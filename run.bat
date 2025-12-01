@@ -2,6 +2,9 @@
 chcp 65001 >nul
 setlocal
 
+:: 定义 Lua 解释器，可以根据需要修改
+set "LUA_EXEC=lua54"
+
 :main
 if not exist "client.exe" (
     echo 错误: 未找到 client.exe

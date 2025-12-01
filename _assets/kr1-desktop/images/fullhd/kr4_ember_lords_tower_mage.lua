@@ -1,0 +1,14815 @@
+return {
+	ember_lords_mage_tower_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			107,
+			8,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			816,
+			532,
+			99,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			84,
+			9,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			604,
+			98,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			11,
+			81,
+			5,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			846,
+			103,
+			78
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			5,
+			76,
+			2,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			601,
+			129,
+			112,
+			83
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			2,
+			60,
+			1,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			335,
+			5,
+			116,
+			97
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			19,
+			19,
+			18,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			517,
+			14,
+			12
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0002"
+		}
+	},
+	ember_lords_mage_tower_bolt_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			19,
+			19,
+			18,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			816,
+			588,
+			14,
+			13
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0004"
+		}
+	},
+	ember_lords_mage_tower_bolt_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			19,
+			18,
+			18,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			674,
+			102,
+			14,
+			14
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0006"
+		}
+	},
+	ember_lords_mage_tower_bolt_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			19,
+			19,
+			20,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1009,
+			283,
+			12,
+			14
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0008"
+		}
+	},
+	ember_lords_mage_tower_bolt_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			19,
+			19,
+			19,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			818,
+			745,
+			13,
+			14
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0010"
+		}
+	},
+	ember_lords_mage_tower_bolt_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			18,
+			18,
+			18,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			487,
+			515,
+			15,
+			14
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0012"
+		}
+	},
+	ember_lords_mage_tower_bolt_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			10,
+			13,
+			11,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			999,
+			30,
+			22
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0020"
+		}
+	},
+	ember_lords_mage_tower_bolt_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			10,
+			13,
+			11,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			160,
+			999,
+			30,
+			22
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0022"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			15,
+			15,
+			14,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			996,
+			793,
+			22,
+			21
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0006"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			15,
+			16,
+			17,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			963,
+			102,
+			19,
+			21
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0008"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			16,
+			17,
+			17,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			225,
+			999,
+			18,
+			17
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0012"
+		}
+	},
+	ember_lords_mage_tower_bolt_particle_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			2,
+			4,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			999,
+			196,
+			17,
+			13
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			2,
+			4,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			446,
+			515,
+			17,
+			13
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			6,
+			2,
+			5,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			382,
+			517,
+			14,
+			12
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			6,
+			2,
+			5,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			399,
+			517,
+			14,
+			12
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			5,
+			5,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			955,
+			371,
+			16,
+			8
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			5,
+			5,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			371,
+			16,
+			8
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			5,
+			5,
+			5,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			993,
+			371,
+			15,
+			8
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			5,
+			5,
+			6,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			648,
+			14,
+			8
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			8,
+			6,
+			6,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			988,
+			973,
+			11,
+			7
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			9,
+			7,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1011,
+			371,
+			9,
+			5
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			953,
+			196,
+			20,
+			13
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			976,
+			196,
+			20,
+			13
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			6,
+			2,
+			3,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			505,
+			515,
+			16,
+			13
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			6,
+			2,
+			3,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			952,
+			283,
+			16,
+			13
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			4,
+			3,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			325,
+			1011,
+			18,
+			10
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			4,
+			4,
+			3,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			988,
+			283,
+			18,
+			10
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			5,
+			5,
+			3,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			517,
+			17,
+			9
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			5,
+			5,
+			3,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			833,
+			588,
+			17,
+			9
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			8,
+			5,
+			4,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			699,
+			1011,
+			13,
+			9
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_particle_lvl4_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			25,
+			17
+		},
+		trim = {
+			9,
+			7,
+			6,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			233,
+			918,
+			10,
+			5
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_ghost = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			60,
+			9,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			846,
+			98,
+			99
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lavas_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			6,
+			10,
+			5,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1016,
+			977,
+			3,
+			2
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0002"
+		}
+	},
+	ember_lords_mage_tower_lavas_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			6,
+			9,
+			5,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1010,
+			977,
+			3,
+			3
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0004"
+		}
+	},
+	ember_lords_mage_tower_lavas_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			5,
+			9,
+			5,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1013,
+			277,
+			4,
+			3
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0006"
+		}
+	},
+	ember_lords_mage_tower_lavas_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			5,
+			9,
+			4,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			526,
+			5,
+			3
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0008"
+		}
+	},
+	ember_lords_mage_tower_lavas_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			5,
+			8,
+			4,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			783,
+			991,
+			5,
+			4
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0010"
+		}
+	},
+	ember_lords_mage_tower_lavas_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			5,
+			8,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1002,
+			973,
+			5,
+			5
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0012"
+		}
+	},
+	ember_lords_mage_tower_lavas_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			4,
+			8,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			783,
+			983,
+			7,
+			5
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0014"
+		}
+	},
+	ember_lords_mage_tower_lavas_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			4,
+			7,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			517,
+			7,
+			6
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0016"
+		}
+	},
+	ember_lords_mage_tower_lavas_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			3,
+			2,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1013,
+			263,
+			8,
+			11
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0018"
+		}
+	},
+	ember_lords_mage_tower_lavas_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			3,
+			0,
+			2,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			745,
+			9,
+			13
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0020"
+		}
+	},
+	ember_lords_mage_tower_lavas_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			2,
+			0,
+			2,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			233,
+			902,
+			10,
+			13
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0022"
+		}
+	},
+	ember_lords_mage_tower_lavas_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			1,
+			0,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			853,
+			588,
+			12,
+			13
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0024"
+		}
+	},
+	ember_lords_mage_tower_lavas_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			868,
+			588,
+			12,
+			12
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0026"
+		}
+	},
+	ember_lords_mage_tower_lavas_0027 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			0,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			883,
+			588,
+			13,
+			11
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0028"
+		}
+	},
+	ember_lords_mage_tower_lavas_0029 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			0,
+			3,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			899,
+			588,
+			14,
+			10
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0030"
+		}
+	},
+	ember_lords_mage_tower_lavas_0031 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			0,
+			4,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			1011,
+			14,
+			10
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0032"
+		}
+	},
+	ember_lords_mage_tower_lavas_0033 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			0,
+			7,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			674,
+			119,
+			14,
+			7
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0034"
+		}
+	},
+	ember_lords_mage_tower_lavas_0035 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			0,
+			0,
+			14,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			971,
+			283,
+			14,
+			14
+		},
+		alias = {
+			"ember_lords_mage_tower_lavas_0036",
+			"ember_lords_mage_tower_lavas_0037",
+			"ember_lords_mage_tower_lavas_0038",
+			"ember_lords_mage_tower_lavas_0039"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer1_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			2,
+			60,
+			1,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			454,
+			5,
+			116,
+			97
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer1_0002",
+			"ember_lords_mage_tower_lvl4_layer1_0003",
+			"ember_lords_mage_tower_lvl4_layer1_0004",
+			"ember_lords_mage_tower_lvl4_layer1_0005",
+			"ember_lords_mage_tower_lvl4_layer1_0006",
+			"ember_lords_mage_tower_lvl4_layer1_0007",
+			"ember_lords_mage_tower_lvl4_layer1_0008",
+			"ember_lords_mage_tower_lvl4_layer1_0009",
+			"ember_lords_mage_tower_lvl4_layer1_0010",
+			"ember_lords_mage_tower_lvl4_layer1_0011",
+			"ember_lords_mage_tower_lvl4_layer1_0012",
+			"ember_lords_mage_tower_lvl4_layer1_0013",
+			"ember_lords_mage_tower_lvl4_layer1_0014",
+			"ember_lords_mage_tower_lvl4_layer1_0015",
+			"ember_lords_mage_tower_lvl4_layer1_0016",
+			"ember_lords_mage_tower_lvl4_layer1_0017",
+			"ember_lords_mage_tower_lvl4_layer1_0018",
+			"ember_lords_mage_tower_lvl4_layer1_0019",
+			"ember_lords_mage_tower_lvl4_layer1_0020",
+			"ember_lords_mage_tower_lvl4_layer1_0021",
+			"ember_lords_mage_tower_lvl4_layer1_0022",
+			"ember_lords_mage_tower_lvl4_layer1_0023",
+			"ember_lords_mage_tower_lvl4_layer1_0024",
+			"ember_lords_mage_tower_lvl4_layer1_0025",
+			"ember_lords_mage_tower_lvl4_layer1_0026",
+			"ember_lords_mage_tower_lvl4_layer1_0027",
+			"ember_lords_mage_tower_lvl4_layer1_0028",
+			"ember_lords_mage_tower_lvl4_layer1_0029",
+			"ember_lords_mage_tower_lvl4_layer1_0030",
+			"ember_lords_mage_tower_lvl4_layer1_0031",
+			"ember_lords_mage_tower_lvl4_layer1_0032",
+			"ember_lords_mage_tower_lvl4_layer1_0033",
+			"ember_lords_mage_tower_lvl4_layer1_0034",
+			"ember_lords_mage_tower_lvl4_layer1_0035",
+			"ember_lords_mage_tower_lvl4_layer1_0036",
+			"ember_lords_mage_tower_lvl4_layer1_0037",
+			"ember_lords_mage_tower_lvl4_layer1_0038",
+			"ember_lords_mage_tower_lvl4_layer1_0039",
+			"ember_lords_mage_tower_lvl4_layer1_0040",
+			"ember_lords_mage_tower_lvl4_layer1_0041",
+			"ember_lords_mage_tower_lvl4_layer1_0042",
+			"ember_lords_mage_tower_lvl4_layer1_0043",
+			"ember_lords_mage_tower_lvl4_layer1_0044",
+			"ember_lords_mage_tower_lvl4_layer1_0045",
+			"ember_lords_mage_tower_lvl4_layer1_0046",
+			"ember_lords_mage_tower_lvl4_layer1_0047",
+			"ember_lords_mage_tower_lvl4_layer1_0048",
+			"ember_lords_mage_tower_lvl4_layer1_0049",
+			"ember_lords_mage_tower_lvl4_layer1_0050",
+			"ember_lords_mage_tower_lvl4_layer1_0051",
+			"ember_lords_mage_tower_lvl4_layer1_0052"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			0,
+			0,
+			119,
+			168
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			129,
+			119,
+			168
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0027",
+			"ember_lords_mage_tower_lvl4_layer2_0052",
+			"ember_lords_mage_tower_lvl4_layer3_0001",
+			"ember_lords_mage_tower_lvl4_layer3_0023",
+			"ember_lords_mage_tower_lvl4_layer3_0024",
+			"ember_lords_mage_tower_lvl4_layer3_0025",
+			"ember_lords_mage_tower_lvl4_layer3_0026",
+			"ember_lords_mage_tower_lvl4_layer3_0027",
+			"ember_lords_mage_tower_lvl4_layer3_0049",
+			"ember_lords_mage_tower_lvl4_layer3_0050",
+			"ember_lords_mage_tower_lvl4_layer3_0051",
+			"ember_lords_mage_tower_lvl4_layer3_0052"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			573,
+			102,
+			98,
+			24
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0030"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			806,
+			100,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0031"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			983,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0032"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			920,
+			765,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0033"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			818,
+			717,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0034"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			919,
+			717,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0035"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			57,
+			11,
+			48,
+			131
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			907,
+			100,
+			14,
+			26
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0003"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			34,
+			0,
+			34,
+			118
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			897,
+			817,
+			51,
+			50
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0028 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			47,
+			12,
+			46,
+			148
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			992,
+			702,
+			26,
+			8
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0029"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0034 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			45,
+			12,
+			45,
+			135
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			513,
+			105,
+			29,
+			21
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0035",
+			"ember_lords_mage_tower_lvl4_layer3_0036"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			985,
+			78,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0095",
+			"ember_lords_mage_tower_shooter_lvl4_0096",
+			"ember_lords_mage_tower_shooter_lvl4_0125",
+			"ember_lords_mage_tower_shooter_lvl4_0157",
+			"ember_lords_mage_tower_shooter_lvl4_0158",
+			"ember_lords_mage_tower_shooter_lvl4_0225",
+			"ember_lords_mage_tower_shooter_lvl4_0226"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			2,
+			13,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			815,
+			46,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0017"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			4,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			911,
+			52,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0019"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			659,
+			53,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0021"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			4,
+			0,
+			11,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			781,
+			50,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0023"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0034 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			14,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			974,
+			52,
+			46
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0035"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0036 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			7,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			821,
+			50,
+			53
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0037"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0038 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			2,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			844,
+			51,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0039"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0040 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			917,
+			55,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0041"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0042 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			728,
+			56,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0043"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0044 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			0,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			791,
+			56,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0045"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0061 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			2,
+			11,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			754,
+			48,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0062"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0063 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			4,
+			0,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			722,
+			53,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0064"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0065 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			785,
+			53,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0066"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0067 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			848,
+			53,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0068"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0083 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			7,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			765,
+			52,
+			53
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0084"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0085 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			2,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			720,
+			53,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0086"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0087 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			724,
+			55,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0088"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0089 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			854,
+			56,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0090"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0091 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			0,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			787,
+			55,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0092"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0099 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			0,
+			15,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			659,
+			64,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0100"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0101 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			1,
+			14,
+			2,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			927,
+			659,
+			62,
+			45
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0102"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0103 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			1,
+			7,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			604,
+			63,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0104"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0105 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			0,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			526,
+			461,
+			64,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0106"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0107 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			0,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			786,
+			461,
+			59,
+			59
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0108"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0109 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			2,
+			0,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			660,
+			461,
+			60,
+			59
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0110"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0111 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			1,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			850,
+			56,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0112"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0113 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			4,
+			0,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			604,
+			57,
+			59
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0114"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0115 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			2,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			604,
+			58,
+			57
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0116"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0117 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			4,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			659,
+			53,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0118"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0130 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			0,
+			15,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			860,
+			659,
+			64,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0131"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0132 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			1,
+			14,
+			2,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			717,
+			62,
+			45
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0133"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0134 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			1,
+			7,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			635,
+			604,
+			63,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0135"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0136 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			0,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			593,
+			461,
+			64,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0137"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0138 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			0,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			848,
+			461,
+			59,
+			59
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0139"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0140 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			2,
+			0,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			723,
+			461,
+			60,
+			59
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0141"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0142 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			1,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			911,
+			56,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0143"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0144 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			4,
+			0,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			666,
+			57,
+			59
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0145"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0146 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			3,
+			2,
+			4,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			664,
+			58,
+			57
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0147"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0148 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			4,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			738,
+			659,
+			52,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0149"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0161 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			17,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			990,
+			461,
+			31,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0162"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0165 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			19,
+			19,
+			18,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			992,
+			659,
+			28,
+			40
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0166"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0190 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			10,
+			6,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			972,
+			54,
+			49
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0191"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0192 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			765,
+			53,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0193"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0194 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			5,
+			6,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			905,
+			54,
+			54
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0195"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0196 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			4,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			873,
+			47,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0197"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0198 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			4,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			876,
+			48,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0199"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0200 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			7,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			971,
+			604,
+			49,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0201"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0202 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			8,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			875,
+			53,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0203"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0206 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			9,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			877,
+			52,
+			50
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0207"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0260 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			10,
+			6,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			765,
+			54,
+			49
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0261"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0262 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			820,
+			53,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0263"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0264 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			5,
+			6,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			962,
+			54,
+			54
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0265"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0266 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			4,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			931,
+			47,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0267"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0268 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			4,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			934,
+			48,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0269"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0270 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			7,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			951,
+			817,
+			49,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0271"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0272 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			8,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			929,
+			53,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0273"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0276 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			9,
+			7,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			930,
+			52,
+			50
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0277"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0315 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			6,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			817,
+			49,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0316 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			6,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			873,
+			49,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0319 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			936,
+			873,
+			49,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0320 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			936,
+			928,
+			49,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0347 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			6,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			929,
+			49,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0348 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			6,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			817,
+			49,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			0,
+			0,
+			148,
+			106
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			184,
+			5,
+			148,
+			106
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0027",
+			"ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0028"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			19,
+			21,
+			17,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			532,
+			112,
+			69
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			21,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			927,
+			116,
+			69
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			22,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			461,
+			116,
+			68
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			12,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			833,
+			215,
+			116,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			12,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			302,
+			116,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			481,
+			382,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			600,
+			382,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			719,
+			382,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			838,
+			382,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			461,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			539,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			617,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			14,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			695,
+			116,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			12,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			302,
+			116,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			11,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			360,
+			215,
+			116,
+			78
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			10,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			129,
+			116,
+			79
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			8,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			129,
+			116,
+			82
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			7,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			364,
+			129,
+			116,
+			82
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			5,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			758,
+			116,
+			85
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			2,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			578,
+			116,
+			88
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			17,
+			0,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			300,
+			116,
+			90
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			18,
+			0,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			485,
+			115,
+			90
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			19,
+			5,
+			17,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			215,
+			112,
+			84
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			21,
+			22,
+			19,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			705,
+			532,
+			108,
+			66
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign_0026 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			148,
+			106
+		},
+		trim = {
+			39,
+			19,
+			42,
+			48
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			850,
+			765,
+			67,
+			39
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			2,
+			23,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			851,
+			70,
+			64
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0002",
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0003"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			9,
+			19,
+			9,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			957,
+			382,
+			62,
+			67
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0005",
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0006"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			9,
+			20,
+			6,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			955,
+			302,
+			65,
+			66
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0008",
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0009"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			10,
+			23,
+			7,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			604,
+			63,
+			48
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0011",
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0012"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			5,
+			27,
+			1,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			936,
+			983,
+			74,
+			32
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0017"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			2,
+			27,
+			1,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			604,
+			77,
+			41
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			2,
+			24,
+			1,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			910,
+			461,
+			77,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0020"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			1,
+			24,
+			1,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			461,
+			78,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			1,
+			26,
+			2,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			446,
+			461,
+			77,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0023"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			1,
+			26,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			787,
+			76,
+			61
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			1,
+			22,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			918,
+			532,
+			76,
+			65
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0026"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			16,
+			14,
+			9,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			545,
+			105,
+			25,
+			21
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0036 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			17,
+			10,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			411,
+			105,
+			31,
+			20
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0037 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			17,
+			10,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			445,
+			105,
+			31,
+			20
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0038",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0039",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0040",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0041",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0042",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0043",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0044",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0045",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0046",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0047",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0048",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0049",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0050",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0051",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0052",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0053",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0054",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0055",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0056"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0057 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			17,
+			10,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			479,
+			105,
+			31,
+			20
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			7,
+			10,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			985,
+			42,
+			36
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			448,
+			980,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0034 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			9,
+			11,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			989,
+			39,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0049 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			13,
+			13,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			925,
+			102,
+			35,
+			23
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0050 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			13,
+			13,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			691,
+			104,
+			35,
+			22
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0051 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			14,
+			13,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			729,
+			104,
+			35,
+			21
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0052 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			14,
+			13,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			104,
+			35,
+			21
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0053 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			15,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			920,
+			793,
+			35,
+			19
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0054 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			15,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			958,
+			793,
+			35,
+			19
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0055 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			15,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			910,
+			508,
+			35,
+			19
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0056 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			16,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			948,
+			508,
+			35,
+			18
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0057 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			16,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			986,
+			508,
+			35,
+			18
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0058 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			16,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			335,
+			105,
+			35,
+			18
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0059 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			16,
+			13,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			373,
+			105,
+			35,
+			18
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0060"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			0,
+			0,
+			57,
+			51
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			911,
+			604,
+			57,
+			51
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			22,
+			22,
+			17,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			466,
+			515,
+			18,
+			12
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			11,
+			14,
+			8,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			992,
+			38,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			11,
+			13,
+			7,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			347,
+			991,
+			39,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0053 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			193,
+			999,
+			29,
+			22
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			5,
+			27,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			347,
+			857,
+			47,
+			60
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0006"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			5,
+			15,
+			4,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			604,
+			48,
+			71
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0008"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			8,
+			2,
+			7,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			347,
+			773,
+			42,
+			81
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0010"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			17,
+			5,
+			23,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			325,
+			787,
+			17,
+			60
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			22,
+			10,
+			26,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			233,
+			846,
+			9,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			23,
+			18,
+			26,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1013,
+			215,
+			8,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			20,
+			21,
+			26,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1010,
+			932,
+			11,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			0,
+			0,
+			57,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			925,
+			5,
+			57,
+			94
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0025",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0026",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0027",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0028",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0029",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0030",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0031",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0032",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0033"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			2,
+			43,
+			4,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			347,
+			920,
+			41,
+			68
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			1,
+			34,
+			0,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			347,
+			695,
+			46,
+			75
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			1,
+			19,
+			0,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			292,
+			918,
+			46,
+			90
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			0,
+			19,
+			0,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			347,
+			604,
+			47,
+			88
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			0,
+			5,
+			0,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			682,
+			47,
+			102
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			2,
+			5,
+			2,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			246,
+			918,
+			43,
+			99
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			2,
+			0,
+			2,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			296,
+			682,
+			43,
+			102
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			16,
+			0,
+			14,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			846,
+			17,
+			99
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			15,
+			0,
+			13,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			988,
+			873,
+			19,
+			97
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			16,
+			20,
+			12,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			319,
+			851,
+			19,
+			62
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			17,
+			23,
+			19,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1010,
+			873,
+			11,
+			56
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			12,
+			29,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			895,
+			873,
+			38,
+			67
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			12,
+			19,
+			7,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			678,
+			38,
+			73
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			15,
+			19,
+			8,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			985,
+			5,
+			34,
+			70
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			15,
+			15,
+			8,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			895,
+			943,
+			34,
+			74
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			15,
+			23,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			997,
+			532,
+			17,
+			68
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			17,
+			23,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			817,
+			17,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_shadow = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			51,
+			18,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			292,
+			1011,
+			30,
+			9
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			0,
+			0,
+			176,
+			121
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			176,
+			121
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_teleport_decal_0027",
+			"ember_lords_mage_tower_shooter_lvl4_teleport_decal_0028"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			28,
+			27,
+			37,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			361,
+			532,
+			111,
+			69
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			27,
+			35,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			773,
+			115,
+			70
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			25,
+			27,
+			34,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			948,
+			117,
+			69
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			18,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			479,
+			215,
+			115,
+			78
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			18,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			597,
+			215,
+			115,
+			78
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			19,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			302,
+			115,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			19,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			483,
+			302,
+			115,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			20,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			837,
+			302,
+			115,
+			76
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			20,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			382,
+			115,
+			76
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			20,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			245,
+			382,
+			115,
+			76
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			20,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			363,
+			382,
+			115,
+			76
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			19,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			601,
+			302,
+			115,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			19,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			719,
+			302,
+			115,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			18,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			715,
+			215,
+			115,
+			78
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			17,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			215,
+			115,
+			79
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			16,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			716,
+			129,
+			115,
+			80
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			14,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			483,
+			129,
+			115,
+			82
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			13,
+			35,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			129,
+			115,
+			83
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			25,
+			10,
+			34,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			669,
+			117,
+			86
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			25,
+			8,
+			34,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			393,
+			117,
+			89
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			5,
+			34,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			806,
+			5,
+			116,
+			92
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			26,
+			3,
+			35,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			573,
+			5,
+			115,
+			94
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			28,
+			0,
+			36,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			691,
+			5,
+			112,
+			96
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			29,
+			27,
+			39,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			475,
+			532,
+			108,
+			67
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_decal_0026 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			176,
+			121
+		},
+		trim = {
+			47,
+			25,
+			61,
+			57
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			747,
+			717,
+			68,
+			39
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_effect_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			7,
+			4,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			625,
+			659,
+			54,
+			58
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_teleport_effect_0004"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_effect_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			5,
+			2,
+			5,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			952,
+			215,
+			58,
+			65
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_teleport_effect_0006"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_effect_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			3,
+			2,
+			3,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			953,
+			129,
+			62,
+			64
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_teleport_effect_0008"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_effect_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			3,
+			9,
+			4,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			781,
+			604,
+			61,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_teleport_effect_0010"
+		}
+	},
+	terrain_ember_lords_mage = {
+		a_name = "kr4_ember_lords_tower_mage-1.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			2,
+			106,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			586,
+			532,
+			116,
+			62
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_bolt_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			15,
+			14,
+			16,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			988,
+			20,
+			21
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0014"
+		}
+	},
+	ember_lords_mage_tower_bolt_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			11,
+			12,
+			12,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			563,
+			430,
+			28,
+			22
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0016"
+		}
+	},
+	ember_lords_mage_tower_bolt_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			10,
+			12,
+			11,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			923,
+			30,
+			23
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_0018"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			15,
+			16,
+			15,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			827,
+			430,
+			21,
+			18
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0002"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			15,
+			15,
+			15,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			780,
+			430,
+			21,
+			20
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0004"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			14,
+			16,
+			17,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			804,
+			430,
+			20,
+			20
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0010"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			13,
+			12,
+			14,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			997,
+			367,
+			24,
+			24
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0014"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			7,
+			9,
+			8,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			849,
+			367,
+			36,
+			27
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0016"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			7,
+			9,
+			8,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			425,
+			367,
+			36,
+			28
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0018"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			7,
+			10,
+			7,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			620,
+			367,
+			37,
+			27
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0020"
+		}
+	},
+	ember_lords_mage_tower_bolt_lvl4_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			51,
+			51
+		},
+		trim = {
+			7,
+			10,
+			7,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			660,
+			367,
+			37,
+			27
+		},
+		alias = {
+			"ember_lords_mage_tower_bolt_lvl4_0022"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			112,
+			9,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			865,
+			33,
+			98,
+			23
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0026",
+			"ember_lords_mage_tower_lvl4_layer2_0028",
+			"ember_lords_mage_tower_lvl4_layer2_0051"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			112,
+			9,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			229,
+			61,
+			98,
+			23
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0029"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			5,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0036"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			158,
+			5,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0037"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			5,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0038"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			360,
+			5,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0014",
+			"ember_lords_mage_tower_lvl4_layer2_0015",
+			"ember_lords_mage_tower_lvl4_layer2_0016",
+			"ember_lords_mage_tower_lvl4_layer2_0017",
+			"ember_lords_mage_tower_lvl4_layer2_0039",
+			"ember_lords_mage_tower_lvl4_layer2_0040",
+			"ember_lords_mage_tower_lvl4_layer2_0041",
+			"ember_lords_mage_tower_lvl4_layer2_0042",
+			"ember_lords_mage_tower_lvl4_layer2_0043"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			5,
+			98,
+			25
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer2_0044"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			562,
+			5,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			663,
+			5,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			764,
+			5,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			865,
+			5,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			158,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			112,
+			9,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			330,
+			61,
+			98,
+			23
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0045 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0046 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			360,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0047 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0048 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			562,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0049 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			663,
+			33,
+			98,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer2_0050 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			12,
+			111,
+			9,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			764,
+			33,
+			98,
+			24
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			45,
+			11,
+			48,
+			131
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			995,
+			333,
+			26,
+			26
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0005"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			45,
+			11,
+			45,
+			131
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			786,
+			29,
+			26
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0007"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			45,
+			11,
+			45,
+			130
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			672,
+			29,
+			27
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0009",
+			"ember_lords_mage_tower_lvl4_layer3_0010"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			43,
+			9,
+			43,
+			128
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			403,
+			33,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			39,
+			5,
+			39,
+			124
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			863,
+			41,
+			39
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			36,
+			1,
+			35,
+			120
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			113,
+			48,
+			47
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			35,
+			1,
+			35,
+			120
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			584,
+			61,
+			49,
+			47
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			35,
+			0,
+			35,
+			119
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			781,
+			49,
+			49
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			34,
+			0,
+			34,
+			119
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			61,
+			51,
+			49
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			36,
+			2,
+			36,
+			121
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			528,
+			113,
+			47,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			38,
+			4,
+			38,
+			122
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			362,
+			43,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			40,
+			6,
+			40,
+			124
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			293,
+			39,
+			38
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			43,
+			8,
+			43,
+			127
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			367,
+			33,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			44,
+			10,
+			44,
+			129
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			437,
+			31,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0030 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			45,
+			12,
+			45,
+			138
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			748,
+			430,
+			29,
+			18
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0031"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0032 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			45,
+			12,
+			45,
+			136
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			688,
+			430,
+			29,
+			20
+		},
+		alias = {
+			"ember_lords_mage_tower_lvl4_layer3_0033"
+		}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0037 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			43,
+			12,
+			43,
+			128
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			648,
+			399,
+			33,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0038 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			39,
+			9,
+			39,
+			124
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			370,
+			293,
+			41,
+			35
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0039 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			34,
+			5,
+			35,
+			121
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			629,
+			113,
+			50,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0040 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			34,
+			5,
+			34,
+			120
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			367,
+			113,
+			51,
+			43
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0041 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			34,
+			5,
+			34,
+			120
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			421,
+			113,
+			51,
+			43
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0042 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			34,
+			4,
+			34,
+			119
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			950,
+			61,
+			51,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0043 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			33,
+			4,
+			34,
+			119
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			174,
+			61,
+			52,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0044 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			36,
+			6,
+			36,
+			121
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			210,
+			47,
+			41
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0045 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			37,
+			8,
+			37,
+			123
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			918,
+			210,
+			45,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0046 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			39,
+			10,
+			39,
+			125
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			594,
+			293,
+			41,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0047 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			41,
+			11,
+			41,
+			127
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			443,
+			333,
+			37,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_lvl4_layer3_0048 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			119,
+			168
+		},
+		trim = {
+			44,
+			12,
+			43,
+			128
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			867,
+			399,
+			32,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			17,
+			11,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			909,
+			163,
+			45,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0003"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			18,
+			13,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			957,
+			163,
+			46,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0005"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			21,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			672,
+			210,
+			46,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0007"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			22,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			293,
+			40,
+			37
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0009"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			18,
+			14,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			638,
+			40,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0011"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			15,
+			14,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			928,
+			113,
+			45,
+			45
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0013"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			7,
+			14,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			168,
+			45,
+			53
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0015"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			16,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			578,
+			113,
+			48,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0025"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0026 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			17,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			475,
+			113,
+			50,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0027"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0028 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			21,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			319,
+			210,
+			47,
+			39
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0029"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0030 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			18,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			254,
+			45,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0031"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0032 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			16,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			878,
+			113,
+			47,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0033"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0046 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			514,
+			36,
+			44
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0047 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			17,
+			10,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			978,
+			46,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0048",
+			"ember_lords_mage_tower_shooter_lvl4_0069",
+			"ember_lords_mage_tower_shooter_lvl4_0070"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0049 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			18,
+			12,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			494,
+			163,
+			47,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0050"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0051 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			21,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			572,
+			210,
+			47,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0052"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0053 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			22,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			890,
+			42,
+			37
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0054"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0055 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			18,
+			12,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			407,
+			43,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0056"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0057 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			15,
+			12,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			976,
+			113,
+			45,
+			45
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0058"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0059 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			13,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			659,
+			47,
+			53
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0060"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0071 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			16,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			300,
+			163,
+			45,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0072"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0073 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			17,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			250,
+			163,
+			47,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0074"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0075 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			21,
+			5,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			622,
+			210,
+			47,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0076"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0077 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			18,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			299,
+			44,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0078"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0079 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			16,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			348,
+			163,
+			45,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0080"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0081 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			14,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			157,
+			113,
+			49,
+			46
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0082"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0093 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			16,
+			7,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			209,
+			113,
+			51,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0094"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0097 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			15,
+			10,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			163,
+			46,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0098"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0119 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			13,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			844,
+			61,
+			50,
+			46
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0120"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0121 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			20,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			856,
+			163,
+			50,
+			39
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0122"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0123 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			17,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			424,
+			38,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0124"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0126 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			561,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0127",
+			"ember_lords_mage_tower_shooter_lvl4_0156",
+			"ember_lords_mage_tower_shooter_lvl4_0227",
+			"ember_lords_mage_tower_shooter_lvl4_0228",
+			"ember_lords_mage_tower_shooter_lvl4_0295",
+			"ember_lords_mage_tower_shooter_lvl4_0296"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0128 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			15,
+			10,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			201,
+			163,
+			46,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0129"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0150 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			13,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			897,
+			61,
+			50,
+			46
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0151"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0152 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			20,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			369,
+			210,
+			47,
+			39
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0153"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0154 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			17,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			469,
+			38,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0155"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0159 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			16,
+			16,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			700,
+			34,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0160"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0163 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			19,
+			18,
+			19,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			550,
+			27,
+			41
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0164"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0167 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			19,
+			21,
+			18,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			638,
+			28,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0168",
+			"ember_lords_mage_tower_shooter_lvl4_0169",
+			"ember_lords_mage_tower_shooter_lvl4_0170",
+			"ember_lords_mage_tower_shooter_lvl4_0171",
+			"ember_lords_mage_tower_shooter_lvl4_0172",
+			"ember_lords_mage_tower_shooter_lvl4_0173"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0174 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			21,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			745,
+			31,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0175"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0176 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			20,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			661,
+			31,
+			39
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0177"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0178 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			15,
+			19,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			792,
+			35,
+			40
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0179"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0180 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			15,
+			18,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			434,
+			36,
+			41
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0181"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0182 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			17,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			344,
+			36,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0183"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0184 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			16,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			546,
+			41,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0185"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0186 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			16,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			396,
+			163,
+			46,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0187"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0188 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			14,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			263,
+			113,
+			49,
+			45
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0189"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0204 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			8,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			115,
+			49,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0205"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0208 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			11,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			556,
+			46,
+			48
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0209"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0210 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			388,
+			45,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0211"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0212 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			8,
+			10,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			280,
+			46,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0213"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0214 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			9,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			820,
+			43,
+			50
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0215"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0216 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			15,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			452,
+			41,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0217",
+			"ember_lords_mage_tower_shooter_lvl4_0218",
+			"ember_lords_mage_tower_shooter_lvl4_0219",
+			"ember_lords_mage_tower_shooter_lvl4_0220"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0221 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			608,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0222"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0223 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			655,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0224"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0229 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			16,
+			16,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			746,
+			34,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0230"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0231 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			17,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			958,
+			31,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0232"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0233 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			19,
+			18,
+			19,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			594,
+			27,
+			41
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0234"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0235 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			19,
+			19,
+			18,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			367,
+			28,
+			40
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0236"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0237 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			19,
+			21,
+			18,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			679,
+			28,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0238",
+			"ember_lords_mage_tower_shooter_lvl4_0239",
+			"ember_lords_mage_tower_shooter_lvl4_0240",
+			"ember_lords_mage_tower_shooter_lvl4_0241",
+			"ember_lords_mage_tower_shooter_lvl4_0242",
+			"ember_lords_mage_tower_shooter_lvl4_0243"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0244 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			21,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			786,
+			31,
+			38
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0245"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0246 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			17,
+			20,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			703,
+			31,
+			39
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0247"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0248 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			15,
+			19,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			835,
+			35,
+			40
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0249"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0250 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			15,
+			18,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			478,
+			36,
+			41
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0251"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0252 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			17,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			389,
+			36,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0253"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0254 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			16,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			592,
+			41,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0255"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0256 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			16,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			445,
+			163,
+			46,
+			43
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0257"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0258 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			14,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			315,
+			113,
+			49,
+			45
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0259"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0274 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			8,
+			9,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			169,
+			49,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0275"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0278 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			11,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			607,
+			46,
+			48
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0279"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0280 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			443,
+			45,
+			52
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0281"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0282 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			9,
+			8,
+			10,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			334,
+			46,
+			51
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0283"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0284 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			9,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			873,
+			43,
+			50
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0285"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0286 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			12,
+			15,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			499,
+			41,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0287",
+			"ember_lords_mage_tower_shooter_lvl4_0288",
+			"ember_lords_mage_tower_shooter_lvl4_0289",
+			"ember_lords_mage_tower_shooter_lvl4_0290"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0291 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			702,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0292"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0293 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			749,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0294"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0297 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			796,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0298",
+			"ember_lords_mage_tower_shooter_lvl4_0327",
+			"ember_lords_mage_tower_shooter_lvl4_0328"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0299 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			17,
+			16,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			610,
+			35,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0300"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0301 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			18,
+			16,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			522,
+			36,
+			41
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0302"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0303 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			17,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			930,
+			37,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0304 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			17,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			975,
+			37,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0305 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			17,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			683,
+			40,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0306 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			17,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			728,
+			40,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0307 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			14,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			113,
+			46,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0308 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			14,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			731,
+			113,
+			46,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0309 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			11,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			966,
+			5,
+			48,
+			48
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0310 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			11,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			431,
+			61,
+			48,
+			48
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0311 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			12,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			636,
+			61,
+			49,
+			47
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0312 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			12,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			688,
+			61,
+			49,
+			47
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0313 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			439,
+			48,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0314 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			494,
+			48,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0317 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			8,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			223,
+			49,
+			51
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0318 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			8,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			277,
+			49,
+			51
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0321 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			7,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			833,
+			46,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0322 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			7,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			888,
+			46,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0323 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			11,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			718,
+			45,
+			48
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0324"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0325 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			10,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			926,
+			43,
+			49
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0326"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0329 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			15,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			843,
+			36,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0330",
+			"ember_lords_mage_tower_shooter_lvl4_0359",
+			"ember_lords_mage_tower_shooter_lvl4_0360"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0331 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			14,
+			17,
+			16,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			655,
+			35,
+			42
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0332"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0333 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			13,
+			18,
+			16,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			566,
+			36,
+			41
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0334"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0335 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			17,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			254,
+			37,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0336 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			11,
+			17,
+			17,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			299,
+			37,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0337 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			17,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			773,
+			40,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0338 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			10,
+			17,
+			15,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			818,
+			40,
+			42
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0339 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			14,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			780,
+			113,
+			46,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0340 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			14,
+			13,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			829,
+			113,
+			46,
+			45
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0341 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			11,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			482,
+			61,
+			48,
+			48
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0342 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			11,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			533,
+			61,
+			48,
+			48
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0343 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			12,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			740,
+			61,
+			49,
+			47
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0344 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			12,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			792,
+			61,
+			49,
+			47
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0345 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			549,
+			48,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0346 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			604,
+			48,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0349 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			8,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			331,
+			49,
+			51
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0350 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			8,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			385,
+			49,
+			51
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0351 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			49,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0352 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			5,
+			7,
+			11,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			60,
+			49,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0353 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			7,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			943,
+			46,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0354 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			7,
+			7,
+			12,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			113,
+			46,
+			52
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0355 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			6,
+			11,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			769,
+			45,
+			48
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0356"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_0357 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			65,
+			60
+		},
+		trim = {
+			8,
+			10,
+			14,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			163,
+			43,
+			49
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_0358"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			16,
+			29,
+			4,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			111,
+			61,
+			60,
+			39
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0014"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_affliction_modifier_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			80,
+			88
+		},
+		trim = {
+			16,
+			29,
+			1,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			202,
+			210,
+			63,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			14,
+			14,
+			7,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			896,
+			29,
+			24
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			13,
+			13,
+			7,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			702,
+			30,
+			26
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			12,
+			12,
+			7,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			557,
+			31,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			11,
+			12,
+			6,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			684,
+			399,
+			33,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			10,
+			12,
+			6,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			700,
+			367,
+			34,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			10,
+			12,
+			6,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			367,
+			34,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			12,
+			5,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			605,
+			333,
+			36,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			12,
+			5,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			644,
+			333,
+			36,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			8,
+			12,
+			5,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			963,
+			37,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			758,
+			254,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			799,
+			254,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			840,
+			254,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			881,
+			254,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			922,
+			254,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			963,
+			254,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			416,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			451,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			486,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			521,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			556,
+			38,
+			32
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0022",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0023",
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0024"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			7,
+			12,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			591,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0026 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			8,
+			12,
+			5,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			333,
+			37,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0027 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			12,
+			5,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			683,
+			333,
+			36,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0028 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			12,
+			6,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			762,
+			333,
+			35,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0029 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			12,
+			6,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			367,
+			35,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0030 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			12,
+			6,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			387,
+			367,
+			35,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0031 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			13,
+			6,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			534,
+			399,
+			35,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0032 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			13,
+			7,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			902,
+			399,
+			34,
+			26
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0033 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			13,
+			7,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			425,
+			430,
+			34,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0034 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			14,
+			7,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			462,
+			430,
+			34,
+			23
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1_0035 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			50,
+			51
+		},
+		trim = {
+			9,
+			14,
+			9,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			870,
+			32,
+			23
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			18,
+			13,
+			17,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			658,
+			430,
+			27,
+			22
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			17,
+			12,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			815,
+			30,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			15,
+			10,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			774,
+			367,
+			34,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			13,
+			9,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			322,
+			333,
+			37,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			9,
+			11,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			682,
+			293,
+			39,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			8,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			414,
+			293,
+			42,
+			34
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			8,
+			7,
+			8,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			771,
+			210,
+			46,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			7,
+			7,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			419,
+			210,
+			48,
+			38
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			544,
+			163,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			596,
+			163,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			648,
+			163,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			700,
+			163,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			752,
+			163,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			6,
+			6,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			804,
+			163,
+			49,
+			40
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			7,
+			6,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			268,
+			210,
+			48,
+			39
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			7,
+			7,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			470,
+			210,
+			48,
+			38
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			7,
+			7,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			521,
+			210,
+			48,
+			38
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			7,
+			7,
+			8,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			721,
+			210,
+			47,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			8,
+			7,
+			8,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			820,
+			210,
+			46,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			8,
+			7,
+			8,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			869,
+			210,
+			46,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			8,
+			7,
+			9,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			966,
+			210,
+			45,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			9,
+			7,
+			9,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			344,
+			44,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			9,
+			7,
+			9,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			152,
+			384,
+			44,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0026 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			7,
+			10,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			254,
+			42,
+			36
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0027 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			8,
+			10,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			325,
+			293,
+			42,
+			35
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0028 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			8,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			459,
+			293,
+			42,
+			34
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0029 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			8,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			504,
+			293,
+			42,
+			34
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0030 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			10,
+			8,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			549,
+			293,
+			42,
+			34
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0031 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			11,
+			9,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			638,
+			293,
+			41,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0032 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			9,
+			11,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			724,
+			293,
+			39,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0033 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			9,
+			11,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			766,
+			293,
+			39,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0035 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			9,
+			12,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			626,
+			38,
+			32
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0036 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			12,
+			9,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			827,
+			38,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0037 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			13,
+			9,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			362,
+			333,
+			37,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0038 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			13,
+			10,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			483,
+			333,
+			37,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0039 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			10,
+			12,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			800,
+			333,
+			36,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0040 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			10,
+			12,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			839,
+			333,
+			36,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0041 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			15,
+			11,
+			12,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			811,
+			367,
+			35,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0042 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			15,
+			11,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			960,
+			367,
+			34,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0043 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			11,
+			13,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			572,
+			399,
+			35,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0044 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			11,
+			13,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			610,
+			399,
+			35,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0045 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			12,
+			13,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			939,
+			399,
+			35,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0046 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			12,
+			13,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			977,
+			399,
+			35,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0047 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			12,
+			13,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			430,
+			35,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2_0048 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			62,
+			51
+		},
+		trim = {
+			14,
+			12,
+			13,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			387,
+			430,
+			35,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			18,
+			17,
+			14,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			720,
+			430,
+			25,
+			22
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0004 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			17,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			975,
+			29,
+			23
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			15,
+			16,
+			11,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			731,
+			31,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0006 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			15,
+			15,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			469,
+			32,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0007 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			14,
+			14,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			720,
+			399,
+			33,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0008 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			14,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			399,
+			34,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0009 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			464,
+			367,
+			36,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			878,
+			333,
+			36,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			293,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			888,
+			293,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			931,
+			293,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			293,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			285,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			328,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			371,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			414,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0021 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			457,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0022 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			500,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			543,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0024 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			586,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0025 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			629,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0026 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			672,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0027 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			10,
+			13,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			715,
+			254,
+			40,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0028 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			11,
+			13,
+			7,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			861,
+			39,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0029 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			11,
+			13,
+			8,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			402,
+			333,
+			38,
+			30
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0030 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			11,
+			14,
+			8,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			523,
+			333,
+			38,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0031 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			11,
+			14,
+			8,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			564,
+			333,
+			38,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0032 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			8,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			722,
+			333,
+			37,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0033 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			917,
+			333,
+			36,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0034 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			956,
+			333,
+			36,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0035 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			503,
+			367,
+			36,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0036 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			542,
+			367,
+			36,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0037 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			12,
+			14,
+			9,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			581,
+			367,
+			36,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0038 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			14,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			386,
+			399,
+			34,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0039 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			14,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			423,
+			399,
+			34,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0040 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			14,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			460,
+			399,
+			34,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0041 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			14,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			497,
+			399,
+			34,
+			28
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0042 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			756,
+			399,
+			34,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0043 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			793,
+			399,
+			34,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0044 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			830,
+			399,
+			34,
+			27
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0045 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			11,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			499,
+			33,
+			26
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0046 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			11,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			528,
+			33,
+			26
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0047 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			12,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			587,
+			32,
+			26
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0048 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			616,
+			32,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0049 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			12,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			644,
+			32,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0050 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			12,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			759,
+			32,
+			24
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0051 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			843,
+			31,
+			24
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0052 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			14,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			313,
+			949,
+			30,
+			23
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0054 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			499,
+			430,
+			29,
+			22
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0055 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			531,
+			430,
+			29,
+			22
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0056 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			15,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			594,
+			430,
+			29,
+			21
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3_0057 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			13,
+			15,
+			15,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			626,
+			430,
+			29,
+			21
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			14,
+			60,
+			10,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			888,
+			367,
+			33,
+			29
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0002"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			9,
+			35,
+			7,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			498,
+			41,
+			55
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0004"
+		}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			18,
+			0,
+			23,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			334,
+			16,
+			79
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			18,
+			0,
+			23,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			334,
+			16,
+			79
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			17,
+			0,
+			23,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			200,
+			878,
+			17,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			17,
+			0,
+			23,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			220,
+			878,
+			17,
+			77
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			17,
+			2,
+			24,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			410,
+			16,
+			67
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			17,
+			2,
+			24,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			480,
+			16,
+			67
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			17,
+			5,
+			23,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			720,
+			17,
+			60
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			22,
+			10,
+			26,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			299,
+			839,
+			9,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1_0023 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			94
+		},
+		trim = {
+			20,
+			21,
+			29,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			524,
+			8,
+			39
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			5,
+			74,
+			8,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			808,
+			293,
+			34,
+			37
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			15,
+			0,
+			13,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			215,
+			19,
+			97
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			16,
+			2,
+			13,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			215,
+			18,
+			85
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0013 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			16,
+			2,
+			13,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			905,
+			18,
+			85
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			16,
+			2,
+			12,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			905,
+			19,
+			80
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			16,
+			20,
+			17,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			839,
+			14,
+			59
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			17,
+			23,
+			17,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			957,
+			13,
+			56
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			17,
+			26,
+			16,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			901,
+			14,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			47,
+			111
+		},
+		trim = {
+			20,
+			26,
+			16,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			298,
+			957,
+			11,
+			49
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			12,
+			67,
+			12,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			924,
+			367,
+			33,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0002 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			9,
+			45,
+			3,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			224,
+			45,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0003 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			12,
+			39,
+			7,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			57,
+			658,
+			38,
+			57
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0005 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			12,
+			29,
+			7,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			715,
+			38,
+			63
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0010 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			15,
+			23,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			240,
+			894,
+			17,
+			66
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0011 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			15,
+			23,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			260,
+			894,
+			17,
+			66
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0012 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			17,
+			24,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			282,
+			783,
+			16,
+			53
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0014 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			17,
+			23,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1004,
+			61,
+			17,
+			48
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0015 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			17,
+			29,
+			24,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1004,
+			254,
+			16,
+			36
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0016 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			20,
+			29,
+			24,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1006,
+			163,
+			13,
+			33
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0017 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			20,
+			31,
+			25,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			490,
+			12,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0018 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			21,
+			31,
+			25,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			299,
+			895,
+			11,
+			31
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0019 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			18,
+			33,
+			25,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			458,
+			14,
+			29
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3_0020 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			57,
+			101
+		},
+		trim = {
+			18,
+			33,
+			28,
+			43
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			299,
+			929,
+			11,
+			25
+		},
+		alias = {}
+	},
+	ember_lords_mage_tower_shooter_lvl4_teleport_effect_0001 = {
+		a_name = "kr4_ember_lords_tower_mage-2.dds",
+		size = {
+			68,
+			68
+		},
+		trim = {
+			13,
+			12,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			106,
+			315,
+			42,
+			44
+		},
+		alias = {
+			"ember_lords_mage_tower_shooter_lvl4_teleport_effect_0002"
+		}
+	}
+}

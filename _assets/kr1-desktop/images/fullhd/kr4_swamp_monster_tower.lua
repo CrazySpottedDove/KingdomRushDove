@@ -1,0 +1,5485 @@
+return {
+	swamp_monster_towers_lvl4_0001 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			4,
+			2,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			5,
+			145,
+			123
+		},
+		alias = {}
+	},
+	swamp_monster_tower_bubble_0001 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			668,
+			451,
+			18,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0001"
+		}
+	},
+	swamp_monster_tower_bubble_0002 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			0,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			986,
+			704,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0002"
+		}
+	},
+	swamp_monster_tower_bubble_0003 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			0,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			986,
+			718,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0003"
+		}
+	},
+	swamp_monster_tower_bubble_0004 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			0,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			1008,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0004"
+		}
+	},
+	swamp_monster_tower_bubble_0005 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			689,
+			451,
+			18,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0005"
+		}
+	},
+	swamp_monster_tower_bubble_0006 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			710,
+			451,
+			18,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0006"
+		}
+	},
+	swamp_monster_tower_bubble_0007 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			0,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			977,
+			1010,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0007"
+		}
+	},
+	swamp_monster_tower_bubble_0008 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			591,
+			1008,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0008"
+		}
+	},
+	swamp_monster_tower_bubble_0009 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			0,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1000,
+			1010,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0009"
+		}
+	},
+	swamp_monster_tower_bubble_0010 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			613,
+			1008,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0010"
+		}
+	},
+	swamp_monster_tower_bubble_0011 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			731,
+			451,
+			19,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0011"
+		}
+	},
+	swamp_monster_tower_bubble_0012 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			986,
+			732,
+			20,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0012"
+		}
+	},
+	swamp_monster_tower_bubble_0013 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			944,
+			1009,
+			21,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0013"
+		}
+	},
+	swamp_monster_tower_bubble_0014 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			976,
+			898,
+			20,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0014"
+		}
+	},
+	swamp_monster_tower_bubble_0015 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			999,
+			898,
+			20,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0015"
+		}
+	},
+	swamp_monster_tower_bubble_0016 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			645,
+			451,
+			20,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0016"
+		}
+	},
+	swamp_monster_tower_bubble_0017 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			955,
+			547,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0017"
+		}
+	},
+	swamp_monster_tower_bubble_0018 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			978,
+			547,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0018"
+		}
+	},
+	swamp_monster_tower_bubble_0019 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			160,
+			18,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0019"
+		}
+	},
+	swamp_monster_tower_bubble_0020 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			2,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			200,
+			17,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0020"
+		}
+	},
+	swamp_monster_tower_bubble_0021 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			2,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			213,
+			17,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0021"
+		}
+	},
+	swamp_monster_tower_bubble_0022 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			2,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			173,
+			18,
+			10
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0022"
+		}
+	},
+	swamp_monster_tower_bubble_0023 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			635,
+			1008,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0023"
+		}
+	},
+	swamp_monster_tower_bubble_0024 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			976,
+			884,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0024"
+		}
+	},
+	swamp_monster_tower_bubble_0025 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			998,
+			884,
+			19,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0025"
+		}
+	},
+	swamp_monster_tower_bubble_0026 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			432,
+			978,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0026"
+		}
+	},
+	swamp_monster_tower_bubble_0027 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			432,
+			992,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0027"
+		}
+	},
+	swamp_monster_tower_bubble_0028 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			432,
+			1006,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0028"
+		}
+	},
+	swamp_monster_tower_bubble_0029 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			875,
+			1009,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0029"
+		}
+	},
+	swamp_monster_tower_bubble_0030 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			898,
+			1009,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0030"
+		}
+	},
+	swamp_monster_tower_bubble_0031 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			921,
+			1009,
+			20,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0031"
+		}
+	},
+	swamp_monster_tower_bubble_0032 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			4,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			186,
+			16,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0032"
+		}
+	},
+	swamp_monster_tower_bubble_0033 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			753,
+			451,
+			17,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0033"
+		}
+	},
+	swamp_monster_tower_bubble_0034 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			657,
+			1008,
+			17,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0034"
+		}
+	},
+	swamp_monster_tower_bubble_0035 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			21,
+			11
+		},
+		trim = {
+			1,
+			0,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1003,
+			146,
+			17,
+			11
+		},
+		alias = {
+			"swamp_monster_tower_sparks_0035"
+		}
+	},
+	swamp_monster_tower_explosion_0007 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			9,
+			7,
+			8,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			973,
+			100,
+			48,
+			43
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0008"
+		}
+	},
+	swamp_monster_tower_explosion_0011 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			11,
+			11,
+			8,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			973,
+			5,
+			46,
+			45
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0012"
+		}
+	},
+	swamp_monster_tower_explosion_0013 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			12,
+			15,
+			9,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			977,
+			922,
+			44,
+			42
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0014"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0012 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			57,
+			1,
+			9,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			929,
+			265,
+			85,
+			104
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0013"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0044 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			47,
+			2,
+			6,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			657,
+			98,
+			94
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0045"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0046 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			63,
+			4,
+			0,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			776,
+			924,
+			88,
+			94
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0047"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0001 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			0,
+			0,
+			151,
+			125
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			336,
+			5,
+			151,
+			125
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0002",
+			"swamp_monster_tower_shooter_lvl4_layer2_0003",
+			"swamp_monster_tower_shooter_lvl4_layer2_0012",
+			"swamp_monster_tower_shooter_lvl4_layer2_0013",
+			"swamp_monster_tower_shooter_lvl4_layer2_0014",
+			"swamp_monster_tower_shooter_lvl4_layer2_0015",
+			"swamp_monster_tower_shooter_lvl4_layer2_0016",
+			"swamp_monster_tower_shooter_lvl4_layer2_0017",
+			"swamp_monster_tower_shooter_lvl4_layer2_0018",
+			"swamp_monster_tower_shooter_lvl4_layer2_0019",
+			"swamp_monster_tower_shooter_lvl4_layer2_0020",
+			"swamp_monster_tower_shooter_lvl4_layer2_0021",
+			"swamp_monster_tower_shooter_lvl4_layer2_0022",
+			"swamp_monster_tower_shooter_lvl4_layer2_0023",
+			"swamp_monster_tower_shooter_lvl4_layer2_0024",
+			"swamp_monster_tower_shooter_lvl4_layer2_0025",
+			"swamp_monster_tower_shooter_lvl4_layer2_0026",
+			"swamp_monster_tower_shooter_lvl4_layer2_0027",
+			"swamp_monster_tower_shooter_lvl4_layer2_0028",
+			"swamp_monster_tower_shooter_lvl4_layer2_0029",
+			"swamp_monster_tower_shooter_lvl4_layer2_0030",
+			"swamp_monster_tower_shooter_lvl4_layer2_0031",
+			"swamp_monster_tower_shooter_lvl4_layer2_0032",
+			"swamp_monster_tower_shooter_lvl4_layer2_0033",
+			"swamp_monster_tower_shooter_lvl4_layer2_0034",
+			"swamp_monster_tower_shooter_lvl4_layer2_0035",
+			"swamp_monster_tower_shooter_lvl4_layer2_0044",
+			"swamp_monster_tower_shooter_lvl4_layer2_0045",
+			"swamp_monster_tower_shooter_lvl4_layer2_0046",
+			"swamp_monster_tower_shooter_lvl4_layer2_0047",
+			"swamp_monster_tower_shooter_lvl4_layer2_0048",
+			"swamp_monster_tower_shooter_lvl4_layer2_0049",
+			"swamp_monster_tower_shooter_lvl4_layer2_0050",
+			"swamp_monster_tower_shooter_lvl4_layer2_0051",
+			"swamp_monster_tower_shooter_lvl4_layer2_0052",
+			"swamp_monster_tower_shooter_lvl4_layer2_0053",
+			"swamp_monster_tower_shooter_lvl4_layer2_0054",
+			"swamp_monster_tower_shooter_lvl4_layer2_0055",
+			"swamp_monster_tower_shooter_lvl4_layer2_0056",
+			"swamp_monster_tower_shooter_lvl4_layer2_0057",
+			"swamp_monster_tower_shooter_lvl4_layer2_0058",
+			"swamp_monster_tower_shooter_lvl4_layer2_0059",
+			"swamp_monster_tower_shooter_lvl4_layer2_0060",
+			"swamp_monster_tower_shooter_lvl4_layer2_0061",
+			"swamp_monster_tower_shooter_lvl4_layer3_0001",
+			"swamp_monster_tower_shooter_lvl4_layer3_0002",
+			"swamp_monster_tower_shooter_lvl4_layer3_0003",
+			"swamp_monster_tower_shooter_lvl4_layer3_0012",
+			"swamp_monster_tower_shooter_lvl4_layer3_0013",
+			"swamp_monster_tower_shooter_lvl4_layer3_0014",
+			"swamp_monster_tower_shooter_lvl4_layer3_0015",
+			"swamp_monster_tower_shooter_lvl4_layer3_0016",
+			"swamp_monster_tower_shooter_lvl4_layer3_0017",
+			"swamp_monster_tower_shooter_lvl4_layer3_0018",
+			"swamp_monster_tower_shooter_lvl4_layer3_0019",
+			"swamp_monster_tower_shooter_lvl4_layer3_0020",
+			"swamp_monster_tower_shooter_lvl4_layer3_0021",
+			"swamp_monster_tower_shooter_lvl4_layer3_0022",
+			"swamp_monster_tower_shooter_lvl4_layer3_0023",
+			"swamp_monster_tower_shooter_lvl4_layer3_0024",
+			"swamp_monster_tower_shooter_lvl4_layer3_0025",
+			"swamp_monster_tower_shooter_lvl4_layer3_0026",
+			"swamp_monster_tower_shooter_lvl4_layer3_0027",
+			"swamp_monster_tower_shooter_lvl4_layer3_0028",
+			"swamp_monster_tower_shooter_lvl4_layer3_0029",
+			"swamp_monster_tower_shooter_lvl4_layer3_0030",
+			"swamp_monster_tower_shooter_lvl4_layer3_0031",
+			"swamp_monster_tower_shooter_lvl4_layer3_0032",
+			"swamp_monster_tower_shooter_lvl4_layer3_0033",
+			"swamp_monster_tower_shooter_lvl4_layer3_0034",
+			"swamp_monster_tower_shooter_lvl4_layer3_0035",
+			"swamp_monster_tower_shooter_lvl4_layer3_0044",
+			"swamp_monster_tower_shooter_lvl4_layer3_0045",
+			"swamp_monster_tower_shooter_lvl4_layer3_0046",
+			"swamp_monster_tower_shooter_lvl4_layer3_0047",
+			"swamp_monster_tower_shooter_lvl4_layer3_0048",
+			"swamp_monster_tower_shooter_lvl4_layer3_0049",
+			"swamp_monster_tower_shooter_lvl4_layer3_0050",
+			"swamp_monster_tower_shooter_lvl4_layer3_0051",
+			"swamp_monster_tower_shooter_lvl4_layer3_0052",
+			"swamp_monster_tower_shooter_lvl4_layer3_0053",
+			"swamp_monster_tower_shooter_lvl4_layer3_0054",
+			"swamp_monster_tower_shooter_lvl4_layer3_0055",
+			"swamp_monster_tower_shooter_lvl4_layer3_0056",
+			"swamp_monster_tower_shooter_lvl4_layer3_0057",
+			"swamp_monster_tower_shooter_lvl4_layer3_0058",
+			"swamp_monster_tower_shooter_lvl4_layer3_0059",
+			"swamp_monster_tower_shooter_lvl4_layer3_0060",
+			"swamp_monster_tower_shooter_lvl4_layer3_0061"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0010 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			20,
+			5,
+			84,
+			76
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			973,
+			53,
+			47,
+			44
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0011"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0036 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			20,
+			41,
+			91,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			976,
+			834,
+			40,
+			47
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0037"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0040 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			4,
+			51,
+			118,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			990,
+			419,
+			29,
+			42
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0041"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0010 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			21,
+			9,
+			86,
+			76
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			977,
+			967,
+			44,
+			40
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0011"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0036 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			25,
+			46,
+			91,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			986,
+			654,
+			35,
+			47
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0037"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0040 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			3,
+			54,
+			118,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			990,
+			374,
+			30,
+			42
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0041"
+		}
+	},
+	swamp_monster_tower_smoke_0001 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			2,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			227,
+			959,
+			29,
+			59
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0002"
+		}
+	},
+	swamp_monster_tower_spawn_explosion_0002 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			13,
+			17,
+			19,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			677,
+			838,
+			96,
+			89
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0003 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			12,
+			17,
+			18,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			875,
+			834,
+			98,
+			85
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0004 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			12,
+			16,
+			17,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			776,
+			745,
+			99,
+			86
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0005 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			12,
+			16,
+			17,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			780,
+			654,
+			99,
+			87
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0006 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			11,
+			15,
+			17,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			677,
+			654,
+			100,
+			88
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0007 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			14,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			883,
+			374,
+			104,
+			88
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0008 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			14,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			851,
+			104,
+			88
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0009 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			14,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			741,
+			466,
+			104,
+			92
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0010 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			14,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			848,
+			466,
+			104,
+			92
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0011 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			564,
+			105,
+			87
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0012 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			677,
+			564,
+			105,
+			87
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0013 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			15,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			785,
+			564,
+			105,
+			87
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0014 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			18,
+			13,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			834,
+			105,
+			84
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0015 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			10,
+			19,
+			10,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			403,
+			374,
+			108,
+			87
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0019 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			0,
+			0,
+			128,
+			114
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			265,
+			128,
+			114
+		},
+		alias = {}
+	},
+	swamp_monster_unit_lvl4_0001 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			51,
+			87,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			921,
+			105,
+			84
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0034",
+			"swamp_monster_unit_lvl4_0035",
+			"swamp_monster_unit_lvl4_0064",
+			"swamp_monster_unit_lvl4_0065",
+			"swamp_monster_unit_lvl4_0123",
+			"swamp_monster_unit_lvl4_0124",
+			"swamp_monster_unit_lvl4_0157",
+			"swamp_monster_unit_lvl4_0158",
+			"swamp_monster_unit_lvl4_0159",
+			"swamp_monster_unit_lvl4_0160",
+			"swamp_monster_unit_lvl4_0191"
+		}
+	},
+	swamp_monster_unit_lvl4_0014 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			49,
+			86,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			882,
+			654,
+			101,
+			85
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0015"
+		}
+	},
+	swamp_monster_unit_lvl4_0016 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			82,
+			47,
+			86,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			744,
+			102,
+			87
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0017"
+		}
+	},
+	swamp_monster_unit_lvl4_0018 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			80,
+			46,
+			85,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			564,
+			105,
+			90
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0019"
+		}
+	},
+	swamp_monster_unit_lvl4_0020 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			79,
+			48,
+			85,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			774,
+			374,
+			106,
+			88
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0021"
+		}
+	},
+	swamp_monster_unit_lvl4_0022 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			81,
+			51,
+			86,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			936,
+			103,
+			85
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0023"
+		}
+	},
+	swamp_monster_unit_lvl4_0024 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			52,
+			88,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			875,
+			922,
+			99,
+			84
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0025"
+		}
+	},
+	swamp_monster_unit_lvl4_0028 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			49,
+			91,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			776,
+			834,
+			96,
+			87
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0029"
+		}
+	},
+	swamp_monster_unit_lvl4_0030 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			46,
+			93,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			677,
+			930,
+			94,
+			90
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0031"
+		}
+	},
+	swamp_monster_unit_lvl4_0032 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			47,
+			94,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			887,
+			93,
+			88
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0033"
+		}
+	},
+	swamp_monster_unit_lvl4_0036 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			59,
+			82,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			942,
+			105,
+			76
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0037",
+			"swamp_monster_unit_lvl4_0125",
+			"swamp_monster_unit_lvl4_0126",
+			"swamp_monster_unit_lvl4_0161",
+			"swamp_monster_unit_lvl4_0162"
+		}
+	},
+	swamp_monster_unit_lvl4_0038 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			34,
+			100,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			783,
+			87,
+			101
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0039",
+			"swamp_monster_unit_lvl4_0163",
+			"swamp_monster_unit_lvl4_0164"
+		}
+	},
+	swamp_monster_unit_lvl4_0040 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			53,
+			20,
+			115,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			583,
+			102,
+			115
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0041",
+			"swamp_monster_unit_lvl4_0165",
+			"swamp_monster_unit_lvl4_0166"
+		}
+	},
+	swamp_monster_unit_lvl4_0042 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			47,
+			20,
+			116,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			623,
+			107,
+			115
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0043",
+			"swamp_monster_unit_lvl4_0167",
+			"swamp_monster_unit_lvl4_0168"
+		}
+	},
+	swamp_monster_unit_lvl4_0044 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			44,
+			20,
+			116,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			382,
+			110,
+			115
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0045",
+			"swamp_monster_unit_lvl4_0169",
+			"swamp_monster_unit_lvl4_0170"
+		}
+	},
+	swamp_monster_unit_lvl4_0046 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			40,
+			20,
+			116,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			890,
+			114,
+			115
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0047",
+			"swamp_monster_unit_lvl4_0171",
+			"swamp_monster_unit_lvl4_0172"
+		}
+	},
+	swamp_monster_unit_lvl4_0048 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			69,
+			27,
+			36,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			490,
+			5,
+			165,
+			113
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0049"
+		}
+	},
+	swamp_monster_unit_lvl4_0050 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			91,
+			27,
+			28,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			146,
+			151,
+			116
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0051"
+		}
+	},
+	swamp_monster_unit_lvl4_0052 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			56,
+			31,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			482,
+			466,
+			124,
+			87
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0053"
+		}
+	},
+	swamp_monster_unit_lvl4_0054 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			74,
+			32,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			878,
+			745,
+			124,
+			67
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0055"
+		}
+	},
+	swamp_monster_unit_lvl4_0060 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			61,
+			53,
+			42,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			833,
+			146,
+			167,
+			89
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0061"
+		}
+	},
+	swamp_monster_unit_lvl4_0062 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			85,
+			45,
+			89,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			677,
+			745,
+			96,
+			90
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0063"
+		}
+	},
+	swamp_monster_unit_lvl4_0066 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			51,
+			87,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			893,
+			564,
+			105,
+			87
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0067",
+			"swamp_monster_unit_lvl4_0068",
+			"swamp_monster_unit_lvl4_0069",
+			"swamp_monster_unit_lvl4_0070",
+			"swamp_monster_unit_lvl4_0071",
+			"swamp_monster_unit_lvl4_0072",
+			"swamp_monster_unit_lvl4_0073"
+		}
+	},
+	swamp_monster_unit_lvl4_0087 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			108,
+			76,
+			66,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			959,
+			96,
+			62
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0088"
+		}
+	},
+	swamp_monster_unit_lvl4_0105 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			118,
+			84,
+			88,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			955,
+			466,
+			64,
+			58
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0106"
+		}
+	},
+	swamp_monster_unit_lvl4_0107 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			118,
+			104,
+			88,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			978,
+			64,
+			38
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0108"
+		}
+	},
+	swamp_monster_unit_lvl4_0111 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			89,
+			32,
+			88,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			564,
+			93,
+			107
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0112"
+		}
+	},
+	swamp_monster_unit_lvl4_0113 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			86,
+			25,
+			86,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			819,
+			98,
+			114
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0114"
+		}
+	},
+	swamp_monster_unit_lvl4_0115 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			86,
+			25,
+			86,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			701,
+			98,
+			115
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0116"
+		}
+	},
+	swamp_monster_unit_lvl4_0117 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			84,
+			26,
+			83,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			466,
+			103,
+			114
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0118"
+		}
+	},
+	swamp_monster_unit_lvl4_0121 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			87,
+			50,
+			85,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			461,
+			754,
+			98,
+			94
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0122"
+		}
+	},
+	swamp_monster_unit_lvl4_0127 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			29,
+			99,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			674,
+			93,
+			106
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0128"
+		}
+	},
+	swamp_monster_unit_lvl4_0129 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			50,
+			15,
+			115,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			500,
+			105,
+			120
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0130"
+		}
+	},
+	swamp_monster_unit_lvl4_0131 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			42,
+			15,
+			116,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			767,
+			112,
+			120
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0132"
+		}
+	},
+	swamp_monster_unit_lvl4_0133 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			38,
+			13,
+			116,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			642,
+			116,
+			122
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0134"
+		}
+	},
+	swamp_monster_unit_lvl4_0135 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			37,
+			13,
+			116,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			517,
+			117,
+			122
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0136"
+		}
+	},
+	swamp_monster_unit_lvl4_0137 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			34,
+			12,
+			117,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			391,
+			119,
+			123
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0138"
+		}
+	},
+	swamp_monster_unit_lvl4_0139 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			33,
+			12,
+			117,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			265,
+			120,
+			123
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0140"
+		}
+	},
+	swamp_monster_unit_lvl4_0141 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			65,
+			15,
+			33,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			172,
+			138
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0142"
+		}
+	},
+	swamp_monster_unit_lvl4_0143 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			89,
+			15,
+			28,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			180,
+			5,
+			153,
+			132
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0144"
+		}
+	},
+	swamp_monster_unit_lvl4_0145 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			46,
+			25,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			796,
+			265,
+			130,
+			103
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0146"
+		}
+	},
+	swamp_monster_unit_lvl4_0147 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			74,
+			30,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			645,
+			374,
+			126,
+			74
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0148"
+		}
+	},
+	swamp_monster_unit_lvl4_0149 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			74,
+			27,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			609,
+			466,
+			129,
+			80
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0150"
+		}
+	},
+	swamp_monster_unit_lvl4_0151 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			74,
+			28,
+			19
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			514,
+			374,
+			128,
+			73
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0152"
+		}
+	},
+	swamp_monster_unit_lvl4_0153 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			61,
+			53,
+			68,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			374,
+			141,
+			89
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0154"
+		}
+	},
+	swamp_monster_unit_lvl4_0173 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			69,
+			27,
+			37,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			658,
+			5,
+			164,
+			113
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0174"
+		}
+	},
+	swamp_monster_unit_lvl4_0175 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			91,
+			27,
+			35,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			146,
+			144,
+			116
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0176"
+		}
+	},
+	swamp_monster_unit_lvl4_0177 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			37,
+			26,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			529,
+			265,
+			129,
+			106
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0178"
+		}
+	},
+	swamp_monster_unit_lvl4_0179 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			35,
+			24,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			265,
+			132,
+			106
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0180"
+		}
+	},
+	swamp_monster_unit_lvl4_0181 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			35,
+			24,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			394,
+			265,
+			132,
+			106
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0182"
+		}
+	},
+	swamp_monster_unit_lvl4_0183 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			38,
+			24,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			661,
+			265,
+			132,
+			103
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0184"
+		}
+	},
+	swamp_monster_unit_lvl4_0185 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			61,
+			52,
+			24,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			306,
+			146,
+			185,
+			90
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0186"
+		}
+	},
+	swamp_monster_unit_lvl4_0187 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			85,
+			45,
+			24,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			669,
+			146,
+			161,
+			97
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0188"
+		}
+	},
+	swamp_monster_unit_lvl4_0189 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			51,
+			20,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			494,
+			146,
+			172,
+			92
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0190"
+		}
+	},
+	swamp_monster_unit_lvl4_0192 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			51,
+			87,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			654,
+			105,
+			87
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0193"
+		}
+	},
+	swamp_monster_unit_lvl4_0198 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			74,
+			43,
+			82,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			466,
+			114,
+			95
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0199"
+		}
+	},
+	swamp_monster_unit_lvl4_0200 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			74,
+			34,
+			80,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			741,
+			116,
+			104
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0201"
+		}
+	},
+	swamp_monster_unit_lvl4_0202 = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			77,
+			30,
+			83,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			128,
+			848,
+			110,
+			108
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0203"
+		}
+	},
+	swamp_monster_unit_lvl4_shadow = {
+		a_name = "kr4_swamp_monster_tower-1.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			108,
+			121,
+			108,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			955,
+			527,
+			54,
+			17
+		},
+		alias = {}
+	},
+	swamp_monster_tower_explosion_0001 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			15,
+			15,
+			14,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			443,
+			317,
+			36,
+			38
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0002"
+		}
+	},
+	swamp_monster_tower_explosion_0003 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			8,
+			7,
+			3,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			669,
+			54,
+			42
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0004"
+		}
+	},
+	swamp_monster_tower_explosion_0005 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			6,
+			4,
+			1,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			620,
+			58,
+			46
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0006"
+		}
+	},
+	swamp_monster_tower_explosion_0009 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			9,
+			9,
+			7,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			714,
+			49,
+			46
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0010"
+		}
+	},
+	swamp_monster_tower_explosion_0015 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			65,
+			57
+		},
+		trim = {
+			0,
+			0,
+			65,
+			57
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			560,
+			65,
+			57
+		},
+		alias = {
+			"swamp_monster_tower_explosion_0016",
+			"swamp_monster_tower_explosion_0017",
+			"swamp_monster_tower_explosion_0018"
+		}
+	},
+	Swamp_monster_tower_proyectile_instakill_lvl4 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			40,
+			39
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			357,
+			317,
+			40,
+			39
+		},
+		alias = {}
+	},
+	swamp_monster_tower_proyectile_lvl4 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			40,
+			39
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			400,
+			317,
+			40,
+			39
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0001 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			33,
+			37,
+			26,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			747,
+			252,
+			92,
+			57
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0002",
+			"swamp_monster_tower_shooter_lvl4_layer1_0003"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0004 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			21,
+			26,
+			48,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			709,
+			178,
+			82,
+			69
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0005"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0006 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			17,
+			24,
+			50,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			178,
+			84,
+			71
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0007"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0008 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			15,
+			24,
+			52,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			266,
+			178,
+			84,
+			71
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0009"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0010 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			22,
+			24,
+			47,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			353,
+			178,
+			82,
+			71
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0011"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0014 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			58,
+			12,
+			5,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			182,
+			88,
+			92
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0015"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0016 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			59,
+			15,
+			6,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			365,
+			86,
+			88
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0017"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0018 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			58,
+			22,
+			5,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			608,
+			91,
+			88,
+			81
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0019"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0020 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			60,
+			37,
+			5,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			438,
+			178,
+			86,
+			66
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0021"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0022 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			60,
+			37,
+			5,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			527,
+			178,
+			86,
+			66
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0023 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			48,
+			44,
+			25,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			525,
+			377,
+			78,
+			61
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0024"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0025 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			38,
+			34,
+			24,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			655,
+			252,
+			89,
+			62
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0026"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0027 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			32,
+			41,
+			27,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			430,
+			377,
+			92,
+			54
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0028"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0029 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			32,
+			37,
+			27,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			842,
+			252,
+			92,
+			57
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0030"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0031 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			32,
+			37,
+			27,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			356,
+			252,
+			92,
+			61
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0032"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0033 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			32,
+			37,
+			27,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			262,
+			317,
+			92,
+			57
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0034 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			30,
+			34,
+			30,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			262,
+			252,
+			91,
+			62
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0035",
+			"swamp_monster_tower_shooter_lvl4_layer1_0059",
+			"swamp_monster_tower_shooter_lvl4_layer1_0060",
+			"swamp_monster_tower_shooter_lvl4_layer1_0061"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0036 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			25,
+			35,
+			48,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			606,
+			377,
+			78,
+			59
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0037"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0038 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			15,
+			35,
+			59,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			687,
+			377,
+			77,
+			59
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0039"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0040 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			11,
+			39,
+			66,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			928,
+			377,
+			74,
+			56
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0041"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0042 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			14,
+			37,
+			61,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			849,
+			377,
+			76,
+			58
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0043"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0048 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			64,
+			12,
+			3,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			699,
+			91,
+			84,
+			84
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0049"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0050 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			63,
+			35,
+			7,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			937,
+			252,
+			81,
+			62
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0051"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0052 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			63,
+			35,
+			7,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			262,
+			377,
+			81,
+			62
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer1_0053"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0054 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			63,
+			35,
+			7,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			377,
+			81,
+			62
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0055 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			47,
+			40,
+			5,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			451,
+			252,
+			99,
+			56
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0056 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			47,
+			40,
+			5,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			553,
+			252,
+			99,
+			56
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0057 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			35,
+			29,
+			29,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			794,
+			178,
+			87,
+			65
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer1_0058 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			35,
+			29,
+			29,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			884,
+			178,
+			87,
+			65
+		},
+		alias = {}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0004 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			18,
+			8,
+			86,
+			75
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			137,
+			47,
+			42
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0005"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0006 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			13,
+			6,
+			92,
+			76
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			91,
+			46,
+			43
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0007"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0008 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			12,
+			6,
+			94,
+			78
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			182,
+			45,
+			41
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0009"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0038 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			6,
+			41,
+			106,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			763,
+			39,
+			44
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0039"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer2_0042 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			4,
+			52,
+			113,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			220,
+			933,
+			34,
+			43
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer2_0043"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0004 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			19,
+			12,
+			87,
+			75
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			810,
+			45,
+			38
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0005"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0006 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			13,
+			10,
+			94,
+			77
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			851,
+			44,
+			38
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0007"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0008 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			12,
+			10,
+			96,
+			77
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			892,
+			43,
+			38
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0009"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0038 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			9,
+			43,
+			104,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			933,
+			38,
+			42
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0039"
+		}
+	},
+	swamp_monster_tower_shooter_lvl4_layer3_0042 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			151,
+			125
+		},
+		trim = {
+			6,
+			50,
+			112,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			988,
+			5,
+			33,
+			46
+		},
+		alias = {
+			"swamp_monster_tower_shooter_lvl4_layer3_0043"
+		}
+	},
+	swamp_monster_tower_smoke_0003 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			5,
+			8,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			482,
+			317,
+			23,
+			53
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0004",
+			"swamp_monster_tower_smoke_0005"
+		}
+	},
+	swamp_monster_tower_smoke_0006 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			6,
+			11,
+			4,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			78,
+			878,
+			21,
+			50
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0007",
+			"swamp_monster_tower_smoke_0008"
+		}
+	},
+	swamp_monster_tower_smoke_0009 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			5,
+			8,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			508,
+			317,
+			23,
+			53
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0010",
+			"swamp_monster_tower_smoke_0011"
+		}
+	},
+	swamp_monster_tower_smoke_0012 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			5,
+			9,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			534,
+			317,
+			23,
+			52
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0013",
+			"swamp_monster_tower_smoke_0014"
+		}
+	},
+	swamp_monster_tower_smoke_0015 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			6,
+			10,
+			3,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			560,
+			317,
+			22,
+			51
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0016",
+			"swamp_monster_tower_smoke_0017"
+		}
+	},
+	swamp_monster_tower_smoke_0018 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			31,
+			61
+		},
+		trim = {
+			5,
+			10,
+			4,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			585,
+			317,
+			22,
+			51
+		},
+		alias = {
+			"swamp_monster_tower_smoke_0019",
+			"swamp_monster_tower_smoke_0020"
+		}
+	},
+	swamp_monster_tower_spawn_explosion_0001 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			14,
+			18,
+			20,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			91,
+			94,
+			88
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0016 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			22,
+			22,
+			10,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			202,
+			91,
+			96,
+			84
+		},
+		alias = {}
+	},
+	swamp_monster_tower_spawn_explosion_0017 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			128,
+			114
+		},
+		trim = {
+			44,
+			56,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			970,
+			77,
+			51
+		},
+		alias = {
+			"swamp_monster_tower_spawn_explosion_0018"
+		}
+	},
+	swamp_monster_unit_lvl4_0002 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			51,
+			93,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			301,
+			91,
+			94,
+			84
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0003"
+		}
+	},
+	swamp_monster_unit_lvl4_0004 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			54,
+			91,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			889,
+			5,
+			96,
+			80
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0005"
+		}
+	},
+	swamp_monster_unit_lvl4_0006 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			56,
+			90,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			398,
+			91,
+			97,
+			78
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0007"
+		}
+	},
+	swamp_monster_unit_lvl4_0008 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			55,
+			89,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			788,
+			5,
+			98,
+			79
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0009"
+		}
+	},
+	swamp_monster_unit_lvl4_0010 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			53,
+			87,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			459,
+			5,
+			100,
+			80
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0011"
+		}
+	},
+	swamp_monster_unit_lvl4_0012 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			51,
+			87,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			100,
+			83
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0013"
+		}
+	},
+	swamp_monster_unit_lvl4_0026 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			83,
+			52,
+			90,
+			30
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			102,
+			91,
+			97,
+			84
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0027"
+		}
+	},
+	swamp_monster_unit_lvl4_0056 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			74,
+			33,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			108,
+			5,
+			123,
+			67
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0057"
+		}
+	},
+	swamp_monster_unit_lvl4_0058 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			73,
+			41,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			562,
+			5,
+			115,
+			68
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0059"
+		}
+	},
+	swamp_monster_unit_lvl4_0074 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			82,
+			61,
+			81,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			234,
+			5,
+			107,
+			77
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0075"
+		}
+	},
+	swamp_monster_unit_lvl4_0076 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			104,
+			75,
+			76,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			616,
+			178,
+			90,
+			63
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0077"
+		}
+	},
+	swamp_monster_unit_lvl4_0078 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			106,
+			65,
+			74,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			786,
+			91,
+			90,
+			73
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0079"
+		}
+	},
+	swamp_monster_unit_lvl4_0080 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			108,
+			68,
+			72,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			621,
+			90,
+			70
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0081"
+		}
+	},
+	swamp_monster_unit_lvl4_0082 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			108,
+			68,
+			70,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			879,
+			91,
+			92,
+			70
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0083",
+			"swamp_monster_unit_lvl4_0084"
+		}
+	},
+	swamp_monster_unit_lvl4_0085 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			108,
+			70,
+			68,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			456,
+			94,
+			68
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0086"
+		}
+	},
+	swamp_monster_unit_lvl4_0089 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			68,
+			85,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			407,
+			70,
+			74
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0090"
+		}
+	},
+	swamp_monster_unit_lvl4_0091 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			53,
+			85,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			878,
+			70,
+			89
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0092"
+		}
+	},
+	swamp_monster_unit_lvl4_0093 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			52,
+			85,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			694,
+			70,
+			90
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0094"
+		}
+	},
+	swamp_monster_unit_lvl4_0095 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			115,
+			51,
+			85,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			527,
+			70,
+			91
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0096"
+		}
+	},
+	swamp_monster_unit_lvl4_0097 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			54,
+			85,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			787,
+			71,
+			88
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0098"
+		}
+	},
+	swamp_monster_unit_lvl4_0099 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			114,
+			66,
+			85,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			328,
+			71,
+			76
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0100"
+		}
+	},
+	swamp_monster_unit_lvl4_0101 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			111,
+			63,
+			85,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			102,
+			178,
+			74,
+			81
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0102"
+		}
+	},
+	swamp_monster_unit_lvl4_0103 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			108,
+			88,
+			83,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			377,
+			79,
+			57
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0104"
+		}
+	},
+	swamp_monster_unit_lvl4_0109 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			112,
+			69,
+			88,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			484,
+			70,
+			73
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0110"
+		}
+	},
+	swamp_monster_unit_lvl4_0119 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			67,
+			80,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			344,
+			5,
+			112,
+			73
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0120"
+		}
+	},
+	swamp_monster_unit_lvl4_0155 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			92,
+			50,
+			86,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			277,
+			92,
+			85
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0156"
+		}
+	},
+	swamp_monster_unit_lvl4_0194 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			79,
+			64,
+			86,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			680,
+			5,
+			105,
+			74
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0195"
+		}
+	},
+	swamp_monster_unit_lvl4_0196 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			78,
+			68,
+			85,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			498,
+			91,
+			107,
+			70
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0197"
+		}
+	},
+	swamp_monster_unit_lvl4_0204 = {
+		a_name = "kr4_swamp_monster_tower-2.dds",
+		size = {
+			270,
+			166
+		},
+		trim = {
+			89,
+			65,
+			101,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			179,
+			252,
+			80,
+			73
+		},
+		alias = {
+			"swamp_monster_unit_lvl4_0205"
+		}
+	}
+}

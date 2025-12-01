@@ -2152,7 +2152,7 @@ return {
         action_arg = "pandas_retreat",
         action = "tw_free_action",
         halo = "glow_ico_main",
-        image = "quickmenu_retreat_icons_tower_panda",
+        image = "kr5_quickmenu_action_icons_0006",
         place = 3,
         tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
         tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")
@@ -2362,8 +2362,8 @@ return {
         } }
     }), templates.rally, templates.sell, merge(templates.mode, {
         image = "kr5_quickmenu_action_icons_0002",
-        image_mode1 = "kr5_quickmenu_action_icons_0001",
         image_mode0 = "kr5_quickmenu_action_icons_0002",
+        image_mode1 = "kr5_quickmenu_action_icons_0001",
         tt_title_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NAME"),
         tt_desc_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_DESCRIPTION"),
         tt_phrase_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NOTE"),

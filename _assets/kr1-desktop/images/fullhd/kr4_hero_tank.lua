@@ -1,0 +1,18053 @@
+return {
+	hero_tank_0040 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			83,
+			76,
+			87,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1958,
+			1525,
+			86,
+			98
+		},
+		alias = {
+			"hero_tank_0041"
+		}
+	},
+	hero_tank_0050 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1948,
+			1628,
+			95,
+			99
+		},
+		alias = {
+			"hero_tank_0051"
+		}
+	},
+	hero_tank_0076 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			68,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1945,
+			95,
+			100
+		},
+		alias = {
+			"hero_tank_0077"
+		}
+	},
+	hero_tank_0095 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			61,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1939,
+			1833,
+			95,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0096 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			61,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1647,
+			95,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0097 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			53,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1550,
+			94,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0098 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			53,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1668,
+			94,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0099 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			46,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1220,
+			94,
+			122
+		},
+		alias = {
+			"hero_tank_0100"
+		}
+	},
+	hero_tank_0101 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			39,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			685,
+			94,
+			129
+		},
+		alias = {
+			"hero_tank_0102"
+		}
+	},
+	hero_tank_0103 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			42,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1846,
+			94,
+			126
+		},
+		alias = {
+			"hero_tank_0104"
+		}
+	},
+	hero_tank_0105 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			41,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			949,
+			94,
+			127
+		},
+		alias = {
+			"hero_tank_0106"
+		}
+	},
+	hero_tank_0107 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			41,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1079,
+			94,
+			127
+		},
+		alias = {
+			"hero_tank_0108"
+		}
+	},
+	hero_tank_0109 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			41,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1209,
+			94,
+			127
+		},
+		alias = {}
+	},
+	hero_tank_0110 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			41,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1339,
+			94,
+			127
+		},
+		alias = {
+			"hero_tank_0111"
+		}
+	},
+	hero_tank_0112 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			41,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1469,
+			94,
+			127
+		},
+		alias = {
+			"hero_tank_0113",
+			"hero_tank_0114",
+			"hero_tank_0115",
+			"hero_tank_0116",
+			"hero_tank_0117",
+			"hero_tank_0118"
+		}
+	},
+	hero_tank_0119 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			41,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1599,
+			94,
+			127
+		},
+		alias = {
+			"hero_tank_0120",
+			"hero_tank_0121",
+			"hero_tank_0122",
+			"hero_tank_0123",
+			"hero_tank_0124",
+			"hero_tank_0125",
+			"hero_tank_0126",
+			"hero_tank_0127",
+			"hero_tank_0128"
+		}
+	},
+	hero_tank_0129 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			39,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			817,
+			94,
+			129
+		},
+		alias = {
+			"hero_tank_0130"
+		}
+	},
+	hero_tank_0131 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			35,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			1888,
+			94,
+			133
+		},
+		alias = {
+			"hero_tank_0132"
+		}
+	},
+	hero_tank_0133 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			35,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1782,
+			94,
+			133
+		},
+		alias = {
+			"hero_tank_0134"
+		}
+	},
+	hero_tank_0135 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			34,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			1751,
+			100,
+			134
+		},
+		alias = {}
+	},
+	hero_tank_0136 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			27,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			1441,
+			100,
+			141
+		},
+		alias = {}
+	},
+	hero_tank_0137 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			71,
+			27,
+			82,
+			57
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			1296,
+			103,
+			142
+		},
+		alias = {
+			"hero_tank_0138"
+		}
+	},
+	hero_tank_0139 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			69,
+			51,
+			83,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1729,
+			104,
+			114
+		},
+		alias = {
+			"hero_tank_0140"
+		}
+	},
+	hero_tank_0143 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			69,
+			68,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1636,
+			1525,
+			104,
+			100
+		},
+		alias = {
+			"hero_tank_0144"
+		}
+	},
+	hero_tank_0174 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			58,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1534,
+			95,
+			110
+		},
+		alias = {
+			"hero_tank_0175"
+		}
+	},
+	hero_tank_0176 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			55,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1786,
+			95,
+			113
+		},
+		alias = {
+			"hero_tank_0177"
+		}
+	},
+	hero_tank_0180 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			54,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1316,
+			95,
+			114
+		},
+		alias = {
+			"hero_tank_0181"
+		}
+	},
+	hero_tank_0182 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			59,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1636,
+			1846,
+			95,
+			109
+		},
+		alias = {
+			"hero_tank_0183"
+		}
+	},
+	hero_tank_0184 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			56,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1902,
+			95,
+			112
+		},
+		alias = {
+			"hero_tank_0185"
+		}
+	},
+	hero_tank_0186 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			57,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1420,
+			95,
+			111
+		},
+		alias = {
+			"hero_tank_0187",
+			"hero_tank_0204",
+			"hero_tank_0205"
+		}
+	},
+	hero_tank_0188 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			54,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1433,
+			95,
+			114
+		},
+		alias = {
+			"hero_tank_0189"
+		}
+	},
+	hero_tank_0190 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			52,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1420,
+			95,
+			116
+		},
+		alias = {
+			"hero_tank_0191"
+		}
+	},
+	hero_tank_0192 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			52,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1539,
+			95,
+			116
+		},
+		alias = {
+			"hero_tank_0193"
+		}
+	},
+	hero_tank_0194 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			51,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1345,
+			95,
+			117
+		},
+		alias = {
+			"hero_tank_0195"
+		}
+	},
+	hero_tank_0196 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			51,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1465,
+			95,
+			117
+		},
+		alias = {
+			"hero_tank_0197"
+		}
+	},
+	hero_tank_0198 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			51,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1585,
+			95,
+			117
+		},
+		alias = {
+			"hero_tank_0199"
+		}
+	},
+	hero_tank_0200 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			51,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1705,
+			95,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0201 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			51,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1825,
+			95,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0202 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			51,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1196,
+			95,
+			117
+		},
+		alias = {
+			"hero_tank_0203"
+		}
+	},
+	hero_tank_0206 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			53,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1658,
+			95,
+			115
+		},
+		alias = {
+			"hero_tank_0207"
+		}
+	},
+	hero_tank_0208 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			47,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			1096,
+			95,
+			121
+		},
+		alias = {
+			"hero_tank_0209"
+		}
+	},
+	hero_tank_0235 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			71,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1737,
+			1946,
+			98,
+			97
+		},
+		alias = {
+			"hero_tank_0236"
+		}
+	},
+	hero_tank_0237 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			66,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1861,
+			1420,
+			102,
+			102
+		},
+		alias = {
+			"hero_tank_0238"
+		}
+	},
+	hero_tank_0239 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			72,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1408,
+			1096,
+			102,
+			96
+		},
+		alias = {
+			"hero_tank_0240"
+		}
+	},
+	hero_tank_0241 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			68,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1838,
+			1730,
+			102,
+			100
+		},
+		alias = {
+			"hero_tank_0242",
+			"hero_tank_0243"
+		}
+	},
+	hero_tank_0244 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			60,
+			51,
+			53,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			290,
+			143,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0245 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			60,
+			50,
+			53,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1731,
+			143,
+			143,
+			118
+		},
+		alias = {}
+	},
+	hero_tank_0246 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			59,
+			51,
+			52,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1583,
+			143,
+			145,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0247 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			59,
+			53,
+			51,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1666,
+			5,
+			146,
+			120
+		},
+		alias = {}
+	},
+	hero_tank_0248 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			58,
+			53,
+			50,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1515,
+			5,
+			148,
+			121
+		},
+		alias = {}
+	},
+	hero_tank_0249 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			57,
+			53,
+			50,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1363,
+			5,
+			149,
+			122
+		},
+		alias = {}
+	},
+	hero_tank_0250 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			57,
+			53,
+			49,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1434,
+			150,
+			137
+		},
+		alias = {}
+	},
+	hero_tank_0251 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			57,
+			54,
+			50,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1757,
+			149,
+			137
+		},
+		alias = {}
+	},
+	hero_tank_0252 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			57,
+			53,
+			49,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1110,
+			150,
+			139
+		},
+		alias = {}
+	},
+	hero_tank_0253 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			56,
+			54,
+			49,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			406,
+			151,
+			143
+		},
+		alias = {}
+	},
+	hero_tank_0254 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			56,
+			68,
+			49,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			473,
+			5,
+			151,
+			130
+		},
+		alias = {}
+	},
+	hero_tank_0255 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			55,
+			68,
+			52,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			627,
+			5,
+			149,
+			130
+		},
+		alias = {}
+	},
+	hero_tank_0256 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			55,
+			68,
+			52,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			779,
+			5,
+			149,
+			130
+		},
+		alias = {}
+	},
+	hero_tank_0257 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			55,
+			64,
+			53,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			5,
+			148,
+			135
+		},
+		alias = {}
+	},
+	hero_tank_0258 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			54,
+			64,
+			53,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1897,
+			149,
+			136
+		},
+		alias = {}
+	},
+	hero_tank_0259 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			64,
+			74,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1013,
+			143,
+			132,
+			136
+		},
+		alias = {}
+	},
+	hero_tank_0260 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			60,
+			74,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			877,
+			143,
+			133,
+			140
+		},
+		alias = {}
+	},
+	hero_tank_0261 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			60,
+			73,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			740,
+			143,
+			134,
+			140
+		},
+		alias = {}
+	},
+	hero_tank_0262 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			60,
+			73,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			602,
+			143,
+			135,
+			140
+		},
+		alias = {}
+	},
+	hero_tank_0263 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			56,
+			73,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			143,
+			135,
+			144
+		},
+		alias = {}
+	},
+	hero_tank_0264 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			47,
+			56,
+			70,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			460,
+			143,
+			139,
+			139
+		},
+		alias = {}
+	},
+	hero_tank_0265 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			46,
+			56,
+			69,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1219,
+			5,
+			141,
+			131
+		},
+		alias = {}
+	},
+	hero_tank_0266 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			46,
+			53,
+			69,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			931,
+			5,
+			141,
+			133
+		},
+		alias = {}
+	},
+	hero_tank_0267 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			46,
+			53,
+			69,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1075,
+			5,
+			141,
+			132
+		},
+		alias = {}
+	},
+	hero_tank_0268 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			46,
+			53,
+			68,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1438,
+			143,
+			142,
+			120
+		},
+		alias = {}
+	},
+	hero_tank_0269 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			46,
+			51,
+			67,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1815,
+			5,
+			143,
+			122
+		},
+		alias = {}
+	},
+	hero_tank_0270 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			51,
+			67,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1294,
+			143,
+			141,
+			122
+		},
+		alias = {}
+	},
+	hero_tank_0271 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			51,
+			66,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1115,
+			410,
+			142,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0272 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			50,
+			67,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			971,
+			410,
+			141,
+			118
+		},
+		alias = {}
+	},
+	hero_tank_0273 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			51,
+			50,
+			66,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1403,
+			410,
+			139,
+			118
+		},
+		alias = {}
+	},
+	hero_tank_0274 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			56,
+			49,
+			66,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			533,
+			134,
+			119
+		},
+		alias = {}
+	},
+	hero_tank_0275 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			57,
+			49,
+			66,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1052,
+			533,
+			133,
+			119
+		},
+		alias = {}
+	},
+	hero_tank_0276 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			60,
+			52,
+			65,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			290,
+			131,
+			116
+		},
+		alias = {}
+	},
+	hero_tank_0277 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			70,
+			51,
+			58,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1777,
+			290,
+			128,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0278 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			70,
+			51,
+			58,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1908,
+			290,
+			128,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0279 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			69,
+			52,
+			57,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1376,
+			290,
+			130,
+			116
+		},
+		alias = {}
+	},
+	hero_tank_0280 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			51,
+			53,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1870,
+			533,
+			131,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0281 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			50,
+			53,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1601,
+			533,
+			131,
+			118
+		},
+		alias = {}
+	},
+	hero_tank_0282 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			51,
+			52,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1735,
+			533,
+			132,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0283 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			53,
+			51,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1448,
+			655,
+			129,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0284 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			53,
+			50,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			655,
+			130,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0285 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			53,
+			50,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1048,
+			655,
+			130,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0286 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			53,
+			49,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1509,
+			290,
+			131,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0287 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			54,
+			49,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1314,
+			655,
+			131,
+			114
+		},
+		alias = {}
+	},
+	hero_tank_0288 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			53,
+			49,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			290,
+			131,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0289 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			54,
+			49,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1580,
+			655,
+			129,
+			114
+		},
+		alias = {}
+	},
+	hero_tank_0290 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			49,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1642,
+			888,
+			129,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0291 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			56,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1895,
+			888,
+			122,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0292 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			56,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			998,
+			122,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0304 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			71,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1513,
+			1096,
+			102,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0305 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			71,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1618,
+			1096,
+			102,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0308 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1160,
+			998,
+			101,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0309 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1264,
+			998,
+			101,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0310 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1368,
+			998,
+			101,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0311 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1472,
+			998,
+			101,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0312 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1576,
+			998,
+			101,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0313 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1680,
+			998,
+			101,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0314 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1723,
+			1096,
+			101,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0315 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1827,
+			1096,
+			101,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0316 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1943,
+			1730,
+			101,
+			97
+		},
+		alias = {}
+	},
+	hero_tank_0317 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1939,
+			1943,
+			101,
+			97
+		},
+		alias = {}
+	},
+	hero_tank_0318 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1784,
+			998,
+			101,
+			95
+		},
+		alias = {
+			"hero_tank_0319"
+		}
+	},
+	hero_tank_0320 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1844,
+			1628,
+			101,
+			97
+		},
+		alias = {
+			"hero_tank_0321"
+		}
+	},
+	hero_tank_0322 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1888,
+			998,
+			101,
+			95
+		},
+		alias = {
+			"hero_tank_0323"
+		}
+	},
+	hero_tank_0344 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			71,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1931,
+			1096,
+			102,
+			95
+		},
+		alias = {
+			"hero_tank_0345"
+		}
+	},
+	hero_tank_0372 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			63,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1838,
+			1940,
+			95,
+			105
+		},
+		alias = {}
+	},
+	hero_tank_0373 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			63,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1757,
+			95,
+			105
+		},
+		alias = {}
+	},
+	hero_tank_0374 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			63,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1865,
+			95,
+			105
+		},
+		alias = {}
+	},
+	hero_tank_0378 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			69,
+			79,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1535,
+			1420,
+			103,
+			102
+		},
+		alias = {}
+	},
+	hero_tank_0379 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			69,
+			80,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1851,
+			1525,
+			104,
+			99
+		},
+		alias = {}
+	},
+	hero_tank_0380 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			69,
+			80,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1737,
+			1628,
+			104,
+			99
+		},
+		alias = {}
+	},
+	hero_tank_0381 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			71,
+			69,
+			80,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1743,
+			1525,
+			105,
+			99
+		},
+		alias = {}
+	},
+	hero_tank_0382 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			71,
+			68,
+			80,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1641,
+			1420,
+			105,
+			100
+		},
+		alias = {}
+	},
+	hero_tank_0383 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1196,
+			102,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0384 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1308,
+			102,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0385 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1535,
+			1525,
+			98,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0386 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1535,
+			1635,
+			98,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0387 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1535,
+			1745,
+			98,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0388 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			70,
+			82,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1737,
+			1730,
+			98,
+			105
+		},
+		alias = {}
+	},
+	hero_tank_0389 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			70,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1535,
+			1855,
+			98,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0390 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1645,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0391 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1756,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0392 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			66,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1776,
+			98,
+			111
+		},
+		alias = {}
+	},
+	hero_tank_0393 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			66,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			1890,
+			98,
+			111
+		},
+		alias = {}
+	},
+	hero_tank_0394 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			67,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1196,
+			98,
+			110
+		},
+		alias = {}
+	},
+	hero_tank_0395 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			67,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1196,
+			98,
+			110
+		},
+		alias = {}
+	},
+	hero_tank_0396 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1538,
+			1196,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0397 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1639,
+			1196,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0398 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1867,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0399 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1309,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0400 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1538,
+			1309,
+			98,
+			108
+		},
+		alias = {
+			"hero_tank_0401"
+		}
+	},
+	hero_tank_0402 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			73,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1838,
+			1833,
+			98,
+			104
+		},
+		alias = {
+			"hero_tank_0403"
+		}
+	},
+	hero_tank_0404 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			72,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1737,
+			1838,
+			98,
+			105
+		},
+		alias = {
+			"hero_tank_0405"
+		}
+	},
+	hero_tank_0406 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			71,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1636,
+			1628,
+			98,
+			106
+		},
+		alias = {
+			"hero_tank_0407"
+		}
+	},
+	hero_tank_0408 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			71,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1636,
+			1737,
+			98,
+			106
+		},
+		alias = {
+			"hero_tank_0409"
+		}
+	},
+	hero_tank_0410 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1639,
+			1309,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0411 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1740,
+			1309,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0412 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1841,
+			1309,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0413 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			69,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1942,
+			1309,
+			98,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0414 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1740,
+			1196,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0415 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1841,
+			1196,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0416 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1942,
+			1196,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0417 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1309,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0418 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1421,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0419 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			68,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1533,
+			98,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0470 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			90,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1636,
+			1958,
+			98,
+			87
+		},
+		alias = {
+			"hero_tank_0471"
+		}
+	},
+	hero_tank_0507 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			51,
+			70,
+			87,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1521,
+			888,
+			118,
+			104
+		},
+		alias = {}
+	},
+	hero_tank_0508 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			51,
+			70,
+			86,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1163,
+			888,
+			119,
+			105
+		},
+		alias = {}
+	},
+	hero_tank_0509 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			51,
+			68,
+			84,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			888,
+			121,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0510 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			51,
+			68,
+			82,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1475,
+			773,
+			123,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0511 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			64,
+			81,
+			50
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			773,
+			125,
+			112
+		},
+		alias = {}
+	},
+	hero_tank_0512 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			64,
+			79,
+			50
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1841,
+			655,
+			127,
+			112
+		},
+		alias = {}
+	},
+	hero_tank_0513 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			62,
+			77,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1181,
+			655,
+			130,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0514 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			62,
+			75,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1241,
+			290,
+			132,
+			115
+		},
+		alias = {}
+	},
+	hero_tank_0515 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			61,
+			74,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			290,
+			132,
+			116
+		},
+		alias = {}
+	},
+	hero_tank_0516 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			61,
+			73,
+			48
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1464,
+			533,
+			134,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0517 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			62,
+			72,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1188,
+			533,
+			135,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0518 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			62,
+			72,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1326,
+			533,
+			135,
+			117
+		},
+		alias = {}
+	},
+	hero_tank_0519 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			61,
+			71,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1825,
+			410,
+			136,
+			118
+		},
+		alias = {}
+	},
+	hero_tank_0520 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			61,
+			70,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1545,
+			410,
+			137,
+			119
+		},
+		alias = {}
+	},
+	hero_tank_0521 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			61,
+			70,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1685,
+			410,
+			137,
+			119
+		},
+		alias = {}
+	},
+	hero_tank_0522 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			61,
+			69,
+			45
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			410,
+			139,
+			120
+		},
+		alias = {}
+	},
+	hero_tank_0523 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			63,
+			68,
+			45
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1260,
+			410,
+			140,
+			118
+		},
+		alias = {}
+	},
+	hero_tank_0524 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			63,
+			67,
+			44
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			828,
+			410,
+			140,
+			119
+		},
+		alias = {}
+	},
+	hero_tank_0525 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			65,
+			87,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1847,
+			773,
+			121,
+			108
+		},
+		alias = {}
+	},
+	hero_tank_0526 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			65,
+			87,
+			56
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1039,
+			888,
+			121,
+			105
+		},
+		alias = {}
+	},
+	hero_tank_0527 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			62,
+			88,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1601,
+			773,
+			120,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0528 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			48,
+			62,
+			88,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1724,
+			773,
+			120,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0529 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			62,
+			89,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			998,
+			117,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0530 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			62,
+			89,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1110,
+			117,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0531 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			61,
+			91,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1285,
+			888,
+			115,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0532 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			61,
+			91,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1403,
+			888,
+			115,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0533 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			62,
+			92,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1334,
+			115,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0534 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			62,
+			92,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1918,
+			114,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0535 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			61,
+			92,
+			56
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1446,
+			115,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0536 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			61,
+			92,
+			56
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1558,
+			115,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0537 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			50,
+			62,
+			91,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1670,
+			115,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0538 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			62,
+			91,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			1222,
+			116,
+			109
+		},
+		alias = {}
+	},
+	hero_tank_0539 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			49,
+			65,
+			89,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1774,
+			888,
+			118,
+			100
+		},
+		alias = {}
+	},
+	hero_tank_0540 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			52,
+			68,
+			89,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			1096,
+			115,
+			97
+		},
+		alias = {}
+	},
+	hero_tank_0541 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			56,
+			69,
+			72,
+			50
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1193,
+			773,
+			128,
+			107
+		},
+		alias = {}
+	},
+	hero_tank_0542 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			75,
+			80,
+			72,
+			50
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1749,
+			1420,
+			109,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0543 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			67,
+			71,
+			63,
+			42
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1712,
+			655,
+			126,
+			113
+		},
+		alias = {
+			"hero_tank_0544"
+		}
+	},
+	hero_tank_0545 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			61,
+			75,
+			58,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			290,
+			137,
+			117
+		},
+		alias = {
+			"hero_tank_0546"
+		}
+	},
+	hero_tank_0547 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			58,
+			73,
+			57,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1877,
+			143,
+			141,
+			119
+		},
+		alias = {
+			"hero_tank_0548"
+		}
+	},
+	hero_tank_0549 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			56,
+			73,
+			57,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1148,
+			143,
+			143,
+			122
+		},
+		alias = {
+			"hero_tank_0550"
+		}
+	},
+	hero_tank_expendable1_0005 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			11,
+			45,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			652,
+			1983,
+			30,
+			46
+		},
+		alias = {
+			"hero_tank_expendable1_0006"
+		}
+	},
+	hero_tank_expendable1_0007 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			32,
+			42,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			1077,
+			29,
+			27
+		},
+		alias = {
+			"hero_tank_expendable1_0008"
+		}
+	},
+	hero_tank_expendable1_0052 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			23,
+			11,
+			50,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2004,
+			533,
+			41,
+			48
+		},
+		alias = {
+			"hero_tank_expendable1_0053"
+		}
+	},
+	hero_tank_expendable1_0062 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			6,
+			40,
+			59,
+			9
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			127,
+			709,
+			49,
+			23
+		},
+		alias = {
+			"hero_tank_expendable1_0063"
+		}
+	},
+	hero_tank_expendable1_shadow = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			52,
+			43,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			652,
+			2032,
+			28,
+			7
+		},
+		alias = {
+			"hero_tank_expendable2_shadow"
+		}
+	},
+	hero_tank_expendable2_0054 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			25,
+			27,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			157,
+			2013,
+			45,
+			32
+		},
+		alias = {
+			"hero_tank_expendable2_0055"
+		}
+	},
+	hero_tank_expendable2_0066 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			34,
+			22,
+			20,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1389,
+			60,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0067 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			34,
+			22,
+			19,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1971,
+			847,
+			61,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0086 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			25,
+			42,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			767,
+			1975,
+			28,
+			40
+		},
+		alias = {
+			"hero_tank_expendable2_0087"
+		}
+	},
+	hero_tank_expendable2_0158 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			6,
+			40,
+			57,
+			9
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1992,
+			1068,
+			51,
+			23
+		},
+		alias = {
+			"hero_tank_expendable2_0159"
+		}
+	},
+	hero_tank_fire_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			7,
+			3,
+			2,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2020,
+			888,
+			25,
+			36
+		},
+		alias = {
+			"hero_tank_fire_0004"
+		}
+	},
+	hero_tank_fire_0005 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			7,
+			2,
+			3,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2020,
+			927,
+			24,
+			37
+		},
+		alias = {
+			"hero_tank_fire_0006"
+		}
+	},
+	hero_tank_fire_loop_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			12,
+			25,
+			66,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			649,
+			2,
+			3
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0002 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1231,
+			2004,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0035 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			1703,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0036 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			1032,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			12,
+			39,
+			8,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1971,
+			734,
+			72,
+			46
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0002 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			8,
+			18,
+			6,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			1975,
+			78,
+			67
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			7,
+			8,
+			6,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1437,
+			1973,
+			79,
+			68
+		},
+		alias = {
+			"hero_tank_GroundSlam_decal_0004"
+		}
+	},
+	hero_tank_GroundSlam_decal_0007 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			7,
+			3,
+			5,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1983,
+			80,
+			59
+		},
+		alias = {
+			"hero_tank_GroundSlam_decal_0008"
+		}
+	},
+	hero_tank_GroundSlam_decal_0011 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			10,
+			5,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1988,
+			77,
+			56
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0012 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			10,
+			5,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			798,
+			77,
+			56
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0013 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			13,
+			7,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			857,
+			75,
+			54
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0014 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			13,
+			7,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			914,
+			75,
+			54
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0015 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			15,
+			7,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1327,
+			75,
+			59
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0016 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			15,
+			7,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			736,
+			75,
+			59
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0017 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			10,
+			17,
+			7,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			127,
+			641,
+			75,
+			65
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_effect_0002 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			179,
+			97
+		},
+		trim = {
+			12,
+			12,
+			13,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1251,
+			1096,
+			154,
+			72
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_ground = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			89,
+			66
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			1978,
+			89,
+			66
+		},
+		alias = {}
+	},
+	hero_tank_hit_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			11,
+			23,
+			8,
+			8
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1613,
+			263,
+			26,
+			24
+		},
+		alias = {
+			"hero_tank_hit_0002"
+		}
+	},
+	hero_tank_hit_0004 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			2,
+			6,
+			2,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2004,
+			584,
+			41,
+			47
+		},
+		alias = {}
+	},
+	hero_tank_hit_0009 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			3,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			159,
+			406,
+			42,
+			55
+		},
+		alias = {}
+	},
+	hero_tank_hit_0010 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			3,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			159,
+			464,
+			42,
+			55
+		},
+		alias = {}
+	},
+	hero_tank_hit_0017 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			11,
+			0,
+			6,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			767,
+			2018,
+			28,
+			24
+		},
+		alias = {
+			"hero_tank_hit_0018"
+		}
+	},
+	hero_tank_hit_air_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			10,
+			23,
+			9,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1251,
+			1171,
+			26,
+			22
+		},
+		alias = {
+			"hero_tank_hit_air_0002"
+		}
+	},
+	hero_tank_hit_air_0017 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			11,
+			0,
+			7,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1583,
+			263,
+			27,
+			24
+		},
+		alias = {
+			"hero_tank_hit_air_0018"
+		}
+	},
+	hero_tank_missile_particle_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			3,
+			6,
+			8,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1091,
+			12,
+			10
+		},
+		alias = {}
+	},
+	hero_tank_missile_particle_0002 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			4,
+			5,
+			8,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			881,
+			2024,
+			11,
+			11
+		},
+		alias = {}
+	},
+	hero_tank_missile_particle_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			6,
+			5,
+			7,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			862,
+			10,
+			10
+		},
+		alias = {}
+	},
+	hero_tank_missile_particle_0004 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			9,
+			6,
+			5,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			987,
+			9,
+			8
+		},
+		alias = {}
+	},
+	hero_tank_missile_particle_0005 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			9,
+			7,
+			2,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2020,
+			987,
+			12,
+			8
+		},
+		alias = {}
+	},
+	hero_tank_missile_particle_0006 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			12,
+			8,
+			1,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			179,
+			726,
+			10,
+			7
+		},
+		alias = {}
+	},
+	hero_tank_missile_proyectile = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			26,
+			26
+		},
+		trim = {
+			1,
+			6,
+			2,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			179,
+			709,
+			23,
+			14
+		},
+		alias = {}
+	},
+	hero_tank_simple_proyectile = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			11,
+			11
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1077,
+			11,
+			11
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			11,
+			40,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1503,
+			266,
+			27,
+			20
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0002 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			11,
+			40,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1533,
+			266,
+			27,
+			20
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			6,
+			37,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			128,
+			377,
+			34,
+			23
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0004 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			37,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			165,
+			377,
+			33,
+			23
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0005 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			32,
+			0,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			159,
+			522,
+			33,
+			24
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0006 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			33,
+			0,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			154,
+			1077,
+			33,
+			23
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0007 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			33,
+			0,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			2017,
+			33,
+			23
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0008 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			27,
+			0,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1169,
+			2017,
+			33,
+			23
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0009 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			28,
+			0,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1731,
+			264,
+			33,
+			22
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0010 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			7,
+			28,
+			0,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1767,
+			264,
+			33,
+			22
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0011 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			8,
+			24,
+			0,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1803,
+			264,
+			32,
+			22
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0012 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			8,
+			25,
+			0,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1838,
+			264,
+			32,
+			21
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0013 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			9,
+			25,
+			0,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1642,
+			263,
+			31,
+			20
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0014 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			9,
+			21,
+			1,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1676,
+			263,
+			30,
+			20
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0015 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			9,
+			21,
+			1,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1438,
+			266,
+			30,
+			20
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0016 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			10,
+			21,
+			1,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1471,
+			266,
+			29,
+			20
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0017 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			10,
+			20,
+			2,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2004,
+			634,
+			28,
+			18
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0018 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			11,
+			20,
+			2,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1280,
+			1171,
+			27,
+			18
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0019 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			11,
+			20,
+			2,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1310,
+			1171,
+			27,
+			18
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0020 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			12,
+			20,
+			3,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2020,
+			967,
+			25,
+			17
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0021 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			11,
+			20,
+			3,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1340,
+			1171,
+			26,
+			17
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0022 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			12,
+			19,
+			2,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1369,
+			1171,
+			26,
+			16
+		},
+		alias = {}
+	},
+	hero_tank_smoke_0023 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			40,
+			60
+		},
+		trim = {
+			12,
+			20,
+			2,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			915,
+			2030,
+			26,
+			15
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			61,
+			99,
+			56,
+			32
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1535,
+			1965,
+			80,
+			80
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0002 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			56,
+			20,
+			55,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			1585,
+			86,
+			163
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			55,
+			15,
+			50,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			1124,
+			92,
+			169
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0004 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			54,
+			11,
+			48,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1509,
+			95,
+			175
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0005 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			53,
+			9,
+			46,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			761,
+			98,
+			178
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0006 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			51,
+			40,
+			40,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			973,
+			106,
+			148
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0007 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			50,
+			39,
+			40,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			821,
+			107,
+			149
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0008 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			48,
+			40,
+			40,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			533,
+			109,
+			149
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0009 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			47,
+			38,
+			40,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1354,
+			110,
+			152
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0010 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			42,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			1895,
+			114,
+			149
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0011 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			38,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			942,
+			114,
+			153
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0012 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			36,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1527,
+			114,
+			155
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0013 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			50,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			533,
+			114,
+			141
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0014 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			46,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1687,
+			114,
+			145
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0015 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			43,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			750,
+			114,
+			148
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0016 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			40,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			1878,
+			114,
+			151
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0017 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			37,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			290,
+			114,
+			154
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0018 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			43,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			901,
+			114,
+			148
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0019 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			37,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			447,
+			114,
+			154
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0020 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			32,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1058,
+			114,
+			159
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0021 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			30,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			1731,
+			114,
+			161
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0022 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			28,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			1399,
+			114,
+			163
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0023 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			25,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			1061,
+			114,
+			166
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0024 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			21,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			715,
+			114,
+			170
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0025 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			18,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			363,
+			114,
+			173
+		},
+		alias = {
+			"hero_tank_ultimate_fire_0049"
+		}
+	},
+	hero_tank_ultimate_fire_0026 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			14,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			5,
+			114,
+			177
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0027 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			11,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1574,
+			114,
+			180
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0028 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			8,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			924,
+			114,
+			183
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0029 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			6,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			736,
+			114,
+			185
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0030 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			38,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			1098,
+			114,
+			153
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0031 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			38,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			1254,
+			114,
+			153
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0032 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			40,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			290,
+			114,
+			151
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0033 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			37,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			604,
+			114,
+			154
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0034 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			42,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			598,
+			114,
+			149
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0035 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			38,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			1410,
+			114,
+			153
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0036 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			36,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1685,
+			114,
+			155
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0037 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			50,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			677,
+			114,
+			141
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0038 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			46,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1835,
+			114,
+			145
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0039 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			43,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1052,
+			114,
+			148
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0040 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			40,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			444,
+			114,
+			151
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0041 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			38,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			1566,
+			114,
+			153
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0042 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			43,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			569,
+			1203,
+			114,
+			148
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0043 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			38,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			452,
+			1722,
+			114,
+			153
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0044 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			32,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1220,
+			114,
+			159
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0045 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			30,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			894,
+			114,
+			161
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0046 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			28,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			1565,
+			114,
+			163
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0047 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			25,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			1230,
+			114,
+			166
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0048 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			21,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			888,
+			114,
+			170
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0050 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			18,
+			38,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			539,
+			114,
+			173
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0051 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			45,
+			15,
+			38,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			205,
+			185,
+			114,
+			175
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0052 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			44,
+			11,
+			37,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1252,
+			116,
+			179
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0053 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			43,
+			9,
+			35,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			552,
+			119,
+			181
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0054 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			42,
+			6,
+			35,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			219,
+			120,
+			184
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0055 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			40,
+			39,
+			33,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			440,
+			124,
+			150
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0056 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			40,
+			39,
+			33,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			593,
+			124,
+			149
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0057 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			39,
+			41,
+			32,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			745,
+			126,
+			146
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0058 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			38,
+			40,
+			32,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			290,
+			127,
+			147
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0059 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			39,
+			44,
+			32,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1382,
+			126,
+			142
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0060 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			40,
+			41,
+			33,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			322,
+			1843,
+			124,
+			142
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0061 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			60,
+			55,
+			55,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1961,
+			5,
+			82,
+			125
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0062 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			62,
+			53,
+			55,
+			32
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			1574,
+			80,
+			126
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0063 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			62,
+			55,
+			55,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1964,
+			410,
+			80,
+			119
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0064 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			99,
+			101,
+			55,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			158,
+			1434,
+			43,
+			69
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0065 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			99,
+			109,
+			55,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			157,
+			1949,
+			43,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0066 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			133,
+			109,
+			55,
+			90
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			847,
+			9,
+			12
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_0067 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			197,
+			211
+		},
+		trim = {
+			0,
+			0,
+			197,
+			211
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			197,
+			211
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			16,
+			38,
+			16,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1563,
+			266,
+			17,
+			16
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0006 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			2,
+			4,
+			1,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			402,
+			1988,
+			46,
+			56
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0007 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			5,
+			2,
+			0,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			158,
+			1174,
+			44,
+			58
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0008 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			4,
+			0,
+			0,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			157,
+			1886,
+			45,
+			60
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0009 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			6,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			158,
+			1110,
+			43,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0010 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			4,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			157,
+			1822,
+			45,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0013 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1971,
+			783,
+			49,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0022 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			6,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			158,
+			1506,
+			43,
+			62
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0023 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			4,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			157,
+			1757,
+			45,
+			62
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0032 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			39,
+			15,
+			0,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			634,
+			10,
+			12
+		},
+		alias = {
+			"hero_tank_ultimate_fire_modifier_0033"
+		}
+	},
+	hero_tank_ultimate_fire_modifier_0034 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			40,
+			16,
+			0,
+			42
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			875,
+			9,
+			9
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0035 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			49,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1992,
+			998,
+			49,
+			67
+		},
+		alias = {
+			"hero_tank_ultimate_fire_modifier_0036"
+		}
+	},
+	hero_tank_ultimate_plane_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			164,
+			100
+		},
+		trim = {
+			7,
+			6,
+			10,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1043,
+			773,
+			147,
+			94
+		},
+		alias = {
+			"hero_tank_ultimate_plane_0002"
+		}
+	},
+	hero_tank_ultimate_plane_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			164,
+			100
+		},
+		trim = {
+			8,
+			8,
+			8,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1324,
+			773,
+			148,
+			90
+		},
+		alias = {
+			"hero_tank_ultimate_plane_0004"
+		}
+	},
+	hero_tank_ultimate_plane_shadow = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			80,
+			17
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			2024,
+			80,
+			17
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_proyectile_explosion_0001 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			0,
+			33,
+			2,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			122,
+			971,
+			64,
+			58
+		},
+		alias = {
+			"hero_tank_ultimate_proyectile_explosion_0002"
+		}
+	},
+	hero_tank_ultimate_proyectile_explosion_0003 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			5,
+			10,
+			3,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1971,
+			655,
+			58,
+			76
+		},
+		alias = {
+			"hero_tank_ultimate_proyectile_explosion_0004"
+		}
+	},
+	hero_tank_ultimate_proyectile_explosion_0005 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			4,
+			4,
+			2,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			128,
+			219,
+			60,
+			80
+		},
+		alias = {
+			"hero_tank_ultimate_proyectile_explosion_0006"
+		}
+	},
+	hero_tank_ultimate_proyectile_explosion_0007 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			0,
+			0,
+			0,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			127,
+			552,
+			66,
+			86
+		},
+		alias = {
+			"hero_tank_ultimate_proyectile_explosion_0008"
+		}
+	},
+	hero_tank_ultimate_proyectile_explosion_0009 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			0,
+			0,
+			1,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			128,
+			302,
+			65,
+			72
+		},
+		alias = {
+			"hero_tank_ultimate_proyectile_explosion_0010"
+		}
+	},
+	hero_tank_ultimate_proyectile_explosion_0011 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			0,
+			0,
+			1,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1252,
+			65,
+			72
+		},
+		alias = {
+			"hero_tank_ultimate_proyectile_explosion_0012"
+		}
+	},
+	hero_tank_ultimate_proyectile_explosion_0013 = {
+		a_name = "kr4_hero_tank-1.dds",
+		size = {
+			66,
+			91
+		},
+		trim = {
+			0,
+			0,
+			66,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1966,
+			1420,
+			66,
+			91
+		},
+		alias = {}
+	},
+	hero_tank_0001 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1678,
+			202,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0044",
+			"hero_tank_0045"
+		}
+	},
+	hero_tank_0002 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			82,
+			70,
+			88,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			930,
+			86,
+			105
+		},
+		alias = {
+			"hero_tank_0003"
+		}
+	},
+	hero_tank_0004 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			82,
+			67,
+			88,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			403,
+			86,
+			107
+		},
+		alias = {
+			"hero_tank_0005"
+		}
+	},
+	hero_tank_0006 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			82,
+			67,
+			87,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1218,
+			87,
+			106
+		},
+		alias = {
+			"hero_tank_0007"
+		}
+	},
+	hero_tank_0008 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			84,
+			71,
+			84,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			824,
+			88,
+			103
+		},
+		alias = {
+			"hero_tank_0013"
+		}
+	},
+	hero_tank_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			84,
+			73,
+			84,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1529,
+			88,
+			101
+		},
+		alias = {
+			"hero_tank_0010"
+		}
+	},
+	hero_tank_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			84,
+			71,
+			84,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			616,
+			88,
+			104
+		},
+		alias = {
+			"hero_tank_0012"
+		}
+	},
+	hero_tank_0014 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			84,
+			72,
+			77,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			219,
+			95,
+			103
+		},
+		alias = {
+			"hero_tank_0019"
+		}
+	},
+	hero_tank_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			84,
+			71,
+			78,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			431,
+			94,
+			104
+		},
+		alias = {
+			"hero_tank_0016"
+		}
+	},
+	hero_tank_0017 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			84,
+			72,
+			79,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1351,
+			93,
+			103
+		},
+		alias = {
+			"hero_tank_0018"
+		}
+	},
+	hero_tank_0020 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			693,
+			202,
+			96,
+			95
+		},
+		alias = {
+			"hero_tank_0021"
+		}
+	},
+	hero_tank_0022 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			202,
+			96,
+			97
+		},
+		alias = {
+			"hero_tank_0023"
+		}
+	},
+	hero_tank_0024 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			72,
+			83,
+			56
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			302,
+			94,
+			98
+		},
+		alias = {
+			"hero_tank_0025"
+		}
+	},
+	hero_tank_0026 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			87,
+			72,
+			77,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			406,
+			92,
+			102
+		},
+		alias = {
+			"hero_tank_0031"
+		}
+	},
+	hero_tank_0027 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			87,
+			74,
+			77,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			513,
+			92,
+			100
+		},
+		alias = {
+			"hero_tank_0028"
+		}
+	},
+	hero_tank_0029 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			86,
+			72,
+			77,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1457,
+			93,
+			102
+		},
+		alias = {
+			"hero_tank_0030"
+		}
+	},
+	hero_tank_0032 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			74,
+			84,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1483,
+			94,
+			103
+		},
+		alias = {
+			"hero_tank_0037"
+		}
+	},
+	hero_tank_0033 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			77,
+			83,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			511,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0034"
+		}
+	},
+	hero_tank_0035 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			74,
+			83,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1589,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0036"
+		}
+	},
+	hero_tank_0038 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			83,
+			80,
+			87,
+			50
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1926,
+			86,
+			96
+		},
+		alias = {
+			"hero_tank_0039"
+		}
+	},
+	hero_tank_0042 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			83,
+			77,
+			87,
+			48
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1633,
+			86,
+			101
+		},
+		alias = {
+			"hero_tank_0043"
+		}
+	},
+	hero_tank_0046 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1776,
+			202,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0047",
+			"hero_tank_0090",
+			"hero_tank_0091",
+			"hero_tank_0298"
+		}
+	},
+	hero_tank_0048 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			792,
+			202,
+			95,
+			96
+		},
+		alias = {
+			"hero_tank_0049"
+		}
+	},
+	hero_tank_0052 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			70,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			612,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0053"
+		}
+	},
+	hero_tank_0054 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			70,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			713,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0055"
+		}
+	},
+	hero_tank_0056 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1562,
+			95,
+			99
+		},
+		alias = {
+			"hero_tank_0057"
+		}
+	},
+	hero_tank_0058 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			70,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			814,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0059"
+		}
+	},
+	hero_tank_0060 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			70,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			915,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0061"
+		}
+	},
+	hero_tank_0062 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1327,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0063"
+		}
+	},
+	hero_tank_0064 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1427,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0065"
+		}
+	},
+	hero_tank_0066 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1527,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0067"
+		}
+	},
+	hero_tank_0068 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			890,
+			202,
+			95,
+			96
+		},
+		alias = {
+			"hero_tank_0069"
+		}
+	},
+	hero_tank_0070 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1874,
+			202,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0071"
+		}
+	},
+	hero_tank_0072 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1664,
+			95,
+			99
+		},
+		alias = {
+			"hero_tank_0073"
+		}
+	},
+	hero_tank_0074 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1766,
+			95,
+			99
+		},
+		alias = {
+			"hero_tank_0075"
+		}
+	},
+	hero_tank_0078 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1693,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0079"
+		}
+	},
+	hero_tank_0080 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			538,
+			95,
+			102
+		},
+		alias = {}
+	},
+	hero_tank_0081 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			643,
+			95,
+			102
+		},
+		alias = {}
+	},
+	hero_tank_0082 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			748,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0083"
+		}
+	},
+	hero_tank_0084 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			853,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0085"
+		}
+	},
+	hero_tank_0086 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			958,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0087"
+		}
+	},
+	hero_tank_0088 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1063,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0089"
+		}
+	},
+	hero_tank_0092 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			988,
+			202,
+			95,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0093 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			623,
+			5,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0094",
+			"hero_tank_0147",
+			"hero_tank_0148",
+			"hero_tank_0297"
+		}
+	},
+	hero_tank_0141 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			68,
+			77,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			207,
+			5,
+			105,
+			91
+		},
+		alias = {
+			"hero_tank_0142"
+		}
+	},
+	hero_tank_0145 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1627,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0146"
+		}
+	},
+	hero_tank_0149 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			721,
+			5,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0227"
+		}
+	},
+	hero_tank_0150 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			819,
+			5,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0151",
+			"hero_tank_0501",
+			"hero_tank_0502",
+			"hero_tank_0503",
+			"hero_tank_0551"
+		}
+	},
+	hero_tank_0152 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1086,
+			202,
+			95,
+			96
+		},
+		alias = {
+			"hero_tank_0153"
+		}
+	},
+	hero_tank_0154 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1727,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0155"
+		}
+	},
+	hero_tank_0156 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			917,
+			5,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0157"
+		}
+	},
+	hero_tank_0158 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			81,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1207,
+			302,
+			95,
+			87
+		},
+		alias = {}
+	},
+	hero_tank_0159 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			81,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1305,
+			302,
+			95,
+			87
+		},
+		alias = {
+			"hero_tank_0160",
+			"hero_tank_0161",
+			"hero_tank_0162",
+			"hero_tank_0163",
+			"hero_tank_0164",
+			"hero_tank_0165",
+			"hero_tank_0166",
+			"hero_tank_0167",
+			"hero_tank_0168",
+			"hero_tank_0169",
+			"hero_tank_0214",
+			"hero_tank_0215",
+			"hero_tank_0216",
+			"hero_tank_0217",
+			"hero_tank_0218",
+			"hero_tank_0219",
+			"hero_tank_0220"
+		}
+	},
+	hero_tank_0170 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			78,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			906,
+			302,
+			95,
+			90
+		},
+		alias = {
+			"hero_tank_0171"
+		}
+	},
+	hero_tank_0172 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			70,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1016,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0173"
+		}
+	},
+	hero_tank_0178 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			64,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			95,
+			104
+		},
+		alias = {
+			"hero_tank_0179"
+		}
+	},
+	hero_tank_0210 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			75,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1705,
+			103,
+			95,
+			93
+		},
+		alias = {
+			"hero_tank_0211"
+		}
+	},
+	hero_tank_0212 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			81,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1403,
+			302,
+			95,
+			87
+		},
+		alias = {
+			"hero_tank_0213"
+		}
+	},
+	hero_tank_0221 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			81,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1501,
+			302,
+			95,
+			87
+		},
+		alias = {
+			"hero_tank_0222"
+		}
+	},
+	hero_tank_0223 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1827,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0224"
+		}
+	},
+	hero_tank_0225 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			70,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1117,
+			95,
+			98
+		},
+		alias = {
+			"hero_tank_0226"
+		}
+	},
+	hero_tank_0228 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1015,
+			5,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0229",
+			"hero_tank_0230",
+			"hero_tank_0231",
+			"hero_tank_0232",
+			"hero_tank_0233"
+		}
+	},
+	hero_tank_0234 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			72,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			103,
+			98,
+			96
+		},
+		alias = {}
+	},
+	hero_tank_0293 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			81,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			523,
+			5,
+			97,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0294 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1113,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0295 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1211,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0296 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1309,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0299 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1407,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0300 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1137,
+			94,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0301 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1235,
+			94,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0302 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1505,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0303 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1603,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0306 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			74,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			315,
+			5,
+			101,
+			94
+		},
+		alias = {}
+	},
+	hero_tank_0307 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			74,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			419,
+			5,
+			101,
+			94
+		},
+		alias = {}
+	},
+	hero_tank_0324 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			72,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			5,
+			101,
+			95
+		},
+		alias = {
+			"hero_tank_0325",
+			"hero_tank_0326",
+			"hero_tank_0327",
+			"hero_tank_0328",
+			"hero_tank_0329",
+			"hero_tank_0330",
+			"hero_tank_0331",
+			"hero_tank_0332",
+			"hero_tank_0333",
+			"hero_tank_0334",
+			"hero_tank_0335",
+			"hero_tank_0336",
+			"hero_tank_0337",
+			"hero_tank_0338",
+			"hero_tank_0339",
+			"hero_tank_0340",
+			"hero_tank_0341",
+			"hero_tank_0342",
+			"hero_tank_0343"
+		}
+	},
+	hero_tank_0346 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1333,
+			94,
+			95
+		},
+		alias = {
+			"hero_tank_0347"
+		}
+	},
+	hero_tank_0348 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1431,
+			94,
+			95
+		},
+		alias = {
+			"hero_tank_0349"
+		}
+	},
+	hero_tank_0350 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1701,
+			5,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0351",
+			"hero_tank_0499",
+			"hero_tank_0500"
+		}
+	},
+	hero_tank_0352 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			79,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1038,
+			94,
+			96
+		},
+		alias = {
+			"hero_tank_0353",
+			"hero_tank_0358",
+			"hero_tank_0359",
+			"hero_tank_0364",
+			"hero_tank_0365"
+		}
+	},
+	hero_tank_0354 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			77,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			398,
+			202,
+			96,
+			97
+		},
+		alias = {
+			"hero_tank_0355",
+			"hero_tank_0360",
+			"hero_tank_0361",
+			"hero_tank_0366",
+			"hero_tank_0367"
+		}
+	},
+	hero_tank_0356 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			1927,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0357",
+			"hero_tank_0362",
+			"hero_tank_0363",
+			"hero_tank_0368",
+			"hero_tank_0369"
+		}
+	},
+	hero_tank_0370 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1868,
+			95,
+			99
+		},
+		alias = {}
+	},
+	hero_tank_0371 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			202,
+			95,
+			99
+		},
+		alias = {}
+	},
+	hero_tank_0375 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			73,
+			88,
+			81,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1599,
+			302,
+			102,
+			80
+		},
+		alias = {}
+	},
+	hero_tank_0376 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			73,
+			88,
+			81,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1704,
+			302,
+			102,
+			80
+		},
+		alias = {}
+	},
+	hero_tank_0377 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			88,
+			79,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			800,
+			302,
+			103,
+			83
+		},
+		alias = {}
+	},
+	hero_tank_0420 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			87,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1901,
+			103,
+			98,
+			90
+		},
+		alias = {
+			"hero_tank_0421",
+			"hero_tank_0444",
+			"hero_tank_0445"
+		}
+	},
+	hero_tank_0422 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			87,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			302,
+			98,
+			90
+		},
+		alias = {
+			"hero_tank_0423",
+			"hero_tank_0446",
+			"hero_tank_0447"
+		}
+	},
+	hero_tank_0424 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			87,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			497,
+			302,
+			98,
+			90
+		},
+		alias = {
+			"hero_tank_0425",
+			"hero_tank_0448",
+			"hero_tank_0449"
+		}
+	},
+	hero_tank_0426 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			694,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0427",
+			"hero_tank_0450",
+			"hero_tank_0451"
+		}
+	},
+	hero_tank_0428 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			795,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0429",
+			"hero_tank_0452",
+			"hero_tank_0453"
+		}
+	},
+	hero_tank_0430 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			896,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0431",
+			"hero_tank_0454",
+			"hero_tank_0455"
+		}
+	},
+	hero_tank_0432 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			997,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0433",
+			"hero_tank_0456",
+			"hero_tank_0457"
+		}
+	},
+	hero_tank_0434 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1098,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0435",
+			"hero_tank_0458",
+			"hero_tank_0459"
+		}
+	},
+	hero_tank_0436 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1199,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0437",
+			"hero_tank_0460",
+			"hero_tank_0461"
+		}
+	},
+	hero_tank_0438 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			87,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			598,
+			302,
+			98,
+			90
+		},
+		alias = {
+			"hero_tank_0439",
+			"hero_tank_0462",
+			"hero_tank_0463"
+		}
+	},
+	hero_tank_0440 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1300,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0441"
+		}
+	},
+	hero_tank_0442 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1401,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0443"
+		}
+	},
+	hero_tank_0464 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			84,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1577,
+			202,
+			98,
+			93
+		},
+		alias = {
+			"hero_tank_0465"
+		}
+	},
+	hero_tank_0466 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			86,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1502,
+			103,
+			98,
+			91
+		},
+		alias = {
+			"hero_tank_0467"
+		}
+	},
+	hero_tank_0468 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			89,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			699,
+			302,
+			98,
+			88
+		},
+		alias = {
+			"hero_tank_0469"
+		}
+	},
+	hero_tank_0472 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			76,
+			90,
+			82,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1004,
+			302,
+			98,
+			87
+		},
+		alias = {
+			"hero_tank_0473",
+			"hero_tank_0474",
+			"hero_tank_0475"
+		}
+	},
+	hero_tank_0476 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			77,
+			90,
+			82,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1809,
+			302,
+			97,
+			84
+		},
+		alias = {
+			"hero_tank_0477"
+		}
+	},
+	hero_tank_0478 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			87,
+			83,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1105,
+			302,
+			99,
+			84
+		},
+		alias = {
+			"hero_tank_0479"
+		}
+	},
+	hero_tank_0480 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			90,
+			83,
+			54
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1909,
+			302,
+			99,
+			82
+		},
+		alias = {
+			"hero_tank_0481"
+		}
+	},
+	hero_tank_0482 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			74,
+			79,
+			83,
+			57
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1603,
+			103,
+			99,
+			90
+		},
+		alias = {
+			"hero_tank_0483"
+		}
+	},
+	hero_tank_0484 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			80,
+			76,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1737,
+			93,
+			92
+		},
+		alias = {
+			"hero_tank_0485"
+		}
+	},
+	hero_tank_0486 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			65,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			325,
+			95,
+			103
+		},
+		alias = {
+			"hero_tank_0487"
+		}
+	},
+	hero_tank_0488 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			75,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1803,
+			103,
+			95,
+			93
+		},
+		alias = {
+			"hero_tank_0489"
+		}
+	},
+	hero_tank_0490 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1799,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0491 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1897,
+			5,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0492 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			302,
+			103,
+			95,
+			95
+		},
+		alias = {}
+	},
+	hero_tank_0493 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			400,
+			103,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0494"
+		}
+	},
+	hero_tank_0495 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			498,
+			103,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0496"
+		}
+	},
+	hero_tank_0497 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			82,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1184,
+			202,
+			96,
+			95
+		},
+		alias = {
+			"hero_tank_0498"
+		}
+	},
+	hero_tank_0504 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			80,
+			77,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			1832,
+			93,
+			91
+		},
+		alias = {
+			"hero_tank_0505"
+		}
+	},
+	hero_tank_0506 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			80,
+			76,
+			83,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			299,
+			723,
+			93,
+			98
+		},
+		alias = {}
+	},
+	hero_tank_0552 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			73,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			596,
+			103,
+			95,
+			95
+		},
+		alias = {
+			"hero_tank_0553",
+			"hero_tank_0604",
+			"hero_tank_0605"
+		}
+	},
+	hero_tank_0554 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1283,
+			202,
+			95,
+			96
+		},
+		alias = {
+			"hero_tank_0555",
+			"hero_tank_0602",
+			"hero_tank_0603"
+		}
+	},
+	hero_tank_0556 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1381,
+			202,
+			95,
+			96
+		},
+		alias = {
+			"hero_tank_0557"
+		}
+	},
+	hero_tank_0558 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			497,
+			202,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0559"
+		}
+	},
+	hero_tank_0560 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			69,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			201,
+			304,
+			95,
+			99
+		},
+		alias = {
+			"hero_tank_0561"
+		}
+	},
+	hero_tank_0562 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1168,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0563"
+		}
+	},
+	hero_tank_0564 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1273,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0565"
+		}
+	},
+	hero_tank_0566 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			64,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			112,
+			95,
+			104
+		},
+		alias = {
+			"hero_tank_0567"
+		}
+	},
+	hero_tank_0568 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1797,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0569"
+		}
+	},
+	hero_tank_0570 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1901,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0571"
+		}
+	},
+	hero_tank_0572 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			103,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0573"
+		}
+	},
+	hero_tank_0574 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			207,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0575"
+		}
+	},
+	hero_tank_0576 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			311,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0577"
+		}
+	},
+	hero_tank_0578 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			66,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1378,
+			95,
+			102
+		},
+		alias = {
+			"hero_tank_0579"
+		}
+	},
+	hero_tank_0580 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			415,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0581"
+		}
+	},
+	hero_tank_0582 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			519,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0583"
+		}
+	},
+	hero_tank_0584 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			623,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0585"
+		}
+	},
+	hero_tank_0586 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			727,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0587"
+		}
+	},
+	hero_tank_0588 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			831,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0589"
+		}
+	},
+	hero_tank_0590 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			935,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0591"
+		}
+	},
+	hero_tank_0592 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1039,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0593"
+		}
+	},
+	hero_tank_0594 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1143,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0595"
+		}
+	},
+	hero_tank_0596 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			67,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1247,
+			95,
+			101
+		},
+		alias = {
+			"hero_tank_0597"
+		}
+	},
+	hero_tank_0598 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			71,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			595,
+			202,
+			95,
+			97
+		},
+		alias = {
+			"hero_tank_0599"
+		}
+	},
+	hero_tank_0600 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			78,
+			72,
+			83,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1479,
+			202,
+			95,
+			96
+		},
+		alias = {
+			"hero_tank_0601"
+		}
+	},
+	hero_tank_dust_0001 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			9,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1781,
+			611,
+			38,
+			36
+		},
+		alias = {}
+	},
+	hero_tank_dust_0002 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			9,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1822,
+			611,
+			38,
+			36
+		},
+		alias = {}
+	},
+	hero_tank_dust_0003 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			774,
+			38,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0004 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			815,
+			38,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			11,
+			0,
+			7,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			651,
+			39,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0006 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			11,
+			0,
+			7,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			692,
+			39,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0007 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			11,
+			0,
+			8,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			856,
+			38,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0008 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			11,
+			0,
+			8,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			897,
+			38,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			10,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1701,
+			611,
+			37,
+			37
+		},
+		alias = {}
+	},
+	hero_tank_dust_0010 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			10,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1741,
+			611,
+			37,
+			37
+		},
+		alias = {}
+	},
+	hero_tank_dust_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			9,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			733,
+			39,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0012 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			9,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			938,
+			38,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			8,
+			0,
+			9,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			866,
+			611,
+			40,
+			37
+		},
+		alias = {}
+	},
+	hero_tank_dust_0014 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			8,
+			0,
+			9,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			909,
+			611,
+			40,
+			37
+		},
+		alias = {}
+	},
+	hero_tank_dust_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			7,
+			1,
+			9,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1219,
+			611,
+			41,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_dust_0016 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			9,
+			1,
+			9,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			979,
+			39,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_dust_0017 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			9,
+			0,
+			10,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1863,
+			611,
+			38,
+			36
+		},
+		alias = {}
+	},
+	hero_tank_dust_0018 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			9,
+			0,
+			10,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1904,
+			611,
+			38,
+			36
+		},
+		alias = {}
+	},
+	hero_tank_dust_0019 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			11,
+			3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1174,
+			36,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_dust_0020 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			11,
+			3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1212,
+			36,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_dust_0021 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			11,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1096,
+			36,
+			36
+		},
+		alias = {}
+	},
+	hero_tank_dust_0022 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			10,
+			0,
+			11,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1135,
+			36,
+			36
+		},
+		alias = {}
+	},
+	hero_tank_dust_0023 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			5,
+			0,
+			5,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1758,
+			529,
+			47,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0024 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			5,
+			0,
+			5,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1808,
+			529,
+			47,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_dust_0025 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			5,
+			0,
+			6,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1951,
+			529,
+			46,
+			38
+		},
+		alias = {
+			"hero_tank_dust_0026"
+		}
+	},
+	hero_tank_dust_0027 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			5,
+			0,
+			4,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1605,
+			529,
+			48,
+			38
+		},
+		alias = {
+			"hero_tank_dust_0028"
+		}
+	},
+	hero_tank_dust_0029 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			8,
+			0,
+			6,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2002,
+			161,
+			43,
+			37
+		},
+		alias = {
+			"hero_tank_dust_0030"
+		}
+	},
+	hero_tank_dust_0031 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			5,
+			0,
+			4,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1656,
+			529,
+			48,
+			38
+		},
+		alias = {
+			"hero_tank_dust_0032"
+		}
+	},
+	hero_tank_dust_0033 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			57,
+			38
+		},
+		trim = {
+			5,
+			0,
+			4,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1707,
+			529,
+			48,
+			38
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0001 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			23,
+			41,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1857,
+			30,
+			34
+		},
+		alias = {
+			"hero_tank_expendable1_0029",
+			"hero_tank_expendable1_0030",
+			"hero_tank_expendable1_0045",
+			"hero_tank_expendable1_0046",
+			"hero_tank_expendable1_0047"
+		}
+	},
+	hero_tank_expendable1_0002 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			28,
+			3,
+			57,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1710,
+			29,
+			36
+		},
+		alias = {
+			"hero_tank_expendable1_0003",
+			"hero_tank_expendable1_0004"
+		}
+	},
+	hero_tank_expendable1_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			41,
+			19,
+			42,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2011,
+			349,
+			31,
+			40
+		},
+		alias = {
+			"hero_tank_expendable1_0010"
+		}
+	},
+	hero_tank_expendable1_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			41,
+			27,
+			42,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			2007,
+			31,
+			32
+		},
+		alias = {
+			"hero_tank_expendable1_0012"
+		}
+	},
+	hero_tank_expendable1_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			23,
+			41,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1634,
+			30,
+			36
+		},
+		alias = {
+			"hero_tank_expendable1_0014",
+			"hero_tank_expendable1_0048",
+			"hero_tank_expendable1_0049"
+		}
+	},
+	hero_tank_expendable1_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			25,
+			40,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			701,
+			573,
+			30,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0016 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			21,
+			41,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			668,
+			573,
+			30,
+			33
+		},
+		alias = {
+			"hero_tank_expendable1_0017"
+		}
+	},
+	hero_tank_expendable1_0018 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			17,
+			42,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1894,
+			30,
+			34
+		},
+		alias = {
+			"hero_tank_expendable1_0019"
+		}
+	},
+	hero_tank_expendable1_0020 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			41,
+			20,
+			42,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1596,
+			31,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0021 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			25,
+			43,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			674,
+			451,
+			31,
+			31
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0022 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			25,
+			44,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			634,
+			573,
+			31,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0023 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			21,
+			43,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1749,
+			31,
+			33
+		},
+		alias = {
+			"hero_tank_expendable1_0024"
+		}
+	},
+	hero_tank_expendable1_0025 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			41,
+			17,
+			42,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1673,
+			31,
+			34
+		},
+		alias = {
+			"hero_tank_expendable1_0026"
+		}
+	},
+	hero_tank_expendable1_0027 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			20,
+			42,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1931,
+			29,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0028 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			23,
+			41,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			734,
+			573,
+			29,
+			33
+		},
+		alias = {}
+	},
+	hero_tank_expendable1_0031 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			34,
+			13,
+			42,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1664,
+			38,
+			44
+		},
+		alias = {
+			"hero_tank_expendable1_0032"
+		}
+	},
+	hero_tank_expendable1_0033 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			32,
+			14,
+			42,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1618,
+			40,
+			43
+		},
+		alias = {
+			"hero_tank_expendable1_0034",
+			"hero_tank_expendable1_0035",
+			"hero_tank_expendable1_0036"
+		}
+	},
+	hero_tank_expendable1_0037 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			14,
+			28,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1750,
+			37,
+			43
+		},
+		alias = {
+			"hero_tank_expendable1_0038"
+		}
+	},
+	hero_tank_expendable1_0039 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			23,
+			29,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1250,
+			36,
+			34
+		},
+		alias = {
+			"hero_tank_expendable1_0040"
+		}
+	},
+	hero_tank_expendable1_0041 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			26,
+			29,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1436,
+			36,
+			31
+		},
+		alias = {
+			"hero_tank_expendable1_0042"
+		}
+	},
+	hero_tank_expendable1_0043 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			46,
+			24,
+			37,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1785,
+			31,
+			33
+		},
+		alias = {
+			"hero_tank_expendable1_0044"
+		}
+	},
+	hero_tank_expendable1_0050 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			37,
+			15,
+			46,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2011,
+			302,
+			31,
+			44
+		},
+		alias = {
+			"hero_tank_expendable1_0051"
+		}
+	},
+	hero_tank_expendable1_0054 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			16,
+			8,
+			52,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1016,
+			46,
+			51
+		},
+		alias = {
+			"hero_tank_expendable1_0055"
+		}
+	},
+	hero_tank_expendable1_0056 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			15,
+			31,
+			55,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1945,
+			611,
+			44,
+			31
+		},
+		alias = {
+			"hero_tank_expendable1_0057"
+		}
+	},
+	hero_tank_expendable1_0058 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			10,
+			23,
+			57,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1555,
+			529,
+			47,
+			39
+		},
+		alias = {
+			"hero_tank_expendable1_0059"
+		}
+	},
+	hero_tank_expendable1_0060 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			10,
+			31,
+			57,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			624,
+			451,
+			47,
+			31
+		},
+		alias = {
+			"hero_tank_expendable1_0061"
+		}
+	},
+	hero_tank_expendable2_0001 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			38,
+			23,
+			34,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			952,
+			611,
+			42,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0029",
+			"hero_tank_expendable2_0030",
+			"hero_tank_expendable2_0046",
+			"hero_tank_expendable2_0047",
+			"hero_tank_expendable2_0048",
+			"hero_tank_expendable2_0049",
+			"hero_tank_expendable2_0072",
+			"hero_tank_expendable2_0073",
+			"hero_tank_expendable2_0074",
+			"hero_tank_expendable2_0075",
+			"hero_tank_expendable2_0076",
+			"hero_tank_expendable2_0077",
+			"hero_tank_expendable2_0078",
+			"hero_tank_expendable2_0079",
+			"hero_tank_expendable2_0080",
+			"hero_tank_expendable2_0081",
+			"hero_tank_expendable2_0104",
+			"hero_tank_expendable2_0105",
+			"hero_tank_expendable2_0106",
+			"hero_tank_expendable2_0107",
+			"hero_tank_expendable2_0108",
+			"hero_tank_expendable2_0109",
+			"hero_tank_expendable2_0110",
+			"hero_tank_expendable2_0111",
+			"hero_tank_expendable2_0112",
+			"hero_tank_expendable2_0113",
+			"hero_tank_expendable2_0136",
+			"hero_tank_expendable2_0137",
+			"hero_tank_expendable2_0138",
+			"hero_tank_expendable2_0139",
+			"hero_tank_expendable2_0140",
+			"hero_tank_expendable2_0141",
+			"hero_tank_expendable2_0142",
+			"hero_tank_expendable2_0143"
+		}
+	},
+	hero_tank_expendable2_0002 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			27,
+			2,
+			48,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1134,
+			611,
+			39,
+			37
+		},
+		alias = {
+			"hero_tank_expendable2_0003",
+			"hero_tank_expendable2_0004"
+		}
+	},
+	hero_tank_expendable2_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			11,
+			36,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1522,
+			39,
+			46
+		},
+		alias = {
+			"hero_tank_expendable2_0006"
+		}
+	},
+	hero_tank_expendable2_0007 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			38,
+			32,
+			37,
+			9
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1287,
+			39,
+			31
+		},
+		alias = {
+			"hero_tank_expendable2_0008"
+		}
+	},
+	hero_tank_expendable2_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			38,
+			19,
+			32,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1904,
+			529,
+			44,
+			40
+		},
+		alias = {
+			"hero_tank_expendable2_0010"
+		}
+	},
+	hero_tank_expendable2_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			37,
+			27,
+			35,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			589,
+			573,
+			42,
+			32
+		},
+		alias = {
+			"hero_tank_expendable2_0012"
+		}
+	},
+	hero_tank_expendable2_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			38,
+			23,
+			34,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			543,
+			611,
+			42,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0014"
+		}
+	},
+	hero_tank_expendable2_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			25,
+			33,
+			12
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1263,
+			611,
+			41,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0016 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			21,
+			33,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			588,
+			611,
+			42,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0017"
+		}
+	},
+	hero_tank_expendable2_0018 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			37,
+			17,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1912,
+			44,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0019"
+		}
+	},
+	hero_tank_expendable2_0020 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			37,
+			20,
+			34,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			678,
+			611,
+			43,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0021 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			35,
+			25,
+			35,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1992,
+			611,
+			44,
+			31
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0022 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			35,
+			25,
+			36,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1655,
+			611,
+			43,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0023 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			35,
+			21,
+			35,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1796,
+			44,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0024"
+		}
+	},
+	hero_tank_expendable2_0025 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			36,
+			17,
+			35,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			724,
+			611,
+			43,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0026"
+		}
+	},
+	hero_tank_expendable2_0027 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			20,
+			33,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			997,
+			611,
+			42,
+			35
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0028 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			23,
+			33,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1611,
+			611,
+			41,
+			34
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0031 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			35,
+			23,
+			36,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1042,
+			611,
+			43,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0032"
+		}
+	},
+	hero_tank_expendable2_0033 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			31,
+			23,
+			41,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1307,
+			611,
+			42,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0034"
+		}
+	},
+	hero_tank_expendable2_0035 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			29,
+			23,
+			43,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1352,
+			611,
+			42,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0036",
+			"hero_tank_expendable2_0037"
+		}
+	},
+	hero_tank_expendable2_0038 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			26,
+			19,
+			12
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1835,
+			46,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0039"
+		}
+	},
+	hero_tank_expendable2_0040 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			48,
+			23,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1950,
+			44,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0041"
+		}
+	},
+	hero_tank_expendable2_0042 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			47,
+			24,
+			24,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1088,
+			611,
+			43,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0043"
+		}
+	},
+	hero_tank_expendable2_0044 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			24,
+			30,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1397,
+			611,
+			42,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0045"
+		}
+	},
+	hero_tank_expendable2_0050 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			22,
+			31,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1988,
+			44,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0051",
+			"hero_tank_expendable2_0114",
+			"hero_tank_expendable2_0115"
+		}
+	},
+	hero_tank_expendable2_0052 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			22,
+			28,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			573,
+			44,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0053"
+		}
+	},
+	hero_tank_expendable2_0056 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			24,
+			26,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			770,
+			611,
+			45,
+			33
+		},
+		alias = {
+			"hero_tank_expendable2_0057"
+		}
+	},
+	hero_tank_expendable2_0058 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			24,
+			25,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			818,
+			611,
+			45,
+			33
+		},
+		alias = {
+			"hero_tank_expendable2_0059",
+			"hero_tank_expendable2_0060",
+			"hero_tank_expendable2_0061",
+			"hero_tank_expendable2_0062",
+			"hero_tank_expendable2_0063"
+		}
+	},
+	hero_tank_expendable2_0064 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			33,
+			25,
+			21,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1429,
+			529,
+			60,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0065 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			33,
+			25,
+			21,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1492,
+			529,
+			60,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0068 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			37,
+			24,
+			18,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1972,
+			266,
+			59,
+			33
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0069 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			37,
+			24,
+			18,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1973,
+			485,
+			59,
+			33
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0070 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			23,
+			18,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1309,
+			529,
+			57,
+			34
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0071 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			39,
+			23,
+			18,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1369,
+			529,
+			57,
+			34
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0082 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			22,
+			36,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1017,
+			38,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0083"
+		}
+	},
+	hero_tank_expendable2_0084 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			25,
+			37,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1356,
+			34,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0085"
+		}
+	},
+	hero_tank_expendable2_0088 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			25,
+			42,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1393,
+			28,
+			40
+		},
+		alias = {
+			"hero_tank_expendable2_0089"
+		}
+	},
+	hero_tank_expendable2_0090 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			25,
+			43,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1470,
+			27,
+			41
+		},
+		alias = {
+			"hero_tank_expendable2_0091",
+			"hero_tank_expendable2_0092",
+			"hero_tank_expendable2_0093",
+			"hero_tank_expendable2_0094",
+			"hero_tank_expendable2_0095"
+		}
+	},
+	hero_tank_expendable2_0096 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			23,
+			28,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1049,
+			44,
+			44
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0097 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			23,
+			28,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1096,
+			44,
+			44
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0098 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			23,
+			27,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1643,
+			45,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0099 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			23,
+			26,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1595,
+			46,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0100 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			23,
+			26,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1787,
+			44,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0101 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			44,
+			23,
+			26,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1835,
+			44,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0102 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			23,
+			27,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1447,
+			47,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0103 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			23,
+			27,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1495,
+			47,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0116 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			46,
+			22,
+			28,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1568,
+			611,
+			40,
+			35
+		},
+		alias = {
+			"hero_tank_expendable2_0117"
+		}
+	},
+	hero_tank_expendable2_0118 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			21,
+			26,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1442,
+			611,
+			39,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0119"
+		}
+	},
+	hero_tank_expendable2_0120 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			23,
+			25,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			546,
+			573,
+			40,
+			34
+		},
+		alias = {
+			"hero_tank_expendable2_0121"
+		}
+	},
+	hero_tank_expendable2_0122 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			49,
+			21,
+			26,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1484,
+			611,
+			39,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0123",
+			"hero_tank_expendable2_0124",
+			"hero_tank_expendable2_0125",
+			"hero_tank_expendable2_0126",
+			"hero_tank_expendable2_0127"
+		}
+	},
+	hero_tank_expendable2_0128 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			16,
+			29,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1858,
+			529,
+			43,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0129 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			15,
+			28,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1336,
+			44,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0130 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			15,
+			27,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1381,
+			44,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0131 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			43,
+			14,
+			27,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1290,
+			44,
+			43
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0132 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			13,
+			27,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1883,
+			45,
+			44
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0133 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			42,
+			13,
+			27,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1930,
+			45,
+			44
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0134 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			13,
+			28,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1691,
+			46,
+			44
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0135 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			40,
+			14,
+			28,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1977,
+			46,
+			43
+		},
+		alias = {}
+	},
+	hero_tank_expendable2_0144 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			38,
+			23,
+			34,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			633,
+			611,
+			42,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0145"
+		}
+	},
+	hero_tank_expendable2_0146 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			34,
+			15,
+			40,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1571,
+			40,
+			44
+		},
+		alias = {
+			"hero_tank_expendable2_0147"
+		}
+	},
+	hero_tank_expendable2_0148 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			23,
+			11,
+			46,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1344,
+			45,
+			48
+		},
+		alias = {
+			"hero_tank_expendable2_0149"
+		}
+	},
+	hero_tank_expendable2_0150 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			16,
+			3,
+			50,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			957,
+			48,
+			56
+		},
+		alias = {
+			"hero_tank_expendable2_0151"
+		}
+	},
+	hero_tank_expendable2_0152 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			15,
+			26,
+			54,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1711,
+			45,
+			36
+		},
+		alias = {
+			"hero_tank_expendable2_0153"
+		}
+	},
+	hero_tank_expendable2_0154 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			10,
+			18,
+			55,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			953,
+			49,
+			44
+		},
+		alias = {
+			"hero_tank_expendable2_0155"
+		}
+	},
+	hero_tank_expendable2_0156 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			114,
+			72
+		},
+		trim = {
+			10,
+			31,
+			55,
+			10
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1995,
+			69,
+			49,
+			31
+		},
+		alias = {
+			"hero_tank_expendable2_0157"
+		}
+	},
+	hero_tank_fire_0001 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			5,
+			3,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1821,
+			31,
+			33
+		},
+		alias = {
+			"hero_tank_fire_0002"
+		}
+	},
+	hero_tank_fire_0007 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			2,
+			1,
+			4,
+			3
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1554,
+			28,
+			39
+		},
+		alias = {
+			"hero_tank_fire_0008"
+		}
+	},
+	hero_tank_fire_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			2,
+			8,
+			3,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			766,
+			573,
+			29,
+			33
+		},
+		alias = {
+			"hero_tank_fire_0010"
+		}
+	},
+	hero_tank_fire_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			7,
+			5,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1969,
+			29,
+			35
+		},
+		alias = {
+			"hero_tank_fire_0012"
+		}
+	},
+	hero_tank_fire_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			5,
+			4,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1514,
+			30,
+			37
+		},
+		alias = {
+			"hero_tank_fire_0014"
+		}
+	},
+	hero_tank_fire_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			4,
+			5,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			798,
+			573,
+			29,
+			33
+		},
+		alias = {
+			"hero_tank_fire_0016"
+		}
+	},
+	hero_tank_fire_0017 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			2,
+			2,
+			5,
+			5
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			541,
+			651,
+			27,
+			36
+		},
+		alias = {
+			"hero_tank_fire_0018"
+		}
+	},
+	hero_tank_fire_0019 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			1,
+			7,
+			5,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			830,
+			573,
+			28,
+			32
+		},
+		alias = {
+			"hero_tank_fire_0020"
+		}
+	},
+	hero_tank_fire_loop_0003 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			957,
+			440,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0004 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1040,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1040,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0006 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1123,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0007 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1123,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0008 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1206,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1206,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0010 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1289,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1289,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0012 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1372,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1372,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0014 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1455,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1455,
+			439,
+			80,
+			41
+		},
+		alias = {
+			"hero_tank_fire_loop_0043"
+		}
+	},
+	hero_tank_fire_loop_0016 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1538,
+			395,
+			80,
+			41
+		},
+		alias = {
+			"hero_tank_fire_loop_0044"
+		}
+	},
+	hero_tank_fire_loop_0017 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1538,
+			439,
+			80,
+			41
+		},
+		alias = {
+			"hero_tank_fire_loop_0045"
+		}
+	},
+	hero_tank_fire_loop_0018 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1621,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0019 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1621,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0020 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1704,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0021 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1704,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0022 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1787,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0023 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1787,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0024 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1870,
+			395,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0025 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1870,
+			439,
+			80,
+			41
+		},
+		alias = {
+			"hero_tank_fire_loop_0053"
+		}
+	},
+	hero_tank_fire_loop_0026 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1953,
+			395,
+			80,
+			41
+		},
+		alias = {
+			"hero_tank_fire_loop_0054"
+		}
+	},
+	hero_tank_fire_loop_0027 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1953,
+			439,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0028 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0029 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			479,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0030 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			562,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0031 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			645,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0032 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			728,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0033 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			811,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0034 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			894,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0037 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			708,
+			395,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0038 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			708,
+			440,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0039 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			977,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0040 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1060,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0041 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1143,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0042 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1226,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0046 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1309,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0047 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1392,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0048 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1475,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0049 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1558,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0050 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1641,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0051 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1724,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0052 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1807,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0055 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1890,
+			485,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0056 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0057 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			479,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0058 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			562,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0059 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			645,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0060 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			728,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0061 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			811,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0062 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			894,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0063 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			791,
+			395,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0064 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			791,
+			440,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0065 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			874,
+			395,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0066 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			874,
+			440,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0067 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			977,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0068 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1060,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0069 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1143,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0070 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1226,
+			529,
+			80,
+			41
+		},
+		alias = {}
+	},
+	hero_tank_fire_loop_0071 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			80,
+			42
+		},
+		trim = {
+			0,
+			0,
+			80,
+			42
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			957,
+			395,
+			80,
+			42
+		},
+		alias = {}
+	},
+	hero_tank_GroundSlam_decal_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			7,
+			4,
+			4,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			103,
+			1970,
+			81,
+			63
+		},
+		alias = {
+			"hero_tank_GroundSlam_decal_0006"
+		}
+	},
+	hero_tank_GroundSlam_decal_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			7,
+			4,
+			4,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			624,
+			395,
+			81,
+			53
+		},
+		alias = {
+			"hero_tank_GroundSlam_decal_0010"
+		}
+	},
+	hero_tank_GroundSlam_decal_0018 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			92,
+			87
+		},
+		trim = {
+			0,
+			0,
+			92,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			395,
+			92,
+			87
+		},
+		alias = {
+			"hero_tank_GroundSlam_decal_0019"
+		}
+	},
+	hero_tank_GroundSlam_effect_0001 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			179,
+			97
+		},
+		trim = {
+			25,
+			14,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			491,
+			395,
+			130,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_hit_0003 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			2,
+			6,
+			2,
+			4
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1426,
+			41,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_hit_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			0,
+			4,
+			1,
+			2
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1395,
+			44,
+			49
+		},
+		alias = {}
+	},
+	hero_tank_hit_0006 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			0,
+			4,
+			1,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1291,
+			44,
+			50
+		},
+		alias = {}
+	},
+	hero_tank_hit_0007 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			2,
+			2,
+			0,
+			1
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1236,
+			43,
+			52
+		},
+		alias = {}
+	},
+	hero_tank_hit_0008 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			2,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1126,
+			43,
+			53
+		},
+		alias = {}
+	},
+	hero_tank_hit_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			3,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2002,
+			103,
+			42,
+			55
+		},
+		alias = {}
+	},
+	hero_tank_hit_0012 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			3,
+			0,
+			0,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1872,
+			42,
+			37
+		},
+		alias = {}
+	},
+	hero_tank_hit_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			4,
+			0,
+			1,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1176,
+			611,
+			40,
+			36
+		},
+		alias = {
+			"hero_tank_hit_0014"
+		}
+	},
+	hero_tank_hit_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			55
+		},
+		trim = {
+			10,
+			0,
+			5,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			573,
+			30,
+			25
+		},
+		alias = {
+			"hero_tank_hit_0016"
+		}
+	},
+	hero_tank_hit_air_0003 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			2,
+			6,
+			3,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1239,
+			40,
+			48
+		},
+		alias = {
+			"hero_tank_hit_air_0004"
+		}
+	},
+	hero_tank_hit_air_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			0,
+			4,
+			2,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1543,
+			43,
+			49
+		},
+		alias = {
+			"hero_tank_hit_air_0006"
+		}
+	},
+	hero_tank_hit_air_0007 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			2,
+			2,
+			0,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1143,
+			43,
+			45
+		},
+		alias = {
+			"hero_tank_hit_air_0008"
+		}
+	},
+	hero_tank_hit_air_0009 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			3,
+			1,
+			1,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2000,
+			529,
+			41,
+			41
+		},
+		alias = {
+			"hero_tank_hit_air_0010"
+		}
+	},
+	hero_tank_hit_air_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			3,
+			0,
+			1,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			611,
+			41,
+			37
+		},
+		alias = {
+			"hero_tank_hit_air_0012"
+		}
+	},
+	hero_tank_hit_air_0013 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			4,
+			0,
+			2,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1526,
+			611,
+			39,
+			36
+		},
+		alias = {
+			"hero_tank_hit_air_0014"
+		}
+	},
+	hero_tank_hit_air_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			45,
+			71
+		},
+		trim = {
+			10,
+			0,
+			6,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			894,
+			573,
+			29,
+			25
+		},
+		alias = {
+			"hero_tank_hit_air_0016"
+		}
+	},
+	hero_tank_shadow = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			256,
+			226
+		},
+		trim = {
+			83,
+			141,
+			81,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			2005,
+			92,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0002 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			5,
+			28,
+			7,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1321,
+			37,
+			32
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0003 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			4,
+			15,
+			4,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1474,
+			41,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0004 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			3,
+			9,
+			2,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1182,
+			44,
+			51
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0005 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			3,
+			7,
+			2,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1070,
+			44,
+			53
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0011 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			1,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1972,
+			202,
+			48,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0012 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			1,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			573,
+			48,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0014 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			10,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			752,
+			49,
+			51
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0015 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			7,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			695,
+			49,
+			54
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0016 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			3,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			573,
+			49,
+			58
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0017 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			3,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			634,
+			49,
+			58
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0018 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1995,
+			5,
+			49,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0019 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			2,
+			0,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			701,
+			47,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0020 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			2,
+			0,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			765,
+			47,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0021 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			1,
+			0,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			637,
+			48,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0024 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			2,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			829,
+			47,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0025 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			0,
+			2,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			893,
+			47,
+			61
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0026 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			15,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			806,
+			49,
+			46
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0027 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			15,
+			0,
+			6
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			855,
+			49,
+			46
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0028 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			0,
+			14,
+			0,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			904,
+			49,
+			46
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0029 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			5,
+			14,
+			0,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			396,
+			1738,
+			44,
+			46
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0030 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			6,
+			14,
+			0,
+			7
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1000,
+			43,
+			46
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_fire_modifier_0031 = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			49,
+			67
+		},
+		trim = {
+			6,
+			14,
+			0,
+			8
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1191,
+			43,
+			45
+		},
+		alias = {}
+	},
+	hero_tank_ultimate_proyectile = {
+		a_name = "kr4_hero_tank-2.dds",
+		size = {
+			35,
+			38
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			499,
+			1055,
+			35,
+			38
+		},
+		alias = {}
+	}
+}

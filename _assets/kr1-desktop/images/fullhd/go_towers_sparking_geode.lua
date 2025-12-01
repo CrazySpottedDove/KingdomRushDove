@@ -1,16946 +1,7184 @@
 return {
-	["sparking_geode_base_0001"] = {
+	sparking_geode_base_0001 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			159,
-			201
+			202
 		},
 		trim = {
-			24,
-            54,
-            23,
-            91
+			28,
+			57,
+			26,
+			94
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1186,
-			61,
-			112,
-			56
+			1925,
+			578,
+			105,
+			51
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0002"
+		}
 	},
-	["sparking_geode_base_0002"] = {
+	sparking_geode_base_0003 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			159,
-			201
-		},
-		trim = {
-			24,
-            54,
-            23,
-            91
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1186,
-			61,
-			112,
-			56
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
+			202
 		},
 		trim = {
 			0,
-            0,
-            156,
-            198
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
 			0,
-            0,
-            156,
-            198
+			159,
+			202
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			4,
-			3,
-			3
+			5,
+			967,
+			159,
+			202
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0004"
+		}
 	},
-	["sparking_geode_base_0005"] = {
+	sparking_geode_base_0005 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			159,
-			201
+			202
 		},
 		trim = {
-			52,
-            27,
-            53,
-            109
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1000,
-			128,
+			53,
+			28,
 			54,
-			65
+			110
 		},
-		alias = {},
-	},
-	["sparking_geode_base_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
+		a_size = {
+			2048,
+			2048
 		},
-		trim = {
+		f_quad = {
+			185,
+			1387,
 			52,
-            27,
-            53,
-            109
+			64
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1000,
-			128,
-			54,
-			65
-		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0006"
+		}
 	},
-	["sparking_geode_base_0007"] = {
+	sparking_geode_base_0007 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			159,
-			201
-		},
-		trim = {
-			44,
-            26,
-            51,
-            107
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2023,
-			128,
-			64,
-			68
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			44,
-            26,
-            51,
-            107
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2023,
-			128,
-			64,
-			68
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
+			202
 		},
 		trim = {
 			45,
-            25,
-            53,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2095,
-			128,
-			61,
-			68
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			45,
-            25,
-            53,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2095,
-			128,
-			61,
-			68
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			44,
-            26,
-            52,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1807,
-			128,
-			63,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			44,
-            26,
-            52,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1807,
-			128,
-			63,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
+			28,
 			52,
-            27,
-            42,
-            104
+			109
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			99,
-			204,
-			65,
-			70
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			52,
-            27,
-            42,
-            104
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			99,
-			204,
-			65,
-			70
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			51,
-            27,
-            51,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1315,
-			128,
-			57,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			51,
-            27,
-            51,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1315,
-			128,
-			57,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			49,
-            26,
-            40,
-            99
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			303,
-			204,
-			70,
-			76
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			49,
-            26,
-            40,
-            99
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			303,
-			204,
-			70,
-			76
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			49,
-            26,
-            39,
-            99
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			381,
-			204,
-			71,
-			76
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			49,
-            26,
-            39,
-            99
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			381,
-			204,
-			71,
-			76
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			50,
-            25,
-            37,
-            103
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			172,
-			204,
-			72,
-			73
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			50,
-            25,
-            37,
-            103
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			172,
-			204,
-			72,
-			73
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			51,
-            27,
-            52,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1380,
-			128,
-			56,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			51,
-            27,
-            52,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1380,
-			128,
-			56,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			51,
-            25,
-            52,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2164,
-			128,
-			56,
-			68
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			51,
-            25,
-            52,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2164,
-			128,
-			56,
-			68
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			48,
-            26,
-            53,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1878,
-			128,
-			58,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			48,
-            26,
-            53,
-            108
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1878,
-			128,
-			58,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_base_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			159,
-			201
-		},
-		trim = {
-			52,
-            27,
-            53,
-            109
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1062,
-			128,
-			54,
+			1562,
+			1980,
+			62,
 			65
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0008"
+		}
 	},
-	["sparking_geode_base_0030"] = {
+	sparking_geode_base_0013 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			159,
-			201
+			202
 		},
 		trim = {
-			52,
-            27,
-            53,
-            109
+			53,
+			28,
+			43,
+			105
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1062,
-			128,
-			54,
-			65
+			171,
+			1570,
+			63,
+			69
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0014"
+		}
 	},
-	["sparking_geode_construction"] = {
+	sparking_geode_base_0017 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			159,
+			202
+		},
+		trim = {
+			51,
+			27,
+			40,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			167,
+			1044,
+			68,
+			75
+		},
+		alias = {
+			"sparking_geode_base_0018"
+		}
+	},
+	sparking_geode_base_0019 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			159,
+			202
+		},
+		trim = {
+			51,
+			27,
+			39,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			167,
+			967,
+			69,
+			74
+		},
+		alias = {
+			"sparking_geode_base_0020"
+		}
+	},
+	sparking_geode_base_0021 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			159,
+			202
+		},
+		trim = {
+			51,
+			26,
+			39,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			159,
+			1172,
+			69,
+			71
+		},
+		alias = {
+			"sparking_geode_base_0022"
+		}
+	},
+	sparking_geode_base_0029 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			159,
+			202
+		},
+		trim = {
+			53,
+			28,
+			54,
+			110
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			185,
+			1454,
+			52,
+			64
+		},
+		alias = {
+			"sparking_geode_base_0030"
+		}
+	},
+	sparking_geode_construction = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			119,
 			156
 		},
 		trim = {
-			10,
-            37,
-            11,
-            56
+			14,
+			40,
+			13,
+			59
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			660,
-			128,
-			98,
-			63
+			1339,
+			1984,
+			92,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_crystal_big_0001"] = {
+	sparking_geode_crystal_big_0001 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			133,
 			224
 		},
 		trim = {
-			35,
-            76,
-            42,
-            101
+			38,
+			79,
+			45,
+			104
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1934,
-			4,
-			56,
-			47
+			185,
+			1521,
+			50,
+			41
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_crystal_big_0002"] = {
+	sparking_geode_crystal_big_0002 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
 			133,
 			224
 		},
 		trim = {
+			19,
+			41,
+			19,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1739,
+			1733,
+			95,
+			88
+		},
+		alias = {}
+	},
+	sparking_geode_crystal_big_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			133,
+			224
+		},
+		trim = {
+			15,
 			16,
-            38,
-            16,
-            92
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2111,
-			204,
-			101,
-			94
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0037"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0038"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0039"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0040"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0041"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0042"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0043"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0044"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0045"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0046"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0047"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0048"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0049"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0050"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0051"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0052"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_big_0053"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			133,
-			224
-		},
-		trim = {
-			12,
-            13,
-            12,
-            93
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			732,
-			545,
-			109,
-			118
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			29,
-            58,
-            33,
-            77
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1418,
-			4,
-			51,
-			41
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			21,
-            35,
-            24,
-            78
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			766,
-			128,
-			68,
-			63
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0037"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0038"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0039"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0040"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0041"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0042"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0043"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0044"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0045"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0046"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0047"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0048"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0049"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0050"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0051"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0052"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_mid_0053"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			113,
-			176
-		},
-		trim = {
-			11,
-            12,
-            12,
-            72
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1916,
-			204,
-			90,
-			92
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			26,
-            40,
-            25,
-            51
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			981,
-			4,
-			45,
-			36
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			21,
-            34,
-            23,
-            52
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1477,
-			4,
-			52,
-			41
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0037"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0038"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0039"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0040"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0041"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0042"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0043"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0044"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0045"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0046"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0047"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0048"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0049"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0050"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0051"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0052"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_crystal_small_0053"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			127
-		},
-		trim = {
-			11,
-            10,
-            14,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1944,
-			128,
-			71,
-			67
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			76,
-            27,
-            79,
-            187
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1761,
-			1793,
-			131,
-			220
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			76,
-            37,
-            77,
-            187
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			996,
-			1793,
-			133,
-			210
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			75,
-            37,
-            70,
-            182
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1612,
-			1793,
-			141,
-			215
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			75,
-            37,
-            66,
-            185
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1137,
-			1793,
-			145,
-			212
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			74,
-            56,
-            66,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			521,
-			1793,
-			146,
-			195
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			74,
-            37,
-            58,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1290,
-			1793,
-			154,
-			214
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			76,
-            37,
-            58,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1452,
-			1793,
-			152,
-			214
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			72,
-            53,
-            74,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			848,
-			1793,
-			140,
-			198
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			72,
-            56,
-            49,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			675,
-			1793,
-			165,
-			195
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			64,
-            61,
-            49,
-            191
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1881,
-			1603,
-			173,
-			182
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			63,
-            61,
-            41,
-            191
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2062,
-			1603,
-			182,
-			182
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			77,
-            64,
-            40,
-            188
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1793,
-			169,
-			182
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			61,
-            64,
-            80,
-            188
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			181,
-			1793,
-			145,
-			182
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			61,
-            99,
-            39,
-            185
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2110,
-			1275,
-			186,
-			150
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			99,
-            99,
-            38,
-            206
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			452,
-			680,
-			149,
-			129
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			61,
-            100,
-            87,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1007,
-			545,
-			138,
-			122
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			61,
-            100,
-            34,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1153,
-			545,
-			191,
-			122
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			102,
-            102,
-            34,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			849,
-			545,
-			150,
-			120
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			102,
-            121,
-            90,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			307,
-			94,
+			15,
 			96
 		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			735,
-			204,
-			78,
-			79
+			1927,
+			638,
+			103,
+			112
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_crystal_big_0004",
+			"sparking_geode_crystal_big_0005",
+			"sparking_geode_crystal_big_0006",
+			"sparking_geode_crystal_big_0007",
+			"sparking_geode_crystal_big_0008",
+			"sparking_geode_crystal_big_0009",
+			"sparking_geode_crystal_big_0010",
+			"sparking_geode_crystal_big_0011",
+			"sparking_geode_crystal_big_0012",
+			"sparking_geode_crystal_big_0013",
+			"sparking_geode_crystal_big_0014",
+			"sparking_geode_crystal_big_0015",
+			"sparking_geode_crystal_big_0016",
+			"sparking_geode_crystal_big_0017",
+			"sparking_geode_crystal_big_0018",
+			"sparking_geode_crystal_big_0019",
+			"sparking_geode_crystal_big_0020",
+			"sparking_geode_crystal_big_0021",
+			"sparking_geode_crystal_big_0022",
+			"sparking_geode_crystal_big_0023",
+			"sparking_geode_crystal_big_0024",
+			"sparking_geode_crystal_big_0025",
+			"sparking_geode_crystal_big_0026",
+			"sparking_geode_crystal_big_0027",
+			"sparking_geode_crystal_big_0028",
+			"sparking_geode_crystal_big_0029",
+			"sparking_geode_crystal_big_0030",
+			"sparking_geode_crystal_big_0031",
+			"sparking_geode_crystal_big_0032",
+			"sparking_geode_crystal_big_0033",
+			"sparking_geode_crystal_big_0034",
+			"sparking_geode_crystal_big_0035",
+			"sparking_geode_crystal_big_0036",
+			"sparking_geode_crystal_big_0037",
+			"sparking_geode_crystal_big_0038",
+			"sparking_geode_crystal_big_0039",
+			"sparking_geode_crystal_big_0040",
+			"sparking_geode_crystal_big_0041",
+			"sparking_geode_crystal_big_0042",
+			"sparking_geode_crystal_big_0043",
+			"sparking_geode_crystal_big_0044",
+			"sparking_geode_crystal_big_0045",
+			"sparking_geode_crystal_big_0046",
+			"sparking_geode_crystal_big_0047",
+			"sparking_geode_crystal_big_0048",
+			"sparking_geode_crystal_big_0049",
+			"sparking_geode_crystal_big_0050",
+			"sparking_geode_crystal_big_0051",
+			"sparking_geode_crystal_big_0052",
+			"sparking_geode_crystal_big_0053"
+		}
 	},
-	["sparking_geode_cystal_fx_0021"] = {
+	sparking_geode_crystal_mid_0001 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			286,
-			434
+			114,
+			176
 		},
 		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			735,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			102,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			821,
-			204,
-			83,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			102,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			821,
-			204,
-			83,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			97,
-            137,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			998,
-			204,
-			88,
+			32,
+			61,
+			37,
 			80
 		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			97,
-            137,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			998,
-			204,
-			88,
-			80
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			93,
-            134,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1225,
-			204,
-			92,
-			83
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			93,
-            134,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1225,
-			204,
-			92,
-			83
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			91,
-            132,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1459,
-			204,
-			94,
-			85
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			91,
-            132,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1459,
-			204,
-			94,
-			85
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			86,
-            130,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1655,
-			204,
-			99,
-			87
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			86,
-            130,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1655,
-			204,
-			99,
-			87
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			106,
-            138,
-            91,
-            203
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2014,
-			204,
-			89,
-			93
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0037"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			106,
-            138,
-            91,
-            203
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2014,
-			204,
-			89,
-			93
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0038"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			106,
-            138,
-            85,
-            200
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			106,
-			307,
-			95,
-			96
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0039"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			106,
-            138,
-            85,
-            200
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			106,
-			307,
-			95,
-			96
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0040"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0041"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            78,
-            195
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1183,
-			307,
-			101,
-			101
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0042"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            78,
-            195
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1183,
-			307,
-			101,
-			101
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0043"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            71,
-            193
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1572,
-			307,
-			108,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0044"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            71,
-            193
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1572,
-			307,
-			108,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0045"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0046"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            70,
-            190
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1957,
-			307,
-			109,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0047"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            70,
-            190
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1957,
-			307,
-			109,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0048"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0049"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			106,
-            138,
-            71,
-            189
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			142,
-			421,
-			109,
-			107
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0050"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			106,
-            138,
-            71,
-            189
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			142,
-			421,
-			109,
-			107
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0051"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0052"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0053"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			107,
-            138,
-            101,
-            217
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			912,
-			204,
-			78,
-			79
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0054"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			75,
-            106,
-            79,
-            186
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1533,
-			974,
-			132,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0055"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			77,
-            110,
-            81,
-            187
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2032,
-			680,
-			128,
-			137
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0056"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			78,
-            105,
-            77,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			787,
-			1275,
-			131,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0057"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			80,
-            109,
-            78,
-            183
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1673,
-			974,
-			128,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0058"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			77,
-            110,
-            74,
-            191
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			741,
-			680,
-			135,
-			133
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0059"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			77,
-            110,
-            74,
-            191
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			884,
-			680,
-			135,
-			133
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0060"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			74,
-            105,
-            70,
-            188
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1449,
-			825,
-			142,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0061"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			74,
-            105,
-            70,
-            188
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1599,
-			825,
-			142,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0062"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			72,
-            122,
-            66,
-            185
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1947,
-			545,
-			148,
-			127
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0063"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			72,
-            122,
-            66,
-            185
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2103,
-			545,
-			148,
-			127
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0064"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			72,
-            128,
-            67,
-            193
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			542,
-			421,
-			147,
-			113
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0065"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			72,
-            128,
-            67,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			343,
-			307,
-			147,
-			98
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0066"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			80,
-            180,
-            67,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1605,
-			4,
-			139,
-			44
-		},
-		alias = {},
-	},
-	["sparking_geode_cystal_fx_0067"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			286,
-			434
-		},
-		trim = {
-			80,
-            180,
-            67,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1605,
-			4,
-			139,
-			44
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			35,
-            30,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			185,
-			4,
-			30,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			35,
-            30,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			185,
-			4,
-			30,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            27,
-            31,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			546,
-			4,
-			32,
-			25
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            27,
-            31,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			546,
-			4,
-			32,
-			25
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			31,
-            25,
-            30,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			357,
-			4,
-			35,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			31,
-            25,
-            30,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			357,
-			4,
-			35,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            29,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			400,
-			4,
-			38,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            29,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			400,
-			4,
-			38,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            28,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			4,
-			39,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            28,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			4,
-			39,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			28,
-            26,
-            29,
-            26
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			811,
-			4,
-			39,
-			27
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			28,
-            26,
-            29,
-            26
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			811,
-			4,
-			39,
-			27
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            35,
-            34,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			44,
-			4,
-			29,
-			17
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            35,
-            34,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			44,
-			4,
-			29,
-			17
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			35,
-            30,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			185,
-			4,
-			30,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			35,
-            30,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			185,
-			4,
-			30,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            27,
-            31,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			546,
-			4,
-			32,
-			25
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            27,
-            31,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			546,
-			4,
-			32,
-			25
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			31,
-            25,
-            30,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			357,
-			4,
-			35,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			31,
-            25,
-            30,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			357,
-			4,
-			35,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            29,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			400,
-			4,
-			38,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            29,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			400,
-			4,
-			38,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            28,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			4,
-			39,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			29,
-            27,
-            28,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			4,
-			39,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			0,
-            0,
-            93,
-            76
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			28,
-            26,
-            29,
-            26
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			811,
-			4,
-			39,
-			27
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			28,
-            26,
-            29,
-            26
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			811,
-			4,
-			39,
-			27
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            35,
-            34,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			44,
-			4,
-			29,
-			17
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            35,
-            34,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			44,
-			4,
-			29,
-			17
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0037"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			35,
-            30,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			185,
-			4,
-			30,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0038"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			35,
-            30,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			185,
-			4,
-			30,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0039"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            27,
-            31,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			546,
-			4,
-			32,
-			25
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0040"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			33,
-            27,
-            31,
-            27
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			546,
-			4,
-			32,
-			25
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0041"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			31,
-            25,
-            30,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			357,
-			4,
-			35,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_1_0042"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			96,
-			79
-		},
-		trim = {
-			31,
-            25,
-            30,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			357,
-			4,
-			35,
-			24
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			24,
-            37,
-            35,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1775,
-			61,
-			68,
-			58
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			25,
-            34,
-            35,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			152,
-			128,
-			67,
-			61
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			53,
-            68,
-            33,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			586,
-			4,
-			41,
-			26
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			22,
-            32,
-            31,
-            29
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			842,
-			128,
-			74,
-			63
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			48,
-            68,
-            33,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			635,
-			4,
-			46,
-			26
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			20,
-            32,
-            53,
-            66
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			689,
-			4,
-			54,
-			26
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			39,
-            44,
-            52,
-            59
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			313,
-			4,
-			36,
-			21
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			52,
-            57,
-            39,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1170,
-			4,
-			36,
-			37
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			38,
-            37,
-            47,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1214,
-			4,
-			42,
-			37
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			49,
-            71,
-            33,
-            29
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			493,
-			4,
+			189,
+			679,
 			45,
-			24
+			35
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_electric_decal_2_0020"] = {
+	sparking_geode_crystal_mid_0003 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			127,
-			124
-		},
-		trim = {
-			49,
-            54,
-            32,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1364,
-			4,
-			46,
-			40
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			49,
-            56,
-            45,
-            50
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			81,
-			4,
-			33,
-			18
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			60,
-            47,
-            46,
-            61
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			15,
-			4,
-			21,
-			16
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			60,
-            45,
-            44,
-            61
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			122,
-			4,
-			23,
-			18
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			59,
-            44,
-            44,
-            62
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			153,
-			4,
-			24,
-			18
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			33,
-            37,
-            42,
-            61
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			751,
-			4,
-			52,
-			26
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			18,
-            34,
-            42,
-            37
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			308,
-			61,
-			67,
-			53
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			20,
-            32,
-            66,
-            38
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			699,
-			61,
-			41,
-			54
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			28,
-            35,
-            64,
-            69
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			223,
-			4,
-			35,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			19,
-            33,
-            66,
-            38
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			383,
-			61,
-			42,
-			53
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			17,
-            65,
-            71,
-            39
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			266,
-			4,
-			39,
-			20
-		},
-		alias = {},
-	},
-	["sparking_geode_electric_decal_2_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			127,
-			124
-		},
-		trim = {
-			0,
-            0,
-            124,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			28,
-            24,
-            31,
-            118
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			680,
-			151,
-			127
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			27,
-            24,
-            30,
-            118
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			163,
-			680,
-			153,
-			127
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			26,
-            19,
-            28,
-            114
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1300,
-			680,
-			156,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			25,
-            19,
-            28,
-            114
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1464,
-			680,
-			157,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			24,
-            16,
-            26,
-            111
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1809,
-			974,
-			160,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			23,
-            16,
-            25,
-            111
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1977,
-			974,
-			162,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			21,
-            14,
-            25,
-            109
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			926,
-			1275,
-			164,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			20,
-            14,
-            24,
-            109
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1098,
-			1275,
-			166,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			19,
-            36,
-            23,
-            117
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2003,
-			421,
-			168,
-			116
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			19,
-            37,
-            22,
-            116
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			545,
-			169,
-			116
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			17,
-            37,
-            21,
-            116
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			181,
-			545,
-			172,
-			116
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			17,
-            38,
-            20,
-            116
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1183,
-			421,
-			173,
-			115
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			15,
-            38,
-            19,
-            115
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			361,
-			545,
-			176,
-			116
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			15,
-            39,
-            18,
-            115
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1364,
-			421,
-			177,
-			115
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
+			114,
+			176
 		},
 		trim = {
 			14,
-            39,
-            17,
-            114
+			15,
+			15,
+			75
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			545,
-			545,
-			179,
-			116
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			13,
-            41,
-            18,
-            115
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			697,
-			421,
-			179,
-			113
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			49,
-            41,
-            17,
-            114
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			884,
-			421,
-			144,
-			114
-		},
-		alias = {},
-	},
-	["sparking_geode_evolve_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			210,
-			269
-		},
-		trim = {
-			60,
-            43,
-            64,
-            140
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1561,
-			204,
-			86,
+			1739,
+			1909,
+			85,
 			86
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_crystal_mid_0004",
+			"sparking_geode_crystal_mid_0005",
+			"sparking_geode_crystal_mid_0006",
+			"sparking_geode_crystal_mid_0007",
+			"sparking_geode_crystal_mid_0008",
+			"sparking_geode_crystal_mid_0009",
+			"sparking_geode_crystal_mid_0010",
+			"sparking_geode_crystal_mid_0011",
+			"sparking_geode_crystal_mid_0012",
+			"sparking_geode_crystal_mid_0013",
+			"sparking_geode_crystal_mid_0014",
+			"sparking_geode_crystal_mid_0015",
+			"sparking_geode_crystal_mid_0016",
+			"sparking_geode_crystal_mid_0017",
+			"sparking_geode_crystal_mid_0018",
+			"sparking_geode_crystal_mid_0019",
+			"sparking_geode_crystal_mid_0020",
+			"sparking_geode_crystal_mid_0021",
+			"sparking_geode_crystal_mid_0022",
+			"sparking_geode_crystal_mid_0023",
+			"sparking_geode_crystal_mid_0024",
+			"sparking_geode_crystal_mid_0025",
+			"sparking_geode_crystal_mid_0026",
+			"sparking_geode_crystal_mid_0027",
+			"sparking_geode_crystal_mid_0028",
+			"sparking_geode_crystal_mid_0029",
+			"sparking_geode_crystal_mid_0030",
+			"sparking_geode_crystal_mid_0031",
+			"sparking_geode_crystal_mid_0032",
+			"sparking_geode_crystal_mid_0033",
+			"sparking_geode_crystal_mid_0034",
+			"sparking_geode_crystal_mid_0035",
+			"sparking_geode_crystal_mid_0036",
+			"sparking_geode_crystal_mid_0037",
+			"sparking_geode_crystal_mid_0038",
+			"sparking_geode_crystal_mid_0039",
+			"sparking_geode_crystal_mid_0040",
+			"sparking_geode_crystal_mid_0041",
+			"sparking_geode_crystal_mid_0042",
+			"sparking_geode_crystal_mid_0043",
+			"sparking_geode_crystal_mid_0044",
+			"sparking_geode_crystal_mid_0045",
+			"sparking_geode_crystal_mid_0046",
+			"sparking_geode_crystal_mid_0047",
+			"sparking_geode_crystal_mid_0048",
+			"sparking_geode_crystal_mid_0049",
+			"sparking_geode_crystal_mid_0050",
+			"sparking_geode_crystal_mid_0051",
+			"sparking_geode_crystal_mid_0052",
+			"sparking_geode_crystal_mid_0053"
+		}
 	},
-	["sparking_geode_evolve_0019"] = {
+	sparking_geode_crystal_small_0001 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			210,
-			269
-		},
-		trim = {
-			60,
-            43,
-            64,
-            140
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1561,
-			204,
-			86,
-			86
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            22,
-            32,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2054,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            22,
-            32,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2054,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			30,
-            23,
-            31,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1976,
-			1793,
-			32,
-			429
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			30,
-            23,
-            31,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1976,
-			1793,
-			32,
-			429
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
+			97,
+			128
 		},
 		trim = {
 			29,
-            21,
-            32,
-            442
+			44,
+			28,
+			54
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			2092,
-			1793,
-			32,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            21,
-            32,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2092,
-			1793,
-			32,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            54,
-            30,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1934,
-			1793,
-			34,
-			399
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            54,
-            30,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1934,
-			1793,
-			34,
-			399
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			32,
-            79,
-            35,
-            445
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			1793,
-			26,
-			370
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			32,
-            79,
-            35,
-            445
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			1793,
-			26,
-			370
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			32,
-            79,
-            35,
-            445
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			1793,
-			26,
-			370
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			32,
-            79,
-            35,
-            445
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			1793,
-			26,
-			370
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            54,
-            30,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1934,
-			1793,
-			34,
-			399
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            54,
-            30,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1934,
-			1793,
-			34,
-			399
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            21,
-            32,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2092,
-			1793,
-			32,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			29,
-            21,
-            32,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2092,
-			1793,
-			32,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			30,
-            23,
-            31,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1976,
-			1793,
-			32,
-			429
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			30,
-            23,
-            31,
-            442
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1976,
-			1793,
-			32,
-			429
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            22,
-            32,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2054,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            22,
-            32,
-            441
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2054,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_0027"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			93,
-			894
-		},
-		trim = {
-			31,
-            20,
-            32,
-            443
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2016,
-			1793,
-			30,
-			431
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
+			2005,
+			1013,
 			40,
-            18,
-            29,
-            36
+			30
+		},
+		alias = {}
+	},
+	sparking_geode_crystal_small_0002 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			128
+		},
+		trim = {
+			25,
+			37,
+			27,
+			55
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			433,
-			61,
-			81,
+			1736,
+			1528,
+			45,
+			36
+		},
+		alias = {}
+	},
+	sparking_geode_crystal_small_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			128
+		},
+		trim = {
+			14,
+			13,
+			18,
 			53
 		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			34,
-            17,
-            33,
-            30
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
+			171,
+			1642,
+			65,
+			62
+		},
+		alias = {
+			"sparking_geode_crystal_small_0004",
+			"sparking_geode_crystal_small_0005",
+			"sparking_geode_crystal_small_0006",
+			"sparking_geode_crystal_small_0007",
+			"sparking_geode_crystal_small_0008",
+			"sparking_geode_crystal_small_0009",
+			"sparking_geode_crystal_small_0010",
+			"sparking_geode_crystal_small_0011",
+			"sparking_geode_crystal_small_0012",
+			"sparking_geode_crystal_small_0013",
+			"sparking_geode_crystal_small_0014",
+			"sparking_geode_crystal_small_0015",
+			"sparking_geode_crystal_small_0016",
+			"sparking_geode_crystal_small_0017",
+			"sparking_geode_crystal_small_0018",
+			"sparking_geode_crystal_small_0019",
+			"sparking_geode_crystal_small_0020",
+			"sparking_geode_crystal_small_0021",
+			"sparking_geode_crystal_small_0022",
+			"sparking_geode_crystal_small_0023",
+			"sparking_geode_crystal_small_0024",
+			"sparking_geode_crystal_small_0025",
+			"sparking_geode_crystal_small_0026",
+			"sparking_geode_crystal_small_0027",
+			"sparking_geode_crystal_small_0028",
+			"sparking_geode_crystal_small_0029",
+			"sparking_geode_crystal_small_0030",
+			"sparking_geode_crystal_small_0031",
+			"sparking_geode_crystal_small_0032",
+			"sparking_geode_crystal_small_0033",
+			"sparking_geode_crystal_small_0034",
+			"sparking_geode_crystal_small_0035",
+			"sparking_geode_crystal_small_0036",
+			"sparking_geode_crystal_small_0037",
+			"sparking_geode_crystal_small_0038",
+			"sparking_geode_crystal_small_0039",
+			"sparking_geode_crystal_small_0040",
+			"sparking_geode_crystal_small_0041",
+			"sparking_geode_crystal_small_0042",
+			"sparking_geode_crystal_small_0043",
+			"sparking_geode_crystal_small_0044",
+			"sparking_geode_crystal_small_0045",
+			"sparking_geode_crystal_small_0046",
+			"sparking_geode_crystal_small_0047",
+			"sparking_geode_crystal_small_0048",
+			"sparking_geode_crystal_small_0049",
+			"sparking_geode_crystal_small_0050",
+			"sparking_geode_crystal_small_0051",
+			"sparking_geode_crystal_small_0052",
+			"sparking_geode_crystal_small_0053"
+		}
+	},
+	sparking_geode_cystal_fx_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			77,
+			28,
+			80,
+			188
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			747,
+			130,
+			219
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0002 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			77,
+			38,
+			80,
+			188
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			1169,
+			130,
+			209
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			77,
+			38,
+			71,
+			183
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			530,
+			139,
+			214
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0004 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			77,
+			38,
+			67,
+			186
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			316,
+			143,
+			211
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			76,
+			58,
+			67,
+			185
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			471,
+			144,
+			192
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0006 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			76,
+			38,
+			58,
+			185
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			752,
+			153,
+			212
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			78,
+			38,
+			58,
+			185
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1172,
+			151,
+			212
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0008 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			73,
+			54,
+			76,
+			184
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			969,
+			138,
+			197
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0009 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			73,
+			57,
+			51,
+			184
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1570,
+			163,
+			194
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0010 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			65,
+			62,
+			51,
+			193
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			133,
+			171,
+			180
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0011 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			65,
+			62,
+			41,
+			193
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			569,
+			181,
+			180
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0012 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			78,
+			65,
+			41,
+			190
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			601,
+			133,
+			168,
+			180
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0013 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			63,
+			65,
+			82,
+			190
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			1381,
+			142,
+			180
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0014 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			63,
+			100,
+			39,
+			186
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			572,
+			316,
+			185,
+			149
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0015 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			100,
+			100,
+			39,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			782,
+			148,
+			127
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0016 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			63,
+			101,
+			89,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1787,
+			1049,
+			135,
+			121
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0017 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			63,
+			101,
+			36,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1413,
+			316,
+			188,
+			121
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0018 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			104,
+			103,
+			36,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1707,
+			912,
+			147,
+			119
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0019 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			104,
+			122,
+			91,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			1830,
+			92,
+			94
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0020 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			161,
+			752,
+			77,
+			77
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0021"
+		}
+	},
+	sparking_geode_cystal_fx_0022 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			104,
+			139,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1962,
+			5,
+			81,
+			77
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0023"
+		}
+	},
+	sparking_geode_cystal_fx_0024 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			161,
+			832,
+			77,
+			77
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0029",
+			"sparking_geode_cystal_fx_0032",
+			"sparking_geode_cystal_fx_0035",
+			"sparking_geode_cystal_fx_0040",
+			"sparking_geode_cystal_fx_0045",
+			"sparking_geode_cystal_fx_0048",
+			"sparking_geode_cystal_fx_0051",
+			"sparking_geode_cystal_fx_0052",
+			"sparking_geode_cystal_fx_0053"
+		}
+	},
+	sparking_geode_cystal_fx_0025 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			99,
+			139,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1928,
+			1824,
+			86,
+			77
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0026"
+		}
+	},
+	sparking_geode_cystal_fx_0027 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			95,
+			135,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1835,
+			1824,
+			90,
+			81
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0028"
+		}
+	},
+	sparking_geode_cystal_fx_0030 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			92,
+			134,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1739,
+			1824,
+			93,
+			82
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0031"
+		}
+	},
+	sparking_geode_cystal_fx_0033 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			88,
+			132,
+			102,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			1733,
+			97,
+			84
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0034"
+		}
+	},
+	sparking_geode_cystal_fx_0036 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			92,
+			204
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			1927,
+			87,
+			92
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0037"
+		}
+	},
+	sparking_geode_cystal_fx_0038 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			86,
+			202
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			1733,
+			93,
+			94
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0039"
+		}
+	},
+	sparking_geode_cystal_fx_0041 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			79,
+			196
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1939,
+			100,
+			100
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0042"
+		}
+	},
+	sparking_geode_cystal_fx_0043 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			73,
+			194
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1534,
+			1571,
+			106,
+			102
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0044"
+		}
+	},
+	sparking_geode_cystal_fx_0046 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			71,
+			192
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1925,
+			471,
+			108,
+			104
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0047"
+		}
+	},
+	sparking_geode_cystal_fx_0049 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			108,
+			139,
+			72,
+			191
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1927,
+			316,
+			107,
+			105
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0050"
+		}
+	},
+	sparking_geode_cystal_fx_0054 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			77,
+			107,
+			80,
+			188
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1616,
+			130,
+			140
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0055 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			78,
+			112,
+			82,
+			189
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1749,
+			127,
+			134
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0056 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			80,
+			107,
+			78,
+			185
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1332,
+			129,
+			143
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0057 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			82,
+			110,
+			79,
+			185
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1329,
+			126,
+			140
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0058 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			81,
+			114,
+			76,
+			193
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1236,
+			1049,
+			130,
+			128
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0059 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			81,
+			114,
+			76,
+			193
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1369,
+			1049,
+			130,
+			128
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0060 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			78,
+			109,
+			73,
+			189
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1193,
+			136,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0061 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			78,
+			109,
+			73,
+			189
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1333,
+			136,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0062 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			76,
+			124,
+			68,
+			186
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1917,
+			143,
+			125
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0063 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			76,
+			126,
+			68,
+			186
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1413,
+			912,
+			143,
+			123
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0064 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			76,
+			132,
+			69,
+			195
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1288,
+			782,
+			142,
+			108
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0065 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			76,
+			132,
+			69,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1479,
+			1369,
+			142,
+			91
+		},
+		alias = {}
+	},
+	sparking_geode_cystal_fx_0066 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			287,
+			435
+		},
+		trim = {
+			84,
+			184,
+			70,
+			214
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1600,
+			1528,
+			133,
+			37
+		},
+		alias = {
+			"sparking_geode_cystal_fx_0067"
+		}
+	},
+	sparking_geode_electric_decal_1_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			37,
+			32,
+			32,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2001,
+			1549,
+			28,
+			18
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0002",
+			"sparking_geode_electric_decal_1_0019",
+			"sparking_geode_electric_decal_1_0020",
+			"sparking_geode_electric_decal_1_0037",
+			"sparking_geode_electric_decal_1_0038"
+		}
+	},
+	sparking_geode_electric_decal_1_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			35,
+			29,
+			32,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2012,
+			424,
+			30,
+			23
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0004",
+			"sparking_geode_electric_decal_1_0021",
+			"sparking_geode_electric_decal_1_0022",
+			"sparking_geode_electric_decal_1_0039",
+			"sparking_geode_electric_decal_1_0040"
+		}
+	},
+	sparking_geode_electric_decal_1_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			33,
+			27,
+			31,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2011,
+			1700,
+			33,
+			22
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0006",
+			"sparking_geode_electric_decal_1_0023",
+			"sparking_geode_electric_decal_1_0024",
+			"sparking_geode_electric_decal_1_0041",
+			"sparking_geode_electric_decal_1_0042"
+		}
+	},
+	sparking_geode_electric_decal_1_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			32,
+			29,
+			29,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			2022,
+			36,
+			23
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0008",
+			"sparking_geode_electric_decal_1_0025",
+			"sparking_geode_electric_decal_1_0026"
+		}
+	},
+	sparking_geode_electric_decal_1_0009 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			0,
+			0,
+			97,
+			80
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1937,
+			1733,
+			97,
+			80
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0010",
+			"sparking_geode_electric_decal_1_0013",
+			"sparking_geode_electric_decal_1_0014",
+			"sparking_geode_electric_decal_1_0027",
+			"sparking_geode_electric_decal_1_0028",
+			"sparking_geode_electric_decal_1_0031",
+			"sparking_geode_electric_decal_1_0032"
+		}
+	},
+	sparking_geode_electric_decal_1_0011 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			31,
+			29,
+			29,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1682,
+			2022,
+			37,
+			22
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0012",
+			"sparking_geode_electric_decal_1_0029",
+			"sparking_geode_electric_decal_1_0030"
+		}
+	},
+	sparking_geode_electric_decal_1_0015 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			30,
+			28,
+			31,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1856,
+			288,
+			36,
+			24
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0016",
+			"sparking_geode_electric_decal_1_0033",
+			"sparking_geode_electric_decal_1_0034"
+		}
+	},
+	sparking_geode_electric_decal_1_0017 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			97,
+			80
+		},
+		trim = {
+			36,
+			37,
+			35,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1472,
+			2004,
+			26,
+			15
+		},
+		alias = {
+			"sparking_geode_electric_decal_1_0018",
+			"sparking_geode_electric_decal_1_0035",
+			"sparking_geode_electric_decal_1_0036"
+		}
+	},
+	sparking_geode_electric_decal_2_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
 			128,
-			83,
+			125
+		},
+		trim = {
+			26,
+			39,
+			36,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			171,
+			1707,
+			66,
+			56
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			54,
+			71,
+			35,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1970,
+			424,
+			39,
+			24
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0004 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			23,
+			35,
+			33,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1562,
+			1743,
+			72,
 			60
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_longray_decal_down_0003"] = {
+	sparking_geode_electric_decal_2_0005 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			150,
-			107
+			128,
+			125
 		},
 		trim = {
-			35,
-            18,
-            29,
-            33
+			50,
+			71,
+			34,
+			30
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1306,
-			61,
-			86,
-			56
+			189,
+			717,
+			44,
+			24
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_longray_decal_down_0004"] = {
+	sparking_geode_electric_decal_2_0006 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			150,
-			107
+			128,
+			125
 		},
 		trim = {
-			35,
-            18,
-            29,
-            33
+			21,
+			34,
+			54,
+			67
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1400,
-			61,
-			86,
-			56
+			1969,
+			878,
+			53,
+			24
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_longray_decal_down_0005"] = {
+	sparking_geode_electric_decal_2_0007 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			150,
-			107
+			128,
+			125
+		},
+		trim = {
+			0,
+			0,
+			128,
+			125
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1362,
+			1180,
+			128,
+			125
+		},
+		alias = {
+			"sparking_geode_electric_decal_2_0008",
+			"sparking_geode_electric_decal_2_0009",
+			"sparking_geode_electric_decal_2_0010",
+			"sparking_geode_electric_decal_2_0011",
+			"sparking_geode_electric_decal_2_0012",
+			"sparking_geode_electric_decal_2_0013",
+			"sparking_geode_electric_decal_2_0014",
+			"sparking_geode_electric_decal_2_0015",
+			"sparking_geode_electric_decal_2_0021",
+			"sparking_geode_electric_decal_2_0023",
+			"sparking_geode_electric_decal_2_0032",
+			"sparking_geode_electric_decal_2_0034"
+		}
+	},
+	sparking_geode_electric_decal_2_0016 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
 		},
 		trim = {
 			41,
-            18,
-            27,
-            36
+			45,
+			54,
+			61
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			522,
-			61,
-			82,
-			53
+			1965,
+			1549,
+			33,
+			19
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_longray_decal_down_0006"] = {
+	sparking_geode_electric_decal_2_0017 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			150,
-			107
+			128,
+			125
+		},
+		trim = {
+			53,
+			59,
+			41,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1881,
+			1996,
+			34,
+			36
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0018 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
 		},
 		trim = {
 			39,
-            17,
-            27,
-            36
+			39,
+			49,
+			51
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			748,
-			61,
-			84,
-			54
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			35,
-            17,
-            29,
-            33
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1596,
-			61,
-			86,
-			57
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			35,
-            16,
-            29,
-            33
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1851,
-			61,
-			86,
-			58
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			34,
-            16,
-            33,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			227,
-			128,
-			83,
-			61
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			34,
-            17,
-            33,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			128,
-			83,
-			60
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			35,
-            18,
-            29,
-            33
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1306,
-			61,
-			86,
-			56
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
+			1927,
+			424,
 			40,
-            18,
-            29,
-            36
+			35
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			433,
-			61,
-			81,
-			53
-		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_longray_decal_down_0013"] = {
+	sparking_geode_electric_decal_2_0019 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			150,
-			107
+			128,
+			125
 		},
 		trim = {
-			41,
-            18,
-            30,
-            36
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			612,
-			61,
-			79,
-			53
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			0,
-            0,
-            147,
-            104
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_down_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			107
-		},
-		trim = {
-			0,
-            0,
-            147,
-            104
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			21,
-            67,
-            14,
-            64
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			858,
-			4,
-			115,
+			50,
+			73,
+			34,
 			30
 		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			21,
-            67,
-            14,
-            64
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			858,
-			4,
-			115,
+			1980,
+			753,
+			44,
+			22
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0020 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			52,
+			57,
+			32,
 			30
 		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
+		a_size = {
+			2048,
+			2048
 		},
-		trim = {
+		f_quad = {
+			193,
+			1898,
 			44,
-            13,
-            40,
-            53
+			38
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2220,
-			204,
-			66,
-			95
-		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_longray_decal_up_0004"] = {
+	sparking_geode_electric_decal_2_0022 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			150,
-			161
-		},
-		trim = {
-			44,
-            13,
-            40,
-            53
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2220,
-			204,
-			66,
-			95
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			34,
-            42,
-            27,
-            60
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2159,
-			61,
-			89,
-			59
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			34,
-            42,
-            27,
-            60
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2159,
-			61,
-			89,
-			59
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			34,
-            38,
-            33,
-            57
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1444,
 			128,
-			83,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
+			125
 		},
 		trim = {
-			34,
-            38,
-            33,
-            57
+			51,
+			57,
+			47,
+			51
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1444,
+			1970,
+			451,
+			30,
+			17
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0024 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
 			128,
-			83,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
+			125
 		},
 		trim = {
-			38,
-            40,
-            38,
-            60
+			62,
+			48,
+			47,
+			63
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			318,
+			1784,
+			1528,
+			19,
+			14
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0025 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
 			128,
-			74,
-			61
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
+			125
 		},
 		trim = {
-			38,
-            40,
-            38,
-            60
+			62,
+			46,
+			46,
+			63
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			318,
+			2025,
+			878,
+			20,
+			16
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0026 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
 			128,
-			74,
-			61
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
+			125
 		},
 		trim = {
-			36,
-            39,
-            37,
-            60
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			400,
-			128,
-			77,
-			62
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			36,
-            39,
-            37,
-            60
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			400,
-			128,
-			77,
-			62
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			34,
-            39,
-            34,
-            56
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1535,
-			128,
-			82,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			34,
-            39,
-            34,
-            56
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1535,
-			128,
-			82,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_longray_decal_up_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			150,
-			161
-		},
-		trim = {
-			34,
-            39,
-            34,
-            56
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1535,
-			128,
-			82,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_modifier_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			27,
-            25,
-            28,
-            25
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1802,
-			4,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["sparking_geode_modifier_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			27,
-            25,
-            28,
-            25
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1802,
-			4,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["sparking_geode_modifier_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			28,
-            22,
-            26,
-            24
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			61,
+			62,
 			45,
-			50
-		},
-		alias = {},
-	},
-	["sparking_geode_modifier_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			28,
-            22,
-            26,
-            24
+			45,
+			64
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			61,
-			45,
-			50
+			1472,
+			2022,
+			21,
+			16
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_modifier_0005"] = {
+	sparking_geode_electric_decal_2_0027 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			99,
-			96
+			128,
+			125
+		},
+		trim = {
+			34,
+			38,
+			44,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1927,
+			753,
+			50,
+			24
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0028 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			19,
+			35,
+			43,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1972,
+			1314,
+			66,
+			52
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0029 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			22,
+			34,
+			68,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2005,
+			912,
+			38,
+			52
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0030 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			30,
+			36,
+			66,
+			71
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2012,
+			450,
+			32,
+			18
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0031 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			19,
+			34,
+			67,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			1843,
+			42,
+			52
+		},
+		alias = {}
+	},
+	sparking_geode_electric_decal_2_0033 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			128,
+			125
+		},
+		trim = {
+			18,
+			67,
+			73,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1925,
+			1549,
+			37,
+			19
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			31,
+			27,
+			34,
+			122
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1559,
+			912,
+			145,
+			121
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0002 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			30,
+			27,
+			33,
+			122
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1263,
+			912,
+			147,
+			121
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
 		},
 		trim = {
 			29,
-            25,
-            28,
-            26
+			20,
+			32,
+			115
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1752,
-			4,
-			42,
-			45
-		},
-		alias = {},
-	},
-	["sparking_geode_modifier_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			29,
-            25,
-            28,
-            26
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1752,
-			4,
-			42,
-			45
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			280,
-            40,
-            204,
-            46
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1264,
-			4,
-			92,
-			38
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			280,
-            40,
-            204,
-            46
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1264,
-			4,
-			92,
-			38
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			282,
-            27,
-            200,
-            41
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1494,
-			61,
-			94,
-			56
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			282,
-            27,
-            200,
-            41
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1494,
-			61,
-			94,
-			56
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			277,
-            30,
-            31,
-            40
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			840,
-			61,
-			268,
-			54
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			277,
-            30,
-            31,
-            40
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			840,
-			61,
-			268,
-			54
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			0,
-            0,
-            573,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			0,
-            0,
-            573,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			338,
-            27,
-            32,
-            39
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1945,
-			61,
-			206,
-			58
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			338,
-            27,
-            32,
-            39
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1945,
-			61,
-			206,
-			58
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			376,
-            29,
-            33,
-            33
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			485,
-			128,
-			167,
-			62
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			376,
-            29,
-            33,
-            33
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			485,
-			128,
-			167,
-			62
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			460,
-            44,
-            33,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			217,
-			61,
-			83,
-			52
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			460,
-            44,
-            33,
-            28
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			217,
-			61,
-			83,
-			52
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			0,
-            0,
-            573,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			576,
-			124
-		},
-		trim = {
-			0,
-            0,
-            573,
-            121
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			148,
-            50,
-            95,
-            46
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1854,
-			4,
-			72,
-			46
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			148,
-            50,
-            95,
-            46
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1854,
-			4,
-			72,
-			46
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			152,
-            36,
-            76,
-            37
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			204,
-			87,
-			69
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			152,
-            36,
-            76,
-            37
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			204,
-			87,
-			69
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			158,
-            29,
-            31,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1325,
-			204,
-			126,
-			83
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			158,
-            29,
-            31,
-            30
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1325,
-			204,
-			126,
-			83
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			203,
-            42,
-            35,
-            43
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1690,
-			61,
-			77,
-			57
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			203,
-            42,
-            35,
-            43
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1690,
-			61,
-			77,
-			57
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			189,
-            31,
-            32,
-            45
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1625,
-			128,
-			94,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			189,
-            31,
-            32,
-            45
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1625,
-			128,
-			94,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			235,
-            28,
-            37,
-            39
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			252,
-			204,
-			43,
-			75
-		},
-		alias = {},
-	},
-	["sparking_geode_ray_rebote_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			315,
-			142
-		},
-		trim = {
-			235,
-            28,
-            37,
-            39
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			252,
-			204,
-			43,
-			75
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			41,
-            93,
-            39,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			57,
-			61,
-			152,
-			50
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			41,
-            93,
-            39,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			57,
-			61,
-			152,
-			50
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			43,
-            92,
-            41,
-            130
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1998,
-			4,
-			148,
-			47
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			43,
-            92,
-            41,
-            128
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2154,
-			4,
-			148,
-			49
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			101,
-            98,
-            71,
-            128
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1537,
-			4,
-			60,
-			43
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			54,
-            67,
-            57,
-            124
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			606,
-			204,
-			121,
-			78
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			49,
-            47,
-            45,
-            124
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			498,
-			307,
-			138,
-			98
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			49,
-            47,
-            45,
-            146
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			460,
-			204,
-			138,
-			76
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            43,
-            48,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1042,
-			307,
-			133,
-			100
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            43,
-            48,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1042,
-			307,
-			133,
-			100
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			54,
-            83,
-            50,
-            150
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1034,
-			4,
-			128,
-			36
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0014"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			50,
-            34,
-            51,
-            129
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2074,
-			307,
-			131,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            34,
-            51,
-            129
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			421,
-			130,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            34,
-            51,
-            129
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			421,
-			130,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			55,
-            35,
-            54,
-            152
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1094,
-			204,
-			123,
-			82
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			55,
-            35,
-            54,
-            152
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1094,
-			204,
-			123,
-			82
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            36,
-            52,
-            130
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1688,
-			307,
-			127,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            36,
-            52,
-            130
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1688,
-			307,
-			127,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            34,
-            53,
-            132
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1823,
-			307,
-			126,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            34,
-            53,
-            132
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1823,
-			307,
-			126,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            41,
-            53,
-            132
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			209,
-			307,
-			126,
-			96
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			58,
-            36,
-            58,
-            134
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			918,
-			307,
-			116,
-			99
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			50,
-            26,
-            55,
-            104
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			714,
-			825,
-			127,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			50,
-            30,
-            55,
-            104
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1027,
-			680,
-			127,
+			534,
+			802,
+			149,
 			135
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0027"] = {
+	sparking_geode_evolve_0004 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			52,
-            58,
-            50,
-            99
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			404,
-			421,
-			130,
-			112
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0028"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			52,
-            58,
-            50,
-            99
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			404,
-			421,
-			130,
-			112
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			63,
-            29,
-            94,
-            175
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1124,
-			128,
-			75,
-			65
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			50,
-            29,
-            43,
-            102
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			147,
-			825,
-			139,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            53,
-            42,
-            102
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1036,
-			421,
-			139,
-			114
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			117,
-            53,
-            43,
-            150
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1727,
-			128,
-			72,
-			66
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			48,
-            27,
-            37,
-            103
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			849,
-			825,
-			147,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			48,
-            51,
-            37,
-            103
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1549,
-			421,
-			147,
+			28,
+			20,
+			31,
 			115
 		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			49,
-            55,
-            46,
-            103
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			259,
-			421,
-			137,
+			1624,
+			638,
+			151,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			27,
+			17,
+			30,
+			112
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1164,
+			638,
+			153,
+			141
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0006 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			26,
+			17,
+			28,
+			112
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			638,
+			156,
+			141
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			24,
+			15,
+			28,
 			111
 		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            59,
-            130,
-            150
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			95,
-			128,
-			49,
-			60
+			1604,
+			316,
+			158,
+			144
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0037"] = {
+	sparking_geode_evolve_0008 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			52,
-            49,
-            34,
-            131
+			23,
+			15,
+			27,
+			111
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1762,
-			204,
-			146,
-			89
+			1095,
+			316,
+			160,
+			144
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0038"] = {
+	sparking_geode_evolve_0009 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			51,
-            41,
-            34,
-            105
+			22,
+			37,
+			26,
+			120
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1352,
-			545,
-			147,
-			123
+			1631,
+			5,
+			162,
+			113
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0039"] = {
+	sparking_geode_evolve_0010 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			51,
-            41,
-            48,
-            105
+			22,
+			38,
+			25,
+			120
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1507,
-			545,
-			133,
-			123
+			1796,
+			5,
+			163,
+			112
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0040"] = {
+	sparking_geode_evolve_0011 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			49,
-            37,
-            49,
-            107
+			20,
+			38,
+			24,
+			119
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1648,
-			545,
-			134,
-			125
+			1462,
+			5,
+			166,
+			113
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0041"] = {
+	sparking_geode_evolve_0012 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			48,
-            37,
-            35,
-            107
+			19,
+			39,
+			23,
+			119
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1790,
-			545,
-			149,
-			125
+			1291,
+			5,
+			168,
+			112
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0042"] = {
+	sparking_geode_evolve_0013 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			46,
-            47,
-            35,
-            107
+			18,
+			39,
+			22,
+			118
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1704,
-			421,
-			151,
-			115
+			943,
+			5,
+			170,
+			113
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_attack_fx_0043"] = {
+	sparking_geode_evolve_0014 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			210,
+			270
 		},
 		trim = {
-			46,
-            45,
-            54,
-            109
+			17,
+			41,
+			21,
+			118
 		},
 		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1863,
-			421,
-			132,
-			115
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0044"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			58,
-            32,
-            54,
-            109
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			324,
-			680,
-			120,
-			128
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0045"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			73,
-            32,
-            59,
-            172
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1207,
-			128,
-			100,
-			65
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0046"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			45,
-            27,
-            58,
-            144
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			644,
-			307,
-			129,
-			98
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0047"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			45,
-            27,
-            58,
-            144
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			781,
-			307,
-			129,
-			98
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0048"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0049"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			71,
-            35,
-            99,
-            179
-		},
-		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
 			1116,
+			5,
+			172,
+			111
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0015 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			15,
+			41,
+			20,
+			117
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			765,
+			5,
+			175,
+			112
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0016 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			14,
+			42,
+			19,
+			116
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			585,
+			5,
+			177,
+			112
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0017 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
+			50,
+			42,
+			18,
+			116
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1618,
+			1180,
+			142,
+			112
+		},
+		alias = {}
+	},
+	sparking_geode_evolve_0018 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			210,
+			270
+		},
+		trim = {
 			61,
-			62,
+			44,
+			65,
+			141
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1835,
+			1908,
+			84,
+			85
+		},
+		alias = {
+			"sparking_geode_evolve_0019"
+		}
+	},
+	sparking_geode_longray_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			94,
+			895
+		},
+		trim = {
+			33,
+			21,
+			33,
+			444
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1472,
+			1571,
+			28,
+			430
+		},
+		alias = {
+			"sparking_geode_longray_0002",
+			"sparking_geode_longray_0023",
+			"sparking_geode_longray_0024",
+			"sparking_geode_longray_0025",
+			"sparking_geode_longray_0026",
+			"sparking_geode_longray_0027"
+		}
+	},
+	sparking_geode_longray_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			94,
+			895
+		},
+		trim = {
+			33,
+			23,
+			33,
+			443
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1503,
+			1571,
+			28,
+			429
+		},
+		alias = {
+			"sparking_geode_longray_0004",
+			"sparking_geode_longray_0021",
+			"sparking_geode_longray_0022"
+		}
+	},
+	sparking_geode_longray_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			94,
+			895
+		},
+		trim = {
+			31,
+			24,
+			33,
+			443
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1306,
+			1369,
+			30,
+			428
+		},
+		alias = {
+			"sparking_geode_longray_0006",
+			"sparking_geode_longray_0019",
+			"sparking_geode_longray_0020"
+		}
+	},
+	sparking_geode_longray_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			94,
+			895
+		},
+		trim = {
+			30,
+			22,
+			33,
+			444
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1236,
+			1369,
+			31,
+			429
+		},
+		alias = {
+			"sparking_geode_longray_0008",
+			"sparking_geode_longray_0017",
+			"sparking_geode_longray_0018"
+		}
+	},
+	sparking_geode_longray_0009 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			94,
+			895
+		},
+		trim = {
+			30,
+			55,
+			31,
+			443
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1270,
+			1369,
+			33,
+			397
+		},
+		alias = {
+			"sparking_geode_longray_0010",
+			"sparking_geode_longray_0015",
+			"sparking_geode_longray_0016"
+		}
+	},
+	sparking_geode_longray_0011 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			94,
+			895
+		},
+		trim = {
+			33,
+			81,
+			36,
+			446
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1534,
+			1676,
+			25,
+			368
+		},
+		alias = {
+			"sparking_geode_longray_0012",
+			"sparking_geode_longray_0013",
+			"sparking_geode_longray_0014"
+		}
+	},
+	sparking_geode_longray_decal_down_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			42,
+			19,
+			31,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1562,
+			1925,
+			78,
+			52
+		},
+		alias = {
+			"sparking_geode_longray_decal_down_0012"
+		}
+	},
+	sparking_geode_longray_decal_down_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			42,
+			19,
+			28,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1805,
+			1314,
+			81,
+			52
+		},
+		alias = {}
+	},
+	sparking_geode_longray_decal_down_0014 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			0,
+			0,
+			151,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			993,
+			782,
+			151,
+			108
+		},
+		alias = {
+			"sparking_geode_longray_decal_down_0015"
+		}
+	},
+	sparking_geode_longray_decal_up_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			151,
+			162
+		},
+		trim = {
+			23,
+			68,
+			14,
+			66
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1894,
+			1700,
+			114,
+			28
+		},
+		alias = {
+			"sparking_geode_longray_decal_up_0002"
+		}
+	},
+	sparking_geode_longray_decal_up_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			151,
+			162
+		},
+		trim = {
+			45,
+			14,
+			41,
 			55
 		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0050"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			44,
-            26,
-            56,
-            141
-		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1292,
-			307,
-			132,
-			102
+			1969,
+			782,
+			65,
+			93
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_longray_decal_up_0004"
+		}
 	},
-	["sparking_geode_tower_attack_fx_0051"] = {
+	sparking_geode_longray_decal_up_0009 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			232,
-			269
+			151,
+			162
 		},
 		trim = {
-			44,
-            26,
-            56,
-            141
+			39,
+			42,
+			40,
+			62
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1432,
-			307,
-			132,
-			102
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0052"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			68,
-            30,
-            96,
-            176
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			924,
-			128,
-			68,
-			63
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0053"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0054"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0055"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			63,
-            29,
-            94,
-            175
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1124,
-			128,
-			75,
-			65
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0056"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			63,
-            29,
-            94,
-            175
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1124,
-			128,
-			75,
-			65
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0057"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			50,
-            26,
-            55,
-            104
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			714,
-			825,
-			127,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0058"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			58,
-            36,
-            58,
-            134
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			918,
-			307,
-			116,
-			99
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0059"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            41,
-            53,
-            132
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			209,
-			307,
-			126,
-			96
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0060"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            34,
-            53,
-            132
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1823,
-			307,
-			126,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0061"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            34,
-            53,
-            132
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1823,
-			307,
-			126,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0062"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            36,
-            52,
-            130
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1688,
-			307,
-			127,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0063"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			53,
-            36,
-            52,
-            130
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1688,
-			307,
-			127,
-			103
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0064"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			55,
-            35,
-            54,
-            152
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1094,
-			204,
-			123,
-			82
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0065"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			55,
-            35,
-            54,
-            152
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1094,
-			204,
-			123,
-			82
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0066"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            34,
-            51,
-            129
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			421,
-			130,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0067"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            34,
-            51,
-            129
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			421,
-			130,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0068"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			50,
-            34,
-            51,
-            129
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2074,
-			307,
-			131,
-			106
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0069"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			54,
-            83,
-            50,
-            150
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1034,
-			4,
-			128,
-			36
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0070"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            43,
-            48,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1042,
-			307,
-			133,
-			100
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0071"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			51,
-            43,
-            48,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1042,
-			307,
-			133,
-			100
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0072"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			49,
-            47,
-            45,
-            146
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			460,
-			204,
-			138,
-			76
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0073"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			49,
-            47,
-            45,
-            124
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			498,
-			307,
-			138,
-			98
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0074"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			54,
-            67,
-            57,
-            124
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			606,
-			204,
-			121,
-			78
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0075"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			101,
-            98,
-            71,
-            128
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1537,
-			4,
-			60,
-			43
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0076"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			43,
-            92,
-            41,
-            128
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2154,
-			4,
-			148,
-			49
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0077"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			43,
-            92,
-            41,
-            130
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1998,
-			4,
-			148,
-			47
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0078"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0079"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			0,
-            0,
-            229,
-            266
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0080"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			41,
-            93,
-            39,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			57,
-			61,
-			152,
-			50
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_attack_fx_0081"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			232,
-			269
-		},
-		trim = {
-			41,
-            93,
-            39,
-            126
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			57,
-			61,
-			152,
-			50
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0001"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1749,
-			825,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0002"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1749,
-			825,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0003"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            32,
-            77,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2147,
-			974,
-			140,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0004"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            32,
-            77,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2147,
-			974,
-			140,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0005"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            32,
-            77,
-            213
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1895,
-			825,
-			141,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0006"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            32,
-            77,
-            213
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1895,
-			825,
-			141,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0007"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            31,
-            76,
-            214
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2044,
-			825,
-			142,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0008"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            31,
-            76,
-            214
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2044,
-			825,
-			142,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0009"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            30,
-            75,
-            215
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			974,
-			143,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0010"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            30,
-            75,
-            215
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			974,
-			143,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0011"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			73,
-            29,
-            74,
-            216
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			155,
-			974,
-			145,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0012"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			73,
-            29,
-            74,
-            216
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			155,
-			974,
-			145,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0013"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
+			1562,
+			1806,
 			72,
-            28,
-            73,
-            217
+			58
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			308,
-			974,
-			147,
-			141
-		},
-		alias = {},
+		alias = {
+			"sparking_geode_longray_decal_up_0010"
+		}
 	},
-	["sparking_geode_tower_lvl4_0014"] = {
+	sparking_geode_longray_decal_up_0011 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
-			386
+			151,
+			162
 		},
 		trim = {
-			72,
-            28,
-            73,
-            217
+			38,
+			40,
+			38,
+			61
 		},
 		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			308,
-			974,
-			147,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0015"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            27,
-            73,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1294,
-			825,
-			147,
-			140
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0016"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            27,
-            73,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1294,
-			825,
-			147,
-			140
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0017"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            26,
-            72,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			463,
-			974,
-			148,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0018"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            26,
-            72,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			463,
-			974,
-			148,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0019"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            26,
-            72,
-            221
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1004,
-			825,
-			148,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0020"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            26,
-            72,
-            221
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1004,
-			825,
-			148,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0021"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            26,
-            72,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			619,
-			974,
-			148,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0022"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            26,
-            72,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			775,
-			974,
-			148,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0023"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            27,
-            73,
-            218
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			931,
-			974,
-			147,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0024"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            27,
-            73,
-            218
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1086,
-			974,
-			147,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0025"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            28,
-            73,
-            216
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1124,
-			147,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0026"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            28,
-            73,
-            216
-		},
-		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
 			159,
-			1124,
+			1313,
+			75,
+			61
+		},
+		alias = {
+			"sparking_geode_longray_decal_up_0012"
+		}
+	},
+	sparking_geode_modifier_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			99,
+			97
+		},
+		trim = {
+			28,
+			26,
+			29,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			189,
+			631,
+			42,
+			45
+		},
+		alias = {
+			"sparking_geode_modifier_0002"
+		}
+	},
+	sparking_geode_modifier_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			99,
+			97
+		},
+		trim = {
+			29,
+			23,
+			27,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1835,
+			1996,
+			43,
+			49
+		},
+		alias = {
+			"sparking_geode_modifier_0004"
+		}
+	},
+	sparking_geode_modifier_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			99,
+			97
+		},
+		trim = {
+			31,
+			26,
+			29,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2005,
+			967,
+			39,
+			43
+		},
+		alias = {
+			"sparking_geode_modifier_0006"
+		}
+	},
+	sparking_geode_ray_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			281,
+			41,
+			205,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1739,
+			1998,
+			91,
+			37
+		},
+		alias = {
+			"sparking_geode_ray_0002"
+		}
+	},
+	sparking_geode_ray_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			279,
+			32,
+			32,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1236,
+			1314,
+			266,
+			52
+		},
+		alias = {
+			"sparking_geode_ray_0006"
+		}
+	},
+	sparking_geode_ray_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			0,
+			0,
+			577,
+			125
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			577,
+			125
+		},
+		alias = {
+			"sparking_geode_ray_0008",
+			"sparking_geode_ray_0015",
+			"sparking_geode_ray_0016"
+		}
+	},
+	sparking_geode_ray_0009 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			340,
+			29,
+			33,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1600,
+			1469,
+			204,
+			56
+		},
+		alias = {
+			"sparking_geode_ray_0010"
+		}
+	},
+	sparking_geode_ray_0011 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			378,
+			30,
+			33,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1783,
+			1571,
+			166,
+			61
+		},
+		alias = {
+			"sparking_geode_ray_0012"
+		}
+	},
+	sparking_geode_ray_0013 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			463,
+			46,
+			34,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1889,
+			1314,
+			80,
+			51
+		},
+		alias = {
+			"sparking_geode_ray_0014"
+		}
+	},
+	sparking_geode_ray_rebote_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			315,
+			142
+		},
+		trim = {
+			149,
+			51,
+			96,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			167,
+			1122,
+			70,
+			44
+		},
+		alias = {
+			"sparking_geode_ray_rebote_0002"
+		}
+	},
+	sparking_geode_ray_rebote_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			315,
+			142
+		},
+		trim = {
+			153,
+			37,
+			77,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1922,
+			1975,
+			85,
+			67
+		},
+		alias = {
+			"sparking_geode_ray_rebote_0004"
+		}
+	},
+	sparking_geode_ray_rebote_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			315,
+			142
+		},
+		trim = {
+			159,
+			30,
+			32,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			1649,
+			124,
+			81
+		},
+		alias = {
+			"sparking_geode_ray_rebote_0006"
+		}
+	},
+	sparking_geode_ray_rebote_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			315,
+			142
+		},
+		trim = {
+			204,
+			43,
+			36,
+			44
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1562,
+			1867,
+			75,
+			55
+		},
+		alias = {
+			"sparking_geode_ray_rebote_0008"
+		}
+	},
+	sparking_geode_ray_rebote_0009 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			315,
+			142
+		},
+		trim = {
+			190,
+			32,
+			33,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1952,
+			1571,
+			92,
+			64
+		},
+		alias = {
+			"sparking_geode_ray_rebote_0010"
+		}
+	},
+	sparking_geode_ray_rebote_0011 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			315,
+			142
+		},
+		trim = {
+			236,
+			29,
+			37,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			1767,
+			42,
+			73
+		},
+		alias = {
+			"sparking_geode_ray_rebote_0012"
+		}
+	},
+	sparking_geode_tower_attack_fx_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			43,
+			94,
+			39,
+			128
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1894,
+			1649,
+			151,
+			48
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0002",
+			"sparking_geode_tower_attack_fx_0080",
+			"sparking_geode_tower_attack_fx_0081"
+		}
+	},
+	sparking_geode_tower_attack_fx_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			0,
+			0,
+			233,
+			270
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			133,
+			233,
+			270
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0004",
+			"sparking_geode_tower_attack_fx_0048",
+			"sparking_geode_tower_attack_fx_0053",
+			"sparking_geode_tower_attack_fx_0054",
+			"sparking_geode_tower_attack_fx_0078",
+			"sparking_geode_tower_attack_fx_0079"
+		}
+	},
+	sparking_geode_tower_attack_fx_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			45,
+			94,
+			41,
+			131
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1655,
+			1314,
 			147,
-			142
+			45
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_attack_fx_0077"
+		}
 	},
-	["sparking_geode_tower_lvl4_0027"] = {
+	sparking_geode_tower_attack_fx_0006 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
-			386
+			233,
+			270
 		},
 		trim = {
-			73,
-            29,
-            74,
-            215
+			45,
+			94,
+			41,
+			129
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			314,
-			1124,
-			145,
-			142
+			1505,
+			1314,
+			147,
+			47
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_attack_fx_0076"
+		}
 	},
-	["sparking_geode_tower_lvl4_0028"] = {
+	sparking_geode_tower_attack_fx_0007 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
-			386
+			233,
+			270
 		},
 		trim = {
-			73,
-            29,
-            74,
-            215
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			467,
-			1124,
-			145,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0029"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			73,
-            29,
-            75,
-            214
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1385,
-			1124,
-			144,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0030"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			73,
-            29,
-            75,
-            214
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1537,
-			1124,
-			144,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0031"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            31,
-            75,
-            213
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			620,
-			1124,
-			143,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0032"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            31,
-            75,
-            213
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			771,
-			1124,
-			143,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0033"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            31,
-            76,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1689,
-			1124,
-			142,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0034"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			74,
-            31,
-            76,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1839,
-			1124,
-			142,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0035"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            33,
-            77,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			922,
-			1124,
-			140,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0036"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            33,
-            77,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			922,
-			1124,
-			140,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0037"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1241,
-			974,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0038"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1241,
-			974,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0039"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			62,
-            32,
-            66,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1272,
-			1275,
-			164,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0040"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			62,
-            32,
-            66,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1272,
-			1275,
-			164,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0041"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			67,
-            30,
-            71,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1275,
-			154,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0042"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			67,
-            30,
-            71,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1275,
-			154,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0043"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
+			102,
+			99,
 			72,
-            32,
-            76,
-            216
+			129
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			294,
-			825,
-			144,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0044"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            32,
-            76,
-            216
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			294,
-			825,
-			144,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0045"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			77,
-            30,
-            80,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			825,
-			135,
-			137
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0046"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			77,
-            30,
-            80,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			825,
-			135,
-			137
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0047"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            28,
-            82,
-            222
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1629,
-			680,
-			128,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0048"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            28,
-            82,
-            222
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1629,
-			680,
-			128,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0049"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            25,
-            83,
-            225
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1765,
-			680,
-			127,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0050"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            25,
-            83,
-            225
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1765,
-			680,
-			127,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0051"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            21,
-            83,
-            227
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			825,
-			127,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0052"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            21,
-            83,
-            227
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			825,
-			127,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0053"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			83,
-            18,
-            83,
-            229
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1160,
-			825,
-			126,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0054"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			83,
-            18,
-            83,
-            229
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1160,
-			825,
-			126,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0055"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			84,
-            23,
-            84,
-            231
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			609,
-			680,
-			124,
-			132
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0056"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			84,
-            23,
-            84,
-            231
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			609,
-			680,
-			124,
-			132
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0057"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			79,
-            52,
-            83,
-            199
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1162,
-			680,
-			130,
-			135
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0058"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			79,
-            52,
-            83,
-            199
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1162,
-			680,
-			130,
-			135
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0059"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
+			1962,
 			85,
-            41,
-            83,
-            209
+			59,
+			42
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			680,
-			124,
-			136
-		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_attack_fx_0075"
+		}
 	},
-	["sparking_geode_tower_lvl4_0060"] = {
+	sparking_geode_tower_attack_fx_0008 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
-			386
+			233,
+			270
 		},
 		trim = {
-			85,
-            41,
-            83,
-            209
+			56,
+			68,
+			58,
+			125
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1900,
-			680,
-			124,
-			136
+			1925,
+			1469,
+			119,
+			77
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_attack_fx_0074"
+		}
 	},
-	["sparking_geode_tower_lvl4_0061"] = {
+	sparking_geode_tower_attack_fx_0009 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
-			386
+			233,
+			270
 		},
 		trim = {
-			85,
-            35,
-            82,
-            208
+			50,
+			48,
+			46,
+			125
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0062"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0063"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0064"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0065"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0066"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0067"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0068"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0069"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0070"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0071"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0072"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0073"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0074"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0075"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0076"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0077"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0078"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0079"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0080"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0081"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0082"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0083"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0084"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0085"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0086"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0087"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0088"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            37,
-            81,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			581,
-			825,
-			125,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0089"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0090"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			86,
-            36,
-            81,
-            207
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			2122,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0091"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0092"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            35,
-            82,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1989,
-			1124,
-			125,
-			143
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0093"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            41,
-            83,
-            209
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			680,
-			124,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0094"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			85,
-            41,
-            83,
-            209
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1900,
-			680,
-			124,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0095"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			79,
-            52,
-            83,
-            199
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1162,
-			680,
-			130,
-			135
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0096"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			79,
-            52,
-            83,
-            199
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1162,
-			680,
-			130,
-			135
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0097"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			84,
-            23,
-            84,
-            231
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			609,
-			680,
-			124,
-			132
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0098"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			84,
-            23,
-            84,
-            231
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			609,
-			680,
-			124,
-			132
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0099"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			83,
-            18,
-            83,
-            229
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1160,
-			825,
-			126,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0100"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			83,
-            18,
-            83,
-            229
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1160,
-			825,
-			126,
-			139
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0101"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            21,
-            83,
-            227
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			825,
-			127,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0102"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            21,
-            83,
-            227
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			446,
-			825,
-			127,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0103"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            25,
-            83,
-            225
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1765,
-			680,
-			127,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0104"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            25,
-            83,
-            225
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1765,
-			680,
-			127,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0105"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            28,
-            82,
-            222
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1629,
-			680,
-			128,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0106"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			82,
-            28,
-            82,
-            222
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1629,
-			680,
-			128,
-			136
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0107"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			77,
-            30,
-            80,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			825,
-			135,
-			137
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0108"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			77,
-            30,
-            80,
-            219
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			825,
-			135,
-			137
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0109"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            32,
-            76,
-            216
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			294,
-			825,
-			144,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0110"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			72,
-            32,
-            76,
-            216
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			294,
-			825,
-			144,
-			138
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0111"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			67,
-            30,
-            71,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1275,
-			154,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0112"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			67,
-            30,
-            71,
-            212
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1275,
-			154,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0113"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			62,
-            32,
-            66,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1272,
-			1275,
-			164,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0114"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			62,
-            32,
-            66,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1272,
-			1275,
-			164,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0115"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1241,
-			974,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0116"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1241,
-			974,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0117"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1387,
-			974,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0118"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1387,
-			974,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0119"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			77,
-            32,
-            78,
-            200
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			365,
-			1433,
+			1339,
+			1369,
 			137,
-			154
+			97
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_attack_fx_0073"
+		}
 	},
-	["sparking_geode_tower_lvl4_0120"] = {
+	sparking_geode_tower_attack_fx_0010 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			233,
+			270
+		},
+		trim = {
+			50,
+			48,
+			46,
+			147
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1643,
+			1571,
+			137,
+			75
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0072"
+		}
+	},
+	sparking_geode_tower_attack_fx_0011 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			53,
+			44,
+			48,
+			127
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1339,
+			1469,
+			132,
+			99
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0012",
+			"sparking_geode_tower_attack_fx_0070",
+			"sparking_geode_tower_attack_fx_0071"
+		}
+	},
+	sparking_geode_tower_attack_fx_0013 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			55,
+			84,
+			52,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			2005,
+			126,
+			34
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0069"
+		}
+	},
+	sparking_geode_tower_attack_fx_0014 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			52,
+			36,
+			52,
+			130
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1939,
+			129,
+			104
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0068"
+		}
+	},
+	sparking_geode_tower_attack_fx_0015 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			52,
+			36,
+			52,
+			130
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			782,
+			129,
+			104
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0016",
+			"sparking_geode_tower_attack_fx_0066",
+			"sparking_geode_tower_attack_fx_0067"
+		}
+	},
+	sparking_geode_tower_attack_fx_0017 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			57,
+			36,
+			55,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1770,
+			1649,
+			121,
+			81
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0018",
+			"sparking_geode_tower_attack_fx_0064",
+			"sparking_geode_tower_attack_fx_0065"
+		}
+	},
+	sparking_geode_tower_attack_fx_0019 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			55,
+			38,
+			53,
+			131
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1339,
+			1777,
+			125,
+			101
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0020",
+			"sparking_geode_tower_attack_fx_0062",
+			"sparking_geode_tower_attack_fx_0063"
+		}
+	},
+	sparking_geode_tower_attack_fx_0021 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			54,
+			36,
+			55,
+			134
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1339,
+			1881,
+			124,
+			100
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0022",
+			"sparking_geode_tower_attack_fx_0060",
+			"sparking_geode_tower_attack_fx_0061"
+		}
+	},
+	sparking_geode_tower_attack_fx_0023 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			55,
+			42,
+			55,
+			134
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1474,
+			1469,
+			123,
+			94
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0059"
+		}
+	},
+	sparking_geode_tower_attack_fx_0024 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			60,
+			37,
+			58,
+			137
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1807,
+			1469,
+			115,
+			96
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0058"
+		}
+	},
+	sparking_geode_tower_attack_fx_0025 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			51,
+			27,
+			56,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1472,
+			126,
+			138
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0057"
+		}
+	},
+	sparking_geode_tower_attack_fx_0026 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			51,
+			31,
+			56,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1049,
+			126,
+			134
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0027 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			54,
+			60,
+			50,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1705,
+			782,
+			129,
+			110
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0028"
+		}
+	},
+	sparking_geode_tower_attack_fx_0029 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			64,
+			30,
+			95,
+			176
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			159,
+			1246,
+			74,
+			64
+		},
+		alias = {
+			"sparking_geode_tower_attack_fx_0055",
+			"sparking_geode_tower_attack_fx_0056"
+		}
+	},
+	sparking_geode_tower_attack_fx_0030 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			52,
+			30,
+			44,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1497,
+			137,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0031 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			52,
+			55,
+			43,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1147,
+			782,
+			138,
+			112
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0032 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			119,
+			55,
+			43,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1562,
+			1676,
+			71,
+			64
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0033 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			50,
+			28,
+			37,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1778,
+			638,
+			146,
+			138
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0034 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			50,
+			53,
+			37,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1502,
+			1049,
+			146,
+			113
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0035 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			50,
+			56,
+			48,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1433,
+			782,
+			135,
+			110
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0036 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			54,
+			60,
+			131,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			189,
+			569,
+			48,
+			59
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0037 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			54,
+			50,
+			35,
+			132
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1624,
+			1369,
+			144,
+			88
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0038 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			53,
+			43,
+			35,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1857,
+			912,
+			145,
+			120
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0039 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			53,
+			43,
+			49,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1763,
+			1180,
+			131,
+			120
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0040 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			50,
+			38,
+			50,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1651,
+			1049,
+			133,
+			123
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0041 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			50,
+			38,
+			36,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1113,
+			912,
+			147,
+			123
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0042 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			47,
+			48,
+			36,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			840,
+			782,
+			150,
+			113
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0043 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			47,
+			46,
+			55,
+			111
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1571,
+			782,
+			131,
+			113
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0044 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			60,
+			33,
+			55,
+			112
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1925,
+			1049,
+			118,
+			125
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0045 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			75,
+			33,
+			60,
+			173
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1922,
+			1908,
+			98,
+			64
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0046 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			46,
+			28,
+			59,
+			146
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1771,
+			1369,
+			128,
+			96
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0047 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			46,
+			28,
+			59,
+			146
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1902,
+			1369,
+			128,
+			96
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0049 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			73,
+			37,
+			101,
+			181
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			161,
+			912,
+			59,
+			52
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0050 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			45,
+			27,
+			58,
+			143
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1339,
+			1571,
+			130,
+			100
+		},
+		alias = {}
+	},
+	sparking_geode_tower_attack_fx_0051 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			45,
+			27,
+			58,
+			143
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1339,
+			1674,
+			130,
+			100
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0001 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			79,
+			36,
+			82,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1759,
+			132,
+			137
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0002",
+			"sparking_geode_tower_lvl4_0141",
+			"sparking_geode_tower_lvl4_0142"
+		}
+	},
+	sparking_geode_tower_lvl4_0003 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			78,
+			33,
+			81,
+			215
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1050,
+			134,
+			138
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0004"
+		}
+	},
+	sparking_geode_tower_lvl4_0005 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			78,
+			33,
+			80,
+			216
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1892,
+			135,
+			137
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0006"
+		}
+	},
+	sparking_geode_tower_lvl4_0007 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			78,
+			34,
+			79,
+			217
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1478,
+			136,
+			135
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0008"
+		}
+	},
+	sparking_geode_tower_lvl4_0009 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
 			386
 		},
 		trim = {
 			77,
-            32,
-            78,
-            200
+			33,
+			79,
+			218
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			365,
-			1433,
+			832,
+			912,
 			137,
-			154
+			135
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0010"
+		}
 	},
-	["sparking_geode_tower_lvl4_0121"] = {
+	sparking_geode_tower_lvl4_0011 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
+			386
+		},
+		trim = {
+			76,
+			32,
+			78,
+			220
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1755,
+			139,
+			134
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0012"
+		}
+	},
+	sparking_geode_tower_lvl4_0013 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			31,
+			77,
+			221
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			912,
+			140,
+			134
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0014"
+		}
+	},
+	sparking_geode_tower_lvl4_0015 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			30,
+			76,
+			222
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1360,
+			141,
+			134
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0016"
+		}
+	},
+	sparking_geode_tower_lvl4_0017 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			75,
+			29,
+			76,
+			223
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			1631,
+			142,
+			134
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0018"
+		}
+	},
+	sparking_geode_tower_lvl4_0019 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			75,
+			29,
+			75,
+			224
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			1768,
+			143,
+			133
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0020"
+		}
+	},
+	sparking_geode_tower_lvl4_0021 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			75,
+			29,
+			75,
+			222
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			940,
+			143,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0022 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			75,
+			29,
+			75,
+			222
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			1078,
+			143,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0023 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			30,
+			76,
+			221
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			1355,
+			141,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0024 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			30,
+			76,
+			221
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			1493,
+			141,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0025 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			31,
+			77,
+			220
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1084,
+			140,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0026 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			31,
+			77,
+			220
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1222,
+			140,
+			135
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0027 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			32,
+			78,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			806,
+			139,
+			136
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0028 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			32,
+			78,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			945,
+			139,
+			136
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0029 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			77,
+			32,
+			78,
+			217
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			1904,
+			138,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0030 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			77,
+			32,
+			78,
+			217
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			666,
+			138,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0031 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			77,
+			33,
+			79,
+			216
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1637,
+			137,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0032 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			77,
+			33,
+			79,
+			216
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			387,
+			1777,
+			137,
+			137
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0033 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			78,
+			33,
+			80,
+			215
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1473,
+			135,
+			138
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0034 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			78,
+			33,
+			80,
+			215
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1614,
+			135,
+			138
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0035 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			78,
+			34,
+			81,
+			214
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1191,
+			134,
+			138
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0036"
+		}
+	},
+	sparking_geode_tower_lvl4_0037 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			79,
+			36,
+			82,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			1899,
+			132,
+			137
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0038",
+			"sparking_geode_tower_lvl4_0115",
+			"sparking_geode_tower_lvl4_0116"
+		}
+	},
+	sparking_geode_tower_lvl4_0039 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
 			386
 		},
 		trim = {
 			65,
-            30,
-            74,
-            193
+			33,
+			69,
+			211
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			232,
-			1603,
-			153,
-			163
+			1765,
+			316,
+			159,
+			142
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0040",
+			"sparking_geode_tower_lvl4_0113",
+			"sparking_geode_tower_lvl4_0114"
+		}
 	},
-	["sparking_geode_tower_lvl4_0122"] = {
+	sparking_geode_tower_lvl4_0041 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
+			386
+		},
+		trim = {
+			71,
+			31,
+			75,
+			215
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1474,
+			638,
+			147,
+			140
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0042",
+			"sparking_geode_tower_lvl4_0111",
+			"sparking_geode_tower_lvl4_0112"
+		}
+	},
+	sparking_geode_tower_lvl4_0043 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			75,
+			33,
+			80,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			912,
+			138,
+			134
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0044",
+			"sparking_geode_tower_lvl4_0109",
+			"sparking_geode_tower_lvl4_0110"
+		}
+	},
+	sparking_geode_tower_lvl4_0045 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			81,
+			31,
+			84,
+			222
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1613,
+			128,
+			133
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0046",
+			"sparking_geode_tower_lvl4_0107",
+			"sparking_geode_tower_lvl4_0108"
+		}
+	},
+	sparking_geode_tower_lvl4_0047 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			85,
+			29,
+			84,
+			225
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1599,
+			124,
+			132
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0048",
+			"sparking_geode_tower_lvl4_0105",
+			"sparking_geode_tower_lvl4_0106"
+		}
+	},
+	sparking_geode_tower_lvl4_0049 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			86,
+			27,
+			84,
+			228
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1236,
+			1180,
+			123,
+			131
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0050",
+			"sparking_geode_tower_lvl4_0103",
+			"sparking_geode_tower_lvl4_0104"
+		}
+	},
+	sparking_geode_tower_lvl4_0051 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			86,
+			24,
+			84,
+			230
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1870,
+			123,
+			132
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0052",
+			"sparking_geode_tower_lvl4_0101",
+			"sparking_geode_tower_lvl4_0102"
+		}
+	},
+	sparking_geode_tower_lvl4_0053 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			86,
+			21,
+			84,
+			232
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1734,
+			123,
+			133
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0054",
+			"sparking_geode_tower_lvl4_0099",
+			"sparking_geode_tower_lvl4_0100"
+		}
+	},
+	sparking_geode_tower_lvl4_0055 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			85,
+			26,
+			85,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1897,
+			1180,
+			123,
+			126
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0056",
+			"sparking_geode_tower_lvl4_0097",
+			"sparking_geode_tower_lvl4_0098"
+		}
+	},
+	sparking_geode_tower_lvl4_0057 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			83,
+			53,
+			84,
+			202
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1328,
+			126,
+			131
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0058",
+			"sparking_geode_tower_lvl4_0095",
+			"sparking_geode_tower_lvl4_0096"
+		}
+	},
+	sparking_geode_tower_lvl4_0059 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			86,
+			43,
+			85,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1493,
+			1180,
+			122,
+			131
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0060",
+			"sparking_geode_tower_lvl4_0093",
+			"sparking_geode_tower_lvl4_0094"
+		}
+	},
+	sparking_geode_tower_lvl4_0061 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			89,
+			36,
+			83,
+			211
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1186,
+			121,
+			139
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0062",
+			"sparking_geode_tower_lvl4_0067",
+			"sparking_geode_tower_lvl4_0068",
+			"sparking_geode_tower_lvl4_0073",
+			"sparking_geode_tower_lvl4_0074",
+			"sparking_geode_tower_lvl4_0079",
+			"sparking_geode_tower_lvl4_0080",
+			"sparking_geode_tower_lvl4_0085",
+			"sparking_geode_tower_lvl4_0086",
+			"sparking_geode_tower_lvl4_0091",
+			"sparking_geode_tower_lvl4_0092"
+		}
+	},
+	sparking_geode_tower_lvl4_0063 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			88,
+			38,
+			82,
+			214
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			1462,
+			123,
+			134
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0064",
+			"sparking_geode_tower_lvl4_0069",
+			"sparking_geode_tower_lvl4_0070",
+			"sparking_geode_tower_lvl4_0075",
+			"sparking_geode_tower_lvl4_0076",
+			"sparking_geode_tower_lvl4_0081",
+			"sparking_geode_tower_lvl4_0082",
+			"sparking_geode_tower_lvl4_0087",
+			"sparking_geode_tower_lvl4_0088"
+		}
+	},
+	sparking_geode_tower_lvl4_0065 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			88,
+			37,
+			83,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1886,
+			122,
+			139
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0066",
+			"sparking_geode_tower_lvl4_0071",
+			"sparking_geode_tower_lvl4_0072",
+			"sparking_geode_tower_lvl4_0077",
+			"sparking_geode_tower_lvl4_0078",
+			"sparking_geode_tower_lvl4_0083",
+			"sparking_geode_tower_lvl4_0084",
+			"sparking_geode_tower_lvl4_0089",
+			"sparking_geode_tower_lvl4_0090"
+		}
+	},
+	sparking_geode_tower_lvl4_0117 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			79,
+			36,
+			82,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1049,
+			132,
+			137
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0118"
+		}
+	},
+	sparking_geode_tower_lvl4_0119 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			80,
+			33,
+			81,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			1564,
+			132,
+			152
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0120"
+		}
+	},
+	sparking_geode_tower_lvl4_0121 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			66,
+			31,
+			75,
+			194
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			534,
+			638,
+			152,
+			161
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0122"
+		}
+	},
+	sparking_geode_tower_lvl4_0123 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			79,
+			32,
+			82,
+			217
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1189,
+			132,
+			137
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0124"
+		}
+	},
+	sparking_geode_tower_lvl4_0125 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
 			386
 		},
 		trim = {
 			65,
-            30,
-            74,
-            193
+			30,
+			62,
+			197
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			232,
-			1603,
-			153,
-			163
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0123"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            28,
-            79,
-            214
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
+			1056,
+			471,
 			166,
-			1275,
-			138,
-			144
+			159
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0126"
+		}
 	},
-	["sparking_geode_tower_lvl4_0124"] = {
+	sparking_geode_tower_lvl4_0127 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            28,
-            79,
-            214
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			166,
-			1275,
-			138,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0125"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			63,
-            27,
-            61,
-            196
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			393,
-			1603,
-			168,
-			163
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0126"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			63,
-            27,
-            61,
-            196
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			393,
-			1603,
-			168,
-			163
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0127"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			61,
-            26,
-            65,
-            198
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1808,
-			1433,
-			166,
-			162
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0128"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			61,
-            26,
-            65,
-            198
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1808,
-			1433,
-			166,
-			162
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0129"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			61,
-            26,
-            65,
-            198
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1982,
-			1433,
-			166,
-			162
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0130"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			61,
-            26,
-            65,
-            198
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1982,
-			1433,
-			166,
-			162
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0131"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			73,
-            33,
-            74,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1070,
-			1124,
-			145,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0132"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			73,
-            33,
-            74,
-            211
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1070,
-			1124,
-			145,
-			142
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0133"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			41,
-            40,
-            31,
-            184
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1603,
-			220,
-			162
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0134"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			41,
-            40,
-            31,
-            184
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			4,
-			1603,
-			220,
-			162
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0135"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			61,
-            39,
-            52,
-            165
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			334,
-			1793,
-			179,
-			182
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0136"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			61,
-            39,
-            52,
-            165
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			334,
-			1793,
-			179,
-			182
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0137"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			68,
-            37,
-            68,
-            205
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			312,
-			1275,
-			156,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0138"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			68,
-            37,
-            68,
-            205
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			476,
-			1275,
-			156,
-			144
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0139"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			57,
-            35,
-            52,
-            195
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			863,
-			1433,
-			183,
-			156
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0140"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			57,
-            35,
-            52,
-            195
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1054,
-			1433,
-			183,
-			156
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0141"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1749,
-			825,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0142"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			75,
-            35,
-            79,
-            210
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1749,
-			825,
-			138,
-			141
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0143"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			67,
-            32,
-            86,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1444,
-			1275,
-			139,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0144"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			67,
-            32,
-            86,
-            208
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1444,
-			1275,
-			139,
-			146
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0145"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
 			62,
-            31,
-            74,
-            201
+			28,
+			66,
+			199
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			510,
-			1433,
-			156,
-			154
+			1406,
+			471,
+			165,
+			159
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0128"
+		}
 	},
-	["sparking_geode_tower_lvl4_0146"] = {
+	sparking_geode_tower_lvl4_0129 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
 			62,
-            31,
-            74,
-            201
+			29,
+			66,
+			199
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			510,
-			1433,
-			156,
-			154
+			1574,
+			471,
+			165,
+			158
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0130"
+		}
 	},
-	["sparking_geode_tower_lvl4_0147"] = {
+	sparking_geode_tower_lvl4_0131 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            53,
-            64,
-            181
+			76,
+			36,
+			77,
+			214
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			178,
-			1433,
-			179,
+			534,
+			1216,
+			140,
+			136
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0132"
+		}
+	},
+	sparking_geode_tower_lvl4_0133 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			43,
+			41,
+			31,
+			185
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			406,
+			219,
+			160
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0134"
+		}
+	},
+	sparking_geode_tower_lvl4_0135 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			63,
+			40,
+			53,
+			166
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1387,
+			177,
+			180
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0136"
+		}
+	},
+	sparking_geode_tower_lvl4_0137 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			69,
+			39,
+			69,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			848,
+			638,
+			155,
+			141
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0138 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			69,
+			39,
+			69,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1006,
+			638,
+			155,
+			141
+		},
+		alias = {}
+	},
+	sparking_geode_tower_lvl4_0139 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			59,
+			38,
+			52,
+			196
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1856,
+			133,
+			182,
 			152
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0148"] = {
+	sparking_geode_tower_lvl4_0140 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            53,
-            64,
-            181
+			59,
+			38,
+			52,
+			196
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			178,
-			1433,
-			179,
+			387,
+			316,
+			182,
 			152
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0149"] = {
+	sparking_geode_tower_lvl4_0143 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            62,
-            62,
-            178
+			70,
+			35,
+			87,
+			209
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1591,
-			1275,
-			181,
-			146
+			241,
+			1864,
+			136,
+			142
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0144"
+		}
 	},
-	["sparking_geode_tower_lvl4_0150"] = {
+	sparking_geode_tower_lvl4_0145 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            62,
-            62,
-            178
+			66,
+			34,
+			75,
+			202
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1591,
-			1275,
-			181,
-			146
+			1258,
+			316,
+			152,
+			150
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0146"
+		}
 	},
-	["sparking_geode_tower_lvl4_0151"] = {
+	sparking_geode_tower_lvl4_0147 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            47,
-            64,
-            178
+			50,
+			56,
+			65,
+			182
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1433,
-			1433,
-			179,
-			161
+			1225,
+			471,
+			178,
+			148
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0148"
+		}
 	},
-	["sparking_geode_tower_lvl4_0152"] = {
+	sparking_geode_tower_lvl4_0149 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            47,
-            64,
-            178
+			50,
+			63,
+			63,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1433,
-			1433,
-			179,
-			161
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0153"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            47,
-            63,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1620,
-			1433,
+			1742,
+			471,
 			180,
-			161
+			144
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0150"
+		}
 	},
-	["sparking_geode_tower_lvl4_0154"] = {
+	sparking_geode_tower_lvl4_0151 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            47,
-            63,
-            178
+			50,
+			48,
+			65,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1620,
-			1433,
-			180,
-			161
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0155"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            49,
-            63,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1245,
-			1433,
-			180,
+			1316,
+			133,
+			178,
 			159
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0152"
+		}
 	},
-	["sparking_geode_tower_lvl4_0156"] = {
+	sparking_geode_tower_lvl4_0153 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            49,
-            63,
-            178
+			50,
+			48,
+			67,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1245,
-			1433,
-			180,
+			1497,
+			133,
+			176,
 			159
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0154"
+		}
 	},
-	["sparking_geode_tower_lvl4_0157"] = {
+	sparking_geode_tower_lvl4_0155 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            42,
-            63,
-            178
+			50,
+			50,
+			66,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			745,
-			1603,
-			180,
-			166
+			1676,
+			133,
+			177,
+			157
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0156"
+		}
 	},
-	["sparking_geode_tower_lvl4_0158"] = {
+	sparking_geode_tower_lvl4_0157 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            42,
-            63,
-            178
+			50,
+			43,
+			66,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			745,
-			1603,
-			180,
-			166
+			1136,
+			133,
+			177,
+			164
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0158"
+		}
 	},
-	["sparking_geode_tower_lvl4_0159"] = {
+	sparking_geode_tower_lvl4_0159 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            53,
-            62,
-            178
+			50,
+			54,
+			65,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			674,
-			1433,
-			181,
-			155
+			705,
+			471,
+			178,
+			153
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0160"
+		}
 	},
-	["sparking_geode_tower_lvl4_0160"] = {
+	sparking_geode_tower_lvl4_0161 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            53,
-            62,
-            178
+			50,
+			40,
+			60,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			674,
-			1433,
-			181,
-			155
+			415,
+			133,
+			183,
+			167
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0162"
+		}
 	},
-	["sparking_geode_tower_lvl4_0161"] = {
+	sparking_geode_tower_lvl4_0163 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            39,
-            59,
-            178
+			50,
+			43,
+			64,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1304,
-			1603,
-			184,
-			169
+			954,
+			133,
+			179,
+			164
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0164"
+		}
 	},
-	["sparking_geode_tower_lvl4_0162"] = {
+	sparking_geode_tower_lvl4_0165 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			49,
-            39,
-            59,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1304,
-			1603,
-			184,
-			169
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0163"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            42,
-            61,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			933,
-			1603,
-			182,
-			166
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0164"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            42,
-            61,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			933,
-			1603,
-			182,
-			166
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0165"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            37,
-            56,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1686,
-			1603,
-			187,
-			171
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0166"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            37,
-            56,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1686,
-			1603,
-			187,
-			171
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0167"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            39,
-            61,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1496,
-			1603,
-			182,
-			169
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0168"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
-			49,
-            39,
-            61,
-            178
-		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1496,
-			1603,
-			182,
-			169
-		},
-		alias = {},
-	},
-	["sparking_geode_tower_lvl4_0169"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
-		size = {
-			292,
-			386
-		},
-		trim = {
+			50,
+			38,
 			58,
-            41,
-            61,
-            179
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1123,
-			1603,
-			173,
-			166
+			5,
+			1767,
+			185,
+			169
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0166"
+		}
 	},
-	["sparking_geode_tower_lvl4_0170"] = {
+	sparking_geode_tower_lvl4_0167 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
-			58,
-            41,
-            61,
-            179
+			50,
+			40,
+			64,
+			179
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			1123,
-			1603,
-			173,
-			166
+			772,
+			133,
+			179,
+			167
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0168"
+		}
 	},
-	["sparking_geode_tower_lvl4_0171"] = {
+	sparking_geode_tower_lvl4_0169 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
 			61,
-            37,
-            63,
-            186
+			42,
+			64,
+			180
 		},
 		a_size = {
-			2306,
-			2306
+			2048,
+			2048
 		},
 		f_quad = {
-			569,
-			1603,
+			534,
+			471,
 			168,
-			163
+			164
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_tower_lvl4_0170"
+		}
 	},
-	["sparking_geode_tower_lvl4_0172"] = {
+	sparking_geode_tower_lvl4_0171 = {
 		a_name = "go_towers_sparking_geode-1.dds",
 		size = {
-			292,
+			293,
 			386
 		},
 		trim = {
+			62,
+			38,
+			64,
+			187
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			886,
+			471,
+			167,
+			161
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0172"
+		}
+	},
+	sparking_geode_tower_lvl4_0173 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			72,
+			35,
+			70,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			638,
+			151,
+			138
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0174"
+		}
+	},
+	sparking_geode_tower_lvl4_0175 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			72,
+			26,
+			80,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			241,
+			1719,
+			141,
+			142
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0176"
+		}
+	},
+	sparking_geode_tower_lvl4_0177 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			71,
+			23,
+			58,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			760,
+			316,
+			164,
+			144
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0178"
+		}
+	},
+	sparking_geode_tower_lvl4_0179 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			76,
+			26,
+			52,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			927,
+			316,
+			165,
+			141
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0180"
+		}
+	},
+	sparking_geode_tower_lvl4_0181 = {
+		a_name = "go_towers_sparking_geode-1.dds",
+		size = {
+			293,
+			386
+		},
+		trim = {
+			81,
+			28,
+			79,
+			217
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			1049,
+			133,
+			141
+		},
+		alias = {
+			"sparking_geode_tower_lvl4_0182"
+		}
+	},
+	sparking_geode_base_0009 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			159,
+			202
+		},
+		trim = {
+			46,
+			26,
+			54,
+			110
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			93,
+			247,
+			59,
+			66
+		},
+		alias = {
+			"sparking_geode_base_0010"
+		}
+	},
+	sparking_geode_base_0011 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			159,
+			202
+		},
+		trim = {
+			45,
+			27,
+			53,
+			110
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			425,
 			61,
-            37,
-            63,
-            186
+			65
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			569,
-			1603,
-			168,
-			163
-		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0012"
+		}
 	},
-	["sparking_geode_tower_lvl4_0173"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_base_0015 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			159,
+			202
 		},
 		trim = {
-			69,
-            32,
-            69,
-            212
+			52,
+			28,
+			52,
+			110
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			1223,
-			1124,
-			154,
-			142
+			155,
+			309,
+			55,
+			64
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0016"
+		}
 	},
-	["sparking_geode_tower_lvl4_0174"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_base_0023 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			159,
+			202
 		},
 		trim = {
-			69,
-            32,
-            69,
-            212
+			52,
+			28,
+			53,
+			110
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			1223,
-			1124,
-			154,
-			142
+			155,
+			436,
+			54,
+			64
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0024"
+		}
 	},
-	["sparking_geode_tower_lvl4_0175"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_base_0025 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			159,
+			202
 		},
 		trim = {
-			69,
-            23,
-            77,
-            215
+			52,
+			26,
+			53,
+			110
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			1956,
-			1275,
-			146,
-			148
+			93,
+			384,
+			54,
+			66
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0026"
+		}
 	},
-	["sparking_geode_tower_lvl4_0176"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_base_0027 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			159,
+			202
 		},
 		trim = {
-			69,
-            23,
-            77,
-            215
+			49,
+			27,
+			54,
+			110
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			1956,
-			1275,
-			146,
-			148
+			93,
+			316,
+			56,
+			65
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_base_0028"
+		}
 	},
-	["sparking_geode_tower_lvl4_0177"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_crystal_mid_0002 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			114,
+			176
 		},
 		trim = {
-			68,
-            20,
-            58,
-            216
+			25,
+			38,
+			28,
+			81
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			4,
-			1433,
-			166,
-			150
+			155,
+			376,
+			61,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0178"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_electric_decal_2_0002 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			128,
+			125
 		},
 		trim = {
-			68,
-            20,
-            58,
-            216
+			27,
+			36,
+			36,
+			30
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			4,
-			1433,
-			166,
-			150
+			155,
+			247,
+			65,
+			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0179"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_longray_decal_down_0002 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			151,
+			108
 		},
 		trim = {
+			36,
+			18,
+			34,
+			31
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			132,
+			81,
+			59
+		},
+		alias = {
+			"sparking_geode_longray_decal_down_0010"
+		}
+	},
+	sparking_geode_longray_decal_down_0003 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			37,
+			19,
+			29,
+			34
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			253,
+			85,
+			55
+		},
+		alias = {
+			"sparking_geode_longray_decal_down_0011"
+		}
+	},
+	sparking_geode_longray_decal_down_0004 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			37,
+			19,
+			29,
+			34
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			311,
+			85,
+			55
+		},
+		alias = {}
+	},
+	sparking_geode_longray_decal_down_0006 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			41,
+			18,
+			28,
+			37
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			369,
+			82,
+			53
+		},
+		alias = {}
+	},
+	sparking_geode_longray_decal_down_0007 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			37,
+			18,
+			29,
+			34
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			194,
+			85,
+			56
+		},
+		alias = {}
+	},
+	sparking_geode_longray_decal_down_0008 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			108
+		},
+		trim = {
+			37,
+			17,
+			29,
+			34
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
 			72,
-            23,
-            52,
-            216
+			85,
+			57
 		},
-		a_size = {
-			2306,
-			2306
-		},
-		f_quad = {
-			1780,
-			1275,
-			168,
-			147
-		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0180"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_longray_decal_down_0009 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			151,
+			108
 		},
 		trim = {
-			72,
-            23,
-            52,
-            216
+			36,
+			17,
+			34,
+			31
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			1780,
-			1275,
-			168,
-			147
+			358,
+			5,
+			81,
+			60
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0181"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_longray_decal_down_0013 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			151,
+			108
 		},
 		trim = {
-			77,
-            27,
-            76,
-            214
+			42,
+			20,
+			31,
+			38
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			640,
-			1275,
-			139,
-			145
+			93,
+			194,
+			78,
+			50
 		},
-		alias = {},
+		alias = {}
 	},
-	["sparking_geode_tower_lvl4_0182"] = {
-		a_name = "go_towers_sparking_geode-1.dds",
+	sparking_geode_longray_decal_up_0005 = {
+		a_name = "go_towers_sparking_geode-2.dds",
 		size = {
-			292,
-			386
+			151,
+			162
 		},
 		trim = {
-			77,
-            27,
-            76,
-            214
+			36,
+			43,
+			29,
+			62
 		},
 		a_size = {
-			2306,
-			2306
+			512,
+			512
 		},
 		f_quad = {
-			640,
-			1275,
-			139,
-			145
+			269,
+			5,
+			86,
+			57
 		},
-		alias = {},
+		alias = {
+			"sparking_geode_longray_decal_up_0006"
+		}
+	},
+	sparking_geode_longray_decal_up_0007 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			162
+		},
+		trim = {
+			35,
+			40,
+			34,
+			58
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			5,
+			82,
+			64
+		},
+		alias = {
+			"sparking_geode_longray_decal_up_0008"
+		}
+	},
+	sparking_geode_longray_decal_up_0013 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			151,
+			162
+		},
+		trim = {
+			35,
+			41,
+			35,
+			57
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			90,
+			5,
+			81,
+			64
+		},
+		alias = {
+			"sparking_geode_longray_decal_up_0014",
+			"sparking_geode_longray_decal_up_0015"
+		}
+	},
+	sparking_geode_ray_0003 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			577,
+			125
+		},
+		trim = {
+			284,
+			28,
+			201,
+			43
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			174,
+			5,
+			92,
+			54
+		},
+		alias = {
+			"sparking_geode_ray_0004"
+		}
+	},
+	sparking_geode_tower_attack_fx_0052 = {
+		a_name = "go_towers_sparking_geode-2.dds",
+		size = {
+			233,
+			270
+		},
+		trim = {
+			70,
+			31,
+			97,
+			178
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			442,
+			5,
+			66,
+			61
+		},
+		alias = {}
 	}
 }

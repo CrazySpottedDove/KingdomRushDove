@@ -1,19946 +1,9661 @@
 return {
-	["hero_dragon_bone_bones_a_green_air"] = {
+	hero_dragon_bone_bones_a_green_air = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
 			116,
 			139
 		},
 		trim = {
-			18,
-            19,
-            38,
-            35
+			19,
+			20,
+			39,
+			36
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			458,
-			461,
-			60,
-			85
+			1985,
+			959,
+			58,
+			83
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_bones_a_green_ground"] = {
+	hero_dragon_bone_bones_a_green_ground = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			107,
+			108,
 			139
 		},
 		trim = {
+			16,
+			20,
+			43,
+			69
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1093,
+			1289,
+			49,
+			50
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_a_ground = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			91,
+			114
+		},
+		trim = {
+			14,
 			15,
-            19,
-            40,
-            66
+			36,
+			57
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			837,
-			58,
-			52,
-			54
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_a_ground"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			90,
-			113
-		},
-		trim = {
-			11,
-            11,
-            33,
-            53
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			241,
-			58,
-			46,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_b_green_air"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			90,
-			133
-		},
-		trim = {
-			19,
-            18,
-            26,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			318,
-			282,
-			45,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_b_green_ground"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			90,
-			133
-		},
-		trim = {
-			19,
-            18,
-            33,
-            63
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			657,
-			58,
-			38,
-			52
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_b_ground"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			65,
-			107
-		},
-		trim = {
-			10,
-            10,
-            22,
-            50
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			107,
-			58,
-			33,
-			47
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_c_green_air"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			73,
-			88
-		},
-		trim = {
-			18,
-            17,
-            26,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2337,
-			4,
-			29,
-			42
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_c_green_ground"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			73,
-			88
-		},
-		trim = {
-			17,
-            17,
-            28,
-            41
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			482,
-			4,
-			28,
-			30
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_c_ground"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			56,
-			68
-		},
-		trim = {
-			11,
-            10,
-            21,
-            31
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			294,
-			4,
-			24,
-			27
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_decal"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			76,
-			48
-		},
-		trim = {
-			11,
-            14,
-            12,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			71,
-			4,
-			53,
-			23
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			17,
-            22,
-            28,
-            66
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			148,
-			58,
-			34,
-			48
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			17,
-            22,
-            28,
-            66
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			148,
-			58,
-			34,
-			48
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			13,
-            17,
-            26,
-            65
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			897,
-			58,
-			40,
-			54
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			13,
-            17,
-            26,
-            65
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			897,
-			58,
-			40,
-			54
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            15,
-            24,
-            65
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1278,
-			58,
-			44,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            15,
-            24,
-            65
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1278,
-			58,
-			44,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            13,
-            25,
-            64
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			275,
-			124,
-			43,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            13,
-            25,
-            64
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			275,
-			124,
-			43,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            11,
-            25,
-            77
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			190,
-			58,
-			43,
-			48
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            11,
-            25,
-            77
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			190,
-			58,
-			43,
-			48
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            11,
-            25,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2644,
-			4,
-			43,
-			46
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            11,
-            25,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2644,
-			4,
-			43,
-			46
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            10,
-            25,
-            80
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			58,
-			43,
-			46
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			11,
-            10,
-            25,
-            80
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			58,
-			43,
-			46
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			13,
-            12,
-            25,
-            82
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2374,
-			4,
+			1093,
+			1449,
 			41,
 			42
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_bones_despawn_fx_0016"] = {
+	hero_dragon_bone_bones_b_green_air = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			79,
-			136
+			91,
+			133
+		},
+		trim = {
+			20,
+			19,
+			27,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1486,
+			44,
+			76
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_b_green_ground = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			91,
+			133
+		},
+		trim = {
+			20,
+			19,
+			36,
+			66
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			496,
+			35,
+			48
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_b_ground = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			65,
+			108
 		},
 		trim = {
 			13,
-            12,
-            27,
-            92
+			13,
+			25,
+			54
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			812,
-			4,
+			207,
+			1889,
+			27,
+			41
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_c_green_air = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			74,
+			88
+		},
+		trim = {
+			19,
+			19,
+			27,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			207,
+			1933,
+			28,
+			39
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_c_green_ground = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			74,
+			88
+		},
+		trim = {
+			19,
+			19,
+			31,
+			44
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1788,
+			201,
+			24,
+			25
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_c_ground = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			57,
+			68
+		},
+		trim = {
+			14,
+			13,
+			25,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2026,
+			1597,
+			18,
+			21
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_decal = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			77,
+			48
+		},
+		trim = {
+			14,
+			16,
+			15,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			916,
+			206,
+			48,
+			18
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_despawn_fx_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			20,
+			25,
+			31,
+			69
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2016,
+			1993,
+			29,
+			42
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0002"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0003 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			16,
+			20,
+			29,
+			68
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			547,
+			35,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0004"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0005 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			15,
+			18,
+			28,
+			68
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1501,
+			182,
+			37,
+			50
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0006"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0007 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			15,
+			16,
+			28,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1093,
+			1342,
+			37,
+			53
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0008"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0009 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			15,
+			14,
+			28,
+			80
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			598,
+			37,
+			42
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0010"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0011 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			14,
+			14,
+			28,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			643,
+			38,
+			40
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0012"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0013 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			14,
+			13,
+			28,
+			83
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			193,
+			686,
+			38,
+			40
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0014"
+		}
+	},
+	hero_dragon_bone_bones_despawn_fx_0016 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			15,
+			14,
+			30,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			309,
+			2018,
+			35,
+			27
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_despawn_fx_0017 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			17,
+			14,
+			32,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			385,
+			2018,
+			31,
+			26
+		},
+		alias = {
+			"hero_dragon_bone_bones_despawn_fx_0018"
+		}
+	},
+	hero_dragon_bone_bones_fx_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			33,
+			20,
+			36,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1003,
+			206,
+			30,
+			24
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0002"
+		}
+	},
+	hero_dragon_bone_bones_fx_0003 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			26,
+			14,
+			29,
+			43
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1992,
+			750,
+			44,
+			25
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0004"
+		}
+	},
+	hero_dragon_bone_bones_fx_0005 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			24,
+			15,
+			27,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1093,
+			1494,
+			48,
+			27
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0006"
+		}
+	},
+	hero_dragon_bone_bones_fx_0007 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			23,
+			17,
+			26,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1447,
+			1087,
+			50,
+			28
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0008"
+		}
+	},
+	hero_dragon_bone_bones_fx_0009 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			21,
+			20,
+			24,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1634,
+			2015,
+			54,
+			28
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0010"
+		}
+	},
+	hero_dragon_bone_bones_fx_0011 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			19,
+			26,
+			22,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1500,
+			1087,
+			58,
+			21
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0012"
+		}
+	},
+	hero_dragon_bone_bones_fx_0013 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			16,
+			24,
+			19,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			2018,
+			64,
+			18
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0014"
+		}
+	},
+	hero_dragon_bone_bones_fx_0015 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			15,
+			23,
+			17,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1922,
+			750,
+			67,
+			23
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0016"
+		}
+	},
+	hero_dragon_bone_bones_fx_0017 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			82
+		},
+		trim = {
+			13,
+			25,
+			16,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1691,
+			2015,
+			70,
+			20
+		},
+		alias = {
+			"hero_dragon_bone_bones_fx_0018"
+		}
+	},
+	hero_dragon_bone_breath_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			292,
+			76,
+			215,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1969,
+			413,
+			72,
+			79
+		},
+		alias = {
+			"hero_dragon_bone_breath_0002"
+		}
+	},
+	hero_dragon_bone_breath_0011 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			269,
+			49,
+			105,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1634,
+			1597,
+			205,
+			114
+		},
+		alias = {
+			"hero_dragon_bone_breath_0012"
+		}
+	},
+	hero_dragon_bone_breath_0013 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			269,
+			47,
+			88,
+			52
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1537,
+			1123,
+			222,
+			117
+		},
+		alias = {
+			"hero_dragon_bone_breath_0014"
+		}
+	},
+	hero_dragon_bone_breath_0015 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			277,
+			41,
+			78,
+			55
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1758,
+			959,
+			224,
+			120
+		},
+		alias = {
+			"hero_dragon_bone_breath_0016"
+		}
+	},
+	hero_dragon_bone_breath_0017 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			295,
+			38,
+			68,
+			53
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1351,
+			959,
+			216,
+			125
+		},
+		alias = {
+			"hero_dragon_bone_breath_0018"
+		}
+	},
+	hero_dragon_bone_breath_0019 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			313,
+			36,
+			58,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1326,
+			1123,
+			208,
+			129
+		},
+		alias = {
+			"hero_dragon_bone_breath_0020"
+		}
+	},
+	hero_dragon_bone_breath_0021 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			330,
+			30,
+			50,
+			45
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1889,
+			199,
+			141
+		},
+		alias = {
+			"hero_dragon_bone_breath_0022"
+		}
+	},
+	hero_dragon_bone_breath_0023 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			347,
+			29,
+			38,
+			43
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1154,
+			959,
+			194,
+			144
+		},
+		alias = {
+			"hero_dragon_bone_breath_0024"
+		}
+	},
+	hero_dragon_bone_breath_0025 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			366,
+			30,
+			28,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1570,
+			959,
+			185,
+			146
+		},
+		alias = {
+			"hero_dragon_bone_breath_0026"
+		}
+	},
+	hero_dragon_bone_breath_0027 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			382,
+			30,
+			29,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1762,
+			1123,
+			168,
+			147
+		},
+		alias = {
+			"hero_dragon_bone_breath_0028"
+		}
+	},
+	hero_dragon_bone_breath_0029 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			392,
+			31,
+			31,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1634,
+			1714,
+			156,
+			147
+		},
+		alias = {
+			"hero_dragon_bone_breath_0030"
+		}
+	},
+	hero_dragon_bone_breath_0031 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			402,
+			27,
+			31,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1898,
+			236,
+			146,
+			151
+		},
+		alias = {
+			"hero_dragon_bone_breath_0032"
+		}
+	},
+	hero_dragon_bone_breath_0037 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			429,
+			34,
+			31,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1922,
+			602,
+			119,
+			145
+		},
+		alias = {
+			"hero_dragon_bone_breath_0038"
+		}
+	},
+	hero_dragon_bone_breath_0039 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			441,
+			36,
+			56,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1962,
+			1714,
+			82,
+			131
+		},
+		alias = {
+			"hero_dragon_bone_breath_0040"
+		}
+	},
+	hero_dragon_bone_breath_0041 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			449,
+			46,
+			57,
+			50
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1971,
+			1277,
+			73,
+			120
+		},
+		alias = {
+			"hero_dragon_bone_breath_0042"
+		}
+	},
+	hero_dragon_bone_burst_projectile_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			54,
+			60
+		},
+		trim = {
+			14,
+			14,
+			14,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			207,
+			1975,
+			26,
+			30
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_0002"
+		}
+	},
+	hero_dragon_bone_burst_projectile_0003 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			54,
+			60
+		},
+		trim = {
+			14,
+			14,
+			14,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			207,
+			2008,
+			26,
+			30
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_0004"
+		}
+	},
+	hero_dragon_bone_burst_projectile_0005 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			54,
+			60
+		},
+		trim = {
+			14,
+			14,
+			14,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1729,
+			201,
+			26,
+			30
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_0006"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0005 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			15,
+			17,
+			14,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1888,
+			1082,
 			39,
-			32
+			38
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0006"
+		}
 	},
-	["hero_dragon_bone_bones_despawn_fx_0017"] = {
+	hero_dragon_bone_cloud_b_bubbles_0052 = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			79,
-			136
-		},
-		trim = {
-			15,
-            13,
-            29,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			398,
-			4,
-			35,
-			28
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_despawn_fx_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			136
-		},
-		trim = {
-			15,
-            13,
-            29,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			398,
-			4,
-			35,
-			28
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			30,
-            17,
-            33,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			518,
-			4,
-			36,
-			30
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			30,
-            17,
-            33,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			518,
-			4,
-			36,
-			30
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
+			133,
+			202
 		},
 		trim = {
 			23,
-            11,
-            26,
-            40
+			13,
+			21,
+			96
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			672,
-			4,
-			50,
-			31
+			1956,
+			1436,
+			89,
+			93
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0053",
+			"hero_dragon_bone_cloud_b_bubbles_0054"
+		}
 	},
-	["hero_dragon_bone_bones_fx_0004"] = {
+	hero_dragon_bone_cloud_b_bubbles_0055 = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			99,
-			82
+			133,
+			202
 		},
 		trim = {
 			23,
-            11,
-            26,
-            40
+			32,
+			36,
+			99
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			672,
-			4,
-			50,
+			1969,
+			495,
+			74,
+			71
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0056",
+			"hero_dragon_bone_cloud_b_bubbles_0057"
+		}
+	},
+	hero_dragon_bone_drake_0016 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			27,
+			48,
+			43,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			481,
+			184,
+			81,
+			49
+		},
+		alias = {
+			"hero_dragon_bone_drake_0017"
+		}
+	},
+	hero_dragon_bone_drake_0018 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			24,
+			49,
+			45,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			565,
+			184,
+			82,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_drake_0019"
+		}
+	},
+	hero_dragon_bone_drake_0026 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			42,
+			46,
+			14,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1918,
+			1993,
+			95,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0027"
+		}
+	},
+	hero_dragon_bone_drake_0030 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			40,
+			46,
+			23,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			182,
+			88,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0031"
+		}
+	},
+	hero_dragon_bone_drake_0032 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			38,
+			46,
+			26,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1411,
+			182,
+			87,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0033"
+		}
+	},
+	hero_dragon_bone_drake_0058 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			36,
+			35,
+			32,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1956,
+			1532,
+			83,
+			62
+		},
+		alias = {
+			"hero_dragon_bone_drake_0059"
+		}
+	},
+	hero_dragon_bone_drake_0070 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			36,
+			61,
+			34,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1113,
+			196,
+			81,
+			36
+		},
+		alias = {
+			"hero_dragon_bone_drake_0071"
+		}
+	},
+	hero_dragon_bone_drake_hit_fx_0002 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			37,
+			19,
+			23,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1093,
+			1398,
+			39,
+			48
+		},
+		alias = {}
+	},
+	hero_dragon_bone_drake_hit_fx_0003 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			19,
+			18,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1630,
+			45,
+			58
+		},
+		alias = {}
+	},
+	hero_dragon_bone_drake_hit_fx_0004 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			35,
+			15,
+			18,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1565,
+			46,
+			62
+		},
+		alias = {}
+	},
+	hero_dragon_bone_drake_hit_fx_0007 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			33,
+			14,
+			24,
+			65
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1930,
+			1082,
+			42,
+			35
+		},
+		alias = {}
+	},
+	hero_dragon_bone_drake_hit_fx_0008 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			32,
+			17,
+			23,
+			64
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1351,
+			1087,
+			44,
+			33
+		},
+		alias = {
+			"hero_dragon_bone_drake_hit_fx_0009"
+		}
+	},
+	hero_dragon_bone_drake_hit_fx_0010 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			21,
+			22,
+			62
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1398,
+			1087,
+			46,
 			31
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_bones_fx_0005"] = {
+	hero_dragon_bone_hero_0001 = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			240,
 			99,
-			82
-		},
-		trim = {
-			21,
-            12,
-            24,
-            37
+			201
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			970,
-			4,
-			54,
-			33
+			1651,
+			1277,
+			157,
+			155
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hero_0002",
+			"hero_dragon_bone_hero_0095",
+			"hero_dragon_bone_hero_0096",
+			"hero_dragon_bone_hero_0171",
+			"hero_dragon_bone_hero_0172"
+		}
 	},
-	["hero_dragon_bone_bones_fx_0006"] = {
+	hero_dragon_bone_hero_0003 = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			99,
-			82
+			338,
+			596
 		},
 		trim = {
-			21,
-            12,
-            24,
-            37
+			85,
+			236,
+			101,
+			201
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			970,
-			4,
-			54,
-			33
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			20,
-            13,
-            23,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1149,
-			4,
-			56,
-			35
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			20,
-            13,
-            23,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1149,
-			4,
-			56,
-			35
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			18,
-            16,
-            21,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1284,
-			4,
-			60,
-			36
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			18,
-            16,
-            21,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1284,
-			4,
-			60,
-			36
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			16,
-            23,
-            19,
-            32
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			326,
-			4,
-			64,
-			27
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			16,
-            23,
-            19,
-            32
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			326,
-			4,
-			64,
-			27
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			13,
-            21,
-            16,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			132,
-			4,
-			70,
-			24
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			13,
-            21,
-            16,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			132,
-			4,
-			70,
-			24
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			11,
-            19,
-            15,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			562,
-			4,
-			73,
-			30
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			11,
-            19,
-            15,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			562,
-			4,
-			73,
-			30
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			10,
-            24,
-            13,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			210,
-			4,
-			76,
-			24
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_bones_fx_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			82
-		},
-		trim = {
-			10,
-            24,
-            13,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			210,
-			4,
-			76,
-			24
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			291,
-            74,
-            214,
-            61
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			916,
-			369,
-			74,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			291,
-            74,
-            214,
-            61
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			916,
-			369,
-			74,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			270,
-            70,
-            203,
-            57
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			792,
-			461,
-			106,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			270,
-            70,
-            203,
-            57
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			792,
-			461,
-			106,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			267,
-            66,
-            180,
-            66
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1967,
-			369,
-			132,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			267,
-            66,
-            180,
-            66
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1967,
-			369,
-			132,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			268,
-            59,
-            153,
-            66
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1310,
-			461,
-			158,
-			90
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			268,
-            59,
-            153,
-            66
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1310,
-			461,
-			158,
-			90
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			267,
-            55,
-            129,
-            60
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
+			1315,
+			1604,
 			152,
-			567,
-			183,
-			100
+			159
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hero_0004"
+		}
 	},
-	["hero_dragon_bone_breath_0010"] = {
+	hero_dragon_bone_hero_0011 = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			579,
-			215
+			338,
+			596
 		},
 		trim = {
-			267,
-            55,
-            129,
-            60
+			81,
+			187,
+			97,
+			259
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			152,
-			567,
-			183,
-			100
+			1793,
+			1436,
+			160,
+			150
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hero_0012"
+		}
 	},
-	["hero_dragon_bone_breath_0011"] = {
+	hero_dragon_bone_hero_0013 = {
 		a_name = "go_hero_dragon_bone-1.dds",
 		size = {
-			579,
-			215
+			338,
+			596
 		},
 		trim = {
-			267,
-            48,
-            105,
-            52
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2025,
-			567,
-			207,
-			115
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			267,
-            48,
-            105,
-            52
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2025,
-			567,
-			207,
-			115
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			267,
-            46,
-            87,
-            51
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			692,
-			225,
-			118
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			267,
-            46,
-            87,
-            51
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			692,
-			225,
-			118
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			276,
-            40,
-            78,
-            54
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			767,
-			692,
-			225,
-			121
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			276,
-            40,
-            78,
-            54
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			767,
-			692,
-			225,
-			121
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			293,
-            37,
-            68,
-            51
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2254,
-			692,
-			218,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			293,
-            37,
-            68,
-            51
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2254,
-			692,
-			218,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			311,
-            35,
-            58,
-            50
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			936,
-			827,
-			210,
-			130
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			311,
-            35,
-            58,
-            50
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			936,
-			827,
-			210,
-			130
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			328,
-            29,
-            49,
-            44
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2294,
-			827,
-			202,
-			142
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			328,
-            29,
-            49,
-            44
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2294,
-			827,
-			202,
-			142
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			346,
-            28,
-            37,
-            41
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			123,
-			979,
-			196,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			346,
-            28,
-            37,
-            41
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			123,
-			979,
-			196,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			364,
-            29,
-            27,
-            39
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			833,
-			979,
-			188,
-			147
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			364,
-            29,
-            27,
-            39
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			833,
-			979,
-			188,
-			147
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0027"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			380,
-            29,
-            29,
-            38
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1029,
-			979,
-			170,
-			148
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0028"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			380,
-            29,
-            29,
-            38
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1029,
-			979,
-			170,
-			148
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0029"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			390,
-            30,
-            30,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1207,
-			979,
-			159,
-			148
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0030"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			390,
-            30,
-            30,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1207,
-			979,
-			159,
-			148
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0031"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			400,
-            26,
-            30,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1523,
-			979,
-			149,
-			152
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0032"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			400,
-            26,
-            30,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1523,
-			979,
-			149,
-			152
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0033"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			408,
-            30,
-            30,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1374,
-			979,
-			141,
-			149
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0034"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			408,
-            30,
-            30,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1374,
-			979,
-			141,
-			149
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0035"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			418,
-            26,
-            30,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1680,
-			979,
-			131,
-			152
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0036"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			418,
-            26,
-            30,
-            37
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1680,
-			979,
-			131,
-			152
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0037"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			428,
-            33,
-            31,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			327,
-			979,
-			120,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0038"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			428,
-            33,
-            31,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			327,
-			979,
-			120,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0039"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			440,
-            34,
-            56,
-            48
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1308,
-			827,
-			83,
-			133
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0040"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			440,
-            34,
-            56,
-            48
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1308,
-			827,
-			83,
-			133
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0041"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			448,
-            45,
-            56,
-            49
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1000,
-			692,
 			75,
-			121
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_breath_0042"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			579,
-			215
-		},
-		trim = {
-			448,
-            45,
-            56,
-            49
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1000,
-			692,
-			75,
-			121
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			53,
-			59
-		},
-		trim = {
-			12,
-            13,
-            12,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			859,
-			4,
-			29,
-			32
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			53,
-			59
-		},
-		trim = {
-			12,
-            13,
-            12,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			859,
-			4,
-			29,
-			32
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			53,
-			59
-		},
-		trim = {
-			12,
-            13,
-            12,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			896,
-			4,
-			29,
-			32
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			53,
-			59
-		},
-		trim = {
-			12,
-            13,
-            12,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			896,
-			4,
-			29,
-			32
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			53,
-			59
-		},
-		trim = {
-			12,
-            13,
-            12,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			933,
-			4,
-			29,
-			32
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			53,
-			59
-		},
-		trim = {
-			12,
-            13,
-            12,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			933,
-			4,
-			29,
-			32
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1876,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1876,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1924,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1924,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1972,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1972,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2020,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2020,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2068,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            15,
-            14,
-            16
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2068,
-			4,
-			40,
-			40
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            16,
-            14,
-            17
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1661,
-			4,
-			40,
-			38
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			14,
-            16,
-            14,
-            17
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1661,
-			4,
-			40,
-			38
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			15,
-            16,
-            15,
-            17
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1709,
-			4,
-			38,
-			38
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_burst_projectile_trail_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			68,
-			71
-		},
-		trim = {
-			15,
-            16,
-            15,
-            17
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1709,
-			4,
-			38,
-			38
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            25,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1625,
-			197,
-			103,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            25,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1625,
-			197,
-			103,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            25,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1625,
-			197,
-			103,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            24,
-            26,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1736,
-			197,
-			103,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            24,
-            26,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1736,
-			197,
-			103,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            24,
-            26,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1736,
-			197,
-			103,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            24,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2228,
-			197,
-			104,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            24,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2228,
-			197,
-			104,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            24,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2228,
-			197,
-			104,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            23,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			371,
-			282,
-			105,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            23,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			371,
-			282,
-			105,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            23,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			371,
-			282,
-			105,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1296,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1296,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1296,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			25,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1409,
-			282,
-			106,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			25,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1409,
-			282,
-			106,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			25,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1409,
-			282,
-			106,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1523,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1523,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1523,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1636,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1636,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			26,
-            22,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1636,
-			282,
-			105,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            22,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1749,
-			282,
-			103,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            22,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1749,
-			282,
-			103,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0027"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            22,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1749,
-			282,
-			103,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0028"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            23,
-            26,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2340,
-			197,
-			103,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0029"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            23,
-            26,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2340,
-			197,
-			103,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0030"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            23,
-            26,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2340,
-			197,
-			103,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0031"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			28,
-            24,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2451,
-			197,
-			103,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0032"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			28,
-            24,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2451,
-			197,
-			103,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0033"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			28,
-            24,
-            25,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2451,
-			197,
-			103,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0034"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            25,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1847,
-			197,
-			101,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0035"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            25,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1847,
-			197,
-			101,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0036"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            25,
-            26,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1847,
-			197,
-			101,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0037"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            27,
-            26,
-            22
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1406,
-			197,
-			101,
-			75
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0038"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            27,
-            26,
-            22
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1406,
-			197,
-			101,
-			75
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0039"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            27,
-            26,
-            22
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1406,
-			197,
-			101,
-			75
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0040"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            27,
-            28,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			670,
-			197,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0041"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            27,
-            28,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			670,
-			197,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0042"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            27,
-            28,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			670,
-			197,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0043"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            28,
-            28,
-            22
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			777,
-			197,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0044"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            28,
-            28,
-            22
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			777,
-			197,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0045"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			29,
-            28,
-            28,
-            22
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			777,
-			197,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0046"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            26,
-            27,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1515,
-			197,
-			102,
-			75
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0047"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            26,
-            27,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1515,
-			197,
-			102,
-			75
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_0048"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			156,
-			124
-		},
-		trim = {
-			27,
-            26,
-            27,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1515,
-			197,
-			102,
-			75
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
 			178,
+			97,
+			255
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			1123,
+			166,
+			163
+		},
+		alias = {
+			"hero_dragon_bone_hero_0014",
+			"hero_dragon_bone_hero_0047",
+			"hero_dragon_bone_hero_0048",
+			"hero_dragon_bone_hero_0087",
+			"hero_dragon_bone_hero_0088",
+			"hero_dragon_bone_hero_0163",
+			"hero_dragon_bone_hero_0164"
+		}
+	},
+	hero_dragon_bone_hero_0015 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			73,
+			171,
+			96,
+			255
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1386,
+			236,
+			169,
+			170
+		},
+		alias = {
+			"hero_dragon_bone_hero_0016",
+			"hero_dragon_bone_hero_0049",
+			"hero_dragon_bone_hero_0050",
+			"hero_dragon_bone_hero_0089",
+			"hero_dragon_bone_hero_0090",
+			"hero_dragon_bone_hero_0165",
+			"hero_dragon_bone_hero_0166"
+		}
+	},
+	hero_dragon_bone_hero_0017 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			190,
+			97,
+			258
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1470,
+			1597,
+			161,
+			148
+		},
+		alias = {
+			"hero_dragon_bone_hero_0018",
+			"hero_dragon_bone_hero_0051",
+			"hero_dragon_bone_hero_0052",
+			"hero_dragon_bone_hero_0091",
+			"hero_dragon_bone_hero_0092",
+			"hero_dragon_bone_hero_0167",
+			"hero_dragon_bone_hero_0168"
+		}
+	},
+	hero_dragon_bone_hero_0021 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			240,
+			103,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1470,
+			1748,
+			153,
+			155
+		},
+		alias = {
+			"hero_dragon_bone_hero_0022",
+			"hero_dragon_bone_hero_0055",
+			"hero_dragon_bone_hero_0056",
+			"hero_dragon_bone_hero_0131",
+			"hero_dragon_bone_hero_0132"
+		}
+	},
+	hero_dragon_bone_hero_0023 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			84,
+			230,
+			102,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1145,
+			1765,
+			152,
+			165
+		},
+		alias = {
+			"hero_dragon_bone_hero_0024"
+		}
+	},
+	hero_dragon_bone_hero_0025 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			225,
+			104,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1470,
+			1906,
+			151,
+			134
+		},
+		alias = {
+			"hero_dragon_bone_hero_0026"
+		}
+	},
+	hero_dragon_bone_hero_0031 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			78,
+			171,
+			93,
+			253
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1558,
+			236,
+			167,
+			172
+		},
+		alias = {
+			"hero_dragon_bone_hero_0032"
+		}
+	},
+	hero_dragon_bone_hero_0033 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			78,
+			173,
+			85,
+			247
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			780,
+			175,
+			176
+		},
+		alias = {
+			"hero_dragon_bone_hero_0034"
+		}
+	},
+	hero_dragon_bone_hero_0035 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			77,
+			168,
+			82,
+			251
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			1756,
+			179,
+			177
+		},
+		alias = {
+			"hero_dragon_bone_hero_0036"
+		}
+	},
+	hero_dragon_bone_hero_0037 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			187,
+			78,
+			241
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			849,
+			236,
+			177,
+			168
+		},
+		alias = {
+			"hero_dragon_bone_hero_0038"
+		}
+	},
+	hero_dragon_bone_hero_0039 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			92,
+			245,
+			84,
+			198
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1486,
+			1277,
+			162,
+			153
+		},
+		alias = {
+			"hero_dragon_bone_hero_0040"
+		}
+	},
+	hero_dragon_bone_hero_0041 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			95,
+			245,
+			88,
+			193
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1470,
+			1436,
+			155,
+			158
+		},
+		alias = {
+			"hero_dragon_bone_hero_0042"
+		}
+	},
+	hero_dragon_bone_hero_0045 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			249,
+			84,
+			242
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			1936,
+			172,
+			105
+		},
+		alias = {
+			"hero_dragon_bone_hero_0046"
+		}
+	},
+	hero_dragon_bone_hero_0057 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			84,
+			230,
+			102,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1315,
+			1436,
+			152,
+			165
+		},
+		alias = {
+			"hero_dragon_bone_hero_0058"
+		}
+	},
+	hero_dragon_bone_hero_0065 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			78,
+			171,
+			93,
+			253
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1728,
+			236,
+			167,
+			172
+		},
+		alias = {
+			"hero_dragon_bone_hero_0066"
+		}
+	},
+	hero_dragon_bone_hero_0067 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			78,
+			173,
+			85,
+			247
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1154,
+			780,
+			175,
+			176
+		},
+		alias = {
+			"hero_dragon_bone_hero_0068"
+		}
+	},
+	hero_dragon_bone_hero_0069 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			77,
+			168,
+			80,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			798,
+			181,
+			182
+		},
+		alias = {
+			"hero_dragon_bone_hero_0070"
+		}
+	},
+	hero_dragon_bone_hero_0071 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			171,
+			72,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			794,
+			184,
+			188
+		},
+		alias = {
+			"hero_dragon_bone_hero_0072"
+		}
+	},
+	hero_dragon_bone_hero_0073 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			86,
+			178,
+			68,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1585,
+			184,
+			184
+		},
+		alias = {
+			"hero_dragon_bone_hero_0074"
+		}
+	},
+	hero_dragon_bone_hero_0075 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			178,
+			67,
+			232
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			413,
+			191,
+			186
+		},
+		alias = {
+			"hero_dragon_bone_hero_0076"
+		}
+	},
+	hero_dragon_bone_hero_0077 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			84,
+			187,
+			66,
+			232
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1407,
+			413,
+			188,
+			177
+		},
+		alias = {
+			"hero_dragon_bone_hero_0078"
+		}
+	},
+	hero_dragon_bone_hero_0079 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			92,
+			248,
+			68,
+			197
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1145,
+			1123,
+			178,
+			151
+		},
+		alias = {
+			"hero_dragon_bone_hero_0080"
+		}
+	},
+	hero_dragon_bone_hero_0081 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			95,
+			242,
+			82,
+			194
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1145,
+			1440,
+			161,
+			160
+		},
+		alias = {
+			"hero_dragon_bone_hero_0082"
+		}
+	},
+	hero_dragon_bone_hero_0097 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			85,
+			191,
+			101,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1315,
+			1766,
+			152,
+			159
+		},
+		alias = {
+			"hero_dragon_bone_hero_0098"
+		}
+	},
+	hero_dragon_bone_hero_0105 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			76,
+			42,
+			101,
+			381
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			1694,
+			161,
+			173
+		},
+		alias = {
+			"hero_dragon_bone_hero_0106"
+		}
+	},
+	hero_dragon_bone_hero_0107 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			68,
+			31,
+			102,
+			386
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			1163,
+			168,
+			179
+		},
+		alias = {
+			"hero_dragon_bone_hero_0108"
+		}
+	},
+	hero_dragon_bone_hero_0109 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			69,
+			18,
+			102,
+			385
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			1174,
+			167,
+			193
+		},
+		alias = {
+			"hero_dragon_bone_hero_0110"
+		}
+	},
+	hero_dragon_bone_hero_0111 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			91,
+			72,
+			84,
+			334
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			970,
+			163,
+			190
+		},
+		alias = {
+			"hero_dragon_bone_hero_0112"
+		}
+	},
+	hero_dragon_bone_hero_0113 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			137,
+			129,
+			79,
+			284
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1793,
+			1855,
+			122,
+			183
+		},
+		alias = {
+			"hero_dragon_bone_hero_0114"
+		}
+	},
+	hero_dragon_bone_hero_0115 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			141,
+			190,
+			83,
+			172
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			1289,
+			114,
+			234
+		},
+		alias = {
+			"hero_dragon_bone_hero_0116"
+		}
+	},
+	hero_dragon_bone_hero_0117 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			138,
+			214,
+			100,
+			159
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1924,
+			5,
+			100,
+			223
+		},
+		alias = {
+			"hero_dragon_bone_hero_0118"
+		}
+	},
+	hero_dragon_bone_hero_0121 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			98,
+			278,
+			55,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1179,
+			602,
+			185,
+			173
+		},
+		alias = {
+			"hero_dragon_bone_hero_0122"
+		}
+	},
+	hero_dragon_bone_hero_0123 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			88,
+			273,
+			46,
+			135
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1113,
+			5,
+			204,
+			188
+		},
+		alias = {
+			"hero_dragon_bone_hero_0124"
+		}
+	},
+	hero_dragon_bone_hero_0125 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			268,
+			35,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1122,
+			223,
+			184
+		},
+		alias = {
+			"hero_dragon_bone_hero_0126"
+		}
+	},
+	hero_dragon_bone_hero_0127 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			109,
+			267,
+			31,
+			154
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			825,
+			413,
+			198,
+			175
+		},
+		alias = {
+			"hero_dragon_bone_hero_0128"
+		}
+	},
+	hero_dragon_bone_hero_0129 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			105,
+			265,
+			65,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1315,
+			1277,
+			168,
+			156
+		},
+		alias = {
+			"hero_dragon_bone_hero_0130"
+		}
+	},
+	hero_dragon_bone_hero_0133 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			226,
+			97,
+			196
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			1517,
+			161,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0134"
+		}
+	},
+	hero_dragon_bone_hero_0139 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			67,
+			201,
+			105,
+			257
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1793,
+			1714,
+			166,
+			138
+		},
+		alias = {
+			"hero_dragon_bone_hero_0140"
+		}
+	},
+	hero_dragon_bone_hero_0141 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			47,
+			155,
+			106,
+			255
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			413,
+			185,
+			186
+		},
+		alias = {
+			"hero_dragon_bone_hero_0142"
+		}
+	},
+	hero_dragon_bone_hero_0143 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			47,
+			150,
+			107,
+			257
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			602,
+			184,
+			189
+		},
+		alias = {
+			"hero_dragon_bone_hero_0144"
+		}
+	},
+	hero_dragon_bone_hero_0145 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			44,
+			148,
+			108,
+			259
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			1826,
+			186,
+			189
+		},
+		alias = {
+			"hero_dragon_bone_hero_0146"
+		}
+	},
+	hero_dragon_bone_hero_0147 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			44,
+			150,
+			106,
+			254
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			832,
+			188,
+			192
+		},
+		alias = {
+			"hero_dragon_bone_hero_0148"
+		}
+	},
+	hero_dragon_bone_hero_0149 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			48,
+			154,
+			96,
+			244
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			916,
+			5,
+			194,
+			198
+		},
+		alias = {
+			"hero_dragon_bone_hero_0150"
+		}
+	},
+	hero_dragon_bone_hero_0151 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			73,
+			162,
+			76,
+			244
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			1227,
+			189,
+			190
+		},
+		alias = {
+			"hero_dragon_bone_hero_0152"
+		}
+	},
+	hero_dragon_bone_hero_0153 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			78,
+			181,
+			83,
+			248
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1029,
+			236,
+			177,
+			167
+		},
+		alias = {
+			"hero_dragon_bone_hero_0154"
+		}
+	},
+	hero_dragon_bone_hero_0155 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			87,
+			240,
+			89,
+			192
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			1694,
+			162,
+			164
+		},
+		alias = {
+			"hero_dragon_bone_hero_0156"
+		}
+	},
+	hero_dragon_bone_hero_0157 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			90,
+			240,
+			91,
+			189
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			1861,
+			157,
+			167
+		},
+		alias = {
+			"hero_dragon_bone_hero_0158"
+		}
+	},
+	hero_dragon_bone_hero_0173 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			212,
+			82,
+			198
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			1370,
+			173,
+			186
+		},
+		alias = {
+			"hero_dragon_bone_hero_0174"
+		}
+	},
+	hero_dragon_bone_hero_0175 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			81,
+			215,
+			83,
+			188
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1772,
+			174,
+			193
+		},
+		alias = {
+			"hero_dragon_bone_hero_0176"
+		}
+	},
+	hero_dragon_bone_hero_0177 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			223,
+			87,
+			186
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			780,
+			168,
+			187
+		},
+		alias = {
+			"hero_dragon_bone_hero_0178"
+		}
+	},
+	hero_dragon_bone_hero_0179 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			87,
+			232,
+			84,
+			204
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1145,
+			1277,
+			167,
+			160
+		},
+		alias = {
+			"hero_dragon_bone_hero_0180"
+		}
+	},
+	hero_dragon_bone_hero_0187 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			23,
+			167,
+			121,
+			247
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			628,
+			413,
+			194,
+			182
+		},
+		alias = {
+			"hero_dragon_bone_hero_0188"
+		}
+	},
+	hero_dragon_bone_hero_0189 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			16,
+			172,
+			136,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1780,
+			413,
+			186,
+			178
+		},
+		alias = {
+			"hero_dragon_bone_hero_0190"
+		}
+	},
+	hero_dragon_bone_hero_0191 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			113,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			236,
+			205,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0192"
+		}
+	},
+	hero_dragon_bone_hero_0193 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			170,
+			84,
+			245
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			736,
+			234,
+			181
+		},
+		alias = {
+			"hero_dragon_bone_hero_0194"
+		}
+	},
+	hero_dragon_bone_hero_0195 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			99,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			5,
+			219,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0196"
+		}
+	},
+	hero_dragon_bone_hero_0197 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			90,
+			245
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1711,
+			228,
+			175
+		},
+		alias = {
+			"hero_dragon_bone_hero_0198"
+		}
+	},
+	hero_dragon_bone_hero_0199 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			85,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1309,
+			233,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0200"
+		}
+	},
+	hero_dragon_bone_hero_0201 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			175,
+			81,
+			245
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			481,
+			5,
+			237,
+			176
+		},
+		alias = {
+			"hero_dragon_bone_hero_0202"
+		}
+	},
+	hero_dragon_bone_hero_0203 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			114,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			642,
+			236,
+			204,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0204"
+		}
+	},
+	hero_dragon_bone_hero_0205 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			134,
+			245
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			602,
+			184,
+			175
+		},
+		alias = {
+			"hero_dragon_bone_hero_0206",
+			"hero_dragon_bone_hero_0209",
+			"hero_dragon_bone_hero_0210",
+			"hero_dragon_bone_hero_0213",
+			"hero_dragon_bone_hero_0214",
+			"hero_dragon_bone_hero_0217",
+			"hero_dragon_bone_hero_0218",
+			"hero_dragon_bone_hero_0221",
+			"hero_dragon_bone_hero_0222",
+			"hero_dragon_bone_hero_0225",
+			"hero_dragon_bone_hero_0226"
+		}
+	},
+	hero_dragon_bone_hero_0207 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			134,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			992,
+			602,
+			184,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0208",
+			"hero_dragon_bone_hero_0211",
+			"hero_dragon_bone_hero_0212",
+			"hero_dragon_bone_hero_0215",
+			"hero_dragon_bone_hero_0216",
+			"hero_dragon_bone_hero_0219",
+			"hero_dragon_bone_hero_0220",
+			"hero_dragon_bone_hero_0223",
+			"hero_dragon_bone_hero_0224",
+			"hero_dragon_bone_hero_0227",
+			"hero_dragon_bone_hero_0228"
+		}
+	},
+	hero_dragon_bone_hero_0229 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			20,
+			176,
+			135,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1367,
+			602,
+			183,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0230"
+		}
+	},
+	hero_dragon_bone_hero_0231 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			21,
+			177,
+			136,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1738,
+			602,
+			181,
+			173
+		},
+		alias = {
+			"hero_dragon_bone_hero_0232"
+		}
+	},
+	hero_dragon_bone_hero_0233 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			21,
+			176,
+			135,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1553,
+			602,
+			182,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0234"
+		}
+	},
+	hero_dragon_bone_hero_0235 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			27,
+			183,
+			136,
+			252
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			959,
+			175,
+			161
+		},
+		alias = {
+			"hero_dragon_bone_hero_0236"
+		}
+	},
+	hero_dragon_bone_hero_0237 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			30,
+			170,
+			135,
+			252
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1699,
+			780,
+			173,
+			174
+		},
+		alias = {
+			"hero_dragon_bone_hero_0238"
+		}
+	},
+	hero_dragon_bone_hero_0239 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			34,
+			157,
+			131,
+			251
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			983,
+			173,
+			188
+		},
+		alias = {
+			"hero_dragon_bone_hero_0240"
+		}
+	},
+	hero_dragon_bone_hero_0241 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			45,
+			150,
+			117,
+			252
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			985,
+			176,
+			194
+		},
+		alias = {
+			"hero_dragon_bone_hero_0242"
+		}
+	},
+	hero_dragon_bone_hero_0243 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			52,
+			152,
+			107,
+			259
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1598,
+			413,
+			179,
+			185
+		},
+		alias = {
+			"hero_dragon_bone_hero_0244"
+		}
+	},
+	hero_dragon_bone_hero_0245 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			65,
+			161,
+			99,
+			267
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1209,
+			236,
+			174,
+			168
+		},
+		alias = {
+			"hero_dragon_bone_hero_0246"
+		}
+	},
+	hero_dragon_bone_hero_0247 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			81,
+			184,
+			95,
+			263
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1628,
+			1436,
+			162,
+			149
+		},
+		alias = {
+			"hero_dragon_bone_hero_0248"
+		}
+	},
+	hero_dragon_bone_hero_0251 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			240,
+			99,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1811,
+			1277,
+			157,
+			155
+		},
+		alias = {
+			"hero_dragon_bone_hero_0252"
+		}
+	},
+	hero_dragon_bone_hero_0255 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			84,
+			219,
+			95,
+			268
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1145,
+			1933,
+			159,
+			109
+		},
+		alias = {
+			"hero_dragon_bone_hero_0256"
+		}
+	},
+	hero_dragon_bone_hero_0257 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			77,
+			171,
+			82,
+			253
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1332,
+			780,
+			179,
+			172
+		},
+		alias = {
+			"hero_dragon_bone_hero_0258"
+		}
+	},
+	hero_dragon_bone_hero_0259 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			75,
+			154,
+			82,
+			249
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			602,
+			181,
+			193
+		},
+		alias = {
+			"hero_dragon_bone_hero_0260"
+		}
+	},
+	hero_dragon_bone_hero_0261 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			74,
+			152,
+			81,
+			247
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			1027,
+			183,
+			197
+		},
+		alias = {
+			"hero_dragon_bone_hero_0262"
+		}
+	},
+	hero_dragon_bone_hero_0263 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			69,
+			154,
+			81,
+			248
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			635,
+			188,
+			194
+		},
+		alias = {
+			"hero_dragon_bone_hero_0264"
+		}
+	},
+	hero_dragon_bone_hero_0265 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			73,
+			151,
+			80,
+			247
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			434,
+			185,
+			198
+		},
+		alias = {
+			"hero_dragon_bone_hero_0266"
+		}
+	},
+	hero_dragon_bone_hero_0267 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			68,
+			153,
+			81,
+			248
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			236,
+			189,
+			195
+		},
+		alias = {
+			"hero_dragon_bone_hero_0268"
+		}
+	},
+	hero_dragon_bone_hero_0269 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			68,
+			163,
+			80,
+			252
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1214,
+			413,
+			190,
+			181
+		},
+		alias = {
+			"hero_dragon_bone_hero_0270"
+		}
+	},
+	hero_dragon_bone_hero_0273 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			87,
+			193,
+			91,
+			244
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1145,
+			1603,
+			160,
+			159
+		},
+		alias = {
+			"hero_dragon_bone_hero_0274"
+		}
+	},
+	hero_dragon_bone_hero_0275 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			81,
+			187,
+			88,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1875,
+			780,
+			169,
+			172
+		},
+		alias = {
+			"hero_dragon_bone_hero_0276"
+		}
+	},
+	hero_dragon_bone_hero_0277 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			197,
+			89,
+			235
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			1870,
+			166,
+			164
+		},
+		alias = {
+			"hero_dragon_bone_hero_0278"
+		}
+	},
+	hero_dragon_bone_hero_0279 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			85,
+			197,
+			91,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			976,
+			1526,
+			162,
+			165
+		},
+		alias = {
+			"hero_dragon_bone_hero_0280"
+		}
+	},
+	hero_dragon_bone_hero_0281 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			87,
+			195,
+			85,
+			232
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			1345,
+			166,
+			169
+		},
+		alias = {
+			"hero_dragon_bone_hero_0282"
+		}
+	},
+	hero_dragon_bone_hero_0283 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			89,
+			195,
+			67,
+			232
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1514,
+			780,
+			182,
+			169
+		},
+		alias = {
+			"hero_dragon_bone_hero_0284"
+		}
+	},
+	hero_dragon_bone_hero_0285 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			89,
+			231,
+			68,
+			253
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1842,
+			1597,
+			181,
+			112
+		},
+		alias = {
+			"hero_dragon_bone_hero_0286"
+		}
+	},
+	hero_dragon_bone_hero_0287 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			95,
+			232,
+			68,
+			296
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1968,
+			175,
+			68
+		},
+		alias = {
+			"hero_dragon_bone_hero_0288"
+		}
+	},
+	hero_dragon_bone_hero_0291 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			102,
+			224,
+			96,
+			263
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1315,
+			1928,
+			140,
+			109
+		},
+		alias = {
+			"hero_dragon_bone_hero_0292"
+		}
+	},
+	hero_dragon_bone_hero_0311 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			66,
+			158,
+			98,
+			242
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1182,
+			174,
+			196
+		},
+		alias = {
+			"hero_dragon_bone_hero_0312"
+		}
+	},
+	hero_dragon_bone_hero_0313 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			64,
+			137,
+			92,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1486,
+			182,
+			222
+		},
+		alias = {
+			"hero_dragon_bone_hero_0314"
+		}
+	},
+	hero_dragon_bone_hero_0315 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			63,
+			125,
+			90,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			496,
+			185,
+			237
+		},
+		alias = {
+			"hero_dragon_bone_hero_0316"
+		}
+	},
+	hero_dragon_bone_hero_0317 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			65,
+			124,
+			99,
+			269
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			1620,
+			174,
+			203
+		},
+		alias = {
+			"hero_dragon_bone_hero_0318"
+		}
+	},
+	hero_dragon_bone_hero_0319 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			67,
+			128,
+			102,
+			267
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1381,
+			169,
+			201
+		},
+		alias = {
+			"hero_dragon_bone_hero_0320"
+		}
+	},
+	hero_dragon_bone_hero_0321 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			70,
+			137,
+			103,
+			265
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			434,
+			1559,
+			165,
+			194
+		},
+		alias = {
+			"hero_dragon_bone_hero_0322"
+		}
+	},
+	hero_dragon_bone_hero_0323 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			182,
+			107,
+			266
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1634,
+			1864,
+			151,
+			148
+		},
+		alias = {
+			"hero_dragon_bone_hero_0324"
+		}
+	},
+	hero_dragon_bone_hero_0327 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			65,
+			151,
+			39,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			234,
+			244
+		},
+		alias = {
+			"hero_dragon_bone_hero_0328"
+		}
+	},
+	hero_dragon_bone_hero_0329 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			64,
+			150,
+			38,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			5,
+			236,
+			228
+		},
+		alias = {
+			"hero_dragon_bone_hero_0330"
+		}
+	},
+	hero_dragon_bone_hero_0331 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			67,
+			154,
+			45,
+			201
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			252,
+			226,
+			241
+		},
+		alias = {
+			"hero_dragon_bone_hero_0332"
+		}
+	},
+	hero_dragon_bone_hero_0333 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			75,
+			162,
+			54,
+			235
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			920,
+			209,
+			199
+		},
+		alias = {
+			"hero_dragon_bone_hero_0334"
+		}
+	},
+	hero_dragon_bone_hero_0335 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			75,
+			153,
+			81,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			242,
+			1420,
+			182,
+			197
+		},
+		alias = {
+			"hero_dragon_bone_hero_0336"
+		}
+	},
+	hero_dragon_bone_hero_0337 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			74,
+			152,
+			80,
+			242
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1542,
+			5,
+			184,
+			202
+		},
+		alias = {
+			"hero_dragon_bone_hero_0338"
+		}
+	},
+	hero_dragon_bone_hero_0339 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			69,
+			154,
+			77,
+			238
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			721,
+			5,
+			192,
+			204
+		},
+		alias = {
+			"hero_dragon_bone_hero_0340"
+		}
+	},
+	hero_dragon_bone_hero_0341 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			71,
+			169,
+			75,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1729,
+			5,
+			192,
+			193
+		},
+		alias = {
+			"hero_dragon_bone_hero_0342"
+		}
+	},
+	hero_dragon_bone_hit_0011 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			139,
+			253
+		},
+		trim = {
+			17,
+			18,
+			17,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1918,
+			1855,
+			105,
+			135
+		},
+		alias = {
+			"hero_dragon_bone_hit_0012"
+		}
+	},
+	hero_dragon_bone_hit_0013 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			139,
+			253
+		},
+		trim = {
+			15,
+			15,
+			15,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1933,
+			1123,
+			109,
+			139
+		},
+		alias = {
+			"hero_dragon_bone_hit_0014"
+		}
+	},
+	hero_dragon_bone_hit_air_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			36,
+			32,
+			39,
+			43
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1267,
+			196,
+			50,
+			33
+		},
+		alias = {
+			"hero_dragon_bone_hit_air_0002"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			45,
+			44,
+			42,
+			45
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			347,
+			2018,
+			35,
+			27
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0002"
+		}
+	},
+	hero_dragon_bone_plague_fx_0010 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			24,
+			17,
+			20,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1830,
+			1082,
+			55,
+			35
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0011",
+			"hero_dragon_bone_plague_fx_0012"
+		}
+	},
+	hero_dragon_bone_plague_fx_0013 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			28,
+			22,
+			17,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1975,
+			1082,
+			54,
+			27
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0014"
+		}
+	},
+	hero_dragon_bone_plague_fx_0015 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			28,
+			22,
+			15,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1985,
+			1045,
+			56,
+			29
+		},
+		alias = {}
+	},
+	hero_dragon_bone_plague_fx_0016 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			18,
+			20,
+			14,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1197,
+			196,
+			67,
+			31
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0017"
+		}
+	},
+	hero_dragon_bone_plague_fx_0018 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			15,
+			20,
+			14,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1969,
+			569,
+			70,
+			29
+		},
+		alias = {}
+	},
+	hero_dragon_bone_plague_fx_0019 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			15,
+			18,
+			14,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1971,
+			1400,
+			70,
+			31
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0020"
+		}
+	},
+	hero_dragon_bone_plague_fx_0022 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			15,
+			19,
+			15,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1758,
+			1082,
+			69,
+			38
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0023"
+		}
+	},
+	hero_dragon_bone_plague_fx_0024 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			15,
+			19,
+			17,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			650,
+			184,
+			67,
+			47
+		},
+		alias = {}
+	},
+	hero_dragon_bone_projectile_trail_0001 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			15,
+			15,
+			14,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			967,
+			206,
+			33,
+			24
+		},
+		alias = {
+			"hero_dragon_bone_projectile_trail_0002"
+		}
+	},
+	hero_dragon_bone_projectile_trail_0003 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			20,
+			15,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1758,
+			201,
+			27,
+			24
+		},
+		alias = {
+			"hero_dragon_bone_projectile_trail_0004"
+		}
+	},
+	hero_dragon_bone_projectile_trail_0005 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			28,
+			15,
+			14,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1815,
+			201,
+			20,
+			25
+		},
+		alias = {
+			"hero_dragon_bone_projectile_trail_0006"
+		}
+	},
+	hero_dragon_bone_projectile_trail_0007 = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			62,
+			54
+		},
+		trim = {
+			34,
+			15,
+			13,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2026,
+			1621,
+			15,
+			24
+		},
+		alias = {
+			"hero_dragon_bone_projectile_trail_0008"
+		}
+	},
+	hero_dragon_bone_shadow = {
+		a_name = "go_hero_dragon_bone-1.dds",
+		size = {
+			80,
+			40
+		},
+		trim = {
+			13,
+			14,
+			13,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1036,
+			206,
+			54,
+			12
+		},
+		alias = {}
+	},
+	hero_dragon_bone_bones_despawn_fx_0015 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			80,
+			136
+		},
+		trim = {
+			15,
+			14,
+			28,
+			85
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			236,
+			1180,
+			37,
+			37
+		},
+		alias = {}
+	},
+	hero_dragon_bone_breath_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			272,
+			72,
+			203,
+			58
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1556,
+			104,
+			86
+		},
+		alias = {
+			"hero_dragon_bone_breath_0004"
+		}
+	},
+	hero_dragon_bone_breath_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			269,
+			67,
+			180,
+			68
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1914,
+			275,
+			130,
+			81
+		},
+		alias = {
+			"hero_dragon_bone_breath_0006"
+		}
+	},
+	hero_dragon_bone_breath_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			269,
+			60,
+			154,
+			68
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			789,
+			275,
+			156,
+			88
+		},
+		alias = {
+			"hero_dragon_bone_breath_0008"
+		}
+	},
+	hero_dragon_bone_breath_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			269,
+			56,
+			129,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			594,
+			395,
+			181,
+			99
+		},
+		alias = {
+			"hero_dragon_bone_breath_0010"
+		}
+	},
+	hero_dragon_bone_breath_0033 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			410,
+			31,
+			31,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			492,
+			5,
+			138,
+			148
+		},
+		alias = {
+			"hero_dragon_bone_breath_0034"
+		}
+	},
+	hero_dragon_bone_breath_0035 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			579,
+			216
+		},
+		trim = {
+			420,
+			27,
+			31,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			320,
+			128,
+			151
+		},
+		alias = {
+			"hero_dragon_bone_breath_0036"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			15,
+			17,
+			15,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			244,
+			1922,
+			38,
+			38
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0002"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			15,
+			17,
+			15,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			245,
+			1267,
+			38,
+			38
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0004"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			15,
+			17,
+			15,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			243,
+			1844,
+			38,
+			38
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0008"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			15,
+			17,
+			15,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			95,
+			1726,
+			38,
+			38
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0010"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0011 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			16,
+			18,
+			15,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			236,
+			1220,
+			37,
+			36
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0012"
+		}
+	},
+	hero_dragon_bone_burst_projectile_trail_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			68,
+			71
+		},
+		trim = {
+			16,
+			18,
+			16,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			236,
+			1013,
+			36,
+			36
+		},
+		alias = {
+			"hero_dragon_bone_burst_projectile_trail_0014"
+		}
+	},
+	hero_dragon_bone_cloud_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			27,
+			26,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1346,
+			102,
+			75
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0002",
+			"hero_dragon_bone_cloud_0003"
+		}
+	},
+	hero_dragon_bone_cloud_0004 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			26,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1424,
+			102,
+			75
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0005",
+			"hero_dragon_bone_cloud_0006"
+		}
+	},
+	hero_dragon_bone_cloud_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			26,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1502,
+			102,
+			75
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0008",
+			"hero_dragon_bone_cloud_0009"
+		}
+	},
+	hero_dragon_bone_cloud_0010 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			24,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			844,
+			102,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0011",
+			"hero_dragon_bone_cloud_0012"
+		}
+	},
+	hero_dragon_bone_cloud_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			27,
+			23,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1822,
+			103,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0014",
+			"hero_dragon_bone_cloud_0015"
+		}
+	},
+	hero_dragon_bone_cloud_0016 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			27,
+			23,
+			25,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1645,
+			104,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0017",
+			"hero_dragon_bone_cloud_0018"
+		}
+	},
+	hero_dragon_bone_cloud_0019 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			23,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1903,
+			102,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0020",
+			"hero_dragon_bone_cloud_0021"
+		}
+	},
+	hero_dragon_bone_cloud_0022 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			23,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			682,
+			102,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0023",
+			"hero_dragon_bone_cloud_0024"
+		}
+	},
+	hero_dragon_bone_cloud_0025 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			23,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			763,
+			102,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0026",
+			"hero_dragon_bone_cloud_0027"
+		}
+	},
+	hero_dragon_bone_cloud_0028 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			28,
+			25,
+			26,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1101,
+			102,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0029",
+			"hero_dragon_bone_cloud_0030"
+		}
+	},
+	hero_dragon_bone_cloud_0031 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			29,
+			26,
+			26,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1267,
+			101,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0032",
+			"hero_dragon_bone_cloud_0033"
+		}
+	},
+	hero_dragon_bone_cloud_0034 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			30,
+			27,
+			27,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1844,
+			99,
+			75
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0035",
+			"hero_dragon_bone_cloud_0036"
+		}
+	},
+	hero_dragon_bone_cloud_0037 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			30,
+			28,
+			27,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			519,
+			99,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0038",
+			"hero_dragon_bone_cloud_0039"
+		}
+	},
+	hero_dragon_bone_cloud_0040 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			31,
+			28,
+			28,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			390,
+			519,
+			97,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0041",
+			"hero_dragon_bone_cloud_0042"
+		}
+	},
+	hero_dragon_bone_cloud_0043 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			30,
+			29,
+			28,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			490,
+			519,
+			98,
+			73
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0044",
+			"hero_dragon_bone_cloud_0045"
+		}
+	},
+	hero_dragon_bone_cloud_0046 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			156,
+			125
+		},
+		trim = {
+			29,
+			28,
+			27,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1922,
+			100,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_cloud_0047",
+			"hero_dragon_bone_cloud_0048"
+		}
+	},
+	hero_dragon_bone_cloud_b = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			179,
 			156
 		},
 		trim = {
-			16,
-            20,
-            22,
-            37
+			18,
+			21,
+			23,
+			38
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			567,
-			140,
+			948,
+			275,
+			138,
+			97
+		},
+		alias = {}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			25,
+			27,
+			44,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1617,
+			596,
+			64,
+			72
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0002",
+			"hero_dragon_bone_cloud_b_bubbles_0003"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0004 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			28,
+			24,
+			17,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			687,
+			519,
+			88,
+			72
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0005",
+			"hero_dragon_bone_cloud_b_bubbles_0006"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			33,
+			22,
+			14,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1728,
+			86,
+			71
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0008",
+			"hero_dragon_bone_cloud_b_bubbles_0009"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0010 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			29,
+			19,
+			13,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			924,
+			91,
+			86
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0011",
+			"hero_dragon_bone_cloud_b_bubbles_0012"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			24,
+			49,
+			14,
 			99
 		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			22,
-            24,
-            41,
-            99
-		},
 		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			484,
-			282,
-			70,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			22,
-            24,
-            41,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			484,
-			282,
-			70,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			22,
-            24,
-            41,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			484,
-			282,
-			70,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			26,
-            21,
-            14,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			562,
-			282,
-			93,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			26,
-            21,
-            14,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			562,
-			282,
-			93,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			26,
-            21,
-            14,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			562,
-			282,
-			93,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			30,
-            19,
-            12,
-            105
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2562,
-			197,
-			91,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			30,
-            19,
-            12,
-            105
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2562,
-			197,
-			91,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			30,
-            19,
-            12,
-            105
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2562,
-			197,
-			91,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			26,
-            18,
-            11,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			906,
-			461,
-			96,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			26,
-            18,
-            11,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			906,
-			461,
-			96,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			26,
-            18,
-            11,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			906,
-			461,
-			96,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			21,
-            45,
-            11,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1083,
-			124,
-			101,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			21,
-            45,
-            11,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1083,
-			124,
-			101,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			21,
-            45,
-            11,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1083,
-			124,
-			101,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			15,
-            43,
-            11,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			326,
-			124,
-			107,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			15,
-            43,
-            11,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			326,
-			124,
-			107,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			15,
-            43,
-            11,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			326,
-			124,
-			107,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			13,
-            40,
-            12,
-            101
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1192,
-			124,
-			108,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			13,
-            40,
-            12,
-            101
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1192,
-			124,
-			108,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			13,
-            40,
-            12,
-            101
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1192,
-			124,
-			108,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			11,
-            37,
-            15,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1710,
-			124,
-			107,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			11,
-            37,
-            15,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1710,
-			124,
-			107,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			11,
-            37,
-            15,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1710,
-			124,
-			107,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			11,
-            35,
-            20,
-            105
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1600,
-			124,
-			102,
-			61
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			11,
-            35,
-            20,
-            105
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1600,
-			124,
-			102,
-			61
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0027"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			11,
-            35,
-            20,
-            105
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1600,
-			124,
-			102,
-			61
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0028"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			12,
-            32,
-            26,
-            107
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1825,
-			124,
-			95,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0029"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			12,
-            32,
-            26,
-            107
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1825,
-			124,
-			95,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0030"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			12,
-            32,
-            26,
-            107
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1825,
-			124,
-			95,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0031"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			14,
-            29,
-            30,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			884,
-			197,
-			89,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0032"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			14,
-            29,
-            30,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			884,
-			197,
-			89,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0033"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			14,
-            29,
-            30,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			884,
-			197,
-			89,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0034"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			19,
-            26,
-            30,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1956,
-			197,
-			84,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0035"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			19,
-            26,
-            30,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1956,
-			197,
-			84,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0036"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			19,
-            26,
-            30,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1956,
-			197,
-			84,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0037"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			18,
-            24,
-            28,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1764,
-			369,
-			87,
-			82
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0038"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			18,
-            24,
-            28,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1764,
-			369,
-			87,
-			82
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0039"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			18,
-            24,
-            28,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1764,
-			369,
-			87,
-			82
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0040"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			16,
-            21,
-            28,
-            97
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2107,
-			369,
-			89,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0041"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			16,
-            21,
-            28,
-            97
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2107,
-			369,
-			89,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0042"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			16,
-            21,
-            28,
-            97
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2107,
-			369,
-			89,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0043"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			15,
-            18,
-            28,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2604,
-			369,
-			90,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0044"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			15,
-            18,
-            28,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2604,
-			369,
-			90,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0045"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			15,
-            18,
-            28,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2604,
-			369,
-			90,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0046"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			16,
-            16,
-            28,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2204,
-			369,
-			89,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0047"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			16,
-            16,
-            28,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2204,
-			369,
-			89,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0048"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			16,
-            16,
-            28,
-            102
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2204,
-			369,
-			89,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0049"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			17,
-            13,
-            24,
-            90
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2399,
-			461,
-			92,
-			98
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0050"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			17,
-            13,
-            24,
-            90
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2399,
-			461,
-			92,
-			98
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0051"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			17,
-            13,
-            24,
-            90
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2399,
-			461,
-			92,
-			98
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0052"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			19,
-            10,
-            20,
-            93
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2499,
-			461,
-			94,
-			98
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0053"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			19,
-            10,
-            20,
-            93
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2499,
-			461,
-			94,
-			98
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0054"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			19,
-            10,
-            20,
-            93
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2499,
-			461,
-			94,
-			98
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0055"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			20,
-            29,
-            33,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
 			2048,
-			197,
-			80,
-			76
+			2048
 		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0056"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			20,
-            29,
-            33,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2048,
-			197,
-			80,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0057"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			20,
-            29,
-            33,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2048,
-			197,
-			80,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0058"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			21,
-            26,
-            38,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			282,
-			74,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0059"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			21,
-            26,
-            38,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			282,
-			74,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_b_bubbles_0060"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			133,
-			201
-		},
-		trim = {
-			21,
-            26,
-            38,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			282,
-			74,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            44,
-            30,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			998,
-			369,
-			136,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            44,
-            30,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			998,
-			369,
-			136,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            44,
-            30,
-            23
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			998,
-			369,
-			136,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			26,
-            39,
-            29,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			461,
-			143,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			26,
-            39,
-            29,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			461,
-			143,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			26,
-            39,
-            29,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			461,
-			143,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            29,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			155,
-			461,
-			144,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            29,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			155,
-			461,
-			144,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            29,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			155,
-			461,
-			144,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			307,
-			461,
-			143,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			307,
-			461,
-			143,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			307,
-			461,
-			143,
-			84
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			24,
-            38,
-            35,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1860,
-			282,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			24,
-            38,
-            35,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1860,
-			282,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			24,
-            38,
-            35,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1860,
-			282,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            38,
-            32,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2007,
-			282,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            38,
-            32,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2007,
-			282,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            38,
-            32,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2007,
-			282,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2156,
-			282,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2156,
-			282,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			25,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2156,
-			282,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			26,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2305,
-			282,
-			140,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			26,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2305,
-			282,
-			140,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			26,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2305,
-			282,
-			140,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2453,
-			282,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2453,
-			282,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0027"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2453,
-			282,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0028"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			369,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0029"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			369,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0030"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			369,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0031"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			151,
-			369,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0032"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			151,
-			369,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0033"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            39,
-            32,
-            29
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			151,
-			369,
-			139,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0034"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            40,
-            32,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			86,
-			282,
-			139,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0035"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            40,
-            32,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			86,
-			282,
-			139,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0036"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			27,
-            40,
-            32,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			86,
-			282,
-			139,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0037"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            34,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			981,
-			197,
-			133,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0038"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            34,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			981,
-			197,
-			133,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0039"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            34,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			981,
-			197,
-			133,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0040"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            32,
-            26
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			663,
-			282,
-			135,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0041"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            32,
-            26
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			663,
-			282,
-			135,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0042"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            32,
-            26
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			663,
-			282,
-			135,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0043"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            32,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			298,
-			369,
-			135,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0044"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            32,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			298,
-			369,
-			135,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0045"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			31,
-            43,
-            32,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			298,
-			369,
-			135,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0046"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            43,
-            31,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			441,
-			369,
-			135,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0047"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            43,
-            31,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			441,
-			369,
-			135,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0048"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            43,
-            31,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			441,
-			369,
-			135,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0049"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            44,
-            31,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			806,
-			282,
-			134,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0050"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            44,
-            31,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			806,
-			282,
-			134,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0051"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            44,
-            31,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			806,
-			282,
-			134,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0052"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            44,
-            31,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			584,
-			369,
-			134,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0053"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            44,
-            31,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			584,
-			369,
-			134,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0054"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            44,
-            31,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			584,
-			369,
-			134,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0055"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            45,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			948,
-			282,
-			136,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0056"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            45,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			948,
-			282,
-			136,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0057"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			32,
-            45,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			948,
-			282,
-			136,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0058"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            43,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1142,
-			369,
-			135,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0059"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            43,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1142,
-			369,
-			135,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_cloud_decal_0060"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			198,
-			147
-		},
-		trim = {
-			33,
-            43,
-            30,
-            24
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1142,
-			369,
-			135,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			24,
-            35,
-            35,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2281,
-			124,
-			91,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			24,
-            35,
-            35,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2281,
-			124,
-			91,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			26,
-            35,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2380,
-			124,
-			90,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			26,
-            35,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2380,
-			124,
-			90,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			27,
-            37,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1928,
-			124,
-			92,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			22,
-            41,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2538,
-			58,
-			98,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			22,
-            41,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2538,
-			58,
-			98,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            42,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2271,
-			58,
-			91,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            42,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2271,
-			58,
-			91,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			22,
-            40,
-            33,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
 		f_quad = {
-			441,
-			124,
+			578,
+			596,
 			95,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            43,
-            35,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1425,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            43,
-            35,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1425,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			23,
-            44,
-            40,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1040,
-			58,
-			87,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			23,
-            44,
-            40,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1040,
-			58,
-			87,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			21,
-            45,
-            42,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			945,
-			58,
-			87,
 			54
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0014",
+			"hero_dragon_bone_cloud_b_bubbles_0015"
+		}
 	},
-	["hero_dragon_bone_drake_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_b_bubbles_0016 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
+			133,
+			202
+		},
+		trim = {
+			19,
+			46,
+			14,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1700,
+			519,
+			100,
+			54
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0017",
+			"hero_dragon_bone_cloud_b_bubbles_0018"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0019 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			16,
+			43,
+			15,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1242,
+			519,
+			102,
+			56
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0020",
+			"hero_dragon_bone_cloud_b_bubbles_0021"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0022 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			14,
+			40,
+			18,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1347,
+			519,
+			101,
+			56
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0023",
+			"hero_dragon_bone_cloud_b_bubbles_0024"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0025 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			14,
+			38,
+			23,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1889,
+			519,
+			96,
+			56
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0026",
+			"hero_dragon_bone_cloud_b_bubbles_0027"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0028 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			15,
+			35,
+			29,
+			111
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			838,
+			596,
+			89,
+			56
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0029",
+			"hero_dragon_bone_cloud_b_bubbles_0030"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0031 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			17,
+			32,
+			33,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1156,
+			519,
+			83,
+			71
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0032",
+			"hero_dragon_bone_cloud_b_bubbles_0033"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0034 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
 		},
 		trim = {
 			21,
-            45,
-            42,
-            79
+			30,
+			32,
+			102
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			945,
-			58,
+			1536,
+			519,
+			80,
+			70
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0035",
+			"hero_dragon_bone_cloud_b_bubbles_0036"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0037 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			21,
+			27,
+			31,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1417,
+			81,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0038",
+			"hero_dragon_bone_cloud_b_bubbles_0039"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0040 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			19,
+			24,
+			31,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1256,
+			83,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0041",
+			"hero_dragon_bone_cloud_b_bubbles_0042"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0043 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			18,
+			21,
+			31,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1175,
+			84,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0044",
+			"hero_dragon_bone_cloud_b_bubbles_0045"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0046 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			18,
+			19,
+			31,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1337,
+			84,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0047",
+			"hero_dragon_bone_cloud_b_bubbles_0048"
+		}
+	},
+	hero_dragon_bone_cloud_b_bubbles_0049 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			133,
+			202
+		},
+		trim = {
+			20,
+			16,
+			26,
+			93
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1726,
 			87,
-			54
+			93
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0050",
+			"hero_dragon_bone_cloud_b_bubbles_0051"
+		}
 	},
-	["hero_dragon_bone_drake_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_b_bubbles_0058 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
+			133,
+			202
 		},
 		trim = {
-			26,
-            39,
-            32,
-            79
+			24,
+			29,
+			41,
+			102
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1308,
-			124,
-			92,
-			60
+			1288,
+			596,
+			68,
+			71
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_b_bubbles_0059",
+			"hero_dragon_bone_cloud_b_bubbles_0060"
+		}
 	},
-	["hero_dragon_bone_drake_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
-		},
-		trim = {
-			26,
-            39,
-            32,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1308,
-			124,
-			92,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			31,
-            34,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2615,
-			124,
-			88,
-			65
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			31,
-            34,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2615,
-			124,
-			88,
-			65
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			38,
-            39,
-            11,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1408,
-			124,
-			101,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			38,
-            39,
-            11,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1408,
-			124,
-			101,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			38,
-            43,
-            11,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1520,
-			58,
-			101,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0027"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			38,
-            43,
-            11,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1520,
-			58,
-			101,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0028"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			38,
-            41,
-            19,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			124,
-			93,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0029"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			38,
-            41,
-            19,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			124,
-			93,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0030"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			36,
-            43,
-            19,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1629,
-			58,
-			95,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0031"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			36,
-            43,
-            19,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1629,
-			58,
-			95,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0032"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
+			199,
+			148
 		},
 		trim = {
 			34,
-            43,
-            23,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1732,
-			58,
-			93,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0033"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			34,
-            43,
-            23,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1732,
-			58,
-			93,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0034"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
+			46,
 			30,
-            43,
-            31,
-            79
+			24
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1833,
-			58,
-			89,
-			56
+			1016,
+			156,
+			135,
+			78
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0002",
+			"hero_dragon_bone_cloud_decal_0003"
+		}
 	},
-	["hero_dragon_bone_drake_0035"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0004 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
-		},
-		trim = {
-			30,
-            43,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1833,
-			58,
-			89,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0036"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0037"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			58,
-			87,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0038"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			26,
-            40,
-            40,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			544,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0039"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			26,
-            40,
-            40,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			544,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0040"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			636,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0041"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			636,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0042"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
+			199,
+			148
 		},
 		trim = {
 			27,
-            40,
-            38,
-            79
+			41,
+			31,
+			25
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			728,
-			124,
-			85,
-			59
+			1770,
+			275,
+			141,
+			82
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0005",
+			"hero_dragon_bone_cloud_decal_0006"
+		}
 	},
-	["hero_dragon_bone_drake_0043"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
+			199,
+			148
+		},
+		trim = {
+			26,
+			41,
+			31,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1480,
+			275,
+			142,
+			82
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0008",
+			"hero_dragon_bone_cloud_decal_0009"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0010 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			26,
+			40,
+			31,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1625,
+			275,
+			142,
+			82
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0011",
+			"hero_dragon_bone_cloud_decal_0012"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			26,
+			40,
+			36,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			876,
+			156,
+			137,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0014",
+			"hero_dragon_bone_cloud_decal_0015"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0016 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			26,
+			40,
+			33,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			450,
+			156,
+			140,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0017",
+			"hero_dragon_bone_cloud_decal_0018"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0019 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			26,
+			40,
+			33,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			307,
+			156,
+			140,
+			78
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0020",
+			"hero_dragon_bone_cloud_decal_0021"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0022 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
 		},
 		trim = {
 			27,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			728,
-			124,
-			85,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0044"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			636,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0045"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			636,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0046"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			636,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0047"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            38,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			636,
-			124,
-			84,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0048"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            37,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			821,
-			124,
-			85,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0049"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            40,
-            37,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			821,
-			124,
-			85,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0050"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            42,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2370,
-			58,
-			88,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0051"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			28,
-            42,
-            34,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2370,
-			58,
-			88,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0052"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            32,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1930,
-			58,
-			89,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0053"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			29,
-            43,
-            32,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1930,
-			58,
-			89,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0054"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			30,
-            43,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2027,
-			58,
-			90,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0055"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			30,
-            43,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2027,
-			58,
-			90,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0056"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			30,
-            40,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			914,
-			124,
-			90,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0057"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			30,
-            40,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			914,
-			124,
-			90,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0058"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
+			41,
 			33,
-            32,
-            29,
-            79
+			30
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			197,
-			88,
-			67
+			593,
+			156,
+			139,
+			77
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0023",
+			"hero_dragon_bone_cloud_decal_0024"
+		}
 	},
-	["hero_dragon_bone_drake_0059"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0025 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
+			199,
+			148
 		},
 		trim = {
+			28,
+			42,
 			33,
-            32,
-            29,
-            79
+			30
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			197,
-			88,
-			67
+			1154,
+			156,
+			138,
+			76
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0026",
+			"hero_dragon_bone_cloud_decal_0027"
+		}
 	},
-	["hero_dragon_bone_drake_0060"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0028 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
+			199,
+			148
 		},
 		trim = {
-			34,
-            25,
-            28,
-            79
+			28,
+			42,
+			33,
+			30
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1122,
-			197,
-			88,
+			1295,
+			156,
+			138,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0029",
+			"hero_dragon_bone_cloud_decal_0030"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0031 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			28,
+			41,
+			33,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			735,
+			156,
+			138,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0032",
+			"hero_dragon_bone_cloud_decal_0033"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0034 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			28,
+			43,
+			33,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			526,
+			138,
 			74
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0035",
+			"hero_dragon_bone_cloud_decal_0036"
+		}
 	},
-	["hero_dragon_bone_drake_0061"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0037 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			150,
-			178
-		},
-		trim = {
-			34,
-            25,
-            28,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1122,
-			197,
-			88,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0062"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			31,
-            21,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1092,
-			282,
-			89,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0063"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			31,
-            21,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1092,
-			282,
-			89,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0064"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			33,
-            13,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			526,
-			461,
-			87,
-			86
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0065"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			33,
-            13,
-            30,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			526,
-			461,
-			87,
-			86
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0066"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
+			199,
+			148
 		},
 		trim = {
 			32,
-            12,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			621,
-			461,
-			87,
-			87
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0067"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			32,
-            12,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			621,
-			461,
-			87,
-			87
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0068"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			32,
-            11,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1010,
-			461,
-			87,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0069"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			32,
-            11,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1010,
-			461,
-			87,
-			88
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0070"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			32,
-            58,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2173,
-			4,
-			87,
-			41
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_0071"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			150,
-			178
-		},
-		trim = {
-			32,
-            58,
-            31,
-            79
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2173,
-			4,
-			87,
-			41
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_hit_fx_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			113
-		},
-		trim = {
-			34,
-            23,
-            21,
-            44
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			55,
-			58,
 			44,
-			46
+			35,
+			31
 		},
-		alias = {},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1480,
+			132,
+			73
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0038",
+			"hero_dragon_bone_cloud_decal_0039"
+		}
 	},
-	["hero_dragon_bone_drake_hit_fx_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_cloud_decal_0040 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			99,
-			113
+			199,
+			148
+		},
+		trim = {
+			32,
+			44,
+			33,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1534,
+			156,
+			134,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0041",
+			"hero_dragon_bone_cloud_decal_0042"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0043 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			32,
+			45,
+			33,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1671,
+			156,
+			134,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0044",
+			"hero_dragon_bone_cloud_decal_0045"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0046 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			33,
+			45,
+			33,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1140,
+			133,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0047",
+			"hero_dragon_bone_cloud_decal_0048"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0049 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
 		},
 		trim = {
 			34,
-            16,
-            20,
-            44
+			46,
+			33,
+			26
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			703,
-			58,
+			5,
+			1401,
+			132,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0050",
+			"hero_dragon_bone_cloud_decal_0051"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0052 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			35,
+			46,
+			31,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1220,
+			133,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0053",
+			"hero_dragon_bone_cloud_decal_0054"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0055 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			34,
+			47,
+			31,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			603,
+			134,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0056",
+			"hero_dragon_bone_cloud_decal_0057"
+		}
+	},
+	hero_dragon_bone_cloud_decal_0058 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			199,
+			148
+		},
+		trim = {
+			34,
+			46,
+			31,
+			25
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1808,
+			156,
+			134,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_cloud_decal_0059",
+			"hero_dragon_bone_cloud_decal_0060"
+		}
+	},
+	hero_dragon_bone_drake_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			32,
+			46,
+			37,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1199,
+			675,
+			82,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0012",
+			"hero_dragon_bone_drake_0013",
+			"hero_dragon_bone_drake_0036",
+			"hero_dragon_bone_drake_0037"
+		}
+	},
+	hero_dragon_bone_drake_0002 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			27,
+			39,
+			39,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			930,
+			596,
+			85,
+			58
+		},
+		alias = {
+			"hero_dragon_bone_drake_0003"
+		}
+	},
+	hero_dragon_bone_drake_0004 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			29,
+			38,
+			37,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			750,
+			596,
+			85,
+			59
+		},
+		alias = {
+			"hero_dragon_bone_drake_0005"
+		}
+	},
+	hero_dragon_bone_drake_0006 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			30,
+			40,
+			35,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1103,
+			596,
+			86,
+			57
+		},
+		alias = {}
+	},
+	hero_dragon_bone_drake_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			25,
 			45,
+			33,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1192,
+			596,
+			93,
+			52
+		},
+		alias = {
+			"hero_dragon_bone_drake_0008"
+		}
+	},
+	hero_dragon_bone_drake_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			31,
+			45,
+			34,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1775,
+			596,
+			86,
+			52
+		},
+		alias = {
+			"hero_dragon_bone_drake_0010"
+		}
+	},
+	hero_dragon_bone_drake_0011 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			25,
+			44,
+			36,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1359,
+			596,
+			90,
 			53
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_drake_hit_fx_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_0014 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			99,
-			113
-		},
-		trim = {
-			33,
-            16,
-            15,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2478,
-			124,
-			51,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_hit_fx_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			113
+			151,
+			179
 		},
 		trim = {
 			31,
-            11,
-            14,
-            33
+			46,
+			38,
+			82
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			185,
-			197,
-			54,
+			1284,
+			675,
+			82,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0015"
+		}
+	},
+	hero_dragon_bone_drake_0020 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			30,
+			42,
+			35,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1528,
+			596,
+			86,
+			55
+		},
+		alias = {
+			"hero_dragon_bone_drake_0021"
+		}
+	},
+	hero_dragon_bone_drake_0022 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			34,
+			37,
+			35,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1018,
+			596,
+			82,
+			60
+		},
+		alias = {
+			"hero_dragon_bone_drake_0023"
+		}
+	},
+	hero_dragon_bone_drake_0024 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			42,
+			42,
+			13,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			479,
+			596,
+			96,
+			55
+		},
+		alias = {
+			"hero_dragon_bone_drake_0025"
+		}
+	},
+	hero_dragon_bone_drake_0028 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			41,
+			45,
+			22,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1684,
+			596,
+			88,
+			52
+		},
+		alias = {
+			"hero_dragon_bone_drake_0029"
+		}
+	},
+	hero_dragon_bone_drake_0034 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			33,
+			46,
+			35,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			675,
+			83,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0035"
+		}
+	},
+	hero_dragon_bone_drake_0038 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			29,
+			43,
+			43,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			785,
+			675,
+			79,
+			54
+		},
+		alias = {
+			"hero_dragon_bone_drake_0039"
+		}
+	},
+	hero_dragon_bone_drake_0040 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			31,
+			43,
+			41,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			867,
+			675,
+			79,
+			54
+		},
+		alias = {
+			"hero_dragon_bone_drake_0041",
+			"hero_dragon_bone_drake_0044",
+			"hero_dragon_bone_drake_0045",
+			"hero_dragon_bone_drake_0046",
+			"hero_dragon_bone_drake_0047"
+		}
+	},
+	hero_dragon_bone_drake_0042 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			30,
+			44,
+			42,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1035,
+			675,
+			79,
+			53
+		},
+		alias = {
+			"hero_dragon_bone_drake_0043"
+		}
+	},
+	hero_dragon_bone_drake_0048 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			31,
+			43,
+			40,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			443,
+			675,
+			80,
+			54
+		},
+		alias = {
+			"hero_dragon_bone_drake_0049"
+		}
+	},
+	hero_dragon_bone_drake_0050 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			31,
+			45,
+			38,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			700,
+			675,
+			82,
+			52
+		},
+		alias = {
+			"hero_dragon_bone_drake_0051"
+		}
+	},
+	hero_dragon_bone_drake_0052 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			32,
+			46,
+			35,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			675,
+			84,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0053"
+		}
+	},
+	hero_dragon_bone_drake_0054 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			33,
+			46,
+			34,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			613,
+			675,
+			84,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_drake_0055"
+		}
+	},
+	hero_dragon_bone_drake_0056 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			34,
+			44,
+			33,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1864,
+			596,
+			84,
+			53
+		},
+		alias = {
+			"hero_dragon_bone_drake_0057"
+		}
+	},
+	hero_dragon_bone_drake_0060 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			37,
+			28,
+			32,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1451,
+			519,
+			82,
 			69
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_drake_0061"
+		}
 	},
-	["hero_dragon_bone_drake_hit_fx_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_0062 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			99,
-			113
+			151,
+			179
 		},
 		trim = {
-			29,
-            11,
-            11,
-            32
+			35,
+			24,
+			32,
+			82
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			247,
-			197,
-			59,
-			70
+			288,
+			1652,
+			84,
+			73
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_drake_0063"
+		}
 	},
-	["hero_dragon_bone_drake_hit_fx_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_0064 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			99,
-			113
+			151,
+			179
 		},
 		trim = {
-			29,
-            11,
-            11,
-            32
+			36,
+			16,
+			34,
+			82
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			314,
-			197,
-			59,
-			70
+			288,
+			1091,
+			81,
+			81
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_drake_0065"
+		}
 	},
-	["hero_dragon_bone_drake_hit_fx_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_0066 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			99,
-			113
+			151,
+			179
 		},
 		trim = {
-			29,
-            11,
-            21,
-            62
+			36,
+			15,
+			34,
+			82
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			2116,
-			4,
-			49,
+			288,
+			846,
+			81,
+			82
+		},
+		alias = {
+			"hero_dragon_bone_drake_0067"
+		}
+	},
+	hero_dragon_bone_drake_0068 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			151,
+			179
+		},
+		trim = {
+			36,
+			14,
+			34,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			760,
+			81,
+			83
+		},
+		alias = {
+			"hero_dragon_bone_drake_0069"
+		}
+	},
+	hero_dragon_bone_drake_hit_fx_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			38,
+			27,
+			23,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			246,
+			1101,
+			38,
 			40
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_drake_hit_fx_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_hit_fx_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
 			99,
-			113
+			114
 		},
 		trim = {
-			28,
-            14,
-            21,
-            61
+			33,
+			15,
+			14,
+			35
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1755,
-			4,
-			50,
-			38
+			229,
+			1667,
+			52,
+			64
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_drake_hit_fx_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_hit_fx_0006 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
 			99,
-			113
+			114
 		},
 		trim = {
-			28,
-            14,
-            21,
-            61
+			33,
+			14,
+			14,
+			35
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1755,
-			4,
-			50,
-			38
+			1988,
+			519,
+			52,
+			65
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_dragon_bone_drake_hit_fx_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_drake_spawn_fx_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			99,
-			113
+			159,
+			145
 		},
 		trim = {
-			28,
-            18,
-            19,
-            58
+			27,
+			36,
+			14,
+			53
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1984,
+			118,
+			56
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0002"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			34,
+			29,
+			33,
+			32
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1180,
+			92,
+			84
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0004"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			47,
+			29,
+			50,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			378,
+			675,
+			62,
+			83
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0006"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			42,
+			34,
+			38,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1879,
+			79,
+			75
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0008"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			29,
+			13,
+			39,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1945,
+			156,
+			91,
+			96
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0010"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0011 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			32,
+			16,
+			42,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1667,
+			85,
+			88
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0012"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			36,
+			34,
+			41,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1071,
+			519,
+			82,
+			72
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0014"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0015 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			33,
+			32,
+			40,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			931,
+			86,
+			77
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0016"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0017 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			35,
+			32,
+			40,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1498,
+			84,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0018"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0019 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			35,
+			32,
+			42,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1802,
+			82,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0020"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0021 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			37,
+			32,
+			51,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			676,
+			596,
+			71,
+			72
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0022"
+		}
+	},
+	hero_dragon_bone_drake_spawn_fx_0023 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			159,
+			145
+		},
+		trim = {
+			58,
+			46,
+			61,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			95,
+			1767,
+			40,
+			36
+		},
+		alias = {
+			"hero_dragon_bone_drake_spawn_fx_0024"
+		}
+	},
+	hero_dragon_bone_hero_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			86,
+			238,
+			101,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			395,
+			151,
+			121
+		},
+		alias = {
+			"hero_dragon_bone_hero_0006"
+		}
+	},
+	hero_dragon_bone_hero_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			90,
+			242,
+			99,
+			266
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1089,
+			275,
+			149,
+			88
+		},
+		alias = {
+			"hero_dragon_bone_hero_0008"
+		}
+	},
+	hero_dragon_bone_hero_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			86,
+			229,
+			98,
+			261
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1402,
+			395,
+			154,
+			106
+		},
+		alias = {
+			"hero_dragon_bone_hero_0010"
+		}
+	},
+	hero_dragon_bone_hero_0019 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			225,
+			98,
+			263
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1085,
+			395,
+			157,
+			108
+		},
+		alias = {
+			"hero_dragon_bone_hero_0020",
+			"hero_dragon_bone_hero_0053",
+			"hero_dragon_bone_hero_0054",
+			"hero_dragon_bone_hero_0093",
+			"hero_dragon_bone_hero_0094",
+			"hero_dragon_bone_hero_0169",
+			"hero_dragon_bone_hero_0170",
+			"hero_dragon_bone_hero_0249",
+			"hero_dragon_bone_hero_0250"
+		}
+	},
+	hero_dragon_bone_hero_0027 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			86,
+			222,
+			106,
+			275
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1716,
+			395,
+			146,
+			99
+		},
+		alias = {
+			"hero_dragon_bone_hero_0028"
+		}
+	},
+	hero_dragon_bone_hero_0029 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			211,
+			99,
+			268
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			275,
+			159,
+			117
+		},
+		alias = {
+			"hero_dragon_bone_hero_0030"
+		}
+	},
+	hero_dragon_bone_hero_0043 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			89,
+			246,
+			86,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			156,
+			163,
+			116
+		},
+		alias = {
+			"hero_dragon_bone_hero_0044"
+		}
+	},
+	hero_dragon_bone_hero_0059 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			225,
+			104,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			633,
+			5,
+			151,
+			134
+		},
+		alias = {
+			"hero_dragon_bone_hero_0060"
+		}
+	},
+	hero_dragon_bone_hero_0061 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			86,
+			222,
+			106,
+			275
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1865,
+			395,
+			146,
+			99
+		},
+		alias = {
+			"hero_dragon_bone_hero_0062"
+		}
+	},
+	hero_dragon_bone_hero_0063 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			80,
+			211,
+			99,
+			268
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			303,
+			275,
+			159,
+			117
+		},
+		alias = {
+			"hero_dragon_bone_hero_0064"
+		}
+	},
+	hero_dragon_bone_hero_0083 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			89,
+			246,
+			83,
+			231
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			940,
+			5,
+			166,
+			119
+		},
+		alias = {
+			"hero_dragon_bone_hero_0084"
+		}
+	},
+	hero_dragon_bone_hero_0085 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			249,
+			97,
+			259
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			465,
+			275,
+			159,
+			88
+		},
+		alias = {
+			"hero_dragon_bone_hero_0086"
+		}
+	},
+	hero_dragon_bone_hero_0099 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			86,
+			138,
+			103,
+			337
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			442,
+			395,
+			149,
+			121
+		},
+		alias = {
+			"hero_dragon_bone_hero_0100"
+		}
+	},
+	hero_dragon_bone_hero_0101 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			90,
+			115,
+			94,
+			375
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1559,
+			395,
+			154,
+			106
+		},
+		alias = {
+			"hero_dragon_bone_hero_0102"
+		}
+	},
+	hero_dragon_bone_hero_0103 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			94,
+			97,
+			378
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1109,
+			5,
+			159,
+			124
+		},
+		alias = {
+			"hero_dragon_bone_hero_0104"
+		}
+	},
+	hero_dragon_bone_hero_0119 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			120,
+			281,
+			85,
+			154
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			156,
+			133,
+			161
+		},
+		alias = {
+			"hero_dragon_bone_hero_0120"
+		}
+	},
+	hero_dragon_bone_hero_0135 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			85,
+			220,
+			99,
+			232
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			158,
+			5,
+			154,
+			144
+		},
+		alias = {
+			"hero_dragon_bone_hero_0136"
+		}
+	},
+	hero_dragon_bone_hero_0137 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			87,
+			211,
+			107,
+			257
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			395,
+			144,
+			128
+		},
+		alias = {
+			"hero_dragon_bone_hero_0138"
+		}
+	},
+	hero_dragon_bone_hero_0159 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			89,
+			246,
+			96,
+			234
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			778,
+			395,
+			153,
+			116
+		},
+		alias = {
+			"hero_dragon_bone_hero_0160"
+		}
+	},
+	hero_dragon_bone_hero_0161 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			82,
+			249,
+			97,
+			259
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			627,
+			275,
+			159,
+			88
+		},
+		alias = {
+			"hero_dragon_bone_hero_0162"
+		}
+	},
+	hero_dragon_bone_hero_0181 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			87,
+			245,
+			77,
+			228
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			315,
+			5,
+			174,
+			123
+		},
+		alias = {
+			"hero_dragon_bone_hero_0182"
+		}
+	},
+	hero_dragon_bone_hero_0183 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			100,
+			234,
+			88,
+			228
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			787,
+			5,
+			150,
+			134
+		},
+		alias = {
+			"hero_dragon_bone_hero_0184"
+		}
+	},
+	hero_dragon_bone_hero_0185 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			89,
+			232,
+			101,
+			246
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			934,
+			395,
+			148,
+			118
+		},
+		alias = {
+			"hero_dragon_bone_hero_0186"
+		}
+	},
+	hero_dragon_bone_hero_0253 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			85,
+			232,
+			95,
+			242
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1579,
+			5,
+			158,
+			122
+		},
+		alias = {
+			"hero_dragon_bone_hero_0254"
+		}
+	},
+	hero_dragon_bone_hero_0271 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			93,
+			199,
+			95,
+			249
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			150,
+			148
+		},
+		alias = {
+			"hero_dragon_bone_hero_0272"
+		}
+	},
+	hero_dragon_bone_hero_0289 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			114,
+			250,
+			115,
+			291
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			875,
+			519,
+			109,
+			55
+		},
+		alias = {
+			"hero_dragon_bone_hero_0290"
+		}
+	},
+	hero_dragon_bone_hero_0293 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			113,
+			229,
+			106,
+			264
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1358,
+			275,
+			119,
+			103
+		},
+		alias = {
+			"hero_dragon_bone_hero_0294"
+		}
+	},
+	hero_dragon_bone_hero_0295 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			100,
+			209,
+			96,
+			249
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1434,
+			5,
+			142,
+			138
+		},
+		alias = {
+			"hero_dragon_bone_hero_0296"
+		}
+	},
+	hero_dragon_bone_hero_0297 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			108,
+			217,
+			100,
+			256
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1909,
+			5,
+			130,
+			123
+		},
+		alias = {
+			"hero_dragon_bone_hero_0298"
+		}
+	},
+	hero_dragon_bone_hero_0299 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			118,
+			224,
+			106,
+			261
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1241,
+			275,
+			114,
+			111
+		},
+		alias = {
+			"hero_dragon_bone_hero_0300"
+		}
+	},
+	hero_dragon_bone_hero_0301 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			120,
+			226,
+			115,
+			272
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1300,
+			103,
+			98
+		},
+		alias = {
+			"hero_dragon_bone_hero_0302"
+		}
+	},
+	hero_dragon_bone_hero_0303 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			126,
+			239,
+			129,
+			283
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1575,
+			83,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_hero_0304"
+		}
+	},
+	hero_dragon_bone_hero_0305 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			132,
+			250,
+			142,
+			288
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			443,
+			792,
+			64,
+			58
+		},
+		alias = {
+			"hero_dragon_bone_hero_0306"
+		}
+	},
+	hero_dragon_bone_hero_0307 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			129,
+			250,
+			141,
+			289
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			443,
+			732,
+			68,
+			57
+		},
+		alias = {
+			"hero_dragon_bone_hero_0308"
+		}
+	},
+	hero_dragon_bone_hero_0309 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			111,
+			222,
+			110,
+			254
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			474,
+			117,
+			120
+		},
+		alias = {
+			"hero_dragon_bone_hero_0310"
+		}
+	},
+	hero_dragon_bone_hero_0325 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			225,
+			101,
+			263
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1245,
+			395,
+			154,
+			108
+		},
+		alias = {
+			"hero_dragon_bone_hero_0326"
+		}
+	},
+	hero_dragon_bone_hero_0343 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			78,
+			214,
+			94,
+			268
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1740,
+			5,
+			166,
+			114
+		},
+		alias = {
+			"hero_dragon_bone_hero_0344"
+		}
+	},
+	hero_dragon_bone_hero_0345 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			338,
+			596
+		},
+		trim = {
+			83,
+			236,
+			95,
+			237
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1271,
+			5,
+			160,
+			123
+		},
+		alias = {
+			"hero_dragon_bone_hero_0346"
+		}
+	},
+	hero_dragon_bone_hit_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			139,
+			253
+		},
+		trim = {
+			42,
+			89,
+			44,
+			115
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1745,
+			675,
+			53,
+			49
+		},
+		alias = {
+			"hero_dragon_bone_hit_0002"
+		}
+	},
+	hero_dragon_bone_hit_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			139,
+			253
+		},
+		trim = {
+			30,
+			76,
+			31,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1619,
+			519,
+			78,
+			70
+		},
+		alias = {
+			"hero_dragon_bone_hit_0004"
+		}
+	},
+	hero_dragon_bone_hit_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			139,
+			253
+		},
+		trim = {
+			22,
+			40,
+			22,
+			103
+		},
+		a_size = {
+			2048,
+			2048
 		},
 		f_quad = {
 			1436,
-			4,
-			52,
-			37
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			24,
-            33,
-            13,
-            49
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2028,
-			124,
-			122,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			24,
-            33,
-            13,
-            49
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2028,
-			124,
-			122,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			30,
-            26,
-            31,
-            28
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1476,
-			461,
-			98,
-			90
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			30,
-            26,
-            31,
-            28
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1476,
-			461,
-			98,
-			90
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			44,
-            27,
-            47,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			716,
-			461,
-			68,
-			87
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			44,
-            27,
-            47,
-            30
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			716,
-			461,
-			68,
-			87
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			39,
-            31,
-            35,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1285,
-			369,
-			85,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			39,
-            31,
-            35,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1285,
-			369,
-			85,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			26,
-            10,
-            36,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			343,
-			567,
-			97,
-			101
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			26,
-            10,
-            36,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			343,
-			567,
-			97,
-			101
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			28,
-            13,
-            39,
-            38
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1793,
-			461,
-			92,
-			93
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			28,
-            13,
-            39,
-            38
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1793,
-			461,
-			92,
-			93
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			33,
-            30,
-            38,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			726,
-			369,
-			88,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			33,
-            30,
-            38,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			726,
-			369,
-			88,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			30,
-            28,
-            37,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2301,
-			369,
-			92,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			30,
-            28,
-            37,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2301,
-			369,
-			92,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			31,
-            28,
-            37,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1475,
-			369,
-			91,
-			81
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			31,
-            28,
-            37,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1475,
-			369,
-			91,
-			81
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			33,
-            28,
-            38,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1574,
-			369,
-			88,
-			81
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			33,
-            28,
-            38,
-            35
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1574,
-			369,
-			88,
-			81
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			34,
-            29,
-            48,
-            38
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			233,
-			282,
-			77,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			34,
-            29,
-            48,
-            38
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			233,
-			282,
-			77,
-			77
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			55,
-            43,
-            58,
-            59
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2423,
-			4,
-			46,
-			42
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_drake_spawn_fx_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			159,
-			144
-		},
-		trim = {
-			55,
-            43,
-            58,
-            59
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2423,
-			4,
-			46,
-			42
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			713,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			713,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            233,
-            97,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1397,
-			1143,
-			158,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            233,
-            97,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1397,
-			1143,
-			158,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            234,
-            98,
-            235
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2480,
-			692,
 			156,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            234,
-            98,
-            235
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2480,
-			692,
-			156,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			87,
-            239,
-            96,
-            263
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1893,
-			461,
-			154,
-			94
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			87,
-            239,
-            96,
-            263
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1893,
-			461,
-			154,
-			94
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            226,
-            95,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1367,
-			567,
-			159,
+			95,
 			110
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0006"
+		}
 	},
-	["hero_dragon_bone_hero_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			337,
-			596
+			139,
+			253
 		},
 		trim = {
-			83,
-            226,
-            95,
-            260
+			20,
+			28,
+			20,
+			102
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1367,
-			567,
-			159,
-			110
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            184,
-            94,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2497,
-			979,
-			166,
-			156
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            184,
-            94,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2497,
-			979,
-			166,
-			156
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            99,
-            199
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			366,
-			1143,
-			159,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            99,
-            199
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			366,
-			1143,
-			159,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            227,
-            99,
-            197
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1055,
-			1318,
-			157,
-			172
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            227,
-            99,
-            197
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1055,
-			1318,
-			157,
-			172
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            101,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1672,
-			827,
-			156,
-			140
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            101,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1672,
-			827,
-			156,
-			140
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0027"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            219,
-            102,
-            272
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			564,
-			567,
-			153,
-			105
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0028"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            219,
-            102,
-            272
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			564,
-			567,
-			153,
-			105
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0029"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            208,
-            96,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1210,
-			692,
-			164,
+			5,
+			1014,
+			99,
 			123
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0008"
+		}
 	},
-	["hero_dragon_bone_hero_0030"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			337,
-			596
+			139,
+			253
 		},
 		trim = {
-			77,
-            208,
-            96,
-            265
+			19,
+			24,
+			19,
+			101
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			1210,
-			692,
-			164,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0031"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            168,
-            89,
-            250
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2251,
-			1501,
-			173,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0032"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            168,
-            89,
-            250
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2251,
-			1501,
-			173,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0033"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            170,
-            82,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1200,
-			1687,
-			181,
-			182
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0034"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            170,
-            82,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1200,
-			1687,
-			181,
-			182
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0035"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            165,
-            79,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1578,
-			1687,
-			184,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0036"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            165,
-            79,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1578,
-			1687,
-			184,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0037"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            184,
-            77,
-            240
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1220,
-			1318,
-			180,
-			172
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0038"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            184,
-            77,
-            240
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1220,
-			1318,
-			180,
-			172
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0039"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            242,
-            83,
-            195
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			193,
-			1143,
-			165,
-			159
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0040"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            242,
-            83,
-            195
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			193,
-			1143,
-			165,
-			159
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0041"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			91,
-            241,
-            87,
-            191
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1230,
-			1143,
-			159,
-			164
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0042"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			91,
-            241,
-            87,
-            191
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1230,
-			1143,
-			159,
-			164
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0043"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			86,
-            242,
-            85,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1382,
-			692,
-			166,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0044"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			86,
-            242,
-            85,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1382,
-			692,
-			166,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0045"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            246,
-            83,
-            242
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			886,
-			567,
-			175,
-			108
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0046"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            246,
-            83,
-            242
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			886,
-			567,
-			175,
-			108
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0047"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0048"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0049"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0050"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0051"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0052"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0053"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0054"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0055"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            99,
-            199
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			366,
-			1143,
-			159,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0056"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            99,
-            199
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			366,
-			1143,
-			159,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0057"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            227,
-            99,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			714,
-			1318,
-			157,
-			171
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0058"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            227,
-            99,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			714,
-			1318,
-			157,
-			171
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0059"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            101,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1836,
-			827,
-			156,
-			140
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0060"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            101,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1836,
-			827,
-			156,
-			140
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0061"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            219,
-            102,
-            272
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			725,
-			567,
-			153,
-			105
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0062"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            219,
-            102,
-            272
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			725,
-			567,
-			153,
-			105
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0063"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            208,
-            96,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1556,
-			692,
-			164,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0064"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            208,
-            96,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1556,
-			692,
-			164,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0065"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            168,
-            89,
-            250
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2432,
-			1501,
-			173,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0066"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            168,
-            89,
-            250
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2432,
-			1501,
-			173,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0067"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            170,
-            82,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1389,
-			1687,
-			181,
-			182
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0068"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            170,
-            82,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1389,
-			1687,
-			181,
-			182
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0069"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            165,
-            78,
-            243
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			135,
-			1879,
-			185,
-			188
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0070"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            165,
-            78,
-            243
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			135,
-			1879,
-			185,
-			188
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0071"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            168,
-            71,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			2079,
-			187,
-			194
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0072"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            168,
-            71,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			2079,
-			187,
-			194
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0073"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            175,
-            67,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			932,
-			1879,
-			187,
-			190
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0074"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            175,
-            67,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			932,
-			1879,
-			187,
-			190
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0075"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			76,
-            175,
-            66,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2095,
-			1879,
-			195,
-			192
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0076"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			76,
-            175,
-            66,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2095,
-			1879,
-			195,
-			192
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0077"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            184,
-            66,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1770,
-			1687,
-			191,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0078"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            184,
-            66,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1770,
-			1687,
-			191,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0079"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            244,
-            67,
-            194
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1143,
-			181,
-			158
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0080"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            244,
-            67,
-            194
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1143,
-			181,
-			158
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0081"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			91,
-            239,
-            81,
-            191
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2049,
-			1143,
-			165,
-			166
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0082"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			91,
-            239,
-            81,
-            191
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2049,
-			1143,
-			165,
-			166
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0083"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            243,
-            83,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1894,
-			692,
-			169,
-			124
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0084"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            243,
-            83,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1894,
-			692,
-			169,
-			124
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0085"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            246,
-            94,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2055,
-			461,
-			164,
-			94
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0086"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            246,
-            94,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2055,
-			461,
-			164,
-			94
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0087"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0088"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0089"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0090"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0091"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0092"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0093"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0094"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0095"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			713,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0096"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			713,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0097"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            188,
-            97,
-            243
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1563,
-			1143,
-			158,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0098"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            188,
-            97,
-            243
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1563,
-			1143,
-			158,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0099"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            135,
-            99,
-            334
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			827,
-			155,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0100"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            135,
-            99,
-            334
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			827,
-			155,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0101"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			87,
-            113,
-            92,
-            374
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1069,
-			567,
-			158,
-			109
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0102"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			87,
-            113,
-            92,
-            374
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1069,
-			567,
-			158,
-			109
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0103"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            93,
-            96,
-            376
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			167,
-			827,
-			160,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0104"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            93,
-            96,
-            376
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			167,
-			827,
-			160,
-			127
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0105"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            41,
-            100,
-            380
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1784,
-			1318,
-			162,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0106"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            41,
-            100,
-            380
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1784,
-			1318,
-			162,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0107"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			67,
-            30,
-            101,
-            385
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			839,
-			1687,
-			169,
-			181
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0108"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			67,
-            30,
-            101,
-            385
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			839,
-			1687,
-			169,
-			181
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0109"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			68,
-            17,
-            101,
-            384
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			582,
-			2079,
-			168,
-			195
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0110"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			68,
-            17,
-            101,
-            384
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			582,
-			2079,
-			168,
-			195
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0111"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            71,
-            83,
-            333
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2298,
-			1879,
-			165,
-			192
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0112"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            71,
-            83,
-            333
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2298,
-			1879,
-			165,
-			192
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0113"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			135,
-            126,
-            79,
-            283
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1879,
-			123,
-			187
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0114"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			135,
-            126,
-            79,
-            283
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1879,
-			123,
-			187
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0115"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			140,
-            187,
-            82,
-            171
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1915,
-			2287,
-			115,
-			238
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0116"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			140,
-            187,
-            82,
-            171
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1915,
-			2287,
-			115,
-			238
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0117"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			134,
-            210,
-            98,
-            159
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1556,
-			2287,
-			105,
-			227
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0118"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			134,
-            210,
-            98,
-            159
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1556,
-			2287,
-			105,
-			227
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0119"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			117,
-            277,
-            82,
-            154
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1729,
-			1143,
-			138,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0120"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			117,
-            277,
-            82,
-            154
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1729,
-			1143,
-			138,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0121"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			94,
-            275,
-            53,
-            144
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1621,
-			1501,
-			190,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0122"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			94,
-            275,
-            53,
-            144
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1621,
-			1501,
-			190,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0123"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            269,
-            43,
-            135
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2471,
-			1879,
-			209,
-			192
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0124"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            269,
-            43,
-            135
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2471,
-			1879,
-			209,
-			192
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0125"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			78,
-            265,
-            35,
-            142
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			522,
-			1879,
-			224,
-			189
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0126"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			78,
-            265,
-            35,
-            142
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			522,
-			1879,
-			224,
-			189
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0127"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			106,
-            264,
-            30,
-            153
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			434,
-			1687,
-			201,
-			179
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0128"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			106,
-            264,
-            30,
-            153
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			434,
-			1687,
-			201,
-			179
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0129"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			102,
-            262,
-            63,
-            173
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			533,
-			1143,
-			172,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0130"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			102,
-            262,
-            63,
-            173
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			533,
-			1143,
-			172,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0131"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            99,
-            199
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			366,
-			1143,
-			159,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0132"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            99,
-            199
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			366,
-			1143,
-			159,
-			161
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0133"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			78,
-            225,
-            96,
-            195
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			186,
-			1501,
-			163,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0134"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			78,
-            225,
-            96,
-            195
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			186,
-			1501,
-			163,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0135"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			84,
-            219,
-            98,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			455,
-			979,
-			155,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0136"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			84,
-            219,
-            98,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			455,
-			979,
-			155,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0137"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            210,
-            106,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1154,
-			827,
-			146,
-			130
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0138"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            210,
-            106,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1154,
-			827,
-			146,
-			130
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0139"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			66,
-            200,
-            104,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2000,
-			827,
-			167,
-			140
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0140"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			66,
-            200,
-            104,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2000,
-			827,
-			167,
-			140
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0141"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			46,
-            154,
-            105,
-            254
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			328,
-			1879,
-			186,
-			188
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0142"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			46,
-            154,
-            105,
-            254
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			328,
-			1879,
-			186,
-			188
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0143"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			46,
-            149,
-            105,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1312,
-			1879,
-			186,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0144"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			46,
-            149,
-            105,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1312,
-			1879,
-			186,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0145"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			43,
-            147,
-            106,
-            258
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1506,
-			1879,
-			188,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0146"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			43,
-            147,
-            106,
-            258
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1506,
-			1879,
-			188,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0147"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			43,
-            149,
-            105,
-            253
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			199,
-			2079,
-			189,
-			194
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0148"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			43,
-            149,
-            105,
-            253
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			199,
-			2079,
-			189,
-			194
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0149"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			47,
-            153,
-            95,
-            243
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2279,
-			2079,
-			195,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0150"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			47,
-            153,
-            95,
-            243
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2279,
-			2079,
-			195,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0151"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            161,
-            74,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1702,
-			1879,
-			191,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0152"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            161,
-            74,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1702,
-			1879,
-			191,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0153"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            180,
-            82,
-            247
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			183,
-			1318,
-			178,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0154"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            180,
-            82,
-            247
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			183,
-			1318,
-			178,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0155"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            238,
-            88,
-            192
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2222,
-			1143,
-			164,
-			166
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0156"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            238,
-            88,
-            192
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2222,
-			1143,
-			164,
-			166
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0157"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            239,
-            90,
-            188
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			369,
-			1318,
-			158,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0158"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            239,
-            90,
-            188
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			369,
-			1318,
-			158,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0159"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			86,
-            242,
-            93,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1728,
-			692,
-			158,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0160"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			86,
-            242,
-            93,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1728,
-			692,
-			158,
-			123
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0161"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            246,
-            94,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2227,
-			461,
-			164,
-			94
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0162"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            246,
-            94,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2227,
-			461,
-			164,
-			94
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0163"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0164"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            175,
-            94,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1318,
-			171,
-			169
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0165"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0166"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            168,
-            93,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1501,
-			174,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0167"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0168"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            187,
-            94,
-            255
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			979,
-			166,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0169"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0170"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0171"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			713,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0172"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			713,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0173"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            210,
-            81,
-            196
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1127,
-			1879,
-			177,
-			190
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0174"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            210,
-            81,
-            196
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1127,
-			1879,
-			177,
-			190
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0175"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            214,
-            82,
-            187
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			758,
-			2079,
-			175,
-			195
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0176"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            214,
-            82,
-            187
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			758,
-			2079,
-			175,
-			195
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0177"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            221,
-            85,
-            186
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			754,
-			1879,
-			170,
-			189
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0178"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            221,
-            85,
-            186
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			754,
-			1879,
-			170,
-			189
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0179"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            230,
-            83,
-            204
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
+			5,
 			883,
-			1143,
-			169,
-			162
+			101,
+			128
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0010"
+		}
 	},
-	["hero_dragon_bone_hero_0180"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_0015 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            230,
-            83,
-            204
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			883,
-			1143,
-			169,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0181"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			86,
-            243,
-            76,
-            228
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2071,
-			692,
-			175,
-			125
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0182"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			86,
-            243,
-            76,
-            228
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2071,
-			692,
-			175,
-			125
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0183"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			98,
-            233,
-            87,
-            228
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1512,
-			827,
-			152,
-			135
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0184"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			98,
-            233,
-            87,
-            228
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1512,
-			827,
-			152,
-			135
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0185"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			88,
-            231,
-            100,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			431,
-			692,
-			149,
-			120
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0186"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			88,
-            231,
-            100,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			431,
-			692,
-			149,
-			120
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0187"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			22,
-            166,
-            120,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2412,
-			1687,
-			195,
-			184
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0188"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			22,
-            166,
-            120,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2412,
-			1687,
-			195,
-			184
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0189"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			15,
-            171,
-            134,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			643,
-			1687,
-			188,
-			180
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0190"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			15,
-            171,
-            134,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			643,
-			1687,
-			188,
-			180
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0191"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            176,
-            111,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1954,
-			1318,
-			207,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0192"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            176,
-            111,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1954,
-			1318,
-			207,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0193"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            169,
-            83,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1969,
-			1687,
-			235,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0194"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            169,
-            83,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1969,
-			1687,
-			235,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0195"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            97,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			357,
-			1501,
-			221,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0196"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            97,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			357,
-			1501,
-			221,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0197"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            88,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			1501,
-			230,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0198"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            88,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1819,
-			1501,
-			230,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0199"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            83,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			586,
-			1501,
-			235,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0200"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            83,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			586,
-			1501,
-			235,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0201"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            174,
-            80,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1687,
-			238,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0202"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            174,
-            80,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			1687,
-			238,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0203"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            111,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			829,
-			1501,
-			207,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0204"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            111,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			829,
-			1501,
-			207,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0205"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0206"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0207"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0208"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0209"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0210"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0211"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0212"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0213"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0214"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0215"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0216"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0217"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0218"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0219"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0220"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0221"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0222"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0223"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0224"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0225"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0226"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            132,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2057,
-			1501,
-			186,
-			177
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0227"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0228"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1044,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0229"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1237,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0230"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			19,
-            175,
-            133,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1237,
-			1501,
-			185,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0231"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			20,
-            176,
-            134,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2169,
-			1318,
-			183,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0232"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			20,
-            176,
-            134,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2169,
-			1318,
-			183,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0233"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			20,
-            175,
-            134,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1430,
-			1501,
-			183,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0234"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			20,
-            175,
-            134,
-            245
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1430,
-			1501,
-			183,
-			176
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0235"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
+			139,
+			253
 		},
 		trim = {
 			23,
-            180,
-            134,
-            249
+			15,
+			22,
+			98
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			2394,
-			1143,
-			180,
-			167
+			5,
+			597,
+			94,
+			140
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0016"
+		}
 	},
-	["hero_dragon_bone_hero_0236"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_0017 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			337,
-			596
+			139,
+			253
 		},
 		trim = {
 			23,
-            180,
-            134,
-            249
+			15,
+			22,
+			98
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			2394,
-			1143,
-			180,
-			167
+			5,
+			740,
+			94,
+			140
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0018"
+		}
 	},
-	["hero_dragon_bone_hero_0237"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_0019 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			337,
-			596
-		},
-		trim = {
-			27,
-            167,
-            134,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1016,
-			1687,
-			176,
-			181
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0238"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			27,
-            167,
-            134,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1016,
-			1687,
-			176,
-			181
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0239"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
+			139,
+			253
 		},
 		trim = {
 			31,
-            154,
-            128,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			396,
-			2079,
-			178,
-			194
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0240"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			31,
-            154,
-            128,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			396,
-			2079,
-			178,
-			194
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0241"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			42,
-            147,
-            114,
-            249
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2482,
-			2079,
-			181,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0242"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			42,
-            147,
-            114,
-            249
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2482,
-			2079,
-			181,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0243"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			48,
-            149,
-            103,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1901,
-			1879,
-			186,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0244"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			48,
-            149,
-            103,
-            256
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1901,
-			1879,
-			186,
-			191
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0245"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			62,
-            158,
-            96,
-            264
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1408,
-			1318,
-			179,
-			174
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0246"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			62,
-            158,
-            96,
-            264
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1408,
-			1318,
-			179,
-			174
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0247"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            181,
-            92,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2321,
-			979,
-			168,
-			155
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0248"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            181,
-            92,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2321,
-			979,
-			168,
-			155
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0249"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0250"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1534,
-			567,
-			163,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0251"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1060,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0252"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			79,
-            236,
-            96,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1060,
-			1143,
-			162,
-			162
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0253"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            229,
-            91,
-            239
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			335,
-			827,
-			164,
-			128
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0254"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            229,
-            91,
-            239
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			335,
-			827,
-			164,
-			128
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0255"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            216,
-            92,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2240,
-			567,
-			164,
-			115
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0256"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			81,
-            216,
-            92,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2240,
-			567,
-			164,
-			115
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0257"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			76,
-            170,
-            80,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1595,
-			1318,
-			181,
-			174
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0258"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			76,
-            170,
-            80,
-            252
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1595,
-			1318,
-			181,
-			174
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0259"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            153,
-            80,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			941,
-			2079,
-			183,
-			195
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0260"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			74,
-            153,
-            80,
-            248
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			941,
-			2079,
-			183,
-			195
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0261"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            151,
-            80,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2086,
-			2079,
-			185,
-			199
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0262"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            151,
-            80,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2086,
-			2079,
-			185,
-			199
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0263"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			67,
-            153,
-            80,
-            247
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1132,
-			2079,
-			190,
-			196
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0264"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			67,
-            153,
-            80,
-            247
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1132,
-			2079,
-			190,
-			196
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0265"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            150,
-            79,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			2287,
-			186,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0266"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            150,
-            79,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			2287,
-			186,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0267"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			67,
-            152,
-            80,
-            247
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1504,
-			2079,
-			190,
-			197
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0268"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			67,
-            152,
-            80,
-            247
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1504,
-			2079,
-			190,
-			197
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0269"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			66,
-            162,
-            79,
-            251
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2212,
-			1687,
-			192,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0270"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			66,
-            162,
-            79,
-            251
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2212,
-			1687,
-			192,
-			183
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0271"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            196,
-            92,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1993,
-			979,
-			156,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0272"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			89,
-            196,
-            92,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1993,
-			979,
-			156,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0273"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			84,
-            190,
-            87,
-            241
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1875,
-			1143,
-			166,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0274"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			84,
-            190,
-            87,
-            241
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1875,
-			1143,
-			166,
-			165
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0275"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            184,
-            84,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			250,
-			1687,
-			176,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0276"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            184,
-            84,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			250,
-			1687,
-			176,
-			178
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0277"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            194,
-            86,
-            232
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			535,
-			1318,
-			171,
-			170
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0278"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            194,
-            86,
-            232
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			535,
-			1318,
-			171,
-			170
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0279"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            194,
-            87,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			879,
-			1318,
-			168,
-			171
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0280"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			82,
-            194,
-            87,
-            231
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			879,
-			1318,
-			168,
-			171
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0281"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            192,
-            83,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2360,
-			1318,
-			171,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0282"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			83,
-            192,
-            83,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2360,
-			1318,
-			171,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0283"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            192,
-            65,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2539,
-			1318,
-			187,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0284"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            192,
-            65,
-            229
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2539,
-			1318,
-			187,
-			175
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0285"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            228,
-            66,
-            250
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			237,
-			692,
-			186,
-			118
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0286"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			85,
-            228,
-            66,
-            250
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			237,
-			692,
-			186,
-			118
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0287"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			91,
-            229,
-            66,
-            293
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1218,
-			197,
-			180,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0288"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			91,
-            229,
-            66,
-            293
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1218,
-			197,
-			180,
-			74
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0289"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			111,
-            246,
-            111,
-            288
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2158,
-			124,
-			115,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0290"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			111,
-            246,
-            111,
-            288
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2158,
-			124,
-			115,
-			62
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0291"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			98,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1705,
-			567,
-			145,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0292"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			98,
-            222,
-            94,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1705,
-			567,
-			145,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0293"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			109,
-            226,
-            104,
-            261
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1235,
-			567,
-			124,
-			109
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0294"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			109,
-            226,
-            104,
-            261
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1235,
-			567,
-			124,
-			109
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0295"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			96,
-            206,
-            94,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2504,
-			827,
-			147,
-			144
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0296"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			96,
-            206,
-            94,
-            246
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2504,
-			827,
-			147,
-			144
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0297"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			105,
-            214,
-            97,
-            253
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			620,
-			827,
-			135,
-			129
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0298"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			105,
-            214,
-            97,
-            253
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			620,
-			827,
-			135,
-			129
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0299"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			115,
-            221,
-            102,
-            258
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2412,
-			567,
-			120,
-			117
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0300"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			115,
-            221,
-            102,
-            258
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2412,
-			567,
-			120,
-			117
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0301"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			116,
-            223,
-            113,
-            269
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			448,
-			567,
-			108,
-			104
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0302"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			116,
-            223,
-            113,
-            269
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			448,
-			567,
-			108,
-			104
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0303"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			122,
-            236,
-            126,
-            280
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1378,
-			369,
-			89,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0304"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			122,
-            236,
-            126,
-            280
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1378,
-			369,
-			89,
-			80
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0305"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			129,
-            247,
-            138,
-            285
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2537,
-			124,
-			70,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0306"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			129,
-            247,
-            138,
-            285
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2537,
-			124,
-			70,
-			64
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0307"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			125,
-            248,
-            137,
-            288
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1517,
-			124,
-			75,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0308"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			125,
-            248,
-            137,
-            288
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1517,
-			124,
-			75,
-			60
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0309"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			110,
-            221,
-            108,
-            253
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1083,
-			692,
-			119,
-			122
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0310"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			110,
-            221,
-            108,
-            253
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1083,
-			692,
-			119,
-			122
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0311"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			65,
-            157,
-            97,
-            241
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1903,
-			2079,
-			175,
-			198
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0312"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			65,
-            157,
-            97,
-            241
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1903,
-			2079,
-			175,
-			198
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0313"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			63,
-            136,
-            91,
-            236
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1365,
-			2287,
-			183,
-			224
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0314"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			63,
-            136,
-            91,
-            236
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1365,
-			2287,
-			183,
-			224
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0315"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			62,
-            124,
-            89,
-            233
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2038,
-			2287,
-			186,
-			239
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0316"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			62,
-            124,
-            89,
-            233
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2038,
-			2287,
-			186,
-			239
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0317"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			63,
-            123,
-            98,
-            268
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			980,
-			2287,
-			176,
-			205
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0318"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			63,
-            123,
-            98,
-            268
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			980,
-			2287,
-			176,
-			205
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0319"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			66,
-            127,
-            101,
-            266
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			608,
-			2287,
-			170,
-			203
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0320"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			66,
-            127,
-            101,
-            266
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			608,
-			2287,
-			170,
-			203
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0321"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			69,
-            136,
-            102,
-            264
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			2079,
-			166,
-			196
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0322"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			69,
-            136,
-            102,
-            264
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1330,
-			2079,
-			166,
-			196
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0323"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            179,
-            104,
-            263
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2157,
-			979,
-			156,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0324"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			77,
-            179,
-            104,
-            263
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2157,
-			979,
-			156,
-			154
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0325"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            98,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1858,
-			567,
-			159,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0326"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            222,
-            98,
-            260
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1858,
-			567,
-			159,
-			114
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0327"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			63,
-            150,
-            38,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2467,
-			2287,
-			236,
-			248
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0328"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			63,
-            150,
-            38,
-            198
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2467,
-			2287,
-			236,
-			248
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0329"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			62,
-            149,
-            37,
-            217
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1669,
-			2287,
-			238,
-			230
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0330"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			62,
-            149,
-            37,
-            217
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1669,
-			2287,
-			238,
-			230
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0331"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			65,
-            153,
-            45,
-            200
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2232,
-			2287,
-			227,
-			243
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0332"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			65,
-            153,
-            45,
-            200
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2232,
-			2287,
-			227,
-			243
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0333"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			73,
-            161,
-            54,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			390,
-			2287,
-			210,
-			201
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0334"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			73,
-            161,
-            54,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			390,
-			2287,
-			210,
-			201
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0335"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			73,
-            152,
-            80,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			198,
-			2287,
-			184,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0336"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			73,
-            152,
-            80,
-            244
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			198,
-			2287,
-			184,
-			200
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0337"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            151,
-            79,
-            241
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			786,
-			2287,
-			186,
-			204
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0338"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			72,
-            151,
-            79,
-            241
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			786,
-			2287,
-			186,
-			204
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0339"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			68,
-            153,
-            76,
-            237
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1164,
-			2287,
-			193,
-			206
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0340"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			68,
-            153,
-            76,
-            237
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1164,
-			2287,
-			193,
-			206
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0341"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            166,
-            74,
-            233
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1702,
-			2079,
-			193,
-			197
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0342"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			70,
-            166,
-            74,
-            233
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1702,
-			2079,
-			193,
-			197
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0343"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            211,
-            91,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			588,
-			692,
-			171,
-			120
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0344"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			75,
-            211,
-            91,
-            265
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			588,
-			692,
-			171,
-			120
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0345"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            233,
-            92,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			763,
-			827,
-			165,
-			129
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hero_0346"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			337,
-			596
-		},
-		trim = {
-			80,
-            233,
-            92,
-            234
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			763,
-			827,
-			165,
-			129
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			38,
-            86,
-            41,
-            111
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1135,
-			58,
-			60,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			38,
-            86,
-            41,
-            111
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1135,
-			58,
-			60,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			27,
-            72,
-            28,
-            104
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2136,
-			197,
-			84,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			27,
-            72,
-            28,
-            104
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2136,
-			197,
-			84,
-			76
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			19,
-            36,
-            19,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2540,
-			567,
-			101,
-			117
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			19,
-            36,
-            19,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2540,
-			567,
-			101,
-			117
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			17,
-            25,
-            17,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			507,
-			827,
-			105,
-			128
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			17,
-            25,
-            17,
-            99
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			507,
-			827,
-			105,
-			128
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			17,
-            21,
-            17,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1399,
-			827,
-			105,
-			133
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			17,
-            21,
-            17,
-            98
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1399,
-			827,
-			105,
-			133
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			14,
-            15,
-            14,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2175,
-			827,
-			111,
-			141
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			14,
-            15,
-            14,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2175,
-			827,
-			111,
-			141
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			14,
-            11,
-            14,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			979,
-			111,
-			145
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			14,
-            11,
-            14,
-            96
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			979,
-			111,
-			145
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			20,
-            11,
-            19,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			618,
-			979,
-			100,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			20,
-            11,
-            19,
-            95
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			618,
-			979,
-			100,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			20,
-            12,
-            20,
-            94
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			726,
-			979,
-			99,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			20,
-            12,
-            20,
-            94
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			726,
-			979,
-			99,
-			146
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			29,
-            13,
-            22,
-            168
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			467,
-			197,
-			88,
-			71
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			29,
-            13,
-            22,
-            168
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			467,
-			197,
-			88,
-			71
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			30,
-            13,
-            25,
-            181
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			105,
-			124,
-			84,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			139,
-			252
-		},
-		trim = {
-			30,
-            13,
-            25,
-            181
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			105,
-			124,
-			84,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			33,
-            28,
-            36,
-            40
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1813,
-			4,
-			55,
-			39
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			33,
-            28,
-            36,
-            40
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1813,
-			4,
-			55,
-			39
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			25,
-            23,
-            29,
-            26
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			197,
-			124,
-			70,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			25,
-            23,
-            29,
-            26
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			197,
-			124,
-			70,
-			58
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			21,
-            18,
-            25,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			381,
-			197,
-			78,
-			70
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			21,
-            18,
-            25,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			381,
-			197,
-			78,
-			70
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			17,
-            13,
-            21,
-            15
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			822,
-			369,
-			86,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			17,
-            13,
-            21,
-            15
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			822,
-			369,
-			86,
-			79
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
 			16,
-            11,
-            17,
-            13
+			25,
+			172
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			2401,
-			369,
-			91,
-			83
+			1803,
+			519,
+			83,
+			65
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0020"
+		}
 	},
-	["hero_dragon_bone_hit_air_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_0021 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			124,
-			107
-		},
-		trim = {
-			16,
-            11,
-            17,
-            13
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2401,
-			369,
-			91,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			15,
-            11,
-            13,
-            13
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2500,
-			369,
-			96,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			15,
-            11,
-            13,
-            13
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2500,
-			369,
-			96,
-			83
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			13,
-            11,
-            11,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1859,
-			369,
-			100,
-			82
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			13,
-            11,
-            11,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1859,
-			369,
-			100,
-			82
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			14,
-            11,
-            11,
-            18
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1189,
-			282,
-			99,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			14,
-            11,
-            11,
-            18
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1189,
-			282,
-			99,
-			78
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			14,
-            17,
-            11,
-            18
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			563,
-			197,
-			99,
-			72
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_hit_air_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			14,
-            17,
-            11,
-            18
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			563,
-			197,
-			99,
-			72
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			42,
-            41,
-            39,
-            42
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1032,
-			4,
-			41,
-			33
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			42,
-            41,
-            39,
-            42
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1032,
-			4,
-			41,
-			33
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
+			139,
+			253
 		},
 		trim = {
 			32,
-            28,
-            31,
-            32
+			16,
+			28,
+			184
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			2125,
-			58,
-			59,
-			56
+			1117,
+			675,
+			79,
+			53
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_0022"
+		}
 	},
-	["hero_dragon_bone_plague_explosion_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_air_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			122,
-			116
+			125,
+			108
 		},
 		trim = {
+			29,
+			26,
 			32,
-            28,
-            31,
-            32
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2125,
-			58,
-			59,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			21,
-            23,
-            24,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			100,
-			197,
-			77,
-			68
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			21,
-            23,
-            24,
-            25
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			100,
-			197,
-			77,
-			68
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			16,
-            16,
-            20,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1670,
-			369,
-			86,
-			81
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			16,
-            16,
-            20,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1670,
-			369,
-			86,
-			81
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			13,
-            14,
-            16,
-            13
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1105,
-			461,
-			93,
-			89
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			13,
-            14,
-            16,
-            13
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1105,
-			461,
-			93,
-			89
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			11,
-            15,
-            15,
-            12
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1206,
-			461,
-			96,
-			89
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			11,
-            15,
-            15,
-            12
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1206,
-			461,
-			96,
-			89
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			11,
-            14,
-            14,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1582,
-			461,
-			97,
-			91
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			11,
-            14,
-            14,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1582,
-			461,
-			97,
-			91
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			11,
-            13,
-            13,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1687,
-			461,
-			98,
-			92
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			11,
-            13,
-            13,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1687,
-			461,
-			98,
-			92
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			28,
-            21,
-            35,
-            46
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			295,
-			58,
-			59,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_explosion_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			122,
-			116
-		},
-		trim = {
-			28,
-            21,
-            35,
-            46
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			295,
-			58,
-			59,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			14,
-            14,
-            18,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1203,
-			58,
-			67,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			14,
-            14,
-            18,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1203,
-			58,
-			67,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			14,
-            14,
-            18,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1203,
-			58,
-			67,
-			55
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			18,
-            10,
-            18,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1012,
-			124,
-			63,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			18,
-            10,
-            18,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1012,
-			124,
-			63,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			18,
-            10,
-            18,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1012,
-			124,
-			63,
-			59
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			19,
-            11,
-            16,
-            20
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2466,
-			58,
-			64,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			19,
-            11,
-            16,
-            20
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2466,
-			58,
-			64,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			19,
-            11,
-            16,
-            20
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2466,
-			58,
-			64,
-			57
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			20,
-            14,
-            18,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2268,
-			4,
-			61,
-			41
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0011"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			20,
-            14,
-            18,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2268,
-			4,
-			61,
-			41
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0012"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			20,
-            14,
-            18,
-            33
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2268,
-			4,
-			61,
-			41
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0013"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			24,
-            19,
-            15,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1081,
-			4,
-			60,
-			33
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0014"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			24,
-            19,
-            15,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1081,
-			4,
-			60,
-			33
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0015"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			24,
-            19,
-            12,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1213,
-			4,
-			63,
-			35
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0016"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			15,
-            17,
-            11,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1496,
-			4,
-			73,
-			37
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0017"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			15,
-            17,
-            11,
-            34
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1496,
-			4,
-			73,
-			37
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0018"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			12,
-            16,
-            11,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1352,
-			4,
-			76,
-			36
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0019"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			11,
-            15,
-            12,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1577,
-			4,
-			76,
-			37
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0020"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			11,
-            15,
-            12,
-            36
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			1577,
-			4,
-			76,
-			37
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0021"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			12,
-            15,
-            11,
-            28
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2560,
-			4,
-			76,
-			45
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0022"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			12,
-            16,
-            12,
-            28
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2477,
-			4,
-			75,
-			44
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0023"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			12,
-            16,
-            12,
-            28
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2477,
-			4,
-			75,
-			44
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0024"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			11,
-            16,
-            15,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			756,
-			58,
-			73,
-			53
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0025"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			12,
-            13,
-            16,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2192,
-			58,
-			71,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_plague_fx_0026"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			12,
-            13,
-            16,
-            19
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			2192,
-			58,
-			71,
-			56
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			362,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			362,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			421,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			421,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			480,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			480,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			539,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			539,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0009"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			598,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_0010"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			76
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			598,
-			58,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_trail_0001"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			62,
-			53
-		},
-		trim = {
-			11,
-            11,
-            11,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			730,
-			4,
-			40,
-			31
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_trail_0002"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			62,
-			53
-		},
-		trim = {
-			11,
-            11,
-            11,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			730,
-			4,
-			40,
-			31
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_trail_0003"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			62,
-			53
-		},
-		trim = {
-			16,
-            12,
-            13,
-            12
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			441,
-			4,
-			33,
 			29
 		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_trail_0004"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			62,
-			53
-		},
-		trim = {
-			16,
-            12,
-            13,
-            12
-		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			441,
-			4,
-			33,
-			29
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_projectile_trail_0005"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			62,
+			1369,
+			675,
+			64,
 			53
+		},
+		alias = {
+			"hero_dragon_bone_hit_air_0004"
+		}
+	},
+	hero_dragon_bone_hit_air_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			125,
+			108
 		},
 		trim = {
 			24,
-            11,
-            12,
-            11
+			21,
+			28,
+			22
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			778,
-			4,
-			26,
-			31
+			1452,
+			596,
+			73,
+			65
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_air_0006"
+		}
 	},
-	["hero_dragon_bone_projectile_trail_0006"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_air_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			62,
-			53
+			125,
+			108
 		},
 		trim = {
+			20,
+			17,
 			24,
-            11,
-            12,
-            11
+			18
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			778,
-			4,
-			26,
-			31
+			987,
+			519,
+			81,
+			73
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_air_0008"
+		}
 	},
-	["hero_dragon_bone_projectile_trail_0007"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_air_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			62,
-			53
+			125,
+			108
 		},
 		trim = {
-			31,
-            11,
-            10,
-            12
+			19,
+			15,
+			20,
+			16
 		},
 		a_size = {
-			2730,
-			2730
+			2048,
+			2048
 		},
 		f_quad = {
-			643,
-			4,
-			21,
-			30
+			288,
+			1011,
+			86,
+			77
 		},
-		alias = {},
+		alias = {
+			"hero_dragon_bone_hit_air_0010"
+		}
 	},
-	["hero_dragon_bone_projectile_trail_0008"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
+	hero_dragon_bone_hit_air_0011 = {
+		a_name = "go_hero_dragon_bone-2.dds",
 		size = {
-			62,
-			53
+			125,
+			108
 		},
 		trim = {
-			31,
-            11,
-            10,
-            12
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			643,
-			4,
-			21,
-			30
-		},
-		alias = {},
-	},
-	["hero_dragon_bone_shadow"] = {
-		a_name = "go_hero_dragon_bone-1.dds",
-		size = {
-			79,
-			39
-		},
-		trim = {
-			9,
-            11,
-            11,
-            11
-		},
-		a_size = {
-			2730,
-			2730
-		},
-		f_quad = {
-			4,
-			4,
-			59,
+			19,
+			15,
+			15,
 			17
 		},
-		alias = {},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			385,
+			596,
+			91,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_hit_air_0012"
+		}
+	},
+	hero_dragon_bone_hit_air_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			17,
+			15,
+			14,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			596,
+			94,
+			76
+		},
+		alias = {
+			"hero_dragon_bone_hit_air_0014"
+		}
+	},
+	hero_dragon_bone_hit_air_0015 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			18,
+			14,
+			14,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			591,
+			519,
+			93,
+			72
+		},
+		alias = {
+			"hero_dragon_bone_hit_air_0016"
+		}
+	},
+	hero_dragon_bone_hit_air_0017 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			17,
+			20,
+			14,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			778,
+			519,
+			94,
+			66
+		},
+		alias = {
+			"hero_dragon_bone_hit_air_0018"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			35,
+			31,
+			34,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1689,
+			675,
+			53,
+			50
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0004"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			24,
+			26,
+			27,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1951,
+			596,
+			71,
+			62
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0006"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			19,
+			20,
+			23,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			1957,
+			80,
+			74
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0008"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			16,
+			18,
+			19,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			288,
+			675,
+			87,
+			82
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0010"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0011 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			14,
+			18,
+			18,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1758,
+			90,
+			83
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0012"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0013 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			14,
+			18,
+			17,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1580,
+			91,
+			84
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0014"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0015 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			14,
+			17,
+			16,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1013,
+			92,
+			85
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0016"
+		}
+	},
+	hero_dragon_bone_plague_explosion_0017 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			122,
+			116
+		},
+		trim = {
+			31,
+			23,
+			38,
+			48
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			214,
+			1999,
+			53,
+			45
+		},
+		alias = {
+			"hero_dragon_bone_plague_explosion_0018"
+		}
+	},
+	hero_dragon_bone_plague_fx_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			17,
+			16,
+			21,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1506,
+			675,
+			61,
+			50
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0002",
+			"hero_dragon_bone_plague_fx_0003"
+		}
+	},
+	hero_dragon_bone_plague_fx_0004 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			22,
+			13,
+			22,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1631,
+			675,
+			55,
+			53
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0005",
+			"hero_dragon_bone_plague_fx_0006"
+		}
+	},
+	hero_dragon_bone_plague_fx_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			22,
+			14,
+			19,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1570,
+			675,
+			58,
+			51
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0008",
+			"hero_dragon_bone_plague_fx_0009"
+		}
+	},
+	hero_dragon_bone_plague_fx_0021 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			15,
+			18,
+			14,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			141,
+			1999,
+			70,
+			39
+		},
+		alias = {}
+	},
+	hero_dragon_bone_plague_fx_0025 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			15,
+			16,
+			17,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1436,
+			675,
+			67,
+			50
+		},
+		alias = {
+			"hero_dragon_bone_plague_fx_0026"
+		}
+	},
+	hero_dragon_bone_projectile_0001 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			80,
+			77
+		},
+		trim = {
+			15,
+			14,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1580,
+			50,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_projectile_0002"
+		}
+	},
+	hero_dragon_bone_projectile_0003 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			80,
+			77
+		},
+		trim = {
+			15,
+			14,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			234,
+			1758,
+			50,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_projectile_0004"
+		}
+	},
+	hero_dragon_bone_projectile_0005 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			80,
+			77
+		},
+		trim = {
+			15,
+			14,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			924,
+			50,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_projectile_0006"
+		}
+	},
+	hero_dragon_bone_projectile_0007 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			80,
+			77
+		},
+		trim = {
+			15,
+			14,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1801,
+			675,
+			50,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_projectile_0008"
+		}
+	},
+	hero_dragon_bone_projectile_0009 = {
+		a_name = "go_hero_dragon_bone-2.dds",
+		size = {
+			80,
+			77
+		},
+		trim = {
+			15,
+			14,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1854,
+			675,
+			50,
+			48
+		},
+		alias = {
+			"hero_dragon_bone_projectile_0010"
+		}
 	}
 }
