@@ -38,27 +38,6 @@ function SU.remove_references(screen, klass)
 end
 
 function SU.get_safe_frame(w, h, ref_w, ref_h)
-	if KR_TARGET == "phone" and KR_PLATFORM == "android" then
-		local jnia = require("jni_android")
-		local sa = jnia.get_system_property("SAFE_AREA")
-
-		if sa and sa ~= "" then
-			local r, t, l, b = unpack(string.split(sa, ","))
-
-			f = ref_h / h
-
-			local lr = math.max(l, r) * f
-			local tb = math.max(t, b) * f
-
-			return {
-				t = tb,
-				b = tb,
-				l = lr,
-				r = lr
-			}
-		end
-	end
-
 	local a = w / h
 
 	for _, v in pairs(SAFE_FRAME_STEPS) do

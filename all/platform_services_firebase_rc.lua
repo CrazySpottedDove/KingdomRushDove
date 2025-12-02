@@ -63,8 +63,6 @@ if KR_PLATFORM == "ios" then
 			return ffi.string(C.kfb_rc_get_remote_config_string(key))
 		end
 	}
-else
-	proxy = require("jni_android")
 end
 
 function fbrc:init(name, params)

@@ -147,23 +147,7 @@ function mu.default_params(params, game_name, game_target, game_platform)
 	local api_level, has_menu_key, device_locale
 	local device_profile = DEVICE_PROFILE_LOW
 
-	if game_platform == "android" then
-		local jnia = require("jni_android")
-
-		if jnia then
-			has_menu_key = jnia.get_system_property("HAS_PERMANENT_MENU_KEY") == "true"
-			api_level = jnia.get_system_property("API_LEVEL")
-			api_level = api_level and tonumber(api_level)
-
-			local s = jnia.get_system_property("CURRENT_LOCALE")
-
-			if s then
-				local ll, lc, ls = string.match(s, "^(%a%a)_?(%a?%a?)_?#?(%a*)")
-
-				device_locale = i18n:find_fallback_locale(ll, ls)
-			end
-		end
-	elseif game_platform == "ios" then
+    if game_platform == "ios" then
 		local ffi = require("ffi")
 
 		ffi.cdef(" const char* kr_get_current_locale(); ")
@@ -428,21 +412,6 @@ function mu.get_debug_info(params)
 	end
 
 	o = o .. "\n"
-
-	if KR_PLATFORM == "android" then
-		local jnia = require("jni_android")
-
-		if jnia then
-			o = o .. string.format("-------------------------------------------------------\n")
-			o = o .. string.format("-- ANDROID \n")
-			o = o .. string.format("api_level        :%s\n", jnia.get_system_property("API_LEVEL"))
-			o = o .. string.format("has_menu_key     :%s\n", jnia.get_system_property("HAS_PERMANENT_MENU_KEY"))
-			o = o .. string.format("phone_type       :%s\n", jnia.get_system_property("PHONE_TYPE"))
-			o = o .. string.format("density_dpi      :%s (%s,%s)\n", jnia.get_system_property("DENSITY_DPI"), jnia.get_system_property("X_DPI"), jnia.get_system_property("Y_DPI"))
-			o = o .. string.format("screen size (in) :%s\n", jnia.get_system_property("DIAGONAL_SIZE_INCHES"))
-			o = o .. "\n"
-		end
-	end
 
 	o = o .. string.format("-------------------------------------------------------\n")
 	o = o .. string.format("-- STARTING PARAMS \n")

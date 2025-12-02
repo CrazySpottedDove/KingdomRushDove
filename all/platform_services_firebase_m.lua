@@ -32,8 +32,6 @@ if KR_PLATFORM == "ios" then
 			return ffi.string(C.kfb_m_get_messaging_token())
 		end
 	}
-else
-	proxy = require("jni_android")
 end
 
 function fbm:init(name, params)

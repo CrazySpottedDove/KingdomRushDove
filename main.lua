@@ -1040,11 +1040,7 @@ local function get_error_stack(msg, layer)
 end
 
 local function crash_report(str)
-    if KR_PLATFORM == "android" then
-        local jnia = require("jni_android")
-
-        jnia.crashlytics_log_and_crash(str)
-    elseif KR_PLATFORM == "ios" then
+    if KR_PLATFORM == "ios" then
         local PS = require("platform_services")
 
         if PS.services.analytics then

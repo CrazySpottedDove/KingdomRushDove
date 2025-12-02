@@ -86,8 +86,6 @@ if KR_PLATFORM == "ios" then
 	function proxy.crashlytics_set_collection(value)
 		C.kfb_cr_set_collection(value)
 	end
-else
-	proxy = require("jni_android")
 end
 
 function fba:init(name, params)

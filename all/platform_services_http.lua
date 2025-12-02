@@ -100,8 +100,6 @@ if KR_PLATFORM == "ios" or KR_PLATFORM == "mac" then
 			return -1
 		end
 	end
-else
-	proxy = require("jni_android")
 end
 
 http.proxy = proxy

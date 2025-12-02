@@ -26,13 +26,8 @@ local sys = require("systems")
 
 local IS_KR5 = KR_GAME == "kr5"
 
-if IS_KR5 then
-	simulation = require("klove.simulation")
-	A = require("klove.animation_db")
-else
-	simulation = require("simulation")
-	A = require("animation_db")
-end
+simulation = require("simulation")
+A = require("animation_db")
 
 local EXO
 

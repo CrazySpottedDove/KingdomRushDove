@@ -36,8 +36,6 @@ if KR_PLATFORM == "ios" then
 			return C.kfb_dl_check_link(url)
 		end
 	}
-else
-	proxy = require("jni_android")
 end
 
 function fbdl:init(name, params)

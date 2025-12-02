@@ -59,8 +59,6 @@ if KR_PLATFORM == "ios" then
 	function proxy.has_video_ad(srvid, ad_type)
 		return C.kadmob_has_video_ad(ad_type)
 	end
-elseif KR_PLATFORM == "android" then
-	proxy = require("jni_android")
 end
 
 function ads:init(name, params)
