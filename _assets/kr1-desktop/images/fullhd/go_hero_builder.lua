@@ -1,27293 +1,7004 @@
 return {
-	["hero_obdul_basic_attack_hit_0001"] = {
+	hero_obdul_basic_attack_hit_0001 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			93,
-			90
-		},
-		trim = {
-			28,
-            22,
-            28,
-            28
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1417,
-			4,
-			37,
-			40
-		},
-		alias = {},
-	},
-	["hero_obdul_basic_attack_hit_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			93,
-			90
-		},
-		trim = {
-			28,
-            22,
-            28,
-            28
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1417,
-			4,
-			37,
-			40
-		},
-		alias = {},
-	},
-	["hero_obdul_basic_attack_hit_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			93,
-			90
-		},
-		trim = {
-			25,
-            15,
-            20,
-            22
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			747,
-			115,
-			48,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_basic_attack_hit_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			93,
-			90
-		},
-		trim = {
-			25,
-            15,
-            20,
-            22
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			747,
-			115,
-			48,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_basic_attack_hit_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			93,
-			90
-		},
-		trim = {
-			21,
-            15,
-            18,
-            18
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2175,
-			115,
-			54,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_basic_attack_hit_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			93,
-			90
-		},
-		trim = {
-			21,
-            15,
-            18,
-            18
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2175,
-			115,
-			54,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_basic_attack_hit_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			93,
-			90
-		},
-		trim = {
-			0,
-            0,
-            90,
-            87
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2332,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			137,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			270,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			402,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			534,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			667,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			800,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			933,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1066,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1199,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1332,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1465,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1598,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1731,
-			635,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1864,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1996,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2128,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2260,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2392,
-			635,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			136,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			268,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0025"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			401,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0026"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			533,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0027"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			665,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0028"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			798,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0029"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			931,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0030"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1064,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0031"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1197,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0032"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1329,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0033"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1462,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0034"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1594,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0035"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1726,
-			739,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0036"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1858,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0037"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1991,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0038"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2124,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0039"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2257,
-			739,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0040"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0041"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            71,
-            176,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			757,
-			949,
-			121,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0042"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            71,
-            176,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			757,
-			949,
-			121,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0043"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            73,
-            175,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1928,
-			843,
-			123,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0044"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            73,
-            175,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1928,
-			843,
-			123,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0045"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            73,
-            175,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1928,
-			843,
-			123,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0046"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2390,
-			739,
-			123,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0047"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2390,
-			739,
-			123,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0048"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            73,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1557,
-			843,
-			126,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0049"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            73,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1557,
-			843,
-			126,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0050"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1057,
-			127,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0051"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1057,
-			127,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0052"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1057,
-			127,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0053"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            70,
-            170,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1217,
-			949,
-			129,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0054"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            70,
-            170,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1217,
-			949,
-			129,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0055"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            75,
-            168,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			843,
-			132,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0056"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            75,
-            168,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			843,
-			132,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0057"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            75,
-            168,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			843,
-			132,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0058"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            75,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1762,
-			531,
-			127,
-			95
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0059"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            75,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1762,
-			531,
-			127,
-			95
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0060"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            72,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2059,
-			843,
-			126,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0061"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            72,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2059,
-			843,
-			126,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0062"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			139,
-			1057,
-			123,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0063"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			139,
-			1057,
-			123,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0064"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			139,
-			1057,
-			123,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0065"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0066"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0067"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            79,
-            170,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			732,
-			431,
-			129,
+			94,
 			91
 		},
-		alias = {},
-	},
-	["hero_obdul_hero_0068"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
 		trim = {
-			166,
-            79,
-            170,
-            150
+			30,
+			23,
+			30,
+			30
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			732,
-			431,
-			129,
+			318,
+			1204,
+			34,
+			38
+		},
+		alias = {
+			"hero_obdul_basic_attack_hit_0002"
+		}
+	},
+	hero_obdul_hero_0005 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1753,
+			1778,
+			119,
 			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_hero_0069"] = {
+	hero_obdul_hero_0007 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			156,
-            76,
-            169,
-            150
+			171,
+			77,
+			176,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1012,
-			531,
-			140,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0070"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			156,
-            76,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1012,
-			531,
-			140,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0071"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			105,
-            40,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			832,
-			2024,
-			185,
-			130
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0072"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			105,
-            40,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			832,
-			2024,
-			185,
-			130
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0073"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			96,
-            37,
-            179,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1865,
-			2024,
-			190,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0074"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			96,
-            37,
-            179,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1865,
-			2024,
-			190,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0075"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			94,
-            37,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2063,
-			2024,
-			191,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0076"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			94,
-            37,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2063,
-			2024,
-			191,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0077"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			94,
-            37,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2063,
-			2024,
-			191,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0078"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			94,
-            37,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2063,
-			2024,
-			191,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0079"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			200,
-            66,
-            88,
-            138
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			356,
-			1634,
-			177,
-			116
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0080"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            66,
-            87,
-            140
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2094,
-			1511,
-			177,
-			114
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0081"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            87,
-            82,
-            140
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			531,
-			182,
-			93
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0082"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            87,
-            82,
-            139
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1160,
-			531,
-			182,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0083"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            101,
-            70,
-            139
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			952,
-			335,
-			194,
-			80
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0084"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            101,
-            70,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			544,
-			335,
-			194,
-			78
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0085"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            101,
-            69,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1747,
-			253,
-			195,
-			74
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0086"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            101,
-            69,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1950,
-			253,
-			195,
-			74
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0087"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            103,
-            99,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1253,
-			253,
-			165,
-			72
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0088"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            103,
-            99,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1426,
-			253,
-			165,
-			72
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0089"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            103,
-            96,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2153,
-			253,
-			168,
-			74
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0090"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			201,
-            103,
-            96,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2153,
-			253,
-			168,
-			74
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0091"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            76,
-            96,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1354,
-			949,
-			197,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0092"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            76,
-            96,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1559,
-			949,
-			197,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0093"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            60,
-            108,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			990,
-			1511,
-			196,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0094"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            60,
-            108,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			990,
-			1511,
-			196,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0095"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            53,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			677,
-			1634,
-			129,
-			117
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0096"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            53,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			677,
-			1634,
-			129,
-			117
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0097"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            77,
-            172,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1350,
-			531,
-			127,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0098"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            77,
-            172,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1350,
-			531,
-			127,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0099"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0100"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0101"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0102"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0103"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			179,
-            49,
-            167,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			851,
-			1761,
+			1875,
+			1778,
 			119,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0104"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			179,
-            49,
-            167,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			851,
-			1761,
-			119,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0105"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			139,
-            51,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1933,
-			1634,
-			122,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0106"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			139,
-            51,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1933,
-			1634,
-			122,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0107"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			133,
-            54,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			541,
-			1634,
-			128,
-			116
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0108"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			133,
-            54,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			541,
-			1634,
-			128,
-			116
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0109"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			148,
-            60,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1511,
-			113,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0110"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			148,
-            60,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1511,
-			113,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0111"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			200,
-            72,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2424,
-			1057,
-			124,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0112"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			200,
-            72,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2424,
-			1057,
-			124,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0113"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			200,
-            65,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			125,
-			1511,
-			124,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0114"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			200,
-            65,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			125,
-			1511,
-			124,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0115"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            52,
-            140,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			226,
-			1891,
-			158,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0116"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            52,
-            140,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			226,
-			1891,
-			158,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0117"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            52,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			392,
-			1891,
-			165,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0118"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            52,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			392,
-			1891,
-			165,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0119"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            85,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			352,
-			431,
-			147,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0120"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            85,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			352,
-			431,
-			147,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0121"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            62,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1194,
-			1511,
-			161,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0122"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            62,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1194,
-			1511,
-			161,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0123"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            52,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			565,
-			1891,
-			164,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0124"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            52,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			565,
-			1891,
-			164,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0125"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            52,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			737,
-			1891,
-			165,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0126"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            52,
-            141,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			737,
-			1891,
-			165,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0127"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            85,
-            138,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1643,
-			431,
-			150,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0128"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            85,
-            138,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1643,
-			431,
-			150,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0129"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            74,
-            177,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			144,
-			843,
-			123,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0130"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            74,
-            177,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			144,
-			843,
-			123,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0131"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            74,
-            182,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			275,
-			843,
-			120,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0132"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            74,
-            182,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			275,
-			843,
-			120,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0133"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            74,
-            184,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			403,
-			843,
-			119,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0134"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            74,
-            184,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			403,
-			843,
-			119,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0135"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            89,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1154,
-			335,
-			120,
-			81
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0136"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            89,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1154,
-			335,
-			120,
-			81
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0137"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            104,
-            170,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			335,
-			130,
-			75
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0138"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            104,
-            170,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			335,
-			130,
-			75
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0139"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            60,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			257,
-			1511,
-			130,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0140"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            60,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			257,
-			1511,
-			130,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0141"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            53,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			677,
-			1634,
-			129,
-			117
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0142"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            53,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			677,
-			1634,
-			129,
-			117
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0143"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            77,
-            172,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1350,
-			531,
-			127,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0144"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            77,
-            172,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1350,
-			531,
-			127,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0145"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0146"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0147"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0148"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0149"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            55,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2279,
-			1511,
-			124,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0150"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            55,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2279,
-			1511,
-			124,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0151"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            50,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			286,
-			1761,
-			132,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0152"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            50,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			286,
-			1761,
-			132,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0153"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            49,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			978,
-			1761,
-			132,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0154"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            49,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			978,
-			1761,
-			132,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0155"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            48,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2206,
-			1761,
-			132,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0156"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            48,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2206,
-			1761,
-			132,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0157"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            50,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			426,
-			1761,
-			132,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0158"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            50,
-            166,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			426,
-			1761,
-			132,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0159"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            52,
-            161,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1118,
-			1761,
-			143,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0160"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            52,
-            161,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1118,
-			1761,
-			143,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0161"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            71,
-            166,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1428,
-			1057,
-			132,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0162"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            71,
-            166,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1428,
-			1057,
-			132,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0163"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            89,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1688,
-			335,
-			94,
-			84
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0164"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            89,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1688,
-			335,
-			94,
-			84
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0165"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            82,
-            184,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			869,
-			431,
-			95,
 			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_hero_0166"] = {
+	hero_obdul_hero_0008 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			186,
-            82,
-            184,
-            147
+			171,
+			77,
+			176,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			869,
-			431,
-			95,
+			1753,
+			1872,
+			119,
 			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_hero_0167"] = {
+	hero_obdul_hero_0015 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			185,
-            80,
-            185,
-            147
+			170,
+			77,
+			177,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			194,
-			531,
-			95,
-			93
+			1875,
+			1872,
+			119,
+			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_hero_0168"] = {
+	hero_obdul_hero_0048 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			185,
-            80,
-            185,
-            147
+			171,
+			76,
+			176,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			194,
-			531,
-			95,
-			93
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0169"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            77,
-            178,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			530,
-			843,
-			98,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0170"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            75,
-            178,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2193,
-			843,
-			98,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0171"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            73,
-            180,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1764,
-			949,
-			93,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0172"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            71,
-            180,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1568,
-			1057,
-			93,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0173"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            69,
-            181,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1457,
-			1168,
-			93,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0174"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            67,
-            181,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1274,
-			1280,
-			93,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0175"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			190,
-            65,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			480,
-			1394,
-			93,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0176"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			190,
-            71,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1669,
-			1057,
-			93,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0177"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            69,
-            178,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1558,
-			1168,
-			98,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0178"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            67,
-            178,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1375,
-			1280,
-			98,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0179"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            65,
-            180,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			581,
-			1394,
-			93,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0180"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            69,
-            180,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1664,
-			1168,
-			93,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0181"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            67,
-            181,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1481,
-			1280,
-			93,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0182"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            65,
-            181,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			682,
-			1394,
-			93,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0183"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			190,
-            63,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			395,
-			1511,
-			93,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0184"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			190,
-            80,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			297,
-			531,
-			93,
-			93
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0185"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            77,
-            178,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			636,
-			843,
-			98,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0186"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            75,
-            178,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2299,
-			843,
-			98,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0187"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            73,
-            180,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1865,
-			949,
-			93,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0188"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            71,
-            180,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1770,
-			1057,
-			93,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0189"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            69,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1765,
-			1168,
-			92,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0190"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            67,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1582,
-			1280,
-			92,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0191"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			190,
-            65,
-            186,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			783,
-			1394,
-			89,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0192"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			190,
-            71,
-            186,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1871,
-			1057,
-			89,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0193"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            69,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1865,
-			1168,
-			94,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0194"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            67,
-            182,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
+			1922,
 			1682,
-			1280,
-			94,
-			106
+			119,
+			92
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0049"
+		}
 	},
-	["hero_obdul_hero_0195"] = {
+	hero_obdul_hero_0050 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			189,
-            65,
-            182,
-            147
+			170,
+			73,
+			174,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			880,
 			1394,
-			94,
-			108
+			1588,
+			122,
+			95
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0051",
+			"hero_obdul_hero_0052"
+		}
 	},
-	["hero_obdul_hero_0196"] = {
+	hero_obdul_hero_0053 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			189,
-            69,
-            182,
-            147
+			170,
+			73,
+			173,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1967,
-			1168,
-			94,
-			104
+			1919,
+			1416,
+			123,
+			95
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0054"
+		}
 	},
-	["hero_obdul_hero_0197"] = {
+	hero_obdul_hero_0055 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			182,
-            67,
-            172,
-            147
+			169,
+			78,
+			171,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1784,
-			1280,
-			111,
-			106
+			1649,
+			1588,
+			126,
+			90
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0056",
+			"hero_obdul_hero_0057"
+		}
 	},
-	["hero_obdul_hero_0198"] = {
+	hero_obdul_hero_0058 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			182,
-            65,
-            172,
-            147
+			170,
+			79,
+			174,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			982,
-			1394,
-			111,
-			108
+			1907,
+			1588,
+			122,
+			89
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0059"
+		}
 	},
-	["hero_obdul_hero_0199"] = {
+	hero_obdul_hero_0060 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			167,
-            63,
-            162,
-            147
+			170,
+			75,
+			176,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			496,
-			1511,
-			136,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0200"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            80,
-            162,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			398,
-			531,
-			136,
+			1633,
+			1682,
+			120,
 			93
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0061"
+		}
 	},
-	["hero_obdul_hero_0201"] = {
+	hero_obdul_hero_0062 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            78,
-            165,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1485,
-			531,
-			133,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0202"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            76,
-            165,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			742,
-			843,
-			133,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0203"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            80,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			507,
-			431,
-			125,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0204"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            80,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			507,
-			431,
-			125,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0205"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0206"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0207"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0208"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0209"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            79,
-            170,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			732,
-			431,
-			129,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0210"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            79,
-            170,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			732,
-			431,
-			129,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0211"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			156,
-            76,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1012,
-			531,
-			140,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0212"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			156,
-            76,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1012,
-			531,
-			140,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0213"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			89,
-            65,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			769,
-			1280,
-			201,
-			105
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0214"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			89,
-            65,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			769,
-			1280,
-			201,
-			105
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0215"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			80,
-            66,
-            179,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2069,
-			1168,
-			206,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0216"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			80,
-            66,
-            179,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2069,
-			1168,
-			206,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0217"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			77,
-            67,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1168,
-			208,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0218"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			77,
-            67,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1168,
-			208,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0219"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			80,
-            61,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1856,
-			1394,
-			205,
-			109
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0220"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			80,
-            61,
-            180,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1856,
-			1394,
-			205,
-			109
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0221"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			147,
-            93,
-            99,
-            109
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			814,
-			1634,
-			219,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0222"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			147,
-            93,
-            99,
-            109
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			814,
-			1634,
-			219,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0223"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			111,
-            74,
-            196,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2405,
-			843,
-			158,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0224"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			111,
-            74,
-            196,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2405,
-			843,
-			158,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0225"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			137,
-            93,
-            99,
-            109
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1041,
-			1634,
-			229,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0226"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			137,
-            93,
-            99,
-            109
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1041,
-			1634,
-			229,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0227"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			197,
-            55,
-            126,
-            127
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2030,
-			2165,
-			142,
-			138
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0228"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			197,
-            55,
-            126,
-            127
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2030,
-			2165,
-			142,
-			138
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0229"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			111,
-            74,
-            196,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2405,
-			843,
-			158,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0230"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			111,
-            74,
-            196,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2405,
-			843,
-			158,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0231"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			198,
-            84,
-            101,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2297,
-			335,
-			166,
-			88
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0232"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			198,
-            84,
-            101,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2297,
-			335,
-			166,
-			88
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0233"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			197,
-            65,
-            99,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			119,
-			1394,
-			169,
-			107
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0234"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			197,
-            65,
-            99,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			119,
-			1394,
-			169,
-			107
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0235"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			198,
-            72,
-            106,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1966,
-			949,
-			161,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0236"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			198,
-            72,
-            106,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1966,
-			949,
-			161,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0237"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			197,
-            103,
-            109,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			573,
-			253,
-			159,
-			69
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0238"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			197,
-            103,
-            109,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			573,
-			253,
-			159,
-			69
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0239"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			198,
-            103,
-            128,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2329,
-			253,
-			139,
-			74
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0240"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			198,
-            103,
-            128,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2329,
-			253,
-			139,
-			74
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0241"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            76,
-            161,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			883,
-			843,
-			132,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0242"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            76,
-            161,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			883,
-			843,
-			132,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0243"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            60,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			257,
-			1511,
-			130,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0244"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            60,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			257,
-			1511,
-			130,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0245"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            53,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			677,
-			1634,
-			129,
-			117
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0246"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            53,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			677,
-			1634,
-			129,
-			117
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0247"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            77,
-            172,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1350,
-			531,
-			127,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0248"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            77,
-            172,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1350,
-			531,
-			127,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0249"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0250"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0251"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0252"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0253"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			164,
-            69,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			270,
-			1057,
-			130,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0254"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			164,
-            69,
-            171,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			270,
-			1057,
-			130,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0255"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            91,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			746,
-			335,
-			130,
-			79
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0256"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            91,
-            175,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			746,
-			335,
-			130,
-			79
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0257"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			154,
-            86,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1790,
-			335,
-			137,
-			84
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0258"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			154,
-            86,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1790,
-			335,
-			137,
-			84
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0259"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            101,
-            160,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			740,
-			253,
-			109,
-			69
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0260"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            101,
-            160,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			740,
-			253,
-			109,
-			69
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0261"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            101,
-            162,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			857,
-			253,
-			114,
-			69
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0262"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            101,
-            162,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			857,
-			253,
-			114,
-			69
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0263"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            99,
-            163,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1129,
-			253,
-			116,
-			71
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0264"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            99,
-            163,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1129,
-			253,
-			116,
-			71
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0265"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			181,
-            51,
-            193,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2063,
-			1634,
-			91,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0266"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			181,
-            51,
-            193,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2063,
-			1634,
-			91,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0267"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			174,
-            52,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1278,
-			1634,
-			87,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0268"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			174,
-            52,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1278,
-			1634,
-			87,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0269"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			157,
-            52,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1373,
-			1634,
-			104,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0270"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			157,
-            52,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1373,
-			1634,
-			104,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0271"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            67,
-            80,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1101,
-			1394,
-			208,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0272"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            67,
-            80,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1101,
-			1394,
-			208,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0273"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            48,
-            78,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			910,
-			1891,
-			227,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0274"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            48,
-            78,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			910,
-			1891,
-			227,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0275"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            52,
-            79,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1485,
-			1634,
-			226,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0276"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            52,
-            79,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1485,
-			1634,
-			226,
-			118
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0277"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            58,
-            80,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1269,
-			1761,
-			208,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0278"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			177,
-            58,
-            80,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1269,
-			1761,
-			208,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0279"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			157,
-            43,
-            82,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2262,
-			2024,
-			226,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0280"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			157,
-            43,
-            82,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2262,
-			2024,
-			226,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0281"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			212,
-            57,
-            84,
-            151
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			813,
-			1511,
-			169,
-			112
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0282"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			212,
-            57,
-            84,
-            151
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			813,
-			1511,
-			169,
-			112
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0283"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			249,
-            31,
-            22,
-            154
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			882,
-			2165,
-			194,
-			135
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0284"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			249,
-            31,
-            22,
-            154
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			882,
-			2165,
-			194,
-			135
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0285"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			242,
-            66,
-            38,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1903,
-			1280,
-			185,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0286"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			242,
-            66,
-            38,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1903,
-			1280,
-			185,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0287"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			240,
-            63,
-            35,
-            152
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			978,
-			1280,
-			190,
-			105
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0288"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			240,
-            63,
-            35,
-            152
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			978,
-			1280,
-			190,
-			105
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0289"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			243,
-            28,
-            35,
-            159
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			2165,
-			187,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0290"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			243,
-            28,
-            35,
-            159
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			2165,
-			187,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0291"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			245,
-            31,
-            29,
-            161
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			633,
-			2024,
-			191,
-			128
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0292"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			245,
-            31,
-            29,
-            161
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			633,
-			2024,
-			191,
-			128
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0293"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			247,
-            57,
-            34,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2162,
-			1634,
-			184,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0294"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			247,
-            57,
-            34,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2162,
-			1634,
-			184,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0295"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			249,
-            33,
-            11,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			2312,
-			205,
-			140
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0296"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			249,
-            33,
-            11,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			2312,
-			205,
-			140
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0297"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			245,
-            57,
-            17,
-            154
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2069,
-			1394,
-			203,
-			109
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0298"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			245,
-            57,
-            17,
-            154
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2069,
-			1394,
-			203,
-			109
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0299"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            21,
-            77,
-            157
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			890,
-			2312,
-			192,
-			142
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0300"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            21,
-            77,
-            157
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			890,
-			2312,
-			192,
-			142
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0301"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			205,
-            60,
-            92,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2411,
-			1511,
-			168,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0302"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			205,
-            60,
-            92,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2411,
-			1511,
-			168,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0303"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			204,
-            48,
-            91,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1145,
-			1891,
-			170,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0304"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			204,
-            48,
-            91,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1145,
-			1891,
-			170,
-			123
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0305"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            19,
-            92,
-            156
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1585,
-			2312,
-			177,
-			145
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0306"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            19,
-            92,
-            156
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1585,
-			2312,
-			177,
-			145
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0307"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			195,
-            19,
-            93,
-            158
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1090,
-			2312,
-			177,
-			143
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0308"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			195,
-            19,
-            93,
-            158
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1090,
-			2312,
-			177,
-			143
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0309"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			206,
-            48,
-            94,
-            162
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			1511,
-			165,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0310"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			206,
-            48,
-            94,
-            162
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			1511,
-			165,
-			110
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0311"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			176,
-            21,
-            96,
-            166
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			199,
-			2165,
-			193,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0312"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			176,
-            21,
-            96,
-            166
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			199,
-			2165,
-			193,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0313"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			185,
-            51,
-            94,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2354,
-			1634,
-			186,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0314"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			185,
-            51,
-            94,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2354,
-			1634,
-			186,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0315"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			154,
-            74,
-            116,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1023,
-			843,
-			195,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0316"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			154,
-            74,
-            116,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1023,
-			843,
-			195,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0317"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			156,
-            74,
-            118,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1226,
-			843,
-			191,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0318"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			156,
-            74,
-            118,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1226,
-			843,
-			191,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0319"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            72,
-            120,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			949,
-			179,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0320"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            72,
-            120,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			949,
-			179,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0321"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            119,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			408,
-			1057,
-			179,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0322"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			167,
-            69,
-            119,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			408,
-			1057,
-			179,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0323"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0324"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0325"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1425,
-			843,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0326"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1425,
-			843,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0327"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            73,
-            183,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1691,
-			843,
-			117,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0328"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            73,
-            183,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1691,
-			843,
-			117,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0329"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            64,
-            188,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2096,
-			1280,
-			116,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0330"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			161,
-            64,
-            188,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2096,
-			1280,
-			116,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0331"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            67,
-            191,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			220,
-			1168,
-			115,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0332"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            67,
-            191,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			220,
-			1168,
-			115,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0333"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            69,
-            195,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			595,
-			1057,
-			110,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0334"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            69,
-            195,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			595,
-			1057,
-			110,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0335"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            69,
-            195,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			595,
-			1057,
-			110,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0336"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            69,
-            195,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			595,
-			1057,
-			110,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0337"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0338"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0339"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			184,
-            46,
-            153,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1445,
-			1891,
-			128,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0340"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			184,
-            46,
-            153,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1445,
-			1891,
-			128,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0341"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			145,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0342"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			145,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0343"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			183,
-            46,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1581,
-			1891,
-			132,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0344"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			183,
-            46,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1581,
-			1891,
-			132,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0345"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0346"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0347"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			184,
-            46,
-            153,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1445,
-			1891,
-			128,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0348"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			184,
-            46,
-            153,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1445,
-			1891,
-			128,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0349"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			145,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0350"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			145,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0351"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			183,
-            46,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1581,
-			1891,
-			132,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0352"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			183,
-            46,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1581,
-			1891,
-			132,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0353"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0354"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			182,
-            52,
-            150,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1761,
-			133,
-			119
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0355"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			184,
-            46,
-            153,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1445,
-			1891,
-			128,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0356"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			184,
-            46,
-            153,
-            149
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1445,
-			1891,
-			128,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0357"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
 			171,
-            64,
-            174,
-            150
+			73,
+			178,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2220,
-			1280,
-			120,
-			106
+			1633,
+			1778,
+			117,
+			95
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0063",
+			"hero_obdul_hero_0064"
+		}
 	},
-	["hero_obdul_hero_0358"] = {
+	hero_obdul_hero_0069 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
-		},
-		trim = {
-			171,
-            64,
-            174,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2220,
-			1280,
-			120,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0359"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1425,
-			843,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0360"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            173,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1425,
-			843,
-			124,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0361"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0362"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0363"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            81,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			431,
-			131,
-			89
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0364"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            81,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			431,
-			131,
-			89
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0365"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
 			160,
-            87,
-            165,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2003,
-			335,
-			140,
-			85
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0366"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            69,
-            165,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2283,
-			1168,
-			140,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0367"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            40,
-            191,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			400,
-			2165,
-			111,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0368"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            40,
-            191,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			519,
-			2165,
-			111,
-			133
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0369"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1721,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0370"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1843,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0371"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1965,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0372"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2087,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0373"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2209,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0374"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2331,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0375"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2453,
-			1891,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0376"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			2024,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0377"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			126,
-			2024,
-			114,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0378"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2346,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0379"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2346,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0380"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2346,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0381"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            40,
-            191,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1025,
-			2024,
-			111,
-			130
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0382"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			163,
-            40,
-            191,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1025,
-			2024,
-			111,
-			130
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0383"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            87,
-            165,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1282,
-			335,
-			140,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0384"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            87,
-            165,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1282,
-			335,
-			140,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0385"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            81,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			431,
-			131,
-			89
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0386"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            81,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			431,
-			131,
-			89
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0387"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0388"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0389"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			150,
-			56,
-			90,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0390"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			150,
-			56,
-			90,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0391"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			578,
-			56,
-			90,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0392"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			578,
-			56,
-			90,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0393"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            90,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2471,
-			335,
-			90,
-			88
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0394"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            90,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2471,
-			335,
-			90,
-			88
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0395"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            74,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1176,
-			1280,
-			90,
-			105
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0396"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            74,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1176,
-			1280,
-			90,
-			105
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0397"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            66,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1363,
-			1511,
-			90,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0398"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            66,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1363,
-			1511,
-			90,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0399"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            62,
-            193,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1634,
-			81,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0400"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			191,
-            62,
-            193,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			93,
-			1634,
-			81,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0401"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            61,
-            194,
-            144
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			182,
-			1634,
 			79,
-			115
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0402"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			192,
-            61,
-            194,
-            144
+			172,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			269,
-			1634,
-			79,
-			115
+			1414,
+			1315,
+			134,
+			89
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0070",
+			"hero_obdul_hero_0211",
+			"hero_obdul_hero_0212"
+		}
 	},
-	["hero_obdul_hero_0403"] = {
+	hero_obdul_hero_0071 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			189,
-            65,
-            194,
-            147
+			108,
+			44,
+			179,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1317,
-			1394,
-			82,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0404"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			189,
-            65,
-            193,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1407,
-			1394,
-			83,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0405"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            10,
-            181,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2185,
-			2312,
-			125,
-			163
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0406"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            10,
-            181,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2318,
-			2312,
-			125,
-			163
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0407"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			151,
-            38,
-            179,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			217,
-			2312,
-			135,
-			140
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0408"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			151,
-            38,
-            179,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			360,
-			2312,
-			135,
-			140
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0409"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            52,
-            184,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1485,
-			1761,
-			123,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0410"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            52,
-            184,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1616,
-			1761,
-			123,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0411"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            49,
-            189,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1323,
-			1891,
-			114,
+			977,
+			498,
+			179,
 			124
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0072"
+		}
 	},
-	["hero_obdul_hero_0412"] = {
+	hero_obdul_hero_0073 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			465,
-			320
+			466,
+			321
 		},
 		trim = {
-			162,
-            49,
-            189,
-            150
+			100,
+			40,
+			182,
+			153
 		},
 		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1747,
-			1761,
-			114,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0413"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2468,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0414"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2468,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0415"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2468,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0416"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			162,
-            48,
-            189,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2468,
-			1761,
-			114,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0417"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            87,
-            165,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1282,
-			335,
-			140,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0418"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            87,
-            165,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1282,
-			335,
-			140,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0419"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            81,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			431,
-			131,
-			89
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0420"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            81,
-            169,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			431,
-			131,
-			89
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0421"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0422"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0423"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0424"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			168,
-            74,
-            172,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2199,
-			531,
-			125,
-			96
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0425"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            86,
-            162,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2151,
-			335,
-			138,
-			86
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0426"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            86,
-            162,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2151,
-			335,
-			138,
-			86
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0427"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            55,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			566,
-			1761,
-			145,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0428"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            55,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			566,
-			1761,
-			145,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0429"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            41,
-            162,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1322,
-			2165,
-			138,
-			136
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0430"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            41,
-            162,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1322,
-			2165,
-			138,
-			136
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0431"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            23,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1770,
-			2312,
-			145,
-			152
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0432"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            23,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1770,
-			2312,
-			145,
-			152
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0433"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            36,
-            163,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2332,
-			2165,
-			136,
-			139
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0434"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			166,
-            36,
-            163,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2332,
-			2165,
-			136,
-			139
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0435"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            34,
-            172,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			503,
-			2312,
-			121,
-			141
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0436"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            34,
-            172,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			503,
-			2312,
-			121,
-			141
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0437"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            37,
-            161,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2180,
-			2165,
-			144,
-			138
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0438"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			160,
-            37,
-            161,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2180,
-			2165,
-			144,
-			138
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0439"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            38,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1468,
-			2165,
-			146,
-			137
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0440"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			159,
-            38,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1468,
-			2165,
-			146,
-			137
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0441"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            32,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1275,
-			2312,
-			147,
-			143
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0442"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            32,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1275,
-			2312,
-			147,
-			143
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0443"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            32,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1430,
-			2312,
-			147,
-			143
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0444"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            32,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1430,
-			2312,
-			147,
-			143
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0445"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            38,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1622,
-			2165,
-			147,
-			137
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0446"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            38,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1622,
-			2165,
-			147,
-			137
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0447"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			157,
-            77,
-            159,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			191,
-			949,
-			149,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0448"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			157,
-            77,
-            159,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			191,
-			949,
-			149,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0449"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            54,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1869,
-			1761,
-			147,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0450"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            54,
-            160,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1869,
-			1761,
-			147,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0451"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            50,
-            159,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			248,
-			2024,
-			148,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0452"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			158,
-            50,
-            159,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			248,
-			2024,
-			148,
-			125
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0453"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			155,
-            54,
-            136,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2024,
-			1761,
-			174,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0454"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			155,
-            54,
-            136,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2024,
-			1761,
-			174,
-			121
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0455"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            89,
-            166,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1430,
-			335,
-			134,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0456"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            89,
-            166,
-            148
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1430,
-			335,
-			134,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0457"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            95,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			142,
-			335,
-			65,
-			75
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0458"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			196,
-            95,
-            204,
-            150
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			142,
-			335,
-			65,
-			75
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0459"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			178,
-            65,
-            175,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1498,
-			1394,
-			112,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0460"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			178,
-            65,
-            175,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1498,
-			1394,
-			112,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0461"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            53,
-            169,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			719,
-			1761,
-			124,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0462"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			172,
-            53,
-            169,
-            147
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			719,
-			1761,
-			124,
-			120
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0463"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            62,
-            167,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1461,
-			1511,
-			133,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0464"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			165,
-            62,
-            167,
-            145
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1461,
-			1511,
-			133,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0465"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            66,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1602,
-			1511,
-			90,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0466"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            66,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1602,
-			1511,
-			90,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0467"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            74,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2431,
-			1168,
-			90,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0468"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            74,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2431,
-			1168,
-			90,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0469"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            90,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2471,
-			335,
-			90,
-			88
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0470"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            90,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2471,
-			335,
-			90,
-			88
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0471"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			578,
-			56,
-			90,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0472"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			578,
-			56,
-			90,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0473"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			150,
-			56,
-			90,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0474"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			150,
-			56,
-			90,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_hero_0475"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			465,
-			320
-		},
-		trim = {
-			186,
-            132,
-            189,
-            142
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			150,
-			56,
-			90,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			153,
-            101,
-            153,
-            101
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			293,
-			4,
-			20,
-			19
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			69,
-            44,
-            27,
-            69
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1618,
-			1394,
-			230,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			69,
-            44,
-            27,
-            69
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1618,
-			1394,
-			230,
-			108
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			56,
-            19,
-            38,
-            70
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1382,
-			2024,
-			232,
-			132
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			56,
-            19,
-            38,
-            70
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1382,
-			2024,
-			232,
-			132
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			62,
-            21,
-            29,
-            68
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1622,
-			2024,
-			235,
-			132
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			62,
-            21,
-            29,
-            68
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1622,
-			2024,
-			235,
-			132
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			69,
-            17,
-            27,
-            69
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1084,
-			2165,
-			230,
-			135
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			69,
-            17,
-            27,
-            69
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1084,
-			2165,
-			230,
-			135
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			56,
-            19,
-            38,
-            70
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1382,
-			2024,
-			232,
-			132
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			56,
-            19,
-            38,
-            70
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1382,
-			2024,
-			232,
-			132
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0025"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			83,
-            46,
-            24,
-            77
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			348,
-			949,
-			219,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0026"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			83,
-            46,
-            24,
-            77
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			348,
-			949,
-			219,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0027"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0028"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0029"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0030"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0031"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0032"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0033"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0034"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0035"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0036"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0037"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0038"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0039"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0040"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0041"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0042"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0043"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_fx_0044"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			326,
-			221
-		},
-		trim = {
-			0,
-            0,
-            323,
-            218
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_hit_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			105,
-			102
-		},
-		trim = {
-			33,
-            26,
-            33,
-            32
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2190,
-			4,
-			39,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_hit_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			105,
-			102
-		},
-		trim = {
-			33,
-            26,
-            33,
-            32
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2190,
-			4,
-			39,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_hit_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			105,
-			102
-		},
-		trim = {
-			30,
-            20,
-            25,
-            27
-		},
-		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
 			1667,
-			115,
-			50,
-			55
+			363,
+			184,
+			128
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0074"
+		}
 	},
-	["hero_obdul_skill_3_hit_0004"] = {
+	hero_obdul_hero_0075 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			105,
-			102
+			466,
+			321
 		},
 		trim = {
-			30,
-            20,
-            25,
-            27
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1667,
-			115,
-			50,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_hit_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			105,
-			102
-		},
-		trim = {
-			26,
-            19,
-            22,
-            22
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1235,
-			180,
-			57,
-			61
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_hit_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			105,
-			102
-		},
-		trim = {
-			26,
-            19,
-            22,
-            22
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1235,
-			180,
-			57,
-			61
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_3_hit_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			105,
-			102
-		},
-		trim = {
-			0,
-            0,
-            102,
-            99
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			21,
-            18,
-            21,
-            24
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1462,
-			4,
-			37,
-			40
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			21,
-            18,
-            21,
-            24
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1462,
-			4,
-			37,
-			40
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			18,
-            13,
-            14,
-            18
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2362,
-			56,
-			47,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			18,
-            13,
-            14,
-            18
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2362,
-			56,
-			47,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			14,
-            11,
-            11,
-            14
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2237,
-			115,
-			54,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			14,
-            11,
-            11,
-            14
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2237,
-			115,
-			54,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_hit_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			79,
-			82
-		},
-		trim = {
-			0,
-            0,
-            76,
-            79
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			32,
-            31,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1700,
-			1511,
-			86,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			31,
-            74,
-            53,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1528,
-			180,
-			83,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0025"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0026"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0027"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0028"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0029"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0030"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0031"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            54,
-            53,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			640,
-			431,
-			84,
-			90
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0032"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0033"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0034"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0035"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0036"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0037"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0038"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0039"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0040"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0041"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0042"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0043"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0044"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0045"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0046"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0047"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0048"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0049"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0050"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0051"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1968,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0052"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			32,
-            31,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1794,
-			1511,
-			86,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0053"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			32,
-            31,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1794,
-			1511,
-			86,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0054"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0055"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0056"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0057"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0058"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0059"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0060"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0061"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0062"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0063"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0064"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0065"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0066"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0067"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0068"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0069"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0070"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0071"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0072"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0073"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0074"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0075"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			30,
-            42,
-            49,
-            103
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2064,
-			1057,
-			88,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0076"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            50,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			886,
-			949,
-			88,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0077"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            50,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			886,
-			949,
-			88,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0078"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0079"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0080"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0081"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0082"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0083"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0084"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0085"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			29,
-            44,
-            49,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			982,
-			949,
-			89,
-			99
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0086"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			39,
-            40,
-            34,
-            107
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2135,
-			949,
-			94,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0087"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			39,
-            40,
-            34,
-            107
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2135,
-			949,
-			94,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0088"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			25,
-            41,
-            26,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2160,
-			1057,
-			116,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0089"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			25,
-            41,
-            26,
-            104
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2160,
-			1057,
-			116,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0090"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			11,
-            40,
-            16,
-            101
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2348,
-			1280,
-			140,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0091"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			11,
-            40,
-            16,
-            101
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2348,
-			1280,
-			140,
-			106
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0092"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0093"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0094"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0095"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0096"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0097"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0098"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0099"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0100"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer1_0101"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0025"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0026"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0027"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0028"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0029"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0030"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0031"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0032"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0033"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0034"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0035"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0036"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0037"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0038"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0039"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0040"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0041"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0042"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0043"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0044"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0045"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0046"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			62,
-            11,
-            60,
-            190
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			248,
-			56,
-			45,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0047"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			62,
-            11,
-            60,
-            190
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			248,
-			56,
-			45,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0048"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			57,
-            37,
-            55,
-            175
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			679,
-			4,
-			55,
-			35
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0049"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			57,
-            37,
-            55,
-            175
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			679,
-			4,
-			55,
-			35
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0050"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			58,
-            28,
-            57,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			56,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0051"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			58,
-            28,
-            57,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			56,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0052"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0053"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0054"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			58,
-            31,
-            57,
-            172
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2237,
-			4,
-			52,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0055"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			58,
-            31,
-            57,
-            172
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2237,
-			4,
-			52,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0056"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			43,
-            27,
-            62,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			676,
-			56,
-			62,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0057"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			43,
-            27,
-            62,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			676,
-			56,
-			62,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0058"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			42,
-            27,
-            62,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			746,
-			56,
-			63,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0059"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			42,
-            27,
-            62,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			746,
-			56,
-			63,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0060"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			41,
-            27,
-            62,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			817,
-			56,
-			64,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0061"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			41,
-            27,
-            62,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			817,
-			56,
-			64,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0062"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            39,
-            53,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			742,
-			4,
-			42,
-			35
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0063"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            39,
-            53,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			742,
-			4,
-			42,
-			35
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0064"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            36,
-            51,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1127,
-			4,
-			44,
-			38
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0065"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            36,
-            51,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1127,
-			4,
-			44,
-			38
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0066"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            38,
-            51,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			792,
-			4,
-			44,
-			36
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0067"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            38,
-            51,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			792,
-			4,
-			44,
-			36
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0068"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			69,
-            33,
-            58,
-            173
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1575,
-			4,
+			97,
 			40,
-			41
+			184,
+			153
 		},
-		alias = {},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1290,
+			363,
+			185,
+			128
+		},
+		alias = {
+			"hero_obdul_hero_0076",
+			"hero_obdul_hero_0077",
+			"hero_obdul_hero_0078"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer2_0069"] = {
+	hero_obdul_hero_0079 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
+			204,
 			69,
-            33,
-            58,
-            173
+			91,
+			141
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1575,
-			4,
-			40,
-			41
+			355,
+			878,
+			171,
+			111
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0070"] = {
+	hero_obdul_hero_0080 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			59,
-            31,
-            57,
-            172
+			204,
+			69,
+			91,
+			143
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2297,
-			4,
-			51,
-			44
+			1108,
+			878,
+			171,
+			109
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0071"] = {
+	hero_obdul_hero_0081 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			59,
-            31,
-            57,
-            172
+			204,
+			89,
+			85,
+			143
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2297,
-			4,
-			51,
-			44
+			1707,
+			138,
+			177,
+			89
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0072"] = {
+	hero_obdul_hero_0082 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			58,
-            31,
-            57,
-            172
+			204,
+			89,
+			85,
+			141
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2237,
-			4,
-			52,
-			44
+			1603,
+			992,
+			177,
+			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0073"] = {
+	hero_obdul_hero_0083 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			58,
-            31,
-            57,
-            172
+			204,
+			104,
+			74,
+			141
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2237,
-			4,
-			52,
-			44
+			849,
+			147,
+			188,
+			76
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0074"] = {
+	hero_obdul_hero_0084 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			58,
-            31,
-            57,
-            172
+			204,
+			104,
+			74,
+			143
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2237,
-			4,
-			52,
-			44
+			1307,
+			143,
+			188,
+			74
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0075"] = {
+	hero_obdul_hero_0085 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			58,
-            31,
-            57,
-            172
+			204,
+			103,
+			72,
+			149
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2237,
-			4,
-			52,
-			44
+			891,
+			776,
+			190,
+			69
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0076"] = {
+	hero_obdul_hero_0086 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			62,
-            34,
-            55,
-            170
+			204,
+			104,
+			72,
+			149
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1994,
-			4,
-			50,
-			43
+			1247,
+			776,
+			190,
+			68
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0077"] = {
+	hero_obdul_hero_0087 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			62,
-            34,
-            55,
-            170
+			204,
+			107,
+			102,
+			149
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1994,
-			4,
-			50,
-			43
+			1753,
+			1966,
+			160,
+			65
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0078"] = {
+	hero_obdul_hero_0089 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			60,
-            33,
-            56,
-            170
+			204,
+			107,
+			99,
+			147
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2356,
-			4,
-			51,
-			44
+			1756,
+			1682,
+			163,
+			67
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0090"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer2_0079"] = {
+	hero_obdul_hero_0091 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			60,
-            33,
-            56,
-            170
+			176,
+			79,
+			97,
+			145
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2356,
-			4,
-			51,
-			44
+			716,
+			878,
+			193,
+			97
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0080"] = {
+	hero_obdul_hero_0092 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			62,
-            34,
-            55,
-            170
+			176,
+			79,
+			97,
+			145
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2052,
-			4,
-			50,
-			43
+			912,
+			878,
+			193,
+			97
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer2_0081"] = {
+	hero_obdul_hero_0093 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			62,
-            34,
-            55,
-            170
+			164,
+			63,
+			109,
+			149
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2052,
-			4,
-			50,
-			43
+			1159,
+			498,
+			193,
+			109
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0094"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer2_0082"] = {
+	hero_obdul_hero_0095 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			62,
-            34,
-            55,
-            170
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2052,
-			4,
-			50,
-			43
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0083"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
 			167,
-			247
-		},
-		trim = {
-			62,
-            34,
-            55,
-            170
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2052,
-			4,
-			50,
-			43
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0084"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			62,
-            34,
-            55,
-            170
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2052,
-			4,
-			50,
-			43
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0085"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			62,
-            34,
-            55,
-            170
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2052,
-			4,
-			50,
-			43
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0086"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			51,
-            26,
-            61,
-            175
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			361,
 			56,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			1364,
+			123,
+			112
+		},
+		alias = {
+			"hero_obdul_hero_0096",
+			"hero_obdul_hero_0141",
+			"hero_obdul_hero_0142",
+			"hero_obdul_hero_0245",
+			"hero_obdul_hero_0246"
+		}
+	},
+	hero_obdul_hero_0103 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			184,
+			52,
+			170,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1298,
+			112,
+			116
+		},
+		alias = {
+			"hero_obdul_hero_0104"
+		}
+	},
+	hero_obdul_hero_0105 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			142,
 			55,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0087"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			51,
-            26,
-            61,
-            175
+			208,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			361,
-			56,
-			55,
-			46
+			1026,
+			1670,
+			116,
+			113
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0106"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer2_0088"] = {
+	hero_obdul_hero_0107 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			48,
-            21,
-            65,
-            181
+			137,
+			57,
+			208,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			56,
-			54,
-			45
+			609,
+			1479,
+			121,
+			111
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0108"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer2_0089"] = {
+	hero_obdul_hero_0109 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			48,
-            21,
-            65,
-            181
+			151,
+			63,
+			208,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			56,
-			54,
-			45
+			1394,
+			1890,
+			107,
+			105
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0110"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer2_0090"] = {
+	hero_obdul_hero_0111 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			51,
-            24,
-            67,
-            176
+			204,
+			75,
+			144,
+			148
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
+		},
+		f_quad = {
+			1394,
+			1686,
+			118,
+			98
+		},
+		alias = {
+			"hero_obdul_hero_0112"
+		}
+	},
+	hero_obdul_hero_0113 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			204,
+			69,
+			144,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1394,
+			1416,
+			118,
+			104
+		},
+		alias = {
+			"hero_obdul_hero_0114"
+		}
+	},
+	hero_obdul_hero_0115 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			56,
+			144,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1923,
+			151,
+			117
+		},
+		alias = {
+			"hero_obdul_hero_0116"
+		}
+	},
+	hero_obdul_hero_0117 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			163,
+			56,
+			144,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			762,
+			159,
+			117
+		},
+		alias = {
+			"hero_obdul_hero_0118"
+		}
+	},
+	hero_obdul_hero_0119 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			181,
+			89,
+			144,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1551,
+			1315,
+			141,
+			84
+		},
+		alias = {
+			"hero_obdul_hero_0120"
+		}
+	},
+	hero_obdul_hero_0121 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			167,
+			66,
+			144,
+			148
+		},
+		a_size = {
+			2048,
+			2048
 		},
 		f_quad = {
 			889,
+			1101,
+			155,
+			107
+		},
+		alias = {
+			"hero_obdul_hero_0122"
+		}
+	},
+	hero_obdul_hero_0123 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
 			56,
-			49,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0091"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			51,
-            24,
-            67,
-            176
+			144,
+			148
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			889,
+			5,
+			1002,
+			158,
+			117
+		},
+		alias = {
+			"hero_obdul_hero_0124"
+		}
+	},
+	hero_obdul_hero_0125 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			163,
 			56,
-			49,
-			47
+			144,
+			148
 		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0092"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			55,
-            26,
-            68,
-            174
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			946,
-			56,
-			44,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0093"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			55,
-            26,
-            68,
-            174
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			946,
-			56,
-			44,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0094"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			55,
-            60,
-            68,
-            136
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2417,
-			56,
-			44,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0095"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			55,
-            60,
-            68,
-            136
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2417,
-			56,
-			44,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0096"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			55,
-            89,
-            67,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1276,
-			56,
-			45,
-			48
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0097"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			55,
-            89,
-            67,
-            110
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1276,
-			56,
-			45,
-			48
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0098"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0099"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0100"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer2_0101"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0025"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0026"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0027"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0028"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0029"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0030"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0031"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0032"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0033"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0034"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0035"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0036"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0037"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0038"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0039"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0040"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0041"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0042"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0043"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0044"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0045"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0046"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0047"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0048"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0049"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0050"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0051"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0052"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0053"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0054"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0055"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0056"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0057"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0058"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0059"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0060"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0061"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0062"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0063"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0064"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0065"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0066"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0067"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0068"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0069"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0070"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0071"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0072"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0073"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0074"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0075"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0076"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            75,
-            52,
-            136
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			844,
-			4,
-			43,
-			36
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0077"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            75,
-            52,
-            136
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			844,
-			4,
-			43,
-			36
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0078"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			71,
-            73,
-            52,
-            138
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			895,
-			4,
-			44,
-			36
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0079"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			71,
-            73,
-            52,
-            138
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			895,
-			4,
-			44,
-			36
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0080"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            72,
-            52,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			583,
-			4,
-			43,
-			34
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0081"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            72,
-            52,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			583,
-			4,
-			43,
-			34
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0082"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            71,
-            54,
-            143
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			486,
-			4,
-			41,
-			33
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0083"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			72,
-            71,
-            54,
-            143
-		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			486,
-			4,
-			41,
-			33
+			5,
+			882,
+			159,
+			117
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0126"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer3_0084"] = {
+	hero_obdul_hero_0127 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			72,
-            70,
-            55,
-            144
+			181,
+			89,
+			141,
+			147
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			535,
-			4,
-			40,
-			33
+			1515,
+			1416,
+			144,
+			85
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0128"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer3_0085"] = {
+	hero_obdul_hero_0139 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			72,
-            70,
-            55,
-            144
+			164,
+			63,
+			178,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			535,
-			4,
-			40,
-			33
+			1026,
+			1786,
+			124,
+			105
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0140",
+			"hero_obdul_hero_0243",
+			"hero_obdul_hero_0244"
+		}
 	},
-	["hero_obdul_skill_4_tower_layer3_0086"] = {
+	hero_obdul_hero_0149 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
+			176,
 			59,
-            70,
-            55,
-            123
+			172,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1213,
-			115,
+			1162,
+			1315,
+			118,
+			109
+		},
+		alias = {
+			"hero_obdul_hero_0150"
+		}
+	},
+	hero_obdul_hero_0151 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			54,
+			169,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			1247,
+			126,
+			114
+		},
+		alias = {
+			"hero_obdul_hero_0152"
+		}
+	},
+	hero_obdul_hero_0153 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			52,
+			169,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1606,
+			126,
+			116
+		},
+		alias = {
+			"hero_obdul_hero_0154"
+		}
+	},
+	hero_obdul_hero_0155 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			51,
+			169,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1369,
+			126,
+			117
+		},
+		alias = {
+			"hero_obdul_hero_0156"
+		}
+	},
+	hero_obdul_hero_0157 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
 			53,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0087"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			50,
-            70,
-            51,
-            104
+			169,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1599,
-			253,
+			475,
+			1725,
+			126,
+			115
+		},
+		alias = {
+			"hero_obdul_hero_0158"
+		}
+	},
+	hero_obdul_hero_0159 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			55,
+			164,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			1593,
+			137,
+			115
+		},
+		alias = {
+			"hero_obdul_hero_0160"
+		}
+	},
+	hero_obdul_hero_0161 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			74,
+			169,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1662,
+			1416,
+			126,
+			96
+		},
+		alias = {
+			"hero_obdul_hero_0162"
+		}
+	},
+	hero_obdul_hero_0178 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			68,
+			181,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1283,
+			1942,
+			92,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0182 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
 			66,
-			73
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0088"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			50,
-            70,
-            51,
-            104
+			184,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1673,
-			253,
+			264,
+			1353,
+			88,
+			104
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0183 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			64,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1958,
+			498,
+			87,
+			106
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0197 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			186,
+			68,
+			175,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1519,
+			1892,
+			105,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0198 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			186,
 			66,
-			73
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0089"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			41,
-            64,
-            40,
-            106
+			175,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			387,
-			335,
-			86,
-			77
+			1633,
+			1876,
+			105,
+			104
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer3_0090"] = {
+	hero_obdul_hero_0199 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			41,
-            64,
-            40,
-            106
+			171,
+			65,
+			164,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			387,
-			335,
-			86,
-			77
+			1865,
+			1101,
+			131,
+			105
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer3_0091"] = {
+	hero_obdul_hero_0200 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			35,
-            57,
-            36,
-            102
+			171,
+			81,
+			164,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			431,
-			96,
-			88
+			1825,
+			1315,
+			131,
+			89
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer3_0092"] = {
+	hero_obdul_hero_0201 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			35,
-            57,
-            36,
-            102
+			170,
+			79,
+			169,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			431,
-			96,
-			88
+			1519,
+			1588,
+			127,
+			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer3_0093"] = {
+	hero_obdul_hero_0202 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			33,
-            55,
-            31,
-            99
+			170,
+			77,
+			169,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			542,
-			531,
-			103,
+			1695,
+			1315,
+			127,
 			93
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_skill_4_tower_layer3_0094"] = {
+	hero_obdul_hero_0213 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			167,
-			247
+			466,
+			321
 		},
 		trim = {
-			33,
-            55,
-            31,
-            99
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			542,
-			531,
-			103,
-			93
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0095"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			33,
-            55,
-            30,
-            100
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1801,
-			431,
-			104,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0096"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			33,
-            55,
-            30,
-            100
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1801,
-			431,
-			104,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0097"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			33,
-            55,
-            31,
-            100
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1913,
-			431,
-			103,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0098"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			33,
-            55,
-            31,
-            100
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1913,
-			431,
-			103,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0099"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			36,
-            53,
-            31,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			803,
-			115,
-			100,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0100"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			36,
-            53,
-            31,
-            141
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			803,
-			115,
-			100,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_layer3_0101"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			167,
-			247
-		},
-		trim = {
-			0,
-            0,
-            164,
-            244
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_4_tower_projectile"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			11,
-            11,
-            11,
-            13
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			347,
-			4,
-			34,
-			24
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            43,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			115,
-			59,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			46,
-            45,
-            67,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1944,
-			56,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			46,
-            45,
-            67,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1944,
-			56,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			46,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2299,
-			115,
-			59,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			46,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2299,
-			115,
-			59,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            36,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			890,
-			180,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            36,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			890,
-			180,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2366,
-			115,
-			59,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2366,
-			115,
-			59,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            42,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			911,
-			115,
-			57,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            42,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			911,
-			115,
-			57,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            48,
-            61,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			998,
-			56,
-			59,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            48,
-            61,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			998,
-			56,
-			59,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            39,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1963,
-			115,
-			59,
-			56
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            39,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1963,
-			115,
-			59,
-			56
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            36,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			955,
-			180,
-			59,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            36,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			955,
-			180,
-			59,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2433,
-			115,
-			56,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2433,
-			115,
-			56,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            41,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1274,
-			115,
-			57,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            41,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1274,
-			115,
-			57,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            46,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1329,
-			56,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            46,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1329,
-			56,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            41,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1339,
-			115,
-			56,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0025"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            41,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1339,
-			115,
-			56,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0026"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            37,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			489,
-			180,
-			57,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0027"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            37,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			489,
-			180,
-			57,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0028"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            64,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2497,
-			115,
-			58,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0029"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            64,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2497,
-			115,
-			58,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0030"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            42,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			976,
-			115,
-			57,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0031"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            42,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			976,
-			115,
-			57,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0032"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            46,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1391,
-			56,
-			58,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0033"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            46,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1391,
-			56,
-			58,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0034"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            41,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1403,
-			115,
-			58,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0035"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            41,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1403,
-			115,
-			58,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0036"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			47,
-            37,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			554,
-			180,
-			58,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0037"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			47,
-            37,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			554,
-			180,
-			58,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0038"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			180,
-			57,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0039"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			180,
-			57,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0040"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            42,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1041,
-			115,
-			55,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0041"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            42,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1041,
-			115,
-			55,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0042"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            46,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1457,
-			56,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0043"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            46,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1457,
-			56,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0044"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            40,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1725,
-			115,
-			56,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0045"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            40,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1725,
-			115,
-			56,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0046"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            36,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1022,
-			180,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0047"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            36,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1022,
-			180,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0048"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            64,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
+			93,
 			69,
-			180,
-			58,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0049"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            64,
-            44
+			179,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
+			355,
+			776,
+			194,
+			99
+		},
+		alias = {
+			"hero_obdul_hero_0214"
+		}
+	},
+	hero_obdul_hero_0215 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			83,
 			69,
-			180,
-			58,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0050"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            41,
-            63,
-            44
+			182,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1469,
-			115,
-			57,
-			54
+			1148,
+			636,
+			201,
+			99
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0216"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0051"] = {
+	hero_obdul_hero_0217 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			50,
-            41,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1469,
-			115,
-			57,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0052"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            46,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1520,
-			56,
-			58,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0053"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			50,
-            46,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1520,
-			56,
-			58,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0054"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            40,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1789,
-			115,
-			58,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0055"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            40,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1789,
-			115,
-			58,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0056"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			47,
-            36,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1087,
-			180,
-			58,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0057"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			47,
-            36,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1087,
-			180,
-			58,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0058"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			135,
-			180,
-			57,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0059"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            38,
-            65,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			135,
-			180,
-			57,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0060"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            41,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1534,
-			115,
-			55,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0061"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            41,
-            66,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1534,
-			115,
-			55,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0062"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            43,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			115,
-			59,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0063"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            43,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			115,
-			59,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0064"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			44,
-            43,
-            68,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			368,
-			115,
-			58,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0065"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			44,
-            43,
-            68,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			368,
-			115,
-			58,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0066"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			40,
-            41,
-            68,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1597,
-			115,
-			62,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0067"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			40,
-            41,
-            68,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1597,
-			115,
-			62,
-			54
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0068"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			38,
-            34,
-            68,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1300,
-			180,
-			64,
-			61
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0069"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			38,
-            34,
-            68,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1300,
-			180,
-			64,
-			61
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0070"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            39,
-            33,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2030,
-			115,
-			88,
-			56
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0071"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			49,
-            39,
-            33,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2030,
-			115,
-			88,
-			56
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0072"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			59,
-            43,
-            34,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			434,
-			115,
-			77,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0073"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			59,
-            43,
-            34,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			434,
-			115,
-			77,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0074"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			64,
-            45,
-            35,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2009,
-			56,
+			80,
 			71,
-			50
+			184,
+			153
 		},
-		alias = {},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1525,
+			636,
+			202,
+			97
+		},
+		alias = {
+			"hero_obdul_hero_0218"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0075"] = {
+	hero_obdul_hero_0219 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
+			83,
 			64,
-            45,
-            35,
-            44
+			184,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2009,
-			56,
-			71,
-			50
+			1756,
+			498,
+			199,
+			104
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0220"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0076"] = {
+	hero_obdul_hero_0221 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			65,
-            45,
-            55,
-            44
+			150,
+			96,
+			102,
+			113
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2088,
-			56,
-			50,
-			50
+			1073,
+			363,
+			214,
+			112
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0222"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0077"] = {
+	hero_obdul_hero_0223 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			65,
-            45,
-            55,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2088,
-			56,
-			50,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0078"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			63,
-            43,
-            62,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			519,
 			115,
-			45,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0079"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			63,
-            43,
-            62,
-            44
+			78,
+			199,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			519,
-			115,
-			45,
-			52
+			1710,
+			1101,
+			152,
+			92
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0224",
+			"hero_obdul_hero_0229",
+			"hero_obdul_hero_0230"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0080"] = {
+	hero_obdul_hero_0225 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			48,
-            43,
-            63,
-            44
+			140,
+			96,
+			102,
+			113
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			301,
-			115,
+			1536,
+			230,
+			224,
+			112
+		},
+		alias = {
+			"hero_obdul_hero_0226"
+		}
+	},
+	hero_obdul_hero_0227 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			201,
 			59,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0081"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            43,
-            63,
-            44
+			129,
+			130
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			301,
-			115,
-			59,
-			52
+			5,
+			1676,
+			136,
+			132
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0228"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0082"] = {
+	hero_obdul_hero_0231 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			48,
-            43,
-            63,
-            44
+			201,
+			88,
+			105,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			572,
-			115,
-			59,
-			52
+			1084,
+			776,
+			160,
+			82
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0232"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0083"] = {
+	hero_obdul_hero_0233 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			48,
-            43,
-            63,
-            44
+			201,
+			68,
+			101,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			572,
-			115,
-			59,
-			52
+			1098,
+			992,
+			164,
+			102
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0234"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0084"] = {
+	hero_obdul_hero_0235 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			44,
-            31,
-            74,
-            44
+			201,
+			75,
+			109,
+			151
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1824,
-			180,
-			52,
-			64
+			1388,
+			1101,
+			156,
+			95
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0236"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0085"] = {
+	hero_obdul_hero_0239 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			44,
-            31,
-            74,
-            44
+			201,
+			107,
+			132,
+			146
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1824,
-			180,
-			52,
-			64
+			745,
+			1973,
+			133,
+			68
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0240"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0086"] = {
+	hero_obdul_hero_0241 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			34,
-            21,
-            74,
-            44
+			176,
+			79,
+			164,
+			152
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2476,
-			253,
-			62,
-			74
+			1778,
+			1588,
+			126,
+			90
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0242"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0087"] = {
+	hero_obdul_hero_0253 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			34,
-            21,
-            74,
-            44
+			167,
+			72,
+			174,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2476,
-			253,
-			62,
-			74
+			1791,
+			1416,
+			125,
+			96
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0254"
+		}
 	},
-	["hero_obdul_skill_5_soldier_0088"] = {
+	hero_obdul_hero_0265 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			170,
-			139
+			466,
+			321
 		},
 		trim = {
-			31,
-            11,
-            79,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1935,
-			335,
-			60,
-			84
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0089"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			31,
-            11,
-            79,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1935,
-			335,
-			60,
-			84
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0090"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			24,
-            16,
-            86,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			884,
-			335,
-			60,
-			79
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0091"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			24,
-            16,
-            86,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			884,
-			335,
-			60,
-			79
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0092"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			16,
-            20,
-            94,
-            43
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			319,
-			335,
-			60,
-			76
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0093"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			16,
-            20,
-            94,
-            43
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			319,
-			335,
-			60,
-			76
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0094"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			13,
-            55,
-            97,
-            38
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			424,
-			56,
-			60,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0095"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			13,
-            55,
-            97,
-            38
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			424,
-			56,
-			60,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0096"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			11,
-            61,
-            99,
-            38
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1507,
-			4,
-			60,
-			40
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0097"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			11,
-            61,
-            99,
-            38
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1507,
-			4,
-			60,
-			40
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0098"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			11,
-            55,
-            99,
-            37
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1065,
-			56,
-			60,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0099"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			11,
-            55,
-            99,
-            37
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1065,
-			56,
-			60,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0100"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			11,
-            57,
-            99,
-            38
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2415,
-			4,
-			60,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0101"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			11,
-            57,
-            99,
-            38
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2415,
-			4,
-			60,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0102"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            51,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2483,
-			4,
-			59,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0103"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            51,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2483,
-			4,
-			59,
-			44
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0104"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            37,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			620,
-			180,
-			59,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0105"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            37,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			620,
-			180,
-			59,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0106"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            43,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			115,
-			59,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_0107"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			139
-		},
-		trim = {
-			48,
-            43,
-            63,
-            44
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			301,
-			115,
-			59,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			19,
-            65,
-            22,
-            65
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			39,
-			4,
-			49,
-			17
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			19,
-            19,
-            22,
-            65
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1619,
-			180,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			19,
-            19,
-            21,
-            64
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1884,
-			180,
-			50,
-			64
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			19,
-            19,
-            21,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2003,
-			180,
-			50,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			18,
-            19,
-            21,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2061,
-			180,
-			51,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			18,
-            19,
-            21,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2120,
-			180,
-			51,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			18,
-            19,
-            20,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2179,
-			180,
-			52,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			18,
-            19,
-            20,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2239,
-			180,
-			52,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			17,
-            19,
-            20,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2299,
-			180,
-			53,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			17,
-            19,
-            19,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2360,
-			180,
+			184,
 			54,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_skill_5_soldier_spawn_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			90,
-			147
-		},
-		trim = {
-			17,
-            19,
-            20,
-            63
+			197,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2422,
-			180,
-			53,
-			65
+			1957,
+			230,
+			85,
+			114
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0266"
+		}
 	},
-	["hero_obdul_skill_5_soldier_spawn_0012"] = {
+	hero_obdul_hero_0269 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			90,
-			147
+			466,
+			321
 		},
 		trim = {
-			17,
-            20,
-            20,
-            63
+			160,
+			56,
+			208,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
 			1942,
-			180,
-			53,
-			64
+			5,
+			98,
+			112
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0270"
+		}
 	},
-	["hero_obdul_skill_5_soldier_spawn_0013"] = {
+	hero_obdul_hero_0271 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			90,
-			147
+			466,
+			321
 		},
 		trim = {
-			17,
-            33,
-            19,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2469,
-			56,
-			54,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			89,
-            52,
-            89,
-            61
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			248,
-			253,
-			117,
-			68
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			66,
-            38,
-            63,
-            48
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1897,
-			531,
-			166,
-			95
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			62,
-            36,
-            60,
-            45
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2237,
-			949,
-			173,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			59,
-            34,
-            55,
-            43
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			1280,
 			181,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			55,
-            31,
-            50,
-            41
+			70,
+			82,
+			149
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2280,
-			1394,
-			190,
-			109
+			1550,
+			498,
+			203,
+			102
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0272"
+		}
 	},
-	["hero_obdul_ultimate_0006"] = {
+	hero_obdul_hero_0273 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			295,
-			181
+			466,
+			321
 		},
 		trim = {
+			164,
 			51,
-            29,
-            46,
-            39
+			81,
+			152
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1888,
-			1511,
-			198,
-			113
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			47,
-            27,
-            42,
-            36
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1719,
-			1634,
-			206,
+			1312,
+			230,
+			221,
 			118
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0274"
+		}
 	},
-	["hero_obdul_ultimate_0008"] = {
+	hero_obdul_hero_0275 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			295,
-			181
+			466,
+			321
 		},
 		trim = {
-			44,
-            25,
-            37,
-            34
+			163,
+			56,
+			82,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			1891,
-			214,
-			122
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			40,
-            22,
-            34,
-            32
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			404,
-			2024,
+			407,
+			363,
 			221,
-			127
+			112
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0276"
+		}
 	},
-	["hero_obdul_ultimate_0010"] = {
+	hero_obdul_hero_0277 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			295,
-			181
+			466,
+			321
 		},
 		trim = {
-			36,
-            20,
-            29,
-            30
+			181,
+			61,
+			82,
+			145
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1144,
-			2024,
+			379,
+			498,
+			203,
+			115
+		},
+		alias = {
+			"hero_obdul_hero_0278"
+		}
+	},
+	hero_obdul_hero_0279 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			47,
+			84,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			871,
 			230,
-			131
+			220,
+			126
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0280"
+		}
 	},
-	["hero_obdul_ultimate_0011"] = {
+	hero_obdul_hero_0281 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			295,
-			181
+			466,
+			321
 		},
 		trim = {
+			217,
+			60,
+			87,
+			155
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			992,
+			162,
+			106
+		},
+		alias = {
+			"hero_obdul_hero_0282"
+		}
+	},
+	hero_obdul_hero_0283 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			252,
 			34,
-            18,
-            25,
-            29
+			23,
+			157
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			638,
-			2165,
-			236,
-			134
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			30,
-            17,
-            20,
-            27
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1777,
-			2165,
-			245,
-			137
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			27,
-            15,
-            18,
-            25
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			632,
-			2312,
-			250,
-			141
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			0,
-            0,
-            292,
-            178
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			0,
-            0,
-            292,
-            178
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			0,
-            0,
-            292,
-            178
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			295,
-			181
-		},
-		trim = {
-			0,
-            0,
-            292,
-            178
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			61,
-            11,
-            60,
-            133
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1923,
-			2312,
-			123,
-			154
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			61,
-            11,
-            60,
-            133
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2054,
-			2312,
-			123,
-			154
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			12,
-            67,
-            58,
-            133
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			575,
-			949,
-			174,
-			98
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			10,
-            58,
-            58,
-            133
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			296,
-			1394,
-			176,
-			107
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			60,
-            79,
-            56,
-            126
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			653,
-			531,
-			128,
-			93
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			60,
-            85,
-            56,
-            119
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1626,
-			531,
-			128,
-			94
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			60,
-            90,
-            56,
-            116
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2024,
-			431,
-			128,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			60,
-            90,
-            56,
-            116
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2160,
-			431,
-			128,
-			92
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			59,
-            82,
-            53,
-            125
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			972,
-			431,
-			132,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			59,
-            82,
-            53,
-            125
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			972,
-			431,
-			132,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			59,
-            89,
-            53,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1112,
-			431,
-			132,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			59,
-            89,
-            53,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1252,
-			431,
-			132,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			75,
-            89,
-            80,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1392,
-			431,
-			89,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			75,
-            89,
-            80,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1392,
-			431,
-			89,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			75,
-            89,
-            80,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1392,
-			431,
-			89,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			75,
-            89,
-            80,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1392,
-			431,
-			89,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_ball_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			244,
-			298
-		},
-		trim = {
-			75,
-            89,
-            80,
-            118
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1392,
-			431,
-			89,
-			91
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
+			1763,
+			230,
+			191,
 			130
 		},
+		alias = {
+			"hero_obdul_hero_0284"
+		}
+	},
+	hero_obdul_hero_0285 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
 		trim = {
-			19,
-            27,
-            11,
-            12
+			245,
+			69,
+			41,
+			152
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1489,
-			431,
-			146,
+			1470,
+			878,
+			180,
+			100
+		},
+		alias = {
+			"hero_obdul_hero_0286"
+		}
+	},
+	hero_obdul_hero_0287 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			244,
+			66,
+			37,
+			155
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1282,
+			878,
+			185,
+			100
+		},
+		alias = {
+			"hero_obdul_hero_0288"
+		}
+	},
+	hero_obdul_hero_0289 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			247,
+			32,
+			37,
+			162
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1854,
+			363,
+			182,
+			127
+		},
+		alias = {
+			"hero_obdul_hero_0290"
+		}
+	},
+	hero_obdul_hero_0291 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			248,
+			34,
+			32,
+			165
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			585,
+			498,
+			186,
+			122
+		},
+		alias = {
+			"hero_obdul_hero_0292"
+		}
+	},
+	hero_obdul_hero_0293 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			250,
+			61,
+			37,
+			147
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			749,
+			636,
+			179,
+			113
+		},
+		alias = {
+			"hero_obdul_hero_0294"
+		}
+	},
+	hero_obdul_hero_0295 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			252,
+			36,
+			14,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			498,
+			200,
+			135
+		},
+		alias = {
+			"hero_obdul_hero_0296"
+		}
+	},
+	hero_obdul_hero_0297 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			249,
+			60,
+			19,
+			157
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			366,
+			636,
+			198,
+			104
+		},
+		alias = {
+			"hero_obdul_hero_0298"
+		}
+	},
+	hero_obdul_hero_0299 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			199,
+			24,
+			80,
+			160
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			636,
+			187,
+			137
+		},
+		alias = {
+			"hero_obdul_hero_0300"
+		}
+	},
+	hero_obdul_hero_0301 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			208,
+			63,
+			95,
+			149
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1811,
+			163,
+			109
+		},
+		alias = {
+			"hero_obdul_hero_0302"
+		}
+	},
+	hero_obdul_hero_0303 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			208,
+			52,
+			94,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			1908,
+			164,
+			117
+		},
+		alias = {
+			"hero_obdul_hero_0304"
+		}
+	},
+	hero_obdul_hero_0305 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			201,
+			22,
+			95,
+			159
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			921,
+			170,
+			140
+		},
+		alias = {
+			"hero_obdul_hero_0306"
+		}
+	},
+	hero_obdul_hero_0307 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			199,
+			22,
+			95,
+			162
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			1064,
+			172,
+			137
+		},
+		alias = {
+			"hero_obdul_hero_0308"
+		}
+	},
+	hero_obdul_hero_0309 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			210,
+			51,
+			97,
+			166
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1265,
+			992,
+			159,
+			104
+		},
+		alias = {
+			"hero_obdul_hero_0310"
+		}
+	},
+	hero_obdul_hero_0311 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			180,
+			25,
+			100,
+			169
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1478,
+			363,
+			186,
+			127
+		},
+		alias = {
+			"hero_obdul_hero_0312"
+		}
+	},
+	hero_obdul_hero_0313 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			54,
+			98,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			567,
+			636,
+			179,
+			114
+		},
+		alias = {
+			"hero_obdul_hero_0314"
+		}
+	},
+	hero_obdul_hero_0315 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			157,
+			77,
+			119,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			552,
+			776,
+			190,
 			91
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0316"
+		}
 	},
-	["hero_obdul_ultimate_decal_enemy_0001"] = {
+	hero_obdul_hero_0317 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			119,
-			79
+			466,
+			321
 		},
 		trim = {
-			45,
-            30,
-            46,
-            31
+			160,
+			77,
+			121,
+			153
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			96,
-			4,
-			28,
-			18
+			910,
+			992,
+			185,
+			91
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_hero_0318"
+		}
 	},
-	["hero_obdul_ultimate_decal_enemy_0002"] = {
+	hero_obdul_hero_0319 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			119,
-			79
+			466,
+			321
 		},
 		trim = {
+			169,
+			76,
+			123,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1783,
+			992,
+			174,
+			92
+		},
+		alias = {
+			"hero_obdul_hero_0320"
+		}
+	},
+	hero_obdul_hero_0321 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			73,
+			122,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1427,
+			992,
+			173,
+			95
+		},
+		alias = {
+			"hero_obdul_hero_0322"
+		}
+	},
+	hero_obdul_hero_0329 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			67,
+			191,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1519,
+			1682,
+			111,
+			101
+		},
+		alias = {
+			"hero_obdul_hero_0330"
+		}
+	},
+	hero_obdul_hero_0333 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			72,
+			199,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1283,
+			1743,
+			103,
+			96
+		},
+		alias = {
+			"hero_obdul_hero_0334",
+			"hero_obdul_hero_0335",
+			"hero_obdul_hero_0336"
+		}
+	},
+	hero_obdul_hero_0337 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			186,
+			55,
+			150,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1252,
+			130,
+			114
+		},
+		alias = {
+			"hero_obdul_hero_0338",
+			"hero_obdul_hero_0345",
+			"hero_obdul_hero_0346",
+			"hero_obdul_hero_0353",
+			"hero_obdul_hero_0354"
+		}
+	},
+	hero_obdul_hero_0339 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			187,
+			49,
+			155,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1129,
+			124,
+			120
+		},
+		alias = {
+			"hero_obdul_hero_0340",
+			"hero_obdul_hero_0347",
+			"hero_obdul_hero_0348",
+			"hero_obdul_hero_0355",
+			"hero_obdul_hero_0356"
+		}
+	},
+	hero_obdul_hero_0341 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			186,
+			55,
+			151,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1489,
+			129,
+			114
+		},
+		alias = {
+			"hero_obdul_hero_0342",
+			"hero_obdul_hero_0349",
+			"hero_obdul_hero_0350"
+		}
+	},
+	hero_obdul_hero_0343 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			187,
+			49,
+			152,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			1850,
+			127,
+			120
+		},
+		alias = {
+			"hero_obdul_hero_0344",
+			"hero_obdul_hero_0351",
+			"hero_obdul_hero_0352"
+		}
+	},
+	hero_obdul_hero_0357 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			174,
+			68,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1394,
+			1787,
+			115,
+			100
+		},
+		alias = {
+			"hero_obdul_hero_0358"
+		}
+	},
+	hero_obdul_hero_0366 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			70,
+			169,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			1315,
+			133,
+			100
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0367 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			167,
+			43,
+			194,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			1593,
+			105,
+			127
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0368 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			167,
+			43,
+			194,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			1723,
+			105,
+			127
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0369 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1661,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0370 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1783,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0371 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1905,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0372 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1162,
+			1427,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0373 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1162,
+			1549,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0374 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1162,
+			1671,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0375 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1162,
+			1793,
+			108,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0376 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			149
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1538,
+			108,
+			120
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0377 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			192,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			1418,
+			109,
+			121
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0378 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1162,
+			1915,
+			108,
+			116
+		},
+		alias = {
+			"hero_obdul_hero_0379",
+			"hero_obdul_hero_0380"
+		}
+	},
+	hero_obdul_hero_0381 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			167,
+			43,
+			194,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			1542,
+			105,
+			125
+		},
+		alias = {
+			"hero_obdul_hero_0382"
+		}
+	},
+	hero_obdul_hero_0389 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			136,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			931,
+			732,
+			85,
+			40
+		},
+		alias = {
+			"hero_obdul_hero_0390",
+			"hero_obdul_hero_0473",
+			"hero_obdul_hero_0474",
+			"hero_obdul_hero_0475"
+		}
+	},
+	hero_obdul_hero_0391 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			136,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1019,
+			732,
+			85,
+			40
+		},
+		alias = {
+			"hero_obdul_hero_0392",
+			"hero_obdul_hero_0471",
+			"hero_obdul_hero_0472"
+		}
+	},
+	hero_obdul_hero_0395 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			78,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1959,
+			1315,
+			85,
+			98
+		},
+		alias = {
+			"hero_obdul_hero_0396"
+		}
+	},
+	hero_obdul_hero_0397 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			69,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			264,
+			1460,
+			85,
+			107
+		},
+		alias = {
+			"hero_obdul_hero_0398"
+		}
+	},
+	hero_obdul_hero_0405 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			161,
+			13,
+			182,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			1747,
+			123,
+			158
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0406 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			160,
+			13,
+			182,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			1586,
+			124,
+			158
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0407 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			153,
+			39,
+			180,
+			143
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1122,
+			133,
+			139
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0408 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			153,
+			39,
+			180,
+			143
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1264,
+			133,
+			139
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0409 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			160,
+			53,
+			185,
+			149
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1843,
+			121,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0410 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			160,
+			53,
+			185,
+			149
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			1125,
+			121,
+			119
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0411 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			163,
+			50,
+			192,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1631,
+			111,
+			123
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0412 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			163,
+			50,
+			193,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1417,
+			110,
+			118
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0413 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			165,
+			52,
+			193,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1283,
+			1416,
+			108,
+			116
+		},
+		alias = {
+			"hero_obdul_hero_0414",
+			"hero_obdul_hero_0415",
+			"hero_obdul_hero_0416"
+		}
+	},
+	hero_obdul_hero_0427 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			59,
+			163,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			1476,
+			139,
+			114
+		},
+		alias = {
+			"hero_obdul_hero_0428"
+		}
+	},
+	hero_obdul_hero_0429 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			168,
+			44,
+			165,
+			147
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			992,
+			133,
+			130
+		},
+		alias = {
+			"hero_obdul_hero_0430"
+		}
+	},
+	hero_obdul_hero_0431 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			27,
+			163,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			1204,
+			139,
+			146
+		},
+		alias = {
+			"hero_obdul_hero_0432"
+		}
+	},
+	hero_obdul_hero_0433 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			170,
+			39,
+			165,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			992,
+			131,
+			134
+		},
+		alias = {
+			"hero_obdul_hero_0434"
+		}
+	},
+	hero_obdul_hero_0435 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			176,
 			37,
-            25,
-            37,
-            26
+			175,
+			148
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			389,
-			4,
+			745,
+			1711,
+			115,
+			136
+		},
+		alias = {
+			"hero_obdul_hero_0436"
+		}
+	},
+	hero_obdul_hero_0437 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			163,
+			40,
+			165,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1406,
+			138,
+			133
+		},
+		alias = {
+			"hero_obdul_hero_0438"
+		}
+	},
+	hero_obdul_hero_0439 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			42,
+			163,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1901,
+			636,
+			141,
+			131
+		},
+		alias = {
+			"hero_obdul_hero_0440"
+		}
+	},
+	hero_obdul_hero_0441 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			35,
+			164,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			480,
+			140,
+			138
+		},
+		alias = {
+			"hero_obdul_hero_0442"
+		}
+	},
+	hero_obdul_hero_0443 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			35,
+			164,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			621,
+			140,
+			138
+		},
+		alias = {
+			"hero_obdul_hero_0444"
+		}
+	},
+	hero_obdul_hero_0445 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			42,
+			164,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1542,
+			140,
+			131
+		},
+		alias = {
+			"hero_obdul_hero_0446"
+		}
+	},
+	hero_obdul_hero_0447 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			161,
+			80,
+			162,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			776,
+			143,
+			93
+		},
+		alias = {
+			"hero_obdul_hero_0448"
+		}
+	},
+	hero_obdul_hero_0449 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			57,
+			164,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			1357,
+			140,
+			116
+		},
+		alias = {
+			"hero_obdul_hero_0450"
+		}
+	},
+	hero_obdul_hero_0451 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			54,
+			163,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			1101,
+			141,
+			119
+		},
+		alias = {
+			"hero_obdul_hero_0452"
+		}
+	},
+	hero_obdul_hero_0453 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			158,
+			57,
+			140,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1730,
+			636,
+			168,
+			116
+		},
+		alias = {
+			"hero_obdul_hero_0454"
+		}
+	},
+	hero_obdul_hero_0455 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			168,
+			93,
+			169,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1916,
+			1966,
+			129,
+			77
+		},
+		alias = {
+			"hero_obdul_hero_0456"
+		}
+	},
+	hero_obdul_hero_0459 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			182,
+			68,
+			179,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1519,
+			1786,
+			105,
+			103
+		},
+		alias = {
+			"hero_obdul_hero_0460"
+		}
+	},
+	hero_obdul_hero_0461 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			176,
+			56,
+			172,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1867,
+			118,
+			115
+		},
+		alias = {
+			"hero_obdul_hero_0462"
+		}
+	},
+	hero_obdul_hero_0463 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			169,
+			66,
+			170,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1757,
+			127,
+			107
+		},
+		alias = {
+			"hero_obdul_hero_0464"
+		}
+	},
+	hero_obdul_skill_3_fx_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			157,
+			104,
+			157,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1711,
+			736,
+			13,
+			14
+		},
+		alias = {}
+	},
+	hero_obdul_skill_3_fx_0002 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			0,
+			0,
+			327,
+			222
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			327,
+			222
+		},
+		alias = {
+			"hero_obdul_skill_3_fx_0003",
+			"hero_obdul_skill_3_fx_0004",
+			"hero_obdul_skill_3_fx_0005",
+			"hero_obdul_skill_3_fx_0006",
+			"hero_obdul_skill_3_fx_0007",
+			"hero_obdul_skill_3_fx_0008",
+			"hero_obdul_skill_3_fx_0009",
+			"hero_obdul_skill_3_fx_0010",
+			"hero_obdul_skill_3_fx_0011",
+			"hero_obdul_skill_3_fx_0012",
+			"hero_obdul_skill_3_fx_0013",
+			"hero_obdul_skill_3_fx_0014",
+			"hero_obdul_skill_3_fx_0027",
+			"hero_obdul_skill_3_fx_0028",
+			"hero_obdul_skill_3_fx_0029",
+			"hero_obdul_skill_3_fx_0030",
+			"hero_obdul_skill_3_fx_0031",
+			"hero_obdul_skill_3_fx_0032",
+			"hero_obdul_skill_3_fx_0033",
+			"hero_obdul_skill_3_fx_0034",
+			"hero_obdul_skill_3_fx_0035",
+			"hero_obdul_skill_3_fx_0036",
+			"hero_obdul_skill_3_fx_0037",
+			"hero_obdul_skill_3_fx_0038",
+			"hero_obdul_skill_3_fx_0039",
+			"hero_obdul_skill_3_fx_0040",
+			"hero_obdul_skill_3_fx_0041",
+			"hero_obdul_skill_3_fx_0042",
+			"hero_obdul_skill_3_fx_0043",
+			"hero_obdul_skill_3_fx_0044"
+		}
+	},
+	hero_obdul_skill_3_fx_0015 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			71,
 			45,
+			28,
+			71
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			842,
+			363,
+			228,
+			106
+		},
+		alias = {
+			"hero_obdul_skill_3_fx_0016"
+		}
+	},
+	hero_obdul_skill_3_fx_0017 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			58,
+			20,
+			39,
+			72
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			411,
+			230,
+			230,
+			130
+		},
+		alias = {
+			"hero_obdul_skill_3_fx_0018",
+			"hero_obdul_skill_3_fx_0023",
+			"hero_obdul_skill_3_fx_0024"
+		}
+	},
+	hero_obdul_skill_3_fx_0019 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			64,
+			22,
+			31,
+			70
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1707,
+			5,
+			232,
+			130
+		},
+		alias = {
+			"hero_obdul_skill_3_fx_0020"
+		}
+	},
+	hero_obdul_skill_3_fx_0021 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			71,
+			19,
+			28,
+			71
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			363,
+			228,
+			132
+		},
+		alias = {
+			"hero_obdul_skill_3_fx_0022"
+		}
+	},
+	hero_obdul_skill_3_fx_0025 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			327,
+			222
+		},
+		trim = {
+			86,
+			48,
+			27,
+			81
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			931,
+			636,
+			214,
+			93
+		},
+		alias = {
+			"hero_obdul_skill_3_fx_0026"
+		}
+	},
+	hero_obdul_skill_3_hit_0003 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			105,
+			102
+		},
+		trim = {
+			32,
+			21,
+			26,
 			28
 		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			28,
-            21,
-            29,
-            21
-		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			947,
-			4,
-			62,
+			1997,
+			1906,
+			47,
+			53
+		},
+		alias = {
+			"hero_obdul_skill_3_hit_0004"
+		}
+	},
+	hero_obdul_skill_3_hit_0007 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			105,
+			102
+		},
+		trim = {
+			0,
+			0,
+			105,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1283,
+			1535,
+			105,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_skill_4_tower_hit_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			80,
+			82
+		},
+		trim = {
+			25,
+			21,
+			25,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			318,
+			1283,
+			30,
+			34
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_hit_0002"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			33,
+			35,
+			52,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1960,
+			992,
+			83,
+			106
+		},
+		alias = {}
+	},
+	hero_obdul_skill_4_tower_layer1_0090 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			14,
+			43,
+			19,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1300,
+			1211,
+			135,
+			100
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0091"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0092 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			0,
+			0,
+			168,
+			247
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			230,
+			168,
+			247
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0093",
+			"hero_obdul_skill_4_tower_layer1_0094",
+			"hero_obdul_skill_4_tower_layer1_0095",
+			"hero_obdul_skill_4_tower_layer1_0096",
+			"hero_obdul_skill_4_tower_layer1_0097",
+			"hero_obdul_skill_4_tower_layer1_0098",
+			"hero_obdul_skill_4_tower_layer1_0099",
+			"hero_obdul_skill_4_tower_layer1_0100",
+			"hero_obdul_skill_4_tower_layer1_0101",
+			"hero_obdul_skill_4_tower_layer2_0001",
+			"hero_obdul_skill_4_tower_layer2_0002",
+			"hero_obdul_skill_4_tower_layer2_0003",
+			"hero_obdul_skill_4_tower_layer2_0004",
+			"hero_obdul_skill_4_tower_layer2_0005",
+			"hero_obdul_skill_4_tower_layer2_0006",
+			"hero_obdul_skill_4_tower_layer2_0007",
+			"hero_obdul_skill_4_tower_layer2_0008",
+			"hero_obdul_skill_4_tower_layer2_0009",
+			"hero_obdul_skill_4_tower_layer2_0010",
+			"hero_obdul_skill_4_tower_layer2_0011",
+			"hero_obdul_skill_4_tower_layer2_0012",
+			"hero_obdul_skill_4_tower_layer2_0013",
+			"hero_obdul_skill_4_tower_layer2_0014",
+			"hero_obdul_skill_4_tower_layer2_0015",
+			"hero_obdul_skill_4_tower_layer2_0016",
+			"hero_obdul_skill_4_tower_layer2_0017",
+			"hero_obdul_skill_4_tower_layer2_0018",
+			"hero_obdul_skill_4_tower_layer2_0019",
+			"hero_obdul_skill_4_tower_layer2_0020",
+			"hero_obdul_skill_4_tower_layer2_0021",
+			"hero_obdul_skill_4_tower_layer2_0022",
+			"hero_obdul_skill_4_tower_layer2_0023",
+			"hero_obdul_skill_4_tower_layer2_0024",
+			"hero_obdul_skill_4_tower_layer2_0025",
+			"hero_obdul_skill_4_tower_layer2_0026",
+			"hero_obdul_skill_4_tower_layer2_0027",
+			"hero_obdul_skill_4_tower_layer2_0028",
+			"hero_obdul_skill_4_tower_layer2_0029",
+			"hero_obdul_skill_4_tower_layer2_0030",
+			"hero_obdul_skill_4_tower_layer2_0031",
+			"hero_obdul_skill_4_tower_layer2_0032",
+			"hero_obdul_skill_4_tower_layer2_0033",
+			"hero_obdul_skill_4_tower_layer2_0034",
+			"hero_obdul_skill_4_tower_layer2_0035",
+			"hero_obdul_skill_4_tower_layer2_0036",
+			"hero_obdul_skill_4_tower_layer2_0037",
+			"hero_obdul_skill_4_tower_layer2_0038",
+			"hero_obdul_skill_4_tower_layer2_0039",
+			"hero_obdul_skill_4_tower_layer2_0040",
+			"hero_obdul_skill_4_tower_layer2_0041",
+			"hero_obdul_skill_4_tower_layer2_0042",
+			"hero_obdul_skill_4_tower_layer2_0043",
+			"hero_obdul_skill_4_tower_layer2_0044",
+			"hero_obdul_skill_4_tower_layer2_0045",
+			"hero_obdul_skill_4_tower_layer2_0052",
+			"hero_obdul_skill_4_tower_layer2_0053",
+			"hero_obdul_skill_4_tower_layer2_0098",
+			"hero_obdul_skill_4_tower_layer2_0099",
+			"hero_obdul_skill_4_tower_layer2_0100",
+			"hero_obdul_skill_4_tower_layer2_0101",
+			"hero_obdul_skill_4_tower_layer3_0001",
+			"hero_obdul_skill_4_tower_layer3_0002",
+			"hero_obdul_skill_4_tower_layer3_0003",
+			"hero_obdul_skill_4_tower_layer3_0004",
+			"hero_obdul_skill_4_tower_layer3_0005",
+			"hero_obdul_skill_4_tower_layer3_0006",
+			"hero_obdul_skill_4_tower_layer3_0007",
+			"hero_obdul_skill_4_tower_layer3_0008",
+			"hero_obdul_skill_4_tower_layer3_0009",
+			"hero_obdul_skill_4_tower_layer3_0010",
+			"hero_obdul_skill_4_tower_layer3_0011",
+			"hero_obdul_skill_4_tower_layer3_0012",
+			"hero_obdul_skill_4_tower_layer3_0013",
+			"hero_obdul_skill_4_tower_layer3_0014",
+			"hero_obdul_skill_4_tower_layer3_0015",
+			"hero_obdul_skill_4_tower_layer3_0016",
+			"hero_obdul_skill_4_tower_layer3_0017",
+			"hero_obdul_skill_4_tower_layer3_0018",
+			"hero_obdul_skill_4_tower_layer3_0019",
+			"hero_obdul_skill_4_tower_layer3_0020",
+			"hero_obdul_skill_4_tower_layer3_0021",
+			"hero_obdul_skill_4_tower_layer3_0022",
+			"hero_obdul_skill_4_tower_layer3_0023",
+			"hero_obdul_skill_4_tower_layer3_0024",
+			"hero_obdul_skill_4_tower_layer3_0025",
+			"hero_obdul_skill_4_tower_layer3_0026",
+			"hero_obdul_skill_4_tower_layer3_0027",
+			"hero_obdul_skill_4_tower_layer3_0028",
+			"hero_obdul_skill_4_tower_layer3_0029",
+			"hero_obdul_skill_4_tower_layer3_0030",
+			"hero_obdul_skill_4_tower_layer3_0031",
+			"hero_obdul_skill_4_tower_layer3_0032",
+			"hero_obdul_skill_4_tower_layer3_0033",
+			"hero_obdul_skill_4_tower_layer3_0034",
+			"hero_obdul_skill_4_tower_layer3_0035",
+			"hero_obdul_skill_4_tower_layer3_0036",
+			"hero_obdul_skill_4_tower_layer3_0037",
+			"hero_obdul_skill_4_tower_layer3_0038",
+			"hero_obdul_skill_4_tower_layer3_0039",
+			"hero_obdul_skill_4_tower_layer3_0040",
+			"hero_obdul_skill_4_tower_layer3_0041",
+			"hero_obdul_skill_4_tower_layer3_0042",
+			"hero_obdul_skill_4_tower_layer3_0043",
+			"hero_obdul_skill_4_tower_layer3_0044",
+			"hero_obdul_skill_4_tower_layer3_0045",
+			"hero_obdul_skill_4_tower_layer3_0046",
+			"hero_obdul_skill_4_tower_layer3_0047",
+			"hero_obdul_skill_4_tower_layer3_0048",
+			"hero_obdul_skill_4_tower_layer3_0049",
+			"hero_obdul_skill_4_tower_layer3_0050",
+			"hero_obdul_skill_4_tower_layer3_0051",
+			"hero_obdul_skill_4_tower_layer3_0052",
+			"hero_obdul_skill_4_tower_layer3_0053",
+			"hero_obdul_skill_4_tower_layer3_0054",
+			"hero_obdul_skill_4_tower_layer3_0055",
+			"hero_obdul_skill_4_tower_layer3_0056",
+			"hero_obdul_skill_4_tower_layer3_0057",
+			"hero_obdul_skill_4_tower_layer3_0058",
+			"hero_obdul_skill_4_tower_layer3_0059",
+			"hero_obdul_skill_4_tower_layer3_0060",
+			"hero_obdul_skill_4_tower_layer3_0061",
+			"hero_obdul_skill_4_tower_layer3_0062",
+			"hero_obdul_skill_4_tower_layer3_0063",
+			"hero_obdul_skill_4_tower_layer3_0064",
+			"hero_obdul_skill_4_tower_layer3_0065",
+			"hero_obdul_skill_4_tower_layer3_0066",
+			"hero_obdul_skill_4_tower_layer3_0067",
+			"hero_obdul_skill_4_tower_layer3_0068",
+			"hero_obdul_skill_4_tower_layer3_0069",
+			"hero_obdul_skill_4_tower_layer3_0070",
+			"hero_obdul_skill_4_tower_layer3_0071",
+			"hero_obdul_skill_4_tower_layer3_0072",
+			"hero_obdul_skill_4_tower_layer3_0073",
+			"hero_obdul_skill_4_tower_layer3_0074",
+			"hero_obdul_skill_4_tower_layer3_0075",
+			"hero_obdul_skill_4_tower_layer3_0101"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0048 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			60,
+			40,
+			59,
+			178
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			303,
+			1715,
+			49,
+			29
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0049"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0054 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			61,
+			35,
+			61,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			394,
+			190,
+			46,
 			37
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0055",
+			"hero_obdul_skill_4_tower_layer2_0072",
+			"hero_obdul_skill_4_tower_layer2_0073",
+			"hero_obdul_skill_4_tower_layer2_0074",
+			"hero_obdul_skill_4_tower_layer2_0075"
+		}
 	},
-	["hero_obdul_ultimate_decal_enemy_0004"] = {
+	hero_obdul_skill_4_tower_layer2_0062 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			119,
-			79
+			168,
+			247
 		},
 		trim = {
-			27,
-            20,
-            27,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1289,
-			4,
-			65,
-			39
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			26,
-            19,
-            26,
-            19
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1623,
-			4,
-			67,
-			41
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			24,
-            19,
-            25,
-            18
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1806,
-			4,
-			70,
-			42
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			23,
-            18,
-            24,
-            18
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2110,
-			4,
-			72,
-			43
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			21,
-            17,
-            22,
-            17
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			66,
-			56,
 			76,
-			45
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			20,
-            16,
-            21,
-            17
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			492,
+			42,
 			56,
-			78,
-			46
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			19,
-            16,
-            19,
-            16
+			175
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1133,
-			56,
-			81,
-			47
+			447,
+			743,
+			36,
+			30
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0063"
+		}
 	},
-	["hero_obdul_ultimate_decal_enemy_0011"] = {
+	hero_obdul_skill_4_tower_layer2_0064 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			119,
-			79
+			168,
+			247
 		},
 		trim = {
-			18,
-            14,
-            17,
-            16
+			76,
+			39,
+			54,
+			176
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1586,
-			56,
-			84,
-			49
+			1309,
+			738,
+			38,
+			32
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0065"
+		}
 	},
-	["hero_obdul_ultimate_decal_enemy_0012"] = {
+	hero_obdul_skill_4_tower_layer2_0068 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			119,
-			79
+			168,
+			247
 		},
 		trim = {
-			17,
-            14,
-            17,
-            14
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			115,
-			85,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			15,
-            15,
-            15,
-            15
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1678,
-			56,
-			89,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			16,
-            14,
-            15,
-            14
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			97,
-			115,
-			88,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			0,
-            0,
-            116,
-            76
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_decal_enemy_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			119,
-			79
-		},
-		trim = {
-			0,
-            0,
-            116,
-            76
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			50,
-            41,
-            52,
-            42
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1153,
-			180,
 			74,
-			59
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			44,
-            37,
-            46,
-            38
+			36,
+			61,
+			176
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			253,
-			86,
-			67
+			318,
+			1245,
+			33,
+			35
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0069"
+		}
 	},
-	["hero_obdul_ultimate_dust_cloud_0003"] = {
+	hero_obdul_skill_4_tower_layer2_0070 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			176,
-			142
+			168,
+			247
+		},
+		trim = {
+			62,
+			35,
+			61,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			443,
+			190,
+			45,
+			37
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0071"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0076 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			65,
+			37,
+			58,
+			174
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			491,
+			190,
+			45,
+			36
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0077"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0080 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			65,
+			37,
+			58,
+			174
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			539,
+			190,
+			45,
+			36
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0081",
+			"hero_obdul_skill_4_tower_layer2_0082",
+			"hero_obdul_skill_4_tower_layer2_0083",
+			"hero_obdul_skill_4_tower_layer2_0084",
+			"hero_obdul_skill_4_tower_layer2_0085"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0092 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			59,
+			30,
+			72,
+			177
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1107,
+			732,
+			37,
+			40
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0093"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0076 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			76,
+			78,
+			55,
+			139
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			407,
+			743,
+			37,
+			30
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0077"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0078 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			75,
+			76,
+			55,
+			141
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			366,
+			743,
+			38,
+			30
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0079"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0080 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			76,
+			75,
+			56,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			302,
+			1877,
+			36,
+			28
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0081"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0082 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			76,
+			74,
+			56,
+			146
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			486,
+			743,
+			36,
+			27
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0083"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0084 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			76,
+			74,
+			57,
+			147
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			525,
+			743,
+			35,
+			26
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0085"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0099 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			168,
+			247
 		},
 		trim = {
 			39,
-            33,
-            41,
-            34
+			56,
+			34,
+			144
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			215,
-			335,
-			96,
-			75
+			1394,
+			1998,
+			95,
+			47
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0100"
+		}
 	},
-	["hero_obdul_ultimate_dust_cloud_0004"] = {
+	hero_obdul_skill_4_tower_projectile = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			176,
-			142
+			57,
+			48
 		},
 		trim = {
-			33,
-            29,
-            35,
-            30
+			15,
+			14,
+			15,
+			17
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1572,
-			335,
-			108,
-			83
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
+			2004,
+			972,
 			27,
-            24,
-            30,
-            26
+			17
 		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2296,
-			431,
-			119,
-			92
-		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_ultimate_dust_cloud_0006"] = {
+	hero_obdul_skill_5_soldier_0016 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			176,
-			142
+			170,
+			139
+		},
+		trim = {
+			52,
+			39,
+			66,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1243,
+			173,
+			52,
+			53
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0017"
+		}
+	},
+	hero_obdul_skill_5_soldier_0088 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			34,
+			14,
+			82,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1040,
+			147,
+			54,
+			78
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0089"
+		}
+	},
+	hero_obdul_skill_5_soldier_0096 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			14,
+			65,
+			102,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1654,
+			736,
+			54,
+			34
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0097"
+		}
+	},
+	hero_obdul_skill_5_soldier_spawn_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
 		},
 		trim = {
 			22,
-            21,
-            24,
-            22
+			66,
+			25,
+			67
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1079,
-			949,
-			130,
+			2000,
+			607,
+			44,
+			15
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0002 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			22,
+			20,
+			24,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1997,
+			1842,
+			45,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0007 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			21,
+			20,
+			24,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1997,
+			1778,
+			46,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0008 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			21,
+			20,
+			23,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			303,
+			1651,
+			47,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0009 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			20,
+			20,
+			23,
+			66
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			302,
+			1812,
+			48,
+			62
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0010 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			20,
+			20,
+			23,
+			66
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			303,
+			1586,
+			48,
+			62
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			19,
+			20,
+			22,
+			66
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			302,
+			1747,
+			50,
+			62
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0002 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			69,
+			42,
+			66,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1547,
+			1101,
+			160,
+			89
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0003 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			66,
+			39,
+			62,
+			49
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1047,
+			1101,
+			167,
+			94
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0004 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			62,
+			37,
+			58,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1826,
+			878,
+			175,
 			99
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_ultimate_dust_cloud_0007"] = {
+	hero_obdul_ultimate_0005 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			176,
-			142
+			295,
+			182
 		},
 		trim = {
-			22,
-            20,
-            24,
-            21
+			58,
+			35,
+			53,
+			44
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			713,
-			1057,
-			130,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			21,
-            20,
-            23,
-            21
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			851,
-			1057,
-			132,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			21,
-            20,
-            23,
-            21
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			991,
-			1057,
-			132,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			21,
-            20,
-            23,
-            21
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1131,
-			1057,
-			132,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			21,
-            19,
-            23,
-            21
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2284,
-			1057,
-			132,
-			102
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			20,
-            19,
-            22,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			343,
-			1168,
-			134,
+			529,
+			878,
+			184,
 			103
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_ultimate_dust_cloud_0013"] = {
+	hero_obdul_ultimate_0006 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			176,
-			142
+			295,
+			182
 		},
 		trim = {
-			20,
-            19,
-            22,
-            20
+			54,
+			32,
+			49,
+			42
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			485,
-			1168,
-			134,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			20,
-            19,
-            22,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			627,
-			1168,
-			134,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			20,
-            19,
-            22,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			769,
-			1168,
-			134,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            22,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			911,
-			1168,
-			135,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            21,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1054,
-			1168,
-			136,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0018"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            21,
-            19
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			193,
-			1280,
-			136,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0019"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            21,
-            19
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			337,
-			1280,
-			136,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            21,
-            19
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			481,
-			1280,
-			136,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0021"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            21,
-            19
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			625,
-			1280,
-			136,
-			104
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0022"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			19,
-            19,
-            21,
-            20
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1198,
-			1168,
-			136,
-			103
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0023"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			0,
-            0,
-            173,
-            139
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_cloud_0024"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			176,
-			142
-		},
-		trim = {
-			0,
-            0,
-            173,
-            139
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			33,
-            33,
-            25,
-            34
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1775,
-			56,
-			112,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			33,
-            33,
-            25,
-            34
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1775,
-			56,
-			112,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			26,
-            33,
-            20,
-            26
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			200,
-			180,
-			124,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			26,
-            33,
-            20,
-            26
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			200,
-			180,
-			124,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			12,
-            32,
-            16,
-            17
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			98,
-			253,
-			142,
-			67
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			12,
-            32,
-            16,
-            17
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			98,
-			253,
-			142,
-			67
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			16,
-            33,
-            12,
-            13
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			979,
-			253,
-			142,
-			70
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			16,
-            33,
-            12,
-            13
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			979,
-			253,
-			142,
-			70
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			15,
-            43,
-            15,
-            10
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1676,
-			180,
-			140,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			15,
-            43,
-            15,
-            10
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1676,
-			180,
-			140,
-			63
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			12,
-            44,
-            12,
-            14
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			687,
-			180,
-			146,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			12,
-            44,
-            12,
-            14
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			687,
-			180,
-			146,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_dust_over_ball_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			170,
-			116
-		},
-		trim = {
-			0,
-            0,
-            167,
-            113
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_projectile"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			400,
-			90
-		},
-		trim = {
-			11,
-            11,
-            197,
-            11
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			373,
-			253,
+			1355,
+			498,
 			192,
-			68
+			108
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_ultimate_rock_01_0001"] = {
+	hero_obdul_ultimate_0007 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			204,
-			164
+			295,
+			182
 		},
 		trim = {
-			10,
-            12,
-            153,
-            87
+			51,
+			30,
+			44,
+			40
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2483,
-			180,
-			41,
-			65
+			774,
+			498,
+			200,
+			112
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_ultimate_rock_01_0002"] = {
+	hero_obdul_ultimate_0008 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			204,
-			164
+			295,
+			182
 		},
 		trim = {
-			10,
-            12,
-            153,
-            87
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2483,
-			180,
-			41,
-			65
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            11,
-            153,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1372,
-			180,
-			41,
-			61
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            11,
-            153,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1372,
-			180,
-			41,
-			61
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            10,
-            153,
-            96
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			841,
-			180,
-			41,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            10,
-            153,
-            96
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			841,
-			180,
-			41,
-			58
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            10,
-            153,
-            98
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2126,
-			115,
-			41,
-			56
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            10,
-            153,
-            98
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2126,
-			115,
-			41,
-			56
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            13,
-            153,
-            94
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			332,
-			180,
-			41,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            13,
-            153,
-            94
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			332,
-			180,
-			41,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            23,
-            153,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1895,
-			56,
-			41,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            23,
-            153,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1895,
-			56,
-			41,
-			49
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            36,
-            157,
-            94
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			634,
-			4,
-			37,
-			34
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            36,
-            157,
-            94
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			634,
-			4,
-			37,
-			34
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            58,
-            158,
-            75
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			442,
-			4,
-			36,
-			31
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			10,
-            58,
-            158,
-            75
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			442,
-			4,
-			36,
-			31
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_01_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			204,
-			164
-		},
-		trim = {
-			0,
-            0,
-            201,
-            161
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            16,
-            13,
-            136
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1179,
-			4,
 			47,
-			38
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            16,
-            13,
-            136
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1179,
-			4,
-			47,
-			38
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            15,
-            13,
-            138
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1017,
-			4,
-			47,
+			28,
+			40,
 			37
 		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            15,
-            13,
-            138
-		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1017,
-			4,
-			47,
-			37
+			631,
+			363,
+			208,
+			117
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_ultimate_rock_02_0005"] = {
+	hero_obdul_ultimate_0009 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            14,
-            13,
-            138
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1234,
-			4,
-			47,
-			38
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            14,
-            13,
-            138
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1234,
-			4,
-			47,
-			38
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            11,
-            13,
-            137
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1884,
-			4,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            11,
-            13,
-            137
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1884,
-			4,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            14,
-            13,
-            134
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1939,
-			4,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            14,
-            13,
-            134
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1939,
-			4,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            19,
-            13,
-            132
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1362,
-			4,
-			47,
-			39
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            19,
-            13,
-            132
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1362,
-			4,
-			47,
-			39
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            30,
-            13,
-            123
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1072,
-			4,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			153,
-            30,
-            13,
-            123
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1072,
-			4,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			154,
-            51,
-            13,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1222,
-			56,
-			46,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			154,
-            51,
-            13,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1222,
-			56,
-			46,
-			47
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_02_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			213,
-			190
-		},
-		trim = {
-			0,
-            0,
-            210,
-            187
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			13,
-            26,
-            11,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1698,
-			4,
-			100,
-			41
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			13,
-            26,
-            11,
-            63
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1698,
-			4,
-			100,
-			41
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            14,
-            10,
-            66
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2146,
-			56,
-			100,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            14,
-            10,
-            66
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2146,
-			56,
-			100,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            11,
-            10,
-            67
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			639,
-			115,
-			100,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            11,
-            10,
-            67
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			639,
-			115,
-			100,
-			52
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            10,
-            10,
-            69
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			193,
-			115,
-			100,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            10,
-            10,
-            69
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			193,
-			115,
-			100,
-			51
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            11,
-            10,
-            64
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1855,
-			115,
-			100,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            11,
-            10,
-            64
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1855,
-			115,
-			100,
-			55
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            14,
-            10,
-            59
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			381,
-			180,
-			100,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            14,
-            10,
-            59
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			381,
-			180,
-			100,
-			57
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            28,
-            11,
-            40
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1421,
-			180,
-			99,
-			62
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            28,
-            11,
-            40
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1421,
-			180,
-			99,
-			62
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            53,
-            10,
-            27
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2254,
-			56,
-			100,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			14,
-            53,
-            10,
-            27
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			2254,
-			56,
-			100,
-			50
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_03_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			124,
-			130
-		},
-		trim = {
-			0,
-            0,
-            121,
-            127
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			57,
-            24,
-            10,
-            187
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			321,
-			4,
-			18,
-			19
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			57,
-            24,
-            10,
-            187
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			321,
-			4,
-			18,
-			19
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            18,
-            11,
-            194
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			132,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            18,
-            11,
-            194
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			132,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            12,
-            11,
-            200
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			159,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            12,
-            11,
-            200
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			159,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0007"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            11,
-            11,
-            201
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			186,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            11,
-            11,
-            201
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			186,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0009"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            10,
-            11,
-            202
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0010"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            10,
-            11,
-            202
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			213,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0011"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            16,
-            11,
-            196
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			240,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			55,
-            16,
-            11,
-            196
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			240,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0013"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			56,
-            31,
-            11,
-            181
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			267,
-			4,
-			18,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0014"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			56,
-            31,
-            11,
-            181
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			267,
-			4,
-			18,
-			18
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0015"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			56,
-            51,
-            13,
-            163
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			15,
-			4,
-			16,
-			16
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0016"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			56,
-            51,
-            13,
-            163
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			15,
-			4,
-			16,
-			16
-		},
-		alias = {},
-	},
-	["hero_obdul_ultimate_rock_04_0017"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			85,
-			230
-		},
-		trim = {
-			0,
-            0,
-            82,
-            227
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0001"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			55,
-            20,
-            50,
-            93
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1816,
-			843,
-			48,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0002"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			55,
-            20,
-            50,
-            93
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1872,
-			843,
-			48,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0003"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			55,
-            20,
-            50,
-            93
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1872,
-			843,
-			48,
-			97
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0004"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			53,
-            40,
-            45,
-            93
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			481,
-			335,
-			55,
-			77
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0005"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			53,
-            40,
-            45,
-            93
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			481,
-			335,
-			55,
-			77
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0006"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
+			295,
+			182
 		},
 		trim = {
 			44,
-            16,
-            39,
-            93
+			25,
+			36,
+			35
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1271,
-			1057,
-			70,
-			101
+			1094,
+			230,
+			215,
+			122
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0007"] = {
+	hero_obdul_ultimate_0010 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			153,
-			210
+			295,
+			182
 		},
 		trim = {
-			43,
-            16,
-            39,
-            93
+			40,
+			23,
+			31,
+			33
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1349,
-			1057,
+			644,
+			230,
+			224,
+			126
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			36,
+			21,
+			27,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			230,
+			232,
+			130
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0012 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			32,
+			18,
+			22,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1307,
+			5,
+			241,
+			135
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0013 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			29,
+			16,
+			18,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			849,
+			5,
+			248,
+			139
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0014 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			0,
+			0,
+			295,
+			182
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			335,
+			5,
+			295,
+			182
+		},
+		alias = {
+			"hero_obdul_ultimate_0015",
+			"hero_obdul_ultimate_0016",
+			"hero_obdul_ultimate_0017"
+		}
+	},
+	hero_obdul_ultimate_ball_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			65,
+			14,
+			62,
+			134
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			992,
+			117,
+			150
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0002 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			65,
+			14,
+			62,
+			134
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			1145,
+			117,
+			150
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0003 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			15,
 			71,
-			101
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0008"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			23,
-            10,
-            23,
-            94
+			61,
+			134
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			1394,
-			107,
-			106
+			1217,
+			1101,
+			168,
+			93
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0009"] = {
+	hero_obdul_ultimate_ball_0004 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			153,
-			210
+			244,
+			298
 		},
 		trim = {
-			23,
-            10,
-            23,
-            97
+			13,
+			61,
+			61,
+			134
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1342,
-			1168,
-			107,
+			1653,
+			878,
+			170,
 			103
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0010"] = {
+	hero_obdul_ultimate_ball_0009 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			153,
-			210
+			244,
+			298
 		},
 		trim = {
-			10,
-            18,
-            23,
-            97
+			62,
+			85,
+			56,
+			128
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2071,
-			531,
-			120,
-			95
+			609,
+			1957,
+			126,
+			85
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_ultimate_ball_0010"
+		}
 	},
-	["hero_obdul_woody_0011"] = {
+	hero_obdul_ultimate_decal = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			153,
-			210
+			176,
+			131
 		},
 		trim = {
-			10,
-            18,
-            23,
-            92
+			21,
+			29,
+			14,
+			14
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2418,
-			949,
-			120,
-			100
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0012"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			28,
-            30,
-            28,
-            92
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			108,
-			431,
-			97,
+			1887,
+			138,
+			141,
 			88
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0013"] = {
+	hero_obdul_ultimate_decal_enemy_0001 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			153,
-			210
+			119,
+			80
 		},
 		trim = {
+			48,
+			34,
+			49,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1999,
+			1195,
+			22,
+			13
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0002 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			40,
+			29,
+			40,
+			28
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1958,
+			607,
+			39,
+			23
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0003 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			31,
 			25,
-            28,
-            24,
-            89
+			32,
+			24
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			789,
-			531,
-			104,
-			93
+			335,
+			190,
+			56,
+			31
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0014"] = {
+	hero_obdul_ultimate_decal_enemy_0004 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
-			153,
-			210
+			119,
+			80
 		},
 		trim = {
+			30,
+			23,
+			30,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1592,
+			736,
+			59,
+			34
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0005 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			29,
+			23,
+			29,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1245,
+			738,
+			61,
+			35
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0006 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			28,
+			22,
+			27,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1525,
+			736,
+			64,
+			36
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0015 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			0,
+			0,
+			119,
+			80
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			475,
+			1965,
+			119,
+			80
+		},
+		alias = {
+			"hero_obdul_ultimate_decal_enemy_0016"
+		}
+	},
+	hero_obdul_ultimate_dust_cloud_0006 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			23,
+			22,
 			25,
-            28,
-            24,
-            89
+			22
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			789,
-			531,
-			104,
-			93
+			1283,
+			1315,
+			128,
+			98
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0015"] = {
+	hero_obdul_ultimate_dust_cloud_0007 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			23,
+			21,
+			25,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1839,
+			776,
+			128,
+			99
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0008 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			22,
+			21,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1440,
+			776,
+			130,
+			99
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0009 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			22,
+			21,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1573,
+			776,
+			130,
+			99
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0010 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			22,
+			21,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1706,
+			776,
+			130,
+			99
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			22,
+			20,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			1894,
+			130,
+			100
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0012 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			21,
+			20,
+			23,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			609,
+			1853,
+			132,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0013 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			21,
+			20,
+			23,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1574,
+			1211,
+			132,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0014 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			21,
+			20,
+			23,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1709,
+			1211,
+			132,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0015 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			21,
+			20,
+			23,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1844,
+			1211,
+			132,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0016 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			23,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1438,
+			1211,
+			133,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0017 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			22,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			1211,
+			134,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0018 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			22,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1211,
+			134,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0019 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			22,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1316,
+			134,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0020 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			22,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1421,
+			134,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0021 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			22,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1526,
+			134,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0022 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			20,
+			20,
+			22,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1163,
+			1211,
+			134,
+			101
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0023 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			0,
+			0,
+			176,
+			142
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			776,
+			176,
+			142
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_cloud_0024"
+		}
+	},
+	hero_obdul_ultimate_dust_over_ball_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			37,
+			37,
+			28,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1519,
+			1997,
+			105,
+			43
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_over_ball_0002"
+		}
+	},
+	hero_obdul_ultimate_dust_over_ball_0003 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			30,
+			36,
+			22,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1722,
+			1523,
+			118,
+			51
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_over_ball_0004"
+		}
+	},
+	hero_obdul_ultimate_dust_over_ball_0005 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			15,
+			36,
+			19,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1583,
+			1523,
+			136,
+			60
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_over_ball_0006"
+		}
+	},
+	hero_obdul_ultimate_dust_over_ball_0009 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			18,
+			46,
+			18,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			1985,
+			134,
+			57
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_over_ball_0010"
+		}
+	},
+	hero_obdul_ultimate_dust_over_ball_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			16,
+			48,
+			14,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1100,
+			173,
+			140,
+			52
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_over_ball_0012"
+		}
+	},
+	hero_obdul_ultimate_dust_over_ball_0013 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			0,
+			0,
+			170,
+			116
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1352,
+			636,
+			170,
+			116
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_projectile = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			400,
+			91
+		},
+		trim = {
+			14,
+			14,
+			200,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1394,
+			1523,
+			186,
+			62
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_rock_01_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			27,
+			156,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1123,
+			1997,
+			35,
+			42
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0012"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0013 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			39,
+			160,
+			98
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1247,
+			847,
+			31,
+			28
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0014"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0015 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			59,
+			160,
+			77
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			318,
+			1320,
+			31,
+			29
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0016"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0017 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			0,
+			0,
+			204,
+			165
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1100,
+			5,
+			204,
+			165
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_rock_02_0007 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			14,
+			14,
+			140
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			587,
+			190,
+			43,
+			36
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0008"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0017 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			0,
+			0,
+			213,
+			190
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			633,
+			5,
+			213,
+			190
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_rock_03_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			29,
+			14,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1148,
+			738,
+			94,
+			35
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0002"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0009 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			14,
+			14,
+			68
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1940,
+			1523,
+			94,
+			49
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0010"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			18,
+			14,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1843,
+			1523,
+			94,
+			50
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0012"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0013 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			31,
+			14,
+			44
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1633,
+			1983,
+			94,
+			56
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0014"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0017 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			0,
+			0,
+			125,
+			131
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			745,
+			1223,
+			125,
+			131
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_rock_04_0001 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			60,
+			27,
+			13,
+			190
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1711,
+			753,
+			12,
+			13
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0002"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0003 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			59,
+			21,
+			13,
+			197
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1492,
+			1998,
+			13,
+			12
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0004"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0005 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			59,
+			15,
+			13,
+			203
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1492,
+			2013,
+			13,
+			12
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0006"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0007 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			59,
+			14,
+			13,
+			204
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1492,
+			2028,
+			13,
+			12
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0008"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0009 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			59,
+			13,
+			13,
+			204
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2024,
+			1195,
+			13,
+			13
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0010"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0011 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			59,
+			19,
+			13,
+			199
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1957,
+			347,
+			13,
+			12
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0012"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0013 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			60,
+			34,
+			13,
+			184
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1989,
+			347,
+			12,
+			12
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0014"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0015 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			59,
+			54,
+			13,
+			164
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1973,
+			347,
+			13,
+			12
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_04_0016"
+		}
+	},
+	hero_obdul_ultimate_rock_04_0017 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			85,
+			230
+		},
+		trim = {
+			0,
+			0,
+			85,
+			230
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			176,
+			1353,
+			85,
+			230
+		},
+		alias = {}
+	},
+	hero_obdul_woody_0001 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
 			153,
 			210
 		},
 		trim = {
-			26,
-            28,
-            23,
-            90
+			58,
+			23,
+			54,
+			96
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2423,
-			431,
-			104,
-			92
+			2004,
+			878,
+			41,
+			91
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0016"] = {
+	hero_obdul_woody_0002 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
 			153,
 			210
 		},
 		trim = {
-			26,
-            28,
-            23,
-            90
+			58,
+			23,
+			54,
+			96
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			2423,
-			431,
-			104,
-			92
+			1999,
+			1101,
+			41,
+			91
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_woody_0003"
+		}
 	},
-	["hero_obdul_woody_0017"] = {
+	hero_obdul_woody_0004 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			56,
+			43,
+			48,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1498,
+			143,
+			49,
+			71
+		},
+		alias = {
+			"hero_obdul_woody_0005"
+		}
+	},
+	hero_obdul_woody_0006 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			48,
+			19,
+			41,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1970,
+			776,
+			64,
+			95
+		},
+		alias = {}
+	},
+	hero_obdul_woody_0007 = {
+		a_name = "go_hero_builder-1.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			47,
+			19,
+			41,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1979,
+			1211,
+			65,
+			95
+		},
+		alias = {}
+	},
+	hero_obdul_woody_0008 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
 			153,
@@ -27295,23 +7006,23 @@ return {
 		},
 		trim = {
 			27,
-            27,
-            23,
-            90
+			13,
+			26,
+			97
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			901,
-			531,
-			103,
-			93
+			1283,
+			1640,
+			100,
+			100
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0018"] = {
+	hero_obdul_woody_0009 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
 			153,
@@ -27319,71 +7030,49 @@ return {
 		},
 		trim = {
 			27,
-            27,
-            23,
-            90
+			13,
+			26,
+			100
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			901,
-			531,
-			103,
-			93
+			1283,
+			1842,
+			100,
+			97
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_obdul_woody_0019"] = {
+	hero_obdul_woody_0019 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
 			153,
 			210
 		},
 		trim = {
-			28,
-            26,
-            24,
-            131
+			32,
+			29,
+			27,
+			134
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			1104,
-			115,
-			101,
-			53
+			1026,
+			1997,
+			94,
+			47
 		},
-		alias = {},
+		alias = {
+			"hero_obdul_woody_0020"
+		}
 	},
-	["hero_obdul_woody_0020"] = {
-		a_name = "go_hero_builder-1.dds",
-		size = {
-			153,
-			210
-		},
-		trim = {
-			28,
-            26,
-            24,
-            131
-		},
-		a_size = {
-			2586,
-			2586
-		},
-		f_quad = {
-			1104,
-			115,
-			101,
-			53
-		},
-		alias = {},
-	},
-	["hero_obdul_woody_0021"] = {
+	hero_obdul_woody_0021 = {
 		a_name = "go_hero_builder-1.dds",
 		size = {
 			153,
@@ -27391,20 +7080,6025 @@ return {
 		},
 		trim = {
 			0,
-            0,
-            150,
-            207
+			0,
+			153,
+			210
 		},
 		a_size = {
-			2586,
-			2586
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			4,
-			3,
-			3
+			1551,
+			5,
+			153,
+			210
 		},
-		alias = {},
+		alias = {}
+	},
+	hero_obdul_basic_attack_hit_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			94,
+			91
+		},
+		trim = {
+			27,
+			16,
+			21,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			857,
+			466,
+			46,
+			51
+		},
+		alias = {
+			"hero_obdul_basic_attack_hit_0004"
+		}
+	},
+	hero_obdul_basic_attack_hit_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			94,
+			91
+		},
+		trim = {
+			23,
+			16,
+			18,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1812,
+			390,
+			53,
+			55
+		},
+		alias = {
+			"hero_obdul_basic_attack_hit_0006"
+		}
+	},
+	hero_obdul_basic_attack_hit_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			94,
+			91
+		},
+		trim = {
+			0,
+			0,
+			94,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			545,
+			94,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1358,
+			5,
+			119,
+			90
+		},
+		alias = {
+			"hero_obdul_hero_0040",
+			"hero_obdul_hero_0065",
+			"hero_obdul_hero_0066",
+			"hero_obdul_hero_0099",
+			"hero_obdul_hero_0100",
+			"hero_obdul_hero_0101",
+			"hero_obdul_hero_0102",
+			"hero_obdul_hero_0145",
+			"hero_obdul_hero_0146",
+			"hero_obdul_hero_0147",
+			"hero_obdul_hero_0148",
+			"hero_obdul_hero_0205",
+			"hero_obdul_hero_0206",
+			"hero_obdul_hero_0207",
+			"hero_obdul_hero_0208",
+			"hero_obdul_hero_0249",
+			"hero_obdul_hero_0250",
+			"hero_obdul_hero_0251",
+			"hero_obdul_hero_0252",
+			"hero_obdul_hero_0323",
+			"hero_obdul_hero_0324",
+			"hero_obdul_hero_0361",
+			"hero_obdul_hero_0362",
+			"hero_obdul_hero_0387",
+			"hero_obdul_hero_0388",
+			"hero_obdul_hero_0421",
+			"hero_obdul_hero_0422",
+			"hero_obdul_hero_0423",
+			"hero_obdul_hero_0424"
+		}
+	},
+	hero_obdul_hero_0002 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1480,
+			5,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1602,
+			5,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0004 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1724,
+			5,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0006 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1846,
+			5,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0009 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			240,
+			99,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0010 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1363,
+			99,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0011 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			737,
+			5,
+			118,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0012 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			858,
+			5,
+			118,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0013 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1484,
+			99,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0014 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1605,
+			99,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0016 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			979,
+			5,
+			118,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0017 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			170,
+			77,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			119,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0018 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			170,
+			77,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			127,
+			5,
+			119,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0019 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			170,
+			77,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			249,
+			5,
+			119,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0020 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			170,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			362,
+			99,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0021 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1726,
+			99,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0022 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1847,
+			99,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0023 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			117,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0024 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0025 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			359,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0026 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			480,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0027 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			601,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0028 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			722,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0029 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			843,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0030 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			964,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0031 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1085,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0032 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			484,
+			99,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0033 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			606,
+			99,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0034 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			728,
+			99,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0035 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			850,
+			99,
+			119,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0036 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			371,
+			5,
+			119,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0037 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			493,
+			5,
+			119,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0038 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			172,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1206,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0039 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			172,
+			78,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1327,
+			196,
+			118,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0041 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			172,
+			74,
+			179,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			99,
+			115,
+			94
+		},
+		alias = {
+			"hero_obdul_hero_0042"
+		}
+	},
+	hero_obdul_hero_0043 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			76,
+			179,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			99,
+			116,
+			92
+		},
+		alias = {
+			"hero_obdul_hero_0044",
+			"hero_obdul_hero_0045"
+		}
+	},
+	hero_obdul_hero_0046 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			172,
+			78,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			297,
+			117,
+			90
+		},
+		alias = {
+			"hero_obdul_hero_0047"
+		}
+	},
+	hero_obdul_hero_0067 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			169,
+			82,
+			174,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1694,
+			196,
+			123,
+			86
+		},
+		alias = {
+			"hero_obdul_hero_0068",
+			"hero_obdul_hero_0209",
+			"hero_obdul_hero_0210"
+		}
+	},
+	hero_obdul_hero_0088 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			204,
+			107,
+			102,
+			149
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			622,
+			297,
+			160,
+			65
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0097 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			169,
+			81,
+			175,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1569,
+			196,
+			122,
+			87
+		},
+		alias = {
+			"hero_obdul_hero_0098",
+			"hero_obdul_hero_0143",
+			"hero_obdul_hero_0144",
+			"hero_obdul_hero_0247",
+			"hero_obdul_hero_0248"
+		}
+	},
+	hero_obdul_hero_0129 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			168,
+			78,
+			180,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1448,
+			196,
+			118,
+			90
+		},
+		alias = {
+			"hero_obdul_hero_0130"
+		}
+	},
+	hero_obdul_hero_0131 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			166,
+			78,
+			186,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1304,
+			297,
+			114,
+			90
+		},
+		alias = {
+			"hero_obdul_hero_0132"
+		}
+	},
+	hero_obdul_hero_0133 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			166,
+			78,
+			187,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1421,
+			297,
+			113,
+			90
+		},
+		alias = {
+			"hero_obdul_hero_0134"
+		}
+	},
+	hero_obdul_hero_0135 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			177,
+			92,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			466,
+			113,
+			76
+		},
+		alias = {
+			"hero_obdul_hero_0136"
+		}
+	},
+	hero_obdul_hero_0137 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			168,
+			108,
+			173,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			366,
+			390,
+			125,
+			68
+		},
+		alias = {
+			"hero_obdul_hero_0138"
+		}
+	},
+	hero_obdul_hero_0163 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			92,
+			186,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1960,
+			87,
+			78
+		},
+		alias = {
+			"hero_obdul_hero_0164"
+		}
+	},
+	hero_obdul_hero_0165 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			191,
+			86,
+			187,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1700,
+			88,
+			84
+		},
+		alias = {
+			"hero_obdul_hero_0166"
+		}
+	},
+	hero_obdul_hero_0167 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			83,
+			189,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1440,
+			88,
+			87
+		},
+		alias = {
+			"hero_obdul_hero_0168"
+		}
+	},
+	hero_obdul_hero_0169 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			79,
+			181,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			641,
+			92,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0170 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			77,
+			181,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			545,
+			92,
+			93
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0171 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			195,
+			75,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1277,
+			87,
+			95
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0172 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			195,
+			73,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			777,
+			87,
+			97
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0173 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			70,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1460,
+			88,
+			100
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0174 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			68,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			824,
+			88,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0175 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			67,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1139,
+			87,
+			103
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0176 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			73,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			877,
+			87,
+			97
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0177 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			70,
+			181,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			390,
+			92,
+			100
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0179 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			195,
+			67,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1245,
+			87,
+			103
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0180 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			195,
+			71,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			466,
+			87,
+			99
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0181 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			68,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			929,
+			88,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0184 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			81,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1348,
+			87,
+			89
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0185 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			79,
+			181,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			735,
+			92,
+			91
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0186 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			76,
+			181,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1873,
+			92,
+			94
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0187 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			195,
+			74,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1077,
+			87,
+			96
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0188 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			195,
+			73,
+			184,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			977,
+			87,
+			97
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0189 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			70,
+			186,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			568,
+			86,
+			100
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0190 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			68,
+			186,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1666,
+			86,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0191 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			67,
+			190,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			671,
+			82,
+			103
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0192 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			73,
+			190,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			926,
+			82,
+			97
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0193 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			70,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1563,
+			88,
+			100
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0194 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			68,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1034,
+			88,
+			102
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0195 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			67,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			718,
+			88,
+			103
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0196 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			71,
+			185,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1771,
+			88,
+			99
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0203 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			83,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1654,
+			297,
+			119,
+			85
+		},
+		alias = {
+			"hero_obdul_hero_0204"
+		}
+	},
+	hero_obdul_hero_0237 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			201,
+			107,
+			111,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1776,
+			297,
+			154,
+			63
+		},
+		alias = {
+			"hero_obdul_hero_0238"
+		}
+	},
+	hero_obdul_hero_0255 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			163,
+			95,
+			178,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			390,
+			125,
+			73
+		},
+		alias = {
+			"hero_obdul_hero_0256"
+		}
+	},
+	hero_obdul_hero_0257 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			157,
+			90,
+			177,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1045,
+			297,
+			132,
+			78
+		},
+		alias = {
+			"hero_obdul_hero_0258"
+		}
+	},
+	hero_obdul_hero_0259 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			200,
+			104,
+			163,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1503,
+			545,
+			103,
+			64
+		},
+		alias = {
+			"hero_obdul_hero_0260"
+		}
+	},
+	hero_obdul_hero_0261 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			193,
+			104,
+			165,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1213,
+			545,
+			108,
+			64
+		},
+		alias = {
+			"hero_obdul_hero_0262"
+		}
+	},
+	hero_obdul_hero_0263 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			190,
+			103,
+			166,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			986,
+			545,
+			110,
+			65
+		},
+		alias = {
+			"hero_obdul_hero_0264"
+		}
+	},
+	hero_obdul_hero_0267 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			177,
+			56,
+			208,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			603,
+			81,
+			112
+		},
+		alias = {
+			"hero_obdul_hero_0268"
+		}
+	},
+	hero_obdul_hero_0325 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			171,
+			77,
+			176,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			615,
+			5,
+			119,
+			91
+		},
+		alias = {
+			"hero_obdul_hero_0326",
+			"hero_obdul_hero_0359",
+			"hero_obdul_hero_0360"
+		}
+	},
+	hero_obdul_hero_0327 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			169,
+			76,
+			186,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1933,
+			196,
+			111,
+			92
+		},
+		alias = {
+			"hero_obdul_hero_0328"
+		}
+	},
+	hero_obdul_hero_0331 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			162,
+			70,
+			195,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			196,
+			109,
+			98
+		},
+		alias = {
+			"hero_obdul_hero_0332"
+		}
+	},
+	hero_obdul_hero_0363 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			168,
+			85,
+			172,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			493,
+			297,
+			126,
+			83
+		},
+		alias = {
+			"hero_obdul_hero_0364",
+			"hero_obdul_hero_0385",
+			"hero_obdul_hero_0386",
+			"hero_obdul_hero_0419",
+			"hero_obdul_hero_0420"
+		}
+	},
+	hero_obdul_hero_0365 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			90,
+			169,
+			151
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1091,
+			99,
+			133,
+			80
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0383 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			164,
+			90,
+			169,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			909,
+			297,
+			133,
+			78
+		},
+		alias = {
+			"hero_obdul_hero_0384",
+			"hero_obdul_hero_0417",
+			"hero_obdul_hero_0418"
+		}
+	},
+	hero_obdul_hero_0393 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			94,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1875,
+			85,
+			82
+		},
+		alias = {
+			"hero_obdul_hero_0394",
+			"hero_obdul_hero_0469",
+			"hero_obdul_hero_0470"
+		}
+	},
+	hero_obdul_hero_0399 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			66,
+			196,
+			147
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1968,
+			5,
+			76,
+			108
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0400 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			194,
+			66,
+			196,
+			147
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1481,
+			76,
+			108
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0401 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			196,
+			64,
+			198,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1026,
+			72,
+			109
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0402 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			196,
+			64,
+			198,
+			148
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1138,
+			72,
+			109
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0403 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			190,
+			68,
+			197,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1592,
+			79,
+			103
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0404 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			190,
+			68,
+			196,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1375,
+			80,
+			103
+		},
+		alias = {}
+	},
+	hero_obdul_hero_0425 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			168,
+			89,
+			165,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1227,
+			99,
+			133,
+			80
+		},
+		alias = {
+			"hero_obdul_hero_0426"
+		}
+	},
+	hero_obdul_hero_0457 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			199,
+			98,
+			208,
+			153
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1968,
+			116,
+			59,
+			70
+		},
+		alias = {
+			"hero_obdul_hero_0458"
+		}
+	},
+	hero_obdul_hero_0465 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			69,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			493,
+			85,
+			107
+		},
+		alias = {
+			"hero_obdul_hero_0466"
+		}
+	},
+	hero_obdul_hero_0467 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			466,
+			321
+		},
+		trim = {
+			189,
+			78,
+			192,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1176,
+			85,
+			98
+		},
+		alias = {
+			"hero_obdul_hero_0468"
+		}
+	},
+	hero_obdul_skill_3_hit_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			105,
+			102
+		},
+		trim = {
+			34,
+			27,
+			34,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			339,
+			1800,
+			37,
+			42
+		},
+		alias = {
+			"hero_obdul_skill_3_hit_0002"
+		}
+	},
+	hero_obdul_skill_3_hit_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			105,
+			102
+		},
+		trim = {
+			27,
+			20,
+			23,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1546,
+			390,
+			55,
+			59
+		},
+		alias = {
+			"hero_obdul_skill_3_hit_0006"
+		}
+	},
+	hero_obdul_skill_4_tower_hit_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			80,
+			82
+		},
+		trim = {
+			22,
+			14,
+			15,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1396,
+			466,
+			43,
+			47
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_hit_0004"
+		}
+	},
+	hero_obdul_skill_4_tower_hit_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			80,
+			82
+		},
+		trim = {
+			18,
+			14,
+			13,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1746,
+			49,
+			51
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_hit_0006"
+		}
+	},
+	hero_obdul_skill_4_tower_hit_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			80,
+			82
+		},
+		trim = {
+			0,
+			0,
+			80,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1609,
+			545,
+			80,
+			82
+		},
+		alias = {}
+	},
+	hero_obdul_skill_4_tower_layer1_0002 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			34,
+			77,
+			56,
+			112
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1779,
+			545,
+			78,
+			58
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0003",
+			"hero_obdul_skill_4_tower_layer1_0004",
+			"hero_obdul_skill_4_tower_layer1_0005",
+			"hero_obdul_skill_4_tower_layer1_0006",
+			"hero_obdul_skill_4_tower_layer1_0007",
+			"hero_obdul_skill_4_tower_layer1_0008",
+			"hero_obdul_skill_4_tower_layer1_0009",
+			"hero_obdul_skill_4_tower_layer1_0010",
+			"hero_obdul_skill_4_tower_layer1_0011",
+			"hero_obdul_skill_4_tower_layer1_0012",
+			"hero_obdul_skill_4_tower_layer1_0013",
+			"hero_obdul_skill_4_tower_layer1_0014",
+			"hero_obdul_skill_4_tower_layer1_0015"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0016 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			33,
+			55,
+			56,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1421,
+			545,
+			79,
+			86
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0017",
+			"hero_obdul_skill_4_tower_layer1_0018",
+			"hero_obdul_skill_4_tower_layer1_0019",
+			"hero_obdul_skill_4_tower_layer1_0020",
+			"hero_obdul_skill_4_tower_layer1_0021",
+			"hero_obdul_skill_4_tower_layer1_0022",
+			"hero_obdul_skill_4_tower_layer1_0023",
+			"hero_obdul_skill_4_tower_layer1_0024",
+			"hero_obdul_skill_4_tower_layer1_0025",
+			"hero_obdul_skill_4_tower_layer1_0026",
+			"hero_obdul_skill_4_tower_layer1_0027",
+			"hero_obdul_skill_4_tower_layer1_0028",
+			"hero_obdul_skill_4_tower_layer1_0029",
+			"hero_obdul_skill_4_tower_layer1_0030",
+			"hero_obdul_skill_4_tower_layer1_0031"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0032 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			33,
+			45,
+			52,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1796,
+			83,
+			96
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0033",
+			"hero_obdul_skill_4_tower_layer1_0034",
+			"hero_obdul_skill_4_tower_layer1_0035",
+			"hero_obdul_skill_4_tower_layer1_0036",
+			"hero_obdul_skill_4_tower_layer1_0037",
+			"hero_obdul_skill_4_tower_layer1_0038",
+			"hero_obdul_skill_4_tower_layer1_0039",
+			"hero_obdul_skill_4_tower_layer1_0040",
+			"hero_obdul_skill_4_tower_layer1_0041",
+			"hero_obdul_skill_4_tower_layer1_0042",
+			"hero_obdul_skill_4_tower_layer1_0043",
+			"hero_obdul_skill_4_tower_layer1_0044",
+			"hero_obdul_skill_4_tower_layer1_0045",
+			"hero_obdul_skill_4_tower_layer1_0046",
+			"hero_obdul_skill_4_tower_layer1_0047",
+			"hero_obdul_skill_4_tower_layer1_0048",
+			"hero_obdul_skill_4_tower_layer1_0049",
+			"hero_obdul_skill_4_tower_layer1_0050",
+			"hero_obdul_skill_4_tower_layer1_0051"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0052 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			33,
+			35,
+			52,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1351,
+			83,
+			106
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0053"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0054 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			33,
+			45,
+			52,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1895,
+			83,
+			96
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0055",
+			"hero_obdul_skill_4_tower_layer1_0056",
+			"hero_obdul_skill_4_tower_layer1_0057",
+			"hero_obdul_skill_4_tower_layer1_0058",
+			"hero_obdul_skill_4_tower_layer1_0059",
+			"hero_obdul_skill_4_tower_layer1_0060",
+			"hero_obdul_skill_4_tower_layer1_0061",
+			"hero_obdul_skill_4_tower_layer1_0062",
+			"hero_obdul_skill_4_tower_layer1_0063",
+			"hero_obdul_skill_4_tower_layer1_0064",
+			"hero_obdul_skill_4_tower_layer1_0065",
+			"hero_obdul_skill_4_tower_layer1_0066",
+			"hero_obdul_skill_4_tower_layer1_0067",
+			"hero_obdul_skill_4_tower_layer1_0068",
+			"hero_obdul_skill_4_tower_layer1_0069",
+			"hero_obdul_skill_4_tower_layer1_0070",
+			"hero_obdul_skill_4_tower_layer1_0071",
+			"hero_obdul_skill_4_tower_layer1_0072",
+			"hero_obdul_skill_4_tower_layer1_0073",
+			"hero_obdul_skill_4_tower_layer1_0074",
+			"hero_obdul_skill_4_tower_layer1_0075"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0076 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			32,
+			47,
+			54,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1250,
+			82,
+			95
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0077"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0078 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			32,
+			47,
+			52,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1698,
+			84,
+			95
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0079",
+			"hero_obdul_skill_4_tower_layer1_0080",
+			"hero_obdul_skill_4_tower_layer1_0081",
+			"hero_obdul_skill_4_tower_layer1_0082",
+			"hero_obdul_skill_4_tower_layer1_0083",
+			"hero_obdul_skill_4_tower_layer1_0084",
+			"hero_obdul_skill_4_tower_layer1_0085"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0086 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			42,
+			43,
+			37,
+			110
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			829,
+			89,
+			94
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0087"
+		}
+	},
+	hero_obdul_skill_4_tower_layer1_0088 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			28,
+			44,
+			30,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1820,
+			196,
+			110,
+			96
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer1_0089"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0046 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			65,
+			14,
+			64,
+			193
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			339,
+			1589,
+			39,
+			40
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0047"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0050 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			61,
+			32,
+			61,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1651,
+			466,
+			46,
+			40
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0051"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0056 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			47,
+			30,
+			66,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			906,
+			466,
+			55,
+			42
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0057"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0058 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			45,
+			30,
+			65,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			360,
+			466,
+			58,
+			42
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0059"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0060 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			45,
+			30,
+			66,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			639,
+			466,
+			57,
+			42
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0061"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0066 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			76,
+			41,
+			54,
+			175
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1745,
+			511,
+			38,
+			31
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0067"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0078 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			64,
+			36,
+			59,
+			173
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1789,
+			466,
+			45,
+			38
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0079"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0086 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			54,
+			29,
+			65,
+			178
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1548,
+			466,
+			49,
+			40
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0087"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0088 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			51,
+			24,
+			69,
+			184
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1600,
+			466,
+			48,
+			39
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0089"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0090 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			55,
+			27,
+			71,
+			179
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1700,
+			466,
+			42,
+			41
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0091"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0094 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			59,
+			63,
+			72,
+			139
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			341,
+			1955,
+			37,
+			45
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0095"
+		}
+	},
+	hero_obdul_skill_4_tower_layer2_0096 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			59,
+			92,
+			70,
+			113
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1700,
+			39,
+			42
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer2_0097"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0086 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			63,
+			73,
+			58,
+			126
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			964,
+			466,
+			47,
+			48
+		},
+		alias = {}
+	},
+	hero_obdul_skill_4_tower_layer3_0087 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			54,
+			73,
+			54,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			390,
+			60,
+			67
+		},
+		alias = {}
+	},
+	hero_obdul_skill_4_tower_layer3_0088 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			54,
+			73,
+			54,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			924,
+			390,
+			60,
+			67
+		},
+		alias = {}
+	},
+	hero_obdul_skill_4_tower_layer3_0089 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			44,
+			67,
+			43,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1970,
+			81,
+			71
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0090"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0091 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			38,
+			60,
+			39,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1530,
+			91,
+			82
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0092"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0093 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			36,
+			58,
+			34,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			382,
+			545,
+			98,
+			87
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0094"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0095 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			36,
+			58,
+			33,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			483,
+			545,
+			99,
+			86
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0096"
+		}
+	},
+	hero_obdul_skill_4_tower_layer3_0097 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			168,
+			247
+		},
+		trim = {
+			37,
+			58,
+			34,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			886,
+			545,
+			97,
+			86
+		},
+		alias = {
+			"hero_obdul_skill_4_tower_layer3_0098"
+		}
+	},
+	hero_obdul_skill_5_soldier_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			47,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			421,
+			466,
+			53,
+			46
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0062",
+			"hero_obdul_skill_5_soldier_0063",
+			"hero_obdul_skill_5_soldier_0080",
+			"hero_obdul_skill_5_soldier_0081",
+			"hero_obdul_skill_5_soldier_0106",
+			"hero_obdul_skill_5_soldier_0107"
+		}
+	},
+	hero_obdul_skill_5_soldier_0002 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			49,
+			48,
+			70,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1014,
+			466,
+			51,
+			44
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0003"
+		}
+	},
+	hero_obdul_skill_5_soldier_0004 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			49,
+			42,
+			69,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1536,
+			52,
+			50
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0005"
+		}
+	},
+	hero_obdul_skill_5_soldier_0006 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			39,
+			68,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			985,
+			51,
+			53
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0007"
+		}
+	},
+	hero_obdul_skill_5_soldier_0008 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			42,
+			66,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1268,
+			53,
+			50
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0009"
+		}
+	},
+	hero_obdul_skill_5_soldier_0010 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			45,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			306,
+			466,
+			51,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0011"
+		}
+	},
+	hero_obdul_skill_5_soldier_0012 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			51,
+			64,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1233,
+			466,
+			53,
+			41
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0013"
+		}
+	},
+	hero_obdul_skill_5_soldier_0014 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			42,
+			65,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1321,
+			53,
+			50
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0015"
+		}
+	},
+	hero_obdul_skill_5_soldier_0018 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			41,
+			67,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1374,
+			51,
+			51
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0019"
+		}
+	},
+	hero_obdul_skill_5_soldier_0020 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			44,
+			68,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1800,
+			51,
+			49
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0021"
+		}
+	},
+	hero_obdul_skill_5_soldier_0022 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			50,
+			70,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1442,
+			466,
+			47,
+			43
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0023"
+		}
+	},
+	hero_obdul_skill_5_soldier_0024 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			44,
+			69,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			533,
+			466,
+			50,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0025"
+		}
+	},
+	hero_obdul_skill_5_soldier_0026 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			40,
+			68,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1158,
+			51,
+			52
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0027"
+		}
+	},
+	hero_obdul_skill_5_soldier_0028 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			42,
+			67,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1589,
+			51,
+			50
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0029"
+		}
+	},
+	hero_obdul_skill_5_soldier_0030 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			45,
+			66,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			699,
+			466,
+			51,
+			47
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0031"
+		}
+	},
+	hero_obdul_skill_5_soldier_0032 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			50,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1179,
+			466,
+			51,
+			43
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0033"
+		}
+	},
+	hero_obdul_skill_5_soldier_0034 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			44,
+			66,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1904,
+			52,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0035"
+		}
+	},
+	hero_obdul_skill_5_soldier_0036 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			50,
+			40,
+			68,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			639,
+			52,
+			53
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0037"
+		}
+	},
+	hero_obdul_skill_5_soldier_0038 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			41,
+			68,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1213,
+			51,
+			52
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0039"
+		}
+	},
+	hero_obdul_skill_5_soldier_0040 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			45,
+			69,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			753,
+			466,
+			49,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0041"
+		}
+	},
+	hero_obdul_skill_5_soldier_0042 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			49,
+			70,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1289,
+			466,
+			47,
+			44
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0043"
+		}
+	},
+	hero_obdul_skill_5_soldier_0044 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			44,
+			69,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			586,
+			466,
+			50,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0045"
+		}
+	},
+	hero_obdul_skill_5_soldier_0046 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			39,
+			68,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1041,
+			51,
+			53
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0047"
+		}
+	},
+	hero_obdul_skill_5_soldier_0048 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			41,
+			67,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1428,
+			51,
+			51
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0049"
+		}
+	},
+	hero_obdul_skill_5_soldier_0050 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			44,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1852,
+			51,
+			49
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0051"
+		}
+	},
+	hero_obdul_skill_5_soldier_0052 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			53,
+			49,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1068,
+			466,
+			51,
+			44
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0053"
+		}
+	},
+	hero_obdul_skill_5_soldier_0054 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			44,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1642,
+			52,
+			49
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0055"
+		}
+	},
+	hero_obdul_skill_5_soldier_0056 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			50,
+			39,
+			68,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			695,
+			52,
+			53
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0057"
+		}
+	},
+	hero_obdul_skill_5_soldier_0058 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			41,
+			68,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1482,
+			51,
+			51
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0059"
+		}
+	},
+	hero_obdul_skill_5_soldier_0060 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			44,
+			69,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			805,
+			466,
+			49,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0061"
+		}
+	},
+	hero_obdul_skill_5_soldier_0064 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			47,
+			46,
+			70,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1955,
+			53,
+			47
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0065"
+		}
+	},
+	hero_obdul_skill_5_soldier_0066 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			43,
+			44,
+			70,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			879,
+			57,
+			48
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0067"
+		}
+	},
+	hero_obdul_skill_5_soldier_0068 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			41,
+			37,
+			70,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1484,
+			390,
+			59,
+			56
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0069"
+		}
+	},
+	hero_obdul_skill_5_soldier_0070 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			52,
+			39,
+			36,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1860,
+			545,
+			82,
+			54
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0071"
+		}
+	},
+	hero_obdul_skill_5_soldier_0072 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			62,
+			47,
+			36,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1409,
+			390,
+			72,
+			46
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0073"
+		}
+	},
+	hero_obdul_skill_5_soldier_0074 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			67,
+			49,
+			38,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1868,
+			390,
+			65,
+			44
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0075"
+		}
+	},
+	hero_obdul_skill_5_soldier_0076 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			67,
+			48,
+			58,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			334,
+			1097,
+			45,
+			45
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0077"
+		}
+	},
+	hero_obdul_skill_5_soldier_0078 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			67,
+			47,
+			64,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1904,
+			39,
+			46
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0079"
+		}
+	},
+	hero_obdul_skill_5_soldier_0082 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			47,
+			66,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			477,
+			466,
+			53,
+			46
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0083"
+		}
+	},
+	hero_obdul_skill_5_soldier_0084 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			47,
+			34,
+			77,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1097,
+			46,
+			58
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0085"
+		}
+	},
+	hero_obdul_skill_5_soldier_0086 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			37,
+			24,
+			78,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1130,
+			390,
+			55,
+			68
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0087"
+		}
+	},
+	hero_obdul_skill_5_soldier_0090 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			27,
+			19,
+			89,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1073,
+			390,
+			54,
+			73
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0091"
+		}
+	},
+	hero_obdul_skill_5_soldier_0092 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			19,
+			24,
+			97,
+			46
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1272,
+			390,
+			54,
+			69
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0093"
+		}
+	},
+	hero_obdul_skill_5_soldier_0094 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			16,
+			59,
+			100,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			2005,
+			54,
+			40
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0095"
+		}
+	},
+	hero_obdul_skill_5_soldier_0098 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			14,
+			58,
+			102,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1122,
+			466,
+			54,
+			41
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0099"
+		}
+	},
+	hero_obdul_skill_5_soldier_0100 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			14,
+			61,
+			102,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1339,
+			466,
+			54,
+			38
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0101"
+		}
+	},
+	hero_obdul_skill_5_soldier_0102 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			54,
+			66,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1492,
+			466,
+			53,
+			38
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0103"
+		}
+	},
+	hero_obdul_skill_5_soldier_0104 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			139
+		},
+		trim = {
+			51,
+			40,
+			67,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			930,
+			52,
+			52
+		},
+		alias = {
+			"hero_obdul_skill_5_soldier_0105"
+		}
+	},
+	hero_obdul_skill_5_soldier_spawn_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			22,
+			20,
+			25,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			333,
+			815,
+			44,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0004 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			22,
+			20,
+			24,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			751,
+			45,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			22,
+			20,
+			24,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			333,
+			751,
+			45,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0006 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			22,
+			20,
+			24,
+			67
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			815,
+			45,
+			61
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0012 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			18,
+			21,
+			21,
+			65
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1682,
+			390,
+			52,
+			62
+		},
+		alias = {}
+	},
+	hero_obdul_skill_5_soldier_spawn_0013 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			91,
+			148
+		},
+		trim = {
+			18,
+			34,
+			21,
+			65
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			285,
+			1694,
+			52,
+			49
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			295,
+			182
+		},
+		trim = {
+			93,
+			55,
+			91,
+			64
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1099,
+			545,
+			111,
+			63
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			64,
+			82,
+			59,
+			129
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			125,
+			297,
+			121,
+			87
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0006 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			64,
+			89,
+			59,
+			122
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			249,
+			297,
+			121,
+			87
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			64,
+			93,
+			59,
+			119
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			785,
+			297,
+			121,
+			86
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0008 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			64,
+			93,
+			59,
+			120
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1180,
+			297,
+			121,
+			85
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0011 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			62,
+			92,
+			56,
+			121
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1100,
+			5,
+			126,
+			85
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0012 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			62,
+			92,
+			56,
+			121
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1229,
+			5,
+			126,
+			85
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_ball_0013 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			244,
+			298
+		},
+		trim = {
+			76,
+			92,
+			83,
+			121
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1787,
+			85,
+			85
+		},
+		alias = {
+			"hero_obdul_ultimate_ball_0014",
+			"hero_obdul_ultimate_ball_0015",
+			"hero_obdul_ultimate_ball_0016",
+			"hero_obdul_ultimate_ball_0017"
+		}
+	},
+	hero_obdul_ultimate_decal_enemy_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			26,
+			21,
+			26,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1945,
+			594,
+			67,
+			38
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0008 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			25,
+			20,
+			24,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1936,
+			390,
+			70,
+			40
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0009 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			24,
+			20,
+			23,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1737,
+			390,
+			72,
+			41
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0010 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			22,
+			18,
+			22,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1604,
+			390,
+			75,
+			43
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0011 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			22,
+			18,
+			20,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1329,
+			390,
+			77,
+			44
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0012 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			20,
+			17,
+			18,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1188,
+			390,
+			81,
+			46
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0013 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			19,
+			16,
+			17,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			987,
+			390,
+			83,
+			48
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_decal_enemy_0014 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			119,
+			80
+		},
+		trim = {
+			17,
+			15,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			100,
+			1994,
+			87,
+			50
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			51,
+			42,
+			53,
+			43
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			786,
+			390,
+			72,
+			57
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0002 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			45,
+			38,
+			47,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1692,
+			545,
+			84,
+			65
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			40,
+			34,
+			42,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1324,
+			545,
+			94,
+			73
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0004 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			34,
+			30,
+			36,
+			31
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1933,
+			297,
+			106,
+			81
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_cloud_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			176,
+			142
+		},
+		trim = {
+			28,
+			25,
+			31,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			373,
+			297,
+			117,
+			90
+		},
+		alias = {}
+	},
+	hero_obdul_ultimate_dust_over_ball_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			170,
+			116
+		},
+		trim = {
+			20,
+			36,
+			15,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			228,
+			390,
+			135,
+			64
+		},
+		alias = {
+			"hero_obdul_ultimate_dust_over_ball_0008"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			15,
+			156,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			341,
+			1268,
+			35,
+			59
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0002"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			14,
+			156,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1642,
+			35,
+			55
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0004"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			13,
+			156,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			930,
+			35,
+			52
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0006"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			13,
+			156,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			337,
+			1746,
+			35,
+			51
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0008"
+		}
+	},
+	hero_obdul_ultimate_rock_01_0009 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			13,
+			17,
+			156,
+			98
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1536,
+			35,
+			50
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_01_0010"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0001 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			19,
+			14,
+			139
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1789,
+			507,
+			43,
+			32
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0002"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			18,
+			14,
+			141
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1548,
+			509,
+			43,
+			31
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0004"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			17,
+			14,
+			141
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			505,
+			43,
+			32
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0006"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0009 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			17,
+			14,
+			137
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			466,
+			43,
+			36
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0010"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0011 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			22,
+			14,
+			135
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1651,
+			509,
+			43,
+			33
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0012"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0013 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			156,
+			33,
+			14,
+			126
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1600,
+			508,
+			43,
+			31
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0014"
+		}
+	},
+	hero_obdul_ultimate_rock_02_0015 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			213,
+			190
+		},
+		trim = {
+			158,
+			53,
+			14,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1745,
+			466,
+			41,
+			42
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_02_0016"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0003 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			17,
+			14,
+			69
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			689,
+			390,
+			94,
+			45
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0004"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0005 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			14,
+			14,
+			71
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1945,
+			545,
+			94,
+			46
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0006"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0007 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			13,
+			14,
+			72
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			494,
+			390,
+			94,
+			46
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0008"
+		}
+	},
+	hero_obdul_ultimate_rock_03_0015 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			125,
+			131
+		},
+		trim = {
+			17,
+			57,
+			13,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			591,
+			390,
+			95,
+			45
+		},
+		alias = {
+			"hero_obdul_ultimate_rock_03_0016"
+		}
+	},
+	hero_obdul_woody_0010 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			13,
+			21,
+			26,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1537,
+			297,
+			114,
+			89
+		},
+		alias = {}
+	},
+	hero_obdul_woody_0011 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			13,
+			21,
+			26,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			123,
+			99,
+			114,
+			94
+		},
+		alias = {}
+	},
+	hero_obdul_woody_0012 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			31,
+			33,
+			31,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			190,
+			1615,
+			91,
+			82
+		},
+		alias = {}
+	},
+	hero_obdul_woody_0013 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			29,
+			31,
+			27,
+			92
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			585,
+			545,
+			97,
+			87
+		},
+		alias = {
+			"hero_obdul_woody_0014"
+		}
+	},
+	hero_obdul_woody_0015 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			29,
+			31,
+			26,
+			93
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			785,
+			545,
+			98,
+			86
+		},
+		alias = {
+			"hero_obdul_woody_0016"
+		}
+	},
+	hero_obdul_woody_0017 = {
+		a_name = "go_hero_builder-2.dds",
+		size = {
+			153,
+			210
+		},
+		trim = {
+			30,
+			30,
+			26,
+			93
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			685,
+			545,
+			97,
+			87
+		},
+		alias = {
+			"hero_obdul_woody_0018"
+		}
 	}
 }

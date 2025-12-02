@@ -1,12797 +1,8858 @@
 return {
-	["demon_pit_tower_build"] = {
+	demon_pit_tower_build = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			136,
 			142
 		},
 		trim = {
-			13,
-            11,
-            13,
-            49
+			14,
+			14,
+			16,
+			50
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			119,
-			932,
-			110,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			213,
-			60,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			59,
-            62,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1492,
-			284,
-			66,
-			65
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			59,
-            62,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1492,
-			284,
-			66,
-			65
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            66,
-            67,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			751,
-			213,
-			68,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            66,
-            67,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			751,
-			213,
-			68,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			59,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1113,
-			213,
-			66,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			59,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1113,
-			213,
-			66,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            63,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1025,
-			284,
-			61,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            63,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1025,
-			284,
-			61,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            60,
-            72,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			89,
-			358,
-			58,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0011"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            60,
-            72,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			89,
-			358,
-			58,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0012"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			64,
-            59,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1172,
-			358,
-			56,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0013"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			64,
-            59,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1172,
-			358,
-			56,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0014"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            62,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1566,
-			284,
-			57,
-			65
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0015"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            62,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1566,
-			284,
-			57,
-			65
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0016"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            66,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			827,
-			213,
-			57,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0017"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            66,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			827,
-			213,
-			57,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0018"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1187,
-			213,
-			57,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0019"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1187,
-			213,
-			57,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0020"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			64,
-            63,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1094,
-			284,
-			56,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0021"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			64,
-            63,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1094,
-			284,
-			56,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0022"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            60,
-            72,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			155,
-			358,
-			58,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0023"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            60,
-            72,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			155,
-			358,
-			58,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0024"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            59,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1236,
-			358,
-			61,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0025"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            59,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1236,
-			358,
-			61,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0026"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            65,
-            66,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1252,
-			213,
-			69,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0027"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            65,
-            66,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1252,
-			213,
-			69,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0028"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            67,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			530,
-			213,
-			64,
-			60
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0029"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            67,
-            73,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			530,
-			213,
-			64,
-			60
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0030"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			55,
-            68,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			374,
-			213,
-			68,
-			59
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0031"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			55,
-            68,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			374,
-			213,
-			68,
-			59
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0032"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            67,
-            64,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			602,
-			213,
-			67,
-			60
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0033"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            67,
-            64,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			602,
-			213,
-			67,
-			60
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0034"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            60,
-            44,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			221,
-			358,
-			87,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0035"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			62,
-            60,
-            44,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			221,
-			358,
-			87,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0036"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            58,
-            10,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1577,
-			358,
-			125,
-			69
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0037"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            58,
-            10,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1577,
-			358,
-			125,
-			69
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0038"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			54,
-            60,
-            37,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			316,
-			358,
-			102,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0039"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			54,
-            60,
-            37,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			316,
-			358,
-			102,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0040"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			52,
-            60,
-            53,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			426,
-			358,
-			88,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0041"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			52,
-            60,
-            53,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			426,
-			358,
-			88,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0042"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			54,
-            60,
-            67,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			522,
-			358,
-			72,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0043"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			54,
-            60,
-            67,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			522,
-			358,
-			72,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0044"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            68,
-            65,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			450,
-			213,
-			72,
-			59
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0045"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            68,
-            65,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			450,
-			213,
-			72,
-			59
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0046"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            65,
-            66,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1252,
-			213,
-			69,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0047"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            65,
-            66,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1252,
-			213,
-			69,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0048"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			213,
-			60,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0049"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			213,
-			60,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0050"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			61,
-            62,
-            69,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1631,
-			284,
-			63,
-			65
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0051"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			61,
-            62,
-            69,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1631,
-			284,
-			63,
-			65
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0052"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            67,
-            67,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			677,
-			213,
-			66,
-			60
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0053"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            67,
-            67,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			677,
-			213,
-			66,
-			60
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0054"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0055"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0056"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0057"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0058"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0059"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0060"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0061"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0062"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0063"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1329,
-			213,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0064"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            106
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			602,
-			358,
-			65,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0065"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			60,
-            65,
-            68,
-            102
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			319,
-			436,
-			65,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0066"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            54,
-            61,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1161,
-			932,
-			74,
-			85
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0067"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			58,
-            55,
-            61,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			859,
-			932,
-			74,
-			84
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0068"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			54,
-            36,
-            55,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			120,
-			1239,
-			84,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0069"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			54,
-            36,
-            55,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			212,
-			1239,
-			84,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0070"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			42,
-            25,
-            46,
-            85
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1017,
-			1739,
-			105,
-			128
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0071"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			42,
-            25,
-            46,
-            85
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1130,
-			1739,
-			105,
-			128
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0072"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			36,
-            22,
-            40,
-            88
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1243,
-			1739,
-			117,
-			128
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0073"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			36,
-            22,
-            40,
-            88
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1368,
-			1739,
-			117,
-			128
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0074"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			33,
-            19,
-            38,
-            95
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1893,
-			1607,
-			122,
-			124
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0075"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			33,
-            19,
-            38,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			383,
-			1739,
-			122,
-			125
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0076"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			27,
-            18,
-            36,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			513,
-			1739,
-			130,
-			126
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0077"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			27,
-            18,
-            36,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			651,
-			1739,
-			130,
-			126
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0078"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			45,
-            16,
-            44,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1493,
-			1739,
-			104,
-			128
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0079"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			44,
-            16,
-            43,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			789,
-			1739,
+			780,
+			246,
 			106,
-			126
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0080"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			44,
-            15,
-            43,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			903,
-			1739,
-			106,
-			127
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0081"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			49,
-            15,
-            48,
-            123
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			575,
-			1126,
-			96,
-			100
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0082"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			68,
-            14,
-            70,
-            141
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			471,
-			932,
-			55,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0083"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			68,
-            14,
-            70,
-            141
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			471,
-			932,
-			55,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0084"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			72,
-            11,
-            71,
-            152
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1449,
-			759,
-			50,
-			75
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0085"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			72,
-            11,
-            71,
-            152
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1449,
-			759,
-			50,
-			75
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0086"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			73,
-            55,
-            73,
-            164
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			82,
-			4,
-			47,
-			19
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0087"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			73,
-            55,
-            73,
-            164
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			82,
-			4,
-			47,
-			19
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0088"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			50,
-            74,
-            55,
-            100
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1158,
-			284,
-			88,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0089"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			50,
-            74,
-            55,
-            100
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1158,
-			284,
-			88,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0090"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			40,
-            56,
-            46,
-            95
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1651,
-			932,
-			107,
-			87
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0091"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			40,
-            56,
-            46,
-            95
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1651,
-			932,
-			107,
-			87
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0092"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			38,
-            54,
-            44,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			756,
-			1027,
-			111,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0093"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			38,
-            54,
-            44,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			756,
-			1027,
-			111,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0094"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			37,
-            58,
-            43,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1435,
-			932,
-			113,
-			86
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0095"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			37,
-            58,
-            43,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1435,
-			932,
-			113,
-			86
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0096"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			37,
-            67,
-            43,
-            93
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			531,
-			843,
-			113,
 			78
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_demon_big_guy_0097"] = {
+	demon_pit_tower_demon_big_guy_0001 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
-			238
+			239
 		},
 		trim = {
-			37,
-            67,
-            43,
-            93
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			531,
-			843,
-			113,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0098"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            64,
-            62,
-            103
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			392,
-			436,
-			75,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0099"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            64,
-            62,
-            103
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			392,
-			436,
-			75,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0100"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            66,
-            62,
-            102
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1825,
-			358,
-			75,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0101"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            66,
-            62,
-            102
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1825,
-			358,
-			75,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0102"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            64,
-            61,
-            102
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1106,
-			436,
-			76,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0103"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			56,
-            64,
-            61,
-            102
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1106,
-			436,
-			76,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0104"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			213,
-			60,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_0105"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			193,
-			238
-		},
-		trim = {
-			63,
-            65,
-            70,
-            111
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			213,
-			60,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_hit_fx_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			116
-		},
-		trim = {
-			41,
-            38,
-            36,
-            41
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1347,
-			4,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_hit_fx_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			116
-		},
-		trim = {
-			41,
-            38,
-            36,
-            41
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1347,
-			4,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_hit_fx_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			116
-		},
-		trim = {
-			35,
-            28,
-            30,
-            30
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			239,
-			213,
-			59,
-			58
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_hit_fx_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			116
-		},
-		trim = {
-			35,
-            28,
-            30,
-            30
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			239,
-			213,
-			59,
-			58
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_hit_fx_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			116
-		},
-		trim = {
-			28,
-            24,
-            25,
-            24
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1305,
-			358,
-			71,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_hit_fx_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			116
-		},
-		trim = {
-			28,
-            24,
-            25,
-            24
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1305,
-			358,
-			71,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			17,
-            66,
-            30,
-            140
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			306,
-			213,
-			60,
-			58
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			17,
-            66,
-            30,
-            140
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			306,
-			213,
-			60,
-			58
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			21,
-            50,
-            25,
-            134
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1325,
-			843,
-			61,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			21,
-            50,
-            25,
-            134
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1325,
-			843,
-			61,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			10,
-            11,
-            13,
-            132
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			234,
-			1607,
-			84,
-			121
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			10,
-            11,
-            13,
-            132
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			234,
-			1607,
-			84,
-			121
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			16,
-            19,
-            20,
-            132
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1248,
-			1356,
-			71,
-			113
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_big_guy_projectile_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			107,
-			264
-		},
-		trim = {
-			16,
-            19,
-            20,
-            132
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1248,
-			1356,
-			71,
-			113
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            71,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			970,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            72,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			319,
-			49,
-			43,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            72,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			319,
-			49,
-			43,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            69,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1987,
-			49,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            69,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1987,
-			49,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			50,
-            67,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1379,
-			99,
-			42,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			50,
-            67,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1379,
-			99,
-			42,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            70,
-            49,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1510,
-			49,
-			42,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            72,
-            48,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			370,
-			49,
-			43,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            72,
-            48,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			370,
-			49,
-			43,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0011"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            68,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			852,
-			99,
-			43,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0012"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            68,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			852,
-			99,
-			43,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0013"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			50,
-            66,
-            49,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1743,
-			99,
-			43,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0014"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			50,
-            66,
-            49,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1743,
-			99,
-			43,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0015"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            70,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1560,
-			49,
-			43,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0016"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            71,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			970,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0017"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            71,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			970,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0018"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            53,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			99,
-			41,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0019"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            53,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			99,
-			41,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0020"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			47,
-            67,
-            53,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1429,
-			99,
-			42,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0021"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			47,
-            67,
-            53,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1429,
-			99,
-			42,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0022"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			40,
-            66,
-            54,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1794,
-			99,
-			48,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0023"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			40,
-            66,
-            54,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1794,
-			99,
-			48,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0024"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			30,
-            65,
-            54,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			56,
-			152,
-			58,
-			46
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0025"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			30,
-            65,
-            54,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			56,
-			152,
-			58,
-			46
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0026"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			29,
-            53,
-            25,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			892,
-			213,
-			88,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0027"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			29,
-            53,
-            25,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			892,
-			213,
-			88,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0028"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			55,
-            57,
-            29,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			173,
-			213,
-			58,
-			56
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0029"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			55,
-            57,
-            29,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			173,
-			213,
-			58,
-			56
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0030"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			54,
-            69,
-            35,
-            98
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			903,
-			99,
-			53,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0031"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			54,
-            69,
-            35,
-            98
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			903,
-			99,
-			53,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0032"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			55,
-            70,
-            39,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1611,
-			49,
-			48,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0033"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			55,
-            70,
-            39,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1611,
-			49,
-			48,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0034"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            70,
-            48,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1667,
-			49,
-			43,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0035"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            70,
-            48,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1667,
-			49,
-			43,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0036"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            71,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			970,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0037"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            71,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			970,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0038"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            48,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			53,
-			99,
-			46,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0039"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            48,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			53,
-			99,
-			46,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0040"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			41,
-            51,
-            43,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1402,
-			213,
-			58,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0041"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			41,
-            51,
-            43,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1402,
-			213,
-			58,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0042"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			39,
-            49,
-            43,
-            98
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1528,
-			213,
-			60,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0043"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			39,
-            49,
-            43,
-            98
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1528,
-			213,
-			60,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0044"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			41,
-            46,
-            41,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			675,
-			358,
-			60,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0045"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			41,
-            46,
-            41,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			675,
-			358,
-			60,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0046"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			42,
-            44,
-            43,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			743,
-			358,
-			57,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0047"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			42,
-            44,
-            43,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			743,
-			358,
-			57,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0048"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			42,
-            44,
-            43,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			808,
-			358,
-			57,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0049"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			42,
-            44,
-            43,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			808,
-			358,
-			57,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0050"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            43,
-            43,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1384,
-			358,
-			56,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0051"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            43,
-            43,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1384,
-			358,
-			56,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0052"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            44,
-            47,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			873,
-			358,
-			52,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0053"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            44,
-            47,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			873,
-			358,
-			52,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0054"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            44,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			933,
-			358,
-			49,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0055"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            44,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			933,
-			358,
-			49,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0056"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            50,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			988,
-			213,
-			49,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0057"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            50,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			988,
-			213,
-			49,
-			61
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0058"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1596,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0059"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1596,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0060"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1596,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0061"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1596,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0062"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            47,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1254,
-			284,
-			49,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0063"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            47,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1254,
-			284,
-			49,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0064"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            47,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1254,
-			284,
-			49,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0065"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            47,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1254,
-			284,
-			49,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0066"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1653,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0067"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1653,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0068"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1653,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0069"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1653,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0070"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            48,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1710,
-			213,
-			49,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0071"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            49,
-            47,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1468,
-			213,
-			52,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0072"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            49,
-            47,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1468,
-			213,
-			52,
-			62
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0073"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            71,
-            49,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1021,
-			49,
-			47,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0074"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            71,
-            49,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1021,
-			49,
-			47,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0075"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            79,
-            48,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			448,
-			4,
-			48,
-			34
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0076"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            79,
-            48,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			448,
-			4,
-			48,
-			34
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0077"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            86,
-            47,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			260,
-			4,
-			49,
-			27
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0078"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            86,
-            47,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			260,
-			4,
-			49,
-			27
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0079"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            88,
-            47,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			169,
-			4,
-			49,
-			25
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0080"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            88,
-            47,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			169,
-			4,
-			49,
-			25
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0081"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            73,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			114,
-			49,
-			43,
-			38
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0082"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            73,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			114,
-			49,
-			43,
-			38
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0083"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            68,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			964,
-			99,
-			42,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0084"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            68,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			964,
-			99,
-			42,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0085"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            70,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1718,
-			49,
-			42,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0086"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            70,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1718,
-			49,
-			42,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0087"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0088"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0089"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0090"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0091"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0092"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0093"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0094"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0095"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0096"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            52,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			107,
-			99,
-			42,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0097"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            68,
-            49,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1850,
-			99,
-			44,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0098"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			43,
-            68,
-            44,
-            94
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			427,
-			152,
-			55,
-			48
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0099"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			38,
-            52,
-            39,
-            91
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			990,
-			358,
-			65,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0100"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			37,
-            52,
-            38,
-            90
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1448,
-			358,
-			67,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0101"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			31,
-            47,
-            34,
-            89
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			739,
-			677,
-			77,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0102"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			31,
-            47,
-            34,
-            88
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1507,
-			759,
-			77,
-			75
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0103"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			21,
-            24,
-            26,
-            87
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			472,
-			1126,
-			95,
-			99
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0104"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			21,
-            24,
-            26,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			797,
-			1126,
-			95,
-			102
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0105"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			14,
-            22,
-            20,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1120,
-			1126,
-			108,
-			104
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0106"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			14,
-            22,
-            20,
-            81
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1156,
-			1239,
-			108,
-			107
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0107"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			13,
-            19,
-            19,
-            81
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			572,
-			1356,
-			110,
-			110
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0108"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			13,
-            19,
-            19,
-            79
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1130,
-			1356,
-			110,
-			112
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0109"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			11,
-            18,
-            16,
-            79
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1327,
-			1356,
-			115,
-			113
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0110"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			11,
-            18,
-            16,
-            77
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1555,
-			1356,
-			115,
-			115
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0111"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			23,
-            16,
-            24,
-            77
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1095,
-			1480,
-			95,
-			117
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0112"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			22,
-            16,
-            23,
-            80
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1450,
-			1356,
-			97,
+			66,
+			68,
+			73,
 			114
 		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0113"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			22,
-            15,
-            23,
-            80
-		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1678,
-			1356,
-			97,
-			115
+			799,
+			1928,
+			54,
+			57
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0048",
+			"demon_pit_tower_demon_big_guy_0049",
+			"demon_pit_tower_demon_big_guy_0104",
+			"demon_pit_tower_demon_big_guy_0105"
+		}
 	},
-	["demon_pit_tower_demon_minion_0114"] = {
+	demon_pit_tower_demon_big_guy_0002 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			27,
-            15,
-            27,
-            114
+			63,
+			65,
+			71,
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1622,
-			843,
-			88,
-			81
+			799,
+			1040,
+			59,
+			60
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0003"
+		}
 	},
-	["demon_pit_tower_demon_minion_0115"] = {
+	demon_pit_tower_demon_big_guy_0004 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			44,
-            14,
-            47,
-            120
+			61,
+			69,
+			71,
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1592,
-			759,
-			51,
-			76
+			1734,
+			980,
+			61,
+			56
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0005"
+		}
 	},
-	["demon_pit_tower_demon_minion_0116"] = {
+	demon_pit_tower_demon_big_guy_0006 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			44,
-            14,
-            47,
-            120
+			63,
+			69,
+			71,
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1592,
-			759,
-			51,
-			76
+			799,
+			1103,
+			59,
+			56
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0007"
+		}
 	},
-	["demon_pit_tower_demon_minion_0117"] = {
+	demon_pit_tower_demon_big_guy_0008 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			48,
-            11,
-            48,
-            131
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1523,
-			358,
-			46,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0118"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            11,
-            48,
-            131
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1523,
-			358,
-			46,
-			68
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0119"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            51,
-            50,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			4,
-			43,
-			17
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0120"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            51,
-            50,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			4,
-			43,
-			17
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0121"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			44,
-            70,
-            25,
-            88
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1566,
-			152,
+			65,
+			66,
 			73,
-			52
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0122"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			44,
-            70,
-            25,
-            88
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1566,
-			152,
-			73,
-			52
+			799,
+			1347,
+			55,
+			59
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0009"
+		}
 	},
-	["demon_pit_tower_demon_minion_0123"] = {
+	demon_pit_tower_demon_big_guy_0010 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			44,
-            67,
-            23,
-            90
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1647,
-			152,
+			66,
+			63,
 			75,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1409,
+			52,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0011"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0012 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			67,
+			63,
+			76,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1798,
+			50,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0013"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0014 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			66,
+			65,
+			76,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1153,
+			51,
+			60
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0015"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0016 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			66,
+			69,
+			76,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1411,
+			51,
+			56
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0017"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0018 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			67,
+			69,
+			76,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1584,
+			50,
+			56
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0019"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0020 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			67,
+			66,
+			76,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1349,
+			50,
+			59
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0021"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0022 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			66,
+			63,
+			75,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1474,
+			52,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0023"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0024 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			65,
+			63,
+			73,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1990,
+			906,
+			55,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0025"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0026 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			61,
+			68,
+			69,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1974,
+			63,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0027",
+			"demon_pit_tower_demon_big_guy_0046",
+			"demon_pit_tower_demon_big_guy_0047"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0028 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			59,
+			70,
+			76,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1539,
+			58,
+			55
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0029"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0030 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			58,
+			72,
+			73,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1040,
+			62,
 			53
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0031"
+		}
 	},
-	["demon_pit_tower_demon_minion_0124"] = {
+	demon_pit_tower_demon_big_guy_0032 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			44,
-            67,
-            23,
-            90
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1647,
-			152,
-			75,
-			53
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0125"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            65,
-            24,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			690,
-			152,
-			72,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0126"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            65,
-            24,
-            96
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			690,
-			152,
-			72,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0127"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			47,
-            63,
-            24,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1122,
-			152,
-			71,
-			50
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0128"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			47,
-            63,
-            24,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1122,
-			152,
-			71,
-			50
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0129"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            63,
-            26,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1201,
-			152,
+			65,
+			70,
 			67,
-			50
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0130"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			49,
-            63,
-            26,
-            97
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1276,
-			152,
-			67,
-			50
+			1899,
+			980,
+			61,
+			55
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0033"
+		}
 	},
-	["demon_pit_tower_demon_minion_0131"] = {
+	demon_pit_tower_demon_big_guy_0034 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			51,
-            62,
-            28,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1495,
-			152,
+			66,
 			63,
-			51
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0132"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            62,
-            28,
-            97
+			47,
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1495,
-			152,
-			63,
-			51
+			711,
+			1475,
+			80,
+			62
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0035"
+		}
 	},
-	["demon_pit_tower_demon_minion_0133"] = {
+	demon_pit_tower_demon_big_guy_0036 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
-			51,
-            63,
-            27,
-            97
+			61,
+			61,
+			13,
+			114
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1351,
-			152,
-			64,
-			50
+			1100,
+			443,
+			119,
+			64
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0037"
+		}
 	},
-	["demon_pit_tower_demon_minion_0134"] = {
+	demon_pit_tower_demon_big_guy_0038 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			142,
-			210
-		},
-		trim = {
-			51,
-            63,
-            27,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1423,
-			152,
-			64,
-			50
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0135"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
+			193,
+			239
 		},
 		trim = {
 			57,
-            67,
-            42,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			122,
-			152,
-			43,
-			46
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0136"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			55,
-            64,
-            43,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			770,
-			152,
-			44,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0137"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			55,
-            64,
-            43,
-            97
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			770,
-			152,
-			44,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0138"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            74,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1402,
-			4,
-			46,
-			37
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0139"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			46,
-            74,
-            50,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1402,
-			4,
-			46,
-			37
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0140"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			157,
-			99,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0141"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            69,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			157,
-			99,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_0142"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			142,
-			210
-		},
-		trim = {
-			48,
-            71,
-            51,
-            99
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1076,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_explosion_decal"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			90,
-			68
-		},
-		trim = {
-			13,
-            16,
-            14,
-            17
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			562,
-			4,
 			63,
+			40,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			995,
+			906,
+			96,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0039"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0040 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			56,
+			63,
+			55,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1341,
+			82,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0041"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0042 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			57,
+			64,
+			70,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1435,
+			66,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0043"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0044 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			59,
+			72,
+			68,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1665,
+			980,
+			66,
+			53
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0045"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0050 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			65,
+			66,
+			72,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1162,
+			56,
+			59
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0051"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0052 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			63,
+			71,
+			70,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1096,
+			60,
+			54
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0053"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0054 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			64,
+			68,
+			71,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1963,
+			980,
+			58,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0055",
+			"demon_pit_tower_demon_big_guy_0056",
+			"demon_pit_tower_demon_big_guy_0057",
+			"demon_pit_tower_demon_big_guy_0058",
+			"demon_pit_tower_demon_big_guy_0059",
+			"demon_pit_tower_demon_big_guy_0060",
+			"demon_pit_tower_demon_big_guy_0061",
+			"demon_pit_tower_demon_big_guy_0062",
+			"demon_pit_tower_demon_big_guy_0063"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0064 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			64,
+			68,
+			71,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1909,
+			58,
+			62
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0065 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			64,
+			68,
+			71,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1713,
+			58,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0066 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			61,
+			56,
+			65,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1258,
+			67,
+			80
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0067 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			61,
+			56,
+			64,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1976,
+			340,
+			68,
+			81
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0068 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			57,
+			39,
+			58,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			947,
+			78,
+			103
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0069 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			57,
+			39,
+			58,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1053,
+			78,
+			103
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0070 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			45,
+			28,
+			49,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1152,
+			99,
+			124
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0071 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			45,
+			28,
+			49,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1279,
+			99,
+			124
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0072 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			39,
+			26,
+			43,
+			89
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			130,
+			111,
+			124
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0073 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			39,
+			26,
+			43,
+			89
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			257,
+			111,
+			124
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0074 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			36,
+			22,
+			41,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1708,
+			116,
+			121
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0075 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			36,
+			22,
+			41,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1832,
+			116,
+			121
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0076 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			29,
+			22,
+			38,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			126,
+			122
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0077 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			29,
+			22,
+			38,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			134,
+			5,
+			126,
+			120
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0078 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			48,
+			19,
+			47,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1655,
+			98,
+			123
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0079 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			47,
+			19,
+			46,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1531,
+			100,
+			121
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0080 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			47,
+			18,
+			46,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1406,
+			100,
+			122
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0081 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			52,
+			18,
+			51,
+			127
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			443,
+			90,
+			94
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_big_guy_0082 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			71,
+			17,
+			73,
+			145
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1568,
+			49,
+			77
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0083"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0084 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			76,
+			14,
+			74,
+			156
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1216,
+			43,
+			69
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0085"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0086 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			77,
+			58,
+			76,
+			167
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			664,
+			2026,
+			40,
+			14
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0087"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0088 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			53,
+			77,
+			58,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1681,
+			82,
+			58
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0089"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0090 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			43,
+			60,
+			49,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1085,
+			246,
+			101,
+			80
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0091"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0092 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			42,
+			57,
+			47,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1956,
+			104,
+			85
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0093"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0094 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			40,
+			62,
+			46,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			565,
+			246,
+			107,
+			80
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0095"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0096 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			40,
+			70,
+			46,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1911,
+			246,
+			107,
+			72
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0097"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0098 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			60,
+			67,
+			66,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			769,
+			67,
+			66
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0099"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0100 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			59,
+			70,
+			65,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			970,
+			69,
+			63
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0101"
+		}
+	},
+	demon_pit_tower_demon_big_guy_0102 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			193,
+			239
+		},
+		trim = {
+			59,
+			67,
+			64,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			561,
+			70,
+			66
+		},
+		alias = {
+			"demon_pit_tower_demon_big_guy_0103"
+		}
+	},
+	demon_pit_tower_demon_big_guy_hit_fx_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			116
+		},
+		trim = {
+			43,
+			39,
+			37,
+			42
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1142,
+			1126,
+			45,
 			35
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_hit_fx_0002"
+		}
 	},
-	["demon_pit_tower_demon_minion_hit_fx_0001"] = {
+	demon_pit_tower_demon_big_guy_hit_fx_0003 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			113,
-			133
+			125,
+			116
 		},
 		trim = {
-			38,
-            47,
-            39,
-            48
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			165,
-			49,
-			36,
-			38
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_hit_fx_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			113,
-			133
-		},
-		trim = {
-			38,
-            47,
-            39,
-            48
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			165,
-			49,
-			36,
-			38
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_hit_fx_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			113,
-			133
-		},
-		trim = {
-			33,
-            38,
-            29,
-            40
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			114,
-			213,
-			51,
-			55
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_hit_fx_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			113,
-			133
-		},
-		trim = {
-			33,
-            38,
-            29,
-            40
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			114,
-			213,
-			51,
-			55
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_hit_fx_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			113,
-			133
-		},
-		trim = {
-			27,
-            36,
-            25,
-            34
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1767,
-			213,
-			61,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_minion_hit_fx_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			113,
-			133
-		},
-		trim = {
-			27,
-            36,
-            25,
-            34
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1767,
-			213,
-			61,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			12,
-            16,
-            21,
-            19
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1768,
-			49,
-			43,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			13,
-            15,
-            21,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1014,
-			99,
-			42,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			13,
-            15,
-            21,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1902,
-			99,
-			42,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			13,
-            15,
-            21,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			173,
-			152,
-			42,
-			46
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            15,
-            20,
-            13
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			490,
-			152,
-			42,
-			48
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			15,
-            14,
-            20,
-            13
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			822,
-			152,
-			41,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			16,
-            16,
-            19,
-            11
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			871,
-			152,
-			41,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			15,
-            16,
-            19,
-            11
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			920,
-			152,
-			42,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            16,
-            18,
-            11
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			970,
-			152,
-			44,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            18,
-            18,
-            11
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			324,
-			152,
-			44,
-			47
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0011"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            19,
-            18,
-            11
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			223,
-			152,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0012"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            20,
-            18,
-            12
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1479,
-			99,
-			44,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0013"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			15,
-            20,
-            19,
-            13
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1064,
-			99,
-			42,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0014"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            20,
-            19,
-            14
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			208,
-			99,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0015"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            21,
-            17,
-            13
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			259,
-			99,
-			45,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0016"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            20,
-            16,
-            14
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			312,
-			99,
-			46,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0017"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            20,
-            14,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1819,
-			49,
-			48,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0018"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            20,
-            13,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1127,
-			49,
-			49,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0019"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			15,
-            18,
-            12,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			366,
-			99,
-			49,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0020"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			16,
-            18,
-            11,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			423,
-			99,
-			49,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0021"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			17,
-            18,
-            11,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			480,
-			99,
-			48,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0022"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            18,
-            11,
-            14
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1531,
-			99,
-			47,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0023"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            17,
-            12,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1586,
-			99,
-			46,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0024"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			19,
-            18,
-            13,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1114,
-			99,
-			44,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0025"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			19,
-            18,
-            13,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			536,
-			99,
-			44,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0026"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            18,
-            15,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			588,
-			99,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0027"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			20,
-            16,
-            14,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1952,
-			99,
-			42,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0028"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			19,
-            15,
-            16,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			275,
-			152,
-			41,
-			46
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0029"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            13,
-            16,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			540,
-			152,
-			42,
-			48
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0030"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            12,
-            17,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			590,
-			152,
-			41,
-			48
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0031"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            11,
-            17,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1022,
-			152,
-			41,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0032"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			16,
-            11,
-            17,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1071,
-			152,
-			43,
-			49
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0033"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			17,
-            11,
-            16,
-            17
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			639,
-			152,
-			43,
-			48
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0034"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			17,
-            11,
-            16,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			376,
-			152,
-			43,
-			47
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0035"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			16,
-            11,
-            16,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			152,
-			44,
-			45
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0036"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            12,
-            16,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1640,
-			99,
-			42,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0037"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			18,
-            13,
-            16,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1166,
-			99,
-			42,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0038"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			16,
-            14,
-            16,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			639,
-			99,
-			44,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0039"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			15,
-            14,
-            16,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			691,
-			99,
-			45,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0040"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			14,
-            15,
-            15,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1875,
-			49,
-			47,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0041"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			13,
-            16,
-            16,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1184,
-			49,
-			47,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0042"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			11,
-            16,
-            16,
-            19
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1930,
-			49,
-			49,
-			41
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0043"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			11,
-            16,
-            16,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			744,
-			99,
-			49,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0044"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			11,
-            15,
-            17,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1216,
-			99,
-			48,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0045"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			11,
-            15,
-            18,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1272,
-			99,
-			47,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0046"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			11,
-            14,
-            20,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1690,
-			99,
-			45,
-			44
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_0047"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			76,
-			76
-		},
-		trim = {
-			11,
-            15,
-            21,
-            18
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1327,
-			99,
-			44,
-			43
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			12,
-            11,
-            11,
-            14
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			354,
-			4,
+			37,
+			29,
 			30,
 			31
 		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			11,
-            13,
-            13,
-            15
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			317,
-			4,
-			29,
-			28
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			12,
-            14,
-            15,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			226,
-			4,
-			26,
-			26
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			13,
-            16,
-            16,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			137,
-			4,
-			24,
-			24
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			13,
-            16,
-            16,
-            16
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			137,
-			4,
-			24,
-			24
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			16,
-            19,
-            18,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			55,
-			4,
-			19,
-			17
-		},
-		alias = {},
-	},
-	["demon_pit_tower_demon_projectile_particle_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			53,
-			56
-		},
-		trim = {
-			16,
-            19,
-            18,
-            20
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			55,
-			4,
-			19,
-			17
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			13,
-            11,
-            11,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			717,
-			1607,
-			129,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			13,
-            12,
-            10,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			326,
-			1607,
-			130,
-			122
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			13,
-            12,
-            10,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			326,
-			1607,
-			130,
-			122
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			11,
-            11,
-            11,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			854,
-			1607,
-			131,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			11,
-            11,
-            11,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			854,
-			1607,
-			131,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			13,
-            11,
-            11,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			717,
-			1607,
-			129,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_base_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			153,
-			218
-		},
-		trim = {
-			13,
-            11,
-            11,
-            84
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			717,
-			1607,
-			129,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			824,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			937,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1050,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1163,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1276,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1389,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1502,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1615,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1728,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1728,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0011"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1841,
-			677,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0012"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0013"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			117,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0014"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			230,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0015"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			343,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0016"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			456,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0017"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			569,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0018"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			682,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0019"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			795,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_bubbles_0020"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			144,
-			232
-		},
-		trim = {
-			18,
-            16,
-            21,
-            142
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			908,
-			759,
-			105,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1190,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            61,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1718,
-			843,
-			96,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            61,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1718,
-			843,
-			96,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			652,
-			843,
-			96,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			652,
-			843,
-			96,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1458,
-			1126,
-			96,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1562,
-			1126,
-			96,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            35,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1272,
-			1239,
-			96,
-			107
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            35,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1376,
-			1239,
-			96,
-			107
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            36,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			304,
-			1239,
-			97,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0011"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            36,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			409,
-			1239,
-			97,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0012"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            38,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1236,
-			1126,
-			97,
-			104
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0013"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            38,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1236,
-			1126,
-			97,
-			104
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0014"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            61,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1822,
-			843,
-			96,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0015"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            61,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1822,
-			843,
-			96,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0016"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			756,
-			843,
-			95,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0017"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			756,
-			843,
-			95,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0018"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1666,
-			1126,
-			96,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0019"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1666,
-			1126,
-			96,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0020"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            32,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			690,
-			1356,
-			96,
-			110
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0021"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            32,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			794,
-			1356,
-			96,
-			110
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0022"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1712,
-			1239,
-			96,
-			109
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0023"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1816,
-			1239,
-			96,
-			109
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0024"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1920,
-			1239,
-			96,
-			109
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0025"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1356,
-			96,
-			109
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0026"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            39,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			900,
-			1126,
-			96,
-			103
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0027"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            39,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			900,
-			1126,
-			96,
-			103
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0028"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            51,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1502,
-			1027,
-			96,
-			91
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0029"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            51,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1502,
-			1027,
-			96,
-			91
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0030"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1294,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0031"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            62,
-            30,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			843,
-			100,
-			77
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0032"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            62,
-            30,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			843,
-			100,
-			77
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0033"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            25,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1580,
-			1480,
-			95,
-			119
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0034"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            25,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1683,
-			1480,
-			95,
-			119
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0035"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            14,
-            26,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1605,
-			1739,
-			112,
-			132
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0036"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            14,
-            26,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1725,
-			1739,
-			112,
-			132
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0037"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			18,
-            11,
-            22,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1148,
-			1879,
-			119,
-			136
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0038"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			18,
-            11,
-            22,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1275,
-			1879,
-			119,
-			136
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0039"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			16,
-            14,
-            21,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			368,
-			1879,
-			122,
-			133
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0040"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			16,
-            14,
-            21,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			498,
-			1879,
-			122,
-			133
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0041"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            15,
-            21,
-            212
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			464,
-			1607,
-			118,
-			122
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0042"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            15,
-            21,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1739,
-			118,
-			124
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0043"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            17,
-            19,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			993,
-			1607,
-			121,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0044"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            17,
-            19,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1122,
-			1607,
-			121,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0045"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            24,
-            20,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1783,
-			1356,
-			119,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0046"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            23,
-            20,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1198,
-			1480,
-			119,
-			117
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0047"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            26,
-            21,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1910,
-			1356,
-			114,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0048"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            26,
-            21,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1910,
-			1356,
-			114,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0049"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            28,
-            22,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1480,
-			105,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0050"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            28,
-            22,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1480,
-			105,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0051"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			35,
-            37,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			514,
-			1239,
-			91,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0052"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			35,
-            37,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			514,
-			1239,
-			91,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0053"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1021,
-			759,
-			96,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0054"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1021,
-			759,
-			96,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0055"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            70,
-            32,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1651,
-			759,
-			98,
-			76
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0056"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            70,
-            32,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1651,
-			759,
-			98,
-			76
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0057"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			34,
-            70,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1398,
-			436,
-			92,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0058"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			34,
-            70,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1398,
-			436,
-			92,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0059"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			33,
-            53,
-            34,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			875,
-			1027,
-			92,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0060"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			33,
-            53,
-            34,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			975,
-			1027,
-			92,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0061"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            50,
-            33,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			442,
-			1027,
-			95,
-			89
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0062"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            50,
-            33,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			545,
-			1027,
-			95,
-			89
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0063"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            50,
-            33,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1075,
-			1027,
-			95,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0064"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            50,
-            33,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1178,
-			1027,
-			96,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0065"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			25,
-            63,
-            33,
-            215
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			475,
-			436,
-			101,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0066"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			25,
-            63,
-            33,
-            215
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			584,
-			436,
-			101,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0067"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			25,
-            66,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1063,
-			358,
-			101,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0068"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			25,
-            66,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1063,
-			358,
-			101,
-			67
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0069"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1836,
-			213,
-			95,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0070"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1939,
-			213,
-			95,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0071"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            31,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			284,
-			97,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0072"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            31,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			109,
-			284,
-			98,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0073"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            28,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			215,
-			284,
-			101,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0074"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            28,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			215,
-			284,
-			101,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0075"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            26,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1908,
-			358,
-			103,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0076"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            26,
-            208
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			693,
-			436,
-			103,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0077"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1498,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0078"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1602,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0079"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1846,
-			596,
-			96,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0080"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1846,
-			596,
-			96,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0081"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			677,
-			96,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0082"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			677,
-			96,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0083"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1190,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0084"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            45,
-            18,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			222,
-			1126,
-			111,
-			97
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0085"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            45,
-            18,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			222,
-			1126,
-			111,
-			97
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0086"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            55,
-            26,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1766,
-			932,
-			102,
-			87
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0087"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            55,
-            26,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1766,
-			932,
-			102,
-			87
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0088"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            51,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1606,
-			1027,
-			96,
-			91
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0089"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            51,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1606,
-			1027,
-			96,
-			91
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0090"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            58,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			941,
-			932,
-			96,
-			84
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0091"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            58,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			941,
-			932,
-			96,
-			84
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0092"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            52,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1282,
-			1027,
-			96,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0093"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            52,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1282,
-			1027,
-			96,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0094"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            54,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			222,
-			1027,
-			96,
-			88
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0095"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            54,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			222,
-			1027,
-			96,
-			88
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0096"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1190,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0097"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1190,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0098"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1706,
-			436,
-			97,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0099"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1706,
-			436,
-			97,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0100"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1811,
-			436,
-			95,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0101"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1811,
-			436,
-			95,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0102"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0103"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0104"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0105"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0106"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0107"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0108"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0109"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0110"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0111"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0112"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1914,
-			436,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0113"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			516,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0114"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			516,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0115"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			27,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			108,
-			516,
-			100,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0116"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			27,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			108,
-			516,
-			100,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0117"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			27,
-            53,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			648,
-			1027,
-			100,
-			89
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0118"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			27,
-            53,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			648,
-			1027,
-			100,
-			89
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0119"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			26,
-            50,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1126,
-			101,
-			92
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0120"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			26,
-            50,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1126,
-			101,
-			92
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0121"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			26,
-            49,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			113,
-			1126,
-			101,
-			93
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0122"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			26,
-            49,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			113,
-			1126,
-			101,
-			93
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0123"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			18,
-            63,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1091,
-			843,
-			109,
-			79
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0124"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			18,
-            63,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1208,
-			843,
-			109,
-			79
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0125"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            65,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			112,
-			843,
-			108,
-			77
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0126"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            65,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			112,
-			843,
-			108,
-			77
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0127"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			31,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			216,
-			516,
-			96,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0128"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			320,
-			516,
-			98,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0129"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			426,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0130"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			540,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0131"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            62,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1394,
-			843,
-			106,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0132"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            62,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1394,
-			843,
-			106,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0133"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			17,
-            60,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			237,
-			932,
-			110,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0134"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			17,
-            60,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			237,
-			932,
-			110,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0135"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            59,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			534,
-			932,
-			108,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0136"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            59,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			534,
-			932,
-			108,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0137"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			654,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0138"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			779,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0139"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			904,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0140"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			904,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0141"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1029,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0142"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1029,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0143"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1145,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0144"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			17,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1261,
-			516,
-			110,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0145"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			17,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1261,
-			516,
-			110,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0146"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1379,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0147"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1379,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0148"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1495,
-			516,
-			107,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0149"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1495,
-			516,
-			107,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0150"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1610,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0151"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1610,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0152"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1724,
-			516,
-			103,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0153"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1724,
-			516,
-			103,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0154"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1835,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0155"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1835,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0156"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            62,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1508,
-			843,
-			106,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0157"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            62,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1508,
-			843,
-			106,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0158"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            60,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			355,
-			932,
-			108,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0159"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            60,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			355,
-			932,
-			108,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0160"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            59,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			650,
-			932,
-			107,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0161"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            59,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			650,
-			932,
-			107,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0162"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			596,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0163"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			129,
-			596,
-			118,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0164"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			255,
-			596,
-			118,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0165"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			255,
-			596,
-			118,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0166"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            70,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			381,
-			596,
-			104,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0167"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            70,
-            33,
-            207
-		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			493,
-			596,
-			102,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0168"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
+			799,
+			1288,
 			58,
-            70,
-            33,
-            207
+			56
 		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			603,
-			596,
-			68,
-			72
-		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_hit_fx_0004"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0169"] = {
+	demon_pit_tower_demon_big_guy_hit_fx_0005 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			125,
+			116
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			30,
+			25,
+			26,
+			25
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			445,
+			700,
+			69,
+			66
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_hit_fx_0006"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0170"] = {
+	demon_pit_tower_demon_big_guy_projectile_0001 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			108,
+			264
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			21,
+			69,
+			33,
+			143
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			861,
+			1529,
+			54,
+			52
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_projectile_0002"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0171"] = {
+	demon_pit_tower_demon_big_guy_projectile_0003 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			108,
+			264
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			24,
+			53,
+			28,
+			137
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			1989,
+			690,
+			56,
+			74
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_projectile_0004"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0172"] = {
+	demon_pit_tower_demon_big_guy_projectile_0005 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			108,
+			264
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			13,
+			14,
+			17,
+			135
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			445,
+			443,
+			78,
+			115
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_projectile_0006"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0173"] = {
+	demon_pit_tower_demon_big_guy_projectile_0007 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			108,
+			264
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			19,
+			22,
+			23,
+			135
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			526,
+			1592,
+			66,
+			107
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_big_guy_projectile_0008"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0174"] = {
+	demon_pit_tower_demon_minion_0001 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			51,
+			74,
+			54,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			972,
+			2011,
+			37,
+			34
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0016",
+			"demon_pit_tower_demon_minion_0017",
+			"demon_pit_tower_demon_minion_0036",
+			"demon_pit_tower_demon_minion_0037"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0175"] = {
+	demon_pit_tower_demon_minion_0002 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			52,
+			75,
+			54,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			1023,
+			1677,
+			36,
+			33
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0003"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0176"] = {
+	demon_pit_tower_demon_minion_0004 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			52,
+			72,
+			53,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			1062,
+			1208,
+			37,
+			36
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0005"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0177"] = {
+	demon_pit_tower_demon_minion_0006 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			53,
+			70,
+			53,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			972,
+			1970,
+			36,
+			38
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0007"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0178"] = {
+	demon_pit_tower_demon_minion_0008 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			55,
+			73,
+			52,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			1023,
+			1601,
+			35,
+			35
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0179"] = {
+	demon_pit_tower_demon_minion_0009 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			54,
+			75,
+			51,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			1062,
+			1361,
+			37,
+			33
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0010"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0180"] = {
+	demon_pit_tower_demon_minion_0011 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			53,
+			71,
+			52,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			972,
+			1810,
+			37,
+			37
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0012"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0181"] = {
+	demon_pit_tower_demon_minion_0013 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			54,
+			69,
+			52,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			972,
+			1692,
+			36,
+			39
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_demon_minion_0014"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0182"] = {
+	demon_pit_tower_demon_minion_0015 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
 		},
 		trim = {
-			59,
-            70,
-            32,
-            207
+			52,
+			73,
+			54,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			596,
-			68,
-			72
+			1023,
+			1408,
+			36,
+			35
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0183"] = {
+	demon_pit_tower_demon_minion_0018 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			159,
-			349
+			142,
+			210
+		},
+		trim = {
+			51,
+			72,
+			56,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1446,
+			35,
+			36
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0019"
+		}
+	},
+	demon_pit_tower_demon_minion_0020 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			50,
+			70,
+			56,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1169,
+			36,
+			38
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0021"
+		}
+	},
+	demon_pit_tower_demon_minion_0022 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
 		},
 		trim = {
 			43,
-            62,
-            33,
-            210
+			69,
+			57,
+			102
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			228,
-			843,
-			83,
+			926,
+			1492,
+			42,
+			39
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0023"
+		}
+	},
+	demon_pit_tower_demon_minion_0024 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			33,
+			68,
+			57,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1126,
+			52,
+			40
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0025"
+		}
+	},
+	demon_pit_tower_demon_minion_0026 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			32,
+			56,
+			28,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1482,
+			980,
+			82,
+			55
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0027"
+		}
+	},
+	demon_pit_tower_demon_minion_0028 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			58,
+			59,
+			32,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1707,
+			52,
+			51
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0029"
+		}
+	},
+	demon_pit_tower_demon_minion_0030 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			58,
+			71,
+			37,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1092,
+			1126,
+			47,
+			38
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0031"
+		}
+	},
+	demon_pit_tower_demon_minion_0032 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			58,
+			73,
+			42,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1628,
+			1126,
+			42,
+			35
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0033"
+		}
+	},
+	demon_pit_tower_demon_minion_0034 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			55,
+			73,
+			50,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1062,
+			1286,
+			37,
+			35
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0035"
+		}
+	},
+	demon_pit_tower_demon_minion_0038 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			51,
+			72,
+			51,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1530,
+			40,
+			36
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0039"
+		}
+	},
+	demon_pit_tower_demon_minion_0040 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			45,
+			54,
+			46,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1470,
+			51,
+			56
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0041"
+		}
+	},
+	demon_pit_tower_demon_minion_0042 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			42,
+			52,
+			46,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1988,
+			54,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0043"
+		}
+	},
+	demon_pit_tower_demon_minion_0044 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			44,
+			49,
+			44,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1224,
+			54,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0045"
+		}
+	},
+	demon_pit_tower_demon_minion_0046 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			47,
+			45,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1670,
+			51,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0047"
+		}
+	},
+	demon_pit_tower_demon_minion_0048 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			47,
+			45,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1734,
+			51,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0049"
+		}
+	},
+	demon_pit_tower_demon_minion_0050 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			46,
+			46,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1863,
+			50,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0051"
+		}
+	},
+	demon_pit_tower_demon_minion_0052 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			47,
+			50,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1998,
+			836,
+			46,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0053"
+		}
+	},
+	demon_pit_tower_demon_minion_0054 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			47,
+			52,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1643,
+			44,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0055"
+		}
+	},
+	demon_pit_tower_demon_minion_0056 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			51,
+			53,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1252,
+			43,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0057"
+		}
+	},
+	demon_pit_tower_demon_minion_0058 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			51,
+			53,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1312,
+			43,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0059",
+			"demon_pit_tower_demon_minion_0060",
+			"demon_pit_tower_demon_minion_0061"
+		}
+	},
+	demon_pit_tower_demon_minion_0062 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			50,
+			53,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1126,
+			43,
+			58
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0063",
+			"demon_pit_tower_demon_minion_0064",
+			"demon_pit_tower_demon_minion_0065"
+		}
+	},
+	demon_pit_tower_demon_minion_0066 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			51,
+			53,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1372,
+			43,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0067",
+			"demon_pit_tower_demon_minion_0068",
+			"demon_pit_tower_demon_minion_0069"
+		}
+	},
+	demon_pit_tower_demon_minion_0070 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			51,
+			53,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1432,
+			43,
+			57
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0071 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			46,
+			51,
+			50,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1817,
+			46,
+			57
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0072"
+		}
+	},
+	demon_pit_tower_demon_minion_0073 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			49,
+			74,
+			52,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1773,
+			41,
+			34
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0074"
+		}
+	},
+	demon_pit_tower_demon_minion_0075 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			49,
+			82,
+			51,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1190,
+			1169,
+			42,
+			28
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0076"
+		}
+	},
+	demon_pit_tower_demon_minion_0077 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			49,
+			89,
+			50,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1100,
+			510,
+			43,
+			21
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0078"
+		}
+	},
+	demon_pit_tower_demon_minion_0079 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			49,
+			91,
+			50,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			2026,
+			43,
+			19
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0080"
+		}
+	},
+	demon_pit_tower_demon_minion_0081 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			51,
+			76,
+			54,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1062,
+			1397,
+			37,
+			32
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0082"
+		}
+	},
+	demon_pit_tower_demon_minion_0083 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			71,
+			55,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1368,
+			35,
+			37
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0084"
+		}
+	},
+	demon_pit_tower_demon_minion_0085 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			73,
+			55,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1639,
+			35,
+			35
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0086"
+		}
+	},
+	demon_pit_tower_demon_minion_0087 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			72,
+			55,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1485,
+			35,
+			36
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0088",
+			"demon_pit_tower_demon_minion_0089",
+			"demon_pit_tower_demon_minion_0090",
+			"demon_pit_tower_demon_minion_0091",
+			"demon_pit_tower_demon_minion_0092",
+			"demon_pit_tower_demon_minion_0093",
+			"demon_pit_tower_demon_minion_0094",
+			"demon_pit_tower_demon_minion_0095",
+			"demon_pit_tower_demon_minion_0096"
+		}
+	},
+	demon_pit_tower_demon_minion_0097 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			71,
+			52,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1543,
+			1126,
+			38,
+			39
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0098 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			47,
+			71,
+			47,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1169,
+			48,
+			42
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0099 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			41,
+			55,
+			42,
+			94
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1845,
+			59,
+			61
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0100 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			40,
+			55,
+			41,
+			93
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1648,
+			61,
+			62
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0101 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			35,
+			50,
+			37,
+			92
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1742,
+			70,
+			68
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0102 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			35,
+			50,
+			37,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1609,
+			70,
+			69
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0103 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			24,
+			27,
+			29,
+			90
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			851,
+			89,
+			93
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0104 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			24,
+			27,
+			29,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			443,
+			89,
+			96
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0105 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			17,
+			25,
+			23,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			763,
+			340,
+			102,
+			98
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0106 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			17,
+			25,
+			23,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1093,
+			102,
+			101
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0107 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			16,
+			22,
+			22,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1816,
+			130,
+			104,
+			104
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0108 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			16,
+			22,
+			22,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1709,
+			130,
+			104,
+			106
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0109 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			14,
+			21,
+			19,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1389,
+			130,
+			109,
+			107
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0110 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			14,
+			21,
+			19,
+			80
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1781,
+			109,
+			109
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0111 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			26,
+			19,
+			27,
+			80
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			811,
+			89,
+			111
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0112 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			26,
+			19,
+			25,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			699,
+			91,
+			109
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0113 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			26,
+			18,
+			25,
+			82
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			470,
+			91,
+			110
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0114 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			30,
+			18,
+			30,
+			117
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1464,
+			82,
+			75
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0115 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			47,
+			17,
+			50,
+			123
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			799,
+			1597,
+			45,
+			70
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0116"
+		}
+	},
+	demon_pit_tower_demon_minion_0117 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			51,
+			14,
+			51,
+			134
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1187,
+			40,
+			62
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0118"
+		}
+	},
+	demon_pit_tower_demon_minion_0119 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			54,
+			53,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1976,
+			424,
+			37,
+			12
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0120"
+		}
+	},
+	demon_pit_tower_demon_minion_0121 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			48,
+			73,
+			27,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			998,
+			1076,
+			67,
+			46
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0122"
+		}
+	},
+	demon_pit_tower_demon_minion_0123 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			47,
+			70,
+			26,
+			93
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1076,
+			69,
+			47
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0124"
+		}
+	},
+	demon_pit_tower_demon_minion_0125 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			49,
+			68,
+			27,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1638,
+			1076,
+			66,
+			43
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0126"
+		}
+	},
+	demon_pit_tower_demon_minion_0127 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			50,
+			66,
+			27,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1570,
+			1076,
+			65,
+			44
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0128"
+		}
+	},
+	demon_pit_tower_demon_minion_0129 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			66,
+			29,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1906,
+			1076,
+			61,
+			44
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0130 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			52,
+			66,
+			29,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1970,
+			1076,
+			61,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0131 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			53,
+			65,
+			31,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1877,
+			58,
+			45
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0132"
+		}
+	},
+	demon_pit_tower_demon_minion_0133 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			55,
+			66,
+			29,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1925,
+			58,
+			44
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0134 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			55,
+			66,
+			29,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1972,
+			58,
+			44
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0135 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			61,
+			71,
+			44,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1845,
+			1126,
+			37,
+			39
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_0136 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			59,
+			67,
+			45,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1534,
+			38,
+			43
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0137"
+		}
+	},
+	demon_pit_tower_demon_minion_0138 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			49,
+			77,
+			53,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1103,
+			1169,
+			40,
+			31
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0139"
+		}
+	},
+	demon_pit_tower_demon_minion_0140 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			51,
+			72,
+			55,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1290,
+			36,
+			36
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_0141"
+		}
+	},
+	demon_pit_tower_demon_minion_0142 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			142,
+			210
+		},
+		trim = {
+			51,
+			74,
+			54,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1062,
+			1324,
+			37,
+			34
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_explosion_decal = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			91,
+			68
+		},
+		trim = {
+			14,
+			18,
+			15,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1027,
+			1126,
+			62,
+			31
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_minion_hit_fx_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			114,
+			133
+		},
+		trim = {
+			39,
+			49,
+			40,
+			48
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1524,
+			35,
+			36
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_hit_fx_0002"
+		}
+	},
+	demon_pit_tower_demon_minion_hit_fx_0003 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			114,
+			133
+		},
+		trim = {
+			34,
+			39,
+			30,
+			41
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1761,
+			50,
+			53
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_hit_fx_0004"
+		}
+	},
+	demon_pit_tower_demon_minion_hit_fx_0005 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			114,
+			133
+		},
+		trim = {
+			28,
+			37,
+			26,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1781,
+			60,
+			61
+		},
+		alias = {
+			"demon_pit_tower_demon_minion_hit_fx_0006"
+		}
+	},
+	demon_pit_tower_demon_projectile_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
 			77
 		},
-		alias = {},
+		trim = {
+			15,
+			19,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1062,
+			1169,
+			38,
+			36
+		},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0184"] = {
+	demon_pit_tower_demon_projectile_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			16,
+			18,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1850,
+			37,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0003 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			16,
+			18,
+			24,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1885,
+			1126,
+			37,
+			39
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			18,
+			25,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1608,
+			35,
+			41
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0005 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			18,
+			24,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1259,
+			36,
+			42
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0006 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			19,
+			18,
+			23,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1349,
+			35,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0007 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			19,
+			19,
+			23,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1395,
+			35,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0008 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			18,
+			20,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1754,
+			37,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0009 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			20,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1580,
+			38,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0010 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			22,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1880,
+			38,
+			41
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0011 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			23,
+			22,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1279,
+			1126,
+			38,
+			40
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0012 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			24,
+			22,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1763,
+			1126,
+			38,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0013 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			18,
+			24,
+			23,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1210,
+			36,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0014 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			18,
+			24,
+			22,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1890,
+			37,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0015 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			24,
+			21,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1734,
+			39,
+			36
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0016 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			24,
+			19,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1584,
+			1126,
+			41,
+			36
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0017 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			18,
+			24,
+			17,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1406,
+			1126,
+			42,
+			36
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0018 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			18,
+			23,
+			16,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1451,
+			1126,
+			43,
+			35
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0019 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			18,
+			23,
+			15,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1190,
+			1126,
+			44,
+			35
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0020 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			19,
+			22,
+			15,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1800,
+			43,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0021 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			20,
+			22,
+			14,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1840,
+			43,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0022 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			21,
+			22,
+			14,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1713,
+			42,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0023 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			22,
+			21,
+			15,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1320,
+			1126,
+			40,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0024 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			23,
+			21,
+			16,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1804,
+			1126,
+			38,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0025 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			23,
+			22,
+			17,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1062,
+			1247,
+			37,
+			36
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0026 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			23,
+			22,
+			17,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1930,
+			37,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0027 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			23,
+			20,
+			17,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1925,
+			1126,
+			37,
+			39
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0028 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			23,
+			18,
+			18,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1441,
+			36,
+			41
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0029 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			22,
+			17,
+			19,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1304,
+			36,
+			42
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0030 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			22,
+			16,
+			20,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1485,
+			35,
+			42
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0031 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			21,
+			15,
+			20,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2009,
+			540,
+			36,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0032 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			21,
+			15,
+			19,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1214,
+			37,
+			42
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0033 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			20,
+			14,
+			19,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1626,
+			38,
+			43
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0034 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			20,
+			14,
+			19,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1924,
+			38,
+			41
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0035 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			20,
+			15,
+			18,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1237,
+			1126,
+			39,
+			39
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0036 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			21,
+			16,
+			19,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2007,
+			1126,
+			37,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0037 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			22,
+			17,
+			19,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1250,
+			36,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0038 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			20,
+			17,
+			18,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1965,
+			1126,
+			39,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0039 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			19,
+			17,
+			18,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1569,
+			40,
+			36
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0040 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			17,
+			18,
+			18,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1673,
+			1126,
+			42,
+			35
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0041 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			16,
+			19,
+			19,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1718,
+			1126,
+			42,
+			35
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0042 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			15,
+			20,
+			19,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1497,
+			1126,
+			43,
+			35
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0043 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			14,
+			19,
+			20,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			2009,
+			43,
+			36
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0044 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			14,
+			18,
+			20,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1672,
+			43,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0045 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			14,
+			18,
+			22,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1968,
+			41,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0046 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			14,
+			17,
+			23,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1363,
+			1126,
+			40,
+			38
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_0047 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			77,
+			77
+		},
+		trim = {
+			15,
+			18,
+			24,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			972,
+			1652,
+			38,
+			37
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_particle_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			54,
+			57
+		},
+		trim = {
+			15,
+			15,
+			14,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2009,
+			586,
+			25,
+			24
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_particle_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			54,
+			57
+		},
+		trim = {
+			14,
+			16,
+			16,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			757,
+			2016,
+			24,
+			23
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_particle_0003 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			54,
+			57
+		},
+		trim = {
+			15,
+			18,
+			18,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2024,
+			980,
+			21,
+			19
+		},
+		alias = {}
+	},
+	demon_pit_tower_demon_projectile_particle_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			54,
+			57
+		},
+		trim = {
+			16,
+			19,
+			19,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2024,
+			1002,
+			19,
+			19
+		},
+		alias = {
+			"demon_pit_tower_demon_projectile_particle_0005"
+		}
+	},
+	demon_pit_tower_demon_projectile_particle_0006 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			54,
+			57
+		},
+		trim = {
+			17,
+			21,
+			20,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			906,
+			2019,
+			17,
+			15
+		},
+		alias = {
+			"demon_pit_tower_demon_projectile_particle_0007"
+		}
+	},
+	demon_pit_tower_lvl4_tower_base_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			153,
+			219
+		},
+		trim = {
+			14,
+			14,
+			14,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			263,
+			5,
+			125,
+			118
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_base_0006",
+			"demon_pit_tower_lvl4_tower_base_0007"
+		}
+	},
+	demon_pit_tower_lvl4_tower_base_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			153,
+			219
+		},
+		trim = {
+			14,
+			15,
+			13,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			519,
+			5,
+			126,
+			117
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_base_0003"
+		}
+	},
+	demon_pit_tower_lvl4_tower_base_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			153,
+			219
+		},
+		trim = {
+			14,
+			14,
+			14,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			391,
+			5,
+			125,
+			118
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_base_0005"
+		}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1631,
+			443,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1738,
+			443,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0003 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1845,
+			443,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0005 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			725,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0006 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0007 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			939,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0008 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1046,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0009 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1153,
+			540,
+			104,
+			72
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_bubbles_0010"
+		}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0011 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1260,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0012 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1367,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0013 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1474,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0014 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1581,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0015 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1688,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0016 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1795,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0017 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1902,
+			540,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0018 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			615,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0019 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			725,
+			615,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_bubbles_0020 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			145,
+			233
+		},
+		trim = {
+			19,
+			17,
+			22,
+			144
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			832,
+			615,
+			104,
+			72
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1612,
+			90,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0083",
+			"demon_pit_tower_lvl4_tower_demons_0096",
+			"demon_pit_tower_lvl4_tower_demons_0097"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			64,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			933,
+			90,
+			75
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0003"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			67,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1089,
+			90,
+			72
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0005"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0006 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			40,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1284,
+			340,
+			90,
+			99
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0007 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			40,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1377,
+			340,
+			90,
+			99
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0008 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			38,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1767,
+			90,
+			101
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0009 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			38,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1871,
+			90,
+			101
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0010 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			39,
+			34,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1561,
+			91,
+			100
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0011 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			39,
+			34,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1664,
+			91,
+			100
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0012 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			41,
+			34,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1190,
+			340,
+			91,
+			98
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0013"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0014 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			64,
+			36,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1011,
+			90,
+			75
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0015"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0016 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			35,
+			67,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1164,
+			89,
+			72
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0017"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0018 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			40,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1470,
+			340,
+			90,
+			99
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0019"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0020 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			35,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			925,
+			90,
+			104
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0021 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			35,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1032,
+			90,
+			104
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0022 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			36,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1139,
+			90,
+			103
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0023 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			36,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1245,
+			90,
+			103
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0024 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			37,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1351,
+			90,
+			102
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0025 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			37,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1456,
+			90,
+			102
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0026 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			42,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1563,
+			340,
+			90,
+			97
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0027"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0028 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			54,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			914,
+			443,
+			90,
+			85
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0029"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0030 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1681,
+			90,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0031 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			65,
+			33,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			906,
+			93,
+			71
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0032"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0033 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			28,
+			36,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1711,
+			89,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0034 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			28,
+			36,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1827,
+			89,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0035 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			18,
+			29,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			640,
+			106,
+			125
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0036 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			18,
+			29,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			768,
+			106,
+			125
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0037 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			14,
+			25,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			910,
+			113,
+			130
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0038 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			14,
+			25,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1043,
+			113,
+			130
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0039 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			19,
+			17,
+			24,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			130,
+			116,
+			127
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0040 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			19,
+			17,
+			24,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			260,
+			116,
+			127
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0041 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			18,
+			25,
+			214
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1930,
+			5,
+			111,
+			117
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0042 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			18,
+			25,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1588,
+			5,
+			111,
+			118
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0043 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			20,
+			22,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			648,
+			5,
+			115,
+			117
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0044 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			20,
+			22,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			766,
+			5,
+			115,
+			117
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0045 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			25,
+			23,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			704,
+			130,
+			113,
+			112
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0046 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			24,
+			23,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			355,
+			130,
+			113,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0047 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			27,
+			29,
+			24,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1893,
+			108,
+			110
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0048"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0049 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			35,
+			32,
+			25,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1923,
+			130,
+			99,
+			109
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0050"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0051 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			38,
+			40,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			542,
+			84,
+			100
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0052"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0053 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			73,
+			36,
+			207
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1320,
+			90,
+			69
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0054"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0055 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			30,
+			73,
+			33,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1686,
+			690,
+			96,
+			71
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0056"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0057 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			37,
+			73,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1040,
+			85,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0058"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0059 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			37,
+			56,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1418,
+			85,
+			84
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0060 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			37,
+			56,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1505,
+			85,
+			84
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0061 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			53,
+			37,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1246,
+			88,
+			83
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0062 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			53,
+			37,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1332,
+			88,
+			83
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0063 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			53,
+			37,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1159,
+			88,
+			84
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0064 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			53,
+			37,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1952,
+			443,
+			89,
+			84
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0065 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			28,
+			66,
+			37,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1319,
+			836,
+			94,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0066 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			28,
+			66,
+			37,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1416,
+			836,
+			94,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0067 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			28,
+			69,
+			37,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1687,
+			906,
+			94,
+			61
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0068"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0069 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			37,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1100,
+			980,
+			88,
+			57
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0070 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			37,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1191,
+			980,
+			88,
+			57
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0071 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			34,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1006,
+			980,
+			91,
+			57
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0072 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			33,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			911,
+			980,
+			92,
+			57
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0073 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			31,
+			219
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			814,
+			980,
+			94,
+			57
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0074"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0075 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			29,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1220,
+			836,
+			96,
+			64
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0076 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			29,
+			211
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1948,
+			767,
+			96,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0077 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1750,
+			90,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0078 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1812,
+			836,
+			90,
+			67
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0079 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1905,
+			836,
+			90,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0080"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0081 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1542,
+			90,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0082"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0084 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			48,
+			20,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1082,
+			340,
+			105,
+			91
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0085"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0086 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			58,
+			30,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			443,
+			95,
+			81
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0087"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0088 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			54,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1007,
+			443,
+			90,
+			85
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0089"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0090 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			61,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			852,
+			90,
+			78
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0091"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0092 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			55,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1326,
+			443,
+			90,
+			84
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0093"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0094 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			57,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			767,
+			90,
+			82
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0095"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0098 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			901,
+			906,
+			91,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0099"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0100 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			35,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1400,
+			906,
+			89,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0101"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0102 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1819,
+			90,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0103",
+			"demon_pit_tower_lvl4_tower_demons_0104",
+			"demon_pit_tower_lvl4_tower_demons_0105",
+			"demon_pit_tower_lvl4_tower_demons_0106",
+			"demon_pit_tower_lvl4_tower_demons_0107",
+			"demon_pit_tower_lvl4_tower_demons_0108",
+			"demon_pit_tower_lvl4_tower_demons_0109",
+			"demon_pit_tower_lvl4_tower_demons_0110",
+			"demon_pit_tower_lvl4_tower_demons_0111",
+			"demon_pit_tower_lvl4_tower_demons_0112"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0113 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1888,
+			90,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0114"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0115 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			30,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1123,
+			836,
+			94,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0116"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0117 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			30,
+			56,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1605,
+			246,
+			94,
+			83
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0118"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0119 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			29,
+			53,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			987,
+			246,
+			95,
+			86
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0120"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0121 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			29,
+			52,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			889,
+			246,
+			95,
+			87
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0122"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0123 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			66,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1419,
+			443,
+			103,
+			73
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0124 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			66,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1525,
+			443,
+			103,
+			73
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0125 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			68,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1936,
+			615,
+			103,
+			71
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0126"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0127 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1957,
+			90,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0128 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			32,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1513,
+			836,
+			92,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0129 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1234,
+			767,
+			100,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0233"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0130 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1337,
+			767,
+			100,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0234"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0131 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			65,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			690,
+			100,
+			74
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0132",
+			"demon_pit_tower_lvl4_tower_demons_0235",
+			"demon_pit_tower_lvl4_tower_demons_0236"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0133 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			20,
+			63,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1294,
+			246,
+			104,
+			76
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0134",
+			"demon_pit_tower_lvl4_tower_demons_0237",
+			"demon_pit_tower_lvl4_tower_demons_0238"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0135 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			62,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1500,
+			246,
+			102,
+			77
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0136",
+			"demon_pit_tower_lvl4_tower_demons_0239",
+			"demon_pit_tower_lvl4_tower_demons_0240"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0137 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			13,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1594,
+			615,
+			111,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0241"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0138 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			13,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1708,
+			615,
+			111,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0242"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0139 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			13,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1822,
+			615,
+			111,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0140",
+			"demon_pit_tower_lvl4_tower_demons_0243",
+			"demon_pit_tower_lvl4_tower_demons_0244"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0141 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1884,
+			690,
+			102,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0142",
+			"demon_pit_tower_lvl4_tower_demons_0245",
+			"demon_pit_tower_lvl4_tower_demons_0246"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0143 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			767,
+			102,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0247",
+			"demon_pit_tower_lvl4_tower_demons_0329"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0144 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			20,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1264,
+			690,
+			104,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0145"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0146 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1026,
+			767,
+			101,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0147"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0148 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1130,
+			767,
+			101,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0149"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0150 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1440,
+			767,
+			100,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0151"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0152 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			27,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1749,
+			767,
+			97,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0153"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0154 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1543,
+			767,
+			100,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0155"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0156 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			65,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			721,
+			690,
+			100,
+			74
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0157"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0158 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			63,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1806,
+			246,
+			102,
+			76
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0159"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0160 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			62,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1702,
+			246,
+			101,
+			77
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0161"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0162 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			13,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			824,
+			690,
+			111,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0163 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			13,
+			73,
+			34,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1047,
+			615,
+			112,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0164 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			13,
+			73,
+			34,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1162,
+			615,
+			112,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0165"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0166 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			27,
+			73,
+			34,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			1975,
+			98,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0167 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			27,
+			73,
+			36,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1849,
+			767,
+			96,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0168 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			62,
+			73,
+			36,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1499,
+			61,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0169 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			62,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1297,
+			62,
+			66
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0170",
+			"demon_pit_tower_lvl4_tower_demons_0171",
+			"demon_pit_tower_lvl4_tower_demons_0172",
+			"demon_pit_tower_lvl4_tower_demons_0173",
+			"demon_pit_tower_lvl4_tower_demons_0174",
+			"demon_pit_tower_lvl4_tower_demons_0175",
+			"demon_pit_tower_lvl4_tower_demons_0176",
+			"demon_pit_tower_lvl4_tower_demons_0177",
+			"demon_pit_tower_lvl4_tower_demons_0178",
+			"demon_pit_tower_lvl4_tower_demons_0179",
+			"demon_pit_tower_lvl4_tower_demons_0180",
+			"demon_pit_tower_lvl4_tower_demons_0181",
+			"demon_pit_tower_lvl4_tower_demons_0182"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0183 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			47,
+			65,
+			35,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1184,
+			77,
+			71
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0184 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			47,
+			65,
+			33,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1110,
+			79,
+			71
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0185 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			28,
+			33,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			977,
+			92,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0186 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			35,
+			28,
+			36,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			583,
+			88,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0187 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			18,
+			29,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			896,
+			106,
+			125
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0188 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			24,
+			18,
+			29,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			1024,
+			106,
+			125
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0189 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			14,
+			25,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1176,
+			113,
+			130
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0190 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			14,
+			25,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1309,
+			113,
+			130
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0191 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			19,
+			17,
+			24,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			390,
+			116,
+			127
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0192 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			19,
+			17,
+			24,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			520,
+			116,
+			127
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0193 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			18,
+			25,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1702,
+			5,
+			111,
+			118
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0194 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			18,
+			25,
+			213
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1816,
+			5,
+			111,
+			118
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0195 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			20,
+			22,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			884,
+			5,
+			115,
+			117
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0196 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			20,
+			22,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1002,
+			5,
+			115,
+			117
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0197 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			25,
+			23,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			820,
+			130,
+			113,
+			112
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0198 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			23,
+			24,
+			23,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			471,
+			130,
+			113,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0199 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			27,
+			29,
+			24,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1167,
+			130,
+			108,
+			110
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0200 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			27,
+			29,
+			24,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1278,
+			130,
+			108,
+			110
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0201 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			35,
+			32,
+			25,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			246,
+			99,
+			109
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0202 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			35,
+			32,
+			25,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			238,
+			358,
+			99,
+			109
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0203 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			38,
+			40,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			645,
+			84,
+			100
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0204 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			38,
+			40,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			748,
+			84,
+			100
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0205 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			73,
+			36,
+			207
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1392,
+			90,
+			69
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0206 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			33,
+			73,
+			35,
+			207
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			807,
+			906,
+			91,
+			69
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0207 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			30,
+			73,
+			33,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1785,
+			690,
+			96,
+			71
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0208 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			30,
+			62,
+			33,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1401,
+			246,
+			96,
+			82
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0209 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			42,
+			62,
+			36,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			618,
+			1239,
+			81,
+			78
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0210 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			42,
+			60,
+			34,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			1786,
+			83,
+			80
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0211 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -12799,839 +8860,95 @@ return {
 		},
 		trim = {
 			44,
-            62,
-            30,
-            210
+			60,
+			34,
+			209
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			319,
-			843,
-			85,
-			77
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0185"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            25,
-            31,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1786,
-			1480,
-			98,
-			119
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0186"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            25,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1892,
-			1480,
-			94,
-			119
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0187"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            14,
-            26,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1845,
-			1739,
-			112,
-			132
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0188"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            14,
-            26,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1879,
-			112,
-			132
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0189"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			18,
-            11,
-            22,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1402,
-			1879,
-			119,
-			136
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0190"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			18,
-            11,
-            22,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1529,
-			1879,
-			119,
-			136
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0191"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			16,
-            14,
-            21,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			628,
-			1879,
-			122,
-			133
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0192"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			16,
-            14,
-            21,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			758,
-			1879,
-			122,
-			133
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0193"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            15,
-            21,
-            211
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1251,
-			1607,
-			118,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0194"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            15,
-            21,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			130,
-			1739,
-			118,
-			124
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0195"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            17,
-            19,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1377,
-			1607,
-			121,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0196"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            17,
-            19,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1506,
-			1607,
-			121,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0197"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            24,
-            20,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			117,
-			1480,
-			119,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0198"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			20,
-            23,
-            20,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1325,
-			1480,
-			119,
-			117
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0199"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            26,
-            21,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			244,
-			1480,
-			114,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0200"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			24,
-            26,
-            21,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			366,
-			1480,
-			114,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0201"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            28,
-            22,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			488,
-			1480,
-			105,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0202"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			32,
-            28,
-            22,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			601,
-			1480,
-			105,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0203"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			37,
-            37,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			613,
-			1239,
-			89,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0204"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			37,
-            37,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			710,
-			1239,
-			89,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0205"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1125,
-			759,
-			96,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0206"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			30,
-            70,
-            32,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1229,
-			759,
-			97,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0207"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            70,
-            32,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1757,
-			759,
-			98,
-			76
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0208"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			29,
-            59,
-            32,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1876,
-			932,
-			98,
-			87
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0209"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			40,
-            59,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			765,
-			932,
-			86,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0210"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			39,
-            57,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1243,
-			932,
-			88,
-			85
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0211"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			41,
-            57,
-            31,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1556,
-			932,
-			87,
-			86
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0212"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			41,
-            56,
-            30,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1027,
-			88,
-			87
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0213"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			40,
-            56,
-            31,
-            208
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1339,
-			932,
-			88,
-			85
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0214"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			41,
-            70,
-            25,
-            208
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			804,
-			436,
-			93,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0215"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			52,
-            70,
-            26,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			755,
-			596,
+			526,
+			1951,
 			81,
-			72
+			80
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0216"] = {
+	demon_pit_tower_lvl4_tower_demons_0212 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			53,
-            70,
-            24,
-            207
+			44,
+			59,
+			33,
+			209
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			844,
-			596,
-			82,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0217"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			51,
-            70,
-            25,
-            213
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
+			526,
 			1702,
-			284,
-			83,
-			66
+			82,
+			81
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0218"] = {
+	demon_pit_tower_lvl4_tower_demons_0213 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			51,
-            70,
-            28,
-            213
+			42,
+			59,
+			33,
+			211
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1793,
-			284,
-			80,
-			66
+			526,
+			1869,
+			84,
+			79
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0219"] = {
+	demon_pit_tower_lvl4_tower_demons_0214 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			42,
+			73,
+			28,
+			211
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1595,
+			906,
+			89,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0215 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -13639,23 +8956,23 @@ return {
 		},
 		trim = {
 			56,
-            70,
-            28,
-            213
+			73,
+			28,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1881,
-			284,
+			711,
+			1540,
 			75,
 			66
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0220"] = {
+	demon_pit_tower_lvl4_tower_demons_0216 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -13663,71 +8980,23 @@ return {
 		},
 		trim = {
 			56,
-            70,
-            26,
-            213
+			73,
+			27,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			358,
-			77,
+			711,
+			1406,
+			76,
 			66
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0221"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			75,
-            70,
-            26,
-            215
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1311,
-			284,
-			58,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0222"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			56,
-            70,
-            33,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			436,
-			70,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0223"] = {
+	demon_pit_tower_lvl4_tower_demons_0217 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -13735,167 +9004,47 @@ return {
 		},
 		trim = {
 			55,
-            70,
-            33,
-            208
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			905,
-			436,
-			71,
-			71
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0224"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			53,
-            70,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			934,
-			596,
 			73,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0225"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			52,
-            70,
-            33,
-            207
+			27,
+			216
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1015,
-			596,
-			74,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0226"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			50,
-            70,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			108,
-			677,
-			76,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0227"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			50,
-            70,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			108,
-			677,
-			76,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0228"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			49,
-            70,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			192,
-			677,
+			711,
+			1953,
 			77,
-			73
+			60
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0229"] = {
+	demon_pit_tower_lvl4_tower_demons_0218 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			49,
-            70,
-            33,
-            206
+			55,
+			73,
+			31,
+			216
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			192,
-			677,
-			77,
-			73
+			445,
+			907,
+			73,
+			60
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0230"] = {
+	demon_pit_tower_lvl4_tower_demons_0219 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -13903,2279 +9052,981 @@ return {
 		},
 		trim = {
 			59,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1097,
-			596,
-			68,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0231"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
+			73,
 			31,
-            70,
-            32,
-            207
+			216
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1173,
-			596,
-			96,
-			72
+			445,
+			1167,
+			69,
+			60
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0232"] = {
+	demon_pit_tower_lvl4_tower_demons_0220 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
+			59,
+			73,
 			29,
-            70,
-            32,
-            207
+			216
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1277,
-			596,
-			98,
+			445,
+			1036,
+			71,
+			60
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0221 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			79,
+			73,
+			29,
+			218
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			1288,
+			51,
+			58
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0222 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			60,
+			73,
+			35,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1230,
+			64,
+			64
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0223 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			59,
+			73,
+			35,
+			211
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1099,
+			65,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0224 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			57,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			838,
+			67,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0225 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			56,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			630,
+			68,
+			67
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0226 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			54,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1883,
+			70,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0227"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0228 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			53,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			1813,
+			71,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0229"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0230 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			62,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			445,
+			1366,
+			62,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0231 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			34,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1201,
+			906,
+			90,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0232 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			32,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1608,
+			836,
+			92,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0248 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			64,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			809,
+			443,
+			102,
+			75
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0249"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0250 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			67,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1384,
+			615,
+			102,
 			72
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0251"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0233"] = {
+	demon_pit_tower_lvl4_tower_demons_0252 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			21,
-            70,
-            32,
-            207
+			22,
+			40,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			426,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0234"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			540,
-			516,
-			106,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0235"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            62,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1394,
-			843,
-			106,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0236"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			21,
-            62,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1394,
-			843,
-			106,
-			80
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0237"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			17,
-            60,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			237,
-			932,
-			110,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0238"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			17,
-            60,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			237,
-			932,
-			110,
-			82
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0239"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            59,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			534,
-			932,
-			108,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0240"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            59,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			534,
-			932,
-			108,
-			83
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0241"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			654,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0242"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			779,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0243"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			904,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0244"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			10,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			904,
-			516,
-			117,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0245"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1029,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0246"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1029,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0247"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1145,
-			516,
-			108,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0248"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            61,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1926,
-			843,
-			108,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0249"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            61,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1926,
-			843,
-			108,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0250"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			859,
-			843,
-			108,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0251"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			859,
-			843,
-			108,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0252"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1770,
-			1126,
-			108,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0253"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1886,
-			1126,
-			108,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0254"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            35,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1480,
-			1239,
-			108,
-			107
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0255"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            35,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1596,
-			1239,
-			108,
-			107
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0256"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            36,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			807,
-			1239,
-			109,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0257"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            36,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			924,
-			1239,
-			109,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0258"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            38,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1341,
-			1126,
-			109,
-			104
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0259"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            38,
-            31,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1341,
-			1126,
-			109,
-			104
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0260"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            61,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			932,
-			107,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0261"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            61,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			932,
-			107,
-			81
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0262"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			975,
-			843,
-			108,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0263"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            64,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			975,
-			843,
-			108,
-			78
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0264"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1239,
-			108,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0265"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            37,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			1239,
-			108,
-			105
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0266"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            32,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			898,
-			1356,
-			108,
-			110
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0267"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            32,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1014,
-			1356,
-			108,
-			110
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0268"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			108,
-			1356,
-			108,
-			109
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0269"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			224,
-			1356,
-			108,
-			109
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0270"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            33,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
 			340,
-			1356,
-			108,
-			109
+			1405,
+			102,
+			99
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0271"] = {
+	demon_pit_tower_lvl4_tower_demons_0253 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            33,
-            32,
-            207
+			22,
+			40,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			456,
-			1356,
-			108,
-			109
+			340,
+			1507,
+			102,
+			99
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0272"] = {
+	demon_pit_tower_lvl4_tower_demons_0254 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            39,
-            32,
-            207
+			22,
+			38,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1004,
-			1126,
-			108,
-			103
+			340,
+			1197,
+			102,
+			101
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0273"] = {
+	demon_pit_tower_lvl4_tower_demons_0255 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            39,
-            32,
-            207
+			22,
+			38,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1004,
-			1126,
-			108,
-			103
+			340,
+			1301,
+			102,
+			101
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0274"] = {
+	demon_pit_tower_lvl4_tower_demons_0256 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            51,
-            32,
-            207
+			22,
+			39,
+			34,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1710,
-			1027,
-			108,
-			91
+			445,
+			340,
+			103,
+			100
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0275"] = {
+	demon_pit_tower_lvl4_tower_demons_0257 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            51,
-            32,
-            207
+			22,
+			39,
+			34,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1710,
-			1027,
-			108,
-			91
+			551,
+			340,
+			103,
+			100
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0276"] = {
+	demon_pit_tower_lvl4_tower_demons_0258 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            70,
-            32,
-            207
+			22,
+			41,
+			34,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1383,
-			596,
-			108,
+			657,
+			340,
+			103,
+			98
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0259"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0260 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			64,
+			36,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1222,
+			443,
+			101,
+			75
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0261"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0262 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			67,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1489,
+			615,
+			102,
 			72
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0263"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0277"] = {
+	demon_pit_tower_lvl4_tower_demons_0264 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			18,
-            62,
-            30,
-            210
+			22,
+			40,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			412,
-			843,
-			111,
-			77
+			340,
+			1609,
+			102,
+			99
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0265"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0278"] = {
+	demon_pit_tower_lvl4_tower_demons_0266 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			18,
-            62,
-            30,
-            210
+			22,
+			35,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			412,
-			843,
-			111,
-			77
+			340,
+			340,
+			102,
+			104
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0279"] = {
+	demon_pit_tower_lvl4_tower_demons_0267 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            25,
-            33,
-            205
+			22,
+			35,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			1607,
-			107,
-			119
+			340,
+			447,
+			102,
+			104
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0280"] = {
+	demon_pit_tower_lvl4_tower_demons_0268 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            25,
-            33,
-            205
+			22,
+			36,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			119,
-			1607,
-			107,
-			119
+			340,
+			554,
+			102,
+			103
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0281"] = {
+	demon_pit_tower_lvl4_tower_demons_0269 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            14,
-            26,
-            203
+			22,
+			36,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			124,
-			1879,
-			114,
-			132
+			340,
+			660,
+			102,
+			103
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0282"] = {
+	demon_pit_tower_lvl4_tower_demons_0270 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            14,
-            26,
-            203
+			22,
+			37,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			246,
-			1879,
-			114,
-			132
+			340,
+			872,
+			102,
+			102
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0283"] = {
+	demon_pit_tower_lvl4_tower_demons_0271 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			18,
-            11,
-            22,
-            202
+			22,
+			36,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			766,
+			102,
+			103
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0272 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			42,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			977,
+			340,
+			102,
+			97
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0273"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0274 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			54,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
 		},
 		f_quad = {
 			1656,
-			1879,
-			119,
-			136
+			340,
+			102,
+			85
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0275"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0284"] = {
+	demon_pit_tower_lvl4_tower_demons_0276 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			18,
-            11,
-            22,
-            202
+			22,
+			73,
+			35,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1783,
-			1879,
-			119,
-			136
+			816,
+			767,
+			102,
+			66
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0285"] = {
+	demon_pit_tower_lvl4_tower_demons_0277 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			16,
-            14,
-            21,
-            202
+			21,
+			65,
+			33,
+			213
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			888,
-			1879,
-			122,
-			133
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0286"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			16,
-            14,
-            21,
-            202
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1018,
-			1879,
-			122,
-			133
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0287"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            15,
-            21,
-            212
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			590,
-			1607,
-			119,
-			122
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0288"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            15,
-            21,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			256,
-			1739,
-			119,
-			124
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0289"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            17,
-            19,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1635,
-			1607,
-			121,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0290"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            17,
-            19,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1764,
-			1607,
-			121,
-			123
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0291"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            24,
-            20,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			714,
-			1480,
-			120,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0292"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            23,
-            20,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1452,
-			1480,
-			120,
-			117
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0293"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            26,
-            21,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			842,
-			1480,
-			119,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0294"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            26,
-            21,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			842,
-			1480,
-			119,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0295"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            28,
-            22,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			969,
-			1480,
-			118,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0296"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            28,
-            22,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			969,
-			1480,
-			118,
-			116
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0297"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            37,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1041,
-			1239,
-			107,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0298"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            37,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1041,
-			1239,
-			107,
-			106
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0299"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1334,
-			759,
-			107,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0300"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            205
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1334,
-			759,
-			107,
-			74
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0301"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1863,
-			759,
-			108,
-			76
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0302"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            32,
-            203
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1863,
-			759,
-			108,
-			76
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0303"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1499,
-			596,
-			107,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0304"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1499,
-			596,
-			107,
-			72
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0305"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			277,
-			677,
-			107,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0306"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            206
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			392,
-			677,
-			107,
-			73
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0307"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1710,
-			358,
-			107,
-			69
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0308"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            210
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1710,
-			358,
-			107,
-			69
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0309"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			82,
-			436,
-			107,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0310"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			82,
-			436,
-			107,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0311"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            215
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1377,
-			284,
-			107,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0312"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            215
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1377,
-			284,
-			107,
-			64
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0313"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			324,
-			284,
-			107,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0314"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			324,
-			284,
-			107,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0315"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			439,
-			284,
-			107,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0316"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            33,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			554,
-			284,
-			107,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0317"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            31,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			669,
-			284,
-			109,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0318"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            30,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			786,
-			284,
-			110,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0319"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            27,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			904,
-			284,
-			113,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0320"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            27,
-            216
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			904,
-			284,
-			113,
-			63
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0321"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            26,
-            209
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			197,
-			436,
-			114,
-			70
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0322"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            70,
-            26,
-            208
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			984,
-			436,
-			114,
+			939,
+			615,
+			105,
 			71
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0278"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0323"] = {
+	demon_pit_tower_lvl4_tower_demons_0279 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            70,
-            32,
-            207
+			22,
+			28,
+			36,
+			208
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1614,
-			596,
+			1501,
+			130,
+			101,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0280 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			28,
+			36,
+			208
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1605,
+			130,
+			101,
+			113
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0281 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			18,
+			29,
+			206
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			384,
 			108,
-			72
+			125
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0324"] = {
+	demon_pit_tower_lvl4_tower_demons_0282 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            70,
-            32,
-            207
+			22,
+			18,
+			29,
+			206
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1730,
-			596,
+			124,
+			512,
 			108,
-			72
+			125
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0325"] = {
+	demon_pit_tower_lvl4_tower_demons_0283 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			14,
+			25,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1442,
+			113,
+			130
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0284 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			21,
+			14,
+			25,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1575,
+			113,
+			130
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0285 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -16183,23 +10034,23 @@ return {
 		},
 		trim = {
 			19,
-            70,
-            32,
-            206
+			17,
+			24,
+			205
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			507,
-			677,
-			108,
-			73
+			5,
+			650,
+			116,
+			127
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0326"] = {
+	demon_pit_tower_lvl4_tower_demons_0286 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
@@ -16207,1292 +10058,1611 @@ return {
 		},
 		trim = {
 			19,
-            70,
-            32,
-            206
+			17,
+			24,
+			205
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			507,
-			677,
-			108,
-			73
+			5,
+			780,
+			116,
+			127
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0327"] = {
+	demon_pit_tower_lvl4_tower_demons_0287 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            70,
-            32,
-            206
+			22,
+			18,
+			24,
+			214
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			623,
-			677,
-			108,
-			73
+			1472,
+			5,
+			113,
+			117
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0328"] = {
+	demon_pit_tower_lvl4_tower_demons_0288 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            70,
-            32,
-            206
+			22,
+			18,
+			24,
+			213
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			623,
-			677,
-			108,
-			73
+			1356,
+			5,
+			113,
+			118
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0329"] = {
+	demon_pit_tower_lvl4_tower_demons_0289 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            70,
-            32,
-            207
+			22,
+			20,
+			22,
+			212
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1145,
-			516,
-			108,
-			72
+			1120,
+			5,
+			115,
+			117
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0330"] = {
+	demon_pit_tower_lvl4_tower_demons_0290 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            45,
-            17,
-            207
+			22,
+			20,
+			22,
+			212
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			341,
-			1126,
-			123,
-			97
+			1238,
+			5,
+			115,
+			117
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0331"] = {
+	demon_pit_tower_lvl4_tower_demons_0291 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            45,
-            17,
-            207
+			22,
+			25,
+			23,
+			212
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			341,
-			1126,
-			123,
-			97
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0332"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            55,
-            26,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			100,
-			1027,
+			587,
+			130,
 			114,
-			87
+			112
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0333"] = {
+	demon_pit_tower_lvl4_tower_demons_0292 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            55,
-            26,
-            207
+			22,
+			24,
+			23,
+			212
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			100,
-			1027,
+			238,
+			130,
 			114,
-			87
+			113
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_demons_0334"] = {
+	demon_pit_tower_lvl4_tower_demons_0293 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
 		},
 		trim = {
-			19,
-            51,
-            32,
-            207
+			22,
+			29,
+			24,
+			210
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1826,
-			1027,
-			108,
-			91
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0335"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            51,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1826,
-			1027,
-			108,
-			91
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0336"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            58,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			932,
-			108,
-			84
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0337"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            58,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1045,
-			932,
-			108,
-			84
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0338"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            52,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1386,
-			1027,
-			108,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0339"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            52,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1386,
-			1027,
-			108,
-			90
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0340"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            54,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			326,
-			1027,
-			108,
-			88
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_demons_0341"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			159,
-			349
-		},
-		trim = {
-			19,
-            54,
-            32,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			326,
-			1027,
-			108,
-			88
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_front_0001"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
+			936,
 			130,
-			142
+			113,
+			110
 		},
-		trim = {
-			11,
-            11,
-            17,
-            78
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1730,
-			152,
-			102,
-			53
-		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0294"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_front_0002"] = {
+	demon_pit_tower_lvl4_tower_demons_0295 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			130,
-			142
+			159,
+			349
 		},
 		trim = {
-			10,
-            11,
-            16,
-            78
+			22,
+			32,
+			25,
+			208
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1840,
-			152,
+			1052,
+			130,
+			112,
+			109
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0296"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0297 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			40,
+			37,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			1943,
+			100,
+			100
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0298"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0299 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			36,
+			207
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1049,
+			690,
+			101,
+			69
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0300"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0301 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			33,
+			205
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1277,
+			615,
 			104,
-			53
+			71
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0302"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_front_0003"] = {
+	demon_pit_tower_lvl4_tower_demons_0303 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			130,
-			142
+			159,
+			349
 		},
 		trim = {
-			10,
-            11,
-            16,
-            78
+			22,
+			73,
+			37,
+			209
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1840,
-			152,
-			104,
-			53
+			711,
+			836,
+			100,
+			67
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0304"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_front_0004"] = {
+	demon_pit_tower_lvl4_tower_demons_0305 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			130,
-			142
+			159,
+			349
 		},
 		trim = {
-			11,
-            11,
-            17,
-            78
+			22,
+			73,
+			37,
+			209
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			213,
-			102,
-			53
+			814,
+			836,
+			100,
+			67
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_front_0005"] = {
+	demon_pit_tower_lvl4_tower_demons_0306 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			130,
-			142
+			159,
+			349
 		},
 		trim = {
-			11,
-            11,
-            17,
-            78
+			22,
+			73,
+			37,
+			209
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			213,
-			102,
-			53
+			917,
+			836,
+			100,
+			67
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_front_0006"] = {
+	demon_pit_tower_lvl4_tower_demons_0307 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			130,
-			142
+			159,
+			349
 		},
 		trim = {
-			11,
-            11,
-            17,
-            78
+			22,
+			73,
+			37,
+			213
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1730,
-			152,
-			102,
-			53
+			1020,
+			836,
+			100,
+			63
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0308"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_front_0007"] = {
+	demon_pit_tower_lvl4_tower_demons_0309 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			130,
-			142
+			159,
+			349
 		},
 		trim = {
-			11,
-            11,
-            17,
-            78
+			22,
+			73,
+			37,
+			212
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1730,
-			152,
-			102,
-			53
+			1646,
+			767,
+			100,
+			64
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0310"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0001"] = {
+	demon_pit_tower_lvl4_tower_demons_0311 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			11,
-            11,
-            11,
-            59
+			22,
+			73,
+			37,
+			218
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1456,
-			4,
-			102,
-			37
+			1492,
+			906,
+			100,
+			58
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0312"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0002"] = {
+	demon_pit_tower_lvl4_tower_demons_0313 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			11,
-            10,
-            11,
-            58
+			22,
+			73,
+			37,
+			219
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			421,
-			49,
-			102,
-			39
+			1784,
+			906,
+			100,
+			57
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0314"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0003"] = {
+	demon_pit_tower_lvl4_tower_demons_0315 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			12,
-            10,
-            11,
-            58
+			22,
+			73,
+			37,
+			219
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			531,
-			49,
-			101,
-			39
+			1887,
+			906,
+			100,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0004"] = {
+	demon_pit_tower_lvl4_tower_demons_0316 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			12,
-            12,
-            11,
-            58
+			22,
+			73,
+			37,
+			219
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1566,
-			4,
-			101,
-			37
+			711,
+			980,
+			100,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0005"] = {
+	demon_pit_tower_lvl4_tower_demons_0317 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			12,
-            11,
-            10,
-            58
+			22,
+			73,
+			34,
+			219
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			209,
-			49,
-			102,
-			38
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			12,
-            11,
-            10,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			640,
-			49,
-			102,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            10,
-            11,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1239,
-			49,
-			102,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            10,
-            11,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1349,
-			49,
-			102,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            15,
-            11,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			633,
-			4,
-			102,
-			35
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			12,
-            13,
-            11,
-            58
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1128,
-			4,
-			101,
-			36
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0011"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			12,
-            13,
-            10,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1675,
-			4,
-			102,
-			37
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0012"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			12,
-            11,
-            10,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			750,
-			49,
-			102,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0013"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            11,
-            11,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			860,
-			49,
-			102,
-			39
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0014"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            15,
-            11,
-            57
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			743,
-			4,
-			102,
-			35
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0015"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			12,
-            13,
-            11,
-            59
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			853,
-			4,
-			101,
-			35
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0016"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            13,
-            11,
-            59
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			962,
-			4,
-			102,
-			35
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_fuego_0017"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            11,
-            10,
-            59
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1785,
-			4,
+			1294,
+			906,
 			103,
-			37
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0018"] = {
+	demon_pit_tower_lvl4_tower_demons_0318 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			12,
-            11,
-            10,
-            59
+			22,
+			73,
+			33,
+			219
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1896,
-			4,
-			102,
-			37
+			1094,
+			906,
+			104,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0019"] = {
+	demon_pit_tower_lvl4_tower_demons_0319 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
-			124,
-			107
+			159,
+			349
 		},
 		trim = {
-			11,
-            12,
-            11,
-            59
+			22,
+			73,
+			31,
+			219
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			1237,
-			4,
+			1703,
+			836,
+			106,
+			57
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0320"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0321 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			29,
+			212
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1153,
+			690,
+			108,
+			64
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0322 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			29,
+			211
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			938,
+			690,
+			108,
+			65
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0323 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			921,
+			767,
 			102,
+			66
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0324 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1371,
+			690,
+			102,
+			67
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_demons_0325 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1476,
+			690,
+			102,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0326"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0327 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			73,
+			35,
+			209
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1581,
+			690,
+			102,
+			67
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0328"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0330 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			48,
+			20,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			340,
+			246,
+			117,
+			91
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0331"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0332 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			58,
+			30,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1761,
+			340,
+			107,
+			81
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0333"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0334 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			54,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1871,
+			340,
+			102,
+			85
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0335"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0336 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			61,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1189,
+			246,
+			102,
+			78
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0337"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0338 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			55,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			460,
+			246,
+			102,
+			84
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0339"
+		}
+	},
+	demon_pit_tower_lvl4_tower_demons_0340 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			159,
+			349
+		},
+		trim = {
+			22,
+			57,
+			35,
+			210
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			675,
+			246,
+			102,
+			82
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_demons_0341"
+		}
+	},
+	demon_pit_tower_lvl4_tower_front_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			131,
+			142
+		},
+		trim = {
+			15,
+			14,
+			21,
+			81
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1567,
+			980,
+			95,
+			47
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_front_0006",
+			"demon_pit_tower_lvl4_tower_front_0007"
+		}
+	},
+	demon_pit_tower_lvl4_tower_front_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			131,
+			142
+		},
+		trim = {
+			13,
+			15,
+			20,
+			81
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1381,
+			980,
+			98,
+			46
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_front_0003"
+		}
+	},
+	demon_pit_tower_lvl4_tower_front_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			131,
+			142
+		},
+		trim = {
+			15,
+			14,
+			20,
+			81
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1282,
+			980,
+			96,
+			47
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_front_0005"
+		}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			15,
+			13,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1629,
+			1040,
+			98,
+			30
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0002 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			13,
+			13,
+			62
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			926,
+			1040,
+			98,
+			33
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0003 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			13,
+			13,
+			62
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1027,
+			1040,
+			97,
+			33
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0004 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			15,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1329,
+			1040,
+			97,
+			32
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0005 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			15,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1127,
+			1040,
+			98,
+			32
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0006 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			15,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1429,
+			1040,
+			97,
+			32
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0007 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			13,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			124,
+			2006,
+			98,
+			34
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0008 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			13,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1798,
+			980,
+			98,
+			34
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0009 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			18,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1470,
+			1076,
+			97,
+			29
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0010 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			17,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1932,
+			1040,
+			97,
+			30
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0011 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			17,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1068,
+			1076,
+			97,
+			30
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0012 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			15,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1529,
+			1040,
+			97,
+			32
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0013 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			15,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1228,
+			1040,
+			98,
+			32
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0014 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			18,
+			13,
+			61
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1268,
+			1076,
+			98,
+			29
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0015 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			17,
+			13,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1707,
+			1076,
+			97,
+			28
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0016 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			17,
+			14,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1807,
+			1076,
+			96,
+			28
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0017 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			15,
+			15,
+			13,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1168,
+			1076,
+			97,
+			30
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0018 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			15,
+			13,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1730,
+			1040,
+			98,
+			30
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0019 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			16,
+			13,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1369,
+			1076,
+			98,
+			29
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_fuego_0020 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			125,
+			108
+		},
+		trim = {
+			14,
+			15,
+			13,
+			63
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1831,
+			1040,
+			98,
+			30
+		},
+		alias = {}
+	},
+	demon_pit_tower_lvl4_tower_reload_0001 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			156,
+			253
+		},
+		trim = {
+			97,
+			51,
+			16,
+			174
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			711,
+			2016,
+			43,
+			28
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_reload_0002"
+		}
+	},
+	demon_pit_tower_lvl4_tower_reload_0003 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			156,
+			253
+		},
+		trim = {
+			100,
+			41,
+			20,
+			177
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1563,
+			36,
+			35
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_reload_0004"
+		}
+	},
+	demon_pit_tower_lvl4_tower_reload_0005 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			156,
+			253
+		},
+		trim = {
+			99,
+			33,
+			15,
+			194
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			861,
+			2019,
+			42,
+			26
+		},
+		alias = {
+			"demon_pit_tower_lvl4_tower_reload_0006"
+		}
+	},
+	demon_pit_tower_lvl4_tower_reload_0007 = {
+		a_name = "go_towers_demon_pit-1.dds",
+		size = {
+			156,
+			253
+		},
+		trim = {
+			102,
+			20,
+			18,
+			197
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1023,
+			1329,
+			36,
 			36
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_reload_0008"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_fuego_0020"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			124,
-			107
-		},
-		trim = {
-			11,
-            11,
-            11,
-            59
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			4,
-			49,
-			102,
-			37
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0001"] = {
+	demon_pit_tower_lvl4_tower_reload_0009 = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
-			252
+			253
 		},
 		trim = {
-			93,
-            48,
-            13,
-            170
+			101,
+			13,
+			14,
+			211
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			504,
-			4,
-			50,
-			34
+			1146,
+			1169,
+			41,
+			29
 		},
-		alias = {},
+		alias = {
+			"demon_pit_tower_lvl4_tower_reload_0010"
+		}
 	},
-	["demon_pit_tower_lvl4_tower_reload_0002"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			93,
-            48,
-            13,
-            170
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			504,
-			4,
-			50,
-			34
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0003"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			96,
-            38,
-            17,
-            174
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1459,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0004"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			96,
-            38,
-            17,
-            174
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1459,
-			49,
-			43,
-			40
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0005"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			96,
-            30,
-            12,
-            190
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			392,
-			4,
-			48,
-			32
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0006"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			96,
-            30,
-            12,
-            190
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			392,
-			4,
-			48,
-			32
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0007"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			98,
-            17,
-            15,
-            193
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			801,
-			99,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0008"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			98,
-            17,
-            15,
-            193
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			801,
-			99,
-			43,
-			42
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0009"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			97,
-            10,
-            11,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1072,
-			4,
-			48,
-			35
-		},
-		alias = {},
-	},
-	["demon_pit_tower_lvl4_tower_reload_0010"] = {
-		a_name = "go_towers_demon_pit-1.dds",
-		size = {
-			156,
-			252
-		},
-		trim = {
-			97,
-            10,
-            11,
-            207
-		},
-		a_size = {
-			2038,
-			2038
-		},
-		f_quad = {
-			1072,
-			4,
-			48,
-			35
-		},
-		alias = {},
-	},
-	["demon_pit_tower_preview"] = {
+	demon_pit_tower_preview = {
 		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			136,
 			170
 		},
 		trim = {
+			14,
 			13,
-            10,
-            13,
-            60
+			16,
+			63
 		},
 		a_size = {
-			2038,
-			2038
+			2048,
+			2048
 		},
 		f_quad = {
-			679,
-			1126,
-			110,
-			100
+			868,
+			340,
+			106,
+			94
 		},
-		alias = {},
+		alias = {}
 	}
 }

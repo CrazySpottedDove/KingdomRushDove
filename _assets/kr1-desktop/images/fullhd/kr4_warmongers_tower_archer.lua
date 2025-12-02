@@ -1,0 +1,5020 @@
+return {
+	warmongers_archerhoney_tower_proyectile_lvl4 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			20,
+			17
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			803,
+			55,
+			20,
+			17
+		},
+		alias = {}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			10,
+			4,
+			21,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			904,
+			37,
+			33
+		},
+		alias = {}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0002 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			6,
+			4,
+			22,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			514,
+			40,
+			33
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0003"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0004 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			5,
+			4,
+			22,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			881,
+			182,
+			41,
+			33
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0005"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0006 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			5,
+			5,
+			22,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			550,
+			41,
+			32
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0007"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0008 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			25,
+			8,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			762,
+			26,
+			29
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0009"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0010 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			24,
+			9,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			547,
+			27,
+			28
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0011"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0012 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			23,
+			8,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			351,
+			29,
+			29
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0013"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0014 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			24,
+			9,
+			15,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			383,
+			29,
+			28
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0015"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0016 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			25,
+			6,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			848,
+			26,
+			31
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0017"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0018 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			22,
+			5,
+			13,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			780,
+			227,
+			33,
+			32
+		},
+		alias = {}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0019 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			21,
+			5,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			978,
+			227,
+			31,
+			32
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0020"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0021 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			20,
+			5,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			912,
+			227,
+			32,
+			32
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0022"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0023 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			20,
+			5,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			296,
+			276,
+			31,
+			32
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0024"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0025 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			20,
+			9,
+			20,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			445,
+			28,
+			28
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0026"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0027 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			22,
+			8,
+			19,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			952,
+			27,
+			29
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0028"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0029 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			24,
+			9,
+			19,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			858,
+			25,
+			28
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0030"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0031 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			24,
+			9,
+			18,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			794,
+			26,
+			28
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0032"
+		}
+	},
+	warmongers_archerhoney_tower_shooter_lvl4_0033 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			68,
+			43
+		},
+		trim = {
+			24,
+			7,
+			20,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			825,
+			24,
+			30
+		},
+		alias = {
+			"warmongers_archerhoney_tower_shooter_lvl4_0034"
+		}
+	},
+	warmongers_archer_tower_ghost = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			2,
+			24,
+			15,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			364,
+			102,
+			98
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_hit_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			12,
+			11,
+			10,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			587,
+			227,
+			28,
+			40
+		},
+		alias = {
+			"warmongers_archer_tower_hit_0002"
+		}
+	},
+	warmongers_archer_tower_hit_0003 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			8,
+			8,
+			6,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			467,
+			36,
+			44
+		},
+		alias = {
+			"warmongers_archer_tower_hit_0004"
+		}
+	},
+	warmongers_archer_tower_hit_0005 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			6,
+			7,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			981,
+			57,
+			39,
+			44
+		},
+		alias = {
+			"warmongers_archer_tower_hit_0006"
+		}
+	},
+	warmongers_archer_tower_hit_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			5,
+			4,
+			4,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			413,
+			41,
+			51
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			2,
+			17,
+			11,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			253,
+			106,
+			108
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			0,
+			0,
+			119,
+			131
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			119,
+			119,
+			131
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0002",
+			"warmongers_archer_tower_lvl4_honda_back_0003",
+			"warmongers_archer_tower_lvl4_honda_back_0004",
+			"warmongers_archer_tower_lvl4_honda_back_0005",
+			"warmongers_archer_tower_lvl4_honda_back_0006",
+			"warmongers_archer_tower_lvl4_honda_back_0035",
+			"warmongers_archer_tower_lvl4_honda_front_0001",
+			"warmongers_archer_tower_lvl4_honda_front_0002",
+			"warmongers_archer_tower_lvl4_honda_front_0003",
+			"warmongers_archer_tower_lvl4_honda_front_0004",
+			"warmongers_archer_tower_lvl4_honda_front_0005",
+			"warmongers_archer_tower_lvl4_honda_front_0006",
+			"warmongers_archer_tower_lvl4_honda_front_0035"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			46,
+			19,
+			32,
+			88
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			330,
+			276,
+			41,
+			24
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0008"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0009 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			7,
+			37,
+			93
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			727,
+			41,
+			31
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0010"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0011 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			7,
+			37,
+			92
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			585,
+			41,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0012"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0013 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			7,
+			37,
+			92
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			620,
+			41,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0014"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0015 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			6,
+			37,
+			92
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			925,
+			182,
+			41,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0016"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0017 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			40,
+			5,
+			39,
+			92
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			838,
+			182,
+			40,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0018",
+			"warmongers_archer_tower_lvl4_honda_back_0019",
+			"warmongers_archer_tower_lvl4_honda_back_0020",
+			"warmongers_archer_tower_lvl4_honda_back_0021",
+			"warmongers_archer_tower_lvl4_honda_back_0022"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0023 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			44,
+			3,
+			34,
+			93
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			182,
+			41,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0024"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0025 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			46,
+			4,
+			31,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			655,
+			182,
+			42,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0026"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0027 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			44,
+			1,
+			31,
+			93
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			473,
+			182,
+			44,
+			37
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0028"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0029 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			1,
+			34,
+			93
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			520,
+			182,
+			44,
+			37
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0030"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0031 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			6,
+			37,
+			87
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			567,
+			182,
+			41,
+			38
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0032"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_back_0033 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			41,
+			16,
+			36,
+			93
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			779,
+			276,
+			42,
+			22
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_back_0034"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			47,
+			39,
+			33,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			646,
+			302,
+			39,
+			13
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0008"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0009 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			43,
+			31,
+			35,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			316,
+			326,
+			41,
+			21
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0010"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0011 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			43,
+			30,
+			35,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			779,
+			301,
+			41,
+			22
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0012"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0013 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			43,
+			30,
+			35,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			272,
+			326,
+			41,
+			22
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0014"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0015 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			43,
+			29,
+			35,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			601,
+			276,
+			41,
+			23
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0016"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0017 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			42,
+			29,
+			36,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			645,
+			276,
+			41,
+			23
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0018",
+			"warmongers_archer_tower_lvl4_honda_front_0019",
+			"warmongers_archer_tower_lvl4_honda_front_0020",
+			"warmongers_archer_tower_lvl4_honda_front_0021",
+			"warmongers_archer_tower_lvl4_honda_front_0022"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0023 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			46,
+			33,
+			31,
+			78
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			360,
+			326,
+			42,
+			20
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0024"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0025 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			48,
+			34,
+			29,
+			76
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			601,
+			302,
+			42,
+			21
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0026"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0027 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			46,
+			34,
+			29,
+			72
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			652,
+			227,
+			44,
+			25
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0028"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0029 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			44,
+			32,
+			32,
+			74
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			734,
+			227,
+			43,
+			25
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0030"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0031 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			43,
+			37,
+			35,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			734,
+			255,
+			41,
+			15
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0032"
+		}
+	},
+	warmongers_archer_tower_lvl4_honda_front_0033 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			44,
+			39,
+			35,
+			79
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			330,
+			303,
+			40,
+			13
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honda_front_0034"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			14,
+			5,
+			9,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			902,
+			57,
+			76,
+			56
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0018"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0002 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			12,
+			5,
+			12,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			202,
+			119,
+			75,
+			56
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0003"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0004 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			12,
+			4,
+			7,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			59,
+			80,
+			57
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0005"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0006 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			13,
+			5,
+			4,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			639,
+			5,
+			82,
+			58
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0007"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0008 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			16,
+			2,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			724,
+			55,
+			76,
+			60
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0009"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0010 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			14,
+			1,
+			12,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			5,
+			73,
+			63
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0011"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0012 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			10,
+			3,
+			7,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			554,
+			5,
+			82,
+			59
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0013"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0014 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			10,
+			5,
+			2,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			57,
+			87,
+			59
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0015"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_cloud_0016 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			9,
+			5,
+			1,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			167,
+			5,
+			89,
+			62
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_cloud_0017"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			46,
+			44,
+			41,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			119,
+			72,
+			60
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0002 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			41,
+			40,
+			37,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			369,
+			5,
+			81,
+			64
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0003 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			35,
+			36,
+			33,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			939,
+			91,
+			69
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0004 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			30,
+			33,
+			28,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			864,
+			101,
+			72
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0005 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			24,
+			28,
+			24,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			627,
+			111,
+			78
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0006 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			31,
+			29,
+			24,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			784,
+			104,
+			77
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			27,
+			28,
+			22,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			708,
+			110,
+			73
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0008 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			23,
+			23,
+			17,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			465,
+			119,
+			78
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0009 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			23,
+			23,
+			17,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			546,
+			119,
+			78
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_explosion_0010 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			159,
+			111
+		},
+		trim = {
+			0,
+			0,
+			159,
+			111
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			159,
+			111
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			10,
+			11,
+			38,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			167,
+			70,
+			74,
+			45
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0002"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0003 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			15,
+			10,
+			36,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			480,
+			119,
+			71,
+			46
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0004"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0005 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			19,
+			9,
+			32,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			639,
+			66,
+			71,
+			47
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0006"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			24,
+			9,
+			29,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			554,
+			119,
+			69,
+			47
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0008"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0009 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			27,
+			8,
+			22,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			554,
+			67,
+			73,
+			47
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0010"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0011 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			13,
+			7,
+			19,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			902,
+			5,
+			90,
+			49
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0012"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0013 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			1,
+			7,
+			14,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			259,
+			5,
+			107,
+			49
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0014"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0015 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			5,
+			13,
+			20,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			119,
+			97,
+			42
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0016"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0017 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			8,
+			12,
+			17,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			119,
+			97,
+			43
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0018"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0019 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			12,
+			9,
+			11,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			724,
+			5,
+			99,
+			47
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0020"
+		}
+	},
+	warmongers_archer_tower_lvl4_honey_particle_0021 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			122,
+			65
+		},
+		trim = {
+			17,
+			12,
+			38,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			71,
+			67,
+			44
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_honey_particle_0022"
+		}
+	},
+	warmongers_archer_tower_lvl4_over = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			119,
+			131
+		},
+		trim = {
+			10,
+			28,
+			11,
+			52
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			5,
+			98,
+			51
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_special_hit_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			2,
+			6,
+			2,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			363,
+			46,
+			47
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_special_hit_0002"
+		}
+	},
+	warmongers_archer_tower_lvl4_special_hit_0003 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			0,
+			2,
+			0,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			915,
+			50,
+			53
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_special_hit_0004"
+		}
+	},
+	warmongers_archer_tower_lvl4_special_hit_0005 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			0,
+			3,
+			1,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			857,
+			49,
+			55
+		},
+		alias = {
+			"warmongers_archer_tower_lvl4_special_hit_0006"
+		}
+	},
+	warmongers_archer_tower_lvl4_special_hit_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			1,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			608,
+			49,
+			57
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_lvl4_special_hit_0008 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			50,
+			58
+		},
+		trim = {
+			1,
+			10,
+			13,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			652,
+			255,
+			36,
+			16
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_proyectile_lvl4 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			23,
+			23
+		},
+		trim = {
+			3,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			428,
+			92,
+			18,
+			20
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_proyectile_lvl4_decal = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			23,
+			23
+		},
+		trim = {
+			3,
+			5,
+			2,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			537,
+			309,
+			18,
+			13
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_proyectile_particle = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			44,
+			11
+		},
+		trim = {
+			0,
+			0,
+			5,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			495,
+			309,
+			39,
+			11
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_proyectile_particle_lvl4 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			31,
+			20
+		},
+		trim = {
+			4,
+			2,
+			3,
+			1
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			915,
+			24,
+			17
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_proyectile_special_lvl4 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			51,
+			47
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			276,
+			51,
+			47
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_proyectile_spineffect_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			23,
+			23
+		},
+		trim = {
+			1,
+			3,
+			1,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			935,
+			21,
+			17
+		},
+		alias = {
+			"warmongers_archer_tower_proyectile_spineffect_0006"
+		}
+	},
+	warmongers_archer_tower_proyectile_spineffect_0002 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			23,
+			23
+		},
+		trim = {
+			1,
+			3,
+			1,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			955,
+			21,
+			17
+		},
+		alias = {
+			"warmongers_archer_tower_proyectile_spineffect_0003"
+		}
+	},
+	warmongers_archer_tower_proyectile_spineffect_0004 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			23,
+			23
+		},
+		trim = {
+			0,
+			3,
+			1,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			428,
+			72,
+			22,
+			17
+		},
+		alias = {
+			"warmongers_archer_tower_proyectile_spineffect_0005"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0001 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			46,
+			35,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			761,
+			38,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0002",
+			"warmongers_archer_tower_shooter_lvl4_0131",
+			"warmongers_archer_tower_shooter_lvl4_0172",
+			"warmongers_archer_tower_shooter_lvl4_0173",
+			"warmongers_archer_tower_shooter_lvl4_0174",
+			"warmongers_archer_tower_shooter_lvl4_0175",
+			"warmongers_archer_tower_shooter_lvl4_0176",
+			"warmongers_archer_tower_shooter_lvl4_0177",
+			"warmongers_archer_tower_shooter_lvl4_0178"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0003 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			23,
+			47,
+			37,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			869,
+			39,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0004"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0005 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			19,
+			47,
+			37,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			700,
+			182,
+			43,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0006"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0007 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			19,
+			47,
+			37,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			746,
+			182,
+			43,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0008"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0009 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			19,
+			47,
+			37,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			792,
+			182,
+			43,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0010"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0011 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			40,
+			51,
+			32,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			578,
+			27,
+			28
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0012"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0013 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			41,
+			51,
+			31,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			609,
+			27,
+			28
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0014"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0015 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			41,
+			52,
+			30,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			640,
+			28,
+			27
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0016"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0017 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			41,
+			51,
+			29,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			414,
+			29,
+			28
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0018"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0019 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			44,
+			35,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			816,
+			227,
+			30,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0020"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0021 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			24,
+			45,
+			36,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			969,
+			182,
+			39,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0022"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0023 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			46,
+			35,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			797,
+			38,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0024"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0025 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			39,
+			47,
+			24,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			436,
+			227,
+			36,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0026",
+			"warmongers_archer_tower_shooter_lvl4_0047",
+			"warmongers_archer_tower_shooter_lvl4_0048"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0027 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			35,
+			47,
+			39,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			882,
+			25,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0028"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0029 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			47,
+			39,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			824,
+			276,
+			29,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0030"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0031 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			32,
+			48,
+			39,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			272,
+			351,
+			28,
+			31
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0032"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0033 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			32,
+			48,
+			39,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			272,
+			385,
+			28,
+			31
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0034"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0035 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			37,
+			52,
+			34,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			670,
+			28,
+			27
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0036"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0037 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			39,
+			51,
+			33,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			700,
+			27,
+			28
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0038"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0039 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			41,
+			50,
+			31,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			984,
+			27,
+			29
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0040"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0041 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			41,
+			51,
+			31,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			731,
+			27,
+			28
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0042"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0043 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			39,
+			42,
+			29,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			553,
+			227,
+			31,
+			37
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0044"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0045 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			44,
+			30,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			982,
+			33,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0046"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0049 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			46,
+			35,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			833,
+			38,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0050",
+			"warmongers_archer_tower_shooter_lvl4_0088",
+			"warmongers_archer_tower_shooter_lvl4_0089"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0051 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			53,
+			31,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			335,
+			351,
+			32,
+			26
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0052",
+			"warmongers_archer_tower_shooter_lvl4_0055"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0053 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			42,
+			56,
+			29,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			889,
+			28,
+			23
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0054"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0056 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			40,
+			12,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			365,
+			182,
+			51,
+			39
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0057 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			40,
+			12,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			419,
+			182,
+			51,
+			39
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0058 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			23,
+			15,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			969,
+			119,
+			50,
+			56
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0059 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			23,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			731,
+			53,
+			52
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0060 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			18,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			743,
+			119,
+			53,
+			57
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0061 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			29,
+			18,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			626,
+			119,
+			55,
+			57
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0062 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			29,
+			12,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			542,
+			55,
+			63
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0063 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			27,
+			12,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			476,
+			57,
+			63
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0064 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			27,
+			6,
+			15,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			328,
+			57,
+			71
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0065 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			27,
+			6,
+			15,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			402,
+			57,
+			71
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0066 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			23,
+			5,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			182,
+			61,
+			70
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0067 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			23,
+			5,
+			15,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			255,
+			61,
+			70
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0068",
+			"warmongers_archer_tower_shooter_lvl4_0069"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0070 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			25,
+			36,
+			43,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			940,
+			31,
+			39
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0071 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			33,
+			40,
+			39,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			689,
+			276,
+			27,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0072"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0073 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			42,
+			37,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			556,
+			26,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0074"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0075 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			38,
+			41,
+			36,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			664,
+			25,
+			34
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0076 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			23,
+			12,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			684,
+			119,
+			56,
+			54
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0077"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0078 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			24,
+			14,
+			29,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			668,
+			46,
+			60
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0079"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0080 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			24,
+			6,
+			35,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			786,
+			40,
+			68
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0081"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0082 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			24,
+			15,
+			25,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			799,
+			119,
+			50,
+			59
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0083",
+			"warmongers_archer_tower_shooter_lvl4_0084"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0085 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			33,
+			9,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			369,
+			72,
+			56,
+			44
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0086"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0087 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			38,
+			33,
+			9,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			298,
+			227,
+			52,
+			46
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0090 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			25,
+			46,
+			35,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			655,
+			39,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0091",
+			"warmongers_archer_tower_shooter_lvl4_0092",
+			"warmongers_archer_tower_shooter_lvl4_0093",
+			"warmongers_archer_tower_shooter_lvl4_0094",
+			"warmongers_archer_tower_shooter_lvl4_0095",
+			"warmongers_archer_tower_shooter_lvl4_0096",
+			"warmongers_archer_tower_shooter_lvl4_0128",
+			"warmongers_archer_tower_shooter_lvl4_0129",
+			"warmongers_archer_tower_shooter_lvl4_0130"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0097 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			40,
+			38,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			887,
+			276,
+			27,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0098"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0099 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			39,
+			43,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			99,
+			939,
+			25,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0100"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0101 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			29,
+			36,
+			45,
+			42
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			99,
+			978,
+			25,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0102"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0103 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			28,
+			35,
+			47,
+			42
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			440,
+			24,
+			37
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0104"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0105 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			24,
+			32,
+			49,
+			42
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			995,
+			5,
+			26,
+			40
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0106"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0107 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			21,
+			29,
+			50,
+			42
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			405,
+			227,
+			28,
+			43
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0108",
+			"warmongers_archer_tower_shooter_lvl4_0109",
+			"warmongers_archer_tower_shooter_lvl4_0110"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0111 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			29,
+			35,
+			44,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			363,
+			26,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0112"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0113 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			37,
+			42,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			592,
+			26,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0114"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0115 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			32,
+			36,
+			40,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			917,
+			276,
+			27,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0116"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0117 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			29,
+			36,
+			43,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			947,
+			276,
+			27,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0118"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0119 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			34,
+			46,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			405,
+			276,
+			27,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0120"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0121 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			34,
+			46,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			435,
+			276,
+			27,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0122"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0123 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			30,
+			37,
+			44,
+			44
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			775,
+			25,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0124"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0125 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			40,
+			38,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			977,
+			276,
+			27,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0126"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0127 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			39,
+			45,
+			36,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			476,
+			24,
+			32
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0132 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			53,
+			31,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			495,
+			276,
+			32,
+			30
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0133"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0134 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			57,
+			30,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			565,
+			276,
+			33,
+			29
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0135"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0136 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			53,
+			31,
+			31
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			530,
+			276,
+			32,
+			30
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0137"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0138 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			35,
+			46,
+			37,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			326,
+			27,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0139"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0140 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			41,
+			43,
+			38
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			480,
+			25,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0141"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0142 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			28,
+			41,
+			44,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			465,
+			276,
+			27,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0143"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0144 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			40,
+			45,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			881,
+			227,
+			28,
+			37
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0145"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0146 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			19,
+			41,
+			49,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			618,
+			227,
+			31,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0147"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0148 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			18,
+			43,
+			49,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			699,
+			227,
+			32,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0149",
+			"warmongers_archer_tower_shooter_lvl4_0150",
+			"warmongers_archer_tower_shooter_lvl4_0151"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0152 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			32,
+			40,
+			39,
+			38
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			947,
+			227,
+			28,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0153"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0154 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			42,
+			38,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			719,
+			276,
+			27,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0155"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0156 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			38,
+			41,
+			36,
+			39
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			701,
+			25,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0157"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0158 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			42,
+			43,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			518,
+			25,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0159"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0160 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			30,
+			41,
+			44,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			401,
+			25,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0161"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0162 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			26,
+			41,
+			44,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			849,
+			227,
+			29,
+			36
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0163"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0164 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			27,
+			44,
+			44,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			856,
+			276,
+			28,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0165"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0166 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			30,
+			46,
+			44,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			917,
+			25,
+			32
+		},
+		alias = {}
+	},
+	warmongers_archer_tower_shooter_lvl4_0167 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			39,
+			47,
+			24,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			475,
+			227,
+			36,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0168",
+			"warmongers_archer_tower_shooter_lvl4_0169",
+			"warmongers_archer_tower_shooter_lvl4_0170",
+			"warmongers_archer_tower_shooter_lvl4_0171"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0179 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			15,
+			25,
+			36,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			182,
+			48,
+			55
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0180"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0181 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			7,
+			26,
+			40,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			914,
+			119,
+			52,
+			54
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0182"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0183 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			0,
+			32,
+			40,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			852,
+			119,
+			59,
+			48
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0184"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0185 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			0,
+			40,
+			41,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			182,
+			58,
+			42
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0186"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0187 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			0,
+			44,
+			40,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			182,
+			59,
+			41
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0188"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0189 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			0,
+			44,
+			40,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			971,
+			59,
+			44
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0190",
+			"warmongers_archer_tower_shooter_lvl4_0191",
+			"warmongers_archer_tower_shooter_lvl4_0192"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0193 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			31,
+			41,
+			40,
+			38
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			374,
+			276,
+			28,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0194"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0195 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			34,
+			43,
+			38,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			749,
+			276,
+			27,
+			35
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0196"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0197 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			38,
+			42,
+			36,
+			38
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			738,
+			25,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0198"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0199 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			18,
+			20,
+			41,
+			34
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			300,
+			40,
+			60
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0200"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0201 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			9,
+			25,
+			46,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			240,
+			44,
+			57
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0202"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0203 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			0,
+			36,
+			46,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			227,
+			53,
+			46
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0204"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0205 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			9,
+			43,
+			41,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			353,
+			227,
+			49,
+			46
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0206"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0207 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			29,
+			48,
+			44,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			628,
+			26,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0208",
+			"warmongers_archer_tower_shooter_lvl4_0213"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0209 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			36,
+			48,
+			39,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			242,
+			811,
+			24,
+			34
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0210",
+			"warmongers_archer_tower_shooter_lvl4_0214",
+			"warmongers_archer_tower_shooter_lvl4_0215"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0211 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			39,
+			47,
+			24,
+			35
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			514,
+			227,
+			36,
+			32
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0212",
+			"warmongers_archer_tower_shooter_lvl4_0216"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0217 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			43,
+			52,
+			33,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			303,
+			511,
+			23,
+			33
+		},
+		alias = {
+			"warmongers_archer_tower_shooter_lvl4_0218"
+		}
+	},
+	warmongers_archer_tower_shooter_lvl4_0219 = {
+		a_name = "kr4_warmongers_tower_archer-1.dds",
+		size = {
+			99,
+			114
+		},
+		trim = {
+			32,
+			49,
+			28,
+			32
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			691,
+			39,
+			33
+		},
+		alias = {}
+	}
+}

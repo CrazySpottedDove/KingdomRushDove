@@ -405,8 +405,8 @@ local function load_director()
 
     local director = require("director")
 
-    require("mods.mod_main"):init(director)
-
+    director:init(main.params)
+    
     main.handler = director
 end
 

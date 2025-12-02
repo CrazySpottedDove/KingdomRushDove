@@ -1,725 +1,109 @@
 return {
-	["ghost_tower_buff_skill_back_0001"] = {
+	ghost_tower_buff_skill_front_0001 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			99,
-			213
+			85,
+			82
 		},
 		trim = {
-			25,
-            37,
-            24,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			986,
-			866,
-			50,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			25,
-            37,
-            24,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			986,
-			866,
-			50,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			24,
-            44,
-            23,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1380,
-			607,
-			52,
-			76
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			24,
-            44,
-            23,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1380,
-			607,
-			52,
-			76
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
+			23,
+			13,
 			22,
-            46,
-            22,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1246,
-			361,
-			55,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			22,
-            46,
-            22,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1246,
-			361,
-			55,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			21,
-            47,
-            20,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			961,
-			361,
-			58,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			21,
-            47,
-            20,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			961,
-			361,
-			58,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			21,
-            42,
-            18,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			492,
-			691,
-			60,
-			78
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			21,
-            42,
-            18,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			492,
-			691,
-			60,
-			78
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			20,
-            37,
-            19,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1044,
-			866,
-			60,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			20,
-            37,
-            19,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1044,
-			866,
-			60,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			22,
-            43,
-            21,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			159,
-			691,
-			56,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			22,
-            43,
-            21,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			159,
-			691,
-			56,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			24,
-            37,
-            23,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1112,
-			866,
-			52,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_back_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			213
-		},
-		trim = {
-			24,
-            37,
-            23,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1112,
-			866,
-			52,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			20,
-            12,
-            19,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			994,
-			4,
-			46,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			20,
-            12,
-            19,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			994,
-			4,
-			46,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			19,
-            12,
-            19,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1048,
-			4,
-			47,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			19,
-            12,
-            19,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1048,
-			4,
-			47,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			18,
-            15,
-            19,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			655,
-			4,
-			48,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			18,
-            15,
-            19,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			655,
-			4,
-			48,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			18,
-            13,
-            17,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			882,
-			4,
-			50,
-			35
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			18,
-            13,
-            17,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			882,
-			4,
-			50,
-			35
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			17,
-            11,
-            16,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1300,
-			4,
-			52,
 			37
 		},
-		alias = {},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			921,
+			373,
+			40,
+			32
+		},
+		alias = {
+			"ghost_tower_buff_skill_front_0002"
+		}
 	},
-	["ghost_tower_buff_skill_front_0010"] = {
+	ghost_tower_buff_skill_front_0003 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
 		},
 		trim = {
-			17,
-            11,
-            16,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1300,
-			4,
-			52,
+			22,
+			15,
+			22,
 			37
 		},
-		alias = {},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			964,
+			373,
+			41,
+			30
+		},
+		alias = {
+			"ghost_tower_buff_skill_front_0004"
+		}
 	},
-	["ghost_tower_buff_skill_front_0011"] = {
+	ghost_tower_buff_skill_front_0005 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
 		},
 		trim = {
+			21,
 			18,
-            12,
-            18,
-            34
+			21,
+			37
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1103,
-			4,
-			49,
-			36
+			165,
+			993,
+			43,
+			27
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_buff_skill_front_0006"
+		}
 	},
-	["ghost_tower_buff_skill_front_0012"] = {
+	ghost_tower_buff_skill_front_0007 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
 		},
 		trim = {
-			18,
-            12,
-            18,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1103,
-			4,
-			49,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
+			21,
+			15,
 			19,
-            15,
-            20,
-            34
+			37
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			711,
-			4,
-			46,
-			33
+			873,
+			373,
+			45,
+			30
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_buff_skill_front_0008"
+		}
 	},
-	["ghost_tower_buff_skill_front_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			82
-		},
-		trim = {
-			19,
-            15,
-            20,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			711,
-			4,
-			46,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_buff_skill_front_0015"] = {
+	ghost_tower_buff_skill_front_0009 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
@@ -727,11348 +111,6549 @@ return {
 		},
 		trim = {
 			20,
-            13,
-            19,
-            34
+			13,
+			19,
+			37
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			940,
-			4,
+			617,
+			374,
 			46,
-			35
+			32
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_buff_skill_front_0010"
+		}
 	},
-	["ghost_tower_buff_skill_front_0016"] = {
+	ghost_tower_buff_skill_front_0011 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
 		},
 		trim = {
-			20,
-            13,
-            19,
-            34
+			21,
+			15,
+			21,
+			37
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			940,
-			4,
-			46,
-			35
+			548,
+			985,
+			43,
+			30
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_buff_skill_front_0012"
+		}
 	},
-	["ghost_tower_build"] = {
+	ghost_tower_buff_skill_front_0013 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			178,
+			85,
+			82
+		},
+		trim = {
+			22,
+			18,
+			22,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			211,
+			993,
+			41,
+			27
+		},
+		alias = {
+			"ghost_tower_buff_skill_front_0014"
+		}
+	},
+	ghost_tower_build = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			179,
 			139
 		},
 		trim = {
+			39,
+			17,
+			40,
+			43
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			908,
+			409,
+			100,
+			79
+		},
+		alias = {}
+	},
+	ghost_tower_hit_fx_0001 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			108,
+			102
+		},
+		trim = {
 			36,
-            14,
-            39,
-            42
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1172,
-			866,
-			103,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_hit_fx_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			107,
-			102
-		},
-		trim = {
+			31,
 			34,
-            30,
-            34,
-            33
+			34
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			203,
-			49,
-			39,
-			39
+			118,
+			546,
+			38,
+			37
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_hit_fx_0002"
+		}
 	},
-	["ghost_tower_hit_fx_0002"] = {
+	ghost_tower_hit_fx_0003 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			107,
+			108,
 			102
 		},
 		trim = {
-			34,
-            30,
-            34,
-            33
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			203,
-			49,
-			39,
-			39
-		},
-		alias = {},
-	},
-	["ghost_tower_hit_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			107,
-			102
-		},
-		trim = {
-			30,
-            21,
-            25,
-            27
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1379,
-			154,
-			52,
-			54
-		},
-		alias = {},
-	},
-	["ghost_tower_hit_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			107,
-			102
-		},
-		trim = {
-			30,
-            21,
-            25,
-            27
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1379,
-			154,
-			52,
-			54
-		},
-		alias = {},
-	},
-	["ghost_tower_hit_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			107,
-			102
-		},
-		trim = {
+			32,
+			22,
 			26,
-            20,
-            22,
-            22
+			28
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1371,
-			216,
-			59,
-			60
+			964,
+			967,
+			50,
+			52
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_hit_fx_0004"
+		}
 	},
-	["ghost_tower_hit_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			107,
-			102
-		},
-		trim = {
-			26,
-            20,
-            22,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1371,
-			216,
-			59,
-			60
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower"] = {
+	ghost_tower_lvl4_tower = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			247
 		},
 		trim = {
-			18,
-            11,
-            18,
-            99
+			20,
+			14,
+			21,
+			102
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			373,
-			1295,
-			120,
-			137
+			858,
+			147,
+			115,
+			131
 		},
-		alias = {},
+		alias = {}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0001"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0001 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			762,
-			778,
-			144,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			762,
-			778,
-			144,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			560,
-			691,
-			144,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			560,
-			691,
-			144,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            25,
-            31,
-            40
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			712,
-			691,
-			143,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            25,
-            31,
-            40
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			712,
-			691,
-			143,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            25,
-            30,
-            40
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			863,
-			691,
-			144,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            25,
-            30,
-            40
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			863,
-			691,
-			144,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
+			202,
+			145
 		},
 		trim = {
 			28,
-            25,
-            30,
-            40
+			27,
+			31,
+			40
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1015,
-			691,
+			601,
+			494,
 			143,
-			79
+			78
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0002"
+		}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0010"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0003 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
+			202,
+			145
 		},
 		trim = {
 			28,
-            25,
-            30,
-            40
+			27,
+			31,
+			40
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1015,
-			691,
+			747,
+			494,
 			143,
-			79
+			78
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0004"
+		}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0011"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0005 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
+			202,
+			145
 		},
 		trim = {
-			29,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1166,
-			691,
-			142,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			29,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1166,
-			691,
-			142,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			30,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			778,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			30,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			778,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			30,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			153,
-			778,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			30,
-            26,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			153,
-			778,
-			141,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
+			28,
+			26,
 			32,
-            26,
-            31,
-            39
+			41
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			302,
-			778,
+			308,
+			659,
+			142,
+			78
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0006"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0007 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			28,
+			26,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			576,
+			143,
+			78
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0008"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0009 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			29,
+			26,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			740,
+			142,
+			78
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0010"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0011 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			30,
+			27,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			659,
+			141,
+			77
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0012"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0013 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			31,
+			27,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			833,
+			140,
+			77
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0014"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0015 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			31,
+			27,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			913,
+			140,
+			77
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0016"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0017 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			34,
+			27,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			905,
+			137,
+			77
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0018"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0019 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			33,
+			26,
+			31,
+			41
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			739,
+			138,
+			78
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0020"
+		}
+	},
+	ghost_tower_lvl4_tower_shadow_fx_0021 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			202,
+			145
+		},
+		trim = {
+			33,
+			26,
+			31,
+			40
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			751,
 			138,
 			79
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0022"
+		}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0018"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0023 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
+			202,
+			145
 		},
 		trim = {
 			32,
-            26,
-            31,
-            39
+			26,
+			31,
+			40
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			302,
-			778,
-			138,
+			308,
+			821,
+			139,
 			79
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0024"
+		}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0019"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0025 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
+			202,
+			145
 		},
 		trim = {
 			31,
-            25,
-            31,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			914,
-			778,
-			139,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
+			26,
 			31,
-            25,
-            31,
-            39
+			38
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			914,
-			778,
-			139,
-			80
+			165,
+			583,
+			140,
+			81
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0026"
+		}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0021"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0027 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
-		},
-		trim = {
-			32,
-            25,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1061,
-			778,
-			139,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			32,
-            25,
-            30,
-            39
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1061,
-			778,
-			139,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
+			202,
+			145
 		},
 		trim = {
 			30,
-            24,
-            31,
-            38
+			26,
+			32,
+			38
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			464,
-			866,
+			165,
+			667,
 			140,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			30,
-            24,
-            31,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			464,
-			866,
-			140,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			29,
-            24,
-            29,
-            37
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1283,
-			866,
-			143,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			29,
-            24,
-            29,
-            37
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1283,
-			866,
-			143,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			29,
-            24,
-            31,
-            37
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			957,
-			141,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			29,
-            24,
-            31,
-            37
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			957,
-			141,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0029"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			28,
-            25,
-            30,
-            37
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			612,
-			866,
-			143,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0030"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			28,
-            25,
-            30,
-            37
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			612,
-			866,
-			143,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0031"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            25,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			156,
-			866,
-			144,
 			81
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0028"
+		}
 	},
-	["ghost_tower_lvl4_tower_shadow_fx_0032"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0029 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            25,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			156,
-			866,
-			144,
-			81
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0033"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1208,
-			778,
-			144,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0034"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1208,
-			778,
-			144,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0035"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			866,
-			144,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_shadow_fx_0036"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			201,
-			144
-		},
-		trim = {
-			27,
-            26,
-            30,
-            38
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			866,
-			144,
-			80
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
+			202,
+			145
 		},
 		trim = {
 			29,
-            26,
-            29,
-            119
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			765,
-			4,
-			27,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			29,
-            26,
-            29,
-            119
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			765,
-			4,
-			27,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			27,
-            22,
-            26,
-            116
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			406,
-			49,
-			32,
-			40
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			27,
-            22,
-            26,
-            116
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			406,
-			49,
-			32,
-			40
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			24,
-            19,
-            23,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1229,
-			99,
-			38,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			24,
-            19,
-            23,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1229,
-			99,
-			38,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			22,
-            19,
-            22,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1275,
-			99,
-			41,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			22,
-            19,
-            22,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1275,
-			99,
-			41,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			22,
-            19,
-            21,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1324,
-			99,
-			42,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			22,
-            19,
-            21,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1324,
-			99,
-			42,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			20,
-            20,
-            22,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			236,
-			99,
-			43,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			20,
-            20,
-            22,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			236,
-			99,
-			43,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			20,
-            19,
-            21,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			987,
-			99,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			20,
-            19,
-            21,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			987,
-			99,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			20,
-            19,
-            21,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1039,
-			99,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_tower_spawn_fx_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			85,
-			178
-		},
-		trim = {
-			20,
-            19,
-            21,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1039,
-			99,
-			44,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			899,
-			284,
-			66,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			899,
-			284,
-			66,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			973,
-			284,
-			65,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			973,
-			284,
-			65,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1332,
-			284,
-			65,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1332,
-			284,
-			65,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            33,
-            49,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			376,
-			361,
-			64,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            33,
-            49,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			376,
-			361,
-			64,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            32,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			665,
-			361,
-			65,
-			71
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            32,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			665,
-			361,
-			65,
-			71
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            30,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1027,
-			361,
-			65,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            30,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1027,
-			361,
-			65,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1309,
-			361,
-			65,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1309,
-			361,
-			65,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1382,
-			361,
-			66,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1382,
-			361,
-			66,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            30,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1100,
-			361,
-			68,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            30,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1100,
-			361,
-			68,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            31,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			738,
-			361,
-			69,
-			72
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            31,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			738,
-			361,
-			69,
-			72
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            33,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			448,
-			361,
-			69,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            33,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			448,
-			361,
-			69,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            35,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1046,
-			284,
-			68,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            35,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1046,
-			284,
-			68,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			899,
-			284,
-			66,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			899,
-			284,
-			66,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			973,
-			284,
-			65,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			973,
-			284,
-			65,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0029"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1332,
-			284,
-			65,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0030"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1332,
-			284,
-			65,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0031"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            33,
-            49,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			376,
-			361,
-			64,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0032"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            33,
-            49,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			376,
-			361,
-			64,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0033"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            32,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			665,
-			361,
-			65,
-			71
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0034"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            32,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			665,
-			361,
-			65,
-			71
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0035"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            30,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1027,
-			361,
-			65,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0036"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            30,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1027,
-			361,
-			65,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0037"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1309,
-			361,
-			65,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0038"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1309,
-			361,
-			65,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0039"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1382,
-			361,
-			66,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0040"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            29,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1382,
-			361,
-			66,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0041"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            30,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1100,
-			361,
-			68,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0042"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            30,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1100,
-			361,
-			68,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0043"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            31,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			738,
-			361,
-			69,
-			72
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0044"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            31,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			738,
-			361,
-			69,
-			72
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0045"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            33,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			448,
-			361,
-			69,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0046"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            33,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			448,
-			361,
-			69,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0047"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            35,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1046,
-			284,
-			68,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0048"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			42,
-            35,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1046,
-			284,
-			68,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0049"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			361,
-			66,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0050"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			361,
-			66,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0051"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			51,
-            28,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1165,
-			607,
-			57,
-			75
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0052"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			51,
-            28,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1165,
-			607,
-			57,
-			75
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0053"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
 			26,
-            15,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1361,
-			957,
-			82,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0054"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			26,
-            15,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1361,
-			957,
-			82,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0055"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			23,
-            14,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			463,
-			1053,
-			86,
-			89
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0056"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			23,
-            14,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			463,
-			1053,
-			86,
-			89
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0057"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			12,
-            14,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			557,
-			1053,
-			96,
-			89
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0058"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			12,
-            14,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			557,
-			1053,
-			96,
-			89
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0059"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			10,
-            14,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			661,
-			1053,
-			98,
-			89
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0060"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			10,
-            14,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			661,
-			1053,
-			98,
-			89
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0061"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
 			31,
-            19,
-            45,
-            92
+			38
 		},
 		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			373,
-			957,
-			80,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0062"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			31,
-            19,
-            45,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			373,
-			957,
-			80,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0063"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            50,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1168,
-			154,
-			72,
-			53
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0064"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            50,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1168,
-			154,
-			72,
-			53
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0065"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			47,
-            28,
-            26,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			691,
-			83,
-			76
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0066"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			47,
-            28,
-            26,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			691,
-			83,
-			76
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0067"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            13,
-            29,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			767,
-			1053,
-			83,
-			90
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0068"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            13,
-            29,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			767,
-			1053,
-			83,
-			90
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0069"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			38,
-            10,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1346,
-			1053,
-			72,
-			93
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0070"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			38,
-            10,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1346,
-			1053,
-			72,
-			93
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0071"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            34,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			78,
-			361,
-			71,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0072"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            34,
-            46,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			78,
-			361,
-			71,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0073"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			157,
-			361,
-			66,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0074"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			157,
-			361,
-			66,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0075"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            47,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			361,
-			66,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0076"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			231,
-			361,
-			65,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0077"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			231,
-			361,
-			65,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0078"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            30,
-            50,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1176,
-			361,
-			62,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0079"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            30,
-            50,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1176,
-			361,
-			62,
-			73
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0080"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			46,
-            33,
-            50,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			525,
-			361,
-			60,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0081"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			46,
-            33,
-            50,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			525,
-			361,
-			60,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0082"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			41,
-            38,
-            51,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			469,
-			284,
-			64,
-			65
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0083"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			41,
-            38,
-            51,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			469,
-			284,
-			64,
-			65
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0084"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			37,
-            40,
-            46,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			388,
-			284,
-			73,
-			64
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0085"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			37,
-            40,
-            46,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			388,
-			284,
-			73,
-			64
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0086"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            38,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			541,
-			284,
-			69,
-			65
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0087"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            38,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			541,
-			284,
-			69,
-			65
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0088"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            36,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			618,
-			284,
-			69,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0089"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            36,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			618,
-			284,
-			69,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0090"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			41,
-            29,
-            49,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			443,
-			66,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0091"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			41,
-            29,
-            49,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			443,
-			66,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0092"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			48,
-            27,
-            52,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			95,
-			691,
-			56,
-			76
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0093"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			48,
-            27,
-            52,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			95,
-			691,
-			56,
-			76
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0094"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			51,
-            20,
-            51,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			153,
-			957,
-			54,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0095"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			51,
-            20,
-            51,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			153,
-			957,
-			54,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0096"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			58,
-            19,
-            53,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			461,
-			957,
-			45,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0097"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			58,
-            19,
-            53,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			461,
-			957,
-			45,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0098"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            26,
-            62,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			223,
-			691,
-			31,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0099"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            26,
-            62,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			223,
-			691,
-			31,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0100"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            40,
-            64,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			277,
-			284,
-			29,
-			63
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0101"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            40,
-            64,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			277,
-			284,
-			29,
-			63
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0102"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			61,
-            73,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			533,
-			4,
-			33,
-			31
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0103"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			61,
-            73,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			533,
-			4,
-			33,
-			31
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0104"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            68,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1160,
-			4,
-			31,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0105"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            68,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1160,
-			4,
-			31,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0106"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			62,
-            72,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			615,
-			4,
-			32,
-			32
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0107"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			62,
-            72,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			615,
-			4,
-			32,
-			32
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0108"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            70,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			843,
-			4,
-			31,
-			34
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0109"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			63,
-            70,
-            62,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			843,
-			4,
-			31,
-			34
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0110"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            47,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			695,
-			284,
-			66,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0111"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            47,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			695,
-			284,
-			66,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0112"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            48,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			769,
-			284,
-			65,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0113"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            35,
-            48,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			769,
-			284,
-			65,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0114"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1122,
-			284,
-			65,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0115"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            34,
-            48,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1122,
-			284,
-			65,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0116"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            33,
-            49,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			304,
-			361,
-			64,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0117"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			43,
-            33,
-            49,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			304,
-			361,
-			64,
-			69
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0118"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			45,
-            28,
-            50,
-            85
-		},
-		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
 			763,
-			866,
-			61,
-			82
+			409,
+			142,
+			81
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0030"
+		}
 	},
-	["ghost_tower_lvl4_unit_0119"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0031 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			156,
-			195
+			202,
+			145
 		},
 		trim = {
-			45,
-            28,
-            50,
-            85
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			763,
-			866,
-			61,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0120"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			46,
-            25,
-            50,
-            86
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			514,
-			957,
-			60,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0121"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			46,
-            25,
-            50,
-            86
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			514,
-			957,
-			60,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0122"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            48,
-            42,
-            86
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			96,
-			284,
-			78,
-			61
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0123"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            48,
-            42,
-            86
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			96,
-			284,
-			78,
-			61
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0124"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            59,
-            49,
-            79
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			760,
-			216,
-			63,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0125"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            59,
-            49,
-            79
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			760,
-			216,
-			63,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0126"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            65,
-            43,
-            75
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			91,
-			216,
-			74,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0127"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			39,
-            65,
-            43,
-            75
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			91,
-			216,
-			74,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0128"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            69,
-            41,
-            72
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			216,
-			79,
-			54
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0129"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            69,
-            41,
-            72
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			216,
-			79,
-			54
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0130"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			35,
-            74,
-            39,
-            70
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			633,
-			154,
-			82,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0131"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			35,
-            74,
-            39,
-            70
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			633,
-			154,
-			82,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0132"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			34,
-            70,
-            38,
-            70
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			173,
-			216,
-			84,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0133"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			34,
-            70,
-            38,
-            70
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			173,
-			216,
-			84,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0134"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			38,
-            69,
-            42,
-            69
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			831,
-			216,
-			76,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0135"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			38,
-            69,
-            42,
-            69
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			831,
-			216,
-			76,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0136"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			34,
-            68,
-            39,
-            69
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1084,
-			216,
-			83,
-			58
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0137"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			34,
-            68,
-            39,
-            69
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1084,
-			216,
-			83,
-			58
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0138"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            69,
-            44,
-            76
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			483,
-			154,
-			68,
-			50
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0139"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            69,
-            44,
-            76
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			483,
-			154,
-			68,
-			50
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0140"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            45,
-            40,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			915,
-			216,
-			80,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0141"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			36,
-            45,
-            40,
-            93
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			915,
-			216,
-			80,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0142"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			45,
-            26,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			262,
-			691,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0143"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			45,
-            26,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			262,
-			691,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0144"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            33,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			593,
-			361,
-			64,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_lvl4_unit_0145"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			156,
-			195
-		},
-		trim = {
-			44,
-            33,
-            48,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			593,
-			361,
-			64,
-			70
-		},
-		alias = {},
-	},
-	["ghost_tower_preview"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			181,
-			170
-		},
-		trim = {
-			33,
-            11,
-            38,
-            55
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			1154,
-			110,
-			104
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			36,
-            63,
-            22,
-            171
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			160,
-			49,
-			35,
-			38
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			36,
-            63,
-            22,
-            171
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			160,
-			49,
-			35,
-			38
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			32,
-            51,
-            24,
-            172
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			274,
-			154,
-			37,
-			49
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			32,
-            51,
-            24,
-            172
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			274,
-			154,
-			37,
-			49
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			30,
-            35,
-            30,
-            179
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1175,
-			216,
-			33,
-			58
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			30,
-            35,
-            30,
-            179
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1175,
-			216,
-			33,
-			58
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
+			29,
+			26,
 			31,
-            25,
-            35,
-            186
+			39
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			182,
-			284,
-			27,
-			61
+			308,
+			576,
+			142,
+			80
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0032"
+		}
 	},
-	["ghost_tower_soul_skill_0008"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0033 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			93,
-			272
-		},
-		trim = {
-			31,
-            25,
-            35,
-            186
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			182,
-			284,
-			27,
-			61
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
+			202,
+			145
 		},
 		trim = {
 			28,
-            19,
-            33,
-            200
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1248,
-			154,
-			32,
-			53
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			28,
-            19,
-            33,
-            200
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1248,
-			154,
-			32,
-			53
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			26,
-            14,
-            33,
-            210
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			80,
-			154,
-			34,
-			48
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			26,
-            14,
-            33,
-            210
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			80,
-			154,
-			34,
-			48
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			30,
-            12,
-            28,
-            223
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1360,
-			4,
-			35,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			30,
-            12,
-            28,
-            223
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1360,
-			4,
-			35,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			32,
-            14,
-            26,
-            225
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			800,
-			4,
-			35,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			32,
-            14,
-            26,
-            225
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			800,
-			4,
-			35,
-			33
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			35,
-            18,
-            25,
-            223
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			574,
-			4,
-			33,
-			31
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			93,
-			272
-		},
-		trim = {
-			35,
-            18,
-            25,
-            223
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			574,
-			4,
-			33,
-			31
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			287,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			287,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			342,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			342,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            14,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			914,
-			49,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            14,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			914,
-			49,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            14,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			969,
-			49,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            14,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			969,
-			49,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            15,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			501,
-			49,
-			47,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            15,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			501,
-			49,
-			47,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            19,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1403,
-			4,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            19,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1403,
-			4,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            19,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			49,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            19,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			49,
-			47,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            17,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			250,
-			49,
-			47,
-			39
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            17,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			250,
-			49,
-			47,
-			39
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            16,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			446,
-			49,
-			47,
+			27,
+			31,
 			40
 		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            16,
-            26,
-            32
-		},
 		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			446,
-			49,
-			47,
-			40
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            15,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			556,
-			49,
-			47,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            15,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			556,
-			49,
-			47,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            14,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
 			1024,
-			49,
-			47,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            14,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
+			1024
 		},
 		f_quad = {
-			1024,
-			49,
-			47,
-			42
+			599,
+			576,
+			143,
+			78
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0034"
+		}
 	},
-	["ghost_tower_soul_skill_enemy_fx_0023"] = {
+	ghost_tower_lvl4_tower_shadow_fx_0035 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            12,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			80,
-			99,
-			47,
-			44
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            12,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			80,
-			99,
-			47,
-			44
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			397,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			397,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			452,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			99,
-			88
-		},
-		trim = {
-			26,
-            11,
-            26,
-            32
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			452,
-			99,
-			47,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			723,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			723,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			799,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			799,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            14,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			122,
-			154,
-			68,
-			48
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            14,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			122,
-			154,
-			68,
-			48
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            14,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			198,
-			154,
-			68,
-			48
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            14,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			198,
-			154,
-			68,
-			48
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            15,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1374,
-			99,
-			68,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            15,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1374,
-			99,
-			68,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            20,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1079,
-			49,
-			68,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            20,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1079,
-			49,
-			68,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            19,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			99,
-			68,
-			43
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            19,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			99,
-			68,
-			43
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            17,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			507,
-			99,
-			68,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            17,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			507,
-			99,
-			68,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            16,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1091,
-			99,
-			68,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            16,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1091,
-			99,
-			68,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            15,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			154,
-			68,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            15,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			154,
-			68,
-			47
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            13,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			319,
-			154,
-			68,
-			49
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            13,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			319,
-			154,
-			68,
-			49
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			875,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			875,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            10,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1092,
-			154,
-			68,
-			52
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            10,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1092,
-			154,
-			68,
-			52
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			951,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_big_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			130,
-			96
-		},
-		trim = {
-			30,
-            11,
-            32,
-            34
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			951,
-			154,
-			68,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
+			202,
+			145
 		},
 		trim = {
 			28,
-            11,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			583,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            11,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			583,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            12,
-            29,
-            25
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			684,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            12,
-            29,
-            25
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			684,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            14,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1155,
-			49,
-			93,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            14,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1155,
-			49,
-			93,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            14,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1256,
-			49,
-			93,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            14,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1256,
-			49,
-			93,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            15,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			611,
-			49,
-			93,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            15,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			611,
-			49,
-			93,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            20,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1199,
-			4,
-			93,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            20,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1199,
-			4,
-			93,
-			36
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            19,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			59,
-			49,
-			93,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            19,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			59,
-			49,
-			93,
-			37
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            17,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			305,
-			49,
-			93,
+			27,
+			31,
 			39
 		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            17,
-            29,
-            26
-		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			305,
-			49,
-			93,
-			39
+			455,
+			494,
+			143,
+			79
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_shadow_fx_0036"
+		}
 	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0017"] = {
+	ghost_tower_lvl4_tower_spawn_fx_0009 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			150,
-			82
+			85,
+			179
 		},
 		trim = {
-			28,
-            16,
-            29,
-            25
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			712,
-			49,
-			93,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            16,
-            29,
-            25
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			712,
-			49,
-			93,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            15,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			813,
-			49,
-			93,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            15,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			813,
-			49,
-			93,
-			41
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            14,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1357,
-			49,
-			93,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            14,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1357,
-			49,
-			93,
-			42
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            12,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			135,
-			99,
-			93,
-			44
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            12,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			135,
-			99,
-			93,
-			44
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            11,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			785,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            11,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			785,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            11,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			886,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_enemy_fx_bigger_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			150,
-			82
-		},
-		trim = {
-			28,
-            11,
-            29,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			886,
-			99,
-			93,
-			45
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
+			23,
 			20,
-            26,
-            19,
-            25
+			22,
+			114
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1027,
-			154,
-			57,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			20,
-            26,
-            19,
-            25
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1027,
-			154,
-			57,
-			51
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			15,
-            18,
-            15,
-            21
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			314,
-			284,
-			66,
-			63
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			15,
-            18,
-            15,
-            21
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			314,
-			284,
-			66,
-			63
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			12,
-            13,
-            15,
-            21
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1195,
-			284,
-			69,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			12,
-            13,
-            15,
-            21
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1195,
-			284,
-			69,
-			68
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			20,
-            23,
-            24,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			265,
-			216,
-			52,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			20,
-            23,
-            24,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			265,
-			216,
-			52,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			19,
-            30,
-            23,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1167,
-			99,
-			54,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_hit_fx_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			96,
-			102
-		},
-		trim = {
-			19,
-            30,
-            23,
-            26
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1167,
-			99,
-			54,
-			46
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			53,
-			48
-		},
-		trim = {
-			15,
-            12,
-            11,
-            11
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
+			118,
 			498,
-			4,
-			27,
-			25
+			40,
+			45
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0010"
+		}
 	},
-	["ghost_tower_soul_skill_projectile_particle_0001"] = {
+	ghost_tower_lvl4_tower_spawn_fx_0013 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			56,
-			51
+			85,
+			179
 		},
 		trim = {
-			14,
-            13,
-            14,
-            14
+			21,
+			20,
+			22,
+			115
 		},
 		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			284,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			284,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			320,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			320,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			356,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			356,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            14,
-            14,
-            13
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			392,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            14,
-            14,
-            13
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			392,
-			4,
-			28,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			15,
-            14,
-            14,
-            13
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			428,
-			4,
-			27,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			15,
-            14,
-            14,
-            13
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			428,
-			4,
-			27,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            14,
-            15,
-            13
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			463,
-			4,
-			27,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			14,
-            14,
-            15,
-            13
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			463,
-			4,
-			27,
-			24
-		},
-		alias = {},
-	},
-	["ghost_tower_soul_skill_projectile_particle_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			56,
-			51
-		},
-		trim = {
-			15,
-            14,
-            15,
-            15
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			181,
-			4,
-			26,
-			22
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			23,
-            23,
-            23,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			215,
-			4,
-			27,
-			23
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			23,
-            23,
-            23,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			215,
-			4,
-			27,
-			23
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			23,
-            23,
-            24,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			250,
-			4,
-			26,
-			23
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			23,
-            23,
-            24,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			250,
-			4,
-			26,
-			23
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			24,
-            23,
-            25,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			86,
-			4,
-			24,
-			21
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			24,
-            23,
-            25,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			86,
-			4,
-			24,
-			21
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			25,
-            23,
-            24,
-            24
-		},
-		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
 			118,
-			4,
-			24,
-			21
+			451,
+			42,
+			44
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0014"
+		}
 	},
-	["ghost_tower_spawn_trail_particle_0008"] = {
+	ghost_tower_lvl4_tower_spawn_fx_0015 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			73,
-			68
+			85,
+			179
 		},
 		trim = {
-			25,
-            23,
-            24,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			118,
-			4,
-			24,
-			21
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			25,
-            23,
-            25,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			150,
-			4,
-			23,
-			21
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			25,
-            23,
-            25,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			150,
-			4,
-			23,
-			21
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			27,
-            24,
-            25,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			30,
-			4,
 			21,
-			20
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			27,
-            24,
-            25,
-            24
+			20,
+			22,
+			114
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			30,
-			4,
-			21,
-			20
+			976,
+			228,
+			42,
+			45
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0016"
+		}
 	},
-	["ghost_tower_spawn_trail_particle_0013"] = {
+	ghost_tower_lvl4_unit_0057 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			73,
-			68
+			156,
+			196
 		},
 		trim = {
-			28,
-            24,
-            26,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			59,
-			4,
-			19,
-			20
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			28,
-            24,
-            26,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			59,
-			4,
-			19,
-			20
-		},
-		alias = {},
-	},
-	["ghost_tower_spawn_trail_particle_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			73,
-			68
-		},
-		trim = {
-			28,
-            24,
-            27,
-            25
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			4,
-			18,
-			19
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_back"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			161,
-			105
-		},
-		trim = {
+			15,
 			17,
-            13,
-            16,
-            36
+			50,
+			96
 		},
 		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			547,
-			216,
-			128,
-			56
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_front"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			161,
-			110
-		},
-		trim = {
-			16,
-            40,
-            16,
-            15
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			325,
-			216,
-			129,
-			55
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            22,
-            20,
-            23
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			333,
-			691,
-			151,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            21,
-            19,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			448,
-			778,
-			152,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            21,
-            19,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			448,
-			778,
-			152,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			21,
-            20,
-            21,
-            21
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			308,
-			866,
-			148,
-			81
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			21,
-            20,
-            21,
-            21
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			308,
-			866,
-			148,
-			81
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			22,
-            20,
-            22,
-            20
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			832,
-			866,
-			146,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			22,
-            20,
-            22,
-            20
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			832,
-			866,
-			146,
-			82
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            19,
-            21,
-            20
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			215,
-			957,
-			150,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            19,
-            21,
-            20
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			215,
-			957,
-			150,
-			83
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			18,
-            19,
-            18,
-            19
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			582,
-			957,
-			154,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			18,
-            19,
-            18,
-            19
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			582,
-			957,
-			154,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			21,
-            19,
-            21,
-            19
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			744,
-			957,
-			148,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			21,
-            19,
-            21,
-            19
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			744,
-			957,
-			148,
-			84
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            19,
-            19,
-            18
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			900,
-			957,
-			152,
-			85
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            19,
-            19,
-            18
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			900,
-			957,
-			152,
-			85
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			18,
-            17,
-            19,
-            18
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1200,
-			957,
-			153,
-			87
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			18,
-            17,
-            19,
-            18
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1200,
-			957,
-			153,
-			87
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			24,
-            17,
-            24,
-            17
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			1053,
-			142,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			24,
-            17,
-            24,
-            17
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			1053,
-			142,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			29,
-            18,
-            29,
-            19
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1060,
-			957,
-			132,
-			85
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			29,
-            18,
-            29,
-            19
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1060,
-			957,
-			132,
-			85
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			26,
-            26,
-            26,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			815,
-			361,
-			138,
-			72
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			26,
-            26,
-            26,
-            24
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			815,
-			361,
-			138,
-			72
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			24,
-            24,
-            24,
-            23
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1230,
-			607,
-			142,
-			75
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			24,
-            24,
-            24,
-            23
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1230,
-			607,
-			142,
-			75
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			22,
-            21,
-            22,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			608,
-			778,
-			146,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			22,
-            21,
-            22,
-            22
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			608,
-			778,
-			146,
-			79
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_fx_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			190,
-			122
-		},
-		trim = {
-			19,
-            22,
-            20,
-            23
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			333,
-			691,
-			151,
-			77
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			78,
-			443,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			207,
-			443,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			336,
-			443,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			465,
-			443,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
 			594,
-			443,
-			121,
-			74
+			840,
+			91,
+			83
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0058"
+		}
 	},
-	["ghost_tower_swap_indicator_particles_0006"] = {
+	ghost_tower_lvl4_unit_0059 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			164,
-			161
+			156,
+			196
 		},
 		trim = {
-			22,
-            30,
-            21,
-            57
+			13,
+			17,
+			52,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			723,
-			443,
-			121,
-			74
+			594,
+			926,
+			91,
+			83
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0060"
+		}
 	},
-	["ghost_tower_swap_indicator_particles_0007"] = {
+	ghost_tower_lvl4_unit_0061 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			164,
-			161
+			156,
+			196
 		},
 		trim = {
+			34,
 			22,
-            30,
-            21,
-            57
+			49,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			852,
-			443,
-			121,
-			74
+			948,
+			829,
+			73,
+			78
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0062"
+		}
 	},
-	["ghost_tower_swap_indicator_particles_0008"] = {
+	ghost_tower_lvl4_unit_0069 = {
 		a_name = "go_towers_ghost-1.dds",
 		size = {
-			164,
-			161
+			156,
+			196
+		},
+		trim = {
+			41,
+			13,
+			49,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			948,
+			739,
+			66,
+			87
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0070"
+		}
+	},
+	ghost_tower_lvl4_unit_0096 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			61,
+			22,
+			57,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			976,
+			147,
+			38,
+			78
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0097"
+		}
+	},
+	ghost_tower_lvl4_unit_0098 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			66,
+			29,
+			66,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			990,
+			281,
+			24,
+			71
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0099"
+		}
+	},
+	ghost_tower_lvl4_unit_0126 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			40,
+			67,
+			45,
+			76
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			948,
+			910,
+			71,
+			53
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0127"
+		}
+	},
+	ghost_tower_preview = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			182,
+			170
+		},
+		trim = {
+			36,
+			14,
+			39,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			594,
+			739,
+			107,
+			98
+		},
+		alias = {}
+	},
+	ghost_tower_soul_skill_0007 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			35,
+			28,
+			38,
+			189
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			999,
+			659,
+			21,
+			56
+		},
+		alias = {
+			"ghost_tower_soul_skill_0008"
+		}
+	},
+	ghost_tower_soul_skill_0015 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			33,
+			17,
+			29,
+			228
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			255,
+			993,
+			32,
+			28
+		},
+		alias = {
+			"ghost_tower_soul_skill_0016"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0005 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			17,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			403,
+			983,
+			46,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0006"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0011 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			22,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			775,
+			373,
+			46,
+			33
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0012"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0013 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			22,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			824,
+			373,
+			46,
+			33
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0014"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0005 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			17,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			983,
+			92,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0006"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0011 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			23,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			522,
+			374,
+			92,
+			32
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0012"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0013 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			22,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			680,
+			373,
+			92,
+			33
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0014"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0017 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			19,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			985,
+			92,
+			36
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0018"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0009 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			27,
+			25,
+			26,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			999,
+			718,
+			21,
+			18
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0010"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0015 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			30,
+			26,
+			29,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			290,
+			993,
+			15,
+			16
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_back = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			162,
+			105
+		},
+		trim = {
+			18,
+			15,
+			17,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			704,
+			967,
+			127,
+			53
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_front = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			162,
+			111
+		},
+		trim = {
+			18,
+			42,
+			17,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			967,
+			127,
+			51
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_fx_0001 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			21,
+			24,
+			21,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			745,
+			576,
+			148,
+			75
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0028"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0002 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			20,
+			23,
+			20,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			943,
+			150,
+			77
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0003"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0004 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
 		},
 		trim = {
 			22,
-            30,
-            21,
-            57
+			22,
+			22,
+			21
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
+		},
+		f_quad = {
+			614,
+			409,
+			146,
+			79
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0005"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0006 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			23,
+			22,
+			23,
+			21
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			494,
+			144,
+			79
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0007"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0008 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			22,
+			21,
+			22,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			465,
+			409,
+			146,
+			81
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0009"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0010 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			20,
+			20,
+			20,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			858,
+			150,
+			82
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0011"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0012 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			22,
+			20,
+			22,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			316,
+			409,
+			146,
+			82
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0013"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0014 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			21,
+			20,
+			21,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			409,
+			148,
+			82
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0015"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0016 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			20,
+			19,
+			20,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			680,
+			150,
+			85
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0017"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0018 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			25,
+			18,
+			25,
+			18
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			494,
+			140,
+			86
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0019"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0020 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			30,
+			20,
+			30,
+			20
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			453,
+			820,
+			130,
+			82
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0021"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0022 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			27,
+			27,
+			27,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			738,
+			659,
+			136,
+			70
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0023"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0024 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			26,
+			25,
+			26,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			597,
+			659,
+			138,
+			73
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0025"
+		}
+	},
+	ghost_tower_swap_indicator_fx_0026 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			190,
+			122
+		},
+		trim = {
+			24,
+			23,
+			24,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			903,
+			142,
+			77
+		},
+		alias = {
+			"ghost_tower_swap_indicator_fx_0027"
+		}
+	},
+	ghost_tower_swap_indicator_particles_0001 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			896,
+			576,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0002 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			893,
+			494,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0003 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			877,
+			659,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0004 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			704,
+			739,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0005 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			739,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0006 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			704,
+			815,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0007 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			815,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0008 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			704,
+			891,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0009 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			826,
+			891,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_teleport_fx_in_0001 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			67,
+			80,
+			59,
+			103
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			522,
+			281,
+			155,
+			90
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0002"
+		}
+	},
+	ghost_tower_teleport_fx_in_0003 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			70,
+			80,
+			61,
+			104
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			837,
+			281,
+			150,
+			89
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0004"
+		}
+	},
+	ghost_tower_teleport_fx_in_0005 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			73,
+			81,
+			66,
+			105
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			768,
+			142,
+			87
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0006"
+		}
+	},
+	ghost_tower_teleport_fx_in_0007 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			50,
+			45,
+			50,
+			89
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			181,
+			139
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0008"
+		}
+	},
+	ghost_tower_teleport_fx_in_0009 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			49,
+			49,
+			49,
+			90
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			189,
+			5,
+			183,
+			134
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0010"
+		}
+	},
+	ghost_tower_teleport_fx_in_0011 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			52,
+			61,
+			53,
+			93
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			679,
+			147,
+			176,
+			119
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0012"
+		}
+	},
+	ghost_tower_teleport_fx_in_0013 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			54,
+			52,
+			57,
+			97
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			506,
+			147,
+			170,
+			124
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0014"
+		}
+	},
+	ghost_tower_teleport_fx_in_0015 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			57,
+			40,
+			58,
+			99
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			736,
+			5,
+			166,
+			134
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0016"
+		}
+	},
+	ghost_tower_teleport_fx_in_0017 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			62,
+			18,
+			62,
+			105
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			147,
+			157,
+			150
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0018"
+		}
+	},
+	ghost_tower_teleport_fx_in_0019 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			281,
+			273
+		},
+		trim = {
+			84,
+			22,
+			81,
+			113
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			905,
+			5,
+			116,
+			138
+		},
+		alias = {
+			"ghost_tower_teleport_fx_in_0020"
+		}
+	},
+	ghost_tower_teleport_fx_out_0001 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			93,
+			22,
+			92,
+			115
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			451,
+			110,
+			136
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0002"
+		}
+	},
+	ghost_tower_teleport_fx_out_0003 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			71,
+			18,
+			71,
+			107
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			300,
+			153,
+			148
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0004"
+		}
+	},
+	ghost_tower_teleport_fx_out_0005 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			66,
+			40,
+			67,
+			102
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			147,
+			162,
+			131
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0006"
+		}
+	},
+	ghost_tower_teleport_fx_out_0007 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			63,
+			49,
+			65,
+			99
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			165,
+			281,
+			167,
+			125
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0008"
+		}
+	},
+	ghost_tower_teleport_fx_out_0009 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			60,
+			56,
+			62,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			330,
+			147,
+			173,
+			122
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0010"
+		}
+	},
+	ghost_tower_teleport_fx_out_0011 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			57,
+			55,
+			57,
+			92
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			552,
+			5,
+			181,
+			126
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0012"
+		}
+	},
+	ghost_tower_teleport_fx_out_0013 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			60,
+			46,
+			61,
+			90
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			375,
+			5,
+			174,
+			137
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0014"
+		}
+	},
+	ghost_tower_teleport_fx_out_0015 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			54,
+			81,
+			57,
+			86
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			335,
+			281,
+			184,
+			106
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0016"
+		}
+	},
+	ghost_tower_teleport_fx_out_0017 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			78,
+			81,
+			70,
+			105
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			590,
+			147,
+			87
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0018"
+		}
+	},
+	ghost_tower_teleport_fx_out_0019 = {
+		a_name = "go_towers_ghost-1.dds",
+		size = {
+			295,
+			273
+		},
+		trim = {
+			75,
+			80,
+			66,
+			104
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			680,
+			281,
+			154,
+			89
+		},
+		alias = {
+			"ghost_tower_teleport_fx_out_0020"
+		}
+	},
+	ghost_tower_buff_skill_back_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			27,
+			38,
+			25,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			415,
+			47,
+			81
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0002"
+		}
+	},
+	ghost_tower_buff_skill_back_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			25,
+			45,
+			23,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			574,
+			51,
+			74
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0004"
+		}
+	},
+	ghost_tower_buff_skill_back_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			24,
+			47,
+			22,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			499,
+			53,
+			72
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0006"
+		}
+	},
+	ghost_tower_buff_skill_back_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			22,
+			48,
+			20,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			805,
+			57,
+			71
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0008"
+		}
+	},
+	ghost_tower_buff_skill_back_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			22,
+			45,
+			19,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			781,
+			58,
+			74
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0010"
+		}
+	},
+	ghost_tower_buff_skill_back_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			22,
+			38,
+			19,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			491,
+			58,
+			81
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0012"
+		}
+	},
+	ghost_tower_buff_skill_back_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			23,
+			44,
+			21,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			441,
+			55,
+			75
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0014"
+		}
+	},
+	ghost_tower_buff_skill_back_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			213
+		},
+		trim = {
+			25,
+			38,
+			23,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			357,
+			51,
+			81
+		},
+		alias = {
+			"ghost_tower_buff_skill_back_0016"
+		}
+	},
+	ghost_tower_buff_skill_front_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			85,
+			82
+		},
+		trim = {
+			24,
+			15,
+			21,
+			37
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			987,
+			40,
+			30
+		},
+		alias = {
+			"ghost_tower_buff_skill_front_0016"
+		}
+	},
+	ghost_tower_hit_fx_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			108,
+			102
+		},
+		trim = {
+			28,
+			21,
+			23,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			942,
+			57,
+			58
+		},
+		alias = {
+			"ghost_tower_hit_fx_0006"
+		}
+	},
+	ghost_tower_lvl4_tower_spawn_fx_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			85,
+			179
+		},
+		trim = {
+			31,
+			27,
+			30,
+			121
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			840,
+			24,
+			31
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0002"
+		}
+	},
+	ghost_tower_lvl4_tower_spawn_fx_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			85,
+			179
+		},
+		trim = {
+			28,
+			24,
+			27,
+			117
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			727,
+			30,
+			38
+		},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0004"
+		}
+	},
+	ghost_tower_lvl4_tower_spawn_fx_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			85,
+			179
+		},
+		trim = {
+			25,
+			20,
+			25,
+			114
+		},
+		a_size = {
+			1024,
+			1024
 		},
 		f_quad = {
 			981,
-			443,
-			121,
-			74
+			5,
+			35,
+			45
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0006"
+		}
 	},
-	["ghost_tower_swap_indicator_particles_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_tower_spawn_fx_0007 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			164,
-			161
+			85,
+			179
 		},
 		trim = {
-			22,
-            30,
-            21,
-            57
+			23,
+			20,
+			24,
+			114
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1110,
-			443,
-			121,
-			74
+			983,
+			233,
+			38,
+			45
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0008"
+		}
 	},
-	["ghost_tower_swap_indicator_particles_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_tower_spawn_fx_0011 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			164,
-			161
+			85,
+			179
 		},
 		trim = {
-			22,
-            30,
-            21,
-            57
+			21,
+			21,
+			23,
+			115
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1239,
-			443,
-			121,
-			74
+			397,
+			891,
+			41,
+			43
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_tower_spawn_fx_0012"
+		}
 	},
-	["ghost_tower_swap_indicator_particles_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0001 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			133,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			262,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			391,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			520,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			649,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			778,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			907,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1036,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1165,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1294,
-			525,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			133,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			262,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0025"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			391,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0026"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			520,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0027"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			649,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0028"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			778,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0029"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			907,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_swap_indicator_particles_0030"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			164,
-			161
-		},
-		trim = {
-			22,
-            30,
-            21,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1036,
-			607,
-			121,
-			74
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			66,
-            79,
-            58,
-            101
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1018,
-			1053,
-			157,
-			92
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			66,
-            79,
-            58,
-            101
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1018,
-			1053,
-			157,
-			92
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			69,
-            79,
-            60,
-            103
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			858,
-			1053,
-			152,
-			90
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			69,
-            79,
-            60,
-            103
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			858,
-			1053,
-			152,
-			90
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			72,
-            80,
-            65,
-            104
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			154,
-			1053,
-			144,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			72,
-            80,
-            65,
-            104
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			154,
-			1053,
-			144,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			49,
-            44,
-            49,
-            87
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			808,
-			1295,
-			183,
-			141
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			49,
-            44,
-            49,
-            87
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			808,
-			1295,
-			183,
-			141
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			48,
-            47,
-            48,
-            89
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			180,
-			1295,
-			185,
-			136
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			48,
-            47,
-            48,
-            89
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			180,
-			1295,
-			185,
-			136
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			51,
-            60,
-            52,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			316,
-			1154,
-			178,
-			120
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			51,
-            60,
-            52,
-            92
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			316,
-			1154,
-			178,
-			120
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			53,
-            50,
-            56,
-            96
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			685,
-			1154,
-			172,
-			126
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			53,
-            50,
-            56,
-            96
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			685,
-			1154,
-			172,
-			126
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			56,
-            39,
-            57,
-            98
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			1295,
-			168,
-			135
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			56,
-            39,
-            57,
-            98
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			4,
-			1295,
-			168,
-			135
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			61,
-            17,
-            61,
-            104
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1288,
-			1295,
-			159,
-			151
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			61,
-            17,
-            61,
-            104
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1288,
-			1295,
-			159,
-			151
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			83,
-            19,
-            80,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			999,
-			1295,
-			118,
-			141
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_in_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			281,
-			272
-		},
-		trim = {
-			83,
-            19,
-            80,
-            112
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			999,
-			1295,
-			118,
-			141
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			90,
-            19,
-            90,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			685,
-			1295,
-			115,
-			140
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			90,
-            19,
-            90,
-            113
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			685,
-			1295,
-			115,
-			140
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			70,
-            17,
-            70,
-            106
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1125,
-			1295,
-			155,
-			149
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			70,
-            17,
-            70,
-            106
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1125,
-			1295,
-			155,
-			149
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			65,
-            38,
-            66,
-            101
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1233,
-			1154,
-			164,
-			133
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			65,
-            38,
-            66,
-            101
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1233,
-			1154,
-			164,
-			133
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			62,
-            46,
-            64,
-            97
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1056,
-			1154,
-			169,
-			129
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			62,
-            46,
-            64,
-            97
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1056,
-			1154,
-			169,
-			129
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			59,
-            55,
-            61,
-            94
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			502,
-			1154,
-			175,
-			123
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			59,
-            55,
-            61,
-            94
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			502,
-			1154,
-			175,
-			123
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			56,
-            53,
-            56,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			865,
-			1154,
-			183,
-			128
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			56,
-            53,
-            56,
-            91
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			865,
-			1154,
-			183,
-			128
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			59,
-            45,
-            60,
-            89
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			501,
-			1295,
-			176,
-			138
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			59,
-            45,
-            60,
-            89
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			501,
-			1295,
-			176,
-			138
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			53,
-            80,
-            56,
-            85
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			122,
-			1154,
-			186,
-			107
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			53,
-            80,
-            56,
-            85
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			122,
-			1154,
-			186,
-			107
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			76,
-            80,
-            70,
-            104
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			306,
-			1053,
-			149,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			76,
-            80,
-            70,
-            104
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			306,
-			1053,
-			149,
-			88
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			74,
-            78,
-            66,
-            102
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1183,
-			1053,
-			155,
-			92
-		},
-		alias = {},
-	},
-	["ghost_tower_teleport_fx_out_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			295,
-			272
-		},
-		trim = {
-			74,
-            78,
-            66,
-            102
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1183,
-			1053,
-			155,
-			92
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0001"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			49,
-            22,
-            46,
-            72
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			842,
-			284,
-			49,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0002"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			49,
-            22,
-            46,
-            72
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			842,
-			284,
-			49,
-			67
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0003"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
 			46,
-            18,
-            46,
-            75
+			39,
+			50,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1272,
-			284,
-			52,
-			68
+			215,
+			754,
+			60,
+			61
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0002",
+			"ghost_tower_lvl4_unit_0025",
+			"ghost_tower_lvl4_unit_0026"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0004"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0003 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
 			46,
-            18,
-            46,
-            75
+			38,
+			51,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			1272,
-			284,
+			215,
+			818,
+			59,
+			62
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0004",
+			"ghost_tower_lvl4_unit_0027",
+			"ghost_tower_lvl4_unit_0028"
+		}
+	},
+	ghost_tower_lvl4_unit_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			789,
+			59,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0006",
+			"ghost_tower_lvl4_unit_0029",
+			"ghost_tower_lvl4_unit_0030"
+		}
+	},
+	ghost_tower_lvl4_unit_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
 			52,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			948,
+			58,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0008",
+			"ghost_tower_lvl4_unit_0031",
+			"ghost_tower_lvl4_unit_0032"
+		}
+	},
+	ghost_tower_lvl4_unit_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			35,
+			52,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			651,
+			58,
+			65
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0010",
+			"ghost_tower_lvl4_unit_0033",
+			"ghost_tower_lvl4_unit_0034"
+		}
+	},
+	ghost_tower_lvl4_unit_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			33,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			345,
+			59,
+			67
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0012",
+			"ghost_tower_lvl4_unit_0035",
+			"ghost_tower_lvl4_unit_0036"
+		}
+	},
+	ghost_tower_lvl4_unit_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			32,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			879,
+			59,
 			68
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0014",
+			"ghost_tower_lvl4_unit_0037",
+			"ghost_tower_lvl4_unit_0038"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0005"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0015 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
-			47,
-            27,
-            45,
-            73
+			46,
+			32,
+			50,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			217,
-			284,
-			52,
-			61
+			88,
+			663,
+			60,
+			68
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0016",
+			"ghost_tower_lvl4_unit_0039",
+			"ghost_tower_lvl4_unit_0040"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0006"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0017 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
-			47,
-            27,
-            45,
-            73
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			217,
-			284,
-			52,
-			61
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0007"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			43,
-            35,
-            43,
-            67
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1305,
-			216,
-			58,
-			59
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0008"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			43,
-            35,
-            43,
-            67
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1305,
-			216,
-			58,
-			59
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0009"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			37,
-            42,
-            38,
-            63
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			683,
-			216,
-			69,
-			56
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0010"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			37,
-            42,
-            38,
-            63
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			683,
-			216,
-			69,
-			56
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0011"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
+			45,
 			33,
-            47,
-            34,
-            59
+			49,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			462,
-			216,
-			77,
-			55
+			88,
+			287,
+			62,
+			67
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0018",
+			"ghost_tower_lvl4_unit_0041",
+			"ghost_tower_lvl4_unit_0042"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0012"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0019 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
-			33,
-            47,
-            34,
-            59
+			45,
+			34,
+			49,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			462,
-			216,
-			77,
-			55
+			88,
+			594,
+			62,
+			66
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0020",
+			"ghost_tower_lvl4_unit_0043",
+			"ghost_tower_lvl4_unit_0044"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0013"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0021 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
+			45,
+			36,
+			49,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			950,
+			62,
+			64
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0022",
+			"ghost_tower_lvl4_unit_0045",
+			"ghost_tower_lvl4_unit_0046"
+		}
+	},
+	ghost_tower_lvl4_unit_0023 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			45,
+			38,
+			49,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			345,
+			62,
+			62
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0024",
+			"ghost_tower_lvl4_unit_0047",
+			"ghost_tower_lvl4_unit_0048"
+		}
+	},
+	ghost_tower_lvl4_unit_0049 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
+			50,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			410,
+			60,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0050",
+			"ghost_tower_lvl4_unit_0075"
+		}
+	},
+	ghost_tower_lvl4_unit_0051 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			54,
 			31,
-            55,
-            33,
-            57
+			51,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			395,
-			154,
-			80,
-			49
+			280,
+			599,
+			51,
+			69
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0052"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0014"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0053 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
-		},
-		trim = {
-			31,
-            55,
-            33,
-            57
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			395,
-			154,
-			80,
-			49
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0015"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			30,
-            52,
-            31,
-            56
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1288,
-			154,
-			83,
-			53
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0016"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			30,
-            52,
-            31,
-            56
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1288,
-			154,
-			83,
-			53
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0017"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			35,
-            48,
-            36,
-            56
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1003,
-			216,
-			73,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0018"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			35,
-            48,
-            36,
-            56
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1003,
-			216,
-			73,
-			57
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0019"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			31,
-            48,
-            32,
-            55
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1216,
-			216,
-			81,
-			58
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0020"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
-		},
-		trim = {
-			31,
-            48,
-            32,
-            55
-		},
-		a_size = {
-			1454,
-			1454
-		},
-		f_quad = {
-			1216,
-			216,
-			81,
-			58
-		},
-		alias = {},
-	},
-	["ghost_tower_unit_spawn_fx_0021"] = {
-		a_name = "go_towers_ghost-1.dds",
-		size = {
-			144,
-			161
+			156,
+			196
 		},
 		trim = {
 			29,
-            48,
-            31,
-            53
+			18,
+			51,
+			96
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			4,
-			284,
-			84,
+			5,
+			406,
+			76,
+			82
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0054"
+		}
+	},
+	ghost_tower_lvl4_unit_0055 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			26,
+			17,
+			50,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			233,
+			80,
+			83
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0056"
+		}
+	},
+	ghost_tower_lvl4_unit_0063 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			39,
+			53,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			501,
+			233,
+			66,
+			47
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0064"
+		}
+	},
+	ghost_tower_lvl4_unit_0065 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			49,
+			32,
+			29,
+			94
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			615,
+			157,
+			78,
+			70
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0066"
+		}
+	},
+	ghost_tower_lvl4_unit_0067 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			47,
+			16,
+			32,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			319,
+			77,
+			84
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0068"
+		}
+	},
+	ghost_tower_lvl4_unit_0071 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			41,
+			36,
+			49,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			938,
+			66,
+			64
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0072"
+		}
+	},
+	ghost_tower_lvl4_unit_0073 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
+			50,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			476,
+			60,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0074"
+		}
+	},
+	ghost_tower_lvl4_unit_0076 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			855,
+			59,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0077"
+		}
+	},
+	ghost_tower_lvl4_unit_0078 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			47,
+			33,
+			53,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			719,
+			56,
+			67
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0079"
+		}
+	},
+	ghost_tower_lvl4_unit_0080 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			49,
+			36,
+			53,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			744,
+			54,
+			64
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0081"
+		}
+	},
+	ghost_tower_lvl4_unit_0082 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			44,
+			41,
+			54,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			811,
+			58,
+			59
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0083"
+		}
+	},
+	ghost_tower_lvl4_unit_0084 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			40,
+			44,
+			49,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			345,
+			67,
+			57
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0085"
+		}
+	},
+	ghost_tower_lvl4_unit_0086 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			42,
+			41,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			409,
+			63,
+			59
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0087"
+		}
+	},
+	ghost_tower_lvl4_unit_0088 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			42,
+			39,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			345,
+			63,
+			61
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0089"
+		}
+	},
+	ghost_tower_lvl4_unit_0090 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			44,
+			32,
+			52,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			734,
+			60,
+			68
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0091"
+		}
+	},
+	ghost_tower_lvl4_unit_0092 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			51,
+			30,
+			55,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			671,
+			50,
+			70
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0093"
+		}
+	},
+	ghost_tower_lvl4_unit_0094 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			54,
+			23,
+			54,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			674,
+			48,
+			77
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0095"
+		}
+	},
+	ghost_tower_lvl4_unit_0100 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			66,
+			43,
+			67,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			61,
+			697,
+			23,
+			57
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0101"
+		}
+	},
+	ghost_tower_lvl4_unit_0102 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			65,
+			76,
+			64,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			936,
+			27,
+			25
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0103"
+		}
+	},
+	ghost_tower_lvl4_unit_0104 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			66,
+			71,
+			66,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			903,
+			24,
+			30
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0105"
+		}
+	},
+	ghost_tower_lvl4_unit_0106 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			65,
+			76,
+			65,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			995,
+			26,
+			25
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0107"
+		}
+	},
+	ghost_tower_lvl4_unit_0108 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			66,
+			73,
+			66,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			964,
+			24,
+			28
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0109"
+		}
+	},
+	ghost_tower_lvl4_unit_0110 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			38,
+			50,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			542,
+			60,
+			62
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0111"
+		}
+	},
+	ghost_tower_lvl4_unit_0112 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			38,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			883,
+			59,
+			62
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0113"
+		}
+	},
+	ghost_tower_lvl4_unit_0114 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			921,
+			59,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0115"
+		}
+	},
+	ghost_tower_lvl4_unit_0116 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			46,
+			37,
+			52,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			533,
+			58,
+			63
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0117"
+		}
+	},
+	ghost_tower_lvl4_unit_0118 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			48,
+			32,
+			53,
+			87
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			858,
+			55,
+			77
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0119"
+		}
+	},
+	ghost_tower_lvl4_unit_0120 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			49,
+			28,
+			54,
+			87
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			697,
+			53,
+			81
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0121"
+		}
+	},
+	ghost_tower_lvl4_unit_0122 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			39,
+			49,
+			45,
+			87
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			634,
+			72,
 			60
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_lvl4_unit_0123"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0022"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_lvl4_unit_0124 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			156,
+			196
+		},
+		trim = {
+			46,
+			60,
+			50,
+			80
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			946,
+			345,
+			60,
+			56
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0125"
+		}
+	},
+	ghost_tower_lvl4_unit_0128 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			37,
+			71,
+			42,
+			73
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			309,
+			287,
+			77,
+			52
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0129"
+		}
+	},
+	ghost_tower_lvl4_unit_0130 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			36,
+			76,
+			41,
+			71
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			464,
+			287,
+			79,
+			49
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0131"
+		}
+	},
+	ghost_tower_lvl4_unit_0132 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			35,
+			72,
+			39,
+			70
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			865,
+			157,
+			82,
+			54
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0133"
+		}
+	},
+	ghost_tower_lvl4_unit_0134 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			39,
+			71,
+			43,
+			70
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			153,
+			287,
+			74,
+			55
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0135"
+		}
+	},
+	ghost_tower_lvl4_unit_0136 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			35,
+			70,
+			40,
+			69
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			781,
+			157,
+			81,
+			57
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0137"
+		}
+	},
+	ghost_tower_lvl4_unit_0138 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			45,
+			70,
+			45,
+			77
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			363,
+			233,
+			66,
+			49
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0139"
+		}
+	},
+	ghost_tower_lvl4_unit_0140 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			39,
+			48,
+			43,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			546,
+			287,
+			74,
+			52
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0141"
+		}
+	},
+	ghost_tower_lvl4_unit_0142 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			48,
+			29,
+			51,
+			95
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			519,
+			57,
+			72
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0143"
+		}
+	},
+	ghost_tower_lvl4_unit_0144 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			156,
+			196
+		},
+		trim = {
+			47,
+			36,
+			51,
+			96
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			215,
+			607,
+			58,
+			64
+		},
+		alias = {
+			"ghost_tower_lvl4_unit_0145"
+		}
+	},
+	ghost_tower_soul_skill_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			38,
+			65,
+			23,
+			174
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			768,
+			33,
+			34
+		},
+		alias = {
+			"ghost_tower_soul_skill_0002"
+		}
+	},
+	ghost_tower_soul_skill_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			34,
+			52,
+			25,
+			176
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			981,
+			53,
+			35,
+			45
+		},
+		alias = {
+			"ghost_tower_soul_skill_0004"
+		}
+	},
+	ghost_tower_soul_skill_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			33,
+			38,
+			33,
+			183
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			981,
+			101,
+			28,
+			52
+		},
+		alias = {
+			"ghost_tower_soul_skill_0006"
+		}
+	},
+	ghost_tower_soul_skill_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			32,
+			22,
+			36,
+			203
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			631,
+			26,
+			48
+		},
+		alias = {
+			"ghost_tower_soul_skill_0010"
+		}
+	},
+	ghost_tower_soul_skill_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
 		},
 		trim = {
 			29,
-            48,
-            31,
-            53
+			17,
+			36,
+			214
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			4,
-			284,
-			84,
+			346,
+			682,
+			29,
+			42
+		},
+		alias = {
+			"ghost_tower_soul_skill_0012"
+		}
+	},
+	ghost_tower_soul_skill_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			32,
+			14,
+			32,
+			227
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			805,
+			30,
+			32
+		},
+		alias = {
+			"ghost_tower_soul_skill_0014"
+		}
+	},
+	ghost_tower_soul_skill_0017 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			94,
+			273
+		},
+		trim = {
+			38,
+			21,
+			28,
+			226
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			874,
+			28,
+			26
+		},
+		alias = {
+			"ghost_tower_soul_skill_0018"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			14,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			630,
+			46,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0002"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			14,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			674,
+			46,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0004"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			17,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			937,
+			46,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0008"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			18,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			474,
+			46,
+			37
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0010"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			20,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			593,
+			46,
+			35
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0016"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0017 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			19,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			554,
+			46,
+			36
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0018"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0019 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			18,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			514,
+			46,
+			37
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0020"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0021 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			17,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			978,
+			46,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0022"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0023 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			15,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			848,
+			46,
+			40
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0024"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0025 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			14,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			718,
+			46,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0026"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_0027 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			99,
+			88
+		},
+		trim = {
+			26,
+			14,
+			27,
+			33
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			762,
+			46,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_0028"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			14,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			623,
+			287,
+			92,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0002"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			15,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			908,
+			287,
+			92,
+			40
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0004"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			18,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			756,
+			345,
+			92,
+			37
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0008"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			18,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			851,
+			345,
+			92,
+			37
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0010"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			20,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			268,
+			233,
+			92,
+			35
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0016"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0019 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			18,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			173,
+			233,
+			92,
+			37
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0020"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0021 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			17,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			661,
+			345,
+			92,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0022"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0023 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			15,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			416,
+			345,
+			92,
+			40
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0024"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0025 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			14,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			718,
+			287,
+			92,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0026"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_bigger_0027 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			151,
+			82
+		},
+		trim = {
+			29,
+			14,
+			30,
+			27
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			813,
+			287,
+			92,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_bigger_0028"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			14,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			570,
+			233,
+			66,
+			47
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0002"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			14,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			639,
+			233,
+			66,
+			47
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0004"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			17,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			914,
+			233,
+			66,
+			44
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0006"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			17,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			456,
+			405,
+			66,
+			44
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0008"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			18,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			594,
+			405,
+			66,
+			43
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0010"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			23,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			870,
+			405,
+			66,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0012"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			23,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			939,
+			405,
+			66,
+			38
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0014"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			20,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			801,
+			405,
+			66,
+			41
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0016"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0017 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			19,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			732,
+			405,
+			66,
+			42
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0018"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0019 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			18,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			663,
+			405,
+			66,
+			43
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0020"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0021 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			17,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			525,
+			405,
+			66,
+			44
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0022"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0023 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			15,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			845,
+			233,
+			66,
+			46
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0024"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0025 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			13,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			432,
+			233,
+			66,
+			48
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0026"
+		}
+	},
+	ghost_tower_soul_skill_enemy_fx_big_0027 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			131,
+			97
+		},
+		trim = {
+			32,
+			14,
+			33,
+			36
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			708,
+			233,
+			66,
+			47
+		},
+		alias = {
+			"ghost_tower_soul_skill_enemy_fx_big_0028"
+		}
+	},
+	ghost_tower_soul_skill_hit_fx_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			97,
+			102
+		},
+		trim = {
+			24,
+			27,
+			22,
+			28
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			527,
+			51,
+			47
+		},
+		alias = {
+			"ghost_tower_soul_skill_hit_fx_0002"
+		}
+	},
+	ghost_tower_soul_skill_hit_fx_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			97,
+			102
+		},
+		trim = {
+			17,
+			19,
+			17,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			471,
+			63,
+			59
+		},
+		alias = {
+			"ghost_tower_soul_skill_hit_fx_0004"
+		}
+	},
+	ghost_tower_soul_skill_hit_fx_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			97,
+			102
+		},
+		trim = {
+			13,
+			14,
+			18,
+			22
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			950,
+			157,
+			66,
+			66
+		},
+		alias = {
+			"ghost_tower_soul_skill_hit_fx_0006"
+		}
+	},
+	ghost_tower_soul_skill_hit_fx_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			97,
+			102
+		},
+		trim = {
+			23,
+			26,
+			27,
+			26
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			577,
+			47,
+			50
+		},
+		alias = {
+			"ghost_tower_soul_skill_hit_fx_0008"
+		}
+	},
+	ghost_tower_soul_skill_hit_fx_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			97,
+			102
+		},
+		trim = {
+			23,
+			34,
+			26,
+			29
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			806,
+			48,
+			39
+		},
+		alias = {
+			"ghost_tower_soul_skill_hit_fx_0010"
+		}
+	},
+	ghost_tower_soul_skill_projectile = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			54,
+			48
+		},
+		trim = {
+			18,
+			13,
+			14,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			63,
+			858,
+			22,
+			21
+		},
+		alias = {}
+	},
+	ghost_tower_soul_skill_projectile_particle_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			486,
+			452,
+			26,
+			22
+		},
+		alias = {
+			"ghost_tower_soul_skill_projectile_particle_0002"
+		}
+	},
+	ghost_tower_soul_skill_projectile_particle_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			15,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			456,
+			452,
+			27,
+			22
+		},
+		alias = {
+			"ghost_tower_soul_skill_projectile_particle_0004"
+		}
+	},
+	ghost_tower_soul_skill_projectile_particle_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			515,
+			452,
+			26,
+			22
+		},
+		alias = {
+			"ghost_tower_soul_skill_projectile_particle_0006"
+		}
+	},
+	ghost_tower_soul_skill_projectile_particle_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			544,
+			452,
+			26,
+			22
+		},
+		alias = {
+			"ghost_tower_soul_skill_projectile_particle_0008"
+		}
+	},
+	ghost_tower_soul_skill_projectile_particle_0009 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			573,
+			452,
+			26,
+			22
+		},
+		alias = {
+			"ghost_tower_soul_skill_projectile_particle_0010"
+		}
+	},
+	ghost_tower_soul_skill_projectile_particle_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			15,
+			15,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			602,
+			452,
+			26,
+			22
+		},
+		alias = {
+			"ghost_tower_soul_skill_projectile_particle_0012"
+		}
+	},
+	ghost_tower_soul_skill_projectile_particle_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			16,
+			16,
+			16,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			659,
+			452,
+			25,
+			20
+		},
+		alias = {}
+	},
+	ghost_tower_spawn_trail_particle_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			25,
+			24,
+			24,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			631,
+			452,
+			25,
+			21
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0002"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			25,
+			24,
+			25,
+			23
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			61,
+			757,
+			24,
+			21
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0004"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			26,
+			24,
+			26,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			63,
+			882,
+			22,
+			20
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0006"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0007 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			27,
+			24,
+			26,
+			24
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			373,
+			964,
+			21,
+			20
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0008"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			28,
+			25,
+			27,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			375,
+			995,
+			19,
+			18
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0012"
+		}
+	},
+	ghost_tower_spawn_trail_particle_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			74,
+			68
+		},
+		trim = {
+			29,
+			25,
+			27,
+			25
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			376,
+			936,
+			18,
+			18
+		},
+		alias = {
+			"ghost_tower_spawn_trail_particle_0014"
+		}
+	},
+	ghost_tower_swap_indicator_particles_0010 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0012 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			249,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			371,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0014 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			493,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			615,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0016 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0017 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			859,
+			5,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0018 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0019 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0020 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			249,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0021 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			371,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0022 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			493,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0023 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			615,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0024 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			737,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0025 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			859,
+			81,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0026 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			157,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0027 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			127,
+			157,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0028 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			249,
+			157,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0029 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			371,
+			157,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_swap_indicator_particles_0030 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			165,
+			162
+		},
+		trim = {
+			24,
+			31,
+			22,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			493,
+			157,
+			119,
+			73
+		},
+		alias = {}
+	},
+	ghost_tower_unit_spawn_fx_0001 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			50,
+			23,
+			47,
+			73
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			405,
+			48,
+			66
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0002"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0003 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			47,
+			19,
+			47,
+			77
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			280,
+			873,
+			51,
+			66
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0004"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0005 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			48,
+			28,
+			47,
+			74
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			397,
+			464,
+			50,
 			60
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0006"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0023"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_unit_spawn_fx_0007 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			145,
+			162
 		},
 		trim = {
-			40,
-            49,
-            38,
-            62
+			44,
+			37,
+			45,
+			69
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			559,
-			154,
-			66,
-			50
+			397,
+			405,
+			56,
+			56
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0008"
+		}
 	},
-	["ghost_tower_unit_spawn_fx_0024"] = {
-		a_name = "go_towers_ghost-1.dds",
+	ghost_tower_unit_spawn_fx_0009 = {
+		a_name = "go_towers_ghost-2.dds",
 		size = {
-			144,
-			161
+			145,
+			162
 		},
 		trim = {
+			39,
+			43,
 			40,
-            49,
-            38,
-            62
+			65
 		},
 		a_size = {
-			1454,
-			1454
+			1024,
+			1024
 		},
 		f_quad = {
-			559,
-			154,
+			592,
+			345,
 			66,
-			50
+			54
 		},
-		alias = {},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0010"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0011 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			34,
+			48,
+			35,
+			61
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			230,
+			287,
+			76,
+			53
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0012"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0013 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			33,
+			56,
+			34,
+			59
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			511,
+			345,
+			78,
+			47
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0014"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0015 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			31,
+			53,
+			32,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			88,
+			233,
+			82,
+			51
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0016"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0017 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			36,
+			49,
+			37,
+			58
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			389,
+			287,
+			72,
+			55
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0018"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0019 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			33,
+			49,
+			33,
+			57
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			575,
+			79,
+			56
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0020"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0021 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			30,
+			50,
+			33,
+			55
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			696,
+			157,
+			82,
+			57
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0022"
+		}
+	},
+	ghost_tower_unit_spawn_fx_0023 = {
+		a_name = "go_towers_ghost-2.dds",
+		size = {
+			145,
+			162
+		},
+		trim = {
+			42,
+			51,
+			38,
+			64
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			777,
+			233,
+			65,
+			47
+		},
+		alias = {
+			"ghost_tower_unit_spawn_fx_0024"
+		}
 	}
 }

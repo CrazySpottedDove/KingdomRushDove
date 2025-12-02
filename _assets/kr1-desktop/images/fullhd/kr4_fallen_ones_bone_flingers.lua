@@ -1,0 +1,9452 @@
+return {
+	boneflingers_shooter_proyectiles_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			3,
+			3,
+			3,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			812,
+			84,
+			14,
+			14
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			2,
+			4,
+			2,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			249,
+			88,
+			16,
+			12
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			0,
+			5,
+			0,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			420,
+			1010,
+			20,
+			10
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			3,
+			4,
+			3,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			287,
+			88,
+			14,
+			12
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			5,
+			9,
+			5,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			743,
+			84,
+			24,
+			15
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			5,
+			7,
+			5,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			997,
+			159,
+			24,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			4,
+			9,
+			4,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			674,
+			81,
+			26,
+			16
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			5,
+			5,
+			5,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			997,
+			132,
+			24,
+			24
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0005 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			5,
+			4,
+			5,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			997,
+			103,
+			24,
+			26
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0006 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			2,
+			9,
+			2,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			989,
+			376,
+			30,
+			18
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0008 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			2,
+			4,
+			2,
+			2
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			990,
+			300,
+			30,
+			28
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			11,
+			10,
+			10,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			141,
+			890,
+			13,
+			14
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			11,
+			12,
+			7,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			268,
+			88,
+			16,
+			12
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			13,
+			8,
+			10,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			752,
+			865,
+			11,
+			16
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			4,
+			8,
+			6,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			703,
+			81,
+			24,
+			17
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0005 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			4,
+			8,
+			5,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			646,
+			81,
+			25,
+			17
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0006 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			9,
+			8,
+			8,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			368,
+			81,
+			17,
+			17
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0008 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			7,
+			7,
+			1,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			894,
+			79,
+			26,
+			19
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0009 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			9,
+			6,
+			4,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			682,
+			21,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_decals_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			3,
+			6,
+			3,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			926,
+			882,
+			14,
+			10
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_decals_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			5,
+			5,
+			1,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			323,
+			88,
+			14,
+			11
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_decals_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			5,
+			5,
+			6,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			368,
+			1007,
+			9,
+			11
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_decals_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			20,
+			20
+		},
+		trim = {
+			3,
+			7,
+			3,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			804,
+			1012,
+			14,
+			9
+		},
+		alias = {}
+	},
+	boneflingers_tower_ghost = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			16,
+			21,
+			18,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			138,
+			5,
+			108,
+			79
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			6,
+			15,
+			6,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			5,
+			130,
+			95
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_golem_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			909,
+			182,
+			73,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0026",
+			"boneflingers_tower_lvl4_golem_0027",
+			"boneflingers_tower_lvl4_golem_0058",
+			"RECOVER_boneflingers_tower_lvl4_golem_0001",
+			"RECOVER_boneflingers_tower_lvl4_golem_0026",
+			"RECOVER_boneflingers_tower_lvl4_golem_0027",
+			"RECOVER_boneflingers_tower_lvl4_golem_0058"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			35,
+			28,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			891,
+			399,
+			68,
+			63
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0003"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			45,
+			34,
+			29,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			739,
+			399,
+			68,
+			64
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0005"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0006 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			29,
+			29,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			712,
+			69,
+			69
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0007"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0008 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			43,
+			26,
+			30,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			635,
+			69,
+			72
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0009"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0010 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			41,
+			25,
+			31,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			782,
+			70,
+			73
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0011"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0012 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			29,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			385,
+			260,
+			72,
+			70
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0013"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0014 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			35,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			517,
+			399,
+			73,
+			64
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0015"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0016 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			31,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			686,
+			260,
+			72,
+			68
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0017"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0018 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			28,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			633,
+			72,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0019"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0020 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			42,
+			25,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			556,
+			70,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0021"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0022 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			24,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			858,
+			68,
+			75
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0023"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0024 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			28,
+			28,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			339,
+			70,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0025"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0028 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			32,
+			27,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			523,
+			103,
+			79,
+			72
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0029",
+			"RECOVER_boneflingers_tower_lvl4_golem_0028",
+			"RECOVER_boneflingers_tower_lvl4_golem_0029"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0030 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			17,
+			26,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			646,
+			5,
+			94,
+			73
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0031",
+			"RECOVER_boneflingers_tower_lvl4_golem_0030",
+			"RECOVER_boneflingers_tower_lvl4_golem_0031"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0032 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			12,
+			26,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			450,
+			5,
+			99,
+			73
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0033",
+			"RECOVER_boneflingers_tower_lvl4_golem_0032",
+			"RECOVER_boneflingers_tower_lvl4_golem_0033"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0034 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			12,
+			26,
+			29,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			5,
+			101,
+			73
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0035",
+			"RECOVER_boneflingers_tower_lvl4_golem_0034",
+			"RECOVER_boneflingers_tower_lvl4_golem_0035"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0036 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			55,
+			37,
+			8,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			685,
+			103,
+			79,
+			70
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0037",
+			"RECOVER_boneflingers_tower_lvl4_golem_0036",
+			"RECOVER_boneflingers_tower_lvl4_golem_0037"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0038 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			57,
+			31,
+			6,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			542,
+			79,
+			78
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0039",
+			"RECOVER_boneflingers_tower_lvl4_golem_0038",
+			"RECOVER_boneflingers_tower_lvl4_golem_0039"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0040 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			57,
+			33,
+			5,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			789,
+			80,
+			75
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0041",
+			"RECOVER_boneflingers_tower_lvl4_golem_0040",
+			"RECOVER_boneflingers_tower_lvl4_golem_0041"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0042 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			57,
+			33,
+			9,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			444,
+			103,
+			76,
+			75
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0043",
+			"RECOVER_boneflingers_tower_lvl4_golem_0042",
+			"RECOVER_boneflingers_tower_lvl4_golem_0043"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0044 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			50,
+			31,
+			9,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			182,
+			83,
+			77
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0045",
+			"RECOVER_boneflingers_tower_lvl4_golem_0044",
+			"RECOVER_boneflingers_tower_lvl4_golem_0045"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0046 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			48,
+			29,
+			9,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			934,
+			5,
+			85,
+			79
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0047",
+			"RECOVER_boneflingers_tower_lvl4_golem_0046",
+			"RECOVER_boneflingers_tower_lvl4_golem_0047"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0048 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			9,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			249,
+			5,
+			94,
+			80
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0049",
+			"boneflingers_tower_lvl4_golem_0050",
+			"boneflingers_tower_lvl4_golem_0051",
+			"RECOVER_boneflingers_tower_lvl4_golem_0048",
+			"RECOVER_boneflingers_tower_lvl4_golem_0049",
+			"RECOVER_boneflingers_tower_lvl4_golem_0050",
+			"RECOVER_boneflingers_tower_lvl4_golem_0051"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0052 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			12,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			552,
+			5,
+			91,
+			77
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0053",
+			"RECOVER_boneflingers_tower_lvl4_golem_0052",
+			"RECOVER_boneflingers_tower_lvl4_golem_0053"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0054 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			26,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			605,
+			103,
+			77,
+			73
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0055",
+			"RECOVER_boneflingers_tower_lvl4_golem_0054",
+			"RECOVER_boneflingers_tower_lvl4_golem_0055"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0056 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			260,
+			73,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0057",
+			"RECOVER_boneflingers_tower_lvl4_golem_0056",
+			"RECOVER_boneflingers_tower_lvl4_golem_0057"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0059 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			334,
+			73,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0060",
+			"boneflingers_tower_lvl4_golem_0071",
+			"RECOVER_boneflingers_tower_lvl4_golem_0059",
+			"RECOVER_boneflingers_tower_lvl4_golem_0060",
+			"RECOVER_boneflingers_tower_lvl4_golem_0071"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0061 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			37,
+			25,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			103,
+			74,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0062",
+			"RECOVER_boneflingers_tower_lvl4_golem_0061",
+			"RECOVER_boneflingers_tower_lvl4_golem_0062"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0063 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			22,
+			23,
+			32,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			103,
+			88,
+			76
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0064",
+			"RECOVER_boneflingers_tower_lvl4_golem_0063",
+			"RECOVER_boneflingers_tower_lvl4_golem_0064"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0065 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			20,
+			23,
+			32,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			743,
+			5,
+			90,
+			76
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0066",
+			"RECOVER_boneflingers_tower_lvl4_golem_0065",
+			"RECOVER_boneflingers_tower_lvl4_golem_0066"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0067 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			41,
+			24,
+			28,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			921,
+			103,
+			73,
+			75
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0068",
+			"RECOVER_boneflingers_tower_lvl4_golem_0067",
+			"RECOVER_boneflingers_tower_lvl4_golem_0068"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0069 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			24,
+			29,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			182,
+			73,
+			75
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0070",
+			"RECOVER_boneflingers_tower_lvl4_golem_0069",
+			"RECOVER_boneflingers_tower_lvl4_golem_0070"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0072 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			408,
+			73,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0073",
+			"RECOVER_boneflingers_tower_lvl4_golem_0072",
+			"RECOVER_boneflingers_tower_lvl4_golem_0073"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0074 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			25,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			844,
+			103,
+			74,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0075",
+			"RECOVER_boneflingers_tower_lvl4_golem_0074",
+			"RECOVER_boneflingers_tower_lvl4_golem_0075"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0076 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			31,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			460,
+			260,
+			74,
+			68
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0077",
+			"RECOVER_boneflingers_tower_lvl4_golem_0076",
+			"RECOVER_boneflingers_tower_lvl4_golem_0077"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0078 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			29,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			260,
+			74,
+			70
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0079",
+			"boneflingers_tower_lvl4_golem_0080",
+			"boneflingers_tower_lvl4_golem_0081",
+			"boneflingers_tower_lvl4_golem_0082",
+			"boneflingers_tower_lvl4_golem_0083",
+			"RECOVER_boneflingers_tower_lvl4_golem_0078",
+			"RECOVER_boneflingers_tower_lvl4_golem_0079",
+			"RECOVER_boneflingers_tower_lvl4_golem_0080",
+			"RECOVER_boneflingers_tower_lvl4_golem_0081",
+			"RECOVER_boneflingers_tower_lvl4_golem_0082",
+			"RECOVER_boneflingers_tower_lvl4_golem_0083"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0084 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			41,
+			36,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			666,
+			399,
+			70,
+			63
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0085",
+			"RECOVER_boneflingers_tower_lvl4_golem_0084",
+			"RECOVER_boneflingers_tower_lvl4_golem_0085"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0086 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			27,
+			34,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			264,
+			70,
+			72
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0086"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0087 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			20,
+			34,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			182,
+			70,
+			79
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0087"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0088 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			34,
+			13,
+			36,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			262,
+			72,
+			87
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0089",
+			"RECOVER_boneflingers_tower_lvl4_golem_0088",
+			"RECOVER_boneflingers_tower_lvl4_golem_0089"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0090 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			13,
+			39,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			867,
+			65,
+			92
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0091",
+			"RECOVER_boneflingers_tower_lvl4_golem_0090",
+			"RECOVER_boneflingers_tower_lvl4_golem_0091"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0092 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			13,
+			40,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			392,
+			64,
+			91
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0093",
+			"RECOVER_boneflingers_tower_lvl4_golem_0092",
+			"RECOVER_boneflingers_tower_lvl4_golem_0093"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0094 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			30,
+			39,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			635,
+			65,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0095",
+			"RECOVER_boneflingers_tower_lvl4_golem_0094",
+			"RECOVER_boneflingers_tower_lvl4_golem_0095"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0096 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			60,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			750,
+			66,
+			44
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0097",
+			"RECOVER_boneflingers_tower_lvl4_golem_0096",
+			"RECOVER_boneflingers_tower_lvl4_golem_0097"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0098 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			55,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			696,
+			648,
+			66,
+			49
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0099",
+			"RECOVER_boneflingers_tower_lvl4_golem_0098",
+			"RECOVER_boneflingers_tower_lvl4_golem_0099"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0100 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			57,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			671,
+			472,
+			66,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0101",
+			"RECOVER_boneflingers_tower_lvl4_golem_0100",
+			"RECOVER_boneflingers_tower_lvl4_golem_0101"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0102 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			57,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			740,
+			472,
+			66,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0103",
+			"RECOVER_boneflingers_tower_lvl4_golem_0102",
+			"RECOVER_boneflingers_tower_lvl4_golem_0103"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0104 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			57,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			809,
+			472,
+			66,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0105",
+			"boneflingers_tower_lvl4_golem_0106",
+			"boneflingers_tower_lvl4_golem_0107",
+			"boneflingers_tower_lvl4_golem_0108",
+			"boneflingers_tower_lvl4_golem_0109",
+			"boneflingers_tower_lvl4_golem_0110",
+			"boneflingers_tower_lvl4_golem_0111",
+			"RECOVER_boneflingers_tower_lvl4_golem_0104",
+			"RECOVER_boneflingers_tower_lvl4_golem_0105",
+			"RECOVER_boneflingers_tower_lvl4_golem_0106",
+			"RECOVER_boneflingers_tower_lvl4_golem_0107",
+			"RECOVER_boneflingers_tower_lvl4_golem_0108",
+			"RECOVER_boneflingers_tower_lvl4_golem_0109",
+			"RECOVER_boneflingers_tower_lvl4_golem_0110",
+			"RECOVER_boneflingers_tower_lvl4_golem_0111"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0112 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			57,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			878,
+			472,
+			66,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0113",
+			"RECOVER_boneflingers_tower_lvl4_golem_0112",
+			"RECOVER_boneflingers_tower_lvl4_golem_0113"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0114 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			59,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			799,
+			66,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0115",
+			"RECOVER_boneflingers_tower_lvl4_golem_0114",
+			"RECOVER_boneflingers_tower_lvl4_golem_0115"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0116 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			55,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			765,
+			648,
+			66,
+			49
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0117",
+			"RECOVER_boneflingers_tower_lvl4_golem_0116",
+			"RECOVER_boneflingers_tower_lvl4_golem_0117"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0118 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			58,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			750,
+			66,
+			46
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0119",
+			"RECOVER_boneflingers_tower_lvl4_golem_0118",
+			"RECOVER_boneflingers_tower_lvl4_golem_0119"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0120 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			57,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			947,
+			472,
+			66,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0121",
+			"boneflingers_tower_lvl4_golem_0122",
+			"boneflingers_tower_lvl4_golem_0123",
+			"RECOVER_boneflingers_tower_lvl4_golem_0120",
+			"RECOVER_boneflingers_tower_lvl4_golem_0121",
+			"RECOVER_boneflingers_tower_lvl4_golem_0122",
+			"RECOVER_boneflingers_tower_lvl4_golem_0123"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0124 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			35,
+			55,
+			37,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			893,
+			588,
+			70,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0125",
+			"RECOVER_boneflingers_tower_lvl4_golem_0124",
+			"RECOVER_boneflingers_tower_lvl4_golem_0125"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0126 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			31,
+			55,
+			32,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			472,
+			79,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0127",
+			"RECOVER_boneflingers_tower_lvl4_golem_0126",
+			"RECOVER_boneflingers_tower_lvl4_golem_0127"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0128 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			30,
+			52,
+			33,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			675,
+			333,
+			79,
+			51
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0129",
+			"RECOVER_boneflingers_tower_lvl4_golem_0128",
+			"RECOVER_boneflingers_tower_lvl4_golem_0129"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0130 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			34,
+			48,
+			30,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			810,
+			399,
+			78,
+			55
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0131",
+			"RECOVER_boneflingers_tower_lvl4_golem_0130",
+			"RECOVER_boneflingers_tower_lvl4_golem_0131"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0132 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			34,
+			40,
+			26,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			962,
+			82,
+			59
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0133",
+			"RECOVER_boneflingers_tower_lvl4_golem_0132",
+			"RECOVER_boneflingers_tower_lvl4_golem_0133"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0134 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			31,
+			34,
+			23,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			353,
+			103,
+			88,
+			65
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0135",
+			"RECOVER_boneflingers_tower_lvl4_golem_0134",
+			"RECOVER_boneflingers_tower_lvl4_golem_0135"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0136 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			29,
+			33,
+			21,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			96,
+			103,
+			92,
+			66
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0137",
+			"RECOVER_boneflingers_tower_lvl4_golem_0136",
+			"RECOVER_boneflingers_tower_lvl4_golem_0137"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0138 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			28,
+			28,
+			19,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			836,
+			5,
+			95,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0139",
+			"RECOVER_boneflingers_tower_lvl4_golem_0138",
+			"RECOVER_boneflingers_tower_lvl4_golem_0139"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0140 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			42,
+			33,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			593,
+			399,
+			70,
+			66
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0141",
+			"RECOVER_boneflingers_tower_lvl4_golem_0140",
+			"RECOVER_boneflingers_tower_lvl4_golem_0141"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0142 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			37,
+			31,
+			28,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			754,
+			182,
+			77,
+			68
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0143",
+			"RECOVER_boneflingers_tower_lvl4_golem_0142",
+			"RECOVER_boneflingers_tower_lvl4_golem_0143"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0144 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			482,
+			73,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0144"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0145 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			61,
+			87,
+			55,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			993,
+			880,
+			26,
+			12
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0146"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0160 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			35,
+			66,
+			52,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			901,
+			750,
+			55,
+			38
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0161"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0162 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			34,
+			65,
+			34,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			938,
+			648,
+			74,
+			42
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0163"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0164 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			33,
+			65,
+			34,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			706,
+			75,
+			41
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0165"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0166 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			31,
+			54,
+			32,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			757,
+			333,
+			79,
+			51
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0167"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0168 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			36,
+			41,
+			31,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			333,
+			75,
+			63
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0169"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0170 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			31,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			413,
+			70,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0171"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0172 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			460,
+			182,
+			71,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0173",
+			"boneflingers_tower_lvl4_golem_0174",
+			"boneflingers_tower_lvl4_golem_0175",
+			"boneflingers_tower_lvl4_golem_0176",
+			"boneflingers_tower_lvl4_golem_0177",
+			"boneflingers_tower_lvl4_golem_0178",
+			"boneflingers_tower_lvl4_golem_0179"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0180 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			930,
+			64,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0181"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0182 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			486,
+			64,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0183"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0184 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			563,
+			64,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0185"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0186 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			34,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			564,
+			62,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0187"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0188 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			407,
+			66,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0189"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0190 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			43,
+			28,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			640,
+			64,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0191"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0192 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			28,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			410,
+			63,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0193",
+			"boneflingers_tower_lvl4_golem_0194",
+			"boneflingers_tower_lvl4_golem_0195"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0196 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			28,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			785,
+			67,
+			74
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0197"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0198 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			39,
+			40,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			962,
+			399,
+			55,
+			69
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0199"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0200 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			48,
+			41,
+			40,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			894,
+			54,
+			70
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0201"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0202 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			40,
+			39,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			541,
+			56,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0203"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0204 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			39,
+			36,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			948,
+			59,
+			72
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0205",
+			"boneflingers_tower_lvl4_golem_0206",
+			"boneflingers_tower_lvl4_golem_0207",
+			"boneflingers_tower_lvl4_golem_0208",
+			"boneflingers_tower_lvl4_golem_0209",
+			"boneflingers_tower_lvl4_golem_0210",
+			"boneflingers_tower_lvl4_golem_0211"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0212 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			45,
+			36,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			941,
+			62,
+			66
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0213"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0214 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			31,
+			37,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			793,
+			59,
+			71
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0215"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0216 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			10,
+			28,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			352,
+			67,
+			92
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0217"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0218 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			48,
+			0,
+			29,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			182,
+			65,
+			102
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0219",
+			"boneflingers_tower_lvl4_golem_0220"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0221 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			32,
+			28,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			784,
+			68,
+			70
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0222"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0223 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			22,
+			19,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			623,
+			76,
+			80
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0224"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0225 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			26,
+			17,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			191,
+			103,
+			78,
+			76
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0226"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0227 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			27,
+			25,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			608,
+			182,
+			70,
+			75
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0228"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0229 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			182,
+			73,
+			74
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_golem_shadow = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			54,
+			92,
+			47,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			971,
+			87,
+			41,
+			10
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_mask = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			25,
+			27,
+			16,
+			56
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			648,
+			101,
+			31
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			47,
+			61,
+			38,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1015,
+			87,
+			6,
+			7
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			46,
+			58,
+			39,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			998,
+			834,
+			6,
+			7
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			44,
+			54,
+			35,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			752,
+			884,
+			12,
+			14
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			42,
+			48,
+			36,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			141,
+			867,
+			13,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0006 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			37,
+			50,
+			36,
+			17
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			791,
+			84,
+			18,
+			11
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0007 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			36,
+			48,
+			37,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			770,
+			84,
+			18,
+			15
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0008 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			35,
+			34,
+			39,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			996,
+			706,
+			17,
+			39
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0010 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			54,
+			39,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			858,
+			682,
+			21,
+			19
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0013 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			50,
+			31,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			998,
+			29,
+			23
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0017 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			29,
+			36,
+			31,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			990,
+			260,
+			31,
+			37
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0022 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			43,
+			26,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			923,
+			991,
+			38,
+			30
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0028 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			50,
+			26,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			873,
+			998,
+			38,
+			23
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0029 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			58,
+			26,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			552,
+			85,
+			38,
+			15
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0030 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			59,
+			26,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			593,
+			85,
+			38,
+			14
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0031 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			59,
+			26,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			1007,
+			38,
+			14
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0032"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0035 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			14,
+			39,
+			13,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			926,
+			845,
+			64,
+			34
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0036 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			14,
+			39,
+			13,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			750,
+			64,
+			34
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0037 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			35,
+			10,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			788,
+			706,
+			69,
+			38
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0038 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			35,
+			10,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			860,
+			706,
+			69,
+			38
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0039 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			14,
+			23,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			959,
+			60,
+			49
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0040"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0041 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			15,
+			20,
+			24,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			956,
+			52,
+			52
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0042 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			16,
+			20,
+			20,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			966,
+			588,
+			55,
+			52
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0043 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			8,
+			12,
+			20,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			633,
+			523,
+			63,
+			60
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0044 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			8,
+			12,
+			20,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			699,
+			523,
+			63,
+			60
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0045 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			1,
+			10,
+			21,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			603,
+			333,
+			69,
+			62
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0046"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0047 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			3,
+			7,
+			13,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			761,
+			260,
+			75,
+			65
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0048 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			3,
+			7,
+			13,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			839,
+			260,
+			75,
+			65
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0049 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			20,
+			12,
+			10,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			831,
+			523,
+			61,
+			60
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0050 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			21,
+			12,
+			10,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			588,
+			60,
+			60
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0051 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			21,
+			20,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			905,
+			54,
+			52
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0052"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0053 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			22,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			969,
+			47,
+			50
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0054 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			25,
+			18,
+			17,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			904,
+			49,
+			54
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0055 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			25,
+			18,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			596,
+			50,
+			54
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0056 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			25,
+			15,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			783,
+			50,
+			57
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0057 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			25,
+			16,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			960,
+			50,
+			56
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0058"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0059 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			14,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			845,
+			48,
+			58
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0060 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			13,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			843,
+			48,
+			59
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0061"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0062 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			12,
+			16,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			720,
+			48,
+			60
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0063 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			24,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			923,
+			895,
+			48,
+			45
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0066 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			21,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			873,
+			947,
+			47,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0067"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0068 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			19,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			818,
+			48,
+			50
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0069"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0070 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			25,
+			22,
+			15,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			871,
+			51,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0071"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0072 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			23,
+			24,
+			14,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			883,
+			797,
+			54,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0073"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0074 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			22,
+			26,
+			14,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			940,
+			797,
+			55,
+			44
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0075"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0076 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			23,
+			24,
+			13,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			797,
+			55,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0077"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0078 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			22,
+			21,
+			14,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			961,
+			55,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0079"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0080 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			22,
+			19,
+			14,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			797,
+			55,
+			49
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0081"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0082 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			25,
+			22,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			873,
+			845,
+			50,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0083"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0084 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			26,
+			24,
+			17,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			923,
+			943,
+			48,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0085"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0090 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			16,
+			9,
+			24,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			963,
+			523,
+			51,
+			60
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0091"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0092 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			11,
+			3,
+			26,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			651,
+			54,
+			66
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0093",
+			"boneflingers_tower_lvl4_skeletonwarrior_0094",
+			"boneflingers_tower_lvl4_skeletonwarrior_0095"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0096 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			34,
+			23,
+			4,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			921,
+			53,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0097"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0098 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			30,
+			22,
+			2,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			906,
+			59,
+			47
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0099"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0100 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			28,
+			26,
+			2,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			770,
+			750,
+			61,
+			43
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0101"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0108 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			21,
+			12,
+			10,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			830,
+			588,
+			60,
+			57
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0109"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0110 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			7,
+			14,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			921,
+			333,
+			65,
+			60
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0111"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0112 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			11,
+			10,
+			15,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			895,
+			523,
+			65,
+			56
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0113"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0114 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			10,
+			12,
+			18,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			764,
+			588,
+			63,
+			55
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0115"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0116 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			10,
+			22,
+			18,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			701,
+			797,
+			63,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0117"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0118 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			13,
+			16,
+			17,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			648,
+			61,
+			55
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0119"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0120 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			11,
+			13,
+			17,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			765,
+			523,
+			63,
+			60
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0121"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0122 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			11,
+			18,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			569,
+			523,
+			61,
+			62
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0123"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0124 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			10,
+			18,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			756,
+			61,
+			63
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0125"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0126 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			9,
+			18,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			689,
+			61,
+			64
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0127"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0128 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			12,
+			37,
+			18,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			932,
+			706,
+			61,
+			36
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_shadow = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			61,
+			27,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			1010,
+			37,
+			11
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			42,
+			53,
+			33,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1007,
+			834,
+			5,
+			6
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			41,
+			50,
+			34,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			634,
+			85,
+			5,
+			6
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			39,
+			46,
+			31,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			730,
+			81,
+			10,
+			13
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			37,
+			42,
+			31,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			752,
+			845,
+			12,
+			17
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0005 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			35,
+			36,
+			31,
+			11
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			1006,
+			998,
+			14,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0006 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			33,
+			43,
+			31,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			304,
+			88,
+			16,
+			10
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0007 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			32,
+			41,
+			32,
+			13
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			349,
+			1007,
+			16,
+			13
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0008 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			31,
+			29,
+			34,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			998,
+			797,
+			15,
+			34
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0009 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			43,
+			34,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			914,
+			682,
+			19,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0010 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			46,
+			34,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			346,
+			81,
+			19,
+			17
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0011 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			42,
+			27,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			836,
+			79,
+			26,
+			21
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0013 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			43,
+			27,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			865,
+			79,
+			26,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0017 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			31,
+			27,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			993,
+			845,
+			28,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0028 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			43,
+			22,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			985,
+			235,
+			34,
+			20
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0029 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			50,
+			22,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			934,
+			87,
+			34,
+			13
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0030 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			51,
+			22,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			810,
+			457,
+			34,
+			12
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0031 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			51,
+			22,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			847,
+			457,
+			34,
+			12
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0032"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0041 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			14,
+			17,
+			20,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			949,
+			46,
+			46
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0043 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			7,
+			10,
+			17,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			847,
+			56,
+			53
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0044 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			7,
+			10,
+			17,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			903,
+			56,
+			53
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0045 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			1,
+			9,
+			17,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			967,
+			62,
+			54
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0046"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0047 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			3,
+			6,
+			14,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			632,
+			588,
+			63,
+			57
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0048 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			3,
+			6,
+			14,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			698,
+			588,
+			63,
+			57
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0049 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			18,
+			12,
+			20,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			974,
+			895,
+			42,
+			51
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0056 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			22,
+			13,
+			22,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			985,
+			182,
+			36,
+			50
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0068 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			20,
+			23,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			989,
+			333,
+			32,
+			40
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0069"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0092 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			10,
+			2,
+			27,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			706,
+			43,
+			58
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0093",
+			"boneflingers_tower_lvl4_skeleton_0094",
+			"boneflingers_tower_lvl4_skeleton_0095"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0110 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			13,
+			6,
+			16,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			849,
+			51,
+			52
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0111"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0112 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			14,
+			9,
+			19,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			873,
+			895,
+			47,
+			49
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0113"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0118 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			12,
+			14,
+			17,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			767,
+			51,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0119"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0120 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			11,
+			11,
+			15,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			653,
+			54,
+			50
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0121"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0122 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			12,
+			9,
+			23,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			845,
+			45,
+			53
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0123"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0124 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			12,
+			9,
+			25,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			958,
+			43,
+			52
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0125"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0126 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			12,
+			8,
+			25,
+			5
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			825,
+			901,
+			43,
+			54
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0127"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_shadow = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			54,
+			22,
+			4
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			767,
+			1012,
+			34,
+			9
+		},
+		alias = {}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0002 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			29,
+			32,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			537,
+			260,
+			71,
+			70
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0003"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0004 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			27,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			834,
+			182,
+			72,
+			72
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0005"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0006 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			27,
+			31,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			936,
+			71,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0007"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0008 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			41,
+			26,
+			30,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			232,
+			707,
+			71,
+			72
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0009"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0010 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			43,
+			27,
+			30,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			939,
+			69,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0011"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0012 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			30,
+			28,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			917,
+			260,
+			70,
+			69
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0013"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0014 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			29,
+			29,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			399,
+			67,
+			70
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0015"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0016 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			45,
+			27,
+			29,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			561,
+			68,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0017"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0018 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			27,
+			29,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			333,
+			69,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0019"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0020 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			42,
+			26,
+			31,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			710,
+			69,
+			72
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0021"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0022 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			41,
+			27,
+			31,
+			16
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			487,
+			70,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0023"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0024 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			30,
+			31,
+			15
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			611,
+			260,
+			72,
+			69
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0025"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0145 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			60,
+			87,
+			53,
+			14
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			882,
+			682,
+			29,
+			13
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0146"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0160 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			35,
+			66,
+			52,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			959,
+			750,
+			55,
+			38
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0161"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0162 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			34,
+			65,
+			34,
+			7
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			594,
+			472,
+			74,
+			42
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0163"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0164 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			33,
+			65,
+			34,
+			8
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			710,
+			706,
+			75,
+			41
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0165"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0166 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			31,
+			54,
+			32,
+			9
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			839,
+			333,
+			79,
+			51
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0167"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0168 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			36,
+			41,
+			31,
+			10
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			525,
+			333,
+			75,
+			63
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0169"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0170 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			31,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			561,
+			70,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0171"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0172 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			534,
+			182,
+			71,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0173",
+			"RECOVER_boneflingers_tower_lvl4_golem_0174",
+			"RECOVER_boneflingers_tower_lvl4_golem_0175",
+			"RECOVER_boneflingers_tower_lvl4_golem_0176",
+			"RECOVER_boneflingers_tower_lvl4_golem_0177",
+			"RECOVER_boneflingers_tower_lvl4_golem_0178",
+			"RECOVER_boneflingers_tower_lvl4_golem_0179"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0180 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			717,
+			64,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0181"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0182 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			794,
+			64,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0183"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0184 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			871,
+			64,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0185"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0186 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			28,
+			34,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			641,
+			62,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0187"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0188 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			28,
+			32,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			484,
+			66,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0189"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0190 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			43,
+			28,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			333,
+			64,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0191"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0192 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			44,
+			28,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			487,
+			63,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0193",
+			"RECOVER_boneflingers_tower_lvl4_golem_0194",
+			"RECOVER_boneflingers_tower_lvl4_golem_0195"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0196 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			40,
+			28,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			159,
+			862,
+			67,
+			74
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0197"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0198 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			39,
+			40,
+			6
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			822,
+			55,
+			69
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0199"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0200 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			48,
+			41,
+			40,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			512,
+			523,
+			54,
+			70
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0201"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0202 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			40,
+			39,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			615,
+			56,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0203"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0204 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			39,
+			36,
+			3
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			718,
+			59,
+			72
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0205",
+			"RECOVER_boneflingers_tower_lvl4_golem_0206",
+			"RECOVER_boneflingers_tower_lvl4_golem_0207",
+			"RECOVER_boneflingers_tower_lvl4_golem_0208",
+			"RECOVER_boneflingers_tower_lvl4_golem_0209",
+			"RECOVER_boneflingers_tower_lvl4_golem_0210",
+			"RECOVER_boneflingers_tower_lvl4_golem_0211"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0212 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			45,
+			36,
+			35,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			447,
+			472,
+			62,
+			66
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0213"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0214 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			31,
+			37,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			380,
+			867,
+			59,
+			71
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0215"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0216 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			10,
+			28,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			447,
+			67,
+			92
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0217"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0218 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			48,
+			0,
+			29,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			5,
+			287,
+			65,
+			102
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0219",
+			"RECOVER_boneflingers_tower_lvl4_golem_0220"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0221 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			46,
+			32,
+			28,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			308,
+			857,
+			68,
+			70
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0222"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0223 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			22,
+			19,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			73,
+			706,
+			76,
+			80
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0224"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0225 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			26,
+			17,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			272,
+			103,
+			78,
+			76
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0226"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0227 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			47,
+			27,
+			25,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			681,
+			182,
+			70,
+			75
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0228"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0229 = {
+		a_name = "kr4_fallen_ones_bone_flingers-1.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			39,
+			28,
+			30,
+			12
+		},
+		a_size = {
+			1024,
+			1024
+		},
+		f_quad = {
+			384,
+			182,
+			73,
+			74
+		},
+		alias = {}
+	},
+	boneflingers_shooter_0001 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			20,
+			9,
+			19,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			290,
+			32,
+			35
+		},
+		alias = {
+			"boneflingers_shooter_0002",
+			"boneflingers_shooter_0016"
+		}
+	},
+	boneflingers_shooter_0003 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			8,
+			8,
+			24,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			424,
+			87,
+			39,
+			36
+		},
+		alias = {
+			"boneflingers_shooter_0004"
+		}
+	},
+	boneflingers_shooter_0005 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			1,
+			9,
+			26,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			234,
+			87,
+			44,
+			35
+		},
+		alias = {
+			"boneflingers_shooter_0006"
+		}
+	},
+	boneflingers_shooter_0007 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			1,
+			9,
+			26,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			281,
+			87,
+			44,
+			35
+		},
+		alias = {
+			"boneflingers_shooter_0008"
+		}
+	},
+	boneflingers_shooter_0009 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			13,
+			13,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			470,
+			53,
+			37,
+			31
+		},
+		alias = {
+			"boneflingers_shooter_0010"
+		}
+	},
+	boneflingers_shooter_0011 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			17,
+			11,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			336,
+			166,
+			39,
+			27
+		},
+		alias = {
+			"boneflingers_shooter_0012"
+		}
+	},
+	boneflingers_shooter_0013 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			14,
+			14,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			258,
+			166,
+			36,
+			30
+		},
+		alias = {}
+	},
+	boneflingers_shooter_0014 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			12,
+			17,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			255,
+			199,
+			33,
+			32
+		},
+		alias = {
+			"boneflingers_shooter_0015"
+		}
+	},
+	boneflingers_shooter_0017 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			20,
+			9,
+			19,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			328,
+			32,
+			35
+		},
+		alias = {
+			"boneflingers_shooter_0018",
+			"boneflingers_shooter_0032"
+		}
+	},
+	boneflingers_shooter_0019 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			8,
+			8,
+			24,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			466,
+			87,
+			39,
+			36
+		},
+		alias = {
+			"boneflingers_shooter_0020"
+		}
+	},
+	boneflingers_shooter_0021 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			2,
+			8,
+			26,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			188,
+			87,
+			43,
+			36
+		},
+		alias = {
+			"boneflingers_shooter_0022"
+		}
+	},
+	boneflingers_shooter_0023 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			1,
+			8,
+			26,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			87,
+			44,
+			36
+		},
+		alias = {
+			"boneflingers_shooter_0024"
+		}
+	},
+	boneflingers_shooter_0025 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			17,
+			11,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			378,
+			166,
+			39,
+			27
+		},
+		alias = {
+			"boneflingers_shooter_0026"
+		}
+	},
+	boneflingers_shooter_0027 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			14,
+			13,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			218,
+			166,
+			37,
+			30
+		},
+		alias = {
+			"boneflingers_shooter_0028"
+		}
+	},
+	boneflingers_shooter_0029 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			14,
+			14,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			297,
+			166,
+			36,
+			30
+		},
+		alias = {}
+	},
+	boneflingers_shooter_0030 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			71,
+			48
+		},
+		trim = {
+			21,
+			12,
+			18,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			291,
+			199,
+			32,
+			32
+		},
+		alias = {
+			"boneflingers_shooter_0031"
+		}
+	},
+	boneflingers_shooter_proyectiles_big_0007 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			2,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			326,
+			199,
+			32,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_0009 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			2,
+			5,
+			2,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			383,
+			234,
+			30,
+			24
+		},
+		alias = {}
+	},
+	boneflingers_shooter_proyectiles_big_decals_0007 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			34,
+			34
+		},
+		trim = {
+			2,
+			3,
+			0,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			284,
+			234,
+			32,
+			24
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_golem_0147 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			55,
+			56,
+			49,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			53,
+			38,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0148"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0149 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			58,
+			60,
+			46,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			55,
+			468,
+			38,
+			41
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0150"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0151 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			58,
+			57,
+			47,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			149,
+			37,
+			44
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0152",
+			"boneflingers_tower_lvl4_golem_0153",
+			"boneflingers_tower_lvl4_golem_0154",
+			"boneflingers_tower_lvl4_golem_0155"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0156 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			70,
+			52,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			53,
+			52,
+			31
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0157"
+		}
+	},
+	boneflingers_tower_lvl4_golem_0158 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			36,
+			77,
+			52,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			251,
+			53,
+			54,
+			29
+		},
+		alias = {
+			"boneflingers_tower_lvl4_golem_0159"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0005 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			39,
+			41,
+			36,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			445,
+			234,
+			16,
+			24
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0009 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			30,
+			50,
+			39,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			487,
+			5,
+			22,
+			23
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0011 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			48,
+			31,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			319,
+			234,
+			29,
+			25
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0012 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			41,
+			31,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			435,
+			199,
+			29,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0014 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			48,
+			31,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			351,
+			234,
+			29,
+			25
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0015 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			34,
+			31,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			248,
+			29,
+			39
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0016 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			31,
+			41,
+			31,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			467,
+			199,
+			29,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0018 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			32,
+			26,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			243,
+			38,
+			41
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0019 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			25,
+			27,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			102,
+			37,
+			48
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0020 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			36,
+			27,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			249,
+			37,
+			37
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0021 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			38,
+			27,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			370,
+			37,
+			35
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0023 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			41,
+			26,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			304,
+			126,
+			38,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0024 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			36,
+			26,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			126,
+			38,
+			37
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0025 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			36,
+			26,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			182,
+			126,
+			38,
+			37
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0026 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			27,
+			26,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			365,
+			38,
+			46
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0027 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			38,
+			26,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			223,
+			126,
+			38,
+			35
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0033 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			15,
+			43,
+			11,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			319,
+			5,
+			65,
+			30
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0034"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0064 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			24,
+			17,
+			9
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			107,
+			5,
+			47,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0065"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0086 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			26,
+			17,
+			9
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			212,
+			5,
+			47,
+			43
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0087"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0088 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			24,
+			16,
+			9
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			5,
+			48,
+			45
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0089",
+			"boneflingers_tower_lvl4_skeletonwarrior_0106"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0102 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			24,
+			22,
+			25,
+			10
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			316,
+			42,
+			46
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0103"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0104 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			22,
+			20,
+			27,
+			10
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			214,
+			42,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeletonwarrior_0105"
+		}
+	},
+	boneflingers_tower_lvl4_skeletonwarrior_0107 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			91,
+			78
+		},
+		trim = {
+			27,
+			24,
+			16,
+			9
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			56,
+			5,
+			48,
+			45
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0012 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			36,
+			27,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			218,
+			302,
+			26,
+			27
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0014 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			41,
+			27,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			416,
+			234,
+			26,
+			22
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0015 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			29,
+			27,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			218,
+			234,
+			26,
+			34
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0016 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			35,
+			27,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			218,
+			271,
+			26,
+			28
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0018 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			28,
+			23,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			381,
+			126,
+			33,
+			35
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0019 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			21,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			466,
+			34,
+			42
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0020 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			31,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			442,
+			34,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0021 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			33,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			465,
+			166,
+			34,
+			30
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0022 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			37,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			247,
+			234,
+			34,
+			26
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0023 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			35,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			398,
+			199,
+			34,
+			28
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0024 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			31,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			477,
+			34,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0025 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			31,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			218,
+			199,
+			34,
+			32
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0026 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			24,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			289,
+			34,
+			39
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0027 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			33,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			361,
+			199,
+			34,
+			30
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0033 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			40,
+			15,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			417,
+			53,
+			50,
+			23
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0034"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0035 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			38,
+			16,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			365,
+			53,
+			49,
+			25
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0036 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			38,
+			23,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			420,
+			166,
+			42,
+			25
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0037 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			30,
+			20,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			328,
+			87,
+			45,
+			33
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0038 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			30,
+			20,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			376,
+			87,
+			45,
+			33
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0039 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			25,
+			19,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			438,
+			5,
+			46,
+			38
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0040"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0042 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			18,
+			17,
+			17,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			53,
+			45,
+			46
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0050 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			19,
+			12,
+			20,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			104,
+			41,
+			51
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0051 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			19,
+			17,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			419,
+			39,
+			46
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0052"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0053 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			19,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			376,
+			34,
+			44
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0054 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			23,
+			15,
+			20,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			153,
+			37,
+			48
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0055 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			23,
+			15,
+			20,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			204,
+			37,
+			48
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0057 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			21,
+			12,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			365,
+			37,
+			51
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0058"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0059 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			11,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			255,
+			34,
+			52
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0060 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			12,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			414,
+			34,
+			51
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0061"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0062 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			11,
+			22,
+			4
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			52,
+			310,
+			34,
+			52
+		},
+		alias = {}
+	},
+	boneflingers_tower_lvl4_skeleton_0063 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			25,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			366,
+			32,
+			35
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0088",
+			"boneflingers_tower_lvl4_skeleton_0089",
+			"boneflingers_tower_lvl4_skeleton_0106",
+			"boneflingers_tower_lvl4_skeleton_0107"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0064 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			25,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			404,
+			32,
+			35
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0065"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0066 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			22,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			207,
+			32,
+			38
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0067"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0070 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			23,
+			22,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			446,
+			34,
+			38
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0071"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0072 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			21,
+			24,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			331,
+			36,
+			36
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0073"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0074 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			21,
+			26,
+			22,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			264,
+			126,
+			37,
+			34
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0075"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0076 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			20,
+			25,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			408,
+			37,
+			35
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0077"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0078 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			20,
+			22,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			166,
+			37,
+			38
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0079"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0080 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			21,
+			20,
+			23,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			141,
+			207,
+			36,
+			39
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0081"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0082 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			23,
+			22,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			181,
+			166,
+			34,
+			38
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0083"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0084 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			24,
+			24,
+			23,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			345,
+			126,
+			33,
+			36
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0085"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0086 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			26,
+			22,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			463,
+			126,
+			33,
+			34
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0087"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0090 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			15,
+			7,
+			27,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			158,
+			38,
+			53
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0091"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0096 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			30,
+			23,
+			3,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			468,
+			47,
+			36
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0097"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0098 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			27,
+			19,
+			1,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			157,
+			5,
+			52,
+			40
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0099"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0100 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			25,
+			22,
+			1,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			262,
+			5,
+			54,
+			37
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0101"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0102 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			22,
+			19,
+			22,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			423,
+			36,
+			40
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0103"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0104 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			20,
+			17,
+			23,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			331,
+			37,
+			42
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0105"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0108 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			19,
+			12,
+			20,
+			7
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			265,
+			41,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0109"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0114 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			13,
+			10,
+			23,
+			9
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			53,
+			44,
+			48
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0115"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0116 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			12,
+			19,
+			20,
+			9
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			387,
+			5,
+			48,
+			39
+		},
+		alias = {
+			"boneflingers_tower_lvl4_skeleton_0117"
+		}
+	},
+	boneflingers_tower_lvl4_skeleton_0128 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			80,
+			67
+		},
+		trim = {
+			12,
+			36,
+			25,
+			5
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			417,
+			126,
+			43,
+			26
+		},
+		alias = {}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0147 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			55,
+			56,
+			49,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			101,
+			38,
+			45
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0148"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0149 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			58,
+			60,
+			46,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			287,
+			38,
+			41
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0150"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0151 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			58,
+			57,
+			47,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			100,
+			196,
+			37,
+			44
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0152",
+			"RECOVER_boneflingers_tower_lvl4_golem_0153",
+			"RECOVER_boneflingers_tower_lvl4_golem_0154",
+			"RECOVER_boneflingers_tower_lvl4_golem_0155"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0156 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			38,
+			70,
+			52,
+			13
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			196,
+			53,
+			52,
+			31
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0157"
+		}
+	},
+	RECOVER_boneflingers_tower_lvl4_golem_0158 = {
+		a_name = "kr4_fallen_ones_bone_flingers-2.dds",
+		size = {
+			142,
+			114
+		},
+		trim = {
+			36,
+			77,
+			52,
+			8
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			308,
+			53,
+			54,
+			29
+		},
+		alias = {
+			"RECOVER_boneflingers_tower_lvl4_golem_0159"
+		}
+	}
+}

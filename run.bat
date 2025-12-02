@@ -6,6 +6,11 @@ setlocal
 set "LUA_EXEC=lua54"
 
 :main
+if not exist "client.exe" (
+    echo 错误: 未找到 client.exe
+    exit /b 1
+)
+
 if "%1"=="" (
     call :show_help
     exit /b 0
@@ -45,22 +50,12 @@ exit /b 0
 
 :upload
 echo 上传资源...
-if exist "scripts/upload_assets.lua" (
-    %LUA_EXEC% "scripts/upload_assets.lua"
-) else (
-    echo 错误: 未找到 upload_assets.lua
-    exit /b 1
-)
+"client.exe" --upload-assets
 exit /b 0
 
 :download
 echo 下载资源...
-if exist "scripts/download_assets.lua" (
-    %LUA_EXEC% "scripts/download_assets.lua"
-) else (
-    echo 错误: 未找到 download_assets.lua
-    exit /b 1
-)
+"client.exe" --sync-assets
 exit /b 0
 
 :show_help

@@ -1,0 +1,11310 @@
+return {
+	hero_murglun_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			55,
+			98,
+			74,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2315,
+			5,
+			155,
+			162
+		},
+		alias = {
+			"hero_murglun_0002"
+		}
+	},
+	hero_murglun_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			110,
+			74,
+			106
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1666,
+			203,
+			149,
+			153
+		},
+		alias = {}
+	},
+	hero_murglun_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			69,
+			109,
+			74,
+			86
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2928,
+			5,
+			141,
+			174
+		},
+		alias = {
+			"hero_murglun_0005"
+		}
+	},
+	hero_murglun_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			106,
+			73,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1886,
+			5,
+			138,
+			184
+		},
+		alias = {
+			"hero_murglun_0007"
+		}
+	},
+	hero_murglun_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			106,
+			73,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2027,
+			5,
+			138,
+			184
+		},
+		alias = {}
+	},
+	hero_murglun_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			76,
+			110,
+			72,
+			81
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3072,
+			5,
+			136,
+			178
+		},
+		alias = {
+			"hero_murglun_0010"
+		}
+	},
+	hero_murglun_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			83,
+			120,
+			72,
+			81
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2392,
+			203,
+			129,
+			168
+		},
+		alias = {
+			"hero_murglun_0012"
+		}
+	},
+	hero_murglun_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			85,
+			154,
+			73,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3303,
+			126,
+			124
+		},
+		alias = {
+			"hero_murglun_0014"
+		}
+	},
+	hero_murglun_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			62,
+			106,
+			73,
+			96
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2631,
+			5,
+			149,
+			167
+		},
+		alias = {
+			"hero_murglun_0016"
+		}
+	},
+	hero_murglun_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			90,
+			73,
+			98
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1598,
+			5,
+			141,
+			181
+		},
+		alias = {
+			"hero_murglun_0018"
+		}
+	},
+	hero_murglun_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			90,
+			73,
+			98
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1742,
+			5,
+			141,
+			181
+		},
+		alias = {}
+	},
+	hero_murglun_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			55,
+			98,
+			74,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2473,
+			5,
+			155,
+			162
+		},
+		alias = {
+			"hero_murglun_0021"
+		}
+	},
+	hero_murglun_0022 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			110,
+			74,
+			108
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2103,
+			203,
+			149,
+			151
+		},
+		alias = {}
+	},
+	hero_murglun_0023 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			69,
+			109,
+			78,
+			95
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1963,
+			203,
+			137,
+			165
+		},
+		alias = {
+			"hero_murglun_0024"
+		}
+	},
+	hero_murglun_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			69,
+			106,
+			80,
+			88
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3939,
+			5,
+			135,
+			175
+		},
+		alias = {
+			"hero_murglun_0026"
+		}
+	},
+	hero_murglun_0027 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			69,
+			106,
+			80,
+			88
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			958,
+			203,
+			135,
+			175
+		},
+		alias = {}
+	},
+	hero_murglun_0028 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			81,
+			110,
+			80,
+			117
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			2852,
+			123,
+			142
+		},
+		alias = {
+			"hero_murglun_0029"
+		}
+	},
+	hero_murglun_0030 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			83,
+			120,
+			83,
+			132
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3680,
+			118,
+			117
+		},
+		alias = {
+			"hero_murglun_0031"
+		}
+	},
+	hero_murglun_0032 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			88,
+			120,
+			84,
+			129
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3924,
+			112,
+			120
+		},
+		alias = {
+			"hero_murglun_0033"
+		}
+	},
+	hero_murglun_0034 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			88,
+			120,
+			84,
+			129
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			729,
+			112,
+			120
+		},
+		alias = {}
+	},
+	hero_murglun_0035 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			87,
+			112,
+			84,
+			136
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3800,
+			113,
+			121
+		},
+		alias = {
+			"hero_murglun_0036"
+		}
+	},
+	hero_murglun_0037 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			87,
+			105,
+			75,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3879,
+			203,
+			122,
+			144
+		},
+		alias = {
+			"hero_murglun_0038"
+		}
+	},
+	hero_murglun_0039 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			81,
+			72,
+			64,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1309,
+			5,
+			139,
+			185
+		},
+		alias = {
+			"hero_murglun_0040"
+		}
+	},
+	hero_murglun_0041 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			74,
+			56,
+			108
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3855,
+			403,
+			155,
+			187
+		},
+		alias = {
+			"hero_murglun_0042"
+		}
+	},
+	hero_murglun_0043 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			80,
+			63,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			1961,
+			155,
+			186
+		},
+		alias = {
+			"hero_murglun_0044"
+		}
+	},
+	hero_murglun_0045 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			84,
+			64,
+			99
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			2352,
+			154,
+			186
+		},
+		alias = {
+			"hero_murglun_0046"
+		}
+	},
+	hero_murglun_0047 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			76,
+			74,
+			110
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			2776,
+			156,
+			183
+		},
+		alias = {
+			"hero_murglun_0048"
+		}
+	},
+	hero_murglun_0049 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			79,
+			86,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			5,
+			144,
+			176
+		},
+		alias = {}
+	},
+	hero_murglun_0050 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			59,
+			84,
+			90,
+			107
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3211,
+			5,
+			135,
+			178
+		},
+		alias = {
+			"hero_murglun_0051"
+		}
+	},
+	hero_murglun_0052 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			50,
+			90,
+			94,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1523,
+			203,
+			140,
+			163
+		},
+		alias = {
+			"hero_murglun_0053"
+		}
+	},
+	hero_murglun_0054 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			68,
+			95,
+			88,
+			117
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2941,
+			203,
+			128,
+			157
+		},
+		alias = {
+			"hero_murglun_0055"
+		}
+	},
+	hero_murglun_0056 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			22,
+			39,
+			81,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			611,
+			181,
+			221
+		},
+		alias = {
+			"hero_murglun_0057"
+		}
+	},
+	hero_murglun_0058 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			22,
+			31,
+			76,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			3342,
+			186,
+			226
+		},
+		alias = {
+			"hero_murglun_0059"
+		}
+	},
+	hero_murglun_0060 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			37,
+			61,
+			74,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2862,
+			403,
+			173,
+			192
+		},
+		alias = {
+			"hero_murglun_0061"
+		}
+	},
+	hero_murglun_0062 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			78,
+			83,
+			77,
+			124
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2524,
+			203,
+			129,
+			162
+		},
+		alias = {}
+	},
+	hero_murglun_0063 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			76,
+			75,
+			74,
+			130
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2255,
+			203,
+			134,
+			164
+		},
+		alias = {
+			"hero_murglun_0064"
+		}
+	},
+	hero_murglun_0065 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			78,
+			81,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			3165,
+			142,
+			189
+		},
+		alias = {}
+	},
+	hero_murglun_0066 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			84,
+			81,
+			101,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3332,
+			203,
+			99,
+			185
+		},
+		alias = {
+			"hero_murglun_0067"
+		}
+	},
+	hero_murglun_0068 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			17,
+			33,
+			98,
+			104
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			881,
+			169,
+			232
+		},
+		alias = {
+			"hero_murglun_0069"
+		}
+	},
+	hero_murglun_0070 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			17,
+			22,
+			96,
+			111
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			642,
+			171,
+			236
+		},
+		alias = {
+			"hero_murglun_0071"
+		}
+	},
+	hero_murglun_0072 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			17,
+			21,
+			98,
+			125
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			1636,
+			169,
+			223
+		},
+		alias = {}
+	},
+	hero_murglun_0073 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			34,
+			53,
+			95,
+			119
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3038,
+			403,
+			155,
+			197
+		},
+		alias = {
+			"hero_murglun_0074"
+		}
+	},
+	hero_murglun_0075 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			84,
+			91,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3072,
+			203,
+			120,
+			165
+		},
+		alias = {}
+	},
+	hero_murglun_0076 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			85,
+			70,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1376,
+			203,
+			144,
+			162
+		},
+		alias = {
+			"hero_murglun_0077"
+		}
+	},
+	hero_murglun_0078 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			80,
+			81,
+			129
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1818,
+			203,
+			142,
+			160
+		},
+		alias = {}
+	},
+	hero_murglun_0079 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			82,
+			81,
+			81,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3434,
+			203,
+			121,
+			150
+		},
+		alias = {
+			"hero_murglun_0080"
+		}
+	},
+	hero_murglun_0081 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			17,
+			33,
+			76,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			2387,
+			191,
+			227
+		},
+		alias = {
+			"hero_murglun_0082"
+		}
+	},
+	hero_murglun_0083 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			17,
+			22,
+			74,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			3827,
+			193,
+			234
+		},
+		alias = {
+			"hero_murglun_0084"
+		}
+	},
+	hero_murglun_0085 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			17,
+			21,
+			77,
+			128
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			3831,
+			190,
+			220
+		},
+		alias = {}
+	},
+	hero_murglun_0086 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			34,
+			53,
+			95,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3196,
+			403,
+			155,
+			196
+		},
+		alias = {
+			"hero_murglun_0087"
+		}
+	},
+	hero_murglun_0088 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			87,
+			79,
+			91,
+			127
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			2997,
+			106,
+			163
+		},
+		alias = {}
+	},
+	hero_murglun_0089 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			86,
+			79,
+			80,
+			137
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3558,
+			203,
+			118,
+			153
+		},
+		alias = {
+			"hero_murglun_0090"
+		}
+	},
+	hero_murglun_0091 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			81,
+			73,
+			81,
+			159
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3163,
+			122,
+			137
+		},
+		alias = {}
+	},
+	hero_murglun_0092 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			60,
+			70,
+			102,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3557,
+			122,
+			120
+		},
+		alias = {
+			"hero_murglun_0093"
+		}
+	},
+	hero_murglun_0094 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			41,
+			34,
+			96,
+			155
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			3531,
+			147,
+			180
+		},
+		alias = {
+			"hero_murglun_0095",
+			"hero_murglun_0096"
+		}
+	},
+	hero_murglun_0097 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			49,
+			88,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			2962,
+			135,
+			200
+		},
+		alias = {}
+	},
+	hero_murglun_0098 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			43,
+			75,
+			91,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			845,
+			5,
+			150,
+			172
+		},
+		alias = {}
+	},
+	hero_murglun_0099 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			59,
+			92,
+			74,
+			55
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			3295,
+			151,
+			222
+		},
+		alias = {
+			"hero_murglun_0100"
+		}
+	},
+	hero_murglun_0101 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			110,
+			79,
+			60
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			2150,
+			144,
+			199
+		},
+		alias = {}
+	},
+	hero_murglun_0102 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			81,
+			109,
+			75,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			827,
+			203,
+			128,
+			197
+		},
+		alias = {
+			"hero_murglun_0103"
+		}
+	},
+	hero_murglun_0104 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			77,
+			106,
+			84,
+			62
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			1019,
+			123,
+			201
+		},
+		alias = {
+			"hero_murglun_0105"
+		}
+	},
+	hero_murglun_0106 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			84,
+			106,
+			87,
+			71
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			2151,
+			113,
+			192
+		},
+		alias = {}
+	},
+	hero_murglun_0107 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			87,
+			110,
+			68,
+			74
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3349,
+			5,
+			129,
+			185
+		},
+		alias = {}
+	},
+	hero_murglun_0108 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			86,
+			90,
+			71,
+			78
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			611,
+			127,
+			201
+		},
+		alias = {}
+	},
+	hero_murglun_0109 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			86,
+			90,
+			71,
+			78
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			815,
+			127,
+			201
+		},
+		alias = {}
+	},
+	hero_murglun_0110 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			87,
+			80,
+			86,
+			80
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			1727,
+			111,
+			209
+		},
+		alias = {}
+	},
+	hero_murglun_0111 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			87,
+			80,
+			86,
+			80
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			1939,
+			111,
+			209
+		},
+		alias = {}
+	},
+	hero_murglun_0112 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			49,
+			59,
+			64,
+			100
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			1862,
+			171,
+			210
+		},
+		alias = {
+			"hero_murglun_0113"
+		}
+	},
+	hero_murglun_0114 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			2,
+			65,
+			29,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			5,
+			253,
+			195
+		},
+		alias = {
+			"hero_murglun_0115"
+		}
+	},
+	hero_murglun_0116 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			12,
+			54,
+			37,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			203,
+			235,
+			197
+		},
+		alias = {
+			"hero_murglun_0117"
+		}
+	},
+	hero_murglun_0118 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			23,
+			46,
+			54,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			2617,
+			207,
+			208
+		},
+		alias = {
+			"hero_murglun_0119"
+		}
+	},
+	hero_murglun_0120 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			28,
+			46,
+			59,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			403,
+			197,
+			205
+		},
+		alias = {}
+	},
+	hero_murglun_0121 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			28,
+			46,
+			59,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			964,
+			403,
+			197,
+			205
+		},
+		alias = {}
+	},
+	hero_murglun_0122 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			32,
+			53,
+			67,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1574,
+			403,
+			185,
+			202
+		},
+		alias = {}
+	},
+	hero_murglun_0123 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			32,
+			53,
+			67,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1762,
+			403,
+			185,
+			202
+		},
+		alias = {}
+	},
+	hero_murglun_0124 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			35,
+			54,
+			66,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1950,
+			403,
+			183,
+			203
+		},
+		alias = {}
+	},
+	hero_murglun_0125 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			35,
+			54,
+			66,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2136,
+			403,
+			183,
+			203
+		},
+		alias = {}
+	},
+	hero_murglun_0126 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			39,
+			54,
+			66,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2322,
+			403,
+			179,
+			203
+		},
+		alias = {}
+	},
+	hero_murglun_0127 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			39,
+			54,
+			66,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2504,
+			403,
+			179,
+			203
+		},
+		alias = {}
+	},
+	hero_murglun_0128 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			48,
+			73,
+			76,
+			110
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3692,
+			403,
+			160,
+			186
+		},
+		alias = {}
+	},
+	hero_murglun_0129 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			48,
+			73,
+			76,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3529,
+			403,
+			160,
+			187
+		},
+		alias = {}
+	},
+	hero_murglun_0130 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			90,
+			71,
+			107
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			3714,
+			152,
+			172
+		},
+		alias = {
+			"hero_murglun_0131"
+		}
+	},
+	hero_murglun_0132 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			74,
+			90,
+			73,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3481,
+			5,
+			137,
+			174
+		},
+		alias = {
+			"hero_murglun_0133"
+		}
+	},
+	hero_murglun_0134 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			56,
+			115,
+			72,
+			89
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1150,
+			5,
+			156,
+			165
+		},
+		alias = {
+			"hero_murglun_0135"
+		}
+	},
+	hero_murglun_0136 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			67,
+			115,
+			73,
+			73
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			3889,
+			144,
+			181
+		},
+		alias = {}
+	},
+	hero_murglun_0137 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			78,
+			113,
+			72,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3195,
+			203,
+			134,
+			142
+		},
+		alias = {
+			"hero_murglun_0138"
+		}
+	},
+	hero_murglun_0139 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			90,
+			110,
+			71,
+			135
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			3430,
+			123,
+			124
+		},
+		alias = {
+			"hero_murglun_0140"
+		}
+	},
+	hero_murglun_0141 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			67,
+			72,
+			58,
+			148
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3777,
+			5,
+			159,
+			149
+		},
+		alias = {
+			"hero_murglun_0142"
+		}
+	},
+	hero_murglun_0143 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			67,
+			28,
+			51,
+			126
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			2075,
+			166,
+			215
+		},
+		alias = {
+			"hero_murglun_0144"
+		}
+	},
+	hero_murglun_0145 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			65,
+			21,
+			50,
+			95
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			3086,
+			169,
+			253
+		},
+		alias = {
+			"hero_murglun_0146"
+		}
+	},
+	hero_murglun_0147 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			72,
+			20,
+			49,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			3571,
+			163,
+			257
+		},
+		alias = {
+			"hero_murglun_0148"
+		}
+	},
+	hero_murglun_0149 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			17,
+			46,
+			89
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			3160,
+			168,
+			263
+		},
+		alias = {
+			"hero_murglun_0150"
+		}
+	},
+	hero_murglun_0151 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			13,
+			43,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			757,
+			175,
+			271
+		},
+		alias = {}
+	},
+	hero_murglun_0152 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			13,
+			43,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			1031,
+			175,
+			271
+		},
+		alias = {}
+	},
+	hero_murglun_0153 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			67,
+			16,
+			44,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			1576,
+			173,
+			268
+		},
+		alias = {}
+	},
+	hero_murglun_0154 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			16,
+			44,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			1305,
+			174,
+			268
+		},
+		alias = {}
+	},
+	hero_murglun_0155 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			68,
+			20,
+			46,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			2629,
+			170,
+			262
+		},
+		alias = {}
+	},
+	hero_murglun_0156 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			56,
+			20,
+			44,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			2517,
+			184,
+			262
+		},
+		alias = {}
+	},
+	hero_murglun_0157 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			56,
+			27,
+			44,
+			70
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			1976,
+			184,
+			272
+		},
+		alias = {}
+	},
+	hero_murglun_0158 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			27,
+			39,
+			70
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			1424,
+			191,
+			272
+		},
+		alias = {}
+	},
+	hero_murglun_0159 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			35,
+			39,
+			51
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			861,
+			191,
+			283
+		},
+		alias = {}
+	},
+	hero_murglun_0160 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			35,
+			35,
+			51
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			5,
+			195,
+			283
+		},
+		alias = {}
+	},
+	hero_murglun_0161 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			69,
+			35,
+			53
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			2782,
+			195,
+			247
+		},
+		alias = {}
+	},
+	hero_murglun_0162 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			51,
+			69,
+			31,
+			53
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			258,
+			202,
+			247
+		},
+		alias = {}
+	},
+	hero_murglun_0163 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			51,
+			90,
+			31,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1164,
+			403,
+			202,
+			186
+		},
+		alias = {}
+	},
+	hero_murglun_0164 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			68,
+			93,
+			69,
+			54
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			3520,
+			147,
+			222
+		},
+		alias = {
+			"hero_murglun_0165"
+		}
+	},
+	hero_murglun_0166 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			77,
+			103,
+			66,
+			54
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			1291,
+			141,
+			212
+		},
+		alias = {
+			"hero_murglun_0167"
+		}
+	},
+	hero_murglun_0168 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			72,
+			177,
+			68,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			3969,
+			144,
+			116
+		},
+		alias = {
+			"hero_murglun_0169"
+		}
+	},
+	hero_murglun_0170 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			72,
+			126,
+			72,
+			95
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2656,
+			203,
+			140,
+			148
+		},
+		alias = {
+			"hero_murglun_0171"
+		}
+	},
+	hero_murglun_0172 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			76,
+			74,
+			71,
+			123
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1096,
+			203,
+			137,
+			172
+		},
+		alias = {
+			"hero_murglun_0173"
+		}
+	},
+	hero_murglun_0174 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			55,
+			89,
+			74,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			3357,
+			155,
+			171
+		},
+		alias = {
+			"hero_murglun_0175"
+		}
+	},
+	hero_murglun_0176 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			61,
+			84,
+			74,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			998,
+			5,
+			149,
+			173
+		},
+		alias = {}
+	},
+	hero_murglun_0177 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			83,
+			76,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2783,
+			5,
+			142,
+			174
+		},
+		alias = {
+			"hero_murglun_0178"
+		}
+	},
+	hero_murglun_0179 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			69,
+			78,
+			71,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1451,
+			5,
+			144,
+			178
+		},
+		alias = {
+			"hero_murglun_0180"
+		}
+	},
+	hero_murglun_0181 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			58,
+			91,
+			54,
+			104
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3354,
+			403,
+			172,
+			174
+		},
+		alias = {
+			"hero_murglun_0182"
+		}
+	},
+	hero_murglun_0183 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			99,
+			41,
+			69
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2686,
+			403,
+			173,
+			201
+		},
+		alias = {
+			"hero_murglun_0184"
+		}
+	},
+	hero_murglun_0185 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			69,
+			96,
+			43,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			403,
+			172,
+			236
+		},
+		alias = {
+			"hero_murglun_0186"
+		}
+	},
+	hero_murglun_0187 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			47,
+			99,
+			27,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			5,
+			210,
+			250
+		},
+		alias = {
+			"hero_murglun_0188"
+		}
+	},
+	hero_murglun_0189 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			97,
+			50,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			2828,
+			168,
+			255
+		},
+		alias = {
+			"hero_murglun_0190"
+		}
+	},
+	hero_murglun_0191 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			65,
+			97,
+			71,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			1116,
+			148,
+			257
+		},
+		alias = {}
+	},
+	hero_murglun_0192 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			65,
+			97,
+			71,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			1376,
+			148,
+			257
+		},
+		alias = {}
+	},
+	hero_murglun_0193 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			112,
+			71,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			2293,
+			140,
+			247
+		},
+		alias = {}
+	},
+	hero_murglun_0194 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			112,
+			71,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			2543,
+			140,
+			247
+		},
+		alias = {}
+	},
+	hero_murglun_0195 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			111,
+			73,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			2793,
+			138,
+			248
+		},
+		alias = {}
+	},
+	hero_murglun_0196 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			73,
+			111,
+			73,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			3044,
+			138,
+			248
+		},
+		alias = {}
+	},
+	hero_murglun_0197 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			101,
+			113,
+			84,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			1223,
+			99,
+			249
+		},
+		alias = {}
+	},
+	hero_murglun_0198 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			101,
+			113,
+			84,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			1475,
+			99,
+			249
+		},
+		alias = {}
+	},
+	hero_murglun_0199 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			119,
+			112,
+			87,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			2346,
+			78,
+			250
+		},
+		alias = {}
+	},
+	hero_murglun_0200 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			119,
+			112,
+			87,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			2599,
+			78,
+			250
+		},
+		alias = {}
+	},
+	hero_murglun_0201 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			118,
+			264,
+			110,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2900,
+			56,
+			97
+		},
+		alias = {}
+	},
+	hero_murglun_0202 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			118,
+			264,
+			109,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2800,
+			57,
+			97
+		},
+		alias = {}
+	},
+	hero_murglun_0203 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			261,
+			109,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2341,
+			58,
+			100
+		},
+		alias = {}
+	},
+	hero_murglun_0204 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			261,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2235,
+			58,
+			103
+		},
+		alias = {}
+	},
+	hero_murglun_0205 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			259,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1587,
+			58,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_0206 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			259,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1695,
+			58,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_0207 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			259,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1803,
+			58,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_0208 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			259,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1911,
+			58,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_0209 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			258,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1199,
+			58,
+			106
+		},
+		alias = {
+			"hero_murglun_0210"
+		}
+	},
+	hero_murglun_0211 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			259,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2019,
+			58,
+			105
+		},
+		alias = {
+			"hero_murglun_0212"
+		}
+	},
+	hero_murglun_0213 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			259,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2127,
+			58,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_0214 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			117,
+			317,
+			109,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3528,
+			957,
+			58,
+			47
+		},
+		alias = {}
+	},
+	hero_murglun_0215 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			116,
+			319,
+			109,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1014,
+			4047,
+			59,
+			46
+		},
+		alias = {
+			"hero_murglun_0216"
+		}
+	},
+	hero_murglun_0217 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			116,
+			324,
+			110,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2656,
+			354,
+			58,
+			45
+		},
+		alias = {
+			"hero_murglun_0218"
+		}
+	},
+	hero_murglun_0219 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			115,
+			325,
+			106,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3434,
+			356,
+			63,
+			44
+		},
+		alias = {
+			"hero_murglun_0220",
+			"hero_murglun_0221"
+		}
+	},
+	hero_murglun_0222 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			116,
+			281,
+			108,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3331,
+			60,
+			86
+		},
+		alias = {}
+	},
+	hero_murglun_0223 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			116,
+			281,
+			108,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3420,
+			60,
+			86
+		},
+		alias = {}
+	},
+	hero_murglun_0224 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			114,
+			265,
+			110,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3173,
+			60,
+			87
+		},
+		alias = {}
+	},
+	hero_murglun_0225 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			110,
+			222,
+			90,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4004,
+			203,
+			84,
+			130
+		},
+		alias = {}
+	},
+	hero_murglun_0226 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			110,
+			222,
+			90,
+			19
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			852,
+			84,
+			128
+		},
+		alias = {}
+	},
+	hero_murglun_0227 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			100,
+			161,
+			87,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3679,
+			203,
+			97,
+			184
+		},
+		alias = {}
+	},
+	hero_murglun_0228 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			100,
+			161,
+			87,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3779,
+			203,
+			97,
+			184
+		},
+		alias = {}
+	},
+	hero_murglun_0229 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			77,
+			123,
+			73,
+			22
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			1064,
+			134,
+			224
+		},
+		alias = {}
+	},
+	hero_murglun_0230 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			77,
+			123,
+			73,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			835,
+			134,
+			226
+		},
+		alias = {}
+	},
+	hero_murglun_0231 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			88,
+			120,
+			73,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			2541,
+			123,
+			232
+		},
+		alias = {}
+	},
+	hero_murglun_0232 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			88,
+			120,
+			73,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			1720,
+			123,
+			238
+		},
+		alias = {}
+	},
+	hero_murglun_0233 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			83,
+			59,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			3426,
+			159,
+			275
+		},
+		alias = {}
+	},
+	hero_murglun_0234 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			83,
+			59,
+			14
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			3704,
+			159,
+			272
+		},
+		alias = {}
+	},
+	hero_murglun_0235 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			65,
+			39,
+			53,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			1987,
+			166,
+			318
+		},
+		alias = {}
+	},
+	hero_murglun_0236 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			65,
+			39,
+			53,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			2308,
+			166,
+			318
+		},
+		alias = {}
+	},
+	hero_murglun_0237 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			63,
+			31,
+			51,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			5,
+			170,
+			327
+		},
+		alias = {}
+	},
+	hero_murglun_0238 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			63,
+			31,
+			51,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			335,
+			170,
+			327
+		},
+		alias = {}
+	},
+	hero_murglun_0239 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			31,
+			51,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			1329,
+			163,
+			326
+		},
+		alias = {}
+	},
+	hero_murglun_0240 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			70,
+			31,
+			51,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			1658,
+			163,
+			326
+		},
+		alias = {}
+	},
+	hero_murglun_0241 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			68,
+			28,
+			49,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			665,
+			167,
+			329
+		},
+		alias = {}
+	},
+	hero_murglun_0242 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			68,
+			28,
+			49,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			997,
+			167,
+			329
+		},
+		alias = {}
+	},
+	hero_murglun_0243 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			63,
+			24,
+			44,
+			75
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			3281,
+			177,
+			270
+		},
+		alias = {}
+	},
+	hero_murglun_0244 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			63,
+			24,
+			44,
+			75
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			3554,
+			177,
+			270
+		},
+		alias = {}
+	},
+	hero_murglun_0245 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			27,
+			46,
+			75
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			2117,
+			172,
+			267
+		},
+		alias = {}
+	},
+	hero_murglun_0246 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			65,
+			27,
+			46,
+			75
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			1847,
+			173,
+			267
+		},
+		alias = {}
+	},
+	hero_murglun_0247 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			66,
+			30,
+			49,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			2894,
+			169,
+			263
+		},
+		alias = {}
+	},
+	hero_murglun_0248 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			30,
+			46,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			2251,
+			184,
+			263
+		},
+		alias = {}
+	},
+	hero_murglun_0249 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			54,
+			36,
+			46,
+			59
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			1699,
+			184,
+			274
+		},
+		alias = {}
+	},
+	hero_murglun_0250 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			51,
+			36,
+			41,
+			59
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			1147,
+			192,
+			274
+		},
+		alias = {}
+	},
+	hero_murglun_0251 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			51,
+			46,
+			41,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			576,
+			192,
+			282
+		},
+		alias = {}
+	},
+	hero_murglun_0252 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			53,
+			46,
+			36,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			291,
+			195,
+			282
+		},
+		alias = {}
+	},
+	hero_murglun_0253 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			53,
+			80,
+			36,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			178,
+			3032,
+			195,
+			246
+		},
+		alias = {}
+	},
+	hero_murglun_0254 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			49,
+			80,
+			33,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			376,
+			508,
+			202,
+			246
+		},
+		alias = {}
+	},
+	hero_murglun_0255 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			49,
+			100,
+			33,
+			83
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1369,
+			403,
+			202,
+			186
+		},
+		alias = {}
+	},
+	hero_murglun_0256 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			67,
+			104,
+			71,
+			44
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			589,
+			3745,
+			146,
+			221
+		},
+		alias = {
+			"hero_murglun_0257"
+		}
+	},
+	hero_murglun_0258 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			76,
+			114,
+			68,
+			44
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			764,
+			1506,
+			140,
+			211
+		},
+		alias = {
+			"hero_murglun_0259"
+		}
+	},
+	hero_murglun_0260 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			71,
+			188,
+			70,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			611,
+			143,
+			115
+		},
+		alias = {
+			"hero_murglun_0261"
+		}
+	},
+	hero_murglun_0262 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			71,
+			136,
+			74,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2799,
+			203,
+			139,
+			148
+		},
+		alias = {
+			"hero_murglun_0263"
+		}
+	},
+	hero_murglun_0264 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			284,
+			369
+		},
+		trim = {
+			74,
+			84,
+			73,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1236,
+			203,
+			137,
+			172
+		},
+		alias = {
+			"hero_murglun_0265"
+		}
+	},
+	hero_murglun_attack_decals_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			73,
+			38
+		},
+		trim = {
+			4,
+			0,
+			4,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2797,
+			810,
+			65,
+			38
+		},
+		alias = {}
+	},
+	hero_murglun_attack_decals_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			73,
+			38
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3558,
+			359,
+			73,
+			38
+		},
+		alias = {}
+	},
+	hero_murglun_attack_decals_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			73,
+			38
+		},
+		trim = {
+			4,
+			0,
+			4,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1666,
+			359,
+			65,
+			38
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			14,
+			30,
+			11,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3094,
+			818,
+			33,
+			31
+		},
+		alias = {
+			"hero_murglun_attack_explotion_0002"
+		}
+	},
+	hero_murglun_attack_explotion_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			3,
+			7,
+			3,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3418,
+			957,
+			52,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			3,
+			7,
+			3,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3304,
+			957,
+			52,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			0,
+			5,
+			2,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1446,
+			1086,
+			56,
+			63
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			0,
+			5,
+			2,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1412,
+			56,
+			65
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			2,
+			3,
+			0,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1200,
+			56,
+			67
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			2,
+			3,
+			0,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1270,
+			56,
+			67
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			4,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1340,
+			53,
+			69
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			4,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			890,
+			1882,
+			53,
+			70
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			4,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4040,
+			611,
+			53,
+			71
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			4,
+			0,
+			1,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3645,
+			957,
+			53,
+			47
+		},
+		alias = {}
+	},
+	hero_murglun_attack_explotion_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			5,
+			0,
+			2,
+			25
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			890,
+			2727,
+			51,
+			46
+		},
+		alias = {
+			"hero_murglun_attack_explotion_0014"
+		}
+	},
+	hero_murglun_attack_explotion_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			13,
+			0,
+			7,
+			39
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2745,
+			812,
+			38,
+			32
+		},
+		alias = {
+			"hero_murglun_attack_explotion_0016"
+		}
+	},
+	hero_murglun_attack_explotion_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			71
+		},
+		trim = {
+			14,
+			0,
+			9,
+			40
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3018,
+			818,
+			35,
+			31
+		},
+		alias = {
+			"hero_murglun_attack_explotion_0018"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			14,
+			27,
+			11,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2840,
+			926,
+			33,
+			28
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0002"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			3,
+			8,
+			3,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3473,
+			957,
+			52,
+			58
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0004"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			0,
+			6,
+			2,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4034,
+			852,
+			56,
+			58
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0006"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			2,
+			5,
+			0,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3359,
+			957,
+			56,
+			56
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0008"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			4,
+			3,
+			1,
+			13
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3589,
+			957,
+			53,
+			50
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0010"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			4,
+			2,
+			1,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3701,
+			957,
+			53,
+			47
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0012"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			5,
+			0,
+			2,
+			19
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3950,
+			350,
+			51,
+			47
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0014"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			13,
+			0,
+			7,
+			34
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3782,
+			816,
+			38,
+			32
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0016"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			14,
+			0,
+			9,
+			36
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3056,
+			818,
+			35,
+			30
+		},
+		alias = {
+			"hero_murglun_attack_explotion_basic_0018"
+		}
+	},
+	hero_murglun_attack_explotion_basic_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			58,
+			66
+		},
+		trim = {
+			0,
+			0,
+			58,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1131,
+			58,
+			66
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			13,
+			17,
+			21,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3942,
+			821,
+			32,
+			26
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			17,
+			17,
+			20,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4010,
+			821,
+			29,
+			26
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			13,
+			18,
+			17,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3190,
+			926,
+			36,
+			27
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			13,
+			18,
+			17,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3229,
+			926,
+			36,
+			27
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			16,
+			19,
+			12,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1217,
+			1598,
+			38,
+			25
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			16,
+			19,
+			12,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2799,
+			926,
+			38,
+			25
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			20,
+			19,
+			13,
+			19
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2706,
+			932,
+			33,
+			22
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			20,
+			20,
+			13,
+			19
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2368,
+			926,
+			33,
+			21
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			25,
+			21,
+			12,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1221,
+			1389,
+			29,
+			19
+		},
+		alias = {}
+	},
+	hero_murglun_attack_particle_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			66,
+			60
+		},
+		trim = {
+			27,
+			22,
+			12,
+			21
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1226,
+			1180,
+			27,
+			17
+		},
+		alias = {}
+	},
+	hero_murglun_attack_proy = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			37,
+			37
+		},
+		trim = {
+			4,
+			8,
+			6,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1620,
+			823,
+			27,
+			24
+		},
+		alias = {}
+	},
+	hero_murglun_death_smoke_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2267,
+			816,
+			13,
+			23
+		},
+		alias = {
+			"hero_murglun_death_smoke_0002"
+		}
+	},
+	hero_murglun_death_smoke_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1943,
+			366,
+			13,
+			23
+		},
+		alias = {
+			"hero_murglun_death_smoke_0004"
+		}
+	},
+	hero_murglun_death_smoke_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1141,
+			3225,
+			13,
+			23
+		},
+		alias = {
+			"hero_murglun_death_smoke_0006"
+		}
+	},
+	hero_murglun_death_smoke_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1143,
+			2444,
+			13,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0008"
+		}
+	},
+	hero_murglun_death_smoke_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1143,
+			2469,
+			13,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0010"
+		}
+	},
+	hero_murglun_death_smoke_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1143,
+			2494,
+			13,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0012"
+		}
+	},
+	hero_murglun_death_smoke_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			1,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1138,
+			2800,
+			12,
+			21
+		},
+		alias = {
+			"hero_murglun_death_smoke_0014"
+		}
+	},
+	hero_murglun_death_smoke_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			2,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1139,
+			1225,
+			10,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0016"
+		}
+	},
+	hero_murglun_death_smoke_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			2,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1138,
+			2849,
+			10,
+			23
+		},
+		alias = {
+			"hero_murglun_death_smoke_0018"
+		}
+	},
+	hero_murglun_death_smoke_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			2,
+			0,
+			2,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1139,
+			1275,
+			9,
+			23
+		},
+		alias = {
+			"hero_murglun_death_smoke_0020"
+		}
+	},
+	hero_murglun_death_smoke_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			2,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1139,
+			1199,
+			10,
+			23
+		},
+		alias = {
+			"hero_murglun_death_smoke_0022"
+		}
+	},
+	hero_murglun_death_smoke_0023 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			2,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1139,
+			1250,
+			10,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0024"
+		}
+	},
+	hero_murglun_death_smoke_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1138,
+			2824,
+			11,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0026"
+		}
+	},
+	hero_murglun_death_smoke_0027 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1142,
+			2706,
+			13,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0028"
+		}
+	},
+	hero_murglun_death_smoke_0029 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1142,
+			2756,
+			13,
+			21
+		},
+		alias = {
+			"hero_murglun_death_smoke_0030"
+		}
+	},
+	hero_murglun_death_smoke_0031 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1142,
+			2731,
+			13,
+			22
+		},
+		alias = {
+			"hero_murglun_death_smoke_0032"
+		}
+	},
+	hero_murglun_geiser_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			24,
+			117,
+			17,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			914,
+			3686,
+			31,
+			24
+		},
+		alias = {
+			"hero_murglun_geiser_0002"
+		}
+	},
+	hero_murglun_geiser_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			21,
+			68,
+			19,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1222,
+			1480,
+			32,
+			66
+		},
+		alias = {
+			"hero_murglun_geiser_0004"
+		}
+	},
+	hero_murglun_geiser_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			21,
+			55,
+			14,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			138,
+			3979,
+			37,
+			82
+		},
+		alias = {
+			"hero_murglun_geiser_0006"
+		}
+	},
+	hero_murglun_geiser_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			13,
+			48,
+			2,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3000,
+			57,
+			92
+		},
+		alias = {
+			"hero_murglun_geiser_0008"
+		}
+	},
+	hero_murglun_geiser_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			11,
+			46,
+			0,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2706,
+			61,
+			91
+		},
+		alias = {
+			"hero_murglun_geiser_0010"
+		}
+	},
+	hero_murglun_geiser_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			10,
+			44,
+			0,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2444,
+			62,
+			93
+		},
+		alias = {
+			"hero_murglun_geiser_0012"
+		}
+	},
+	hero_murglun_geiser_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			42,
+			1,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2984,
+			852,
+			69,
+			95
+		},
+		alias = {
+			"hero_murglun_geiser_0014"
+		}
+	},
+	hero_murglun_geiser_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			40,
+			2,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3285,
+			852,
+			68,
+			96
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			40,
+			2,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3356,
+			852,
+			68,
+			96
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			8,
+			38,
+			0,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1389,
+			64,
+			96
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0018 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			8,
+			38,
+			0,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1488,
+			64,
+			96
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			8,
+			35,
+			0,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3575,
+			852,
+			64,
+			100
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			7,
+			35,
+			0,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3427,
+			852,
+			65,
+			100
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			7,
+			35,
+			1,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3056,
+			852,
+			64,
+			102
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0022 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			7,
+			35,
+			1,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3123,
+			852,
+			64,
+			102
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0023 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			34,
+			2,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			983,
+			68,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0024 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			34,
+			2,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1091,
+			68,
+			105
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			35,
+			15,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			890,
+			2541,
+			55,
+			90
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0026 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			2,
+			35,
+			15,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			890,
+			2634,
+			55,
+			90
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0027 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			6,
+			35,
+			16,
+			29
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			890,
+			1720,
+			50,
+			78
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0028 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			6,
+			35,
+			16,
+			29
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			890,
+			1801,
+			50,
+			78
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0029 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			6,
+			61,
+			34,
+			44
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2941,
+			363,
+			32,
+			37
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_0030 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			7,
+			61,
+			35,
+			55
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3977,
+			821,
+			30,
+			26
+		},
+		alias = {
+			"hero_murglun_geiser_0031"
+		}
+	},
+	hero_murglun_geiser_0032 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			9,
+			61,
+			36,
+			56
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2404,
+			926,
+			27,
+			25
+		},
+		alias = {
+			"hero_murglun_geiser_0033"
+		}
+	},
+	hero_murglun_geiser_0034 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			72,
+			142
+		},
+		trim = {
+			0,
+			0,
+			72,
+			142
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4013,
+			403,
+			72,
+			142
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_death_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			10,
+			38,
+			8,
+			13
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1680,
+			823,
+			26,
+			20
+		},
+		alias = {
+			"hero_murglun_geiser_death_0002"
+		}
+	},
+	hero_murglun_geiser_death_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			2,
+			23,
+			2,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3634,
+			359,
+			40,
+			40
+		},
+		alias = {
+			"hero_murglun_geiser_death_0004"
+		}
+	},
+	hero_murglun_geiser_death_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			0,
+			21,
+			1,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3500,
+			356,
+			43,
+			40
+		},
+		alias = {
+			"hero_murglun_geiser_death_0006"
+		}
+	},
+	hero_murglun_geiser_death_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			1,
+			19,
+			0,
+			13
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2865,
+			810,
+			43,
+			39
+		},
+		alias = {
+			"hero_murglun_geiser_death_0008"
+		}
+	},
+	hero_murglun_geiser_death_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			2,
+			18,
+			0,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			902,
+			3076,
+			42,
+			36
+		},
+		alias = {
+			"hero_murglun_geiser_death_0010"
+		}
+	},
+	hero_murglun_geiser_death_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			2,
+			18,
+			0,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3737,
+			816,
+			42,
+			33
+		},
+		alias = {
+			"hero_murglun_geiser_death_0012"
+		}
+	},
+	hero_murglun_geiser_death_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			4,
+			17,
+			1,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			902,
+			3029,
+			39,
+			44
+		},
+		alias = {
+			"hero_murglun_geiser_death_0014"
+		}
+	},
+	hero_murglun_geiser_death_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			8,
+			18,
+			5,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3895,
+			157,
+			31,
+			43
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_death_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			8,
+			18,
+			5,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1224,
+			1412,
+			31,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_geiser_death_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			6,
+			18,
+			5,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1221,
+			1340,
+			33,
+			46
+		},
+		alias = {
+			"hero_murglun_geiser_death_0018"
+		}
+	},
+	hero_murglun_geiser_death_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			5,
+			20,
+			4,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1217,
+			1550,
+			35,
+			45
+		},
+		alias = {
+			"hero_murglun_geiser_death_0020"
+		}
+	},
+	hero_murglun_geiser_death_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			9,
+			19,
+			10,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			736,
+			3969,
+			25,
+			46
+		},
+		alias = {
+			"hero_murglun_geiser_death_0022"
+		}
+	},
+	hero_murglun_geiser_death_0023 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			9,
+			18,
+			10,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1137,
+			2900,
+			25,
+			47
+		},
+		alias = {
+			"hero_murglun_geiser_death_0024"
+		}
+	},
+	hero_murglun_geiser_death_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			9,
+			18,
+			10,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1137,
+			2950,
+			25,
+			47
+		},
+		alias = {
+			"hero_murglun_geiser_death_0026"
+		}
+	},
+	hero_murglun_geiser_death_0027 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			71
+		},
+		trim = {
+			9,
+			53,
+			10,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1224,
+			1461,
+			25,
+			12
+		},
+		alias = {
+			"hero_murglun_geiser_death_0028"
+		}
+	},
+	hero_murglun_heat_wave_decal = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			185,
+			185
+		},
+		trim = {
+			16,
+			15,
+			16,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3621,
+			5,
+			153,
+			155
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			25,
+			3,
+			38,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2145,
+			852,
+			93,
+			87
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			18,
+			6,
+			38,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1952,
+			852,
+			100,
+			84
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			18,
+			6,
+			32,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3942,
+			729,
+			106,
+			89
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			11,
+			9,
+			32,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3018,
+			729,
+			113,
+			86
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			11,
+			11,
+			28,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2407,
+			729,
+			117,
+			86
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			13,
+			28,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2162,
+			729,
+			121,
+			84
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			17,
+			24,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2669,
+			729,
+			125,
+			80
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			5,
+			19,
+			24,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2797,
+			729,
+			127,
+			78
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			5,
+			10,
+			17,
+			29
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1469,
+			852,
+			134,
+			67
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			10,
+			17,
+			29
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1700,
+			852,
+			132,
+			67
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			9,
+			10,
+			25
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2527,
+			729,
+			139,
+			72
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			4,
+			9,
+			10,
+			25
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1894,
+			729,
+			142,
+			72
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			4,
+			10,
+			5,
+			21
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1345,
+			729,
+			147,
+			75
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0014 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			2,
+			10,
+			5,
+			21
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1193,
+			729,
+			149,
+			75
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			2,
+			13,
+			2,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3885,
+			611,
+			152,
+			76
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			3,
+			10,
+			2,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3491,
+			611,
+			151,
+			79
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			3,
+			10,
+			5,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1743,
+			729,
+			148,
+			72
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0018 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			3,
+			5,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3219,
+			611,
+			144,
+			85
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			3,
+			31,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2286,
+			729,
+			118,
+			86
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			12,
+			6,
+			31,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3737,
+			729,
+			113,
+			84
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			6,
+			29,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1620,
+			729,
+			120,
+			91
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0022 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			7,
+			12,
+			29,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2039,
+			729,
+			120,
+			85
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0023 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			5,
+			12,
+			29,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1495,
+			729,
+			122,
+			90
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0024 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			5,
+			3,
+			29,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3366,
+			611,
+			122,
+			99
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			8,
+			3,
+			31,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3765,
+			611,
+			117,
+			101
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0026 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			8,
+			2,
+			31,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3645,
+			611,
+			117,
+			102
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0027 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			28,
+			2,
+			36,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			852,
+			92,
+			102
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx1_0028 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			156,
+			106
+		},
+		trim = {
+			25,
+			3,
+			36,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3415,
+			729,
+			95,
+			101
+		},
+		alias = {}
+	},
+	hero_murglun_heat_wave_fx2_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			34,
+			63,
+			80,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2531,
+			935,
+			26,
+			18
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0002",
+			"hero_murglun_heat_wave_fx2_0003"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			34,
+			51,
+			82,
+			39
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3823,
+			816,
+			24,
+			29
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0005",
+			"hero_murglun_heat_wave_fx2_0006"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			24,
+			44,
+			25,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1258,
+			1086,
+			91,
+			64
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0008",
+			"hero_murglun_heat_wave_fx2_0009"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			21,
+			34,
+			27,
+			14
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3190,
+			852,
+			92,
+			71
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0011",
+			"hero_murglun_heat_wave_fx2_0012"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			20,
+			25,
+			30,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2706,
+			852,
+			90,
+			77
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0014",
+			"hero_murglun_heat_wave_fx2_0015"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			24,
+			22,
+			34,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2899,
+			852,
+			82,
+			82
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0017",
+			"hero_murglun_heat_wave_fx2_0018"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			27,
+			19,
+			46,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2540,
+			67,
+			84
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0020",
+			"hero_murglun_heat_wave_fx2_0021",
+			"hero_murglun_heat_wave_fx2_0052",
+			"hero_murglun_heat_wave_fx2_0053",
+			"hero_murglun_heat_wave_fx2_0054"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0022 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			18,
+			15,
+			31,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2241,
+			852,
+			91,
+			86
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0023",
+			"hero_murglun_heat_wave_fx2_0024",
+			"hero_murglun_heat_wave_fx2_0055",
+			"hero_murglun_heat_wave_fx2_0056",
+			"hero_murglun_heat_wave_fx2_0057"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			15,
+			34,
+			29,
+			23
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1258,
+			1021,
+			96,
+			62
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0026",
+			"hero_murglun_heat_wave_fx2_0027",
+			"hero_murglun_heat_wave_fx2_0058",
+			"hero_murglun_heat_wave_fx2_0059",
+			"hero_murglun_heat_wave_fx2_0060"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0028 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			15,
+			32,
+			28,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2799,
+			852,
+			97,
+			71
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0029",
+			"hero_murglun_heat_wave_fx2_0030"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0031 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			22,
+			46,
+			33,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2324,
+			957,
+			85,
+			56
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0032",
+			"hero_murglun_heat_wave_fx2_0033"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0034 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			34,
+			46,
+			34,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2864,
+			957,
+			72,
+			55
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0035",
+			"hero_murglun_heat_wave_fx2_0036"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0037 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			34,
+			42,
+			40,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3164,
+			957,
+			66,
+			53
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0038",
+			"hero_murglun_heat_wave_fx2_0039"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0040 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			24,
+			44,
+			25,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1352,
+			1086,
+			91,
+			64
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0041",
+			"hero_murglun_heat_wave_fx2_0042"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0043 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			21,
+			34,
+			11,
+			14
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2335,
+			852,
+			108,
+			71
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0044",
+			"hero_murglun_heat_wave_fx2_0045"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0046 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			20,
+			25,
+			6,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1835,
+			852,
+			114,
+			77
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0047",
+			"hero_murglun_heat_wave_fx2_0048"
+		}
+	},
+	hero_murglun_heat_wave_fx2_0049 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			140,
+			119
+		},
+		trim = {
+			24,
+			22,
+			5,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1355,
+			852,
+			111,
+			82
+		},
+		alias = {
+			"hero_murglun_heat_wave_fx2_0050",
+			"hero_murglun_heat_wave_fx2_0051"
+		}
+	},
+	hero_murglun_lava_blood_explotion_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			2,
+			12,
+			0,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1141,
+			3200,
+			18,
+			22
+		},
+		alias = {
+			"hero_murglun_lava_blood_explotion_0002"
+		}
+	},
+	hero_murglun_lava_blood_explotion_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			2,
+			9,
+			0,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2234,
+			357,
+			18,
+			25
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			0,
+			9,
+			0,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1141,
+			3173,
+			20,
+			24
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			0,
+			6,
+			0,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2876,
+			926,
+			20,
+			27
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			0,
+			6,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1141,
+			3989,
+			20,
+			29
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			0,
+			3,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1141,
+			3954,
+			20,
+			32
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			3,
+			3,
+			0,
+			21
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2234,
+			385,
+			17,
+			11
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			4,
+			0,
+			1,
+			26
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1142,
+			2780,
+			15,
+			9
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_explotion_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			20,
+			35
+		},
+		trim = {
+			0,
+			0,
+			20,
+			35
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3048,
+			363,
+			20,
+			35
+		},
+		alias = {}
+	},
+	hero_murglun_lava_blood_proy = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			26,
+			14
+		},
+		trim = {
+			3,
+			3,
+			2,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3233,
+			1009,
+			21,
+			8
+		},
+		alias = {}
+	},
+	hero_murglun_shadow = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			44,
+			16
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2742,
+			932,
+			44,
+			16
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			3979,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1224,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1357,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1490,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1623,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1756,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1889,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2022,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2155,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2288,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2421,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2554,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2687,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0014 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2820,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2953,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_tower_fx_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			133,
+			124
+		},
+		trim = {
+			2,
+			14,
+			1,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3086,
+			611,
+			130,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_decal = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			94,
+			60
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2052,
+			957,
+			92,
+			56
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			85,
+			71,
+			71,
+			49
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2717,
+			354,
+			48,
+			45
+		},
+		alias = {
+			"hero_murglun_ultimate_explotion_0002"
+		}
+	},
+	hero_murglun_ultimate_explotion_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			68,
+			38,
+			59,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3495,
+			852,
+			77,
+			84
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			65,
+			38,
+			59,
+			39
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2623,
+			852,
+			80,
+			88
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			64,
+			35,
+			58,
+			39
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2446,
+			852,
+			82,
+			91
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			59,
+			35,
+			58,
+			35
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2055,
+			852,
+			87,
+			95
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			59,
+			31,
+			54,
+			35
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1606,
+			852,
+			91,
+			99
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			31,
+			54,
+			34
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1260,
+			852,
+			92,
+			100
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			28,
+			56,
+			34
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			957,
+			90,
+			103
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			57,
+			28,
+			56,
+			31
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3134,
+			729,
+			91,
+			106
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			57,
+			28,
+			56,
+			31
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3228,
+			729,
+			91,
+			106
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			28,
+			56,
+			30
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3322,
+			729,
+			90,
+			107
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			26,
+			58,
+			30
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3513,
+			729,
+			88,
+			109
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0014 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			26,
+			58,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2927,
+			729,
+			88,
+			112
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			28,
+			60,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3853,
+			729,
+			86,
+			110
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			58,
+			79,
+			61,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2147,
+			957,
+			85,
+			59
+		},
+		alias = {
+			"hero_murglun_ultimate_explotion_0017"
+		}
+	},
+	hero_murglun_ultimate_explotion_0018 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			62,
+			80,
+			61,
+			26
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3648,
+			81,
+			59
+		},
+		alias = {
+			"hero_murglun_ultimate_explotion_0019"
+		}
+	},
+	hero_murglun_ultimate_explotion_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			64,
+			80,
+			62,
+			26
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4013,
+			548,
+			78,
+			59
+		},
+		alias = {
+			"hero_murglun_ultimate_explotion_0021"
+		}
+	},
+	hero_murglun_ultimate_explotion_0022 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			109,
+			85,
+			65,
+			56
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2335,
+			926,
+			30,
+			24
+		},
+		alias = {
+			"hero_murglun_ultimate_explotion_0023"
+		}
+	},
+	hero_murglun_ultimate_explotion_0024 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			204,
+			165
+		},
+		trim = {
+			110,
+			84,
+			67,
+			57
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1650,
+			823,
+			27,
+			24
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_explotion_decal = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			145,
+			88
+		},
+		trim = {
+			7,
+			7,
+			8,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3604,
+			729,
+			130,
+			73
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			2,
+			5,
+			15,
+			19
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2639,
+			957,
+			72,
+			56
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			3,
+			5,
+			14,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2489,
+			957,
+			72,
+			57
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			5,
+			5,
+			6,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3772,
+			78,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			5,
+			5,
+			6,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3710,
+			78,
+			59
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			7,
+			6,
+			8,
+			15
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			4031,
+			74,
+			59
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			9,
+			7,
+			8,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2564,
+			957,
+			72,
+			57
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			12,
+			9,
+			5,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3014,
+			957,
+			72,
+			54
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			16,
+			12,
+			5,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3879,
+			350,
+			68,
+			50
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			21,
+			14,
+			5,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3265,
+			348,
+			63,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			21,
+			15,
+			5,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2527,
+			804,
+			63,
+			45
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			22,
+			15,
+			4,
+			21
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3604,
+			805,
+			63,
+			44
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			22,
+			16,
+			4,
+			22
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2103,
+			357,
+			63,
+			42
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			23,
+			17,
+			27,
+			22
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1734,
+			359,
+			39,
+			41
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0014 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			24,
+			17,
+			28,
+			23
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			902,
+			3115,
+			37,
+			40
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			24,
+			18,
+			29,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3817,
+			157,
+			36,
+			38
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			25,
+			18,
+			29,
+			25
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2669,
+			812,
+			35,
+			37
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			26,
+			20,
+			30,
+			25
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2976,
+			363,
+			33,
+			35
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0018 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			26,
+			20,
+			31,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2162,
+			816,
+			32,
+			33
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			28,
+			22,
+			33,
+			28
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1881,
+			366,
+			28,
+			30
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			31,
+			26,
+			36,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			736,
+			4067,
+			22,
+			22
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle2_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			80
+		},
+		trim = {
+			0,
+			0,
+			89,
+			80
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2531,
+			852,
+			89,
+			80
+		},
+		alias = {
+			"hero_murglun_ultimate_particle2_0022",
+			"hero_murglun_ultimate_particle2_0023"
+		}
+	},
+	hero_murglun_ultimate_particle_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			2,
+			5,
+			15,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2939,
+			957,
+			72,
+			55
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			3,
+			5,
+			14,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2714,
+			957,
+			72,
+			56
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			5,
+			5,
+			6,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3894,
+			78,
+			57
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			5,
+			5,
+			6,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3833,
+			78,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			7,
+			6,
+			8,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2412,
+			957,
+			74,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			9,
+			7,
+			8,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2789,
+			957,
+			72,
+			56
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			12,
+			9,
+			5,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3089,
+			957,
+			72,
+			54
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			16,
+			12,
+			5,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3233,
+			957,
+			68,
+			49
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			21,
+			14,
+			5,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			948,
+			4047,
+			63,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			21,
+			14,
+			5,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2593,
+			804,
+			63,
+			45
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			22,
+			15,
+			5,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3670,
+			805,
+			62,
+			43
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			22,
+			16,
+			5,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2169,
+			357,
+			62,
+			42
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			23,
+			17,
+			27,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1776,
+			359,
+			39,
+			40
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0014 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			24,
+			17,
+			28,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3777,
+			157,
+			37,
+			39
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			24,
+			18,
+			29,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3856,
+			157,
+			36,
+			38
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			25,
+			18,
+			29,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2707,
+			812,
+			35,
+			37
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			26,
+			19,
+			30,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3012,
+			363,
+			33,
+			35
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0018 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			26,
+			20,
+			31,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2197,
+			816,
+			32,
+			33
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			28,
+			21,
+			33,
+			14
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1912,
+			366,
+			28,
+			30
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			31,
+			26,
+			36,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1709,
+			823,
+			22,
+			22
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_particle_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			89,
+			65
+		},
+		trim = {
+			0,
+			0,
+			89,
+			65
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1063,
+			89,
+			65
+		},
+		alias = {
+			"hero_murglun_ultimate_particle_0022",
+			"hero_murglun_ultimate_particle_0023"
+		}
+	},
+	hero_murglun_ultimate_proy = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			77,
+			70
+		},
+		trim = {
+			5,
+			8,
+			5,
+			11
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3195,
+			348,
+			67,
+			51
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			51,
+			5,
+			30,
+			49
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1138,
+			3000,
+			23,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0002 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			47,
+			3,
+			31,
+			51
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1226,
+			1131,
+			26,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			46,
+			0,
+			33,
+			53
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1224,
+			1249,
+			25,
+			47
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0004 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			46,
+			0,
+			34,
+			54
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			736,
+			4018,
+			24,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			45,
+			1,
+			33,
+			53
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1224,
+			1200,
+			26,
+			46
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0006 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			37,
+			2,
+			31,
+			46
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4051,
+			790,
+			36,
+			52
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			36,
+			3,
+			29,
+			39
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4051,
+			729,
+			39,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0008 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			34,
+			5,
+			27,
+			31
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			902,
+			2962,
+			43,
+			64
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			33,
+			9,
+			26,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1029,
+			2346,
+			45,
+			67
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0010 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			31,
+			11,
+			24,
+			16
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1550,
+			49,
+			73
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			27,
+			16,
+			23,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1165,
+			1480,
+			54,
+			67
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0012 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			22,
+			8,
+			22,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3954,
+			60,
+			74
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			17,
+			7,
+			20,
+			18
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3509,
+			67,
+			75
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0014 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			15,
+			8,
+			19,
+			17
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3095,
+			70,
+			75
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			12,
+			10,
+			18,
+			14
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			2627,
+			74,
+			76
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0016 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			10,
+			11,
+			17,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3642,
+			852,
+			77,
+			82
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			9,
+			12,
+			16,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			1308,
+			79,
+			78
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0018 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			9,
+			23,
+			15,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3263,
+			80,
+			65
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			7,
+			30,
+			13,
+			12
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1078,
+			3587,
+			84,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0020 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			5,
+			32,
+			13,
+			10
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2235,
+			957,
+			86,
+			58
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0021 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			4,
+			32,
+			12,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4004,
+			336,
+			88,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0022 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			3,
+			32,
+			11,
+			8
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1959,
+			957,
+			90,
+			60
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0023 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			9,
+			9
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1863,
+			957,
+			93,
+			59
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0024 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			8,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1766,
+			957,
+			94,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0025 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			6,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1667,
+			957,
+			96,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0026 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			5,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1567,
+			957,
+			97,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0027 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			3,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1465,
+			957,
+			99,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0028 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			2,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1362,
+			957,
+			100,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0029 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			1,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3722,
+			852,
+			101,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0030 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			1,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3826,
+			852,
+			101,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0031 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			1,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3930,
+			852,
+			101,
+			61
+		},
+		alias = {}
+	},
+	hero_murglun_ultimate_rocks_0032 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			104,
+			100
+		},
+		trim = {
+			2,
+			32,
+			1,
+			7
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1258,
+			957,
+			101,
+			61
+		},
+		alias = {
+			"hero_murglun_ultimate_rocks_0033"
+		}
+	},
+	hero_tank_fire_0001 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			5,
+			2,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2232,
+			816,
+			32,
+			33
+		},
+		alias = {
+			"hero_tank_fire_0002"
+		}
+	},
+	hero_tank_fire_0003 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			6,
+			3,
+			2,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			919,
+			3714,
+			26,
+			36
+		},
+		alias = {
+			"hero_tank_fire_0004"
+		}
+	},
+	hero_tank_fire_0005 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			7,
+			2,
+			3,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1138,
+			3049,
+			24,
+			37
+		},
+		alias = {
+			"hero_tank_fire_0006"
+		}
+	},
+	hero_tank_fire_0007 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			2,
+			1,
+			4,
+			3
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			914,
+			3531,
+			28,
+			39
+		},
+		alias = {
+			"hero_tank_fire_0008"
+		}
+	},
+	hero_tank_fire_0009 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			2,
+			8,
+			3,
+			2
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			914,
+			3650,
+			29,
+			33
+		},
+		alias = {
+			"hero_tank_fire_0010"
+		}
+	},
+	hero_tank_fire_0011 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			7,
+			5,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			914,
+			3573,
+			29,
+			35
+		},
+		alias = {
+			"hero_tank_fire_0012"
+		}
+	},
+	hero_tank_fire_0013 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			5,
+			4,
+			1
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1224,
+			1299,
+			30,
+			37
+		},
+		alias = {
+			"hero_tank_fire_0014"
+		}
+	},
+	hero_tank_fire_0015 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			0,
+			4,
+			5,
+			6
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1818,
+			366,
+			29,
+			33
+		},
+		alias = {
+			"hero_tank_fire_0016"
+		}
+	},
+	hero_tank_fire_0017 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			2,
+			2,
+			5,
+			5
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			914,
+			3611,
+			27,
+			36
+		},
+		alias = {
+			"hero_tank_fire_0018"
+		}
+	},
+	hero_tank_fire_0019 = {
+		a_name = "kr4_hero_murglun-1.dds",
+		size = {
+			34,
+			43
+		},
+		trim = {
+			1,
+			7,
+			5,
+			4
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1850,
+			366,
+			28,
+			32
+		},
+		alias = {
+			"hero_tank_fire_0020"
+		}
+	}
+}

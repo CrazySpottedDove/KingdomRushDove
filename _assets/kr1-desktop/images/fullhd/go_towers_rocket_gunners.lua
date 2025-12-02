@@ -1,15266 +1,9535 @@
 return {
-	["rocket_gunners_tower_build"] = {
+	rocket_gunners_tower_build = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			136,
 			99
 		},
 		trim = {
-			18,
-            10,
-            10,
-            17
+			19,
+			13,
+			13,
+			20
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1327,
-			592,
-			108,
-			72
+			1812,
+			375,
+			104,
+			66
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_gunner_shadow"] = {
+	rocket_gunners_tower_gunner_shadow = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			56,
-			36
+			57,
+			37
 		},
 		trim = {
-			10,
-            10,
-            10,
-            11
+			13,
+			14,
+			13,
+			14
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			72,
-			4,
-			36,
-			15
+			774,
+			758,
+			31,
+			9
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_hit_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			29,
-            25,
-            34,
-            32
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			126,
-			48,
-			36,
-			39
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_0002"] = {
+	rocket_gunners_tower_hit_fx_0001 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
-			96
+			97
 		},
 		trim = {
-			29,
-            25,
-            34,
-            32
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			126,
-			48,
-			36,
-			39
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
+			31,
 			27,
-            19,
-            24,
-            26
+			36,
+			33
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			324,
-			48,
-			51
+			2002,
+			424,
+			32,
+			37
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_hit_fx_0002"
+		}
 	},
-	["rocket_gunners_tower_hit_fx_0004"] = {
+	rocket_gunners_tower_hit_fx_0003 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
-			96
+			97
 		},
 		trim = {
+			28,
+			21,
 			27,
-            19,
-            24,
-            26
+			27
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			324,
-			48,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			23,
-            15,
-            22,
-            22
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			959,
-			450,
-			54,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			23,
-            15,
-            22,
-            22
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			959,
-			450,
-			54,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			30,
-            14,
-            19,
-            32
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1609,
-			208,
-			50,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			99,
-			96
-		},
-		trim = {
-			30,
-            14,
-            19,
-            32
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1609,
-			208,
-			50,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			23,
-            20,
-            41,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			365,
-			208,
-			46,
+			397,
+			1056,
+			44,
 			49
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_hit_fx_0004"
+		}
 	},
-	["rocket_gunners_tower_hit_fx_floor_0002"] = {
+	rocket_gunners_tower_hit_fx_0005 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			110,
-			107
-		},
-		trim = {
-			22,
-            20,
-            22,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			419,
-			208,
-			66,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			25,
-            13,
-            21,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1581,
-			386,
-			64,
-			56
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			25,
-            13,
-            22,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			450,
-			63,
-			56
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
+			99,
+			97
 		},
 		trim = {
 			24,
-            11,
-            24,
-            38
+			16,
+			24,
+			23
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			387,
-			450,
-			62,
+			447,
+			1033,
+			51,
 			58
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_hit_fx_0006"
+		}
 	},
-	["rocket_gunners_tower_hit_fx_floor_0006"] = {
+	rocket_gunners_tower_hit_fx_0007 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			110,
-			107
-		},
-		trim = {
-			25,
-            13,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			75,
-			450,
-			62,
-			56
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            11,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			457,
-			450,
-			61,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            11,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			526,
-			450,
-			61,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			25,
-            11,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			595,
-			450,
-			62,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			25,
-            11,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			665,
-			450,
-			62,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            15,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1546,
-			324,
-			61,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            15,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1615,
-			324,
-			61,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            14,
-            23,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			498,
-			386,
-			61,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            14,
-            24,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			567,
-			386,
-			60,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            14,
-            24,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			635,
-			386,
-			60,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            14,
-            24,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			703,
-			386,
-			60,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            25,
-            24,
-            38
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			995,
-			98,
-			60,
-			44
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            36,
-            25,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			958,
-			4,
-			59,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            36,
-            25,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1025,
-			4,
-			59,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            36,
-            24,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1092,
-			4,
-			60,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            36,
-            24,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1160,
-			4,
-			60,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            38,
-            25,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			601,
-			4,
-			59,
-			30
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			26,
-            38,
-            25,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			668,
-			4,
-			59,
-			30
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			25,
-            38,
-            25,
-            39
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			4,
-			60,
-			30
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_hit_fx_floor_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			107
-		},
-		trim = {
-			60,
-            49,
-            25,
-            43
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			116,
-			4,
-			25,
-			15
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			43,
-            29,
-            43,
-            30
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			225,
-			4,
-			38,
-			17
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			40,
-            22,
-            41,
-            28
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			508,
-			4,
-			43,
-			26
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			37,
-            21,
-            37,
-            23
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1228,
-			4,
-			50,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
+			99,
+			97
 		},
 		trim = {
 			32,
-            20,
-            34,
-            21
+			15,
+			19,
+			33
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1431,
-			4,
-			58,
-			35
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			31,
-            19,
-            31,
-            18
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			170,
+			447,
+			1802,
 			48,
-			62,
-			39
+			49
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_hit_fx_0008"
+		}
 	},
-	["rocket_gunners_tower_landing_fx_0006"] = {
+	rocket_gunners_tower_hit_fx_floor_0001 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			124,
-			76
-		},
-		trim = {
-			29,
-            19,
-            29,
-            18
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			240,
-			48,
-			66,
-			39
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			26,
-            17,
-            26,
-            19
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			571,
-			48,
-			72,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			26,
-            17,
-            26,
-            19
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			651,
-			48,
-			72,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
+			111,
+			108
 		},
 		trim = {
 			25,
-            16,
-            25,
-            20
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			731,
-			48,
-			74,
+			22,
+			43,
 			40
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			24,
-            16,
-            24,
-            20
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			813,
-			48,
-			76,
-			40
+			2002,
+			375,
+			43,
+			46
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_landing_fx_0011"] = {
+	rocket_gunners_tower_hit_fx_floor_0002 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			124,
-			76
+			111,
+			108
 		},
 		trim = {
-			24,
-            16,
-            23,
-            21
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			314,
-			48,
-			77,
-			39
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
+			25,
+			22,
 			23,
-            16,
-            23,
-            21
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			399,
-			48,
-			78,
-			39
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			22,
-            16,
-            23,
-            20
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			897,
-			48,
-			79,
 			40
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			22,
-            16,
-            22,
-            20
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			984,
-			48,
-			80,
+			460,
+			586,
+			63,
+			46
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			26,
+			16,
+			23,
 			40
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_landing_fx_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			76
-		},
-		trim = {
-			22,
-            20,
-            22,
-            20
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1497,
-			4,
-			80,
-			36
+			235,
+			1451,
+			62,
+			52
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0001"] = {
+	rocket_gunners_tower_hit_fx_floor_0004 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			65,
-            64,
-            72,
-            101
+			26,
+			16,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			266,
-			56,
-			50
+			397,
+			586,
+			60,
+			52
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0002"] = {
+	rocket_gunners_tower_hit_fx_floor_0005 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			65,
-            64,
-            72,
-            101
+			27,
+			15,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			68,
-			266,
-			56,
-			50
+			235,
+			1813,
+			59,
+			53
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0003"] = {
+	rocket_gunners_tower_hit_fx_floor_0006 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			66,
-            64,
-            72,
-            101
+			27,
+			15,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			132,
-			266,
-			55,
-			50
+			235,
+			1869,
+			59,
+			53
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0004"] = {
+	rocket_gunners_tower_hit_fx_floor_0007 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			66,
-            64,
-            72,
-            101
+			27,
+			14,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			195,
-			266,
-			55,
-			50
+			235,
+			1506,
+			59,
+			54
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0005"] = {
+	rocket_gunners_tower_hit_fx_floor_0008 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			65,
-            64,
-            72,
-            101
+			27,
+			14,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			258,
-			266,
-			56,
-			50
+			235,
+			1563,
+			59,
+			54
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0006"] = {
+	rocket_gunners_tower_hit_fx_floor_0009 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			65,
-            64,
-            72,
-            101
+			27,
+			15,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			322,
-			266,
-			56,
-			50
+			235,
+			1925,
+			59,
+			53
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0007"] = {
+	rocket_gunners_tower_hit_fx_floor_0010 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			111,
+			108
 		},
 		trim = {
-			66,
-            64,
-            73,
-            101
+			27,
+			15,
+			25,
+			40
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			386,
-			266,
+			235,
+			1981,
+			59,
+			53
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			16,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			813,
+			58,
+			52
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0012 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			16,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			868,
+			58,
+			52
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0013 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			15,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			641,
+			58,
+			53
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0014 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			15,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			697,
+			58,
+			53
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			16,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			923,
+			58,
+			52
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0016 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			16,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			978,
+			58,
+			52
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0017 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			26,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1657,
+			58,
+			42
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0018 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1563,
+			344,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0019 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1624,
+			344,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0020 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1635,
+			641,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0021 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1696,
+			641,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0022 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1757,
+			641,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0023 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1818,
+			641,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0024 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			27,
+			40,
+			26,
+			40
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1879,
+			641,
+			58,
+			28
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_hit_fx_floor_0025 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			108
+		},
+		trim = {
+			61,
+			51,
+			26,
+			43
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1892,
+			444,
+			24,
+			14
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_landing_fx_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			125,
+			77
+		},
+		trim = {
+			45,
+			31,
+			44,
+			30
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1979,
+			348,
+			36,
+			16
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_landing_fx_0002 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			125,
+			77
+		},
+		trim = {
+			41,
+			25,
+			42,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1481,
+			346,
+			42,
+			23
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_landing_fx_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			125,
+			77
+		},
+		trim = {
+			38,
+			25,
+			38,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1429,
+			346,
+			49,
+			25
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_landing_fx_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			125,
+			77
+		},
+		trim = {
+			35,
+			25,
+			36,
+			24
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1940,
+			641,
 			54,
-			50
+			28
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0008"] = {
+	rocket_gunners_tower_landing_fx_0005 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			125,
+			77
 		},
 		trim = {
-			66,
-            64,
-            73,
-            101
+			33,
+			23,
+			33,
+			21
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			448,
-			266,
-			54,
-			50
+			1985,
+			218,
+			59,
+			33
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0009"] = {
+	rocket_gunners_tower_landing_fx_0006 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			125,
+			77
 		},
 		trim = {
-			65,
-            64,
-            73,
-            101
+			30,
+			23,
+			30,
+			21
 		},
 		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			510,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			822,
-			152,
-			55,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			493,
-			208,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			885,
-			152,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			573,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			555,
-			208,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			618,
-			208,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			680,
-			208,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
 			636,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
+			641,
 			65,
-            64,
-            73,
-            101
+			33
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			699,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			762,
-			266,
-			54,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			824,
-			266,
-			54,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			886,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			949,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1013,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1076,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0026"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0027"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1204,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0028"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1204,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0029"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0030"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0031"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1204,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0032"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1204,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0033"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0034"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1269,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0035"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1269,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0036"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            67,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			483,
-			152,
-			55,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0037"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            67,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			483,
-			152,
-			55,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0038"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            69,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			947,
-			152,
-			58,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0039"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            69,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			947,
-			152,
-			58,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0040"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            65,
-            60,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			546,
-			152,
-			66,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0041"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            65,
-            60,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			546,
-			152,
-			66,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0042"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			62,
-            62,
-            39,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1021,
-			450,
-			92,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0043"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			62,
-            62,
-            45,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1121,
-			450,
-			86,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0044"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			61,
-            63,
-            55,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			713,
-			324,
-			77,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0045"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			61,
-            63,
-            55,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			713,
-			324,
-			77,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0046"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			60,
-            63,
-            53,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			386,
-			80,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0047"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			60,
-            63,
-            53,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			386,
-			80,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0048"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			64,
-            64,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			798,
-			324,
-			78,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0049"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			64,
-            64,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			798,
-			324,
-			78,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0050"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			329,
-			324,
-			77,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0051"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			329,
-			324,
-			77,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0052"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            67,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1013,
-			152,
-			55,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0053"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            67,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1013,
-			152,
-			55,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0054"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1269,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0055"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1269,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0056"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0057"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0058"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            66,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			620,
-			152,
-			57,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0059"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            66,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			620,
-			152,
-			57,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0060"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            65,
-            65,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			800,
-			208,
-			57,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0061"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            65,
-            65,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			800,
-			208,
-			57,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0062"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            59,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			865,
-			208,
-			62,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0063"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            59,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			865,
-			208,
-			62,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0064"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            57,
-            43,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			92,
-			386,
-			83,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0065"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            57,
-            43,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			183,
-			386,
-			82,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0066"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			64,
-            59,
-            53,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			771,
-			386,
-			76,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0067"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			64,
-            59,
-            53,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			771,
-			386,
-			76,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0068"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            60,
-            51,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			60,
-			324,
-			77,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0069"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            60,
-            51,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			60,
-			324,
-			77,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0070"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            61,
-            50,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			855,
-			386,
-			76,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0071"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            61,
-            50,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			855,
-			386,
-			76,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0072"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            61,
-            50,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			884,
-			324,
-			73,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0073"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            61,
-            50,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			884,
-			324,
-			73,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0074"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            67,
-            69,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			935,
-			208,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0075"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            67,
-            69,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			935,
-			208,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0076"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0077"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0078"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0079"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0080"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1585,
-			98,
-			49,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0081"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1585,
-			98,
-			49,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0082"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1076,
-			152,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0083"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1076,
-			152,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0084"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			74,
-            65,
-            59,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1135,
-			152,
-			60,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0085"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			74,
-            65,
-            59,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1135,
-			152,
-			60,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0086"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            62,
-            39,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1215,
-			450,
-			89,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0087"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            62,
-            45,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1312,
-			450,
-			83,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0088"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            63,
-            55,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			965,
-			324,
-			73,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0089"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            63,
-            55,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			965,
-			324,
-			73,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0090"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            63,
-            53,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			273,
-			386,
-			75,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0091"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            63,
-            53,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			273,
-			386,
-			75,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0092"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1046,
-			324,
-			74,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0093"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1046,
-			324,
-			74,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0094"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            65,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			414,
-			324,
-			72,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0095"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            65,
-            51,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			414,
-			324,
-			72,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0096"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1642,
-			98,
-			51,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0097"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1642,
-			98,
-			51,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0098"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0099"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0100"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			208,
-			53,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0101"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			208,
-			53,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0102"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			73,
-            67,
-            66,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			152,
-			54,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0103"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			73,
-            67,
-            66,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			152,
-			54,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0104"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			74,
-            65,
-            65,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1203,
-			152,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0105"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			74,
-            65,
-            65,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1203,
-			152,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0106"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			75,
-            65,
-            59,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1265,
-			152,
-			59,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0107"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			75,
-            65,
-            59,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1265,
-			152,
-			59,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0108"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            57,
-            43,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			145,
-			450,
-			81,
-			56
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0109"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            57,
-            43,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			234,
-			450,
-			81,
-			56
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0110"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            59,
-            53,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			356,
-			386,
-			73,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0111"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            59,
-            53,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			356,
-			386,
-			73,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0112"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            60,
-            52,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1128,
-			324,
-			74,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0113"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            60,
-            52,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1128,
-			324,
-			74,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0114"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            61,
-            50,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			494,
-			324,
-			74,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0115"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            61,
-            50,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			494,
-			324,
-			74,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0116"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            61,
-            51,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			576,
-			324,
-			70,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0117"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            61,
-            51,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			576,
-			324,
-			70,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0118"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            67,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			66,
-			152,
-			53,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0119"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            67,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			66,
-			152,
-			53,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0120"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			208,
-			53,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0121"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			208,
-			53,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0122"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1269,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0123"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1269,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0124"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            67,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			483,
-			152,
-			55,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0125"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            67,
-            73,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			483,
-			152,
-			55,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0126"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            69,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			947,
-			152,
-			58,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0127"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            65,
-            69,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			947,
-			152,
-			58,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0128"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            65,
-            57,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			685,
-			152,
-			69,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0129"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            65,
-            57,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			685,
-			152,
-			69,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0130"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			62,
-            62,
-            38,
-            89
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			442,
-			518,
-			93,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0131"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			62,
-            62,
-            40,
-            89
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			543,
-			518,
-			91,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0132"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			62,
-            57,
-            47,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			642,
-			518,
-			84,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0133"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			62,
-            57,
-            47,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			642,
-			518,
-			84,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0134"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			60,
-            52,
-            46,
-            96
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			94,
-			592,
-			87,
-			67
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0135"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			60,
-            52,
-            46,
-            96
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			94,
-			592,
-			87,
-			67
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0136"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            49,
-            46,
-            95
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			682,
-			592,
-			84,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0137"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            49,
-            46,
-            95
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			682,
-			592,
-			84,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0138"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            48,
-            46,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1590,
-			592,
-			82,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0139"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            48,
-            46,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1590,
-			592,
-			82,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0140"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            50,
-            64,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1181,
-			518,
-			63,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0141"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            50,
-            64,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1181,
-			518,
-			63,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0142"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            48,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1577,
-			518,
-			56,
-			66
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0143"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            48,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1577,
-			518,
-			56,
-			66
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0144"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0145"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            64,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1139,
-			266,
-			57,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0146"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            66,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			620,
-			152,
-			57,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0147"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            66,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			620,
-			152,
-			57,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0148"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            65,
-            65,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			800,
-			208,
-			57,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0149"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            65,
-            65,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			800,
-			208,
-			57,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0150"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            57,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1059,
-			208,
-			64,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0151"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            57,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1059,
-			208,
-			64,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0152"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            53,
-            38,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1591,
-			450,
-			88,
-			60
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0153"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            53,
-            38,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			518,
-			88,
-			60
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0154"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			64,
-            49,
-            46,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1252,
-			518,
-			83,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0155"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			64,
-            49,
-            46,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1252,
-			518,
-			83,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0156"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            45,
-            45,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			592,
-			82,
-			66
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0157"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            45,
-            45,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			592,
-			82,
-			66
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0158"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            41,
-            46,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			383,
-			673,
-			81,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0159"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            41,
-            46,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			383,
-			673,
-			81,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0160"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            40,
-            45,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			472,
-			673,
-			78,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0161"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            40,
-            45,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			472,
-			673,
-			78,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0162"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            42,
-            69,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			558,
-			673,
-			55,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0163"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            42,
-            69,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			558,
-			673,
-			55,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0164"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            40,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			621,
-			673,
-			57,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0165"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            40,
-            68,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			621,
-			673,
-			57,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0166"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0167"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0168"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1585,
-			98,
-			49,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0169"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1585,
-			98,
-			49,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0170"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1076,
-			152,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0171"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            65,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1076,
-			152,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0172"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			75,
-            65,
-            57,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1332,
-			152,
-			61,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0173"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			75,
-            65,
-            57,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1332,
-			152,
-			61,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0174"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            62,
-            38,
-            89
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			734,
-			518,
-			89,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0175"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            62,
-            40,
-            89
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			831,
-			518,
-			87,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0176"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            57,
-            47,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			926,
-			518,
-			81,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0177"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            57,
-            47,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			926,
-			518,
-			81,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0178"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            52,
-            46,
-            96
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			189,
-			592,
-			82,
-			67
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0179"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            52,
-            46,
-            96
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			189,
-			592,
-			82,
-			67
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0180"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            49,
-            47,
-            95
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			774,
-			592,
-			79,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0181"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            49,
-            47,
-            95
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			774,
-			592,
-			79,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0182"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            48,
-            46,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			673,
-			77,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0183"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            48,
-            46,
-            94
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			673,
-			77,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0184"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            50,
-            65,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			376,
-			518,
-			58,
-			63
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0185"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            50,
-            65,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			376,
-			518,
-			58,
-			63
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0186"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            48,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1343,
-			518,
-			50,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0187"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            48,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1343,
-			518,
-			50,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0188"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			208,
-			53,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0189"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			208,
-			53,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0190"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			73,
-            67,
-            66,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			152,
-			54,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0191"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			73,
-            67,
-            66,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			152,
-			54,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0192"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			74,
-            65,
-            65,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1203,
-			152,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0193"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			74,
-            65,
-            65,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1203,
-			152,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0194"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			75,
-            65,
-            57,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1401,
-			152,
-			61,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0195"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			75,
-            65,
-            57,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1401,
-			152,
-			61,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0196"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            53,
-            38,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			100,
-			518,
-			87,
-			60
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0197"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            53,
-            38,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			195,
-			518,
-			87,
-			60
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0198"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            49,
-            46,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1015,
-			518,
-			80,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0199"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            49,
-            46,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1015,
-			518,
-			80,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0200"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            45,
-            45,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			279,
-			592,
-			80,
-			68
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0201"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            45,
-            45,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			279,
-			592,
-			80,
-			68
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0202"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            41,
-            46,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1443,
-			592,
-			79,
-			72
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0203"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            41,
-            46,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1443,
-			592,
-			79,
-			72
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0204"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            40,
-            46,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			89,
-			673,
-			75,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0205"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            40,
-            46,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			89,
-			673,
-			75,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0206"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            42,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			861,
-			592,
-			53,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0207"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            42,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			861,
-			592,
-			53,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0208"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            40,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			172,
-			673,
-			53,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0209"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            40,
-            68,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			172,
-			673,
-			53,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0210"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1333,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0211"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1333,
-			266,
-			56,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0212"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            68,
-            72,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1470,
-			152,
-			55,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0213"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            68,
-            72,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1470,
-			152,
-			55,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0214"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            58,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			323,
-			450,
-			56,
-			57
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0215"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            58,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			323,
-			450,
-			56,
-			57
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0216"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            55,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1403,
-			450,
-			55,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0217"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            55,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1403,
-			450,
-			55,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0218"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            55,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1466,
-			450,
-			56,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0219"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            55,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1466,
-			450,
-			56,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0220"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            55,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1403,
-			450,
-			55,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0221"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            55,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1403,
-			450,
-			55,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0222"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            42,
-            72,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			686,
-			673,
-			56,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0223"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            42,
-            72,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			686,
-			673,
-			56,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0224"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            40,
-            72,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1064,
-			673,
-			55,
-			76
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0225"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            40,
-            72,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1064,
-			673,
-			55,
-			76
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0226"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            40,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1000,
-			673,
-			56,
-			75
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0227"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            40,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1000,
-			673,
-			56,
-			75
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0228"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            40,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			750,
-			673,
-			55,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0229"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            40,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			750,
-			673,
-			55,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0230"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            44,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			922,
-			592,
-			56,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0231"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            44,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			922,
-			592,
-			56,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0232"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            44,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			986,
-			592,
-			54,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0233"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            44,
-            72,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			986,
-			592,
-			54,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0234"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            44,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			618,
-			592,
-			56,
-			70
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0235"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            44,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			618,
-			592,
-			56,
-			70
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0236"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            67,
-            71,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1533,
-			152,
-			57,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0237"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            67,
-            71,
-            100
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1533,
-			152,
-			57,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0238"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1131,
-			208,
-			56,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0239"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1131,
-			208,
-			56,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0240"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1397,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0241"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1397,
-			266,
-			55,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0242"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0243"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			742,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0244"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            68,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1333,
-			98,
-			51,
-			45
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0245"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            68,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1333,
-			98,
-			51,
-			45
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0246"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            58,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			939,
-			386,
-			51,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0247"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            58,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			939,
-			386,
-			51,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0248"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            55,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			450,
-			52,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0249"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            55,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			450,
-			52,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0250"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            55,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			450,
-			52,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0251"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            55,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			450,
-			52,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0252"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            55,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			450,
-			52,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0253"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            55,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			735,
-			450,
-			52,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0254"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            42,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1530,
-			592,
-			52,
-			72
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0255"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            42,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1530,
-			592,
-			52,
-			72
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0256"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            40,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			813,
-			673,
-			52,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0257"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            40,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			813,
-			673,
-			52,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0258"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            40,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			873,
-			673,
-			52,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0259"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            40,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			873,
-			673,
-			52,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0260"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            40,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			233,
-			673,
-			52,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0261"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            40,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			233,
-			673,
-			52,
-			73
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0262"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            44,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			439,
-			592,
-			52,
-			69
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0263"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            44,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			439,
-			592,
-			52,
-			69
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0264"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            44,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			499,
-			592,
-			51,
-			69
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0265"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            44,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			499,
-			592,
-			51,
-			69
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0266"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            44,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			558,
-			592,
-			52,
-			69
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0267"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            44,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			558,
-			592,
-			52,
-			69
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0268"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			127,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0269"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			127,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0270"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            65,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1598,
-			152,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0271"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            65,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1598,
-			152,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0272"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1195,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0273"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1195,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0274"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			187,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0275"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			187,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0276"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            61,
-            72,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1253,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0277"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            61,
-            72,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1253,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0278"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            59,
-            70,
-            109
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			762,
-			152,
-			52,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0279"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            59,
-            70,
-            109
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			762,
-			152,
-			52,
-			47
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0280"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            60,
-            70,
-            106
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1311,
-			208,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0281"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            60,
-            70,
-            106
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1311,
-			208,
-			51,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0282"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1657,
-			152,
-			50,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0283"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1657,
-			152,
-			50,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0284"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            71,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1392,
-			98,
-			51,
-			45
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0285"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            71,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1392,
-			98,
-			51,
-			45
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0286"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            61,
-            73,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			145,
-			324,
-			48,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0287"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            61,
-            73,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			145,
-			324,
-			48,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0288"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            59,
-            75,
-            106
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1460,
-			266,
-			46,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0289"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            59,
-            75,
-            106
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1460,
-			266,
-			46,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0290"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            60,
-            74,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1514,
-			266,
-			47,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0291"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            60,
-            74,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1514,
-			266,
-			47,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0292"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1370,
-			208,
-			48,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0293"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            64,
-            73,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1370,
-			208,
-			48,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0294"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			247,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0295"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            67,
-            70,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			247,
-			152,
-			52,
-			46
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0296"] = {
+	rocket_gunners_tower_landing_fx_0007 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1426,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0297"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1426,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0298"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1426,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0299"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1426,
-			208,
-			50,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0300"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			307,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0301"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            71,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			307,
-			152,
-			52,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0302"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            71,
-            69,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1463,
-			48,
-			56,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0303"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			68,
-            71,
-            69,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1463,
-			48,
-			56,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0304"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            62,
-            75,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			208,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0305"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			67,
-            62,
-            75,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			208,
-			51,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0306"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            77,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			654,
-			324,
-			51,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0307"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            65,
-            77,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			654,
-			324,
-			51,
-			52
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0308"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            68,
-            76,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			63,
-			208,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0309"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            68,
-            76,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			63,
-			208,
-			54,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0310"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            65,
-            75,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1484,
-			208,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0311"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            65,
-            75,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1484,
-			208,
-			55,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0312"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            63,
-            74,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			201,
-			324,
-			56,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0313"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            63,
-            74,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			265,
-			324,
-			56,
-			51
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0314"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            65,
-            74,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
 			125,
-			208,
-			56,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0315"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            65,
-            74,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			125,
-			208,
-			56,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0316"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            71,
-            74,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			651,
-			98,
-			56,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0317"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            71,
-            74,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			651,
-			98,
-			56,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0318"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			48,
-            44,
-            51,
-            73
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			829,
-			861,
-			94,
-			98
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0319"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			48,
-            44,
-            51,
-            73
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			931,
-			861,
-			94,
-			98
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0320"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
+			77
 		},
 		trim = {
 			27,
-            33,
-            33,
-            89
+			20,
+			27,
+			22
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			225,
-			861,
-			133,
-			93
+			1253,
+			586,
+			71,
+			35
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0321"] = {
+	rocket_gunners_tower_landing_fx_0008 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			125,
+			77
 		},
 		trim = {
 			27,
-            33,
-            33,
-            87
+			20,
+			27,
+			22
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			569,
-			861,
-			133,
-			95
+			1327,
+			586,
+			71,
+			35
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0322"] = {
+	rocket_gunners_tower_landing_fx_0009 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			125,
+			77
 		},
 		trim = {
-			50,
-            26,
-            58,
-            84
+			26,
+			20,
+			26,
+			23
 		},
 		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1133,
-			861,
-			85,
-			105
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0323"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			50,
-            26,
-            56,
-            82
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1226,
-			861,
-			87,
-			107
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0324"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			48,
-            27,
-            53,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1321,
-			861,
-			92,
-			107
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0325"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			48,
-            27,
-            53,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1421,
-			861,
-			92,
-			107
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0326"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			48,
-            32,
-            53,
-            84
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1033,
-			861,
-			92,
-			99
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0327"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			48,
-            32,
-            53,
-            84
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1033,
-			861,
-			92,
-			99
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0328"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			50,
-            37,
-            53,
-            84
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			471,
-			861,
-			90,
-			94
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0329"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			50,
-            37,
-            53,
-            84
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			471,
-			861,
-			90,
-			94
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0330"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			51,
-            45,
-            54,
-            105
-		},
-		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
 			1401,
-			518,
-			88,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0331"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			51,
-            45,
-            54,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1401,
-			518,
-			88,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0332"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            56,
-            72,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			386,
-			58,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0333"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			63,
-            56,
-            72,
-            104
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			998,
-			386,
-			58,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0334"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            67,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			367,
-			152,
-			51,
-			46
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0335"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			70,
-            69,
-            72,
-            102
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1063,
-			98,
-			51,
-			44
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0336"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            66,
-            75,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			189,
-			208,
-			47,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0337"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            66,
-            75,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			189,
-			208,
-			47,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0338"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1569,
-			266,
-			50,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0339"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			71,
-            64,
-            72,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1569,
-			266,
-			50,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0340"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
+			586,
 			73,
-            64,
-            66,
-            102
+			34
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1547,
-			208,
-			54,
-			49
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0341"] = {
+	rocket_gunners_tower_landing_fx_0010 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			125,
+			77
 		},
 		trim = {
-			73,
-            64,
-            66,
-            102
+			25,
+			20,
+			25,
+			23
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1547,
-			208,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0342"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
+			1108,
+			586,
 			75,
-            65,
-            65,
-            102
+			34
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			244,
-			208,
-			53,
-			48
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_lvl4_gunner_0343"] = {
+	rocket_gunners_tower_landing_fx_0011 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			193,
-			215
+			125,
+			77
 		},
 		trim = {
+			25,
+			20,
+			25,
+			22
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			834,
+			586,
 			75,
-            65,
-            65,
-            102
+			35
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			244,
-			208,
-			53,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0344"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            69,
-            62,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1451,
-			98,
-			53,
-			45
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0345"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            69,
-            62,
-            101
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1451,
-			98,
-			53,
-			45
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0346"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            76,
-            58,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1072,
-			48,
-			57,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0347"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            76,
-            58,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1072,
-			48,
-			57,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0348"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            73,
-            58,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1122,
-			98,
-			57,
-			44
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0349"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            73,
-            58,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1122,
-			98,
-			57,
-			44
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0350"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0351"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0352"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0353"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0354"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0355"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0356"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0357"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0358"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0359"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0360"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0361"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0362"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			715,
-			98,
-			55,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0363"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			715,
-			98,
-			55,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0364"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			73,
-            74,
-            59,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1590,
-			48,
-			61,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0365"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			73,
-            74,
-            59,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1590,
-			48,
-			61,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0366"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            74,
-            60,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			778,
-			98,
-			64,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0367"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			69,
-            74,
-            60,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			778,
-			98,
-			64,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0368"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			98,
-			67,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0369"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			98,
-			67,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0370"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			79,
-			98,
-			68,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0371"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			65,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			79,
-			98,
-			68,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0372"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            74,
-            60,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			850,
-			98,
-			67,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0373"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            74,
-            60,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			850,
-			98,
-			67,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0374"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            74,
-            59,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			155,
-			98,
-			68,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0375"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			66,
-            74,
-            59,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			155,
-			98,
-			68,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0376"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            74,
-            59,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			925,
-			98,
-			62,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0377"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			72,
-            74,
-            59,
-            98
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			925,
-			98,
-			62,
-			43
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0378"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_gunner_0379"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			193,
-			215
-		},
-		trim = {
-			78,
-            74,
-            60,
-            99
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1527,
-			48,
-			55,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			653,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			797,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			797,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1085,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1229,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1373,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1517,
-			978,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			148,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			292,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			436,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			580,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			724,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			868,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            31,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			148,
-			1372,
-			136,
-			126
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            31,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			148,
-			1372,
-			136,
-			126
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			509,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			509,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			653,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			653,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			797,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			797,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0026"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0027"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0028"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0029"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1085,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0030"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1229,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0031"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1373,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0032"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            28,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1517,
-			1372,
-			136,
-			129
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0033"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            17,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			221,
-			1509,
-			136,
-			140
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0034"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            17,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			365,
-			1509,
-			136,
-			140
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0035"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            13,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			797,
-			1509,
-			136,
-			144
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0036"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            13,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			941,
-			1509,
-			136,
-			144
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0037"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            10,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1373,
-			1509,
-			136,
-			147
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0038"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            10,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1517,
-			1509,
-			136,
-			147
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0039"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            11,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1085,
-			1509,
-			136,
-			146
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0040"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            11,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1229,
-			1509,
-			136,
-			146
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0041"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            15,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			509,
-			1509,
-			136,
-			142
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0042"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            15,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			653,
-			1509,
-			136,
-			142
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0043"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			148,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0044"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			148,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0045"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			292,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0046"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			292,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0047"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			436,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0048"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			436,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0049"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			436,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0050"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			580,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0051"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			724,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0052"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			868,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0053"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1012,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0054"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1156,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0055"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1300,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0056"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1444,
-			1240,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0057"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            33,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			1372,
-			136,
-			124
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0058"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1012,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0059"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1156,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0060"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1300,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0061"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1444,
-			1109,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_lvl4_tower_0062"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			159,
-			238
-		},
-		trim = {
-			12,
-            34,
-            11,
-            81
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			1240,
-			136,
-			123
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			35,
-            84,
-            34,
-            118
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1627,
-			266,
-			58,
-			50
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			35,
-            84,
-            34,
-            118
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1627,
-			266,
-			58,
-			50
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0003"] = {
+	rocket_gunners_tower_landing_fx_0012 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			127,
-			252
+			125,
+			77
 		},
 		trim = {
-			31,
-            72,
-            32,
-            112
+			24,
+			20,
+			24,
+			22
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			367,
-			592,
-			64,
-			68
+			1789,
+			337,
+			77,
+			35
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0004"] = {
+	rocket_gunners_tower_landing_fx_0013 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			127,
-			252
+			125,
+			77
 		},
 		trim = {
+			24,
+			19,
 			23,
-            36,
-            25,
-            107
+			22
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1521,
-			861,
-			79,
-			109
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			23,
-            36,
-            25,
-            107
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1521,
-			861,
-			79,
-			109
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			17,
-            24,
-            15,
-            106
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			550,
-			978,
-			95,
-			122
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			17,
-            24,
-            15,
-            106
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			550,
-			978,
-			95,
-			122
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			14,
-            20,
-            13,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			292,
-			1372,
-			100,
-			127
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			14,
-            20,
-            13,
-            105
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			292,
-			1372,
-			100,
-			127
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			15,
-            14,
-            11,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			112,
-			1509,
-			101,
-			135
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			15,
-            14,
-            11,
-            103
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			112,
-			1509,
-			101,
-			135
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			14,
-            11,
-            12,
-            114
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			400,
-			1372,
-			101,
-			127
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			14,
-            11,
-            12,
-            114
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			400,
-			1372,
-			101,
-			127
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			16,
-            11,
-            11,
-            111
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			1509,
-			100,
-			130
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			16,
-            11,
-            11,
-            111
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			1509,
-			100,
-			130
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			17,
-            12,
-            13,
-            147
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			366,
-			861,
-			97,
-			93
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			17,
-            12,
-            13,
-            147
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			366,
-			861,
-			97,
-			93
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			16,
-            12,
-            15,
-            149
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			861,
-			96,
-			91
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			22,
-            12,
-            14,
-            169
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1048,
-			592,
-			91,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			23,
-            12,
-            18,
-            182
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			795,
-			450,
-			86,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			127,
-			252
-		},
-		trim = {
-			23,
-            12,
-            18,
-            182
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			795,
-			450,
-			86,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			56,
-            54,
-            56,
-            54
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1585,
-			4,
-			41,
+			605,
+			586,
+			78,
 			36
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0002"] = {
+	rocket_gunners_tower_landing_fx_0014 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			153,
-			144
+			125,
+			77
 		},
 		trim = {
-			35,
-            41,
-            40,
-            43
+			23,
+			19,
+			23,
+			22
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			290,
-			518,
+			310,
+			2007,
+			79,
+			36
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_landing_fx_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			125,
+			77
+		},
+		trim = {
+			23,
+			22,
+			23,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			752,
+			586,
+			79,
+			34
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1039,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0002 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1091,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1143,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1195,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0005 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1247,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0006 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1299,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0007 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1351,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0008 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1403,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1455,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0010 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1507,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1559,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0012 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1611,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0013 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1663,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0014 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1715,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1767,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0016 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1819,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0017 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1871,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0018 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1923,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0019 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1975,
+			680,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0020 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			727,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0021 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			773,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0022 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			819,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0023 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			865,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0024 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			911,
+			49,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0025 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			68,
+			71,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			680,
+			50,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0026",
+			"rocket_gunners_tower_lvl4_gunner_0029",
+			"rocket_gunners_tower_lvl4_gunner_0030",
+			"rocket_gunners_tower_lvl4_gunner_0056",
+			"rocket_gunners_tower_lvl4_gunner_0057",
+			"rocket_gunners_tower_lvl4_gunner_0076",
+			"rocket_gunners_tower_lvl4_gunner_0077",
+			"rocket_gunners_tower_lvl4_gunner_0144",
+			"rocket_gunners_tower_lvl4_gunner_0145"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0027 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			68,
+			71,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			561,
+			680,
+			50,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0028",
+			"rocket_gunners_tower_lvl4_gunner_0031",
+			"rocket_gunners_tower_lvl4_gunner_0032"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0033 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			68,
+			74,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1592,
+			44,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0078",
+			"rocket_gunners_tower_lvl4_gunner_0079",
+			"rocket_gunners_tower_lvl4_gunner_0098",
+			"rocket_gunners_tower_lvl4_gunner_0099",
+			"rocket_gunners_tower_lvl4_gunner_0166",
+			"rocket_gunners_tower_lvl4_gunner_0167",
+			"rocket_gunners_tower_lvl4_gunner_0242",
+			"rocket_gunners_tower_lvl4_gunner_0243"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0034 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			957,
+			49,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0035",
+			"rocket_gunners_tower_lvl4_gunner_0054",
+			"rocket_gunners_tower_lvl4_gunner_0055",
+			"rocket_gunners_tower_lvl4_gunner_0122",
+			"rocket_gunners_tower_lvl4_gunner_0123"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0036 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			70,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1277,
+			49,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0037",
+			"rocket_gunners_tower_lvl4_gunner_0124",
+			"rocket_gunners_tower_lvl4_gunner_0125"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0038 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			69,
+			72,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			720,
+			680,
+			52,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0039",
+			"rocket_gunners_tower_lvl4_gunner_0126",
+			"rocket_gunners_tower_lvl4_gunner_0127"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0040 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			70,
+			69,
+			60,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			979,
+			586,
+			63,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0041"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0042 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			65,
+			65,
+			41,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1084,
+			464,
+			87,
+			56
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0043 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			65,
+			65,
+			46,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1259,
+			82,
+			56
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0044 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			63,
+			66,
+			55,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			990,
+			532,
+			75,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0045"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0046 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			64,
+			67,
+			54,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1068,
+			532,
+			75,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0047"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0048 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			65,
+			67,
+			52,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			911,
+			532,
+			76,
+			50
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0049"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0050 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			53,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1295,
+			532,
+			72,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0051"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0052 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			70,
+			76,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1187,
+			49,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0053"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0058 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			70,
+			69,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			883,
+			680,
+			51,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0059",
+			"rocket_gunners_tower_lvl4_gunner_0146",
+			"rocket_gunners_tower_lvl4_gunner_0147"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0060 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			68,
+			67,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1851,
+			586,
+			52,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0061",
+			"rocket_gunners_tower_lvl4_gunner_0148",
+			"rocket_gunners_tower_lvl4_gunner_0149"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0062 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			69,
+			60,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1702,
+			58,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0063"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0064 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			71,
+			59,
+			44,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			749,
+			532,
 			78,
-			60
+			49
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0003"] = {
+	rocket_gunners_tower_lvl4_gunner_0065 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			153,
-			144
+			193,
+			216
 		},
 		trim = {
-			24,
-            28,
-            30,
-            33
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			763,
-			99,
-			83
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			24,
-            28,
-            30,
-            33
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			763,
-			99,
-			83
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			18,
-            23,
-            24,
-            24
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			710,
-			861,
-			111,
-			97
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			18,
-            23,
-            24,
-            24
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			710,
-			861,
-			111,
-			97
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			13,
-            16,
-            18,
-            18
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			978,
-			122,
-			110
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			13,
-            16,
-            18,
-            18
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			4,
-			978,
-			122,
-			110
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			10,
-            12,
-            13,
-            14
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			412,
-			978,
-			130,
-			118
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			10,
-            12,
-            13,
-            14
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			412,
-			978,
-			130,
-			118
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			10,
-            13,
-            11,
-            16
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			134,
-			978,
-			132,
-			115
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			10,
-            13,
-            11,
-            16
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			134,
-			978,
-			132,
-			115
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			12,
-            12,
-            11,
-            16
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			274,
-			978,
-			130,
-			116
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			12,
-            12,
-            11,
-            16
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			274,
-			978,
-			130,
-			116
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			13,
-            11,
-            14,
-            48
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			323,
-			763,
-			126,
-			85
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			13,
-            11,
-            14,
-            48
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			323,
-			763,
-			126,
-			85
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			31,
-            21,
-            39,
-            52
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1147,
-			592,
-			83,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_explosion_air_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			153,
-			144
-		},
-		trim = {
-			31,
-            21,
-            39,
-            52
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1147,
-			592,
-			83,
-			71
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			19,
-            26,
-            21,
-            32
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1103,
-			518,
-			70,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			19,
-            26,
-            21,
-            32
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1103,
-			518,
-			70,
-			64
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			27,
-            21,
-            30,
-            47
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			437,
-			386,
-			53,
-			54
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			27,
-            16,
-            30,
-            47
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1530,
-			450,
-			53,
-			59
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			26,
-            11,
-            25,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			933,
-			673,
+			71,
 			59,
-			74
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			26,
-            11,
-            25,
-            37
+			44,
+			108
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			933,
-			673,
-			59,
-			74
+			830,
+			532,
+			78,
+			49
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0007"] = {
+	rocket_gunners_tower_lvl4_gunner_0066 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			110,
-			122
+			193,
+			216
 		},
 		trim = {
-			23,
-            11,
-            24,
-            34
+			68,
+			62,
+			54,
+			104
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1306,
-			673,
+			1221,
+			532,
+			71,
+			50
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0067"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0068 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
 			63,
-			77
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			23,
-            11,
-            24,
-            34
+			52,
+			108
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1306,
-			673,
+			1878,
+			532,
+			72,
+			45
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0069"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0070 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			70,
 			63,
-			77
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			29,
-            15,
-            20,
-            31
+			51,
+			103
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1127,
-			673,
-			61,
-			76
+			1146,
+			532,
+			72,
+			50
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0071"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0010"] = {
+	rocket_gunners_tower_lvl4_gunner_0072 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			110,
-			122
+			193,
+			216
 		},
 		trim = {
-			29,
-            15,
-            20,
-            31
+			73,
+			62,
+			51,
+			104
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1127,
-			673,
-			61,
-			76
+			1443,
+			532,
+			69,
+			50
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0073"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0011"] = {
+	rocket_gunners_tower_lvl4_gunner_0074 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			110,
-			122
+			193,
+			216
 		},
 		trim = {
-			28,
-            22,
-            23,
-            66
+			73,
+			70,
+			72,
+			103
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1364,
-			4,
+			508,
+			1141,
+			48,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0075"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0080 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			70,
+			76,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1725,
+			43,
+			40
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0081",
+			"rocket_gunners_tower_lvl4_gunner_0168",
+			"rocket_gunners_tower_lvl4_gunner_0169"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0082 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			76,
+			69,
+			72,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1776,
+			45,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0083",
+			"rocket_gunners_tower_lvl4_gunner_0170",
+			"rocket_gunners_tower_lvl4_gunner_0171"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0084 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			78,
+			69,
+			60,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1663,
+			586,
+			55,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0085"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0086 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			65,
+			42,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1318,
+			82,
+			56
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0087 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			65,
+			46,
+			95
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1771,
+			78,
+			56
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0088 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			66,
+			55,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1515,
+			532,
+			70,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0089"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0090 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			67,
+			54,
+			100
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1588,
+			532,
+			70,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0091"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0092 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			71,
+			67,
+			52,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1370,
+			532,
+			70,
+			50
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0093"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0094 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			68,
+			53,
+			99
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1953,
+			532,
+			66,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0095"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0096 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			70,
+			76,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1593,
+			44,
+			40
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0097"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0100 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			68,
+			71,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1321,
+			47,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0101",
+			"rocket_gunners_tower_lvl4_gunner_0120",
+			"rocket_gunners_tower_lvl4_gunner_0121",
+			"rocket_gunners_tower_lvl4_gunner_0188",
+			"rocket_gunners_tower_lvl4_gunner_0189"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0102 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			77,
+			70,
+			69,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1821,
+			47,
+			40
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0103",
+			"rocket_gunners_tower_lvl4_gunner_0190",
+			"rocket_gunners_tower_lvl4_gunner_0191"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0104 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			78,
+			69,
+			67,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1411,
+			48,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0105",
+			"rocket_gunners_tower_lvl4_gunner_0192",
+			"rocket_gunners_tower_lvl4_gunner_0193"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0106 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			78,
+			68,
+			60,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1991,
+			55,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0107"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0108 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
 			59,
-			34
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			110,
-			122
-		},
-		trim = {
-			28,
-            22,
-            23,
-            66
+			44,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1364,
-			4,
+			589,
+			532,
+			77,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0109 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
 			59,
-			34
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			18,
-            22,
-            40,
-            43
+			44,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1238,
-			592,
-			81,
-			71
+			669,
+			532,
+			77,
+			51
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0002"] = {
+	rocket_gunners_tower_lvl4_gunner_0110 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			18,
-            22,
-            19,
-            37
+			71,
+			62,
+			54,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1377,
-			673,
-			102,
-			77
+			1807,
+			532,
+			68,
+			48
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0111"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0003"] = {
+	rocket_gunners_tower_lvl4_gunner_0112 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            13,
-            19,
-            37
+			71,
+			63,
+			52,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			877,
-			763,
-			101,
-			86
+			1661,
+			532,
+			70,
+			47
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0113"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0004"] = {
+	rocket_gunners_tower_lvl4_gunner_0114 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            13,
-            20,
-            37
+			72,
+			63,
+			51,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			986,
-			763,
-			100,
-			86
+			1734,
+			532,
+			70,
+			47
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0115"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0005"] = {
+	rocket_gunners_tower_lvl4_gunner_0116 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            11,
-            18,
-            36
+			76,
+			62,
+			51,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1413,
-			763,
-			102,
-			89
+			235,
+			1620,
+			66,
+			48
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0117"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0006"] = {
+	rocket_gunners_tower_lvl4_gunner_0118 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			15,
-            11,
-            15,
-            34
+			75,
+			70,
+			72,
+			106
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			108,
-			861,
-			109,
+			397,
+			1245,
+			46,
+			40
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0119"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0128 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			70,
+			69,
+			59,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			912,
+			586,
+			64,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0129"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0130 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			63,
+			41,
 			91
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			15,
-            11,
-            14,
-            35
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1523,
-			763,
-			110,
-			90
+			485,
+			464,
+			86,
+			62
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0008"] = {
+	rocket_gunners_tower_lvl4_gunner_0131 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            11,
-            22,
-            37
+			65,
+			64,
+			41,
+			91
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
+			574,
+			464,
+			87,
+			61
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0132 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			64,
+			60,
+			50,
+			98
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1442,
+			79,
+			58
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0133"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0134 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			64,
+			56,
+			49,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			836,
+			464,
+			80,
+			63
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0135"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0136 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			65,
+			52,
+			49,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			626,
+			79,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0137"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0138 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			51,
+			49,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			696,
+			76,
+			69
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0139"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0140 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			53,
+			67,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			907,
+			58,
+			59
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0141"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0142 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			51,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
 			1094,
-			763,
-			98,
-			88
+			49,
+			60
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0143"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0009"] = {
+	rocket_gunners_tower_lvl4_gunner_0150 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            11,
-            22,
-            37
+			75,
+			68,
+			58,
+			105
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1200,
-			763,
-			98,
-			88
+			1045,
+			586,
+			60,
+			43
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0151"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0010"] = {
+	rocket_gunners_tower_lvl4_gunner_0152 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            11,
-            21,
-            37
+			71,
+			55,
+			39,
+			103
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1306,
-			763,
-			99,
-			88
+			1174,
+			464,
+			83,
+			58
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0011"] = {
+	rocket_gunners_tower_lvl4_gunner_0153 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            15,
-            21,
-            37
+			71,
+			54,
+			39,
+			104
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			111,
-			763,
-			99,
-			84
+			1260,
+			464,
+			83,
+			58
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0012"] = {
+	rocket_gunners_tower_lvl4_gunner_0154 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            15,
-            23,
-            37
+			68,
+			52,
+			49,
+			104
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			218,
-			763,
-			97,
-			84
+			310,
+			1503,
+			76,
+			60
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0155"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0013"] = {
+	rocket_gunners_tower_lvl4_gunner_0156 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            14,
-            23,
-            37
+			69,
+			48,
+			48,
+			108
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			457,
-			763,
-			97,
-			85
+			310,
+			1566,
+			76,
+			60
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0157"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0014"] = {
+	rocket_gunners_tower_lvl4_gunner_0158 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            14,
-            23,
-            37
+			70,
+			44,
+			47,
+			103
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			562,
-			763,
-			97,
-			85
+			310,
+			768,
+			76,
+			69
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0159"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0015"] = {
+	rocket_gunners_tower_lvl4_gunner_0160 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
-			19,
-            14,
-            23,
-            37
+			73,
+			43,
+			47,
+			104
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			840,
+			73,
+			69
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0161"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0162 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			45,
+			71,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1028,
+			50,
+			68
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0163"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0164 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			44,
+			71,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1099,
+			50,
+			68
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0165"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0172 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			78,
+			69,
+			58,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1903,
+			57,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0173"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0174 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			64,
+			41,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			664,
+			464,
+			83,
+			61
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0175 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			64,
+			41,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			750,
+			464,
+			83,
+			61
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0176 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			60,
+			50,
+			98
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1830,
+			75,
+			58
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0177"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0178 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			56,
+			49,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1123,
+			75,
+			63
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0179"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0180 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			71,
+			52,
+			49,
+			97
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			912,
+			73,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0181"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0182 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			51,
+			49,
+			96
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1051,
+			70,
+			69
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0183"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0184 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			53,
+			67,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			753,
+			53,
+			57
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0185"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0186 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			51,
+			74,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1434,
+			44,
+			60
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0187"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0194 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			78,
+			69,
+			58,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1947,
+			57,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0195"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0196 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			54,
+			39,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1346,
+			464,
+			82,
+			58
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0197 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			54,
+			39,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1431,
+			464,
+			82,
+			58
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0198 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			71,
+			52,
+			49,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1891,
+			73,
+			58
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0199"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0200 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			71,
+			48,
+			48,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1377,
+			74,
+			62
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0201"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0202 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			44,
+			47,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			982,
+			74,
+			66
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0203"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0204 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			76,
+			43,
+			47,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1189,
+			70,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0205"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0206 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			76,
+			45,
+			71,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1996,
+			464,
+			46,
+			65
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0207"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0208 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			44,
+			71,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			641,
+			47,
+			66
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0209"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0210 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1003,
+			49,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0211"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0212 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			71,
+			75,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			830,
+			680,
+			50,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0213"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0214 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			62,
+			75,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1550,
+			50,
+			51
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0215"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0216 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			59,
+			75,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1322,
+			50,
+			53
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0217",
+			"rocket_gunners_tower_lvl4_gunner_0220",
+			"rocket_gunners_tower_lvl4_gunner_0221"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0218 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			59,
+			75,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1378,
+			50,
+			53
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0219"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0222 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			45,
+			75,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1170,
+			50,
+			68
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0223"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0224 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			44,
+			75,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			691,
+			50,
+			69
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0225"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0226 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			43,
+			75,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			763,
+			50,
+			69
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0227"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0228 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			43,
+			75,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			835,
+			50,
+			69
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0229"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0230 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			45,
+			75,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1241,
+			50,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0231"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0232 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			45,
+			76,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1381,
+			49,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0233"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0234 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			45,
+			75,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1311,
+			50,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0235"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0236 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			67,
+			71,
+			74,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			775,
+			680,
+			52,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0237"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0238 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1049,
+			49,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0239"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0240 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1095,
+			49,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0241"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0244 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			71,
+			75,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1768,
+			44,
+			39
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0245"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0246 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			62,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1969,
+			586,
+			45,
+			49
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0247"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0248 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			59,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1747,
+			46,
+			52
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0249",
+			"rocket_gunners_tower_lvl4_gunner_0250",
+			"rocket_gunners_tower_lvl4_gunner_0251",
+			"rocket_gunners_tower_lvl4_gunner_0252",
+			"rocket_gunners_tower_lvl4_gunner_0253"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0254 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			45,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			780,
+			46,
+			66
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0255"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0256 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			44,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			710,
+			46,
+			67
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0257"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0258 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			43,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1671,
+			46,
+			68
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0259"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0260 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			43,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			1742,
+			46,
+			68
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0261"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0262 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			45,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			849,
+			46,
+			66
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0263"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0264 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			45,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			987,
+			44,
+			66
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0265"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0266 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			45,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			918,
+			46,
+			66
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0267"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0268 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			71,
+			74,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1683,
+			45,
+			39
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0269"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0270 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			68,
+			74,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1546,
+			45,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0271"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0272 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			68,
+			74,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1638,
+			44,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0273"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0274 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			71,
+			73,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1509,
+			46,
+			39
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0275"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0276 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			65,
+			74,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1684,
+			44,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0277"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0278 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			62,
+			73,
+			113
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1157,
+			45,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0279"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0280 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			64,
+			74,
+			110
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1864,
+			44,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0281"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0282 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			68,
+			74,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1909,
+			44,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0283"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0284 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			70,
+			74,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1466,
+			45,
+			40
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0285"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0286 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			65,
+			76,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1954,
+			42,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0287"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0288 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			62,
+			78,
+			110
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1636,
+			40,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0289"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0290 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			64,
+			77,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1419,
+			41,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0291"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0292 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			68,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1373,
+			42,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0293"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0294 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			70,
+			73,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1288,
+			46,
+			40
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0295"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0296 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			68,
+			74,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			2001,
+			44,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0297",
+			"rocket_gunners_tower_lvl4_gunner_0298",
+			"rocket_gunners_tower_lvl4_gunner_0299"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0300 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			71,
+			73,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1551,
+			46,
+			39
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0301"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0302 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			72,
+			74,
+			71,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			721,
+			727,
+			50,
+			37
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0303"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0304 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			71,
+			65,
+			78,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1730,
+			44,
+			43
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0305"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0306 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			68,
+			69,
+			80,
+			101
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1108,
+			45,
+			46
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0307"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0308 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			72,
+			79,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1455,
+			48,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0309"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0310 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			69,
+			78,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1232,
+			49,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0311"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0312 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			67,
+			77,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			614,
+			680,
+			50,
+			44
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0313 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			67,
+			77,
+			105
+		},
+		a_size = {
+			2048,
+			2048
 		},
 		f_quad = {
 			667,
-			763,
-			97,
+			680,
+			50,
+			44
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0314 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			69,
+			77,
+			106
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			560,
+			727,
+			50,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0315"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0316 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			65,
+			75,
+			77,
+			104
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			613,
+			727,
+			51,
+			37
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0317"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0318 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			49,
+			45,
+			53,
+			75
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1099,
+			91,
+			96
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0319 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			49,
+			45,
+			53,
+			75
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1198,
+			91,
+			96
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0320 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			28,
+			36,
+			34,
+			93
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1563,
+			254,
+			131,
+			87
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0321 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			28,
+			36,
+			34,
+			91
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1429,
+			254,
+			131,
+			89
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0322 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			54,
+			30,
+			61,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1939,
+			78,
+			99
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0323 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			53,
+			30,
+			58,
 			85
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			19,
-            14,
-            23,
-            37
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			772,
-			763,
-			97,
-			85
+			137,
+			1297,
+			82,
+			101
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0017"] = {
+	rocket_gunners_tower_lvl4_gunner_0324 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			139,
-			136
-		},
-		trim = {
-			19,
-            22,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1487,
-			673,
-			97,
-			77
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			19,
-            44,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1064,
-			386,
-			97,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			21,
-            44,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1169,
-			386,
-			95,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			21,
-            44,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1272,
-			386,
-			95,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			21,
-            44,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1375,
-			386,
-			95,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			21,
-            44,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1478,
-			386,
-			95,
-			55
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			21,
-            46,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1210,
-			324,
-			95,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
-		},
-		trim = {
-			21,
-            46,
-            23,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1313,
-			324,
-			95,
-			53
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			139,
-			136
+			193,
+			216
 		},
 		trim = {
 			51,
-            53,
-            23,
-            38
+			30,
+			57,
+			83
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1512,
-			98,
-			65,
-			45
+			137,
+			993,
+			85,
+			103
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_phosphoric_coating_trace_0001"] = {
+	rocket_gunners_tower_lvl4_gunner_0325 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			136,
-			68
+			193,
+			216
 		},
 		trim = {
-			17,
-            15,
-            63,
-            17
+			50,
+			30,
+			56,
+			82
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1634,
-			4,
+			137,
+			886,
+			87,
+			104
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0326 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			52,
+			35,
+			56,
+			87
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1492,
+			85,
+			94
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0327"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0328 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			53,
+			40,
+			56,
+			88
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			464,
+			84,
+			88
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0329"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0330 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			54,
+			48,
+			57,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			999,
+			464,
+			82,
+			60
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0331"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0332 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			66,
+			59,
+			75,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1497,
+			52,
+			50
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0333"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0334 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			70,
+			75,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1201,
+			45,
+			41
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0335 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			72,
+			76,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1810,
+			44,
+			39
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_gunner_0336 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			74,
+			70,
+			78,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1852,
+			41,
+			41
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0337"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0338 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			67,
+			74,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1499,
+			44,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0339"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0340 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			77,
+			67,
+			68,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			937,
+			680,
+			48,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0341"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0342 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			78,
+			69,
+			68,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			1366,
+			47,
+			42
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0343"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0344 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			82,
+			72,
+			64,
+			105
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			1331,
+			47,
+			39
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0345"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0346 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			81,
+			80,
+			61,
+			103
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1581,
+			641,
+			51,
+			33
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0347"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0348 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			81,
+			77,
+			61,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			667,
+			727,
+			51,
+			37
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0349"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0350 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			81,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1361,
+			641,
+			50,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0351",
+			"rocket_gunners_tower_lvl4_gunner_0352",
+			"rocket_gunners_tower_lvl4_gunner_0353",
+			"rocket_gunners_tower_lvl4_gunner_0354",
+			"rocket_gunners_tower_lvl4_gunner_0355",
+			"rocket_gunners_tower_lvl4_gunner_0356",
+			"rocket_gunners_tower_lvl4_gunner_0357",
+			"rocket_gunners_tower_lvl4_gunner_0358",
+			"rocket_gunners_tower_lvl4_gunner_0359",
+			"rocket_gunners_tower_lvl4_gunner_0360",
+			"rocket_gunners_tower_lvl4_gunner_0361",
+			"rocket_gunners_tower_lvl4_gunner_0378",
+			"rocket_gunners_tower_lvl4_gunner_0379"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0362 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			81,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1414,
+			641,
+			50,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0363"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0364 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			76,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1005,
+			641,
+			55,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0365"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0366 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			73,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			704,
+			641,
+			58,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0367"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0368 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			70,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			508,
+			641,
+			61,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0369"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0370 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1721,
+			586,
+			62,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0371"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0372 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			70,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			572,
+			641,
+			61,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0373"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0374 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			69,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1786,
+			586,
+			62,
+			36
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0375"
+		}
+	},
+	rocket_gunners_tower_lvl4_gunner_0376 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			193,
+			216
+		},
+		trim = {
+			75,
+			78,
+			62,
+			102
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			946,
+			641,
 			56,
 			36
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_lvl4_gunner_0377"
+		}
 	},
-	["rocket_gunners_tower_phosphoric_coating_trace_0002"] = {
+	rocket_gunners_tower_lvl4_tower_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			401,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0002 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			533,
+			131,
+			129,
+			118
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0003"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			665,
+			131,
+			129,
+			118
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0005"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0006 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			797,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0007 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			929,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0008 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1061,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1193,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0010 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1325,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1457,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0012 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1589,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0013 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1721,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0014 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1853,
+			131,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			254,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0016 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			269,
+			254,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0017 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			34,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			533,
+			5,
+			129,
+			121
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0018"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0019 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1418,
+			129,
+			123
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0020"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0021 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1544,
+			129,
+			123
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0022"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0023 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1670,
+			129,
+			123
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0024"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0025 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1796,
+			129,
+			123
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0026",
+			"rocket_gunners_tower_lvl4_tower_0027",
+			"rocket_gunners_tower_lvl4_tower_0028"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0029 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1922,
+			129,
+			123
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0030 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			5,
+			129,
+			123
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0031 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			269,
+			5,
+			129,
+			123
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0032 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			32,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			401,
+			5,
+			129,
+			123
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0033 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			21,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1144,
+			129,
+			134
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0034 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			21,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1281,
+			129,
+			134
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0035 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			16,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			581,
+			129,
+			139
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0036 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			17,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			723,
+			129,
+			138
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0037 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			14,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			129,
+			141
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0038 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			14,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			149,
+			129,
+			141
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0039 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			14,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			293,
+			129,
+			141
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0040 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			14,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			437,
+			129,
+			141
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0041 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			18,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			864,
+			129,
+			137
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0042 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			18,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1004,
+			129,
+			137
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0043 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			665,
+			5,
+			129,
+			120
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0044"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0045 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			797,
+			5,
+			129,
+			120
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0046"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0047 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			929,
+			5,
+			129,
+			120
+		},
+		alias = {
+			"rocket_gunners_tower_lvl4_tower_0048",
+			"rocket_gunners_tower_lvl4_tower_0049"
+		}
+	},
+	rocket_gunners_tower_lvl4_tower_0050 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1061,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0051 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1193,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0052 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1325,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0053 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1457,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0054 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1589,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0055 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1721,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0056 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1853,
+			5,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0057 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			131,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0058 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			35,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			269,
+			131,
+			129,
+			120
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0059 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			401,
+			254,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0060 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			533,
+			254,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0061 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			665,
+			254,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_lvl4_tower_0062 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			159,
+			239
+		},
+		trim = {
+			16,
+			37,
+			14,
+			84
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			797,
+			254,
+			129,
+			118
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			39,
+			88,
+			37,
+			121
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1608,
+			586,
+			52,
+			44
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0002"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			35,
+			75,
+			34,
+			116
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1985,
+			153,
+			59,
+			62
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			27,
+			39,
+			29,
+			111
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			464,
+			72,
+			103
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0005"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0006 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			21,
+			27,
+			18,
+			109
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1697,
+			254,
+			89,
+			117
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0007"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0008 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			18,
+			23,
+			15,
+			108
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			761,
+			95,
+			122
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0009"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0010 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			19,
+			17,
+			14,
+			107
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			375,
+			95,
+			129
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0011"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0012 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			18,
+			14,
+			15,
+			116
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			635,
+			95,
+			123
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0013"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0014 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			19,
+			14,
+			15,
+			114
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			507,
+			94,
+			125
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0015"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0016 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			20,
+			15,
+			17,
+			150
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1401,
+			91,
+			88
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0017"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0018 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			20,
+			15,
+			18,
+			152
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1850,
+			90,
+			86
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0019 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			25,
+			15,
+			18,
+			173
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			464,
+			85,
+			65
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_0020 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			128,
+			253
+		},
+		trim = {
+			26,
+			15,
+			21,
+			186
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1952,
+			81,
+			52
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_0021"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			59,
+			57,
+			59,
+			57
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1869,
+			337,
+			35,
+			31
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0002 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			39,
+			45,
+			44,
+			47
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			635,
+			70,
+			53
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			27,
+			32,
+			33,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1521,
+			375,
+			93,
+			76
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0004"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0005 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			21,
+			27,
+			27,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1912,
+			254,
+			105,
+			91
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0006"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0007 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			16,
+			19,
+			22,
+			21
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1311,
+			254,
+			115,
+			105
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0008"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			13,
+			16,
+			16,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			929,
+			254,
+			124,
+			112
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0010"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			13,
+			16,
+			14,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1056,
+			254,
+			126,
+			110
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0012"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0013 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			15,
+			15,
+			15,
+			19
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1185,
+			254,
+			123,
+			111
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0014"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			17,
+			14,
+			16,
+			51
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1789,
+			254,
+			120,
+			80
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0016"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_explosion_air_0017 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			34,
+			24,
+			42,
+			56
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			919,
+			464,
+			77,
+			65
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_explosion_air_0018"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			20,
+			27,
+			23,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			570,
+			68,
+			62
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_hit_fx_0002"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			29,
+			24,
+			33,
+			48
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1604,
+			49,
+			50
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			29,
+			19,
+			33,
+			48
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1264,
+			49,
+			55
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0005 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			28,
+			14,
+			25,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1985,
+			80,
+			58,
+			70
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_hit_fx_0006"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0007 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			25,
+			14,
+			25,
+			35
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1695,
+			61,
+			73
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_hit_fx_0008"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			32,
+			18,
+			21,
+			32
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1985,
+			5,
+			58,
+			72
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_hit_fx_0010"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			111,
+			122
+		},
+		trim = {
+			31,
+			25,
+			27,
+			69
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			774,
+			727,
+			53,
+			28
+		},
+		alias = {
+			"rocket_gunners_tower_phosphoric_coating_hit_fx_0012"
+		}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			19,
+			24,
+			41,
+			44
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			555,
+			79,
+			68
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0002 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			19,
+			24,
+			21,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1325,
+			375,
+			99,
+			74
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			16,
+			21,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			553,
+			375,
+			96,
+			82
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			16,
+			23,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1036,
+			375,
+			94,
+			82
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0005 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			21,
+			14,
+			21,
+			39
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			453,
+			375,
+			97,
+			83
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0006 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			18,
+			14,
+			17,
+			37
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			346,
+			375,
+			104,
+			85
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0007 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			16,
+			14,
+			15,
+			36
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			235,
+			375,
+			108,
+			86
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0008 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			14,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1589,
+			93,
+			84
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			14,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1676,
+			93,
+			84
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0010 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			14,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			137,
+			1763,
+			93,
+			84
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			16,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1133,
+			375,
+			93,
+			82
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0012 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			16,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1229,
+			375,
+			93,
+			82
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0013 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			15,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			652,
+			375,
+			93,
+			83
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0014 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			15,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			748,
+			375,
+			93,
+			83
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			15,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			844,
+			375,
+			93,
+			83
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0016 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			15,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			940,
+			375,
+			93,
+			83
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0017 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			23,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1617,
+			375,
+			93,
+			75
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0018 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1516,
+			464,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0019 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1612,
+			464,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0020 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1708,
+			464,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0021 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1804,
+			464,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0022 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1900,
+			464,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0023 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			397,
+			532,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0024 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			22,
+			47,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			493,
+			532,
+			93,
+			51
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0025 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			139,
+			136
+		},
+		trim = {
+			52,
+			55,
+			24,
+			38
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			686,
+			586,
+			63,
+			43
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_trace_0001 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			136,
 			68
 		},
 		trim = {
-			60,
-            15,
-            19,
-            15
+			18,
+			18,
+			64,
+			18
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
+			1467,
+			641,
+			54,
+			32
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_phosphoric_coating_trace_0002 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			136,
+			68
+		},
+		trim = {
 			61,
-			48,
-			57,
+			18,
+			21,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1524,
+			641,
+			54,
+			32
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_preview = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			125,
+			114
+		},
+		trim = {
+			15,
+			15,
+			14,
+			27
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1713,
+			375,
+			96,
+			72
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_reticle_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			168,
+			156
+		},
+		trim = {
+			38,
+			38,
+			39,
 			38
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_preview"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			124,
-			113
-		},
-		trim = {
-			11,
-            13,
-            11,
-            24
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1196,
-			673,
-			102,
-			76
+			1427,
+			375,
+			91,
+			80
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0001"] = {
+	rocket_gunners_tower_reticle_0002 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
-			37,
-            37,
-            38,
-            37
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1592,
-			673,
-			92,
-			82
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_reticle_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			167,
-			156
-		},
-		trim = {
+			44,
 			42,
-            41,
-            43,
-            42
+			44,
+			42
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			293,
-			673,
-			82,
-			73
+			1919,
+			375,
+			80,
+			72
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0003"] = {
+	rocket_gunners_tower_reticle_0003 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
-			47,
-            45,
-            48,
-            46
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1497,
-			518,
-			72,
-			65
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_reticle_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			167,
-			156
-		},
-		trim = {
-			52,
-            49,
-            53,
-            49
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			889,
-			450,
-			62,
-			58
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_reticle_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			167,
-			156
-		},
-		trim = {
-			57,
-            54,
-            58,
-            54
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			305,
-			208,
-			52,
-			48
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_reticle_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			167,
-			156
-		},
-		trim = {
-			62,
-            58,
-            63,
-            58
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1137,
 			48,
-			42,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_reticle_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			167,
-			156
-		},
-		trim = {
-			59,
-            55,
-            59,
-            55
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			426,
-			152,
+			47,
 			49,
 			46
 		},
-		alias = {},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			310,
+			1629,
+			71,
+			63
+		},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0008"] = {
+	rocket_gunners_tower_reticle_0004 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
-			55,
-            51,
-            55,
-            52
+			53,
+			50,
+			54,
+			50
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1416,
-			324,
-			57,
-			53
+			235,
+			969,
+			61,
+			56
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0009"] = {
+	rocket_gunners_tower_reticle_0005 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
+			58,
 			55,
-            51,
-            55,
-            52
+			59,
+			55
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1481,
-			324,
-			57,
-			53
+			447,
+			1854,
+			51,
+			46
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0010"] = {
+	rocket_gunners_tower_reticle_0006 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
-			55,
-            51,
-            55,
-            52
+			63,
+			59,
+			64,
+			59
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1481,
-			324,
-			57,
-			53
+			397,
+			1896,
+			41,
+			38
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0011"] = {
+	rocket_gunners_tower_reticle_0007 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
-			55,
-            51,
-            55,
-            52
+			60,
+			56,
+			60,
+			56
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1416,
-			324,
-			57,
-			53
+			988,
+			680,
+			48,
+			44
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_reticle_0012"] = {
+	rocket_gunners_tower_reticle_0008 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			167,
+			168,
 			156
 		},
 		trim = {
-			55,
-            51,
-            55,
-            52
+			56,
+			53,
+			56,
+			52
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1416,
-			324,
+			447,
+			1157,
+			56,
+			51
+		},
+		alias = {
+			"rocket_gunners_tower_reticle_0011",
+			"rocket_gunners_tower_reticle_0012"
+		}
+	},
+	rocket_gunners_tower_reticle_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			168,
+			156
+		},
+		trim = {
+			56,
+			53,
 			57,
 			53
 		},
-		alias = {},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			447,
+			1211,
+			55,
+			50
+		},
+		alias = {
+			"rocket_gunners_tower_reticle_0010"
+		}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal"] = {
+	rocket_gunners_tower_sting_missiles_floor_decal = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			105,
 			71
 		},
 		trim = {
+			14,
+			17,
+			15,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			526,
+			586,
+			76,
+			37
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_sting_missiles_floor_decal_smoke_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			54,
+			108
+		},
+		trim = {
 			13,
-            16,
-            14,
-            16
+			15,
+			15,
+			69
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			485,
-			48,
-			78,
-			39
+			1912,
+			348,
+			26,
+			24
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0002",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0003",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0004"
+		}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0001"] = {
+	rocket_gunners_tower_sting_missiles_floor_decal_smoke_0005 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			54,
+			108
 		},
 		trim = {
-			10,
-            12,
-            12,
-            65
+			14,
+			14,
+			15,
+			68
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			803,
-			4,
-			31,
-			30
+			2020,
+			284,
+			25,
+			26
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0006",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0007",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0008"
+		}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0002"] = {
+	rocket_gunners_tower_sting_missiles_floor_decal_smoke_0009 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			54,
+			108
 		},
 		trim = {
-			10,
-            12,
-            12,
-            65
+			14,
+			13,
+			15,
+			69
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			803,
-			4,
-			31,
-			30
+			2020,
+			313,
+			25,
+			26
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0010",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0011",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0012"
+		}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0003"] = {
+	rocket_gunners_tower_sting_missiles_floor_decal_smoke_0013 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			54,
+			108
 		},
 		trim = {
-			10,
-            12,
-            12,
-            65
+			13,
+			13,
+			15,
+			69
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			803,
-			4,
-			31,
-			30
+			397,
+			1937,
+			26,
+			26
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0014",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0015",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0016"
+		}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0004"] = {
+	rocket_gunners_tower_sting_missiles_floor_decal_smoke_0017 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			54,
+			108
 		},
 		trim = {
-			10,
-            12,
-            12,
-            65
+			14,
+			13,
+			15,
+			68
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			803,
-			4,
-			31,
-			30
+			2020,
+			254,
+			25,
+			27
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0018",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0019",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0020"
+		}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0005"] = {
+	rocket_gunners_tower_sting_missiles_floor_decal_smoke_0021 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			54,
+			108
 		},
 		trim = {
+			13,
+			13,
+			15,
+			68
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2017,
+			586,
+			26,
+			27
+		},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0022",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0023",
+			"rocket_gunners_tower_sting_missiles_floor_decal_smoke_0024"
+		}
+	},
+	rocket_gunners_tower_sting_missiles_particles_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			43,
+			40
+		},
+		trim = {
+			14,
+			14,
+			15,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2018,
+			348,
+			14,
+			13
+		},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_particles_0002"
+		}
+	},
+	rocket_gunners_tower_sting_missiles_particles_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			43,
+			40
+		},
+		trim = {
+			15,
+			14,
+			15,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1543,
+			627,
+			13,
+			11
+		},
+		alias = {
+			"rocket_gunners_tower_sting_missiles_particles_0004"
+		}
+	},
+	rocket_gunners_tower_sting_missiles_particles_0005 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			43,
+			40
+		},
+		trim = {
+			16,
+			16,
+			16,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			808,
+			758,
 			11,
-            11,
-            12,
-            65
+			9
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			842,
-			4,
-			30,
-			31
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0006"] = {
+	rocket_gunners_tower_sting_missiles_particles_0006 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			43,
+			40
 		},
 		trim = {
-			11,
-            11,
-            12,
-            65
+			17,
+			16,
+			16,
+			15
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			842,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			11,
-            11,
-            12,
-            65
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			842,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			11,
-            11,
-            12,
-            65
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			842,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			11,
-            10,
-            12,
-            66
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			880,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			11,
-            10,
-            12,
-            66
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			880,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			11,
-            10,
-            12,
-            66
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			880,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			11,
-            10,
-            12,
-            66
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			880,
-			4,
-			30,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
+			2035,
+			348,
 			10,
-            10,
-            11,
-            66
+			9
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			918,
-			4,
-			32,
-			31
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0014"] = {
+	rocket_gunners_tower_sting_missiles_particles_0007 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			43,
+			40
 		},
 		trim = {
+			17,
+			16,
+			16,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2035,
+			360,
 			10,
-            10,
-            11,
-            66
+			9
 		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			918,
-			4,
-			32,
-			31
-		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0015"] = {
+	rocket_gunners_tower_sting_missiles_particles_0008 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			53,
-			107
+			43,
+			40
 		},
 		trim = {
-			10,
-            10,
-            11,
-            66
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			918,
-			4,
-			32,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            11,
-            66
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			918,
-			4,
-			32,
-			31
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            64
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1325,
-			4,
-			31,
-			33
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            64
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1325,
-			4,
-			31,
-			33
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            64
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1325,
-			4,
-			31,
-			33
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            64
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1325,
-			4,
-			31,
-			33
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            65
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1286,
-			4,
-			31,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            65
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1286,
-			4,
-			31,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            65
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1286,
-			4,
-			31,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			53,
-			107
-		},
-		trim = {
-			10,
-            10,
-            12,
-            65
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1286,
-			4,
-			31,
-			32
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			11,
-            10,
-            11,
-            10
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			298,
-			4,
-			20,
-			19
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			11,
-            10,
-            11,
-            10
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			298,
-			4,
-			20,
-			19
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			11,
-            10,
-            12,
-            11
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			271,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			11,
-            10,
-            12,
-            11
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			271,
-			4,
-			19,
-			18
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			12,
-            13,
-            13,
-            11
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			149,
-			4,
+			17,
+			16,
 			17,
 			15
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			13,
-            13,
-            13,
-            11
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			174,
-			4,
-			16,
-			15
+			2036,
+			616,
+			9,
+			9
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_particles_0007"] = {
+	rocket_gunners_tower_sting_missiles_particles_0009 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			42,
-			39
+			43,
+			40
 		},
 		trim = {
-			13,
-            12,
-            13,
-            13
+			17,
+			17,
+			17,
+			16
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			48,
-			4,
+			2036,
+			628,
+			9,
+			7
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_sting_missiles_projectile_0001 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			102,
+			45
+		},
+		trim = {
 			16,
+			14,
+			51,
 			14
 		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_particles_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			13,
-            14,
-            14,
-            13
-		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			4,
-			15,
-			12
+			1941,
+			348,
+			35,
+			17
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_particles_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			42,
-			39
-		},
-		trim = {
-			15,
-            13,
-            14,
-            14
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			27,
-			4,
-			13,
-			12
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_sting_missiles_projectile_0001"] = {
+	rocket_gunners_tower_sting_missiles_projectile_0002 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			102,
 			45
 		},
 		trim = {
-			12,
-            11,
-            48,
-            11
+			14,
+			14,
+			51,
+			14
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			356,
-			4,
-			42,
-			23
+			1812,
+			444,
+			37,
+			17
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_projectile_0002"] = {
+	rocket_gunners_tower_sting_missiles_projectile_0003 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			102,
 			45
 		},
 		trim = {
-			11,
-            11,
-            48,
-            11
+			14,
+			14,
+			51,
+			14
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			406,
-			4,
-			43,
-			23
+			1852,
+			444,
+			37,
+			17
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_sting_missiles_projectile_0003"] = {
+	rocket_gunners_tower_take_off_fx_0001 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			102,
-			45
-		},
-		trim = {
-			11,
-            11,
-            48,
-            11
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			457,
-			4,
-			43,
-			23
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
-			36,
-            19,
-            37,
-            35
+			37,
+			21,
+			38,
+			36
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			559,
-			4,
-			34,
-			28
+			1526,
+			346,
+			33,
+			25
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_take_off_fx_0002"] = {
+	rocket_gunners_tower_take_off_fx_0002 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
-			28,
-            14,
-            30,
-            31
+			30,
+			17,
+			32,
+			32
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			4,
-			48,
-			49,
+			1997,
+			641,
+			46,
+			33
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0003 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			24,
+			17,
+			26,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			765,
+			641,
+			58,
+			36
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0004 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			23,
+			16,
+			25,
+			29
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1906,
+			586,
+			60,
 			37
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_take_off_fx_0003"] = {
+	rocket_gunners_tower_take_off_fx_0005 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
 			22,
-            14,
-            24,
-            26
+			16,
+			24,
+			28
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			231,
-			98,
-			61,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			22,
-            13,
-            23,
-            27
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			300,
-			98,
+			1543,
+			586,
 			62,
-			42
+			38
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_take_off_fx_0005"] = {
+	rocket_gunners_tower_take_off_fx_0006 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
 			21,
-            13,
-            23,
-            27
+			15,
+			24,
+			28
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			370,
-			98,
+			1477,
+			586,
 			63,
-			42
+			39
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_take_off_fx_0006"] = {
+	rocket_gunners_tower_take_off_fx_0007 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			107,
-			82
-		},
-		trim = {
-			20,
-            12,
-            22,
-            26
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1187,
-			98,
-			65,
-			44
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			20,
-            12,
-            22,
-            26
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1260,
-			98,
-			65,
-			44
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			22,
-            11,
-            25,
-            29
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			441,
-			98,
-			60,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
 			21,
-            11,
-            23,
-            29
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			509,
-			98,
-			63,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			21,
-            11,
-            23,
-            29
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			580,
-			98,
-			63,
-			42
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			22,
-            11,
-            24,
-            31
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1187,
-			48,
-			61,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			22,
-            11,
-            24,
-            31
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			1256,
-			48,
-			61,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
+			15,
 			23,
-            11,
-            23,
-            31
+			27
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1325,
-			48,
-			61,
+			1186,
+			586,
+			64,
 			40
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_take_off_fx_0014"] = {
+	rocket_gunners_tower_take_off_fx_0008 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
-			23,
-            11,
-            23,
-            31
+			25,
+			14,
+			28,
+			32
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			1394,
+			1063,
+			641,
+			55,
+			36
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0009 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			24,
+			14,
+			27,
+			32
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			826,
+			641,
+			57,
+			36
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0010 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			24,
+			14,
+			27,
+			32
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			886,
+			641,
+			57,
+			36
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0011 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			25,
+			14,
+			27,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1243,
+			641,
+			56,
+			35
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0012 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			25,
+			14,
+			27,
+			33
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1302,
+			641,
+			56,
+			35
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0013 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			24,
+			14,
+			26,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1121,
+			641,
+			58,
+			34
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0014 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			24,
+			14,
+			26,
+			34
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1182,
+			641,
+			58,
+			34
+		},
+		alias = {}
+	},
+	rocket_gunners_tower_take_off_fx_0015 = {
+		a_name = "go_towers_rocket_gunners-1.dds",
+		size = {
+			108,
+			82
+		},
+		trim = {
+			44,
+			14,
 			48,
-			61,
-			40
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			41,
-            11,
-            44,
-            51
+			52
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			326,
-			4,
-			22,
-			20
-		},
-		alias = {},
-	},
-	["rocket_gunners_tower_take_off_fx_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.dds",
-		size = {
-			107,
-			82
-		},
-		trim = {
-			43,
-            13,
-            45,
-            53
-		},
-		a_size = {
-			1711,
-			1711
-		},
-		f_quad = {
-			198,
-			4,
-			19,
+			426,
+			1937,
+			16,
 			16
 		},
-		alias = {},
+		alias = {}
 	},
-	["rocket_gunners_tower_take_off_fx_0017"] = {
+	rocket_gunners_tower_take_off_fx_0016 = {
 		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
-			107,
+			108,
 			82
 		},
 		trim = {
-			43,
-            13,
-            45,
-            53
+			44,
+			14,
+			48,
+			55
 		},
 		a_size = {
-			1711,
-			1711
+			2048,
+			2048
 		},
 		f_quad = {
-			198,
-			4,
-			19,
-			16
+			2017,
+			616,
+			16,
+			13
 		},
-		alias = {},
+		alias = {
+			"rocket_gunners_tower_take_off_fx_0017"
+		}
 	}
 }

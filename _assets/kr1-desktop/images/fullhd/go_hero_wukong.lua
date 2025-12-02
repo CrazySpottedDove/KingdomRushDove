@@ -1,4781 +1,2100 @@
 return {
-	["hero_wukong_attack_range_projectile_0001"] = {
+	hero_wukong_attack_range_projectile_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
-			28,
-            17,
-            19,
-            224
+			32,
+			18,
+			21,
+			227
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3515,
-			1996,
-			32,
-			219
+			410,
+			3765,
+			27,
+			215
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_attack_range_projectile_0002"
+		}
 	},
-	["hero_wukong_attack_range_projectile_0002"] = {
+	hero_wukong_attack_range_projectile_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
-			28,
-            17,
-            19,
-            224
+			30,
+			85,
+			25,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3515,
-			1996,
-			32,
-			219
+			1567,
+			2389,
+			25,
+			149
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_attack_range_projectile_0004"
+		}
 	},
-	["hero_wukong_attack_range_projectile_0003"] = {
+	hero_wukong_attack_range_projectile_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
 			27,
-            82,
-            21,
-            223
+			187,
+			29,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			609,
-			1815,
-			31,
-			155
+			1680,
+			3066,
+			24,
+			47
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0004"] = {
+	hero_wukong_attack_range_projectile_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
 			27,
-            82,
-            21,
-            223
+			187,
+			29,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			609,
-			1815,
-			31,
-			155
+			1680,
+			2822,
+			24,
+			47
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0005"] = {
+	hero_wukong_attack_range_projectile_0007 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
-			24,
-            184,
-            27,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			656,
-			61,
 			28,
-			53
+			158,
+			27,
+			226
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2145,
+			3449,
+			25,
+			76
+		},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0006"] = {
+	hero_wukong_attack_range_projectile_0008 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
-			24,
-            184,
-            27,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			692,
-			61,
 			28,
-			53
+			158,
+			27,
+			226
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2143,
+			3754,
+			25,
+			76
+		},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0007"] = {
+	hero_wukong_attack_range_projectile_0009 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
-			24,
-            155,
-            24,
-            223
+			26,
+			164,
+			25,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			679,
-			530,
-			31,
-			82
+			1680,
+			2993,
+			29,
+			70
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0008"] = {
+	hero_wukong_attack_range_projectile_0010 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
-			24,
-            155,
-            24,
-            223
+			26,
+			164,
+			25,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			718,
-			530,
-			31,
-			82
+			1680,
+			2749,
+			29,
+			70
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0009"] = {
+	hero_wukong_attack_range_projectile_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
+			460
+		},
+		trim = {
+			25,
+			164,
+			25,
+			226
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1671,
+			2030,
+			30,
+			70
+		},
+		alias = {}
+	},
+	hero_wukong_attack_range_projectile_0012 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			80,
+			460
+		},
+		trim = {
+			25,
+			164,
+			25,
+			226
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4061,
+			1228,
+			30,
+			70
+		},
+		alias = {}
+	},
+	hero_wukong_attack_range_projectile_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			80,
+			460
+		},
+		trim = {
+			23,
+			164,
+			23,
+			226
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1672,
+			1586,
+			34,
+			70
+		},
+		alias = {}
+	},
+	hero_wukong_attack_range_projectile_0014 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			80,
+			460
+		},
+		trim = {
+			23,
+			164,
+			23,
+			226
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1675,
+			3229,
+			34,
+			70
+		},
+		alias = {}
+	},
+	hero_wukong_attack_range_projectile_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			80,
 			460
 		},
 		trim = {
 			22,
-            161,
-            23,
-            223
+			164,
+			22,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1324,
-			356,
-			34,
-			76
+			3842,
+			147,
+			36,
+			70
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0010"] = {
+	hero_wukong_attack_range_projectile_0016 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
 		},
 		trim = {
 			22,
-            161,
-            23,
-            223
+			164,
+			22,
+			226
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1366,
-			356,
-			34,
-			76
+			1786,
+			2691,
+			36,
+			70
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_attack_range_projectile_0011"] = {
+	hero_wukong_attack_range_projectile_0017 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
+			80,
 			460
+		},
+		trim = {
+			22,
+			164,
+			22,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4054,
+			159,
+			36,
+			71
+		},
+		alias = {}
+	},
+	hero_wukong_attack_range_projectile_0018 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			80,
+			460
+		},
+		trim = {
+			30,
+			164,
+			32,
+			226
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2152,
+			3223,
+			18,
+			70
+		},
+		alias = {
+			"hero_wukong_attack_range_projectile_0019",
+			"hero_wukong_attack_range_projectile_0020",
+			"hero_wukong_attack_range_projectile_0021"
+		}
+	},
+	hero_wukong_back_dust_0001 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			170,
+			151
+		},
+		trim = {
+			50,
+			36,
+			51,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2457,
+			1547,
+			69,
+			36
+		},
+		alias = {
+			"hero_wukong_back_dust_0002"
+		}
+	},
+	hero_wukong_back_dust_0003 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			170,
+			151
+		},
+		trim = {
+			23,
+			27,
+			38,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3421,
+			434,
+			109,
+			45
+		},
+		alias = {
+			"hero_wukong_back_dust_0004"
+		}
+	},
+	hero_wukong_back_dust_0005 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			170,
+			151
 		},
 		trim = {
 			21,
-            161,
-            21,
-            223
+			24,
+			36,
+			87
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1408,
-			356,
-			37,
-			76
+			3542,
+			442,
+			113,
+			40
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_back_dust_0006"
+		}
 	},
-	["hero_wukong_attack_range_projectile_0012"] = {
+	hero_wukong_back_dust_0007 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			79,
-			460
+			170,
+			151
 		},
 		trim = {
 			21,
-            161,
-            21,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1453,
-			356,
-			37,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
 			20,
-            161,
-            20,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1498,
-			356,
-			39,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			20,
-            161,
-            20,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1545,
-			356,
-			39,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
 			19,
-            161,
-            19,
-            223
+			90
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1592,
-			356,
-			41,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			19,
-            161,
-            19,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1641,
-			356,
-			41,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			18,
-            161,
-            19,
-            222
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2500,
-			356,
-			42,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			27,
-            161,
-            28,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1690,
-			356,
-			24,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			27,
-            161,
-            28,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1690,
-			356,
-			24,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			27,
-            161,
-            28,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1690,
-			356,
-			24,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_attack_range_projectile_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			79,
-			460
-		},
-		trim = {
-			27,
-            161,
-            28,
-            223
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1690,
-			356,
-			24,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			47,
-            33,
-            48,
-            76
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1004,
-			4,
-			75,
+			2305,
+			1544,
+			130,
 			41
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_back_dust_0008"
+		}
 	},
-	["hero_wukong_back_dust_0002"] = {
+	hero_wukong_back_dust_0009 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			170,
-			150
+			151
 		},
 		trim = {
-			47,
-            33,
-            48,
-            76
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1004,
-			4,
-			75,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			20,
-            24,
-            34,
-            76
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			61,
-			116,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			20,
-            24,
-            34,
-            76
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			61,
-			116,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			18,
-            21,
-            33,
-            84
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1983,
-			4,
-			119,
-			45
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			18,
-            21,
-            33,
-            84
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1983,
-			4,
-			119,
-			45
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
+			15,
 			17,
-            16,
-            16,
-            86
+			30,
+			99
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2915,
-			4,
-			137,
-			48
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			17,
-            16,
-            16,
-            86
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2915,
-			4,
-			137,
-			48
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			11,
-            14,
-            27,
-            95
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1087,
-			4,
-			132,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			11,
-            14,
-            27,
-            95
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1087,
-			4,
-			132,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_back_dust_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			170,
-			150
-		},
-		trim = {
-			10,
-            11,
-            25,
-            104
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			625,
-			4,
-			135,
+			2177,
+			444,
+			125,
 			35
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_back_dust_0010"
+		}
 	},
-	["hero_wukong_back_dust_0012"] = {
+	hero_wukong_back_dust_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			170,
-			150
+			151
 		},
 		trim = {
-			10,
-            11,
-            25,
-            104
+			13,
+			14,
+			28,
+			108
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			625,
-			4,
-			135,
-			35
+			2265,
+			747,
+			129,
+			29
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_back_dust_0012"
+		}
 	},
-	["hero_wukong_back_dust_0013"] = {
+	hero_wukong_back_dust_0013 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			170,
-			150
+			151
 		},
 		trim = {
 			0,
-            0,
-            167,
-            147
+			0,
+			170,
+			151
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			4,
-			4,
-			3,
-			3
+			2004,
+			241,
+			170,
+			151
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_baston_crack"] = {
+	hero_wukong_baston_crack = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			258,
 			213
 		},
 		trim = {
-			12,
-            20,
-            18,
-            31
+			14,
+			21,
+			21,
+			34
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2528,
-			1815,
-			228,
-			162
+			1998,
+			5,
+			223,
+			158
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_1_0001"] = {
+	hero_wukong_clone_1_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			195,
-			249
+			196,
+			250
 		},
 		trim = {
-			54,
-            55,
-            49,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2550,
-			356,
-			92,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			51,
-            50,
-            43,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			757,
-			530,
-			101,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			47,
-            43,
-            36,
-            112
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2014,
-			814,
-			112,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			41,
-            41,
-            32,
-            108
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1312,
-			1023,
-			122,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			37,
-            38,
-            27,
-            106
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1135,
-			131,
-			105
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			34,
-            36,
-            26,
-            104
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2224,
-			1135,
-			135,
-			109
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			32,
-            30,
-            26,
-            104
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1826,
-			1254,
-			137,
-			115
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			31,
-            26,
-            25,
-            103
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			806,
-			1381,
-			139,
-			120
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			31,
-            24,
-            24,
-            102
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2290,
-			1381,
-			140,
-			123
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			31,
-            22,
-            24,
-            103
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2883,
-			1381,
-			140,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			32,
-            21,
-            23,
-            103
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			296,
-			1513,
-			140,
-			125
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			36,
-            20,
-            20,
-            105
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3031,
-			1381,
-			139,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			34,
-            19,
-            19,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			844,
-			1254,
-			142,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			67,
-            64,
-            62,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2929,
-			199,
-			66,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			67,
-            78,
-            58,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1179,
-			61,
-			70,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			67,
-            78,
-            58,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1179,
-			61,
-			70,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			68,
-            62,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1147,
-			275,
-			67,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			68,
-            62,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1147,
-			275,
-			67,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            57,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			604,
-			356,
-			66,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            57,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			604,
-			356,
-			66,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			72,
-            56,
-            62,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1722,
-			356,
-			61,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			72,
-            56,
-            62,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1722,
-			356,
-			61,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            67,
-            59,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			942,
-			199,
-			67,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            67,
-            59,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			942,
-			199,
-			67,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			66,
-            77,
-            57,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1770,
-			61,
-			72,
-			55
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			66,
-            77,
-            57,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1770,
-			61,
-			72,
-			55
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			68,
-            62,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1222,
-			275,
-			67,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			68,
-            62,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1222,
-			275,
-			67,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            57,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			678,
-			356,
-			66,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            57,
-            60,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			678,
-			356,
-			66,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			72,
-            59,
-            62,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3351,
-			275,
-			61,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			72,
-            59,
-            62,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3351,
-			275,
-			61,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            67,
-            58,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1017,
-			199,
-			68,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            67,
-            58,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1017,
-			199,
-			68,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			52,
-            60,
-            71,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2629,
-			275,
-			72,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			52,
-            60,
-            71,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2629,
-			275,
-			72,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			49,
-            60,
-            74,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2709,
-			275,
-			72,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			49,
-            60,
-            74,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2709,
-			275,
-			72,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			48,
-            61,
-            75,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2221,
-			275,
-			72,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0040"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			48,
-            61,
-            75,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2221,
-			275,
-			72,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0041"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			47,
-            62,
-            76,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1297,
-			275,
-			72,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0042"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			47,
-            62,
-            76,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1297,
-			275,
-			72,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0043"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            62,
-            77,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1377,
-			275,
-			72,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0044"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            62,
-            77,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1377,
-			275,
-			72,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0045"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            63,
-            77,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			589,
-			275,
-			72,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0046"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            63,
-            77,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			589,
-			275,
-			72,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0047"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            63,
-            77,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			669,
-			275,
-			72,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0048"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            63,
-            77,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			669,
-			275,
-			72,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0049"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			55,
-            72,
-            43,
-            107
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1457,
-			275,
-			97,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0050"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			55,
-            72,
-            43,
-            107
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1457,
-			275,
-			97,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0051"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			77,
-            69,
-            44,
-            99
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2451,
-			441,
-			74,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0052"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			77,
-            69,
-            44,
-            99
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2451,
-			441,
-			74,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0053"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			75,
-            75,
-            62,
-            110
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			351,
-			199,
+			57,
 			58,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0054"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			75,
-            75,
-            62,
-            110
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			351,
-			199,
-			58,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0055"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			75,
-            73,
-            63,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3258,
-			61,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0056"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			75,
-            73,
-            63,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3258,
-			61,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0057"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			75,
-            73,
-            63,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3258,
-			61,
-			57,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0058"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			67,
-            48,
-            74,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3483,
-			530,
-			54,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0059"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			67,
-            48,
-            74,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3483,
-			530,
-			54,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0060"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			60,
-            74,
-            56,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2830,
-			61,
-			79,
-			58
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0061"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			60,
-            74,
-            56,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2830,
-			61,
-			79,
-			58
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0062"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            57,
-            66,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			752,
-			356,
-			60,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0063"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			69,
-            57,
-            66,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			752,
-			356,
-			60,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0064"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			67,
-            64,
-            62,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2929,
-			199,
-			66,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0065"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			48,
-            84,
-            50,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3060,
-			4,
-			97,
-			48
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0066"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			48,
-            84,
-            50,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3060,
-			4,
-			97,
-			48
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0067"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			49,
-            58,
-            58,
-            118
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3420,
-			275,
-			88,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0068"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			49,
-            58,
-            58,
-            118
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3420,
-			275,
-			88,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0069"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            58,
-            60,
-            119
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2789,
-			275,
-			89,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0070"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			46,
-            58,
-            60,
-            119
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2789,
-			275,
-			89,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0071"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			44,
-            53,
-            61,
-            121
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			820,
-			356,
-			90,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0072"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			44,
-            53,
-            61,
-            121
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			820,
-			356,
-			90,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0073"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			40,
-            51,
-            55,
-            121
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2650,
-			356,
-			100,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0074"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			40,
-            48,
-            54,
-            121
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1675,
-			441,
-			101,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0075"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			45,
-            43,
-            48,
-            123
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2072,
-			530,
-			102,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0076"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			41,
-            39,
-            42,
-            119
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			774,
-			814,
-			112,
-			91
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0077"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			35,
-            34,
-            37,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1442,
-			1023,
-			123,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0078"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			31,
-            31,
-            33,
-            112
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			679,
-			1135,
-			131,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0079"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			29,
-            29,
-            32,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2367,
-			1135,
-			134,
-			109
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0080"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			27,
-            24,
-            31,
-            110
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1971,
-			1254,
-			137,
-			115
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0081"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			26,
-            19,
-            30,
-            109
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1170,
-			1381,
-			139,
+			50,
 			121
 		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0082"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			26,
-            17,
-            29,
-            109
-		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2438,
-			1381,
-			140,
-			123
+			3408,
+			1957,
+			89,
+			71
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_1_0083"] = {
+	hero_wukong_clone_1_0002 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			195,
-			249
+			196,
+			250
 		},
 		trim = {
-			26,
-            16,
-            30,
-            109
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3178,
-			1381,
-			139,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0084"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			27,
-            14,
-            28,
-            110
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			444,
-			1513,
-			140,
-			125
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0085"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			31,
-            13,
-            26,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			592,
-			1513,
-			138,
-			125
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0086"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			29,
-            13,
-            25,
-            153
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2182,
-			530,
-			141,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0087"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			27,
-            13,
-            24,
-            153
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2331,
-			530,
-			144,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0088"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			27,
-            13,
-            24,
-            152
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3545,
-			530,
-			144,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_1_0089"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			195,
-			249
-		},
-		trim = {
-			0,
-            0,
-            192,
-            246
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			50,
-            61,
-            50,
-            108
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2886,
-			275,
-			93,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			47,
-            56,
-            43,
-            103
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			866,
-			530,
-			103,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
+			52,
+			53,
 			43,
-            52,
-            37,
-            98
+			118
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			894,
-			814,
-			113,
-			91
+			3529,
+			1856,
+			101,
+			79
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0004"] = {
+	hero_wukong_clone_1_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
-			36,
-            47,
-            33,
-            94
+			48,
+			46,
+			37,
+			114
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1573,
-			1023,
-			124,
-			100
+			1596,
+			3991,
+			111,
+			90
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0005"] = {
+	hero_wukong_clone_1_0004 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
+			42,
+			43,
 			32,
-            44,
-            30,
-            92
+			110
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			143,
-			1135,
-			131,
-			105
+			1955,
+			1462,
+			122,
+			97
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0006"] = {
+	hero_wukong_clone_1_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
-			30,
-            42,
-            28,
-            90
+			38,
+			39,
+			29,
+			107
 		},
 		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2509,
-			1135,
-			135,
-			109
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			28,
-            36,
-            27,
-            90
-		},
-		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
 			2116,
-			1254,
+			1006,
+			129,
+			104
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0006 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			36,
+			37,
+			27,
+			106
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2527,
+			1228,
+			133,
+			107
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			34,
+			33,
+			26,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1228,
+			136,
+			112
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0008 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			33,
+			29,
+			25,
+			104
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3170,
+			779,
 			138,
-			115
+			117
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0008"] = {
+	hero_wukong_clone_1_0009 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
-			27,
-            32,
-            27,
-            89
+			33,
+			25,
+			25,
+			104
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			953,
-			1381,
-			139,
-			120
+			2253,
+			779,
+			138,
+			121
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0009"] = {
+	hero_wukong_clone_1_0010 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
-			27,
-            30,
-            26,
-            88
+			33,
+			23,
+			26,
+			104
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2586,
-			1381,
-			140,
+			3126,
+			626,
+			137,
 			123
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0010"] = {
+	hero_wukong_clone_1_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
-			27,
-            28,
-            25,
-            88
+			33,
+			22,
+			24,
+			104
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			738,
-			1513,
-			141,
-			125
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			27,
-            27,
-            25,
-            89
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			887,
-			1513,
-			141,
-			125
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			32,
-            26,
-            22,
-            91
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3325,
-			1381,
+			2418,
+			626,
 			139,
 			124
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0013"] = {
+	hero_wukong_clone_1_0012 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
+		},
+		trim = {
+			38,
+			21,
+			22,
+			107
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2536,
+			779,
+			136,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			36,
+			20,
+			20,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1116,
+			140,
+			109
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0014 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			71,
+			68,
+			65,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3661,
+			60,
+			61
+		},
+		alias = {
+			"hero_wukong_clone_1_0064"
+		}
+	},
+	hero_wukong_clone_1_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			71,
+			81,
+			61,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3194,
+			2274,
+			64,
+			49
+		},
+		alias = {
+			"hero_wukong_clone_1_0016"
+		}
+	},
+	hero_wukong_clone_1_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			72,
+			66,
+			63,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2816,
+			61,
+			64
+		},
+		alias = {
+			"hero_wukong_clone_1_0018"
+		}
+	},
+	hero_wukong_clone_1_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			74,
+			60,
+			63,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			136,
+			3420,
+			59,
+			70
+		},
+		alias = {
+			"hero_wukong_clone_1_0020"
+		}
+	},
+	hero_wukong_clone_1_0021 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			76,
+			60,
+			65,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2950,
+			55,
+			70
+		},
+		alias = {
+			"hero_wukong_clone_1_0022"
+		}
+	},
+	hero_wukong_clone_1_0023 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			73,
+			71,
+			62,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4032,
+			2212,
+			61,
+			59
+		},
+		alias = {
+			"hero_wukong_clone_1_0024"
+		}
+	},
+	hero_wukong_clone_1_0025 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			70,
+			80,
+			60,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2991,
+			2274,
+			66,
+			50
+		},
+		alias = {
+			"hero_wukong_clone_1_0026"
+		}
+	},
+	hero_wukong_clone_1_0027 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			72,
+			66,
+			63,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2883,
+			61,
+			64
+		},
+		alias = {
+			"hero_wukong_clone_1_0028"
+		}
+	},
+	hero_wukong_clone_1_0029 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			74,
+			60,
+			63,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3280,
+			59,
+			70
+		},
+		alias = {
+			"hero_wukong_clone_1_0030"
+		}
+	},
+	hero_wukong_clone_1_0031 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			76,
+			62,
+			65,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3177,
+			55,
+			68
+		},
+		alias = {
+			"hero_wukong_clone_1_0032"
+		}
+	},
+	hero_wukong_clone_1_0033 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			73,
+			71,
+			62,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3851,
+			61,
+			59
+		},
+		alias = {
+			"hero_wukong_clone_1_0034"
+		}
+	},
+	hero_wukong_clone_1_0035 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			55,
+			64,
+			75,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2344,
+			66,
+			66
+		},
+		alias = {
+			"hero_wukong_clone_1_0036"
+		}
+	},
+	hero_wukong_clone_1_0037 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			53,
+			63,
+			77,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2274,
+			66,
+			67
+		},
+		alias = {
+			"hero_wukong_clone_1_0038"
+		}
+	},
+	hero_wukong_clone_1_0039 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			51,
+			64,
+			79,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2413,
+			66,
+			66
+		},
+		alias = {
+			"hero_wukong_clone_1_0040"
+		}
+	},
+	hero_wukong_clone_1_0041 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			50,
+			65,
+			80,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2482,
+			66,
+			65
+		},
+		alias = {
+			"hero_wukong_clone_1_0042"
+		}
+	},
+	hero_wukong_clone_1_0043 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			49,
+			66,
+			81,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2550,
+			66,
+			64
+		},
+		alias = {
+			"hero_wukong_clone_1_0044"
+		}
+	},
+	hero_wukong_clone_1_0045 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			49,
+			66,
+			81,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2617,
+			66,
+			64
+		},
+		alias = {
+			"hero_wukong_clone_1_0046"
+		}
+	},
+	hero_wukong_clone_1_0047 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			49,
+			67,
+			81,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2684,
+			66,
+			63
+		},
+		alias = {
+			"hero_wukong_clone_1_0048"
+		}
+	},
+	hero_wukong_clone_1_0049 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			57,
+			76,
+			46,
+			110
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2601,
+			2123,
+			93,
+			64
+		},
+		alias = {
+			"hero_wukong_clone_1_0050"
+		}
+	},
+	hero_wukong_clone_1_0051 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			81,
+			72,
+			47,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3960,
+			68,
+			75
+		},
+		alias = {
+			"hero_wukong_clone_1_0052"
+		}
+	},
+	hero_wukong_clone_1_0053 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			79,
+			79,
+			65,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3261,
+			2274,
+			52,
+			58
+		},
+		alias = {
+			"hero_wukong_clone_1_0054"
+		}
+	},
+	hero_wukong_clone_1_0055 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			79,
+			76,
+			66,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3921,
+			2274,
+			51,
+			53
+		},
+		alias = {
+			"hero_wukong_clone_1_0056",
+			"hero_wukong_clone_1_0057"
+		}
+	},
+	hero_wukong_clone_1_0058 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			70,
+			51,
+			78,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1545,
+			2307,
+			48,
+			78
+		},
+		alias = {
+			"hero_wukong_clone_1_0059"
+		}
+	},
+	hero_wukong_clone_1_0060 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			64,
+			77,
+			59,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3956,
+			2212,
+			73,
+			52
+		},
+		alias = {
+			"hero_wukong_clone_1_0061"
+		}
+	},
+	hero_wukong_clone_1_0062 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			72,
+			61,
+			69,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3248,
+			55,
+			68
+		},
+		alias = {
+			"hero_wukong_clone_1_0063"
+		}
+	},
+	hero_wukong_clone_1_0065 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			52,
+			88,
+			54,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2308,
+			440,
+			90,
+			41
+		},
+		alias = {
+			"hero_wukong_clone_1_0066"
+		}
+	},
+	hero_wukong_clone_1_0067 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			52,
+			62,
+			61,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3754,
+			2123,
+			83,
+			67
+		},
+		alias = {
+			"hero_wukong_clone_1_0068"
+		}
+	},
+	hero_wukong_clone_1_0069 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			49,
+			61,
+			63,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3340,
+			2123,
+			84,
+			67
+		},
+		alias = {
+			"hero_wukong_clone_1_0070"
+		}
+	},
+	hero_wukong_clone_1_0071 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			48,
+			56,
+			64,
+			123
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3935,
+			1957,
+			84,
+			71
+		},
+		alias = {
+			"hero_wukong_clone_1_0072"
+		}
+	},
+	hero_wukong_clone_1_0073 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			44,
+			54,
+			59,
+			123
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2553,
+			1957,
+			93,
+			73
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0074 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			44,
+			52,
+			56,
+			123
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3338,
+			2038,
+			96,
+			75
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0075 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			47,
+			46,
+			49,
+			125
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3923,
+			1856,
+			100,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0076 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			42,
+			41,
+			43,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2182,
+			1759,
+			111,
+			89
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0077 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			37,
+			36,
+			38,
+			117
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2603,
+			1462,
+			121,
+			97
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0078 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			32,
+			32,
+			34,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3928,
+			1228,
+			130,
+			104
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0079 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
 		},
 		trim = {
 			30,
-            25,
-            21,
-            111
+			31,
+			33,
+			113
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			282,
-			1135,
+			2943,
+			1228,
+			133,
+			106
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0080 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			28,
+			27,
+			32,
+			111
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1972,
+			1228,
+			136,
+			112
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0081 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			27,
+			22,
+			31,
+			111
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3311,
+			779,
+			138,
+			117
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0082 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			27,
+			19,
+			31,
+			111
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2675,
+			779,
+			138,
+			120
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0083 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			27,
+			17,
+			31,
+			111
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3266,
+			626,
+			138,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0084 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			28,
+			15,
+			29,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2560,
+			626,
+			139,
+			123
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0085 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			32,
+			15,
+			27,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			779,
+			137,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0086 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			30,
+			14,
+			26,
+			154
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3162,
+			1462,
+			140,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_clone_1_0087 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			29,
+			14,
+			25,
+			154
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2727,
+			1462,
 			142,
-			105
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            63,
-            67,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2265,
-			199,
-			68,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            73,
-            58,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2137,
-			61,
-			78,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            73,
-            58,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2137,
-			61,
-			78,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            54,
-            62,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1791,
-			356,
-			73,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            54,
-            62,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1791,
-			356,
-			73,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            50,
-            59,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1784,
-			441,
-			78,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            50,
-            59,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1784,
-			441,
-			78,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            53,
-            62,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2758,
-			356,
-			73,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            53,
-            62,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2758,
-			356,
-			73,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            65,
-            61,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1093,
-			199,
-			72,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            65,
-            61,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1093,
-			199,
-			72,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            73,
-            58,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2223,
-			61,
-			78,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            73,
-            58,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2223,
-			61,
-			78,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            54,
-            64,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1872,
-			356,
-			71,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            54,
-            64,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1872,
-			356,
-			71,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            50,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1870,
-			441,
-			72,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            50,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1870,
-			441,
-			72,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            53,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2839,
-			356,
-			70,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            53,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2839,
-			356,
-			70,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            65,
-            62,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1173,
-			199,
-			71,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            65,
-            62,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1173,
-			199,
-			71,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            36,
-            64,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2134,
-			814,
-			72,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            36,
-            64,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2134,
-			814,
-			72,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            31,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3416,
-			916,
-			71,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            31,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3416,
-			916,
-			71,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            26,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3636,
-			1023,
-			70,
-			104
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0040"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            26,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3636,
-			1023,
-			70,
-			104
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0041"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			59,
-            23,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1677,
-			1135,
-			69,
-			107
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0042"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			59,
-            23,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1677,
-			1135,
-			69,
-			107
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0043"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            20,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2808,
-			1135,
-			68,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0044"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            20,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2808,
-			1135,
-			68,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0045"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			59,
-            18,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			435,
-			1254,
-			69,
-			112
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0046"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			59,
-            18,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			435,
-			1254,
-			69,
-			112
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0047"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            17,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			994,
-			1254,
-			71,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0048"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			57,
-            17,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			994,
-			1254,
-			71,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0049"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            17,
-            65,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1073,
-			1254,
-			72,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0050"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			62,
-            42,
-            27,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1080,
-			716,
-			104,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0051"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			62,
-            42,
-            27,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1080,
-			716,
-			104,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0052"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			69,
-            58,
-            38,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2987,
-			275,
-			86,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0053"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			69,
-            58,
-            38,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2987,
-			275,
-			86,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0054"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            68,
-            37,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2840,
-			128,
-			91,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0055"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            68,
-            37,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2840,
-			128,
-			91,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0056"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            64,
-            39,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1944,
-			199,
-			89,
-			66
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0057"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            64,
-            39,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1944,
-			199,
-			89,
-			66
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0058"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            64,
-            39,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1944,
-			199,
-			89,
-			66
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0059"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            64,
-            39,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1944,
-			199,
-			89,
-			66
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0060"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			65,
-            64,
-            39,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1944,
-			199,
-			89,
-			66
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0061"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            60,
-            61,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1562,
-			275,
-			72,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0062"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			60,
-            60,
-            61,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1562,
-			275,
-			72,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0063"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            68,
-            66,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2939,
-			128,
-			71,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0064"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			56,
-            68,
-            66,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2939,
-			128,
-			71,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0065"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            63,
-            67,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2265,
-			199,
-			68,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0066"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			50,
-            81,
-            61,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3248,
-			4,
-			82,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0067"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			50,
-            81,
-            61,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3248,
-			4,
-			82,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0068"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            58,
-            66,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3081,
-			275,
-			69,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0069"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			58,
-            58,
-            66,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3081,
-			275,
-			69,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0070"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			55,
-            48,
-            60,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			977,
-			530,
-			78,
 			82
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0071"] = {
+	hero_wukong_clone_1_0088 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			193,
-			241
+			196,
+			250
 		},
 		trim = {
-			55,
-            48,
-            60,
-            111
+			29,
+			14,
+			24,
+			154
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			977,
-			530,
-			78,
+			2457,
+			1462,
+			143,
 			82
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0072"] = {
+	hero_wukong_clone_1_0089 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			196,
+			250
+		},
+		trim = {
+			0,
+			0,
+			196,
+			250
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			198,
+			3512,
+			196,
+			250
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
 			241
 		},
 		trim = {
-			55,
-            45,
-            60,
-            111
+			53,
+			64,
+			51,
+			109
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1498,
-			622,
-			78,
-			85
+			3843,
+			1957,
+			89,
+			68
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0073"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			55,
-            45,
-            60,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1498,
-			622,
-			78,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0074"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			50,
-            38,
-            55,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1015,
-			814,
-			88,
-			92
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0075"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			50,
-            38,
-            50,
-            111
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1111,
-			814,
-			93,
-			92
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0076"] = {
+	hero_wukong_clone_2_0002 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
@@ -4783,23 +2102,23 @@ return {
 		},
 		trim = {
 			48,
-            43,
-            42,
-            115
+			59,
+			44,
+			104
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2483,
-			530,
-			103,
-			83
+			2082,
+			1957,
+			101,
+			78
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0077"] = {
+	hero_wukong_clone_2_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
@@ -4807,23 +2126,23 @@ return {
 		},
 		trim = {
 			44,
-            39,
-            36,
-            110
+			53,
+			38,
+			99
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1212,
-			814,
-			113,
-			92
+			2296,
+			1759,
+			111,
+			89
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0078"] = {
+	hero_wukong_clone_2_0004 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
@@ -4831,215 +2150,47 @@ return {
 		},
 		trim = {
 			38,
-            34,
-            31,
-            107
+			48,
+			33,
+			95
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1705,
-			1023,
-			124,
-			100
+			2781,
+			1343,
+			122,
+			98
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0079"] = {
+	hero_wukong_clone_2_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
 			241
 		},
 		trim = {
-			34,
-            31,
-            28,
-            104
+			33,
+			44,
+			30,
+			93
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			818,
-			1135,
-			131,
-			106
+			1983,
+			1006,
+			130,
+			104
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0080"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			31,
-            29,
-            27,
-            102
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2884,
-			1135,
-			135,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0081"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			29,
-            24,
-            26,
-            102
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2262,
-			1254,
-			138,
-			115
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0082"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			29,
-            19,
-            25,
-            101
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1317,
-			1381,
-			139,
-			121
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0083"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			28,
-            17,
-            24,
-            101
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2734,
-			1381,
-			141,
-			123
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0084"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			29,
-            16,
-            24,
-            101
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3472,
-			1381,
-			140,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0085"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			29,
-            15,
-            22,
-            102
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3620,
-			1381,
-			142,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0086"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			34,
-            14,
-            21,
-            103
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3770,
-			1381,
-			138,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0087"] = {
+	hero_wukong_clone_2_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
@@ -5047,47 +2198,23 @@ return {
 		},
 		trim = {
 			32,
-            13,
-            19,
-            145
+			43,
+			28,
+			92
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2594,
-			530,
-			142,
-			83
+			3079,
+			1228,
+			133,
+			106
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_clone_2_0088"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			193,
-			241
-		},
-		trim = {
-			31,
-            13,
-            18,
-            144
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3697,
-			530,
-			144,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_clone_2_0089"] = {
+	hero_wukong_clone_2_0007 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
@@ -5095,23 +2222,1306 @@ return {
 		},
 		trim = {
 			30,
-            13,
-            18,
-            144
+			39,
+			27,
+			91
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			4,
-			622,
-			145,
+			2250,
+			1228,
+			136,
+			111
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0008 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			29,
+			34,
+			27,
+			90
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3780,
+			779,
+			137,
+			117
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			28,
+			31,
+			26,
+			89
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3407,
+			626,
+			139,
+			121
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0010 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			28,
+			29,
+			27,
+			89
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2844,
+			626,
+			138,
+			123
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			29,
+			28,
+			25,
+			90
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			626,
+			139,
+			123
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0012 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			33,
+			27,
+			23,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1973,
+			779,
+			137,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			32,
+			26,
+			21,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2800,
+			1228,
+			140,
+			101
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0014 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			62,
+			66,
+			70,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3319,
+			61,
+			61
+		},
+		alias = {
+			"hero_wukong_clone_2_0065"
+		}
+	},
+	hero_wukong_clone_2_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			60,
+			76,
+			61,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2466,
+			2274,
+			72,
+			51
+		},
+		alias = {
+			"hero_wukong_clone_2_0016"
+		}
+	},
+	hero_wukong_clone_2_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			62,
+			57,
+			65,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3681,
+			66,
+			70
+		},
+		alias = {
+			"hero_wukong_clone_2_0018"
+		}
+	},
+	hero_wukong_clone_2_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			59,
+			53,
+			62,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3844,
+			1588,
+			72,
+			74
+		},
+		alias = {
+			"hero_wukong_clone_2_0020"
+		}
+	},
+	hero_wukong_clone_2_0021 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			61,
+			56,
+			65,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3223,
+			67,
+			71
+		},
+		alias = {
+			"hero_wukong_clone_2_0022"
+		}
+	},
+	hero_wukong_clone_2_0023 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			63,
+			68,
+			64,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3738,
+			2212,
+			66,
+			59
+		},
+		alias = {
+			"hero_wukong_clone_2_0024"
+		}
+	},
+	hero_wukong_clone_2_0025 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			60,
+			76,
+			61,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2541,
+			2274,
+			72,
+			51
+		},
+		alias = {
+			"hero_wukong_clone_2_0026"
+		}
+	},
+	hero_wukong_clone_2_0027 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			62,
+			57,
+			67,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2274,
+			64,
+			70
+		},
+		alias = {
+			"hero_wukong_clone_2_0028"
+		}
+	},
+	hero_wukong_clone_2_0029 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			59,
+			53,
+			69,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3061,
+			65,
+			74
+		},
+		alias = {
+			"hero_wukong_clone_2_0030"
+		}
+	},
+	hero_wukong_clone_2_0031 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			61,
+			56,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3919,
+			64,
+			71
+		},
+		alias = {
+			"hero_wukong_clone_2_0032"
+		}
+	},
+	hero_wukong_clone_2_0033 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			63,
+			68,
+			65,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3807,
+			2212,
+			65,
+			59
+		},
+		alias = {
+			"hero_wukong_clone_2_0034"
+		}
+	},
+	hero_wukong_clone_2_0035 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			60,
+			39,
+			67,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3907,
+			66,
+			88
+		},
+		alias = {
+			"hero_wukong_clone_2_0036"
+		}
+	},
+	hero_wukong_clone_2_0037 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			60,
+			34,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3724,
+			65,
+			93
+		},
+		alias = {
+			"hero_wukong_clone_2_0038"
+		}
+	},
+	hero_wukong_clone_2_0039 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			61,
+			29,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4026,
+			1856,
+			64,
+			98
+		},
+		alias = {
+			"hero_wukong_clone_2_0040"
+		}
+	},
+	hero_wukong_clone_2_0041 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			62,
+			26,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3196,
+			63,
+			101
+		},
+		alias = {
+			"hero_wukong_clone_2_0042"
+		}
+	},
+	hero_wukong_clone_2_0043 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			63,
+			23,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3089,
+			62,
+			104
+		},
+		alias = {
+			"hero_wukong_clone_2_0044"
+		}
+	},
+	hero_wukong_clone_2_0045 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			62,
+			21,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			2980,
+			63,
+			106
+		},
+		alias = {
+			"hero_wukong_clone_2_0046"
+		}
+	},
+	hero_wukong_clone_2_0047 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			60,
+			20,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			2755,
+			65,
+			107
+		},
+		alias = {
+			"hero_wukong_clone_2_0048"
+		}
+	},
+	hero_wukong_clone_2_0049 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			59,
+			20,
+			68,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			2530,
+			66,
+			107
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0050 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			66,
+			43,
+			29,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2136,
+			1856,
+			98,
 			84
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_clone_2_0051"
+		}
 	},
-	["hero_wukong_clone_2_0090"] = {
+	hero_wukong_clone_2_0052 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			72,
+			61,
+			41,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4005,
+			1588,
+			80,
+			66
+		},
+		alias = {
+			"hero_wukong_clone_2_0053"
+		}
+	},
+	hero_wukong_clone_2_0054 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			69,
+			71,
+			39,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2820,
+			2212,
+			85,
+			56
+		},
+		alias = {
+			"hero_wukong_clone_2_0055"
+		}
+	},
+	hero_wukong_clone_2_0056 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			69,
+			67,
+			41,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2533,
+			83,
+			60
+		},
+		alias = {
+			"hero_wukong_clone_2_0057",
+			"hero_wukong_clone_2_0058",
+			"hero_wukong_clone_2_0059",
+			"hero_wukong_clone_2_0060"
+		}
+	},
+	hero_wukong_clone_2_0061 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			64,
+			64,
+			64,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			2750,
+			65,
+			63
+		},
+		alias = {
+			"hero_wukong_clone_2_0062"
+		}
+	},
+	hero_wukong_clone_2_0063 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			59,
+			71,
+			69,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3792,
+			65,
+			56
+		},
+		alias = {
+			"hero_wukong_clone_2_0064"
+		}
+	},
+	hero_wukong_clone_2_0066 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			53,
+			84,
+			64,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3448,
+			1541,
+			76,
+			43
+		},
+		alias = {
+			"hero_wukong_clone_2_0067"
+		}
+	},
+	hero_wukong_clone_2_0068 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			61,
+			61,
+			69,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3127,
+			63,
+			66
+		},
+		alias = {
+			"hero_wukong_clone_2_0069"
+		}
+	},
+	hero_wukong_clone_2_0070 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			58,
+			51,
+			63,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3075,
+			1588,
+			72,
+			76
+		},
+		alias = {
+			"hero_wukong_clone_2_0071"
+		}
+	},
+	hero_wukong_clone_2_0072 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			58,
+			48,
+			63,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3109,
+			2123,
+			72,
+			79
+		},
+		alias = {
+			"hero_wukong_clone_2_0073"
+		}
+	},
+	hero_wukong_clone_2_0074 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			53,
+			41,
+			58,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2266,
+			2123,
+			82,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0075 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			53,
+			41,
+			50,
+			114
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2123,
+			90,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0076 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			49,
+			46,
+			43,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3633,
+			1856,
+			101,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0077 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			45,
+			41,
+			37,
+			112
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3101,
+			1668,
+			111,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0078 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			39,
+			36,
+			32,
+			108
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2080,
+			1462,
+			122,
+			97
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0079 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			35,
+			32,
+			29,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2248,
+			1006,
+			129,
+			104
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0080 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			32,
+			31,
+			27,
+			104
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2663,
+			1228,
+			134,
+			106
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0081 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			31,
+			26,
+			26,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2111,
+			1228,
+			136,
+			112
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0082 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			30,
+			22,
+			26,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3920,
+			779,
+			137,
+			117
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0083 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			29,
+			19,
+			25,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2394,
+			779,
+			139,
+			120
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0084 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			30,
+			17,
+			26,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2113,
+			779,
+			137,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0085 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			31,
+			15,
+			24,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2985,
+			626,
+			138,
+			123
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0086 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			35,
+			14,
+			22,
+			104
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3549,
+			626,
+			136,
+			123
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0087 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			33,
+			14,
+			20,
+			146
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3305,
+			1462,
+			140,
+			81
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0088 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			32,
+			14,
+			19,
+			145
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2872,
+			1462,
+			142,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0089 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			193,
+			241
+		},
+		trim = {
+			32,
+			14,
+			19,
+			145
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3017,
+			1462,
+			142,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_clone_2_0090 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			193,
@@ -5119,383 +3529,257 @@ return {
 		},
 		trim = {
 			0,
-            0,
-            190,
-            238
+			0,
+			193,
+			241
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			4,
-			4,
-			3,
-			3
+			1243,
+			241,
+			193,
+			241
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0001"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            13,
-            14,
-            21
+			17,
+			16,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3391,
-			1254,
-			173,
-			119
+			2378,
+			485,
+			168,
+			113
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_cracks_floor_0002"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0002"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            13,
-            14,
-            21
+			17,
+			16,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3391,
-			1254,
-			173,
-			119
+			2549,
+			485,
+			168,
+			113
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_cracks_floor_0004"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0003"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            13,
-            14,
-            21
+			17,
+			13,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3572,
-			1254,
-			173,
-			119
+			2207,
+			485,
+			168,
+			116
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_cracks_floor_0006",
+			"hero_wukong_dragon_ultimate_cracks_floor_0007"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0004"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0008 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            13,
-            14,
-            21
+			17,
+			16,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3572,
-			1254,
-			173,
-			119
+			2720,
+			485,
+			168,
+			113
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_cracks_floor_0009",
+			"hero_wukong_dragon_ultimate_cracks_floor_0010"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0005"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            10,
-            14,
-            21
+			17,
+			16,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1623,
-			1381,
-			173,
-			122
+			2891,
+			485,
+			168,
+			113
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_cracks_floor_0012"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0006"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0013 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            10,
-            14,
-            21
+			17,
+			16,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1623,
-			1381,
-			173,
-			122
+			3062,
+			485,
+			168,
+			113
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_cracks_floor_0014"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0007"] = {
+	hero_wukong_dragon_ultimate_cracks_floor_0015 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
+			202,
 			153
 		},
 		trim = {
-			14,
-            10,
-            14,
-            21
+			17,
+			16,
+			17,
+			24
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1623,
-			1381,
-			173,
-			122
+			3233,
+			485,
+			168,
+			113
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0008"] = {
+	hero_wukong_dragon_ultimate_dragon_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
-			153
+			190,
+			2320
 		},
 		trim = {
-			14,
-            13,
-            14,
-            21
+			67,
+			1067,
+			66,
+			1152
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3753,
-			1254,
-			173,
-			119
+			1933,
+			2080,
+			57,
+			101
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0002"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0009"] = {
+	hero_wukong_dragon_ultimate_dragon_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			201,
-			153
+			190,
+			2320
 		},
 		trim = {
-			14,
-            13,
-            14,
-            21
+			69,
+			1036,
+			67,
+			1167
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3753,
-			1254,
-			173,
-			119
+			2004,
+			3300,
+			54,
+			117
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0004"
+		}
 	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			201,
-			153
-		},
-		trim = {
-			14,
-            13,
-            14,
-            21
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3753,
-			1254,
-			173,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			201,
-			153
-		},
-		trim = {
-			14,
-            13,
-            14,
-            21
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1381,
-			173,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			201,
-			153
-		},
-		trim = {
-			14,
-            13,
-            14,
-            21
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1381,
-			173,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			201,
-			153
-		},
-		trim = {
-			14,
-            13,
-            14,
-            21
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			185,
-			1381,
-			173,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			201,
-			153
-		},
-		trim = {
-			14,
-            13,
-            14,
-            21
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			185,
-			1381,
-			173,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_cracks_floor_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			201,
-			153
-		},
-		trim = {
-			14,
-            13,
-            14,
-            21
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			366,
-			1381,
-			173,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0001"] = {
+	hero_wukong_dragon_ultimate_dragon_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -5503,95 +3787,51 @@ return {
 		},
 		trim = {
 			66,
-            1066,
-            65,
-            1151
+			1009,
+			64,
+			1193
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2833,
-			1023,
-			59,
-			103
+			2004,
+			2409,
+			60,
+			118
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0006"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0002"] = {
+	hero_wukong_dragon_ultimate_dragon_0007 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
+			64,
+			1005,
 			66,
-            1066,
-            65,
-            1151
+			1203
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2833,
-			1023,
-			59,
-			103
+			2004,
+			2865,
+			60,
+			112
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0008"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			68,
-            1035,
-            66,
-            1166
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			547,
-			1381,
-			56,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			68,
-            1035,
-            66,
-            1166
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			547,
-			1381,
-			56,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0005"] = {
+	hero_wukong_dragon_ultimate_dragon_0009 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -5599,671 +3839,103 @@ return {
 		},
 		trim = {
 			65,
-            1008,
-            63,
-            1192
+			1006,
+			67,
+			1216
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1100,
-			1381,
-			62,
-			120
+			1933,
+			2280,
+			58,
+			98
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0010"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0006"] = {
+	hero_wukong_dragon_ultimate_dragon_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			65,
-            1008,
-            63,
-            1192
+			73,
+			1009,
+			69,
+			1233
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1100,
-			1381,
-			62,
-			120
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			63,
-            1004,
-            65,
-            1202
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1631,
-			1254,
-			62,
-			114
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			63,
-            1004,
-            65,
-            1202
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1631,
-			1254,
-			62,
-			114
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			64,
-            1005,
-            66,
-            1213
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2407,
-			1023,
-			60,
-			102
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			64,
-            1005,
-            66,
-            1213
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2407,
-			1023,
-			60,
-			102
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			71,
-            1008,
-            69,
-            1232
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1950,
-			441,
-			50,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			71,
-            1008,
-            69,
-            1232
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1950,
-			441,
-			50,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			36,
-            178,
-            35,
-            1246
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			491,
-			2613,
-			119,
-			896
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			36,
-            178,
-            35,
-            1246
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			491,
-			2613,
-			119,
-			896
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			41,
-            151,
-            42,
-            1227
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			618,
-			2613,
-			107,
-			942
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			41,
-            151,
-            42,
-            1227
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			618,
-			2613,
-			107,
-			942
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			30,
-            11,
-            34,
-            1212
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			839,
-			2613,
-			126,
-			1097
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			30,
-            11,
-            34,
-            1212
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			839,
-			2613,
-			126,
-			1097
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			30,
-            11,
-            41,
-            1206
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			973,
-			2613,
-			119,
-			1103
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			30,
-            11,
-            41,
-            1206
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			973,
-			2613,
-			119,
-			1103
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			33,
-            11,
-            44,
-            1194
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1443,
-			2613,
-			113,
-			1115
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			33,
-            11,
-            44,
-            1194
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1443,
-			2613,
-			113,
-			1115
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			36,
-            11,
-            45,
-            1198
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1100,
-			2613,
-			109,
-			1111
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			36,
-            11,
-            45,
-            1198
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1100,
-			2613,
-			109,
-			1111
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			40,
-            11,
-            45,
-            1196
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1330,
-			2613,
-			105,
-			1113
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			40,
-            11,
-            45,
-            1196
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1330,
-			2613,
-			105,
-			1113
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			40,
-            11,
-            45,
-            1194
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1564,
-			2613,
-			105,
-			1115
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			40,
-            11,
-            45,
-            1194
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1564,
-			2613,
-			105,
-			1115
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			40,
-            11,
-            45,
-            1198
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1217,
-			2613,
-			105,
-			1111
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			40,
-            11,
-            45,
-            1192
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1677,
-			2613,
-			105,
-			1117
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
+			2240,
+			3096,
 			48,
-            11,
-            53,
-            1139
+			78
 		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1918,
-			2613,
-			89,
-			1170
-		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0012"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0032"] = {
+	hero_wukong_dragon_ultimate_dragon_0013 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			40,
-            11,
-            50,
-            1139
+			37,
+			179,
+			36,
+			1247
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2015,
-			2613,
-			100,
-			1170
+			1123,
+			5,
+			117,
+			894
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0014"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0033"] = {
+	hero_wukong_dragon_ultimate_dragon_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			43,
+			152,
+			42,
+			1228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1123,
+			902,
+			105,
+			940
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0016"
+		}
+	},
+	hero_wukong_dragon_ultimate_dragon_0017 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -6271,503 +3943,203 @@ return {
 		},
 		trim = {
 			31,
-            11,
-            38,
-            1139
+			14,
+			35,
+			1215
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2123,
-			2613,
-			121,
-			1170
+			567,
+			5,
+			124,
+			1091
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0018"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0034"] = {
+	hero_wukong_dragon_ultimate_dragon_0019 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			41,
-            11,
-            45,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2252,
-			2613,
-			104,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			36,
-            11,
-            44,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2364,
-			2613,
-			110,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			33,
-            11,
-            48,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2482,
-			2613,
-			109,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			24,
-            11,
-            43,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2599,
-			2613,
-			123,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			36,
-            11,
-            43,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2730,
-			2613,
-			111,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			32,
-            37,
-            38,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1790,
-			2613,
-			120,
-			1144
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0040"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			32,
-            11,
-            38,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2849,
-			2613,
-			120,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0041"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			29,
-            11,
-            36,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2977,
-			2613,
-			125,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0042"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			29,
-            11,
-            36,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3110,
-			2613,
-			125,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0043"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			28,
-            11,
-            34,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3243,
-			2613,
-			128,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0044"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			24,
-            11,
-            34,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3379,
-			2613,
-			132,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0045"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			28,
-            11,
-            34,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3519,
-			2613,
-			128,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0046"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			28,
-            11,
-            34,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3655,
-			2613,
-			128,
-			1170
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0047"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
+			31,
+			14,
 			42,
-            11,
-            45,
-            1139
+			1209
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3791,
-			2613,
-			103,
-			1170
+			567,
+			1099,
+			117,
+			1097
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0020"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0048"] = {
+	hero_wukong_dragon_ultimate_dragon_0021 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
+			34,
+			14,
+			45,
+			1197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			694,
+			5,
+			111,
+			1109
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0022"
+		}
+	},
+	hero_wukong_dragon_ultimate_dragon_0023 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			37,
+			14,
 			47,
-            192,
-            45,
-            1139
+			1201
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			733,
-			2613,
+			913,
+			5,
+			106,
+			1105
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0024"
+		}
+	},
+	hero_wukong_dragon_ultimate_dragon_0025 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			44,
+			14,
+			48,
+			1199
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1022,
+			5,
 			98,
-			989
+			1107
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0026"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0049"] = {
+	hero_wukong_dragon_ultimate_dragon_0027 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			46,
-            305,
-            44,
-            1139
+			44,
+			14,
+			48,
+			1198
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			383,
-			2613,
-			100,
-			876
+			913,
+			2227,
+			98,
+			1108
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0028"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0050"] = {
+	hero_wukong_dragon_ultimate_dragon_0029 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			33,
-            490,
-            55,
-            1139
+			44,
+			14,
+			48,
+			1201
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			273,
-			2613,
-			102,
-			691
+			1022,
+			1115,
+			98,
+			1105
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0051"] = {
+	hero_wukong_dragon_ultimate_dragon_0030 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			24,
-            633,
-            67,
-            1139
+			44,
+			14,
+			48,
+			1195
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			166,
-			2613,
-			99,
-			548
+			913,
+			1113,
+			98,
+			1111
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0052"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			41,
-            804,
-            60,
-            1139
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			2613,
-			89,
-			377
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0053"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			33,
-            907,
-            65,
-            1140
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2090,
-			2231,
-			92,
-			273
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0054"] = {
+	hero_wukong_dragon_ultimate_dragon_0031 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -6775,23 +4147,551 @@ return {
 		},
 		trim = {
 			51,
-            1018,
-            72,
-            1140
+			14,
+			56,
+			1140
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2764,
-			1815,
-			67,
-			162
+			1022,
+			2223,
+			83,
+			1166
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0055"] = {
+	hero_wukong_dragon_ultimate_dragon_0032 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			41,
+			14,
+			51,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			808,
+			2343,
+			98,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0033 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			32,
+			14,
+			39,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			323,
+			5,
+			119,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0034 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			42,
+			14,
+			46,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			808,
+			5,
+			102,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0035 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			37,
+			14,
+			45,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			567,
+			2199,
+			108,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0036 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			34,
+			14,
+			51,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			694,
+			1117,
+			105,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0037 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			25,
+			14,
+			46,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			323,
+			1174,
+			119,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0038 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			39,
+			14,
+			46,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			694,
+			2286,
+			105,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0039 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			35,
+			40,
+			41,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			445,
+			2343,
+			114,
+			1140
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0040 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			35,
+			14,
+			42,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			445,
+			1174,
+			113,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0041 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			32,
+			14,
+			39,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			323,
+			2343,
+			119,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0042 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			32,
+			14,
+			39,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			445,
+			5,
+			119,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0043 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			31,
+			14,
+			37,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			198,
+			5,
+			122,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0044 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			25,
+			14,
+			37,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			2328,
+			128,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0045 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			31,
+			14,
+			37,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			198,
+			1174,
+			122,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0046 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			31,
+			14,
+			37,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			198,
+			2343,
+			122,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0047 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			45,
+			14,
+			46,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			808,
+			1174,
+			99,
+			1166
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0048 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			51,
+			195,
+			46,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1123,
+			1845,
+			93,
+			985
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0049 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			47,
+			308,
+			45,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1123,
+			2833,
+			98,
+			872
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0050 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			34,
+			493,
+			56,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			913,
+			3338,
+			100,
+			687
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0051 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			25,
+			636,
+			68,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			808,
+			3512,
+			97,
+			544
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0052 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			42,
+			807,
+			61,
+			1140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1123,
+			3708,
+			87,
+			373
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0053 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			34,
+			910,
+			68,
+			1141
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1022,
+			3649,
+			88,
+			269
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0054 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -6799,47 +4699,147 @@ return {
 		},
 		trim = {
 			52,
-            1114,
-            76,
-            1140
+			1021,
+			73,
+			1141
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2041,
-			199,
-			62,
-			66
+			1596,
+			3368,
+			65,
+			158
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0056"] = {
+	hero_wukong_dragon_ultimate_dragon_0055 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			57,
-            1116,
-            86,
-            1142
+			53,
+			1117,
+			77,
+			1141
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3018,
-			128,
-			47,
+			2240,
+			3383,
+			60,
 			62
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0057"] = {
+	hero_wukong_dragon_ultimate_dragon_0056 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			58,
+			1119,
+			87,
+			1143
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4035,
+			2274,
+			45,
+			58
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0057 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			58,
+			1126,
+			87,
+			1149
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			397,
+			3512,
+			45,
+			45
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_dragon_0058 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			54,
+			1124,
+			84,
+			1149
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2551,
+			52,
+			47
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0059"
+		}
+	},
+	hero_wukong_dragon_ultimate_dragon_0060 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			190,
+			2320
+		},
+		trim = {
+			55,
+			1123,
+			84,
+			1152
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2712,
+			51,
+			45
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0061"
+		}
+	},
+	hero_wukong_dragon_ultimate_dragon_0062 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -6847,215 +4847,25 @@ return {
 		},
 		trim = {
 			57,
-            1125,
-            86,
-            1148
+			1125,
+			86,
+			1156
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2192,
-			4,
+			2309,
+			3149,
 			47,
-			47
+			39
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0063"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0058"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			53,
-            1123,
-            83,
-            1148
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3338,
-			4,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0059"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			53,
-            1123,
-            83,
-            1148
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3338,
-			4,
-			54,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0060"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			54,
-            1122,
-            83,
-            1151
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2247,
-			4,
-			53,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0061"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			54,
-            1122,
-            83,
-            1151
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2247,
-			4,
-			53,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0062"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			56,
-            1124,
-            85,
-            1155
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1227,
-			4,
-			49,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0063"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			56,
-            1124,
-            85,
-            1155
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1227,
-			4,
-			49,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0064"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			54,
-            1122,
-            83,
-            1156
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1604,
-			4,
-			53,
-			42
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0065"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			54,
-            1122,
-            83,
-            1156
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1604,
-			4,
-			53,
-			42
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0066"] = {
+	hero_wukong_dragon_ultimate_dragon_0064 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -7063,95 +4873,77 @@ return {
 		},
 		trim = {
 			55,
-            1122,
-            85,
-            1159
+			1123,
+			84,
+			1157
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			828,
-			4,
-			50,
-			39
+			2309,
+			2899,
+			51,
+			40
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0065"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0067"] = {
+	hero_wukong_dragon_ultimate_dragon_0066 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			55,
-            1122,
-            85,
-            1159
+			56,
+			1123,
+			87,
+			1160
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			828,
-			4,
-			50,
-			39
+			4005,
+			585,
+			47,
+			37
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0067"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0068"] = {
+	hero_wukong_dragon_ultimate_dragon_0068 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
 			2320
 		},
 		trim = {
-			58,
-            1127,
-            93,
-            1165
+			61,
+			1128,
+			94,
+			1168
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			342,
-			4,
-			39,
-			28
+			1533,
+			4059,
+			35,
+			24
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_dragon_0069"
+		}
 	},
-	["hero_wukong_dragon_ultimate_dragon_0069"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			190,
-			2320
-		},
-		trim = {
-			58,
-            1127,
-            93,
-            1165
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			342,
-			4,
-			39,
-			28
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_dragon_0070"] = {
+	hero_wukong_dragon_ultimate_dragon_0070 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			190,
@@ -7159,311 +4951,513 @@ return {
 		},
 		trim = {
 			0,
-            0,
-            187,
-            2317
+			0,
+			190,
+			2320
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			4,
-			4,
-			3,
-			3
+			5,
+			5,
+			190,
+			2320
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0001"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			85,
-            51,
-            97,
-            61
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1284,
-			4,
-			65,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			85,
-            51,
-            97,
-            61
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1357,
-			4,
-			65,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
+			86,
 			52,
-            32,
-            63,
-            44
+			98,
+			62
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2917,
-			356,
-			132,
-			77
+			3305,
+			1546,
+			63,
+			39
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_vfx_decal_0039"
+		}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0004"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0002 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
+			86,
 			52,
-            32,
-            63,
-            44
+			98,
+			62
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3057,
-			356,
-			132,
-			77
+			3371,
+			1546,
+			63,
+			39
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_vfx_decal_0040"
+		}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0005"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			41,
-            32,
-            55,
-            43
+			53,
+			33,
+			64,
+			45
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			151,
-			441,
-			151,
-			78
+			3351,
+			163,
+			130,
+			75
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_vfx_decal_0037"
+		}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0006"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0004 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			41,
-            32,
-            55,
-            43
+			53,
+			33,
+			64,
+			45
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			310,
-			441,
-			151,
-			78
+			3215,
+			1668,
+			130,
+			75
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_vfx_decal_0038"
+		}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0007"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			38,
-            30,
-            52,
-            42
+			43,
+			33,
+			56,
+			44
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2533,
-			441,
-			157,
-			81
+			3448,
+			1462,
+			148,
+			76
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0008"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			38,
-            30,
-            52,
-            42
+			43,
+			33,
+			56,
+			44
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2698,
-			441,
-			157,
-			81
+			3599,
+			1462,
+			148,
+			76
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_dragon_ultimate_vfx_decal_0036"
+		}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0009"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0007 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			36,
-            31,
-            54,
-            40
+			39,
+			31,
+			53,
+			43
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1063,
-			530,
-			157,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			36,
-            31,
-            54,
-            40
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1228,
-			530,
-			157,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			36,
-            31,
-            56,
-            40
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1393,
-			530,
+			3691,
+			1006,
 			155,
-			82
+			79
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0012"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0008 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			36,
-            31,
-            56,
-            40
+			39,
+			31,
+			53,
+			43
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1556,
-			530,
+			3849,
+			1006,
 			155,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			37,
+			32,
+			56,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3534,
+			1006,
+			154,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0010 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			37,
+			32,
+			55,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3376,
+			1006,
+			155,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			37,
+			32,
+			57,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2408,
+			1116,
+			153,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0012 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			37,
+			32,
+			57,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2564,
+			1116,
+			153,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			29,
+			54,
+			45
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3058,
+			1343,
+			150,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0014 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			29,
+			54,
+			45
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3211,
+			1343,
+			150,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			29,
+			54,
+			45
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3364,
+			1343,
+			150,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0016 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			29,
+			54,
+			45
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3517,
+			1343,
+			150,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			27,
+			57,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3032,
+			1116,
+			147,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0018 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			27,
+			57,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3182,
+			1116,
+			147,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			44,
+			27,
+			57,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2095,
+			1343,
+			146,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0020 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			44,
+			28,
+			57,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2516,
+			1343,
+			146,
 			82
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0013"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0021 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
@@ -7471,23 +5465,47 @@ return {
 		},
 		trim = {
 			42,
-            28,
-            53,
-            44
+			29,
+			55,
+			44
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2863,
-			441,
-			152,
+			2363,
+			1343,
+			150,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0022 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			42,
+			28,
+			55,
+			44
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3932,
+			1116,
+			150,
 			81
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0014"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0023 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
@@ -7495,95 +5513,23 @@ return {
 		},
 		trim = {
 			42,
-            28,
-            53,
-            44
+			29,
+			56,
+			45
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3023,
-			441,
-			152,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			42,
-            28,
-            53,
-            44
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3183,
-			441,
-			152,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			42,
-            28,
-            53,
-            44
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3343,
-			441,
-			152,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			42,
-            26,
-            56,
-            42
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1584,
-			622,
+			2305,
+			1462,
 			149,
-			85
+			79
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0018"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0024 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
@@ -7591,263 +5537,23 @@ return {
 		},
 		trim = {
 			42,
-            26,
-            56,
-            42
+			28,
+			56,
+			45
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1741,
-			622,
+			2906,
+			1343,
 			149,
-			85
+			80
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			42,
-            26,
-            56,
-            42
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1898,
-			622,
-			149,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			42,
-            26,
-            56,
-            42
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2055,
-			622,
-			149,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			41,
-            27,
-            54,
-            43
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2744,
-			530,
-			152,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			41,
-            27,
-            54,
-            43
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2904,
-			530,
-			152,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			41,
-            27,
-            54,
-            43
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3064,
-			530,
-			152,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			41,
-            27,
-            54,
-            43
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3224,
-			530,
-			152,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			43,
-            27,
-            51,
-            40
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2693,
-			622,
-			153,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			43,
-            27,
-            51,
-            40
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2854,
-			622,
-			153,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			43,
-            27,
-            51,
-            40
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3015,
-			622,
-			153,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			43,
-            27,
-            51,
-            40
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3176,
-			622,
-			153,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0029"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0025 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
@@ -7855,287 +5561,287 @@ return {
 		},
 		trim = {
 			44,
-            26,
-            54,
-            41
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3337,
-			622,
-			149,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			44,
-            26,
-            54,
-            41
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3494,
-			622,
-			149,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			44,
-            26,
-            54,
-            41
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3651,
-			622,
-			149,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			44,
-            26,
-            54,
-            41
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			716,
-			149,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			38,
-            30,
-            52,
-            42
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3503,
-			441,
-			157,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			38,
-            30,
-            52,
-            42
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3668,
-			441,
-			157,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			41,
-            32,
-            55,
-            43
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			469,
-			441,
-			151,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			41,
-            32,
-            55,
-            43
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			310,
-			441,
-			151,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
+			28,
 			52,
-            32,
-            63,
-            44
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2917,
-			356,
-			132,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			52,
-            32,
-            63,
-            44
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3057,
-			356,
-			132,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			247,
-			153
-		},
-		trim = {
-			85,
-            51,
-            97,
-            61
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1284,
-			4,
-			65,
 			41
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3932,
+			904,
+			151,
+			84
+		},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_vfx_decal_0040"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0026 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			247,
 			153
 		},
 		trim = {
-			85,
-            51,
-            97,
-            61
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1357,
-			4,
-			65,
+			44,
+			28,
+			52,
 			41
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2914,
+			1006,
+			151,
+			84
+		},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_water_explosion_0001"] = {
+	hero_wukong_dragon_ultimate_vfx_decal_0027 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			44,
+			28,
+			52,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			1006,
+			151,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0028 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			44,
+			28,
+			52,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3222,
+			1006,
+			151,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0029 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			45,
+			27,
+			55,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3332,
+			1116,
+			147,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0030 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			45,
+			27,
+			55,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3482,
+			1116,
+			147,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0031 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			45,
+			27,
+			55,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3632,
+			1116,
+			147,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0032 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			45,
+			27,
+			55,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3782,
+			1116,
+			147,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0033 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			39,
+			31,
+			53,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2092,
+			1116,
+			155,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0034 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			39,
+			31,
+			53,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2250,
+			1116,
+			155,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_vfx_decal_0035 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			247,
+			153
+		},
+		trim = {
+			43,
+			33,
+			56,
+			44
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3750,
+			1462,
+			148,
+			76
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0001 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			39,
+			33,
+			30,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2483,
+			84,
+			130
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0002 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			153,
@@ -8143,23 +5849,23 @@ return {
 		},
 		trim = {
 			38,
-            32,
-            29,
-            117
+			23,
+			30,
+			118
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2893,
-			1513,
-			86,
-			132
+			1596,
+			1112,
+			85,
+			140
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_water_explosion_0002"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			153,
@@ -8167,2087 +5873,1370 @@ return {
 		},
 		trim = {
 			37,
-            22,
-            29,
-            117
+			19,
+			30,
+			118
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2263,
-			1656,
+			1596,
+			820,
+			86,
+			144
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0004 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			37,
+			20,
+			29,
+			119
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			967,
 			87,
 			142
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_water_explosion_0003"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			153,
 			281
 		},
 		trim = {
-			36,
-            18,
-            29,
-            117
+			32,
+			21,
+			29,
+			117
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3480,
-			1656,
-			88,
-			146
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			35,
-            19,
-            29,
-            118
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3070,
-			1656,
-			89,
-			144
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			30,
-            20,
-            29,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3378,
-			1656,
-			94,
-			145
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			31,
-            22,
-            27,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2967,
-			1656,
-			95,
+			1483,
+			3614,
+			92,
 			143
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_water_explosion_0007"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			153,
 			281
 		},
 		trim = {
-			27,
-            23,
-            28,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2358,
-			1656,
-			98,
-			142
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			27,
-            25,
-            27,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1511,
-			1656,
-			99,
-			140
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			26,
-            26,
-            26,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1618,
-			1656,
-			101,
-			140
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			26,
-            27,
-            27,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1403,
-			1656,
-			100,
-			139
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
+			32,
+			23,
 			28,
-            29,
-            26,
-            117
+			117
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3701,
-			1513,
-			99,
-			135
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			28,
-            30,
-            26,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3475,
-			1513,
-			99,
-			134
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			34,
-            32,
-            25,
-            117
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2987,
-			1513,
-			94,
-			132
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			33,
-            34,
-            27,
-            118
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1787,
-			1513,
+			1483,
+			3760,
 			93,
-			129
+			141
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dragon_ultimate_water_explosion_0015"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0007 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			153,
 			281
-		},
-		trim = {
-			42,
-            75,
-            40,
-            118
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1192,
-			716,
-			71,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			43,
-            75,
-            38,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3313,
-			716,
-			72,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			43,
-            78,
-            38,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			585,
-			716,
-			72,
-			87
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			43,
-            78,
-            38,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1271,
-			716,
-			72,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			43,
-            80,
-            38,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			161,
-			716,
-			72,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			42,
-            120,
-            37,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2110,
-			4,
-			74,
-			46
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			42,
-            120,
-            37,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2110,
-			4,
-			74,
-			46
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			41,
-            117,
-            36,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3400,
-			4,
-			76,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			41,
-            117,
-            36,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3400,
-			4,
-			76,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			42,
-            117,
-            36,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3165,
-			4,
-			75,
-			48
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			42,
-            117,
-            36,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3165,
-			4,
-			75,
-			48
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			41,
-            117,
-            35,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3484,
-			4,
-			77,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			41,
-            117,
-            35,
-            115
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3484,
-			4,
-			77,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			39,
-            118,
-            34,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2308,
-			4,
-			80,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			39,
-            118,
-            34,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2308,
-			4,
-			80,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			40,
-            118,
-            35,
-            116
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2396,
-			4,
-			78,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dragon_ultimate_water_explosion_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			153,
-			281
-		},
-		trim = {
-			0,
-            0,
-            150,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			4,
-			3,
-			3
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			58,
-            45,
-            65,
-            67
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			456,
-			61,
-			84,
-			52
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			58,
-            43,
-            65,
-            67
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1257,
-			61,
-			84,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
 		},
 		trim = {
 			29,
-            23,
-            20,
-            57
+			24,
+			28,
+			117
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			157,
-			622,
-			158,
-			84
+			1483,
+			3190,
+			96,
+			140
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0004"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0008 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			207,
-			164
+			153,
+			281
 		},
 		trim = {
 			29,
-            23,
-            21,
-            57
+			26,
+			28,
+			117
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			323,
-			622,
-			157,
-			84
+			1483,
+			3473,
+			96,
+			138
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0005"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0009 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			207,
-			164
+			153,
+			281
 		},
 		trim = {
-			11,
-            17,
-            18,
-            51
+			28,
+			27,
+			27,
+			116
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1784,
-			916,
-			178,
-			96
+			1483,
+			3049,
+			98,
+			138
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0006"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0010 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			207,
-			164
+			153,
+			281
 		},
 		trim = {
-			11,
-            17,
-            18,
-            51
+			28,
+			28,
+			27,
+			116
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1970,
-			916,
-			178,
-			96
+			1483,
+			3333,
+			98,
+			137
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0007"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			207,
-			164
+			153,
+			281
 		},
 		trim = {
-			16,
-            13,
-            20,
-            49
+			29,
+			30,
+			27,
+			119
 		},
 		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2475,
-			1023,
-			171,
-			102
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			16,
-            13,
-            20,
-            49
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2654,
-			1023,
-			171,
-			102
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			38,
-            12,
-            37,
-            62
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3393,
-			716,
-			132,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			38,
-            12,
-            37,
-            62
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3533,
-			716,
-			132,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			35,
-            14,
-            42,
-            62
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1351,
-			716,
-			130,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			35,
-            14,
-            42,
-            62
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1489,
-			716,
-			130,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			60,
-            17,
-            64,
-            63
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			488,
-			622,
-			83,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			60,
-            17,
-            64,
-            63
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			579,
-			622,
-			83,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			60,
-            21,
-            64,
-            62
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3833,
-			441,
-			83,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			60,
-            21,
-            64,
-            62
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			530,
-			83,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			71,
-            25,
-            73,
-            69
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1642,
-			275,
-			63,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_dust_up_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			207,
-			164
-		},
-		trim = {
-			76,
-            25,
-            77,
-            69
-		},
-		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
 			1713,
-			275,
-			54,
-			70
+			3239,
+			97,
+			132
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0019"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0012 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			207,
-			164
+			153,
+			281
 		},
 		trim = {
-			80,
-            29,
-            86,
-            85
+			29,
+			31,
+			26,
+			119
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			128,
-			61,
+			1713,
+			3105,
+			98,
+			131
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			35,
+			33,
+			26,
+			119
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			1255,
+			92,
+			129
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0014 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			35,
+			35,
+			27,
+			119
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			1387,
+			91,
+			127
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			46,
+			78,
+			42,
+			119
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3134,
+			65,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0016 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			46,
+			78,
 			41,
-			50
+			118
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3427,
+			2123,
+			66,
+			85
+		},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0020"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0017 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			207,
-			164
+			153,
+			281
 		},
 		trim = {
+			46,
 			81,
-            29,
-            86,
-            85
+			41,
+			118
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			177,
-			61,
+			1933,
+			3221,
+			66,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0018 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			45,
+			81,
+			41,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3049,
+			67,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			45,
+			83,
+			41,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3608,
+			67,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0020 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			44,
+			122,
 			40,
-			50
+			118
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3827,
+			1541,
+			69,
+			41
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_water_explosion_0021"
+		}
 	},
-	["hero_wukong_dust_up_0021"] = {
+	hero_wukong_dragon_ultimate_water_explosion_0022 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			44,
+			121,
+			39,
+			117
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3678,
+			1541,
+			70,
+			43
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_water_explosion_0023"
+		}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0024 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			43,
+			120,
+			38,
+			117
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3527,
+			1541,
+			72,
+			44
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_water_explosion_0025"
+		}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0026 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			42,
+			120,
+			38,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3118,
+			2274,
+			73,
+			45
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_water_explosion_0027"
+		}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0028 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			41,
+			120,
+			37,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2913,
+			2274,
+			75,
+			45
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_water_explosion_0029"
+		}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0030 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			41,
+			119,
+			36,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2761,
+			2274,
+			76,
+			46
+		},
+		alias = {}
+	},
+	hero_wukong_dragon_ultimate_water_explosion_0031 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			153,
+			281
+		},
+		trim = {
+			0,
+			0,
+			153,
+			281
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			3806,
+			153,
+			281
+		},
+		alias = {
+			"hero_wukong_dragon_ultimate_water_explosion_0032",
+			"hero_wukong_dragon_ultimate_water_explosion_0033",
+			"hero_wukong_dragon_ultimate_water_explosion_0034",
+			"hero_wukong_dragon_ultimate_water_explosion_0035",
+			"hero_wukong_dragon_ultimate_water_explosion_0036",
+			"hero_wukong_dragon_ultimate_water_explosion_0037"
+		}
+	},
+	hero_wukong_dust_up_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			207,
-			164
+			165
 		},
 		trim = {
-			90,
-            41,
-            91,
-            97
+			61,
+			48,
+			68,
+			71
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			308,
-			4,
-			26,
-			26
+			2616,
+			2274,
+			78,
+			46
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_dust_up_0022"] = {
+	hero_wukong_dust_up_0002 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			207,
-			164
+			165
 		},
 		trim = {
-			90,
-            41,
-            91,
-            97
+			61,
+			45,
+			68,
+			71
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			308,
-			4,
-			26,
+			3875,
+			2212,
+			78,
+			49
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0003 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			32,
+			24,
+			22,
+			61
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2720,
+			1116,
+			153,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0004 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			32,
+			24,
+			22,
+			61
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2876,
+			1116,
+			153,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0005 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			14,
+			18,
+			19,
+			54
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2816,
+			779,
+			174,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0006 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			14,
+			18,
+			19,
+			54
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2993,
+			779,
+			174,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			19,
+			14,
+			23,
+			52
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2763,
+			375,
+			165,
+			99
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0008 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			19,
+			14,
+			23,
+			52
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1616,
+			380,
+			165,
+			99
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			42,
+			15,
+			40,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2236,
+			1668,
+			125,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0010 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			42,
+			15,
+			40,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2364,
+			1668,
+			125,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			38,
+			17,
+			45,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2492,
+			1668,
+			124,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0012 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			38,
+			17,
+			45,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2619,
+			1668,
+			124,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			63,
+			20,
+			67,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2123,
+			77,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0014 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			63,
+			20,
+			67,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2521,
+			2123,
+			77,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			63,
+			24,
+			67,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2877,
+			2123,
+			77,
+			75
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0016 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			63,
+			24,
+			67,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2957,
+			2123,
+			77,
+			75
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			74,
+			28,
+			76,
+			73
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3725,
+			57,
+			64
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0018 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			79,
+			28,
+			80,
+			72
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2483,
+			48,
+			65
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			83,
+			30,
+			87,
+			86
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3191,
+			37,
+			49
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0020 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			83,
+			30,
+			87,
+			86
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3243,
+			37,
+			49
+		},
+		alias = {}
+	},
+	hero_wukong_dust_up_0021 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			207,
+			165
+		},
+		trim = {
+			91,
+			42,
+			92,
+			98
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1567,
+			2541,
+			24,
+			25
+		},
+		alias = {
+			"hero_wukong_dust_up_0022"
+		}
+	},
+	hero_wukong_hit_0001 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			77,
+			85
+		},
+		trim = {
+			22,
+			21,
+			22,
 			26
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4055,
+			585,
+			33,
+			38
+		},
+		alias = {
+			"hero_wukong_hit_0002"
+		}
 	},
-	["hero_wukong_hit_0001"] = {
+	hero_wukong_hit_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			76,
+			77,
 			85
 		},
 		trim = {
-			19,
-            21,
-            18,
-            23
+			18,
+			21,
+			17,
+			17
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1430,
-			4,
-			39,
-			41
+			397,
+			3560,
+			42,
+			47
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_hit_0004"
+		}
 	},
-	["hero_wukong_hit_0002"] = {
+	hero_wukong_hit_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			76,
-			85
-		},
-		trim = {
-			19,
-            21,
-            18,
-            23
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1430,
-			4,
-			39,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			76,
+			77,
 			85
 		},
 		trim = {
 			15,
-            17,
-            14,
-            15
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			728,
-			61,
-			47,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			76,
-			85
-		},
-		trim = {
+			17,
 			15,
-            17,
-            14,
-            15
+			16
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			728,
-			61,
+			2309,
+			2601,
 			47,
-			53
+			52
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_hit_0005"] = {
+	hero_wukong_hit_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			76,
+			77,
 			85
 		},
 		trim = {
 			13,
-            14,
-            12,
-            15
+			14,
+			14,
+			15
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1902,
-			61,
-			51,
+			3748,
+			2274,
+			50,
 			56
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_hit_0006"] = {
+	hero_wukong_hit_wukong_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			76,
-			85
+			119,
+			119
 		},
 		trim = {
-			10,
-            13,
-            11,
-            12
+			36,
+			35,
+			37,
+			36
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			746,
-			128,
+			2309,
+			2760,
+			46,
+			48
+		},
+		alias = {
+			"hero_wukong_hit_wukong_0002"
+		}
+	},
+	hero_wukong_hit_wukong_0003 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			119,
+			119
+		},
+		trim = {
+			32,
+			31,
+			32,
+			28
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3060,
+			2274,
 			55,
 			60
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_hit_wukong_0004"
+		}
 	},
-	["hero_wukong_hit_wukong_0001"] = {
+	hero_wukong_hit_wukong_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			119,
 			119
-		},
-		trim = {
-			35,
-            34,
-            36,
-            35
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			225,
-			61,
-			48,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_wukong_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			119,
-			119
-		},
-		trim = {
-			35,
-            34,
-            36,
-            35
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			225,
-			61,
-			48,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_wukong_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			119,
-			119
-		},
-		trim = {
-			31,
-            30,
-            31,
-            27
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3073,
-			128,
-			57,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_wukong_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			119,
-			119
-		},
-		trim = {
-			31,
-            30,
-            31,
-            27
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3073,
-			128,
-			57,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_wukong_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			119,
-			119
-		},
-		trim = {
-			29,
-            25,
-            27,
-            25
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			749,
-			275,
-			63,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_hit_wukong_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			119,
-			119
-		},
-		trim = {
-			27,
-            23,
-            28,
-            24
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3158,
-			275,
-			64,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			64,
-            45,
-            64,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			569,
-			4,
-			48,
-			34
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			58,
-            38,
-            58,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1665,
-			4,
-			60,
-			42
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			47,
-            31,
-            47,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3569,
-			4,
-			82,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			31,
-            24,
-            27,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1961,
-			61,
-			118,
-			56
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
 		},
 		trim = {
 			30,
-            18,
-            30,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1883,
-			128,
-			116,
-			61
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			25,
-            18,
-            30,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2007,
-			128,
-			121,
-			61
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			30,
-            18,
-            30,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2136,
-			128,
-			116,
-			61
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			29,
-            19,
-            30,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			809,
-			128,
-			117,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			29,
-            19,
-            29,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			934,
-			128,
-			118,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			29,
-            18,
-            29,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2260,
-			128,
-			118,
-			61
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
+			26,
 			28,
-            18,
-            28,
-            57
+			26
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2386,
-			128,
-			120,
-			61
+			2173,
+			3501,
+			61,
+			67
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_smoke_0012"] = {
+	hero_wukong_hit_wukong_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			176,
-			136
+			119,
+			119
 		},
 		trim = {
+			29,
+			24,
 			28,
-            18,
-            28,
-            57
+			25
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2514,
-			128,
-			120,
-			61
+			2173,
+			2585,
+			62,
+			70
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_smoke_0013"] = {
+	hero_wukong_smoke_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			176,
 			136
 		},
 		trim = {
-			27,
-            18,
-            27,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2642,
-			128,
-			122,
-			61
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			27,
-            19,
-            27,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1060,
-			128,
-			122,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			27,
-            20,
-            27,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3323,
-			61,
-			122,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			27,
-            20,
-            27,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3453,
-			61,
-			122,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_smoke_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			176,
-			136
-		},
-		trim = {
-			33,
-            21,
-            33,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2917,
-			61,
-			110,
+			65,
+			46,
+			65,
 			58
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			808,
+			4059,
+			46,
+			32
+		},
+		alias = {}
 	},
-	["hero_wukong_smoke_0018"] = {
+	hero_wukong_smoke_0002 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
+			59,
+			39,
+			59,
+			58
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2366,
+			2339,
+			58,
+			39
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0003 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
+			48,
+			32,
+			48,
+			58
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2383,
+			2274,
+			80,
+			46
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0004 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			176,
@@ -10255,23 +7244,23 @@ return {
 		},
 		trim = {
 			32,
-            21,
-            32,
-            57
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3035,
-			61,
-			112,
+			25,
+			28,
 			58
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3613,
+			1957,
+			116,
+			53
+		},
+		alias = {}
 	},
-	["hero_wukong_smoke_0019"] = {
+	hero_wukong_smoke_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			176,
@@ -10279,19580 +7268,12610 @@ return {
 		},
 		trim = {
 			31,
-            20,
-            32,
-            57
+			19,
+			31,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3583,
-			61,
-			113,
+			2859,
+			1957,
+			114,
 			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_smoke_0020"] = {
+	hero_wukong_smoke_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
 			176,
 			136
 		},
 		trim = {
-			62,
-            33,
-            62,
-            60
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1733,
-			4,
-			52,
-			43
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			10,
-            10,
-            10,
-            16
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			247,
-			4,
-			22,
-			22
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			10,
-            10,
-            10,
-            16
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			247,
-			4,
-			22,
-			22
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			11,
-            13,
-            13,
-            17
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			221,
-			4,
-			18,
-			18
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			11,
-            13,
-            13,
-            17
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			221,
-			4,
-			18,
-			18
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			12,
-            15,
-            13,
-            18
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			143,
-			4,
-			17,
-			15
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			12,
-            15,
-            13,
-            18
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			143,
-			4,
-			17,
-			15
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			15,
-            17,
-            13,
-            18
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			121,
-			4,
-			14,
-			13
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			15,
-            17,
-            13,
-            18
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			121,
-			4,
-			14,
-			13
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			16,
-            18,
-            14,
-            20
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			15,
-			4,
-			12,
-			10
-		},
-		alias = {},
-	},
-	["hero_wukong_trail_nube_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			42,
-			48
-		},
-		trim = {
-			16,
-            18,
-            14,
-            20
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			15,
-			4,
-			12,
-			10
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			80,
-            303,
-            85,
-            623
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			611,
-			1381,
+			26,
 			19,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			80,
-            303,
-            85,
-            623
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			611,
-			1381,
-			19,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			62,
-            13,
-            61,
-            658
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3856,
-			2231,
-			61,
-			374
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			62,
-            13,
-            61,
-            658
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3856,
-			2231,
-			61,
-			374
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            39,
-            59,
-            639
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3422,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			62,
-            39,
-            61,
-            639
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3495,
-			2231,
-			61,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            39,
-            59,
-            639
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3422,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            39,
-            59,
-            639
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3422,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            42,
-            59,
-            636
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3564,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            42,
-            59,
-            636
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3564,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            45,
-            59,
-            633
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3637,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            45,
-            59,
-            633
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3637,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            50,
-            59,
-            628
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3710,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            50,
-            59,
-            628
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3710,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            58,
-            59,
-            621
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3276,
-			2231,
-			65,
-			366
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            58,
-            59,
-            621
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3276,
-			2231,
-			65,
-			366
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			61,
-            72,
-            59,
-            608
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3204,
-			2231,
-			64,
-			365
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			61,
-            72,
-            59,
-            608
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3204,
-			2231,
-			64,
-			365
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            107,
-            60,
-            574
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3132,
-			2231,
-			64,
-			364
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            107,
-            60,
-            574
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3132,
-			2231,
-			64,
-			364
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			58,
-            177,
-            57,
-            511
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3055,
-			2231,
-			69,
-			357
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			58,
-            177,
-            57,
-            511
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3055,
-			2231,
-			69,
-			357
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            161,
-            59,
-            518
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3349,
-			2231,
-			65,
-			366
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            161,
-            59,
-            518
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3349,
-			2231,
-			65,
-			366
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0040"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0041"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0042"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0043"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0044"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0045"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0046"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0047"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0048"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0049"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0050"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0051"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0052"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0053"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0054"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			60,
-            164,
-            59,
-            514
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3783,
-			2231,
-			65,
-			367
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0055"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			79,
-            349,
-            74,
-            542
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			386,
-			1815,
 			31,
-			154
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0056"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			79,
-            349,
-            74,
-            542
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			386,
-			1815,
+			445,
+			4032,
+			119,
+			59
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
 			31,
-			154
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0057"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			83,
-            351,
-            80,
-            526
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3263,
-			1815,
-			21,
-			168
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0058"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			83,
-            351,
-            80,
-            526
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3263,
-			1815,
-			21,
-			168
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0059"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			47,
-            190,
-            77,
-            594
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1250,
-			2231,
-			60,
-			261
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0060"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			47,
-            190,
-            77,
-            594
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1250,
-			2231,
-			60,
-			261
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0061"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			45,
-            311,
-            48,
-            574
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2429,
-			1815,
-			91,
-			160
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0062"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			45,
-            311,
-            48,
-            574
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2429,
-			1815,
-			91,
-			160
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0063"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			10,
-            305,
-            44,
-            584
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			648,
-			1815,
-			130,
-			156
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0064"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			10,
-            305,
-            44,
-            584
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			648,
-			1815,
-			130,
-			156
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0065"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			41,
-            375,
-            41,
-            560
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3027,
-			1135,
-			102,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_0066"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			184,
-			1045
-		},
-		trim = {
-			41,
-            375,
-            41,
-            560
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3027,
-			1135,
-			102,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            16,
-            18,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3138,
-			128,
-			77,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            16,
-            18,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3138,
-			128,
-			77,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            15,
-            18,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3658,
-			128,
-			77,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            15,
-            18,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3658,
-			128,
-			77,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			11,
-            11,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2341,
-			199,
-			79,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			11,
-            11,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2341,
-			199,
-			79,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			11,
-            11,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2341,
-			199,
-			79,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            16,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3223,
-			128,
-			78,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            16,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3223,
-			128,
-			78,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            16,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3223,
-			128,
-			78,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_weapon_decal_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			107,
-			90
-		},
-		trim = {
-			12,
-            16,
-            17,
-            12
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3309,
-			128,
-			78,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3659,
-			4,
-			48,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3659,
-			4,
-			48,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			131,
-            249,
-            124,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2482,
-			4,
-			48,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			131,
-            249,
-            124,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2482,
-			4,
-			48,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3715,
-			4,
-			46,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3715,
-			4,
-			46,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			783,
-			61,
-			45,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			783,
-			61,
-			45,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            242,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1349,
-			61,
-			46,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            242,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1349,
-			61,
-			46,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			836,
-			61,
-			44,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			836,
-			61,
-			44,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			131,
-            249,
-            124,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2482,
-			4,
-			48,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			131,
-            249,
-            124,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2482,
-			4,
-			48,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3769,
-			4,
-			46,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3769,
-			4,
-			46,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			888,
-			61,
-			45,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			888,
-			61,
-			45,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            242,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1403,
-			61,
-			46,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            242,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1403,
-			61,
-			46,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			941,
-			61,
-			44,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            243,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			941,
-			61,
-			44,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			113,
-            237,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3704,
-			61,
-			61,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			114,
-            235,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2772,
-			128,
-			60,
-			61
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			115,
-            234,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3395,
-			128,
-			58,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			116,
-            232,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			417,
-			199,
-			57,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			116,
-            232,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			482,
-			199,
-			57,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            231,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1252,
-			199,
-			56,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            231,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1316,
-			199,
-			56,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            231,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1380,
-			199,
-			56,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            231,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1380,
-			199,
-			56,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			131,
-            246,
-            109,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			281,
-			61,
-			63,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			131,
-            246,
-            109,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			281,
-			61,
-			63,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            249,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2538,
-			4,
-			58,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            249,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2538,
-			4,
-			58,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            255,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1477,
-			4,
-			58,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            255,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1477,
-			4,
-			58,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            253,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1793,
-			4,
-			58,
-			43
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            253,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1793,
-			4,
-			58,
-			43
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0040"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            242,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1457,
-			61,
-			45,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0041"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			132,
-            242,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1457,
-			61,
-			45,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0042"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            249,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2604,
-			4,
-			48,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0043"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            249,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2604,
-			4,
-			48,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0044"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            247,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3659,
-			4,
-			48,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0045"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            224,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3230,
-			275,
-			44,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0046"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            224,
-            126,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3230,
-			275,
-			44,
-			72
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0047"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			118,
-            208,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1627,
-			716,
-			56,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0048"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			118,
-            208,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1627,
-			716,
-			56,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0049"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			113,
-            210,
-            128,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			241,
-			716,
-			62,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0050"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			113,
-            210,
-            128,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			241,
-			716,
-			62,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0051"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			118,
-            197,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3495,
-			916,
-			67,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0052"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			118,
-            197,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3495,
-			916,
-			67,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0053"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            191,
-            104,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			432,
-			1135,
-			69,
-			105
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0054"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            191,
-            104,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			432,
-			1135,
-			69,
-			105
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0055"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			121,
-            174,
-            101,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1804,
-			1381,
-			81,
-			122
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0056"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			121,
-            174,
-            101,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1804,
-			1381,
-			81,
-			122
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0057"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			120,
-            161,
-            101,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3808,
-			1513,
-			82,
-			135
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0058"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			120,
-            161,
-            101,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3808,
-			1513,
-			82,
-			135
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0059"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			120,
-            158,
-            102,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			816,
-			1656,
-			81,
-			138
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0060"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			120,
-            158,
-            102,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			816,
-			1656,
-			81,
-			138
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0061"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			73,
-            125,
-            91,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3416,
-			1815,
-			139,
-			171
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0062"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			73,
-            125,
-            91,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3563,
-			1815,
-			139,
-			171
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0063"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			62,
-            157,
-            80,
-            281
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1835,
-			1656,
-			161,
-			141
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0064"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			62,
-            157,
-            80,
-            281
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2004,
-			1656,
-			161,
-			141
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0065"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			54,
-            150,
-            73,
-            275
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			425,
-			1815,
-			176,
-			154
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0066"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			54,
-            150,
-            73,
-            276
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			103,
-			1815,
-			176,
-			153
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0067"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			53,
-            148,
-            71,
-            274
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			843,
-			1815,
-			179,
-			157
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0068"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			53,
-            148,
-            71,
-            274
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1030,
-			1815,
-			179,
-			157
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0069"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			51,
-            147,
-            70,
-            273
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1623,
-			1815,
-			182,
-			159
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0070"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			51,
-            147,
-            70,
-            273
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1813,
-			1815,
-			182,
-			159
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0071"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			82,
-            166,
-            99,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2122,
-			1513,
-			122,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0072"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			82,
-            166,
-            99,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2122,
-			1513,
-			122,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0073"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			82,
-            166,
-            99,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2122,
-			1513,
-			122,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0074"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			80,
-            167,
-            99,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1888,
-			1513,
-			124,
-			129
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0075"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			80,
-            167,
-            99,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1888,
-			1513,
-			124,
-			129
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0076"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			69,
-            185,
-            96,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3643,
-			1135,
-			138,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0077"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			69,
-            185,
-            96,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3643,
-			1135,
-			138,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0078"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			98,
-            140,
-            102,
-            280
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2003,
-			1815,
-			103,
-			159
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0079"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			98,
-            140,
-            102,
-            280
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2003,
-			1815,
-			103,
-			159
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0080"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			125,
-            140,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			786,
-			1815,
-			49,
-			156
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0081"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			125,
-            140,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			786,
-			1815,
-			49,
-			156
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0082"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            283,
-            136,
-            284
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			81,
-			4,
-			32,
-			12
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0083"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			119,
-            45,
-            127,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			585,
-			2231,
-			57,
-			251
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0084"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			96,
-            45,
-            103,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			650,
-			2231,
-			104,
-			251
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0085"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			78,
-            42,
-            103,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			880,
-			2231,
-			122,
-			254
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0086"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			79,
-            42,
-            100,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1010,
-			2231,
-			124,
-			254
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0087"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			77,
-            29,
-            100,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1318,
-			2231,
-			126,
-			267
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0088"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			77,
-            29,
-            103,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1452,
-			2231,
-			123,
-			267
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0089"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			68,
-            27,
-            103,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1699,
-			2231,
-			132,
-			269
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0090"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			68,
-            27,
-            109,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1839,
-			2231,
-			126,
-			269
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0091"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			75,
-            11,
-            109,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2434,
-			2231,
-			119,
-			285
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0092"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			75,
-            11,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2561,
-			2231,
-			118,
-			285
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0093"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			75,
-            19,
-            110,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2190,
-			2231,
-			118,
-			277
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0094"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			75,
-            19,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2316,
-			2231,
-			110,
-			277
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0095"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			76,
-            27,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1973,
-			2231,
-			109,
-			269
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0096"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			76,
-            27,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1973,
-			2231,
-			109,
-			269
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0097"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			77,
-            29,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1583,
-			2231,
-			108,
-			267
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0098"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			77,
-            29,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1583,
-			2231,
-			108,
-			267
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0099"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			82,
-            36,
-            121,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1142,
-			2231,
-			100,
-			260
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0100"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			82,
-            36,
-            121,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1142,
-			2231,
-			100,
-			260
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0101"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			95,
-            56,
-            128,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			497,
-			2231,
-			80,
-			240
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0102"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			110,
-            85,
-            67,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2293,
-			1996,
-			126,
-			211
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0103"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			105,
-            211,
-            52,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2212,
-			622,
-			146,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0104"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			105,
-            211,
-            52,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2212,
-			622,
-			146,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0105"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			120,
-            190,
-            72,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			957,
-			1135,
-			111,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0106"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			120,
-            190,
-            72,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			957,
-			1135,
-			111,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0107"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            196,
-            66,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1837,
-			1023,
-			120,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0108"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            196,
-            66,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1837,
-			1023,
-			120,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0109"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			121,
-            196,
-            68,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1965,
-			1023,
-			114,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0110"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			121,
-            196,
-            68,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1965,
-			1023,
-			114,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0111"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			121,
-            198,
-            67,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			916,
-			115,
-			98
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0112"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			121,
-            198,
-            67,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			916,
-			115,
-			98
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0113"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			115,
-            215,
-            67,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			95,
-			530,
-			121,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0114"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			115,
-            215,
-            67,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			95,
-			530,
-			121,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0115"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            207,
-            68,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2772,
-			716,
-			118,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0116"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			117,
-            207,
-            68,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2772,
-			716,
-			118,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0117"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			108,
-            207,
-            51,
-            276
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2156,
-			916,
-			144,
-			96
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0118"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			110,
-            203,
-            51,
-            276
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2087,
-			1023,
-			142,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0119"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			102,
-            197,
-            37,
-            265
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2504,
-			1254,
-			164,
-			117
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0120"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			102,
-            197,
-            37,
-            265
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2676,
-			1254,
-			164,
-			117
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0121"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			90,
-            188,
-            28,
-            258
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3089,
-			1513,
-			185,
-			133
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0122"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			90,
-            188,
-            28,
-            258
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3282,
-			1513,
-			185,
-			133
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0123"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			85,
-            185,
-            25,
-            256
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			905,
-			1656,
-			193,
-			138
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0124"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			85,
-            185,
-            25,
-            256
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1106,
-			1656,
-			193,
-			138
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0125"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			84,
-            183,
-            23,
-            254
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2464,
-			1656,
-			196,
-			142
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0126"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			84,
-            183,
-            23,
-            254
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2668,
-			1656,
-			196,
-			142
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0127"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            231,
-            72,
-            281
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2428,
-			199,
-			96,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0128"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            231,
-            72,
-            281
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2428,
-			199,
-			96,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0129"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			134,
-            183,
-            113,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1153,
-			1254,
-			56,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0130"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			134,
-            183,
-            113,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1153,
-			1254,
-			56,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0131"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			134,
-            209,
-            122,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			665,
-			716,
-			47,
-			87
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0132"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			134,
-            209,
-            122,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			665,
-			716,
-			47,
-			87
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0133"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			128,
-            253,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1859,
-			4,
-			57,
-			43
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0134"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			128,
-            253,
-            118,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1859,
-			4,
-			57,
-			43
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0135"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            237,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3773,
-			61,
-			43,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0136"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			135,
-            237,
-            125,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3773,
-			61,
-			43,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0137"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            247,
-            123,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3823,
-			4,
-			47,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0138"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			133,
-            247,
-            123,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3823,
-			4,
-			47,
-			49
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0139"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            241,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1850,
-			61,
-			44,
-			55
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0140"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            241,
-            129,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1850,
-			61,
-			44,
-			55
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0141"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            234,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3461,
-			128,
-			43,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0142"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			130,
-            234,
-            130,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3461,
-			128,
-			43,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0143"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			128,
-            229,
-            134,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2532,
-			199,
-			41,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0144"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			128,
-            229,
-            134,
-            283
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2532,
-			199,
-			41,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0145"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			125,
-            227,
-            137,
-            285
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2581,
-			199,
-			41,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0146"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			125,
-            227,
-            137,
-            285
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2581,
-			199,
-			41,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0147"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			119,
-            226,
-            119,
-            291
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3512,
-			128,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0148"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			119,
-            226,
-            119,
-            291
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3585,
-			128,
-			65,
-			62
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0149"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			113,
-            226,
-            111,
-            284
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			820,
-			275,
-			79,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0150"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			113,
-            226,
-            111,
-            284
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			907,
-			275,
-			79,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0151"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			99,
-            220,
-            104,
-            280
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1179,
-			441,
-			100,
-			79
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0152"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			99,
-            221,
-            104,
-            280
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			628,
-			441,
-			100,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0153"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			90,
-            217,
-            103,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			670,
-			622,
-			110,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0154"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			90,
-            217,
-            103,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			788,
-			622,
-			110,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0155"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			83,
-            213,
-            102,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1691,
-			716,
-			118,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0156"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			83,
-            213,
-            102,
-            278
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1817,
-			716,
-			118,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0157"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			81,
-            212,
-            104,
-            279
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1943,
-			716,
-			118,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0158"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			81,
-            212,
-            133,
-            286
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			224,
-			530,
-			89,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0159"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			80,
-            210,
-            132,
-            286
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3384,
-			530,
-			91,
-			83
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0160"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			80,
-            211,
-            132,
-            286
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1719,
-			530,
-			91,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_0161"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			303,
-			579
-		},
-		trim = {
-			81,
-            213,
-            133,
-            287
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1287,
-			441,
-			89,
-			79
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_decal"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			238,
-			176
-		},
-		trim = {
-			11,
-            12,
-            24,
-            20
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3167,
-			1656,
-			203,
-			144
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			56,
-            30,
-            20,
-            51
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			277,
-			4,
-			23,
-			24
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			56,
-            30,
-            20,
-            51
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			277,
-			4,
-			23,
-			24
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			18,
-            20,
-            25,
-            55
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			389,
-			4,
-			56,
-			30
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			18,
-            20,
-            25,
-            55
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			389,
-			4,
-			56,
-			30
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			21,
-            16,
-            26,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			509,
-			4,
-			52,
-			33
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			21,
-            16,
-            26,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			509,
-			4,
-			52,
-			33
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			25,
-            17,
-            26,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			453,
-			4,
-			48,
-			32
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			25,
-            17,
-            26,
-            56
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			453,
-			4,
-			48,
-			32
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
 			19,
-            10,
-            13,
-            42
+			31,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			993,
-			61,
-			67,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			19,
-            10,
-            13,
-            42
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			993,
-			61,
-			67,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			16,
-            12,
-            11,
-            46
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2660,
-			4,
-			72,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			16,
-            12,
-            11,
-            46
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2660,
-			4,
-			72,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			22,
-            16,
-            25,
-            52
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			768,
-			4,
-			52,
-			37
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			22,
-            16,
-            25,
-            52
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			768,
-			4,
-			52,
-			37
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			22,
-            16,
-            24,
-            50
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			886,
-			4,
-			53,
-			39
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			22,
-            16,
-            24,
-            50
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			886,
-			4,
-			53,
-			39
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			21,
-            15,
-            25,
-            49
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1543,
-			4,
-			53,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			21,
-            15,
-            25,
-            49
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1543,
-			4,
-			53,
-			41
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			20,
-            16,
-            30,
-            49
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			947,
-			4,
-			49,
-			40
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			20,
-            16,
-            30,
-            49
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			947,
-			4,
-			49,
-			40
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			21,
-            16,
-            33,
-            74
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			168,
-			4,
-			45,
-			15
-		},
-		alias = {},
-	},
-	["hero_wukong_woolong_spawn_FX_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			99,
-			105
-		},
-		trim = {
-			21,
-            16,
-            33,
-            74
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			168,
-			4,
-			45,
-			15
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0001"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0002"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0003"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3105,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0004"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3105,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0005"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3207,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0006"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3207,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0007"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3309,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0008"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3309,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0009"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3411,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0010"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3411,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0011"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3513,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0012"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3513,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0013"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3615,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0014"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3615,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0015"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3717,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0016"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3717,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0017"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            418,
-            179,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			548,
-			61,
-			100,
-			52
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0018"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            418,
-            179,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			548,
-			61,
-			100,
-			52
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0019"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            403,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2630,
-			199,
-			95,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0020"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            403,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2630,
-			199,
-			95,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0021"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            397,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3516,
-			275,
-			93,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0022"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            397,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3516,
-			275,
-			93,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0023"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            397,
-            184,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3617,
-			275,
-			88,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0024"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            397,
-            184,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3617,
-			275,
-			88,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0025"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            407,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3743,
-			128,
-			95,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0026"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            407,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3743,
-			128,
-			95,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0027"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            417,
-            177,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1068,
-			61,
-			103,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0028"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            417,
-            177,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1068,
-			61,
-			103,
-			53
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0029"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            403,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2733,
-			199,
-			95,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0030"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            403,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2733,
-			199,
-			95,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0031"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            397,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3713,
-			275,
-			93,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0032"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            397,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3713,
-			275,
-			93,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0033"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			197,
-            399,
-            184,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2301,
-			275,
-			87,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0034"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			197,
-            399,
-            184,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2301,
-			275,
-			87,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0035"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            407,
-            180,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3846,
-			128,
-			96,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0036"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            407,
-            180,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3846,
-			128,
-			96,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0037"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            400,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1775,
-			275,
-			89,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0038"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            400,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1775,
-			275,
-			89,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0039"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			202,
-            353,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2848,
-			1254,
-			69,
-			117
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0040"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			202,
-            353,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2848,
-			1254,
-			69,
-			117
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0041"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            348,
-            203,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1893,
-			1381,
-			69,
-			122
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0042"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            348,
-            203,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1893,
-			1381,
-			69,
-			122
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0043"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			199,
-            382,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2069,
-			716,
-			65,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0044"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			200,
-            382,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2142,
-			716,
-			64,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0045"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			198,
-            363,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1754,
-			1135,
-			57,
-			107
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0046"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			198,
-            363,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1754,
-			1135,
-			57,
-			107
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0047"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3570,
-			916,
-			64,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0048"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3642,
-			916,
-			65,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0049"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3715,
-			916,
-			66,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0050"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3715,
-			916,
-			66,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0051"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3789,
-			916,
-			67,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0052"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3789,
-			916,
-			67,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0053"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3864,
-			916,
-			66,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0054"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3864,
-			916,
-			66,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0055"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1023,
-			69,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0056"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1023,
-			69,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0057"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			81,
-			1023,
-			68,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0058"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			81,
-			1023,
-			68,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0059"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			157,
-			1023,
-			67,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0060"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			157,
-			1023,
-			67,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0061"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			232,
-			1023,
-			63,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0062"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			232,
-			1023,
-			63,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0063"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			303,
-			1023,
-			65,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0064"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			303,
-			1023,
-			65,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0065"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            371,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3715,
-			916,
-			66,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0066"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            384,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			311,
-			716,
-			76,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0067"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            384,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			311,
-			716,
-			76,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0068"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            381,
-            201,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2898,
-			716,
-			74,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0069"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            381,
-            201,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2898,
-			716,
-			74,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0070"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            411,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3824,
-			61,
-			100,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0071"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            411,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3824,
-			61,
-			100,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0072"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            400,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1872,
-			275,
-			90,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0073"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            400,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1872,
-			275,
-			90,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0074"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			178,
-            400,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1970,
-			275,
-			92,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0075"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			178,
-            400,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1970,
-			275,
-			92,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0076"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            381,
-            134,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2532,
-			916,
-			162,
-			97
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0077"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            378,
-            134,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2237,
-			1023,
-			162,
-			100
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0078"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            375,
-            134,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2900,
-			1023,
-			162,
-			103
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0079"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            373,
-            134,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			509,
-			1135,
-			162,
-			105
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0080"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            345,
-            138,
-            449
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2563,
-			1513,
-			157,
-			131
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0081"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            345,
-            138,
-            449
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2728,
-			1513,
-			157,
-			131
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0082"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            348,
-            143,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1970,
-			1381,
-			152,
-			122
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0083"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            348,
-            143,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2130,
-			1381,
-			152,
-			122
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0084"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			166,
-            349,
-            151,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1464,
-			1381,
-			151,
-			121
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0085"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            349,
-            151,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1513,
-			138,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0086"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            349,
-            151,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			150,
-			1513,
-			138,
-			124
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0087"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			167,
-            389,
-            138,
-            442
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2214,
-			814,
-			163,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0088"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			167,
-            389,
-            138,
-            442
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2385,
-			814,
-			163,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0089"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			158,
-            389,
-            139,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			321,
-			530,
-			171,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0090"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			158,
-            389,
-            139,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			500,
-			530,
-			171,
-			81
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0091"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			160,
-            388,
-            139,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3673,
-			716,
-			169,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0092"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			160,
-            388,
-            139,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			814,
-			169,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0093"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			169,
-            393,
-            139,
-            448
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			906,
-			622,
-			160,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0094"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			169,
-            396,
-            149,
-            449
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2008,
-			441,
-			150,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0095"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			169,
-            396,
-            149,
-            449
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2008,
-			441,
-			150,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0096"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            399,
-            157,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2396,
-			275,
-			127,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0097"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            399,
-            157,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2396,
-			275,
-			127,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0098"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0099"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            405,
-            192,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			356,
-			99,
-			74
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0100"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            390,
-            190,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2980,
-			716,
-			101,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0101"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			167,
-            379,
-            189,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			376,
-			1023,
-			112,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0102"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			167,
-            372,
-            188,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1076,
-			1135,
-			113,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0103"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			164,
-            367,
-            187,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3789,
-			1135,
-			117,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0104"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			164,
-            364,
-            187,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1701,
-			1254,
-			117,
-			114
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0105"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			161,
-            362,
-            187,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1254,
-			120,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0106"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			161,
-            361,
-            187,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			512,
-			1254,
-			120,
-			112
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0107"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			161,
-            360,
-            187,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3137,
-			1135,
-			120,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0108"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			156,
-            375,
-            190,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1132,
-			916,
-			122,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0109"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			161,
-            350,
-            127,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2252,
-			1513,
-			180,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0110"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			161,
-            350,
-            127,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2252,
-			1513,
-			180,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0111"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			167,
-            350,
-            123,
-            449
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1036,
-			1513,
-			178,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0112"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			167,
-            350,
-            123,
-            449
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1036,
-			1513,
-			178,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0113"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			176,
-            353,
-            120,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1222,
-			1513,
-			172,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0114"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			176,
-            353,
-            120,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1222,
-			1513,
-			172,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0115"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            359,
-            121,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			638,
-			1381,
-			160,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0116"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            359,
-            121,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			638,
-			1381,
-			160,
-			119
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0117"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            364,
-            125,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2652,
-			1135,
-			148,
-			109
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0118"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            364,
-            125,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2652,
-			1135,
-			148,
-			109
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0119"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			180,
-            359,
-            137,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			132,
-			1254,
-			151,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0120"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			180,
-            359,
-            137,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			132,
-			1254,
-			151,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0121"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			171,
-            359,
-            161,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			291,
-			1254,
-			136,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0122"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			171,
-            359,
-            161,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			291,
-			1254,
-			136,
-			111
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0123"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0124"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            390,
-            184,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2166,
-			441,
-			97,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0125"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            390,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2271,
-			441,
-			104,
-			80
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0126"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			178,
-            394,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1951,
-			356,
-			108,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0127"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			175,
-            394,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2067,
-			356,
-			111,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0128"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            393,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3197,
-			356,
-			113,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0129"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            393,
-            182,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3318,
-			356,
+			2976,
+			1957,
 			114,
-			77
+			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0130"] = {
+	hero_wukong_smoke_0008 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			172,
-            394,
-            169,
-            455
+			30,
+			20,
+			31,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
+		},
+		f_quad = {
+			3192,
+			1957,
+			115,
+			58
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
+			30,
+			20,
+			30,
+			58
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2740,
+			1957,
+			116,
+			58
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0010 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
+			30,
+			19,
+			30,
+			58
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			4034,
+			116,
+			59
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
+			29,
+			19,
+			29,
+			58
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3960,
+			2038,
+			118,
+			59
+		},
+		alias = {}
+	},
+	hero_wukong_smoke_0012 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			176,
+			136
+		},
+		trim = {
+			29,
+			19,
+			29,
+			58
+		},
+		a_size = {
+			4096,
+			4096
 		},
 		f_quad = {
 			2186,
-			356,
-			127,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0131"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            391,
-            169,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1384,
-			441,
-			127,
-			79
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0132"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            393,
-            68,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2366,
-			622,
-			188,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0133"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            393,
-            68,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2366,
-			622,
-			188,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0134"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			206,
-            410,
-            30,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1190,
-			128,
-			232,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0135"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			206,
-            410,
-            30,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1190,
-			128,
-			232,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0136"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            413,
-            29,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2309,
-			61,
-			227,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0137"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            413,
-            29,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2309,
-			61,
-			227,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0138"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            411,
-            28,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			128,
-			228,
+			1957,
+			118,
 			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0139"] = {
+	hero_wukong_smoke_0013 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			212,
-            411,
-            28,
-            455
+			28,
+			19,
+			28,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			4,
-			128,
-			228,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0140"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            410,
-            31,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1430,
-			128,
-			225,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0141"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            410,
-            31,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1430,
-			128,
-			225,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0142"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            410,
-            44,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1663,
-			128,
-			212,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0143"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            410,
-            44,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1663,
-			128,
-			212,
-			60
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0144"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            413,
-            62,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2544,
-			61,
-			217,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0145"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            413,
-            62,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2544,
-			61,
-			217,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0146"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			180,
-            399,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2531,
-			275,
-			90,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0147"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			180,
-            399,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2531,
-			275,
-			90,
-			71
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0148"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0149"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            407,
-            173,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			199,
-			108,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0150"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            402,
-            173,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3819,
-			199,
-			122,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0151"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			170,
-            385,
-            175,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2562,
-			622,
-			123,
-			85
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0152"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			163,
-            385,
-            175,
-            453
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			720,
-			716,
-			130,
-			87
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0153"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			149,
-            370,
-            183,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3070,
-			1023,
-			136,
-			103
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0154"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			149,
-            370,
-            183,
-            452
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3214,
-			1023,
-			136,
-			103
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0155"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			146,
-            370,
-            191,
-            437
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3113,
-			1254,
-			131,
-			118
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0156"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			146,
-            370,
-            191,
-            437
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3252,
-			1254,
-			131,
-			118
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0157"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			144,
-            374,
-            191,
-            441
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3265,
-			1135,
-			133,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0158"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			144,
-            374,
-            191,
-            441
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3406,
-			1135,
-			133,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0159"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			146,
-            377,
-            191,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3358,
-			1023,
-			131,
-			103
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0160"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			146,
-            377,
-            191,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3497,
-			1023,
-			131,
-			103
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0161"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			152,
-            378,
-            127,
-            448
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			496,
-			1023,
-			189,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0162"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			152,
-            378,
-            127,
-            448
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			693,
-			1023,
-			189,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0163"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			211,
-            396,
-            85,
-            435
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2556,
-			814,
-			172,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0164"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			211,
-            396,
-            85,
-            435
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2736,
-			814,
-			172,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0165"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            394,
-            78,
-            425
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1197,
-			1135,
-			178,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0166"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            394,
-            78,
-            425
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1383,
-			1135,
-			178,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0167"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			211,
-            409,
-            99,
-            424
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1333,
-			814,
-			158,
-			92
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0168"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			211,
-            407,
-            99,
-            424
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2916,
-			814,
-			158,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0169"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            410,
-            113,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2070,
-			275,
-			143,
-			70
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0170"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            411,
-            111,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			994,
-			275,
-			145,
-			69
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0171"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            411,
-            88,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			240,
-			128,
-			191,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0172"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            411,
-            88,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			439,
-			128,
-			191,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0173"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0174"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			165,
-            404,
-            187,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			918,
-			356,
-			116,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0175"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			165,
-            404,
-            187,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1042,
-			356,
-			116,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0176"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            369,
-            192,
-            448
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1927,
-			1135,
-			103,
-			108
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0177"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            369,
-            192,
-            448
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
+			3437,
 			2038,
-			1135,
-			103,
-			108
+			120,
+			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0178"] = {
+	hero_wukong_smoke_0014 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			170,
-            390,
-            188,
-            447
+			28,
+			20,
+			28,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2214,
-			716,
-			110,
-			88
+			3837,
+			2038,
+			120,
+			58
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0179"] = {
+	hero_wukong_smoke_0015 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			170,
-            390,
-            188,
-            447
+			28,
+			21,
+			28,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2332,
-			716,
-			110,
-			88
+			2307,
+			1957,
+			120,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0180"] = {
+	hero_wukong_smoke_0016 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			174,
-            387,
-            193,
-            446
+			28,
+			21,
+			28,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1499,
-			814,
-			101,
-			92
+			2430,
+			1957,
+			120,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0181"] = {
+	hero_wukong_smoke_0017 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			174,
-            387,
-            193,
-            446
+			34,
+			22,
+			34,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1608,
-			814,
-			101,
-			92
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0182"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            385,
-            192,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2308,
-			916,
-			104,
-			96
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0183"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			172,
-            385,
-            192,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2420,
-			916,
-			104,
-			96
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0184"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            388,
-            192,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1792,
-			814,
-			103,
-			93
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0185"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            388,
-            192,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1903,
-			814,
-			103,
-			93
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0186"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            391,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			181,
-			814,
-			104,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0187"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            391,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			293,
-			814,
-			104,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0188"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3089,
-			716,
-			104,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0189"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3201,
-			716,
-			104,
-			89
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0190"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            192,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			858,
-			716,
-			103,
-			87
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0191"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            192,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			969,
-			716,
-			103,
-			87
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0192"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            192,
-            443
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			405,
-			814,
-			103,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0193"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            192,
-            443
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			516,
-			814,
-			103,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0194"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            190,
-            439
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3082,
-			814,
-			105,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0195"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            190,
-            439
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3082,
-			814,
-			105,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0196"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            188,
-            436
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2702,
-			916,
-			107,
-			97
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0197"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            188,
-            436
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2702,
-			916,
-			107,
-			97
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0198"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			173,
-            392,
-            187,
-            434
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			890,
-			1023,
+			3732,
+			1957,
 			108,
-			99
+			56
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0199"] = {
+	hero_wukong_smoke_0018 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			173,
-            392,
-            187,
-            434
+			33,
+			22,
+			33,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			890,
-			1023,
-			108,
-			99
+			3500,
+			1957,
+			110,
+			56
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0200"] = {
+	hero_wukong_smoke_0019 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			177,
-            388,
-            185,
-            433
+			33,
+			21,
+			33,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3714,
-			1023,
-			106,
-			104
+			694,
+			4026,
+			110,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0201"] = {
+	hero_wukong_smoke_0020 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			176,
+			136
 		},
 		trim = {
-			177,
-            388,
-            185,
-            433
+			63,
+			34,
+			63,
+			61
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3714,
-			1023,
-			106,
-			104
+			2309,
+			2855,
+			50,
+			41
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0202"] = {
+	hero_wukong_trail_nube_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			43,
+			48
 		},
 		trim = {
-			172,
-            379,
-            185,
-            433
+			14,
+			13,
+			13,
+			19
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1217,
-			1254,
-			111,
+			1572,
+			4069,
+			16,
+			16
+		},
+		alias = {
+			"hero_wukong_trail_nube_0002"
+		}
+	},
+	hero_wukong_trail_nube_0003 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			43,
+			48
+		},
+		trim = {
+			15,
+			16,
+			16,
+			20
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1579,
+			3876,
+			12,
+			12
+		},
+		alias = {
+			"hero_wukong_trail_nube_0004"
+		}
+	},
+	hero_wukong_trail_nube_0005 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			43,
+			48
+		},
+		trim = {
+			15,
+			18,
+			16,
+			21
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1579,
+			3891,
+			12,
+			9
+		},
+		alias = {
+			"hero_wukong_trail_nube_0006"
+		}
+	},
+	hero_wukong_trail_nube_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			43,
+			48
+		},
+		trim = {
+			18,
+			20,
+			17,
+			22
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4084,
+			370,
+			8,
+			6
+		},
+		alias = {
+			"hero_wukong_trail_nube_0008"
+		}
+	},
+	hero_wukong_trail_nube_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			43,
+			48
+		},
+		trim = {
+			19,
+			21,
+			17,
+			23
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1562,
+			4086,
+			7,
+			4
+		},
+		alias = {
+			"hero_wukong_trail_nube_0010"
+		}
+	},
+	hero_wukong_weapon_0001 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			185,
+			1045
+		},
+		trim = {
+			84,
+			306,
+			88,
+			626
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1579,
+			3760,
+			13,
 			113
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0002"
+		}
 	},
-	["hero_wukong_wukong_0203"] = {
+	hero_wukong_weapon_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			172,
-            379,
-            185,
-            433
+			64,
+			14,
+			62,
+			659
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1336,
-			1254,
-			111,
-			113
+			1309,
+			3662,
+			59,
+			372
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0004"
+		}
 	},
-	["hero_wukong_wukong_0204"] = {
+	hero_wukong_weapon_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			178,
-            393,
-            185,
-            433
+			64,
+			42,
+			62,
+			642
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1006,
-			1023,
-			105,
-			99
+			136,
+			2328,
+			59,
+			361
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0007",
+			"hero_wukong_weapon_0008"
+		}
 	},
-	["hero_wukong_wukong_0205"] = {
+	hero_wukong_weapon_0006 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			178,
-            393,
-            185,
-            433
+			64,
+			42,
+			62,
+			642
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1119,
-			1023,
-			105,
-			99
+			136,
+			2692,
+			59,
+			361
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0206"] = {
+	hero_wukong_weapon_0009 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			172,
-            404,
-            185,
-            433
+			64,
+			45,
+			62,
+			639
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2450,
-			716,
-			111,
-			88
+			136,
+			3056,
+			59,
+			361
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0010"
+		}
 	},
-	["hero_wukong_wukong_0207"] = {
+	hero_wukong_weapon_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			172,
-            404,
-            185,
-            433
+			64,
+			49,
+			62,
+			636
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2569,
-			716,
-			111,
-			88
+			1372,
+			1973,
+			59,
+			360
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0012"
+		}
 	},
-	["hero_wukong_wukong_0208"] = {
+	hero_wukong_weapon_0013 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			171,
-            418,
-            185,
-            433
+			64,
+			53,
+			62,
+			631
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			111,
-			356,
-			112,
-			74
+			1372,
+			1245,
+			59,
+			361
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0014"
+		}
 	},
-	["hero_wukong_wukong_0209"] = {
+	hero_wukong_weapon_0015 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			173,
-            398,
-            185,
-            433
+			64,
+			61,
+			62,
+			624
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3195,
-			814,
+			1372,
+			2336,
+			59,
+			360
+		},
+		alias = {
+			"hero_wukong_weapon_0016"
+		}
+	},
+	hero_wukong_weapon_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			185,
+			1045
+		},
+		trim = {
+			64,
+			75,
+			62,
+			611
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			3062,
+			59,
+			359
+		},
+		alias = {
+			"hero_wukong_weapon_0018"
+		}
+	},
+	hero_wukong_weapon_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			185,
+			1045
+		},
+		trim = {
+			64,
 			110,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0210"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            380,
-            185,
-            433
+			62,
+			577
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			640,
-			1254,
-			106,
-			112
+			1372,
+			3424,
+			59,
+			358
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0020"
+		}
 	},
-	["hero_wukong_wukong_0211"] = {
+	hero_wukong_weapon_0021 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
+			62,
 			180,
-            365,
-            185,
-            433
+			60,
+			514
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1580,
-			1513,
-			103,
-			127
+			1243,
+			3662,
+			63,
+			351
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0022"
+		}
 	},
-	["hero_wukong_wukong_0212"] = {
+	hero_wukong_weapon_0023 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			183,
-            352,
-            185,
-            433
+			64,
+			164,
+			62,
+			521
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1727,
-			1656,
-			100,
-			140
+			1372,
+			2699,
+			59,
+			360
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0024"
+		}
 	},
-	["hero_wukong_wukong_0213"] = {
+	hero_wukong_weapon_0025 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			187,
-            341,
-            185,
-            433
+			64,
+			167,
+			62,
+			517
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3766,
-			1656,
-			96,
-			151
+			1372,
+			1609,
+			59,
+			361
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0026",
+			"hero_wukong_weapon_0027",
+			"hero_wukong_weapon_0028",
+			"hero_wukong_weapon_0029",
+			"hero_wukong_weapon_0030",
+			"hero_wukong_weapon_0031",
+			"hero_wukong_weapon_0032",
+			"hero_wukong_weapon_0033",
+			"hero_wukong_weapon_0034",
+			"hero_wukong_weapon_0035",
+			"hero_wukong_weapon_0036",
+			"hero_wukong_weapon_0037",
+			"hero_wukong_weapon_0038",
+			"hero_wukong_weapon_0039",
+			"hero_wukong_weapon_0040",
+			"hero_wukong_weapon_0041",
+			"hero_wukong_weapon_0042",
+			"hero_wukong_weapon_0043",
+			"hero_wukong_weapon_0044",
+			"hero_wukong_weapon_0045",
+			"hero_wukong_weapon_0046",
+			"hero_wukong_weapon_0047",
+			"hero_wukong_weapon_0048",
+			"hero_wukong_weapon_0049",
+			"hero_wukong_weapon_0050",
+			"hero_wukong_weapon_0051",
+			"hero_wukong_weapon_0052",
+			"hero_wukong_weapon_0053",
+			"hero_wukong_weapon_0054"
+		}
 	},
-	["hero_wukong_wukong_0214"] = {
+	hero_wukong_weapon_0055 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			187,
-            333,
-            186,
-            433
+			83,
+			350,
+			76,
+			543
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2114,
-			1815,
-			95,
-			159
+			1800,
+			2450,
+			26,
+			152
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0056"
+		}
 	},
-	["hero_wukong_wukong_0215"] = {
+	hero_wukong_weapon_0057 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			189,
-            327,
-            186,
-            435
+			87,
+			354,
+			82,
+			529
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2839,
-			1815,
-			93,
-			163
+			1572,
+			3904,
+			16,
+			162
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0058"
+		}
 	},
-	["hero_wukong_wukong_0216"] = {
+	hero_wukong_weapon_0059 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			192,
-            324,
-            185,
-            443
+			48,
+			191,
+			78,
+			595
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1425,
-			1815,
-			91,
-			158
+			1483,
+			2127,
+			59,
+			259
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0060"
+		}
 	},
-	["hero_wukong_wukong_0217"] = {
+	hero_wukong_weapon_0061 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			192,
-            323,
-            185,
-            444
+			49,
+			315,
+			52,
+			577
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1524,
-			1815,
-			91,
-			158
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0218"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            324,
-            188,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1217,
-			1815,
-			91,
-			157
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0219"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            328,
-            188,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			287,
-			1815,
-			91,
+			1713,
+			2793,
+			84,
 			153
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0062"
+		}
 	},
-	["hero_wukong_wukong_0220"] = {
+	hero_wukong_weapon_0063 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			189,
-            334,
-            191,
-            444
+			13,
+			308,
+			47,
+			587
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3670,
-			1656,
-			88,
-			147
+			1833,
+			626,
+			125,
+			150
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0064"
+		}
 	},
-	["hero_wukong_wukong_0221"] = {
+	hero_wukong_weapon_0065 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			185,
+			1045
 		},
 		trim = {
-			189,
-            343,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1307,
-			1656,
-			88,
-			138
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0222"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            353,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1691,
-			1513,
-			88,
-			128
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0223"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            366,
-            191,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2408,
-			1254,
-			88,
-			115
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0224"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			200,
-            382,
-            201,
-            451
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1717,
-			814,
-			67,
-			92
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0225"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			206,
-            399,
-            204,
-            451
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1166,
-			356,
-			58,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0226"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			210,
-            404,
-            205,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2111,
-			199,
-			53,
-			66
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0227"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            426,
-            205,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1924,
-			4,
-			51,
-			44
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0228"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			213,
-            414,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2087,
-			61,
-			42,
-			56
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0229"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			213,
-            414,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2087,
-			61,
-			42,
-			56
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0230"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			213,
-            420,
-            211,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			352,
-			61,
 			44,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0231"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			213,
-            420,
-            211,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			352,
-			61,
+			378,
 			44,
-			50
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0232"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			212,
-            419,
-            212,
-            455
+			563
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			404,
-			61,
-			44,
-			51
+			1833,
+			1856,
+			97,
+			104
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_0066"
+		}
 	},
-	["hero_wukong_wukong_0233"] = {
+	hero_wukong_weapon_decal_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			108,
+			91
 		},
 		trim = {
-			212,
-            419,
-            212,
-            455
+			13,
+			18,
+			20,
+			15
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			404,
-			61,
-			44,
-			51
+			3196,
+			2212,
+			75,
+			58
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_decal_0002"
+		}
 	},
-	["hero_wukong_wukong_0234"] = {
+	hero_wukong_weapon_decal_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			108,
+			91
 		},
 		trim = {
-			161,
-            322,
-            206,
-            446
+			13,
+			18,
+			20,
+			15
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1316,
-			1815,
-			101,
-			157
+			3274,
+			2212,
+			75,
+			58
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_decal_0004"
+		}
 	},
-	["hero_wukong_wukong_0235"] = {
+	hero_wukong_weapon_decal_0005 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			108,
+			91
 		},
 		trim = {
-			161,
-            312,
-            204,
-            446
+			13,
+			14,
+			20,
+			15
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3152,
-			1815,
-			103,
-			167
+			2082,
+			3616,
+			75,
+			62
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_decal_0006",
+			"hero_wukong_weapon_decal_0007"
+		}
 	},
-	["hero_wukong_wukong_0236"] = {
+	hero_wukong_weapon_decal_0008 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			108,
+			91
 		},
 		trim = {
-			157,
-            303,
-            204,
-            448
+			13,
+			18,
+			20,
+			15
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			4,
-			1996,
-			107,
-			174
+			3352,
+			2212,
+			75,
+			58
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_weapon_decal_0009",
+			"hero_wukong_weapon_decal_0010"
+		}
 	},
-	["hero_wukong_wukong_0237"] = {
+	hero_wukong_weapon_decal_0011 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			108,
+			91
 		},
 		trim = {
-			157,
-            295,
-            202,
-            448
+			13,
+			18,
+			20,
+			15
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			530,
-			1996,
-			109,
-			182
+			3430,
+			2212,
+			75,
+			58
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0238"] = {
+	hero_wukong_woolong_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			143,
-            289,
-            201,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			731,
-			1996,
-			124,
-			189
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0239"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			143,
-            282,
-            201,
-            447
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1084,
-			1996,
-			124,
-			196
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0240"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			132,
-            277,
-            201,
-            446
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1343,
-			1996,
 			135,
-			202
+			250,
+			128,
+			286
 		},
-		alias = {},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3295,
+			41,
+			43
+		},
+		alias = {
+			"hero_wukong_woolong_0002",
+			"hero_wukong_woolong_0044"
+		}
 	},
-	["hero_wukong_wukong_0241"] = {
+	hero_wukong_woolong_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
+			135,
+			252,
+			127,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3536,
+			42,
+			41
+		},
+		alias = {
+			"hero_wukong_woolong_0004",
+			"hero_wukong_woolong_0013",
+			"hero_wukong_woolong_0014"
+		}
+	},
+	hero_wukong_woolong_0005 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			136,
+			250,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3580,
+			40,
+			43
+		},
+		alias = {
+			"hero_wukong_woolong_0006"
+		}
+	},
+	hero_wukong_woolong_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			136,
+			246,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			397,
+			3712,
+			40,
+			47
+		},
+		alias = {
+			"hero_wukong_woolong_0008"
+		}
+	},
+	hero_wukong_woolong_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			136,
+			245,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			397,
+			3610,
+			40,
+			48
+		},
+		alias = {
+			"hero_wukong_woolong_0010"
+		}
+	},
+	hero_wukong_woolong_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			137,
+			246,
+			130,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3436,
+			37,
+			47
+		},
+		alias = {
+			"hero_wukong_woolong_0012"
+		}
+	},
+	hero_wukong_woolong_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			136,
+			250,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3626,
+			40,
+			43
+		},
+		alias = {
+			"hero_wukong_woolong_0016"
+		}
+	},
+	hero_wukong_woolong_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			136,
+			246,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2996,
+			40,
+			47
+		},
+		alias = {
+			"hero_wukong_woolong_0018"
+		}
+	},
+	hero_wukong_woolong_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			136,
+			245,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			397,
+			3661,
+			40,
+			48
+		},
+		alias = {
+			"hero_wukong_woolong_0020"
+		}
+	},
+	hero_wukong_woolong_0021 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			137,
+			246,
+			130,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3486,
+			37,
+			47
+		},
+		alias = {
+			"hero_wukong_woolong_0022"
+		}
+	},
+	hero_wukong_woolong_0023 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			116,
+			240,
 			132,
-            273,
-            202,
-            446
+			286
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1905,
-			1996,
-			134,
-			206
+			3316,
+			2274,
+			56,
+			53
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0242"] = {
+	hero_wukong_woolong_0024 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			152,
-            270,
-            203,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2427,
-			1996,
-			113,
-			211
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0243"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			152,
-            268,
-            203,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2845,
-			1996,
-			113,
-			213
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0244"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			149,
-            268,
-            204,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2966,
-			1996,
-			115,
-			213
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0245"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			149,
-            268,
-            204,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3089,
-			1996,
-			115,
-			213
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0246"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            268,
-            204,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3212,
-			1996,
-			114,
-			213
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0247"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            270,
-            204,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2548,
-			1996,
-			114,
-			211
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0248"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            273,
-            205,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2047,
-			1996,
-			113,
-			208
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0249"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            277,
-            203,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1655,
-			1996,
-			115,
-			204
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0250"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            282,
-            201,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2168,
-			1996,
 			117,
-			210
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0251"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            288,
-            199,
-            433
+			238,
+			133,
+			286
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1778,
-			1996,
-			119,
-			204
+			1309,
+			4037,
+			54,
+			55
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0252"] = {
+	hero_wukong_woolong_0025 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			150,
-            295,
-            199,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1216,
-			1996,
-			119,
-			197
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0253"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            302,
-            198,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			863,
-			1996,
-			120,
-			190
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0254"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			150,
-            311,
-            198,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			402,
-			1996,
-			120,
-			181
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0255"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			148,
-            317,
-            198,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			119,
-			1996,
-			122,
-			175
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0256"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			149,
-            319,
-            199,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3834,
-			1815,
-			120,
-			173
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0257"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			153,
-            321,
-            199,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3710,
-			1815,
-			116,
-			171
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0258"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			153,
-            324,
-            199,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3292,
-			1815,
-			116,
-			168
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0259"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			153,
-            328,
-            198,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3027,
-			1815,
-			117,
-			164
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0260"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			153,
-            333,
-            197,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2217,
-			1815,
 			118,
-			159
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0261"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			153,
-            355,
-            196,
-            433
+			237,
+			133,
+			286
 		},
 		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			564,
-			1656,
-			119,
-			137
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0262"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			155,
-            355,
-            196,
-            433
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			691,
-			1656,
-			117,
-			137
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0263"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			155,
-            356,
-            202,
-            435
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3582,
-			1513,
-			111,
-			134
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0264"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			178,
-            356,
-            202,
-            443
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1402,
-			1513,
-			88,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0265"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            416,
-            196,
-            444
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1444,
-			199,
-			88,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0266"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            416,
-            196,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			547,
-			199,
-			88,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0267"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            394,
-            189,
-            445
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			395,
-			716,
-			102,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0268"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            394,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2321,
-			356,
-			102,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0269"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            406,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			643,
-			199,
-			95,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0270"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            406,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			643,
-			199,
-			95,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0271"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0272"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0273"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            412,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3155,
-			61,
-			95,
-			58
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0274"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            412,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3155,
-			61,
-			95,
-			58
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0275"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            344,
-            200,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1498,
-			1513,
-			74,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0276"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            344,
-            200,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1498,
-			1513,
-			74,
-			126
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0277"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            357,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1455,
-			1254,
-			80,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0278"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            357,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1455,
-			1254,
-			80,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0279"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            371,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1232,
-			1023,
-			72,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0280"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            371,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1232,
-			1023,
-			72,
-			99
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0281"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            388,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1818,
-			530,
-			78,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0282"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            388,
-            198,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1818,
-			530,
-			78,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0283"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            382,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2688,
-			716,
-			76,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0284"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            382,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2688,
-			716,
-			76,
-			88
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0285"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			201,
-            386,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1074,
-			622,
-			63,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0286"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			201,
-            386,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1074,
-			622,
-			63,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0287"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			201,
-            386,
-            207,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1145,
-			622,
-			60,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0288"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			201,
-            386,
-            207,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1145,
-			622,
-			60,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0289"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			201,
-            386,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1213,
-			622,
-			61,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0290"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			201,
-            386,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1213,
-			622,
-			61,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0291"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			200,
-            386,
-            205,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1282,
-			622,
-			63,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0292"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			200,
-            386,
-            205,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1282,
-			622,
-			63,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0293"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			197,
-            386,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1353,
-			622,
-			65,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0294"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			197,
-            386,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1353,
-			622,
-			65,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0295"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            386,
-            208,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1426,
-			622,
-			64,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0296"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			196,
-            386,
-            208,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1426,
-			622,
-			64,
-			84
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0297"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			206,
-            413,
-            209,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2769,
-			61,
-			53,
-			57
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0298"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			205,
-            407,
-            209,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			120,
-			199,
-			54,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0299"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			206,
-            392,
-            209,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			736,
-			441,
-			53,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0300"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			206,
-            380,
-            209,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			627,
-			814,
-			53,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0301"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			205,
-            376,
-            209,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3313,
-			814,
-			54,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0302"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			205,
-            376,
-            207,
-            455
-		},
-		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
 			3375,
-			814,
-			56,
-			94
+			2274,
+			53,
+			56
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0303"] = {
+	hero_wukong_woolong_0026 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			190,
-            358,
-            196,
-            455
+			119,
+			236,
+			133,
+			286
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			754,
-			1254,
-			82,
-			112
+			3431,
+			2274,
+			52,
+			57
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0304"] = {
+	hero_wukong_woolong_0027 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			190,
-            358,
-            196,
-            455
+			120,
+			235,
+			133,
+			286
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			754,
-			1254,
-			82,
-			112
+			3486,
+			2274,
+			51,
+			58
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0305"] = {
+	hero_wukong_woolong_0028 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			194,
-            362,
-            207,
-            455
+			120,
+			234,
+			134,
+			286
 		},
 		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2149,
-			1135,
-			67,
-			108
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0306"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            362,
-            207,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2149,
-			1135,
-			67,
-			108
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0307"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            416,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1510,
-			61,
-			88,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0308"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            416,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1510,
-			61,
-			88,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0309"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            394,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2321,
-			356,
-			102,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0310"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            394,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2321,
-			356,
-			102,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0311"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            406,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			643,
-			199,
-			95,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0312"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            406,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			643,
-			199,
-			95,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0313"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0314"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0315"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            395,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1232,
-			356,
-			84,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0316"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            395,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1232,
-			356,
-			84,
-			75
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0317"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            392,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			797,
-			441,
-			69,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0318"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            392,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			797,
-			441,
-			69,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0319"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            392,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			874,
-			441,
-			76,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0320"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            392,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			874,
-			441,
-			76,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0321"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            384,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			505,
-			716,
-			72,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0322"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            384,
-            210,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			505,
-			716,
-			72,
-			86
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0323"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            375,
-            208,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1262,
-			916,
-			70,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0324"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            375,
-            208,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1262,
-			916,
-			70,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0325"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            375,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1340,
-			916,
-			76,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0326"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            375,
-            204,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1340,
-			916,
-			76,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0327"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            380,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			688,
-			814,
-			78,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0328"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            380,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			688,
-			814,
-			78,
-			90
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0329"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            376,
-            188,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3439,
-			814,
-			93,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0330"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            376,
-            186,
-            455
-		},
-		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
 			3540,
-			814,
-			95,
-			94
+			2274,
+			50,
+			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0331"] = {
+	hero_wukong_woolong_0029 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			187,
-            376,
-            186,
-            455
+			120,
+			234,
+			134,
+			286
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3643,
-			814,
-			95,
-			94
+			3593,
+			2274,
+			50,
+			59
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0332"] = {
+	hero_wukong_woolong_0030 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			187,
-            376,
-            185,
-            455
+			121,
+			234,
+			134,
+			286
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
+		},
+		f_quad = {
+			3696,
+			2274,
+			49,
+			59
+		},
+		alias = {
+			"hero_wukong_woolong_0031"
+		}
+	},
+	hero_wukong_woolong_0032 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			135,
+			247,
+			112,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3975,
+			2274,
+			57,
+			46
+		},
+		alias = {
+			"hero_wukong_woolong_0033"
+		}
+	},
+	hero_wukong_woolong_0034 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			139,
+			252,
+			113,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2811,
+			52,
+			41
+		},
+		alias = {
+			"hero_wukong_woolong_0035"
+		}
+	},
+	hero_wukong_woolong_0036 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			139,
+			258,
+			113,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3897,
+			585,
+			52,
+			35
+		},
+		alias = {
+			"hero_wukong_woolong_0037"
+		}
+	},
+	hero_wukong_woolong_0038 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			139,
+			256,
+			113,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2529,
+			1547,
+			52,
+			37
+		},
+		alias = {
+			"hero_wukong_woolong_0039"
+		}
+	},
+	hero_wukong_woolong_0040 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			135,
+			245,
+			130,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3046,
+			39,
+			48
+		},
+		alias = {
+			"hero_wukong_woolong_0041"
+		}
+	},
+	hero_wukong_woolong_0042 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			134,
+			253,
+			127,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3672,
+			43,
+			40
+		},
+		alias = {
+			"hero_wukong_woolong_0043"
+		}
+	},
+	hero_wukong_woolong_0045 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			137,
+			227,
+			130,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1672,
+			1517,
+			37,
+			66
+		},
+		alias = {
+			"hero_wukong_woolong_0046"
+		}
+	},
+	hero_wukong_woolong_0047 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			121,
+			212,
+			132,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3196,
+			51,
+			81
+		},
+		alias = {
+			"hero_wukong_woolong_0048"
+		}
+	},
+	hero_wukong_woolong_0049 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			116,
+			213,
+			131,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3836,
+			57,
+			80
+		},
+		alias = {
+			"hero_wukong_woolong_0050"
+		}
+	},
+	hero_wukong_woolong_0051 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			123,
+			201,
+			121,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2858,
+			60,
+			92
+		},
+		alias = {
+			"hero_wukong_woolong_0052"
+		}
+	},
+	hero_wukong_woolong_0053 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			134,
+			194,
+			107,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3420,
+			63,
+			99
+		},
+		alias = {
+			"hero_wukong_woolong_0054"
+		}
+	},
+	hero_wukong_woolong_0055 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			125,
+			177,
+			104,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4013,
+			1462,
+			75,
+			116
+		},
+		alias = {
+			"hero_wukong_woolong_0056"
+		}
+	},
+	hero_wukong_woolong_0057 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			124,
+			164,
+			105,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2825,
+			75,
+			129
+		},
+		alias = {
+			"hero_wukong_woolong_0058"
+		}
+	},
+	hero_wukong_woolong_0059 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			124,
+			161,
+			105,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2344,
+			75,
+			132
+		},
+		alias = {
+			"hero_wukong_woolong_0060"
+		}
+	},
+	hero_wukong_woolong_0061 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			74,
+			128,
+			92,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2957,
+			241,
+			138,
+			165
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0062 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			74,
+			128,
+			92,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3098,
+			241,
+			138,
+			165
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0063 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			63,
+			158,
+			81,
+			283
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3879,
+			241,
+			160,
+			138
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0064 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			63,
+			158,
+			81,
+			283
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			485,
+			160,
+			138
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0065 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			56,
+			152,
+			74,
+			277
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1439,
+			241,
+			174,
+			150
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0066 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			56,
+			151,
+			74,
+			277
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3881,
+			5,
+			174,
+			151
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0067 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			54,
+			149,
+			72,
+			275
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3123,
+			5,
+			178,
+			155
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0068 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			54,
+			149,
+			72,
+			275
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3304,
+			5,
+			178,
+			155
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0069 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			53,
+			148,
+			71,
+			274
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2555,
+			5,
+			180,
+			157
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0070 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			53,
+			148,
+			71,
+			274
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2738,
+			5,
+			180,
+			157
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0071 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			85,
+			169,
+			102,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1925,
+			117,
+			124
+		},
+		alias = {
+			"hero_wukong_woolong_0072",
+			"hero_wukong_woolong_0073"
+		}
+	},
+	hero_wukong_woolong_0074 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			83,
+			170,
+			102,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1462,
+			119,
+			123
+		},
+		alias = {
+			"hero_wukong_woolong_0075"
+		}
+	},
+	hero_wukong_woolong_0076 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			72,
+			188,
+			99,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3215,
+			1228,
+			133,
+			105
+		},
+		alias = {
+			"hero_wukong_woolong_0077"
+		}
+	},
+	hero_wukong_woolong_0078 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			100,
+			141,
+			104,
+			281
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			1967,
+			100,
+			157
+		},
+		alias = {
+			"hero_wukong_woolong_0079"
+		}
+	},
+	hero_wukong_woolong_0080 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			128,
+			141,
+			132,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1664,
+			3368,
+			44,
+			152
+		},
+		alias = {
+			"hero_wukong_woolong_0081"
+		}
+	},
+	hero_wukong_woolong_0082 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			139,
+			286,
+			139,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1533,
+			4086,
+			26,
+			7
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0083 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			122,
+			46,
+			130,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			2200,
+			52,
+			247
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0084 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			99,
+			46,
+			106,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			2783,
+			99,
+			247
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0085 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			81,
+			43,
+			106,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			1541,
+			117,
+			250
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0086 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			81,
+			43,
+			103,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			1288,
+			120,
+			250
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0087 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			81,
+			32,
+			103,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			751,
+			120,
+			261
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0088 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			81,
+			32,
+			106,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			445,
+			3768,
+			117,
+			261
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0089 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			72,
+			30,
+			106,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			485,
+			126,
+			263
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0090 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			72,
+			30,
+			112,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			567,
+			3368,
+			120,
+			263
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0091 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			79,
+			14,
+			112,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			567,
+			3634,
+			113,
+			279
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0092 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			79,
+			14,
+			113,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			445,
+			3486,
+			112,
+			279
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0093 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			79,
+			23,
+			113,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			1015,
+			112,
+			270
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0094 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			79,
+			23,
+			121,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			694,
+			3753,
+			104,
+			270
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0095 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			79,
+			30,
+			121,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			1794,
+			104,
+			263
+		},
+		alias = {
+			"hero_wukong_woolong_0096"
+		}
+	},
+	hero_wukong_woolong_0097 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			81,
+			32,
+			122,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			2060,
+			101,
+			261
+		},
+		alias = {
+			"hero_wukong_woolong_0098"
+		}
+	},
+	hero_wukong_woolong_0099 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			85,
+			39,
+			125,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1022,
+			3392,
+			94,
+			254
+		},
+		alias = {
+			"hero_wukong_woolong_0100"
+		}
+	},
+	hero_wukong_woolong_0101 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			99,
+			59,
+			132,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			1560,
+			73,
+			234
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0102 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			114,
+			86,
+			70,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			2573,
+			120,
+			207
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0103 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			109,
+			214,
+			54,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1963,
+			1668,
+			141,
+			79
+		},
+		alias = {
+			"hero_wukong_woolong_0104"
+		}
+	},
+	hero_wukong_woolong_0105 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			124,
+			193,
+			76,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			3126,
+			104,
+			100
+		},
+		alias = {
+			"hero_wukong_woolong_0106"
+		}
+	},
+	hero_wukong_woolong_0107 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			121,
+			199,
+			68,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1759,
+			115,
+			94
+		},
+		alias = {
+			"hero_wukong_woolong_0108"
+		}
+	},
+	hero_wukong_woolong_0109 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			125,
+			199,
+			71,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			3894,
+			108,
+			94
+		},
+		alias = {
+			"hero_wukong_woolong_0110"
+		}
+	},
+	hero_wukong_woolong_0111 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			125,
+			201,
+			71,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2071,
+			1759,
+			108,
+			92
+		},
+		alias = {
+			"hero_wukong_woolong_0112"
+		}
+	},
+	hero_wukong_woolong_0113 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			119,
+			218,
+			71,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3672,
+			1759,
+			114,
+			75
+		},
+		alias = {
+			"hero_wukong_woolong_0114"
+		}
+	},
+	hero_wukong_woolong_0115 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			121,
+			211,
+			71,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3880,
+			1668,
+			112,
+			82
+		},
+		alias = {
+			"hero_wukong_woolong_0116"
+		}
+	},
+	hero_wukong_woolong_0117 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			112,
+			210,
+			52,
+			278
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3629,
+			904,
+			140,
+			91
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0118 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			112,
+			206,
+			52,
+			278
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3161,
+			904,
+			140,
+			95
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0119 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			103,
+			198,
+			38,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3404,
+			485,
+			163,
+			115
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0120 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			103,
+			198,
+			38,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3570,
+			485,
+			163,
+			115
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0121 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			92,
+			189,
+			29,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2585,
+			241,
+			183,
+			131
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0122 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			92,
+			189,
+			29,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2771,
+			241,
+			183,
+			131
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0123 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			87,
+			186,
+			26,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1616,
+			241,
+			191,
+			136
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0124 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			87,
+			186,
+			26,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1810,
+			241,
+			191,
+			136
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0125 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			85,
+			184,
+			24,
+			256
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3485,
+			5,
+			195,
+			139
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0126 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			85,
+			184,
+			24,
+			256
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3683,
+			5,
+			195,
+			139
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0127 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			139,
+			234,
+			76,
+			284
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3238,
+			1588,
+			89,
+			61
+		},
+		alias = {
+			"hero_wukong_woolong_0128"
+		}
+	},
+	hero_wukong_woolong_0129 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			138,
+			186,
+			116,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3498,
+			50,
+			107
+		},
+		alias = {
+			"hero_wukong_woolong_0130"
+		}
+	},
+	hero_wukong_woolong_0131 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			138,
+			212,
+			125,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1786,
+			2607,
+			41,
+			81
+		},
+		alias = {
+			"hero_wukong_woolong_0132"
+		}
+	},
+	hero_wukong_woolong_0133 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			132,
+			257,
+			122,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3952,
+			585,
+			50,
+			36
+		},
+		alias = {
+			"hero_wukong_woolong_0134"
+		}
+	},
+	hero_wukong_woolong_0135 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			138,
+			240,
+			128,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3192,
+			409,
+			38,
+			53
+		},
+		alias = {
+			"hero_wukong_woolong_0136"
+		}
+	},
+	hero_wukong_woolong_0137 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			137,
+			250,
+			126,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3341,
+			41,
+			43
+		},
+		alias = {
+			"hero_wukong_woolong_0138"
+		}
+	},
+	hero_wukong_woolong_0139 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			134,
+			244,
+			132,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3097,
+			38,
+			49
+		},
+		alias = {
+			"hero_wukong_woolong_0140"
+		}
+	},
+	hero_wukong_woolong_0141 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			133,
+			237,
+			134,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1538,
+			1164,
+			37,
+			56
+		},
+		alias = {
+			"hero_wukong_woolong_0142"
+		}
+	},
+	hero_wukong_woolong_0143 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			132,
+			232,
+			137,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1675,
+			3302,
+			35,
+			61
+		},
+		alias = {
+			"hero_wukong_woolong_0144"
+		}
+	},
+	hero_wukong_woolong_0145 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			128,
+			230,
+			139,
+			286
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1671,
+			1964,
+			37,
+			63
+		},
+		alias = {
+			"hero_wukong_woolong_0146"
+		}
+	},
+	hero_wukong_woolong_0147 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			123,
+			229,
+			120,
+			292
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3985,
+			61,
+			58
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0148 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			123,
+			229,
+			120,
+			292
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2697,
+			2274,
+			61,
+			58
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0149 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			117,
+			229,
+			111,
+			285
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2671,
+			76,
+			65
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0150 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			117,
+			229,
+			111,
+			285
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2739,
+			76,
+			65
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0151 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			100,
+			223,
+			106,
+			281
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2922,
+			2038,
+			98,
+			75
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0152 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			100,
+			224,
+			106,
+			281
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3237,
+			2038,
+			98,
+			74
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0153 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			91,
+			218,
+			104,
+			279
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2926,
+			1759,
+			109,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0154 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			91,
+			218,
+			104,
+			279
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3038,
+			1759,
+			109,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0155 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			85,
+			214,
+			104,
+			279
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2865,
+			1668,
+			115,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0156 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			85,
+			214,
+			104,
+			279
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2983,
+			1668,
+			115,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0157 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			83,
+			213,
+			105,
+			280
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2746,
+			1668,
+			116,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0158 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			83,
+			213,
+			134,
+			287
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2351,
+			2123,
+			87,
+			79
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0159 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			82,
+			212,
+			134,
+			287
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3655,
+			2038,
+			88,
+			80
+		},
+		alias = {}
+	},
+	hero_wukong_woolong_0160 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			304,
+			579
+		},
+		trim = {
+			82,
+			212,
+			134,
+			287
+		},
+		a_size = {
+			4096,
+			4096
 		},
 		f_quad = {
 			3746,
-			814,
-			96,
-			94
+			2038,
+			88,
+			80
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0333"] = {
+	hero_wukong_woolong_0161 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			304,
+			579
 		},
 		trim = {
-			185,
-            376,
-            186,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3850,
-			814,
-			97,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0334"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            376,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			916,
-			98,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0335"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            376,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			110,
-			916,
-			98,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0336"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            376,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			216,
-			916,
-			98,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0337"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            376,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			322,
-			916,
-			98,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0338"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            376,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			428,
-			916,
-			98,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0339"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            376,
-            172,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			534,
-			916,
-			107,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0340"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            376,
-            172,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			534,
-			916,
-			107,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0341"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            376,
-            147,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			649,
-			916,
+			82,
+			214,
 			134,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0342"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            376,
-            147,
-            455
+			288
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			649,
-			916,
-			134,
-			94
+			2649,
+			1957,
+			88,
+			77
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0343"] = {
+	hero_wukong_woolong_decal = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			239,
+			176
 		},
 		trim = {
-			188,
-            376,
-            126,
-            455
+			14,
+			14,
+			26,
+			23
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			791,
-			916,
-			154,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0344"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			188,
-            376,
-            126,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			791,
-			916,
-			154,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0345"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            375,
-            111,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1424,
-			916,
-			170,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0346"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            375,
-            111,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1424,
-			916,
-			170,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0347"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            375,
-            107,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1602,
-			916,
-			174,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0348"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            375,
-            107,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1602,
-			916,
-			174,
-			95
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0349"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            376,
-            108,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			953,
-			916,
-			171,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0350"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            376,
-            108,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			953,
-			916,
-			171,
-			94
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0351"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            373,
-            109,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2817,
-			916,
-			178,
-			97
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0352"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			181,
-            373,
-            109,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2817,
-			916,
-			178,
-			97
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0353"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            372,
-            110,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3126,
-			916,
-			179,
-			98
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0354"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            372,
-            110,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3126,
-			916,
-			179,
-			98
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0355"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
+			2921,
+			5,
 			199,
-			94,
-			68
+			139
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0356"] = {
+	hero_wukong_woolong_spawn_FX_0001 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			99,
+			105
 		},
 		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0357"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0358"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0359"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3105,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0360"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3105,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0361"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			275,
-			89,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0362"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			275,
-			89,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0363"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			101,
-			275,
-			89,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0364"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            197,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			101,
-			275,
-			89,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0365"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            388,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1904,
-			530,
-			76,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0366"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            388,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1904,
-			530,
-			76,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0367"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            388,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1988,
-			530,
-			76,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0368"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			179,
-            388,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1988,
-			530,
-			76,
-			82
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0369"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            278,
-            190,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			991,
-			1996,
-			85,
-			192
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0370"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            278,
-            190,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			991,
-			1996,
-			85,
-			192
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0371"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			199,
-            232,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			433,
-			2231,
-			56,
-			238
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0372"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			199,
-            232,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			433,
-			2231,
-			56,
-			238
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0373"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            416,
-            202,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1606,
-			61,
-			75,
+			60,
+			33,
+			22,
 			54
 		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0374"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			191,
-            416,
-            202,
-            455
-		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1606,
-			61,
-			75,
-			54
+			2397,
+			747,
+			17,
+			18
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0002"
+		}
 	},
-	["hero_wukong_wukong_0375"] = {
+	hero_wukong_woolong_spawn_FX_0003 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			99,
+			105
 		},
 		trim = {
-			192,
-            423,
-            196,
-            455
+			22,
+			23,
+			28,
+			58
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2740,
-			4,
-			80,
+			2192,
+			1429,
+			49,
+			24
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0004"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0005 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			25,
+			19,
+			29,
+			59
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2144,
+			1429,
+			45,
+			27
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0006"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			29,
+			20,
+			28,
+			59
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1786,
+			2764,
+			42,
+			26
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0008"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			22,
+			14,
+			17,
+			45
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			4046,
+			60,
+			46
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0010"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			19,
+			15,
+			14,
+			49
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3852,
+			2274,
+			66,
+			41
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0012"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			25,
+			20,
+			28,
+			55
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2095,
+			1429,
+			46,
+			30
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0014"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			25,
+			19,
+			27,
+			53
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			4059,
+			47,
+			33
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0016"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			24,
+			18,
+			28,
+			52
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3803,
+			47,
+			35
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0018"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0019 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			23,
+			19,
+			33,
+			52
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			857,
+			4059,
+			43,
+			34
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0020"
+		}
+	},
+	hero_wukong_woolong_spawn_FX_0021 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			99,
+			105
+		},
+		trim = {
+			24,
+			19,
+			36,
+			77
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4042,
+			370,
+			39,
+			9
+		},
+		alias = {
+			"hero_wukong_woolong_spawn_FX_0022"
+		}
+	},
+	hero_wukong_wukong_0001 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2265,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0002",
+			"hero_wukong_wukong_0098",
+			"hero_wukong_wukong_0123",
+			"hero_wukong_wukong_0148",
+			"hero_wukong_wukong_0173",
+			"hero_wukong_wukong_0271",
+			"hero_wukong_wukong_0272",
+			"hero_wukong_wukong_0313",
+			"hero_wukong_wukong_0314",
+			"hero_wukong_wukong_0355",
+			"hero_wukong_wukong_0356",
+			"hero_wukong_wukong_0357",
+			"hero_wukong_wukong_0358",
+			"hero_wukong_wukong_0461",
+			"hero_wukong_wukong_0462",
+			"hero_wukong_wukong_0500",
+			"hero_wukong_wukong_0501",
+			"hero_wukong_wukong_0542",
+			"hero_wukong_wukong_0543"
+		}
+	},
+	hero_wukong_wukong_0003 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2355,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0004",
+			"hero_wukong_wukong_0359",
+			"hero_wukong_wukong_0360"
+		}
+	},
+	hero_wukong_wukong_0005 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2445,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0006"
+		}
+	},
+	hero_wukong_wukong_0007 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2535,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0008"
+		}
+	},
+	hero_wukong_wukong_0009 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2625,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0010"
+		}
+	},
+	hero_wukong_wukong_0011 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2715,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0012"
+		}
+	},
+	hero_wukong_wukong_0013 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2805,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0014"
+		}
+	},
+	hero_wukong_wukong_0015 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			405,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2895,
+			1588,
+			87,
+			63
+		},
+		alias = {
+			"hero_wukong_wukong_0016"
+		}
+	},
+	hero_wukong_wukong_0017 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			421,
+			182,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3100,
+			2212,
+			93,
 			47
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0018"
+		}
 	},
-	["hero_wukong_wukong_0376"] = {
+	hero_wukong_wukong_0019 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			192,
-            423,
-            196,
-            455
+			195,
+			406,
+			184,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2740,
-			4,
-			80,
-			47
+			3568,
+			2123,
+			90,
+			62
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0020"
+		}
 	},
-	["hero_wukong_wukong_0377"] = {
+	hero_wukong_wukong_0021 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			193,
-            423,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2828,
-			4,
-			79,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0378"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            423,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2828,
-			4,
-			79,
-			47
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0379"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			202,
-            341,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2020,
-			1513,
-			53,
-			129
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0380"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			202,
-            341,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2020,
-			1513,
-			53,
-			129
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0381"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			211,
-            133,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			2231,
-			44,
-			337
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0382"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			211,
-            133,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			2231,
-			44,
-			337
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0383"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			198,
-            69,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			101,
-			2613,
-			57,
-			401
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0384"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			198,
-            69,
-            213,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			101,
-			2613,
-			57,
-			401
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0385"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			215,
-            457,
-            215,
-            457
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			35,
-			4,
-			38,
-			11
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0386"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			215,
-            457,
-            215,
-            457
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			35,
-			4,
-			38,
-			11
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0387"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
+			197,
+			400,
 			185,
-            41,
-            222,
-            810
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			231,
-			356,
-			61,
-			74
+			2697,
+			2123,
+			87,
+			68
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0022"
+		}
 	},
-	["hero_wukong_wukong_0388"] = {
+	hero_wukong_wukong_0023 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
+		},
+		trim = {
+			201,
+			400,
+			187,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2092,
+			1588,
+			81,
+			68
+		},
+		alias = {
+			"hero_wukong_wukong_0024"
+		}
+	},
+	hero_wukong_wukong_0025 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
 		},
 		trim = {
 			196,
-            11,
-            239,
-            785
+			411,
+			184,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2081,
-			1513,
-			33,
+			2456,
+			2212,
+			89,
+			57
+		},
+		alias = {
+			"hero_wukong_wukong_0026"
+		}
+	},
+	hero_wukong_wukong_0027 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			192,
+			421,
+			180,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3000,
+			2212,
+			97,
+			47
+		},
+		alias = {
+			"hero_wukong_wukong_0028"
+		}
+	},
+	hero_wukong_wukong_0029 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			195,
+			406,
+			184,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3661,
+			2123,
+			90,
+			62
+		},
+		alias = {
+			"hero_wukong_wukong_0030"
+		}
+	},
+	hero_wukong_wukong_0031 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			400,
+			185,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2787,
+			2123,
+			87,
+			68
+		},
+		alias = {
+			"hero_wukong_wukong_0032"
+		}
+	},
+	hero_wukong_wukong_0033 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			200,
+			403,
+			187,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3759,
+			1588,
+			82,
+			65
+		},
+		alias = {
+			"hero_wukong_wukong_0034"
+		}
+	},
+	hero_wukong_wukong_0035 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			411,
+			183,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2363,
+			2212,
+			90,
+			57
+		},
+		alias = {
+			"hero_wukong_wukong_0036"
+		}
+	},
+	hero_wukong_wukong_0037 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			404,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3919,
+			1588,
+			83,
+			64
+		},
+		alias = {
+			"hero_wukong_wukong_0038"
+		}
+	},
+	hero_wukong_wukong_0039 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			206,
+			356,
+			200,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			2640,
+			63,
+			112
+		},
+		alias = {
+			"hero_wukong_wukong_0040"
+		}
+	},
+	hero_wukong_wukong_0041 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			199,
+			351,
+			206,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			2289,
+			64,
+			117
+		},
+		alias = {
+			"hero_wukong_wukong_0042"
+		}
+	},
+	hero_wukong_wukong_0043 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			203,
+			386,
+			208,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3138,
+			58,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0044 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			204,
+			386,
+			208,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3531,
+			57,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0045 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			201,
+			366,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1947,
+			380,
+			52,
+			102
+		},
+		alias = {
+			"hero_wukong_wukong_0046"
+		}
+	},
+	hero_wukong_wukong_0047 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3306,
+			58,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0048 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3402,
+			58,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0049 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2953,
+			59,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0050",
+			"hero_wukong_wukong_0065"
+		}
+	},
+	hero_wukong_wukong_0051 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			195,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2570,
+			60,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0052"
+		}
+	},
+	hero_wukong_wukong_0053 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			195,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2666,
+			60,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0054"
+		}
+	},
+	hero_wukong_wukong_0055 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			193,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3998,
+			62,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0056"
+		}
+	},
+	hero_wukong_wukong_0057 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			193,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2184,
+			62,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0058"
+		}
+	},
+	hero_wukong_wukong_0059 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2381,
+			61,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0060"
+		}
+	},
+	hero_wukong_wukong_0061 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			198,
+			375,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3775,
+			57,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0062"
+		}
+	},
+	hero_wukong_wukong_0063 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			375,
+			213,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			2762,
+			60,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0064"
+		}
+	},
+	hero_wukong_wukong_0066 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			387,
+			206,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3496,
+			2123,
+			69,
+			81
+		},
+		alias = {
+			"hero_wukong_wukong_0067"
+		}
+	},
+	hero_wukong_wukong_0068 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			385,
+			204,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3037,
+			2123,
+			69,
+			83
+		},
+		alias = {
+			"hero_wukong_wukong_0069"
+		}
+	},
+	hero_wukong_wukong_0070 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			183,
+			414,
+			193,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2548,
+			2212,
+			93,
+			54
+		},
+		alias = {
+			"hero_wukong_wukong_0071"
+		}
+	},
+	hero_wukong_wukong_0072 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			404,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3150,
+			1588,
+			85,
+			64
+		},
+		alias = {
+			"hero_wukong_wukong_0073"
+		}
+	},
+	hero_wukong_wukong_0074 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			182,
+			404,
+			201,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2176,
+			1588,
+			86,
+			64
+		},
+		alias = {
+			"hero_wukong_wukong_0075"
+		}
+	},
+	hero_wukong_wukong_0076 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			173,
+			383,
+			135,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2502,
+			904,
+			161,
+			95
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0077 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			173,
+			382,
+			135,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2338,
+			904,
+			161,
+			96
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0078 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			379,
+			135,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			904,
+			160,
+			99
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0079 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			376,
+			135,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1784,
+			380,
+			160,
+			102
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0080 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			347,
+			139,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1889,
+			485,
+			156,
 			129
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0389"] = {
+	hero_wukong_wukong_0081 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			185,
-            41,
-            222,
-            810
+			174,
+			347,
+			139,
+			450
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			231,
-			356,
-			61,
-			74
+			2048,
+			485,
+			156,
+			129
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0390"] = {
+	hero_wukong_wukong_0082 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			185,
-            41,
-            222,
-            810
+			176,
+			349,
+			144,
+			457
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			231,
-			356,
-			61,
-			74
+			1961,
+			626,
+			149,
+			120
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0391"] = {
+	hero_wukong_wukong_0083 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			185,
-            41,
-            222,
-            812
+			176,
+			349,
+			144,
+			457
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3282,
-			275,
-			61,
-			72
+			2113,
+			626,
+			149,
+			120
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0392"] = {
+	hero_wukong_wukong_0084 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			185,
-            41,
-            222,
-            812
+			167,
+			350,
+			152,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3282,
-			275,
-			61,
-			72
+			2265,
+			626,
+			150,
+			118
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0393"] = {
+	hero_wukong_wukong_0085 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			185,
-            44,
-            222,
-            807
+			181,
+			350,
+			152,
+			453
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			300,
-			356,
-			61,
-			74
+			3688,
+			626,
+			136,
+			123
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0394"] = {
+	hero_wukong_wukong_0086 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			185,
-            44,
-            222,
-            807
+			181,
+			350,
+			152,
+			453
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			300,
-			356,
-			61,
-			74
+			3827,
+			626,
+			136,
+			123
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0395"] = {
+	hero_wukong_wukong_0087 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
+		},
+		trim = {
+			169,
+			391,
+			139,
+			443
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2666,
+			904,
+			161,
+			92
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0088 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			169,
+			391,
+			139,
+			443
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2830,
+			904,
+			161,
+			92
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0089 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			160,
+			391,
+			139,
+			457
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3881,
+			159,
+			170,
+			78
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0090 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			160,
+			391,
+			139,
+			457
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3304,
+			904,
+			170,
+			78
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0091 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			162,
+			390,
+			140,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			395,
+			167,
+			87
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0092 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			162,
+			390,
+			140,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1439,
+			394,
+			167,
+			87
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0093 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			171,
+			395,
+			141,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3772,
+			904,
+			157,
+			81
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0094 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			398,
+			150,
+			451
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1588,
+			145,
+			77
+		},
+		alias = {
+			"hero_wukong_wukong_0095"
+		}
+	},
+	hero_wukong_wukong_0096 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
 		},
 		trim = {
 			186,
-            53,
-            222,
-            798
+			402,
+			161,
+			457
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			369,
-			356,
-			60,
-			74
+			2439,
+			1856,
+			122,
+			67
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0097"
+		}
 	},
-	["hero_wukong_wukong_0396"] = {
+	hero_wukong_wukong_0099 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            53,
-            222,
-            798
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			369,
-			356,
-			60,
-			74
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0397"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            69,
-            221,
-            780
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2431,
-			356,
-			61,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0398"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            69,
-            221,
-            780
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2431,
-			356,
-			61,
-			76
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0399"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            95,
-            221,
-            756
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			437,
-			356,
-			64,
-			74
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0400"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            95,
-            221,
-            756
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			437,
-			356,
-			64,
-			74
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0401"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
 			178,
-            136,
-            220,
-            710
+			409,
+			195,
+			447
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1519,
-			441,
-			70,
-			79
+			3093,
+			1957,
+			96,
+			70
 		},
-		alias = {},
+		alias = {}
 	},
-	["hero_wukong_wukong_0402"] = {
+	hero_wukong_wukong_0100 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
 			178,
-            136,
-            220,
-            710
+			393,
+			194,
+			447
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			1597,
-			441,
-			70,
+			2036,
+			1856,
+			97,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0101 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			168,
+			383,
+			193,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			3662,
+			108,
+			95
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0102 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			168,
+			375,
+			192,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3901,
+			1462,
+			109,
+			103
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0103 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			165,
+			371,
+			191,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2665,
+			1343,
+			113,
+			106
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0104 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			165,
+			368,
+			191,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1976,
+			1116,
+			113,
+			109
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0105 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			162,
+			365,
+			190,
+			453
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			3663,
+			117,
+			108
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0106 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			162,
+			365,
+			190,
+			453
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			3774,
+			117,
+			108
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0107 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			163,
+			364,
+			190,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2244,
+			1343,
+			116,
+			104
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0108 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			158,
+			378,
+			194,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1951,
+			1759,
+			117,
+			90
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0109 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			162,
+			352,
+			128,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3239,
+			241,
+			179,
+			127
+		},
+		alias = {
+			"hero_wukong_wukong_0110"
+		}
+	},
+	hero_wukong_wukong_0111 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			168,
+			352,
+			124,
+			451
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1535,
+			485,
+			177,
+			123
+		},
+		alias = {
+			"hero_wukong_wukong_0112"
+		}
+	},
+	hero_wukong_wukong_0113 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			178,
+			354,
+			120,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1715,
+			485,
+			171,
+			125
+		},
+		alias = {
+			"hero_wukong_wukong_0114"
+		}
+	},
+	hero_wukong_wukong_0115 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			361,
+			122,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3736,
+			485,
+			158,
+			116
+		},
+		alias = {
+			"hero_wukong_wukong_0116"
+		}
+	},
+	hero_wukong_wukong_0117 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			365,
+			125,
+			454
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1006,
+			147,
+			107
+		},
+		alias = {
+			"hero_wukong_wukong_0118"
+		}
+	},
+	hero_wukong_wukong_0119 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			182,
+			360,
+			138,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3628,
+			779,
+			149,
+			108
+		},
+		alias = {
+			"hero_wukong_wukong_0120"
+		}
+	},
+	hero_wukong_wukong_0121 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			173,
+			360,
+			161,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2389,
+			1228,
+			135,
+			108
+		},
+		alias = {
+			"hero_wukong_wukong_0122"
+		}
+	},
+	hero_wukong_wukong_0124 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			391,
+			186,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3560,
+			2038,
+			92,
+			77
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0125 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			185,
+			391,
+			186,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2488,
+			2038,
+			98,
+			77
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0126 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			181,
+			396,
+			186,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3023,
+			2038,
+			102,
+			72
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0127 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			179,
+			396,
+			186,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2589,
+			2038,
+			104,
+			72
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0128 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			185,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2280,
+			2038,
+			107,
+			73
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0129 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			176,
+			395,
+			185,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1981,
+			1588,
+			108,
+			73
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0130 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			175,
+			396,
+			170,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2783,
+			165,
+			124,
+			72
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0131 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			175,
+			392,
+			170,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3469,
+			1668,
+			124,
+			76
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0132 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			395,
+			69,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3485,
+			147,
+			185,
+			82
+		},
+		alias = {
+			"hero_wukong_wukong_0133"
+		}
+	},
+	hero_wukong_wukong_0134 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			207,
+			413,
+			30,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2957,
+			409,
+			232,
+			55
+		},
+		alias = {
+			"hero_wukong_wukong_0135"
+		}
+	},
+	hero_wukong_wukong_0136 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			415,
+			29,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3123,
+			163,
+			225,
+			53
+		},
+		alias = {
+			"hero_wukong_wukong_0137"
+		}
+	},
+	hero_wukong_wukong_0138 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			413,
+			29,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2555,
+			165,
+			225,
+			55
+		},
+		alias = {
+			"hero_wukong_wukong_0139"
+		}
+	},
+	hero_wukong_wukong_0140 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			411,
+			31,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1998,
+			166,
+			223,
+			57
+		},
+		alias = {
+			"hero_wukong_wukong_0141"
+		}
+	},
+	hero_wukong_wukong_0142 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			412,
+			45,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3670,
+			1343,
+			209,
+			56
+		},
+		alias = {
+			"hero_wukong_wukong_0143"
+		}
+	},
+	hero_wukong_wukong_0144 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			415,
+			63,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3670,
+			1402,
+			212,
+			53
+		},
+		alias = {
+			"hero_wukong_wukong_0145"
+		}
+	},
+	hero_wukong_wukong_0146 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			183,
+			402,
+			202,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4002,
+			2123,
+			84,
+			66
+		},
+		alias = {
+			"hero_wukong_wukong_0147"
+		}
+	},
+	hero_wukong_wukong_0149 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			410,
+			174,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			913,
+			4028,
+			104,
+			58
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0150 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			406,
+			174,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2439,
+			417,
+			118,
+			62
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0151 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			386,
+			177,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3348,
+			1668,
+			118,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0152 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			166,
+			386,
+			177,
+			456
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2107,
+			1668,
+			126,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0153 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			151,
+			371,
+			185,
+			455
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2380,
+			1006,
+			133,
+			100
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0154 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			151,
+			371,
+			185,
+			455
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2516,
+			1006,
+			133,
+			100
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0155 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			147,
+			371,
+			194,
+			439
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1343,
+			128,
+			116
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0156 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			147,
+			371,
+			194,
+			439
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1964,
+			1343,
+			128,
+			116
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0157 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			146,
+			376,
+			194,
+			442
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3351,
+			1228,
+			129,
+			108
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0158 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			146,
+			376,
+			195,
+			442
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3640,
+			1228,
+			128,
+			108
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0159 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			147,
+			379,
+			194,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2652,
+			1006,
+			128,
+			101
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0160 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			147,
+			379,
+			194,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2783,
+			1006,
+			128,
+			101
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0161 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			379,
+			128,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3879,
+			382,
+			188,
+			97
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0162 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			379,
+			128,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3897,
+			485,
+			188,
+			97
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0163 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			397,
+			86,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1996,
+			904,
+			168,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0164 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			397,
+			86,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2167,
+			904,
+			168,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0165 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			396,
+			79,
+			426
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3239,
+			371,
+			175,
+			104
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0166 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			396,
+			79,
+			426
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2585,
+			375,
+			175,
+			104
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0167 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			412,
+			100,
+			425
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3771,
+			1228,
+			154,
+			89
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0168 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			411,
+			100,
+			425
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3483,
+			1228,
+			154,
+			90
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0169 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			413,
+			115,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3596,
+			1668,
+			139,
+			67
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0170 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			215,
+			413,
+			115,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3738,
+			1668,
+			139,
+			66
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0171 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			412,
+			88,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3882,
+			1343,
+			187,
+			56
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0172 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			412,
+			88,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3885,
+			1402,
+			187,
+			56
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0174 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			168,
+			408,
+			191,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2696,
+			2038,
+			110,
+			68
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0175 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			168,
+			408,
+			191,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2809,
+			2038,
+			110,
+			68
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0176 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			373,
+			196,
+			452
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2957,
+			96,
+			101
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0177 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			373,
+			196,
+			452
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3061,
+			96,
+			101
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0178 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			393,
+			192,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3789,
+			1759,
+			103,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0179 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			393,
+			192,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3895,
+			1759,
+			103,
+			83
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0180 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			388,
+			197,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3888,
+			95,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0181 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			388,
+			197,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3979,
+			95,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0182 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			176,
+			389,
+			195,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3254,
+			1759,
+			98,
+			89
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0183 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			176,
+			389,
+			195,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3355,
+			1759,
+			98,
+			89
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0184 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			392,
+			195,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3708,
+			97,
+			87
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0185 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			392,
+			195,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3798,
+			97,
+			87
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0186 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			394,
+			195,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2564,
+			1856,
+			97,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0187 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			394,
+			195,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2664,
+			1856,
+			97,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0188 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			194,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2237,
+			1856,
+			98,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0189 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			194,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2338,
+			1856,
+			98,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0190 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			196,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2038,
+			96,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0191 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			196,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2181,
+			2038,
+			96,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0192 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			196,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3049,
+			1856,
+			96,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0193 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			196,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3148,
+			1856,
+			96,
+			84
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0194 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			194,
+			443
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3995,
+			1668,
+			98,
+			88
+		},
+		alias = {
+			"hero_wukong_wukong_0195"
+		}
+	},
+	hero_wukong_wukong_0196 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			192,
+			439
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2515,
+			1759,
+			100,
+			92
+		},
+		alias = {
+			"hero_wukong_wukong_0197"
+		}
+	},
+	hero_wukong_wukong_0198 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			395,
+			190,
+			437
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2410,
+			1759,
+			102,
+			94
+		},
+		alias = {
+			"hero_wukong_wukong_0199"
+		}
+	},
+	hero_wukong_wukong_0200 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			180,
+			392,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			1856,
+			100,
+			98
+		},
+		alias = {
+			"hero_wukong_wukong_0201"
+		}
+	},
+	hero_wukong_wukong_0202 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			176,
+			383,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2123,
+			104,
+			107
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0203 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			176,
+			383,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2233,
+			104,
+			107
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0204 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			182,
+			397,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2618,
+			1759,
+			98,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0205 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			182,
+			397,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2719,
+			1759,
+			98,
+			93
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0206 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			175,
+			408,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3456,
+			1759,
+			105,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0207 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			175,
+			408,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3564,
+			1759,
+			105,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0208 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			174,
+			421,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3128,
+			2038,
+			106,
+			69
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0209 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			177,
+			402,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2820,
+			1759,
+			103,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0210 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			180,
+			384,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2884,
+			100,
+			106
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0211 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			183,
+			368,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2205,
+			1462,
+			97,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0212 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			355,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			3525,
+			94,
+			135
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0213 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			345,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			2052,
+			90,
+			145
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0214 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			337,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			2893,
+			89,
+			153
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0215 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			331,
+			189,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			2731,
+			89,
+			159
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0216 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			327,
+			189,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			2949,
+			84,
+			153
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0217 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			326,
+			189,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			2450,
+			84,
+			154
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0218 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			328,
+			189,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			3904,
+			86,
+			152
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0219 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			332,
+			189,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			3374,
+			86,
+			148
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0220 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			193,
+			338,
+			195,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			1821,
+			81,
+			140
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0221 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			193,
+			346,
+			195,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2749,
+			81,
+			132
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0222 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			193,
+			357,
+			194,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2096,
+			82,
+			122
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0223 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			193,
+			370,
+			194,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3383,
+			82,
+			109
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0224 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			204,
+			385,
+			204,
+			455
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			3871,
+			61,
+			86
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0225 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			209,
+			403,
+			208,
+			454
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3913,
+			52,
+			69
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0226 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			214,
+			406,
+			208,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3646,
+			2274,
+			47,
+			62
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0227 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			216,
+			430,
+			208,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3762,
+			45,
+			38
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0228 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			216,
+			417,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2942,
+			37,
+			51
+		},
+		alias = {
+			"hero_wukong_wukong_0229"
+		}
+	},
+	hero_wukong_wukong_0230 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			216,
+			424,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3715,
+			39,
+			44
+		},
+		alias = {
+			"hero_wukong_wukong_0231"
+		}
+	},
+	hero_wukong_wukong_0232 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			216,
+			422,
+			215,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			3387,
+			38,
+			46
+		},
+		alias = {
+			"hero_wukong_wukong_0233"
+		}
+	},
+	hero_wukong_wukong_0234 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			164,
+			326,
+			209,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			2578,
+			96,
+			150
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0235 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			164,
+			316,
+			208,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1022,
+			3921,
+			97,
+			160
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0236 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			160,
+			307,
+			208,
+			452
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			1797,
+			101,
+			167
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0237 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			160,
+			299,
+			206,
+			452
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			3785,
+			103,
+			175
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0238 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			147,
+			292,
+			205,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			626,
+			117,
+			184
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0239 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			147,
+			286,
+			204,
+			450
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3421,
+			241,
+			118,
+			190
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0240 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			136,
+			281,
+			205,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2308,
+			241,
+			128,
+			196
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0241 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			136,
+			277,
+			205,
+			449
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2177,
+			241,
+			128,
+			200
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0242 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			155,
+			274,
+			206,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			626,
+			108,
+			204
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0243 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			155,
+			272,
+			207,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3769,
+			241,
+			107,
+			206
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0244 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			152,
+			271,
+			207,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			3033,
+			110,
+			208
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0245 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			152,
+			271,
+			207,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			3244,
+			110,
+			208
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0246 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			272,
+			208,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3658,
+			241,
+			108,
+			206
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0247 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			274,
+			208,
+			448
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			833,
+			108,
+			204
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0248 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			277,
+			208,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			1040,
+			108,
+			202
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0249 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			281,
+			206,
+			447
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			626,
+			110,
+			198
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0250 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			286,
+			205,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			3455,
+			111,
+			204
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0251 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			292,
+			203,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3542,
+			241,
+			113,
+			198
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0252 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			299,
+			202,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			626,
+			114,
+			191
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0253 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			306,
+			201,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			813,
+			115,
+			184
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0254 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			314,
+			201,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			567,
+			3916,
+			115,
+			176
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0255 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			151,
+			321,
+			201,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1000,
+			117,
+			169
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0256 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			322,
+			202,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1172,
+			114,
+			168
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0257 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			324,
+			203,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			1226,
+			109,
+			166
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0258 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			328,
+			203,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			1395,
+			109,
+			162
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0259 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			332,
+			201,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1343,
+			111,
+			158
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0260 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			337,
+			200,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1504,
+			112,
+			153
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0261 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			359,
+			200,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3966,
+			626,
+			112,
+			131
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0262 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			359,
+			200,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1660,
+			112,
+			131
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0263 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			157,
+			360,
+			206,
+			436
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1372,
+			3963,
+			106,
+			130
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0264 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			180,
+			360,
+			206,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2221,
+			83,
+			120
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0265 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			188,
+			420,
+			200,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2807,
+			81,
+			60
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0266 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			188,
+			420,
+			200,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2870,
+			81,
+			60
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0267 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			181,
+			398,
+			193,
+			446
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2390,
+			2038,
+			95,
+			82
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0268 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			181,
+			398,
+			193,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3310,
+			1957,
+			95,
+			70
+		},
+		alias = {
+			"hero_wukong_wukong_0309",
+			"hero_wukong_wukong_0310"
+		}
+	},
+	hero_wukong_wukong_0269 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			185,
+			409,
+			195,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2212,
+			89,
+			59
+		},
+		alias = {
+			"hero_wukong_wukong_0270",
+			"hero_wukong_wukong_0311",
+			"hero_wukong_wukong_0312"
+		}
+	},
+	hero_wukong_wukong_0273 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			185,
+			416,
+			195,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2908,
+			2212,
+			89,
+			52
+		},
+		alias = {
+			"hero_wukong_wukong_0274"
+		}
+	},
+	hero_wukong_wukong_0275 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			348,
+			204,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			1957,
+			68,
+			120
+		},
+		alias = {
+			"hero_wukong_wukong_0276"
+		}
+	},
+	hero_wukong_wukong_0277 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			360,
+			201,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			2067,
+			74,
+			108
+		},
+		alias = {
+			"hero_wukong_wukong_0278"
+		}
+	},
+	hero_wukong_wukong_0279 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			375,
+			205,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3522,
+			67,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0280"
+		}
+	},
+	hero_wukong_wukong_0281 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			195,
+			392,
+			201,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3926,
+			2123,
+			73,
+			76
+		},
+		alias = {
+			"hero_wukong_wukong_0282"
+		}
+	},
+	hero_wukong_wukong_0283 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			201,
+			386,
+			199,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3268,
+			2123,
+			69,
+			82
+		},
+		alias = {
+			"hero_wukong_wukong_0284"
+		}
+	},
+	hero_wukong_wukong_0285 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			205,
+			389,
+			207,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3993,
+			57,
 			79
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0286"
+		}
 	},
-	["hero_wukong_wukong_0403"] = {
+	hero_wukong_wukong_0287 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			186,
-            277,
-            219,
-            571
+			205,
+			389,
+			211,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3440,
-			356,
-			63,
-			77
+			2173,
+			3045,
+			53,
+			79
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0288"
+		}
 	},
-	["hero_wukong_wukong_0404"] = {
+	hero_wukong_wukong_0289 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			186,
-            277,
-            219,
-            571
+			204,
+			389,
+			209,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3440,
-			356,
-			63,
-			77
+			2173,
+			2347,
+			56,
+			79
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0290"
+		}
 	},
-	["hero_wukong_wukong_0405"] = {
+	hero_wukong_wukong_0291 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			191,
-            285,
-            217,
-            560
+			204,
+			389,
+			209,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2383,
-			441,
+			2173,
+			2429,
+			56,
+			79
+		},
+		alias = {
+			"hero_wukong_wukong_0292"
+		}
+	},
+	hero_wukong_wukong_0293 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			200,
+			389,
+			209,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3449,
 			60,
-			80
+			79
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0294"
+		}
 	},
-	["hero_wukong_wukong_0406"] = {
+	hero_wukong_wukong_0295 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			191,
-            285,
-            217,
-            560
+			200,
+			389,
+			211,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2383,
-			441,
+			2082,
+			3754,
+			58,
+			79
+		},
+		alias = {
+			"hero_wukong_wukong_0296"
+		}
+	},
+	hero_wukong_wukong_0297 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			210,
+			415,
+			213,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2656,
+			46,
+			53
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0298 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			208,
+			411,
+			213,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3801,
+			2274,
+			48,
+			57
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0299 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			210,
+			395,
+			212,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2407,
+			47,
+			73
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0300 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			210,
+			383,
+			212,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1545,
+			2219,
+			47,
+			85
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0301 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			209,
+			379,
+			213,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1545,
+			2127,
+			47,
+			89
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0302 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			209,
+			380,
+			211,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2806,
+			49,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0303 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			361,
+			200,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			1957,
+			75,
+			107
+		},
+		alias = {
+			"hero_wukong_wukong_0304"
+		}
+	},
+	hero_wukong_wukong_0305 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			198,
+			365,
+			211,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3618,
 			60,
-			80
+			103
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0306"
+		}
 	},
-	["hero_wukong_wukong_0407"] = {
+	hero_wukong_wukong_0307 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			184,
-            271,
-            218,
-            576
+			188,
+			420,
+			200,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			958,
-			441,
-			66,
-			78
+			3654,
+			2212,
+			81,
+			48
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0308"
+		}
 	},
-	["hero_wukong_wukong_0408"] = {
+	hero_wukong_wukong_0315 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			184,
-            271,
-            218,
-            576
+			190,
+			399,
+			201,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			958,
-			441,
-			66,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0409"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            277,
-            218,
-            570
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1032,
-			441,
-			63,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0410"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            277,
-            218,
-            570
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1032,
-			441,
-			63,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0411"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3511,
-			356,
-			67,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0412"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3511,
-			356,
-			67,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0413"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3586,
-			356,
-			66,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0414"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3586,
-			356,
-			66,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0415"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3660,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0416"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3660,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0417"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3731,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0418"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3731,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0419"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3802,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0420"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3802,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0421"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3873,
-			356,
-			64,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0422"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3873,
-			356,
-			64,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0423"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			441,
-			64,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0424"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			441,
-			64,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0425"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			76,
-			441,
-			67,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0426"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			76,
-			441,
-			67,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0427"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3511,
-			356,
-			67,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0428"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3511,
-			356,
-			67,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0429"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3586,
-			356,
-			66,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0430"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3586,
-			356,
-			66,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0431"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3660,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0432"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3660,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0433"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3731,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0434"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            273,
-            218,
-            575
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3731,
-			356,
-			63,
-			77
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0435"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            275,
-            218,
-            572
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1103,
-			441,
-			68,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0436"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            275,
-            218,
-            572
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1103,
-			441,
-			68,
-			78
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0437"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            288,
-            206,
-            574
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			182,
-			199,
-			76,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0438"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            288,
-            206,
-            574
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			182,
-			199,
-			76,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0439"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            275,
-            206,
-            587
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			266,
-			199,
-			77,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0440"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			185,
-            275,
-            206,
-            587
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			266,
-			199,
-			77,
-			63
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0441"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            274,
-            206,
-            597
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1689,
-			61,
-			73,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0442"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			189,
-            274,
-            206,
-            597
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1689,
-			61,
-			73,
-			54
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0443"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            282,
-            206,
-            457
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			647,
-			1996,
-			76,
-			186
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0444"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			186,
-            282,
-            206,
-            457
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			647,
-			1996,
-			76,
-			186
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0445"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            311,
-            206,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2343,
-			1815,
+			3584,
+			1588,
 			78,
-			159
+			69
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0316"
+		}
 	},
-	["hero_wukong_wukong_0446"] = {
+	hero_wukong_wukong_0317 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			184,
-            311,
-            206,
-            455
+			199,
+			395,
+			208,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2343,
-			1815,
-			78,
-			159
+			1243,
+			4016,
+			62,
+			73
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0318"
+		}
 	},
-	["hero_wukong_wukong_0447"] = {
+	hero_wukong_wukong_0319 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			151,
-            159,
-            132,
-            455
+			190,
+			396,
+			210,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2810,
-			2231,
-			185,
-			311
+			2082,
+			2596,
+			69,
+			72
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0320"
+		}
 	},
-	["hero_wukong_wukong_0448"] = {
+	hero_wukong_wukong_0321 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			151,
-            159,
-            132,
-            455
+			190,
+			387,
+			213,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2810,
-			2231,
-			185,
-			311
+			1933,
+			3691,
+			66,
+			81
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0322"
+		}
 	},
-	["hero_wukong_wukong_0449"] = {
+	hero_wukong_wukong_0323 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			183,
-            353,
-            196,
-            455
+			194,
+			378,
+			212,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2925,
-			1254,
-			89,
-			117
+			1933,
+			2477,
+			63,
+			90
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0324"
+		}
 	},
-	["hero_wukong_wukong_0450"] = {
+	hero_wukong_wukong_0325 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            353,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2925,
-			1254,
-			89,
-			117
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0451"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
 			192,
-            404,
-            191,
-            455
+			378,
+			208,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2172,
-			199,
-			85,
-			66
+			370,
+			4002,
+			69,
+			90
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0326"
+		}
 	},
-	["hero_wukong_wukong_0452"] = {
+	hero_wukong_wukong_0327 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
+		},
+		trim = {
+			191,
+			384,
+			206,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2004,
+			3820,
+			72,
+			84
+		},
+		alias = {
+			"hero_wukong_wukong_0328"
+		}
+	},
+	hero_wukong_wukong_0329 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			380,
+			191,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2123,
+			88,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0330 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3247,
+			1856,
+			91,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0331 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3737,
+			1856,
+			90,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0332 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3830,
+			1856,
+			90,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0333 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4001,
+			1759,
+			92,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0334 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2764,
+			1856,
+			92,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0335 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2859,
+			1856,
+			92,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0336 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2954,
+			1856,
+			92,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0337 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3341,
+			1856,
+			91,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0338 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			380,
+			188,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3435,
+			1856,
+			91,
+			88
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0339 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			380,
+			174,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3150,
+			1759,
+			101,
+			88
+		},
+		alias = {
+			"hero_wukong_wukong_0340"
+		}
+	},
+	hero_wukong_wukong_0341 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
 		},
 		trim = {
 			192,
-            404,
-            191,
-            455
+			380,
+			150,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2172,
-			199,
-			85,
-			66
+			1833,
+			1668,
+			127,
+			88
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0342"
+		}
 	},
-	["hero_wukong_wukong_0453"] = {
+	hero_wukong_wukong_0343 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			189,
-            402,
-            202,
-            455
+			191,
+			380,
+			129,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
+		},
+		f_quad = {
+			3477,
+			904,
+			149,
+			88
+		},
+		alias = {
+			"hero_wukong_wukong_0344"
+		}
+	},
+	hero_wukong_wukong_0345 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			378,
+			115,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2994,
+			904,
+			164,
+			90
+		},
+		alias = {
+			"hero_wukong_wukong_0346"
+		}
+	},
+	hero_wukong_wukong_0347 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			378,
+			109,
+			458
+		},
+		a_size = {
+			4096,
+			4096
 		},
 		f_quad = {
 			198,
-			275,
-			77,
-			68
+			4002,
+			169,
+			90
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0348"
+		}
 	},
-	["hero_wukong_wukong_0454"] = {
+	hero_wukong_wukong_0349 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			189,
-            402,
-            202,
-            455
+			192,
+			379,
+			111,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			198,
-			275,
-			77,
-			68
+			3673,
+			147,
+			166,
+			89
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0350"
+		}
 	},
-	["hero_wukong_wukong_0455"] = {
+	hero_wukong_wukong_0351 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			187,
-            403,
-            196,
-            455
+			184,
+			377,
+			112,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2836,
-			199,
-			85,
-			67
+			2921,
+			147,
+			173,
+			91
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0352"
+		}
 	},
-	["hero_wukong_wukong_0456"] = {
+	hero_wukong_wukong_0353 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            403,
-            196,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2836,
-			199,
-			85,
-			67
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0457"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            397,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3814,
-			275,
-			89,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0458"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			187,
-            397,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3814,
-			275,
-			89,
-			73
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0459"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            405,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1540,
-			199,
-			94,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0460"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            405,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1540,
-			199,
-			94,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0461"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0462"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0463"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
 			183,
-            405,
-            194,
-            455
+			375,
+			113,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
+		},
+		f_quad = {
+			3452,
+			779,
+			173,
+			93
+		},
+		alias = {
+			"hero_wukong_wukong_0354"
+		}
+	},
+	hero_wukong_wukong_0361 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			406,
+			201,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2403,
+			82,
+			62
+		},
+		alias = {
+			"hero_wukong_wukong_0362"
+		}
+	},
+	hero_wukong_wukong_0363 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			406,
+			201,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2468,
+			82,
+			62
+		},
+		alias = {
+			"hero_wukong_wukong_0364"
+		}
+	},
+	hero_wukong_wukong_0365 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			182,
+			392,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4022,
+			1957,
+			71,
+			76
+		},
+		alias = {
+			"hero_wukong_wukong_0366"
+		}
+	},
+	hero_wukong_wukong_0367 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			182,
+			392,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3510,
+			1588,
+			71,
+			76
+		},
+		alias = {
+			"hero_wukong_wukong_0368"
+		}
+	},
+	hero_wukong_wukong_0369 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			195,
+			282,
+			193,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			2389,
+			81,
+			186
+		},
+		alias = {
+			"hero_wukong_wukong_0370"
+		}
+	},
+	hero_wukong_wukong_0371 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			202,
+			235,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1768,
+			2200,
+			51,
+			233
+		},
+		alias = {
+			"hero_wukong_wukong_0372"
+		}
+	},
+	hero_wukong_wukong_0373 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			419,
+			205,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2840,
+			2274,
+			70,
+			49
+		},
+		alias = {
+			"hero_wukong_wukong_0374"
+		}
+	},
+	hero_wukong_wukong_0375 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			427,
+			200,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3751,
+			1541,
+			73,
+			41
+		},
+		alias = {
+			"hero_wukong_wukong_0376"
+		}
+	},
+	hero_wukong_wukong_0377 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			426,
+			200,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3602,
+			1541,
+			73,
+			42
+		},
+		alias = {
+			"hero_wukong_wukong_0378"
+		}
+	},
+	hero_wukong_wukong_0379 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			206,
+			342,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4042,
+			241,
+			47,
+			126
+		},
+		alias = {
+			"hero_wukong_wukong_0380"
+		}
+	},
+	hero_wukong_wukong_0381 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			214,
+			134,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1538,
+			827,
+			39,
+			334
+		},
+		alias = {
+			"hero_wukong_wukong_0382"
+		}
+	},
+	hero_wukong_wukong_0383 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			201,
+			72,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1483,
+			827,
+			52,
+			396
+		},
+		alias = {
+			"hero_wukong_wukong_0384"
+		}
+	},
+	hero_wukong_wukong_0385 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			216,
+			459,
+			216,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1672,
+			1659,
+			37,
+			9
+		},
+		alias = {
+			"hero_wukong_wukong_0386"
+		}
+	},
+	hero_wukong_wukong_0387 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			44,
+			226,
+			814
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3448,
+			54,
+			68
+		},
+		alias = {
+			"hero_wukong_wukong_0389",
+			"hero_wukong_wukong_0390"
+		}
+	},
+	hero_wukong_wukong_0388 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			200,
+			14,
+			243,
+			789
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1683,
+			2483,
+			26,
+			123
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0391 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			44,
+			226,
+			817
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2339,
+			54,
+			65
+		},
+		alias = {
+			"hero_wukong_wukong_0392"
+		}
+	},
+	hero_wukong_wukong_0393 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			47,
+			226,
+			811
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3519,
+			54,
+			68
+		},
+		alias = {
+			"hero_wukong_wukong_0394"
+		}
+	},
+	hero_wukong_wukong_0395 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			56,
+			226,
+			802
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3590,
+			54,
+			68
+		},
+		alias = {
+			"hero_wukong_wukong_0396"
+		}
+	},
+	hero_wukong_wukong_0397 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			72,
+			225,
+			784
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2240,
+			3023,
+			55,
+			70
+		},
+		alias = {
+			"hero_wukong_wukong_0398"
+		}
+	},
+	hero_wukong_wukong_0399 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			99,
+			224,
+			760
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			4020,
+			59,
+			67
+		},
+		alias = {
+			"hero_wukong_wukong_0400"
+		}
+	},
+	hero_wukong_wukong_0401 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			181,
+			139,
+			223,
+			714
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3297,
+			65,
+			73
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0402 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			181,
+			139,
+			223,
+			714
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			3373,
+			65,
+			73
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0403 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			280,
+			223,
+			575
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3649,
+			57,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0404"
+		}
+	},
+	hero_wukong_wukong_0405 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			194,
+			288,
+			221,
+			563
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3571,
+			54,
+			75
+		},
+		alias = {
+			"hero_wukong_wukong_0406"
+		}
+	},
+	hero_wukong_wukong_0407 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			275,
+			221,
+			580
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2658,
+			61,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0408"
+		}
+	},
+	hero_wukong_wukong_0409 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			280,
+			222,
+			574
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3797,
+			56,
+			72
+		},
+		alias = {
+			"hero_wukong_wukong_0410"
+		}
+	},
+	hero_wukong_wukong_0411 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2732,
+			61,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0412",
+			"hero_wukong_wukong_0427",
+			"hero_wukong_wukong_0428"
+		}
+	},
+	hero_wukong_wukong_0413 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2897,
+			60,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0414",
+			"hero_wukong_wukong_0429",
+			"hero_wukong_wukong_0430"
+		}
+	},
+	hero_wukong_wukong_0415 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3872,
+			56,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0416",
+			"hero_wukong_wukong_0431",
+			"hero_wukong_wukong_0432"
+		}
+	},
+	hero_wukong_wukong_0417 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3946,
+			56,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0418",
+			"hero_wukong_wukong_0433",
+			"hero_wukong_wukong_0434"
+		}
+	},
+	hero_wukong_wukong_0419 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3723,
+			57,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0420"
+		}
+	},
+	hero_wukong_wukong_0421 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3353,
+			58,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0422"
+		}
+	},
+	hero_wukong_wukong_0423 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			3427,
+			58,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0424"
+		}
+	},
+	hero_wukong_wukong_0425 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			276,
+			222,
+			579
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2971,
+			60,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0426"
+		}
+	},
+	hero_wukong_wukong_0435 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			185,
+			279,
+			222,
+			576
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2173,
+			2511,
+			62,
+			71
+		},
+		alias = {
+			"hero_wukong_wukong_0436"
+		}
+	},
+	hero_wukong_wukong_0437 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			291,
+			210,
+			578
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3508,
+			2212,
+			70,
+			57
+		},
+		alias = {
+			"hero_wukong_wukong_0438"
+		}
+	},
+	hero_wukong_wukong_0439 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			279,
+			210,
+			591
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3581,
+			2212,
+			70,
+			56
+		},
+		alias = {
+			"hero_wukong_wukong_0440"
+		}
+	},
+	hero_wukong_wukong_0441 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			192,
+			277,
+			209,
+			600
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1933,
+			4038,
+			68,
+			49
+		},
+		alias = {
+			"hero_wukong_wukong_0442"
+		}
+	},
+	hero_wukong_wukong_0443 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			189,
+			285,
+			210,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			2607,
+			70,
+			183
+		},
+		alias = {
+			"hero_wukong_wukong_0444"
+		}
+	},
+	hero_wukong_wukong_0445 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			312,
+			210,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			1964,
+			72,
+			156
+		},
+		alias = {
+			"hero_wukong_wukong_0446"
+		}
+	},
+	hero_wukong_wukong_0447 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			154,
+			162,
+			135,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			5,
+			3497,
+			180,
+			306
+		},
+		alias = {
+			"hero_wukong_wukong_0448"
+		}
+	},
+	hero_wukong_wukong_0449 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			184,
+			356,
+			199,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3165,
+			86,
+			112
+		},
+		alias = {
+			"hero_wukong_wukong_0450"
+		}
+	},
+	hero_wukong_wukong_0451 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			407,
+			194,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2933,
+			79,
+			61
+		},
+		alias = {
+			"hero_wukong_wukong_0452"
+		}
+	},
+	hero_wukong_wukong_0453 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			192,
+			406,
+			206,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2309,
+			2274,
+			71,
+			62
+		},
+		alias = {
+			"hero_wukong_wukong_0454"
+		}
+	},
+	hero_wukong_wukong_0455 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			191,
+			407,
+			199,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2997,
+			79,
+			61
+		},
+		alias = {
+			"hero_wukong_wukong_0456"
+		}
+	},
+	hero_wukong_wukong_0457 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			190,
+			401,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3840,
+			2123,
+			83,
+			67
+		},
+		alias = {
+			"hero_wukong_wukong_0458"
+		}
+	},
+	hero_wukong_wukong_0459 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			408,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2214,
+			87,
+			60
+		},
+		alias = {
+			"hero_wukong_wukong_0460"
+		}
+	},
+	hero_wukong_wukong_0463 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			408,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2277,
+			85,
+			60
+		},
+		alias = {}
+	},
+	hero_wukong_wukong_0464 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			408,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2082,
+			2340,
+			85,
+			60
+		},
+		alias = {
+			"hero_wukong_wukong_0465"
+		}
+	},
+	hero_wukong_wukong_0466 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			409,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2644,
+			2212,
+			85,
+			59
+		},
+		alias = {
+			"hero_wukong_wukong_0467"
+		}
+	},
+	hero_wukong_wukong_0468 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			409,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2732,
+			2212,
+			85,
+			59
+		},
+		alias = {
+			"hero_wukong_wukong_0469"
+		}
+	},
+	hero_wukong_wukong_0470 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			368,
+			189,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3280,
+			94,
+			100
+		},
+		alias = {
+			"hero_wukong_wukong_0471"
+		}
+	},
+	hero_wukong_wukong_0472 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			365,
+			186,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2612,
+			96,
+			103
+		},
+		alias = {
+			"hero_wukong_wukong_0473"
+		}
+	},
+	hero_wukong_wukong_0474 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			364,
+			187,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2718,
+			95,
+			104
+		},
+		alias = {
+			"hero_wukong_wukong_0475"
+		}
+	},
+	hero_wukong_wukong_0476 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			187,
+			373,
+			190,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3495,
+			92,
+			95
+		},
+		alias = {
+			"hero_wukong_wukong_0477"
+		}
+	},
+	hero_wukong_wukong_0478 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			178,
+			373,
+			177,
+			425
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			1794,
+			114,
+			128
+		},
+		alias = {
+			"hero_wukong_wukong_0479"
+		}
+	},
+	hero_wukong_wukong_0480 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			164,
+			328,
+			162,
+			425
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2439,
+			241,
+			143,
+			173
+		},
+		alias = {
+			"hero_wukong_wukong_0481"
+		}
+	},
+	hero_wukong_wukong_0482 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			156,
+			301,
+			153,
+			424
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2392,
+			5,
+			160,
+			201
+		},
+		alias = {
+			"hero_wukong_wukong_0483"
+		}
+	},
+	hero_wukong_wukong_0484 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			153,
+			292,
+			151,
+			424
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2224,
+			5,
+			165,
+			210
+		},
+		alias = {
+			"hero_wukong_wukong_0485"
+		}
+	},
+	hero_wukong_wukong_0486 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			150,
+			290,
+			148,
+			424
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1824,
+			5,
+			171,
+			212
+		},
+		alias = {
+			"hero_wukong_wukong_0487"
+		}
+	},
+	hero_wukong_wukong_0488 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			146,
+			285,
+			144,
+			423
+		},
+		a_size = {
+			4096,
+			4096
 		},
 		f_quad = {
 			1642,
-			199,
+			5,
+			179,
+			218
+		},
+		alias = {
+			"hero_wukong_wukong_0489"
+		}
+	},
+	hero_wukong_wukong_0490 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			140,
+			279,
+			138,
+			422
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1448,
+			5,
+			191,
+			225
+		},
+		alias = {
+			"hero_wukong_wukong_0491"
+		}
+	},
+	hero_wukong_wukong_0492 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			135,
+			273,
+			132,
+			420
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			5,
+			202,
+			233
+		},
+		alias = {
+			"hero_wukong_wukong_0493"
+		}
+	},
+	hero_wukong_wukong_0494 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			131,
+			269,
+			129,
+			423
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			198,
+			3765,
+			209,
+			234
+		},
+		alias = {
+			"hero_wukong_wukong_0495"
+		}
+	},
+	hero_wukong_wukong_0496 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			406,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3330,
+			1588,
+			87,
+			62
+		},
+		alias = {
+			"hero_wukong_wukong_0497"
+		}
+	},
+	hero_wukong_wukong_0498 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			186,
+			406,
+			196,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3420,
+			1588,
+			87,
+			62
+		},
+		alias = {
+			"hero_wukong_wukong_0499"
+		}
+	},
+	hero_wukong_wukong_0502 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			184,
+			409,
+			194,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3665,
+			1588,
 			91,
-			65
+			59
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0503"
+		}
 	},
-	["hero_wukong_wukong_0464"] = {
+	hero_wukong_wukong_0504 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            405,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1741,
-			199,
-			90,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0465"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            405,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1741,
-			199,
-			90,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0466"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            406,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			746,
-			199,
-			90,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0467"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            406,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			746,
-			199,
-			90,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0468"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            406,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			844,
-			199,
-			90,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0469"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            406,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			844,
-			199,
-			90,
-			64
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0470"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            366,
-            187,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3828,
-			1023,
-			99,
-			104
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0471"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            366,
-            187,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3828,
-			1023,
-			99,
-			104
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0472"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            364,
-            186,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1569,
-			1135,
-			100,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0473"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            364,
-            186,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1569,
-			1135,
-			100,
-			106
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0474"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            363,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1819,
-			1135,
-			100,
-			107
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0475"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			183,
-            363,
-            185,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1819,
-			1135,
-			100,
-			107
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0476"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            372,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3313,
-			916,
-			95,
-			98
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0477"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			184,
-            372,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3313,
-			916,
-			95,
-			98
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0478"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            371,
-            176,
-            424
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2440,
-			1513,
-			115,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0479"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            371,
-            176,
-            424
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2440,
-			1513,
-			115,
-			130
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0480"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			162,
-            327,
-            161,
-            423
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			249,
-			1996,
-			145,
-			175
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0481"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			162,
-            327,
-            161,
-            423
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			249,
-			1996,
-			145,
-			175
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0482"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			154,
-            300,
-            153,
-            423
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1486,
-			1996,
-			161,
-			202
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0483"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			154,
-            300,
-            153,
-            423
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1486,
-			1996,
-			161,
-			202
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0484"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			151,
-            291,
-            150,
-            422
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2670,
-			1996,
-			167,
-			212
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0485"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			151,
-            291,
-            150,
-            422
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2670,
-			1996,
-			167,
-			212
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0486"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			148,
-            289,
-            147,
-            422
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3334,
-			1996,
-			173,
-			214
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0487"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			148,
-            289,
-            147,
-            422
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3334,
-			1996,
-			173,
-			214
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0488"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			144,
-            283,
-            143,
-            422
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3555,
-			1996,
-			181,
-			220
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0489"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			144,
-            283,
-            143,
-            422
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3555,
-			1996,
-			181,
-			220
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0490"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			138,
-            278,
-            137,
-            420
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3744,
-			1996,
-			193,
-			227
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0491"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			138,
-            278,
-            137,
-            420
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3744,
-			1996,
-			193,
-			227
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0492"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			134,
-            272,
-            131,
-            419
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			2231,
-			203,
-			234
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0493"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			134,
-            272,
-            131,
-            419
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			2231,
-			203,
-			234
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0494"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			129,
-            268,
-            129,
-            421
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			215,
-			2231,
-			210,
-			236
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0495"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			129,
-            268,
-            129,
-            421
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			215,
-			2231,
-			210,
-			236
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0496"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			283,
-			275,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0497"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			283,
-			275,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0498"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			385,
-			275,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0499"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			385,
-			275,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0500"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0501"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0502"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			180,
-            405,
-            191,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1839,
-			199,
-			97,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0503"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			180,
-            405,
-            191,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1839,
-			199,
-			97,
-			65
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0504"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            357,
-            195,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1543,
-			1254,
-			80,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0505"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            357,
-            195,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			1543,
-			1254,
-			80,
-			113
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0506"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            307,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2940,
-			1815,
-			79,
-			163
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0507"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			195,
-            307,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2940,
-			1815,
-			79,
-			163
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0508"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            360,
-            187,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3547,
-			1135,
-			88,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0509"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            360,
-            187,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3547,
-			1135,
-			88,
-			110
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0510"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            324,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3576,
-			1656,
-			86,
-			146
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0511"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            324,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3576,
-			1656,
-			86,
-			146
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0512"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            328,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2872,
-			1656,
-			87,
-			142
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0513"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            328,
-            189,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2872,
-			1656,
-			87,
-			142
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0514"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            334,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			98,
-			1656,
-			83,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0515"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            334,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			98,
-			1656,
-			83,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0516"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            335,
-            188,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1656,
-			86,
-			135
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0517"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            335,
-            188,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1656,
-			86,
-			135
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0518"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
 			197,
-            334,
-            181,
-            455
+			360,
+			199,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			189,
-			1656,
-			90,
-			136
+			2004,
+			2178,
+			73,
+			108
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0505"
+		}
 	},
-	["hero_wukong_wukong_0519"] = {
+	hero_wukong_wukong_0506 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
+		},
+		trim = {
+			199,
+			311,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			1517,
+			73,
+			157
+		},
+		alias = {
+			"hero_wukong_wukong_0507"
+		}
+	},
+	hero_wukong_wukong_0508 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
 		},
 		trim = {
 			197,
-            334,
-            181,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
+			364,
 			189,
-			1656,
-			90,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0520"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			194,
-            334,
-            187,
-            455
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			287,
-			1656,
-			87,
-			136
+			4007,
+			1006,
+			83,
+			104
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0509"
+		}
 	},
-	["hero_wukong_wukong_0521"] = {
+	hero_wukong_wukong_0510 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			194,
-            334,
-            187,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			287,
-			1656,
-			87,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0522"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            334,
-            191,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			382,
-			1656,
-			84,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0523"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			193,
-            334,
-            191,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			382,
-			1656,
-			84,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0524"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
+			196,
+			327,
 			192,
-            334,
-            194,
-            455
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			474,
-			1656,
-			82,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0525"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            334,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			474,
-			1656,
-			82,
-			136
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0526"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			192,
-            329,
-            194,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2173,
-			1656,
-			82,
+			1596,
+			1677,
+			81,
 			141
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0511"
+		}
 	},
-	["hero_wukong_wukong_0527"] = {
+	hero_wukong_wukong_0512 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			192,
-            329,
-            194,
-            455
+			196,
+			331,
+			193,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			2173,
-			1656,
-			82,
-			141
+			1596,
+			2343,
+			80,
+			137
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0513"
+		}
 	},
-	["hero_wukong_wukong_0528"] = {
+	hero_wukong_wukong_0514 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
+		},
+		trim = {
+			197,
+			338,
+			195,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			1963,
+			77,
+			130
+		},
+		alias = {
+			"hero_wukong_wukong_0515"
+		}
+	},
+	hero_wukong_wukong_0516 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			199,
+			338,
+			191,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			3529,
+			79,
+			130
+		},
+		alias = {
+			"hero_wukong_wukong_0517"
+		}
+	},
+	hero_wukong_wukong_0518 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			202,
+			338,
+			184,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2616,
+			83,
+			130
+		},
+		alias = {
+			"hero_wukong_wukong_0519"
+		}
+	},
+	hero_wukong_wukong_0520 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			199,
+			338,
+			189,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			2993,
+			81,
+			130
+		},
+		alias = {
+			"hero_wukong_wukong_0521"
+		}
+	},
+	hero_wukong_wukong_0522 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			197,
+			337,
+			194,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			3760,
+			78,
+			131
+		},
+		alias = {
+			"hero_wukong_wukong_0523"
+		}
+	},
+	hero_wukong_wukong_0524 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			196,
+			338,
+			197,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			2479,
+			76,
+			130
+		},
+		alias = {
+			"hero_wukong_wukong_0525"
+		}
+	},
+	hero_wukong_wukong_0526 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			195,
+			332,
+			198,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1596,
+			3229,
+			76,
+			136
+		},
+		alias = {
+			"hero_wukong_wukong_0527"
+		}
+	},
+	hero_wukong_wukong_0528 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			199,
+			356,
+			194,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1833,
+			3593,
+			76,
+			112
+		},
+		alias = {
+			"hero_wukong_wukong_0529"
+		}
+	},
+	hero_wukong_wukong_0530 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
 		},
 		trim = {
 			194,
-            353,
-            191,
-            455
+			222,
+			170,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3022,
-			1254,
-			83,
-			117
+			1243,
+			2324,
+			105,
+			246
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0531"
+		}
 	},
-	["hero_wukong_wukong_0529"] = {
+	hero_wukong_wukong_0532 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
+			174,
+			173,
+			186,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			694,
+			3455,
+			109,
+			295
+		},
+		alias = {
+			"hero_wukong_wukong_0533"
+		}
+	},
+	hero_wukong_wukong_0534 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			169,
+			322,
+			214,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1713,
+			3885,
+			86,
+			146
+		},
+		alias = {
+			"hero_wukong_wukong_0535"
+		}
+	},
+	hero_wukong_wukong_0536 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			185,
+			398,
+			203,
+			458
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3184,
+			2123,
+			81,
+			70
+		},
+		alias = {
+			"hero_wukong_wukong_0537"
+		}
+	},
+	hero_wukong_wukong_0538 = {
+		a_name = "go_hero_wukong-1.dds",
+		size = {
+			469,
+			926
+		},
+		trim = {
+			180,
+			414,
 			194,
-            353,
-            191,
-            455
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			3022,
-			1254,
-			83,
-			117
+			2265,
+			2212,
+			95,
+			54
 		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0539"
+		}
 	},
-	["hero_wukong_wukong_0530"] = {
+	hero_wukong_wukong_0540 = {
 		a_name = "go_hero_wukong-1.dds",
 		size = {
-			468,
-			925
+			469,
+			926
 		},
 		trim = {
-			190,
-            219,
-            168,
-            455
+			186,
+			405,
+			196,
+			458
 		},
 		a_size = {
-			3958,
-			3958
+			4096,
+			4096
 		},
 		f_quad = {
-			762,
-			2231,
-			110,
-			251
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0531"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			190,
-            219,
-            168,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			762,
-			2231,
-			110,
-			251
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0532"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			170,
-            170,
-            183,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2687,
-			2231,
-			115,
-			300
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0533"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			170,
-            170,
-            183,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			2687,
-			2231,
-			115,
-			300
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0534"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			166,
-            319,
-            211,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1815,
-			91,
-			151
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0535"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			166,
-            319,
-            211,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			4,
-			1815,
-			91,
-			151
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0536"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            396,
-            199,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			509,
-			356,
+			2985,
+			1588,
 			87,
-			74
+			63
 		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0537"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            396,
-            199,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			509,
-			356,
-			87,
-			74
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0538"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            411,
-            191,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			638,
-			128,
-			100,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0539"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			177,
-            411,
-            191,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			638,
-			128,
-			100,
-			59
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0540"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			487,
-			275,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0541"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			487,
-			275,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0542"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
-	},
-	["hero_wukong_wukong_0543"] = {
-		a_name = "go_hero_wukong-1.dds",
-		size = {
-			468,
-			925
-		},
-		trim = {
-			182,
-            402,
-            192,
-            455
-		},
-		a_size = {
-			3958,
-			3958
-		},
-		f_quad = {
-			3003,
-			199,
-			94,
-			68
-		},
-		alias = {},
+		alias = {
+			"hero_wukong_wukong_0541"
+		}
 	}
 }
