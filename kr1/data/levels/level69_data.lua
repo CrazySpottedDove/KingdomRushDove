@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level21_data.lua
-
+-- chunkname: @./kr3/data/levels/level21_data.lua
 return {
 	show_comic_idx = 9,
 	locked_hero = false,
@@ -8,9 +7,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvesForgottenTreasureAmbienceSound"
-			}
+			sounds = {"ElvesForgottenTreasureAmbienceSound"}
 		},
 		{
 			template = "decal",
@@ -680,115 +677,29 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_engineer",
-				"tower_build_mage"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_engineer", "tower_build_mage"}
+	}},
 	nav_mesh = {
-		{
-			7,
-			8,
-			5,
-			3
-		},
-		{
-			6,
-			7,
-			3,
-			12
-		},
-		{
-			2,
-			1,
-			4,
-			14
-		},
-		{
-			3,
-			5,
-			10,
-			9
-		},
-		{
-			1,
-			nil,
-			10,
-			4
-		},
-		{
-			nil,
-			2,
-			12
-		},
-		{
-			2,
-			8,
-			1,
-			2
-		},
-		{
-			2,
-			nil,
-			1,
-			7
-		},
-		{
-			14,
-			4,
-			11
-		},
-		{
-			4,
-			5,
-			nil,
-			11
-		},
-		{
-			9,
-			10,
-			10
-		},
-		{
-			6,
-			2,
-			14,
-			13
-		},
-		{
-			6,
-			12,
-			14
-		},
-		{
-			12,
-			3,
-			9,
-			13
-		}
+		{7, 8, 5, 3},
+		{6, 7, 3, 12},
+		{2, 1, 4, 14},
+		{3, 5, 10, 9},
+		{1, nil, 10, 4},
+		{nil, 2, 12},
+		{2, 8, 1, 2},
+		{2, nil, 1, 7},
+		{14, 4, 11},
+		{4, 5, nil, 11},
+		{9, 10, 10},
+		{6, 2, 14, 13},
+		{6, 12, 14},
+		{12, 3, 9, 13}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage69",
-		"ElvesForgottenTreasureAmbienceSounds",
-		"ElvesCreepScreecher",
-		"ElvesForgottenTreasureShadowSpawnSounds",
-		"ElvesForgottenTreasureDarkSpitterSounds",
-		"ElvesForgottenTreasureGrimDevourerSounds"
-	},
-	required_textures = {
-		"go_enemies_ancient_metropolis",
-		"go_enemies_forgotten_treasures",
-		"go_stage69",
-		"go_stage69_bg",
-		"go_stages_forgotten_treasures"
-	}
+	required_sounds = {"music_stage69", "ElvesForgottenTreasureAmbienceSounds", "ElvesCreepScreecher", "ElvesForgottenTreasureShadowSpawnSounds", "ElvesForgottenTreasureDarkSpitterSounds", "ElvesForgottenTreasureGrimDevourerSounds"},
+	required_textures = {"go_enemies_ancient_metropolis", "go_enemies_forgotten_treasures", "go_stage69", "go_stage69_bg", "go_stages_forgotten_treasures"}
 }

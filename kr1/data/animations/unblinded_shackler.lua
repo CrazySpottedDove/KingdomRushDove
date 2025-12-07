@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/unblinded_shackler.lua
-
+-- chunkname: @./kr5/data/animations/unblinded_shackler.lua
 local a = {
 	unblinded_shackler_tower_mod_in = {
 		prefix = "unblinded_shackler_tower_mod",
@@ -62,5 +61,4 @@ local a = {
 		from = 141
 	}
 }
-
 return a

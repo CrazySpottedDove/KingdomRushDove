@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_witch.lua
-
+-- chunkname: @./kr5/data/animations/hero_witch.lua
 local a = {
 	hero_witch_hero_layerX_idle = {
 		layer_to = 3,
@@ -312,5 +311,4 @@ local a = {
 		layer_from = 1
 	}
 }
-
 return a

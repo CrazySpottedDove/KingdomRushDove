@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_muyrn.lua
-
+-- chunkname: @./kr5/data/animations/hero_muyrn.lua
 local a = {
 	hero_nyru_muyrn_idle = {
 		prefix = "hero_nyru_muyrn",
@@ -237,5 +236,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

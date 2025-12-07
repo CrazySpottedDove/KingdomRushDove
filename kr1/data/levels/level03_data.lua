@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level03_data.lua
-
+-- chunkname: @./kr1/data/levels/level03_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -523,116 +522,32 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_build_engineer"
-			}
-		}
-	},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_engineer_3"}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 3,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_engineer_3"}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 3,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_build_engineer"}
+	}},
 	nav_mesh = {
-		{
-			nil,
-			8,
-			3,
-			4
-		},
-		{
-			3,
-			8,
-			9,
-			6
-		},
-		{
-			1,
-			8,
-			2,
-			4
-		},
-		{
-			nil,
-			3,
-			6,
-			5
-		},
-		{
-			7,
-			4,
-			6,
-			11
-		},
-		{
-			5,
-			2,
-			12,
-			11
-		},
-		{
-			nil,
-			4,
-			5
-		},
-		{
-			3,
-			nil,
-			9,
-			2
-		},
-		{
-			8,
-			nil,
-			nil,
-			2
-		},
-		{
-			11,
-			12,
-			nil,
-			11
-		},
-		{
-			5,
-			6,
-			10
-		},
-		{
-			6,
-			2,
-			nil,
-			10
-		}
+		{nil, 8, 3, 4},
+		{3, 8, 9, 6},
+		{1, 8, 2, 4},
+		{nil, 3, 6, 5},
+		{7, 4, 6, 11},
+		{5, 2, 12, 11},
+		{nil, 4, 5},
+		{3, nil, 9, 2},
+		{8, nil, nil, 2},
+		{11, 12, nil, 11},
+		{5, 6, 10},
+		{6, 2, nil, 10}
 	},
-	required_sounds = {
-		"music_stage03"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_stages_grass",
-		"go_stage03",
-		"go_stage03_bg"
-	}
+	required_sounds = {"music_stage03"},
+	required_textures = {"go_enemies_grass", "go_stages_grass", "go_stage03", "go_stage03_bg"}
 }

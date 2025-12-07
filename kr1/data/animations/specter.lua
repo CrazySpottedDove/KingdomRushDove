@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/specter.lua
-
+-- chunkname: @./kr5/data/animations/specter.lua
 local a = {
 	spectre_trail_idle = {
 		prefix = "spectre_trail",
@@ -77,5 +76,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

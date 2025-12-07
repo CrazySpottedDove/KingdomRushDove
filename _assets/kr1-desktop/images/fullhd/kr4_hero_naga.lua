@@ -1,26 +1,10 @@
 return {
 	hero_naga_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			53,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1841,
-			237,
-			84,
-			74
-		},
+		size = {213, 156},
+		trim = {59, 53, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {1841, 237, 84, 74},
 		alias = {
 			"hero_naga_0026",
 			"hero_naga_0027",
@@ -38,5673 +22,1762 @@ return {
 	},
 	hero_naga_0002 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			68,
-			51,
-			69,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1797,
-			76,
-			78
-		},
-		alias = {
-			"hero_naga_0003"
-		}
+		size = {213, 156},
+		trim = {68, 51, 69, 27},
+		a_size = {2048, 2048},
+		f_quad = {543, 1797, 76, 78},
+		alias = {"hero_naga_0003"}
 	},
 	hero_naga_0004 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			70,
-			51,
-			70,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			737,
-			73,
-			77
-		},
-		alias = {
-			"hero_naga_0005"
-		}
+		size = {213, 156},
+		trim = {70, 51, 70, 28},
+		a_size = {2048, 2048},
+		f_quad = {627, 737, 73, 77},
+		alias = {"hero_naga_0005"}
 	},
 	hero_naga_0006 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			72,
-			50,
-			71,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1066,
-			70,
-			77
-		},
-		alias = {
-			"hero_naga_0007"
-		}
+		size = {213, 156},
+		trim = {72, 50, 71, 29},
+		a_size = {2048, 2048},
+		f_quad = {627, 1066, 70, 77},
+		alias = {"hero_naga_0007"}
 	},
 	hero_naga_0008 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			75,
-			49,
-			72,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1228,
-			66,
-			78
-		},
-		alias = {
-			"hero_naga_0009"
-		}
+		size = {213, 156},
+		trim = {75, 49, 72, 29},
+		a_size = {2048, 2048},
+		f_quad = {627, 1228, 66, 78},
+		alias = {"hero_naga_0009"}
 	},
 	hero_naga_0010 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			76,
-			50,
-			73,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1466,
-			64,
-			77
-		},
-		alias = {
-			"hero_naga_0011"
-		}
+		size = {213, 156},
+		trim = {76, 50, 73, 29},
+		a_size = {2048, 2048},
+		f_quad = {627, 1466, 64, 77},
+		alias = {"hero_naga_0011"}
 	},
 	hero_naga_0012 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			79,
-			57,
-			74,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			651,
-			60,
-			75
-		},
-		alias = {
-			"hero_naga_0013"
-		}
+		size = {213, 156},
+		trim = {79, 57, 74, 24},
+		a_size = {2048, 2048},
+		f_quad = {713, 651, 60, 75},
+		alias = {"hero_naga_0013"}
 	},
 	hero_naga_0014 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			54,
-			73,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1546,
-			63,
-			78
-		},
-		alias = {
-			"hero_naga_0015"
-		}
+		size = {213, 156},
+		trim = {77, 54, 73, 24},
+		a_size = {2048, 2048},
+		f_quad = {627, 1546, 63, 78},
+		alias = {"hero_naga_0015"}
 	},
 	hero_naga_0016 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			76,
-			53,
-			69,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1146,
-			68,
-			79
-		},
-		alias = {
-			"hero_naga_0017"
-		}
+		size = {213, 156},
+		trim = {76, 53, 69, 24},
+		a_size = {2048, 2048},
+		f_quad = {627, 1146, 68, 79},
+		alias = {"hero_naga_0017"}
 	},
 	hero_naga_0018 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			73,
-			53,
-			68,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			817,
-			72,
-			78
-		},
-		alias = {
-			"hero_naga_0019"
-		}
+		size = {213, 156},
+		trim = {73, 53, 68, 25},
+		a_size = {2048, 2048},
+		f_quad = {627, 817, 72, 78},
+		alias = {"hero_naga_0019"}
 	},
 	hero_naga_0020 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			72,
-			53,
-			65,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1878,
-			76,
-			78
-		},
-		alias = {
-			"hero_naga_0021"
-		}
+		size = {213, 156},
+		trim = {72, 53, 65, 25},
+		a_size = {2048, 2048},
+		f_quad = {543, 1878, 76, 78},
+		alias = {"hero_naga_0021"}
 	},
 	hero_naga_0022 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			70,
-			53,
-			66,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1636,
-			77,
-			78
-		},
-		alias = {
-			"hero_naga_0023"
-		}
+		size = {213, 156},
+		trim = {70, 53, 66, 25},
+		a_size = {2048, 2048},
+		f_quad = {543, 1636, 77, 78},
+		alias = {"hero_naga_0023"}
 	},
 	hero_naga_0024 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			67,
-			53,
-			68,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1717,
-			78,
-			77
-		},
-		alias = {
-			"hero_naga_0025"
-		}
+		size = {213, 156},
+		trim = {67, 53, 68, 26},
+		a_size = {2048, 2048},
+		f_quad = {543, 1717, 78, 77},
+		alias = {"hero_naga_0025"}
 	},
 	hero_naga_0028 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			61,
-			61,
-			56,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1083,
-			237,
-			96,
-			71
-		},
-		alias = {
-			"hero_naga_0029"
-		}
+		size = {213, 156},
+		trim = {61, 61, 56, 24},
+		a_size = {2048, 2048},
+		f_quad = {1083, 237, 96, 71},
+		alias = {"hero_naga_0029"}
 	},
 	hero_naga_0030 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			37,
-			59,
-			56,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1067,
-			420,
-			120,
-			66
-		},
-		alias = {
-			"hero_naga_0031"
-		}
+		size = {213, 156},
+		trim = {37, 59, 56, 31},
+		a_size = {2048, 2048},
+		f_quad = {1067, 420, 120, 66},
+		alias = {"hero_naga_0031"}
 	},
 	hero_naga_0032 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			31,
-			59,
-			59,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			420,
-			123,
-			66
-		},
-		alias = {
-			"hero_naga_0033",
-			"hero_naga_0034",
-			"hero_naga_0035"
-		}
+		size = {213, 156},
+		trim = {31, 59, 59, 31},
+		a_size = {2048, 2048},
+		f_quad = {713, 420, 123, 66},
+		alias = {"hero_naga_0033", "hero_naga_0034", "hero_naga_0035"}
 	},
 	hero_naga_0036 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			73,
-			69,
-			17,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1889,
-			420,
-			123,
-			61
-		},
-		alias = {
-			"hero_naga_0037"
-		}
+		size = {213, 156},
+		trim = {73, 69, 17, 26},
+		a_size = {2048, 2048},
+		f_quad = {1889, 420, 123, 61},
+		alias = {"hero_naga_0037"}
 	},
 	hero_naga_0038 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			63,
-			12,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			586,
-			420,
-			124,
-			66
-		},
-		alias = {
-			"hero_naga_0039"
-		}
+		size = {213, 156},
+		trim = {77, 63, 12, 27},
+		a_size = {2048, 2048},
+		f_quad = {586, 420, 124, 66},
+		alias = {"hero_naga_0039"}
 	},
 	hero_naga_0040 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			63,
-			17,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			945,
-			420,
-			119,
-			67
-		},
-		alias = {
-			"hero_naga_0041"
-		}
+		size = {213, 156},
+		trim = {77, 63, 17, 26},
+		a_size = {2048, 2048},
+		f_quad = {945, 420, 119, 67},
+		alias = {"hero_naga_0041"}
 	},
 	hero_naga_0042 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			63,
-			18,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			420,
-			118,
-			66
-		},
-		alias = {
-			"hero_naga_0043",
-			"hero_naga_0044"
-		}
+		size = {213, 156},
+		trim = {77, 63, 18, 27},
+		a_size = {2048, 2048},
+		f_quad = {1190, 420, 118, 66},
+		alias = {"hero_naga_0043", "hero_naga_0044"}
 	},
 	hero_naga_0045 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			61,
-			25,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			415,
-			237,
-			111,
-			67
-		},
-		alias = {
-			"hero_naga_0046"
-		}
+		size = {213, 156},
+		trim = {77, 61, 25, 28},
+		a_size = {2048, 2048},
+		f_quad = {415, 237, 111, 67},
+		alias = {"hero_naga_0046"}
 	},
 	hero_naga_0047 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			64,
-			58,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1847,
-			78,
-			61
-		},
-		alias = {
-			"hero_naga_0048"
-		}
+		size = {213, 156},
+		trim = {77, 64, 58, 31},
+		a_size = {2048, 2048},
+		f_quad = {627, 1847, 78, 61},
+		alias = {"hero_naga_0048"}
 	},
 	hero_naga_0049 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			63,
-			71,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			843,
-			651,
-			65,
-			63
-		},
-		alias = {
-			"hero_naga_0050"
-		}
+		size = {213, 156},
+		trim = {77, 63, 71, 30},
+		a_size = {2048, 2048},
+		f_quad = {843, 651, 65, 63},
+		alias = {"hero_naga_0050"}
 	},
 	hero_naga_0051 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			76,
-			49,
-			73,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1627,
-			64,
-			76
-		},
-		alias = {
-			"hero_naga_0052"
-		}
+		size = {213, 156},
+		trim = {76, 49, 73, 31},
+		a_size = {2048, 2048},
+		f_quad = {627, 1627, 64, 76},
+		alias = {"hero_naga_0052"}
 	},
 	hero_naga_0055 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			53,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1928,
-			237,
-			84,
-			74
-		},
-		alias = {
-			"hero_naga_0056",
-			"hero_naga_0082",
-			"hero_naga_0193",
-			"hero_naga_0194"
-		}
+		size = {213, 156},
+		trim = {59, 53, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {1928, 237, 84, 74},
+		alias = {"hero_naga_0056", "hero_naga_0082", "hero_naga_0193", "hero_naga_0194"}
 	},
 	hero_naga_0057 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			74,
-			51,
-			59,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1959,
-			80,
-			74
-		},
-		alias = {
-			"hero_naga_0058"
-		}
+		size = {213, 156},
+		trim = {74, 51, 59, 31},
+		a_size = {2048, 2048},
+		f_quad = {543, 1959, 80, 74},
+		alias = {"hero_naga_0058"}
 	},
 	hero_naga_0059 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			78,
-			37,
-			64,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1464,
-			71,
-			90
-		},
-		alias = {
-			"hero_naga_0060"
-		}
+		size = {213, 156},
+		trim = {78, 37, 64, 29},
+		a_size = {2048, 2048},
+		f_quad = {543, 1464, 71, 90},
+		alias = {"hero_naga_0060"}
 	},
 	hero_naga_0061 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			39,
-			36,
-			87,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1419,
-			420,
-			87,
-			89
-		},
-		alias = {
-			"hero_naga_0062"
-		}
+		size = {213, 156},
+		trim = {39, 36, 87, 31},
+		a_size = {2048, 2048},
+		f_quad = {1419, 420, 87, 89},
+		alias = {"hero_naga_0062"}
 	},
 	hero_naga_0063 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			28,
-			31,
-			97,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1140,
-			88,
-			94
-		},
-		alias = {
-			"hero_naga_0064"
-		}
+		size = {213, 156},
+		trim = {28, 31, 97, 31},
+		a_size = {2048, 2048},
+		f_quad = {446, 1140, 88, 94},
+		alias = {"hero_naga_0064"}
 	},
 	hero_naga_0065 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			29,
-			31,
-			96,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1237,
-			88,
-			94
-		},
-		alias = {
-			"hero_naga_0066"
-		}
+		size = {213, 156},
+		trim = {29, 31, 96, 31},
+		a_size = {2048, 2048},
+		f_quad = {446, 1237, 88, 94},
+		alias = {"hero_naga_0066"}
 	},
 	hero_naga_0067 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			82,
-			50,
-			49,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			998,
-			237,
-			82,
-			85
-		},
-		alias = {
-			"hero_naga_0068"
-		}
+		size = {213, 156},
+		trim = {82, 50, 49, 21},
+		a_size = {2048, 2048},
+		f_quad = {998, 237, 82, 85},
+		alias = {"hero_naga_0068"}
 	},
 	hero_naga_0069 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			83,
-			51,
-			34,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1596,
-			420,
-			96,
-			80
-		},
-		alias = {
-			"hero_naga_0070"
-		}
+		size = {213, 156},
+		trim = {83, 51, 34, 25},
+		a_size = {2048, 2048},
+		f_quad = {1596, 420, 96, 80},
+		alias = {"hero_naga_0070"}
 	},
 	hero_naga_0071 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			81,
-			58,
-			32,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1972,
-			100,
-			73
-		},
-		alias = {
-			"hero_naga_0072"
-		}
+		size = {213, 156},
+		trim = {81, 58, 32, 25},
+		a_size = {2048, 2048},
+		f_quad = {257, 1972, 100, 73},
+		alias = {"hero_naga_0072"}
 	},
 	hero_naga_0073 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			81,
-			56,
-			33,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			529,
-			237,
-			99,
-			75
-		},
-		alias = {
-			"hero_naga_0074"
-		}
+		size = {213, 156},
+		trim = {81, 56, 33, 25},
+		a_size = {2048, 2048},
+		f_quad = {529, 237, 99, 75},
+		alias = {"hero_naga_0074"}
 	},
 	hero_naga_0075 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			80,
-			56,
-			33,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			312,
-			237,
-			100,
-			75
-		},
+		size = {213, 156},
+		trim = {80, 56, 33, 25},
+		a_size = {2048, 2048},
+		f_quad = {312, 237, 100, 75},
 		alias = {}
 	},
 	hero_naga_0076 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			59,
-			33,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1958,
-			103,
-			78
-		},
+		size = {213, 156},
+		trim = {77, 59, 33, 19},
+		a_size = {2048, 2048},
+		f_quad = {150, 1958, 103, 78},
 		alias = {}
 	},
 	hero_naga_0077 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			59,
-			33,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			839,
-			420,
-			103,
-			78
-		},
+		size = {213, 156},
+		trim = {77, 59, 33, 19},
+		a_size = {2048, 2048},
+		f_quad = {839, 420, 103, 78},
 		alias = {}
 	},
 	hero_naga_0078 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			62,
-			33,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1357,
-			237,
-			103,
-			63
-		},
+		size = {213, 156},
+		trim = {77, 62, 33, 31},
+		a_size = {2048, 2048},
+		f_quad = {1357, 237, 103, 63},
 		alias = {}
 	},
 	hero_naga_0079 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			62,
-			60,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1781,
-			76,
-			63
-		},
+		size = {213, 156},
+		trim = {77, 62, 60, 31},
+		a_size = {2048, 2048},
+		f_quad = {627, 1781, 76, 63},
 		alias = {}
 	},
 	hero_naga_0080 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			76,
-			61,
-			65,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1931,
-			517,
-			72,
-			68
-		},
-		alias = {
-			"hero_naga_0081"
-		}
+		size = {213, 156},
+		trim = {76, 61, 65, 27},
+		a_size = {2048, 2048},
+		f_quad = {1931, 517, 72, 68},
+		alias = {"hero_naga_0081"}
 	},
 	hero_naga_0085 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			51,
-			43,
-			70,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1794,
-			420,
-			92,
-			82
-		},
-		alias = {
-			"hero_naga_0086"
-		}
+		size = {213, 156},
+		trim = {51, 43, 70, 31},
+		a_size = {2048, 2048},
+		f_quad = {1794, 420, 92, 82},
+		alias = {"hero_naga_0086"}
 	},
 	hero_naga_0087 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			42,
-			43,
-			65,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1683,
-			327,
-			106,
-			81
-		},
-		alias = {
-			"hero_naga_0088"
-		}
+		size = {213, 156},
+		trim = {42, 43, 65, 32},
+		a_size = {2048, 2048},
+		f_quad = {1683, 327, 106, 81},
+		alias = {"hero_naga_0088"}
 	},
 	hero_naga_0089 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			31,
-			39,
-			64,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1562,
-			327,
-			118,
-			85
-		},
-		alias = {
-			"hero_naga_0090",
-			"hero_naga_0091"
-		}
+		size = {213, 156},
+		trim = {31, 39, 64, 32},
+		a_size = {2048, 2048},
+		f_quad = {1562, 327, 118, 85},
+		alias = {"hero_naga_0090", "hero_naga_0091"}
 	},
 	hero_naga_0092 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			80,
-			76,
-			58,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1207,
-			594,
-			75,
-			54
-		},
-		alias = {
-			"hero_naga_0093"
-		}
+		size = {213, 156},
+		trim = {80, 76, 58, 26},
+		a_size = {2048, 2048},
+		f_quad = {1207, 594, 75, 54},
+		alias = {"hero_naga_0093"}
 	},
 	hero_naga_0094 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			81,
-			71,
-			60,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1983,
-			72,
-			61
-		},
-		alias = {
-			"hero_naga_0095"
-		}
+		size = {213, 156},
+		trim = {81, 71, 60, 24},
+		a_size = {2048, 2048},
+		f_quad = {627, 1983, 72, 61},
+		alias = {"hero_naga_0095"}
 	},
 	hero_naga_0096 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			80,
-			77,
-			60,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			911,
-			651,
-			73,
-			56
-		},
-		alias = {
-			"hero_naga_0097"
-		}
+		size = {213, 156},
+		trim = {80, 77, 60, 23},
+		a_size = {2048, 2048},
+		f_quad = {911, 651, 73, 56},
+		alias = {"hero_naga_0097"}
 	},
 	hero_naga_0098 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			80,
-			74,
-			62,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1983,
-			71,
-			62
-		},
-		alias = {
-			"hero_naga_0099"
-		}
+		size = {213, 156},
+		trim = {80, 74, 62, 20},
+		a_size = {2048, 2048},
+		f_quad = {366, 1983, 71, 62},
+		alias = {"hero_naga_0099"}
 	},
 	hero_naga_0100 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			63,
-			72,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			776,
-			651,
-			64,
-			66
-		},
-		alias = {
-			"hero_naga_0101"
-		}
+		size = {213, 156},
+		trim = {77, 63, 72, 27},
+		a_size = {2048, 2048},
+		f_quad = {776, 651, 64, 66},
+		alias = {"hero_naga_0101"}
 	},
 	hero_naga_0102 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			74,
-			54,
-			73,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1309,
-			66,
-			76
-		},
-		alias = {
-			"hero_naga_0103"
-		}
+		size = {213, 156},
+		trim = {74, 54, 73, 26},
+		a_size = {2048, 2048},
+		f_quad = {627, 1309, 66, 76},
+		alias = {"hero_naga_0103"}
 	},
 	hero_naga_0108 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			61,
-			43,
-			71,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1379,
-			81,
-			82
-		},
+		size = {213, 156},
+		trim = {61, 43, 71, 31},
+		a_size = {2048, 2048},
+		f_quad = {543, 1379, 81, 82},
 		alias = {}
 	},
 	hero_naga_0109 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			61,
-			27,
-			73,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			735,
-			79,
-			97
-		},
-		alias = {
-			"hero_naga_0110"
-		}
+		size = {213, 156},
+		trim = {61, 27, 73, 32},
+		a_size = {2048, 2048},
+		f_quad = {543, 735, 79, 97},
+		alias = {"hero_naga_0110"}
 	},
 	hero_naga_0111 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			0,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1436,
-			65,
-			124
-		},
+		size = {213, 156},
+		trim = {69, 0, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {446, 1436, 65, 124},
 		alias = {}
 	},
 	hero_naga_0112 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			0,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1563,
-			65,
-			124
-		},
+		size = {213, 156},
+		trim = {69, 0, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {446, 1563, 65, 124},
 		alias = {}
 	},
 	hero_naga_0113 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			7,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			935,
-			65,
-			117
-		},
+		size = {213, 156},
+		trim = {69, 7, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {543, 935, 65, 117},
 		alias = {}
 	},
 	hero_naga_0114 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			7,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1055,
-			65,
-			117
-		},
+		size = {213, 156},
+		trim = {69, 7, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {543, 1055, 65, 117},
 		alias = {}
 	},
 	hero_naga_0115 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			885,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 885, 65, 119},
 		alias = {}
 	},
 	hero_naga_0116 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1007,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1007, 65, 119},
 		alias = {}
 	},
 	hero_naga_0117 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1129,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1129, 65, 119},
 		alias = {}
 	},
 	hero_naga_0118 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1251,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1251, 65, 119},
 		alias = {}
 	},
 	hero_naga_0119 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1373,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1373, 65, 119},
 		alias = {}
 	},
 	hero_naga_0120 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1495,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1495, 65, 119},
 		alias = {}
 	},
 	hero_naga_0121 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1617,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1617, 65, 119},
 		alias = {}
 	},
 	hero_naga_0122 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1739,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1739, 65, 119},
 		alias = {}
 	},
 	hero_naga_0123 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			69,
-			5,
-			79,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			1861,
-			65,
-			119
-		},
+		size = {213, 156},
+		trim = {69, 5, 79, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 1861, 65, 119},
 		alias = {}
 	},
 	hero_naga_0124 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			74,
-			30,
-			57,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			926,
-			82,
-			102
-		},
-		alias = {
-			"hero_naga_0125"
-		}
+		size = {213, 156},
+		trim = {74, 30, 57, 24},
+		a_size = {2048, 2048},
+		f_quad = {446, 926, 82, 102},
+		alias = {"hero_naga_0125"}
 	},
 	hero_naga_0126 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			74,
-			46,
-			57,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			913,
-			237,
-			82,
-			86
-		},
-		alias = {
-			"hero_naga_0127"
-		}
+		size = {213, 156},
+		trim = {74, 46, 57, 24},
+		a_size = {2048, 2048},
+		f_quad = {913, 237, 82, 86},
+		alias = {"hero_naga_0127"}
 	},
 	hero_naga_0128 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			74,
-			65,
-			57,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1477,
-			517,
-			82,
-			67
-		},
-		alias = {
-			"hero_naga_0129",
-			"hero_naga_0130",
-			"hero_naga_0131",
-			"hero_naga_0132",
-			"hero_naga_0133"
-		}
+		size = {213, 156},
+		trim = {74, 65, 57, 24},
+		a_size = {2048, 2048},
+		f_quad = {1477, 517, 82, 67},
+		alias = {"hero_naga_0129", "hero_naga_0130", "hero_naga_0131", "hero_naga_0132", "hero_naga_0133"}
 	},
 	hero_naga_0134 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			70,
-			60,
-			58,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1269,
-			237,
-			85,
-			77
-		},
-		alias = {
-			"hero_naga_0135"
-		}
+		size = {213, 156},
+		trim = {70, 60, 58, 19},
+		a_size = {2048, 2048},
+		f_quad = {1269, 237, 85, 77},
+		alias = {"hero_naga_0135"}
 	},
 	hero_naga_0136 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			65,
-			54,
-			67,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1557,
-			81,
-			76
-		},
-		alias = {
-			"hero_naga_0137"
-		}
+		size = {213, 156},
+		trim = {65, 54, 67, 26},
+		a_size = {2048, 2048},
+		f_quad = {543, 1557, 81, 76},
+		alias = {"hero_naga_0137"}
 	},
 	hero_naga_0140 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			53,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			517,
-			84,
-			74
-		},
-		alias = {
-			"hero_naga_0141",
-			"hero_naga_0168",
-			"hero_naga_0169"
-		}
+		size = {213, 156},
+		trim = {59, 53, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {713, 517, 84, 74},
+		alias = {"hero_naga_0141", "hero_naga_0168", "hero_naga_0169"}
 	},
 	hero_naga_0142 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			66,
-			36,
-			64,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			517,
-			83,
-			90
-		},
-		alias = {
-			"hero_naga_0143"
-		}
+		size = {213, 156},
+		trim = {66, 36, 64, 30},
+		a_size = {2048, 2048},
+		f_quad = {627, 517, 83, 90},
+		alias = {"hero_naga_0143"}
 	},
 	hero_naga_0144 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			61,
-			22,
-			61,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1244,
-			91,
-			104
-		},
-		alias = {
-			"hero_naga_0145"
-		}
+		size = {213, 156},
+		trim = {61, 22, 61, 30},
+		a_size = {2048, 2048},
+		f_quad = {150, 1244, 91, 104},
+		alias = {"hero_naga_0145"}
 	},
 	hero_naga_0146 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			57,
-			17,
-			64,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1630,
-			92,
-			109
-		},
-		alias = {
-			"hero_naga_0147"
-		}
+		size = {213, 156},
+		trim = {57, 17, 64, 30},
+		a_size = {2048, 2048},
+		f_quad = {257, 1630, 92, 109},
+		alias = {"hero_naga_0147"}
 	},
 	hero_naga_0148 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			14,
-			66,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1742,
-			89,
-			112
-		},
-		alias = {
-			"hero_naga_0149"
-		}
+		size = {213, 156},
+		trim = {58, 14, 66, 30},
+		a_size = {2048, 2048},
+		f_quad = {257, 1742, 89, 112},
+		alias = {"hero_naga_0149"}
 	},
 	hero_naga_0150 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			13,
-			66,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1857,
-			89,
-			112
-		},
-		alias = {
-			"hero_naga_0151"
-		}
+		size = {213, 156},
+		trim = {58, 13, 66, 31},
+		a_size = {2048, 2048},
+		f_quad = {257, 1857, 89, 112},
+		alias = {"hero_naga_0151"}
 	},
 	hero_naga_0152 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			13,
-			66,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			551,
-			89,
-			112
-		},
-		alias = {
-			"hero_naga_0153"
-		}
+		size = {213, 156},
+		trim = {58, 13, 66, 31},
+		a_size = {2048, 2048},
+		f_quad = {150, 551, 89, 112},
+		alias = {"hero_naga_0153"}
 	},
 	hero_naga_0154 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			13,
-			66,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			666,
-			89,
-			112
-		},
-		alias = {
-			"hero_naga_0155"
-		}
+		size = {213, 156},
+		trim = {58, 13, 66, 31},
+		a_size = {2048, 2048},
+		f_quad = {150, 666, 89, 112},
+		alias = {"hero_naga_0155"}
 	},
 	hero_naga_0156 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			13,
-			66,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			781,
-			89,
-			112
-		},
-		alias = {
-			"hero_naga_0157"
-		}
+		size = {213, 156},
+		trim = {58, 13, 66, 31},
+		a_size = {2048, 2048},
+		f_quad = {150, 781, 89, 112},
+		alias = {"hero_naga_0157"}
 	},
 	hero_naga_0158 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			13,
-			66,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			896,
-			89,
-			112
-		},
-		alias = {
-			"hero_naga_0159"
-		}
+		size = {213, 156},
+		trim = {58, 13, 66, 31},
+		a_size = {2048, 2048},
+		f_quad = {150, 896, 89, 112},
+		alias = {"hero_naga_0159"}
 	},
 	hero_naga_0160 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			65,
-			28,
-			62,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			825,
-			86,
-			98
-		},
-		alias = {
-			"hero_naga_0161"
-		}
+		size = {213, 156},
+		trim = {65, 28, 62, 30},
+		a_size = {2048, 2048},
+		f_quad = {446, 825, 86, 98},
+		alias = {"hero_naga_0161"}
 	},
 	hero_naga_0162 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			66,
-			37,
-			62,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			631,
-			237,
-			85,
-			87
-		},
-		alias = {
-			"hero_naga_0163"
-		}
+		size = {213, 156},
+		trim = {66, 37, 62, 32},
+		a_size = {2048, 2048},
+		f_quad = {631, 237, 85, 87},
+		alias = {"hero_naga_0163"}
 	},
 	hero_naga_0164 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			60,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1282,
-			517,
-			84,
-			67
-		},
-		alias = {
-			"hero_naga_0165"
-		}
+		size = {213, 156},
+		trim = {59, 60, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {1282, 517, 84, 67},
+		alias = {"hero_naga_0165"}
 	},
 	hero_naga_0166 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			47,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1182,
-			237,
-			84,
-			80
-		},
-		alias = {
-			"hero_naga_0167"
-		}
+		size = {213, 156},
+		trim = {59, 47, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {1182, 237, 84, 80},
+		alias = {"hero_naga_0167"}
 	},
 	hero_naga_0170 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			53,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			800,
-			517,
-			84,
-			74
-		},
-		alias = {
-			"hero_naga_0171"
-		}
+		size = {213, 156},
+		trim = {59, 53, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {800, 517, 84, 74},
+		alias = {"hero_naga_0171"}
 	},
 	hero_naga_0172 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			53,
-			56,
-			73,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1751,
-			237,
-			87,
-			73
-		},
-		alias = {
-			"hero_naga_0173"
-		}
+		size = {213, 156},
+		trim = {53, 56, 73, 27},
+		a_size = {2048, 2048},
+		f_quad = {1751, 237, 87, 73},
+		alias = {"hero_naga_0173"}
 	},
 	hero_naga_0174 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			42,
-			49,
-			75,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1695,
-			420,
-			96,
-			79
-		},
-		alias = {
-			"hero_naga_0175"
-		}
+		size = {213, 156},
+		trim = {42, 49, 75, 28},
+		a_size = {2048, 2048},
+		f_quad = {1695, 420, 96, 79},
+		alias = {"hero_naga_0175"}
 	},
 	hero_naga_0176 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			33,
-			47,
-			75,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1903,
-			327,
-			105,
-			80
-		},
-		alias = {
-			"hero_naga_0177"
-		}
+		size = {213, 156},
+		trim = {33, 47, 75, 29},
+		a_size = {2048, 2048},
+		f_quad = {1903, 327, 105, 80},
+		alias = {"hero_naga_0177"}
 	},
 	hero_naga_0178 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			33,
-			49,
-			72,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1792,
-			327,
-			108,
-			78
-		},
-		alias = {
-			"hero_naga_0179"
-		}
+		size = {213, 156},
+		trim = {33, 49, 72, 29},
+		a_size = {2048, 2048},
+		f_quad = {1792, 327, 108, 78},
+		alias = {"hero_naga_0179"}
 	},
 	hero_naga_0180 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			33,
-			51,
-			72,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			475,
-			420,
-			108,
-			76
-		},
-		alias = {
-			"hero_naga_0181",
-			"hero_naga_0182"
-		}
+		size = {213, 156},
+		trim = {33, 51, 72, 29},
+		a_size = {2048, 2048},
+		f_quad = {475, 420, 108, 76},
+		alias = {"hero_naga_0181", "hero_naga_0182"}
 	},
 	hero_naga_0183 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			37,
-			53,
-			71,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1311,
-			420,
-			105,
-			74
-		},
-		alias = {
-			"hero_naga_0184"
-		}
+		size = {213, 156},
+		trim = {37, 53, 71, 29},
+		a_size = {2048, 2048},
+		f_quad = {1311, 420, 105, 74},
+		alias = {"hero_naga_0184"}
 	},
 	hero_naga_0185 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			42,
-			58,
-			80,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1463,
-			237,
-			91,
-			71
-		},
-		alias = {
-			"hero_naga_0186"
-		}
+		size = {213, 156},
+		trim = {42, 58, 80, 27},
+		a_size = {2048, 2048},
+		f_quad = {1463, 237, 91, 71},
+		alias = {"hero_naga_0186"}
 	},
 	hero_naga_0187 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			79,
-			77,
-			31,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1557,
-			237,
-			103,
-			62
-		},
-		alias = {
-			"hero_naga_0188"
-		}
+		size = {213, 156},
+		trim = {79, 77, 31, 17},
+		a_size = {2048, 2048},
+		f_quad = {1557, 237, 103, 62},
+		alias = {"hero_naga_0188"}
 	},
 	hero_naga_0189 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			79,
-			93,
-			27,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1064,
-			517,
-			107,
-			53
-		},
-		alias = {
-			"hero_naga_0190"
-		}
+		size = {213, 156},
+		trim = {79, 93, 27, 10},
+		a_size = {2048, 2048},
+		f_quad = {1064, 517, 107, 53},
+		alias = {"hero_naga_0190"}
 	},
 	hero_naga_0191 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			81,
-			92,
-			27,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1174,
-			517,
-			105,
-			54
-		},
-		alias = {
-			"hero_naga_0192"
-		}
+		size = {213, 156},
+		trim = {81, 92, 27, 10},
+		a_size = {2048, 2048},
+		f_quad = {1174, 517, 105, 54},
+		alias = {"hero_naga_0192"}
 	},
 	hero_naga_0195 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			72,
-			51,
-			70,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			898,
-			71,
-			78
-		},
-		alias = {
-			"hero_naga_0196"
-		}
+		size = {213, 156},
+		trim = {72, 51, 70, 27},
+		a_size = {2048, 2048},
+		f_quad = {627, 898, 71, 78},
+		alias = {"hero_naga_0196"}
 	},
 	hero_naga_0197 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			54,
-			70,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1388,
-			66,
-			75
-		},
-		alias = {
-			"hero_naga_0198"
-		}
+		size = {213, 156},
+		trim = {77, 54, 70, 27},
+		a_size = {2048, 2048},
+		f_quad = {627, 1388, 66, 75},
+		alias = {"hero_naga_0198"}
 	},
 	hero_naga_0199 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			77,
-			41,
-			71,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			979,
-			65,
-			84
-		},
-		alias = {
-			"hero_naga_0200"
-		}
+		size = {213, 156},
+		trim = {77, 41, 71, 31},
+		a_size = {2048, 2048},
+		f_quad = {627, 979, 65, 84},
+		alias = {"hero_naga_0200"}
 	},
 	hero_naga_0201 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			73,
-			12,
-			74,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1175,
-			66,
-			112
-		},
-		alias = {
-			"hero_naga_0202"
-		}
+		size = {213, 156},
+		trim = {73, 12, 74, 32},
+		a_size = {2048, 2048},
+		f_quad = {543, 1175, 66, 112},
+		alias = {"hero_naga_0202"}
 	},
 	hero_naga_0203 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			73,
-			1,
-			71,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			759,
-			69,
-			123
-		},
-		alias = {
-			"hero_naga_0204"
-		}
+		size = {213, 156},
+		trim = {73, 1, 71, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 759, 69, 123},
+		alias = {"hero_naga_0204"}
 	},
 	hero_naga_0205 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			73,
-			6,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1790,
-			68,
-			118
-		},
-		alias = {
-			"hero_naga_0224"
-		}
+		size = {213, 156},
+		trim = {73, 6, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {446, 1790, 68, 118},
+		alias = {"hero_naga_0224"}
 	},
 	hero_naga_0206 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			63,
-			6,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1595,
-			78,
-			118
-		},
+		size = {213, 156},
+		trim = {63, 6, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {150, 1595, 78, 118},
 		alias = {}
 	},
 	hero_naga_0207 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			63,
-			6,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1716,
-			78,
-			118
-		},
+		size = {213, 156},
+		trim = {63, 6, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {150, 1716, 78, 118},
 		alias = {}
 	},
 	hero_naga_0208 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			63,
-			5,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1966,
-			5,
-			78,
-			119
-		},
+		size = {213, 156},
+		trim = {63, 5, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {1966, 5, 78, 119},
 		alias = {}
 	},
 	hero_naga_0209 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			63,
-			5,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1351,
-			78,
-			119
-		},
-		alias = {
-			"hero_naga_0210",
-			"hero_naga_0213",
-			"hero_naga_0214",
-			"hero_naga_0217",
-			"hero_naga_0218",
-			"hero_naga_0220"
-		}
+		size = {213, 156},
+		trim = {63, 5, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {150, 1351, 78, 119},
+		alias = {"hero_naga_0210", "hero_naga_0213", "hero_naga_0214", "hero_naga_0217", "hero_naga_0218", "hero_naga_0220"}
 	},
 	hero_naga_0211 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			63,
-			5,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1473,
-			78,
-			119
-		},
-		alias = {
-			"hero_naga_0212",
-			"hero_naga_0215",
-			"hero_naga_0216",
-			"hero_naga_0219"
-		}
+		size = {213, 156},
+		trim = {63, 5, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {150, 1473, 78, 119},
+		alias = {"hero_naga_0212", "hero_naga_0215", "hero_naga_0216", "hero_naga_0219"}
 	},
 	hero_naga_0221 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			63,
-			6,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1837,
-			78,
-			118
-		},
+		size = {213, 156},
+		trim = {63, 6, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {150, 1837, 78, 118},
 		alias = {}
 	},
 	hero_naga_0222 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			64,
-			6,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			517,
-			77,
-			118
-		},
+		size = {213, 156},
+		trim = {64, 6, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 517, 77, 118},
 		alias = {}
 	},
 	hero_naga_0223 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			64,
-			6,
-			72,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			638,
-			77,
-			118
-		},
+		size = {213, 156},
+		trim = {64, 6, 72, 32},
+		a_size = {2048, 2048},
+		f_quad = {366, 638, 77, 118},
 		alias = {}
 	},
 	hero_naga_0225 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			73,
-			9,
-			73,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			617,
-			67,
-			115
-		},
-		alias = {
-			"hero_naga_0226"
-		}
+		size = {213, 156},
+		trim = {73, 9, 73, 32},
+		a_size = {2048, 2048},
+		f_quad = {543, 617, 67, 115},
+		alias = {"hero_naga_0226"}
 	},
 	hero_naga_0227 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			61,
-			39,
-			71,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			1290,
-			81,
-			86
-		},
-		alias = {
-			"hero_naga_0228"
-		}
+		size = {213, 156},
+		trim = {61, 39, 71, 31},
+		a_size = {2048, 2048},
+		f_quad = {543, 1290, 81, 86},
+		alias = {"hero_naga_0228"}
 	},
 	hero_naga_0229 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			59,
-			58,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			887,
-			517,
-			84,
-			69
-		},
-		alias = {
-			"hero_naga_0230"
-		}
+		size = {213, 156},
+		trim = {59, 58, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {887, 517, 84, 69},
+		alias = {"hero_naga_0230"}
 	},
 	hero_naga_0231 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			58,
-			52,
-			70,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1663,
-			237,
-			85,
-			75
-		},
-		alias = {
-			"hero_naga_0232"
-		}
+		size = {213, 156},
+		trim = {58, 52, 70, 29},
+		a_size = {2048, 2048},
+		f_quad = {1663, 237, 85, 75},
+		alias = {"hero_naga_0232"}
 	},
 	hero_naga_area_decal = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			189,
-			79
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1557,
-			132,
-			189,
-			79
-		},
+		size = {189, 79},
+		trim = {0, 0, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {1557, 132, 189, 79},
 		alias = {}
 	},
 	hero_naga_area_decal_only = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			168,
-			92
-		},
-		trim = {
-			9,
-			9,
-			8,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1219,
-			327,
-			151,
-			74
-		},
+		size = {168, 92},
+		trim = {9, 9, 8, 9},
+		a_size = {2048, 2048},
+		f_quad = {1219, 327, 151, 74},
 		alias = {}
 	},
 	hero_naga_area_fx_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			53,
-			49,
-			33,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1889,
-			484,
-			106,
-			25
-		},
-		alias = {
-			"hero_naga_area_fx_0002"
-		}
+		size = {192, 94},
+		trim = {53, 49, 33, 20},
+		a_size = {2048, 2048},
+		f_quad = {1889, 484, 106, 25},
+		alias = {"hero_naga_area_fx_0002"}
 	},
 	hero_naga_area_fx_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			3,
-			26,
-			3,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1373,
-			327,
-			186,
-			58
-		},
-		alias = {
-			"hero_naga_area_fx_0004"
-		}
+		size = {192, 94},
+		trim = {3, 26, 3, 10},
+		a_size = {2048, 2048},
+		f_quad = {1373, 327, 186, 58},
+		alias = {"hero_naga_area_fx_0004"}
 	},
 	hero_naga_area_fx_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			3,
-			14,
-			1,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			456,
-			327,
-			188,
-			70
-		},
-		alias = {
-			"hero_naga_area_fx_0006"
-		}
+		size = {192, 94},
+		trim = {3, 14, 1, 10},
+		a_size = {2048, 2048},
+		f_quad = {456, 327, 188, 70},
+		alias = {"hero_naga_area_fx_0006"}
 	},
 	hero_naga_area_fx_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			2,
-			6,
-			2,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			647,
-			327,
-			188,
-			70
-		},
-		alias = {
-			"hero_naga_area_fx_0008"
-		}
+		size = {192, 94},
+		trim = {2, 6, 2, 18},
+		a_size = {2048, 2048},
+		f_quad = {647, 327, 188, 70},
+		alias = {"hero_naga_area_fx_0008"}
 	},
 	hero_naga_area_fx_0009 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			2,
-			3,
-			2,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			838,
-			327,
-			188,
-			69
-		},
-		alias = {
-			"hero_naga_area_fx_0010"
-		}
+		size = {192, 94},
+		trim = {2, 3, 2, 22},
+		a_size = {2048, 2048},
+		f_quad = {838, 327, 188, 69},
+		alias = {"hero_naga_area_fx_0010"}
 	},
 	hero_naga_area_fx_0011 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			3,
-			8,
-			2,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1029,
-			327,
-			187,
-			60
-		},
-		alias = {
-			"hero_naga_area_fx_0012"
-		}
+		size = {192, 94},
+		trim = {3, 8, 2, 26},
+		a_size = {2048, 2048},
+		f_quad = {1029, 327, 187, 60},
+		alias = {"hero_naga_area_fx_0012"}
 	},
 	hero_naga_area_fx_0013 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			192,
-			94
-		},
-		trim = {
-			0,
-			0,
-			192,
-			94
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			584,
-			5,
-			192,
-			94
-		},
+		size = {192, 94},
+		trim = {0, 0, 192, 94},
+		a_size = {2048, 2048},
+		f_quad = {584, 5, 192, 94},
 		alias = {}
 	},
 	hero_naga_area_ring = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			227,
-			71
-		},
-		trim = {
-			1,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			823,
-			132,
-			226,
-			71
-		},
+		size = {227, 71},
+		trim = {1, 0, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {823, 132, 226, 71},
 		alias = {}
 	},
 	hero_naga_banner_courage_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			11,
-			82,
-			11,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			692,
-			23,
-			40
-		},
-		alias = {
-			"hero_naga_banner_courage_0002"
-		}
+		size = {45, 124},
+		trim = {11, 82, 11, 2},
+		a_size = {2048, 2048},
+		f_quad = {675, 692, 23, 40},
+		alias = {"hero_naga_banner_courage_0002"}
 	},
 	hero_naga_banner_courage_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			11,
-			62,
-			11,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			517,
-			1790,
-			23,
-			60
-		},
-		alias = {
-			"hero_naga_banner_courage_0004"
-		}
+		size = {45, 124},
+		trim = {11, 62, 11, 2},
+		a_size = {2048, 2048},
+		f_quad = {517, 1790, 23, 60},
+		alias = {"hero_naga_banner_courage_0004"}
 	},
 	hero_naga_banner_courage_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			11,
-			51,
-			11,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2020,
-			132,
-			23,
-			71
-		},
-		alias = {
-			"hero_naga_banner_courage_0006"
-		}
+		size = {45, 124},
+		trim = {11, 51, 11, 2},
+		a_size = {2048, 2048},
+		f_quad = {2020, 132, 23, 71},
+		alias = {"hero_naga_banner_courage_0006"}
 	},
 	hero_naga_banner_courage_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			10,
-			43,
-			9,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			610,
-			26,
-			79
-		},
-		alias = {
-			"hero_naga_banner_courage_0008"
-		}
+		size = {45, 124},
+		trim = {10, 43, 9, 2},
+		a_size = {2048, 2048},
+		f_quad = {675, 610, 26, 79},
+		alias = {"hero_naga_banner_courage_0008"}
 	},
 	hero_naga_banner_courage_0009 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			6,
-			56,
-			5,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			517,
-			34,
-			66
-		},
-		alias = {
-			"hero_naga_banner_courage_0010"
-		}
+		size = {45, 124},
+		trim = {6, 56, 5, 2},
+		a_size = {2048, 2048},
+		f_quad = {2006, 517, 34, 66},
+		alias = {"hero_naga_banner_courage_0010"}
 	},
 	hero_naga_banner_courage_0011 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			6,
-			56,
-			5,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2011,
-			327,
-			34,
-			66
-		},
-		alias = {
-			"hero_naga_banner_courage_0012",
-			"hero_naga_banner_courage_0015"
-		}
+		size = {45, 124},
+		trim = {6, 56, 5, 2},
+		a_size = {2048, 2048},
+		f_quad = {2011, 327, 34, 66},
+		alias = {"hero_naga_banner_courage_0012", "hero_naga_banner_courage_0015"}
 	},
 	hero_naga_banner_courage_0013 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			7,
-			54,
-			6,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			115,
-			1813,
-			32,
-			68
-		},
-		alias = {
-			"hero_naga_banner_courage_0014"
-		}
+		size = {45, 124},
+		trim = {7, 54, 6, 2},
+		a_size = {2048, 2048},
+		f_quad = {115, 1813, 32, 68},
+		alias = {"hero_naga_banner_courage_0014"}
 	},
 	hero_naga_banner_courage_0016 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			10,
-			37,
-			9,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2015,
-			237,
-			26,
-			85
-		},
-		alias = {
-			"hero_naga_banner_courage_0017"
-		}
+		size = {45, 124},
+		trim = {10, 37, 9, 2},
+		a_size = {2048, 2048},
+		f_quad = {2015, 237, 26, 85},
+		alias = {"hero_naga_banner_courage_0017"}
 	},
 	hero_naga_banner_courage_0018 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			10,
-			29,
-			9,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			1685,
-			26,
-			93
-		},
-		alias = {
-			"hero_naga_banner_courage_0019"
-		}
+		size = {45, 124},
+		trim = {10, 29, 9, 2},
+		a_size = {2048, 2048},
+		f_quad = {117, 1685, 26, 93},
+		alias = {"hero_naga_banner_courage_0019"}
 	},
 	hero_naga_banner_courage_0020 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			10,
-			27,
-			9,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			121,
-			1560,
-			26,
-			95
-		},
-		alias = {
-			"hero_naga_banner_courage_0021"
-		}
+		size = {45, 124},
+		trim = {10, 27, 9, 2},
+		a_size = {2048, 2048},
+		f_quad = {121, 1560, 26, 95},
+		alias = {"hero_naga_banner_courage_0021"}
 	},
 	hero_naga_banner_courage_0022 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			11,
-			71,
-			11,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			517,
-			1853,
-			23,
-			51
-		},
-		alias = {
-			"hero_naga_banner_courage_0023"
-		}
+		size = {45, 124},
+		trim = {11, 71, 11, 2},
+		a_size = {2048, 2048},
+		f_quad = {517, 1853, 23, 51},
+		alias = {"hero_naga_banner_courage_0023"}
 	},
 	hero_naga_banner_courage_0024 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			45,
-			124
-		},
-		trim = {
-			0,
-			0,
-			45,
-			124
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			610,
-			45,
-			124
-		},
-		alias = {
-			"hero_naga_banner_courage_0025"
-		}
+		size = {45, 124},
+		trim = {0, 0, 45, 124},
+		a_size = {2048, 2048},
+		f_quad = {627, 610, 45, 124},
+		alias = {"hero_naga_banner_courage_0025"}
 	},
 	hero_naga_banner_courage_modifier_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			0,
-			0,
-			90,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			594,
-			90,
-			54
-		},
-		alias = {
-			"hero_naga_banner_courage_modifier_0023"
-		}
+		size = {90, 54},
+		trim = {0, 0, 90, 54},
+		a_size = {2048, 2048},
+		f_quad = {713, 594, 90, 54},
+		alias = {"hero_naga_banner_courage_modifier_0023"}
 	},
 	hero_naga_banner_courage_modifier_0002 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			16,
-			12,
-			16,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1886,
-			685,
-			58,
-			30
-		},
+		size = {90, 54},
+		trim = {16, 12, 16, 12},
+		a_size = {2048, 2048},
+		f_quad = {1886, 685, 58, 30},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			15,
-			11,
-			15,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1886,
-			651,
-			60,
-			31
-		},
+		size = {90, 54},
+		trim = {15, 11, 15, 12},
+		a_size = {2048, 2048},
+		f_quad = {1886, 651, 60, 31},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0004 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			14,
-			10,
-			14,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1756,
-			651,
-			62,
-			33
-		},
+		size = {90, 54},
+		trim = {14, 10, 14, 11},
+		a_size = {2048, 2048},
+		f_quad = {1756, 651, 62, 33},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			14,
-			10,
-			14,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1821,
-			651,
-			62,
-			33
-		},
+		size = {90, 54},
+		trim = {14, 10, 14, 11},
+		a_size = {2048, 2048},
+		f_quad = {1821, 651, 62, 33},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0006 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			13,
-			9,
-			13,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1689,
-			651,
-			64,
-			34
-		},
+		size = {90, 54},
+		trim = {13, 9, 13, 11},
+		a_size = {2048, 2048},
+		f_quad = {1689, 651, 64, 34},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			12,
-			8,
-			12,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1482,
-			651,
-			66,
-			35
-		},
+		size = {90, 54},
+		trim = {12, 8, 12, 11},
+		a_size = {2048, 2048},
+		f_quad = {1482, 651, 66, 35},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0008 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			12,
-			8,
-			12,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1551,
-			651,
-			66,
-			34
-		},
+		size = {90, 54},
+		trim = {12, 8, 12, 12},
+		a_size = {2048, 2048},
+		f_quad = {1551, 651, 66, 34},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0009 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			12,
-			8,
-			12,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1620,
-			651,
-			66,
-			34
-		},
+		size = {90, 54},
+		trim = {12, 8, 12, 12},
+		a_size = {2048, 2048},
+		f_quad = {1620, 651, 66, 34},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0010 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			11,
-			7,
-			11,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1198,
-			651,
-			68,
-			35
-		},
+		size = {90, 54},
+		trim = {11, 7, 11, 12},
+		a_size = {2048, 2048},
+		f_quad = {1198, 651, 68, 35},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0011 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			11,
-			7,
-			11,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1269,
-			651,
-			68,
-			35
-		},
+		size = {90, 54},
+		trim = {11, 7, 11, 12},
+		a_size = {2048, 2048},
+		f_quad = {1269, 651, 68, 35},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0012 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			11,
-			7,
-			11,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1340,
-			651,
-			68,
-			35
-		},
+		size = {90, 54},
+		trim = {11, 7, 11, 12},
+		a_size = {2048, 2048},
+		f_quad = {1340, 651, 68, 35},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0013 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			11,
-			7,
-			11,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1411,
-			651,
-			68,
-			35
-		},
+		size = {90, 54},
+		trim = {11, 7, 11, 12},
+		a_size = {2048, 2048},
+		f_quad = {1411, 651, 68, 35},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0014 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			10,
-			6,
-			10,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1827,
-			594,
-			70,
-			36
-		},
+		size = {90, 54},
+		trim = {10, 6, 10, 12},
+		a_size = {2048, 2048},
+		f_quad = {1827, 594, 70, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0015 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			10,
-			6,
-			10,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1900,
-			594,
-			70,
-			36
-		},
+		size = {90, 54},
+		trim = {10, 6, 10, 12},
+		a_size = {2048, 2048},
+		f_quad = {1900, 594, 70, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0016 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			10,
-			6,
-			10,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1973,
-			594,
-			70,
-			36
-		},
+		size = {90, 54},
+		trim = {10, 6, 10, 12},
+		a_size = {2048, 2048},
+		f_quad = {1973, 594, 70, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0017 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			10,
-			6,
-			10,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1050,
-			651,
-			70,
-			36
-		},
+		size = {90, 54},
+		trim = {10, 6, 10, 12},
+		a_size = {2048, 2048},
+		f_quad = {1050, 651, 70, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0018 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			9,
-			6,
-			9,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1752,
-			594,
-			72,
-			35
-		},
+		size = {90, 54},
+		trim = {9, 6, 9, 13},
+		a_size = {2048, 2048},
+		f_quad = {1752, 594, 72, 35},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0019 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			9,
-			5,
-			9,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1527,
-			594,
-			72,
-			36
-		},
+		size = {90, 54},
+		trim = {9, 5, 9, 13},
+		a_size = {2048, 2048},
+		f_quad = {1527, 594, 72, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0020 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			9,
-			5,
-			9,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1602,
-			594,
-			72,
-			36
-		},
+		size = {90, 54},
+		trim = {9, 5, 9, 13},
+		a_size = {2048, 2048},
+		f_quad = {1602, 594, 72, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0021 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			9,
-			5,
-			9,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1677,
-			594,
-			72,
-			36
-		},
+		size = {90, 54},
+		trim = {9, 5, 9, 13},
+		a_size = {2048, 2048},
+		f_quad = {1677, 594, 72, 36},
 		alias = {}
 	},
 	hero_naga_banner_courage_modifier_0022 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			90,
-			54
-		},
-		trim = {
-			9,
-			6,
-			9,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1123,
-			651,
-			72,
-			34
-		},
+		size = {90, 54},
+		trim = {9, 6, 9, 14},
+		a_size = {2048, 2048},
+		f_quad = {1123, 651, 72, 34},
 		alias = {}
 	},
 	hero_naga_banner_effect_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			236,
-			106
-		},
-		trim = {
-			20,
-			6,
-			23,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			388,
-			5,
-			193,
-			95
-		},
+		size = {236, 106},
+		trim = {20, 6, 23, 5},
+		a_size = {2048, 2048},
+		f_quad = {388, 5, 193, 95},
 		alias = {}
 	},
 	hero_naga_banner_hit_courage_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			60,
-			57
-		},
-		trim = {
-			16,
-			12,
-			18,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1998,
-			484,
-			26,
-			30
-		},
-		alias = {
-			"hero_naga_banner_hit_courage_0002"
-		}
+		size = {60, 57},
+		trim = {16, 12, 18, 15},
+		a_size = {2048, 2048},
+		f_quad = {1998, 484, 26, 30},
+		alias = {"hero_naga_banner_hit_courage_0002"}
 	},
 	hero_naga_banner_hit_courage_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			60,
-			57
-		},
-		trim = {
-			13,
-			7,
-			11,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			111,
-			1416,
-			36,
-			42
-		},
-		alias = {
-			"hero_naga_banner_hit_courage_0004"
-		}
+		size = {60, 57},
+		trim = {13, 7, 11, 8},
+		a_size = {2048, 2048},
+		f_quad = {111, 1416, 36, 42},
+		alias = {"hero_naga_banner_hit_courage_0004"}
 	},
 	hero_naga_banner_hit_courage_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			60,
-			57
-		},
-		trim = {
-			11,
-			6,
-			8,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1949,
-			651,
-			41,
-			45
-		},
-		alias = {
-			"hero_naga_banner_hit_courage_0006"
-		}
+		size = {60, 57},
+		trim = {11, 6, 8, 6},
+		a_size = {2048, 2048},
+		f_quad = {1949, 651, 41, 45},
+		alias = {"hero_naga_banner_hit_courage_0006"}
 	},
 	hero_naga_banner_hit_courage_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			60,
-			57
-		},
-		trim = {
-			11,
-			7,
-			9,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1993,
-			651,
-			40,
-			44
-		},
-		alias = {
-			"hero_naga_banner_hit_courage_0008"
-		}
+		size = {60, 57},
+		trim = {11, 7, 9, 6},
+		a_size = {2048, 2048},
+		f_quad = {1993, 651, 40, 44},
+		alias = {"hero_naga_banner_hit_courage_0008"}
 	},
 	hero_naga_banner_hit_courage_0009 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			60,
-			57
-		},
-		trim = {
-			0,
-			0,
-			60,
-			57
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			987,
-			651,
-			60,
-			57
-		},
+		size = {60, 57},
+		trim = {0, 0, 60, 57},
+		a_size = {2048, 2048},
+		f_quad = {987, 651, 60, 57},
 		alias = {}
 	},
 	hero_naga_kraken_tentacle_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			32,
-			87,
-			12,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1758,
-			517,
-			98,
-			52
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0002"
-		}
+		size = {142, 148},
+		trim = {32, 87, 12, 9},
+		a_size = {2048, 2048},
+		f_quad = {1758, 517, 98, 52},
+		alias = {"hero_naga_kraken_tentacle_0002"}
 	},
 	hero_naga_kraken_tentacle_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			30,
-			38,
-			2,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1907,
-			132,
-			110,
-			101
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0004"
-		}
+		size = {142, 148},
+		trim = {30, 38, 2, 9},
+		a_size = {2048, 2048},
+		f_quad = {1907, 132, 110, 101},
+		alias = {"hero_naga_kraken_tentacle_0004"}
 	},
 	hero_naga_kraken_tentacle_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			29,
-			13,
-			6,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1813,
-			107,
-			126
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0006"
-		}
+		size = {142, 148},
+		trim = {29, 13, 6, 9},
+		a_size = {2048, 2048},
+		f_quad = {5, 1813, 107, 126},
+		alias = {"hero_naga_kraken_tentacle_0006"}
 	},
 	hero_naga_kraken_tentacle_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			28,
-			11,
-			10,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			420,
-			104,
-			128
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0008"
-		}
+		size = {142, 148},
+		trim = {28, 11, 10, 9},
+		a_size = {2048, 2048},
+		f_quad = {150, 420, 104, 128},
+		alias = {"hero_naga_kraken_tentacle_0008"}
 	},
 	hero_naga_kraken_tentacle_0009 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			25,
-			13,
-			8,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1685,
-			109,
-			125
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0010"
-		}
+		size = {142, 148},
+		trim = {25, 13, 8, 10},
+		a_size = {2048, 2048},
+		f_quad = {5, 1685, 109, 125},
+		alias = {"hero_naga_kraken_tentacle_0010"}
 	},
 	hero_naga_kraken_tentacle_0011 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			23,
-			16,
-			6,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1560,
-			113,
-			122
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0012"
-		}
+		size = {142, 148},
+		trim = {23, 16, 6, 10},
+		a_size = {2048, 2048},
+		f_quad = {5, 1560, 113, 122},
+		alias = {"hero_naga_kraken_tentacle_0012"}
 	},
 	hero_naga_kraken_tentacle_0013 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			24,
-			15,
-			33,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1011,
-			85,
-			114
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0014"
-		}
+		size = {142, 148},
+		trim = {24, 15, 33, 19},
+		a_size = {2048, 2048},
+		f_quad = {150, 1011, 85, 114},
+		alias = {"hero_naga_kraken_tentacle_0014"}
 	},
 	hero_naga_kraken_tentacle_0015 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			24,
-			15,
-			33,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1128,
-			85,
-			113
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0016"
-		}
+		size = {142, 148},
+		trim = {24, 15, 33, 20},
+		a_size = {2048, 2048},
+		f_quad = {150, 1128, 85, 113},
+		alias = {"hero_naga_kraken_tentacle_0016"}
 	},
 	hero_naga_kraken_tentacle_0017 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			24,
-			12,
-			27,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1161,
-			91,
-			119
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0018"
-		}
+		size = {142, 148},
+		trim = {24, 12, 27, 17},
+		a_size = {2048, 2048},
+		f_quad = {257, 1161, 91, 119},
+		alias = {"hero_naga_kraken_tentacle_0018"}
 	},
 	hero_naga_kraken_tentacle_0019 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			21,
-			21,
-			25,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1283,
-			96,
-			112
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0020"
-		}
+		size = {142, 148},
+		trim = {21, 21, 25, 15},
+		a_size = {2048, 2048},
+		f_quad = {257, 1283, 96, 112},
+		alias = {"hero_naga_kraken_tentacle_0020"}
 	},
 	hero_naga_kraken_tentacle_0021 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			21,
-			21,
-			25,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1045,
-			96,
-			113
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0022"
-		}
+		size = {142, 148},
+		trim = {21, 21, 25, 14},
+		a_size = {2048, 2048},
+		f_quad = {257, 1045, 96, 113},
+		alias = {"hero_naga_kraken_tentacle_0022"}
 	},
 	hero_naga_kraken_tentacle_0023 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			25,
-			33,
-			23,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			517,
-			94,
-			95
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0024"
-		}
+		size = {142, 148},
+		trim = {25, 33, 23, 20},
+		a_size = {2048, 2048},
+		f_quad = {446, 517, 94, 95},
+		alias = {"hero_naga_kraken_tentacle_0024"}
 	},
 	hero_naga_kraken_tentacle_0025 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			40,
-			32,
-			23,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			835,
-			79,
-			97
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0026"
-		}
+		size = {142, 148},
+		trim = {40, 32, 23, 19},
+		a_size = {2048, 2048},
+		f_quad = {543, 835, 79, 97},
+		alias = {"hero_naga_kraken_tentacle_0026"}
 	},
 	hero_naga_kraken_tentacle_0027 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			38,
-			32,
-			23,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			543,
-			517,
-			81,
-			97
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0028"
-		}
+		size = {142, 148},
+		trim = {38, 32, 23, 19},
+		a_size = {2048, 2048},
+		f_quad = {543, 517, 81, 97},
+		alias = {"hero_naga_kraken_tentacle_0028"}
 	},
 	hero_naga_kraken_tentacle_0029 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			38,
-			29,
-			22,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1334,
-			82,
-			99
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0030"
-		}
+		size = {142, 148},
+		trim = {38, 29, 22, 20},
+		a_size = {2048, 2048},
+		f_quad = {446, 1334, 82, 99},
+		alias = {"hero_naga_kraken_tentacle_0030"}
 	},
 	hero_naga_kraken_tentacle_0031 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			38,
-			30,
-			20,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			721,
-			84,
-			101
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0032"
-		}
+		size = {142, 148},
+		trim = {38, 30, 20, 17},
+		a_size = {2048, 2048},
+		f_quad = {446, 721, 84, 101},
+		alias = {"hero_naga_kraken_tentacle_0032"}
 	},
 	hero_naga_kraken_tentacle_0033 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			39,
-			30,
-			20,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			615,
-			83,
-			103
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0034"
-		}
+		size = {142, 148},
+		trim = {39, 30, 20, 15},
+		a_size = {2048, 2048},
+		f_quad = {446, 615, 83, 103},
+		alias = {"hero_naga_kraken_tentacle_0034"}
 	},
 	hero_naga_kraken_tentacle_0035 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			36,
-			37,
-			23,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1690,
-			83,
-			97
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0036"
-		}
+		size = {142, 148},
+		trim = {36, 37, 23, 14},
+		a_size = {2048, 2048},
+		f_quad = {446, 1690, 83, 97},
+		alias = {"hero_naga_kraken_tentacle_0036"}
 	},
 	hero_naga_kraken_tentacle_0037 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			36,
-			34,
-			22,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1509,
-			420,
-			84,
-			92
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0038"
-		}
+		size = {142, 148},
+		trim = {36, 34, 22, 22},
+		a_size = {2048, 2048},
+		f_quad = {1509, 420, 84, 92},
+		alias = {"hero_naga_kraken_tentacle_0038"}
 	},
 	hero_naga_kraken_tentacle_0039 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			36,
-			34,
-			22,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1911,
-			84,
-			95
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0040"
-		}
+		size = {142, 148},
+		trim = {36, 34, 22, 19},
+		a_size = {2048, 2048},
+		f_quad = {446, 1911, 84, 95},
+		alias = {"hero_naga_kraken_tentacle_0040"}
 	},
 	hero_naga_kraken_tentacle_0041 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			30,
-			23,
-			34,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			1031,
-			78,
-			106
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0042"
-		}
+		size = {142, 148},
+		trim = {30, 23, 34, 19},
+		a_size = {2048, 2048},
+		f_quad = {446, 1031, 78, 106},
+		alias = {"hero_naga_kraken_tentacle_0042"}
 	},
 	hero_naga_kraken_tentacle_0043 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			21,
-			12,
-			30,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1515,
-			91,
-			112
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0044"
-		}
+		size = {142, 148},
+		trim = {21, 12, 30, 24},
+		a_size = {2048, 2048},
+		f_quad = {257, 1515, 91, 112},
+		alias = {"hero_naga_kraken_tentacle_0044"}
 	},
 	hero_naga_kraken_tentacle_0045 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			21,
-			12,
-			30,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			1398,
-			91,
-			114
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0046"
-		}
+		size = {142, 148},
+		trim = {21, 12, 30, 22},
+		a_size = {2048, 2048},
+		f_quad = {257, 1398, 91, 114},
+		alias = {"hero_naga_kraken_tentacle_0046"}
 	},
 	hero_naga_kraken_tentacle_0047 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			17,
-			9,
-			27,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			668,
-			98,
-			118
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0048"
-		}
+		size = {142, 148},
+		trim = {17, 9, 27, 21},
+		a_size = {2048, 2048},
+		f_quad = {257, 668, 98, 118},
+		alias = {"hero_naga_kraken_tentacle_0048"}
 	},
 	hero_naga_kraken_tentacle_0049 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			13,
-			9,
-			23,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			420,
-			106,
-			121
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0050"
-		}
+		size = {142, 148},
+		trim = {13, 9, 23, 18},
+		a_size = {2048, 2048},
+		f_quad = {257, 420, 106, 121},
+		alias = {"hero_naga_kraken_tentacle_0050"}
 	},
 	hero_naga_kraken_tentacle_0051 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			13,
-			9,
-			23,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			544,
-			106,
-			121
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0052"
-		}
+		size = {142, 148},
+		trim = {13, 9, 23, 18},
+		a_size = {2048, 2048},
+		f_quad = {257, 544, 106, 121},
+		alias = {"hero_naga_kraken_tentacle_0052"}
 	},
 	hero_naga_kraken_tentacle_0053 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			17,
-			34,
-			19,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			366,
-			420,
-			106,
-			94
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0054"
-		}
+		size = {142, 148},
+		trim = {17, 34, 19, 20},
+		a_size = {2048, 2048},
+		f_quad = {366, 420, 106, 94},
+		alias = {"hero_naga_kraken_tentacle_0054"}
 	},
 	hero_naga_kraken_tentacle_0055 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			29,
-			50,
-			19,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			719,
-			237,
-			94,
-			78
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0056"
-		}
+		size = {142, 148},
+		trim = {29, 50, 19, 20},
+		a_size = {2048, 2048},
+		f_quad = {719, 237, 94, 78},
+		alias = {"hero_naga_kraken_tentacle_0056"}
 	},
 	hero_naga_kraken_tentacle_0057 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			29,
-			50,
-			19,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			816,
-			237,
-			94,
-			78
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0058"
-		}
+		size = {142, 148},
+		trim = {29, 50, 19, 20},
+		a_size = {2048, 2048},
+		f_quad = {816, 237, 94, 78},
+		alias = {"hero_naga_kraken_tentacle_0058"}
 	},
 	hero_naga_kraken_tentacle_0059 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			38,
-			64,
-			17,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			974,
-			517,
-			87,
-			66
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0060"
-		}
+		size = {142, 148},
+		trim = {38, 64, 17, 18},
+		a_size = {2048, 2048},
+		f_quad = {974, 517, 87, 66},
+		alias = {"hero_naga_kraken_tentacle_0060"}
 	},
 	hero_naga_kraken_tentacle_0061 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			32,
-			76,
-			5,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1369,
-			517,
-			105,
-			53
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0062"
-		}
+		size = {142, 148},
+		trim = {32, 76, 5, 19},
+		a_size = {2048, 2048},
+		f_quad = {1369, 517, 105, 53},
+		alias = {"hero_naga_kraken_tentacle_0062"}
 	},
 	hero_naga_kraken_tentacle_0063 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			32,
-			76,
-			5,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1562,
-			517,
-			105,
-			50
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0064"
-		}
+		size = {142, 148},
+		trim = {32, 76, 5, 22},
+		a_size = {2048, 2048},
+		f_quad = {1562, 517, 105, 50},
+		alias = {"hero_naga_kraken_tentacle_0064"}
 	},
 	hero_naga_kraken_tentacle_0065 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			42,
-			83,
-			19,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1285,
-			594,
-			81,
-			42
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0066"
-		}
+		size = {142, 148},
+		trim = {42, 83, 19, 23},
+		a_size = {2048, 2048},
+		f_quad = {1285, 594, 81, 42},
+		alias = {"hero_naga_kraken_tentacle_0066"}
 	},
 	hero_naga_kraken_tentacle_0067 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			40,
-			93,
-			18,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1440,
-			594,
-			84,
-			31
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0068"
-		}
+		size = {142, 148},
+		trim = {40, 93, 18, 24},
+		a_size = {2048, 2048},
+		f_quad = {1440, 594, 84, 31},
+		alias = {"hero_naga_kraken_tentacle_0068"}
 	},
 	hero_naga_kraken_tentacle_0069 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			40,
-			93,
-			18,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			446,
-			2009,
-			84,
-			32
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0070"
-		}
+		size = {142, 148},
+		trim = {40, 93, 18, 23},
+		a_size = {2048, 2048},
+		f_quad = {446, 2009, 84, 32},
+		alias = {"hero_naga_kraken_tentacle_0070"}
 	},
 	hero_naga_kraken_tentacle_0071 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			66,
-			111,
-			18,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1752,
-			632,
-			58,
-			14
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0072"
-		}
+		size = {142, 148},
+		trim = {66, 111, 18, 23},
+		a_size = {2048, 2048},
+		f_quad = {1752, 632, 58, 14},
+		alias = {"hero_naga_kraken_tentacle_0072"}
 	},
 	hero_naga_kraken_tentacle_0073 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			112,
-			113,
-			19,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1813,
-			632,
-			11,
-			6
-		},
-		alias = {
-			"hero_naga_kraken_tentacle_0074"
-		}
+		size = {142, 148},
+		trim = {112, 113, 19, 29},
+		a_size = {2048, 2048},
+		f_quad = {1813, 632, 11, 6},
+		alias = {"hero_naga_kraken_tentacle_0074"}
 	},
 	hero_naga_kraken_tentacle_0075 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			142,
-			148
-		},
-		trim = {
-			0,
-			0,
-			142,
-			148
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			132,
-			142,
-			148
-		},
+		size = {142, 148},
+		trim = {0, 0, 142, 148},
+		a_size = {2048, 2048},
+		f_quad = {5, 132, 142, 148},
 		alias = {}
 	},
 	hero_naga_kraken_water_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			6,
-			11,
-			5,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			237,
-			159,
-			87
-		},
-		alias = {
-			"hero_naga_kraken_water_0002",
-			"hero_naga_kraken_water_0003",
-			"hero_naga_kraken_water_0004"
-		}
+		size = {170, 111},
+		trim = {6, 11, 5, 13},
+		a_size = {2048, 2048},
+		f_quad = {150, 237, 159, 87},
+		alias = {"hero_naga_kraken_water_0002", "hero_naga_kraken_water_0003", "hero_naga_kraken_water_0004"}
 	},
 	hero_naga_kraken_water_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			16,
-			9,
-			12,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1942,
-			142,
-			89
-		},
-		alias = {
-			"hero_naga_kraken_water_0006"
-		}
+		size = {170, 111},
+		trim = {16, 9, 12, 13},
+		a_size = {2048, 2048},
+		f_quad = {5, 1942, 142, 89},
+		alias = {"hero_naga_kraken_water_0006"}
 	},
 	hero_naga_kraken_water_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			7,
-			11,
-			8,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1749,
-			132,
-			155,
-			93
-		},
-		alias = {
-			"hero_naga_kraken_water_0008",
-			"hero_naga_kraken_water_0009",
-			"hero_naga_kraken_water_0010"
-		}
+		size = {170, 111},
+		trim = {7, 11, 8, 7},
+		a_size = {2048, 2048},
+		f_quad = {1749, 132, 155, 93},
+		alias = {"hero_naga_kraken_water_0008", "hero_naga_kraken_water_0009", "hero_naga_kraken_water_0010"}
 	},
 	hero_naga_kraken_water_0011 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			5,
-			5,
-			5,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1394,
-			132,
-			160,
-			99
-		},
-		alias = {
-			"hero_naga_kraken_water_0012"
-		}
+		size = {170, 111},
+		trim = {5, 5, 5, 7},
+		a_size = {2048, 2048},
+		f_quad = {1394, 132, 160, 99},
+		alias = {"hero_naga_kraken_water_0012"}
 	},
 	hero_naga_kraken_water_0013 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			3,
-			3,
-			2,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			319,
-			132,
-			165,
-			101
-		},
-		alias = {
-			"hero_naga_kraken_water_0014",
-			"hero_naga_kraken_water_0029",
-			"hero_naga_kraken_water_0030",
-			"hero_naga_kraken_water_0045",
-			"hero_naga_kraken_water_0046",
-			"hero_naga_kraken_water_0061",
-			"hero_naga_kraken_water_0062"
-		}
+		size = {170, 111},
+		trim = {3, 3, 2, 7},
+		a_size = {2048, 2048},
+		f_quad = {319, 132, 165, 101},
+		alias = {"hero_naga_kraken_water_0014", "hero_naga_kraken_water_0029", "hero_naga_kraken_water_0030", "hero_naga_kraken_water_0045", "hero_naga_kraken_water_0046", "hero_naga_kraken_water_0061", "hero_naga_kraken_water_0062"}
 	},
 	hero_naga_kraken_water_0015 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			3,
-			3,
-			2,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			487,
-			132,
-			165,
-			101
-		},
-		alias = {
-			"hero_naga_kraken_water_0016",
-			"hero_naga_kraken_water_0031",
-			"hero_naga_kraken_water_0032",
-			"hero_naga_kraken_water_0047",
-			"hero_naga_kraken_water_0048"
-		}
+		size = {170, 111},
+		trim = {3, 3, 2, 7},
+		a_size = {2048, 2048},
+		f_quad = {487, 132, 165, 101},
+		alias = {"hero_naga_kraken_water_0016", "hero_naga_kraken_water_0031", "hero_naga_kraken_water_0032", "hero_naga_kraken_water_0047", "hero_naga_kraken_water_0048"}
 	},
 	hero_naga_kraken_water_0017 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			1,
-			4,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1457,
-			5,
-			167,
-			102
-		},
-		alias = {
-			"hero_naga_kraken_water_0018",
-			"hero_naga_kraken_water_0033",
-			"hero_naga_kraken_water_0034",
-			"hero_naga_kraken_water_0049",
-			"hero_naga_kraken_water_0050"
-		}
+		size = {170, 111},
+		trim = {1, 4, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {1457, 5, 167, 102},
+		alias = {"hero_naga_kraken_water_0018", "hero_naga_kraken_water_0033", "hero_naga_kraken_water_0034", "hero_naga_kraken_water_0049", "hero_naga_kraken_water_0050"}
 	},
 	hero_naga_kraken_water_0019 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			2,
-			4,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1797,
-			5,
-			166,
-			102
-		},
-		alias = {
-			"hero_naga_kraken_water_0020",
-			"hero_naga_kraken_water_0035",
-			"hero_naga_kraken_water_0036",
-			"hero_naga_kraken_water_0051",
-			"hero_naga_kraken_water_0052"
-		}
+		size = {170, 111},
+		trim = {2, 4, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {1797, 5, 166, 102},
+		alias = {"hero_naga_kraken_water_0020", "hero_naga_kraken_water_0035", "hero_naga_kraken_water_0036", "hero_naga_kraken_water_0051", "hero_naga_kraken_water_0052"}
 	},
 	hero_naga_kraken_water_0021 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			4,
-			4,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1119,
-			5,
-			166,
-			107
-		},
-		alias = {
-			"hero_naga_kraken_water_0022",
-			"hero_naga_kraken_water_0037",
-			"hero_naga_kraken_water_0038",
-			"hero_naga_kraken_water_0053",
-			"hero_naga_kraken_water_0054"
-		}
+		size = {170, 111},
+		trim = {4, 4, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {1119, 5, 166, 107},
+		alias = {"hero_naga_kraken_water_0022", "hero_naga_kraken_water_0037", "hero_naga_kraken_water_0038", "hero_naga_kraken_water_0053", "hero_naga_kraken_water_0054"}
 	},
 	hero_naga_kraken_water_0023 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			3,
-			4,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			779,
-			5,
-			167,
-			107
-		},
-		alias = {
-			"hero_naga_kraken_water_0024",
-			"hero_naga_kraken_water_0039",
-			"hero_naga_kraken_water_0040",
-			"hero_naga_kraken_water_0055",
-			"hero_naga_kraken_water_0056"
-		}
+		size = {170, 111},
+		trim = {3, 4, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {779, 5, 167, 107},
+		alias = {"hero_naga_kraken_water_0024", "hero_naga_kraken_water_0039", "hero_naga_kraken_water_0040", "hero_naga_kraken_water_0055", "hero_naga_kraken_water_0056"}
 	},
 	hero_naga_kraken_water_0025 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			0,
-			8,
-			2,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1052,
-			132,
-			168,
-			96
-		},
-		alias = {
-			"hero_naga_kraken_water_0026",
-			"hero_naga_kraken_water_0041",
-			"hero_naga_kraken_water_0042",
-			"hero_naga_kraken_water_0057",
-			"hero_naga_kraken_water_0058"
-		}
+		size = {170, 111},
+		trim = {0, 8, 2, 7},
+		a_size = {2048, 2048},
+		f_quad = {1052, 132, 168, 96},
+		alias = {"hero_naga_kraken_water_0026", "hero_naga_kraken_water_0041", "hero_naga_kraken_water_0042", "hero_naga_kraken_water_0057", "hero_naga_kraken_water_0058"}
 	},
 	hero_naga_kraken_water_0027 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			0,
-			8,
-			2,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1223,
-			132,
-			168,
-			96
-		},
-		alias = {
-			"hero_naga_kraken_water_0028",
-			"hero_naga_kraken_water_0043",
-			"hero_naga_kraken_water_0044",
-			"hero_naga_kraken_water_0059",
-			"hero_naga_kraken_water_0060"
-		}
+		size = {170, 111},
+		trim = {0, 8, 2, 7},
+		a_size = {2048, 2048},
+		f_quad = {1223, 132, 168, 96},
+		alias = {"hero_naga_kraken_water_0028", "hero_naga_kraken_water_0043", "hero_naga_kraken_water_0044", "hero_naga_kraken_water_0059", "hero_naga_kraken_water_0060"}
 	},
 	hero_naga_kraken_water_0063 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			3,
-			3,
-			2,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			655,
-			132,
-			165,
-			101
-		},
-		alias = {
-			"hero_naga_kraken_water_0064"
-		}
+		size = {170, 111},
+		trim = {3, 3, 2, 7},
+		a_size = {2048, 2048},
+		f_quad = {655, 132, 165, 101},
+		alias = {"hero_naga_kraken_water_0064"}
 	},
 	hero_naga_kraken_water_0065 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			1,
-			4,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1627,
-			5,
-			167,
-			102
-		},
-		alias = {
-			"hero_naga_kraken_water_0066"
-		}
+		size = {170, 111},
+		trim = {1, 4, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {1627, 5, 167, 102},
+		alias = {"hero_naga_kraken_water_0066"}
 	},
 	hero_naga_kraken_water_0067 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			2,
-			4,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			132,
-			166,
-			102
-		},
-		alias = {
-			"hero_naga_kraken_water_0068"
-		}
+		size = {170, 111},
+		trim = {2, 4, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {150, 132, 166, 102},
+		alias = {"hero_naga_kraken_water_0068"}
 	},
 	hero_naga_kraken_water_0069 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			4,
-			4,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1288,
-			5,
-			166,
-			107
-		},
-		alias = {
-			"hero_naga_kraken_water_0070"
-		}
+		size = {170, 111},
+		trim = {4, 4, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {1288, 5, 166, 107},
+		alias = {"hero_naga_kraken_water_0070"}
 	},
 	hero_naga_kraken_water_0071 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			3,
-			4,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			949,
-			5,
-			167,
-			107
-		},
-		alias = {
-			"hero_naga_kraken_water_0072"
-		}
+		size = {170, 111},
+		trim = {3, 4, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {949, 5, 167, 107},
+		alias = {"hero_naga_kraken_water_0072"}
 	},
 	hero_naga_kraken_water_0073 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			11,
-			9,
-			9,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			327,
-			150,
-			90
-		},
-		alias = {
-			"hero_naga_kraken_water_0074"
-		}
+		size = {170, 111},
+		trim = {11, 9, 9, 12},
+		a_size = {2048, 2048},
+		f_quad = {150, 327, 150, 90},
+		alias = {"hero_naga_kraken_water_0074"}
 	},
 	hero_naga_kraken_water_0075 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			11,
-			9,
-			9,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			303,
-			327,
-			150,
-			90
-		},
-		alias = {
-			"hero_naga_kraken_water_0076"
-		}
+		size = {170, 111},
+		trim = {11, 9, 9, 12},
+		a_size = {2048, 2048},
+		f_quad = {303, 327, 150, 90},
+		alias = {"hero_naga_kraken_water_0076"}
 	},
 	hero_naga_kraken_water_0077 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			170,
-			111
-		},
-		trim = {
-			0,
-			0,
-			170,
-			111
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			215,
-			5,
-			170,
-			111
-		},
+		size = {170, 111},
+		trim = {0, 0, 170, 111},
+		a_size = {2048, 2048},
+		f_quad = {215, 5, 170, 111},
 		alias = {}
 	},
 	hero_naga_kraken_water_0078 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			207,
-			124
-		},
-		trim = {
-			0,
-			0,
-			207,
-			124
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			5,
-			207,
-			124
-		},
+		size = {207, 124},
+		trim = {0, 0, 207, 124},
+		a_size = {2048, 2048},
+		f_quad = {5, 5, 207, 124},
 		alias = {
 			"hero_naga_kraken_water_0079",
 			"hero_naga_kraken_water_0080",
@@ -5722,610 +1795,194 @@ return {
 	},
 	hero_naga_proyectile = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			82,
-			39
-		},
-		trim = {
-			0,
-			6,
-			0,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1551,
-			688,
-			82,
-			27
-		},
+		size = {82, 39},
+		trim = {0, 6, 0, 6},
+		a_size = {2048, 2048},
+		f_quad = {1551, 688, 82, 27},
 		alias = {}
 	},
 	hero_naga_proyectile_miss_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			44,
-			77
-		},
-		trim = {
-			8,
-			16,
-			7,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2015,
-			420,
-			29,
-			60
-		},
-		alias = {
-			"hero_naga_proyectile_miss_0002"
-		}
+		size = {44, 77},
+		trim = {8, 16, 7, 1},
+		a_size = {2048, 2048},
+		f_quad = {2015, 420, 29, 60},
+		alias = {"hero_naga_proyectile_miss_0002"}
 	},
 	hero_naga_proyectile_miss_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			44,
-			77
-		},
-		trim = {
-			9,
-			10,
-			6,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			945,
-			29,
-			65
-		},
-		alias = {
-			"hero_naga_proyectile_miss_0004"
-		}
+		size = {44, 77},
+		trim = {9, 10, 6, 2},
+		a_size = {2048, 2048},
+		f_quad = {117, 945, 29, 65},
+		alias = {"hero_naga_proyectile_miss_0004"}
 	},
 	hero_naga_proyectile_miss_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			44,
-			77
-		},
-		trim = {
-			9,
-			14,
-			7,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			1013,
-			28,
-			61
-		},
-		alias = {
-			"hero_naga_proyectile_miss_0006"
-		}
+		size = {44, 77},
+		trim = {9, 14, 7, 2},
+		a_size = {2048, 2048},
+		f_quad = {117, 1013, 28, 61},
+		alias = {"hero_naga_proyectile_miss_0006"}
 	},
 	hero_naga_shadow = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			213,
-			156
-		},
-		trim = {
-			86,
-			120,
-			86,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			911,
-			710,
-			41,
-			7
-		},
+		size = {213, 156},
+		trim = {86, 120, 86, 29},
+		a_size = {2048, 2048},
+		f_quad = {911, 710, 41, 7},
 		alias = {}
 	},
 	hero_naga_silence_modifier_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			71
-		},
-		trim = {
-			9,
-			10,
-			8,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1008,
-			594,
-			97,
-			48
-		},
-		alias = {
-			"hero_naga_silence_modifier_0002"
-		}
+		size = {114, 71},
+		trim = {9, 10, 8, 13},
+		a_size = {2048, 2048},
+		f_quad = {1008, 594, 97, 48},
+		alias = {"hero_naga_silence_modifier_0002"}
 	},
 	hero_naga_silence_modifier_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			71
-		},
-		trim = {
-			10,
-			10,
-			8,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1108,
-			594,
-			96,
-			47
-		},
-		alias = {
-			"hero_naga_silence_modifier_0004"
-		}
+		size = {114, 71},
+		trim = {10, 10, 8, 14},
+		a_size = {2048, 2048},
+		f_quad = {1108, 594, 96, 47},
+		alias = {"hero_naga_silence_modifier_0004"}
 	},
 	hero_naga_silence_modifier_0005 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			71
-		},
-		trim = {
-			9,
-			10,
-			7,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			806,
-			594,
-			98,
-			48
-		},
-		alias = {
-			"hero_naga_silence_modifier_0006"
-		}
+		size = {114, 71},
+		trim = {9, 10, 7, 13},
+		a_size = {2048, 2048},
+		f_quad = {806, 594, 98, 48},
+		alias = {"hero_naga_silence_modifier_0006"}
 	},
 	hero_naga_silence_modifier_0007 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			71
-		},
-		trim = {
-			9,
-			10,
-			7,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			907,
-			594,
-			98,
-			48
-		},
-		alias = {
-			"hero_naga_silence_modifier_0008"
-		}
+		size = {114, 71},
+		trim = {9, 10, 7, 13},
+		a_size = {2048, 2048},
+		f_quad = {907, 594, 98, 48},
+		alias = {"hero_naga_silence_modifier_0008"}
 	},
 	hero_naga_tidal_wave_0001 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			18,
-			108,
-			11,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1670,
-			517,
-			85,
-			62
-		},
+		size = {114, 183},
+		trim = {18, 108, 11, 13},
+		a_size = {2048, 2048},
+		f_quad = {1670, 517, 85, 62},
 		alias = {}
 	},
 	hero_naga_tidal_wave_0002 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			15,
-			44,
-			8,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			789,
-			91,
-			125
-		},
+		size = {114, 183},
+		trim = {15, 44, 8, 14},
+		a_size = {2048, 2048},
+		f_quad = {257, 789, 91, 125},
 		alias = {}
 	},
 	hero_naga_tidal_wave_0003 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			15,
-			44,
-			8,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			257,
-			917,
-			91,
-			125
-		},
+		size = {114, 183},
+		trim = {15, 44, 8, 14},
+		a_size = {2048, 2048},
+		f_quad = {257, 917, 91, 125},
 		alias = {}
 	},
 	hero_naga_tidal_wave_0004 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			13,
-			12,
-			6,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1256,
-			95,
-			157
-		},
-		alias = {
-			"hero_naga_tidal_wave_0005"
-		}
+		size = {114, 183},
+		trim = {13, 12, 6, 14},
+		a_size = {2048, 2048},
+		f_quad = {5, 1256, 95, 157},
+		alias = {"hero_naga_tidal_wave_0005"}
 	},
 	hero_naga_tidal_wave_0006 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			11,
-			10,
-			6,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1094,
-			97,
-			159
-		},
-		alias = {
-			"hero_naga_tidal_wave_0007"
-		}
+		size = {114, 183},
+		trim = {11, 10, 6, 14},
+		a_size = {2048, 2048},
+		f_quad = {5, 1094, 97, 159},
+		alias = {"hero_naga_tidal_wave_0007"}
 	},
 	hero_naga_tidal_wave_0008 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			6,
-			13,
-			4,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			784,
-			104,
-			158
-		},
-		alias = {
-			"hero_naga_tidal_wave_0009"
-		}
+		size = {114, 183},
+		trim = {6, 13, 4, 12},
+		a_size = {2048, 2048},
+		f_quad = {5, 784, 104, 158},
+		alias = {"hero_naga_tidal_wave_0009"}
 	},
 	hero_naga_tidal_wave_0010 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			3,
-			16,
-			4,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			626,
-			107,
-			155
-		},
-		alias = {
-			"hero_naga_tidal_wave_0011"
-		}
+		size = {114, 183},
+		trim = {3, 16, 4, 12},
+		a_size = {2048, 2048},
+		f_quad = {5, 626, 107, 155},
+		alias = {"hero_naga_tidal_wave_0011"}
 	},
 	hero_naga_tidal_wave_0012 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			1,
-			18,
-			3,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			469,
-			110,
-			154
-		},
-		alias = {
-			"hero_naga_tidal_wave_0013"
-		}
+		size = {114, 183},
+		trim = {1, 18, 3, 11},
+		a_size = {2048, 2048},
+		f_quad = {5, 469, 110, 154},
+		alias = {"hero_naga_tidal_wave_0013"}
 	},
 	hero_naga_tidal_wave_0014 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			3,
-			22,
-			2,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			945,
-			109,
-			146
-		},
-		alias = {
-			"hero_naga_tidal_wave_0015"
-		}
+		size = {114, 183},
+		trim = {3, 22, 2, 15},
+		a_size = {2048, 2048},
+		f_quad = {5, 945, 109, 146},
+		alias = {"hero_naga_tidal_wave_0015"}
 	},
 	hero_naga_tidal_wave_0016 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			9,
-			26,
-			2,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1416,
-			103,
-			141
-		},
-		alias = {
-			"hero_naga_tidal_wave_0017"
-		}
+		size = {114, 183},
+		trim = {9, 26, 2, 16},
+		a_size = {2048, 2048},
+		f_quad = {5, 1416, 103, 141},
+		alias = {"hero_naga_tidal_wave_0017"}
 	},
 	hero_naga_tidal_wave_0018 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			21,
-			74,
-			24,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1859,
-			517,
-			69,
-			74
-		},
-		alias = {
-			"hero_naga_tidal_wave_0019"
-		}
+		size = {114, 183},
+		trim = {21, 74, 24, 35},
+		a_size = {2048, 2048},
+		f_quad = {1859, 517, 69, 74},
+		alias = {"hero_naga_tidal_wave_0019"}
 	},
 	hero_naga_tidal_wave_0020 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			22,
-			78,
-			25,
-			33
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1706,
-			67,
-			72
-		},
-		alias = {
-			"hero_naga_tidal_wave_0021"
-		}
+		size = {114, 183},
+		trim = {22, 78, 25, 33},
+		a_size = {2048, 2048},
+		f_quad = {627, 1706, 67, 72},
+		alias = {"hero_naga_tidal_wave_0021"}
 	},
 	hero_naga_tidal_wave_0022 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			22,
-			80,
-			25,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1911,
-			67,
-			69
-		},
+		size = {114, 183},
+		trim = {22, 80, 25, 34},
+		a_size = {2048, 2048},
+		f_quad = {627, 1911, 67, 69},
 		alias = {}
 	},
 	hero_naga_tidal_wave_0023 = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			114,
-			183
-		},
-		trim = {
-			0,
-			0,
-			114,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			283,
-			114,
-			183
-		},
+		size = {114, 183},
+		trim = {0, 0, 114, 183},
+		a_size = {2048, 2048},
+		f_quad = {5, 283, 114, 183},
 		alias = {}
 	},
 	hero_naga_tidal_wave_decal = {
 		a_name = "kr4_hero_naga-1.dds",
-		size = {
-			72,
-			45
-		},
-		trim = {
-			2,
-			2,
-			2,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1369,
-			594,
-			68,
-			41
-		},
+		size = {72, 45},
+		trim = {2, 2, 2, 2},
+		a_size = {2048, 2048},
+		f_quad = {1369, 594, 68, 41},
 		alias = {}
 	}
 }

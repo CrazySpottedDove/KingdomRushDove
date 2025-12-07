@@ -1,25 +1,27 @@
-﻿-- chunkname: @./all/render_utils.lua
-
+-- chunkname: @./all/render_utils.lua
 local log = require("lib.klua.log"):new("render_utils")
 local I = require("klove.image_db")
 local G = love.graphics
 local RU = {}
-
 RU.BATCHES_COUNT = 30
 RU.BATCH_SIZE = 30
 RU.batches = {}
 RU.bi = 1
+
 local function norm_component(c)
-    if not c then
-        return 1
-    end
-    if c > 1 then
-        return c / 255
-    end
-    return c
+	if not c then
+		return 1
+	end
+
+	if c > 1 then
+		return c / 255
+	end
+
+	return c
 end
+
 local function norm_color(r, g, b, a)
-    return norm_component(r), norm_component(g), norm_component(b), norm_component(a)
+	return norm_component(r), norm_component(g), norm_component(b), norm_component(a)
 end
 
 function RU.init()
@@ -54,7 +56,6 @@ function RU.frame_draw_params(f)
 
 	local ox = f.anchor.x * ss.size[1] - ss.trim[1]
 	local oy = (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
-
 	return ss.quad, x, y, r, sx, sy, ox, oy
 end
 
@@ -72,7 +73,6 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 	local batch = batches[bi]
 	local last_texture = RU.last_texture
 	local current_shader
-
 	batch:clear()
 
 	if last_texture then
@@ -91,14 +91,13 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 		last_idx = i
 
 		if not f.ss or f.hidden then
-			-- block empty
+		-- block empty
 		else
 			local ss = f.ss
 
 			if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 				if batch_count > 0 then
 					G.draw(batch)
-
 					bi = bi_count < bi + 1 and 1 or bi + 1
 					batch = batches[bi]
 
@@ -108,7 +107,6 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 				end
 
 				batch:clear()
-
 				lr = nil
 				lg = nil
 				lb = nil
@@ -116,10 +114,8 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 				if ss.atlas then
 					local im, w, h = I:i(ss.atlas)
-
 					current_atlas = ss.atlas
 					last_texture = im
-
 					batch:setTexture(im)
 				end
 
@@ -140,7 +136,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 			end
 
 			if f.color then
-				r, g, b = f.color[1] /255, f.color[2] / 255, f.color[3] / 255
+				r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
 			else
 				r, g, b = 1, 1, 1
 			end
@@ -149,19 +145,16 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 			if a ~= la or r ~= lr or g ~= lg or b ~= lb then
 				batch:setColor(r, g, b, a / 255)
-
 				lr, lg, lb, la = r, g, b, a
 			end
 
 			batch:add(frame_draw_params(f))
-
 			batch_count = batch_count + 1
 		end
 	end
 
 	if batch_count > 0 then
 		G.draw(batch)
-
 		bi = bi_count < bi + 1 and 1 or bi + 1
 		batch = batches[bi]
 		batches_count = batches_count + 1
@@ -175,7 +168,6 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 	RU.bi = bi
 	RU.last_texture = last_texture
-
 	return last_idx
 end
 

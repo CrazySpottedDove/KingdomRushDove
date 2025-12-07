@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level16_data.lua
-
+-- chunkname: @./kr3/data/levels/level16_data.lua
 return {
 	show_comic_idx = 7,
 	locked_hero = false,
@@ -8,9 +7,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvenWoodsAmbienceSound"
-			}
+			sounds = {"ElvenWoodsAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -71,10 +68,7 @@ return {
 		},
 		{
 			template = "decal_hr_crystal_skull",
-			["delayed_play.achievement_flag"] = {
-				"MITCHELL_HEDGES",
-				1
-			},
+			["delayed_play.achievement_flag"] = {"MITCHELL_HEDGES", 1},
 			pos = {
 				x = 192,
 				y = 134
@@ -581,131 +575,32 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_engineer"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_archer", "tower_build_engineer"}
+	}},
 	nav_mesh = {
-		{
-			4,
-			nil,
-			2,
-			13
-		},
-		{
-			1,
-			1,
-			16,
-			7
-		},
-		{
-			nil,
-			4,
-			17,
-			6
-		},
-		{
-			nil,
-			1,
-			13,
-			3
-		},
-		{
-			6,
-			17,
-			10
-		},
-		{
-			nil,
-			3,
-			5
-		},
-		{
-			13,
-			2,
-			8,
-			14
-		},
-		{
-			7,
-			16,
-			nil,
-			11
-		},
-		{
-			10,
-			11,
-			12,
-			10
-		},
-		{
-			5,
-			15,
-			9
-		},
-		{
-			15,
-			8,
-			nil,
-			12
-		},
-		{
-			9,
-			11
-		},
-		{
-			4,
-			1,
-			7,
-			17
-		},
-		{
-			17,
-			13,
-			15,
-			15
-		},
-		{
-			17,
-			14,
-			11,
-			10
-		},
-		{
-			2,
-			nil,
-			nil,
-			8
-		},
-		{
-			3,
-			13,
-			14,
-			5
-		}
+		{4, nil, 2, 13},
+		{1, 1, 16, 7},
+		{nil, 4, 17, 6},
+		{nil, 1, 13, 3},
+		{6, 17, 10},
+		{nil, 3, 5},
+		{13, 2, 8, 14},
+		{7, 16, nil, 11},
+		{10, 11, 12, 10},
+		{5, 15, 9},
+		{15, 8, nil, 12},
+		{9, 11},
+		{4, 1, 7, 17},
+		{17, 13, 15, 15},
+		{17, 14, 11, 10},
+		{2, nil, nil, 8},
+		{3, 13, 14, 5}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage64",
-		"ElvesTowerBastionSounds",
-		"ElvesLevelHRSounds",
-		"ElvenWoodsAmbienceSounds",
-		"ElvesCreepHyena"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_enemies_hulking_rage",
-		"go_stage64",
-		"go_stage64_bg",
-		"go_stages_hulking_rage"
-	}
+	required_sounds = {"music_stage64", "ElvesTowerBastionSounds", "ElvesLevelHRSounds", "ElvenWoodsAmbienceSounds", "ElvesCreepHyena"},
+	required_textures = {"go_enemies_elven_woods", "go_enemies_hulking_rage", "go_stage64", "go_stage64_bg", "go_stages_hulking_rage"}
 }

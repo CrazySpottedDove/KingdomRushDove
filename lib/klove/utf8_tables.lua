@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/klove/utf8_tables.lua
-
+-- chunkname: @./lib/klove/utf8_tables.lua
 upper = {
 	nil,
 	nil,
@@ -1019,7 +1018,6 @@ upper = {
 	[7743] = 7742,
 	[7711] = 7710
 }
-
 return {
 	upper = upper
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level11_data.lua
-
+-- chunkname: @./kr3/data/levels/level11_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 2,
@@ -11,9 +10,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"FaerieGroveAmbienceTenElevenSound"
-			}
+			sounds = {"FaerieGroveAmbienceTenElevenSound"}
 		},
 		{
 			template = "decal",
@@ -247,10 +244,7 @@ return {
 		{
 			["editor.tag"] = 1,
 			template = "decal_drow_queen_portal",
-			path_ids = {
-				4,
-				5
-			},
+			path_ids = {4, 5},
 			pos = {
 				x = 571,
 				y = 206
@@ -259,12 +253,7 @@ return {
 		{
 			["editor.tag"] = 3,
 			template = "decal_drow_queen_portal",
-			path_ids = {
-				2,
-				3,
-				4,
-				5
-			},
+			path_ids = {2, 3, 4, 5},
 			pos = {
 				x = 413,
 				y = 389
@@ -273,10 +262,7 @@ return {
 		{
 			["editor.tag"] = 2,
 			template = "decal_drow_queen_portal",
-			path_ids = {
-				2,
-				3
-			},
+			path_ids = {2, 3},
 			pos = {
 				x = 571,
 				y = 535
@@ -1086,103 +1072,30 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6
-		},
-		{
-			max_upgrade_level = 5
-		},
-		{
-			max_upgrade_level = 5,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_mage"
-			}
-		}
-	},
-    unlock_towers = {"tower_pixie"},
+	level_mode_overrides = {{
+		max_upgrade_level = 6
+	}, {
+		max_upgrade_level = 5
+	}, {
+		max_upgrade_level = 5,
+		locked_towers = {"tower_build_barrack", "tower_build_mage"}
+	}},
+	unlock_towers = {"tower_pixie"},
 	nav_mesh = {
-		{
-			3,
-			3,
-			nil,
-			2
-		},
-		{
-			5,
-			1
-		},
-		{
-			6,
-			4,
-			1,
-			5
-		},
-		{
-			8,
-			nil,
-			nil,
-			3
-		},
-		{
-			7,
-			3,
-			2
-		},
-		{
-			13,
-			9,
-			3,
-			7
-		},
-		{
-			14,
-			6,
-			5,
-			10
-		},
-		{
-			11,
-			nil,
-			4,
-			9
-		},
-		{
-			13,
-			8,
-			4,
-			6
-		},
-		{
-			14,
-			14,
-			7
-		},
-		{
-			nil,
-			nil,
-			8,
-			13
-		},
-		{
-			nil,
-			13,
-			6,
-			14
-		},
-		{
-			nil,
-			11,
-			6,
-			12
-		},
-		{
-			nil,
-			12,
-			7,
-			10
-		}
+		{3, 3, nil, 2},
+		{5, 1},
+		{6, 4, 1, 5},
+		{8, nil, nil, 3},
+		{7, 3, 2},
+		{13, 9, 3, 7},
+		{14, 6, 5, 10},
+		{11, nil, 4, 9},
+		{13, 8, 4, 6},
+		{14, 14, 7},
+		{nil, nil, 8, 13},
+		{nil, 13, 6, 14},
+		{nil, 11, 6, 12},
+		{nil, 12, 7, 10}
 	},
 	pan_extension = {
 		bottom = -40,
@@ -1201,11 +1114,5 @@ return {
 		"ElvesGnome",
 		"ElvesSpecialGnome"
 	},
-	required_textures = {
-		"go_enemies_faerie_grove",
-		"go_enemies_mactans_malicia",
-		"go_stage59",
-		"go_stage59_bg",
-		"go_stages_faerie_grove"
-	}
+	required_textures = {"go_enemies_faerie_grove", "go_enemies_mactans_malicia", "go_stage59", "go_stage59_bg", "go_stages_faerie_grove"}
 }

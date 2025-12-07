@@ -1,440 +1,146 @@
 return {
 	darkarmy_melting_furnace_decal_fissure = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			97,
-			77
-		},
-		trim = {
-			1,
-			1,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			925,
-			159,
-			96,
-			75
-		},
+		size = {97, 77},
+		trim = {1, 1, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {925, 159, 96, 75},
 		alias = {}
 	},
 	darkarmy_melting_furnace_red_glow = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			24,
-			32,
-			26,
-			9
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			276,
-			110,
-			110
-		},
+		size = {160, 151},
+		trim = {24, 32, 26, 9},
+		a_size = {1024, 1024},
+		f_quad = {5, 276, 110, 110},
 		alias = {}
 	},
 	darkarmy_melting_furnace_smoke_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			15,
-			16,
-			10,
-			34
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			949,
-			981,
-			63,
-			38
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0014"
-		}
+		size = {88, 88},
+		trim = {15, 16, 10, 34},
+		a_size = {1024, 1024},
+		f_quad = {949, 981, 63, 38},
+		alias = {"darkarmy_melting_furnace_smoke_0014"}
 	},
 	darkarmy_melting_furnace_tower_decal_dotted = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			119,
-			50
-		},
-		trim = {
-			5,
-			12,
-			5,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			984,
-			109,
-			37
-		},
+		size = {119, 50},
+		trim = {5, 12, 5, 1},
+		a_size = {1024, 1024},
+		f_quad = {356, 984, 109, 37},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_ghost = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			169,
-			138
-		},
-		trim = {
-			19,
-			30,
-			18,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			542,
-			5,
-			132,
-			97
-		},
+		size = {169, 138},
+		trim = {19, 30, 18, 11},
+		a_size = {1024, 1024},
+		f_quad = {542, 5, 132, 97},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			31,
-			27,
-			31,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			281,
-			106,
-			13,
-			13
-		},
+		size = {75, 60},
+		trim = {31, 27, 31, 20},
+		a_size = {1024, 1024},
+		f_quad = {281, 106, 13, 13},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0002 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			24,
-			17,
-			27,
-			13
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			511,
-			117,
-			24,
-			30
-		},
+		size = {75, 60},
+		trim = {24, 17, 27, 13},
+		a_size = {1024, 1024},
+		f_quad = {511, 117, 24, 30},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			24,
-			17,
-			27,
-			13
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			206,
-			787,
-			24,
-			30
-		},
+		size = {75, 60},
+		trim = {24, 17, 27, 13},
+		a_size = {1024, 1024},
+		f_quad = {206, 787, 24, 30},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0006 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			12,
-			14,
-			12,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			968,
-			920,
-			51,
-			43
-		},
+		size = {75, 60},
+		trim = {12, 14, 12, 3},
+		a_size = {1024, 1024},
+		f_quad = {968, 920, 51, 43},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			7,
-			67,
-			7,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			871,
-			147,
-			26,
-			8
-		},
+		size = {40, 77},
+		trim = {7, 67, 7, 2},
+		a_size = {1024, 1024},
+		f_quad = {871, 147, 26, 8},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0002 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			5,
-			52,
-			4,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			990,
-			122,
-			31,
-			25
-		},
+		size = {40, 77},
+		trim = {5, 52, 4, 0},
+		a_size = {1024, 1024},
+		f_quad = {990, 122, 31, 25},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			5,
-			42,
-			3,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			383,
-			120,
-			32,
-			35
-		},
+		size = {40, 77},
+		trim = {5, 42, 3, 0},
+		a_size = {1024, 1024},
+		f_quad = {383, 120, 32, 35},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0004 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			3,
-			18,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			984,
-			604,
-			37,
-			59
-		},
+		size = {40, 77},
+		trim = {3, 18, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {984, 604, 37, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			13,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			977,
-			537,
-			40,
-			64
-		},
+		size = {40, 77},
+		trim = {0, 13, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {977, 537, 40, 64},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0008 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			16,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			975,
-			731,
-			39,
-			61
-		},
+		size = {40, 77},
+		trim = {0, 16, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {975, 731, 39, 61},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0024 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			21,
-			3,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			981,
-			668,
-			37,
-			53
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_flames_0025"
-		}
+		size = {40, 77},
+		trim = {0, 21, 3, 3},
+		a_size = {1024, 1024},
+		f_quad = {981, 668, 37, 53},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_flames_0025"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0026 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			2,
-			35,
-			3,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			984,
-			465,
-			35,
-			38
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_flames_0027"
-		}
+		size = {40, 77},
+		trim = {2, 35, 3, 4},
+		a_size = {1024, 1024},
+		f_quad = {984, 465, 35, 38},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_flames_0027"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			37,
-			23,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			5,
-			112,
-			114
-		},
+		size = {160, 151},
+		trim = {25, 37, 23, 0},
+		a_size = {1024, 1024},
+		f_quad = {677, 5, 112, 114},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0002",
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0003",
@@ -560,26 +266,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0041 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			39,
-			22,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			303,
-			5,
-			115,
-			112
-		},
+		size = {160, 151},
+		trim = {23, 39, 22, 0},
+		a_size = {1024, 1024},
+		f_quad = {303, 5, 115, 112},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0042",
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0045",
@@ -608,26 +298,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0043 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			24,
-			39,
-			22,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			792,
-			5,
-			114,
-			112
-		},
+		size = {160, 151},
+		trim = {24, 39, 22, 0},
+		a_size = {1024, 1024},
+		f_quad = {792, 5, 114, 112},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0044",
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0047",
@@ -650,26 +324,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0049 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			42,
-			21,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			421,
-			5,
-			118,
-			109
-		},
+		size = {160, 151},
+		trim = {21, 42, 21, 0},
+		a_size = {1024, 1024},
+		f_quad = {421, 5, 118, 109},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0050",
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0051",
@@ -686,56 +344,18 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			15,
-			53,
-			13,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			168,
-			5,
-			132,
-			98
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0054",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0128",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0129",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0202",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0203"
-		}
+		size = {160, 151},
+		trim = {15, 53, 13, 0},
+		a_size = {1024, 1024},
+		f_quad = {168, 5, 132, 98},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer1_0054", "darkarmy_melting_furnace_tower_lvl4_layer1_0128", "darkarmy_melting_furnace_tower_lvl4_layer1_0129", "darkarmy_melting_furnace_tower_lvl4_layer1_0202", "darkarmy_melting_furnace_tower_lvl4_layer1_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0057 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			37,
-			23,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			909,
-			5,
-			112,
-			114
-		},
+		size = {160, 151},
+		trim = {25, 37, 23, 0},
+		a_size = {1024, 1024},
+		f_quad = {909, 5, 112, 114},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0058",
 			"darkarmy_melting_furnace_tower_lvl4_layer1_0063",
@@ -770,1911 +390,602 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0059 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			37,
-			24,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			159,
-			111,
-			114
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0060",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0134",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0135",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0208",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0209"
-		}
+		size = {160, 151},
+		trim = {25, 37, 24, 0},
+		a_size = {1024, 1024},
+		f_quad = {5, 159, 111, 114},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer1_0060", "darkarmy_melting_furnace_tower_lvl4_layer1_0134", "darkarmy_melting_furnace_tower_lvl4_layer1_0135", "darkarmy_melting_furnace_tower_lvl4_layer1_0208", "darkarmy_melting_furnace_tower_lvl4_layer1_0209"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer1_0061 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			39,
-			23,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			159,
-			112,
-			112
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0062",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0136",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0137",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0210",
-			"darkarmy_melting_furnace_tower_lvl4_layer1_0211"
-		}
+		size = {160, 151},
+		trim = {25, 39, 23, 0},
+		a_size = {1024, 1024},
+		f_quad = {119, 159, 112, 112},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer1_0062", "darkarmy_melting_furnace_tower_lvl4_layer1_0136", "darkarmy_melting_furnace_tower_lvl4_layer1_0137", "darkarmy_melting_furnace_tower_lvl4_layer1_0210", "darkarmy_melting_furnace_tower_lvl4_layer1_0211"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0040 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			38,
-			5,
-			34,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			639,
-			88,
-			71
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0041"
-		}
+		size = {160, 151},
+		trim = {38, 5, 34, 75},
+		a_size = {1024, 1024},
+		f_quad = {119, 639, 88, 71},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0041"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0042 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			38,
-			5,
-			34,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			713,
-			88,
-			71
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0043"
-		}
+		size = {160, 151},
+		trim = {38, 5, 34, 75},
+		a_size = {1024, 1024},
+		f_quad = {119, 713, 88, 71},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0043"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0044 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			40,
-			4,
-			34,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			864,
-			86,
-			72
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0045"
-		}
+		size = {160, 151},
+		trim = {40, 4, 34, 75},
+		a_size = {1024, 1024},
+		f_quad = {119, 864, 86, 72},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0045"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0046 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			43,
-			5,
-			34,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			939,
-			83,
-			71
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0047"
-		}
+		size = {160, 151},
+		trim = {43, 5, 34, 75},
+		a_size = {1024, 1024},
+		f_quad = {119, 939, 83, 71},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0047"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0048 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			42,
-			4,
-			35,
-			62
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			481,
-			861,
-			83,
-			85
-		},
+		size = {160, 151},
+		trim = {42, 4, 35, 62},
+		a_size = {1024, 1024},
+		f_quad = {481, 861, 83, 85},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0049 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			42,
-			4,
-			35,
-			62
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			860,
-			83,
-			85
-		},
+		size = {160, 151},
+		trim = {42, 4, 35, 62},
+		a_size = {1024, 1024},
+		f_quad = {599, 860, 83, 85},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0050 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			5,
-			35,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			274,
-			84,
-			96
-		},
+		size = {160, 151},
+		trim = {41, 5, 35, 50},
+		a_size = {1024, 1024},
+		f_quad = {119, 274, 84, 96},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0051 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			5,
-			35,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			373,
-			84,
-			96
-		},
+		size = {160, 151},
+		trim = {41, 5, 35, 50},
+		a_size = {1024, 1024},
+		f_quad = {119, 373, 84, 96},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0052 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			35,
-			5,
-			28,
-			45
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			494,
-			97,
-			101
-		},
+		size = {160, 151},
+		trim = {35, 5, 28, 45},
+		a_size = {1024, 1024},
+		f_quad = {5, 494, 97, 101},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			35,
-			5,
-			28,
-			45
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			598,
-			97,
-			101
-		},
+		size = {160, 151},
+		trim = {35, 5, 28, 45},
+		a_size = {1024, 1024},
+		f_quad = {5, 598, 97, 101},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0054 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			29,
-			6,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			389,
-			111,
-			102
-		},
+		size = {160, 151},
+		trim = {29, 6, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {5, 389, 111, 102},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0055 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			29,
-			22,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			702,
-			111,
-			86
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0130",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0204"
-		}
+		size = {160, 151},
+		trim = {29, 22, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {5, 702, 111, 86},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0130", "darkarmy_melting_furnace_tower_lvl4_layer2_0204"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0056 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			22,
-			19,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			239,
-			116,
-			89
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0131",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0205"
-		}
+		size = {160, 151},
+		trim = {25, 22, 19, 40},
+		a_size = {1024, 1024},
+		f_quad = {234, 239, 116, 89},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0131", "darkarmy_melting_furnace_tower_lvl4_layer2_0205"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0057 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			22,
-			19,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			353,
-			239,
-			116,
-			89
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0132",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0206"
-		}
+		size = {160, 151},
+		trim = {25, 22, 19, 40},
+		a_size = {1024, 1024},
+		f_quad = {353, 239, 116, 89},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0132", "darkarmy_melting_furnace_tower_lvl4_layer2_0206"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0058 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			35,
-			31,
-			31,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			733,
-			94,
-			78
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0059",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0133",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0134",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0207",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0208"
-		}
+		size = {160, 151},
+		trim = {35, 31, 31, 42},
+		a_size = {1024, 1024},
+		f_quad = {234, 733, 94, 78},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0059", "darkarmy_melting_furnace_tower_lvl4_layer2_0133", "darkarmy_melting_furnace_tower_lvl4_layer2_0134", "darkarmy_melting_furnace_tower_lvl4_layer2_0207", "darkarmy_melting_furnace_tower_lvl4_layer2_0208"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0123 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			53,
-			39,
-			52,
-			62
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			963,
-			795,
-			55,
-			50
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0197"
-		}
+		size = {160, 151},
+		trim = {53, 39, 52, 62},
+		a_size = {1024, 1024},
+		f_quad = {963, 795, 55, 50},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0197"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0124 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			53,
-			33,
-			52,
-			62
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			964,
-			858,
-			55,
-			56
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0198"
-		}
+		size = {160, 151},
+		trim = {53, 33, 52, 62},
+		a_size = {1024, 1024},
+		f_quad = {964, 858, 55, 56},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0198"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0125 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			27,
-			35,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			787,
-			84,
-			74
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0199"
-		}
+		size = {160, 151},
+		trim = {41, 27, 35, 50},
+		a_size = {1024, 1024},
+		f_quad = {119, 787, 84, 74},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0199"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0126 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			20,
-			35,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			555,
-			84,
-			81
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0200"
-		}
+		size = {160, 151},
+		trim = {41, 20, 35, 50},
+		a_size = {1024, 1024},
+		f_quad = {119, 555, 84, 81},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0200"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0127 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			35,
-			13,
-			28,
-			45
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			880,
-			97,
-			93
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0201"
-		}
+		size = {160, 151},
+		trim = {35, 13, 28, 45},
+		a_size = {1024, 1024},
+		f_quad = {5, 880, 97, 93},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0201"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0128 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			35,
-			26,
-			28,
-			45
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			472,
-			97,
-			80
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0202"
-		}
+		size = {160, 151},
+		trim = {35, 26, 28, 45},
+		a_size = {1024, 1024},
+		f_quad = {119, 472, 97, 80},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0202"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0129 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			29,
-			22,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			791,
-			111,
-			86
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0203"
-		}
+		size = {160, 151},
+		trim = {29, 22, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {5, 791, 111, 86},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			920,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {718, 920, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0002 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			21,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			840,
-			795,
-			120,
-			59
-		},
+		size = {160, 151},
+		trim = {19, 49, 21, 43},
+		a_size = {1024, 1024},
+		f_quad = {840, 795, 120, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			21,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			858,
-			120,
-			59
-		},
+		size = {160, 151},
+		trim = {19, 49, 21, 43},
+		a_size = {1024, 1024},
+		f_quad = {718, 858, 120, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0008 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			48,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			948,
-			116,
-			60
-		},
+		size = {160, 151},
+		trim = {25, 48, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {599, 948, 116, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0010 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			48,
-			18,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			795,
-			119,
-			60
-		},
+		size = {160, 151},
+		trim = {23, 48, 18, 43},
+		a_size = {1024, 1024},
+		f_quad = {718, 795, 119, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			47,
-			18,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			880,
-			119,
-			61
-		},
+		size = {160, 151},
+		trim = {23, 47, 18, 43},
+		a_size = {1024, 1024},
+		f_quad = {234, 880, 119, 61},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0012 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			729,
-			731,
-			120,
-			60
-		},
+		size = {160, 151},
+		trim = {21, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {729, 731, 120, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0014 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			843,
-			920,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {843, 920, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0015 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			609,
-			604,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {609, 604, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0016 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			21,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			920,
-			120,
-			61
-		},
+		size = {160, 151},
+		trim = {19, 47, 21, 43},
+		a_size = {1024, 1024},
+		f_quad = {356, 920, 120, 61},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0017 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			45,
-			21,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			608,
-			537,
-			120,
-			63
-		},
+		size = {160, 151},
+		trim = {19, 45, 21, 43},
+		a_size = {1024, 1024},
+		f_quad = {608, 537, 120, 63},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0018 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			45,
-			23,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			814,
-			116,
-			63
-		},
+		size = {160, 151},
+		trim = {21, 45, 23, 43},
+		a_size = {1024, 1024},
+		f_quad = {234, 814, 116, 63},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0023 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			46,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			795,
-			116,
-			62
-		},
+		size = {160, 151},
+		trim = {25, 46, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {599, 795, 116, 62},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0024 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			46,
-			18,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			668,
-			119,
-			62
-		},
+		size = {160, 151},
+		trim = {23, 46, 18, 43},
+		a_size = {1024, 1024},
+		f_quad = {234, 668, 119, 62},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0025 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			47,
-			18,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			944,
-			119,
-			61
-		},
+		size = {160, 151},
+		trim = {23, 47, 18, 43},
+		a_size = {1024, 1024},
+		f_quad = {234, 944, 119, 61},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0026 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			852,
-			731,
-			120,
-			60
-		},
+		size = {160, 151},
+		trim = {21, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {852, 731, 120, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0029 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			734,
-			604,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {734, 604, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0030 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			21,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			481,
-			731,
-			120,
-			61
-		},
+		size = {160, 151},
+		trim = {19, 47, 21, 43},
+		a_size = {1024, 1024},
+		f_quad = {481, 731, 120, 61},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0031 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			21,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			841,
-			858,
-			120,
-			59
-		},
+		size = {160, 151},
+		trim = {19, 49, 21, 43},
+		a_size = {1024, 1024},
+		f_quad = {841, 858, 120, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0041 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			604,
-			731,
-			122,
-			59
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0042",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0043",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0044",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0045",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0046",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0047",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0048"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {604, 731, 122, 59},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0042", "darkarmy_melting_furnace_tower_lvl4_layer3_0043", "darkarmy_melting_furnace_tower_lvl4_layer3_0044", "darkarmy_melting_furnace_tower_lvl4_layer3_0045", "darkarmy_melting_furnace_tower_lvl4_layer3_0046", "darkarmy_melting_furnace_tower_lvl4_layer3_0047", "darkarmy_melting_furnace_tower_lvl4_layer3_0048"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0049 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			17,
-			49,
-			17,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			509,
-			399,
-			126,
-			62
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0050",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0051",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0052"
-		}
+		size = {160, 151},
+		trim = {17, 49, 17, 40},
+		a_size = {1024, 1024},
+		f_quad = {509, 399, 126, 62},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0050", "darkarmy_melting_furnace_tower_lvl4_layer3_0051", "darkarmy_melting_furnace_tower_lvl4_layer3_0052"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			9,
-			37,
-			9,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			526,
-			159,
-			142,
-			76
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0054"
-		}
+		size = {160, 151},
+		trim = {9, 37, 9, 38},
+		a_size = {1024, 1024},
+		f_quad = {526, 159, 142, 76},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0054"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0055 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			18,
-			32,
-			18,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			671,
-			159,
-			124,
-			77
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0056"
-		}
+		size = {160, 151},
+		trim = {18, 32, 18, 42},
+		a_size = {1024, 1024},
+		f_quad = {671, 159, 124, 77},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0056"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0057 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			38,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			465,
-			122,
-			69
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0058"
-		}
+		size = {160, 151},
+		trim = {19, 38, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {234, 465, 122, 69},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0058"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0059 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			44,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			638,
-			399,
-			122,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0060"
-		}
+		size = {160, 151},
+		trim = {19, 44, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {638, 399, 122, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0060"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0061 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			41,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			609,
-			465,
-			122,
-			66
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0062"
-		}
+		size = {160, 151},
+		trim = {19, 41, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {609, 465, 122, 66},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0062"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0122 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			604,
-			122,
-			61
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0123"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {234, 604, 122, 61},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0123"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0124 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			887,
-			399,
-			122,
-			62
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0125",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0126",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0127"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 42},
+		a_size = {1024, 1024},
+		f_quad = {887, 399, 122, 62},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0125", "darkarmy_melting_furnace_tower_lvl4_layer3_0126", "darkarmy_melting_furnace_tower_lvl4_layer3_0127"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0128 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			8,
-			37,
-			9,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			159,
-			143,
-			77
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0129"
-		}
+		size = {160, 151},
+		trim = {8, 37, 9, 37},
+		a_size = {1024, 1024},
+		f_quad = {234, 159, 143, 77},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0129"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0130 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			18,
-			32,
-			18,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			798,
-			159,
-			124,
-			75
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0131"
-		}
+		size = {160, 151},
+		trim = {18, 32, 18, 44},
+		a_size = {1024, 1024},
+		f_quad = {798, 159, 124, 75},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0131"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0132 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			39,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			359,
-			465,
-			122,
-			68
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0133"
-		}
+		size = {160, 151},
+		trim = {19, 39, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {359, 465, 122, 68},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0133"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0134 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			44,
-			20,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			731,
-			537,
-			120,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0135"
-		}
+		size = {160, 151},
+		trim = {20, 44, 20, 44},
+		a_size = {1024, 1024},
+		f_quad = {731, 537, 120, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0135"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0136 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			41,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			734,
-			465,
-			122,
-			66
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0137"
-		}
+		size = {160, 151},
+		trim = {19, 41, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {734, 465, 122, 66},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0137"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0196 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			359,
-			604,
-			122,
-			61
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0197"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {359, 604, 122, 61},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0197"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0198 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			358,
-			537,
-			122,
-			62
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0199"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 42},
+		a_size = {1024, 1024},
+		f_quad = {358, 537, 122, 62},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0199"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0200 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			483,
-			537,
-			122,
-			62
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0201"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 42},
+		a_size = {1024, 1024},
+		f_quad = {483, 537, 122, 62},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0201"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0202 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			8,
-			37,
-			9,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			380,
-			159,
-			143,
-			77
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0203"
-		}
+		size = {160, 151},
+		trim = {8, 37, 9, 37},
+		a_size = {1024, 1024},
+		f_quad = {380, 159, 143, 77},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0204 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			18,
-			32,
-			18,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			472,
-			239,
-			124,
-			75
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0205"
-		}
+		size = {160, 151},
+		trim = {18, 32, 18, 44},
+		a_size = {1024, 1024},
+		f_quad = {472, 239, 124, 75},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0205"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0206 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			39,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			484,
-			465,
-			122,
-			68
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0207"
-		}
+		size = {160, 151},
+		trim = {19, 39, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {484, 465, 122, 68},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0207"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0208 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			44,
-			20,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			854,
-			537,
-			120,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0209"
-		}
+		size = {160, 151},
+		trim = {20, 44, 20, 44},
+		a_size = {1024, 1024},
+		f_quad = {854, 537, 120, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0209"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0210 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			41,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			859,
-			465,
-			122,
-			66
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0211"
-		}
+		size = {160, 151},
+		trim = {19, 41, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {859, 465, 122, 66},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0211"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0212 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			859,
-			604,
-			122,
-			60
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0213"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {859, 604, 122, 60},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0213"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0214 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			668,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {356, 668, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0215 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			481,
-			668,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {481, 668, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0216 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			606,
-			668,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {606, 668, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0217 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			731,
-			668,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {731, 668, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0218 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			856,
-			668,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {856, 668, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0219 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			731,
-			122,
-			60
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0220"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {356, 731, 122, 60},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0220"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0221 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			794,
-			122,
-			60
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0222"
-		}
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {356, 794, 122, 60},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0222"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0223 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			47,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			857,
-			122,
-			60
-		},
+		size = {160, 151},
+		trim = {19, 47, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {356, 857, 122, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			0,
-			0,
-			160,
-			151
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			160,
-			151
-		},
+		size = {160, 151},
+		trim = {0, 0, 160, 151},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 160, 151},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer4_0002",
 			"darkarmy_melting_furnace_tower_lvl4_layer4_0003",
@@ -2926,539 +1237,162 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0049 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			67,
-			49,
-			60,
-			78
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			871,
-			120,
-			33,
-			24
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0124",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0198"
-		}
+		size = {160, 151},
+		trim = {67, 49, 60, 78},
+		a_size = {1024, 1024},
+		f_quad = {871, 120, 33, 24},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0124", "darkarmy_melting_furnace_tower_lvl4_layer4_0198"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0052 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			39,
-			38,
-			51,
-			74
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			806,
-			981,
-			70,
-			39
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0127",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0201"
-		}
+		size = {160, 151},
+		trim = {39, 38, 51, 74},
+		a_size = {1024, 1024},
+		f_quad = {806, 981, 70, 39},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0127", "darkarmy_melting_furnace_tower_lvl4_layer4_0201"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0056 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			30,
-			36,
-			31,
-			58
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			916,
-			331,
-			99,
-			57
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0131",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0205"
-		}
+		size = {160, 151},
+		trim = {30, 36, 31, 58},
+		a_size = {1024, 1024},
+		f_quad = {916, 331, 99, 57},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0131", "darkarmy_melting_furnace_tower_lvl4_layer4_0205"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0058 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			26,
-			36,
-			19,
-			52
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			481,
-			795,
-			115,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0133",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0207"
-		}
+		size = {160, 151},
+		trim = {26, 36, 19, 52},
+		a_size = {1024, 1024},
+		f_quad = {481, 795, 115, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0133", "darkarmy_melting_furnace_tower_lvl4_layer4_0207"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0059 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			36,
-			16,
-			52
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			763,
-			399,
-			121,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0134",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0208"
-		}
+		size = {160, 151},
+		trim = {23, 36, 16, 52},
+		a_size = {1024, 1024},
+		f_quad = {763, 399, 121, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0134", "darkarmy_melting_furnace_tower_lvl4_layer4_0208"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0060 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			36,
-			16,
-			51
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			537,
-			121,
-			64
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0135",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0209"
-		}
+		size = {160, 151},
+		trim = {23, 36, 16, 51},
+		a_size = {1024, 1024},
+		f_quad = {234, 537, 121, 64},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0135", "darkarmy_melting_furnace_tower_lvl4_layer4_0209"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0061 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			17,
-			36,
-			10,
-			51
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			642,
-			331,
-			133,
-			64
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0136",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0210"
-		}
+		size = {160, 151},
+		trim = {17, 36, 10, 51},
+		a_size = {1024, 1024},
+		f_quad = {642, 331, 133, 64},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0136", "darkarmy_melting_furnace_tower_lvl4_layer4_0210"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0062 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			17,
-			37,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			873,
-			239,
-			133,
-			65
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0137",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0211"
-		}
+		size = {160, 151},
+		trim = {17, 37, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {873, 239, 133, 65},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0137", "darkarmy_melting_furnace_tower_lvl4_layer4_0211"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0063 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			17,
-			37,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			331,
-			133,
-			65
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0138",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0212"
-		}
+		size = {160, 151},
+		trim = {17, 37, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {234, 331, 133, 65},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0138", "darkarmy_melting_furnace_tower_lvl4_layer4_0212"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0064 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			17,
-			37,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			370,
-			331,
-			133,
-			65
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0139",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0213"
-		}
+		size = {160, 151},
+		trim = {17, 37, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {370, 331, 133, 65},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0139", "darkarmy_melting_furnace_tower_lvl4_layer4_0213"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0065 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			17,
-			37,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			506,
-			331,
-			133,
-			65
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0140",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0214"
-		}
+		size = {160, 151},
+		trim = {17, 37, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {506, 331, 133, 65},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0140", "darkarmy_melting_furnace_tower_lvl4_layer4_0214"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0066 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			16,
-			37,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			239,
-			134,
-			65
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0141",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0215"
-		}
+		size = {160, 151},
+		trim = {16, 37, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {599, 239, 134, 65},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0141", "darkarmy_melting_furnace_tower_lvl4_layer4_0215"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0067 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			16,
-			37,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			736,
-			239,
-			134,
-			65
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0142",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0216"
-		}
+		size = {160, 151},
+		trim = {16, 37, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {736, 239, 134, 65},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0142", "darkarmy_melting_furnace_tower_lvl4_layer4_0216"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0068 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			16,
-			39,
-			10,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			372,
-			399,
-			134,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0143",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0217"
-		}
+		size = {160, 151},
+		trim = {16, 39, 10, 49},
+		a_size = {1024, 1024},
+		f_quad = {372, 399, 134, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0143", "darkarmy_melting_furnace_tower_lvl4_layer4_0217"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0069 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			16,
-			39,
-			9,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			778,
-			331,
-			135,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0144",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0218"
-		}
+		size = {160, 151},
+		trim = {16, 39, 9, 49},
+		a_size = {1024, 1024},
+		f_quad = {778, 331, 135, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0144", "darkarmy_melting_furnace_tower_lvl4_layer4_0218"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0070 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			16,
-			39,
-			9,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			399,
-			135,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0145",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0219"
-		}
+		size = {160, 151},
+		trim = {16, 39, 9, 49},
+		a_size = {1024, 1024},
+		f_quad = {234, 399, 135, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0145", "darkarmy_melting_furnace_tower_lvl4_layer4_0219"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0071 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			40,
-			19,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			484,
-			604,
-			122,
-			61
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0146",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0220"
-		}
+		size = {160, 151},
+		trim = {19, 40, 19, 50},
+		a_size = {1024, 1024},
+		f_quad = {484, 604, 122, 61},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0146", "darkarmy_melting_furnace_tower_lvl4_layer4_0220"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0073 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			29,
-			74,
-			28,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			307,
-			103,
-			21
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0148",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0222"
-		}
+		size = {160, 151},
+		trim = {29, 74, 28, 56},
+		a_size = {1024, 1024},
+		f_quad = {599, 307, 103, 21},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0148", "darkarmy_melting_furnace_tower_lvl4_layer4_0222"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0074 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			82,
-			76,
-			28,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			705,
-			307,
-			50,
-			19
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0149",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0223"
-		}
+		size = {160, 151},
+		trim = {82, 76, 28, 56},
+		a_size = {1024, 1024},
+		f_quad = {705, 307, 50, 19},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0149", "darkarmy_melting_furnace_tower_lvl4_layer4_0223"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			63,
-			105,
-			60,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			984,
-			506,
-			37,
-			28
-		},
+		size = {160, 151},
+		trim = {63, 105, 60, 18},
+		a_size = {1024, 1024},
+		f_quad = {984, 506, 37, 28},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0002",
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0003",
@@ -3568,1463 +1502,458 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			62,
-			39,
-			91,
-			103
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			468,
-			1010,
-			7,
-			9
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0002",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0075",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0076",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0077",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0150",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0151"
-		}
+		size = {160, 151},
+		trim = {62, 39, 91, 103},
+		a_size = {1024, 1024},
+		f_quad = {468, 1010, 7, 9},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0002", "darkarmy_melting_furnace_tower_lvl4_layer8_0075", "darkarmy_melting_furnace_tower_lvl4_layer8_0076", "darkarmy_melting_furnace_tower_lvl4_layer8_0077", "darkarmy_melting_furnace_tower_lvl4_layer8_0150", "darkarmy_melting_furnace_tower_lvl4_layer8_0151"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			60,
-			37,
-			90,
-			102
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			468,
-			984,
-			10,
-			12
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0004",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0078",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0079",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0152",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0153"
-		}
+		size = {160, 151},
+		trim = {60, 37, 90, 102},
+		a_size = {1024, 1024},
+		f_quad = {468, 984, 10, 12},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0004", "darkarmy_melting_furnace_tower_lvl4_layer8_0078", "darkarmy_melting_furnace_tower_lvl4_layer8_0079", "darkarmy_melting_furnace_tower_lvl4_layer8_0152", "darkarmy_melting_furnace_tower_lvl4_layer8_0153"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			55,
-			36,
-			60,
-			101
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			758,
-			307,
-			45,
-			14
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0006",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0080",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0081",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0154",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0155"
-		}
+		size = {160, 151},
+		trim = {55, 36, 60, 101},
+		a_size = {1024, 1024},
+		f_quad = {758, 307, 45, 14},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0006", "darkarmy_melting_furnace_tower_lvl4_layer8_0080", "darkarmy_melting_furnace_tower_lvl4_layer8_0081", "darkarmy_melting_furnace_tower_lvl4_layer8_0154", "darkarmy_melting_furnace_tower_lvl4_layer8_0155"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			38,
-			21,
-			44,
-			96
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			122,
-			78,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0012",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0086",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0087",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0160",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0161"
-		}
+		size = {160, 151},
+		trim = {38, 21, 44, 96},
+		a_size = {1024, 1024},
+		f_quad = {677, 122, 78, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0012", "darkarmy_melting_furnace_tower_lvl4_layer8_0086", "darkarmy_melting_furnace_tower_lvl4_layer8_0087", "darkarmy_melting_furnace_tower_lvl4_layer8_0160", "darkarmy_melting_furnace_tower_lvl4_layer8_0161"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			36,
-			20,
-			39,
-			94
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			981,
-			85,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0014",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0088",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0089",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0162",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0163"
-		}
+		size = {160, 151},
+		trim = {36, 20, 39, 94},
+		a_size = {1024, 1024},
+		f_quad = {718, 981, 85, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0014", "darkarmy_melting_furnace_tower_lvl4_layer8_0088", "darkarmy_melting_furnace_tower_lvl4_layer8_0089", "darkarmy_melting_furnace_tower_lvl4_layer8_0162", "darkarmy_melting_furnace_tower_lvl4_layer8_0163"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0015 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			36,
-			19,
-			37,
-			94
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			421,
-			117,
-			87,
-			38
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0016",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0090",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0091",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0164",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0165"
-		}
+		size = {160, 151},
+		trim = {36, 19, 37, 94},
+		a_size = {1024, 1024},
+		f_quad = {421, 117, 87, 38},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0016", "darkarmy_melting_furnace_tower_lvl4_layer8_0090", "darkarmy_melting_furnace_tower_lvl4_layer8_0091", "darkarmy_melting_furnace_tower_lvl4_layer8_0164", "darkarmy_melting_furnace_tower_lvl4_layer8_0165"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0019 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			58,
-			20,
-			35,
-			91
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			879,
-			981,
-			67,
-			40
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0020",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0094",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0095",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0168",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0169"
-		}
+		size = {160, 151},
+		trim = {58, 20, 35, 91},
+		a_size = {1024, 1024},
+		f_quad = {879, 981, 67, 40},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0020", "darkarmy_melting_furnace_tower_lvl4_layer8_0094", "darkarmy_melting_furnace_tower_lvl4_layer8_0095", "darkarmy_melting_furnace_tower_lvl4_layer8_0168", "darkarmy_melting_furnace_tower_lvl4_layer8_0169"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0029 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			4,
-			43,
-			111
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			792,
-			120,
-			76,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0030",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0104",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0105",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0178",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0179"
-		}
+		size = {160, 151},
+		trim = {41, 4, 43, 111},
+		a_size = {1024, 1024},
+		f_quad = {792, 120, 76, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0030", "darkarmy_melting_furnace_tower_lvl4_layer8_0104", "darkarmy_melting_furnace_tower_lvl4_layer8_0105", "darkarmy_melting_furnace_tower_lvl4_layer8_0178", "darkarmy_melting_furnace_tower_lvl4_layer8_0179"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0031 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			2,
-			41,
-			116
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			909,
-			122,
-			78,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0032",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0106",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0107",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0180",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0181"
-		}
+		size = {160, 151},
+		trim = {41, 2, 41, 116},
+		a_size = {1024, 1024},
+		f_quad = {909, 122, 78, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0032", "darkarmy_melting_furnace_tower_lvl4_layer8_0106", "darkarmy_melting_furnace_tower_lvl4_layer8_0107", "darkarmy_melting_furnace_tower_lvl4_layer8_0180", "darkarmy_melting_furnace_tower_lvl4_layer8_0181"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0033 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			42,
-			4,
-			41,
-			116
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			303,
-			120,
-			77,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0034",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0108",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0109",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0182",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0183"
-		}
+		size = {160, 151},
+		trim = {42, 4, 41, 116},
+		a_size = {1024, 1024},
+		f_quad = {303, 120, 77, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0034", "darkarmy_melting_furnace_tower_lvl4_layer8_0108", "darkarmy_melting_furnace_tower_lvl4_layer8_0109", "darkarmy_melting_furnace_tower_lvl4_layer8_0182", "darkarmy_melting_furnace_tower_lvl4_layer8_0183"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0039 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			85,
-			5,
-			44,
-			120
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			758,
-			122,
-			31,
-			26
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0040",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0114",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0115",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0188",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0189"
-		}
+		size = {160, 151},
+		trim = {85, 5, 44, 120},
+		a_size = {1024, 1024},
+		f_quad = {758, 122, 31, 26},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0040", "darkarmy_melting_furnace_tower_lvl4_layer8_0114", "darkarmy_melting_furnace_tower_lvl4_layer8_0115", "darkarmy_melting_furnace_tower_lvl4_layer8_0188", "darkarmy_melting_furnace_tower_lvl4_layer8_0189"}
 	},
 	darkarmy_melting_furnace_tower_swords_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			48,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			976,
-			110,
-			45
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0012"
-		}
+		size = {162, 122},
+		trim = {26, 48, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {5, 976, 110, 45},
+		alias = {"darkarmy_melting_furnace_tower_swords_0012"}
 	},
 	darkarmy_melting_furnace_tower_swords_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			48,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			542,
-			105,
-			110,
-			45
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0014"
-		}
+		size = {162, 122},
+		trim = {26, 48, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {542, 105, 110, 45},
+		alias = {"darkarmy_melting_furnace_tower_swords_0014"}
 	},
 	darkarmy_melting_furnace_tower_swords_0015 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			47,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			168,
-			106,
-			110,
-			46
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0016"
-		}
+		size = {162, 122},
+		trim = {26, 47, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {168, 106, 110, 46},
+		alias = {"darkarmy_melting_furnace_tower_swords_0016"}
 	},
 	darkarmy_melting_furnace_tower_swords_decal = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			32,
-			25,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			481,
-			949,
-			111,
-			63
-		},
+		size = {162, 122},
+		trim = {26, 32, 25, 27},
+		a_size = {1024, 1024},
+		f_quad = {481, 949, 111, 63},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_travel_particle = {
 		a_name = "kr4_dark_army_tower_melting_furnace-1.dds",
-		size = {
-			8,
-			8
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			468,
-			999,
-			8,
-			8
-		},
+		size = {8, 8},
+		trim = {0, 0, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {468, 999, 8, 8},
 		alias = {}
 	},
 	darkarmy_melting_furnace_decal = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			97,
-			77
-		},
-		trim = {
-			6,
-			5,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			437,
-			79,
-			70
-		},
+		size = {97, 77},
+		trim = {6, 5, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {5, 437, 79, 70},
 		alias = {}
 	},
 	darkarmy_melting_furnace_smoke_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			8,
-			24,
-			8,
-			15
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			530,
-			72,
-			49
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0002"
-		}
+		size = {88, 88},
+		trim = {8, 24, 8, 15},
+		a_size = {1024, 1024},
+		f_quad = {239, 530, 72, 49},
+		alias = {"darkarmy_melting_furnace_smoke_0002"}
 	},
 	darkarmy_melting_furnace_smoke_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			7,
-			21,
-			7,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			970,
-			74,
-			49
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0004"
-		}
+		size = {88, 88},
+		trim = {7, 21, 7, 18},
+		a_size = {1024, 1024},
+		f_quad = {5, 970, 74, 49},
+		alias = {"darkarmy_melting_furnace_smoke_0004"}
 	},
 	darkarmy_melting_furnace_smoke_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			10,
-			18,
-			8,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			686,
-			70,
-			46
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0006"
-		}
+		size = {88, 88},
+		trim = {10, 18, 8, 24},
+		a_size = {1024, 1024},
+		f_quad = {239, 686, 70, 46},
+		alias = {"darkarmy_melting_furnace_smoke_0006"}
 	},
 	darkarmy_melting_furnace_smoke_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			11,
-			17,
-			8,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			786,
-			69,
-			45
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0008"
-		}
+		size = {88, 88},
+		trim = {11, 17, 8, 26},
+		a_size = {1024, 1024},
+		f_quad = {239, 786, 69, 45},
+		alias = {"darkarmy_melting_furnace_smoke_0008"}
 	},
 	darkarmy_melting_furnace_smoke_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			12,
-			16,
-			10,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			938,
-			66,
-			43
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0010"
-		}
+		size = {88, 88},
+		trim = {12, 16, 10, 29},
+		a_size = {1024, 1024},
+		f_quad = {239, 938, 66, 43},
+		alias = {"darkarmy_melting_furnace_smoke_0010"}
 	},
 	darkarmy_melting_furnace_smoke_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			14,
-			15,
-			12,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			979,
-			62,
-			41
-		},
-		alias = {
-			"darkarmy_melting_furnace_smoke_0012"
-		}
+		size = {88, 88},
+		trim = {14, 15, 12, 32},
+		a_size = {1024, 1024},
+		f_quad = {87, 979, 62, 41},
+		alias = {"darkarmy_melting_furnace_smoke_0012"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0004 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			16,
-			18,
-			18,
-			9
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			921,
-			564,
-			41,
-			33
-		},
+		size = {75, 60},
+		trim = {16, 18, 18, 9},
+		a_size = {1024, 1024},
+		f_quad = {921, 564, 41, 33},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			16,
-			18,
-			18,
-			9
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			965,
-			564,
-			41,
-			33
-		},
+		size = {75, 60},
+		trim = {16, 18, 18, 9},
+		a_size = {1024, 1024},
+		f_quad = {965, 564, 41, 33},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			12,
-			14,
-			12,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			530,
-			51,
-			43
-		},
+		size = {75, 60},
+		trim = {12, 14, 12, 3},
+		a_size = {1024, 1024},
+		f_quad = {439, 530, 51, 43},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0008 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			7,
-			9,
-			7,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			834,
-			61,
-			49
-		},
+		size = {75, 60},
+		trim = {7, 9, 7, 2},
+		a_size = {1024, 1024},
+		f_quad = {239, 834, 61, 49},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			7,
-			9,
-			7,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			886,
-			61,
-			49
-		},
+		size = {75, 60},
+		trim = {7, 9, 7, 2},
+		a_size = {1024, 1024},
+		f_quad = {239, 886, 61, 49},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0010 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			5,
-			12,
-			3,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			735,
-			67,
-			48
-		},
+		size = {75, 60},
+		trim = {5, 12, 3, 0},
+		a_size = {1024, 1024},
+		f_quad = {239, 735, 67, 48},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			5,
-			11,
-			2,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			634,
-			68,
-			49
-		},
+		size = {75, 60},
+		trim = {5, 11, 2, 0},
+		a_size = {1024, 1024},
+		f_quad = {239, 634, 68, 49},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0012 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			3,
-			4,
-			2,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			860,
-			70,
-			54
-		},
+		size = {75, 60},
+		trim = {3, 4, 2, 2},
+		a_size = {1024, 1024},
+		f_quad = {5, 860, 70, 54},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			2,
-			4,
-			2,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			803,
-			71,
-			54
-		},
+		size = {75, 60},
+		trim = {2, 4, 2, 2},
+		a_size = {1024, 1024},
+		f_quad = {5, 803, 71, 54},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0014 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			618,
-			73,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {87, 618, 73, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0015 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			679,
-			73,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {87, 679, 73, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0016 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			740,
-			73,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {87, 740, 73, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0017 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			2,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			801,
-			72,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 2, 2},
+		a_size = {1024, 1024},
+		f_quad = {87, 801, 72, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0018 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			3,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			921,
-			73,
-			55
-		},
+		size = {75, 60},
+		trim = {1, 3, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {87, 921, 73, 55},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0019 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			3,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			582,
-			73,
-			55
-		},
+		size = {75, 60},
+		trim = {1, 3, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {5, 582, 73, 55},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0020 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			3,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			640,
-			73,
-			55
-		},
+		size = {75, 60},
+		trim = {1, 3, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {5, 640, 73, 55},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_fissure_hit_0021 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			0,
-			2,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			862,
-			74,
-			56
-		},
+		size = {75, 60},
+		trim = {0, 2, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {87, 862, 74, 56},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0006 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			12,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			881,
-			39,
-			65
-		},
+		size = {40, 77},
+		trim = {1, 12, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {176, 881, 39, 65},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			12,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			949,
-			39,
-			65
-		},
+		size = {40, 77},
+		trim = {1, 12, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {176, 949, 39, 65},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			16,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			397,
-			530,
-			39,
-			61
-		},
+		size = {40, 77},
+		trim = {0, 16, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {397, 530, 39, 61},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0010 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			12,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			802,
-			39,
-			64
-		},
+		size = {40, 77},
+		trim = {0, 12, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {314, 802, 39, 64},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			12,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			869,
-			39,
-			64
-		},
+		size = {40, 77},
+		trim = {0, 12, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {314, 869, 39, 64},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0012 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			9,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			739,
-			38,
-			68
-		},
+		size = {40, 77},
+		trim = {1, 9, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {176, 739, 38, 68},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			9,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			810,
-			38,
-			68
-		},
+		size = {40, 77},
+		trim = {1, 9, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {176, 810, 38, 68},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0014 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			7,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			593,
-			39,
-			70
-		},
+		size = {40, 77},
+		trim = {1, 7, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {176, 593, 39, 70},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0015 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			7,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			666,
-			39,
-			70
-		},
+		size = {40, 77},
+		trim = {1, 7, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {176, 666, 39, 70},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0016 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			12,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			530,
-			39,
-			65
-		},
+		size = {40, 77},
+		trim = {1, 12, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {314, 530, 39, 65},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0017 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			12,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			598,
-			39,
-			65
-		},
+		size = {40, 77},
+		trim = {1, 12, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {314, 598, 39, 65},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0018 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			12,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			666,
-			39,
-			65
-		},
+		size = {40, 77},
+		trim = {1, 12, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {314, 666, 39, 65},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0019 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			12,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			734,
-			39,
-			65
-		},
+		size = {40, 77},
+		trim = {1, 12, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {314, 734, 39, 65},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0020 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			1,
-			13,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			936,
-			38,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_flames_0021"
-		}
+		size = {40, 77},
+		trim = {1, 13, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {314, 936, 38, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_flames_0021"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_flames_0022 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			40,
-			77
-		},
-		trim = {
-			0,
-			12,
-			2,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			530,
-			38,
-			63
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_flames_0023"
-		}
+		size = {40, 77},
+		trim = {0, 12, 2, 2},
+		a_size = {1024, 1024},
+		f_quad = {356, 530, 38, 63},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_flames_0023"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			54,
-			34,
-			52,
-			77
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			460,
-			485,
-			54,
-			40
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0075",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0076",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0150"
-		}
+		size = {160, 151},
+		trim = {54, 34, 52, 77},
+		a_size = {1024, 1024},
+		f_quad = {460, 485, 54, 40},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0075", "darkarmy_melting_furnace_tower_lvl4_layer2_0076", "darkarmy_melting_furnace_tower_lvl4_layer2_0150"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0002 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			54,
-			34,
-			52,
-			77
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			517,
-			485,
-			54,
-			40
-		},
+		size = {160, 151},
+		trim = {54, 34, 52, 77},
+		a_size = {1024, 1024},
+		f_quad = {517, 485, 54, 40},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer2_0003",
 			"darkarmy_melting_furnace_tower_lvl4_layer2_0004",
@@ -5139,137 +2068,42 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0036 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			37,
-			20,
-			37,
-			77
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			926,
-			374,
-			86,
-			54
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0037"
-		}
+		size = {160, 151},
+		trim = {37, 20, 37, 77},
+		a_size = {1024, 1024},
+		f_quad = {926, 374, 86, 54},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0037"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0038 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			38,
-			12,
-			36,
-			77
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			437,
-			86,
-			62
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0039"
-		}
+		size = {160, 151},
+		trim = {38, 12, 36, 77},
+		a_size = {1024, 1024},
+		f_quad = {87, 437, 86, 62},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0039"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0060 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			44,
-			31,
-			41,
-			51
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			510,
-			75,
-			69
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0061",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0135",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0136",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0209",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0210"
-		}
+		size = {160, 151},
+		trim = {44, 31, 41, 51},
+		a_size = {1024, 1024},
+		f_quad = {5, 510, 75, 69},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0061", "darkarmy_melting_furnace_tower_lvl4_layer2_0135", "darkarmy_melting_furnace_tower_lvl4_layer2_0136", "darkarmy_melting_furnace_tower_lvl4_layer2_0209", "darkarmy_melting_furnace_tower_lvl4_layer2_0210"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0062 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			52,
-			35,
-			48,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			530,
-			60,
-			60
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0063",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0137",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0211",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0212"
-		}
+		size = {160, 151},
+		trim = {52, 35, 48, 56},
+		a_size = {1024, 1024},
+		f_quad = {176, 530, 60, 60},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0063", "darkarmy_melting_furnace_tower_lvl4_layer2_0137", "darkarmy_melting_furnace_tower_lvl4_layer2_0211", "darkarmy_melting_furnace_tower_lvl4_layer2_0212"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0064 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			54,
-			34,
-			52,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			967,
-			437,
-			54,
-			42
-		},
+		size = {160, 151},
+		trim = {54, 34, 52, 75},
+		a_size = {1024, 1024},
+		f_quad = {967, 437, 54, 42},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer2_0065",
 			"darkarmy_melting_furnace_tower_lvl4_layer2_0066",
@@ -5296,540 +2130,170 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0115 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			52,
-			39,
-			51,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			702,
-			485,
-			57,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0116",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0117",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0138",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0139",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0142",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0143",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0146",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0147",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0189",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0190"
-		}
+		size = {160, 151},
+		trim = {52, 39, 51, 75},
+		a_size = {1024, 1024},
+		f_quad = {702, 485, 57, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0116", "darkarmy_melting_furnace_tower_lvl4_layer2_0117", "darkarmy_melting_furnace_tower_lvl4_layer2_0138", "darkarmy_melting_furnace_tower_lvl4_layer2_0139", "darkarmy_melting_furnace_tower_lvl4_layer2_0142", "darkarmy_melting_furnace_tower_lvl4_layer2_0143", "darkarmy_melting_furnace_tower_lvl4_layer2_0146", "darkarmy_melting_furnace_tower_lvl4_layer2_0147", "darkarmy_melting_furnace_tower_lvl4_layer2_0189", "darkarmy_melting_furnace_tower_lvl4_layer2_0190"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0118 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			53,
-			39,
-			51,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			886,
-			485,
-			56,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0119",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0140",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0141",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0144",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0145",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0148",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0149",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0191",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0192"
-		}
+		size = {160, 151},
+		trim = {53, 39, 51, 75},
+		a_size = {1024, 1024},
+		f_quad = {886, 485, 56, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0119", "darkarmy_melting_furnace_tower_lvl4_layer2_0140", "darkarmy_melting_furnace_tower_lvl4_layer2_0141", "darkarmy_melting_furnace_tower_lvl4_layer2_0144", "darkarmy_melting_furnace_tower_lvl4_layer2_0145", "darkarmy_melting_furnace_tower_lvl4_layer2_0148", "darkarmy_melting_furnace_tower_lvl4_layer2_0149", "darkarmy_melting_furnace_tower_lvl4_layer2_0191", "darkarmy_melting_furnace_tower_lvl4_layer2_0192"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0120 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			52,
-			39,
-			51,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			762,
-			485,
-			57,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0193",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0194"
-		}
+		size = {160, 151},
+		trim = {52, 39, 51, 75},
+		a_size = {1024, 1024},
+		f_quad = {762, 485, 57, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0193", "darkarmy_melting_furnace_tower_lvl4_layer2_0194"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer2_0121 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			53,
-			38,
-			51,
-			75
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			574,
-			485,
-			56,
-			38
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0122",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0195",
-			"darkarmy_melting_furnace_tower_lvl4_layer2_0196"
-		}
+		size = {160, 151},
+		trim = {53, 38, 51, 75},
+		a_size = {1024, 1024},
+		f_quad = {574, 485, 56, 38},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer2_0122", "darkarmy_melting_furnace_tower_lvl4_layer2_0195", "darkarmy_melting_furnace_tower_lvl4_layer2_0196"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0004 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			49,
-			23,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			857,
-			312,
-			116,
-			59
-		},
+		size = {160, 151},
+		trim = {21, 49, 23, 43},
+		a_size = {1024, 1024},
+		f_quad = {857, 312, 116, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			49,
-			23,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			123,
-			374,
-			116,
-			59
-		},
+		size = {160, 151},
+		trim = {21, 49, 23, 43},
+		a_size = {1024, 1024},
+		f_quad = {123, 374, 116, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0006 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			49,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			312,
-			117,
-			59
-		},
+		size = {160, 151},
+		trim = {23, 49, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {5, 312, 117, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			48,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			249,
-			117,
-			60
-		},
+		size = {160, 151},
+		trim = {23, 48, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {5, 249, 117, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			48,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			741,
-			249,
-			116,
-			60
-		},
+		size = {160, 151},
+		trim = {25, 48, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {741, 249, 116, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			245,
-			249,
-			120,
-			58
-		},
+		size = {160, 151},
+		trim = {21, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {245, 249, 120, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0019 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			48,
-			23,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			860,
-			249,
-			116,
-			60
-		},
+		size = {160, 151},
+		trim = {21, 48, 23, 43},
+		a_size = {1024, 1024},
+		f_quad = {860, 249, 116, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0020 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			48,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			125,
-			249,
-			117,
-			60
-		},
+		size = {160, 151},
+		trim = {23, 48, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {125, 249, 117, 60},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0021 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			49,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			125,
-			312,
-			117,
-			59
-		},
+		size = {160, 151},
+		trim = {23, 49, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {125, 312, 117, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0022 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			25,
-			49,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			242,
-			374,
-			116,
-			59
-		},
+		size = {160, 151},
+		trim = {25, 49, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {242, 374, 116, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0027 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			368,
-			249,
-			120,
-			58
-		},
+		size = {160, 151},
+		trim = {21, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {368, 249, 120, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0028 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0032 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			49,
-			23,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			361,
-			374,
-			116,
-			59
-		},
+		size = {160, 151},
+		trim = {21, 49, 23, 43},
+		a_size = {1024, 1024},
+		f_quad = {361, 374, 116, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0033 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			49,
-			23,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			480,
-			374,
-			116,
-			59
-		},
+		size = {160, 151},
+		trim = {21, 49, 23, 43},
+		a_size = {1024, 1024},
+		f_quad = {480, 374, 116, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0034 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			23,
-			49,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			245,
-			312,
-			117,
-			59
-		},
+		size = {160, 151},
+		trim = {23, 49, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {245, 312, 117, 59},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0035 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			130,
-			5,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0036",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0037",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0038",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0039",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0040"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {130, 5, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0036", "darkarmy_melting_furnace_tower_lvl4_layer3_0037", "darkarmy_melting_furnace_tower_lvl4_layer3_0038", "darkarmy_melting_furnace_tower_lvl4_layer3_0039", "darkarmy_melting_furnace_tower_lvl4_layer3_0040"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0063 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			255,
-			5,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {255, 5, 122, 58},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer3_0064",
 			"darkarmy_melting_furnace_tower_lvl4_layer3_0065",
@@ -5846,26 +2310,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0075 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			380,
-			5,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {380, 5, 122, 58},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer3_0076",
 			"darkarmy_melting_furnace_tower_lvl4_layer3_0077",
@@ -5911,1077 +2359,338 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0114 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			50,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			491,
-			249,
-			122,
-			57
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0115",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0116",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0117",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0138",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0139",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0142",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0143",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0146",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0147"
-		}
+		size = {160, 151},
+		trim = {19, 50, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {491, 249, 122, 57},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0115", "darkarmy_melting_furnace_tower_lvl4_layer3_0116", "darkarmy_melting_furnace_tower_lvl4_layer3_0117", "darkarmy_melting_furnace_tower_lvl4_layer3_0138", "darkarmy_melting_furnace_tower_lvl4_layer3_0139", "darkarmy_melting_furnace_tower_lvl4_layer3_0142", "darkarmy_melting_furnace_tower_lvl4_layer3_0143", "darkarmy_melting_furnace_tower_lvl4_layer3_0146", "darkarmy_melting_furnace_tower_lvl4_layer3_0147"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0118 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			51,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			365,
-			312,
-			120,
-			57
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0119",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0140",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0141",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0144",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0145",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0148",
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0149"
-		}
+		size = {160, 151},
+		trim = {20, 51, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {365, 312, 120, 57},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0119", "darkarmy_melting_furnace_tower_lvl4_layer3_0140", "darkarmy_melting_furnace_tower_lvl4_layer3_0141", "darkarmy_melting_furnace_tower_lvl4_layer3_0144", "darkarmy_melting_furnace_tower_lvl4_layer3_0145", "darkarmy_melting_furnace_tower_lvl4_layer3_0148", "darkarmy_melting_furnace_tower_lvl4_layer3_0149"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0120 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			50,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			505,
-			5,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 50, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {505, 5, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0121 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			51,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			312,
-			120,
-			57
-		},
+		size = {160, 151},
+		trim = {20, 51, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {488, 312, 120, 57},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0152 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			630,
-			5,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0153"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {630, 5, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0153"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0154 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			755,
-			5,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0155"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {755, 5, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0155"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0156 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			880,
-			5,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0157"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {880, 5, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0157"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0158 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			66,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0159"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {5, 66, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0159"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0160 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			130,
-			66,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0161"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {130, 66, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0161"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0162 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			255,
-			66,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {255, 66, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0163 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			380,
-			66,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {380, 66, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0164 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			505,
-			66,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {505, 66, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0165 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			630,
-			66,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {630, 66, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0166 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			755,
-			66,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {755, 66, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0167 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			880,
-			66,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {880, 66, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0168 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {5, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0169 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			130,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {130, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0170 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			255,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {255, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0171 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			380,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {380, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0172 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			505,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {505, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0173 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			630,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {630, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0174 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			755,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {755, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0175 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			880,
-			127,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {880, 127, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0176 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			188,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {5, 188, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0177 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			130,
-			188,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0178"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {130, 188, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0178"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0179 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			255,
-			188,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0180"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {255, 188, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0180"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0181 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			380,
-			188,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0182"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {380, 188, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0182"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0183 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			505,
-			188,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0184"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {505, 188, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0184"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0185 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			630,
-			188,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0186"
-		}
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {630, 188, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0186"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0187 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			49,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			755,
-			188,
-			122,
-			58
-		},
+		size = {160, 151},
+		trim = {19, 49, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {755, 188, 122, 58},
 		alias = {}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0188 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			50,
-			19,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			616,
-			249,
-			122,
-			57
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0189"
-		}
+		size = {160, 151},
+		trim = {19, 50, 19, 44},
+		a_size = {1024, 1024},
+		f_quad = {616, 249, 122, 57},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0189"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0190 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			51,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			611,
-			312,
-			120,
-			57
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0191"
-		}
+		size = {160, 151},
+		trim = {20, 51, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {611, 312, 120, 57},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0191"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0192 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			50,
-			19,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			880,
-			188,
-			122,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0193"
-		}
+		size = {160, 151},
+		trim = {19, 50, 19, 43},
+		a_size = {1024, 1024},
+		f_quad = {880, 188, 122, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0193"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer3_0194 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			51,
-			20,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			734,
-			312,
-			120,
-			57
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer3_0195"
-		}
+		size = {160, 151},
+		trim = {20, 51, 20, 43},
+		a_size = {1024, 1024},
+		f_quad = {734, 312, 120, 57},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer3_0195"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0050 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			52,
-			46,
-			60,
-			78
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			913,
-			530,
-			48,
-			27
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0125",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0199"
-		}
+		size = {160, 151},
+		trim = {52, 46, 60, 78},
+		a_size = {1024, 1024},
+		f_quad = {913, 530, 48, 27},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0125", "darkarmy_melting_furnace_tower_lvl4_layer4_0199"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0051 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			52,
-			46,
-			52,
-			74
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			698,
-			530,
-			56,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0126",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0200"
-		}
+		size = {160, 151},
+		trim = {52, 46, 52, 74},
+		a_size = {1024, 1024},
+		f_quad = {698, 530, 56, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0126", "darkarmy_melting_furnace_tower_lvl4_layer4_0200"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			39,
-			38,
-			50,
-			64
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			582,
-			71,
-			49
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0128",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0202"
-		}
+		size = {160, 151},
+		trim = {39, 38, 50, 64},
+		a_size = {1024, 1024},
+		f_quad = {239, 582, 71, 49},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0128", "darkarmy_melting_furnace_tower_lvl4_layer4_0202"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0054 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			36,
-			38,
-			45,
-			64
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			698,
-			79,
-			49
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0129",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0203"
-		}
+		size = {160, 151},
+		trim = {36, 38, 45, 64},
+		a_size = {1024, 1024},
+		f_quad = {5, 698, 79, 49},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0129", "darkarmy_melting_furnace_tower_lvl4_layer4_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0055 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			36,
-			38,
-			31,
-			58
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			717,
-			374,
-			93,
-			55
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0130",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0204"
-		}
+		size = {160, 151},
+		trim = {36, 38, 31, 58},
+		a_size = {1024, 1024},
+		f_quad = {717, 374, 93, 55},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0130", "darkarmy_melting_furnace_tower_lvl4_layer4_0204"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0057 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			26,
-			36,
-			19,
-			57
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			374,
-			115,
-			58
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0132",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0206"
-		}
+		size = {160, 151},
+		trim = {26, 36, 19, 57},
+		a_size = {1024, 1024},
+		f_quad = {599, 374, 115, 58},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0132", "darkarmy_melting_furnace_tower_lvl4_layer4_0206"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer4_0072 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			26,
-			40,
-			19,
-			51
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			374,
-			115,
-			60
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0147",
-			"darkarmy_melting_furnace_tower_lvl4_layer4_0221"
-		}
+		size = {160, 151},
+		trim = {26, 40, 19, 51},
+		a_size = {1024, 1024},
+		f_quad = {5, 374, 115, 60},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer4_0147", "darkarmy_melting_furnace_tower_lvl4_layer4_0221"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0036 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			62,
-			105,
-			60,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			397,
-			626,
-			38,
-			28
-		},
+		size = {160, 151},
+		trim = {62, 105, 60, 18},
+		a_size = {1024, 1024},
+		f_quad = {397, 626, 38, 28},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0037",
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0038",
@@ -7004,26 +2713,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0040 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			60,
-			107,
-			59,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			623,
-			675,
-			41,
-			27
-		},
+		size = {160, 151},
+		trim = {60, 107, 59, 17},
+		a_size = {1024, 1024},
+		f_quad = {623, 675, 41, 27},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0041",
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0044",
@@ -7046,26 +2739,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0042 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			61,
-			108,
-			60,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			714,
-			675,
-			39,
-			25
-		},
+		size = {160, 151},
+		trim = {61, 108, 60, 18},
+		a_size = {1024, 1024},
+		f_quad = {714, 675, 39, 25},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0043",
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0046",
@@ -7088,26 +2765,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0048 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			60,
-			106,
-			60,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			992,
-			40,
-			28
-		},
+		size = {160, 151},
+		trim = {60, 106, 60, 17},
+		a_size = {1024, 1024},
+		f_quad = {537, 992, 40, 28},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0049",
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0050",
@@ -7127,200 +2788,58 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			59,
-			110,
-			57,
-			16
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			667,
-			675,
-			44,
-			25
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0054",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0128",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0129",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0202",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0203"
-		}
+		size = {160, 151},
+		trim = {59, 110, 57, 16},
+		a_size = {1024, 1024},
+		f_quad = {667, 675, 44, 25},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer5_0054", "darkarmy_melting_furnace_tower_lvl4_layer5_0128", "darkarmy_melting_furnace_tower_lvl4_layer5_0129", "darkarmy_melting_furnace_tower_lvl4_layer5_0202", "darkarmy_melting_furnace_tower_lvl4_layer5_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0059 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			63,
-			105,
-			60,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			397,
-			688,
-			37,
-			28
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0060",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0134",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0135",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0208",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0209"
-		}
+		size = {160, 151},
+		trim = {63, 105, 60, 18},
+		a_size = {1024, 1024},
+		f_quad = {397, 688, 37, 28},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer5_0060", "darkarmy_melting_furnace_tower_lvl4_layer5_0134", "darkarmy_melting_furnace_tower_lvl4_layer5_0135", "darkarmy_melting_furnace_tower_lvl4_layer5_0208", "darkarmy_melting_furnace_tower_lvl4_layer5_0209"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0061 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			62,
-			105,
-			60,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			397,
-			657,
-			38,
-			28
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0062",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0136",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0137",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0210",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0211"
-		}
+		size = {160, 151},
+		trim = {62, 105, 60, 18},
+		a_size = {1024, 1024},
+		f_quad = {397, 657, 38, 28},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer5_0062", "darkarmy_melting_furnace_tower_lvl4_layer5_0136", "darkarmy_melting_furnace_tower_lvl4_layer5_0137", "darkarmy_melting_furnace_tower_lvl4_layer5_0210", "darkarmy_melting_furnace_tower_lvl4_layer5_0211"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0078 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			63,
-			104,
-			58,
-			15
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			961,
-			600,
-			39,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0079",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0107",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0108"
-		}
+		size = {160, 151},
+		trim = {63, 104, 58, 15},
+		a_size = {1024, 1024},
+		f_quad = {961, 600, 39, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer5_0079", "darkarmy_melting_furnace_tower_lvl4_layer5_0107", "darkarmy_melting_furnace_tower_lvl4_layer5_0108"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0080 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			63,
-			104,
-			58,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			714,
-			637,
-			39,
-			35
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0081",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0105",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0106"
-		}
+		size = {160, 151},
+		trim = {63, 104, 58, 12},
+		a_size = {1024, 1024},
+		f_quad = {714, 637, 39, 35},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer5_0081", "darkarmy_melting_furnace_tower_lvl4_layer5_0105", "darkarmy_melting_furnace_tower_lvl4_layer5_0106"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0082 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			63,
-			104,
-			58,
-			10
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			754,
-			39,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0083",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0103",
-			"darkarmy_melting_furnace_tower_lvl4_layer5_0104"
-		}
+		size = {160, 151},
+		trim = {63, 104, 58, 10},
+		a_size = {1024, 1024},
+		f_quad = {493, 754, 39, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer5_0083", "darkarmy_melting_furnace_tower_lvl4_layer5_0103", "darkarmy_melting_furnace_tower_lvl4_layer5_0104"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer5_0084 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			63,
-			104,
-			58,
-			10
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			794,
-			39,
-			37
-		},
+		size = {160, 151},
+		trim = {63, 104, 58, 10},
+		a_size = {1024, 1024},
+		f_quad = {493, 794, 39, 37},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0085",
 			"darkarmy_melting_furnace_tower_lvl4_layer5_0086",
@@ -7344,184 +2863,50 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			106,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			924,
-			637,
-			38,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0010",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0011",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0020",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0021",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0030",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0031"
-		}
+		size = {160, 151},
+		trim = {102, 106, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {924, 637, 38, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0010", "darkarmy_melting_furnace_tower_lvl4_layer6_0011", "darkarmy_melting_furnace_tower_lvl4_layer6_0020", "darkarmy_melting_furnace_tower_lvl4_layer6_0021", "darkarmy_melting_furnace_tower_lvl4_layer6_0030", "darkarmy_melting_furnace_tower_lvl4_layer6_0031"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0002 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			104,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			914,
-			38,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0003",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0012",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0013",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0022",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0023",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0032",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0033"
-		}
+		size = {160, 151},
+		trim = {102, 104, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {537, 914, 38, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0003", "darkarmy_melting_furnace_tower_lvl4_layer6_0012", "darkarmy_melting_furnace_tower_lvl4_layer6_0013", "darkarmy_melting_furnace_tower_lvl4_layer6_0022", "darkarmy_melting_furnace_tower_lvl4_layer6_0023", "darkarmy_melting_furnace_tower_lvl4_layer6_0032", "darkarmy_melting_furnace_tower_lvl4_layer6_0033"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0004 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			104,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			953,
-			38,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0005",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0014",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0015",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0024",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0025",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0034",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0035"
-		}
+		size = {160, 151},
+		trim = {102, 104, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {537, 953, 38, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0005", "darkarmy_melting_furnace_tower_lvl4_layer6_0014", "darkarmy_melting_furnace_tower_lvl4_layer6_0015", "darkarmy_melting_furnace_tower_lvl4_layer6_0024", "darkarmy_melting_furnace_tower_lvl4_layer6_0025", "darkarmy_melting_furnace_tower_lvl4_layer6_0034", "darkarmy_melting_furnace_tower_lvl4_layer6_0035"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0006 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			551,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0007",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0016",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0017",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0026",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0027",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0036",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0037"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {551, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0007", "darkarmy_melting_furnace_tower_lvl4_layer6_0016", "darkarmy_melting_furnace_tower_lvl4_layer6_0017", "darkarmy_melting_furnace_tower_lvl4_layer6_0026", "darkarmy_melting_furnace_tower_lvl4_layer6_0027", "darkarmy_melting_furnace_tower_lvl4_layer6_0036", "darkarmy_melting_furnace_tower_lvl4_layer6_0037"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0008 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			592,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0009",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0018",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0019",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0028",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0029",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0038"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {592, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0009", "darkarmy_melting_furnace_tower_lvl4_layer6_0018", "darkarmy_melting_furnace_tower_lvl4_layer6_0019", "darkarmy_melting_furnace_tower_lvl4_layer6_0028", "darkarmy_melting_furnace_tower_lvl4_layer6_0029", "darkarmy_melting_furnace_tower_lvl4_layer6_0038"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0039 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			600,
-			38,
-			33
-		},
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {633, 600, 38, 33},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer6_0040",
 			"darkarmy_melting_furnace_tower_lvl4_layer6_0041",
@@ -7555,667 +2940,202 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0051 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			108,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			709,
-			38,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0052"
-		}
+		size = {160, 151},
+		trim = {102, 108, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 709, 38, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0052"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			109,
-			18,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			990,
-			40,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0054",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0128",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0129"
-		}
+		size = {160, 151},
+		trim = {102, 109, 18, 11},
+		a_size = {1024, 1024},
+		f_quad = {493, 990, 40, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0054", "darkarmy_melting_furnace_tower_lvl4_layer6_0128", "darkarmy_melting_furnace_tower_lvl4_layer6_0129"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0055 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			674,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0056",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0130",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0131"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {674, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0056", "darkarmy_melting_furnace_tower_lvl4_layer6_0130", "darkarmy_melting_furnace_tower_lvl4_layer6_0131"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0057 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			105,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			800,
-			637,
-			38,
-			35
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0058",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0132",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0133"
-		}
+		size = {160, 151},
+		trim = {102, 105, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {800, 637, 38, 35},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0058", "darkarmy_melting_furnace_tower_lvl4_layer6_0132", "darkarmy_melting_furnace_tower_lvl4_layer6_0133"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0059 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			103,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			754,
-			38,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0060",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0134",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0135"
-		}
+		size = {160, 151},
+		trim = {102, 103, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {537, 754, 38, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0060", "darkarmy_melting_furnace_tower_lvl4_layer6_0134", "darkarmy_melting_furnace_tower_lvl4_layer6_0135"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0061 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			103,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			794,
-			38,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0062",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0136",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0137"
-		}
+		size = {160, 151},
+		trim = {102, 103, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {537, 794, 38, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0062", "darkarmy_melting_furnace_tower_lvl4_layer6_0136", "darkarmy_melting_furnace_tower_lvl4_layer6_0137"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0063 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			111,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			985,
-			38,
-			29
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0064",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0138",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0139"
-		}
+		size = {160, 151},
+		trim = {102, 111, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 985, 38, 29},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0064", "darkarmy_melting_furnace_tower_lvl4_layer6_0138", "darkarmy_melting_furnace_tower_lvl4_layer6_0139"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0065 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			108,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			744,
-			38,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0066",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0140",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0141"
-		}
+		size = {160, 151},
+		trim = {102, 108, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 744, 38, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0066", "darkarmy_melting_furnace_tower_lvl4_layer6_0140", "darkarmy_melting_furnace_tower_lvl4_layer6_0141"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0076 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			106,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			965,
-			637,
-			38,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0077"
-		}
+		size = {160, 151},
+		trim = {102, 106, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {965, 637, 38, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0077"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0078 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			17,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			756,
-			637,
-			41,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0079"
-		}
+		size = {160, 151},
+		trim = {102, 107, 17, 11},
+		a_size = {1024, 1024},
+		f_quad = {756, 637, 41, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0079"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0080 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			849,
-			39,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0081"
-		}
+		size = {160, 151},
+		trim = {102, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 849, 39, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0081"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0082 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			109,
-			18,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			675,
-			40,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0083"
-		}
+		size = {160, 151},
+		trim = {102, 109, 18, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 675, 40, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0083"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0084 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			883,
-			39,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0085"
-		}
+		size = {160, 151},
+		trim = {102, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 883, 39, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0085"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0086 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			106,
-			16,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			624,
-			637,
-			42,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0087"
-		}
+		size = {160, 151},
+		trim = {102, 106, 16, 11},
+		a_size = {1024, 1024},
+		f_quad = {624, 637, 42, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0087"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0088 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			14,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			826,
-			564,
-			44,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0089"
-		}
+		size = {160, 151},
+		trim = {102, 107, 14, 11},
+		a_size = {1024, 1024},
+		f_quad = {826, 564, 44, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0089"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0090 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			108,
-			13,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			873,
-			564,
-			45,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0091"
-		}
+		size = {160, 151},
+		trim = {102, 108, 13, 11},
+		a_size = {1024, 1024},
+		f_quad = {873, 564, 45, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0091"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0092 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			110,
-			7,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			813,
-			530,
-			51,
-			30
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0093"
-		}
+		size = {160, 151},
+		trim = {102, 110, 7, 11},
+		a_size = {1024, 1024},
+		f_quad = {813, 530, 51, 30},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0093"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0094 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			110,
-			5,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			757,
-			530,
-			53,
-			30
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0095"
-		}
+		size = {160, 151},
+		trim = {102, 110, 5, 11},
+		a_size = {1024, 1024},
+		f_quad = {757, 530, 53, 30},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0095"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0096 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			84,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			615,
-			564,
-			56,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0097"
-		}
+		size = {160, 151},
+		trim = {84, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {615, 564, 56, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0097"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0098 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			83,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			555,
-			564,
-			57,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0099"
-		}
+		size = {160, 151},
+		trim = {83, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {555, 564, 57, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0099"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0100 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			81,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			564,
-			59,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0101"
-		}
+		size = {160, 151},
+		trim = {81, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {493, 564, 59, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0101"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0102 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			715,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0103",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0104"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {715, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0103", "darkarmy_melting_furnace_tower_lvl4_layer6_0104"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0105 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			756,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0106"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {756, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0106"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0107 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			797,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0108",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0111",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0112"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {797, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0108", "darkarmy_melting_furnace_tower_lvl4_layer6_0111", "darkarmy_melting_furnace_tower_lvl4_layer6_0112"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0109 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			838,
-			600,
-			38,
-			33
-		},
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {838, 600, 38, 33},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer6_0110",
 			"darkarmy_melting_furnace_tower_lvl4_layer6_0113",
@@ -8237,580 +3157,170 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0150 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			879,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0216",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0217",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0218",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0219",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0220",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0221",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0222",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0223"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {879, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0216", "darkarmy_melting_furnace_tower_lvl4_layer6_0217", "darkarmy_melting_furnace_tower_lvl4_layer6_0218", "darkarmy_melting_furnace_tower_lvl4_layer6_0219", "darkarmy_melting_furnace_tower_lvl4_layer6_0220", "darkarmy_melting_furnace_tower_lvl4_layer6_0221", "darkarmy_melting_furnace_tower_lvl4_layer6_0222", "darkarmy_melting_furnace_tower_lvl4_layer6_0223"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0151 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			75,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			530,
-			66,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0168",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0169",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0186",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0187"
-		}
+		size = {160, 151},
+		trim = {75, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {493, 530, 66, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0168", "darkarmy_melting_furnace_tower_lvl4_layer6_0169", "darkarmy_melting_furnace_tower_lvl4_layer6_0186", "darkarmy_melting_furnace_tower_lvl4_layer6_0187"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0152 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			74,
-			107,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			239,
-			984,
-			67,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0153",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0170",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0171",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0188",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0189"
-		}
+		size = {160, 151},
+		trim = {74, 107, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {239, 984, 67, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0153", "darkarmy_melting_furnace_tower_lvl4_layer6_0170", "darkarmy_melting_furnace_tower_lvl4_layer6_0171", "darkarmy_melting_furnace_tower_lvl4_layer6_0188", "darkarmy_melting_furnace_tower_lvl4_layer6_0189"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0154 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			91,
-			107,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			674,
-			564,
-			50,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0155",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0172",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0173",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0190",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0191"
-		}
+		size = {160, 151},
+		trim = {91, 107, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {674, 564, 50, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0155", "darkarmy_melting_furnace_tower_lvl4_layer6_0172", "darkarmy_melting_furnace_tower_lvl4_layer6_0173", "darkarmy_melting_furnace_tower_lvl4_layer6_0190", "darkarmy_melting_furnace_tower_lvl4_layer6_0191"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0156 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			94,
-			107,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			727,
-			564,
-			47,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0157",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0174",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0175",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0192",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0193"
-		}
+		size = {160, 151},
+		trim = {94, 107, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {727, 564, 47, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0157", "darkarmy_melting_furnace_tower_lvl4_layer6_0174", "darkarmy_melting_furnace_tower_lvl4_layer6_0175", "darkarmy_melting_furnace_tower_lvl4_layer6_0192", "darkarmy_melting_furnace_tower_lvl4_layer6_0193"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0158 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			95,
-			107,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			777,
-			564,
-			46,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0159",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0176",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0177",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0194",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0195"
-		}
+		size = {160, 151},
+		trim = {95, 107, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {777, 564, 46, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0159", "darkarmy_melting_furnace_tower_lvl4_layer6_0176", "darkarmy_melting_furnace_tower_lvl4_layer6_0177", "darkarmy_melting_furnace_tower_lvl4_layer6_0194", "darkarmy_melting_furnace_tower_lvl4_layer6_0195"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0160 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			91,
-			105,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			576,
-			50,
-			35
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0161",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0178",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0179"
-		}
+		size = {160, 151},
+		trim = {91, 105, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {439, 576, 50, 35},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0161", "darkarmy_melting_furnace_tower_lvl4_layer6_0178", "darkarmy_melting_furnace_tower_lvl4_layer6_0179"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0162 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			80,
-			106,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			822,
-			485,
-			61,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0163",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0180",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0181"
-		}
+		size = {160, 151},
+		trim = {80, 106, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {822, 485, 61, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0163", "darkarmy_melting_furnace_tower_lvl4_layer6_0180", "darkarmy_melting_furnace_tower_lvl4_layer6_0181"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0164 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			77,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			631,
-			530,
-			64,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0165",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0182",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0183"
-		}
+		size = {160, 151},
+		trim = {77, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {631, 530, 64, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0165", "darkarmy_melting_furnace_tower_lvl4_layer6_0182", "darkarmy_melting_furnace_tower_lvl4_layer6_0183"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0166 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			75,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			562,
-			530,
-			66,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0167",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0184",
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0185"
-		}
+		size = {160, 151},
+		trim = {75, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {562, 530, 66, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0167", "darkarmy_melting_furnace_tower_lvl4_layer6_0184", "darkarmy_melting_furnace_tower_lvl4_layer6_0185"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0196 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			106,
-			3,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			600,
-			55,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0197"
-		}
+		size = {160, 151},
+		trim = {102, 106, 3, 11},
+		a_size = {1024, 1024},
+		f_quad = {493, 600, 55, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0197"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0198 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			917,
-			39,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0199"
-		}
+		size = {160, 151},
+		trim = {102, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 917, 39, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0199"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0200 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			108,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			779,
-			38,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0201"
-		}
+		size = {160, 151},
+		trim = {102, 108, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 779, 38, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0201"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0202 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			105,
-			109,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			951,
-			36,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0203"
-		}
+		size = {160, 151},
+		trim = {105, 109, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 951, 36, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0204 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			107,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			920,
-			600,
-			38,
-			33
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0205"
-		}
+		size = {160, 151},
+		trim = {102, 107, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {920, 600, 38, 33},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0205"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0206 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			105,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			841,
-			637,
-			38,
-			35
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0207"
-		}
+		size = {160, 151},
+		trim = {102, 105, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {841, 637, 38, 35},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0207"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0208 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			103,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			834,
-			38,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0209"
-		}
+		size = {160, 151},
+		trim = {102, 103, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {537, 834, 38, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0209"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0210 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			103,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			874,
-			38,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0211"
-		}
+		size = {160, 151},
+		trim = {102, 103, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {537, 874, 38, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0211"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0212 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			111,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			397,
-			594,
-			38,
-			29
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0213"
-		}
+		size = {160, 151},
+		trim = {102, 111, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {397, 594, 38, 29},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0213"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer6_0214 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			102,
-			108,
-			20,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			814,
-			38,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer6_0215"
-		}
+		size = {160, 151},
+		trim = {102, 108, 20, 11},
+		a_size = {1024, 1024},
+		f_quad = {580, 814, 38, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer6_0215"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			100,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			669,
-			637,
-			42,
-			34
-		},
+		size = {160, 151},
+		trim = {20, 100, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {669, 637, 42, 34},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0002",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0065",
@@ -8842,146 +3352,42 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			654,
-			42,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0004",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0078",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0079",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0152",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0153"
-		}
+		size = {160, 151},
+		trim = {20, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 654, 42, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0004", "darkarmy_melting_furnace_tower_lvl4_layer7_0078", "darkarmy_melting_furnace_tower_lvl4_layer7_0079", "darkarmy_melting_furnace_tower_lvl4_layer7_0152", "darkarmy_melting_furnace_tower_lvl4_layer7_0153"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			834,
-			40,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0006",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0080",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0081",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0154",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0155"
-		}
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 834, 40, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0006", "darkarmy_melting_furnace_tower_lvl4_layer7_0080", "darkarmy_melting_furnace_tower_lvl4_layer7_0081", "darkarmy_melting_furnace_tower_lvl4_layer7_0154", "darkarmy_melting_furnace_tower_lvl4_layer7_0155"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			873,
-			40,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0008",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0082",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0083",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0156",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0157"
-		}
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 873, 40, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0008", "darkarmy_melting_furnace_tower_lvl4_layer7_0082", "darkarmy_melting_furnace_tower_lvl4_layer7_0083", "darkarmy_melting_furnace_tower_lvl4_layer7_0156", "darkarmy_melting_furnace_tower_lvl4_layer7_0157"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			912,
-			40,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0010",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0084",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0085",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0158",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0159"
-		}
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 912, 40, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0010", "darkarmy_melting_furnace_tower_lvl4_layer7_0084", "darkarmy_melting_furnace_tower_lvl4_layer7_0085", "darkarmy_melting_furnace_tower_lvl4_layer7_0158", "darkarmy_melting_furnace_tower_lvl4_layer7_0159"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0011 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			951,
-			40,
-			36
-		},
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 951, 40, 36},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0012",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0019",
@@ -8998,26 +3404,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0013 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			771,
-			40,
-			37
-		},
+		size = {160, 151},
+		trim = {22, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 771, 40, 37},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0014",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0021",
@@ -9034,26 +3424,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0015 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			811,
-			40,
-			37
-		},
+		size = {160, 151},
+		trim = {22, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 811, 40, 37},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0016",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0023",
@@ -9070,26 +3444,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0017 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			851,
-			40,
-			37
-		},
+		size = {160, 151},
+		trim = {22, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 851, 40, 37},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0018",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0025",
@@ -9106,26 +3464,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0027 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			891,
-			40,
-			37
-		},
+		size = {160, 151},
+		trim = {22, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 891, 40, 37},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0028",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0037",
@@ -9142,176 +3484,50 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0029 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			637,
-			40,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0030",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0104",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0105",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0178",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0179"
-		}
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {537, 637, 40, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0030", "darkarmy_melting_furnace_tower_lvl4_layer7_0104", "darkarmy_melting_furnace_tower_lvl4_layer7_0105", "darkarmy_melting_furnace_tower_lvl4_layer7_0178", "darkarmy_melting_furnace_tower_lvl4_layer7_0179"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0031 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			676,
-			40,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0032",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0106",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0107",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0180",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0181"
-		}
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {537, 676, 40, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0032", "darkarmy_melting_furnace_tower_lvl4_layer7_0106", "darkarmy_melting_furnace_tower_lvl4_layer7_0107", "darkarmy_melting_furnace_tower_lvl4_layer7_0180", "darkarmy_melting_furnace_tower_lvl4_layer7_0181"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0033 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			931,
-			40,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0034",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0108",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0109",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0182",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0183"
-		}
+		size = {160, 151},
+		trim = {22, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 931, 40, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0034", "darkarmy_melting_furnace_tower_lvl4_layer7_0108", "darkarmy_melting_furnace_tower_lvl4_layer7_0109", "darkarmy_melting_furnace_tower_lvl4_layer7_0182", "darkarmy_melting_furnace_tower_lvl4_layer7_0183"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0035 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			971,
-			40,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0036",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0110",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0111",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0184",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0185"
-		}
+		size = {160, 151},
+		trim = {22, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 971, 40, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0036", "darkarmy_melting_furnace_tower_lvl4_layer7_0110", "darkarmy_melting_furnace_tower_lvl4_layer7_0111", "darkarmy_melting_furnace_tower_lvl4_layer7_0184", "darkarmy_melting_furnace_tower_lvl4_layer7_0185"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0039 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			22,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			537,
-			715,
-			40,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0040",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0114",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0115",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0188",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0189"
-		}
+		size = {160, 151},
+		trim = {22, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {537, 715, 40, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0040", "darkarmy_melting_furnace_tower_lvl4_layer7_0114", "darkarmy_melting_furnace_tower_lvl4_layer7_0115", "darkarmy_melting_furnace_tower_lvl4_layer7_0188", "darkarmy_melting_furnace_tower_lvl4_layer7_0189"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0041 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			693,
-			42,
-			36
-		},
+		size = {160, 151},
+		trim = {20, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 693, 42, 36},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0042",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0045",
@@ -9333,26 +3549,10 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0043 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			98,
-			99,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			637,
-			41,
-			36
-		},
+		size = {160, 151},
+		trim = {20, 98, 99, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 637, 41, 36},
 		alias = {
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0044",
 			"darkarmy_melting_furnace_tower_lvl4_layer7_0116",
@@ -9369,775 +3569,218 @@ return {
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0047 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			98,
-			99,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			676,
-			41,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0048",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0120",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0122",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0123",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0196",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0197"
-		}
+		size = {160, 151},
+		trim = {20, 98, 99, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 676, 41, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0048", "darkarmy_melting_furnace_tower_lvl4_layer7_0120", "darkarmy_melting_furnace_tower_lvl4_layer7_0122", "darkarmy_melting_furnace_tower_lvl4_layer7_0123", "darkarmy_melting_furnace_tower_lvl4_layer7_0196", "darkarmy_melting_furnace_tower_lvl4_layer7_0197"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0049 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			98,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			732,
-			42,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0050",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0124",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0125",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0198",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0199"
-		}
+		size = {160, 151},
+		trim = {20, 98, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 732, 42, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0050", "darkarmy_melting_furnace_tower_lvl4_layer7_0124", "darkarmy_melting_furnace_tower_lvl4_layer7_0125", "darkarmy_melting_furnace_tower_lvl4_layer7_0198", "darkarmy_melting_furnace_tower_lvl4_layer7_0199"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0051 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			98,
-			99,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			493,
-			715,
-			41,
-			36
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0052",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0126",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0127",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0200",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0201"
-		}
+		size = {160, 151},
+		trim = {20, 98, 99, 17},
+		a_size = {1024, 1024},
+		f_quad = {493, 715, 41, 36},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0052", "darkarmy_melting_furnace_tower_lvl4_layer7_0126", "darkarmy_melting_furnace_tower_lvl4_layer7_0127", "darkarmy_melting_furnace_tower_lvl4_layer7_0200", "darkarmy_melting_furnace_tower_lvl4_layer7_0201"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0053 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			100,
-			101,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			882,
-			637,
-			39,
-			34
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0054",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0128",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0129",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0202",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0203"
-		}
+		size = {160, 151},
+		trim = {20, 100, 101, 17},
+		a_size = {1024, 1024},
+		f_quad = {882, 637, 39, 34},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0054", "darkarmy_melting_furnace_tower_lvl4_layer7_0128", "darkarmy_melting_furnace_tower_lvl4_layer7_0129", "darkarmy_melting_furnace_tower_lvl4_layer7_0202", "darkarmy_melting_furnace_tower_lvl4_layer7_0203"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0055 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			97,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			614,
-			42,
-			37
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0056",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0130",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0131",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0204",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0205"
-		}
+		size = {160, 151},
+		trim = {20, 97, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {439, 614, 42, 37},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0056", "darkarmy_melting_furnace_tower_lvl4_layer7_0130", "darkarmy_melting_furnace_tower_lvl4_layer7_0131", "darkarmy_melting_furnace_tower_lvl4_layer7_0204", "darkarmy_melting_furnace_tower_lvl4_layer7_0205"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0057 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			95,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			976,
-			312,
-			41,
-			39
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0058",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0132",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0133",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0206",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0207"
-		}
+		size = {160, 151},
+		trim = {21, 95, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {976, 312, 41, 39},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0058", "darkarmy_melting_furnace_tower_lvl4_layer7_0132", "darkarmy_melting_furnace_tower_lvl4_layer7_0133", "darkarmy_melting_furnace_tower_lvl4_layer7_0206", "darkarmy_melting_furnace_tower_lvl4_layer7_0207"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0059 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			20,
-			95,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			979,
-			249,
-			42,
-			39
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0060",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0134",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0135",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0208",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0209"
-		}
+		size = {160, 151},
+		trim = {20, 95, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {979, 249, 42, 39},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0060", "darkarmy_melting_furnace_tower_lvl4_layer7_0134", "darkarmy_melting_furnace_tower_lvl4_layer7_0135", "darkarmy_melting_furnace_tower_lvl4_layer7_0208", "darkarmy_melting_furnace_tower_lvl4_layer7_0209"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0061 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			19,
-			103,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			867,
-			530,
-			43,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0062",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0136",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0137",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0210",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0211"
-		}
+		size = {160, 151},
+		trim = {19, 103, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {867, 530, 43, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0062", "darkarmy_melting_furnace_tower_lvl4_layer7_0136", "darkarmy_melting_furnace_tower_lvl4_layer7_0137", "darkarmy_melting_furnace_tower_lvl4_layer7_0210", "darkarmy_melting_furnace_tower_lvl4_layer7_0211"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer7_0063 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			21,
-			99,
-			98,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			580,
-			637,
-			41,
-			35
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0064",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0212",
-			"darkarmy_melting_furnace_tower_lvl4_layer7_0213"
-		}
+		size = {160, 151},
+		trim = {21, 99, 98, 17},
+		a_size = {1024, 1024},
+		f_quad = {580, 637, 41, 35},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer7_0064", "darkarmy_melting_furnace_tower_lvl4_layer7_0212", "darkarmy_melting_furnace_tower_lvl4_layer7_0213"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			45,
-			28,
-			58,
-			101
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			964,
-			530,
-			57,
-			22
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0008",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0082",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0083",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0156",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0157"
-		}
+		size = {160, 151},
+		trim = {45, 28, 58, 101},
+		a_size = {1024, 1024},
+		f_quad = {964, 530, 57, 22},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0008", "darkarmy_melting_furnace_tower_lvl4_layer8_0082", "darkarmy_melting_furnace_tower_lvl4_layer8_0083", "darkarmy_melting_furnace_tower_lvl4_layer8_0156", "darkarmy_melting_furnace_tower_lvl4_layer8_0157"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			39,
-			22,
-			55,
-			97
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			485,
-			66,
-			32
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0010",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0084",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0085",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0158",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0159"
-		}
+		size = {160, 151},
+		trim = {39, 22, 55, 97},
+		a_size = {1024, 1024},
+		f_quad = {633, 485, 66, 32},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0010", "darkarmy_melting_furnace_tower_lvl4_layer8_0084", "darkarmy_melting_furnace_tower_lvl4_layer8_0085", "darkarmy_melting_furnace_tower_lvl4_layer8_0158", "darkarmy_melting_furnace_tower_lvl4_layer8_0159"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0017 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			36,
-			18,
-			35,
-			92
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			289,
-			485,
-			89,
-			41
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0018",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0092",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0093",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0166",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0167"
-		}
+		size = {160, 151},
+		trim = {36, 18, 35, 92},
+		a_size = {1024, 1024},
+		f_quad = {289, 485, 89, 41},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0018", "darkarmy_melting_furnace_tower_lvl4_layer8_0092", "darkarmy_melting_furnace_tower_lvl4_layer8_0093", "darkarmy_melting_furnace_tower_lvl4_layer8_0166", "darkarmy_melting_furnace_tower_lvl4_layer8_0167"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0021 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			51,
-			10,
-			36,
-			91
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			917,
-			73,
-			50
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0022",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0096",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0097",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0170",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0171"
-		}
+		size = {160, 151},
+		trim = {51, 10, 36, 91},
+		a_size = {1024, 1024},
+		f_quad = {5, 917, 73, 50},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0022", "darkarmy_melting_furnace_tower_lvl4_layer8_0096", "darkarmy_melting_furnace_tower_lvl4_layer8_0097", "darkarmy_melting_furnace_tower_lvl4_layer8_0170", "darkarmy_melting_furnace_tower_lvl4_layer8_0171"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0023 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			44,
-			4,
-			36,
-			91
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			502,
-			80,
-			56
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0024",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0098",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0099",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0172",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0173"
-		}
+		size = {160, 151},
+		trim = {44, 4, 36, 91},
+		a_size = {1024, 1024},
+		f_quad = {87, 502, 80, 56},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0024", "darkarmy_melting_furnace_tower_lvl4_layer8_0098", "darkarmy_melting_furnace_tower_lvl4_layer8_0099", "darkarmy_melting_furnace_tower_lvl4_layer8_0172", "darkarmy_melting_furnace_tower_lvl4_layer8_0173"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0025 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			43,
-			4,
-			36,
-			93
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			87,
-			561,
-			81,
-			54
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0026",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0100",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0101",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0174",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0175"
-		}
+		size = {160, 151},
+		trim = {43, 4, 36, 93},
+		a_size = {1024, 1024},
+		f_quad = {87, 561, 81, 54},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0026", "darkarmy_melting_furnace_tower_lvl4_layer8_0100", "darkarmy_melting_furnace_tower_lvl4_layer8_0101", "darkarmy_melting_furnace_tower_lvl4_layer8_0174", "darkarmy_melting_furnace_tower_lvl4_layer8_0175"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0027 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			41,
-			2,
-			42,
-			99
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			750,
-			77,
-			50
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0028",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0102",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0103",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0176",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0177"
-		}
+		size = {160, 151},
+		trim = {41, 2, 42, 99},
+		a_size = {1024, 1024},
+		f_quad = {5, 750, 77, 50},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0028", "darkarmy_melting_furnace_tower_lvl4_layer8_0102", "darkarmy_melting_furnace_tower_lvl4_layer8_0103", "darkarmy_melting_furnace_tower_lvl4_layer8_0176", "darkarmy_melting_furnace_tower_lvl4_layer8_0177"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0035 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			43,
-			4,
-			41,
-			116
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			381,
-			485,
-			76,
-			31
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0036",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0110",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0111",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0184",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0185"
-		}
+		size = {160, 151},
+		trim = {43, 4, 41, 116},
+		a_size = {1024, 1024},
+		f_quad = {381, 485, 76, 31},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0036", "darkarmy_melting_furnace_tower_lvl4_layer8_0110", "darkarmy_melting_furnace_tower_lvl4_layer8_0111", "darkarmy_melting_furnace_tower_lvl4_layer8_0184", "darkarmy_melting_furnace_tower_lvl4_layer8_0185"}
 	},
 	darkarmy_melting_furnace_tower_lvl4_layer8_0037 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			160,
-			151
-		},
-		trim = {
-			45,
-			5,
-			42,
-			118
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			945,
-			485,
-			73,
-			28
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0038",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0112",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0113",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0186",
-			"darkarmy_melting_furnace_tower_lvl4_layer8_0187"
-		}
+		size = {160, 151},
+		trim = {45, 5, 42, 118},
+		a_size = {1024, 1024},
+		f_quad = {945, 485, 73, 28},
+		alias = {"darkarmy_melting_furnace_tower_lvl4_layer8_0038", "darkarmy_melting_furnace_tower_lvl4_layer8_0112", "darkarmy_melting_furnace_tower_lvl4_layer8_0113", "darkarmy_melting_furnace_tower_lvl4_layer8_0186", "darkarmy_melting_furnace_tower_lvl4_layer8_0187"}
 	},
 	darkarmy_melting_furnace_tower_swords_0001 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			51,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			854,
-			437,
-			110,
-			42
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0002"
-		}
+		size = {162, 122},
+		trim = {26, 51, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {854, 437, 110, 42},
+		alias = {"darkarmy_melting_furnace_tower_swords_0002"}
 	},
 	darkarmy_melting_furnace_tower_swords_0003 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			51,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			485,
-			110,
-			42
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0004"
-		}
+		size = {162, 122},
+		trim = {26, 51, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {176, 485, 110, 42},
+		alias = {"darkarmy_melting_furnace_tower_swords_0004"}
 	},
 	darkarmy_melting_furnace_tower_swords_0005 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			50,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			515,
-			437,
-			110,
-			43
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0006"
-		}
+		size = {162, 122},
+		trim = {26, 50, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {515, 437, 110, 43},
+		alias = {"darkarmy_melting_furnace_tower_swords_0006"}
 	},
 	darkarmy_melting_furnace_tower_swords_0007 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			50,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			628,
-			437,
-			110,
-			43
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0008"
-		}
+		size = {162, 122},
+		trim = {26, 50, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {628, 437, 110, 43},
+		alias = {"darkarmy_melting_furnace_tower_swords_0008"}
 	},
 	darkarmy_melting_furnace_tower_swords_0009 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			49,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			289,
-			437,
-			110,
-			44
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0010"
-		}
+		size = {162, 122},
+		trim = {26, 49, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {289, 437, 110, 44},
+		alias = {"darkarmy_melting_furnace_tower_swords_0010"}
 	},
 	darkarmy_melting_furnace_tower_swords_0017 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			48,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			813,
-			374,
-			110,
-			45
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0018"
-		}
+		size = {162, 122},
+		trim = {26, 48, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {813, 374, 110, 45},
+		alias = {"darkarmy_melting_furnace_tower_swords_0018"}
 	},
 	darkarmy_melting_furnace_tower_swords_0019 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			48,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			176,
-			437,
-			110,
-			45
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0020"
-		}
+		size = {162, 122},
+		trim = {26, 48, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {176, 437, 110, 45},
+		alias = {"darkarmy_melting_furnace_tower_swords_0020"}
 	},
 	darkarmy_melting_furnace_tower_swords_0021 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			49,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			402,
-			437,
-			110,
-			44
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0022"
-		}
+		size = {162, 122},
+		trim = {26, 49, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {402, 437, 110, 44},
+		alias = {"darkarmy_melting_furnace_tower_swords_0022"}
 	},
 	darkarmy_melting_furnace_tower_swords_0023 = {
 		a_name = "kr4_dark_army_tower_melting_furnace-2.dds",
-		size = {
-			162,
-			122
-		},
-		trim = {
-			26,
-			50,
-			26,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			741,
-			437,
-			110,
-			43
-		},
-		alias = {
-			"darkarmy_melting_furnace_tower_swords_0024"
-		}
+		size = {162, 122},
+		trim = {26, 50, 26, 29},
+		a_size = {1024, 1024},
+		f_quad = {741, 437, 110, 43},
+		alias = {"darkarmy_melting_furnace_tower_swords_0024"}
 	}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level06.lua
-
+-- chunkname: @./kr3/data/levels/level06.lua
 local log = require("lib.klua.log"):new("level06")
 local signal = require("hump.signal")
 local E = require("entity_db")
@@ -8,7 +7,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -19,58 +17,46 @@ local level = {}
 
 function level:load(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
-		self.gryphon_waves = {
-			{
-				wave = 5,
-				side = "left",
-				delay = 17,
-				cooldown = 120
-			},
-			{
-				wave = 10,
-				side = "right",
-				delay = 13,
-				cooldown = 120
-			}
-		}
+		self.gryphon_waves = {{
+			wave = 5,
+			side = "left",
+			delay = 17,
+			cooldown = 120
+		}, {
+			wave = 10,
+			side = "right",
+			delay = 13,
+			cooldown = 120
+		}}
 	elseif store.level_mode == GAME_MODE_HEROIC then
-		self.gryphon_waves = {
-			{
-				wave = 2,
-				side = "left",
-				delay = 15,
-				cooldown = 360
-			},
-			{
-				wave = 4,
-				side = "right",
-				delay = 15,
-				cooldown = 360
-			}
-		}
+		self.gryphon_waves = {{
+			wave = 2,
+			side = "left",
+			delay = 15,
+			cooldown = 360
+		}, {
+			wave = 4,
+			side = "right",
+			delay = 15,
+			cooldown = 360
+		}}
 	elseif store.level_mode == GAME_MODE_IRON then
-		self.gryphon_waves = {
-			{
-				wave = 1,
-				side = "left",
-				delay = 15,
-				cooldown = 48
-			},
-			{
-				wave = 1,
-				side = "right",
-				delay = 15,
-				cooldown = 48
-			}
-		}
+		self.gryphon_waves = {{
+			wave = 1,
+			side = "left",
+			delay = 15,
+			cooldown = 48
+		}, {
+			wave = 1,
+			side = "right",
+			delay = 15,
+			cooldown = 48
+		}}
 	end
 
 	local e = E:create_entity("mega_spawner")
-
 	e.load_file = "level54_spawner"
-
 	LU.queue_insert(store, e)
-
 	self.mega_spawner = e
 end
 
@@ -85,27 +71,21 @@ function level:update(store)
 			phase = math.min(1, (store.tick_ts - start_ts) / duration)
 			entity.pos.x = U.ease_value(from.x, to.x, phase, easing)
 			entity.pos.y = U.ease_value(from.y, to.y, phase, easing)
-
 			coroutine.yield()
 		end
 	end
 
 	-- local e = E:create_entity("hero_alleria_fixed")
-
 	-- e.pos = V.v(660, 625)
 	-- e.cat_pos = V.v(640, 655)
-
 	-- LU.queue_insert(store, e)
-
 	while store.wave_group_number < 1 do
 		coroutine.yield()
 	end
 
 	if self.gryphon_waves then
 		local e = E:create_entity("gryphon_controller")
-
 		e.gryphon_waves = self.gryphon_waves
-
 		LU.queue_insert(store, e)
 	end
 
@@ -121,15 +101,10 @@ function level:update(store)
 			y = 500
 		}, 2)
 		signal.emit("hide-gui")
-
 		local jail = E:create_entity("decal_s06_jailed_boss")
-
 		jail.pos.x, jail.pos.y = store.visible_coords.left - 132, 459
-
 		LU.queue_insert(store, jail)
-
 		self.jail = jail
-
 		S:queue("ElvesHyenaWagonLoop")
 		y_move(store, jail, V.v(120, 459), 47)
 		S:stop("ElvesHyenaWagonLoop")
@@ -137,20 +112,15 @@ function level:update(store)
 		U.animation_start(jail, "open", nil, store.tick_ts, false)
 		U.y_wait(store, fts(83))
 		S:queue("ElvesHyenaWagonEnd")
-
 		local nodes = P:nearest_nodes(jail.pos.x, jail.pos.y)
 		local node = nodes[1]
 		local boss = E:create_entity("eb_gnoll")
-
 		boss.nav_path.pi = node[1]
 		boss.nav_path.spi = 1
 		boss.nav_path.ni = node[3] + 1
 		boss.mega_spawner = self.mega_spawner
-
 		LU.queue_insert(store, boss)
-
 		self.boss = boss
-
 		U.y_wait(store, fts(3))
 
 		for i = 1, 5 do

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level08_data.lua
-
+-- chunkname: @./kr3/data/levels/level08_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 2,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"FaerieGroveAmbienceSound"
-			}
+			sounds = {"FaerieGroveAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -64,20 +61,16 @@ return {
 				x = 906,
 				y = 135
 			},
-			pos_list = {
-				{
-					x = 906,
-					y = 135
-				},
-				{
-					x = 898,
-					y = 250
-				},
-				{
-					x = 925,
-					y = 343
-				}
-			}
+			pos_list = {{
+				x = 906,
+				y = 135
+			}, {
+				x = 898,
+				y = 250
+			}, {
+				x = 925,
+				y = 343
+			}}
 		},
 		{
 			template = "decal_s08_peekaboo_rrh",
@@ -643,128 +636,37 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 4,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 4,
-			locked_towers = {
-				"tower_build_mage",
-				"tower_build_engineer"
-			}
-		}
-	},
-    unlock_towers = {
-        "tower_silver","tower_forest"
-    },
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 4,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 4,
+		locked_towers = {"tower_build_mage", "tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_silver", "tower_forest"},
 	nav_mesh = {
-		[11] = {
-			nil,
-			12,
-			14,
-			16
-		},
-		[12] = {
-			11,
-			nil,
-			17,
-			14
-		},
-		[13] = {
-			11,
-			14,
-			23,
-			16
-		},
-		[14] = {
-			11,
-			12,
-			23,
-			13
-		},
-		[15] = {
-			11,
-			16,
-			20
-		},
-		[16] = {
-			11,
-			13,
-			19,
-			15
-		},
-		[17] = {
-			12,
-			nil,
-			18,
-			23
-		},
-		[18] = {
-			17,
-			nil,
-			24,
-			21
-		},
-		[19] = {
-			16,
-			23,
-			22,
-			20
-		},
-		[20] = {
-			15,
-			19,
-			22
-		},
-		[21] = {
-			23,
-			18,
-			24,
-			22
-		},
-		[22] = {
-			19,
-			21,
-			24,
-			20
-		},
-		[23] = {
-			13,
-			17,
-			21,
-			19
-		},
-		[24] = {
-			21,
-			18,
-			nil,
-			22
-		}
+		[11] = {nil, 12, 14, 16},
+		[12] = {11, nil, 17, 14},
+		[13] = {11, 14, 23, 16},
+		[14] = {11, 12, 23, 13},
+		[15] = {11, 16, 20},
+		[16] = {11, 13, 19, 15},
+		[17] = {12, nil, 18, 23},
+		[18] = {17, nil, 24, 21},
+		[19] = {16, 23, 22, 20},
+		[20] = {15, 19, 22},
+		[21] = {23, 18, 24, 22},
+		[22] = {19, 21, 24, 20},
+		[23] = {13, 17, 21, 19},
+		[24] = {21, 18, nil, 22}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage56",
-		"ElvesVenomPlants",
-		"ElvesLevelEightSounds",
-		"ElvesCreepHoplite",
-		"ElvesScourger",
-		"FaerieGroveAmbienceSounds"
-	},
-	required_textures = {
-		"go_enemies_faerie_grove",
-		"go_stage56",
-		"go_stage56_bg",
-		"go_stages_faerie_grove"
-	}
+	required_sounds = {"music_stage56", "ElvesVenomPlants", "ElvesLevelEightSounds", "ElvesCreepHoplite", "ElvesScourger", "FaerieGroveAmbienceSounds"},
+	required_textures = {"go_enemies_faerie_grove", "go_stage56", "go_stage56_bg", "go_stages_faerie_grove"}
 }

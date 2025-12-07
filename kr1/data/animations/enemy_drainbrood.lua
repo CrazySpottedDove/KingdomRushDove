@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_drainbrood.lua
-
+-- chunkname: @./kr5/data/animations/enemy_drainbrood.lua
 local a = {
 	drainblood_cucoon_in = {
 		prefix = "drainblood_cucoon",
@@ -82,5 +81,4 @@ local a = {
 		from = 94
 	}
 }
-
 return a

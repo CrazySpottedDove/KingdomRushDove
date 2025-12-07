@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/deformed_grymbeard_clone.lua
-
+-- chunkname: @./kr5/data/animations/deformed_grymbeard_clone.lua
 local a = {
 	clone_boss_creep_idle = {
 		prefix = "clone_boss_creep",
@@ -32,5 +31,4 @@ local a = {
 		from = 17
 	}
 }
-
 return a

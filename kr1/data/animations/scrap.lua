@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/scrap.lua
-
+-- chunkname: @./kr5/data/animations/scrap.lua
 local a = {
 	scrap_pile_in = {
 		prefix = "scrap_pile",
@@ -32,5 +31,4 @@ local a = {
 		from = 78
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_royal_archers.lua
-
+-- chunkname: @./kr5/data/animations/tower_royal_archers.lua
 local a = {
 	royal_archer_tower_lvl4_tower_rapacious_hunter_base = {
 		prefix = "royal_archer_tower_lvl4_tower_rapacious_hunter_base",
@@ -247,5 +246,4 @@ local a = {
 		from = 2
 	}
 }
-
 return a

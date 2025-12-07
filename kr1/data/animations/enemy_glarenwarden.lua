@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_glarenwarden.lua
-
+-- chunkname: @./kr5/data/animations/enemy_glarenwarden.lua
 local a = {
 	glarenwarden_creep_glarenwarden_idle_side = {
 		prefix = "glarenwarden_creep",
@@ -92,5 +91,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

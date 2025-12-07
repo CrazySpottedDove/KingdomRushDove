@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level10.lua
-
+-- chunkname: @./kr1/data/levels/level10.lua
 local V = require("lib.klua.vector")
 local level = {}
 

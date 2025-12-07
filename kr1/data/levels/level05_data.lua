@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level05_data.lua
-
+-- chunkname: @./kr1/data/levels/level05_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -453,126 +452,41 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			flags = 4294967295,
-			to = 21,
-			from = 1,
-			path_id = 3
-		}
-	},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 4,
-			locked_towers = {}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 4,
-			locked_towers = {
-				"tower_build_barrack"
-			}
-		}
-	},
-    unlock_towers = {"tower_ranger", "tower_elf"},
+	invalid_path_ranges = {{
+		flags = 4294967295,
+		to = 21,
+		from = 1,
+		path_id = 3
+	}},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 4,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 4,
+		locked_towers = {"tower_build_barrack"}
+	}},
+	unlock_towers = {"tower_ranger", "tower_elf"},
 	nav_mesh = {
-		{
-			8,
-			3,
-			nil,
-			14
-		},
-		{
-			5,
-			5,
-			nil,
-			1
-		},
-		{
-			4,
-			5,
-			2,
-			1
-		},
-		{
-			12,
-			6,
-			3,
-			7
-		},
-		{
-			6,
-			nil,
-			2,
-			3
-		},
-		{
-			12,
-			nil,
-			5,
-			4
-		},
-		{
-			9,
-			4,
-			3,
-			8
-		},
-		{
-			10,
-			7,
-			1,
-			14
-		},
-		{
-			13,
-			13,
-			7,
-			10
-		},
-		{
-			13,
-			9,
-			8,
-			11
-		},
-		{
-			nil,
-			10,
-			14
-		},
-		{
-			nil,
-			6,
-			4,
-			13
-		},
-		{
-			nil,
-			12,
-			4,
-			9
-		},
-		{
-			11,
-			8,
-			1
-		}
+		{8, 3, nil, 14},
+		{5, 5, nil, 1},
+		{4, 5, 2, 1},
+		{12, 6, 3, 7},
+		{6, nil, 2, 3},
+		{12, nil, 5, 4},
+		{9, 4, 3, 8},
+		{10, 7, 1, 14},
+		{13, 13, 7, 10},
+		{13, 9, 8, 11},
+		{nil, 10, 14},
+		{nil, 6, 4, 13},
+		{nil, 12, 4, 9},
+		{11, 8, 1}
 	},
-	required_sounds = {
-		"music_stage05",
-        "HeroArcher"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_stages_grass",
-		"go_stage05",
-		"go_stage05_bg",
-        "go_hero_alleria"
-	}
+	required_sounds = {"music_stage05", "HeroArcher"},
+	required_textures = {"go_enemies_grass", "go_stages_grass", "go_stage05", "go_stage05_bg", "go_hero_alleria"}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage22_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage22_decos.lua
 local a = {
 	achievement_donkey_kong_creep_idle = {
 		prefix = "achievement_donkey_kong_creep",
@@ -202,5 +201,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

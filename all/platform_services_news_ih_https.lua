@@ -1,10 +1,7 @@
-﻿-- chunkname: @./all/platform_services_news_ih_https.lua
-
+-- chunkname: @./all/platform_services_news_ih_https.lua
 local log = require("lib.klua.log"):new("platform_services_news_ih_https")
-
 require("lib.klua.table")
 require("lib.klua.string")
-
 local signal = require("hump.signal")
 local PS = require("platform_services")
 local PSU = require("platform_services_utils")
@@ -12,12 +9,9 @@ local RC = require("remote_config")
 local I = require("klove.image_db")
 local i18n = require("i18n")
 local storage = require("storage")
-
 require("constants")
 require("version")
-
 local news = {}
-
 news.can_be_paused = true
 news.update_interval = 1
 news.texture_group = "cached_news_images"
@@ -31,13 +25,11 @@ function news:init(name, params)
 	else
 		if not PS.services.http or not PS.services.http.inited then
 			log.error("platform_services_news_ih requires platform_services_http inited")
-
 			return nil
 		end
 
 		if not params or not params.news_id or not params.news_store then
 			log.error("platform_services_news_ih requires news_id and news_store params")
-
 			return nil
 		end
 
@@ -51,7 +43,7 @@ end
 
 function news:shutdown(name)
 	if self.inited then
-		-- block empty
+	-- block empty
 	end
 
 	self.inited = nil
@@ -62,13 +54,11 @@ function news:cache_news()
 
 	if not url then
 		log.debug("news URL is nil. skipping...")
-
-		return
+		return 
 	end
 
 	local function cb_dl_news(status, req, url, code, header, data)
 		log.debug("cb_dl_news(status:%s, req.id:%s)", status, req.id)
-
 		local success = status == 0
 
 		if success then
@@ -76,7 +66,6 @@ function news:cache_news()
 
 			if data then
 				log.debug("cached request contents:%s", data)
-
 				local ok, dl = PS.services.http:parse_json(data)
 
 				if ok then
@@ -92,9 +81,7 @@ function news:cache_news()
 	end
 
 	local rid = PS.services.http:get(url, self:get_headers(url), cb_dl_news)
-
 	log.debug("caching news from %s", url, rid)
-
 	return rid
 end
 
@@ -103,8 +90,7 @@ function news:cache_image(suffix)
 
 	if not url then
 		log.debug("image URL is nil. skipping...")
-
-		return
+		return 
 	end
 
 	local function cb_dl_image(status, req, url, code, header, data)
@@ -133,7 +119,6 @@ function news:cache_image(suffix)
 					log.debug("Image loaded as %s", suffix)
 				else
 					success = false
-
 					log.error("Image could not be created from suffix: %s. error:%s", suffix, imd)
 				end
 			end
@@ -143,9 +128,7 @@ function news:cache_image(suffix)
 	end
 
 	local rid = PS.services.http:get(url, self:get_headers(url), cb_dl_image)
-
 	log.debug("caching image %s", url, rid)
-
 	return rid
 end
 
@@ -187,7 +170,6 @@ function news:has_unseen()
 	end
 
 	local nd = self:load_news_data()
-
 	return not nd.last_seen_time or rtime > nd.last_seen_time or nd.last_refresh_id ~= d.refreshId
 end
 
@@ -203,7 +185,6 @@ function news:mark_seen()
 	end
 
 	nd.last_refresh_id = d.refreshId
-
 	self:save_news_data(nd)
 end
 
@@ -212,7 +193,6 @@ function news:get_url(path)
 
 	if DEBUG_NEWS_URL then
 		log.error("overriding news url with debug value %s", DEBUG_NEWS_URL)
-
 		url = DEBUG_NEWS_URL
 	end
 
@@ -221,7 +201,6 @@ function news:get_url(path)
 			url = path
 		elseif string.starts(path, "/") then
 			local parts = string.split(url, "/")
-
 			url = parts[1] .. "//" .. parts[2] .. path
 		else
 			url = url .. "/" .. path
@@ -246,13 +225,11 @@ function news:get_headers(url)
 		ih_appversion_long = version.string,
 		ih_localtime = self:time_to_date(os.time())
 	}
-
 	return headers
 end
 
 function news:store_response(rid, url, code, header, data)
 	log.debug("caching response for rid:%s, url:%s, header:%s", rid, url, header, data)
-
 	self.cache[rid] = {
 		url = url,
 		ts = os.time(),
@@ -260,13 +237,11 @@ function news:store_response(rid, url, code, header, data)
 		header = header,
 		body = data
 	}
-
 	return data, header, code
 end
 
 function news:load_news_data()
 	local global = storage:load_global()
-
 	return global.news or {}
 end
 
@@ -282,9 +257,7 @@ function news:save_news_data(md)
 end
 
 function news:date_to_time(date)
-	local m = {
-		string.match(date, "(%d%d%d%d)%-(%d%d)%-(%d%d)T(%d%d):(%d%d)")
-	}
+	local m = {string.match(date, "(%d%d%d%d)%-(%d%d)%-(%d%d)T(%d%d):(%d%d)")}
 
 	if m and #m > 0 then
 		return os.time({

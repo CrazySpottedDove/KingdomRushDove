@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level10_data.lua
-
+-- chunkname: @./kr1/data/levels/level10_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -114,32 +113,25 @@ return {
 		},
 		{
 			template = "graveyard_controller",
-			["graveyard.spawn_pos"] = {
-				{
-					x = 148,
-					y = 556
-				},
-				{
-					x = 179,
-					y = 541
-				},
-				{
-					x = 146,
-					y = 519
-				},
-				{
-					x = 239,
-					y = 540
-				},
-				{
-					x = 189,
-					y = 502
-				},
-				{
-					x = 200,
-					y = 526
-				}
-			},
+			["graveyard.spawn_pos"] = {{
+				x = 148,
+				y = 556
+			}, {
+				x = 179,
+				y = 541
+			}, {
+				x = 146,
+				y = 519
+			}, {
+				x = 239,
+				y = 540
+			}, {
+				x = 189,
+				y = 502
+			}, {
+				x = 200,
+				y = 526
+			}},
 			pos = {
 				x = 205,
 				y = 510
@@ -357,108 +349,31 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6
-		},
-		{
-			max_upgrade_level = 5
-		},
-		{
-			max_upgrade_level = 5,
-			locked_towers = {
-				"tower_build_engineer"
-			}
-		}
-	},
-    unlock_towers = {"tower_tesla"},
+	level_mode_overrides = {{
+		max_upgrade_level = 6
+	}, {
+		max_upgrade_level = 5
+	}, {
+		max_upgrade_level = 5,
+		locked_towers = {"tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_tesla"},
 	nav_mesh = {
-		{
-			2,
-			8
-		},
-		{
-			5,
-			8,
-			1
-		},
-		{
-			nil,
-			7,
-			4
-		},
-		{
-			3,
-			6,
-			5
-		},
-		{
-			6,
-			9,
-			2,
-			4
-		},
-		{
-			7,
-			10,
-			9,
-			4
-		},
-		{
-			nil,
-			14,
-			6,
-			3
-		},
-		{
-			9,
-			12,
-			nil,
-			2
-		},
-		{
-			6,
-			12,
-			8,
-			5
-		},
-		{
-			7,
-			11,
-			9,
-			6
-		},
-		{
-			7,
-			13,
-			12,
-			10
-		},
-		{
-			13,
-			nil,
-			nil,
-			8
-		},
-		{
-			14,
-			nil,
-			12,
-			11
-		},
-		{
-			7,
-			nil,
-			13,
-			11
-		}
+		{2, 8},
+		{5, 8, 1},
+		{nil, 7, 4},
+		{3, 6, 5},
+		{6, 9, 2, 4},
+		{7, 10, 9, 4},
+		{nil, 14, 6, 3},
+		{9, 12, nil, 2},
+		{6, 12, 8, 5},
+		{7, 11, 9, 6},
+		{7, 13, 12, 10},
+		{13, nil, nil, 8},
+		{14, nil, 12, 11},
+		{7, nil, 13, 11}
 	},
-	required_sounds = {
-		"music_stage10"
-	},
-	required_textures = {
-		"go_enemies_wastelands",
-		"go_stage10",
-		"go_stage10_bg"
-	}
+	required_sounds = {"music_stage10"},
+	required_textures = {"go_enemies_wastelands", "go_stage10", "go_stage10_bg"}
 }

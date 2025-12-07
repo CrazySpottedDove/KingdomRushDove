@@ -1,7 +1,7 @@
-﻿local scripts = {}
+local scripts = {}
 
 function scripts.merge(table1, table2)
-    return table.merge(table1, table2, true)
+	return table.merge(table1, table2, true)
 end
 
 return scripts

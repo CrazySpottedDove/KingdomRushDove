@@ -1,4 +1,4 @@
-﻿-- chunkname: @./all/constants.lua
+-- chunkname: @./all/constants.lua
 PERFORMANCE_MONITOR_ENABLED = false
 ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
@@ -19,6 +19,7 @@ SPATIAL_HASH_ROWS = math.ceil((IN_GAME_Y_MAX - IN_GAME_Y_MIN) / SPATIAL_HASH_CEL
 SPATIAL_HASH_MAX_INDEX = SPATIAL_HASH_COLS * SPATIAL_HASH_ROWS
 SPATIAL_INDEX_CHECK_INTERVAL = 1 / FPS
 ID_ARRAY_CAPACITY = 256
+
 if KR_TARGET == "phone" then
 	GUI_REF_W = 480
 	GUI_REF_H = 320
@@ -26,6 +27,7 @@ else
 	GUI_REF_W = 1024
 	GUI_REF_H = 768
 end
+
 KR5_HERO_ICON_PORTRAIT_X = 44
 KR5_HERO_ICON_PORTRAIT_Y = -7
 KR5_SCALE_FACTOR = 1
@@ -35,54 +37,28 @@ WIDE_SCREEN_ASPECT = 1.775
 ULTRAWIDE_SCREEN_ASPECT = 2.053125
 MIN_SCREEN_ASPECT = KR_TARGET == "phone" and 1.5 or 1.3333333333333333
 MAX_SCREEN_ASPECT = KR_TARGET == "phone" and 2.165 or 1.7777777777777777
-SAFE_FRAME_STEPS = {
-	{
-		ULTRAWIDE_SCREEN_ASPECT,
-		KR_PLATFORM == "ios" and {
-			b = 10,
-			l = 30,
-			r = 30,
-			t = 6
-		} or {
-			b = 10,
-			l = 14,
-			r = 14,
-			t = 6
-		}
-	},
-	{
-		WIDE_SCREEN_ASPECT,
-		{
-			b = 0,
-			l = 0,
-			r = 0,
-			t = 0
-		}
-	},
-	{
-		0,
-		{
-			b = 0,
-			l = 0,
-			r = 0,
-			t = 0
-		}
-	}
-}
-HUD_SCALE_STEPS = {
-	{
-		ULTRAWIDE_SCREEN_ASPECT,
-		1
-	},
-	{
-		WIDE_SCREEN_ASPECT,
-		1
-	},
-	{
-		0,
-		0.85
-	}
-}
+SAFE_FRAME_STEPS = {{ULTRAWIDE_SCREEN_ASPECT, KR_PLATFORM == "ios" and {
+	b = 10,
+	l = 30,
+	r = 30,
+	t = 6
+} or {
+	b = 10,
+	l = 14,
+	r = 14,
+	t = 6
+}}, {WIDE_SCREEN_ASPECT, {
+	b = 0,
+	l = 0,
+	r = 0,
+	t = 0
+}}, {0, {
+	b = 0,
+	l = 0,
+	r = 0,
+	t = 0
+}}}
+HUD_SCALE_STEPS = {{ULTRAWIDE_SCREEN_ASPECT, 1}, {WIDE_SCREEN_ASPECT, 1}, {0, 0.85}}
 TEXTURE_SIZE_ALIAS = {
 	iphone = 480,
 	ipadhd = 1536,
@@ -338,33 +314,11 @@ HEALTH_BAR_SIZES = {
 	}
 }
 HEALTH_BAR_COLORS = {
-	black = {
-		0,
-		0,
-		0,
-		255
-	},
-	bg = {
-		126,
-		0,
-		12,
-		255
-	},
-	fg = {
-		68,
-		174,
-		50,
-		255
-	}
+	black = {0, 0, 0, 255},
+	bg = {126, 0, 12, 255},
+	fg = {68, 174, 50, 255}
 }
-HEALTH_BAR_CORNER_DOT_QUAD = {
-	0,
-	0,
-	1,
-	1,
-	1024,
-	1024
-}
+HEALTH_BAR_CORNER_DOT_QUAD = {0, 0, 1, 1, 1024, 1024}
 BLOOD_NONE = nil
 BLOOD_RED = "red"
 BLOOD_GREEN = "green"
@@ -477,7 +431,6 @@ SGN_FULLADS_WORKFLOW_ICON_TOUCHED = "fullads-workflow-icon-touched"
 SGN_FULLADS_SHOW_MESSAGE = "fullads-show-message"
 SGN_FULLADS_REWARDS_SHOWN = "fullads-rewards-shown"
 SGN_FULLADS_REWARDS_HIDDEN = "fullads-rewards-hidden"
-
 -- 索敌模式
 MODE_FIND_FOREMOST = 0
 MODE_FIND_MAXHP = 1

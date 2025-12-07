@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/armored_nightmare.lua
-
+-- chunkname: @./kr5/data/animations/armored_nightmare.lua
 local a = {
 	armored_nightmare_explosion_idle = {
 		prefix = "armored_nightmare_explosion",
@@ -52,5 +51,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

@@ -1,10864 +1,3498 @@
 return {
 	hero_jack_o_lantern_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1968,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0002",
-			"hero_jack_o_lantern_0360"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 1968, 71, 72},
+		alias = {"hero_jack_o_lantern_0002", "hero_jack_o_lantern_0360"}
 	},
 	hero_jack_o_lantern_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			736,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0004"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 736, 71, 72},
+		alias = {"hero_jack_o_lantern_0004"}
 	},
 	hero_jack_o_lantern_0005 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			811,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0006"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 811, 71, 72},
+		alias = {"hero_jack_o_lantern_0006"}
 	},
 	hero_jack_o_lantern_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			886,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0008"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 886, 71, 72},
+		alias = {"hero_jack_o_lantern_0008"}
 	},
 	hero_jack_o_lantern_0009 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			961,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0010"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 961, 71, 72},
+		alias = {"hero_jack_o_lantern_0010"}
 	},
 	hero_jack_o_lantern_0011 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1036,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0012"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1036, 71, 72},
+		alias = {"hero_jack_o_lantern_0012"}
 	},
 	hero_jack_o_lantern_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			62,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			859,
-			444,
-			80,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_0014"
-		}
+		size = {426, 181},
+		trim = {174, 62, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {859, 444, 80, 73},
+		alias = {"hero_jack_o_lantern_0014"}
 	},
 	hero_jack_o_lantern_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			176,
-			55,
-			173,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1938,
-			361,
-			77,
-			80
-		},
-		alias = {
-			"hero_jack_o_lantern_0016"
-		}
+		size = {426, 181},
+		trim = {176, 55, 173, 46},
+		a_size = {2048, 2048},
+		f_quad = {1938, 361, 77, 80},
+		alias = {"hero_jack_o_lantern_0016"}
 	},
 	hero_jack_o_lantern_0017 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			51,
-			173,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			616,
-			74,
-			83
-		},
-		alias = {
-			"hero_jack_o_lantern_0018"
-		}
+		size = {426, 181},
+		trim = {179, 51, 173, 47},
+		a_size = {2048, 2048},
+		f_quad = {523, 616, 74, 83},
+		alias = {"hero_jack_o_lantern_0018"}
 	},
 	hero_jack_o_lantern_0019 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			49,
-			171,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			523,
-			77,
-			78
-		},
-		alias = {
-			"hero_jack_o_lantern_0020"
-		}
+		size = {426, 181},
+		trim = {178, 49, 171, 54},
+		a_size = {2048, 2048},
+		f_quad = {601, 523, 77, 78},
+		alias = {"hero_jack_o_lantern_0020"}
 	},
 	hero_jack_o_lantern_0021 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			57,
-			170,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1330,
-			361,
-			84,
-			77
-		},
-		alias = {
-			"hero_jack_o_lantern_0022"
-		}
+		size = {426, 181},
+		trim = {172, 57, 170, 47},
+		a_size = {2048, 2048},
+		f_quad = {1330, 361, 84, 77},
+		alias = {"hero_jack_o_lantern_0022"}
 	},
 	hero_jack_o_lantern_0023 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			180,
-			59,
-			173,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1119,
-			73,
-			75
-		},
+		size = {426, 181},
+		trim = {180, 59, 173, 47},
+		a_size = {2048, 2048},
+		f_quad = {523, 1119, 73, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0024 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			54,
-			174,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			702,
-			74,
-			80
-		},
+		size = {426, 181},
+		trim = {178, 54, 174, 47},
+		a_size = {2048, 2048},
+		f_quad = {523, 702, 74, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0025 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			176,
-			51,
-			175,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			531,
-			75,
-			82
-		},
+		size = {426, 181},
+		trim = {176, 51, 175, 48},
+		a_size = {2048, 2048},
+		f_quad = {523, 531, 75, 82},
 		alias = {}
 	},
 	hero_jack_o_lantern_0026 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			55,
-			175,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1601,
-			361,
-			80,
-			78
-		},
+		size = {426, 181},
+		trim = {171, 55, 175, 48},
+		a_size = {2048, 2048},
+		f_quad = {1601, 361, 80, 78},
 		alias = {}
 	},
 	hero_jack_o_lantern_0027 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			55,
-			173,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			619,
-			82,
-			81
-		},
+		size = {426, 181},
+		trim = {171, 55, 173, 45},
+		a_size = {2048, 2048},
+		f_quad = {438, 619, 82, 81},
 		alias = {}
 	},
 	hero_jack_o_lantern_0028 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			160,
-			63,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1122,
-			282,
-			95,
-			72
-		},
+		size = {426, 181},
+		trim = {160, 63, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {1122, 282, 95, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0029 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			160,
-			63,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1220,
-			282,
-			95,
-			72
-		},
+		size = {426, 181},
+		trim = {160, 63, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {1220, 282, 95, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0030 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			156,
-			67,
-			158,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			596,
-			106,
-			112,
-			75
-		},
+		size = {426, 181},
+		trim = {156, 67, 158, 39},
+		a_size = {2048, 2048},
+		f_quad = {596, 106, 112, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0031 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			156,
-			67,
-			158,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			711,
-			106,
-			112,
-			75
-		},
+		size = {426, 181},
+		trim = {156, 67, 158, 39},
+		a_size = {2048, 2048},
+		f_quad = {711, 106, 112, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0032 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			166,
-			67,
-			155,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1421,
-			189,
-			105,
-			75
-		},
+		size = {426, 181},
+		trim = {166, 67, 155, 39},
+		a_size = {2048, 2048},
+		f_quad = {1421, 189, 105, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0033 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			166,
-			66,
-			155,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1206,
-			189,
-			105,
-			76
-		},
+		size = {426, 181},
+		trim = {166, 66, 155, 39},
+		a_size = {2048, 2048},
+		f_quad = {1206, 189, 105, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_0034 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			191,
-			56,
-			154,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1847,
-			81,
-			87
-		},
+		size = {426, 181},
+		trim = {191, 56, 154, 38},
+		a_size = {2048, 2048},
+		f_quad = {351, 1847, 81, 87},
 		alias = {}
 	},
 	hero_jack_o_lantern_0035 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			191,
-			56,
-			154,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1937,
-			81,
-			87
-		},
+		size = {426, 181},
+		trim = {191, 56, 154, 38},
+		a_size = {2048, 2048},
+		f_quad = {351, 1937, 81, 87},
 		alias = {}
 	},
 	hero_jack_o_lantern_0036 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			51,
-			154,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1485,
-			89,
-			84
-		},
+		size = {426, 181},
+		trim = {183, 51, 154, 46},
+		a_size = {2048, 2048},
+		f_quad = {93, 1485, 89, 84},
 		alias = {}
 	},
 	hero_jack_o_lantern_0037 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			51,
-			154,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1572,
-			89,
-			84
-		},
+		size = {426, 181},
+		trim = {183, 51, 154, 46},
+		a_size = {2048, 2048},
+		f_quad = {93, 1572, 89, 84},
 		alias = {}
 	},
 	hero_jack_o_lantern_0038 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			49,
-			154,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1953,
-			99,
-			89,
-			86
-		},
-		alias = {
-			"hero_jack_o_lantern_0039"
-		}
+		size = {426, 181},
+		trim = {183, 49, 154, 46},
+		a_size = {2048, 2048},
+		f_quad = {1953, 99, 89, 86},
+		alias = {"hero_jack_o_lantern_0039"}
 	},
 	hero_jack_o_lantern_0040 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			50,
-			161,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			444,
-			82,
-			85
-		},
-		alias = {
-			"hero_jack_o_lantern_0041"
-		}
+		size = {426, 181},
+		trim = {183, 50, 161, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 444, 82, 85},
+		alias = {"hero_jack_o_lantern_0041"}
 	},
 	hero_jack_o_lantern_0042 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			52,
-			163,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			703,
-			80,
-			83
-		},
-		alias = {
-			"hero_jack_o_lantern_0043"
-		}
+		size = {426, 181},
+		trim = {183, 52, 163, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 703, 80, 83},
+		alias = {"hero_jack_o_lantern_0043"}
 	},
 	hero_jack_o_lantern_0044 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			57,
-			175,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			681,
-			523,
-			77,
-			77
-		},
+		size = {426, 181},
+		trim = {174, 57, 175, 47},
+		a_size = {2048, 2048},
+		f_quad = {681, 523, 77, 77},
 		alias = {}
 	},
 	hero_jack_o_lantern_0045 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			52,
-			178,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			886,
-			79,
-			82
-		},
+		size = {426, 181},
+		trim = {169, 52, 178, 47},
+		a_size = {2048, 2048},
+		f_quad = {438, 886, 79, 82},
 		alias = {}
 	},
 	hero_jack_o_lantern_0046 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			164,
-			48,
-			178,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			840,
-			84,
-			86
-		},
+		size = {426, 181},
+		trim = {164, 48, 178, 47},
+		a_size = {2048, 2048},
+		f_quad = {351, 840, 84, 86},
 		alias = {}
 	},
 	hero_jack_o_lantern_0047 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			161,
-			46,
-			181,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			282,
-			84,
-			88
-		},
+		size = {426, 181},
+		trim = {161, 46, 181, 47},
+		a_size = {2048, 2048},
+		f_quad = {351, 282, 84, 88},
 		alias = {}
 	},
 	hero_jack_o_lantern_0048 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			159,
-			44,
-			182,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1957,
-			5,
-			85,
-			90
-		},
+		size = {426, 181},
+		trim = {159, 44, 182, 47},
+		a_size = {2048, 2048},
+		f_quad = {1957, 5, 85, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0049 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			159,
-			44,
-			183,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1844,
-			189,
-			84,
-			90
-		},
+		size = {426, 181},
+		trim = {159, 44, 183, 47},
+		a_size = {2048, 2048},
+		f_quad = {1844, 189, 84, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0050 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			159,
-			44,
-			183,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1931,
-			189,
-			84,
-			90
-		},
+		size = {426, 181},
+		trim = {159, 44, 183, 47},
+		a_size = {2048, 2048},
+		f_quad = {1931, 189, 84, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0051 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			159,
-			43,
-			178,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			871,
-			89,
-			91
-		},
+		size = {426, 181},
+		trim = {159, 43, 178, 47},
+		a_size = {2048, 2048},
+		f_quad = {93, 871, 89, 91},
 		alias = {}
 	},
 	hero_jack_o_lantern_0052 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			158,
-			43,
-			178,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			777,
-			90,
-			91
-		},
+		size = {426, 181},
+		trim = {158, 43, 178, 47},
+		a_size = {2048, 2048},
+		f_quad = {93, 777, 90, 91},
 		alias = {}
 	},
 	hero_jack_o_lantern_0053 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			158,
-			42,
-			183,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1827,
-			85,
-			92
-		},
+		size = {426, 181},
+		trim = {158, 42, 183, 47},
+		a_size = {2048, 2048},
+		f_quad = {5, 1827, 85, 92},
 		alias = {}
 	},
 	hero_jack_o_lantern_0054 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			158,
-			42,
-			180,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			965,
-			88,
-			92
-		},
+		size = {426, 181},
+		trim = {158, 42, 180, 47},
+		a_size = {2048, 2048},
+		f_quad = {93, 965, 88, 92},
 		alias = {}
 	},
 	hero_jack_o_lantern_0055 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			157,
-			40,
-			177,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			680,
-			92,
-			94
-		},
+		size = {426, 181},
+		trim = {157, 40, 177, 47},
+		a_size = {2048, 2048},
+		f_quad = {93, 680, 92, 94},
 		alias = {}
 	},
 	hero_jack_o_lantern_0056 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			157,
-			40,
-			174,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			583,
-			95,
-			94
-		},
+		size = {426, 181},
+		trim = {157, 40, 174, 47},
+		a_size = {2048, 2048},
+		f_quad = {93, 583, 95, 94},
 		alias = {}
 	},
 	hero_jack_o_lantern_0057 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			154,
-			39,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			282,
-			101,
-			96
-		},
+		size = {426, 181},
+		trim = {154, 39, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {93, 282, 101, 96},
 		alias = {}
 	},
 	hero_jack_o_lantern_0058 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			154,
-			39,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			381,
-			101,
-			96
-		},
+		size = {426, 181},
+		trim = {154, 39, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {93, 381, 101, 96},
 		alias = {}
 	},
 	hero_jack_o_lantern_0059 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			155,
-			47,
-			151,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1335,
-			5,
-			120,
-			98
-		},
+		size = {426, 181},
+		trim = {155, 47, 151, 36},
+		a_size = {2048, 2048},
+		f_quad = {1335, 5, 120, 98},
 		alias = {}
 	},
 	hero_jack_o_lantern_0060 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			155,
-			47,
-			151,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1458,
-			5,
-			120,
-			98
-		},
+		size = {426, 181},
+		trim = {155, 47, 151, 36},
+		a_size = {2048, 2048},
+		f_quad = {1458, 5, 120, 98},
 		alias = {}
 	},
 	hero_jack_o_lantern_0061 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			155,
-			47,
-			130,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			596,
-			5,
-			141,
-			98
-		},
+		size = {426, 181},
+		trim = {155, 47, 130, 36},
+		a_size = {2048, 2048},
+		f_quad = {596, 5, 141, 98},
 		alias = {}
 	},
 	hero_jack_o_lantern_0062 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			155,
-			47,
-			130,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			740,
-			5,
-			141,
-			98
-		},
+		size = {426, 181},
+		trim = {155, 47, 130, 36},
+		a_size = {2048, 2048},
+		f_quad = {740, 5, 141, 98},
 		alias = {}
 	},
 	hero_jack_o_lantern_0063 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			156,
-			55,
-			123,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			884,
-			5,
-			147,
-			90
-		},
+		size = {426, 181},
+		trim = {156, 55, 123, 36},
+		a_size = {2048, 2048},
+		f_quad = {884, 5, 147, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0064 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			156,
-			55,
-			123,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1034,
-			5,
-			147,
-			90
-		},
+		size = {426, 181},
+		trim = {156, 55, 123, 36},
+		a_size = {2048, 2048},
+		f_quad = {1034, 5, 147, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0065 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			156,
-			55,
-			122,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			884,
-			98,
-			148,
-			87
-		},
+		size = {426, 181},
+		trim = {156, 55, 122, 39},
+		a_size = {2048, 2048},
+		f_quad = {884, 98, 148, 87},
 		alias = {}
 	},
 	hero_jack_o_lantern_0066 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			156,
-			55,
-			122,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1184,
-			5,
-			148,
-			87
-		},
+		size = {426, 181},
+		trim = {156, 55, 122, 39},
+		a_size = {2048, 2048},
+		f_quad = {1184, 5, 148, 87},
 		alias = {}
 	},
 	hero_jack_o_lantern_0067 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			159,
-			54,
-			123,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1035,
-			98,
-			144,
-			87
-		},
-		alias = {
-			"hero_jack_o_lantern_0068"
-		}
+		size = {426, 181},
+		trim = {159, 54, 123, 40},
+		a_size = {2048, 2048},
+		f_quad = {1035, 98, 144, 87},
+		alias = {"hero_jack_o_lantern_0068"}
 	},
 	hero_jack_o_lantern_0069 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			180,
-			59,
-			125,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1335,
-			106,
-			121,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_0070"
-		}
+		size = {426, 181},
+		trim = {180, 59, 125, 46},
+		a_size = {2048, 2048},
+		f_quad = {1335, 106, 121, 76},
+		alias = {"hero_jack_o_lantern_0070"}
 	},
 	hero_jack_o_lantern_0071 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			59,
-			127,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1459,
-			106,
-			116,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_0072"
-		}
+		size = {426, 181},
+		trim = {183, 59, 127, 46},
+		a_size = {2048, 2048},
+		f_quad = {1459, 106, 116, 76},
+		alias = {"hero_jack_o_lantern_0072"}
 	},
 	hero_jack_o_lantern_0073 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1111,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0074"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1111, 71, 72},
+		alias = {"hero_jack_o_lantern_0074"}
 	},
 	hero_jack_o_lantern_0075 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			64,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1810,
-			71,
-			71
-		},
-		alias = {
-			"hero_jack_o_lantern_0076",
-			"hero_jack_o_lantern_0099",
-			"hero_jack_o_lantern_0100",
-			"hero_jack_o_lantern_0103",
-			"hero_jack_o_lantern_0104"
-		}
+		size = {426, 181},
+		trim = {183, 64, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1810, 71, 71},
+		alias = {"hero_jack_o_lantern_0076", "hero_jack_o_lantern_0099", "hero_jack_o_lantern_0100", "hero_jack_o_lantern_0103", "hero_jack_o_lantern_0104"}
 	},
 	hero_jack_o_lantern_0077 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			65,
-			173,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1772,
-			523,
-			75,
-			70
-		},
-		alias = {
-			"hero_jack_o_lantern_0078"
-		}
+		size = {426, 181},
+		trim = {178, 65, 173, 46},
+		a_size = {2048, 2048},
+		f_quad = {1772, 523, 75, 70},
+		alias = {"hero_jack_o_lantern_0078"}
 	},
 	hero_jack_o_lantern_0079 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			66,
-			174,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			761,
-			523,
-			80,
-			69
-		},
-		alias = {
-			"hero_jack_o_lantern_0080"
-		}
+		size = {426, 181},
+		trim = {172, 66, 174, 46},
+		a_size = {2048, 2048},
+		f_quad = {761, 523, 80, 69},
+		alias = {"hero_jack_o_lantern_0080"}
 	},
 	hero_jack_o_lantern_0081 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			68,
-			174,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1006,
-			523,
-			81,
-			67
-		},
-		alias = {
-			"hero_jack_o_lantern_0082",
-			"hero_jack_o_lantern_0083",
-			"hero_jack_o_lantern_0084"
-		}
+		size = {426, 181},
+		trim = {171, 68, 174, 46},
+		a_size = {2048, 2048},
+		f_quad = {1006, 523, 81, 67},
+		alias = {"hero_jack_o_lantern_0082", "hero_jack_o_lantern_0083", "hero_jack_o_lantern_0084"}
 	},
 	hero_jack_o_lantern_0085 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			46,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1362,
-			75,
-			89
-		},
-		alias = {
-			"hero_jack_o_lantern_0086"
-		}
+		size = {426, 181},
+		trim = {179, 46, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1362, 75, 89},
+		alias = {"hero_jack_o_lantern_0086"}
 	},
 	hero_jack_o_lantern_0087 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			44,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1073,
-			75,
-			91
-		},
-		alias = {
-			"hero_jack_o_lantern_0088"
-		}
+		size = {426, 181},
+		trim = {179, 44, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1073, 75, 91},
+		alias = {"hero_jack_o_lantern_0088"}
 	},
 	hero_jack_o_lantern_0089 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			42,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			581,
-			75,
-			93
-		},
-		alias = {
-			"hero_jack_o_lantern_0090",
-			"hero_jack_o_lantern_0091",
-			"hero_jack_o_lantern_0092",
-			"hero_jack_o_lantern_0093",
-			"hero_jack_o_lantern_0094"
-		}
+		size = {426, 181},
+		trim = {179, 42, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 581, 75, 93},
+		alias = {"hero_jack_o_lantern_0090", "hero_jack_o_lantern_0091", "hero_jack_o_lantern_0092", "hero_jack_o_lantern_0093", "hero_jack_o_lantern_0094"}
 	},
 	hero_jack_o_lantern_0095 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			49,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1946,
-			76,
-			86
-		},
-		alias = {
-			"hero_jack_o_lantern_0096"
-		}
+		size = {426, 181},
+		trim = {179, 49, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1946, 76, 86},
+		alias = {"hero_jack_o_lantern_0096"}
 	},
 	hero_jack_o_lantern_0097 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			67,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1407,
-			71,
-			68
-		},
-		alias = {
-			"hero_jack_o_lantern_0098"
-		}
+		size = {426, 181},
+		trim = {183, 67, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {675, 1407, 71, 68},
+		alias = {"hero_jack_o_lantern_0098"}
 	},
 	hero_jack_o_lantern_0101 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			61,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1698,
-			523,
-			71,
-			74
-		},
-		alias = {
-			"hero_jack_o_lantern_0102"
-		}
+		size = {426, 181},
+		trim = {183, 61, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {1698, 523, 71, 74},
+		alias = {"hero_jack_o_lantern_0102"}
 	},
 	hero_jack_o_lantern_0105 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			182,
-			60,
-			173,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1354,
-			71,
-			75
-		},
-		alias = {
-			"hero_jack_o_lantern_0106"
-		}
+		size = {426, 181},
+		trim = {182, 60, 173, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 1354, 71, 75},
+		alias = {"hero_jack_o_lantern_0106"}
 	},
 	hero_jack_o_lantern_0107 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			55,
-			174,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			785,
-			74,
-			80
-		},
-		alias = {
-			"hero_jack_o_lantern_0108"
-		}
+		size = {426, 181},
+		trim = {178, 55, 174, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 785, 74, 80},
+		alias = {"hero_jack_o_lantern_0108"}
 	},
 	hero_jack_o_lantern_0109 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			176,
-			43,
-			175,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			677,
-			75,
-			92
-		},
-		alias = {
-			"hero_jack_o_lantern_0110"
-		}
+		size = {426, 181},
+		trim = {176, 43, 175, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 677, 75, 92},
+		alias = {"hero_jack_o_lantern_0110"}
 	},
 	hero_jack_o_lantern_0111 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			51,
-			177,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			444,
-			75,
-			84
-		},
-		alias = {
-			"hero_jack_o_lantern_0112"
-		}
+		size = {426, 181},
+		trim = {174, 51, 177, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 444, 75, 84},
+		alias = {"hero_jack_o_lantern_0112"}
 	},
 	hero_jack_o_lantern_0113 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			49,
-			179,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1167,
-			78,
-			86
-		},
-		alias = {
-			"hero_jack_o_lantern_0114"
-		}
+		size = {426, 181},
+		trim = {169, 49, 179, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1167, 78, 86},
+		alias = {"hero_jack_o_lantern_0114"}
 	},
 	hero_jack_o_lantern_0115 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			49,
-			180,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1647,
-			77,
-			86
-		},
-		alias = {
-			"hero_jack_o_lantern_0116",
-			"hero_jack_o_lantern_0117",
-			"hero_jack_o_lantern_0118"
-		}
+		size = {426, 181},
+		trim = {169, 49, 180, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1647, 77, 86},
+		alias = {"hero_jack_o_lantern_0116", "hero_jack_o_lantern_0117", "hero_jack_o_lantern_0118"}
 	},
 	hero_jack_o_lantern_0119 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			193,
-			57,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1326,
-			62,
-			78
-		},
-		alias = {
-			"hero_jack_o_lantern_0120"
-		}
+		size = {426, 181},
+		trim = {193, 57, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {675, 1326, 62, 78},
+		alias = {"hero_jack_o_lantern_0120"}
 	},
 	hero_jack_o_lantern_0121 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			194,
-			53,
-			170,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1642,
-			62,
-			82
-		},
-		alias = {
-			"hero_jack_o_lantern_0122"
-		}
+		size = {426, 181},
+		trim = {194, 53, 170, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1642, 62, 82},
+		alias = {"hero_jack_o_lantern_0122"}
 	},
 	hero_jack_o_lantern_0123 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			194,
-			59,
-			169,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1982,
-			282,
-			63,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_0124"
-		}
+		size = {426, 181},
+		trim = {194, 59, 169, 46},
+		a_size = {2048, 2048},
+		f_quad = {1982, 282, 63, 76},
+		alias = {"hero_jack_o_lantern_0124"}
 	},
 	hero_jack_o_lantern_0125 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			191,
-			55,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1727,
-			63,
-			80
-		},
-		alias = {
-			"hero_jack_o_lantern_0126"
-		}
+		size = {426, 181},
+		trim = {191, 55, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1727, 63, 80},
+		alias = {"hero_jack_o_lantern_0126"}
 	},
 	hero_jack_o_lantern_0127 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			66,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1106,
-			71,
-			69
-		},
-		alias = {
-			"hero_jack_o_lantern_0128"
-		}
+		size = {426, 181},
+		trim = {183, 66, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {675, 1106, 71, 69},
+		alias = {"hero_jack_o_lantern_0128"}
 	},
 	hero_jack_o_lantern_0129 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			60,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1432,
-			71,
-			75
-		},
-		alias = {
-			"hero_jack_o_lantern_0130"
-		}
+		size = {426, 181},
+		trim = {183, 60, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 1432, 71, 75},
+		alias = {"hero_jack_o_lantern_0130"}
 	},
 	hero_jack_o_lantern_0131 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			66,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1178,
-			71,
-			69
-		},
-		alias = {
-			"hero_jack_o_lantern_0132"
-		}
+		size = {426, 181},
+		trim = {183, 66, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {675, 1178, 71, 69},
+		alias = {"hero_jack_o_lantern_0132"}
 	},
 	hero_jack_o_lantern_0133 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			62,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1672,
-			71,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_0134"
-		}
+		size = {426, 181},
+		trim = {183, 62, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 1672, 71, 73},
+		alias = {"hero_jack_o_lantern_0134"}
 	},
 	hero_jack_o_lantern_0135 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			64,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1884,
-			71,
-			71
-		},
-		alias = {
-			"hero_jack_o_lantern_0136"
-		}
+		size = {426, 181},
+		trim = {183, 64, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1884, 71, 71},
+		alias = {"hero_jack_o_lantern_0136"}
 	},
 	hero_jack_o_lantern_0137 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			64,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1958,
-			71,
-			71
-		},
-		alias = {
-			"hero_jack_o_lantern_0138"
-		}
+		size = {426, 181},
+		trim = {183, 64, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1958, 71, 71},
+		alias = {"hero_jack_o_lantern_0138"}
 	},
 	hero_jack_o_lantern_0139 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1186,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0140"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1186, 71, 72},
+		alias = {"hero_jack_o_lantern_0140"}
 	},
 	hero_jack_o_lantern_0141 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			53,
-			91,
-			303,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1699,
-			70,
-			67
-		},
+		size = {426, 181},
+		trim = {53, 91, 303, 23},
+		a_size = {2048, 2048},
+		f_quad = {675, 1699, 70, 67},
 		alias = {}
 	},
 	hero_jack_o_lantern_0142 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			61,
-			87,
-			290,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1824,
-			75,
-			69
-		},
+		size = {426, 181},
+		trim = {61, 87, 290, 25},
+		a_size = {2048, 2048},
+		f_quad = {523, 1824, 75, 69},
 		alias = {}
 	},
 	hero_jack_o_lantern_0143 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			68,
-			83,
-			278,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			844,
-			523,
-			80,
-			69
-		},
+		size = {426, 181},
+		trim = {68, 83, 278, 29},
+		a_size = {2048, 2048},
+		f_quad = {844, 523, 80, 69},
 		alias = {}
 	},
 	hero_jack_o_lantern_0144 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			76,
-			78,
-			266,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			772,
-			444,
-			84,
-			71
-		},
+		size = {426, 181},
+		trim = {76, 78, 266, 32},
+		a_size = {2048, 2048},
+		f_quad = {772, 444, 84, 71},
 		alias = {}
 	},
 	hero_jack_o_lantern_0145 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			83,
-			74,
-			254,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1798,
-			282,
-			89,
-			73
-		},
+		size = {426, 181},
+		trim = {83, 74, 254, 34},
+		a_size = {2048, 2048},
+		f_quad = {1798, 282, 89, 73},
 		alias = {}
 	},
 	hero_jack_o_lantern_0146 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			91,
-			70,
-			242,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			930,
-			282,
-			93,
-			74
-		},
+		size = {426, 181},
+		trim = {91, 70, 242, 37},
+		a_size = {2048, 2048},
+		f_quad = {930, 282, 93, 74},
 		alias = {}
 	},
 	hero_jack_o_lantern_0147 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			99,
-			66,
-			230,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			537,
-			282,
-			97,
-			75
-		},
+		size = {426, 181},
+		trim = {99, 66, 230, 40},
+		a_size = {2048, 2048},
+		f_quad = {537, 282, 97, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0148 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			106,
-			61,
-			218,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1529,
-			189,
-			102,
-			76
-		},
+		size = {426, 181},
+		trim = {106, 61, 218, 44},
+		a_size = {2048, 2048},
+		f_quad = {1529, 189, 102, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_0149 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			114,
-			57,
-			205,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			679,
-			189,
-			107,
-			78
-		},
+		size = {426, 181},
+		trim = {114, 57, 205, 46},
+		a_size = {2048, 2048},
+		f_quad = {679, 189, 107, 78},
 		alias = {}
 	},
 	hero_jack_o_lantern_0150 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			117,
-			55,
-			205,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1006,
-			189,
-			104,
-			77
-		},
+		size = {426, 181},
+		trim = {117, 55, 205, 49},
+		a_size = {2048, 2048},
+		f_quad = {1006, 189, 104, 77},
 		alias = {}
 	},
 	hero_jack_o_lantern_0151 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			120,
-			54,
-			202,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			572,
-			189,
-			104,
-			81
-		},
+		size = {426, 181},
+		trim = {120, 54, 202, 46},
+		a_size = {2048, 2048},
+		f_quad = {572, 189, 104, 81},
 		alias = {}
 	},
 	hero_jack_o_lantern_0152 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			122,
-			52,
-			202,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			189,
-			102,
-			83
-		},
+		size = {426, 181},
+		trim = {122, 52, 202, 46},
+		a_size = {2048, 2048},
+		f_quad = {467, 189, 102, 83},
 		alias = {}
 	},
 	hero_jack_o_lantern_0153 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			125,
-			51,
-			195,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			358,
-			189,
-			106,
-			84
-		},
+		size = {426, 181},
+		trim = {125, 51, 195, 46},
+		a_size = {2048, 2048},
+		f_quad = {358, 189, 106, 84},
 		alias = {}
 	},
 	hero_jack_o_lantern_0154 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			128,
-			49,
-			188,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			245,
-			189,
-			110,
-			86
-		},
+		size = {426, 181},
+		trim = {128, 49, 188, 46},
+		a_size = {2048, 2048},
+		f_quad = {245, 189, 110, 86},
 		alias = {}
 	},
 	hero_jack_o_lantern_0155 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			131,
-			47,
-			170,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1705,
-			5,
-			125,
-			89
-		},
+		size = {426, 181},
+		trim = {131, 47, 170, 45},
+		a_size = {2048, 2048},
+		f_quad = {1705, 5, 125, 89},
 		alias = {}
 	},
 	hero_jack_o_lantern_0156 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			132,
-			46,
-			170,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1184,
-			95,
-			124,
-			90
-		},
+		size = {426, 181},
+		trim = {132, 46, 170, 45},
+		a_size = {2048, 2048},
+		f_quad = {1184, 95, 124, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0157 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			134,
-			44,
-			171,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1581,
-			5,
-			121,
-			92
-		},
+		size = {426, 181},
+		trim = {134, 44, 171, 45},
+		a_size = {2048, 2048},
+		f_quad = {1581, 5, 121, 92},
 		alias = {}
 	},
 	hero_jack_o_lantern_0158 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			134,
-			45,
-			171,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1833,
-			5,
-			121,
-			91
-		},
+		size = {426, 181},
+		trim = {134, 45, 171, 45},
+		a_size = {2048, 2048},
+		f_quad = {1833, 5, 121, 91},
 		alias = {}
 	},
 	hero_jack_o_lantern_0159 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			135,
-			46,
-			171,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			189,
-			120,
-			90
-		},
+		size = {426, 181},
+		trim = {135, 46, 171, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 189, 120, 90},
 		alias = {}
 	},
 	hero_jack_o_lantern_0160 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			135,
-			48,
-			171,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1705,
-			97,
-			120,
-			88
-		},
+		size = {426, 181},
+		trim = {135, 48, 171, 45},
+		a_size = {2048, 2048},
+		f_quad = {1705, 97, 120, 88},
 		alias = {}
 	},
 	hero_jack_o_lantern_0161 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			137,
-			50,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1581,
-			100,
-			117,
-			86
-		},
+		size = {426, 181},
+		trim = {137, 50, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {1581, 100, 117, 86},
 		alias = {}
 	},
 	hero_jack_o_lantern_0162 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			137,
-			51,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1833,
-			99,
-			117,
-			85
-		},
+		size = {426, 181},
+		trim = {137, 51, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {1833, 99, 117, 85},
 		alias = {}
 	},
 	hero_jack_o_lantern_0163 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			140,
-			53,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			128,
-			189,
-			114,
-			83
-		},
+		size = {426, 181},
+		trim = {140, 53, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {128, 189, 114, 83},
 		alias = {}
 	},
 	hero_jack_o_lantern_0164 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			67,
-			176,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1275,
-			523,
-			78,
-			69
-		},
+		size = {426, 181},
+		trim = {172, 67, 176, 45},
+		a_size = {2048, 2048},
+		f_quad = {1275, 523, 78, 69},
 		alias = {}
 	},
 	hero_jack_o_lantern_0165 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			181,
-			66,
-			168,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1195,
-			523,
-			77,
-			70
-		},
+		size = {426, 181},
+		trim = {181, 66, 168, 45},
+		a_size = {2048, 2048},
+		f_quad = {1195, 523, 77, 70},
 		alias = {}
 	},
 	hero_jack_o_lantern_0166 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			191,
-			61,
-			160,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1523,
-			444,
-			75,
-			75
-		},
+		size = {426, 181},
+		trim = {191, 61, 160, 45},
+		a_size = {2048, 2048},
+		f_quad = {1523, 444, 75, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0167 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			200,
-			61,
-			152,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1867,
-			444,
-			74,
-			75
-		},
+		size = {426, 181},
+		trim = {200, 61, 152, 45},
+		a_size = {2048, 2048},
+		f_quad = {1867, 444, 74, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_0168 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			217,
-			58,
-			143,
-			58
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1134,
-			736,
-			66,
-			65
-		},
+		size = {426, 181},
+		trim = {217, 58, 143, 58},
+		a_size = {2048, 2048},
+		f_quad = {1134, 736, 66, 65},
 		alias = {}
 	},
 	hero_jack_o_lantern_0169 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			225,
-			58,
-			134,
-			57
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1973,
-			67,
-			66
-		},
+		size = {426, 181},
+		trim = {225, 58, 134, 57},
+		a_size = {2048, 2048},
+		f_quad = {675, 1973, 67, 66},
 		alias = {}
 	},
 	hero_jack_o_lantern_0170 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			228,
-			56,
-			124,
-			63
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1057,
-			736,
-			74,
-			62
-		},
+		size = {426, 181},
+		trim = {228, 56, 124, 63},
+		a_size = {2048, 2048},
+		f_quad = {1057, 736, 74, 62},
 		alias = {}
 	},
 	hero_jack_o_lantern_0171 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			236,
-			56,
-			115,
-			63
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			979,
-			736,
-			75,
-			62
-		},
+		size = {426, 181},
+		trim = {236, 56, 115, 63},
+		a_size = {2048, 2048},
+		f_quad = {979, 736, 75, 62},
 		alias = {}
 	},
 	hero_jack_o_lantern_0172 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			250,
-			63,
-			106,
-			72
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			851,
-			70,
-			46
-		},
+		size = {426, 181},
+		trim = {250, 63, 106, 72},
+		a_size = {2048, 2048},
+		f_quad = {197, 851, 70, 46},
 		alias = {}
 	},
 	hero_jack_o_lantern_0173 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			258,
-			63,
-			98,
-			72
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			900,
-			70,
-			46
-		},
+		size = {426, 181},
+		trim = {258, 63, 98, 72},
+		a_size = {2048, 2048},
+		f_quad = {197, 900, 70, 46},
 		alias = {}
 	},
 	hero_jack_o_lantern_0174 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			270,
-			66,
-			90,
-			80
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			895,
-			808,
-			66,
-			35
-		},
+		size = {426, 181},
+		trim = {270, 66, 90, 80},
+		a_size = {2048, 2048},
+		f_quad = {895, 808, 66, 35},
 		alias = {}
 	},
 	hero_jack_o_lantern_0175 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			278,
-			66,
-			82,
-			75
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			680,
-			665,
-			66,
-			40
-		},
+		size = {426, 181},
+		trim = {278, 66, 82, 75},
+		a_size = {2048, 2048},
+		f_quad = {680, 665, 66, 40},
 		alias = {}
 	},
 	hero_jack_o_lantern_0176 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			292,
-			61,
-			83,
-			94
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			870,
-			705,
-			51,
-			26
-		},
+		size = {426, 181},
+		trim = {292, 61, 83, 94},
+		a_size = {2048, 2048},
+		f_quad = {870, 705, 51, 26},
 		alias = {}
 	},
 	hero_jack_o_lantern_0177 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			297,
-			61,
-			80,
-			94
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			924,
-			705,
-			49,
-			26
-		},
+		size = {426, 181},
+		trim = {297, 61, 80, 94},
+		a_size = {2048, 2048},
+		f_quad = {924, 705, 49, 26},
 		alias = {}
 	},
 	hero_jack_o_lantern_0178 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1261,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0179"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {601, 1261, 71, 72},
+		alias = {"hero_jack_o_lantern_0179"}
 	},
 	hero_jack_o_lantern_0180 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			184,
-			63,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1411,
-			70,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_0181"
-		}
+		size = {426, 181},
+		trim = {184, 63, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {601, 1411, 70, 73},
+		alias = {"hero_jack_o_lantern_0181"}
 	},
 	hero_jack_o_lantern_0182 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			184,
-			66,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1033,
-			70,
-			70
-		},
-		alias = {
-			"hero_jack_o_lantern_0183"
-		}
+		size = {426, 181},
+		trim = {184, 66, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {675, 1033, 70, 70},
+		alias = {"hero_jack_o_lantern_0183"}
 	},
 	hero_jack_o_lantern_0184 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			63,
-			171,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			927,
-			523,
-			76,
-			72
-		},
+		size = {426, 181},
+		trim = {179, 63, 171, 46},
+		a_size = {2048, 2048},
+		f_quad = {927, 523, 76, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0185 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			54,
-			176,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			953,
-			71,
-			81
-		},
+		size = {426, 181},
+		trim = {179, 54, 176, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 953, 71, 81},
 		alias = {}
 	},
 	hero_jack_o_lantern_0186 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			46,
-			179,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			605,
-			69,
-			89
-		},
+		size = {426, 181},
+		trim = {178, 46, 179, 46},
+		a_size = {2048, 2048},
+		f_quad = {197, 605, 69, 89},
 		alias = {}
 	},
 	hero_jack_o_lantern_0187 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			41,
-			179,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			789,
-			69,
-			94
-		},
+		size = {426, 181},
+		trim = {178, 41, 179, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 789, 69, 94},
 		alias = {}
 	},
 	hero_jack_o_lantern_0188 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			36,
-			184,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1703,
-			64,
-			99
-		},
+		size = {426, 181},
+		trim = {178, 36, 184, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 1703, 64, 99},
 		alias = {}
 	},
 	hero_jack_o_lantern_0189 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			178,
-			34,
-			184,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			971,
-			64,
-			101
-		},
+		size = {426, 181},
+		trim = {178, 34, 184, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 971, 64, 101},
 		alias = {}
 	},
 	hero_jack_o_lantern_0190 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			186,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			500,
-			61,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 186, 46},
+		a_size = {2048, 2048},
+		f_quad = {197, 500, 61, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0191 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			184,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1283,
-			63,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 184, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 1283, 63, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0192 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			180,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			863,
-			67,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 180, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 863, 67, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0193 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			180,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			968,
-			67,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 180, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 968, 67, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0194 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			184,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1388,
-			63,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 184, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 1388, 63, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0195 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			184,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1493,
-			63,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 184, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 1493, 63, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0196 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			184,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1598,
-			63,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 184, 46},
+		a_size = {2048, 2048},
+		f_quad = {438, 1598, 63, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0197 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			183,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1075,
-			64,
-			101
-		},
+		size = {426, 181},
+		trim = {179, 33, 183, 47},
+		a_size = {2048, 2048},
+		f_quad = {438, 1075, 64, 101},
 		alias = {}
 	},
 	hero_jack_o_lantern_0198 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			183,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1179,
-			64,
-			101
-		},
+		size = {426, 181},
+		trim = {179, 33, 183, 47},
+		a_size = {2048, 2048},
+		f_quad = {438, 1179, 64, 101},
 		alias = {}
 	},
 	hero_jack_o_lantern_0199 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			183,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1736,
-			64,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 183, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1736, 64, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0200 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			183,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1841,
-			64,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 183, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1841, 64, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0201 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			33,
-			182,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1439,
-			70,
-			102
-		},
+		size = {426, 181},
+		trim = {174, 33, 182, 46},
+		a_size = {2048, 2048},
+		f_quad = {351, 1439, 70, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0202 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			33,
-			182,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1544,
-			70,
-			102
-		},
+		size = {426, 181},
+		trim = {174, 33, 182, 46},
+		a_size = {2048, 2048},
+		f_quad = {351, 1544, 70, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0203 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			182,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1454,
-			65,
-			102
-		},
+		size = {426, 181},
+		trim = {179, 33, 182, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 1454, 65, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0204 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			36,
-			181,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			380,
-			71,
-			99
-		},
+		size = {426, 181},
+		trim = {174, 36, 181, 46},
+		a_size = {2048, 2048},
+		f_quad = {270, 380, 71, 99},
 		alias = {}
 	},
 	hero_jack_o_lantern_0205 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			41,
-			178,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1386,
-			78,
-			96
-		},
+		size = {426, 181},
+		trim = {170, 41, 178, 44},
+		a_size = {2048, 2048},
+		f_quad = {93, 1386, 78, 96},
 		alias = {}
 	},
 	hero_jack_o_lantern_0206 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			44,
-			175,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1906,
-			80,
-			93
-		},
+		size = {426, 181},
+		trim = {171, 44, 175, 44},
+		a_size = {2048, 2048},
+		f_quad = {93, 1906, 80, 93},
 		alias = {}
 	},
 	hero_jack_o_lantern_0207 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			47,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			656,
-			82,
-			89
-		},
+		size = {426, 181},
+		trim = {172, 47, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 656, 82, 89},
 		alias = {}
 	},
 	hero_jack_o_lantern_0208 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			177,
-			54,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1805,
-			77,
-			82
-		},
+		size = {426, 181},
+		trim = {177, 54, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {438, 1805, 77, 82},
 		alias = {}
 	},
 	hero_jack_o_lantern_0209 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			64,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			808,
-			71,
-			71
-		},
-		alias = {
-			"hero_jack_o_lantern_0210"
-		}
+		size = {426, 181},
+		trim = {183, 64, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {675, 808, 71, 71},
+		alias = {"hero_jack_o_lantern_0210"}
 	},
 	hero_jack_o_lantern_0211 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			181,
-			60,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1197,
-			73,
-			75
-		},
-		alias = {
-			"hero_jack_o_lantern_0212"
-		}
+		size = {426, 181},
+		trim = {181, 60, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {523, 1197, 73, 75},
+		alias = {"hero_jack_o_lantern_0212"}
 	},
 	hero_jack_o_lantern_0213 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			64,
-			172,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			882,
-			71,
-			71
-		},
-		alias = {
-			"hero_jack_o_lantern_0214"
-		}
+		size = {426, 181},
+		trim = {183, 64, 172, 46},
+		a_size = {2048, 2048},
+		f_quad = {675, 882, 71, 71},
+		alias = {"hero_jack_o_lantern_0214"}
 	},
 	hero_jack_o_lantern_0215 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			186,
-			117,
-			186,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1025,
-			808,
-			54,
-			30
-		},
-		alias = {
-			"hero_jack_o_lantern_0216"
-		}
+		size = {426, 181},
+		trim = {186, 117, 186, 34},
+		a_size = {2048, 2048},
+		f_quad = {1025, 808, 54, 30},
+		alias = {"hero_jack_o_lantern_0216"}
 	},
 	hero_jack_o_lantern_0217 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			186,
-			105,
-			184,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1137,
-			847,
-			56,
-			37
-		},
+		size = {426, 181},
+		trim = {186, 105, 184, 39},
+		a_size = {2048, 2048},
+		f_quad = {1137, 847, 56, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0218 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			186,
-			88,
-			178,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1120,
-			62,
-			48
-		},
+		size = {426, 181},
+		trim = {186, 88, 178, 45},
+		a_size = {2048, 2048},
+		f_quad = {197, 1120, 62, 48},
 		alias = {}
 	},
 	hero_jack_o_lantern_0219 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			184,
-			68,
-			171,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1478,
-			71,
-			68
-		},
+		size = {426, 181},
+		trim = {184, 68, 171, 45},
+		a_size = {2048, 2048},
+		f_quad = {675, 1478, 71, 68},
 		alias = {}
 	},
 	hero_jack_o_lantern_0220 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			175,
-			56,
-			173,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1684,
-			361,
-			78,
-			80
-		},
+		size = {426, 181},
+		trim = {175, 56, 173, 45},
+		a_size = {2048, 2048},
+		f_quad = {1684, 361, 78, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0221 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			175,
-			56,
-			173,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1765,
-			361,
-			78,
-			80
-		},
+		size = {426, 181},
+		trim = {175, 56, 173, 45},
+		a_size = {2048, 2048},
+		f_quad = {1765, 361, 78, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0222 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			167,
-			47,
-			169,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1113,
-			189,
-			90,
-			89
-		},
+		size = {426, 181},
+		trim = {167, 47, 169, 45},
+		a_size = {2048, 2048},
+		f_quad = {1113, 189, 90, 89},
 		alias = {}
 	},
 	hero_jack_o_lantern_0223 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			167,
-			36,
-			169,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			480,
-			90,
-			100
-		},
+		size = {426, 181},
+		trim = {167, 36, 169, 45},
+		a_size = {2048, 2048},
+		f_quad = {93, 480, 90, 100},
 		alias = {}
 	},
 	hero_jack_o_lantern_0224 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			34,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1088,
-			82,
-			102
-		},
+		size = {426, 181},
+		trim = {169, 34, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1088, 82, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0225 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			33,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			982,
-			82,
-			103
-		},
+		size = {426, 181},
+		trim = {169, 33, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 982, 82, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0226 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			33,
-			176,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1403,
-			79,
-			103
-		},
+		size = {426, 181},
+		trim = {171, 33, 176, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1403, 79, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0227 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			33,
-			176,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1509,
-			79,
-			103
-		},
+		size = {426, 181},
+		trim = {171, 33, 176, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1509, 79, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0228 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			33,
-			178,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1615,
-			77,
-			103
-		},
+		size = {426, 181},
+		trim = {171, 33, 178, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1615, 77, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0229 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			33,
-			178,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1721,
-			77,
-			103
-		},
+		size = {426, 181},
+		trim = {171, 33, 178, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1721, 77, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0230 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			31,
-			181,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1922,
-			74,
-			105
-		},
+		size = {426, 181},
+		trim = {171, 31, 181, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1922, 74, 105},
 		alias = {}
 	},
 	hero_jack_o_lantern_0231 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			31,
-			181,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1060,
-			74,
-			105
-		},
+		size = {426, 181},
+		trim = {171, 31, 181, 45},
+		a_size = {2048, 2048},
+		f_quad = {93, 1060, 74, 105},
 		alias = {}
 	},
 	hero_jack_o_lantern_0232 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			30,
-			181,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1168,
-			73,
-			106
-		},
+		size = {426, 181},
+		trim = {172, 30, 181, 45},
+		a_size = {2048, 2048},
+		f_quad = {93, 1168, 73, 106},
 		alias = {}
 	},
 	hero_jack_o_lantern_0233 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			30,
-			181,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1277,
-			73,
-			106
-		},
+		size = {426, 181},
+		trim = {172, 30, 181, 45},
+		a_size = {2048, 2048},
+		f_quad = {93, 1277, 73, 106},
 		alias = {}
 	},
 	hero_jack_o_lantern_0234 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			173,
-			30,
-			183,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			282,
-			70,
-			106
-		},
+		size = {426, 181},
+		trim = {173, 30, 183, 45},
+		a_size = {2048, 2048},
+		f_quad = {197, 282, 70, 106},
 		alias = {}
 	},
 	hero_jack_o_lantern_0235 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			173,
-			30,
-			183,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			391,
-			70,
-			106
-		},
+		size = {426, 181},
+		trim = {173, 30, 183, 45},
+		a_size = {2048, 2048},
+		f_quad = {197, 391, 70, 106},
 		alias = {}
 	},
 	hero_jack_o_lantern_0236 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			33,
-			182,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			929,
-			70,
-			103
-		},
+		size = {426, 181},
+		trim = {174, 33, 182, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 929, 70, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0237 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			33,
-			182,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1035,
-			70,
-			103
-		},
+		size = {426, 181},
+		trim = {174, 33, 182, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 1035, 70, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0238 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			33,
-			182,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1256,
-			65,
-			103
-		},
+		size = {426, 181},
+		trim = {179, 33, 182, 45},
+		a_size = {2048, 2048},
+		f_quad = {270, 1256, 65, 103},
 		alias = {}
 	},
 	hero_jack_o_lantern_0239 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			36,
-			181,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1649,
-			71,
-			100
-		},
+		size = {426, 181},
+		trim = {174, 36, 181, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 1649, 71, 100},
 		alias = {}
 	},
 	hero_jack_o_lantern_0240 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			41,
-			178,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			282,
-			78,
-			95
-		},
+		size = {426, 181},
+		trim = {170, 41, 178, 45},
+		a_size = {2048, 2048},
+		f_quad = {270, 282, 78, 95},
 		alias = {}
 	},
 	hero_jack_o_lantern_0241 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			44,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			561,
-			80,
-			92
-		},
+		size = {426, 181},
+		trim = {171, 44, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 561, 80, 92},
 		alias = {}
 	},
 	hero_jack_o_lantern_0242 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			47,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			748,
-			82,
-			89
-		},
+		size = {426, 181},
+		trim = {172, 47, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 748, 82, 89},
 		alias = {}
 	},
 	hero_jack_o_lantern_0243 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			177,
-			54,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1890,
-			77,
-			82
-		},
+		size = {426, 181},
+		trim = {177, 54, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {438, 1890, 77, 82},
 		alias = {}
 	},
 	hero_jack_o_lantern_0244 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			60,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1275,
-			71,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_0245"
-		}
+		size = {426, 181},
+		trim = {183, 60, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {523, 1275, 71, 76},
+		alias = {"hero_jack_o_lantern_0245"}
 	},
 	hero_jack_o_lantern_0246 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			181,
-			60,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1944,
-			444,
-			73,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_0247"
-		}
+		size = {426, 181},
+		trim = {181, 60, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {1944, 444, 73, 76},
+		alias = {"hero_jack_o_lantern_0247"}
 	},
 	hero_jack_o_lantern_0248 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			64,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1336,
-			71,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_0249"
-		}
+		size = {426, 181},
+		trim = {183, 64, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {601, 1336, 71, 72},
+		alias = {"hero_jack_o_lantern_0249"}
 	},
 	hero_jack_o_lantern_0250 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			183,
-			63,
-			172,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1748,
-			71,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_0251"
-		}
+		size = {426, 181},
+		trim = {183, 63, 172, 45},
+		a_size = {2048, 2048},
+		f_quad = {523, 1748, 71, 73},
+		alias = {"hero_jack_o_lantern_0251"}
 	},
 	hero_jack_o_lantern_0252 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			56,
-			176,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1162,
-			361,
-			81,
-			80
-		},
-		alias = {
-			"hero_jack_o_lantern_0253",
-			"hero_jack_o_lantern_0256",
-			"hero_jack_o_lantern_0257"
-		}
+		size = {426, 181},
+		trim = {169, 56, 176, 45},
+		a_size = {2048, 2048},
+		f_quad = {1162, 361, 81, 80},
+		alias = {"hero_jack_o_lantern_0253", "hero_jack_o_lantern_0256", "hero_jack_o_lantern_0257"}
 	},
 	hero_jack_o_lantern_0254 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			65,
-			176,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1038,
-			444,
-			81,
-			71
-		},
-		alias = {
-			"hero_jack_o_lantern_0255",
-			"hero_jack_o_lantern_0258",
-			"hero_jack_o_lantern_0259"
-		}
+		size = {426, 181},
+		trim = {169, 65, 176, 45},
+		a_size = {2048, 2048},
+		f_quad = {1038, 444, 81, 71},
+		alias = {"hero_jack_o_lantern_0255", "hero_jack_o_lantern_0258", "hero_jack_o_lantern_0259"}
 	},
 	hero_jack_o_lantern_0260 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			60,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			444,
-			81,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_0261",
-			"hero_jack_o_lantern_0262",
-			"hero_jack_o_lantern_0263",
-			"hero_jack_o_lantern_0264",
-			"hero_jack_o_lantern_0265",
-			"hero_jack_o_lantern_0266",
-			"hero_jack_o_lantern_0267"
-		}
+		size = {426, 181},
+		trim = {170, 60, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {601, 444, 81, 76},
+		alias = {"hero_jack_o_lantern_0261", "hero_jack_o_lantern_0262", "hero_jack_o_lantern_0263", "hero_jack_o_lantern_0264", "hero_jack_o_lantern_0265", "hero_jack_o_lantern_0266", "hero_jack_o_lantern_0267"}
 	},
 	hero_jack_o_lantern_0268 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			56,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1246,
-			361,
-			81,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 56, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {1246, 361, 81, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0269 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			56,
-			175,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			532,
-			81,
-			84
-		},
+		size = {426, 181},
+		trim = {170, 56, 175, 41},
+		a_size = {2048, 2048},
+		f_quad = {438, 532, 81, 84},
 		alias = {}
 	},
 	hero_jack_o_lantern_0270 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			71,
-			175,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1693,
-			444,
-			81,
-			69
-		},
+		size = {426, 181},
+		trim = {170, 71, 175, 41},
+		a_size = {2048, 2048},
+		f_quad = {1693, 444, 81, 69},
 		alias = {}
 	},
 	hero_jack_o_lantern_0271 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			71,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1539,
-			523,
-			81,
-			65
-		},
+		size = {426, 181},
+		trim = {170, 71, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {1539, 523, 81, 65},
 		alias = {}
 	},
 	hero_jack_o_lantern_0272 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			34,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1193,
-			81,
-			102
-		},
+		size = {426, 181},
+		trim = {170, 34, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1193, 81, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0273 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			34,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1298,
-			81,
-			102
-		},
+		size = {426, 181},
+		trim = {170, 34, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 1298, 81, 102},
 		alias = {}
 	},
 	hero_jack_o_lantern_0274 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			22,
-			174,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			523,
-			82,
-			114
-		},
-		alias = {
-			"hero_jack_o_lantern_0275"
-		}
+		size = {426, 181},
+		trim = {170, 22, 174, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 523, 82, 114},
+		alias = {"hero_jack_o_lantern_0275"}
 	},
 	hero_jack_o_lantern_0276 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			167,
-			18,
-			174,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			282,
-			85,
-			118
-		},
-		alias = {
-			"hero_jack_o_lantern_0277"
-		}
+		size = {426, 181},
+		trim = {167, 18, 174, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 282, 85, 118},
+		alias = {"hero_jack_o_lantern_0277"}
 	},
 	hero_jack_o_lantern_0278 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			19,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			403,
-			82,
-			117
-		},
-		alias = {
-			"hero_jack_o_lantern_0279"
-		}
+		size = {426, 181},
+		trim = {169, 19, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 403, 82, 117},
+		alias = {"hero_jack_o_lantern_0279"}
 	},
 	hero_jack_o_lantern_0280 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			21,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			640,
-			81,
-			115
-		},
-		alias = {
-			"hero_jack_o_lantern_0281"
-		}
+		size = {426, 181},
+		trim = {170, 21, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 640, 81, 115},
+		alias = {"hero_jack_o_lantern_0281"}
 	},
 	hero_jack_o_lantern_0282 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			23,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			758,
-			81,
-			113
-		},
-		alias = {
-			"hero_jack_o_lantern_0283"
-		}
+		size = {426, 181},
+		trim = {170, 23, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 758, 81, 113},
+		alias = {"hero_jack_o_lantern_0283"}
 	},
 	hero_jack_o_lantern_0284 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			31,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			874,
-			81,
-			105
-		},
-		alias = {
-			"hero_jack_o_lantern_0285"
-		}
+		size = {426, 181},
+		trim = {170, 31, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {5, 874, 81, 105},
+		alias = {"hero_jack_o_lantern_0285"}
 	},
 	hero_jack_o_lantern_0286 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			45,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			373,
-			81,
-			91
-		},
+		size = {426, 181},
+		trim = {170, 45, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 373, 81, 91},
 		alias = {}
 	},
 	hero_jack_o_lantern_0287 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			45,
-			175,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			467,
-			81,
-			91
-		},
+		size = {426, 181},
+		trim = {170, 45, 175, 45},
+		a_size = {2048, 2048},
+		f_quad = {351, 467, 81, 91},
 		alias = {}
 	},
 	hero_jack_o_lantern_0288 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			56,
-			173,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			890,
-			361,
-			83,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 56, 173, 45},
+		a_size = {2048, 2048},
+		f_quad = {890, 361, 83, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0289 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			56,
-			170,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			712,
-			361,
-			86,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 56, 170, 45},
+		a_size = {2048, 2048},
+		f_quad = {712, 361, 86, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0290 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			59,
-			170,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			801,
-			361,
-			86,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 59, 170, 42},
+		a_size = {2048, 2048},
+		f_quad = {801, 361, 86, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0291 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			59,
-			169,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			622,
-			361,
-			87,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 59, 169, 42},
+		a_size = {2048, 2048},
+		f_quad = {622, 361, 87, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0292 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			61,
-			167,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			361,
-			89,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 61, 167, 40},
+		a_size = {2048, 2048},
+		f_quad = {438, 361, 89, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0293 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			61,
-			167,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			530,
-			361,
-			89,
-			80
-		},
+		size = {426, 181},
+		trim = {170, 61, 167, 40},
+		a_size = {2048, 2048},
+		f_quad = {530, 361, 89, 80},
 		alias = {}
 	},
 	hero_jack_o_lantern_0294 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			60,
-			165,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1659,
-			92,
-			81
-		},
+		size = {426, 181},
+		trim = {169, 60, 165, 40},
+		a_size = {2048, 2048},
+		f_quad = {93, 1659, 92, 81},
 		alias = {}
 	},
 	hero_jack_o_lantern_0295 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			60,
-			165,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1743,
-			92,
-			81
-		},
+		size = {426, 181},
+		trim = {169, 60, 165, 40},
+		a_size = {2048, 2048},
+		f_quad = {93, 1743, 92, 81},
 		alias = {}
 	},
 	hero_jack_o_lantern_0296 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			71,
-			162,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1412,
-			282,
-			95,
-			70
-		},
+		size = {426, 181},
+		trim = {169, 71, 162, 40},
+		a_size = {2048, 2048},
+		f_quad = {1412, 282, 95, 70},
 		alias = {}
 	},
 	hero_jack_o_lantern_0297 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			71,
-			162,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1510,
-			282,
-			95,
-			70
-		},
+		size = {426, 181},
+		trim = {169, 71, 162, 40},
+		a_size = {2048, 2048},
+		f_quad = {1510, 282, 95, 70},
 		alias = {}
 	},
 	hero_jack_o_lantern_0298 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			69,
-			164,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1608,
-			282,
-			92,
-			72
-		},
+		size = {426, 181},
+		trim = {170, 69, 164, 40},
+		a_size = {2048, 2048},
+		f_quad = {1608, 282, 92, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0299 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			69,
-			164,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1703,
-			282,
-			92,
-			72
-		},
+		size = {426, 181},
+		trim = {170, 69, 164, 40},
+		a_size = {2048, 2048},
+		f_quad = {1703, 282, 92, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0300 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			69,
-			166,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			361,
-			90,
-			72
-		},
+		size = {426, 181},
+		trim = {170, 69, 166, 40},
+		a_size = {2048, 2048},
+		f_quad = {976, 361, 90, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0301 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			69,
-			166,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1069,
-			361,
-			90,
-			72
-		},
+		size = {426, 181},
+		trim = {170, 69, 166, 40},
+		a_size = {2048, 2048},
+		f_quad = {1069, 361, 90, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0302 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			69,
-			166,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1417,
-			361,
-			89,
-			72
-		},
+		size = {426, 181},
+		trim = {171, 69, 166, 40},
+		a_size = {2048, 2048},
+		f_quad = {1417, 361, 89, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0303 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			69,
-			166,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1509,
-			361,
-			89,
-			72
-		},
+		size = {426, 181},
+		trim = {171, 69, 166, 40},
+		a_size = {2048, 2048},
+		f_quad = {1509, 361, 89, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_0304 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			78,
-			166,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1601,
-			444,
-			89,
-			63
-		},
-		alias = {
-			"hero_jack_o_lantern_0305"
-		}
+		size = {426, 181},
+		trim = {171, 78, 166, 40},
+		a_size = {2048, 2048},
+		f_quad = {1601, 444, 89, 63},
+		alias = {"hero_jack_o_lantern_0305"}
 	},
 	hero_jack_o_lantern_0306 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			170,
-			79,
-			163,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			942,
-			444,
-			93,
-			62
-		},
-		alias = {
-			"hero_jack_o_lantern_0307"
-		}
+		size = {426, 181},
+		trim = {170, 79, 163, 40},
+		a_size = {2048, 2048},
+		f_quad = {942, 444, 93, 62},
+		alias = {"hero_jack_o_lantern_0307"}
 	},
 	hero_jack_o_lantern_0308 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			171,
-			80,
-			161,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1122,
-			444,
-			94,
-			61
-		},
-		alias = {
-			"hero_jack_o_lantern_0309"
-		}
+		size = {426, 181},
+		trim = {171, 80, 161, 40},
+		a_size = {2048, 2048},
+		f_quad = {1122, 444, 94, 61},
+		alias = {"hero_jack_o_lantern_0309"}
 	},
 	hero_jack_o_lantern_0310 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			174,
-			79,
-			160,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1324,
-			444,
-			92,
-			62
-		},
-		alias = {
-			"hero_jack_o_lantern_0311"
-		}
+		size = {426, 181},
+		trim = {174, 79, 160, 40},
+		a_size = {2048, 2048},
+		f_quad = {1324, 444, 92, 62},
+		alias = {"hero_jack_o_lantern_0311"}
 	},
 	hero_jack_o_lantern_0312 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			175,
-			83,
-			161,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1922,
-			523,
-			90,
-			58
-		},
-		alias = {
-			"hero_jack_o_lantern_0313"
-		}
+		size = {426, 181},
+		trim = {175, 83, 161, 40},
+		a_size = {2048, 2048},
+		f_quad = {1922, 523, 90, 58},
+		alias = {"hero_jack_o_lantern_0313"}
 	},
 	hero_jack_o_lantern_0314 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			176,
-			84,
-			164,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1092,
-			604,
-			86,
-			57
-		},
-		alias = {
-			"hero_jack_o_lantern_0315"
-		}
+		size = {426, 181},
+		trim = {176, 84, 164, 40},
+		a_size = {2048, 2048},
+		f_quad = {1092, 604, 86, 57},
+		alias = {"hero_jack_o_lantern_0315"}
 	},
 	hero_jack_o_lantern_0316 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			172,
-			83,
-			165,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			604,
-			89,
-			58
-		},
-		alias = {
-			"hero_jack_o_lantern_0317"
-		}
+		size = {426, 181},
+		trim = {172, 83, 165, 40},
+		a_size = {2048, 2048},
+		f_quad = {601, 604, 89, 58},
+		alias = {"hero_jack_o_lantern_0317"}
 	},
 	hero_jack_o_lantern_0318 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			85,
-			166,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			899,
-			604,
-			91,
-			56
-		},
-		alias = {
-			"hero_jack_o_lantern_0319"
-		}
+		size = {426, 181},
+		trim = {169, 85, 166, 40},
+		a_size = {2048, 2048},
+		f_quad = {899, 604, 91, 56},
+		alias = {"hero_jack_o_lantern_0319"}
 	},
 	hero_jack_o_lantern_0320 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			168,
-			89,
-			162,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			993,
-			604,
-			96,
-			52
-		},
-		alias = {
-			"hero_jack_o_lantern_0321"
-		}
+		size = {426, 181},
+		trim = {168, 89, 162, 40},
+		a_size = {2048, 2048},
+		f_quad = {993, 604, 96, 52},
+		alias = {"hero_jack_o_lantern_0321"}
 	},
 	hero_jack_o_lantern_0322 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			169,
-			89,
-			159,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			798,
-			604,
-			98,
-			52
-		},
-		alias = {
-			"hero_jack_o_lantern_0323"
-		}
+		size = {426, 181},
+		trim = {169, 89, 159, 40},
+		a_size = {2048, 2048},
+		f_quad = {798, 604, 98, 52},
+		alias = {"hero_jack_o_lantern_0323"}
 	},
 	hero_jack_o_lantern_0324 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			90,
-			158,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1270,
-			604,
-			89,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_0325"
-		}
+		size = {426, 181},
+		trim = {179, 90, 158, 40},
+		a_size = {2048, 2048},
+		f_quad = {1270, 604, 89, 51},
+		alias = {"hero_jack_o_lantern_0325"}
 	},
 	hero_jack_o_lantern_0326 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			91,
-			159,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1362,
-			604,
-			88,
-			50
-		},
-		alias = {
-			"hero_jack_o_lantern_0327"
-		}
+		size = {426, 181},
+		trim = {179, 91, 159, 40},
+		a_size = {2048, 2048},
+		f_quad = {1362, 604, 88, 50},
+		alias = {"hero_jack_o_lantern_0327"}
 	},
 	hero_jack_o_lantern_0328 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1427,
-			665,
-			70,
-			36
-		},
-		alias = {
-			"hero_jack_o_lantern_0329",
-			"hero_jack_o_lantern_0359"
-		}
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1427, 665, 70, 36},
+		alias = {"hero_jack_o_lantern_0329", "hero_jack_o_lantern_0359"}
 	},
 	hero_jack_o_lantern_0330 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1500,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1500, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0331 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1573,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1573, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0332 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1646,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1646, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0333 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			810,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {810, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0334 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			883,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {883, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0335 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			956,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {956, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0336 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1029,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1029, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0337 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			103,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1710,
-			70,
-			38
-		},
+		size = {426, 181},
+		trim = {179, 103, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1710, 70, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_0338 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			103,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1751,
-			70,
-			38
-		},
+		size = {426, 181},
+		trim = {179, 103, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1751, 70, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_0339 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			103,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1792,
-			70,
-			38
-		},
+		size = {426, 181},
+		trim = {179, 103, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1792, 70, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_0340 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1374,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1374, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0341 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1416,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1416, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0342 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1458,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1458, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0343 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1500,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1500, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0344 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1542,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1542, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0345 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1584,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1584, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0346 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1626,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1626, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0347 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			102,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1668,
-			70,
-			39
-		},
+		size = {426, 181},
+		trim = {179, 102, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1668, 70, 39},
 		alias = {}
 	},
 	hero_jack_o_lantern_0348 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			103,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1833,
-			70,
-			38
-		},
+		size = {426, 181},
+		trim = {179, 103, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1833, 70, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_0349 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			103,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1874,
-			70,
-			38
-		},
+		size = {426, 181},
+		trim = {179, 103, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1874, 70, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_0350 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			103,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1915,
-			70,
-			38
-		},
+		size = {426, 181},
+		trim = {179, 103, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {197, 1915, 70, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_0351 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1102,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1102, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0352 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1175,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1175, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0353 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			104,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1248,
-			665,
-			70,
-			37
-		},
+		size = {426, 181},
+		trim = {179, 104, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1248, 665, 70, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_0354 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1719,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1719, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0355 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1792,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1792, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0356 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1865,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1865, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0357 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1938,
-			665,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {1938, 665, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_0358 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			179,
-			105,
-			177,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			808,
-			70,
-			36
-		},
+		size = {426, 181},
+		trim = {179, 105, 177, 40},
+		a_size = {2048, 2048},
+		f_quad = {749, 808, 70, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			17,
-			26,
-			10,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1623,
-			523,
-			72,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_explotion_0002"
-		}
+		size = {99, 101},
+		trim = {17, 26, 10, 2},
+		a_size = {2048, 2048},
+		f_quad = {1623, 523, 72, 73},
+		alias = {"hero_jack_o_lantern_explotion_0002"}
 	},
 	hero_jack_o_lantern_explotion_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			14,
-			11,
-			14,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1037,
-			71,
-			79
-		},
+		size = {99, 101},
+		trim = {14, 11, 14, 11},
+		a_size = {2048, 2048},
+		f_quad = {523, 1037, 71, 79},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			14,
-			11,
-			14,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			868,
-			71,
-			82
-		},
+		size = {99, 101},
+		trim = {14, 11, 14, 8},
+		a_size = {2048, 2048},
+		f_quad = {523, 868, 71, 82},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0005 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			9,
-			8,
-			12,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			1559,
-			78,
-			85
-		},
+		size = {99, 101},
+		trim = {9, 8, 12, 8},
+		a_size = {2048, 2048},
+		f_quad = {270, 1559, 78, 85},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			9,
-			8,
-			12,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			772,
-			78,
-			88
-		},
+		size = {99, 101},
+		trim = {9, 8, 12, 5},
+		a_size = {2048, 2048},
+		f_quad = {270, 772, 78, 88},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			13,
-			4,
-			9,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1752,
-			77,
-			92
-		},
+		size = {99, 101},
+		trim = {13, 4, 9, 5},
+		a_size = {2048, 2048},
+		f_quad = {351, 1752, 77, 92},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			13,
-			4,
-			9,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1141,
-			77,
-			93
-		},
+		size = {99, 101},
+		trim = {13, 4, 9, 4},
+		a_size = {2048, 2048},
+		f_quad = {351, 1141, 77, 93},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0009 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			15,
-			1,
-			11,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			270,
-			482,
-			73,
-			96
-		},
+		size = {99, 101},
+		trim = {15, 1, 11, 4},
+		a_size = {2048, 2048},
+		f_quad = {270, 482, 73, 96},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			15,
-			1,
-			11,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1237,
-			73,
-			98
-		},
+		size = {99, 101},
+		trim = {15, 1, 11, 2},
+		a_size = {2048, 2048},
+		f_quad = {351, 1237, 73, 98},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0011 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			15,
-			1,
-			11,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			351,
-			1338,
-			73,
-			98
-		},
+		size = {99, 101},
+		trim = {15, 1, 11, 2},
+		a_size = {2048, 2048},
+		f_quad = {351, 1338, 73, 98},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0012 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			15,
-			1,
-			11,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			903,
-			736,
-			73,
-			64
-		},
+		size = {99, 101},
+		trim = {15, 1, 11, 36},
+		a_size = {2048, 2048},
+		f_quad = {903, 736, 73, 64},
 		alias = {}
 	},
 	hero_jack_o_lantern_explotion_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			17,
-			0,
-			12,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1906,
-			70,
-			64
-		},
-		alias = {
-			"hero_jack_o_lantern_explotion_0014"
-		}
+		size = {99, 101},
+		trim = {17, 0, 12, 37},
+		a_size = {2048, 2048},
+		f_quad = {675, 1906, 70, 64},
+		alias = {"hero_jack_o_lantern_explotion_0014"}
 	},
 	hero_jack_o_lantern_explotion_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			28,
-			1,
-			19,
-			56
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			853,
-			847,
-			52,
-			44
-		},
-		alias = {
-			"hero_jack_o_lantern_explotion_0016"
-		}
+		size = {99, 101},
+		trim = {28, 1, 19, 56},
+		a_size = {2048, 2048},
+		f_quad = {853, 847, 52, 44},
+		alias = {"hero_jack_o_lantern_explotion_0016"}
 	},
 	hero_jack_o_lantern_explotion_0017 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			99,
-			101
-		},
-		trim = {
-			30,
-			1,
-			22,
-			59
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1252,
-			847,
-			47,
-			41
-		},
-		alias = {
-			"hero_jack_o_lantern_explotion_0018"
-		}
+		size = {99, 101},
+		trim = {30, 1, 22, 59},
+		a_size = {2048, 2048},
+		f_quad = {1252, 847, 47, 41},
+		alias = {"hero_jack_o_lantern_explotion_0018"}
 	},
 	hero_jack_o_lantern_ghoul_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			21,
-			18,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1690,
-			36,
-			41
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0012",
-			"hero_jack_o_lantern_ghoul_0013",
-			"hero_jack_o_lantern_ghoul_0029",
-			"hero_jack_o_lantern_ghoul_0030"
-		}
+		size = {91, 69},
+		trim = {37, 21, 18, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 1690, 36, 41},
+		alias = {"hero_jack_o_lantern_ghoul_0012", "hero_jack_o_lantern_ghoul_0013", "hero_jack_o_lantern_ghoul_0029", "hero_jack_o_lantern_ghoul_0030"}
 	},
 	hero_jack_o_lantern_ghoul_0002 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			22,
-			18,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1734,
-			36,
-			40
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0003"
-		}
+		size = {91, 69},
+		trim = {37, 22, 18, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 1734, 36, 40},
+		alias = {"hero_jack_o_lantern_ghoul_0003"}
 	},
 	hero_jack_o_lantern_ghoul_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			39,
-			23,
-			17,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1879,
-			35,
-			39
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0005"
-		}
+		size = {91, 69},
+		trim = {39, 23, 17, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 1879, 35, 39},
+		alias = {"hero_jack_o_lantern_ghoul_0005"}
 	},
 	hero_jack_o_lantern_ghoul_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			35,
-			21,
-			17,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1649,
-			39,
-			38
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0007"
-		}
+		size = {91, 69},
+		trim = {35, 21, 17, 10},
+		a_size = {2048, 2048},
+		f_quad = {749, 1649, 39, 38},
+		alias = {"hero_jack_o_lantern_ghoul_0007"}
 	},
 	hero_jack_o_lantern_ghoul_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			34,
-			16,
-			17,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1742,
-			847,
-			40,
-			44
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0009"
-		}
+		size = {91, 69},
+		trim = {34, 16, 17, 9},
+		a_size = {2048, 2048},
+		f_quad = {1742, 847, 40, 44},
+		alias = {"hero_jack_o_lantern_ghoul_0009"}
 	},
 	hero_jack_o_lantern_ghoul_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			14,
-			17,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1123,
-			37,
-			48
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0011"
-		}
+		size = {91, 69},
+		trim = {37, 14, 17, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 1123, 37, 48},
+		alias = {"hero_jack_o_lantern_ghoul_0011"}
 	},
 	hero_jack_o_lantern_ghoul_0014 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			29,
-			13,
-			21,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1071,
-			41,
-			49
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0015"
-		}
+		size = {91, 69},
+		trim = {29, 13, 21, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 1071, 41, 49},
+		alias = {"hero_jack_o_lantern_ghoul_0015"}
 	},
 	hero_jack_o_lantern_ghoul_0016 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			18,
-			6,
-			36,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1012,
-			37,
-			56
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0017"
-		}
+		size = {91, 69},
+		trim = {18, 6, 36, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 1012, 37, 56},
+		alias = {"hero_jack_o_lantern_ghoul_0017"}
 	},
 	hero_jack_o_lantern_ghoul_0018 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			12,
-			9,
-			38,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			956,
-			41,
-			53
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0019",
-			"hero_jack_o_lantern_ghoul_0020"
-		}
+		size = {91, 69},
+		trim = {12, 9, 38, 7},
+		a_size = {2048, 2048},
+		f_quad = {749, 956, 41, 53},
+		alias = {"hero_jack_o_lantern_ghoul_0019", "hero_jack_o_lantern_ghoul_0020"}
 	},
 	hero_jack_o_lantern_ghoul_0021 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			12,
-			8,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			847,
-			46,
-			54
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0022"
-		}
+		size = {91, 69},
+		trim = {37, 12, 8, 3},
+		a_size = {2048, 2048},
+		f_quad = {749, 847, 46, 54},
+		alias = {"hero_jack_o_lantern_ghoul_0022"}
 	},
 	hero_jack_o_lantern_ghoul_0023 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			17,
-			8,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			904,
-			46,
-			49
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0024"
-		}
+		size = {91, 69},
+		trim = {37, 17, 8, 3},
+		a_size = {2048, 2048},
+		f_quad = {749, 904, 46, 49},
+		alias = {"hero_jack_o_lantern_ghoul_0024"}
 	},
 	hero_jack_o_lantern_ghoul_0025 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			28,
-			7,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1302,
-			847,
-			47,
-			41
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0026"
-		}
+		size = {91, 69},
+		trim = {37, 28, 7, 0},
+		a_size = {2048, 2048},
+		f_quad = {1302, 847, 47, 41},
+		alias = {"hero_jack_o_lantern_ghoul_0026"}
 	},
 	hero_jack_o_lantern_ghoul_0027 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			37,
-			20,
-			15,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1888,
-			847,
-			39,
-			44
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0028"
-		}
+		size = {91, 69},
+		trim = {37, 20, 15, 5},
+		a_size = {2048, 2048},
+		f_quad = {1888, 847, 39, 44},
+		alias = {"hero_jack_o_lantern_ghoul_0028"}
 	},
 	hero_jack_o_lantern_ghoul_0031 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			21,
-			18,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1698,
-			847,
-			41,
-			43
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0032"
-		}
+		size = {91, 69},
+		trim = {32, 21, 18, 5},
+		a_size = {2048, 2048},
+		f_quad = {1698, 847, 41, 43},
+		alias = {"hero_jack_o_lantern_ghoul_0032"}
 	},
 	hero_jack_o_lantern_ghoul_0033 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			8,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2015,
-			523,
-			29,
-			56
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0034"
-		}
+		size = {91, 69},
+		trim = {30, 8, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {2015, 523, 29, 56},
+		alias = {"hero_jack_o_lantern_ghoul_0034"}
 	},
 	hero_jack_o_lantern_ghoul_0035 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			17,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1829,
-			29,
-			47
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0036"
-		}
+		size = {91, 69},
+		trim = {30, 17, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1829, 29, 47},
+		alias = {"hero_jack_o_lantern_ghoul_0036"}
 	},
 	hero_jack_o_lantern_ghoul_0037 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			11,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1228,
-			29,
-			53
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0038"
-		}
+		size = {91, 69},
+		trim = {30, 11, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1228, 29, 53},
+		alias = {"hero_jack_o_lantern_ghoul_0038"}
 	},
 	hero_jack_o_lantern_ghoul_0039 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			15,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1777,
-			29,
-			49
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0040"
-		}
+		size = {91, 69},
+		trim = {30, 15, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1777, 29, 49},
+		alias = {"hero_jack_o_lantern_ghoul_0040"}
 	},
 	hero_jack_o_lantern_ghoul_0041 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			13,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1433,
-			29,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0042",
-			"hero_jack_o_lantern_ghoul_0043",
-			"hero_jack_o_lantern_ghoul_0044",
-			"hero_jack_o_lantern_ghoul_0045",
-			"hero_jack_o_lantern_ghoul_0046"
-		}
+		size = {91, 69},
+		trim = {30, 13, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1433, 29, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0042", "hero_jack_o_lantern_ghoul_0043", "hero_jack_o_lantern_ghoul_0044", "hero_jack_o_lantern_ghoul_0045", "hero_jack_o_lantern_ghoul_0046"}
 	},
 	hero_jack_o_lantern_ghoul_0047 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			13,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1487,
-			29,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0048",
-			"hero_jack_o_lantern_ghoul_0049"
-		}
+		size = {91, 69},
+		trim = {30, 13, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1487, 29, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0048", "hero_jack_o_lantern_ghoul_0049"}
 	},
 	hero_jack_o_lantern_ghoul_0050 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			29,
-			13,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1284,
-			30,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0051"
-		}
+		size = {91, 69},
+		trim = {29, 13, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1284, 30, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0051"}
 	},
 	hero_jack_o_lantern_ghoul_0052 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			29,
-			13,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1338,
-			30,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0053"
-		}
+		size = {91, 69},
+		trim = {29, 13, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1338, 30, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0053"}
 	},
 	hero_jack_o_lantern_ghoul_0054 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			13,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1541,
-			29,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0055",
-			"hero_jack_o_lantern_ghoul_0056"
-		}
+		size = {91, 69},
+		trim = {30, 13, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1541, 29, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0055", "hero_jack_o_lantern_ghoul_0056"}
 	},
 	hero_jack_o_lantern_ghoul_0057 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			30,
-			13,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1595,
-			29,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0058"
-		}
+		size = {91, 69},
+		trim = {30, 13, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1595, 29, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0058"}
 	},
 	hero_jack_o_lantern_ghoul_0059 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			31,
-			13,
-			29,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1174,
-			31,
-			51
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0060"
-		}
+		size = {91, 69},
+		trim = {31, 13, 29, 5},
+		a_size = {2048, 2048},
+		f_quad = {749, 1174, 31, 51},
+		alias = {"hero_jack_o_lantern_ghoul_0060"}
 	},
 	hero_jack_o_lantern_ghoul_0061 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			7,
-			14,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1379,
-			665,
-			45,
-			57
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0062"
-		}
+		size = {91, 69},
+		trim = {32, 7, 14, 5},
+		a_size = {2048, 2048},
+		f_quad = {1379, 665, 45, 57},
+		alias = {"hero_jack_o_lantern_ghoul_0062"}
 	},
 	hero_jack_o_lantern_ghoul_0063 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			5,
-			8,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1994,
-			736,
-			51,
-			59
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0064"
-		}
+		size = {91, 69},
+		trim = {32, 5, 8, 5},
+		a_size = {2048, 2048},
+		f_quad = {1994, 736, 51, 59},
+		alias = {"hero_jack_o_lantern_ghoul_0064"}
 	},
 	hero_jack_o_lantern_ghoul_0065 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			2,
-			6,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1881,
-			736,
-			53,
-			62
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0066"
-		}
+		size = {91, 69},
+		trim = {32, 2, 6, 5},
+		a_size = {2048, 2048},
+		f_quad = {1881, 736, 53, 62},
+		alias = {"hero_jack_o_lantern_ghoul_0066"}
 	},
 	hero_jack_o_lantern_ghoul_0067 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			3,
-			5,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			826,
-			106,
-			54,
-			61
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0068"
-		}
+		size = {91, 69},
+		trim = {32, 3, 5, 5},
+		a_size = {2048, 2048},
+		f_quad = {826, 106, 54, 61},
+		alias = {"hero_jack_o_lantern_ghoul_0068"}
 	},
 	hero_jack_o_lantern_ghoul_0069 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			4,
-			5,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1937,
-			736,
-			54,
-			60
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0070"
-		}
+		size = {91, 69},
+		trim = {32, 4, 5, 5},
+		a_size = {2048, 2048},
+		f_quad = {1937, 736, 54, 60},
+		alias = {"hero_jack_o_lantern_ghoul_0070"}
 	},
 	hero_jack_o_lantern_ghoul_0071 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			17,
-			4,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1321,
-			665,
-			55,
-			47
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0072"
-		}
+		size = {91, 69},
+		trim = {32, 17, 4, 5},
+		a_size = {2048, 2048},
+		f_quad = {1321, 665, 55, 47},
+		alias = {"hero_jack_o_lantern_ghoul_0072"}
 	},
 	hero_jack_o_lantern_ghoul_0073 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			37,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			810,
-			705,
-			57,
-			27
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0074"
-		}
+		size = {91, 69},
+		trim = {32, 37, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {810, 705, 57, 27},
+		alias = {"hero_jack_o_lantern_ghoul_0074"}
 	},
 	hero_jack_o_lantern_ghoul_0075 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			33,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1638,
-			847,
-			57,
-			31
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0076"
-		}
+		size = {91, 69},
+		trim = {32, 33, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {1638, 847, 57, 31},
+		alias = {"hero_jack_o_lantern_ghoul_0076"}
 	},
 	hero_jack_o_lantern_ghoul_0077 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			34,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1785,
-			847,
-			57,
-			30
-		},
-		alias = {
-			"hero_jack_o_lantern_ghoul_0078"
-		}
+		size = {91, 69},
+		trim = {32, 34, 2, 5},
+		a_size = {2048, 2048},
+		f_quad = {1785, 847, 57, 30},
+		alias = {"hero_jack_o_lantern_ghoul_0078"}
 	},
 	hero_jack_o_lantern_ghoul_shadow = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			91,
-			69
-		},
-		trim = {
-			32,
-			57,
-			32,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1379,
-			725,
-			27,
-			7
-		},
+		size = {91, 69},
+		trim = {32, 57, 32, 5},
+		a_size = {2048, 2048},
+		f_quad = {1379, 725, 27, 7},
 		alias = {}
 	},
 	hero_jack_o_lantern_head_proyectile = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			43,
-			43
-		},
-		trim = {
-			5,
-			5,
-			3,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1960,
-			35,
-			36
-		},
+		size = {43, 43},
+		trim = {5, 5, 3, 2},
+		a_size = {2048, 2048},
+		f_quad = {749, 1960, 35, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_shadow = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			186,
-			125,
-			186,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1469,
-			882,
-			54,
-			11
-		},
+		size = {426, 181},
+		trim = {186, 125, 186, 45},
+		a_size = {2048, 2048},
+		f_quad = {1469, 882, 54, 11},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			31,
-			43,
-			32,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			769,
-			2034,
-			12,
-			9
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0002"
-		}
+		size = {75, 102},
+		trim = {31, 43, 32, 50},
+		a_size = {2048, 2048},
+		f_quad = {769, 2034, 12, 9},
+		alias = {"hero_jack_o_lantern_spawner_hit_0002"}
 	},
 	hero_jack_o_lantern_spawner_hit_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			31,
-			43,
-			32,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			791,
-			713,
-			12,
-			9
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0004"
-		}
+		size = {75, 102},
+		trim = {31, 43, 32, 50},
+		a_size = {2048, 2048},
+		f_quad = {791, 713, 12, 9},
+		alias = {"hero_jack_o_lantern_spawner_hit_0004"}
 	},
 	hero_jack_o_lantern_spawner_hit_0005 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			31,
-			43,
-			32,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1671,
-			796,
-			12,
-			9
-		},
+		size = {75, 102},
+		trim = {31, 43, 32, 50},
+		a_size = {2048, 2048},
+		f_quad = {1671, 796, 12, 9},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			28,
-			38,
-			31,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			865,
-			170,
-			16,
-			14
-		},
+		size = {75, 102},
+		trim = {28, 38, 31, 50},
+		a_size = {2048, 2048},
+		f_quad = {865, 170, 16, 14},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			26,
-			35,
-			29,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			725,
-			708,
-			20,
-			18
-		},
+		size = {75, 102},
+		trim = {26, 35, 29, 49},
+		a_size = {2048, 2048},
+		f_quad = {725, 708, 20, 18},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			24,
-			31,
-			26,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			168,
-			2002,
-			25,
-			22
-		},
+		size = {75, 102},
+		trim = {24, 31, 26, 49},
+		a_size = {2048, 2048},
+		f_quad = {168, 2002, 25, 22},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0009 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			23,
-			28,
-			21,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1133,
-			705,
-			31,
-			25
-		},
+		size = {75, 102},
+		trim = {23, 28, 21, 49},
+		a_size = {2048, 2048},
+		f_quad = {1133, 705, 31, 25},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			22,
-			26,
-			21,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1061,
-			705,
-			32,
-			27
-		},
+		size = {75, 102},
+		trim = {22, 26, 21, 49},
+		a_size = {2048, 2048},
+		f_quad = {1061, 705, 32, 27},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0011 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			21,
-			24,
-			17,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1185,
-			808,
-			37,
-			30
-		},
+		size = {75, 102},
+		trim = {21, 24, 17, 48},
+		a_size = {2048, 2048},
+		f_quad = {1185, 808, 37, 30},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0012 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			20,
-			22,
-			17,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1999,
-			38,
-			32
-		},
+		size = {75, 102},
+		trim = {20, 22, 17, 48},
+		a_size = {2048, 2048},
+		f_quad = {749, 1999, 38, 32},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			18,
-			21,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1135,
-			808,
-			47,
-			33
-		},
+		size = {75, 102},
+		trim = {18, 21, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {1135, 808, 47, 33},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0014 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			18,
-			19,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1991,
-			847,
-			47,
-			35
-		},
+		size = {75, 102},
+		trim = {18, 19, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {1991, 847, 47, 35},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			12,
-			17,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1196,
-			847,
-			53,
-			37
-		},
+		size = {75, 102},
+		trim = {12, 17, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {1196, 847, 53, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0016 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			12,
-			18,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1413,
-			847,
-			53,
-			36
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0017"
-		}
+		size = {75, 102},
+		trim = {12, 18, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {1413, 847, 53, 36},
+		alias = {"hero_jack_o_lantern_spawner_hit_0017"}
 	},
 	hero_jack_o_lantern_spawner_hit_0018 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			21,
-			10,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1469,
-			847,
-			58,
-			32
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0021",
-			"hero_jack_o_lantern_spawner_hit_0027"
-		}
+		size = {75, 102},
+		trim = {7, 21, 10, 49},
+		a_size = {2048, 2048},
+		f_quad = {1469, 847, 58, 32},
+		alias = {"hero_jack_o_lantern_spawner_hit_0021", "hero_jack_o_lantern_spawner_hit_0027"}
 	},
 	hero_jack_o_lantern_spawner_hit_0019 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			22,
-			10,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1530,
-			847,
-			58,
-			31
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0020"
-		}
+		size = {75, 102},
+		trim = {7, 22, 10, 49},
+		a_size = {2048, 2048},
+		f_quad = {1530, 847, 58, 31},
+		alias = {"hero_jack_o_lantern_spawner_hit_0020"}
 	},
 	hero_jack_o_lantern_spawner_hit_0022 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			20,
-			10,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1352,
-			847,
-			58,
-			33
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0023",
-			"hero_jack_o_lantern_spawner_hit_0024",
-			"hero_jack_o_lantern_spawner_hit_0025",
-			"hero_jack_o_lantern_spawner_hit_0026"
-		}
+		size = {75, 102},
+		trim = {7, 20, 10, 49},
+		a_size = {2048, 2048},
+		f_quad = {1352, 847, 58, 33},
+		alias = {"hero_jack_o_lantern_spawner_hit_0023", "hero_jack_o_lantern_spawner_hit_0024", "hero_jack_o_lantern_spawner_hit_0025", "hero_jack_o_lantern_spawner_hit_0026"}
 	},
 	hero_jack_o_lantern_spawner_hit_0028 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			24,
-			10,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1930,
-			847,
-			58,
-			29
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0029"
-		}
+		size = {75, 102},
+		trim = {7, 24, 10, 49},
+		a_size = {2048, 2048},
+		f_quad = {1930, 847, 58, 29},
+		alias = {"hero_jack_o_lantern_spawner_hit_0029"}
 	},
 	hero_jack_o_lantern_spawner_hit_0030 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			18,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			964,
-			808,
-			58,
-			36
-		},
+		size = {75, 102},
+		trim = {7, 18, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {964, 808, 58, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0031 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			17,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			969,
-			847,
-			58,
-			37
-		},
+		size = {75, 102},
+		trim = {7, 17, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {969, 847, 58, 37},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0032 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			15,
-			10,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			908,
-			847,
-			58,
-			39
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0033"
-		}
+		size = {75, 102},
+		trim = {7, 15, 10, 48},
+		a_size = {2048, 2048},
+		f_quad = {908, 847, 58, 39},
+		alias = {"hero_jack_o_lantern_spawner_hit_0033"}
 	},
 	hero_jack_o_lantern_spawner_hit_0034 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			10,
-			10,
-			47
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			665,
-			58,
-			45
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0035"
-		}
+		size = {75, 102},
+		trim = {7, 10, 10, 47},
+		a_size = {2048, 2048},
+		f_quad = {749, 665, 58, 45},
+		alias = {"hero_jack_o_lantern_spawner_hit_0035"}
 	},
 	hero_jack_o_lantern_spawner_hit_0036 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			6,
-			10,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1171,
-			58,
-			50
-		},
+		size = {75, 102},
+		trim = {7, 6, 10, 46},
+		a_size = {2048, 2048},
+		f_quad = {197, 1171, 58, 50},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0037 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			6,
-			10,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1224,
-			58,
-			50
-		},
+		size = {75, 102},
+		trim = {7, 6, 10, 46},
+		a_size = {2048, 2048},
+		f_quad = {197, 1224, 58, 50},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0038 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			6,
-			10,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1985,
-			604,
-			58,
-			54
-		},
+		size = {75, 102},
+		trim = {7, 6, 10, 42},
+		a_size = {2048, 2048},
+		f_quad = {1985, 604, 58, 54},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0039 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			6,
-			10,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			949,
-			58,
-			54
-		},
+		size = {75, 102},
+		trim = {7, 6, 10, 42},
+		a_size = {2048, 2048},
+		f_quad = {197, 949, 58, 54},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0040 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			7,
-			0,
-			9,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1609,
-			736,
-			59,
-			63
-		},
+		size = {75, 102},
+		trim = {7, 0, 9, 39},
+		a_size = {2048, 2048},
+		f_quad = {1609, 736, 59, 63},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0041 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			4,
-			0,
-			9,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1412,
-			736,
-			62,
-			63
-		},
+		size = {75, 102},
+		trim = {4, 0, 9, 39},
+		a_size = {2048, 2048},
+		f_quad = {1412, 736, 62, 63},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0042 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			2,
-			8,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1344,
-			736,
-			65,
-			62
-		},
+		size = {75, 102},
+		trim = {2, 2, 8, 38},
+		a_size = {2048, 2048},
+		f_quad = {1344, 736, 65, 62},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0043 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			8,
-			8,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1917,
-			604,
-			65,
-			58
-		},
+		size = {75, 102},
+		trim = {2, 8, 8, 36},
+		a_size = {2048, 2048},
+		f_quad = {1917, 604, 65, 58},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0044 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			9,
-			4,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			604,
-			69,
-			55
-		},
+		size = {75, 102},
+		trim = {2, 9, 4, 38},
+		a_size = {2048, 2048},
+		f_quad = {1773, 604, 69, 55},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0045 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			9,
-			3,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1627,
-			604,
-			70,
-			55
-		},
+		size = {75, 102},
+		trim = {2, 9, 3, 38},
+		a_size = {2048, 2048},
+		f_quad = {1627, 604, 70, 55},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0046 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			9,
-			3,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1700,
-			604,
-			70,
-			55
-		},
+		size = {75, 102},
+		trim = {2, 9, 3, 38},
+		a_size = {2048, 2048},
+		f_quad = {1700, 604, 70, 55},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0047 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			9,
-			4,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1845,
-			604,
-			69,
-			55
-		},
+		size = {75, 102},
+		trim = {2, 9, 4, 38},
+		a_size = {2048, 2048},
+		f_quad = {1845, 604, 69, 55},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0048 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			15,
-			4,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1737,
-			736,
-			69,
-			51
-		},
+		size = {75, 102},
+		trim = {2, 15, 4, 36},
+		a_size = {2048, 2048},
+		f_quad = {1737, 736, 69, 51},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0049 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			15,
-			4,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1809,
-			736,
-			69,
-			51
-		},
+		size = {75, 102},
+		trim = {2, 15, 4, 36},
+		a_size = {2048, 2048},
+		f_quad = {1809, 736, 69, 51},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0050 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			25,
-			4,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1277,
-			69,
-			41
-		},
+		size = {75, 102},
+		trim = {2, 25, 4, 36},
+		a_size = {2048, 2048},
+		f_quad = {197, 1277, 69, 41},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_hit_0051 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			28,
-			3,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1956,
-			70,
-			38
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0052"
-		}
+		size = {75, 102},
+		trim = {2, 28, 3, 36},
+		a_size = {2048, 2048},
+		f_quad = {197, 1956, 70, 38},
+		alias = {"hero_jack_o_lantern_spawner_hit_0052"}
 	},
 	hero_jack_o_lantern_spawner_hit_0053 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			31,
-			3,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			822,
-			808,
-			70,
-			35
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0054"
-		}
+		size = {75, 102},
+		trim = {2, 31, 3, 36},
+		a_size = {2048, 2048},
+		f_quad = {822, 808, 70, 35},
+		alias = {"hero_jack_o_lantern_spawner_hit_0054"}
 	},
 	hero_jack_o_lantern_spawner_hit_0055 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			75,
-			102
-		},
-		trim = {
-			2,
-			28,
-			3,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1997,
-			70,
-			38
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_hit_0056"
-		}
+		size = {75, 102},
+		trim = {2, 28, 3, 36},
+		a_size = {2048, 2048},
+		f_quad = {197, 1997, 70, 38},
+		alias = {"hero_jack_o_lantern_spawner_hit_0056"}
 	},
 	hero_jack_o_lantern_spawner_seed_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			4,
-			5,
-			3,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			784,
-			2034,
-			10,
-			7
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0002"
-		}
+		size = {17, 17},
+		trim = {4, 5, 3, 5},
+		a_size = {2048, 2048},
+		f_quad = {784, 2034, 10, 7},
+		alias = {"hero_jack_o_lantern_spawner_seed_0002"}
 	},
 	hero_jack_o_lantern_spawner_seed_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			4,
-			5,
-			3,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1409,
-			725,
-			10,
-			7
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0004",
-			"hero_jack_o_lantern_spawner_seed_0005",
-			"hero_jack_o_lantern_spawner_seed_0006"
-		}
+		size = {17, 17},
+		trim = {4, 5, 3, 5},
+		a_size = {2048, 2048},
+		f_quad = {1409, 725, 10, 7},
+		alias = {"hero_jack_o_lantern_spawner_seed_0004", "hero_jack_o_lantern_spawner_seed_0005", "hero_jack_o_lantern_spawner_seed_0006"}
 	},
 	hero_jack_o_lantern_spawner_seed_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			4,
-			5,
-			3,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			791,
-			725,
-			10,
-			7
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0008",
-			"hero_jack_o_lantern_spawner_seed_0009",
-			"hero_jack_o_lantern_spawner_seed_0010"
-		}
+		size = {17, 17},
+		trim = {4, 5, 3, 5},
+		a_size = {2048, 2048},
+		f_quad = {791, 725, 10, 7},
+		alias = {"hero_jack_o_lantern_spawner_seed_0008", "hero_jack_o_lantern_spawner_seed_0009", "hero_jack_o_lantern_spawner_seed_0010"}
 	},
 	hero_jack_o_lantern_spawner_seed_0011 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			4,
-			5,
-			3,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1994,
-			798,
-			10,
-			7
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0012"
-		}
+		size = {17, 17},
+		trim = {4, 5, 3, 5},
+		a_size = {2048, 2048},
+		f_quad = {1994, 798, 10, 7},
+		alias = {"hero_jack_o_lantern_spawner_seed_0012"}
 	},
 	hero_jack_o_lantern_spawner_seed_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			3,
-			4,
-			2,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1686,
-			796,
-			12,
-			9
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0014"
-		}
+		size = {17, 17},
+		trim = {3, 4, 2, 4},
+		a_size = {2048, 2048},
+		f_quad = {1686, 796, 12, 9},
+		alias = {"hero_jack_o_lantern_spawner_seed_0014"}
 	},
 	hero_jack_o_lantern_spawner_seed_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			3,
-			4,
-			2,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1701,
-			796,
-			12,
-			9
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0016"
-		}
+		size = {17, 17},
+		trim = {3, 4, 2, 4},
+		a_size = {2048, 2048},
+		f_quad = {1701, 796, 12, 9},
+		alias = {"hero_jack_o_lantern_spawner_seed_0016"}
 	},
 	hero_jack_o_lantern_spawner_seed_0017 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			17,
-			17
-		},
-		trim = {
-			3,
-			4,
-			2,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1716,
-			796,
-			12,
-			9
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_0018"
-		}
+		size = {17, 17},
+		trim = {3, 4, 2, 4},
+		a_size = {2048, 2048},
+		f_quad = {1716, 796, 12, 9},
+		alias = {"hero_jack_o_lantern_spawner_seed_0018"}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			18,
-			15,
-			18,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			2034,
-			17,
-			10
-		},
+		size = {53, 40},
+		trim = {18, 15, 18, 15},
+		a_size = {2048, 2048},
+		f_quad = {749, 2034, 17, 10},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0002 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			15,
-			13,
-			15,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			578,
-			23,
-			14
-		},
+		size = {53, 40},
+		trim = {15, 13, 15, 13},
+		a_size = {2048, 2048},
+		f_quad = {1501, 578, 23, 14},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			12,
-			12,
-			12,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2015,
-			582,
-			29,
-			17
-		},
+		size = {53, 40},
+		trim = {12, 12, 12, 11},
+		a_size = {2048, 2048},
+		f_quad = {2015, 582, 29, 17},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			10,
-			10,
-			9,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1435,
-			578,
-			34,
-			20
-		},
+		size = {53, 40},
+		trim = {10, 10, 9, 10},
+		a_size = {2048, 2048},
+		f_quad = {1435, 578, 34, 20},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0005 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			7,
-			10,
-			7,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1090,
-			579,
-			39,
-			21
-		},
+		size = {53, 40},
+		trim = {7, 10, 7, 9},
+		a_size = {2048, 2048},
+		f_quad = {1090, 579, 39, 21},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			7,
-			10,
-			7,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			713,
-			39,
-			20
-		},
+		size = {53, 40},
+		trim = {7, 10, 7, 10},
+		a_size = {2048, 2048},
+		f_quad = {749, 713, 39, 20},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			7,
-			10,
-			7,
-			10
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1132,
-			579,
-			39,
-			20
-		},
+		size = {53, 40},
+		trim = {7, 10, 7, 10},
+		a_size = {2048, 2048},
+		f_quad = {1132, 579, 39, 20},
 		alias = {}
 	},
 	hero_jack_o_lantern_spawner_seed_decal_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			53,
-			40
-		},
-		trim = {
-			0,
-			0,
-			53,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1030,
-			847,
-			53,
-			40
-		},
-		alias = {
-			"hero_jack_o_lantern_spawner_seed_decal_0009",
-			"hero_jack_o_lantern_spawner_seed_decal_0010"
-		}
+		size = {53, 40},
+		trim = {0, 0, 53, 40},
+		a_size = {2048, 2048},
+		f_quad = {1030, 847, 53, 40},
+		alias = {"hero_jack_o_lantern_spawner_seed_decal_0009", "hero_jack_o_lantern_spawner_seed_decal_0010"}
 	},
 	hero_jack_o_lantern_teleportfx_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			0,
-			0,
-			426,
-			181
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			5,
-			426,
-			181
-		},
-		alias = {
-			"hero_jack_o_lantern_teleportfx_0002"
-		}
+		size = {426, 181},
+		trim = {0, 0, 426, 181},
+		a_size = {2048, 2048},
+		f_quad = {5, 5, 426, 181},
+		alias = {"hero_jack_o_lantern_teleportfx_0002"}
 	},
 	hero_jack_o_lantern_teleportfx_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			193,
-			92,
-			163,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1769,
-			70,
-			66
-		},
+		size = {426, 181},
+		trim = {193, 92, 163, 23},
+		a_size = {2048, 2048},
+		f_quad = {675, 1769, 70, 66},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			201,
-			87,
-			151,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			736,
-			74,
-			69
-		},
+		size = {426, 181},
+		trim = {201, 87, 151, 25},
+		a_size = {2048, 2048},
+		f_quad = {675, 736, 74, 69},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0005 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			208,
-			83,
-			138,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			1975,
-			80,
-			70
-		},
+		size = {426, 181},
+		trim = {208, 83, 138, 28},
+		a_size = {2048, 2048},
+		f_quad = {438, 1975, 80, 70},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			216,
-			78,
-			126,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			685,
-			444,
-			84,
-			72
-		},
+		size = {426, 181},
+		trim = {216, 78, 126, 31},
+		a_size = {2048, 2048},
+		f_quad = {685, 444, 84, 72},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			223,
-			74,
-			114,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1890,
-			282,
-			89,
-			73
-		},
+		size = {426, 181},
+		trim = {223, 74, 114, 34},
+		a_size = {2048, 2048},
+		f_quad = {1890, 282, 89, 73},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			231,
-			70,
-			102,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1026,
-			282,
-			93,
-			74
-		},
+		size = {426, 181},
+		trim = {231, 70, 102, 37},
+		a_size = {2048, 2048},
+		f_quad = {1026, 282, 93, 74},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0009 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			239,
-			66,
-			90,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			637,
-			282,
-			97,
-			75
-		},
+		size = {426, 181},
+		trim = {239, 66, 90, 40},
+		a_size = {2048, 2048},
+		f_quad = {637, 282, 97, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			246,
-			61,
-			78,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1634,
-			189,
-			102,
-			76
-		},
+		size = {426, 181},
+		trim = {246, 61, 78, 44},
+		a_size = {2048, 2048},
+		f_quad = {1634, 189, 102, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0011 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			254,
-			57,
-			66,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			789,
-			189,
-			106,
-			78
-		},
+		size = {426, 181},
+		trim = {254, 57, 66, 46},
+		a_size = {2048, 2048},
+		f_quad = {789, 189, 106, 78},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0012 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			257,
-			56,
-			65,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1314,
-			189,
-			104,
-			76
-		},
+		size = {426, 181},
+		trim = {257, 56, 65, 49},
+		a_size = {2048, 2048},
+		f_quad = {1314, 189, 104, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			259,
-			54,
-			62,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			898,
-			189,
-			105,
-			77
-		},
+		size = {426, 181},
+		trim = {259, 54, 62, 50},
+		a_size = {2048, 2048},
+		f_quad = {898, 189, 105, 77},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0014 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			262,
-			53,
-			62,
-			52
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1739,
-			189,
-			102,
-			76
-		},
+		size = {426, 181},
+		trim = {262, 53, 62, 52},
+		a_size = {2048, 2048},
+		f_quad = {1739, 189, 102, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			265,
-			51,
-			63,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			1827,
-			98,
-			76
-		},
+		size = {426, 181},
+		trim = {265, 51, 63, 54},
+		a_size = {2048, 2048},
+		f_quad = {93, 1827, 98, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0016 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			268,
-			49,
-			62,
-			56
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			438,
-			282,
-			96,
-			76
-		},
+		size = {426, 181},
+		trim = {268, 49, 62, 56},
+		a_size = {2048, 2048},
+		f_quad = {438, 282, 96, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0017 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			271,
-			48,
-			61,
-			58
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			833,
-			282,
-			94,
-			75
-		},
+		size = {426, 181},
+		trim = {271, 48, 61, 58},
+		a_size = {2048, 2048},
+		f_quad = {833, 282, 94, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0018 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			272,
-			46,
-			61,
-			59
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			737,
-			282,
-			93,
-			76
-		},
+		size = {426, 181},
+		trim = {272, 46, 61, 59},
+		a_size = {2048, 2048},
+		f_quad = {737, 282, 93, 76},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0019 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			274,
-			45,
-			61,
-			61
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1318,
-			282,
-			91,
-			75
-		},
+		size = {426, 181},
+		trim = {274, 45, 61, 61},
+		a_size = {2048, 2048},
+		f_quad = {1318, 282, 91, 75},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0020 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			274,
-			45,
-			63,
-			66
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1846,
-			361,
-			89,
-			70
-		},
+		size = {426, 181},
+		trim = {274, 45, 63, 66},
+		a_size = {2048, 2048},
+		f_quad = {1846, 361, 89, 70},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0021 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			275,
-			46,
-			64,
-			71
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1777,
-			444,
-			87,
-			64
-		},
+		size = {426, 181},
+		trim = {275, 46, 64, 71},
+		a_size = {2048, 2048},
+		f_quad = {1777, 444, 87, 64},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0022 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			275,
-			48,
-			65,
-			76
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1181,
-			604,
-			86,
-			57
-		},
+		size = {426, 181},
+		trim = {275, 48, 65, 76},
+		a_size = {2048, 2048},
+		f_quad = {1181, 604, 86, 57},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0023 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			276,
-			50,
-			66,
-			83
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1453,
-			604,
-			84,
-			48
-		},
+		size = {426, 181},
+		trim = {276, 50, 66, 83},
+		a_size = {2048, 2048},
+		f_quad = {1453, 604, 84, 48},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0024 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			276,
-			51,
-			66,
-			84
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1540,
-			604,
-			84,
-			46
-		},
+		size = {426, 181},
+		trim = {276, 51, 66, 84},
+		a_size = {2048, 2048},
+		f_quad = {1540, 604, 84, 46},
 		alias = {}
 	},
 	hero_jack_o_lantern_teleportfx_0025 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			280,
-			53,
-			74,
-			86
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			93,
-			2002,
-			72,
-			42
-		},
-		alias = {
-			"hero_jack_o_lantern_teleportfx_0026"
-		}
+		size = {426, 181},
+		trim = {280, 53, 74, 86},
+		a_size = {2048, 2048},
+		f_quad = {93, 2002, 72, 42},
+		alias = {"hero_jack_o_lantern_teleportfx_0026"}
 	},
 	hero_jack_o_lantern_teleportfx_0027 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			310,
-			58,
-			74,
-			102
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			680,
-			708,
-			42,
-			21
-		},
-		alias = {
-			"hero_jack_o_lantern_teleportfx_0028"
-		}
+		size = {426, 181},
+		trim = {310, 58, 74, 102},
+		a_size = {2048, 2048},
+		f_quad = {680, 708, 42, 21},
+		alias = {"hero_jack_o_lantern_teleportfx_0028"}
 	},
 	hero_jack_o_lantern_teleportfx_0029 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			313,
-			60,
-			77,
-			106
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			826,
-			170,
-			36,
-			15
-		},
-		alias = {
-			"hero_jack_o_lantern_teleportfx_0030"
-		}
+		size = {426, 181},
+		trim = {313, 60, 77, 106},
+		a_size = {2048, 2048},
+		f_quad = {826, 170, 36, 15},
+		alias = {"hero_jack_o_lantern_teleportfx_0030"}
 	},
 	hero_jack_o_lantern_teleportfx_0031 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			426,
-			181
-		},
-		trim = {
-			318,
-			59,
-			82,
-			107
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			168,
-			2027,
-			26,
-			15
-		},
+		size = {426, 181},
+		trim = {318, 59, 82, 107},
+		a_size = {2048, 2048},
+		f_quad = {168, 2027, 26, 15},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_fear_modifier_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			70,
-			35
-		},
-		trim = {
-			12,
-			5,
-			13,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			705,
-			45,
-			26
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_fear_modifier_0002"
-		}
+		size = {70, 35},
+		trim = {12, 5, 13, 4},
+		a_size = {2048, 2048},
+		f_quad = {976, 705, 45, 26},
+		alias = {"hero_jack_o_lantern_ultimate_fear_modifier_0002"}
 	},
 	hero_jack_o_lantern_ultimate_fear_modifier_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			70,
-			35
-		},
-		trim = {
-			10,
-			2,
-			10,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			808,
-			50,
-			32
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_fear_modifier_0004"
-		}
+		size = {70, 35},
+		trim = {10, 2, 10, 1},
+		a_size = {2048, 2048},
+		f_quad = {1082, 808, 50, 32},
+		alias = {"hero_jack_o_lantern_ultimate_fear_modifier_0004"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			17,
-			22,
-			20,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1435,
-			523,
-			101,
-			52
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0002",
-			"hero_jack_o_lantern_ultimate_horse_0003",
-			"hero_jack_o_lantern_ultimate_horse_0012"
-		}
+		size = {138, 99},
+		trim = {17, 22, 20, 25},
+		a_size = {2048, 2048},
+		f_quad = {1435, 523, 101, 52},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0002", "hero_jack_o_lantern_ultimate_horse_0003", "hero_jack_o_lantern_ultimate_horse_0012"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			17,
-			21,
-			19,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1090,
-			523,
-			102,
-			53
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0005"
-		}
+		size = {138, 99},
+		trim = {17, 21, 19, 25},
+		a_size = {2048, 2048},
+		f_quad = {1090, 523, 102, 53},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0005"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			17,
-			18,
-			19,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1219,
-			444,
-			102,
-			56
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0007"
-		}
+		size = {138, 99},
+		trim = {17, 18, 19, 25},
+		a_size = {2048, 2048},
+		f_quad = {1219, 444, 102, 56},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0007"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			17,
-			18,
-			20,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1419,
-			444,
-			101,
-			56
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0009"
-		}
+		size = {138, 99},
+		trim = {17, 18, 20, 25},
+		a_size = {2048, 2048},
+		f_quad = {1419, 444, 101, 56},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0009"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			17,
-			24,
-			19,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			604,
-			102,
-			50
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0011"
-		}
+		size = {138, 99},
+		trim = {17, 24, 19, 25},
+		a_size = {2048, 2048},
+		f_quad = {693, 604, 102, 50},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0011"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			35,
-			7,
-			36,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1549,
-			67,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0014"
-		}
+		size = {138, 99},
+		trim = {35, 7, 36, 20},
+		a_size = {2048, 2048},
+		f_quad = {675, 1549, 67, 72},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0014"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			35,
-			15,
-			36,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1203,
-			736,
-			67,
-			64
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0016"
-		}
+		size = {138, 99},
+		trim = {35, 15, 36, 20},
+		a_size = {2048, 2048},
+		f_quad = {1203, 736, 67, 64},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0016"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0017 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			35,
-			7,
-			36,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1624,
-			67,
-			72
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0018"
-		}
+		size = {138, 99},
+		trim = {35, 7, 36, 20},
+		a_size = {2048, 2048},
+		f_quad = {675, 1624, 67, 72},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0018"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0019 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			35,
-			6,
-			45,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			775,
-			58,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0020"
-		}
+		size = {138, 99},
+		trim = {35, 6, 45, 20},
+		a_size = {2048, 2048},
+		f_quad = {197, 775, 58, 73},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0020"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0021 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			35,
-			5,
-			34,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1487,
-			69,
-			74
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0022"
-		}
+		size = {138, 99},
+		trim = {35, 5, 34, 20},
+		a_size = {2048, 2048},
+		f_quad = {601, 1487, 69, 74},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0022"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0023 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			35,
-			6,
-			36,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1250,
-			67,
-			73
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0024"
-		}
+		size = {138, 99},
+		trim = {35, 6, 36, 20},
+		a_size = {2048, 2048},
+		f_quad = {675, 1250, 67, 73},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0024"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0025 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			37,
-			4,
-			34,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1510,
-			67,
-			78
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0026"
-		}
+		size = {138, 99},
+		trim = {37, 4, 34, 17},
+		a_size = {2048, 2048},
+		f_quad = {523, 1510, 67, 78},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0026"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0027 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			37,
-			8,
-			33,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			956,
-			68,
-			74
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0028"
-		}
+		size = {138, 99},
+		trim = {37, 8, 33, 17},
+		a_size = {2048, 2048},
+		f_quad = {675, 956, 68, 74},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0028"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0029 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			37,
-			7,
-			33,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			1564,
-			68,
-			75
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0030"
-		}
+		size = {138, 99},
+		trim = {37, 7, 33, 17},
+		a_size = {2048, 2048},
+		f_quad = {601, 1564, 68, 75},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0030"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0031 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			37,
-			7,
-			43,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			697,
-			58,
-			75
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0032"
-		}
+		size = {138, 99},
+		trim = {37, 7, 43, 17},
+		a_size = {2048, 2048},
+		f_quad = {197, 697, 58, 75},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0032"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0033 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			37,
-			6,
-			32,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1850,
-			523,
-			69,
-			76
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0034"
-		}
+		size = {138, 99},
+		trim = {37, 6, 32, 17},
+		a_size = {2048, 2048},
+		f_quad = {1850, 523, 69, 76},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0034"}
 	},
 	hero_jack_o_lantern_ultimate_horse_0035 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			138,
-			99
-		},
-		trim = {
-			37,
-			4,
-			34,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1591,
-			67,
-			78
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_horse_0036"
-		}
+		size = {138, 99},
+		trim = {37, 4, 34, 17},
+		a_size = {2048, 2048},
+		f_quad = {523, 1591, 67, 78},
+		alias = {"hero_jack_o_lantern_ultimate_horse_0036"}
 	},
 	hero_jack_o_lantern_ultimate_particle_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			36,
-			30
-		},
-		trim = {
-			4,
-			3,
-			10,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2020,
-			444,
-			22,
-			24
-		},
+		size = {36, 30},
+		trim = {4, 3, 10, 3},
+		a_size = {2048, 2048},
+		f_quad = {2020, 444, 22, 24},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_particle_0002 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			36,
-			30
-		},
-		trim = {
-			1,
-			3,
-			1,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1024,
-			705,
-			34,
-			26
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_particle_0003"
-		}
+		size = {36, 30},
+		trim = {1, 3, 1, 1},
+		a_size = {2048, 2048},
+		f_quad = {1024, 705, 34, 26},
+		alias = {"hero_jack_o_lantern_ultimate_particle_0003"}
 	},
 	hero_jack_o_lantern_ultimate_particle_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			36,
-			30
-		},
-		trim = {
-			1,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1225,
-			808,
-			35,
-			30
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_particle_0005"
-		}
+		size = {36, 30},
+		trim = {1, 0, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {1225, 808, 35, 30},
+		alias = {"hero_jack_o_lantern_ultimate_particle_0005"}
 	},
 	hero_jack_o_lantern_ultimate_particle_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			36,
-			30
-		},
-		trim = {
-			0,
-			3,
-			2,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1096,
-			705,
-			34,
-			24
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_particle_0007"
-		}
+		size = {36, 30},
+		trim = {0, 3, 2, 3},
+		a_size = {2048, 2048},
+		f_quad = {1096, 705, 34, 24},
+		alias = {"hero_jack_o_lantern_ultimate_particle_0007"}
 	},
 	hero_jack_o_lantern_ultimate_particle_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			36,
-			30
-		},
-		trim = {
-			4,
-			4,
-			6,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1472,
-			578,
-			26,
-			21
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_particle_0009"
-		}
+		size = {36, 30},
+		trim = {4, 4, 6, 5},
+		a_size = {2048, 2048},
+		f_quad = {1472, 578, 26, 21},
+		alias = {"hero_jack_o_lantern_ultimate_particle_0009"}
 	},
 	hero_jack_o_lantern_ultimate_particle_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			36,
-			30
-		},
-		trim = {
-			9,
-			5,
-			9,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1174,
-			579,
-			18,
-			20
-		},
+		size = {36, 30},
+		trim = {9, 5, 9, 5},
+		a_size = {2048, 2048},
+		f_quad = {1174, 579, 18, 20},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0001 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			66,
-			85,
-			60,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2011,
-			665,
-			33,
-			35
-		},
+		size = {159, 171},
+		trim = {66, 85, 60, 51},
+		a_size = {2048, 2048},
+		f_quad = {2011, 665, 33, 35},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0002 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			65,
-			83,
-			57,
-			52
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1921,
-			37,
-			36
-		},
+		size = {159, 171},
+		trim = {65, 83, 57, 52},
+		a_size = {2048, 2048},
+		f_quad = {749, 1921, 37, 36},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0003 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			64,
-			80,
-			55,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			749,
-			1392,
-			40,
-			38
-		},
+		size = {159, 171},
+		trim = {64, 80, 55, 53},
+		a_size = {2048, 2048},
+		f_quad = {749, 1392, 40, 38},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0004 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			62,
-			77,
-			53,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1591,
-			847,
-			44,
-			41
-		},
+		size = {159, 171},
+		trim = {62, 77, 53, 53},
+		a_size = {2048, 2048},
+		f_quad = {1591, 847, 44, 41},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0005 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			61,
-			74,
-			50,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1086,
-			847,
-			48,
-			44
-		},
+		size = {159, 171},
+		trim = {61, 74, 50, 53},
+		a_size = {2048, 2048},
+		f_quad = {1086, 847, 48, 44},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0006 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			59,
-			71,
-			48,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			798,
-			847,
-			52,
-			46
-		},
+		size = {159, 171},
+		trim = {59, 71, 48, 54},
+		a_size = {2048, 2048},
+		f_quad = {798, 847, 52, 46},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0007 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			57,
-			67,
-			46,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1321,
-			56,
-			50
-		},
+		size = {159, 171},
+		trim = {57, 67, 46, 54},
+		a_size = {2048, 2048},
+		f_quad = {197, 1321, 56, 50},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0008 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			56,
-			64,
-			44,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1006,
-			59,
-			53
-		},
+		size = {159, 171},
+		trim = {56, 64, 44, 54},
+		a_size = {2048, 2048},
+		f_quad = {197, 1006, 59, 53},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0009 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			54,
-			61,
-			42,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1671,
-			736,
-			63,
-			57
-		},
+		size = {159, 171},
+		trim = {54, 61, 42, 53},
+		a_size = {2048, 2048},
+		f_quad = {1671, 736, 63, 57},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0010 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			54,
-			58,
-			41,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1477,
-			736,
-			64,
-			60
-		},
+		size = {159, 171},
+		trim = {54, 58, 41, 53},
+		a_size = {2048, 2048},
+		f_quad = {1477, 736, 64, 60},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0011 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			52,
-			56,
-			39,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1273,
-			736,
-			68,
-			62
-		},
+		size = {159, 171},
+		trim = {52, 56, 39, 53},
+		a_size = {2048, 2048},
+		f_quad = {1273, 736, 68, 62},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0012 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			51,
-			53,
-			38,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			675,
-			1838,
-			70,
-			65
-		},
+		size = {159, 171},
+		trim = {51, 53, 38, 53},
+		a_size = {2048, 2048},
+		f_quad = {675, 1838, 70, 65},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0013 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			51,
-			51,
-			36,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			828,
-			736,
-			72,
-			66
-		},
+		size = {159, 171},
+		trim = {51, 51, 36, 54},
+		a_size = {2048, 2048},
+		f_quad = {828, 736, 72, 66},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0014 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			50,
-			49,
-			36,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			752,
-			736,
-			73,
-			68
-		},
+		size = {159, 171},
+		trim = {50, 49, 36, 54},
+		a_size = {2048, 2048},
+		f_quad = {752, 736, 73, 68},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0015 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			49,
-			48,
-			34,
-			55
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			601,
-			665,
-			76,
-			68
-		},
+		size = {159, 171},
+		trim = {49, 48, 34, 55},
+		a_size = {2048, 2048},
+		f_quad = {601, 665, 76, 68},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0016 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			49,
-			46,
-			34,
-			55
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1356,
-			523,
-			76,
-			70
-		},
+		size = {159, 171},
+		trim = {49, 46, 34, 55},
+		a_size = {2048, 2048},
+		f_quad = {1356, 523, 76, 70},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0017 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			50,
-			46,
-			34,
-			56
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			523,
-			1896,
-			75,
-			69
-		},
+		size = {159, 171},
+		trim = {50, 46, 34, 56},
+		a_size = {2048, 2048},
+		f_quad = {523, 1896, 75, 69},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0018 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			54,
-			53,
-			43,
-			58
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1544,
-			736,
-			62,
-			60
-		},
+		size = {159, 171},
+		trim = {54, 53, 43, 58},
+		a_size = {2048, 2048},
+		f_quad = {1544, 736, 62, 60},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0019 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			58,
-			54,
-			46,
-			62
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			197,
-			1062,
-			55,
-			55
-		},
+		size = {159, 171},
+		trim = {58, 54, 46, 62},
+		a_size = {2048, 2048},
+		f_quad = {197, 1062, 55, 55},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0020 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			60,
-			63,
-			59,
-			65
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1845,
-			847,
-			40,
-			43
-		},
+		size = {159, 171},
+		trim = {60, 63, 59, 65},
+		a_size = {2048, 2048},
+		f_quad = {1845, 847, 40, 43},
 		alias = {}
 	},
 	hero_jack_o_lantern_ultimate_smoke_0021 = {
 		a_name = "kr4_hero_jack_o_lantern-1.dds",
-		size = {
-			159,
-			171
-		},
-		trim = {
-			0,
-			0,
-			159,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			434,
-			5,
-			159,
-			171
-		},
-		alias = {
-			"hero_jack_o_lantern_ultimate_smoke_0022",
-			"hero_jack_o_lantern_ultimate_smoke_0023"
-		}
+		size = {159, 171},
+		trim = {0, 0, 159, 171},
+		a_size = {2048, 2048},
+		f_quad = {434, 5, 159, 171},
+		alias = {"hero_jack_o_lantern_ultimate_smoke_0022", "hero_jack_o_lantern_ultimate_smoke_0023"}
 	}
 }

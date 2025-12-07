@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level02_data.lua
-
+-- chunkname: @./kr3/data/levels/level02_data.lua
 return {
 	level_terrain_type = 1,
 	locked_hero = false,
@@ -11,9 +10,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvenWoodsAmbienceSound"
-			}
+			sounds = {"ElvenWoodsAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -1379,106 +1376,32 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		},
-		{
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		},
-		{
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_build_mage",
-				"tower_build_engineer"
-			}
-		}
-	},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_engineer_3"}
+	}, {
+		max_upgrade_level = 3,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_engineer_3"}
+	}, {
+		max_upgrade_level = 3,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_build_mage", "tower_build_engineer"}
+	}},
 	nav_mesh = {
-		[20] = {
-			28,
-			25,
-			24,
-			27
-		},
-		[21] = {
-			nil,
-			26,
-			27
-		},
-		[22] = {
-			nil,
-			nil,
-			25,
-			23
-		},
-		[23] = {
-			nil,
-			22,
-			26,
-			21
-		},
-		[24] = {
-			20,
-			25,
-			nil,
-			27
-		},
-		[25] = {
-			22,
-			nil,
-			nil,
-			20
-		},
-		[26] = {
-			23,
-			22,
-			29,
-			21
-		},
-		[27] = {
-			21,
-			24
-		},
-		[28] = {
-			29,
-			20,
-			20,
-			27
-		},
-		[29] = {
-			26,
-			22,
-			28,
-			26
-		}
+		[20] = {28, 25, 24, 27},
+		[21] = {nil, 26, 27},
+		[22] = {nil, nil, 25, 23},
+		[23] = {nil, 22, 26, 21},
+		[24] = {20, 25, nil, 27},
+		[25] = {22, nil, nil, 20},
+		[26] = {23, 22, 29, 21},
+		[27] = {21, 24},
+		[28] = {29, 20, 20, 27},
+		[29] = {26, 22, 28, 26}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage50",
-		"ElvenWoodsAmbienceSounds"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_stage50",
-		"go_stage50_bg",
-		"go_stages_elven_woods"
-	}
+	required_sounds = {"music_stage50", "ElvenWoodsAmbienceSounds"},
+	required_textures = {"go_enemies_elven_woods", "go_stage50", "go_stage50_bg", "go_stages_elven_woods"}
 }

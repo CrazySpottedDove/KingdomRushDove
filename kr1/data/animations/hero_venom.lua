@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_venom.lua
-
+-- chunkname: @./kr5/data/animations/hero_venom.lua
 local a = {
 	hero_venom_hero_idle = {
 		prefix = "hero_venom_hero",
@@ -54,9 +53,9 @@ local a = {
 	hero_venom_hero_beast_in = {
 		prefix = "hero_venom_hero",
 		-- to = 275,
-        to = 544,
+		to = 544,
 		-- from = 238
-        from = 526
+		from = 526
 	},
 	hero_venom_hero_beast_idle = {
 		prefix = "hero_venom_hero",
@@ -66,9 +65,9 @@ local a = {
 	hero_venom_hero_beast_out = {
 		prefix = "hero_venom_hero",
 		-- to = 304,
-        to = 558,
+		to = 558,
 		-- from = 277
-        from = 545
+		from = 545
 	},
 	hero_venom_hero_beast_walk = {
 		prefix = "hero_venom_hero",
@@ -108,9 +107,9 @@ local a = {
 	hero_venom_hero_instakill = {
 		prefix = "hero_venom_hero",
 		-- to = 490,
-        to = 525,
+		to = 525,
 		-- from = 439
-        from = 500
+		from = 500
 	},
 	hero_venom_levelup_fx_idle = {
 		prefix = "hero_venom_levelup_fx",
@@ -201,7 +200,6 @@ local a = {
 		prefix = "hero_venom_hero",
 		to = 180,
 		from = 155
-	},
+	}
 }
-
 return a

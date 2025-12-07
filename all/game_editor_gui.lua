@@ -1,6 +1,5 @@
-﻿-- chunkname: @./all/game_editor_gui.lua
+-- chunkname: @./all/game_editor_gui.lua
 local log = require("lib.klua.log"):new("game_editor_gui")
-
 local ism
 local km = require("lib.klua.macros")
 require("lib.klua.table")
@@ -20,7 +19,6 @@ local GR = require("grid_db")
 local GS = require("game_settings")
 local G = love.graphics
 require("constants")
-
 local IS_KR5 = KR_GAME == "kr5"
 
 if IS_KR5 then
@@ -32,12 +30,11 @@ end
 if DEBUG then
 	package.loaded.game_editor_classes = nil
 end
+
 require("game_editor_classes")
 local NODE_SELECTION_WINDOW = 8
 log.level = log.DEBUG_LEVEL
-
 local gui = {}
-
 gui.required_textures = {}
 
 local function wid(id)
@@ -69,22 +66,14 @@ function gui:init(w, h, editor)
 	self.sh = h
 	self.scale = 1
 	self.active_tool = nil
-	self.tool_names = {
-		"general",
-		"entities",
-		"paths",
-		"grid",
-		"nav"
-	}
+	self.tool_names = {"general", "entities", "paths", "grid", "nav"}
 	self.settings = {}
 	self.settings.grid = {}
 	self.settings.grid.brush_size = 1
 	self.settings.grid.paint = TERRAIN_NONE
 	self.tool_shortcuts = {}
-
 	local tt = kui_db:get_table("game_editor_gui")
 	local window = KWindow:new_from_table(tt)
-
 	window.scale = {
 		x = self.scale,
 		y = self.scale
@@ -148,9 +137,7 @@ function gui:init(w, h, editor)
 	wid("cell_info").update = function(this, dt)
 		self:grid_cell_info_update(this, dt)
 	end
-
 	self:set_grid_paint_type(TERRAIN_NONE)
-
 	wid("paint_type_none").on_click = function()
 		self:set_grid_paint_type(TERRAIN_NONE)
 	end
@@ -175,11 +162,9 @@ function gui:init(w, h, editor)
 	wid("paint_flag_ice").on_click = function()
 		self:toggle_grid_paint_flag(TERRAIN_ICE)
 	end
-
 	wid("paint_flag_flying_nw").on_click = function()
 		self:toggle_grid_paint_flag(TERRAIN_FLYING_NOWALK)
 	end
-
 	wid("brush_size_inc").on_click = function()
 		self:grid_brush_size_change(2)
 	end
@@ -259,9 +244,9 @@ function gui:init(w, h, editor)
 		right = function()
 			self:move_entity("right")
 		end,
-        escape = function()
-            self:select_entity(nil)
-        end
+		escape = function()
+			self:select_entity(nil)
+		end
 	}
 	wid("path_create").on_click = function(this)
 		gui:create_path()
@@ -346,7 +331,7 @@ function gui:init(w, h, editor)
 	end
 	wid("nav_nearest_all").on_click = function(this)
 		if not gui.editor.nav_entity_selected then
-			return
+			return 
 		end
 
 		gui.assign_nearest_all()
@@ -362,14 +347,12 @@ function gui:init(w, h, editor)
 		gui.adds_missing_numbers()
 	end
 	wid("tools_level_name").value = 1
-
 	wid("tools_level_name"):update()
 	wid("entities_insert_template"):set_value("tower_holder")
 end
 
 function gui:destroy()
 	self.window:destroy()
-
 	self.window = nil
 end
 
@@ -387,7 +370,7 @@ end
 
 function gui:keyreleased(key)
 	if self.window:keyreleased(key, isrepeat) then
-		return
+		return 
 	elseif self.tool_shortcuts then
 		local shortcuts = self.tool_shortcuts[self.active_tool]
 
@@ -427,7 +410,6 @@ end
 function gui:u2g(s)
 	local px = (s.x * self.scale + self.window.origin.x - self.editor.game_ref_origin.x) / self.editor.game_scale
 	local py = (self.sh * self.scale - (s.y * self.scale + self.window.origin.y) - self.editor.game_ref_origin.y) / self.editor.game_scale
-
 	return px, py
 end
 
@@ -439,16 +421,13 @@ end
 
 function gui:pointer_pos_label_update(this, dt)
 	local x, y = love.mouse.getPosition()
-
 	x, y = self:u2g(V.v(x, y))
 	this.lt.text = string.format("%s,%s", x, y)
 end
 
 function gui:hide_tool(name)
 	local v = self.window:get_child_by_id(name)
-
 	v.hidden = true
-
 	self:deselect_tool(name)
 
 	if name == "grid" then
@@ -472,19 +451,16 @@ end
 
 function gui:show_tool(name)
 	if not self.editor.store.level then
-		return
+		return 
 	end
 
 	local v = self.window:get_child_by_id(name)
-
 	v.hidden = nil
-
 	self:select_tool(name)
 
 	if name == "grid" then
 		self.editor.grid_visible = true
 		self.editor.grid_dirty = true
-
 		self:update_grid_tool()
 	elseif name == "entities" then
 		self.editor.entities_visible = true
@@ -493,7 +469,6 @@ function gui:show_tool(name)
 		self.editor.paths_visible = true
 		self.editor.paths_dirty = true
 		self.editor.path_selected = nil
-
 		self:update_paths_list()
 	elseif name == "nav" then
 		self.editor.nav_visible = true
@@ -513,16 +488,10 @@ end
 
 function gui:deselect_tool(name)
 	self.window:set_responder()
-
 	local v = self.window:get_child_by_id(name)
 
 	if v.children[2] then
-		v.children[2].colors.background = {
-			220,
-			220,
-			220,
-			255
-		}
+		v.children[2].colors.background = {220, 220, 220, 255}
 	end
 
 	if name == "grid" then
@@ -538,16 +507,10 @@ function gui:select_tool(name)
 	end
 
 	self.active_tool = name
-
 	local v = self.window:get_child_by_id(name)
 
 	if v.children[2] then
-		v.children[2].colors.background = {
-			255,
-			255,
-			200,
-			255
-		}
+		v.children[2].colors.background = {255, 255, 200, 255}
 	end
 
 	if name == "entities" and not self.editor.entities_selected then
@@ -562,11 +525,9 @@ function gui:click_tool(btn, x, y)
 		self:grid_paint(wx, wy, btn)
 	elseif self.active_tool == "entities" then
 		local cb = self.select_entity
-
 		self:entities_select(wx, wy, cb, 12)
 	elseif self.active_tool == "nav" then
 		local cb = self.select_entity_nav
-
 		self:entities_select(wx, wy, cb, 24)
 	end
 end
@@ -581,7 +542,7 @@ function gui:down_tool(btn, x, y)
 			local selected = self:path_nodes_select(wx, wy)
 
 			if not selected then
-				-- block empty
+			-- block empty
 			end
 		end
 	end
@@ -589,7 +550,7 @@ end
 
 function gui:up_tool(btn, x, y)
 	if self.active_tool == "paths" then
-		-- block empty
+	-- block empty
 	end
 end
 
@@ -627,7 +588,6 @@ function gui:grid_cell_info_update(this, dt)
 	local x, y = love.mouse.getPosition()
 	local wx, wy = self:u2g(V.v(x, y))
 	local ct, i, j = GR:cell_type(wx, wy)
-
 	this.lt.text = string.format("%s,%s", i, j)
 	this.gt.text = GR:print_cell(ct)
 end
@@ -649,7 +609,6 @@ function gui:set_grid_paint_type(type)
 	end
 
 	local p = self.settings.grid.paint
-
 	p = bit.band(p, TERRAIN_PROPS_MASK)
 	self.settings.grid.paint = bit.bor(type, p)
 end
@@ -659,8 +618,8 @@ function gui:toggle_grid_paint_flag(flag)
 		[TERRAIN_SHALLOW] = "shallow",
 		[TERRAIN_NOWALK] = "nowalk",
 		[TERRAIN_FAERIE] = "faerie",
-		[TERRAIN_ICE] = "ice",
-		-- [TERRAIN_FLYING_NOWALK] = "flying_nw"
+		[TERRAIN_ICE] = "ice"
+	-- [TERRAIN_FLYING_NOWALK] = "flying_nw"
 	}
 
 	for k, n in pairs(buttons) do
@@ -669,11 +628,9 @@ function gui:toggle_grid_paint_flag(flag)
 
 			if b.active then
 				b:deactivate()
-
 				self.settings.grid.paint = bit.band(self.settings.grid.paint, bit.bnot(flag))
 			else
 				b:activate()
-
 				self.settings.grid.paint = bit.bor(self.settings.grid.paint, flag)
 			end
 		end
@@ -682,7 +639,6 @@ end
 
 function gui:grid_brush_size_change(value)
 	local b = self.settings.grid.brush_size
-
 	b = b + value
 	self.settings.grid.brush_size = km.clamp(1, 21, b)
 end
@@ -695,7 +651,6 @@ function gui:grid_paint(wx, wy, btn)
 	if btn == "2" then
 		local f = TERRAIN_NOWALK
 		local fs = bit.band(s.paint, f)
-
 		fs = bit.band(bit.bnot(fs), f)
 		temp_brush = bit.bor(bit.band(s.paint, bit.bnot(f)), fs)
 	end
@@ -703,7 +658,6 @@ function gui:grid_paint(wx, wy, btn)
 	for i = -bw, bw do
 		for j = -bw, bw do
 			local bx, by = wx + i * GR.cell_size, wy + j * GR.cell_size
-
 			GR:set_cell_type(bx, by, temp_brush)
 		end
 	end
@@ -733,7 +687,6 @@ function gui:refresh_nav_tool()
 
 	if editor.store.level_mode == 1 then
 		wid("nav_mode_override_active").on_change = nil
-
 		wid("nav_mode_override_active"):set_value(false)
 		wid("nav_mode_override_active"):disable()
 	else
@@ -749,7 +702,6 @@ function gui:refresh_nav_tool()
 		wid("nav_mode_override_active").on_change = function(this)
 			gui:nav_mode_override_change(this)
 		end
-
 		wid("nav_mode_override_active"):enable()
 	end
 end
@@ -757,7 +709,6 @@ end
 function gui:entities_select(wx, wy, callback, size)
 	local e
 	local es = self.editor:entities_at_pos(wx, wy, size)
-
 	log.debug("es:%s", es and getdump(es) or "-")
 
 	if es and #es > 0 then
@@ -784,12 +735,9 @@ function gui:select_entity(e)
 	local vd = wid("entities_deselected")
 
 	if e then
-		self.editor.entities_selected = {
-			e.id
-		}
+		self.editor.entities_selected = {e.id}
 		vd.hidden = true
 		vs.hidden = false
-
 		wid("entities_id"):set_value(e.id)
 		wid("entities_template"):set_value(e.template_name)
 
@@ -798,7 +746,6 @@ function gui:select_entity(e)
 		end
 
 		local cv = wid("entities_custom_props")
-
 		cv:remove_children()
 
 		if e.editor and e.editor.props then
@@ -835,7 +782,6 @@ function gui:select_entity(e)
 		self.editor.entities_selected = nil
 		vs.hidden = true
 		vd.hidden = false
-
 		self.window:set_responder(wid("entities_insert_template"))
 	end
 
@@ -850,20 +796,19 @@ function gui:update_entity_prop(prop_view)
 
 	if not prop_name or not prop_type then
 		log.error("Property view %s has no prop_name or prop_type", prop_view)
-
-		return
+		return 
 	end
 
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return
+		return 
 	end
 
 	local e = self.editor.store.entities[eid]
 
 	if not e then
-		return
+		return 
 	end
 
 	local prop_value = prop_view.value
@@ -883,11 +828,9 @@ function gui:update_entity_prop(prop_view)
 			self.editor:undo_push_entity(picker.tracking, e.id, prop_name .. ".x", get_prop(e, prop_name .. ".x"), prop_name .. ".y", get_prop(e, prop_name .. ".y"))
 			set_prop(e, prop_name .. ".x", prop_value.x)
 			set_prop(e, prop_name .. ".y", prop_value.y)
-
 			self._last_prop_value.x = prop_value.x
 			self._last_prop_value.y = prop_value.y
 		end
-
 	else
 		self.editor:undo_push_entity(picker.tracking, e.id, prop_name, get_prop(e, prop_name), picker.tracking)
 		set_prop(e, prop_name, prop_value)
@@ -900,11 +843,10 @@ function gui:entities_move(wx, wy)
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return
+		return 
 	end
 
 	local p = wid("entities_pos")
-
 	p:set_value(V.v(wx, wy))
 end
 
@@ -912,14 +854,13 @@ function gui:move_entity(direction)
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return
+		return 
 	end
 
 	local step = love.keyboard.isDown("lshift", "rshift") and 10 or 1
 	local dx = direction == "left" and -step or direction == "right" and step or 0
 	local dy = direction == "down" and -step or direction == "up" and step or 0
 	local p = wid("entities_pos")
-
 	p:set_value(V.v(V.add(p.value.x, p.value.y, dx, dy)))
 end
 
@@ -927,7 +868,7 @@ function gui:hide_template()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		return
+		return 
 	end
 
 	for _, e in pairs(self.editor.store.entities) do
@@ -943,7 +884,7 @@ function gui:show_template()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		return
+		return 
 	end
 
 	for _, e in pairs(self.editor.store.entities) do
@@ -959,13 +900,11 @@ function gui:insert_entity()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		return
+		return 
 	end
 
 	local e = E:create_entity(template)
-
 	e.pos.x, e.pos.y = REF_W / 2, REF_H / 2 - 50
-
 	LU.queue_insert(self.editor.store, e)
 end
 
@@ -973,24 +912,20 @@ function gui:delete_entity()
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return
+		return 
 	end
 
 	local e = self.editor.store.entities[eid]
 
 	if not e then
-		return
+		return 
 	end
 
 	LU.queue_remove(self.editor.store, e)
-
 	local list = self.editor.store.level.data.entities_list
 	local le = list._idx[e.id]
-
 	table.removeobject(list, le)
-
 	list._idx[e.id] = nil
-
 	self:select_entity(nil)
 end
 
@@ -998,17 +933,16 @@ function gui:duplicate_entity()
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return
+		return 
 	end
 
 	local e = self.editor.store.entities[eid]
 
 	if not e then
-		return
+		return 
 	end
 
 	local de = E:create_entity(e.template_name)
-
 	de.pos = V.v(e.pos.x, e.pos.y - 50)
 
 	if e.editor and e.editor.props then
@@ -1018,12 +952,10 @@ function gui:duplicate_entity()
 			if kt == PT_COORDS then
 				local x = LU.eval_get_prop(e, k .. ".x")
 				local y = LU.eval_get_prop(e, k .. ".y")
-
 				LU.eval_set_prop(de, k .. ".x", x)
 				LU.eval_set_prop(de, k .. ".y", y)
 			else
 				local v = LU.eval_get_prop(e, k)
-
 				LU.eval_set_prop(de, k, v)
 			end
 		end
@@ -1040,7 +972,6 @@ function gui:search_entity_suggestions()
 
 	if str and string.len(str) >= 3 then
 		local results = E:search_entity(str)
-
 		list:clear_rows()
 
 		for i = 1, 10 do
@@ -1051,7 +982,6 @@ function gui:search_entity_suggestions()
 			end
 
 			local l = KLabel:new(V.v(list.size.x, 20))
-
 			l.text_align = "left"
 			l.text = tn
 			l.font_name = "DroidSansMono"
@@ -1068,18 +998,15 @@ end
 
 function gui:update_paths_list()
 	local list = wid("paths_list")
-
 	list:clear_rows()
-
 	local paths = self.editor.path_curves
 
 	if not paths then
-		return
+		return 
 	end
 
 	for i, path in ipairs(paths) do
 		local l = KLabel:new(V.v(list.size.x, 20))
-
 		l.text_align = "left"
 		l.text = i
 
@@ -1096,51 +1023,31 @@ function gui:select_list_path(pi)
 
 	for i, v in ipairs(list.children) do
 		if i == pi then
-			v.colors.background = {
-				0,
-				0,
-				0,
-				40
-			}
+			v.colors.background = {0, 0, 0, 40}
 		else
-			v.colors.background = {
-				0,
-				0,
-				0,
-				0
-			}
+			v.colors.background = {0, 0, 0, 0}
 		end
 	end
 end
 
 function gui:select_node(pi, ni, add)
 	if pi and ni then
-		local sel = {
-			pi,
-			ni
-		}
+		local sel = {pi, ni}
 
 		if add and self.path_nodes_selected then
 			table.insert(self.path_nodes_selected, sel)
 		else
-			self.path_nodes_selected = {
-				sel
-			}
-
+			self.path_nodes_selected = {sel}
 			self:select_list_path(pi)
 		end
 
 		self:show_path_node(unpack(sel))
-
 		self.editor.path_selected = pi
 	else
 		self.path_nodes_selected = nil
-
 		self:show_path_node()
-
-		-- self.editor.path_selected = nil
-
-		-- self:select_list_path()
+	-- self.editor.path_selected = nil
+	-- self:select_list_path()
 	end
 
 	self.editor.paths_dirty = true
@@ -1148,7 +1055,6 @@ end
 
 function gui:path_nodes_select(x, y, w, h)
 	log.debug("x:%s,y%s,w:%s,h:%s", x, y, w, h)
-
 	local multi = true
 
 	if not w or not h then
@@ -1159,9 +1065,7 @@ function gui:path_nodes_select(x, y, w, h)
 
 	local r = V.r(x, y, w, h)
 	local lpi = self.editor.path_selected
-
 	self:select_node()
-
 	local sel = {}
 
 	for pi, path in ipairs(self.editor.path_curves) do
@@ -1182,26 +1086,22 @@ end
 function gui:show_path_node(pi, ni)
 	if not pi or not ni then
 		wid("paths_node_selected").hidden = true
-
 		wid("paths_props"):update_layout()
-
-		return
+		return 
 	end
 
 	local path = self.editor.path_curves[pi]
 
 	if not pi then
 		log.error("Path id not found:%s", pi)
-
-		return
+		return 
 	end
 
 	local p = path.nodes[ni]
 
 	if not p then
 		log.error("Path node id not found:%s", ni)
-
-		return
+		return 
 	end
 
 	local node_type = (ni - 1) % 3 == 0 and "node" or "handle"
@@ -1209,12 +1109,10 @@ function gui:show_path_node(pi, ni)
 
 	if node_type == "node" then
 		local wi = (ni - 1) / 3 + 1
-
 		node_width = path.widths[wi]
 	end
 
 	wid("path_active"):set_value(self.editor.active_paths[pi])
-
 	local cpi = -1
 
 	if self.editor.path_connections and self.editor.path_connections[pi] then
@@ -1231,7 +1129,6 @@ function gui:show_path_node(pi, ni)
 
 	wid("path_node_width").hidden = node_width == nil
 	wid("paths_node_selected").hidden = false
-
 	wid("paths_node_selected"):update_layout()
 	wid("paths_props"):update_layout()
 end
@@ -1240,11 +1137,10 @@ function gui:path_connects_to_change(prop_view)
 	log.debug("prop_view:%s  value:%s", prop_view, prop_view.value)
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:set_path_connection(pi, prop_view.value)
 end
 
@@ -1252,11 +1148,10 @@ function gui:path_active_change(prop_view)
 	log.debug("prop_view:%s  value:%s", prop_view, prop_view.value)
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:set_path_active(pi, prop_view.value)
 end
 
@@ -1264,21 +1159,19 @@ function gui:path_node_pos_change(prop_view)
 	log.debug("prop_view:%s  value:%s", prop_view, getdump(prop_view.value))
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:set_node_pos(pi, ni, prop_view.value.x, prop_view.value.y)
 end
 
 function gui:path_node_width_change(view)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:set_node_width(pi, ni, view.value)
 end
 
@@ -1286,7 +1179,7 @@ function gui:path_nodes_move(x, y, delta)
 	log.debug()
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return
+		return 
 	end
 
 	if delta then
@@ -1296,13 +1189,11 @@ function gui:path_nodes_move(x, y, delta)
 			local pi, ni = unpack(item)
 			local n = self.editor.path_curves[pi].nodes[ni]
 			local nx, ny = n.x + x * step, n.y + y * step
-
 			self.editor:set_node_pos(pi, ni, nx, ny)
 			wid("path_node_pos"):set_value(V.v(nx, ny), true)
 		end
 	else
 		local pi, ni = unpack(self.path_nodes_selected[1])
-
 		self.editor:set_node_pos(pi, ni, x, y)
 		wid("path_node_pos"):set_value(V.v(x, y), true)
 	end
@@ -1310,7 +1201,7 @@ end
 
 function gui:path_node_modify(view, x, y)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1319,29 +1210,13 @@ function gui:path_node_modify(view, x, y)
 	if path and path.nodes and path.nodes[ni] then
 		if ni == 1 or ni == #path.nodes then
 			self.editor:extend_path(pi, ni, x, y)
-
 			local nni = ni == 1 and 1 or #path.nodes
-
-			self.path_nodes_selected = {
-				{
-					pi,
-					nni
-				}
-			}
-
+			self.path_nodes_selected = {{pi, nni}}
 			self:show_path_node(pi, nni)
 		else
 			self.editor:subdivide_path(pi, ni, x, y)
-
 			local nni = ni + 1
-
-			self.path_nodes_selected = {
-				{
-					pi,
-					nni
-				}
-			}
-
+			self.path_nodes_selected = {{pi, nni}}
 			self:show_path_node(pi, nni)
 		end
 	end
@@ -1349,43 +1224,34 @@ end
 
 function gui:path_node_remove(view)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:remove_path_node(pi, ni)
 	self:show_path_node()
 end
 
 function gui:flip_path()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:flip_path(pi)
-
-	self.path_nodes_selected = {
-		{
-			pi,
-			1
-		}
-	}
-
+	self.path_nodes_selected = {{pi, 1}}
 	self:show_path_node(pi, 1)
 end
 
 function gui:move_path(inc)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
 
 	if pi + inc < 1 or pi + inc > #self.editor.path_curves then
-		return
+		return 
 	end
 
 	self.editor:change_path_idx(pi, pi + inc)
@@ -1395,30 +1261,27 @@ end
 
 function gui:create_path()
 	local pi = self.editor:create_path()
-
 	self:update_paths_list()
 	self:select_node(pi, 1)
 end
 
 function gui:duplicate_path()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
 	local npi = self.editor:duplicate_path(pi)
-
 	self:update_paths_list()
 	self:select_node(npi, 1)
 end
 
 function gui:remove_path()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:remove_path(pi)
 	self:update_paths_list()
 	self:show_path_node()
@@ -1426,17 +1289,15 @@ end
 
 function gui:preview_path(view)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return
+		return 
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
-
 	self.editor:preview_path_points(pi)
 end
 
 function gui:nav_mode_override_change(prop_view)
 	log.debug("prop view:%s value:%s", prop_view, prop_view.value)
-
 	local ov = self.editor.store.level.data.level_mode_overrides
 
 	if prop_view.value then
@@ -1448,24 +1309,17 @@ function gui:nav_mode_override_change(prop_view)
 	else
 		ov[self.editor.store.level_mode].nav_mesh = nil
 		self.editor.store.level.nav_mesh = self.editor.store.level.data._before_ov.nav_mesh
-
 		self.editor:sanitize_nav_mesh(self.editor.store.level.nav_mesh)
-
 		self.editor.nav_dirty = true
 	end
 end
 
 function gui:select_entity_nav(e, es)
 	if not e or not es then
-		return
+		return 
 	end
 
-	local v_dir_ids = {
-		"nav_id_right",
-		"nav_id_top",
-		"nav_id_left",
-		"nav_id_bottom"
-	}
+	local v_dir_ids = {"nav_id_right", "nav_id_top", "nav_id_left", "nav_id_bottom"}
 
 	if not e or not e.ui or not e.ui.nav_mesh_id then
 		for _, ee in pairs(es) do
@@ -1477,41 +1331,28 @@ function gui:select_entity_nav(e, es)
 
 	if e and e.ui and e.ui.nav_mesh_id then
 		self.editor.nav_entity_selected = e
-
 		wid("nav_sel_id"):set_value(e.id)
-
 		lt_hid = tonumber(e.ui.nav_mesh_id)
-
 		wid("nav_holder_id"):set_value(lt_hid)
-
 		local nav_mesh = self.editor.store.level.nav_mesh
-
 		self.editor:sanitize_nav_mesh(nav_mesh)
-
 		local edges = nav_mesh[lt_hid]
 
 		for i, n in pairs(v_dir_ids) do
 			local w = wid(n)
-
 			w.list = table.keys(nav_mesh)
-
 			table.sort(w.list)
-
 			local idx = table.keyforobject(w.list, edges[i] or -1)
-
 			w:set_value(idx)
 		end
 	else
 		self.editor.nav_entity_selected = nil
-
 		wid("nav_sel_id"):set_value("")
 		wid("nav_holder_id"):set_value("")
 
 		for _, n in pairs(v_dir_ids) do
 			local w = wid(n)
-
 			w.list = {}
-
 			w:set_value(nil)
 		end
 	end
@@ -1523,7 +1364,7 @@ function gui.set_nav_mesh(view, edge_idx)
 	local e = gui.editor.nav_entity_selected
 
 	if not e or not e.ui then
-		return
+		return 
 	end
 
 	local nav_mesh = gui.editor.store.level.nav_mesh
@@ -1531,16 +1372,14 @@ function gui.set_nav_mesh(view, edge_idx)
 
 	if not nav_mesh_id then
 		log.error("invalid nav_mesh_id:%s for entity (%s)%s", nav_mesh_id, e.id, e.template_name)
-
-		return
+		return 
 	end
 
 	local edge_value = view:get_value()
 
 	if not edge_idx then
 		log.error("invalid edge_idx:%s", edge_idx)
-
-		return
+		return 
 	end
 
 	nav_mesh_id = tonumber(nav_mesh_id)
@@ -1552,8 +1391,7 @@ end
 function gui.assign_nearest_selected(e)
 	if not e then
 		log.error("invalid entity")
-
-		return
+		return 
 	end
 
 	local nearby = {}
@@ -1567,14 +1405,12 @@ function gui.assign_nearest_selected(e)
 	table.sort(nearby, function(e1, e2)
 		return V.dist(e1.pos.x, e1.pos.y, e.pos.x, e.pos.y) < V.dist(e2.pos.x, e2.pos.y, e.pos.x, e.pos.y)
 	end)
-
 	local nav_mesh = gui.editor.store.level.nav_mesh
 
 	for i = 1, 4 do
 		for _, ee in ipairs(nearby) do
 			if ism.get_dir_idx(ee.pos.x - e.pos.x, ee.pos.y - e.pos.y) == i then
 				nav_mesh[tonumber(e.ui.nav_mesh_id)][i] = tonumber(ee.ui.nav_mesh_id)
-
 				break
 			end
 		end
@@ -1628,9 +1464,7 @@ function gui.adds_missing_numbers()
 	for _, e in pairs(gui.editor.store.entities) do
 		if e and e.ui and e.ui.has_nav_mesh and e.ui.nav_mesh_id then
 			local id = tonumber(e.ui.nav_mesh_id)
-
 			last_id = math.max(id, last_id)
-
 			local se = string.format("%d,%d", e.pos.x, e.pos.y)
 
 			if not pos_ids[se] then

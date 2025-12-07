@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level04_data.lua
-
+-- chunkname: @./kr1/data/levels/level04_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -614,120 +613,35 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 3,
-			locked_towers = {}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_build_mage",
-				"tower_build_engineer",
-			}
-		}
-	},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 3,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 3,
+		locked_towers = {"tower_build_mage", "tower_build_engineer"}
+	}},
 	nav_mesh = {
-		{
-			2,
-			5,
-			4
-		},
-		{
-			nil,
-			7,
-			1
-		},
-		{
-			5,
-			14,
-			4,
-			1
-		},
-		{
-			3,
-			15,
-			8,
-			1
-		},
-		{
-			7,
-			14,
-			3,
-			1
-		},
-		{
-			8,
-			12
-		},
-		{
-			nil,
-			9,
-			5,
-			2
-		},
-		{
-			9,
-			10,
-			6,
-			4
-		},
-		{
-			nil,
-			11,
-			8,
-			7
-		},
-		{
-			11,
-			12,
-			6,
-			8
-		},
-		{
-			nil,
-			14,
-			12,
-			9
-		},
-		{
-			11,
-			13,
-			6,
-			10
-		},
-		{
-			15,
-			nil,
-			12,
-			8
-		},
-		{
-			11,
-			nil,
-			15,
-			3
-		},
-		{
-			14,
-			nil,
-			13,
-			4
-		}
+		{2, 5, 4},
+		{nil, 7, 1},
+		{5, 14, 4, 1},
+		{3, 15, 8, 1},
+		{7, 14, 3, 1},
+		{8, 12},
+		{nil, 9, 5, 2},
+		{9, 10, 6, 4},
+		{nil, 11, 8, 7},
+		{11, 12, 6, 8},
+		{nil, 14, 12, 9},
+		{11, 13, 6, 10},
+		{15, nil, 12, 8},
+		{11, nil, 15, 3},
+		{14, nil, 13, 4}
 	},
-	required_sounds = {
-		"music_stage04"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_stages_grass",
-		"go_stage04",
-		"go_stage04_bg"
-	}
+	required_sounds = {"music_stage04"},
+	required_textures = {"go_enemies_grass", "go_stages_grass", "go_stage04", "go_stage04_bg"}
 }

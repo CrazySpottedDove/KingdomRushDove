@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/serpent.lua
-
+-- chunkname: @./lib/serpent.lua
 local n, v = "serpent", 0.284
 local c, d = "Paul Kulchenko", "Lua serializer and pretty printer"
 local snum = {
@@ -48,15 +47,7 @@ for k, v in pairs(G) do
 	globals[v] = k
 end
 
-for _, g in ipairs({
-	"coroutine",
-	"debug",
-	"io",
-	"math",
-	"string",
-	"table",
-	"os"
-}) do
+for _, g in ipairs({"coroutine", "debug", "io", "math", "string", "table", "os"}) do
 	for k, v in pairs(type(G[g]) == "table" and G[g] or {}) do
 		globals[v] = g .. "." .. k
 	end
@@ -70,9 +61,7 @@ local function s(t, opts)
 	local iname = "_" .. (name or "")
 	local iname, comm = iname, opts.comment and (tonumber(opts.comment) or math.huge)
 	local numformat = opts.numformat or "%.17g"
-	local seen, sref, syms, symn = {}, {
-		"local " .. iname .. "={}"
-	}, {}, 0
+	local seen, sref, syms, symn = {}, {"local " .. iname .. "={}"}, {}, 0
 
 	local function gensym(val)
 		return "_" .. tostring(tostring(val)):gsub("[^%w]", ""):gsub("(%d%w+)", function(s)
@@ -101,7 +90,6 @@ local function s(t, opts)
 		local n = name == nil and "" or name
 		local plain = type(n) == "string" and n:match("^[%l%u_][%w_]*$") and not keyword[n]
 		local safe = plain and n or "[" .. safestr(n) .. "]"
-
 		return (path or "") .. (plain and path and "." or "") .. safe, safe
 	end
 
@@ -127,7 +115,6 @@ local function s(t, opts)
 
 		if seen[t] then
 			sref[#sref + 1] = spath .. space .. "=" .. space .. seen[t]
-
 			return tag .. "nil" .. comment("ref", level)
 		end
 
@@ -189,20 +176,16 @@ local function s(t, opts)
 				local value, ktype, plainindex = value, ktype, n <= maxn and not sparse
 
 				if opts.valignore and opts.valignore[value] or opts.keyallow and not opts.keyallow[key] or opts.keyignore and opts.keyignore[key] or opts.valtypeignore and opts.valtypeignore[type(value)] or sparse and value == nil then
-					-- block empty
+				-- block empty
 				elseif ktype == "table" or ktype == "function" or badtype[ktype] then
 					if not seen[key] and not globals[key] then
 						sref[#sref + 1] = "placeholder"
-
 						local sname = safename(iname, gensym(key))
-
 						sref[#sref] = val2str(key, sname, indent, sname, iname, true)
 					end
 
 					sref[#sref + 1] = "placeholder"
-
 					local path = seen[t] .. "[" .. tostring(seen[key] or globals[key] or gensym(key)) .. "]"
-
 					sref[#sref] = path .. space .. "=" .. space .. tostring(seen[value] or val2str(value, nil, indent, path))
 				else
 					out[#out + 1] = val2str(value, key, indent, insref, seen[t], plainindex, level + 1)
@@ -213,18 +196,14 @@ local function s(t, opts)
 			local head = indent and "{\n" .. prefix .. indent or "{"
 			local body = table.concat(out, "," .. (indent and "\n" .. prefix .. indent or space))
 			local tail = indent and "\n" .. prefix .. "}" or "}"
-
 			return (custom and custom(tag, head, body, tail, level) or tag .. head .. body .. tail) .. comment(t, level)
 		elseif badtype[ttype] then
 			seen[t] = insref or spath
-
 			return tag .. globerr(t, level)
 		elseif ttype == "function" then
 			seen[t] = insref or spath
-
 			local ok, res = pcall(string.dump, t)
 			local func = ok and (opts.nocode and "function() --[[..skipped..]] end" or "((loadstring or load)(" .. safestr(res) .. ",'@serialized'))") .. comment(t, level)
-
 			return tag .. (func or globerr(t, level))
 		else
 			return tag .. safestr(t)
@@ -235,7 +214,6 @@ local function s(t, opts)
 	local body = val2str(t, name, indent)
 	local tail = #sref > 1 and table.concat(sref, sepr) .. sepr or ""
 	local warn = opts.comment and #sref > 1 and space .. "--[[incomplete output with shared/self-references skipped]]" or ""
-
 	return not name and body .. warn or "do local " .. body .. sepr .. tail .. "return " .. name .. sepr .. "end"
 end
 

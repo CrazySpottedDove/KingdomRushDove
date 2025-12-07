@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_sparking_geode.lua
-
+-- chunkname: @./kr5/data/animations/tower_sparking_geode.lua
 local a = {
 	sparking_geode_evolve_run = {
 		prefix = "sparking_geode_evolve",
@@ -242,5 +241,4 @@ local a = {
 		from = 141
 	}
 }
-
 return a

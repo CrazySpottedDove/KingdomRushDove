@@ -1,12272 +1,3866 @@
 return {
 	la_red_lvl4_tp_fire_enemy_0002 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			58,
-			29,
-			48,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1980,
-			1720,
-			62,
-			69
-		},
+		size = {168, 151},
+		trim = {58, 29, 48, 53},
+		a_size = {2048, 2048},
+		f_quad = {1980, 1720, 62, 69},
 		alias = {}
 	},
 	tower_pandas_lighting_sky_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			36,
-			21,
-			30,
-			535
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			539,
-			50,
-			549
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0002"
-		}
+		size = {116, 1105},
+		trim = {36, 21, 30, 535},
+		a_size = {2048, 2048},
+		f_quad = {395, 539, 50, 549},
+		alias = {"tower_pandas_lighting_sky_0002"}
 	},
 	tower_pandas_lighting_sky_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			35,
-			22,
-			32,
-			536
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			1436,
-			49,
-			547
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0004"
-		}
+		size = {116, 1105},
+		trim = {35, 22, 32, 536},
+		a_size = {2048, 2048},
+		f_quad = {338, 1436, 49, 547},
+		alias = {"tower_pandas_lighting_sky_0004"}
 	},
 	tower_pandas_lighting_sky_0005 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			34,
-			24,
-			32,
-			535
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1091,
-			50,
-			546
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0006"
-		}
+		size = {116, 1105},
+		trim = {34, 24, 32, 535},
+		a_size = {2048, 2048},
+		f_quad = {395, 1091, 50, 546},
+		alias = {"tower_pandas_lighting_sky_0006"}
 	},
 	tower_pandas_lighting_sky_0007 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			35,
-			22,
-			32,
-			536
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			217,
-			49,
-			547
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0008"
-		}
+		size = {116, 1105},
+		trim = {35, 22, 32, 536},
+		a_size = {2048, 2048},
+		f_quad = {450, 217, 49, 547},
+		alias = {"tower_pandas_lighting_sky_0008"}
 	},
 	tower_pandas_lighting_sky_0009 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			34,
-			39,
-			30,
-			535
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			5,
-			52,
-			531
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0010"
-		}
+		size = {116, 1105},
+		trim = {34, 39, 30, 535},
+		a_size = {2048, 2048},
+		f_quad = {395, 5, 52, 531},
+		alias = {"tower_pandas_lighting_sky_0010"}
 	},
 	tower_pandas_lighting_sky_0011 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			34,
-			64,
-			32,
-			536
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			502,
-			217,
-			50,
-			505
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0012"
-		}
+		size = {116, 1105},
+		trim = {34, 64, 32, 536},
+		a_size = {2048, 2048},
+		f_quad = {502, 217, 50, 505},
+		alias = {"tower_pandas_lighting_sky_0012"}
 	},
 	tower_pandas_lighting_sky_0013 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			34,
-			83,
-			32,
-			535
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			1483,
-			50,
-			487
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0014"
-		}
+		size = {116, 1105},
+		trim = {34, 83, 32, 535},
+		a_size = {2048, 2048},
+		f_quad = {585, 1483, 50, 487},
+		alias = {"tower_pandas_lighting_sky_0014"}
 	},
 	tower_pandas_lighting_sky_0015 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			35,
-			88,
-			32,
-			536
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			403,
-			49,
-			481
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0016"
-		}
+		size = {116, 1105},
+		trim = {35, 88, 32, 536},
+		a_size = {2048, 2048},
+		f_quad = {980, 403, 49, 481},
+		alias = {"tower_pandas_lighting_sky_0016"}
 	},
 	tower_pandas_lighting_sky_0017 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			36,
-			94,
-			30,
-			535
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			638,
-			1483,
-			50,
-			476
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0018"
-		}
+		size = {116, 1105},
+		trim = {36, 94, 30, 535},
+		a_size = {2048, 2048},
+		f_quad = {638, 1483, 50, 476},
+		alias = {"tower_pandas_lighting_sky_0018"}
 	},
 	tower_pandas_lighting_sky_0019 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			35,
-			94,
-			32,
-			536
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			887,
-			49,
-			475
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0020"
-		}
+		size = {116, 1105},
+		trim = {35, 94, 32, 536},
+		a_size = {2048, 2048},
+		f_quad = {980, 887, 49, 475},
+		alias = {"tower_pandas_lighting_sky_0020"}
 	},
 	tower_pandas_lighting_sky_0021 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			35,
-			94,
-			32,
-			536
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			1365,
-			49,
-			475
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0022"
-		}
+		size = {116, 1105},
+		trim = {35, 94, 32, 536},
+		a_size = {2048, 2048},
+		f_quad = {980, 1365, 49, 475},
+		alias = {"tower_pandas_lighting_sky_0022"}
 	},
 	tower_pandas_lighting_sky_0023 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			116,
-			1105
-		},
-		trim = {
-			35,
-			94,
-			34,
-			537
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			403,
-			47,
-			474
-		},
-		alias = {
-			"tower_pandas_lighting_sky_0024"
-		}
+		size = {116, 1105},
+		trim = {35, 94, 34, 537},
+		a_size = {2048, 2048},
+		f_quad = {1032, 403, 47, 474},
+		alias = {"tower_pandas_lighting_sky_0024"}
 	},
 	tower_pandas_panda_blue_lvl4_0004 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			78,
-			158,
-			81,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			1986,
-			54,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0005"
-		}
+		size = {213, 420},
+		trim = {78, 158, 81, 204},
+		a_size = {2048, 2048},
+		f_quad = {338, 1986, 54, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0005"}
 	},
 	tower_pandas_panda_blue_lvl4_0008 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			81,
-			152,
-			80,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1708,
-			52,
-			64
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0009"
-		}
+		size = {213, 420},
+		trim = {81, 152, 80, 204},
+		a_size = {2048, 2048},
+		f_quad = {395, 1708, 52, 64},
+		alias = {"tower_pandas_panda_blue_lvl4_0009"}
 	},
 	tower_pandas_panda_blue_lvl4_0034 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			68,
-			153,
-			51,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1564,
-			1980,
-			94,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0035"
-		}
+		size = {213, 420},
+		trim = {68, 153, 51, 204},
+		a_size = {2048, 2048},
+		f_quad = {1564, 1980, 94, 63},
+		alias = {"tower_pandas_panda_blue_lvl4_0035"}
 	},
 	tower_pandas_panda_blue_lvl4_0038 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			161,
-			56,
-			203
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1986,
-			94,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0039"
-		}
+		size = {213, 420},
+		trim = {63, 161, 56, 203},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1986, 94, 56},
+		alias = {"tower_pandas_panda_blue_lvl4_0039"}
 	},
 	tower_pandas_panda_blue_lvl4_0052 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			69,
-			158,
-			32,
-			201
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1872,
-			1794,
-			112,
-			61
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0053"
-		}
+		size = {213, 420},
+		trim = {69, 158, 32, 201},
+		a_size = {2048, 2048},
+		f_quad = {1872, 1794, 112, 61},
+		alias = {"tower_pandas_panda_blue_lvl4_0053"}
 	},
 	tower_pandas_panda_blue_lvl4_0056 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			50,
-			57,
-			50,
-			193
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1858,
-			5,
-			113,
-			170
-		},
+		size = {213, 420},
+		trim = {50, 57, 50, 193},
+		a_size = {2048, 2048},
+		f_quad = {1858, 5, 113, 170},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0057 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			50,
-			51,
-			51,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1743,
-			5,
-			112,
-			175
-		},
+		size = {213, 420},
+		trim = {50, 51, 51, 194},
+		a_size = {2048, 2048},
+		f_quad = {1743, 5, 112, 175},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0058 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			48,
-			45,
-			46,
-			189
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1291,
-			5,
-			119,
-			186
-		},
+		size = {213, 420},
+		trim = {48, 45, 46, 189},
+		a_size = {2048, 2048},
+		f_quad = {1291, 5, 119, 186},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0059 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			48,
-			40,
-			47,
-			189
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			403,
-			118,
-			191
-		},
+		size = {213, 420},
+		trim = {48, 40, 47, 189},
+		a_size = {2048, 2048},
+		f_quad = {1082, 403, 118, 191},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0060 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			46,
-			37,
-			45,
-			187
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1882,
-			197,
-			122,
-			196
-		},
+		size = {213, 420},
+		trim = {46, 37, 45, 187},
+		a_size = {2048, 2048},
+		f_quad = {1882, 197, 122, 196},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0061 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			47,
-			33,
-			45,
-			187
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1631,
-			197,
-			121,
-			200
-		},
+		size = {213, 420},
+		trim = {47, 33, 45, 187},
+		a_size = {2048, 2048},
+		f_quad = {1631, 197, 121, 200},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0062 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			46,
-			32,
-			45,
-			187
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1506,
-			197,
-			122,
-			201
-		},
+		size = {213, 420},
+		trim = {46, 32, 45, 187},
+		a_size = {2048, 2048},
+		f_quad = {1506, 197, 122, 201},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0063 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			47,
-			30,
-			45,
-			187
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1382,
-			197,
-			121,
-			203
-		},
+		size = {213, 420},
+		trim = {47, 30, 45, 187},
+		a_size = {2048, 2048},
+		f_quad = {1382, 197, 121, 203},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0064 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			46,
-			28,
-			44,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			851,
-			123,
-			207
-		},
+		size = {213, 420},
+		trim = {46, 28, 44, 185},
+		a_size = {2048, 2048},
+		f_quad = {585, 851, 123, 207},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0065 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			46,
-			26,
-			45,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			1061,
-			122,
-			208
-		},
+		size = {213, 420},
+		trim = {46, 26, 45, 186},
+		a_size = {2048, 2048},
+		f_quad = {585, 1061, 122, 208},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0066 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			46,
-			26,
-			45,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			1272,
-			122,
-			208
-		},
+		size = {213, 420},
+		trim = {46, 26, 45, 186},
+		a_size = {2048, 2048},
+		f_quad = {585, 1272, 122, 208},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0067 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			46,
-			25,
-			45,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			639,
-			122,
-			209
-		},
+		size = {213, 420},
+		trim = {46, 25, 45, 186},
+		a_size = {2048, 2048},
+		f_quad = {585, 639, 122, 209},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0068 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			45,
-			23,
-			43,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			1272,
-			125,
-			213
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0069"
-		}
+		size = {213, 420},
+		trim = {45, 23, 43, 184},
+		a_size = {2048, 2048},
+		f_quad = {713, 1272, 125, 213},
+		alias = {"tower_pandas_panda_blue_lvl4_0069"}
 	},
 	tower_pandas_panda_blue_lvl4_0070 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			41,
-			33,
-			27,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			865,
-			145,
-			203
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0071"
-		}
+		size = {213, 420},
+		trim = {41, 33, 27, 184},
+		a_size = {2048, 2048},
+		f_quad = {190, 865, 145, 203},
+		alias = {"tower_pandas_panda_blue_lvl4_0071"}
 	},
 	tower_pandas_panda_blue_lvl4_0072 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			43,
-			39,
-			25,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			1640,
-			145,
-			197
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0073"
-		}
+		size = {213, 420},
+		trim = {43, 39, 25, 184},
+		a_size = {2048, 2048},
+		f_quad = {190, 1640, 145, 197},
+		alias = {"tower_pandas_panda_blue_lvl4_0073"}
 	},
 	tower_pandas_panda_blue_lvl4_0074 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			36,
-			43,
-			32,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			1840,
-			145,
-			193
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0075"
-		}
+		size = {213, 420},
+		trim = {36, 43, 32, 184},
+		a_size = {2048, 2048},
+		f_quad = {190, 1840, 145, 193},
+		alias = {"tower_pandas_panda_blue_lvl4_0075"}
 	},
 	tower_pandas_panda_blue_lvl4_0076 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			35,
-			47,
-			33,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			5,
-			145,
-			189
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0077"
-		}
+		size = {213, 420},
+		trim = {35, 47, 33, 184},
+		a_size = {2048, 2048},
+		f_quad = {585, 5, 145, 189},
+		alias = {"tower_pandas_panda_blue_lvl4_0077"}
 	},
 	tower_pandas_panda_blue_lvl4_0078 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			36,
-			38,
-			32,
-			181
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			1436,
-			145,
-			201
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0079"
-		}
+		size = {213, 420},
+		trim = {36, 38, 32, 181},
+		a_size = {2048, 2048},
+		f_quad = {190, 1436, 145, 201},
+		alias = {"tower_pandas_panda_blue_lvl4_0079"}
 	},
 	tower_pandas_panda_blue_lvl4_0080 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			35,
-			31,
-			33,
-			182
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			469,
-			145,
-			207
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0081"
-		}
+		size = {213, 420},
+		trim = {35, 31, 33, 182},
+		a_size = {2048, 2048},
+		f_quad = {190, 469, 145, 207},
+		alias = {"tower_pandas_panda_blue_lvl4_0081"}
 	},
 	tower_pandas_panda_blue_lvl4_0082 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			41,
-			31,
-			40,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			197,
-			132,
-			205
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0083"
-		}
+		size = {213, 420},
+		trim = {41, 31, 40, 184},
+		a_size = {2048, 2048},
+		f_quad = {845, 197, 132, 205},
+		alias = {"tower_pandas_panda_blue_lvl4_0083"}
 	},
 	tower_pandas_panda_blue_lvl4_0084 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			43,
-			32,
-			41,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			1696,
-			129,
-			202
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0085"
-		}
+		size = {213, 420},
+		trim = {43, 32, 41, 186},
+		a_size = {2048, 2048},
+		f_quad = {713, 1696, 129, 202},
+		alias = {"tower_pandas_panda_blue_lvl4_0085"}
 	},
 	tower_pandas_panda_blue_lvl4_0086 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			43,
-			33,
-			41,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			1436,
-			129,
-			201
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0087"
-		}
+		size = {213, 420},
+		trim = {43, 33, 41, 186},
+		a_size = {2048, 2048},
+		f_quad = {845, 1436, 129, 201},
+		alias = {"tower_pandas_panda_blue_lvl4_0087"}
 	},
 	tower_pandas_panda_blue_lvl4_0099 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			70,
-			138,
-			68,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1737,
-			75,
-			78
-		},
+		size = {213, 420},
+		trim = {70, 138, 68, 204},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1737, 75, 78},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0100 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			70,
-			138,
-			68,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1818,
-			75,
-			78
-		},
+		size = {213, 420},
+		trim = {70, 138, 68, 204},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1818, 75, 78},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0101 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			60,
-			137,
-			67,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1959,
-			1864,
-			86,
-			79
-		},
+		size = {213, 420},
+		trim = {60, 137, 67, 204},
+		a_size = {2048, 2048},
+		f_quad = {1959, 1864, 86, 79},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0102 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			60,
-			137,
-			67,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1400,
-			86,
-			79
-		},
+		size = {213, 420},
+		trim = {60, 137, 67, 204},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1400, 86, 79},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0103 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			144,
-			65,
-			202
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1668,
-			87,
-			74
-		},
+		size = {213, 420},
+		trim = {61, 144, 65, 202},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1668, 87, 74},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0104 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			144,
-			65,
-			202
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1745,
-			87,
-			74
-		},
+		size = {213, 420},
+		trim = {61, 144, 65, 202},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1745, 87, 74},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0108 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			81,
-			197,
-			82,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			638,
-			2025,
-			50,
-			19
-		},
+		size = {213, 420},
+		trim = {81, 197, 82, 204},
+		a_size = {2048, 2048},
+		f_quad = {638, 2025, 50, 19},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0110 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			83,
-			173,
-			87,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1524,
-			43,
-			42
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0111"
-		}
+		size = {213, 420},
+		trim = {83, 173, 87, 205},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1524, 43, 42},
+		alias = {"tower_pandas_panda_blue_lvl4_0111"}
 	},
 	tower_pandas_panda_blue_lvl4_0112 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			82,
-			174,
-			86,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1436,
-			45,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0113"
-		}
+		size = {213, 420},
+		trim = {82, 174, 86, 205},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1436, 45, 41},
+		alias = {"tower_pandas_panda_blue_lvl4_0113"}
 	},
 	tower_pandas_panda_blue_lvl4_0114 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			83,
-			172,
-			87,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1344,
-			43,
-			43
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0115"
-		}
+		size = {213, 420},
+		trim = {83, 172, 87, 205},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1344, 43, 43},
+		alias = {"tower_pandas_panda_blue_lvl4_0115"}
 	},
 	tower_pandas_panda_blue_lvl4_0116 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			83,
-			172,
-			88,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			350,
-			1309,
-			42,
-			43
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0117"
-		}
+		size = {213, 420},
+		trim = {83, 172, 88, 205},
+		a_size = {2048, 2048},
+		f_quad = {350, 1309, 42, 43},
+		alias = {"tower_pandas_panda_blue_lvl4_0117"}
 	},
 	tower_pandas_panda_blue_lvl4_0118 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			83,
-			174,
-			86,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1704,
-			44,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0119"
-		}
+		size = {213, 420},
+		trim = {83, 174, 86, 205},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1704, 44, 41},
+		alias = {"tower_pandas_panda_blue_lvl4_0119"}
 	},
 	tower_pandas_panda_blue_lvl4_0120 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			83,
-			173,
-			87,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1569,
-			43,
-			42
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0121"
-		}
+		size = {213, 420},
+		trim = {83, 173, 87, 205},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1569, 43, 42},
+		alias = {"tower_pandas_panda_blue_lvl4_0121"}
 	},
 	tower_pandas_panda_blue_lvl4_0130 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			136,
-			52,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1945,
-			1305,
-			98,
-			80
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0131"
-		}
+		size = {213, 420},
+		trim = {63, 136, 52, 204},
+		a_size = {2048, 2048},
+		f_quad = {1945, 1305, 98, 80},
+		alias = {"tower_pandas_panda_blue_lvl4_0131"}
 	},
 	tower_pandas_panda_blue_lvl4_0132 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			129,
-			51,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1559,
-			99,
-			87
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0133"
-		}
+		size = {213, 420},
+		trim = {63, 129, 51, 204},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1559, 99, 87},
+		alias = {"tower_pandas_panda_blue_lvl4_0133"}
 	},
 	tower_pandas_panda_blue_lvl4_0134 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			131,
-			50,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1471,
-			102,
-			85
-		},
+		size = {213, 420},
+		trim = {61, 131, 50, 204},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1471, 102, 85},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0135 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			131,
-			50,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1567,
-			1471,
-			102,
-			85
-		},
+		size = {213, 420},
+		trim = {61, 131, 50, 204},
+		a_size = {2048, 2048},
+		f_quad = {1567, 1471, 102, 85},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0136 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			59,
-			149,
-			49,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1764,
-			1794,
-			105,
-			67
-		},
+		size = {213, 420},
+		trim = {59, 149, 49, 204},
+		a_size = {2048, 2048},
+		f_quad = {1764, 1794, 105, 67},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0144 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			62,
-			143,
-			68,
-			192
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1661,
-			1869,
-			83,
-			85
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0145"
-		}
+		size = {213, 420},
+		trim = {62, 143, 68, 192},
+		a_size = {2048, 2048},
+		f_quad = {1661, 1869, 83, 85},
+		alias = {"tower_pandas_panda_blue_lvl4_0145"}
 	},
 	tower_pandas_panda_blue_lvl4_0146 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			60,
-			131,
-			66,
-			196
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1890,
-			87,
-			93
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0147"
-		}
+		size = {213, 420},
+		trim = {60, 131, 66, 196},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1890, 87, 93},
+		alias = {"tower_pandas_panda_blue_lvl4_0147"}
 	},
 	tower_pandas_panda_blue_lvl4_0148 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			116,
-			66,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1591,
-			84,
-			100
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0149"
-		}
+		size = {213, 420},
+		trim = {63, 116, 66, 204},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1591, 84, 100},
+		alias = {"tower_pandas_panda_blue_lvl4_0149"}
 	},
 	tower_pandas_panda_blue_lvl4_0150 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			58,
-			111,
-			64,
-			200
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1193,
-			91,
-			109
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0151"
-		}
+		size = {213, 420},
+		trim = {58, 111, 64, 200},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1193, 91, 109},
+		alias = {"tower_pandas_panda_blue_lvl4_0151"}
 	},
 	tower_pandas_panda_blue_lvl4_0152 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			59,
-			101,
-			65,
-			201
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1766,
-			89,
-			118
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0153"
-		}
+		size = {213, 420},
+		trim = {59, 101, 65, 201},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1766, 89, 118},
+		alias = {"tower_pandas_panda_blue_lvl4_0153"}
 	},
 	tower_pandas_panda_blue_lvl4_0154 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			59,
-			94,
-			65,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1252,
-			89,
-			122
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0155"
-		}
+		size = {213, 420},
+		trim = {59, 94, 65, 204},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1252, 89, 122},
+		alias = {"tower_pandas_panda_blue_lvl4_0155"}
 	},
 	tower_pandas_panda_blue_lvl4_0156 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			89,
-			69,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1193,
-			81,
-			127
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0157"
-		}
+		size = {213, 420},
+		trim = {63, 89, 69, 204},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1193, 81, 127},
+		alias = {"tower_pandas_panda_blue_lvl4_0157"}
 	},
 	tower_pandas_panda_blue_lvl4_0158 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			102,
-			64,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1193,
-			88,
-			114
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0159"
-		}
+		size = {213, 420},
+		trim = {61, 102, 64, 204},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1193, 88, 114},
+		alias = {"tower_pandas_panda_blue_lvl4_0159"}
 	},
 	tower_pandas_panda_blue_lvl4_0160 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			88,
-			66,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1509,
-			84,
-			128
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0161"
-		}
+		size = {213, 420},
+		trim = {63, 88, 66, 204},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1509, 84, 128},
+		alias = {"tower_pandas_panda_blue_lvl4_0161"}
 	},
 	tower_pandas_panda_blue_lvl4_0162 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			87,
-			66,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1377,
-			84,
-			129
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0163"
-		}
+		size = {213, 420},
+		trim = {63, 87, 66, 204},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1377, 84, 129},
+		alias = {"tower_pandas_panda_blue_lvl4_0163"}
 	},
 	tower_pandas_panda_blue_lvl4_0164 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			64,
-			129,
-			66,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1564,
-			1890,
-			83,
-			87
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0165"
-		}
+		size = {213, 420},
+		trim = {64, 129, 66, 204},
+		a_size = {2048, 2048},
+		f_quad = {1564, 1890, 83, 87},
+		alias = {"tower_pandas_panda_blue_lvl4_0165"}
 	},
 	tower_pandas_panda_blue_lvl4_0166 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			64,
-			130,
-			65,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1564,
-			1801,
-			84,
-			86
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0167"
-		}
+		size = {213, 420},
+		trim = {64, 130, 65, 204},
+		a_size = {2048, 2048},
+		f_quad = {1564, 1801, 84, 86},
+		alias = {"tower_pandas_panda_blue_lvl4_0167"}
 	},
 	tower_pandas_panda_blue_lvl4_0184 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			71,
-			121,
-			77,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1323,
-			65,
-			95
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0185"
-		}
+		size = {213, 420},
+		trim = {71, 121, 77, 204},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1323, 65, 95},
+		alias = {"tower_pandas_panda_blue_lvl4_0185"}
 	},
 	tower_pandas_panda_blue_lvl4_0198 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			136,
-			63,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1764,
-			1936,
-			87,
-			80
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0199"
-		}
+		size = {213, 420},
+		trim = {63, 136, 63, 204},
+		a_size = {2048, 2048},
+		f_quad = {1764, 1936, 87, 80},
+		alias = {"tower_pandas_panda_blue_lvl4_0199"}
 	},
 	tower_pandas_panda_blue_lvl4_0200 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			129,
-			65,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1310,
-			85,
-			87
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0201"
-		}
+		size = {213, 420},
+		trim = {63, 129, 65, 204},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1310, 85, 87},
+		alias = {"tower_pandas_panda_blue_lvl4_0201"}
 	},
 	tower_pandas_panda_blue_lvl4_0202 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			69,
-			131,
-			66,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1482,
-			78,
-			85
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0203"
-		}
+		size = {213, 420},
+		trim = {69, 131, 66, 204},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1482, 78, 85},
+		alias = {"tower_pandas_panda_blue_lvl4_0203"}
 	},
 	tower_pandas_panda_blue_lvl4_0208 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			79,
-			152,
-			81,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			601,
-			53,
-			64
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0209"
-		}
+		size = {213, 420},
+		trim = {79, 152, 81, 204},
+		a_size = {2048, 2048},
+		f_quad = {338, 601, 53, 64},
+		alias = {"tower_pandas_panda_blue_lvl4_0209"}
 	},
 	tower_pandas_panda_green_lvl4_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			163,
-			72,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1120,
-			44,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0022",
-			"tower_pandas_panda_green_lvl4_0023",
-			"tower_pandas_panda_green_lvl4_0052",
-			"tower_pandas_panda_green_lvl4_0053"
-		}
+		size = {182, 429},
+		trim = {66, 163, 72, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1120, 44, 56},
+		alias = {"tower_pandas_panda_green_lvl4_0022", "tower_pandas_panda_green_lvl4_0023", "tower_pandas_panda_green_lvl4_0052", "tower_pandas_panda_green_lvl4_0053"}
 	},
 	tower_pandas_panda_green_lvl4_0008 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			65,
-			156,
-			63,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			969,
-			54,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0009"
-		}
+		size = {182, 429},
+		trim = {65, 156, 63, 210},
+		a_size = {2048, 2048},
+		f_quad = {338, 969, 54, 63},
+		alias = {"tower_pandas_panda_green_lvl4_0009"}
 	},
 	tower_pandas_panda_green_lvl4_0018 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			65,
-			156,
-			63,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			469,
-			54,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0019"
-		}
+		size = {182, 429},
+		trim = {65, 156, 63, 210},
+		a_size = {2048, 2048},
+		f_quad = {338, 469, 54, 63},
+		alias = {"tower_pandas_panda_green_lvl4_0019"}
 	},
 	tower_pandas_panda_green_lvl4_0024 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			61,
-			166,
-			74,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1992,
-			1946,
-			47,
-			53
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0025"
-		}
+		size = {182, 429},
+		trim = {61, 166, 74, 210},
+		a_size = {2048, 2048},
+		f_quad = {1992, 1946, 47, 53},
+		alias = {"tower_pandas_panda_green_lvl4_0025"}
 	},
 	tower_pandas_panda_green_lvl4_0034 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			64,
-			158,
-			50,
-			196
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1974,
-			119,
-			68,
-			75
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0035"
-		}
+		size = {182, 429},
+		trim = {64, 158, 50, 196},
+		a_size = {2048, 2048},
+		f_quad = {1974, 119, 68, 75},
+		alias = {"tower_pandas_panda_green_lvl4_0035"}
 	},
 	tower_pandas_panda_green_lvl4_0040 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			38,
-			141,
-			50,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1564,
-			1720,
-			94,
-			78
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0041"
-		}
+		size = {182, 429},
+		trim = {38, 141, 50, 210},
+		a_size = {2048, 2048},
+		f_quad = {1564, 1720, 94, 78},
+		alias = {"tower_pandas_panda_green_lvl4_0041"}
 	},
 	tower_pandas_panda_green_lvl4_0042 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			42,
-			135,
-			43,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1960,
-			97,
-			85
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0043"
-		}
+		size = {182, 429},
+		trim = {42, 135, 43, 209},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1960, 97, 85},
+		alias = {"tower_pandas_panda_green_lvl4_0043"}
 	},
 	tower_pandas_panda_green_lvl4_0044 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			61,
-			153,
-			41,
-			203
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1899,
-			80,
-			73
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0045"
-		}
+		size = {182, 429},
+		trim = {61, 153, 41, 203},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1899, 80, 73},
+		alias = {"tower_pandas_panda_green_lvl4_0045"}
 	},
 	tower_pandas_panda_green_lvl4_0046 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			45,
-			153,
-			41,
-			198
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1878,
-			1559,
-			96,
-			78
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0047"
-		}
+		size = {182, 429},
+		trim = {45, 153, 41, 198},
+		a_size = {2048, 2048},
+		f_quad = {1878, 1559, 96, 78},
+		alias = {"tower_pandas_panda_green_lvl4_0047"}
 	},
 	tower_pandas_panda_green_lvl4_0048 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			49,
-			151,
-			67,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1977,
-			1559,
-			66,
-			70
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0049"
-		}
+		size = {182, 429},
+		trim = {49, 151, 67, 208},
+		a_size = {2048, 2048},
+		f_quad = {1977, 1559, 66, 70},
+		alias = {"tower_pandas_panda_green_lvl4_0049"}
 	},
 	tower_pandas_panda_green_lvl4_0050 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			65,
-			162,
-			70,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			1957,
-			47,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0051"
-		}
+		size = {182, 429},
+		trim = {65, 162, 70, 210},
+		a_size = {2048, 2048},
+		f_quad = {980, 1957, 47, 57},
+		alias = {"tower_pandas_panda_green_lvl4_0051"}
 	},
 	tower_pandas_panda_green_lvl4_0054 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			163,
-			72,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1179,
-			44,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0055"
-		}
+		size = {182, 429},
+		trim = {66, 163, 72, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1179, 44, 56},
+		alias = {"tower_pandas_panda_green_lvl4_0055"}
 	},
 	tower_pandas_panda_green_lvl4_0056 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			30,
-			48,
-			28,
-			188
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			1847,
-			124,
-			193
-		},
+		size = {182, 429},
+		trim = {30, 48, 28, 188},
+		a_size = {2048, 2048},
+		f_quad = {845, 1847, 124, 193},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0057 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			30,
-			48,
-			28,
-			188
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1755,
-			197,
-			124,
-			193
-		},
+		size = {182, 429},
+		trim = {30, 48, 28, 188},
+		a_size = {2048, 2048},
+		f_quad = {1755, 197, 124, 193},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0058 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			40,
-			27,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			197,
-			126,
-			203
-		},
+		size = {182, 429},
+		trim = {29, 40, 27, 186},
+		a_size = {2048, 2048},
+		f_quad = {980, 197, 126, 203},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0059 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			40,
-			27,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1109,
-			197,
-			126,
-			203
-		},
+		size = {182, 429},
+		trim = {29, 40, 27, 186},
+		a_size = {2048, 2048},
+		f_quad = {1109, 197, 126, 203},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0060 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			35,
-			28,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			1014,
-			125,
-			208
-		},
+		size = {182, 429},
+		trim = {29, 35, 28, 186},
+		a_size = {2048, 2048},
+		f_quad = {845, 1014, 125, 208},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0061 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			35,
-			28,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			1225,
-			125,
-			208
-		},
+		size = {182, 429},
+		trim = {29, 35, 28, 186},
+		a_size = {2048, 2048},
+		f_quad = {845, 1225, 125, 208},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0062 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			29,
-			27,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			411,
-			126,
-			215
-		},
+		size = {182, 429},
+		trim = {29, 29, 27, 185},
+		a_size = {2048, 2048},
+		f_quad = {713, 411, 126, 215},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0063 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			29,
-			27,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			629,
-			126,
-			215
-		},
+		size = {182, 429},
+		trim = {29, 29, 27, 185},
+		a_size = {2048, 2048},
+		f_quad = {713, 629, 126, 215},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0064 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			26,
-			28,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			197,
-			125,
-			218
-		},
+		size = {182, 429},
+		trim = {29, 26, 28, 185},
+		a_size = {2048, 2048},
+		f_quad = {585, 197, 125, 218},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0065 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			29,
-			26,
-			28,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			418,
-			125,
-			218
-		},
+		size = {182, 429},
+		trim = {29, 26, 28, 185},
+		a_size = {2048, 2048},
+		f_quad = {585, 418, 125, 218},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0066 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			30,
-			24,
-			28,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			1430,
-			124,
-			220
-		},
+		size = {182, 429},
+		trim = {30, 24, 28, 185},
+		a_size = {2048, 2048},
+		f_quad = {450, 1430, 124, 220},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0067 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			30,
-			24,
-			28,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			1653,
-			124,
-			220
-		},
+		size = {182, 429},
+		trim = {30, 24, 28, 185},
+		a_size = {2048, 2048},
+		f_quad = {450, 1653, 124, 220},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0068 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			30,
-			23,
-			28,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			767,
-			124,
-			221
-		},
+		size = {182, 429},
+		trim = {30, 23, 28, 185},
+		a_size = {2048, 2048},
+		f_quad = {450, 767, 124, 221},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0069 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			30,
-			23,
-			28,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			991,
-			124,
-			221
-		},
+		size = {182, 429},
+		trim = {30, 23, 28, 185},
+		a_size = {2048, 2048},
+		f_quad = {450, 991, 124, 221},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0070 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			28,
-			33,
-			26,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			847,
-			128,
-			211
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0071"
-		}
+		size = {182, 429},
+		trim = {28, 33, 26, 185},
+		a_size = {2048, 2048},
+		f_quad = {713, 847, 128, 211},
+		alias = {"tower_pandas_panda_green_lvl4_0071"}
 	},
 	tower_pandas_panda_green_lvl4_0072 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			27,
-			39,
-			26,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			1488,
-			129,
-			205
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0073"
-		}
+		size = {182, 429},
+		trim = {27, 39, 26, 185},
+		a_size = {2048, 2048},
+		f_quad = {713, 1488, 129, 205},
+		alias = {"tower_pandas_panda_green_lvl4_0073"}
 	},
 	tower_pandas_panda_green_lvl4_0074 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			26,
-			44,
-			25,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			811,
-			131,
-			200
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0075"
-		}
+		size = {182, 429},
+		trim = {26, 44, 25, 185},
+		a_size = {2048, 2048},
+		f_quad = {845, 811, 131, 200},
+		alias = {"tower_pandas_panda_green_lvl4_0075"}
 	},
 	tower_pandas_panda_green_lvl4_0076 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			26,
-			44,
-			24,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			405,
-			132,
-			200
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0077"
-		}
+		size = {182, 429},
+		trim = {26, 44, 24, 185},
+		a_size = {2048, 2048},
+		f_quad = {845, 405, 132, 200},
+		alias = {"tower_pandas_panda_green_lvl4_0077"}
 	},
 	tower_pandas_panda_green_lvl4_0078 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			26,
-			44,
-			24,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			608,
-			132,
-			200
-		},
+		size = {182, 429},
+		trim = {26, 44, 24, 185},
+		a_size = {2048, 2048},
+		f_quad = {845, 608, 132, 200},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0079 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			26,
-			36,
-			24,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			5,
-			132,
-			209
-		},
+		size = {182, 429},
+		trim = {26, 36, 24, 184},
+		a_size = {2048, 2048},
+		f_quad = {450, 5, 132, 209},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0080 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			27,
-			36,
-			26,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			1061,
-			129,
-			208
-		},
+		size = {182, 429},
+		trim = {27, 36, 26, 185},
+		a_size = {2048, 2048},
+		f_quad = {713, 1061, 129, 208},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0081 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			27,
-			31,
-			26,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			1215,
-			129,
-			212
-		},
+		size = {182, 429},
+		trim = {27, 31, 26, 186},
+		a_size = {2048, 2048},
+		f_quad = {450, 1215, 129, 212},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0082 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			27,
-			32,
-			26,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			197,
-			129,
-			211
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0083"
-		}
+		size = {182, 429},
+		trim = {27, 32, 26, 186},
+		a_size = {2048, 2048},
+		f_quad = {713, 197, 129, 211},
+		alias = {"tower_pandas_panda_green_lvl4_0083"}
 	},
 	tower_pandas_panda_green_lvl4_0084 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			28,
-			37,
-			28,
-			188
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			845,
-			1640,
-			126,
-			204
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0085"
-		}
+		size = {182, 429},
+		trim = {28, 37, 28, 188},
+		a_size = {2048, 2048},
+		f_quad = {845, 1640, 126, 204},
+		alias = {"tower_pandas_panda_green_lvl4_0085"}
 	},
 	tower_pandas_panda_green_lvl4_0086 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			163,
-			72,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1238,
-			44,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0087"
-		}
+		size = {182, 429},
+		trim = {66, 163, 72, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1238, 44, 56},
+		alias = {"tower_pandas_panda_green_lvl4_0087"}
 	},
 	tower_pandas_panda_green_lvl4_0092 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			38,
-			148,
-			36,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1688,
-			1389,
-			108,
-			77
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0093"
-		}
+		size = {182, 429},
+		trim = {38, 148, 36, 204},
+		a_size = {2048, 2048},
+		f_quad = {1688, 1389, 108, 77},
+		alias = {"tower_pandas_panda_green_lvl4_0093"}
 	},
 	tower_pandas_panda_green_lvl4_0094 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			145,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1829,
-			1305,
-			113,
-			80
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0095"
-		}
+		size = {182, 429},
+		trim = {36, 145, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1829, 1305, 113, 80},
+		alias = {"tower_pandas_panda_green_lvl4_0095"}
 	},
 	tower_pandas_panda_green_lvl4_0096 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1556,
-			1193,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0097"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1556, 1193, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0097"}
 	},
 	tower_pandas_panda_green_lvl4_0098 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1672,
-			1193,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0099",
-			"tower_pandas_panda_green_lvl4_0222",
-			"tower_pandas_panda_green_lvl4_0223"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1672, 1193, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0099", "tower_pandas_panda_green_lvl4_0222", "tower_pandas_panda_green_lvl4_0223"}
 	},
 	tower_pandas_panda_green_lvl4_0100 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1788,
-			1193,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0101",
-			"tower_pandas_panda_green_lvl4_0219",
-			"tower_pandas_panda_green_lvl4_0220",
-			"tower_pandas_panda_green_lvl4_0221"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1788, 1193, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0101", "tower_pandas_panda_green_lvl4_0219", "tower_pandas_panda_green_lvl4_0220", "tower_pandas_panda_green_lvl4_0221"}
 	},
 	tower_pandas_panda_green_lvl4_0102 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1904,
-			1193,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0103",
-			"tower_pandas_panda_green_lvl4_0217",
-			"tower_pandas_panda_green_lvl4_0218"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1904, 1193, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0103", "tower_pandas_panda_green_lvl4_0217", "tower_pandas_panda_green_lvl4_0218"}
 	},
 	tower_pandas_panda_green_lvl4_0104 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1423,
-			1084,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0105",
-			"tower_pandas_panda_green_lvl4_0215",
-			"tower_pandas_panda_green_lvl4_0216"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1423, 1084, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0105", "tower_pandas_panda_green_lvl4_0215", "tower_pandas_panda_green_lvl4_0216"}
 	},
 	tower_pandas_panda_green_lvl4_0106 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1539,
-			1084,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0107",
-			"tower_pandas_panda_green_lvl4_0213",
-			"tower_pandas_panda_green_lvl4_0214"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1539, 1084, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0107", "tower_pandas_panda_green_lvl4_0213", "tower_pandas_panda_green_lvl4_0214"}
 	},
 	tower_pandas_panda_green_lvl4_0108 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1655,
-			1084,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0109",
-			"tower_pandas_panda_green_lvl4_0211",
-			"tower_pandas_panda_green_lvl4_0212"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1655, 1084, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0109", "tower_pandas_panda_green_lvl4_0211", "tower_pandas_panda_green_lvl4_0212"}
 	},
 	tower_pandas_panda_green_lvl4_0110 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1771,
-			1084,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0111",
-			"tower_pandas_panda_green_lvl4_0209",
-			"tower_pandas_panda_green_lvl4_0210"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1771, 1084, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0111", "tower_pandas_panda_green_lvl4_0209", "tower_pandas_panda_green_lvl4_0210"}
 	},
 	tower_pandas_panda_green_lvl4_0112 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1887,
-			1084,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0113",
-			"tower_pandas_panda_green_lvl4_0207",
-			"tower_pandas_panda_green_lvl4_0208"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1887, 1084, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0113", "tower_pandas_panda_green_lvl4_0207", "tower_pandas_panda_green_lvl4_0208"}
 	},
 	tower_pandas_panda_green_lvl4_0114 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1305,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0115",
-			"tower_pandas_panda_green_lvl4_0205",
-			"tower_pandas_panda_green_lvl4_0206"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1305, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0115", "tower_pandas_panda_green_lvl4_0205", "tower_pandas_panda_green_lvl4_0206"}
 	},
 	tower_pandas_panda_green_lvl4_0116 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1481,
-			1305,
-			113,
-			81
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0117"
-		}
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1481, 1305, 113, 81},
+		alias = {"tower_pandas_panda_green_lvl4_0117"}
 	},
 	tower_pandas_panda_green_lvl4_0118 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			40,
-			151,
-			38,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1664,
-			1559,
-			104,
-			74
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0119"
-		}
+		size = {182, 429},
+		trim = {40, 151, 38, 204},
+		a_size = {2048, 2048},
+		f_quad = {1664, 1559, 104, 74},
+		alias = {"tower_pandas_panda_green_lvl4_0119"}
 	},
 	tower_pandas_panda_green_lvl4_0122 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			72,
-			185,
-			75,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2007,
-			279,
-			35,
-			34
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0123"
-		}
+		size = {182, 429},
+		trim = {72, 185, 75, 210},
+		a_size = {2048, 2048},
+		f_quad = {2007, 279, 35, 34},
+		alias = {"tower_pandas_panda_green_lvl4_0123"}
 	},
 	tower_pandas_panda_green_lvl4_0124 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			186,
-			74,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2007,
-			243,
-			37,
-			33
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0125"
-		}
+		size = {182, 429},
+		trim = {71, 186, 74, 210},
+		a_size = {2048, 2048},
+		f_quad = {2007, 243, 37, 33},
+		alias = {"tower_pandas_panda_green_lvl4_0125"}
 	},
 	tower_pandas_panda_green_lvl4_0126 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			72,
-			184,
-			76,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2007,
-			316,
-			34,
-			35
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0127"
-		}
+		size = {182, 429},
+		trim = {72, 184, 76, 210},
+		a_size = {2048, 2048},
+		f_quad = {2007, 316, 34, 35},
+		alias = {"tower_pandas_panda_green_lvl4_0127"}
 	},
 	tower_pandas_panda_green_lvl4_0128 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			73,
-			184,
-			76,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			356,
-			679,
-			33,
-			35
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0129"
-		}
+		size = {182, 429},
+		trim = {73, 184, 76, 210},
+		a_size = {2048, 2048},
+		f_quad = {356, 679, 33, 35},
+		alias = {"tower_pandas_panda_green_lvl4_0129"}
 	},
 	tower_pandas_panda_green_lvl4_0130 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			72,
-			186,
-			75,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			356,
-			717,
-			35,
-			33
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0131"
-		}
+		size = {182, 429},
+		trim = {72, 186, 75, 210},
+		a_size = {2048, 2048},
+		f_quad = {356, 717, 35, 33},
+		alias = {"tower_pandas_panda_green_lvl4_0131"}
 	},
 	tower_pandas_panda_green_lvl4_0132 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			72,
-			185,
-			75,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2007,
-			354,
-			35,
-			34
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0133"
-		}
+		size = {182, 429},
+		trim = {72, 185, 75, 210},
+		a_size = {2048, 2048},
+		f_quad = {2007, 354, 35, 34},
+		alias = {"tower_pandas_panda_green_lvl4_0133"}
 	},
 	tower_pandas_panda_green_lvl4_0142 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			49,
-			149,
-			36,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1661,
-			1957,
-			97,
-			72
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0143"
-		}
+		size = {182, 429},
+		trim = {49, 149, 36, 208},
+		a_size = {2048, 2048},
+		f_quad = {1661, 1957, 97, 72},
+		alias = {"tower_pandas_panda_green_lvl4_0143"}
 	},
 	tower_pandas_panda_green_lvl4_0144 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			47,
-			149,
-			35,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1661,
-			1794,
-			100,
-			72
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0145"
-		}
+		size = {182, 429},
+		trim = {47, 149, 35, 208},
+		a_size = {2048, 2048},
+		f_quad = {1661, 1794, 100, 72},
+		alias = {"tower_pandas_panda_green_lvl4_0145"}
 	},
 	tower_pandas_panda_green_lvl4_0146 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			45,
-			149,
-			34,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1564,
-			1645,
-			103,
-			72
-		},
+		size = {182, 429},
+		trim = {45, 149, 34, 208},
+		a_size = {2048, 2048},
+		f_quad = {1564, 1645, 103, 72},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0147 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			45,
-			149,
-			34,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1670,
-			1645,
-			103,
-			72
-		},
+		size = {182, 429},
+		trim = {45, 149, 34, 208},
+		a_size = {2048, 2048},
+		f_quad = {1670, 1645, 103, 72},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0148 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			43,
-			153,
-			33,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1871,
-			1720,
-			106,
-			68
-		},
+		size = {182, 429},
+		trim = {43, 153, 33, 208},
+		a_size = {2048, 2048},
+		f_quad = {1871, 1720, 106, 68},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0158 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			160,
-			69,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			350,
-			1247,
-			42,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0159"
-		}
+		size = {182, 429},
+		trim = {71, 160, 69, 210},
+		a_size = {2048, 2048},
+		f_quad = {350, 1247, 42, 59},
+		alias = {"tower_pandas_panda_green_lvl4_0159"}
 	},
 	tower_pandas_panda_green_lvl4_0160 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			70,
-			161,
-			66,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			880,
-			46,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0161"
-		}
+		size = {182, 429},
+		trim = {70, 161, 66, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 880, 46, 58},
+		alias = {"tower_pandas_panda_green_lvl4_0161"}
 	},
 	tower_pandas_panda_green_lvl4_0172 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			43,
-			163,
-			41,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1989,
-			98,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0173"
-		}
+		size = {182, 429},
+		trim = {43, 163, 41, 210},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1989, 98, 56},
+		alias = {"tower_pandas_panda_green_lvl4_0173"}
 	},
 	tower_pandas_panda_green_lvl4_0178 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			151,
-			31,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1975,
-			80,
-			68
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0179"
-		}
+		size = {182, 429},
+		trim = {71, 151, 31, 210},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1975, 80, 68},
+		alias = {"tower_pandas_panda_green_lvl4_0179"}
 	},
 	tower_pandas_panda_green_lvl4_0182 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			162,
-			66,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			941,
-			45,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0183"
-		}
+		size = {182, 429},
+		trim = {71, 162, 66, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 941, 45, 57},
+		alias = {"tower_pandas_panda_green_lvl4_0183"}
 	},
 	tower_pandas_panda_green_lvl4_0184 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			161,
-			67,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1001,
-			44,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0185",
-			"tower_pandas_panda_green_lvl4_0186",
-			"tower_pandas_panda_green_lvl4_0187",
-			"tower_pandas_panda_green_lvl4_0230",
-			"tower_pandas_panda_green_lvl4_0231",
-			"tower_pandas_panda_green_lvl4_0232"
-		}
+		size = {182, 429},
+		trim = {71, 161, 67, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1001, 44, 58},
+		alias = {"tower_pandas_panda_green_lvl4_0185", "tower_pandas_panda_green_lvl4_0186", "tower_pandas_panda_green_lvl4_0187", "tower_pandas_panda_green_lvl4_0230", "tower_pandas_panda_green_lvl4_0231", "tower_pandas_panda_green_lvl4_0232"}
 	},
 	tower_pandas_panda_green_lvl4_0188 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			175,
-			64,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1297,
-			47,
-			44
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0189"
-		}
+		size = {182, 429},
+		trim = {71, 175, 64, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1297, 47, 44},
+		alias = {"tower_pandas_panda_green_lvl4_0189"}
 	},
 	tower_pandas_panda_green_lvl4_0190 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			182,
-			67,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1978,
-			2005,
-			44,
-			37
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0191"
-		}
+		size = {182, 429},
+		trim = {71, 182, 67, 210},
+		a_size = {2048, 2048},
+		f_quad = {1978, 2005, 44, 37},
+		alias = {"tower_pandas_panda_green_lvl4_0191"}
 	},
 	tower_pandas_panda_green_lvl4_0192 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			181,
-			66,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			502,
-			725,
-			45,
-			38
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0193"
-		}
+		size = {182, 429},
+		trim = {71, 181, 66, 210},
+		a_size = {2048, 2048},
+		f_quad = {502, 725, 45, 38},
+		alias = {"tower_pandas_panda_green_lvl4_0193"}
 	},
 	tower_pandas_panda_green_lvl4_0196 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			75,
-			123,
-			68,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2003,
-			1084,
-			39,
-			96
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0197"
-		}
+		size = {182, 429},
+		trim = {75, 123, 68, 210},
+		a_size = {2048, 2048},
+		f_quad = {2003, 1084, 39, 96},
+		alias = {"tower_pandas_panda_green_lvl4_0197"}
 	},
 	tower_pandas_panda_green_lvl4_0198 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			0,
-			0,
-			182,
-			429
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			5,
-			182,
-			429
-		},
+		size = {182, 429},
+		trim = {0, 0, 182, 429},
+		a_size = {2048, 2048},
+		f_quad = {5, 5, 182, 429},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0199 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			183,
-			65,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1868,
-			2005,
-			51,
-			37
-		},
+		size = {182, 429},
+		trim = {66, 183, 65, 209},
+		a_size = {2048, 2048},
+		f_quad = {1868, 2005, 51, 37},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0202 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			40,
-			151,
-			38,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1771,
-			1559,
-			104,
-			74
-		},
+		size = {182, 429},
+		trim = {40, 151, 38, 204},
+		a_size = {2048, 2048},
+		f_quad = {1771, 1559, 104, 74},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0203 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			37,
-			147,
-			35,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1783,
-			1471,
-			110,
-			78
-		},
+		size = {182, 429},
+		trim = {37, 147, 35, 204},
+		a_size = {2048, 2048},
+		f_quad = {1783, 1471, 110, 78},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0204 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1597,
-			1305,
-			113,
-			81
-		},
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1597, 1305, 113, 81},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0224 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			36,
-			144,
-			33,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1713,
-			1305,
-			113,
-			81
-		},
+		size = {182, 429},
+		trim = {36, 144, 33, 204},
+		a_size = {2048, 2048},
+		f_quad = {1713, 1305, 113, 81},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0225 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			37,
-			146,
-			34,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1389,
-			111,
-			79
-		},
+		size = {182, 429},
+		trim = {37, 146, 34, 204},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1389, 111, 79},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0226 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			41,
-			151,
-			38,
-			205
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1617,
-			521,
-			103,
-			73
-		},
+		size = {182, 429},
+		trim = {41, 151, 38, 205},
+		a_size = {2048, 2048},
+		f_quad = {1617, 521, 103, 73},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0229 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			164,
-			66,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1062,
-			45,
-			55
-		},
+		size = {182, 429},
+		trim = {71, 164, 66, 210},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1062, 45, 55},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0004 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			113,
-			210,
-			122,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1987,
-			1794,
-			58,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0005"
-		}
+		size = {293, 534},
+		trim = {113, 210, 122, 262},
+		a_size = {2048, 2048},
+		f_quad = {1987, 1794, 58, 62},
+		alias = {"tower_pandas_panda_red_lvl4_0005"}
 	},
 	tower_pandas_panda_red_lvl4_0006 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			116,
-			207,
-			125,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1640,
-			52,
-			65
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0007"
-		}
+		size = {293, 534},
+		trim = {116, 207, 125, 262},
+		a_size = {2048, 2048},
+		f_quad = {395, 1640, 52, 65},
+		alias = {"tower_pandas_panda_red_lvl4_0007"}
 	},
 	tower_pandas_panda_red_lvl4_0008 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			118,
-			204,
-			128,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			585,
-			1973,
-			47,
-			68
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0009"
-		}
+		size = {293, 534},
+		trim = {118, 204, 128, 262},
+		a_size = {2048, 2048},
+		f_quad = {585, 1973, 47, 68},
+		alias = {"tower_pandas_panda_red_lvl4_0009"}
 	},
 	tower_pandas_panda_red_lvl4_0028 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			94,
-			212,
-			82,
-			250
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1896,
-			1471,
-			117,
-			72
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0029"
-		}
+		size = {293, 534},
+		trim = {94, 212, 82, 250},
+		a_size = {2048, 2048},
+		f_quad = {1896, 1471, 117, 72},
+		alias = {"tower_pandas_panda_red_lvl4_0029"}
 	},
 	tower_pandas_panda_red_lvl4_0030 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			97,
-			209,
-			77,
-			250
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1755,
-			519,
-			119,
-			75
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0031"
-		}
+		size = {293, 534},
+		trim = {97, 209, 77, 250},
+		a_size = {2048, 2048},
+		f_quad = {1755, 519, 119, 75},
+		alias = {"tower_pandas_panda_red_lvl4_0031"}
 	},
 	tower_pandas_panda_red_lvl4_0032 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			109,
-			204,
-			75,
-			253
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1576,
-			1389,
-			109,
-			77
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0033"
-		}
+		size = {293, 534},
+		trim = {109, 204, 75, 253},
+		a_size = {2048, 2048},
+		f_quad = {1576, 1389, 109, 77},
+		alias = {"tower_pandas_panda_red_lvl4_0033"}
 	},
 	tower_pandas_panda_red_lvl4_0034 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			109,
-			189,
-			87,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1564,
-			1559,
-			97,
-			83
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0035"
-		}
+		size = {293, 534},
+		trim = {109, 189, 87, 262},
+		a_size = {2048, 2048},
+		f_quad = {1564, 1559, 97, 83},
+		alias = {"tower_pandas_panda_red_lvl4_0035"}
 	},
 	tower_pandas_panda_red_lvl4_0036 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			103,
-			192,
-			82,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1672,
-			1471,
-			108,
-			80
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0037"
-		}
+		size = {293, 534},
+		trim = {103, 192, 82, 262},
+		a_size = {2048, 2048},
+		f_quad = {1672, 1471, 108, 80},
+		alias = {"tower_pandas_panda_red_lvl4_0037"}
 	},
 	tower_pandas_panda_red_lvl4_0038 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			109,
-			205,
-			79,
-			260
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1931,
-			1645,
-			105,
-			69
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0039"
-		}
+		size = {293, 534},
+		trim = {109, 205, 79, 260},
+		a_size = {2048, 2048},
+		f_quad = {1931, 1645, 105, 69},
+		alias = {"tower_pandas_panda_red_lvl4_0039"}
 	},
 	tower_pandas_panda_red_lvl4_0050 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			121,
-			218,
-			64,
-			252
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1160,
-			129,
-			108,
-			64
-		},
+		size = {293, 534},
+		trim = {121, 218, 64, 252},
+		a_size = {2048, 2048},
+		f_quad = {1160, 129, 108, 64},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0052 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			112,
-			213,
-			64,
-			260
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1040,
-			129,
-			117,
-			61
-		},
+		size = {293, 534},
+		trim = {112, 213, 64, 260},
+		a_size = {2048, 2048},
+		f_quad = {1040, 129, 117, 61},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0062 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			110,
-			167,
-			123,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1822,
-			60,
-			105
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0063"
-		}
+		size = {293, 534},
+		trim = {110, 167, 123, 262},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1822, 60, 105},
+		alias = {"tower_pandas_panda_red_lvl4_0063"}
 	},
 	tower_pandas_panda_red_lvl4_0064 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			106,
-			161,
-			123,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1974,
-			5,
-			64,
-			111
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0065"
-		}
+		size = {293, 534},
+		trim = {106, 161, 123, 262},
+		a_size = {2048, 2048},
+		f_quad = {1974, 5, 64, 111},
+		alias = {"tower_pandas_panda_red_lvl4_0065"}
 	},
 	tower_pandas_panda_red_lvl4_0066 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			119,
-			161,
-			126,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			1843,
-			48,
-			111
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0067"
-		}
+		size = {293, 534},
+		trim = {119, 161, 126, 262},
+		a_size = {2048, 2048},
+		f_quad = {980, 1843, 48, 111},
+		alias = {"tower_pandas_panda_red_lvl4_0067"}
 	},
 	tower_pandas_panda_red_lvl4_0068 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			121,
-			171,
-			118,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			865,
-			54,
-			101
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0069"
-		}
+		size = {293, 534},
+		trim = {121, 171, 118, 262},
+		a_size = {2048, 2048},
+		f_quad = {338, 865, 54, 101},
+		alias = {"tower_pandas_panda_red_lvl4_0069"}
 	},
 	tower_pandas_panda_red_lvl4_0070 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			106,
-			158,
-			96,
-			239
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1112,
-			91,
-			137
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0071"
-		}
+		size = {293, 534},
+		trim = {106, 158, 96, 239},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1112, 91, 137},
+		alias = {"tower_pandas_panda_red_lvl4_0071"}
 	},
 	tower_pandas_panda_red_lvl4_0072 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			73,
-			105,
-			43,
-			238
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1709,
-			177,
-			191
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0073"
-		}
+		size = {293, 534},
+		trim = {73, 105, 43, 238},
+		a_size = {2048, 2048},
+		f_quad = {5, 1709, 177, 191},
+		alias = {"tower_pandas_panda_red_lvl4_0073"}
 	},
 	tower_pandas_panda_red_lvl4_0074 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			52,
-			74,
-			39,
-			237
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			5,
-			202,
-			223
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0075"
-		}
+		size = {293, 534},
+		trim = {52, 74, 39, 237},
+		a_size = {2048, 2048},
+		f_quad = {190, 5, 202, 223},
+		alias = {"tower_pandas_panda_red_lvl4_0075"}
 	},
 	tower_pandas_panda_red_lvl4_0076 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			58,
-			63,
-			44,
-			236
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			231,
-			191,
-			235
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0077"
-		}
+		size = {293, 534},
+		trim = {58, 63, 44, 236},
+		a_size = {2048, 2048},
+		f_quad = {190, 231, 191, 235},
+		alias = {"tower_pandas_panda_red_lvl4_0077"}
 	},
 	tower_pandas_panda_red_lvl4_0078 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			83,
-			60,
-			64,
-			237
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1469,
-			146,
-			237
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0079"
-		}
+		size = {293, 534},
+		trim = {83, 60, 64, 237},
+		a_size = {2048, 2048},
+		f_quad = {5, 1469, 146, 237},
+		alias = {"tower_pandas_panda_red_lvl4_0079"}
 	},
 	tower_pandas_panda_red_lvl4_0080 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			79,
-			55,
-			70,
-			236
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1223,
-			144,
-			243
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0081"
-		}
+		size = {293, 534},
+		trim = {79, 55, 70, 236},
+		a_size = {2048, 2048},
+		f_quad = {5, 1223, 144, 243},
+		alias = {"tower_pandas_panda_red_lvl4_0081"}
 	},
 	tower_pandas_panda_red_lvl4_0082 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			80,
-			48,
-			69,
-			234
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			968,
-			144,
-			252
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0083"
-		}
+		size = {293, 534},
+		trim = {80, 48, 69, 234},
+		a_size = {2048, 2048},
+		f_quad = {5, 968, 144, 252},
+		alias = {"tower_pandas_panda_red_lvl4_0083"}
 	},
 	tower_pandas_panda_red_lvl4_0084 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			76,
-			40,
-			65,
-			233
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			704,
-			152,
-			261
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0085"
-		}
+		size = {293, 534},
+		trim = {76, 40, 65, 233},
+		a_size = {2048, 2048},
+		f_quad = {5, 704, 152, 261},
+		alias = {"tower_pandas_panda_red_lvl4_0085"}
 	},
 	tower_pandas_panda_red_lvl4_0086 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			74,
-			36,
-			63,
-			234
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			437,
-			156,
-			264
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0087"
-		}
+		size = {293, 534},
+		trim = {74, 36, 63, 234},
+		a_size = {2048, 2048},
+		f_quad = {5, 437, 156, 264},
+		alias = {"tower_pandas_panda_red_lvl4_0087"}
 	},
 	tower_pandas_panda_red_lvl4_0102 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			109,
-			207,
-			110,
-			243
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1930,
-			74,
-			84
-		},
+		size = {293, 534},
+		trim = {109, 207, 110, 243},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1930, 74, 84},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0103 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			100,
-			193,
-			107,
-			241
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1649,
-			86,
-			100
-		},
+		size = {293, 534},
+		trim = {100, 193, 107, 241},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1649, 86, 100},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0104 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			195,
-			99,
-			236
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1535,
-			976,
-			112,
-			103
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0105"
-		}
+		size = {293, 534},
+		trim = {82, 195, 99, 236},
+		a_size = {2048, 2048},
+		f_quad = {1535, 976, 112, 103},
+		alias = {"tower_pandas_panda_red_lvl4_0105"}
 	},
 	tower_pandas_panda_red_lvl4_0106 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			80,
-			190,
-			97,
-			238
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1807,
-			717,
-			116,
-			106
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0107"
-		}
+		size = {293, 534},
+		trim = {80, 190, 97, 238},
+		a_size = {2048, 2048},
+		f_quad = {1807, 717, 116, 106},
+		alias = {"tower_pandas_panda_red_lvl4_0107"}
 	},
 	tower_pandas_panda_red_lvl4_0108 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			188,
-			97,
-			241
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			976,
-			114,
-			105
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0109"
-		}
+		size = {293, 534},
+		trim = {82, 188, 97, 241},
+		a_size = {2048, 2048},
+		f_quad = {1190, 976, 114, 105},
+		alias = {"tower_pandas_panda_red_lvl4_0109"}
 	},
 	tower_pandas_panda_red_lvl4_0110 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			80,
-			186,
-			102,
-			244
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1421,
-			976,
-			111,
-			104
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0111"
-		}
+		size = {293, 534},
+		trim = {80, 186, 102, 244},
+		a_size = {2048, 2048},
+		f_quad = {1421, 976, 111, 104},
+		alias = {"tower_pandas_panda_red_lvl4_0111"}
 	},
 	tower_pandas_panda_red_lvl4_0112 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			78,
-			184,
-			104,
-			245
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1307,
-			976,
-			111,
-			105
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0113"
-		}
+		size = {293, 534},
+		trim = {78, 184, 104, 245},
+		a_size = {2048, 2048},
+		f_quad = {1307, 976, 111, 105},
+		alias = {"tower_pandas_panda_red_lvl4_0113"}
 	},
 	tower_pandas_panda_red_lvl4_0114 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			78,
-			182,
-			104,
-			251
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1650,
-			976,
-			111,
-			101
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0115"
-		}
+		size = {293, 534},
+		trim = {78, 182, 104, 251},
+		a_size = {2048, 2048},
+		f_quad = {1650, 976, 111, 101},
+		alias = {"tower_pandas_panda_red_lvl4_0115"}
 	},
 	tower_pandas_panda_red_lvl4_0116 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			77,
-			178,
-			97,
-			254
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1926,
-			717,
-			119,
-			102
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0117"
-		}
+		size = {293, 534},
+		trim = {77, 178, 97, 254},
+		a_size = {2048, 2048},
+		f_quad = {1926, 717, 119, 102},
+		alias = {"tower_pandas_panda_red_lvl4_0117"}
 	},
 	tower_pandas_panda_red_lvl4_0118 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			175,
-			97,
-			266
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1900,
-			976,
-			114,
-			93
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0119"
-		}
+		size = {293, 534},
+		trim = {82, 175, 97, 266},
+		a_size = {2048, 2048},
+		f_quad = {1900, 976, 114, 93},
+		alias = {"tower_pandas_panda_red_lvl4_0119"}
 	},
 	tower_pandas_panda_red_lvl4_0120 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			174,
-			96,
-			268
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1305,
-			1084,
-			115,
-			92
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0121"
-		}
+		size = {293, 534},
+		trim = {82, 174, 96, 268},
+		a_size = {2048, 2048},
+		f_quad = {1305, 1084, 115, 92},
+		alias = {"tower_pandas_panda_red_lvl4_0121"}
 	},
 	tower_pandas_panda_red_lvl4_0126 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			123,
-			230,
-			127,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1614,
-			43,
-			42
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0127"
-		}
+		size = {293, 534},
+		trim = {123, 230, 127, 262},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1614, 43, 42},
+		alias = {"tower_pandas_panda_red_lvl4_0127"}
 	},
 	tower_pandas_panda_red_lvl4_0128 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			122,
-			231,
-			126,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1480,
-			45,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0129"
-		}
+		size = {293, 534},
+		trim = {122, 231, 126, 262},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1480, 45, 41},
+		alias = {"tower_pandas_panda_red_lvl4_0129"}
 	},
 	tower_pandas_panda_red_lvl4_0130 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			123,
-			229,
-			127,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1390,
-			43,
-			43
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0131"
-		}
+		size = {293, 534},
+		trim = {123, 229, 127, 262},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1390, 43, 43},
+		alias = {"tower_pandas_panda_red_lvl4_0131"}
 	},
 	tower_pandas_panda_red_lvl4_0132 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			124,
-			228,
-			128,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			350,
-			1355,
-			41,
-			44
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0133"
-		}
+		size = {293, 534},
+		trim = {124, 228, 128, 262},
+		a_size = {2048, 2048},
+		f_quad = {350, 1355, 41, 44},
+		alias = {"tower_pandas_panda_red_lvl4_0133"}
 	},
 	tower_pandas_panda_red_lvl4_0134 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			123,
-			231,
-			126,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1748,
-			44,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0135"
-		}
+		size = {293, 534},
+		trim = {123, 231, 126, 262},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1748, 44, 41},
+		alias = {"tower_pandas_panda_red_lvl4_0135"}
 	},
 	tower_pandas_panda_red_lvl4_0136 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			123,
-			230,
-			127,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1659,
-			43,
-			42
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0137"
-		}
+		size = {293, 534},
+		trim = {123, 230, 127, 262},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1659, 43, 42},
+		alias = {"tower_pandas_panda_red_lvl4_0137"}
 	},
 	tower_pandas_panda_red_lvl4_0148 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			102,
-			203,
-			90,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1764,
-			1864,
-			101,
-			69
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0149"
-		}
+		size = {293, 534},
+		trim = {102, 203, 90, 262},
+		a_size = {2048, 2048},
+		f_quad = {1764, 1864, 101, 69},
+		alias = {"tower_pandas_panda_red_lvl4_0149"}
 	},
 	tower_pandas_panda_red_lvl4_0150 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			101,
-			201,
-			90,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1661,
-			1720,
-			102,
-			71
-		},
+		size = {293, 534},
+		trim = {101, 201, 90, 262},
+		a_size = {2048, 2048},
+		f_quad = {1661, 1720, 102, 71},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0151 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			101,
-			201,
-			90,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1766,
-			1720,
-			102,
-			71
-		},
+		size = {293, 534},
+		trim = {101, 201, 90, 262},
+		a_size = {2048, 2048},
+		f_quad = {1766, 1720, 102, 71},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0152 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			99,
-			194,
-			88,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1799,
-			1389,
-			106,
-			78
-		},
+		size = {293, 534},
+		trim = {99, 194, 88, 262},
+		a_size = {2048, 2048},
+		f_quad = {1799, 1389, 106, 78},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0153 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			103,
-			194,
-			102,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1868,
-			1864,
-			88,
-			79
-		},
+		size = {293, 534},
+		trim = {103, 194, 102, 261},
+		a_size = {2048, 2048},
+		f_quad = {1868, 1864, 88, 79},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0160 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			120,
-			213,
-			121,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1775,
-			52,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0161",
-			"tower_pandas_panda_red_lvl4_0188",
-			"tower_pandas_panda_red_lvl4_0189",
-			"tower_pandas_panda_red_lvl4_0230"
-		}
+		size = {293, 534},
+		trim = {120, 213, 121, 262},
+		a_size = {2048, 2048},
+		f_quad = {395, 1775, 52, 59},
+		alias = {"tower_pandas_panda_red_lvl4_0161", "tower_pandas_panda_red_lvl4_0188", "tower_pandas_panda_red_lvl4_0189", "tower_pandas_panda_red_lvl4_0230"}
 	},
 	tower_pandas_panda_red_lvl4_0162 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			120,
-			209,
-			119,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			535,
-			54,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0163"
-		}
+		size = {293, 534},
+		trim = {120, 209, 119, 262},
+		a_size = {2048, 2048},
+		f_quad = {338, 535, 54, 63},
+		alias = {"tower_pandas_panda_red_lvl4_0163"}
 	},
 	tower_pandas_panda_red_lvl4_0168 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			104,
-			189,
-			106,
-			243
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1855,
-			83,
-			102
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0169"
-		}
+		size = {293, 534},
+		trim = {104, 189, 106, 243},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1855, 83, 102},
+		alias = {"tower_pandas_panda_red_lvl4_0169"}
 	},
 	tower_pandas_panda_red_lvl4_0170 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			94,
-			190,
-			94,
-			245
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1887,
-			105,
-			99
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0171"
-		}
+		size = {293, 534},
+		trim = {94, 190, 94, 245},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1887, 105, 99},
+		alias = {"tower_pandas_panda_red_lvl4_0171"}
 	},
 	tower_pandas_panda_red_lvl4_0172 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			99,
-			189,
-			100,
-			244
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1459,
-			1193,
-			94,
-			101
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0173"
-		}
+		size = {293, 534},
+		trim = {99, 189, 100, 244},
+		a_size = {2048, 2048},
+		f_quad = {1459, 1193, 94, 101},
+		alias = {"tower_pandas_panda_red_lvl4_0173"}
 	},
 	tower_pandas_panda_red_lvl4_0174 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			104,
-			191,
-			104,
-			245
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1789,
-			85,
-			98
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0175",
-			"tower_pandas_panda_red_lvl4_0176",
-			"tower_pandas_panda_red_lvl4_0177"
-		}
+		size = {293, 534},
+		trim = {104, 191, 104, 245},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1789, 85, 98},
+		alias = {"tower_pandas_panda_red_lvl4_0175", "tower_pandas_panda_red_lvl4_0176", "tower_pandas_panda_red_lvl4_0177"}
 	},
 	tower_pandas_panda_red_lvl4_0178 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			103,
-			190,
-			104,
-			244
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1462,
-			1752,
-			86,
-			100
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0179"
-		}
+		size = {293, 534},
+		trim = {103, 190, 104, 244},
+		a_size = {2048, 2048},
+		f_quad = {1462, 1752, 86, 100},
+		alias = {"tower_pandas_panda_red_lvl4_0179"}
 	},
 	tower_pandas_panda_red_lvl4_0180 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			102,
-			190,
-			103,
-			245
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1489,
-			88,
-			99
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0181"
-		}
+		size = {293, 534},
+		trim = {102, 190, 103, 245},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1489, 88, 99},
+		alias = {"tower_pandas_panda_red_lvl4_0181"}
 	},
 	tower_pandas_panda_red_lvl4_0182 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			101,
-			194,
-			101,
-			248
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1694,
-			91,
-			92
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0183"
-		}
+		size = {293, 534},
+		trim = {101, 194, 101, 248},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1694, 91, 92},
+		alias = {"tower_pandas_panda_red_lvl4_0183"}
 	},
 	tower_pandas_panda_red_lvl4_0184 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			120,
-			215,
-			121,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1961,
-			52,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0185"
-		}
+		size = {293, 534},
+		trim = {120, 215, 121, 262},
+		a_size = {2048, 2048},
+		f_quad = {395, 1961, 52, 57},
+		alias = {"tower_pandas_panda_red_lvl4_0185"}
 	},
 	tower_pandas_panda_red_lvl4_0186 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			121,
-			212,
-			122,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			638,
-			1962,
-			50,
-			60
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0187"
-		}
+		size = {293, 534},
+		trim = {121, 212, 122, 262},
+		a_size = {2048, 2048},
+		f_quad = {638, 1962, 50, 60},
+		alias = {"tower_pandas_panda_red_lvl4_0187"}
 	},
 	tower_pandas_panda_red_lvl4_0200 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			108,
-			166,
-			117,
-			273
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			1570,
-			68,
-			95
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0201"
-		}
+		size = {293, 534},
+		trim = {108, 166, 117, 273},
+		a_size = {2048, 2048},
+		f_quad = {1274, 1570, 68, 95},
+		alias = {"tower_pandas_panda_red_lvl4_0201"}
 	},
 	tower_pandas_panda_red_lvl4_0202 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			83,
-			166,
-			98,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1084,
-			112,
-			106
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0203"
-		}
+		size = {293, 534},
+		trim = {83, 166, 98, 262},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1084, 112, 106},
+		alias = {"tower_pandas_panda_red_lvl4_0203"}
 	},
 	tower_pandas_panda_red_lvl4_0204 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			161,
-			96,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1571,
-			717,
-			115,
-			112
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0205"
-		}
+		size = {293, 534},
+		trim = {82, 161, 96, 261},
+		a_size = {2048, 2048},
+		f_quad = {1571, 717, 115, 112},
+		alias = {"tower_pandas_panda_red_lvl4_0205"}
 	},
 	tower_pandas_panda_red_lvl4_0206 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			83,
-			160,
-			95,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1689,
-			717,
-			115,
-			112
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0207"
-		}
+		size = {293, 534},
+		trim = {83, 160, 95, 262},
+		a_size = {2048, 2048},
+		f_quad = {1689, 717, 115, 112},
+		alias = {"tower_pandas_panda_red_lvl4_0207"}
 	},
 	tower_pandas_panda_red_lvl4_0208 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			80,
-			157,
-			94,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1699,
-			846,
-			119,
-			116
-		},
+		size = {293, 534},
+		trim = {80, 157, 94, 261},
+		a_size = {2048, 2048},
+		f_quad = {1699, 846, 119, 116},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0209 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			80,
-			157,
-			94,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1821,
-			846,
-			119,
-			116
-		},
+		size = {293, 534},
+		trim = {80, 157, 94, 261},
+		a_size = {2048, 2048},
+		f_quad = {1821, 846, 119, 116},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0210 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			78,
-			156,
-			93,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1918,
-			597,
-			122,
-			117
-		},
+		size = {293, 534},
+		trim = {78, 156, 93, 261},
+		a_size = {2048, 2048},
+		f_quad = {1918, 597, 122, 117},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0211 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			78,
-			156,
-			93,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			846,
-			122,
-			117
-		},
+		size = {293, 534},
+		trim = {78, 156, 93, 261},
+		a_size = {2048, 2048},
+		f_quad = {1574, 846, 122, 117},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0212 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			78,
-			153,
-			92,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1330,
-			846,
-			123,
-			120
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0213"
-		}
+		size = {293, 534},
+		trim = {78, 153, 92, 261},
+		a_size = {2048, 2048},
+		f_quad = {1330, 846, 123, 120},
+		alias = {"tower_pandas_panda_red_lvl4_0213"}
 	},
 	tower_pandas_panda_red_lvl4_0214 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			78,
-			148,
-			90,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			713,
-			1901,
-			125,
-			125
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0215"
-		}
+		size = {293, 534},
+		trim = {78, 148, 90, 261},
+		a_size = {2048, 2048},
+		f_quad = {713, 1901, 125, 125},
+		alias = {"tower_pandas_panda_red_lvl4_0215"}
 	},
 	tower_pandas_panda_red_lvl4_0216 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			146,
-			90,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			846,
-			121,
-			127
-		},
+		size = {293, 534},
+		trim = {82, 146, 90, 261},
+		a_size = {2048, 2048},
+		f_quad = {1082, 846, 121, 127},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0217 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			82,
-			146,
-			90,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1206,
-			846,
-			121,
-			127
-		},
+		size = {293, 534},
+		trim = {82, 146, 90, 261},
+		a_size = {2048, 2048},
+		f_quad = {1206, 846, 121, 127},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0218 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			83,
-			146,
-			88,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			717,
-			122,
-			126
-		},
+		size = {293, 534},
+		trim = {83, 146, 88, 262},
+		a_size = {2048, 2048},
+		f_quad = {1082, 717, 122, 126},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0219 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			83,
-			146,
-			95,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1456,
-			846,
-			115,
-			126
-		},
+		size = {293, 534},
+		trim = {83, 146, 95, 262},
+		a_size = {2048, 2048},
+		f_quad = {1456, 846, 115, 126},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0220 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			85,
-			147,
-			101,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1351,
-			717,
-			107,
-			125
-		},
+		size = {293, 534},
+		trim = {85, 147, 101, 262},
+		a_size = {2048, 2048},
+		f_quad = {1351, 717, 107, 125},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0221 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			85,
-			147,
-			101,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1461,
-			717,
-			107,
-			125
-		},
+		size = {293, 534},
+		trim = {85, 147, 101, 262},
+		a_size = {2048, 2048},
+		f_quad = {1461, 717, 107, 125},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0222 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			86,
-			149,
-			115,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1943,
-			846,
-			92,
-			123
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0223"
-		}
+		size = {293, 534},
+		trim = {86, 149, 115, 262},
+		a_size = {2048, 2048},
+		f_quad = {1943, 846, 92, 123},
+		alias = {"tower_pandas_panda_red_lvl4_0223"}
 	},
 	tower_pandas_panda_red_lvl4_0224 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			87,
-			149,
-			120,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			1640,
-			86,
-			123
-		},
+		size = {293, 534},
+		trim = {87, 149, 120, 262},
+		a_size = {2048, 2048},
+		f_quad = {1082, 1640, 86, 123},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0226 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			120,
-			213,
-			121,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1837,
-			52,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0227"
-		}
+		size = {293, 534},
+		trim = {120, 213, 121, 262},
+		a_size = {2048, 2048},
+		f_quad = {395, 1837, 52, 59},
+		alias = {"tower_pandas_panda_red_lvl4_0227"}
 	},
 	tower_pandas_panda_red_lvl4_0228 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			120,
-			213,
-			121,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			1899,
-			52,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0229"
-		}
+		size = {293, 534},
+		trim = {120, 213, 121, 262},
+		a_size = {2048, 2048},
+		f_quad = {395, 1899, 52, 59},
+		alias = {"tower_pandas_panda_red_lvl4_0229"}
 	},
 	tower_pandas_projectile_air_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			71
-		},
-		trim = {
-			23,
-			21,
-			20,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			338,
-			1035,
-			51,
-			29
-		},
+		size = {94, 71},
+		trim = {23, 21, 20, 21},
+		a_size = {2048, 2048},
+		f_quad = {338, 1035, 51, 29},
 		alias = {}
 	},
 	tower_pandas_projectile_air_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			71
-		},
-		trim = {
-			23,
-			21,
-			20,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			2017,
-			51,
-			28
-		},
+		size = {94, 71},
+		trim = {23, 21, 20, 22},
+		a_size = {2048, 2048},
+		f_quad = {1274, 2017, 51, 28},
 		alias = {}
 	},
 	tower_pandas_projectile_air_hit_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			36,
-			34,
-			32,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1328,
-			2017,
-			26,
-			28
-		},
+		size = {94, 97},
+		trim = {36, 34, 32, 35},
+		a_size = {2048, 2048},
+		f_quad = {1328, 2017, 26, 28},
 		alias = {}
 	},
 	tower_pandas_projectile_air_hit_0002 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			28,
-			26,
-			29,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1927,
-			37,
-			43
-		},
+		size = {94, 97},
+		trim = {28, 26, 29, 28},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1927, 37, 43},
 		alias = {}
 	},
 	tower_pandas_projectile_air_hit_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			28,
-			25,
-			27,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1792,
-			39,
-			42
-		},
+		size = {94, 97},
+		trim = {28, 25, 27, 30},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1792, 39, 42},
 		alias = {}
 	},
 	tower_pandas_projectile_air_hit_0004 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			0,
-			0,
-			94,
-			97
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1365,
-			1389,
-			94,
-			97
-		},
-		alias = {
-			"tower_pandas_projectile_fire_hit_0004",
-			"tower_pandas_projectile_ray_hit_0004"
-		}
+		size = {94, 97},
+		trim = {0, 0, 94, 97},
+		a_size = {2048, 2048},
+		f_quad = {1365, 1389, 94, 97},
+		alias = {"tower_pandas_projectile_fire_hit_0004", "tower_pandas_projectile_ray_hit_0004"}
 	},
 	tower_pandas_projectile_fire_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			131,
-			80
-		},
-		trim = {
-			18,
-			22,
-			54,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			733,
-			159,
-			59,
-			34
-		},
-		alias = {
-			"tower_pandas_projectile_fire_0002"
-		}
+		size = {131, 80},
+		trim = {18, 22, 54, 24},
+		a_size = {2048, 2048},
+		f_quad = {733, 159, 59, 34},
+		alias = {"tower_pandas_projectile_fire_0002"}
 	},
 	tower_pandas_projectile_fire_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			131,
-			80
-		},
-		trim = {
-			25,
-			21,
-			53,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1922,
-			2005,
-			53,
-			35
-		},
-		alias = {
-			"tower_pandas_projectile_fire_0004"
-		}
+		size = {131, 80},
+		trim = {25, 21, 53, 24},
+		a_size = {2048, 2048},
+		f_quad = {1922, 2005, 53, 35},
+		alias = {"tower_pandas_projectile_fire_0004"}
 	},
 	tower_pandas_projectile_fire_0005 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			131,
-			80
-		},
-		trim = {
-			22,
-			21,
-			52,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			795,
-			159,
-			57,
-			35
-		},
-		alias = {
-			"tower_pandas_projectile_fire_0006"
-		}
+		size = {131, 80},
+		trim = {22, 21, 52, 24},
+		a_size = {2048, 2048},
+		f_quad = {795, 159, 57, 35},
+		alias = {"tower_pandas_projectile_fire_0006"}
 	},
 	tower_pandas_projectile_fire_0007 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			131,
-			80
-		},
-		trim = {
-			33,
-			21,
-			52,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			855,
-			159,
-			46,
-			35
-		},
-		alias = {
-			"tower_pandas_projectile_fire_0008"
-		}
+		size = {131, 80},
+		trim = {33, 21, 52, 24},
+		a_size = {2048, 2048},
+		f_quad = {855, 159, 46, 35},
+		alias = {"tower_pandas_projectile_fire_0008"}
 	},
 	tower_pandas_projectile_fire_hit_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			36,
-			34,
-			32,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			980,
-			2017,
-			26,
-			28
-		},
+		size = {94, 97},
+		trim = {36, 34, 32, 35},
+		a_size = {2048, 2048},
+		f_quad = {980, 2017, 26, 28},
 		alias = {}
 	},
 	tower_pandas_projectile_fire_hit_0002 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			28,
-			26,
-			29,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1973,
-			37,
-			43
-		},
+		size = {94, 97},
+		trim = {28, 26, 29, 28},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1973, 37, 43},
 		alias = {}
 	},
 	tower_pandas_projectile_fire_hit_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			28,
-			25,
-			27,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1837,
-			39,
-			42
-		},
+		size = {94, 97},
+		trim = {28, 25, 27, 30},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1837, 39, 42},
 		alias = {}
 	},
 	tower_pandas_projectile_ray_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			375,
-			114
-		},
-		trim = {
-			179,
-			32,
-			32,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1413,
-			127,
-			164,
-			51
-		},
+		size = {375, 114},
+		trim = {179, 32, 32, 31},
+		a_size = {2048, 2048},
+		f_quad = {1413, 127, 164, 51},
 		alias = {}
 	},
 	tower_pandas_projectile_ray_0002 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			375,
-			114
-		},
-		trim = {
-			191,
-			32,
-			32,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1776,
-			1645,
-			152,
-			48
-		},
-		alias = {
-			"tower_pandas_projectile_ray_0003"
-		}
+		size = {375, 114},
+		trim = {191, 32, 32, 34},
+		a_size = {2048, 2048},
+		f_quad = {1776, 1645, 152, 48},
+		alias = {"tower_pandas_projectile_ray_0003"}
 	},
 	tower_pandas_projectile_ray_0006 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			375,
-			114
-		},
-		trim = {
-			206,
-			34,
-			32,
-			33
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1589,
-			144,
-			137,
-			47
-		},
-		alias = {
-			"tower_pandas_projectile_ray_0007"
-		}
+		size = {375, 114},
+		trim = {206, 34, 32, 33},
+		a_size = {2048, 2048},
+		f_quad = {1589, 144, 137, 47},
+		alias = {"tower_pandas_projectile_ray_0007"}
 	},
 	tower_pandas_projectile_ray_0008 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			375,
-			114
-		},
-		trim = {
-			217,
-			30,
-			30,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			909,
-			129,
-			128,
-			56
-		},
-		alias = {
-			"tower_pandas_projectile_ray_0009"
-		}
+		size = {375, 114},
+		trim = {217, 30, 30, 28},
+		a_size = {2048, 2048},
+		f_quad = {909, 129, 128, 56},
+		alias = {"tower_pandas_projectile_ray_0009"}
 	},
 	tower_pandas_projectile_ray_0010 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			375,
-			114
-		},
-		trim = {
-			224,
-			32,
-			30,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1868,
-			1946,
-			121,
-			56
-		},
-		alias = {
-			"tower_pandas_projectile_ray_0011"
-		}
+		size = {375, 114},
+		trim = {224, 32, 30, 26},
+		a_size = {2048, 2048},
+		f_quad = {1868, 1946, 121, 56},
+		alias = {"tower_pandas_projectile_ray_0011"}
 	},
 	tower_pandas_projectile_ray_hit_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			36,
-			32,
-			32,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			350,
-			1402,
-			26,
-			30
-		},
+		size = {94, 97},
+		trim = {36, 32, 32, 35},
+		a_size = {2048, 2048},
+		f_quad = {350, 1402, 26, 30},
 		alias = {}
 	},
 	tower_pandas_projectile_ray_hit_0002 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			28,
-			26,
-			29,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2007,
-			197,
-			37,
-			43
-		},
+		size = {94, 97},
+		trim = {28, 26, 29, 28},
+		a_size = {2048, 2048},
+		f_quad = {2007, 197, 37, 43},
 		alias = {}
 	},
 	tower_pandas_projectile_ray_hit_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			94,
-			97
-		},
-		trim = {
-			28,
-			25,
-			27,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			1882,
-			39,
-			42
-		},
+		size = {94, 97},
+		trim = {28, 25, 27, 30},
+		a_size = {2048, 2048},
+		f_quad = {1032, 1882, 39, 42},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			50,
-			56,
-			51,
-			56
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1908,
-			1389,
-			115,
-			70
-		},
+		size = {216, 182},
+		trim = {50, 56, 51, 56},
+		a_size = {2048, 2048},
+		f_quad = {1908, 1389, 115, 70},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0004 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			50,
-			56,
-			51,
-			56
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1203,
-			524,
-			115,
-			70
-		},
+		size = {216, 182},
+		trim = {50, 56, 51, 56},
+		a_size = {2048, 2048},
+		f_quad = {1203, 524, 115, 70},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0005 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			36,
-			36,
-			37,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1626,
-			597,
-			143,
-			101
-		},
+		size = {216, 182},
+		trim = {36, 36, 37, 45},
+		a_size = {2048, 2048},
+		f_quad = {1626, 597, 143, 101},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0006 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			36,
-			36,
-			37,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1772,
-			597,
-			143,
-			101
-		},
+		size = {216, 182},
+		trim = {36, 36, 37, 45},
+		a_size = {2048, 2048},
+		f_quad = {1772, 597, 143, 101},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0007 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			21,
-			28,
-			22,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1903,
-			173,
-			119
-		},
+		size = {216, 182},
+		trim = {21, 28, 22, 35},
+		a_size = {2048, 2048},
+		f_quad = {5, 1903, 173, 119},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0008 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			21,
-			28,
-			22,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1413,
-			5,
-			173,
-			119
-		},
+		size = {216, 182},
+		trim = {21, 28, 22, 35},
+		a_size = {2048, 2048},
+		f_quad = {1413, 5, 173, 119},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0009 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			14,
-			30,
-			14,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			909,
-			5,
-			188,
-			121
-		},
+		size = {216, 182},
+		trim = {14, 30, 14, 31},
+		a_size = {2048, 2048},
+		f_quad = {909, 5, 188, 121},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0010 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			14,
-			30,
-			14,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1100,
-			5,
-			188,
-			121
-		},
+		size = {216, 182},
+		trim = {14, 30, 14, 31},
+		a_size = {2048, 2048},
+		f_quad = {1100, 5, 188, 121},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0011 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			41,
-			27,
-			42,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1896,
-			403,
-			133,
-			117
-		},
+		size = {216, 182},
+		trim = {41, 27, 42, 38},
+		a_size = {2048, 2048},
+		f_quad = {1896, 403, 133, 117},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0012 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			41,
-			27,
-			42,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			597,
-			133,
-			117
-		},
+		size = {216, 182},
+		trim = {41, 27, 42, 38},
+		a_size = {2048, 2048},
+		f_quad = {1082, 597, 133, 117},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0013 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			42,
-			28,
-			42,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1218,
-			597,
-			132,
-			117
-		},
+		size = {216, 182},
+		trim = {42, 28, 42, 37},
+		a_size = {2048, 2048},
+		f_quad = {1218, 597, 132, 117},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0014 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			42,
-			28,
-			42,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1353,
-			597,
-			132,
-			117
-		},
+		size = {216, 182},
+		trim = {42, 28, 42, 37},
+		a_size = {2048, 2048},
+		f_quad = {1353, 597, 132, 117},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0015 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			40,
-			27,
-			42,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1203,
-			403,
-			134,
-			118
-		},
+		size = {216, 182},
+		trim = {40, 27, 42, 37},
+		a_size = {2048, 2048},
+		f_quad = {1203, 403, 134, 118},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0016 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			40,
-			27,
-			42,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1340,
-			403,
-			134,
-			118
-		},
+		size = {216, 182},
+		trim = {40, 27, 42, 37},
+		a_size = {2048, 2048},
+		f_quad = {1340, 403, 134, 118},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0017 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			40,
-			29,
-			40,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1477,
-			403,
-			136,
-			115
-		},
+		size = {216, 182},
+		trim = {40, 29, 40, 38},
+		a_size = {2048, 2048},
+		f_quad = {1477, 403, 136, 115},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0018 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			40,
-			29,
-			40,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1616,
-			403,
-			136,
-			115
-		},
+		size = {216, 182},
+		trim = {40, 29, 40, 38},
+		a_size = {2048, 2048},
+		f_quad = {1616, 403, 136, 115},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_0019 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			39,
-			30,
-			39,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1755,
-			403,
-			138,
-			113
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_0020"
-		}
+		size = {216, 182},
+		trim = {39, 30, 39, 39},
+		a_size = {2048, 2048},
+		f_quad = {1755, 403, 138, 113},
+		alias = {"tower_pandas_red_lvl4_tp_decal_0020"}
 	},
 	tower_pandas_red_lvl4_tp_decal_0021 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			40,
-			32,
-			41,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1488,
-			597,
-			135,
-			108
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_0022"
-		}
+		size = {216, 182},
+		trim = {40, 32, 41, 42},
+		a_size = {2048, 2048},
+		f_quad = {1488, 597, 135, 108},
+		alias = {"tower_pandas_red_lvl4_tp_decal_0022"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			0,
-			0,
-			151,
-			136
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1589,
-			5,
-			151,
-			136
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0002",
-			"tower_pandas_red_lvl4_tp_decal_enemy_0021"
-		}
+		size = {151, 136},
+		trim = {0, 0, 151, 136},
+		a_size = {2048, 2048},
+		f_quad = {1589, 5, 151, 136},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0002", "tower_pandas_red_lvl4_tp_decal_enemy_0021"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0009 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			34,
-			29,
-			37,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1579,
-			80,
-			76
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0010"
-		}
+		size = {151, 136},
+		trim = {34, 29, 37, 31},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1579, 80, 76},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0010"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0011 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			35,
-			29,
-			37,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1658,
-			79,
-			76
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0012"
-		}
+		size = {151, 136},
+		trim = {35, 29, 37, 31},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1658, 79, 76},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0012"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0013 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			34,
-			29,
-			36,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1421,
-			81,
-			76
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0014"
-		}
+		size = {151, 136},
+		trim = {34, 29, 36, 31},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1421, 81, 76},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0014"}
 	},
 	tower_pandas_target_ray_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			65,
-			197,
-			67,
-			230
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			1500,
-			81,
-			76
-		},
-		alias = {
-			"tower_pandas_target_ray_0002"
-		}
+		size = {213, 503},
+		trim = {65, 197, 67, 230},
+		a_size = {2048, 2048},
+		f_quad = {1190, 1500, 81, 76},
+		alias = {"tower_pandas_target_ray_0002"}
 	},
 	tower_pandas_target_ray_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			51,
-			145,
-			57,
-			225
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			976,
-			105,
-			133
-		},
-		alias = {
-			"tower_pandas_target_ray_0004"
-		}
+		size = {213, 503},
+		trim = {51, 145, 57, 225},
+		a_size = {2048, 2048},
+		f_quad = {1082, 976, 105, 133},
+		alias = {"tower_pandas_target_ray_0004"}
 	},
 	tower_pandas_target_ray_0005 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			44,
-			121,
-			51,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			450,
-			1876,
-			118,
-			156
-		},
-		alias = {
-			"tower_pandas_target_ray_0006"
-		}
+		size = {213, 503},
+		trim = {44, 121, 51, 226},
+		a_size = {2048, 2048},
+		f_quad = {450, 1876, 118, 156},
+		alias = {"tower_pandas_target_ray_0006"}
 	},
 	tower_pandas_target_ray_0007 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			35,
-			99,
-			37,
-			228
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1238,
-			197,
-			141,
-			176
-		},
-		alias = {
-			"tower_pandas_target_ray_0008"
-		}
+		size = {213, 503},
+		trim = {35, 99, 37, 228},
+		a_size = {2048, 2048},
+		f_quad = {1238, 197, 141, 176},
+		alias = {"tower_pandas_target_ray_0008"}
 	},
 	tower_pandas_target_ray_0009 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			27,
-			93,
-			29,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			1247,
-			157,
-			186
-		},
-		alias = {
-			"tower_pandas_target_ray_0010"
-		}
+		size = {213, 503},
+		trim = {27, 93, 29, 224},
+		a_size = {2048, 2048},
+		f_quad = {190, 1247, 157, 186},
+		alias = {"tower_pandas_target_ray_0010"}
 	},
 	tower_pandas_target_ray_0011 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			24,
-			100,
-			26,
-			220
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			679,
-			163,
-			183
-		},
-		alias = {
-			"tower_pandas_target_ray_0012"
-		}
+		size = {213, 503},
+		trim = {24, 100, 26, 220},
+		a_size = {2048, 2048},
+		f_quad = {190, 679, 163, 183},
+		alias = {"tower_pandas_target_ray_0012"}
 	},
 	tower_pandas_target_ray_0013 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			21,
-			110,
-			23,
-			220
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			190,
-			1071,
-			169,
-			173
-		},
-		alias = {
-			"tower_pandas_target_ray_0014"
-		}
+		size = {213, 503},
+		trim = {21, 110, 23, 220},
+		a_size = {2048, 2048},
+		f_quad = {190, 1071, 169, 173},
+		alias = {"tower_pandas_target_ray_0014"}
 	},
 	tower_pandas_target_ray_0015 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			213,
-			503
-		},
-		trim = {
-			19,
-			128,
-			21,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			733,
-			5,
-			173,
-			151
-		},
-		alias = {
-			"tower_pandas_target_ray_0016"
-		}
+		size = {213, 503},
+		trim = {19, 128, 21, 224},
+		a_size = {2048, 2048},
+		f_quad = {733, 5, 173, 151},
+		alias = {"tower_pandas_target_ray_0016"}
 	},
 	tower_pandas_tower_build = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			168,
-			102
-		},
-		trim = {
-			15,
-			13,
-			14,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1321,
-			524,
-			139,
-			57
-		},
+		size = {168, 102},
+		trim = {15, 13, 14, 32},
+		a_size = {2048, 2048},
+		f_quad = {1321, 524, 139, 57},
 		alias = {}
 	},
 	tower_pandas_tower_lvl_01 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			165,
-			105
-		},
-		trim = {
-			14,
-			14,
-			14,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1477,
-			521,
-			137,
-			57
-		},
+		size = {165, 105},
+		trim = {14, 14, 14, 34},
+		a_size = {2048, 2048},
+		f_quad = {1477, 521, 137, 57},
 		alias = {}
 	},
 	tower_pandas_tower_lvl_02 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			165,
-			119
-		},
-		trim = {
-			14,
-			15,
-			17,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1896,
-			523,
-			134,
-			63
-		},
+		size = {165, 119},
+		trim = {14, 15, 17, 41},
+		a_size = {2048, 2048},
+		f_quad = {1896, 523, 134, 63},
 		alias = {}
 	},
 	tower_pandas_tower_lvl_03 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			162,
-			133
-		},
-		trim = {
-			15,
-			14,
-			14,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1764,
-			976,
-			133,
-			83
-		},
+		size = {162, 133},
+		trim = {15, 14, 14, 36},
+		a_size = {2048, 2048},
+		f_quad = {1764, 976, 133, 83},
 		alias = {}
 	},
 	tower_pandas_tower_lvl_04 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			170,
-			156
-		},
-		trim = {
-			13,
-			14,
-			16,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1207,
-			717,
-			141,
-			97
-		},
+		size = {170, 156},
+		trim = {13, 14, 16, 45},
+		a_size = {2048, 2048},
+		f_quad = {1207, 717, 141, 97},
 		alias = {}
 	},
 	tower_pandas_trail_fire_0001 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			19,
-			18,
-			19,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			2019,
-			16,
-			17
-		},
-		alias = {
-			"tower_pandas_trail_fire_0002"
-		}
+		size = {54, 54},
+		trim = {19, 18, 19, 19},
+		a_size = {2048, 2048},
+		f_quad = {1062, 2019, 16, 17},
+		alias = {"tower_pandas_trail_fire_0002"}
 	},
 	tower_pandas_trail_fire_0003 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			17,
-			16,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			424,
-			2021,
-			21,
-			21
-		},
-		alias = {
-			"tower_pandas_trail_fire_0004"
-		}
+		size = {54, 54},
+		trim = {17, 16, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {424, 2021, 21, 21},
+		alias = {"tower_pandas_trail_fire_0004"}
 	},
 	tower_pandas_trail_fire_0005 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			15,
-			15,
-			14,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2020,
-			1193,
-			25,
-			24
-		},
-		alias = {
-			"tower_pandas_trail_fire_0006"
-		}
+		size = {54, 54},
+		trim = {15, 15, 14, 15},
+		a_size = {2048, 2048},
+		f_quad = {2020, 1193, 25, 24},
+		alias = {"tower_pandas_trail_fire_0006"}
 	},
 	tower_pandas_trail_fire_0007 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			13,
-			14,
-			14,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1032,
-			2019,
-			27,
-			25
-		},
-		alias = {
-			"tower_pandas_trail_fire_0008"
-		}
+		size = {54, 54},
+		trim = {13, 14, 14, 15},
+		a_size = {2048, 2048},
+		f_quad = {1032, 2019, 27, 25},
+		alias = {"tower_pandas_trail_fire_0008"}
 	},
 	tower_pandas_trail_fire_0009 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			14,
-			14,
-			14,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1723,
-			521,
-			26,
-			25
-		},
-		alias = {
-			"tower_pandas_trail_fire_0010"
-		}
+		size = {54, 54},
+		trim = {14, 14, 14, 15},
+		a_size = {2048, 2048},
+		f_quad = {1723, 521, 26, 25},
+		alias = {"tower_pandas_trail_fire_0010"}
 	},
 	tower_pandas_trail_fire_0011 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			14,
-			15,
-			14,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			395,
-			2021,
-			26,
-			24
-		},
-		alias = {
-			"tower_pandas_trail_fire_0012"
-		}
+		size = {54, 54},
+		trim = {14, 15, 14, 15},
+		a_size = {2048, 2048},
+		f_quad = {395, 2021, 26, 24},
+		alias = {"tower_pandas_trail_fire_0012"}
 	},
 	tower_pandas_trail_fire_0013 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			14,
-			15,
-			14,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1723,
-			549,
-			26,
-			24
-		},
-		alias = {
-			"tower_pandas_trail_fire_0014"
-		}
+		size = {54, 54},
+		trim = {14, 15, 14, 15},
+		a_size = {2048, 2048},
+		f_quad = {1723, 549, 26, 24},
+		alias = {"tower_pandas_trail_fire_0014"}
 	},
 	tower_pandas_trail_fire_0015 = {
 		a_name = "go_towers_pandas-1.dds",
-		size = {
-			54,
-			54
-		},
-		trim = {
-			18,
-			17,
-			14,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2020,
-			1220,
-			22,
-			20
-		},
-		alias = {
-			"tower_pandas_trail_fire_0016"
-		}
+		size = {54, 54},
+		trim = {18, 17, 14, 17},
+		a_size = {2048, 2048},
+		f_quad = {2020, 1220, 22, 20},
+		alias = {"tower_pandas_trail_fire_0016"}
 	},
 	la_red_lvl4_tp_fire_enemy_0001 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			60,
-			36,
-			53,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			743,
-			55,
-			59
-		},
+		size = {168, 151},
+		trim = {60, 36, 53, 56},
+		a_size = {1024, 1024},
+		f_quad = {539, 743, 55, 59},
 		alias = {}
 	},
 	la_red_lvl4_tp_fire_enemy_0003 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			55,
-			28,
-			38,
-			51
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			675,
-			75,
-			72
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0004"
-		}
+		size = {168, 151},
+		trim = {55, 28, 38, 51},
+		a_size = {1024, 1024},
+		f_quad = {5, 675, 75, 72},
+		alias = {"la_red_lvl4_tp_fire_enemy_0004"}
 	},
 	la_red_lvl4_tp_fire_enemy_0005 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			54,
-			25,
-			38,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			599,
-			76,
-			73
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0006"
-		}
+		size = {168, 151},
+		trim = {54, 25, 38, 53},
+		a_size = {1024, 1024},
+		f_quad = {5, 599, 76, 73},
+		alias = {"la_red_lvl4_tp_fire_enemy_0006"}
 	},
 	la_red_lvl4_tp_fire_enemy_0007 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			53,
-			24,
-			38,
-			54
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			523,
-			77,
-			73
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0008"
-		}
+		size = {168, 151},
+		trim = {53, 24, 38, 54},
+		a_size = {1024, 1024},
+		f_quad = {5, 523, 77, 73},
+		alias = {"la_red_lvl4_tp_fire_enemy_0008"}
 	},
 	la_red_lvl4_tp_fire_enemy_0009 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			56,
-			23,
-			38,
-			57
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			824,
-			74,
-			71
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0010"
-		}
+		size = {168, 151},
+		trim = {56, 23, 38, 57},
+		a_size = {1024, 1024},
+		f_quad = {5, 824, 74, 71},
+		alias = {"la_red_lvl4_tp_fire_enemy_0010"}
 	},
 	la_red_lvl4_tp_fire_enemy_0011 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			56,
-			22,
-			36,
-			58
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			750,
-			76,
-			71
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0012"
-		}
+		size = {168, 151},
+		trim = {56, 22, 36, 58},
+		a_size = {1024, 1024},
+		f_quad = {5, 750, 76, 71},
+		alias = {"la_red_lvl4_tp_fire_enemy_0012"}
 	},
 	la_red_lvl4_tp_fire_enemy_0013 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			58,
-			21,
-			38,
-			60
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			393,
-			72,
-			70
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0014"
-		}
+		size = {168, 151},
+		trim = {58, 21, 38, 60},
+		a_size = {1024, 1024},
+		f_quad = {91, 393, 72, 70},
+		alias = {"la_red_lvl4_tp_fire_enemy_0014"}
 	},
 	la_red_lvl4_tp_fire_enemy_0015 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			55,
-			19,
-			39,
-			66
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			584,
-			74,
-			66
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0016"
-		}
+		size = {168, 151},
+		trim = {55, 19, 39, 66},
+		a_size = {1024, 1024},
+		f_quad = {244, 584, 74, 66},
+		alias = {"la_red_lvl4_tp_fire_enemy_0016"}
 	},
 	la_red_lvl4_tp_fire_enemy_0017 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			68,
-			18,
-			39,
-			71
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			576,
-			61,
-			62
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0018"
-		}
+		size = {168, 151},
+		trim = {68, 18, 39, 71},
+		a_size = {1024, 1024},
+		f_quad = {407, 576, 61, 62},
+		alias = {"la_red_lvl4_tp_fire_enemy_0018"}
 	},
 	la_red_lvl4_tp_fire_enemy_0019 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			168,
-			151
-		},
-		trim = {
-			71,
-			18,
-			41,
-			74
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			948,
-			56,
-			59
-		},
-		alias = {
-			"la_red_lvl4_tp_fire_enemy_0020"
-		}
+		size = {168, 151},
+		trim = {71, 18, 41, 74},
+		a_size = {1024, 1024},
+		f_quad = {407, 948, 56, 59},
+		alias = {"la_red_lvl4_tp_fire_enemy_0020"}
 	},
 	tower_pandas_level_up_fx_0001 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			105,
-			142
-		},
-		trim = {
-			18,
-			25,
-			20,
-			70
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			948,
-			628,
-			67,
-			47
-		},
-		alias = {
-			"tower_pandas_level_up_fx_0002"
-		}
+		size = {105, 142},
+		trim = {18, 25, 20, 70},
+		a_size = {1024, 1024},
+		f_quad = {948, 628, 67, 47},
+		alias = {"tower_pandas_level_up_fx_0002"}
 	},
 	tower_pandas_level_up_fx_0003 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			105,
-			142
-		},
-		trim = {
-			15,
-			17,
-			18,
-			68
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			843,
-			72,
-			57
-		},
-		alias = {
-			"tower_pandas_level_up_fx_0004"
-		}
+		size = {105, 142},
+		trim = {15, 17, 18, 68},
+		a_size = {1024, 1024},
+		f_quad = {166, 843, 72, 57},
+		alias = {"tower_pandas_level_up_fx_0004"}
 	},
 	tower_pandas_level_up_fx_0005 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			105,
-			142
-		},
-		trim = {
-			15,
-			15,
-			19,
-			63
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			579,
-			71,
-			64
-		},
-		alias = {
-			"tower_pandas_level_up_fx_0006"
-		}
+		size = {105, 142},
+		trim = {15, 15, 19, 63},
+		a_size = {1024, 1024},
+		f_quad = {327, 579, 71, 64},
+		alias = {"tower_pandas_level_up_fx_0006"}
 	},
 	tower_pandas_level_up_fx_0007 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			105,
-			142
-		},
-		trim = {
-			14,
-			14,
-			19,
-			61
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			724,
-			72,
-			67
-		},
-		alias = {
-			"tower_pandas_level_up_fx_0008"
-		}
+		size = {105, 142},
+		trim = {14, 14, 19, 61},
+		a_size = {1024, 1024},
+		f_quad = {244, 724, 72, 67},
+		alias = {"tower_pandas_level_up_fx_0008"}
 	},
 	tower_pandas_panda_blue_lvl4_0001 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			73,
-			158,
-			73,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			951,
-			393,
-			67,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0088",
-			"tower_pandas_panda_blue_lvl4_0089"
-		}
+		size = {213, 420},
+		trim = {73, 158, 73, 204},
+		a_size = {1024, 1024},
+		f_quad = {951, 393, 67, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0088", "tower_pandas_panda_blue_lvl4_0089"}
 	},
 	tower_pandas_panda_blue_lvl4_0002 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			76,
-			161,
-			79,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			742,
-			58,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0003"
-		}
+		size = {213, 420},
+		trim = {76, 161, 79, 204},
+		a_size = {1024, 1024},
+		f_quad = {599, 742, 58, 55},
+		alias = {"tower_pandas_panda_blue_lvl4_0003"}
 	},
 	tower_pandas_panda_blue_lvl4_0006 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			80,
-			155,
-			80,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			805,
-			53,
-			61
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0007"
-		}
+		size = {213, 420},
+		trim = {80, 155, 80, 204},
+		a_size = {1024, 1024},
+		f_quad = {539, 805, 53, 61},
+		alias = {"tower_pandas_panda_blue_lvl4_0007"}
 	},
 	tower_pandas_panda_blue_lvl4_0010 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			79,
-			157,
-			73,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			959,
-			215,
-			61,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0011"
-		}
+		size = {213, 420},
+		trim = {79, 157, 73, 204},
+		a_size = {1024, 1024},
+		f_quad = {959, 215, 61, 59},
+		alias = {"tower_pandas_panda_blue_lvl4_0011"}
 	},
 	tower_pandas_panda_blue_lvl4_0012 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			74,
-			161,
-			76,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			955,
-			335,
-			63,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0013"
-		}
+		size = {213, 420},
+		trim = {74, 161, 76, 204},
+		a_size = {1024, 1024},
+		f_quad = {955, 335, 63, 55},
+		alias = {"tower_pandas_panda_blue_lvl4_0013"}
 	},
 	tower_pandas_panda_blue_lvl4_0014 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			72,
-			158,
-			75,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			921,
-			66,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0015"
-		}
+		size = {213, 420},
+		trim = {72, 158, 75, 204},
+		a_size = {1024, 1024},
+		f_quad = {91, 921, 66, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0015"}
 	},
 	tower_pandas_panda_blue_lvl4_0016 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			71,
-			154,
-			75,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			715,
-			67,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0017"
-		}
+		size = {213, 420},
+		trim = {71, 154, 75, 204},
+		a_size = {1024, 1024},
+		f_quad = {166, 715, 67, 62},
+		alias = {"tower_pandas_panda_blue_lvl4_0017"}
 	},
 	tower_pandas_panda_blue_lvl4_0018 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			70,
-			152,
-			74,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			466,
-			69,
-			64
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0019"
-		}
+		size = {213, 420},
+		trim = {70, 152, 74, 204},
+		a_size = {1024, 1024},
+		f_quad = {91, 466, 69, 64},
+		alias = {"tower_pandas_panda_blue_lvl4_0019"}
 	},
 	tower_pandas_panda_blue_lvl4_0020 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			72,
-			157,
-			75,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			954,
-			454,
-			66,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0021"
-		}
+		size = {213, 420},
+		trim = {72, 157, 75, 204},
+		a_size = {1024, 1024},
+		f_quad = {954, 454, 66, 59},
+		alias = {"tower_pandas_panda_blue_lvl4_0021"}
 	},
 	tower_pandas_panda_blue_lvl4_0022 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			69,
-			158,
-			69,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			526,
-			75,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0023"
-		}
+		size = {213, 420},
+		trim = {69, 158, 69, 204},
+		a_size = {1024, 1024},
+		f_quad = {166, 526, 75, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0023"}
 	},
 	tower_pandas_panda_blue_lvl4_0024 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			66,
-			163,
-			69,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			809,
-			516,
-			78,
-			53
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0025"
-		}
+		size = {213, 420},
+		trim = {66, 163, 69, 204},
+		a_size = {1024, 1024},
+		f_quad = {809, 516, 78, 53},
+		alias = {"tower_pandas_panda_blue_lvl4_0025"}
 	},
 	tower_pandas_panda_blue_lvl4_0026 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			166,
-			70,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			438,
-			278,
-			80,
-			50
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0027"
-		}
+		size = {213, 420},
+		trim = {63, 166, 70, 204},
+		a_size = {1024, 1024},
+		f_quad = {438, 278, 80, 50},
+		alias = {"tower_pandas_panda_blue_lvl4_0027"}
 	},
 	tower_pandas_panda_blue_lvl4_0028 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			67,
-			161,
-			54,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			335,
-			92,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0029"
-		}
+		size = {213, 420},
+		trim = {67, 161, 54, 204},
+		a_size = {1024, 1024},
+		f_quad = {91, 335, 92, 55},
+		alias = {"tower_pandas_panda_blue_lvl4_0029"}
 	},
 	tower_pandas_panda_blue_lvl4_0030 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			69,
-			161,
-			52,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			186,
-			335,
-			92,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0031"
-		}
+		size = {213, 420},
+		trim = {69, 161, 52, 204},
+		a_size = {1024, 1024},
+		f_quad = {186, 335, 92, 55},
+		alias = {"tower_pandas_panda_blue_lvl4_0031"}
 	},
 	tower_pandas_panda_blue_lvl4_0032 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			71,
-			160,
-			51,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			574,
-			215,
-			91,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0033"
-		}
+		size = {213, 420},
+		trim = {71, 160, 51, 204},
+		a_size = {1024, 1024},
+		f_quad = {574, 215, 91, 56},
+		alias = {"tower_pandas_panda_blue_lvl4_0033"}
 	},
 	tower_pandas_panda_blue_lvl4_0036 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			154,
-			57,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			302,
-			142,
-			93,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0037"
-		}
+		size = {213, 420},
+		trim = {63, 154, 57, 204},
+		a_size = {1024, 1024},
+		f_quad = {302, 142, 93, 62},
+		alias = {"tower_pandas_panda_blue_lvl4_0037"}
 	},
 	tower_pandas_panda_blue_lvl4_0040 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			166,
-			54,
-			203
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			473,
-			335,
-			98,
-			51
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0041"
-		}
+		size = {213, 420},
+		trim = {61, 166, 54, 203},
+		a_size = {1024, 1024},
+		f_quad = {473, 335, 98, 51},
+		alias = {"tower_pandas_panda_blue_lvl4_0041"}
 	},
 	tower_pandas_panda_blue_lvl4_0042 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			58,
-			166,
-			82,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			971,
-			73,
-			50
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0043"
-		}
+		size = {213, 420},
+		trim = {58, 166, 82, 204},
+		a_size = {1024, 1024},
+		f_quad = {166, 971, 73, 50},
+		alias = {"tower_pandas_panda_blue_lvl4_0043"}
 	},
 	tower_pandas_panda_blue_lvl4_0044 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			62,
-			163,
-			76,
-			201
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			645,
-			516,
-			75,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0045"
-		}
+		size = {213, 420},
+		trim = {62, 163, 76, 201},
+		a_size = {1024, 1024},
+		f_quad = {645, 516, 75, 56},
+		alias = {"tower_pandas_panda_blue_lvl4_0045"}
 	},
 	tower_pandas_panda_blue_lvl4_0046 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			82,
-			164,
-			55,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			521,
-			278,
-			76,
-			52
-		},
+		size = {213, 420},
+		trim = {82, 164, 55, 204},
+		a_size = {1024, 1024},
+		f_quad = {521, 278, 76, 52},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0047 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			82,
-			164,
-			53,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			275,
-			278,
-			78,
-			52
-		},
+		size = {213, 420},
+		trim = {82, 164, 53, 204},
+		a_size = {1024, 1024},
+		f_quad = {275, 278, 78, 52},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0048 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			81,
-			166,
-			45,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			864,
-			454,
-			87,
-			50
-		},
+		size = {213, 420},
+		trim = {81, 166, 45, 204},
+		a_size = {1024, 1024},
+		f_quad = {864, 454, 87, 50},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0049 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			81,
-			165,
-			43,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			859,
-			393,
-			89,
-			51
-		},
+		size = {213, 420},
+		trim = {81, 165, 43, 204},
+		a_size = {1024, 1024},
+		f_quad = {859, 393, 89, 51},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0050 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			160,
-			35,
-			202
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			696,
-			70,
-			101,
-			58
-		},
+		size = {213, 420},
+		trim = {77, 160, 35, 202},
+		a_size = {1024, 1024},
+		f_quad = {696, 70, 101, 58},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0051 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			160,
-			34,
-			201
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			699,
-			5,
-			102,
-			59
-		},
+		size = {213, 420},
+		trim = {77, 160, 34, 201},
+		a_size = {1024, 1024},
+		f_quad = {699, 5, 102, 59},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0054 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			66,
-			163,
-			69,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			890,
-			516,
-			78,
-			53
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0055"
-		}
+		size = {213, 420},
+		trim = {66, 163, 69, 204},
+		a_size = {1024, 1024},
+		f_quad = {890, 516, 78, 53},
+		alias = {"tower_pandas_panda_blue_lvl4_0055"}
 	},
 	tower_pandas_panda_blue_lvl4_0090 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			65,
-			152,
-			64,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			855,
-			142,
-			84,
-			64
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0091"
-		}
+		size = {213, 420},
+		trim = {65, 152, 64, 204},
+		a_size = {1024, 1024},
+		f_quad = {855, 142, 84, 64},
+		alias = {"tower_pandas_panda_blue_lvl4_0091"}
 	},
 	tower_pandas_panda_blue_lvl4_0092 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			64,
-			149,
-			63,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			398,
-			142,
-			86,
-			67
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0093"
-		}
+		size = {213, 420},
+		trim = {64, 149, 63, 204},
+		a_size = {1024, 1024},
+		f_quad = {398, 142, 86, 67},
+		alias = {"tower_pandas_panda_blue_lvl4_0093"}
 	},
 	tower_pandas_panda_blue_lvl4_0094 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			62,
-			158,
-			65,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			393,
-			86,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0095"
-		}
+		size = {213, 420},
+		trim = {62, 158, 65, 204},
+		a_size = {1024, 1024},
+		f_quad = {244, 393, 86, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0095"}
 	},
 	tower_pandas_panda_blue_lvl4_0096 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			74,
-			161,
-			81,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			800,
-			58,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0097"
-		}
+		size = {213, 420},
+		trim = {74, 161, 81, 204},
+		a_size = {1024, 1024},
+		f_quad = {599, 800, 58, 55},
+		alias = {"tower_pandas_panda_blue_lvl4_0097"}
 	},
 	tower_pandas_panda_blue_lvl4_0098 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			74,
-			159,
-			82,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			683,
-			57,
-			57
-		},
+		size = {213, 420},
+		trim = {74, 159, 82, 204},
+		a_size = {1024, 1024},
+		f_quad = {539, 683, 57, 57},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0105 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			163,
-			63,
-			201
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			333,
-			393,
-			89,
-			56
-		},
+		size = {213, 420},
+		trim = {61, 163, 63, 201},
+		a_size = {1024, 1024},
+		f_quad = {333, 393, 89, 56},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0106 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			163,
-			63,
-			201
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			425,
-			393,
-			89,
-			56
-		},
+		size = {213, 420},
+		trim = {61, 163, 63, 201},
+		a_size = {1024, 1024},
+		f_quad = {425, 393, 89, 56},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0107 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			74,
-			175,
-			82,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			979,
-			57,
-			41
-		},
+		size = {213, 420},
+		trim = {74, 175, 82, 204},
+		a_size = {1024, 1024},
+		f_quad = {599, 979, 57, 41},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0109 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			61,
-			165,
-			68,
-			197
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			517,
-			393,
-			84,
-			58
-		},
+		size = {213, 420},
+		trim = {61, 165, 68, 197},
+		a_size = {1024, 1024},
+		f_quad = {517, 393, 84, 58},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0122 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			66,
-			166,
-			57,
-			202
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			862,
-			335,
-			90,
-			52
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0123"
-		}
+		size = {213, 420},
+		trim = {66, 166, 57, 202},
+		a_size = {1024, 1024},
+		f_quad = {862, 335, 90, 52},
+		alias = {"tower_pandas_panda_blue_lvl4_0123"}
 	},
 	tower_pandas_panda_blue_lvl4_0124 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			157,
-			55,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			664,
-			142,
-			95,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0125"
-		}
+		size = {213, 420},
+		trim = {63, 157, 55, 204},
+		a_size = {1024, 1024},
+		f_quad = {664, 142, 95, 59},
+		alias = {"tower_pandas_panda_blue_lvl4_0125"}
 	},
 	tower_pandas_panda_blue_lvl4_0126 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			65,
-			162,
-			54,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			668,
-			215,
-			94,
-			54
-		},
+		size = {213, 420},
+		trim = {65, 162, 54, 204},
+		a_size = {1024, 1024},
+		f_quad = {668, 215, 94, 54},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0127 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			65,
-			162,
-			54,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			765,
-			215,
-			94,
-			54
-		},
+		size = {213, 420},
+		trim = {65, 162, 54, 204},
+		a_size = {1024, 1024},
+		f_quad = {765, 215, 94, 54},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0128 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			155,
-			53,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			914,
-			5,
-			97,
-			61
-		},
+		size = {213, 420},
+		trim = {63, 155, 53, 204},
+		a_size = {1024, 1024},
+		f_quad = {914, 5, 97, 61},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0129 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			155,
-			53,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			596,
-			70,
-			97,
-			61
-		},
+		size = {213, 420},
+		trim = {63, 155, 53, 204},
+		a_size = {1024, 1024},
+		f_quad = {596, 70, 97, 61},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0137 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			149,
-			63,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			800,
-			70,
-			87,
-			67
-		},
+		size = {213, 420},
+		trim = {63, 149, 63, 204},
+		a_size = {1024, 1024},
+		f_quad = {800, 70, 87, 67},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0138 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			69,
-			163,
-			61,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			968,
-			83,
-			53
-		},
+		size = {213, 420},
+		trim = {69, 163, 61, 204},
+		a_size = {1024, 1024},
+		f_quad = {5, 968, 83, 53},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0139 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			69,
-			163,
-			61,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			590,
-			454,
-			83,
-			53
-		},
+		size = {213, 420},
+		trim = {69, 163, 61, 204},
+		a_size = {1024, 1024},
+		f_quad = {590, 454, 83, 53},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0140 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			74,
-			155,
-			61,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			794,
-			78,
-			61
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0141"
-		}
+		size = {213, 420},
+		trim = {74, 155, 61, 204},
+		a_size = {1024, 1024},
+		f_quad = {244, 794, 78, 61},
+		alias = {"tower_pandas_panda_blue_lvl4_0141"}
 	},
 	tower_pandas_panda_blue_lvl4_0142 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			73,
-			158,
-			61,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			777,
-			393,
-			79,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0143"
-		}
+		size = {213, 420},
+		trim = {73, 158, 61, 204},
+		a_size = {1024, 1024},
+		f_quad = {777, 393, 79, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0143"}
 	},
 	tower_pandas_panda_blue_lvl4_0168 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			71,
-			155,
-			68,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			721,
-			74,
-			61
-		},
+		size = {213, 420},
+		trim = {71, 155, 68, 204},
+		a_size = {1024, 1024},
+		f_quad = {327, 721, 74, 61},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0169 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			71,
-			155,
-			68,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			785,
-			74,
-			61
-		},
+		size = {213, 420},
+		trim = {71, 155, 68, 204},
+		a_size = {1024, 1024},
+		f_quad = {327, 785, 74, 61},
 		alias = {}
 	},
 	tower_pandas_panda_blue_lvl4_0170 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			160,
-			78,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			683,
-			58,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0171"
-		}
+		size = {213, 420},
+		trim = {77, 160, 78, 204},
+		a_size = {1024, 1024},
+		f_quad = {599, 683, 58, 56},
+		alias = {"tower_pandas_panda_blue_lvl4_0171"}
 	},
 	tower_pandas_panda_blue_lvl4_0172 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			158,
-			78,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			641,
-			58,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0173"
-		}
+		size = {213, 420},
+		trim = {77, 158, 78, 204},
+		a_size = {1024, 1024},
+		f_quad = {407, 641, 58, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0173"}
 	},
 	tower_pandas_panda_blue_lvl4_0174 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			158,
-			78,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			702,
-			58,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0175"
-		}
+		size = {213, 420},
+		trim = {77, 158, 78, 204},
+		a_size = {1024, 1024},
+		f_quad = {407, 702, 58, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0175"}
 	},
 	tower_pandas_panda_blue_lvl4_0176 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			75,
-			156,
-			82,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			885,
-			56,
-			60
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0177"
-		}
+		size = {213, 420},
+		trim = {75, 156, 82, 204},
+		a_size = {1024, 1024},
+		f_quad = {407, 885, 56, 60},
+		alias = {"tower_pandas_panda_blue_lvl4_0177"}
 	},
 	tower_pandas_panda_blue_lvl4_0178 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			68,
-			160,
-			73,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			661,
-			72,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0179"
-		}
+		size = {213, 420},
+		trim = {68, 160, 73, 204},
+		a_size = {1024, 1024},
+		f_quad = {91, 661, 72, 56},
+		alias = {"tower_pandas_panda_blue_lvl4_0179"}
 	},
 	tower_pandas_panda_blue_lvl4_0180 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			64,
-			173,
-			73,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			616,
-			576,
-			76,
-			43
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0181"
-		}
+		size = {213, 420},
+		trim = {64, 173, 73, 204},
+		a_size = {1024, 1024},
+		f_quad = {616, 576, 76, 43},
+		alias = {"tower_pandas_panda_blue_lvl4_0181"}
 	},
 	tower_pandas_panda_blue_lvl4_0182 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			64,
-			173,
-			73,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			695,
-			576,
-			76,
-			43
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0183"
-		}
+		size = {213, 420},
+		trim = {64, 173, 73, 204},
+		a_size = {1024, 1024},
+		f_quad = {695, 576, 76, 43},
+		alias = {"tower_pandas_panda_blue_lvl4_0183"}
 	},
 	tower_pandas_panda_blue_lvl4_0186 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			175,
-			82,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			920,
-			731,
-			54,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0187"
-		}
+		size = {213, 420},
+		trim = {77, 175, 82, 204},
+		a_size = {1024, 1024},
+		f_quad = {920, 731, 54, 41},
+		alias = {"tower_pandas_panda_blue_lvl4_0187"}
 	},
 	tower_pandas_panda_blue_lvl4_0188 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			171,
-			70,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			932,
-			683,
-			66,
-			45
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0189"
-		}
+		size = {213, 420},
+		trim = {77, 171, 70, 204},
+		a_size = {1024, 1024},
+		f_quad = {932, 683, 66, 45},
+		alias = {"tower_pandas_panda_blue_lvl4_0189"}
 	},
 	tower_pandas_panda_blue_lvl4_0190 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			66,
-			167,
-			68,
-			202
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			278,
-			79,
-			51
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0191"
-		}
+		size = {213, 420},
+		trim = {66, 167, 68, 202},
+		a_size = {1024, 1024},
+		f_quad = {356, 278, 79, 51},
+		alias = {"tower_pandas_panda_blue_lvl4_0191"}
 	},
 	tower_pandas_panda_blue_lvl4_0192 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			157,
-			66,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			454,
-			84,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0193"
-		}
+		size = {213, 420},
+		trim = {63, 157, 66, 204},
+		a_size = {1024, 1024},
+		f_quad = {327, 454, 84, 59},
+		alias = {"tower_pandas_panda_blue_lvl4_0193"}
 	},
 	tower_pandas_panda_blue_lvl4_0194 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			74,
-			174,
-			68,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			858,
-			683,
-			71,
-			42
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0195"
-		}
+		size = {213, 420},
+		trim = {74, 174, 68, 204},
+		a_size = {1024, 1024},
+		f_quad = {858, 683, 71, 42},
+		alias = {"tower_pandas_panda_blue_lvl4_0195"}
 	},
 	tower_pandas_panda_blue_lvl4_0196 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			63,
-			155,
-			60,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			762,
-			142,
-			90,
-			61
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0197"
-		}
+		size = {213, 420},
+		trim = {63, 155, 60, 204},
+		a_size = {1024, 1024},
+		f_quad = {762, 142, 90, 61},
+		alias = {"tower_pandas_panda_blue_lvl4_0197"}
 	},
 	tower_pandas_panda_blue_lvl4_0204 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			68,
-			149,
-			68,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			898,
-			77,
-			67
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0205"
-		}
+		size = {213, 420},
+		trim = {68, 149, 68, 204},
+		a_size = {1024, 1024},
+		f_quad = {5, 898, 77, 67},
+		alias = {"tower_pandas_panda_blue_lvl4_0205"}
 	},
 	tower_pandas_panda_blue_lvl4_0206 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			70,
-			163,
-			73,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			916,
-			278,
-			70,
-			53
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0207"
-		}
+		size = {213, 420},
+		trim = {70, 163, 73, 204},
+		a_size = {1024, 1024},
+		f_quad = {916, 278, 70, 53},
+		alias = {"tower_pandas_panda_blue_lvl4_0207"}
 	},
 	tower_pandas_panda_blue_lvl4_0210 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			158,
-			78,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			763,
-			58,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_blue_lvl4_0211"
-		}
+		size = {213, 420},
+		trim = {77, 158, 78, 204},
+		a_size = {1024, 1024},
+		f_quad = {407, 763, 58, 58},
+		alias = {"tower_pandas_panda_blue_lvl4_0211"}
 	},
 	tower_pandas_panda_blue_lvl4_0212 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			213,
-			420
-		},
-		trim = {
-			77,
-			158,
-			78,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			824,
-			58,
-			58
-		},
+		size = {213, 420},
+		trim = {77, 158, 78, 204},
+		a_size = {1024, 1024},
+		f_quad = {407, 824, 58, 58},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0002 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			67,
-			169,
-			61,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			660,
-			858,
-			54,
-			50
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0003"
-		}
+		size = {182, 429},
+		trim = {67, 169, 61, 210},
+		a_size = {1024, 1024},
+		f_quad = {660, 858, 54, 50},
+		alias = {"tower_pandas_panda_green_lvl4_0003"}
 	},
 	tower_pandas_panda_green_lvl4_0004 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			67,
-			164,
-			61,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			660,
-			742,
-			54,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0005"
-		}
+		size = {182, 429},
+		trim = {67, 164, 61, 210},
+		a_size = {1024, 1024},
+		f_quad = {660, 742, 54, 55},
+		alias = {"tower_pandas_panda_green_lvl4_0005"}
 	},
 	tower_pandas_panda_green_lvl4_0006 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			67,
-			160,
-			62,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			869,
-			53,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0007"
-		}
+		size = {182, 429},
+		trim = {67, 160, 62, 210},
+		a_size = {1024, 1024},
+		f_quad = {539, 869, 53, 59},
+		alias = {"tower_pandas_panda_green_lvl4_0007"}
 	},
 	tower_pandas_panda_green_lvl4_0010 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			163,
-			61,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			920,
-			55,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0011"
-		}
+		size = {182, 429},
+		trim = {66, 163, 61, 210},
+		a_size = {1024, 1024},
+		f_quad = {599, 920, 55, 56},
+		alias = {"tower_pandas_panda_green_lvl4_0011"}
 	},
 	tower_pandas_panda_green_lvl4_0012 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			67,
-			169,
-			61,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			660,
-			911,
-			54,
-			50
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0013"
-		}
+		size = {182, 429},
+		trim = {67, 169, 61, 210},
+		a_size = {1024, 1024},
+		f_quad = {660, 911, 54, 50},
+		alias = {"tower_pandas_panda_green_lvl4_0013"}
 	},
 	tower_pandas_panda_green_lvl4_0014 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			67,
-			164,
-			61,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			660,
-			800,
-			54,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0015"
-		}
+		size = {182, 429},
+		trim = {67, 164, 61, 210},
+		a_size = {1024, 1024},
+		f_quad = {660, 800, 54, 55},
+		alias = {"tower_pandas_panda_green_lvl4_0015"}
 	},
 	tower_pandas_panda_green_lvl4_0016 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			67,
-			160,
-			62,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			931,
-			53,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0017"
-		}
+		size = {182, 429},
+		trim = {67, 160, 62, 210},
+		a_size = {1024, 1024},
+		f_quad = {539, 931, 53, 59},
+		alias = {"tower_pandas_panda_green_lvl4_0017"}
 	},
 	tower_pandas_panda_green_lvl4_0020 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			163,
-			61,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			660,
-			683,
-			55,
-			56
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0021"
-		}
+		size = {182, 429},
+		trim = {66, 163, 61, 210},
+		a_size = {1024, 1024},
+		f_quad = {660, 683, 55, 56},
+		alias = {"tower_pandas_panda_green_lvl4_0021"}
 	},
 	tower_pandas_panda_green_lvl4_0026 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			32,
-			176,
-			74,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			774,
-			576,
-			76,
-			43
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0027"
-		}
+		size = {182, 429},
+		trim = {32, 176, 74, 210},
+		a_size = {1024, 1024},
+		f_quad = {774, 576, 76, 43},
+		alias = {"tower_pandas_panda_green_lvl4_0027"}
 	},
 	tower_pandas_panda_green_lvl4_0028 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			40,
-			168,
-			46,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			574,
-			335,
-			96,
-			51
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0029"
-		}
+		size = {182, 429},
+		trim = {40, 168, 46, 210},
+		a_size = {1024, 1024},
+		f_quad = {574, 335, 96, 51},
+		alias = {"tower_pandas_panda_green_lvl4_0029"}
 	},
 	tower_pandas_panda_green_lvl4_0030 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			54,
-			170,
-			49,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			834,
-			278,
-			79,
-			49
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0031"
-		}
+		size = {182, 429},
+		trim = {54, 170, 49, 210},
+		a_size = {1024, 1024},
+		f_quad = {834, 278, 79, 49},
+		alias = {"tower_pandas_panda_green_lvl4_0031"}
 	},
 	tower_pandas_panda_green_lvl4_0032 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			71,
-			171,
-			56,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			660,
-			964,
-			55,
-			48
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0033"
-		}
+		size = {182, 429},
+		trim = {71, 171, 56, 210},
+		a_size = {1024, 1024},
+		f_quad = {660, 964, 55, 48},
+		alias = {"tower_pandas_panda_green_lvl4_0033"}
 	},
 	tower_pandas_panda_green_lvl4_0036 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			68,
-			158,
-			51,
-			199
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			646,
-			63,
-			72
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0037"
-		}
+		size = {182, 429},
+		trim = {68, 158, 51, 199},
+		a_size = {1024, 1024},
+		f_quad = {327, 646, 63, 72},
+		alias = {"tower_pandas_panda_green_lvl4_0037"}
 	},
 	tower_pandas_panda_green_lvl4_0038 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			64,
-			160,
-			55,
-			204
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			903,
-			63,
-			65
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0039"
-		}
+		size = {182, 429},
+		trim = {64, 160, 55, 204},
+		a_size = {1024, 1024},
+		f_quad = {166, 903, 63, 65},
+		alias = {"tower_pandas_panda_green_lvl4_0039"}
 	},
 	tower_pandas_panda_green_lvl4_0088 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			57,
-			162,
-			56,
-			207
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			780,
-			69,
-			60
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0089"
-		}
+		size = {182, 429},
+		trim = {57, 162, 56, 207},
+		a_size = {1024, 1024},
+		f_quad = {166, 780, 69, 60},
+		alias = {"tower_pandas_panda_green_lvl4_0089"}
 	},
 	tower_pandas_panda_green_lvl4_0090 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			45,
-			156,
-			43,
-			205
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			103,
-			70,
-			94,
-			68
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0091"
-		}
+		size = {182, 429},
+		trim = {45, 156, 43, 205},
+		a_size = {1024, 1024},
+		f_quad = {103, 70, 94, 68},
+		alias = {"tower_pandas_panda_green_lvl4_0091"}
 	},
 	tower_pandas_panda_green_lvl4_0120 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			51,
-			169,
-			53,
-			205
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			486,
-			516,
-			78,
-			55
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0121"
-		}
+		size = {182, 429},
+		trim = {51, 169, 53, 205},
+		a_size = {1024, 1024},
+		f_quad = {486, 516, 78, 55},
+		alias = {"tower_pandas_panda_green_lvl4_0121"}
 	},
 	tower_pandas_panda_green_lvl4_0134 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			57,
-			171,
-			41,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			188,
-			278,
-			84,
-			49
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0135"
-		}
+		size = {182, 429},
+		trim = {57, 171, 41, 209},
+		a_size = {1024, 1024},
+		f_quad = {188, 278, 84, 49},
+		alias = {"tower_pandas_panda_green_lvl4_0135"}
 	},
 	tower_pandas_panda_green_lvl4_0136 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			51,
-			167,
-			40,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			673,
-			335,
-			91,
-			53
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0137"
-		}
+		size = {182, 429},
+		trim = {51, 167, 40, 209},
+		a_size = {1024, 1024},
+		f_quad = {673, 335, 91, 53},
+		alias = {"tower_pandas_panda_green_lvl4_0137"}
 	},
 	tower_pandas_panda_green_lvl4_0138 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			50,
-			166,
-			39,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			281,
-			335,
-			93,
-			54
-		},
+		size = {182, 429},
+		trim = {50, 166, 39, 209},
+		a_size = {1024, 1024},
+		f_quad = {281, 335, 93, 54},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0139 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			50,
-			166,
-			39,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			377,
-			335,
-			93,
-			54
-		},
+		size = {182, 429},
+		trim = {50, 166, 39, 209},
+		a_size = {1024, 1024},
+		f_quad = {377, 335, 93, 54},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0140 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			49,
-			166,
-			38,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			215,
-			95,
-			54
-		},
+		size = {182, 429},
+		trim = {49, 166, 38, 209},
+		a_size = {1024, 1024},
+		f_quad = {182, 215, 95, 54},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0141 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			49,
-			166,
-			38,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			280,
-			215,
-			95,
-			54
-		},
+		size = {182, 429},
+		trim = {49, 166, 38, 209},
+		a_size = {1024, 1024},
+		f_quad = {280, 215, 95, 54},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0149 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			48,
-			153,
-			47,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			890,
-			70,
-			87,
-			67
-		},
+		size = {182, 429},
+		trim = {48, 153, 47, 209},
+		a_size = {1024, 1024},
+		f_quad = {890, 70, 87, 67},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0150 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			59,
-			171,
-			45,
-			208
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			753,
-			278,
-			78,
-			50
-		},
+		size = {182, 429},
+		trim = {59, 171, 45, 208},
+		a_size = {1024, 1024},
+		f_quad = {753, 278, 78, 50},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0151 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			63,
-			171,
-			45,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			576,
-			74,
-			49
-		},
+		size = {182, 429},
+		trim = {63, 171, 45, 209},
+		a_size = {1024, 1024},
+		f_quad = {539, 576, 74, 49},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0152 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			157,
-			45,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			913,
-			71,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0153"
-		}
+		size = {182, 429},
+		trim = {66, 157, 45, 209},
+		a_size = {1024, 1024},
+		f_quad = {327, 913, 71, 63},
+		alias = {"tower_pandas_panda_green_lvl4_0153"}
 	},
 	tower_pandas_panda_green_lvl4_0154 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			64,
-			166,
-			45,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			600,
-			278,
-			73,
-			54
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0155"
-		}
+		size = {182, 429},
+		trim = {64, 166, 45, 209},
+		a_size = {1024, 1024},
+		f_quad = {600, 278, 73, 54},
+		alias = {"tower_pandas_panda_green_lvl4_0155"}
 	},
 	tower_pandas_panda_green_lvl4_0156 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			66,
-			163,
-			45,
-			209
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			601,
-			71,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0157"
-		}
+		size = {182, 429},
+		trim = {66, 163, 45, 209},
+		a_size = {1024, 1024},
+		f_quad = {91, 601, 71, 57},
+		alias = {"tower_pandas_panda_green_lvl4_0157"}
 	},
 	tower_pandas_panda_green_lvl4_0162 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			75,
-			173,
-			43,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			731,
-			64,
-			46
-		},
+		size = {182, 429},
+		trim = {75, 173, 43, 210},
+		a_size = {1024, 1024},
+		f_quad = {718, 731, 64, 46},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0163 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			75,
-			173,
-			43,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			785,
-			731,
-			64,
-			46
-		},
+		size = {182, 429},
+		trim = {75, 173, 43, 210},
+		a_size = {1024, 1024},
+		f_quad = {785, 731, 64, 46},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0164 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			74,
-			174,
-			41,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			683,
-			67,
-			45
-		},
+		size = {182, 429},
+		trim = {74, 174, 41, 210},
+		a_size = {1024, 1024},
+		f_quad = {718, 683, 67, 45},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0165 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			74,
-			174,
-			41,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			788,
-			683,
-			67,
-			45
-		},
+		size = {182, 429},
+		trim = {74, 174, 41, 210},
+		a_size = {1024, 1024},
+		f_quad = {788, 683, 67, 45},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0166 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			74,
-			171,
-			42,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			607,
-			628,
-			66,
-			48
-		},
+		size = {182, 429},
+		trim = {74, 171, 42, 210},
+		a_size = {1024, 1024},
+		f_quad = {607, 628, 66, 48},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0167 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			74,
-			171,
-			42,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			676,
-			628,
-			66,
-			48
-		},
+		size = {182, 429},
+		trim = {74, 171, 42, 210},
+		a_size = {1024, 1024},
+		f_quad = {676, 628, 66, 48},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0168 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			72,
-			171,
-			44,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			745,
-			628,
-			66,
-			48
-		},
+		size = {182, 429},
+		trim = {72, 171, 44, 210},
+		a_size = {1024, 1024},
+		f_quad = {745, 628, 66, 48},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0169 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			72,
-			171,
-			44,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			814,
-			628,
-			66,
-			48
-		},
+		size = {182, 429},
+		trim = {72, 171, 44, 210},
+		a_size = {1024, 1024},
+		f_quad = {814, 628, 66, 48},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0170 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			52,
-			161,
-			30,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			96,
-			142,
-			100,
-			58
-		},
+		size = {182, 429},
+		trim = {52, 161, 30, 210},
+		a_size = {1024, 1024},
+		f_quad = {96, 142, 100, 58},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0171 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			52,
-			161,
-			30,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			199,
-			142,
-			100,
-			58
-		},
+		size = {182, 429},
+		trim = {52, 161, 30, 210},
+		a_size = {1024, 1024},
+		f_quad = {199, 142, 100, 58},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0174 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			45,
-			157,
-			58,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			519,
-			79,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0175"
-		}
+		size = {182, 429},
+		trim = {45, 157, 58, 210},
+		a_size = {1024, 1024},
+		f_quad = {244, 519, 79, 62},
+		alias = {"tower_pandas_panda_green_lvl4_0175"}
 	},
 	tower_pandas_panda_green_lvl4_0176 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			47,
-			158,
-			32,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			482,
-			5,
-			103,
-			61
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0177"
-		}
+		size = {182, 429},
+		trim = {47, 158, 32, 210},
+		a_size = {1024, 1024},
+		f_quad = {482, 5, 103, 61},
+		alias = {"tower_pandas_panda_green_lvl4_0177"}
 	},
 	tower_pandas_panda_green_lvl4_0180 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			58,
-			149,
-			36,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			142,
-			88,
-			70
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0181"
-		}
+		size = {182, 429},
+		trim = {58, 149, 36, 210},
+		a_size = {1024, 1024},
+		f_quad = {5, 142, 88, 70},
+		alias = {"tower_pandas_panda_green_lvl4_0181"}
 	},
 	tower_pandas_panda_green_lvl4_0194 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			70,
-			177,
-			64,
-			210
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			971,
-			516,
-			48,
-			42
-		},
-		alias = {
-			"tower_pandas_panda_green_lvl4_0195"
-		}
+		size = {182, 429},
+		trim = {70, 177, 64, 210},
+		a_size = {1024, 1024},
+		f_quad = {971, 516, 48, 42},
+		alias = {"tower_pandas_panda_green_lvl4_0195"}
 	},
 	tower_pandas_panda_green_lvl4_0200 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			55,
-			169,
-			53,
-			207
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			676,
-			278,
-			74,
-			53
-		},
+		size = {182, 429},
+		trim = {55, 169, 53, 207},
+		a_size = {1024, 1024},
+		f_quad = {676, 278, 74, 53},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0201 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			47,
-			158,
-			45,
-			205
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			503,
-			70,
-			90,
-			66
-		},
+		size = {182, 429},
+		trim = {47, 158, 45, 205},
+		a_size = {1024, 1024},
+		f_quad = {503, 70, 90, 66},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0227 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			48,
-			159,
-			46,
-			206
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			573,
-			142,
-			88,
-			64
-		},
+		size = {182, 429},
+		trim = {48, 159, 46, 206},
+		a_size = {1024, 1024},
+		f_quad = {573, 142, 88, 64},
 		alias = {}
 	},
 	tower_pandas_panda_green_lvl4_0228 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			182,
-			429
-		},
-		trim = {
-			60,
-			164,
-			59,
-			208
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			637,
-			63,
-			57
-		},
+		size = {182, 429},
+		trim = {60, 164, 59, 208},
+		a_size = {1024, 1024},
+		f_quad = {471, 637, 63, 57},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0001 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			111,
-			215,
-			119,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			697,
-			63,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0054",
-			"tower_pandas_panda_red_lvl4_0055",
-			"tower_pandas_panda_red_lvl4_0094",
-			"tower_pandas_panda_red_lvl4_0095",
-			"tower_pandas_panda_red_lvl4_0190",
-			"tower_pandas_panda_red_lvl4_0191"
-		}
+		size = {293, 534},
+		trim = {111, 215, 119, 262},
+		a_size = {1024, 1024},
+		f_quad = {471, 697, 63, 57},
+		alias = {"tower_pandas_panda_red_lvl4_0054", "tower_pandas_panda_red_lvl4_0055", "tower_pandas_panda_red_lvl4_0094", "tower_pandas_panda_red_lvl4_0095", "tower_pandas_panda_red_lvl4_0190", "tower_pandas_panda_red_lvl4_0191"}
 	},
 	tower_pandas_panda_red_lvl4_0002 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			110,
-			214,
-			118,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			576,
-			65,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0003"
-		}
+		size = {293, 534},
+		trim = {110, 214, 118, 262},
+		a_size = {1024, 1024},
+		f_quad = {471, 576, 65, 58},
+		alias = {"tower_pandas_panda_red_lvl4_0003"}
 	},
 	tower_pandas_panda_red_lvl4_0010 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			115,
-			209,
-			123,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			878,
-			55,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0011"
-		}
+		size = {293, 534},
+		trim = {115, 209, 123, 262},
+		a_size = {1024, 1024},
+		f_quad = {471, 878, 55, 63},
+		alias = {"tower_pandas_panda_red_lvl4_0011"}
 	},
 	tower_pandas_panda_red_lvl4_0012 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			113,
-			214,
-			120,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			817,
-			60,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0013"
-		}
+		size = {293, 534},
+		trim = {113, 214, 120, 262},
+		a_size = {1024, 1024},
+		f_quad = {471, 817, 60, 58},
+		alias = {"tower_pandas_panda_red_lvl4_0013"}
 	},
 	tower_pandas_panda_red_lvl4_0014 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			111,
-			210,
-			119,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			794,
-			63,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0015"
-		}
+		size = {293, 534},
+		trim = {111, 210, 119, 262},
+		a_size = {1024, 1024},
+		f_quad = {91, 794, 63, 62},
+		alias = {"tower_pandas_panda_red_lvl4_0015"}
 	},
 	tower_pandas_panda_red_lvl4_0016 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			108,
-			207,
-			118,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			533,
-			67,
-			65
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0017"
-		}
+		size = {293, 534},
+		trim = {108, 207, 118, 262},
+		a_size = {1024, 1024},
+		f_quad = {91, 533, 67, 65},
+		alias = {"tower_pandas_panda_red_lvl4_0017"}
 	},
 	tower_pandas_panda_red_lvl4_0018 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			107,
-			204,
-			117,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			858,
-			69,
-			68
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0019"
-		}
+		size = {293, 534},
+		trim = {107, 204, 117, 262},
+		a_size = {1024, 1024},
+		f_quad = {244, 858, 69, 68},
+		alias = {"tower_pandas_panda_red_lvl4_0019"}
 	},
 	tower_pandas_panda_red_lvl4_0020 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			109,
-			209,
-			118,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			649,
-			66,
-			63
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0021"
-		}
+		size = {293, 534},
+		trim = {109, 209, 118, 262},
+		a_size = {1024, 1024},
+		f_quad = {166, 649, 66, 63},
+		alias = {"tower_pandas_panda_red_lvl4_0021"}
 	},
 	tower_pandas_panda_red_lvl4_0022 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			99,
-			215,
-			119,
-			252
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			393,
-			75,
-			67
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0023"
-		}
+		size = {293, 534},
+		trim = {99, 215, 119, 252},
+		a_size = {1024, 1024},
+		f_quad = {166, 393, 75, 67},
+		alias = {"tower_pandas_panda_red_lvl4_0023"}
 	},
 	tower_pandas_panda_red_lvl4_0024 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			94,
-			219,
-			119,
-			253
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			454,
-			80,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0025"
-		}
+		size = {293, 534},
+		trim = {94, 219, 119, 253},
+		a_size = {1024, 1024},
+		f_quad = {244, 454, 80, 62},
+		alias = {"tower_pandas_panda_red_lvl4_0025"}
 	},
 	tower_pandas_panda_red_lvl4_0026 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			92,
-			204,
-			118,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			487,
-			142,
-			83,
-			68
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0027"
-		}
+		size = {293, 534},
+		trim = {92, 204, 118, 262},
+		a_size = {1024, 1024},
+		f_quad = {487, 142, 83, 68},
+		alias = {"tower_pandas_panda_red_lvl4_0027"}
 	},
 	tower_pandas_panda_red_lvl4_0040 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			106,
-			220,
-			79,
-			256
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			588,
-			5,
-			108,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0041"
-		}
+		size = {293, 534},
+		trim = {106, 220, 79, 256},
+		a_size = {1024, 1024},
+		f_quad = {588, 5, 108, 58},
+		alias = {"tower_pandas_panda_red_lvl4_0041"}
 	},
 	tower_pandas_panda_red_lvl4_0042 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			104,
-			221,
-			127,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			883,
-			628,
-			62,
-			51
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0043"
-		}
+		size = {293, 534},
+		trim = {104, 221, 127, 262},
+		a_size = {1024, 1024},
+		f_quad = {883, 628, 62, 51},
+		alias = {"tower_pandas_panda_red_lvl4_0043"}
 	},
 	tower_pandas_panda_red_lvl4_0044 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			108,
-			220,
-			120,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			539,
-			628,
-			65,
-			52
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0045"
-		}
+		size = {293, 534},
+		trim = {108, 220, 120, 262},
+		a_size = {1024, 1024},
+		f_quad = {539, 628, 65, 52},
+		alias = {"tower_pandas_panda_red_lvl4_0045"}
 	},
 	tower_pandas_panda_red_lvl4_0046 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			126,
-			217,
-			68,
-			254
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			401,
-			70,
-			99,
-			63
-		},
+		size = {293, 534},
+		trim = {126, 217, 68, 254},
+		a_size = {1024, 1024},
+		f_quad = {401, 70, 99, 63},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0047 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			126,
-			217,
-			68,
-			253
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			200,
-			70,
-			99,
-			64
-		},
+		size = {293, 534},
+		trim = {126, 217, 68, 253},
+		a_size = {1024, 1024},
+		f_quad = {200, 70, 99, 64},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0048 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			121,
-			221,
-			66,
-			252
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			115,
-			5,
-			106,
-			61
-		},
+		size = {293, 534},
+		trim = {121, 221, 66, 252},
+		a_size = {1024, 1024},
+		f_quad = {115, 5, 106, 61},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0049 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			121,
-			222,
-			65,
-			252
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			372,
-			5,
-			107,
-			60
-		},
+		size = {293, 534},
+		trim = {121, 222, 65, 252},
+		a_size = {1024, 1024},
+		f_quad = {372, 5, 107, 60},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0051 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			122,
-			218,
-			64,
-			260
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			804,
-			5,
-			107,
-			56
-		},
+		size = {293, 534},
+		trim = {122, 218, 64, 260},
+		a_size = {1024, 1024},
+		f_quad = {804, 5, 107, 56},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0053 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			112,
-			213,
-			74,
-			259
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			107,
-			62
-		},
+		size = {293, 534},
+		trim = {112, 213, 74, 259},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 107, 62},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0056 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			108,
-			225,
-			116,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			853,
-			576,
-			69,
-			47
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0057"
-		}
+		size = {293, 534},
+		trim = {108, 225, 116, 262},
+		a_size = {1024, 1024},
+		f_quad = {853, 576, 69, 47},
+		alias = {"tower_pandas_panda_red_lvl4_0057"}
 	},
 	tower_pandas_panda_red_lvl4_0058 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			108,
-			231,
-			120,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			852,
-			731,
-			65,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0059"
-		}
+		size = {293, 534},
+		trim = {108, 231, 120, 262},
+		a_size = {1024, 1024},
+		f_quad = {852, 731, 65, 41},
+		alias = {"tower_pandas_panda_red_lvl4_0059"}
 	},
 	tower_pandas_panda_red_lvl4_0060 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			114,
-			201,
-			123,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			720,
-			56,
-			71
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0061"
-		}
+		size = {293, 534},
+		trim = {114, 201, 123, 262},
+		a_size = {1024, 1024},
+		f_quad = {91, 720, 56, 71},
+		alias = {"tower_pandas_panda_red_lvl4_0061"}
 	},
 	tower_pandas_panda_red_lvl4_0088 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			109,
-			225,
-			116,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			925,
-			576,
-			68,
-			47
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0089"
-		}
+		size = {293, 534},
+		trim = {109, 225, 116, 262},
+		a_size = {1024, 1024},
+		f_quad = {925, 576, 68, 47},
+		alias = {"tower_pandas_panda_red_lvl4_0089"}
 	},
 	tower_pandas_panda_red_lvl4_0090 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			113,
-			214,
-			121,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			944,
-			59,
-			58
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0091"
-		}
+		size = {293, 534},
+		trim = {113, 214, 121, 262},
+		a_size = {1024, 1024},
+		f_quad = {471, 944, 59, 58},
+		alias = {"tower_pandas_panda_red_lvl4_0091"}
 	},
 	tower_pandas_panda_red_lvl4_0092 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			111,
-			215,
-			119,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			471,
-			757,
-			63,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0093"
-		}
+		size = {293, 534},
+		trim = {111, 215, 119, 262},
+		a_size = {1024, 1024},
+		f_quad = {471, 757, 63, 57},
+		alias = {"tower_pandas_panda_red_lvl4_0093"}
 	},
 	tower_pandas_panda_red_lvl4_0096 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			106,
-			213,
-			114,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			587,
-			73,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0097"
-		}
+		size = {293, 534},
+		trim = {106, 213, 114, 262},
+		a_size = {1024, 1024},
+		f_quad = {166, 587, 73, 59},
+		alias = {"tower_pandas_panda_red_lvl4_0097"}
 	},
 	tower_pandas_panda_red_lvl4_0098 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			100,
-			212,
-			105,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			215,
-			88,
-			60
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0099"
-		}
+		size = {293, 534},
+		trim = {100, 212, 105, 262},
+		a_size = {1024, 1024},
+		f_quad = {91, 215, 88, 60},
+		alias = {"tower_pandas_panda_red_lvl4_0099"}
 	},
 	tower_pandas_panda_red_lvl4_0100 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			100,
-			218,
-			107,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			604,
-			393,
-			86,
-			54
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0101"
-		}
+		size = {293, 534},
+		trim = {100, 218, 107, 262},
+		a_size = {1024, 1024},
+		f_quad = {604, 393, 86, 54},
+		alias = {"tower_pandas_panda_red_lvl4_0101"}
 	},
 	tower_pandas_panda_red_lvl4_0122 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			84,
-			175,
-			114,
-			290
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			70,
-			95,
-			69
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0123"
-		}
+		size = {293, 534},
+		trim = {84, 175, 114, 290},
+		a_size = {1024, 1024},
+		f_quad = {5, 70, 95, 69},
+		alias = {"tower_pandas_panda_red_lvl4_0123"}
 	},
 	tower_pandas_panda_red_lvl4_0124 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			85,
-			178,
-			132,
-			299
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			516,
-			76,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0125"
-		}
+		size = {293, 534},
+		trim = {85, 178, 132, 299},
+		a_size = {1024, 1024},
+		f_quad = {407, 516, 76, 57},
+		alias = {"tower_pandas_panda_red_lvl4_0125"}
 	},
 	tower_pandas_panda_red_lvl4_0138 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			113,
-			223,
-			97,
-			261
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			723,
-			516,
-			83,
-			50
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0139"
-		}
+		size = {293, 534},
+		trim = {113, 223, 97, 261},
+		a_size = {1024, 1024},
+		f_quad = {723, 516, 83, 50},
+		alias = {"tower_pandas_panda_red_lvl4_0139"}
 	},
 	tower_pandas_panda_red_lvl4_0140 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			106,
-			220,
-			95,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			767,
-			335,
-			92,
-			52
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0141"
-		}
+		size = {293, 534},
+		trim = {106, 220, 95, 262},
+		a_size = {1024, 1024},
+		f_quad = {767, 335, 92, 52},
+		alias = {"tower_pandas_panda_red_lvl4_0141"}
 	},
 	tower_pandas_panda_red_lvl4_0142 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			105,
-			219,
-			94,
-			261
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			862,
-			215,
-			94,
-			54
-		},
+		size = {293, 534},
+		trim = {105, 219, 94, 261},
+		a_size = {1024, 1024},
+		f_quad = {862, 215, 94, 54},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0143 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			105,
-			219,
-			94,
-			261
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			278,
-			94,
-			54
-		},
+		size = {293, 534},
+		trim = {105, 219, 94, 261},
+		a_size = {1024, 1024},
+		f_quad = {91, 278, 94, 54},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0144 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			105,
-			219,
-			93,
-			261
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			378,
-			215,
-			95,
-			54
-		},
+		size = {293, 534},
+		trim = {105, 219, 93, 261},
+		a_size = {1024, 1024},
+		f_quad = {378, 215, 95, 54},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0145 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			105,
-			219,
-			93,
-			261
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			476,
-			215,
-			95,
-			54
-		},
+		size = {293, 534},
+		trim = {105, 219, 93, 261},
+		a_size = {1024, 1024},
+		f_quad = {476, 215, 95, 54},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0146 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			105,
-			207,
-			92,
-			261
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			302,
-			70,
-			96,
-			66
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0147"
-		}
+		size = {293, 534},
+		trim = {105, 207, 92, 261},
+		a_size = {1024, 1024},
+		f_quad = {302, 70, 96, 66},
+		alias = {"tower_pandas_panda_red_lvl4_0147"}
 	},
 	tower_pandas_panda_red_lvl4_0154 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			101,
-			224,
-			101,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			676,
-			454,
-			91,
-			48
-		},
+		size = {293, 534},
+		trim = {101, 224, 101, 262},
+		a_size = {1024, 1024},
+		f_quad = {676, 454, 91, 48},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0155 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			101,
-			224,
-			101,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			770,
-			454,
-			91,
-			48
-		},
+		size = {293, 534},
+		trim = {101, 224, 101, 262},
+		a_size = {1024, 1024},
+		f_quad = {770, 454, 91, 48},
 		alias = {}
 	},
 	tower_pandas_panda_red_lvl4_0156 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			115,
-			212,
-			101,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			516,
-			77,
-			60
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0157"
-		}
+		size = {293, 534},
+		trim = {115, 212, 101, 262},
+		a_size = {1024, 1024},
+		f_quad = {327, 516, 77, 60},
+		alias = {"tower_pandas_panda_red_lvl4_0157"}
 	},
 	tower_pandas_panda_red_lvl4_0158 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			111,
-			215,
-			101,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			693,
-			393,
-			81,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0159"
-		}
+		size = {293, 534},
+		trim = {111, 215, 101, 262},
+		a_size = {1024, 1024},
+		f_quad = {693, 393, 81, 57},
+		alias = {"tower_pandas_panda_red_lvl4_0159"}
 	},
 	tower_pandas_panda_red_lvl4_0164 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			112,
-			213,
-			116,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			859,
-			65,
-			59
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0165"
-		}
+		size = {293, 534},
+		trim = {112, 213, 116, 262},
+		a_size = {1024, 1024},
+		f_quad = {91, 859, 65, 59},
+		alias = {"tower_pandas_panda_red_lvl4_0165"}
 	},
 	tower_pandas_panda_red_lvl4_0166 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			110,
-			212,
-			110,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			166,
-			463,
-			73,
-			60
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0167"
-		}
+		size = {293, 534},
+		trim = {110, 212, 110, 262},
+		a_size = {1024, 1024},
+		f_quad = {166, 463, 73, 60},
+		alias = {"tower_pandas_panda_red_lvl4_0167"}
 	},
 	tower_pandas_panda_red_lvl4_0192 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			106,
-			211,
-			113,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			849,
-			74,
-			61
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0193"
-		}
+		size = {293, 534},
+		trim = {106, 211, 113, 262},
+		a_size = {1024, 1024},
+		f_quad = {327, 849, 74, 61},
+		alias = {"tower_pandas_panda_red_lvl4_0193"}
 	},
 	tower_pandas_panda_red_lvl4_0194 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			105,
-			210,
-			113,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			929,
-			75,
-			62
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0195"
-		}
+		size = {293, 534},
+		trim = {105, 210, 113, 262},
+		a_size = {1024, 1024},
+		f_quad = {244, 929, 75, 62},
+		alias = {"tower_pandas_panda_red_lvl4_0195"}
 	},
 	tower_pandas_panda_red_lvl4_0196 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			104,
-			215,
-			114,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			567,
-			516,
-			75,
-			57
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0197"
-		}
+		size = {293, 534},
+		trim = {104, 215, 114, 262},
+		a_size = {1024, 1024},
+		f_quad = {567, 516, 75, 57},
+		alias = {"tower_pandas_panda_red_lvl4_0197"}
 	},
 	tower_pandas_panda_red_lvl4_0198 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			101,
-			231,
-			119,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			327,
-			979,
-			73,
-			41
-		},
-		alias = {
-			"tower_pandas_panda_red_lvl4_0199"
-		}
+		size = {293, 534},
+		trim = {101, 231, 119, 262},
+		a_size = {1024, 1024},
+		f_quad = {327, 979, 73, 41},
+		alias = {"tower_pandas_panda_red_lvl4_0199"}
 	},
 	tower_pandas_panda_red_lvl4_0225 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			293,
-			534
-		},
-		trim = {
-			120,
-			213,
-			120,
-			262
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			599,
-			858,
-			53,
-			59
-		},
+		size = {293, 534},
+		trim = {120, 213, 120, 262},
+		a_size = {1024, 1024},
+		f_quad = {599, 858, 53, 59},
 		alias = {}
 	},
 	tower_pandas_projectile_air_0002 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			94,
-			71
-		},
-		trim = {
-			24,
-			21,
-			20,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			91,
-			982,
-			50,
-			29
-		},
+		size = {94, 71},
+		trim = {24, 21, 20, 21},
+		a_size = {1024, 1024},
+		f_quad = {91, 982, 50, 29},
 		alias = {}
 	},
 	tower_pandas_projectile_air_0004 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			94,
-			71
-		},
-		trim = {
-			23,
-			21,
-			21,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			718,
-			780,
-			50,
-			29
-		},
+		size = {94, 71},
+		trim = {23, 21, 21, 21},
+		a_size = {1024, 1024},
+		f_quad = {718, 780, 50, 29},
 		alias = {}
 	},
 	tower_pandas_projectile_ray_0004 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			375,
-			114
-		},
-		trim = {
-			199,
-			34,
-			31,
-			36
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			224,
-			5,
-			145,
-			44
-		},
-		alias = {
-			"tower_pandas_projectile_ray_0005"
-		}
+		size = {375, 114},
+		trim = {199, 34, 31, 36},
+		a_size = {1024, 1024},
+		f_quad = {224, 5, 145, 44},
+		alias = {"tower_pandas_projectile_ray_0005"}
 	},
 	tower_pandas_red_lvl4_tp_decal_0001 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			65,
-			64,
-			66,
-			66
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			414,
-			454,
-			85,
-			52
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_0023"
-		}
+		size = {216, 182},
+		trim = {65, 64, 66, 66},
+		a_size = {1024, 1024},
+		f_quad = {414, 454, 85, 52},
+		alias = {"tower_pandas_red_lvl4_tp_decal_0023"}
 	},
 	tower_pandas_red_lvl4_tp_decal_0002 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			216,
-			182
-		},
-		trim = {
-			65,
-			64,
-			66,
-			66
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			502,
-			454,
-			85,
-			52
-		},
+		size = {216, 182},
+		trim = {65, 64, 66, 66},
+		a_size = {1024, 1024},
+		f_quad = {502, 454, 85, 52},
 		alias = {}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0003 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			38,
-			33,
-			42,
-			35
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			244,
-			653,
-			71,
-			68
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0004"
-		}
+		size = {151, 136},
+		trim = {38, 33, 42, 35},
+		a_size = {1024, 1024},
+		f_quad = {244, 653, 71, 68},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0004"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0005 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			33,
-			30,
-			36,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			292,
-			82,
-			74
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0006"
-		}
+		size = {151, 136},
+		trim = {33, 30, 36, 32},
+		a_size = {1024, 1024},
+		f_quad = {5, 292, 82, 74},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0006"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0007 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			33,
-			30,
-			35,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			215,
-			83,
-			74
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0008"
-		}
+		size = {151, 136},
+		trim = {33, 30, 35, 32},
+		a_size = {1024, 1024},
+		f_quad = {5, 215, 83, 74},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0008"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0015 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			33,
-			30,
-			36,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			369,
-			82,
-			74
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0016"
-		}
+		size = {151, 136},
+		trim = {33, 30, 36, 32},
+		a_size = {1024, 1024},
+		f_quad = {5, 369, 82, 74},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0016"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0017 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			33,
-			30,
-			36,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			446,
-			82,
-			74
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0018"
-		}
+		size = {151, 136},
+		trim = {33, 30, 36, 32},
+		a_size = {1024, 1024},
+		f_quad = {5, 446, 82, 74},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0018"}
 	},
 	tower_pandas_red_lvl4_tp_decal_enemy_0019 = {
 		a_name = "go_towers_pandas-2.dds",
-		size = {
-			151,
-			136
-		},
-		trim = {
-			35,
-			33,
-			38,
-			35
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			942,
-			142,
-			78,
-			68
-		},
-		alias = {
-			"tower_pandas_red_lvl4_tp_decal_enemy_0020"
-		}
+		size = {151, 136},
+		trim = {35, 33, 38, 35},
+		a_size = {1024, 1024},
+		f_quad = {942, 142, 78, 68},
+		alias = {"tower_pandas_red_lvl4_tp_decal_enemy_0020"}
 	}
 }

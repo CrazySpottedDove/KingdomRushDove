@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/glareling.lua
-
+-- chunkname: @./kr5/data/animations/glareling.lua
 local a = {
 	glearling_trail_trail = {
 		prefix = "glearling_trail",
@@ -52,5 +51,4 @@ local a = {
 		from = 148
 	}
 }
-
 return a

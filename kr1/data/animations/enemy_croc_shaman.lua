@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_croc_shaman.lua
-
+-- chunkname: @./kr5/data/animations/enemy_croc_shaman.lua
 local a = {
 	shaman_buff = {
 		prefix = "shaman_buff",
@@ -77,5 +76,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

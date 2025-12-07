@@ -1,74 +1,17 @@
-﻿-- chunkname: @./kr3/data/levels/level15_spawner.lua
-
+-- chunkname: @./kr3/data/levels/level15_spawner.lua
 return {
 	groups = {
-		{
-			1
-		},
-		{
-			5,
-			6,
-			7,
-			8
-		},
-		[110] = {
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10
-		},
-		[567] = {
-			5,
-			6,
-			7
-		},
-		[1234] = {
-			1,
-			2,
-			3,
-			4
-		},
-		[8765] = {
-			"som8",
-			"som7",
-			"som6",
-			"som5"
-		},
-		[8910] = {
-			8,
-			9,
-			10
-		},
-		[151617] = {
-			"som15",
-			"som16",
-			"som17"
-		},
-		[234111213] = {
-			"som2",
-			"som3",
-			"som4",
-			"som11",
-			"som12",
-			"som13"
-		},
-		[1910151617] = {
-			"som1",
-			"som9",
-			"som10",
-			"som15",
-			"som16",
-			"som17"
-		},
-		packSpawner = {
-			"packSpawner"
-		},
+		{1},
+		{5, 6, 7, 8},
+		[110] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+		[567] = {5, 6, 7},
+		[1234] = {1, 2, 3, 4},
+		[8765] = {"som8", "som7", "som6", "som5"},
+		[8910] = {8, 9, 10},
+		[151617] = {"som15", "som16", "som17"},
+		[234111213] = {"som2", "som3", "som4", "som11", "som12", "som13"},
+		[1910151617] = {"som1", "som9", "som10", "som15", "som16", "som17"},
+		packSpawner = {"packSpawner"},
 		somAll = {
 			"som17",
 			"som16",
@@ -90,386 +33,25 @@ return {
 		}
 	},
 	packs = {
-		arachnoparty = {
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"enemy_drider"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_drider"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"enemy_drider"
-			},
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"enemy_drider"
-			},
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"enemy_drider"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_drider"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"enemy_drider"
-			}
-		},
+		arachnoparty = {{0, 0, nil, 1, 1, nil, nil, 1, 1, "enemy_drider"}, {0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_drider"}, {0, 0, nil, 3, 1, nil, nil, 1, 1, "enemy_drider"}, {0, 0, nil, 1, 1, nil, nil, 1, 1, "enemy_drider"}, {0, 0, nil, 1, 1, nil, nil, 1, 1, "enemy_drider"}, {0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_drider"}, {0, 0, nil, 3, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "enemy_drider"}},
 		elvenform1 = {
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_evoker"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				2.3333333333333335,
-				2.3333333333333335,
-				"enemy_twilight_evoker"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"enemy_twilight_elf_harasser"
-			},
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"enemy_twilight_elf_harasser"
-			}
+			{0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 3, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 3, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 1, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 3, 1, nil, nil, 1, 1, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_twilight_evoker"},
+			{0, 0, nil, 3, 1, nil, nil, 2.3333333333333335, 2.3333333333333335, "enemy_twilight_evoker"},
+			{0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 3, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 2, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 3, 1, nil, nil, 0, 0, "enemy_twilight_elf_harasser"},
+			{0, 0, nil, 1, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "enemy_twilight_elf_harasser"}
 		},
-		spider1 = {
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0.6666666666666666,
-				0.6666666666666666,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0.5,
-				0.5,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				1,
-				1,
-				nil,
-				nil,
-				1,
-				1,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				2,
-				1,
-				nil,
-				nil,
-				0,
-				0,
-				"spider_son_of_mactans_drop_spawner"
-			},
-			{
-				0,
-				0,
-				nil,
-				3,
-				1,
-				nil,
-				nil,
-				2.3333333333333335,
-				2.3333333333333335,
-				"spider_son_of_mactans_drop_spawner"
-			}
-		},
-		spider2 = {
-			{
-				0,
-				0,
-				nil,
-				0,
-				20,
-				nil,
-				nil,
-				0.5,
-				0.5,
-				"enemy_spider_arachnomancer"
-			}
-		}
+		spider1 = {{0, 0, nil, 1, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 3, 1, nil, nil, 0, 0, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 2, 1, nil, nil, 0.6666666666666666, 0.6666666666666666, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 1, 1, nil, nil, 1, 1, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 3, 1, nil, nil, 0, 0, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 2, 1, nil, nil, 0.5, 0.5, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 1, 1, nil, nil, 1, 1, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 2, 1, nil, nil, 0, 0, "spider_son_of_mactans_drop_spawner"}, {0, 0, nil, 3, 1, nil, nil, 2.3333333333333335, 2.3333333333333335, "spider_son_of_mactans_drop_spawner"}},
+		spider2 = {{0, 0, nil, 0, 20, nil, nil, 0.5, 0.5, "enemy_spider_arachnomancer"}}
 	},
 	points = {
 		{
@@ -814,495 +396,165 @@ return {
 			}
 		}
 	},
-	waves = {
-		{
-			[4] = {
-				{
-					1.6666666666666667,
-					0.5,
-					567,
-					nil,
-					7,
-					false,
-					true,
-					2,
-					2,
-					"enemy_mantaray"
-				},
-				{
-					23.333333333333332,
-					0.5,
-					567,
-					nil,
-					6,
-					false,
-					true,
-					2,
-					2,
-					"enemy_mantaray"
-				}
-			},
-			[5] = {
-				{
-					3.3333333333333335,
-					0.5,
-					151617,
-					nil,
-					3,
-					false,
-					true,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					26.666666666666668,
-					0.5,
-					234111213,
-					nil,
-					1,
-					true,
-					false,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			},
-			[8] = {
-				{
-					3.3333333333333335,
-					0.5,
-					567,
-					nil,
-					6,
-					false,
-					true,
-					1,
-					2,
-					"enemy_mantaray"
-				},
-				{
-					10,
-					0.5,
-					8910,
-					nil,
-					6,
-					false,
-					true,
-					1,
-					2,
-					"enemy_mantaray"
-				},
-				{
-					28.333333333333332,
-					0.5,
-					1234,
-					nil,
-					5,
-					true,
-					false,
-					2,
-					2,
-					"enemy_mantaray"
-				}
-			},
-			[9] = {
-				{
-					3.3333333333333335,
-					0.5,
-					8910,
-					nil,
-					3,
-					true,
-					false,
-					3,
-					5,
-					"enemy_mantaray"
-				}
-			},
-			[10] = {
-				{
-					1.6666666666666667,
-					0.5,
-					234111213,
-					nil,
-					1,
-					true,
-					false,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					15,
-					0.5,
-					1910151617,
-					nil,
-					1,
-					true,
-					false,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					38.333333333333336,
-					0.5,
-					1910151617,
-					nil,
-					1,
-					true,
-					false,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					38.333333333333336,
-					0.5,
-					234111213,
-					nil,
-					1,
-					true,
-					false,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			},
-			[11] = {
-				{
-					0.6666666666666666,
-					0.5,
-					1,
-					nil,
-					2,
-					true,
-					false,
-					2,
-					2,
-					"enemy_mantaray"
-				}
-			},
-			[12] = {
-				{
-					3.3333333333333335,
-					0.5,
-					1910151617,
-					nil,
-					6,
-					false,
-					true,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					13.333333333333334,
-					0.5,
-					8765,
-					nil,
-					4,
-					false,
-					true,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					40,
-					0.5,
-					1910151617,
-					nil,
-					1,
-					true,
-					false,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					55,
-					0.5,
-					8765,
-					nil,
-					2,
-					true,
-					false,
-					8,
-					8,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			},
-			[13] = {
-				{
-					3.3333333333333335,
-					0.5,
-					1,
-					nil,
-					0,
-					true,
-					false,
-					1,
-					1,
-					"enemy_mantaray"
-				}
-			},
-			[15] = {
-				{
-					0.3333333333333333,
-					0.5,
-					110,
-					nil,
-					15,
-					false,
-					true,
-					0,
-					1,
-					"enemy_mantaray"
-				}
-			},
-			BOSS0 = {
-				{
-					0.3333333333333333,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "elvenform1",
-						path = 5
-					}
-				},
-				{
-					5,
-					0.5,
-					8765,
-					nil,
-					2,
-					true,
-					false,
-					10,
-					10,
-					"spider_son_of_mactans_drop_spawner"
-				},
-				{
-					16.666666666666668,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "arachnoparty",
-						path = 1
-					}
-				}
-			},
-			BOSS1 = {
-				{
-					0.3333333333333333,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "arachnoparty",
-						path = 5
-					}
-				},
-				{
-					3.3333333333333335,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "spider1",
-						path = 1
-					}
-				},
-				{
-					33.333333333333336,
-					0.5,
-					234111213,
-					nil,
-					10,
-					false,
-					true,
-					2,
-					3,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			},
-			BOSS2 = {
-				{
-					0.3333333333333333,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "spider2",
-						path = 3
-					}
-				},
-				{
-					3.3333333333333335,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "spider1",
-						path = 1
-					}
-				},
-				{
-					33.333333333333336,
-					0.5,
-					234111213,
-					nil,
-					10,
-					false,
-					true,
-					2,
-					3,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			},
-			BOSS3 = {
-				{
-					0.3333333333333333,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "spider2",
-						path = 7
-					}
-				},
-				{
-					3.3333333333333335,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "spider2",
-						path = 3
-					}
-				},
-				{
-					33.333333333333336,
-					0,
-					"packSpawner",
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					nil,
-					"PACK",
-					{
-						spawnPackContainer = "enemyPackConfigs",
-						spawnPackId = "spider1",
-						path = 3
-					}
-				},
-				{
-					8.333333333333334,
-					0.5,
-					"somAll",
-					nil,
-					15,
-					false,
-					true,
-					1,
-					1,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			}
-		},
-		{
-			[5] = {
-				{
-					0.3333333333333333,
-					1.5,
-					"somAll",
-					nil,
-					22,
-					false,
-					true,
-					2,
-					2,
-					"spider_son_of_mactans_drop_spawner"
-				}
-			}
-		},
-		{
+	waves = {{
+		[4] = {{1.6666666666666667, 0.5, 567, nil, 7, false, true, 2, 2, "enemy_mantaray"}, {23.333333333333332, 0.5, 567, nil, 6, false, true, 2, 2, "enemy_mantaray"}},
+		[5] = {{3.3333333333333335, 0.5, 151617, nil, 3, false, true, 1, 1, "spider_son_of_mactans_drop_spawner"}, {26.666666666666668, 0.5, 234111213, nil, 1, true, false, 1, 1, "spider_son_of_mactans_drop_spawner"}},
+		[8] = {{3.3333333333333335, 0.5, 567, nil, 6, false, true, 1, 2, "enemy_mantaray"}, {10, 0.5, 8910, nil, 6, false, true, 1, 2, "enemy_mantaray"}, {28.333333333333332, 0.5, 1234, nil, 5, true, false, 2, 2, "enemy_mantaray"}},
+		[9] = {{3.3333333333333335, 0.5, 8910, nil, 3, true, false, 3, 5, "enemy_mantaray"}},
+		[10] = {{1.6666666666666667, 0.5, 234111213, nil, 1, true, false, 1, 1, "spider_son_of_mactans_drop_spawner"}, {15, 0.5, 1910151617, nil, 1, true, false, 1, 1, "spider_son_of_mactans_drop_spawner"}, {38.333333333333336, 0.5, 1910151617, nil, 1, true, false, 1, 1, "spider_son_of_mactans_drop_spawner"}, {38.333333333333336, 0.5, 234111213, nil, 1, true, false, 1, 1, "spider_son_of_mactans_drop_spawner"}},
+		[11] = {{0.6666666666666666, 0.5, 1, nil, 2, true, false, 2, 2, "enemy_mantaray"}},
+		[12] = {{3.3333333333333335, 0.5, 1910151617, nil, 6, false, true, 1, 1, "spider_son_of_mactans_drop_spawner"}, {13.333333333333334, 0.5, 8765, nil, 4, false, true, 1, 1, "spider_son_of_mactans_drop_spawner"}, {40, 0.5, 1910151617, nil, 1, true, false, 1, 1, "spider_son_of_mactans_drop_spawner"}, {55, 0.5, 8765, nil, 2, true, false, 8, 8, "spider_son_of_mactans_drop_spawner"}},
+		[13] = {{3.3333333333333335, 0.5, 1, nil, 0, true, false, 1, 1, "enemy_mantaray"}},
+		[15] = {{0.3333333333333333, 0.5, 110, nil, 15, false, true, 0, 1, "enemy_mantaray"}},
+		BOSS0 = {{
+			0.3333333333333333,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
 			{
-				{
-					0.03333333333333333,
-					1.5,
-					1,
-					nil,
-					0,
-					false,
-					false,
-					5,
-					5,
-					"enemy_mantaray"
-				}
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "elvenform1",
+				path = 5
 			}
-		}
-	}
+		}, {5, 0.5, 8765, nil, 2, true, false, 10, 10, "spider_son_of_mactans_drop_spawner"}, {
+			16.666666666666668,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "arachnoparty",
+				path = 1
+			}
+		}},
+		BOSS1 = {{
+			0.3333333333333333,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "arachnoparty",
+				path = 5
+			}
+		}, {
+			3.3333333333333335,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "spider1",
+				path = 1
+			}
+		}, {33.333333333333336, 0.5, 234111213, nil, 10, false, true, 2, 3, "spider_son_of_mactans_drop_spawner"}},
+		BOSS2 = {{
+			0.3333333333333333,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "spider2",
+				path = 3
+			}
+		}, {
+			3.3333333333333335,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "spider1",
+				path = 1
+			}
+		}, {33.333333333333336, 0.5, 234111213, nil, 10, false, true, 2, 3, "spider_son_of_mactans_drop_spawner"}},
+		BOSS3 = {{
+			0.3333333333333333,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "spider2",
+				path = 7
+			}
+		}, {
+			3.3333333333333335,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "spider2",
+				path = 3
+			}
+		}, {
+			33.333333333333336,
+			0,
+			"packSpawner",
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			nil,
+			"PACK",
+			{
+				spawnPackContainer = "enemyPackConfigs",
+				spawnPackId = "spider1",
+				path = 3
+			}
+		}, {8.333333333333334, 0.5, "somAll", nil, 15, false, true, 1, 1, "spider_son_of_mactans_drop_spawner"}}
+	}, {
+		[5] = {{0.3333333333333333, 1.5, "somAll", nil, 22, false, true, 2, 2, "spider_son_of_mactans_drop_spawner"}}
+	}, {{{0.03333333333333333, 1.5, 1, nil, 0, false, false, 5, 5, "enemy_mantaray"}}}}
 }

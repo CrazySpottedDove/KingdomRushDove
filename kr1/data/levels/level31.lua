@@ -1,5 +1,4 @@
-﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level05.lua
-
+-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level05.lua
 local log = require("lib.klua.log"):new("level05")
 local signal = require("hump.signal")
 local A = require("achievements")
@@ -9,7 +8,6 @@ local S = require("sound_db")
 local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
-
 require("constants")
 
 local function fts(v)
@@ -18,44 +16,29 @@ end
 
 local v = V.v
 local level = {}
-
-level.required_sounds = {
-	"music_stage31",
-	"PiratesSounds",
-	"SpecialCutTreeSounds",
-	-- "SpecialMermaid"
-}
-level.required_textures = {
-	"go_enemies_desert",
-	"go_enemies_desert_b",
-	"go_stages_desert",
-	"go_stage31",
-	"go_stage31_bg",
-}
+level.required_sounds = {"music_stage31", "PiratesSounds", "SpecialCutTreeSounds"}
+-- "SpecialMermaid"
+level.required_textures = {"go_enemies_desert", "go_enemies_desert_b", "go_stages_desert", "go_stage31", "go_stage31_bg"}
 
 function level:init(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		self.locked_hero = false
 		self.locked_powers = {}
 		self.max_upgrade_level = 6
-		self.locked_towers = {
-		}
+		self.locked_towers = {}
 	elseif store.level_mode == GAME_MODE_HEROIC then
 		self.locked_hero = false
 		self.locked_powers = {}
 		self.max_upgrade_level = 3
-		self.locked_towers = {
-		}
+		self.locked_towers = {}
 	elseif store.level_mode == GAME_MODE_IRON then
 		self.locked_hero = false
 		self.locked_powers = {}
 		self.max_upgrade_level = 3
-		self.locked_towers = {
-			"tower_build_barrack",
-            "tower_build_engineer",
-		}
+		self.locked_towers = {"tower_build_barrack", "tower_build_engineer"}
 	end
-    self.unlock_towers = {"tower_dwaarp", "tower_barrack_pirates"}
+
+	self.unlock_towers = {"tower_dwaarp", "tower_barrack_pirates"}
 	store.level_terrain_type = TERRAIN_STYLE_DESERT
 	self.locations = LU.load_locations(store, self)
 end
@@ -70,23 +53,17 @@ function level:load(store)
 			if h.id == "13" then
 				LU.insert_tower(store, "tower_barrack_pirates", h.style, h.pos, h.rally_pos, nil, h.id)
 			elseif h.id == "18" then
-				-- LU.insert_tower(store, "tower_pirate_camp", h.style, h.pos, h.rally_pos, nil, h.id)
+			-- LU.insert_tower(store, "tower_pirate_camp", h.style, h.pos, h.rally_pos, nil, h.id)
 			else
 				LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
 			end
 		end
 	else
 		for _, h in pairs(self.locations.holders) do
-			if table.contains({
-				"10",
-				"17",
-				"4",
-				"13",
-				"9"
-			}, h.id) then
+			if table.contains({"10", "17", "4", "13", "9"}, h.id) then
 				LU.insert_tower(store, "tower_barrack_pirates", h.style, h.pos, h.rally_pos, nil, h.id)
 			elseif h.id == "18" then
-				-- LU.insert_tower(store, "tower_pirate_camp", h.style, h.pos, h.rally_pos, nil, h.id)
+			-- LU.insert_tower(store, "tower_pirate_camp", h.style, h.pos, h.rally_pos, nil, h.id)
 			else
 				LU.insert_tower(store, "tower_holder", h.style, h.pos, h.rally_pos, nil, h.id)
 			end
@@ -94,144 +71,43 @@ function level:load(store)
 	end
 
 	local x
-
 	self.nav_mesh = {
-		{
-			2,
-			x,
-			18,
-			3
-		},
-		{
-			x,
-			x,
-			1,
-			4
-		},
-		{
-			4,
-			1,
-			18,
-			5
-		},
-		{
-			x,
-			2,
-			3,
-			6
-		},
-		{
-			6,
-			3,
-			17,
-			8
-		},
-		{
-			9,
-			4,
-			8,
-			13
-		},
-		{
-			8,
-			17,
-			x,
-			11
-		},
-		{
-			6,
-			5,
-			7,
-			12
-		},
-		{
-			x,
-			x,
-			6,
-			14
-		},
-		{
-			11,
-			7,
-			x,
-			x
-		},
-		{
-			12,
-			7,
-			10,
-			16
-		},
-		{
-			13,
-			8,
-			11,
-			15
-		},
-		{
-			14,
-			6,
-			15,
-			x
-		},
-		{
-			9,
-			9,
-			13,
-			x
-		},
-		{
-			13,
-			12,
-			11,
-			16
-		},
-		{
-			15,
-			15,
-			11,
-			x
-		},
-		{
-			5,
-			18,
-			x,
-			7
-		},
-		{
-			3,
-			x,
-			x,
-			17
-		}
+		{2, x, 18, 3},
+		{x, x, 1, 4},
+		{4, 1, 18, 5},
+		{x, 2, 3, 6},
+		{6, 3, 17, 8},
+		{9, 4, 8, 13},
+		{8, 17, x, 11},
+		{6, 5, 7, 12},
+		{x, x, 6, 14},
+		{11, 7, x, x},
+		{12, 7, 10, 16},
+		{13, 8, 11, 15},
+		{14, 6, 15, x},
+		{9, 9, 13, x},
+		{13, 12, 11, 16},
+		{15, 15, 11, x},
+		{5, 18, x, 7},
+		{3, x, x, 17}
 	}
-
 	local e
-
 	-- e = E:create_entity("decal")
 	-- e.render.sprites[1].name = "decal_waves_big_boat_1"
 	-- e.pos = V.v(882, 595)
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal")
 	-- e.render.sprites[1].name = "decal_waves_small_boat_1"
 	-- e.pos = V.v(34, 562)
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal")
 	-- e.render.sprites[1].name = "decal_waves_small_boat_2"
 	-- e.pos = V.v(135, 563)
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal")
 	-- e.render.sprites[1].name = "decal_waves_small_boat_3"
 	-- e.pos = V.v(193, 603)
-
 	-- LU.queue_insert(store, e)
-
 	-- local water_sparks = {
 	-- 	V.v(286, 729),
 	-- 	V.v(364, 760),
@@ -250,57 +126,41 @@ function level:load(store)
 	-- 	V.v(1240 - REF_OX, 620),
 	-- 	V.v(1325 - REF_OX, 685)
 	-- }
-
 	-- for _, p in pairs(water_sparks) do
 	-- 	e = E:create_entity("decal")
 	-- 	e.render.sprites[1].name = "decal_water_sparks_idle"
 	-- 	e.pos = p
-
 	-- 	LU.queue_insert(store, e)
 	-- end
-
 	-- e = E:create_entity("decal_mermaid")
 	-- e.pos = V.v(45, 516)
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal_tucan")
 	-- e.pos = V.v(876, 292)
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal_flying_parrot")
 	-- e.pos = V.v(948 + REF_OX, 190)
 	-- e.delayed_play.min_delay = 10
 	-- e.delayed_play.max_delay = 30
 	-- e.render.sprites[1].prefix = "decal_parrot_1"
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal_flying_parrot")
 	-- e.pos = V.v(940 + REF_OX, 60)
 	-- e.delayed_play.min_delay = 40
 	-- e.delayed_play.max_delay = 40
 	-- e.render.sprites[1].prefix = "decal_parrot_2"
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal_flying_parrot")
 	-- e.pos = V.v(940 + REF_OX, 60)
 	-- e.delayed_play.min_delay = 40
 	-- e.delayed_play.max_delay = 40
 	-- e.render.sprites[1].prefix = "decal_parrot_3"
-
 	-- LU.queue_insert(store, e)
-
 	self.ship_door = E:create_entity("decal_ship_door")
 	self.ship_door.pos = V.v(620, 655)
-
 	LU.queue_insert(store, self.ship_door)
-
 	e = E:create_entity("pirate_cannons")
 	e.pos.x, e.pos.y = 545, 721
-
 	LU.queue_insert(store, e)
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -345,44 +205,14 @@ function level:load_palms(store)
 
 	for i = 3, 7 do
 		local e = E:create_entity("decal_palm_land")
-
 		e.render.sprites[1].name = "Stage05_000" .. i
 		e.render.sprites[1].animated = false
 		e.render.sprites[1].z = Z_BACKGROUND_COVERS - i
-
 		LU.queue_insert(store, e)
 		table.insert(self.palm_land_groups, e)
 	end
 
-	local palm_tree_coords = {
-		{
-			v(1213, 532),
-			v(1136, 512),
-			v(1059, 491),
-			v(1177, 473),
-			v(1091, 449),
-			v(1181, 444)
-		},
-		{
-			v(883, 498),
-			v(934, 474),
-			v(1002, 452),
-			v(938, 431)
-		},
-		{
-			v(810, 483),
-			v(858, 455),
-			v(823, 422)
-		},
-		{
-			v(749, 474),
-			v(747, 444)
-		},
-		{
-			v(734, 402)
-		}
-	}
-
+	local palm_tree_coords = {{v(1213, 532), v(1136, 512), v(1059, 491), v(1177, 473), v(1091, 449), v(1181, 444)}, {v(883, 498), v(934, 474), v(1002, 452), v(938, 431)}, {v(810, 483), v(858, 455), v(823, 422)}, {v(749, 474), v(747, 444)}, {v(734, 402)}}
 	self.palm_tree_groups = {}
 
 	for _, g in pairs(palm_tree_coords) do
@@ -390,9 +220,7 @@ function level:load_palms(store)
 
 		for _, c in pairs(g) do
 			local e = E:create_entity("decal_palm_tree")
-
 			e.pos = c
-
 			LU.queue_insert(store, e)
 			table.insert(tg, e)
 		end
@@ -405,14 +233,11 @@ function level:y_cut_palms(store)
 	local function cut_group(i)
 		for _, palm in pairs(self.palm_tree_groups[i]) do
 			palm.timed.disabled = nil
-
 			U.animation_start(palm, "cut", nil, store.tick_ts, false)
 		end
 
 		S:queue("SpecialCutTrees")
-
 		local land = self.palm_land_groups[i]
-
 		land.tween.disabled = nil
 		land.render.sprites[1].ts = store.tick_ts
 	end
@@ -428,41 +253,30 @@ function level:y_cut_palms(store)
 			phase = math.min(1, (store.tick_ts - start_ts) / duration)
 			entity.pos.x = U.ease_value(from.x, to.x, phase, easing)
 			entity.pos.y = U.ease_value(from.y, to.y, phase, easing)
-
 			coroutine.yield()
 		end
 	end
 
 	signal.emit("wave-notification", "icon", "enemy_executioner")
-
 	local lumberjack = E:create_entity("decal_lumberjack")
-
 	lumberjack.pos = v(1160, 440)
-
 	LU.queue_insert(store, lumberjack)
-
-	local cut_steps = {
-		{
-			x = 1079,
-			y = 430
-		},
-		{
-			x = 927,
-			y = 420
-		},
-		{
-			x = 837,
-			y = 408
-		},
-		{
-			x = 810,
-			y = 401
-		},
-		{
-			x = 760,
-			y = 395
-		}
-	}
+	local cut_steps = {{
+		x = 1079,
+		y = 430
+	}, {
+		x = 927,
+		y = 420
+	}, {
+		x = 837,
+		y = 408
+	}, {
+		x = 810,
+		y = 401
+	}, {
+		x = 760,
+		y = 395
+	}}
 
 	for i, step in ipairs(cut_steps) do
 		U.animation_start(lumberjack, "cut", nil, store.tick_ts, false)
@@ -474,16 +288,13 @@ function level:y_cut_palms(store)
 	end
 
 	LU.queue_remove(store, lumberjack)
-
 	local nodes = P:nearest_nodes(lumberjack.pos.x, lumberjack.pos.y)
 	local node = nodes[1]
 	local e = E:create_entity("enemy_executioner")
-
 	e.pos = lumberjack.pos
 	e.nav_path.pi = node[1]
 	e.nav_path.spi = 1
 	e.nav_path.ni = node[3] + 3
-
 	LU.queue_insert(store, e)
 	P:activate_path(3)
 end

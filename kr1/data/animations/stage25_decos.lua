@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage25_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage25_decos.lua
 local a = {
 	DLC_stage_03_missile_decal_tower_loop = {
 		prefix = "DLC_stage_03_missile_decal_tower",
@@ -37,5 +36,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

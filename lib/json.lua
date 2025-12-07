@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/json.lua
-
+-- chunkname: @./lib/json.lua
 local json = {
 	_version = "0.1.1"
 }
@@ -31,7 +30,6 @@ end
 
 local function encode_table(val, stack)
 	local res = {}
-
 	stack = stack or {}
 
 	if stack[val] then
@@ -60,7 +58,6 @@ local function encode_table(val, stack)
 		end
 
 		stack[val] = nil
-
 		return "[" .. table.concat(res, ",") .. "]"
 	else
 		for k, v in pairs(val) do
@@ -72,7 +69,6 @@ local function encode_table(val, stack)
 		end
 
 		stack[val] = nil
-
 		return "{" .. table.concat(res, ",") .. "}"
 	end
 end
@@ -275,17 +271,14 @@ end
 local function parse_array(str, i)
 	local res = {}
 	local n = 1
-
 	i = i + 1
 
 	while true do
 		local x
-
 		i = next_char(str, i, space_chars, true)
 
 		if str:sub(i, i) == "]" then
 			i = i + 1
-
 			break
 		end
 
@@ -293,9 +286,7 @@ local function parse_array(str, i)
 		res[n] = x
 		n = n + 1
 		i = next_char(str, i, space_chars, true)
-
 		local chr = str:sub(i, i)
-
 		i = i + 1
 
 		if chr == "]" then
@@ -312,17 +303,14 @@ end
 
 local function parse_object(str, i)
 	local res = {}
-
 	i = i + 1
 
 	while true do
 		local key, val
-
 		i = next_char(str, i, space_chars, true)
 
 		if str:sub(i, i) == "}" then
 			i = i + 1
-
 			break
 		end
 
@@ -341,9 +329,7 @@ local function parse_object(str, i)
 		val, i = parse(str, i)
 		res[key] = val
 		i = next_char(str, i, space_chars, true)
-
 		local chr = str:sub(i, i)
-
 		i = i + 1
 
 		if chr == "}" then
@@ -395,7 +381,6 @@ function json.decode(str)
 	end
 
 	local res, idx = parse(str, next_char(str, 1, space_chars, true))
-
 	idx = next_char(str, idx, space_chars, true)
 
 	if idx <= #str then

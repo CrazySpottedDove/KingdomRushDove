@@ -1,9 +1,7 @@
-﻿-- chunkname: @./kr1-desktop/data/kui_templates/game_gui_layer_user_item_freeze.lua
-
+-- chunkname: @./kr1-desktop/data/kui_templates/game_gui_layer_user_item_freeze.lua
 local SW = ctx.SW
 local WH = ctx.SH
 local F = 1
-
 return {
 	propagate_on_click = true,
 	propagate_on_down = true,

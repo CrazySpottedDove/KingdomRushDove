@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level22_data.lua
-
+-- chunkname: @./kr3/data/levels/level22_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 5,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvesForgottenTreasureAmbienceSound"
-			}
+			sounds = {"ElvesForgottenTreasureAmbienceSound"}
 		},
 		{
 			template = "decal",
@@ -854,77 +851,47 @@ return {
 		{
 			template = "lava_fireball_controller",
 			launch_cooldown_boss = 3,
-			duration = {
-				30,
-				30,
-				1e+99
-			},
-			launch_active = {
-				{
-					nil,
-					nil,
-					true,
-					nil,
-					nil,
-					true,
-					nil,
-					nil,
-					true,
-					nil,
-					nil,
-					true,
-					nil,
-					true,
-					true
-				},
-				{},
-				{
-					true
-				}
-			},
-			launch_cooldown = {
-				5,
-				3,
-				8
-			},
-			launch_points = {
-				{
-					x = 37,
-					y = 258
-				},
-				{
-					x = 45,
-					y = 210
-				},
-				{
-					x = 37,
-					y = 500
-				},
-				{
-					x = 63,
-					y = 537
-				},
-				{
-					x = 45,
-					y = 572
-				}
-			}
+			duration = {30, 30, 1e+99},
+			launch_active = {{
+				nil,
+				nil,
+				true,
+				nil,
+				nil,
+				true,
+				nil,
+				nil,
+				true,
+				nil,
+				nil,
+				true,
+				nil,
+				true,
+				true
+			}, {}, {true}},
+			launch_cooldown = {5, 3, 8},
+			launch_points = {{
+				x = 37,
+				y = 258
+			}, {
+				x = 45,
+				y = 210
+			}, {
+				x = 37,
+				y = 500
+			}, {
+				x = 63,
+				y = 537
+			}, {
+				x = 45,
+				y = 572
+			}}
 		},
 		{
 			load_file = "level70_spawner",
 			template = "mega_spawner",
-			spawn_nodes = {
-				45,
-				95,
-				125,
-				145
-			},
-			spawn_waves = {
-				"Boss_Path_1",
-				"Boss_Path_2",
-				"Boss_Path_3",
-				"Boss_Path_4"
-			}
+			spawn_nodes = {45, 95, 125, 145},
+			spawn_waves = {"Boss_Path_1", "Boss_Path_2", "Boss_Path_3", "Boss_Path_4"}
 		},
 		{
 			["tower.holder_id"] = "11",
@@ -1096,110 +1063,27 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_engineer",
-				"tower_build_archer"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_engineer", "tower_build_archer"}
+	}},
 	nav_mesh = {
-		{
-			4,
-			nil,
-			7,
-			2
-		},
-		{
-			4,
-			1,
-			7,
-			5
-		},
-		{
-			nil,
-			4,
-			5,
-			6
-		},
-		{
-			nil,
-			1,
-			2,
-			3
-		},
-		{
-			8,
-			2,
-			10,
-			11
-		},
-		{
-			nil,
-			3,
-			8
-		},
-		{
-			1,
-			nil,
-			12,
-			9
-		},
-		{
-			6,
-			5,
-			5,
-			11
-		},
-		{
-			5,
-			7,
-			12,
-			10
-		},
-		{
-			5,
-			9,
-			12,
-			11
-		},
-		{
-			8,
-			5,
-			10
-		},
-		{
-			9,
-			7,
-			nil,
-			10
-		}
+		{4, nil, 7, 2},
+		{4, 1, 7, 5},
+		{nil, 4, 5, 6},
+		{nil, 1, 2, 3},
+		{8, 2, 10, 11},
+		{nil, 3, 8},
+		{1, nil, 12, 9},
+		{6, 5, 5, 11},
+		{5, 7, 12, 10},
+		{5, 9, 12, 11},
+		{8, 5, 10},
+		{9, 7, nil, 10}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage70",
-		"ElvesForgottenTreasureAmbienceSounds",
-		"ElvesCreepScreecher",
-		"ElvesForgottenTreasureShadowSpawnSounds",
-		"ElvesForgottenTreasureDarkSpitterSounds",
-		"ElvesForgottenTreasureGrimDevourerSounds",
-		"ElvesForgottenTreasureShadowChampionSounds",
-		"ElvesForgottenTreasureBalrogSounds",
-		"ElvesCreepScreecher",
-		"ElvesHeroBolverk"
-	},
-	required_textures = {
-		"go_enemies_ancient_metropolis",
-		"go_enemies_forgotten_treasures",
-		"go_stage70",
-		"go_stage70_bg",
-		"go_stages_forgotten_treasures",
-		"go_hero_bolverk"
-	}
+	required_sounds = {"music_stage70", "ElvesForgottenTreasureAmbienceSounds", "ElvesCreepScreecher", "ElvesForgottenTreasureShadowSpawnSounds", "ElvesForgottenTreasureDarkSpitterSounds", "ElvesForgottenTreasureGrimDevourerSounds", "ElvesForgottenTreasureShadowChampionSounds", "ElvesForgottenTreasureBalrogSounds", "ElvesCreepScreecher", "ElvesHeroBolverk"},
+	required_textures = {"go_enemies_ancient_metropolis", "go_enemies_forgotten_treasures", "go_stage70", "go_stage70_bg", "go_stages_forgotten_treasures", "go_hero_bolverk"}
 }

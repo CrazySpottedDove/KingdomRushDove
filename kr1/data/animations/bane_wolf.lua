@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/bane_wolf.lua
-
+-- chunkname: @./kr5/data/animations/bane_wolf.lua
 local a = {
 	bane_wolf_creep_idle = {
 		prefix = "bane_wolf_creep",
@@ -32,5 +31,4 @@ local a = {
 		from = 70
 	}
 }
-
 return a

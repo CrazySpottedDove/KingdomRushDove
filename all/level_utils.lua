@@ -1,9 +1,6 @@
-﻿-- chunkname: @./all/level_utils.lua
-
+-- chunkname: @./all/level_utils.lua
 local log = require("lib.klua.log"):new("level_utils")
-
 require("lib.klua.table")
-
 local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local V = require("lib.klua.vector")
@@ -16,9 +13,10 @@ local serpent = require("serpent")
 local bit = require("bit")
 local bor = bit.bor
 local LU = {}
+
 local function is_file(path)
-    local info = love.filesystem.getInfo(path)
-    return info and info.type == "file"
+	local info = love.filesystem.getInfo(path)
+	return info and info.type == "file"
 end
 
 function LU.queue_insert(store, e)
@@ -32,17 +30,13 @@ end
 function LU.eval_get_prop(e, expr)
 	local f = loadstring("return e." .. expr)
 	local env = {}
-
 	env.e = e
-
 	setfenv(f, env)
-
 	return f()
 end
 
 function LU.eval_set_prop(e, prop_name, value)
 	log.error("prop_name:%s prop_value:%s", prop_name, value)
-
 	local repr
 
 	if type(value) == "string" then
@@ -53,9 +47,7 @@ function LU.eval_set_prop(e, prop_name, value)
 
 	local f = loadstring("e." .. prop_name .. "=" .. repr)
 	local env = {}
-
 	env.e = e
-
 	setfenv(f, env)
 	f()
 end
@@ -66,14 +58,12 @@ function LU.load_level(store, name)
 
 	if not is_file(fn) then
 		log.debug("Level file does not exist for %s", fn)
-
 		level = {}
 	else
 		local f, err = love.filesystem.load(fn)
 
 		if err then
 			log.error("Error loading level %s: %s", fn, err)
-
 			return nil
 		end
 
@@ -97,18 +87,20 @@ function LU.load_level(store, name)
 			"pan_extension",
 			"show_comic_idx",
 			"nav_mesh",
-            "unlock_towers"
+			"unlock_towers"
 		}) do
 			level[n] = level.data[n]
 		end
 	end
 
-    if not level["unlock_towers"] then
-        level.unlock_towers = {}
-    end
-    if not level["locked_towers"] then
-        level.locked_towers = {}
-    end
+	if not level["unlock_towers"] then
+		level.unlock_towers = {}
+	end
+
+	if not level["locked_towers"] then
+		level.locked_towers = {}
+	end
+
 	return level
 end
 
@@ -117,12 +109,10 @@ function LU.eval_file(filename)
 
 	if err then
 		log.info("Error loading file %s: %s", fullname, err)
-
 		return nil, err
 	end
 
 	local env = {}
-
 	env.V = V
 	env.v = V.v
 	env.r = V.r
@@ -133,16 +123,12 @@ function LU.eval_file(filename)
 	end
 
 	env.math = math
-
 	local cf = KR_PATH_ALL .. "/constants.lua"
 	local c = love.filesystem.load(cf)
-
 	setfenv(c, env)
 	c()
 	setfenv(f, env)
-
 	local data = f()
-
 	return data
 end
 
@@ -151,7 +137,7 @@ function LU.load_data(store)
 	local data = LU.eval_file(fn)
 
 	if not data then
-        log.error("Level data file %s could not be loaded", fn)
+		log.error("Level data file %s could not be loaded", fn)
 		return nil
 	end
 
@@ -177,7 +163,6 @@ function LU.load_locations(store)
 
 	if err then
 		log.info("Level has no locations file %s: %s", fn, err)
-
 		return nil
 	end
 
@@ -195,7 +180,6 @@ function LU.load_locations(store)
 	table.sort(l.exits, function(o1, o2)
 		return o1.id < o2.id
 	end)
-
 	return l
 end
 
@@ -226,20 +210,19 @@ function LU.insert_entities(store, items, store_back_references)
 						if string.find(k, "%.") then
 							local kf = loadstring("e." .. k .. " = vv")
 							local env = {}
-
 							env.e = e
 							env.k = k
 							env.vv = vv
-
 							setfenv(kf, env)
 							kf()
 						else
 							e[k] = vv
 						end
-                        if k == "preset" then
-                            v(e)
-                        end
-                    end
+
+						if k == "preset" then
+							v(e)
+						end
+					end
 				end
 
 				if (e.editor and e.editor.game_mode ~= 0 and (e.editor.game_mode ~= store.level_mode)) or (item.editor_game_mode and item.editor_game_mode ~= store.level_mode) then
@@ -252,7 +235,6 @@ function LU.insert_entities(store, items, store_back_references)
 					if e.sound_events and e.sound_events.mute_on_level_insert then
 						e.sound_events.insert = nil
 					end
-
 
 					LU.queue_insert(store, e)
 
@@ -277,13 +259,11 @@ end
 function LU.insert_defend_points(store, points, style)
 	if not points then
 		log.info("store.level.locations.exits does not exist")
-
-		return
+		return 
 	end
 
 	for _, p in pairs(points) do
 		local e = E:create_entity("decal_defend_point")
-
 		e.pos.x, e.pos.y = p.pos.x, p.pos.y
 
 		if style == TERRAIN_STYLE_UNDERGROUND then
@@ -291,7 +271,6 @@ function LU.insert_defend_points(store, points, style)
 		end
 
 		e.editor = nil
-
 		LU.queue_insert(store, e)
 	end
 end
@@ -299,21 +278,18 @@ end
 function LU.insert_holders(store, holders, templates)
 	if not holders then
 		log.info("store.level.locations.holders does not exist")
-
-		return
+		return 
 	end
 
 	for _, hp in pairs(holders) do
 		local id = hp.id
 		local template = templates and templates[id] or "tower_holder"
-
 		LU.insert_tower(store, template, hp.style, hp.pos, hp.rally_pos, nil, hp.id)
 	end
 end
 
 function LU.insert_tower(store, template, style, pos, rally_pos, spent, holder_id)
 	local e = E:create_entity(template)
-
 	e.pos = V.v(pos.x, pos.y)
 	e.tower.spent = spent and spent or 0
 	e.tower.terrain_style = TERRAIN_STYLES[style]
@@ -330,13 +306,11 @@ function LU.insert_tower(store, template, style, pos, rally_pos, spent, holder_i
 	end
 
 	LU.queue_insert(store, e)
-
 	return e
 end
 
 function LU.insert_background(store, name, z, sort_y, quad_trim)
 	local e = E:create_entity("decal")
-
 	e.name = "background"
 	e.pos.x, e.pos.y = REF_W * 0.5, REF_H * 0.5
 	e.render.sprites[1].anchor = V.v(0.5, 0.5)
@@ -348,14 +322,11 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 	if quad_trim then
 		local ss = I:s(e.render.sprites[1].name)
 		local t = ss.trim
-
 		t[1] = t[1] - quad_trim
 		t[2] = t[2] - quad_trim
 		t[3] = t[3] + 2 * quad_trim
 		t[4] = t[4] + 2 * quad_trim
-
 		local q = ss.f_quad
-
 		q[1] = q[1] - quad_trim
 		q[2] = q[2] - quad_trim
 		q[3] = q[3] + 2 * quad_trim
@@ -364,83 +335,85 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 	end
 
 	LU.queue_insert(store, e)
-
 	return e
 end
 
 function LU.insert_hero(store, name, pos, force_full_level)
 	if store.level.locked_hero then
 		log.debug("hero locked for level. will not insert")
-		return
+		return 
 	end
 
-    if name and pos then
-        local hero = E:create_entity(name)
-        hero.pos = V.vclone(pos)
-        hero.nav_rally.center = V.vclone(hero.pos)
-        hero.nav_rally.pos = hero.nav_rally.center
-        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
-            if hero.hero.fn_level_up then
-                for i = 1, 10 do
-                    hero.hero.level = i
-                    hero.hero.fn_level_up(hero, store)
-                end
-            else
-                hero.hero.level = 10
-            end
-        end
-        hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
-        hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
-        LU.queue_insert(store, hero)
-        signal.emit("hero-added-no-panel", hero)
-        return
-    end
+	if name and pos then
+		local hero = E:create_entity(name)
+		hero.pos = V.vclone(pos)
+		hero.nav_rally.center = V.vclone(hero.pos)
+		hero.nav_rally.pos = hero.nav_rally.center
+
+		if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
+			if hero.hero.fn_level_up then
+				for i = 1, 10 do
+					hero.hero.level = i
+					hero.hero.fn_level_up(hero, store)
+				end
+			else
+				hero.hero.level = 10
+			end
+		end
+
+		hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
+		hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
+		LU.queue_insert(store, hero)
+		signal.emit("hero-added-no-panel", hero)
+		return 
+	end
 
 	local template_names
+	template_names = store.selected_hero and store.selected_hero or GS.default_hero and {GS.default_hero}
 
-    template_names = store.selected_hero and store.selected_hero or GS.default_hero and {GS.default_hero}
+	if not template_names then
+		store.level.locked_hero = true
+		return 
+	end
 
-    if not template_names then
-        store.level.locked_hero = true
-        return
-    end
-    for _, template_name in ipairs(template_names) do
-        local hero = E:create_entity(template_name)
-        local pos
-        if not hero then
-            log.error("Could not create hero named %s", template_name)
-            return
-        end
+	for _, template_name in ipairs(template_names) do
+		local hero = E:create_entity(template_name)
+		local pos
 
-        if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
-            pos = store.level.custom_spawn_pos
-        else
-            pos = store.level.locations.exits[1].pos
-        end
+		if not hero then
+			log.error("Could not create hero named %s", template_name)
+			return 
+		end
 
-        hero.pos = V.vclone(pos)
-        hero.nav_rally.center = V.vclone(hero.pos)
-        hero.nav_rally.pos = hero.nav_rally.center
+		if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
+			pos = store.level.custom_spawn_pos
+		else
+			pos = store.level.locations.exits[1].pos
+		end
 
-        store.main_hero = hero
-        hero.hero.xp = 0
-        hero.hero.level = 1
-        if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
-            if hero.hero.fn_level_up then
-                for i = 1, 10 do
-                    hero.hero.level = i
-                    hero.hero.fn_level_up(hero, store)
-                end
-            else
-                hero.hero.level = 10
-            end
-        end
-        hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
-        hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
+		hero.pos = V.vclone(pos)
+		hero.nav_rally.center = V.vclone(hero.pos)
+		hero.nav_rally.pos = hero.nav_rally.center
+		store.main_hero = hero
+		hero.hero.xp = 0
+		hero.hero.level = 1
 
-        LU.queue_insert(store, hero)
-        signal.emit("hero-added", hero)
-    end
+		if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
+			if hero.hero.fn_level_up then
+				for i = 1, 10 do
+					hero.hero.level = i
+					hero.hero.fn_level_up(hero, store)
+				end
+			else
+				hero.hero.level = 10
+			end
+		end
+
+		hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
+		hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
+		LU.queue_insert(store, hero)
+		signal.emit("hero-added", hero)
+	end
 end
 
 function LU.list_entities(t, template_name, tag)
@@ -468,7 +441,6 @@ function LU.has_alive_enemies(store, excluded_templates)
 				for _, g in pairs(graveyards) do
 					if g.interrupt then
 						wait_for_graveyard = false
-
 						goto label_23_0
 					else
 						wait_time = math.max(wait_time, g.graveyard.dead_time + g.graveyard.check_interval)
@@ -479,34 +451,27 @@ function LU.has_alive_enemies(store, excluded_templates)
 
 				if wait_time < store.tick_ts - store._graveyards_check_ts then
 					log.debug("graveyard wait done")
-
 					wait_for_graveyard = false
 				else
 					wait_for_graveyard = true
 				end
 			else
 				log.debug("starting new graveyard timeout check")
-
 				store._graveyards_check_ts = store.tick_ts
 				wait_for_graveyard = true
 			end
 		end
 	elseif store._graveyards_check_ts then
 		log.debug("enemies appear. resetting graveyard timeout check")
-
 		store._graveyards_check_ts = nil
 	end
 
 	::label_23_0::
-
 	return #store_enemies > 0 or #pending_enemies > 0 or wait_for_graveyard, #store_enemies, #pending_enemies
 end
 
 function LU.kill_all_enemies(store, discard_gold, keep_spawners)
-	for _, list in pairs({
-		store.enemies,
-		store.pending_inserts
-	}) do
+	for _, list in pairs({store.enemies, store.pending_inserts}) do
 		local all = E:filter(list, "enemy")
 
 		for _, e in pairs(all) do
@@ -531,9 +496,7 @@ function LU.kill_all_enemies(store, discard_gold, keep_spawners)
 			end
 		end
 
-		local soldier_names = {
-			"soldier_rag"
-		}
+		local soldier_names = {"soldier_rag"}
 		local entities = table.filter(list, function(k, v)
 			return table.contains(soldier_names, v.template_name)
 		end)
@@ -549,10 +512,7 @@ function LU.kill_all_enemies(store, discard_gold, keep_spawners)
 				e.spawner.interrupt = true
 			end
 
-			local names = {
-				"graveyard_controller",
-				"swamp_controller"
-			}
+			local names = {"graveyard_controller", "swamp_controller"}
 			local entities = table.filter(list, function(k, v)
 				return table.contains(names, v.template_name)
 			end)
@@ -562,11 +522,7 @@ function LU.kill_all_enemies(store, discard_gold, keep_spawners)
 			end
 		end
 
-		local interrupt_names = {
-			"twister",
-			"mod_timelapse",
-			"aura_bullet_balrog"
-		}
+		local interrupt_names = {"twister", "mod_timelapse", "aura_bullet_balrog"}
 		local entities = table.filter(list, function(k, v)
 			return table.contains(interrupt_names, v.template_name)
 		end)
@@ -575,13 +531,7 @@ function LU.kill_all_enemies(store, discard_gold, keep_spawners)
 			e.interrupt = true
 		end
 
-		local remove_names = {
-			"nav_faerie",
-			"mod_drider_poison",
-			"decal_drider_cocoon",
-			"mod_dark_spitters",
-			"mod_balrog"
-		}
+		local remove_names = {"nav_faerie", "mod_drider_poison", "decal_drider_cocoon", "mod_dark_spitters", "mod_balrog"}
 		local entities = table.filter(list, function(k, v)
 			return table.contains(remove_names, v.template_name)
 		end)

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_ghost.lua
-
+-- chunkname: @./kr5/data/animations/tower_ghost.lua
 local a = {
 	ghost_tower_swap_indicator_particles_idle = {
 		prefix = "ghost_tower_swap_indicator_particles",
@@ -297,5 +296,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

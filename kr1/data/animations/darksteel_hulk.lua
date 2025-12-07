@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/darksteel_hulk.lua
-
+-- chunkname: @./kr5/data/animations/darksteel_hulk.lua
 local a = {
 	darksteel_hulk_creep_idle = {
 		prefix = "darksteel_hulk_creep",
@@ -62,5 +61,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

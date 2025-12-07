@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level20_data.lua
-
+-- chunkname: @./kr1/data/levels/level20_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -84,82 +83,18 @@ return {
 		},
 		{
 			template = "burning_floor_controller",
-			cooldowns = {
-				{
-					[4] = {
-						3,
-						40
-					},
-					[5] = {
-						3,
-						40
-					},
-					[8] = {
-						3,
-						20
-					},
-					[9] = {
-						3,
-						30
-					},
-					[10] = {
-						3,
-						40
-					},
-					[13] = {
-						3,
-						20
-					},
-					[15] = {
-						20,
-						40
-					},
-					[16] = {
-						3,
-						5
-					},
-					[17] = {
-						3,
-						5
-					},
-					[18] = {
-						3,
-						5
-					}
-				},
-				{
-					{
-						1,
-						10
-					},
-					{
-						15,
-						25
-					},
-					{
-						15,
-						50
-					},
-					{
-						5,
-						40
-					},
-					{
-						15,
-						120
-					},
-					{
-						20,
-						240
-					}
-				},
-				{
-					{
-						5,
-						9999
-					}
-				}
-			},
+			cooldowns = {{
+				[4] = {3, 40},
+				[5] = {3, 40},
+				[8] = {3, 20},
+				[9] = {3, 30},
+				[10] = {3, 40},
+				[13] = {3, 20},
+				[15] = {20, 40},
+				[16] = {3, 5},
+				[17] = {3, 5},
+				[18] = {3, 5}
+			}, {{1, 10}, {15, 25}, {15, 50}, {5, 40}, {15, 120}, {20, 240}}, {{5, 9999}}},
 			pos = {
 				x = 254,
 				y = 262
@@ -609,102 +544,25 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_mage"
-			}
+			locked_towers = {"tower_build_mage"}
 		}
 	},
 	nav_mesh = {
-		{
-			2,
-			5,
-			4
-		},
-		{
-			3,
-			7,
-			1
-		},
-		{
-			11,
-			9,
-			2
-		},
-		{
-			1,
-			8,
-			nil,
-			1
-		},
-		{
-			7,
-			12,
-			6,
-			1
-		},
-		{
-			5,
-			12,
-			8,
-			1
-		},
-		{
-			9,
-			12,
-			5,
-			2
-		},
-		{
-			6,
-			13,
-			4,
-			4
-		},
-		{
-			10,
-			14,
-			7,
-			3
-		},
-		{
-			11,
-			14,
-			9,
-			9
-		},
-		{
-			nil,
-			14,
-			10,
-			3
-		},
-		{
-			14,
-			nil,
-			13,
-			7
-		},
-		{
-			12,
-			nil,
-			nil,
-			8
-		},
-		{
-			10,
-			nil,
-			12,
-			9
-		}
+		{2, 5, 4},
+		{3, 7, 1},
+		{11, 9, 2},
+		{1, 8, nil, 1},
+		{7, 12, 6, 1},
+		{5, 12, 8, 1},
+		{9, 12, 5, 2},
+		{6, 13, 4, 4},
+		{10, 14, 7, 3},
+		{11, 14, 9, 9},
+		{nil, 14, 10, 3},
+		{14, nil, 13, 7},
+		{12, nil, nil, 8},
+		{10, nil, 12, 9}
 	},
-	required_sounds = {
-		"music_stage20"
-	},
-	required_textures = {
-		"go_enemies_wastelands",
-		"go_enemies_torment",
-		"go_stages_rotten_torment",
-		"go_stage20",
-		"go_stage20_bg"
-	}
+	required_sounds = {"music_stage20"},
+	required_textures = {"go_enemies_wastelands", "go_enemies_torment", "go_stages_rotten_torment", "go_stage20", "go_stage20_bg"}
 }

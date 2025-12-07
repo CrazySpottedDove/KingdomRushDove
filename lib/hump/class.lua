@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/hump/class.lua
-
+-- chunkname: @./lib/hump/class.lua
 local function include_helper(to, from, seen)
 	if from == nil then
 		return to
@@ -32,13 +31,10 @@ end
 
 local function new(class)
 	class = class or {}
-
 	local inc = class.__includes or {}
 
 	if getmetatable(inc) then
-		inc = {
-			inc
-		}
+		inc = {inc}
 	end
 
 	for _, other in ipairs(inc) do
@@ -51,17 +47,14 @@ local function new(class)
 
 	class.__index = class
 	class.init = class.init or class[1] or function()
-		return
+		return 
 	end
 	class.include = class.include or include
 	class.clone = class.clone or clone
-
 	return setmetatable(class, {
 		__call = function(c, ...)
 			local o = setmetatable({}, c)
-
 			o:init(...)
-
 			return o
 		end
 	})
@@ -72,10 +65,7 @@ if class_commons ~= false and not common then
 
 	function common.class(name, prototype, parent)
 		return new({
-			__includes = {
-				prototype,
-				parent
-			}
+			__includes = {prototype, parent}
 		})
 	end
 

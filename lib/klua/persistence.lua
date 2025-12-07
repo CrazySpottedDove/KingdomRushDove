@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/klua/persistence.lua
-
+-- chunkname: @./lib/klua/persistence.lua
 local write, writeIndent, writers, refCount, stringWriter
 local persistence = {}
 
@@ -44,13 +43,11 @@ function persistence.serialize(file, ...)
 		if count > 1 then
 			if not wrote_def then
 				file:write("local multiRefObjects = {\n")
-
 				wrote_def = true
 			end
 
 			objRefIdx = objRefIdx + 1
 			objRefNames[obj] = objRefIdx
-
 			file:write("{};")
 		end
 	end
@@ -90,13 +87,9 @@ end
 
 function persistence.serialize_to_string(...)
 	local sw = stringWriter.open()
-
 	persistence.serialize(sw, ...)
-
 	local str = tostring(sw)
-
 	sw:close()
-
 	return str
 end
 
@@ -145,7 +138,6 @@ writers = {
 			file:write("multiRefObjects[" .. refIdx .. "]")
 		else
 			file:write("{\n")
-
 			local keys = {}
 
 			for k, v in pairs(item) do
@@ -168,7 +160,6 @@ writers = {
 
 			for _, k in pairs(keys) do
 				local v = item[k]
-
 				writeIndent(file, level + 1)
 				file:write("[")
 				write(file, k, level + 1, objRefNames)
@@ -206,7 +197,6 @@ writers = {
 	end
 }
 stringWriter = {}
-
 local metat = {
 	__index = {}
 }
@@ -215,9 +205,7 @@ function stringWriter.open(...)
 	local sw = {
 		buffer = {}
 	}
-
 	setmetatable(sw, metat)
-
 	return sw
 end
 

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level15_data.lua
-
+-- chunkname: @./kr3/data/levels/level15_data.lua
 return {
 	show_comic_idx = 4,
 	locked_hero = false,
@@ -72,9 +71,7 @@ return {
 		},
 		{
 			template = "background_sounds",
-			sounds = {
-				"MetropolisAmbienceSoundFourteenFifteen"
-			}
+			sounds = {"MetropolisAmbienceSoundFourteenFifteen"}
 		},
 		{
 			template = "birds_formation_controller",
@@ -83,15 +80,11 @@ return {
 				x = -222,
 				y = 254
 			},
-			names = {
-				"decal_bird_duck"
-			},
-			offsets = {
-				{
-					x = 0,
-					y = 0
-				}
-			},
+			names = {"decal_bird_duck"},
+			offsets = {{
+				x = 0,
+				y = 0
+			}},
 			to = {
 				x = 449,
 				y = 825
@@ -104,25 +97,17 @@ return {
 				x = 633,
 				y = -61
 			},
-			names = {
-				"decal_bird_red",
-				"decal_bird_red",
-				"decal_bird_red"
-			},
-			offsets = {
-				{
-					x = 0,
-					y = 0
-				},
-				{
-					x = -14,
-					y = -22
-				},
-				{
-					x = -31,
-					y = -44
-				}
-			},
+			names = {"decal_bird_red", "decal_bird_red", "decal_bird_red"},
+			offsets = {{
+				x = 0,
+				y = 0
+			}, {
+				x = -14,
+				y = -22
+			}, {
+				x = -31,
+				y = -44
+			}},
 			to = {
 				x = 1479,
 				y = 738
@@ -135,15 +120,11 @@ return {
 				x = 357,
 				y = -65
 			},
-			names = {
-				"decal_bird_duck"
-			},
-			offsets = {
-				{
-					x = 0,
-					y = 0
-				}
-			},
+			names = {"decal_bird_duck"},
+			offsets = {{
+				x = 0,
+				y = 0
+			}},
 			to = {
 				x = -222,
 				y = 520
@@ -535,17 +516,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 3,
-			detection_paths = {
-				2,
-				9,
-				4,
-				11
-			},
-			detection_tags = {
-				3,
-				1,
-				4
-			},
+			detection_paths = {2, 9, 4, 11},
+			detection_tags = {3, 1, 4},
 			pos = {
 				x = 428,
 				y = 265
@@ -554,14 +526,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 6,
-			detection_paths = {
-				6,
-				13
-			},
-			detection_tags = {
-				6,
-				4
-			},
+			detection_paths = {6, 13},
+			detection_tags = {6, 4},
 			pos = {
 				x = 945,
 				y = 483
@@ -570,16 +536,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 2,
-			detection_paths = {
-				1,
-				3,
-				8,
-				10
-			},
-			detection_tags = {
-				2,
-				1
-			},
+			detection_paths = {1, 3, 8, 10},
+			detection_tags = {2, 1},
 			pos = {
 				x = 157,
 				y = 503
@@ -588,16 +546,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 5,
-			detection_paths = {
-				5,
-				7,
-				12,
-				14
-			},
-			detection_tags = {
-				5,
-				4
-			},
+			detection_paths = {5, 7, 12, 14},
+			detection_tags = {5, 4},
 			pos = {
 				x = 734,
 				y = 516
@@ -606,9 +556,7 @@ return {
 		{
 			["editor.tag"] = 4,
 			template = "decal_metropolis_portal",
-			detection_tags = {
-				4
-			},
+			detection_tags = {4},
 			pos = {
 				x = 915,
 				y = 619
@@ -617,9 +565,7 @@ return {
 		{
 			["editor.tag"] = 1,
 			template = "decal_metropolis_portal",
-			detection_tags = {
-				1
-			},
+			detection_tags = {1},
 			pos = {
 				x = 230,
 				y = 628
@@ -1008,97 +954,25 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_engineer"
-			}
-		}
-	},
-    unlock_towers = {"tower_drow"},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_archer", "tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_drow"},
 	nav_mesh = {
-		{
-			11,
-			2,
-			8
-		},
-		{
-			14,
-			nil,
-			3,
-			1
-		},
-		{
-			2,
-			nil,
-			nil,
-			8
-		},
-		{
-			7,
-			nil,
-			5,
-			13
-		},
-		{
-			4,
-			nil,
-			14,
-			13
-		},
-		{
-			7,
-			7,
-			13,
-			10
-		},
-		{
-			nil,
-			nil,
-			4,
-			6
-		},
-		{
-			1,
-			3
-		},
-		{
-			10,
-			13,
-			12
-		},
-		{
-			6,
-			6,
-			13,
-			9
-		},
-		{
-			12,
-			14,
-			1,
-			12
-		},
-		{
-			9,
-			11,
-			11
-		},
-		{
-			10,
-			4,
-			12,
-			9
-		},
-		{
-			5,
-			nil,
-			2,
-			11
-		}
+		{11, 2, 8},
+		{14, nil, 3, 1},
+		{2, nil, nil, 8},
+		{7, nil, 5, 13},
+		{4, nil, 14, 13},
+		{7, 7, 13, 10},
+		{nil, nil, 4, 6},
+		{1, 3},
+		{10, 13, 12},
+		{6, 6, 13, 9},
+		{12, 14, 1, 12},
+		{9, 11, 11},
+		{10, 4, 12, 9},
+		{5, nil, 2, 11}
 	},
 	pan_extension = {
 		bottom = -40,
@@ -1120,11 +994,5 @@ return {
 		"ElvesLevelFourteen",
 		"ElvesLevelFifteenSounds"
 	},
-	required_textures = {
-		"go_enemies_ancient_metropolis",
-		"go_enemies_mactans_malicia",
-		"go_stage63",
-		"go_stage63_bg",
-		"go_stages_ancient_metropolis"
-	}
+	required_textures = {"go_enemies_ancient_metropolis", "go_enemies_mactans_malicia", "go_stage63", "go_stage63_bg", "go_stages_ancient_metropolis"}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level07_data.lua
-
+-- chunkname: @./kr1/data/levels/level07_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -75,9 +74,7 @@ return {
 				x = 231,
 				y = 282
 			},
-			track_names = {
-				"2"
-			}
+			track_names = {"2"}
 		},
 		{
 			["render.sprites[1].flip_x"] = true,
@@ -86,9 +83,7 @@ return {
 				x = 768,
 				y = 490
 			},
-			track_names = {
-				"1"
-			}
+			track_names = {"1"}
 		},
 		{
 			["editor.r"] = 1.5882496193148,
@@ -403,119 +398,50 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			from = 75,
-			path_id = 2
-		},
-		{
-			from = 75,
-			path_id = 3
-		},
-		{
-			from = 1,
-			to = 5,
-			path_id = 4
-		},
-		{
-			from = 1,
-			to = 5,
-			path_id = 5
-		}
-	},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 4,
-			locked_towers = {
-
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 4,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_engineer",
-			}
-		}
-	},
-    unlock_towers = {"tower_musketeer"},
+	invalid_path_ranges = {{
+		from = 75,
+		path_id = 2
+	}, {
+		from = 75,
+		path_id = 3
+	}, {
+		from = 1,
+		to = 5,
+		path_id = 4
+	}, {
+		from = 1,
+		to = 5,
+		path_id = 5
+	}},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 4,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 4,
+		locked_towers = {"tower_build_barrack", "tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_musketeer"},
 	nav_mesh = {
-		{
-			2,
-			nil,
-			nil,
-			7
-		},
-		{
-			3,
-			nil,
-			1,
-			6
-		},
+		{2, nil, nil, 7},
+		{3, nil, 1, 6},
 		{
 			[3] = 2,
 			[4] = 5
 		},
-		{
-			nil,
-			3,
-			5,
-			10
-		},
-		{
-			4,
-			3,
-			6,
-			9
-		},
-		{
-			5,
-			2,
-			7,
-			8
-		},
-		{
-			6,
-			1,
-			nil,
-			8
-		},
-		{
-			9,
-			6
-		},
-		{
-			10,
-			5,
-			8
-		},
-		{
-			11,
-			4,
-			9,
-			11
-		},
-		{
-			nil,
-			4,
-			10
-		}
+		{nil, 3, 5, 10},
+		{4, 3, 6, 9},
+		{5, 2, 7, 8},
+		{6, 1, nil, 8},
+		{9, 6},
+		{10, 5, 8},
+		{11, 4, 9, 11},
+		{nil, 4, 10}
 	},
-	required_sounds = {
-		"music_stage07"
-	},
-	required_textures = {
-		"go_enemies_ice",
-		"go_stages_ice",
-		"go_stage07",
-		"go_stage07_bg"
-	}
+	required_sounds = {"music_stage07"},
+	required_textures = {"go_enemies_ice", "go_stages_ice", "go_stage07", "go_stage07_bg"}
 }

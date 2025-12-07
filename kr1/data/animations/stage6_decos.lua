@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage6_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage6_decos.lua
 local a = {
 	werebeast_boss_boss_layerX_idle = {
 		layer_to = 4,
@@ -276,5 +275,4 @@ local a = {
 		from = 44
 	}
 }
-
 return a

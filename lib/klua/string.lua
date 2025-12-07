@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/klua/string.lua
-
+-- chunkname: @./lib/klua/string.lua
 function string.split(s, sepchars)
 	local ret = {}
 
@@ -24,6 +23,5 @@ function string.starts(s, a)
 	end
 
 	local sa = string.sub(s, 1, string.len(a))
-
 	return sa == a
 end

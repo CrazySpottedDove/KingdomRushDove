@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage17_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage17_decos.lua
 local a = {
 	hidden_path_reventant_revenant_roots_reveal_revenant_in = {
 		prefix = "hidden_path_reventant_revenant_roots_reveal",
@@ -27,5 +26,4 @@ local a = {
 		from = 134
 	}
 }
-
 return a

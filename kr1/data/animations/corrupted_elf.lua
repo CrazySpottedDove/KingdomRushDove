@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/corrupted_elf.lua
-
+-- chunkname: @./kr5/data/animations/corrupted_elf.lua
 local a = {
 	corrupted_ranger_creep_idle = {
 		prefix = "corrupted_ranger_creep",
@@ -82,5 +81,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

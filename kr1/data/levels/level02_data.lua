@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level02_data.lua
-
+-- chunkname: @./kr1/data/levels/level02_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -216,87 +215,19 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_barrack_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_archer_3",
-				"tower_build_barrack",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
-		}
-	},
-	nav_mesh = {
-		{
-			nil,
-			nil,
-			2,
-			6
-		},
-		{
-			1,
-			nil,
-			nil,
-			3
-		},
-		{
-			6,
-			2,
-			nil,
-			7
-		},
-		{
-			nil,
-			6,
-			7,
-			5
-		},
-		{
-			nil,
-			4,
-			7
-		},
-		{
-			nil,
-			1,
-			3,
-			4
-		},
-		{
-			4,
-			3,
-			nil,
-			5
-		}
-	},
-	required_sounds = {
-		"music_stage02"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_stages_grass",
-		"go_stage02",
-		"go_stage02_bg"
-	}
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_engineer_3"}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 3,
+		locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_mage_3", "tower_engineer_3"}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 3,
+		locked_towers = {"tower_archer_3", "tower_build_barrack", "tower_mage_3", "tower_engineer_3"}
+	}},
+	nav_mesh = {{nil, nil, 2, 6}, {1, nil, nil, 3}, {6, 2, nil, 7}, {nil, 6, 7, 5}, {nil, 4, 7}, {nil, 1, 3, 4}, {4, 3, nil, 5}},
+	required_sounds = {"music_stage02"},
+	required_textures = {"go_enemies_grass", "go_stages_grass", "go_stage02", "go_stage02_bg"}
 }

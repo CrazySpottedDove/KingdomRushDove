@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_hunter.lua
-
+-- chunkname: @./kr5/data/animations/hero_hunter.lua
 local a = {
 	dante_Idle = {
 		prefix = "dante",
@@ -280,7 +279,6 @@ local a = {
 		prefix = "hit_dante",
 		to = 22,
 		from = 1
-	},
+	}
 }
-
 return a

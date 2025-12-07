@@ -1,10 +1,7 @@
-﻿-- chunkname: @./lib/klove/kui_db.lua
-
+-- chunkname: @./lib/klove/kui_db.lua
 local log = require("lib.klua.log"):new("kui_db")
 local serpent = require("serpent")
-
 require("lib.klua.string")
-
 local kui_db = {}
 
 function kui_db:init(templates_path, reload)
@@ -23,7 +20,6 @@ if DEBUG then
 
 			if love.filesystem.getInfo(filename) then
 				usepath = path
-
 				break
 			end
 		end
@@ -31,7 +27,6 @@ if DEBUG then
 		local filename = KR_FULLPATH_BASE .. "/" .. usepath .. "/" .. name .. ".lua"
 		local out = "return " .. str .. "\n"
 		local f = io.open(filename, "w")
-
 		f:write(out)
 		f:flush()
 		f:close()
@@ -39,15 +34,12 @@ if DEBUG then
 
 	function kui_db:put(name, str)
 		self:write(name, str)
-
 		self.templates[name] = str
 	end
 
 	function kui_db:put_table(name, t)
 		self:extract_templates(t)
-
 		local str = self:pretty_print(t)
-
 		self:put(name, str)
 	end
 end
@@ -58,9 +50,7 @@ function kui_db:read(name)
 
 		if love.filesystem.getInfo(filename) then
 			log.debug("loading template:%s from file %s", name, filename)
-
 			local str = love.filesystem.read(filename)
-
 			return str
 		end
 	end
@@ -72,7 +62,6 @@ function kui_db:get(name)
 
 		if not chunk then
 			log.error("Error finding template %s", name)
-
 			return nil
 		end
 
@@ -88,12 +77,10 @@ function kui_db:get_table(name, ctx)
 
 	if not chunk then
 		log.error("Error loading template %s. Error: %s", name, err)
-
 		return nil
 	end
 
 	local env = {}
-
 	env.ctx = ctx
 
 	function env.v(x, y)
@@ -117,34 +104,27 @@ function kui_db:get_table(name, ctx)
 	env.string = string
 	env.math = math
 	env._ = _
-
 	setfenv(chunk, env)
-
 	local ok, result = pcall(chunk)
 
 	if not ok then
 		log.error("Error calling template %s. Error: %s", name, tostring(result))
-
 		return nil
 	end
 
 	local out = self:filter_table(result, ctx)
-
 	out = self:replace_templates(out, ctx)
-
 	return out
 end
 
 function kui_db:filter_table(t, ctx)
 	if t.WHEN ~= nil and (type(t.WHEN) == "function" and not t.WHEN() or t.WHEN == false) then
 		log.debug("WHEN failed for %s", t.id)
-
 		return nil
 	end
 
 	if t.UNLESS ~= nil and (type(t.UNLESS) == "function" and t.UNLESS() or t.UNLESS == true) then
 		log.debug("UNLESS failed for %s", t.id)
-
 		return nil
 	end
 
@@ -156,7 +136,6 @@ function kui_db:filter_table(t, ctx)
 
 			if nc then
 				ac = ac or {}
-
 				table.insert(ac, nc)
 			end
 		end
@@ -182,7 +161,6 @@ function kui_db:replace_templates(t, ctx)
 
 		for _, ct in pairs(t.children) do
 			local nc = self:replace_templates(ct, ctx)
-
 			table.insert(ac, nc)
 		end
 
@@ -195,7 +173,6 @@ end
 function kui_db:extract_templates(t)
 	if t.template_name and t._template_table then
 		self:put_table(t.template_name, t._template_table)
-
 		t._template_table = nil
 	end
 
@@ -233,7 +210,6 @@ function kui_db:pretty_print(t)
 
 	local function custom_format(tag, head, body, tail, level)
 		local class_body = string.find(body, "^class")
-
 		return tag .. (class_body and "\n" .. string.rep("    ", level) or "") .. head .. body .. tail
 	end
 

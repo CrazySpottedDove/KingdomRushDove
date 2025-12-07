@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/achievements_data.lua
-
+-- chunkname: @./kr1/data/achievements_data.lua
 local t = {
 	{
 		icon = 4,

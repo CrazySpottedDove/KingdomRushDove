@@ -1,5 +1,4 @@
-﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level03_loc.lua
-
+-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level03_loc.lua
 return {
 	holders = {
 		{
@@ -185,31 +184,26 @@ return {
 			}
 		}
 	},
-	entrances = {
-		{
-			len = 310.016,
-			r = 1.5707963267948966,
-			pos = {
-				x = 570,
-				y = 726
-			}
-		},
-		{
-			len = 310.016,
-			r = 0,
-			pos = {
-				x = 978,
-				y = 275
-			}
+	entrances = {{
+		len = 310.016,
+		r = 1.5707963267948966,
+		pos = {
+			x = 570,
+			y = 726
 		}
-	},
-	exits = {
-		{
-			id = "defend_1",
-			pos = {
-				x = 47,
-				y = 339
-			}
+	}, {
+		len = 310.016,
+		r = 0,
+		pos = {
+			x = 978,
+			y = 275
 		}
-	}
+	}},
+	exits = {{
+		id = "defend_1",
+		pos = {
+			x = 47,
+			y = 339
+		}
+	}}
 }

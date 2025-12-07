@@ -1,24 +1,20 @@
-﻿-- chunkname: @./all/i18n.lua
-
+-- chunkname: @./all/i18n.lua
 local i18n = {}
-
 i18n.msgs = {}
 -- i18n.default_locale = "en"
 -- i18n.current_locale = "en"
 i18n.default_locale = "zh-Hans"
 i18n.current_locale = "zh-Hans"
-i18n.supported_locales = {
-	-- "de",
-	-- "en",
-	-- "es",
-	-- "fr",
-	-- "ja",
-	-- "ko",
-	-- "pt",
-	-- "ru",
-	"zh-Hans",
-	-- "zh-Hant"
-}
+i18n.supported_locales = {"zh-Hans"}
+-- "de",
+-- "en",
+-- "es",
+-- "fr",
+-- "ja",
+-- "ko",
+-- "pt",
+-- "ru",
+-- "zh-Hant"
 i18n.locale_names = {
 	-- ko = "한국어",
 	-- de = "Deutsch",
@@ -28,8 +24,8 @@ i18n.locale_names = {
 	-- fr = "Français",
 	-- en = "English",
 	-- ja = "日本語",
-	["zh-Hans"] = "中文 (简体)",
-	-- es = "Español"
+	["zh-Hans"] = "中文 (简体)"
+-- es = "Español"
 }
 
 function i18n.load_locale(locale)
@@ -39,9 +35,7 @@ end
 
 function _(s, default)
 	local l = i18n.msgs[i18n.current_locale]
-
 	l = l or i18n.msgs[i18n.default_locale]
-
 	local ts = l[s]
 
 	if ts then
@@ -54,9 +48,7 @@ function _(s, default)
 end
 
 function i18n:sw(default, ...)
-	local args = {
-		...
-	}
+	local args = {...}
 
 	if #args > 0 then
 		for i, a in ipairs(args) do

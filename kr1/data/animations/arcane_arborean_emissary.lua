@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/arcane_arborean_emissary.lua
-
+-- chunkname: @./kr5/data/animations/arcane_arborean_emissary.lua
 local a = {
 	arborean_emissary_lvl4_tower_layerX_idle = {
 		layer_to = 1,
@@ -207,5 +206,4 @@ local a = {
 		from = 14
 	}
 }
-
 return a

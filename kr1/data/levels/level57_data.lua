@@ -1,8 +1,9 @@
-﻿-- chunkname: @./kr3/data/levels/level09_data.lua
+-- chunkname: @./kr3/data/levels/level09_data.lua
 local function faerie_dragon_preset(this)
-    this.powers.more_dragons.level = 0
-    this.powers.more_dragons.changed = nil
+	this.powers.more_dragons.level = 0
+	this.powers.more_dragons.changed = nil
 end
+
 return {
 	locked_hero = false,
 	level_terrain_type = 2,
@@ -14,32 +15,26 @@ return {
 				x = 0,
 				y = 0
 			},
-			waterfall_nodes = {
-				{
-					flags = 4294967295,
-					to = 18,
-					from = 1,
-					path_id = 1
-				},
-				{
-					flags = 4294967295,
-					to = 19,
-					from = 1,
-					path_id = 2
-				},
-				{
-					flags = 4294967295,
-					to = 19,
-					from = 1,
-					path_id = 8
-				}
-			}
+			waterfall_nodes = {{
+				flags = 4294967295,
+				to = 18,
+				from = 1,
+				path_id = 1
+			}, {
+				flags = 4294967295,
+				to = 19,
+				from = 1,
+				path_id = 2
+			}, {
+				flags = 4294967295,
+				to = 19,
+				from = 1,
+				path_id = 8
+			}}
 		},
 		{
 			template = "background_sounds",
-			sounds = {
-				"FaerieGroveAmbienceSound"
-			}
+			sounds = {"FaerieGroveAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -807,7 +802,7 @@ return {
 				x = 434,
 				y = 119
 			},
-            ["preset"] = faerie_dragon_preset
+			["preset"] = faerie_dragon_preset
 		},
 		{
 			["tower.holder_id"] = "14",
@@ -822,7 +817,7 @@ return {
 				x = 630,
 				y = 253
 			},
-            ["preset"] = faerie_dragon_preset
+			["preset"] = faerie_dragon_preset
 		},
 		{
 			["tower.holder_id"] = "1",
@@ -837,7 +832,7 @@ return {
 				x = 321,
 				y = 232
 			},
-            ["preset"] = faerie_dragon_preset
+			["preset"] = faerie_dragon_preset
 		},
 		{
 			["tower.holder_id"] = "1",
@@ -852,7 +847,7 @@ return {
 				x = 321,
 				y = 232
 			},
-            ["preset"] = faerie_dragon_preset
+			["preset"] = faerie_dragon_preset
 		},
 		{
 			["tower.holder_id"] = "5",
@@ -867,7 +862,7 @@ return {
 				x = 765,
 				y = 327
 			},
-            ["preset"] = faerie_dragon_preset
+			["preset"] = faerie_dragon_preset
 		},
 		{
 			["tower.holder_id"] = "5",
@@ -882,7 +877,7 @@ return {
 				x = 765,
 				y = 327
 			},
-            ["preset"] = faerie_dragon_preset
+			["preset"] = faerie_dragon_preset
 		},
 		{
 			["tower.holder_id"] = "13",
@@ -1151,148 +1146,54 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			flags = 4294967295,
-			to = 18,
-			from = 1,
-			path_id = 1
-		},
-		{
-			flags = 4294967295,
-			to = 19,
-			from = 1,
-			path_id = 2
-		},
-		{
-			flags = 4294967295,
-			to = 19,
-			from = 1,
-			path_id = 8
-		}
-	},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 5,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 5,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_mage",
-			}
-		}
-	},
-    unlock_towers = {"tower_high_elven", "tower_faerie_dragon"},
+	invalid_path_ranges = {{
+		flags = 4294967295,
+		to = 18,
+		from = 1,
+		path_id = 1
+	}, {
+		flags = 4294967295,
+		to = 19,
+		from = 1,
+		path_id = 2
+	}, {
+		flags = 4294967295,
+		to = 19,
+		from = 1,
+		path_id = 8
+	}},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 5,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 5,
+		locked_towers = {"tower_build_barrack", "tower_build_mage"}
+	}},
+	unlock_towers = {"tower_high_elven", "tower_faerie_dragon"},
 	nav_mesh = {
-		{
-			4,
-			2,
-			8,
-			15
-		},
-		{
-			1,
-			7,
-			8,
-			1
-		},
-		{
-			6,
-			nil,
-			4,
-			13
-		},
-		{
-			3,
-			nil,
-			1,
-			15
-		},
-		{
-			10,
-			10,
-			6,
-			6
-		},
-		{
-			12,
-			5,
-			3,
-			14
-		},
-		{
-			9,
-			nil,
-			8,
-			2
-		},
-		{
-			1,
-			7
-		},
-		{
-			nil,
-			nil,
-			7,
-			10
-		},
-		{
-			nil,
-			9,
-			5,
-			12
-		},
-		{
-			nil,
-			12,
-			14
-		},
-		{
-			nil,
-			10,
-			6,
-			11
-		},
-		{
-			14,
-			3,
-			15
-		},
-		{
-			11,
-			6,
-			13
-		},
-		{
-			13,
-			1,
-			8
-		}
+		{4, 2, 8, 15},
+		{1, 7, 8, 1},
+		{6, nil, 4, 13},
+		{3, nil, 1, 15},
+		{10, 10, 6, 6},
+		{12, 5, 3, 14},
+		{9, nil, 8, 2},
+		{1, 7},
+		{nil, nil, 7, 10},
+		{nil, 9, 5, 12},
+		{nil, 12, 14},
+		{nil, 10, 6, 11},
+		{14, 3, 15},
+		{11, 6, 13},
+		{13, 1, 8}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage57",
-		"ElvesLevelNineSounds",
-		"ElvesCreepHoplite",
-		"ElvesScourger",
-		"ElvesCreepAvenger",
-		"FaerieGroveAmbienceSounds"
-	},
-	required_textures = {
-		"go_enemies_faerie_grove",
-		"go_stage57",
-		"go_stage57_bg",
-		"go_stages_faerie_grove"
-	}
+	required_sounds = {"music_stage57", "ElvesLevelNineSounds", "ElvesCreepHoplite", "ElvesScourger", "ElvesCreepAvenger", "FaerieGroveAmbienceSounds"},
+	required_textures = {"go_enemies_faerie_grove", "go_stage57", "go_stage57_bg", "go_stages_faerie_grove"}
 }

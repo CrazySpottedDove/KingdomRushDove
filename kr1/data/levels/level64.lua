@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level16.lua
-
+-- chunkname: @./kr3/data/levels/level16.lua
 local log = require("lib.klua.log"):new("level16")
 local signal = require("hump.signal")
 local E = require("entity_db")
@@ -9,7 +8,6 @@ local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
 local GR = require("grid_db")
-
 require("constants")
 
 local function fts(v)
@@ -39,34 +37,29 @@ local function y_walk(store, entity, to, speed)
 		phase = math.min(1, (store.tick_ts - start_ts) / duration)
 		entity.pos.x = U.ease_value(from.x, to.x, phase, easing)
 		entity.pos.y = U.ease_value(from.y, to.y, phase, easing)
-
 		coroutine.yield()
 	end
 end
 
 local level = {}
-
-level.burner_data = {
-	{
-		explosions = 3,
-		dest_pi = 4,
-		activate_holders = true,
-		start_pos = V.v(889, 300),
-		shoot_pos = V.v(708, 300),
-		end_pos = V.v(820, 300),
-		explosions_delay = fts(5),
-		grid_rect = V.r(643, 254, 121, 110)
-	},
-	{
-		explosions = 2,
-		dest_pi = 5,
-		start_pos = V.v(485, 365),
-		shoot_pos = V.v(391, 379),
-		end_pos = V.v(450, 379),
-		explosions_delay = fts(3),
-		grid_rect = V.r(338, 348, 108, 62)
-	}
-}
+level.burner_data = {{
+	explosions = 3,
+	dest_pi = 4,
+	activate_holders = true,
+	start_pos = V.v(889, 300),
+	shoot_pos = V.v(708, 300),
+	end_pos = V.v(820, 300),
+	explosions_delay = fts(5),
+	grid_rect = V.r(643, 254, 121, 110)
+}, {
+	explosions = 2,
+	dest_pi = 5,
+	start_pos = V.v(485, 365),
+	shoot_pos = V.v(391, 379),
+	end_pos = V.v(450, 379),
+	explosions_delay = fts(3),
+	grid_rect = V.r(338, 348, 108, 62)
+}}
 
 function level:load(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -120,34 +113,24 @@ function level:y_burn_zone(store, zone)
 	local gnoll_speed = 1.5 * FPS
 	local bd = self.burner_data[zone]
 	local bush_burner = LU.list_entities(store.entities, "decal_s16_bush_burner", zone)[1]
-
 	LU.queue_remove(store, bush_burner)
-
 	local fx = E:create_entity("fx_s16_bush_burner")
-
 	fx.pos = bush_burner.pos
 	fx.render.sprites[1].ts = store.tick_ts
-
 	LU.queue_insert(store, fx)
-
 	local gnoll = E:create_entity("decal_gnoll_burner")
-
 	gnoll.pos = V.vclone(bd.start_pos)
-
 	LU.queue_insert(store, gnoll)
 	U.animation_start(gnoll, "walkingRightLeft", true, store.tick_ts, true)
 	y_walk(store, gnoll, bd.end_pos, gnoll_speed)
 	U.animation_start(gnoll, "shoot", true, store.tick_ts, false)
 	U.y_wait(store, shoot_time)
-
 	local b = E:create_entity("torch_gnoll_burner")
-
 	b.pos = V.v(gnoll.pos.x + bullet_offset.x, gnoll.pos.y + bullet_offset.y)
 	b.bullet.from = V.vclone(b.pos)
 	b.bullet.to = bd.shoot_pos
 	b.bullet.target_id = gnoll.id
 	b.bullet.miss_fx = nil
-
 	LU.queue_insert(store, b)
 	U.y_wait(store, flight_time)
 	U.animation_start(gnoll, "idle", true, store.tick_ts, true)
@@ -157,7 +140,6 @@ function level:y_burn_zone(store, zone)
 
 		for _, fx in pairs(fxs) do
 			local delay = (i - 1) * bd.explosions_delay
-
 			fx.timed.disabled = nil
 			fx.render.sprites[1].ts = store.tick_ts + delay
 			fx.render.sprites[1].hidden = nil
@@ -169,12 +151,9 @@ function level:y_burn_zone(store, zone)
 	end
 
 	U.y_wait(store, fts(9))
-
 	local land = LU.list_entities(store.entities, "decal_s16_land_" .. zone)[1]
-
 	land.tween.disabled = nil
 	land.tween.ts = store.tick_ts
-
 	local tofade, toremove = {}, {}
 
 	if zone == 1 then
@@ -213,22 +192,15 @@ function level:y_burn_zone(store, zone)
 	end
 
 	U.y_wait(store, 1)
-
-	local nodes = P:nearest_nodes(gnoll.pos.x, gnoll.pos.y, {
-		bd.dest_pi
-	})
+	local nodes = P:nearest_nodes(gnoll.pos.x, gnoll.pos.y, {bd.dest_pi})
 	local node = nodes[1]
 	local e = E:create_entity("enemy_gnoll_burner")
-
 	e.pos = gnoll.pos
 	e.nav_path.pi = node[1]
 	e.nav_path.spi = 1
 	e.nav_path.ni = node[3] + 3
-
 	local npos = P:node_pos(e.nav_path)
-
 	e.motion.forced_waypoint = npos
-
 	LU.queue_insert(store, e)
 	LU.queue_remove(store, gnoll)
 end

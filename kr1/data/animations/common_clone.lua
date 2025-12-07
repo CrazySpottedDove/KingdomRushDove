@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/common_clone.lua
-
+-- chunkname: @./kr5/data/animations/common_clone.lua
 local a = {
 	common_clone_creep_idle = {
 		prefix = "common_clone_creep",
@@ -42,5 +41,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

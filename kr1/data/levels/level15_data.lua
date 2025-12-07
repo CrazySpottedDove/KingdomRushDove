@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level15_data.lua
-
+-- chunkname: @./kr1/data/levels/level15_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 3,
@@ -195,24 +194,19 @@ return {
 		{
 			template = "swamp_controller",
 			["graveyard.pi"] = 4,
-			["graveyard.spawn_pos"] = {
-				{
-					x = 417,
-					y = 126
-				},
-				{
-					x = 420,
-					y = 100
-				},
-				{
-					x = 410,
-					y = 86
-				},
-				{
-					x = 450,
-					y = 116
-				}
-			},
+			["graveyard.spawn_pos"] = {{
+				x = 417,
+				y = 126
+			}, {
+				x = 420,
+				y = 100
+			}, {
+				x = 410,
+				y = 86
+			}, {
+				x = 450,
+				y = 116
+			}},
 			pos = {
 				x = 0,
 				y = 0
@@ -478,123 +472,28 @@ return {
 	level_mode_overrides = {
 		[3] = {
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_engineer"
-			}
+			locked_towers = {"tower_build_archer", "tower_build_engineer"}
 		}
 	},
 	nav_mesh = {
-		{
-			2,
-			6,
-			3
-		},
-		{
-			nil,
-			4,
-			1
-		},
-		{
-			5,
-			8,
-			7,
-			1
-		},
-		{
-			nil,
-			10,
-			6,
-			2
-		},
-		{
-			6,
-			9,
-			3,
-			1
-		},
-		{
-			4,
-			9,
-			5,
-			1
-		},
-		{
-			8,
-			11,
-			nil,
-			3
-		},
-		{
-			9,
-			11,
-			7,
-			3
-		},
-		{
-			10,
-			13,
-			8,
-			6
-		},
-		{
-			nil,
-			14,
-			9,
-			4
-		},
-		{
-			12,
-			16,
-			7,
-			8
-		},
-		{
-			13,
-			17,
-			11,
-			8
-		},
-		{
-			14,
-			15,
-			12,
-			9
-		},
-		{
-			nil,
-			15,
-			13,
-			10
-		},
-		{
-			14,
-			nil,
-			17,
-			13
-		},
-		{
-			17,
-			nil,
-			nil,
-			11
-		},
-		{
-			15,
-			nil,
-			16,
-			12
-		}
+		{2, 6, 3},
+		{nil, 4, 1},
+		{5, 8, 7, 1},
+		{nil, 10, 6, 2},
+		{6, 9, 3, 1},
+		{4, 9, 5, 1},
+		{8, 11, nil, 3},
+		{9, 11, 7, 3},
+		{10, 13, 8, 6},
+		{nil, 14, 9, 4},
+		{12, 16, 7, 8},
+		{13, 17, 11, 8},
+		{14, 15, 12, 9},
+		{nil, 15, 13, 10},
+		{14, nil, 17, 13},
+		{17, nil, nil, 11},
+		{15, nil, 16, 12}
 	},
-	required_sounds = {
-		"music_stage15",
-		"MushroomSounds"
-	},
-	required_textures = {
-		"go_enemies_rotten",
-		"go_enemies_wastelands",
-		"go_stages_rotten_torment",
-		"go_stage15",
-		"go_stage15_bg"
-	}
+	required_sounds = {"music_stage15", "MushroomSounds"},
+	required_textures = {"go_enemies_rotten", "go_enemies_wastelands", "go_stages_rotten_torment", "go_stage15", "go_stage15_bg"}
 }

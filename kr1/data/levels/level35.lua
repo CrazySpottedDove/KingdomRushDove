@@ -1,5 +1,4 @@
-﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level09.lua
-
+-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level09.lua
 local log = require("lib.klua.log"):new("level09")
 local signal = require("hump.signal")
 local A = require("achievements")
@@ -9,7 +8,6 @@ local S = require("sound_db")
 local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
-
 require("constants")
 
 local function fts(v)
@@ -18,18 +16,8 @@ end
 
 local v = V.v
 local level = {}
-
-level.required_sounds = {
-	"music_stage35",
-	"FrontiersJungleAmbienceSounds",
-	"SpecialAlienSounds"
-}
-level.required_textures = {
-	"go_enemies_jungle",
-	"go_stages_jungle",
-	"go_stage35",
-	"go_stage35_bg"
-}
+level.required_sounds = {"music_stage35", "FrontiersJungleAmbienceSounds", "SpecialAlienSounds"}
+level.required_textures = {"go_enemies_jungle", "go_stages_jungle", "go_stage35", "go_stage35_bg"}
 
 function level:init(store)
 	store.level_terrain_type = TERRAIN_STYLE_JUNGLE
@@ -39,30 +27,25 @@ function level:init(store)
 		self.locked_hero = false
 		self.locked_powers = {}
 		self.max_upgrade_level = 6
-		self.locked_towers = {
-		}
+		self.locked_towers = {}
 	elseif store.level_mode == GAME_MODE_HEROIC then
 		self.locked_hero = false
 		self.locked_powers = {}
 		self.max_upgrade_level = 5
-		self.locked_towers = {
-		}
+		self.locked_towers = {}
 	elseif store.level_mode == GAME_MODE_IRON then
 		self.locked_hero = false
 		self.locked_powers = {}
 		self.max_upgrade_level = 5
-		self.locked_towers = {
-			"tower_build_barrack",
-			"tower_build_mage",
-		}
+		self.locked_towers = {"tower_build_barrack", "tower_build_mage"}
 	end
-    self.unlock_towers = {"tower_necromancer"}
+
+	self.unlock_towers = {"tower_necromancer"}
 end
 
 function level:load(store)
 	LU.insert_background(store, "Stage09_0001", Z_BACKGROUND)
 	LU.insert_defend_points(store, self.locations.exits, store.level_terrain_type)
-
 	self.hidden_holders = {}
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -79,12 +62,7 @@ function level:load(store)
 		end
 	else
 		for _, h in pairs(self.locations.holders) do
-			if table.contains({
-				"2",
-				"9",
-				"10",
-				"15"
-			}, h.id) then
+			if table.contains({"2", "9", "10", "15"}, h.id) then
 				LU.insert_tower(store, "tower_barrack_1", h.style, h.pos, h.rally_pos, nil, h.id)
 			else
 				e = LU.insert_tower(store, "tower_holder_blocked_jungle", h.style, h.pos, h.rally_pos, nil, h.id)
@@ -93,125 +71,44 @@ function level:load(store)
 	end
 
 	local x
-
 	self.nav_mesh = {
-		{
-			9,
-			12,
-			x,
-			2
-		},
-		{
-			14,
-			1,
-			x,
-			11
-		},
-		{
-			4,
-			10,
-			11,
-			x
-		},
-		{
-			x,
-			15,
-			3,
-			x
-		},
-		{
-			6,
-			13,
-			15,
-			15
-		},
-		{
-			x,
-			13,
-			5,
-			5
-		},
-		[8] = {
-			x,
-			x,
-			12,
-			13
-		},
-		[9] = {
-			13,
-			12,
-			1,
-			14
-		},
-		[10] = {
-			15,
-			14,
-			11,
-			3
-		},
-		[11] = {
-			10,
-			2,
-			x,
-			3
-		},
-		[12] = {
-			8,
-			x,
-			1,
-			9
-		},
-		[13] = {
-			x,
-			8,
-			9,
-			5
-		},
-		[14] = {
-			13,
-			9,
-			2,
-			10
-		},
-		[15] = {
-			5,
-			5,
-			10,
-			4
-		}
+		{9, 12, x, 2},
+		{14, 1, x, 11},
+		{4, 10, 11, x},
+		{x, 15, 3, x},
+		{6, 13, 15, 15},
+		{x, 13, 5, 5},
+		[8] = {x, x, 12, 13},
+		[9] = {13, 12, 1, 14},
+		[10] = {15, 14, 11, 3},
+		[11] = {10, 2, x, 3},
+		[12] = {8, x, 1, 9},
+		[13] = {x, 8, 9, 5},
+		[14] = {13, 9, 2, 10},
+		[15] = {5, 5, 10, 4}
 	}
-
 	local alien_egg_coords = {
-		top = {
-			{
-				pi = 4,
-				pos = V.v(657, 608)
-			},
-			{
-				pi = 4,
-				pos = V.v(684, 594)
-			},
-			{
-				pi = 4,
-				pos = V.v(685, 622)
-			}
-		},
-		bottom = {
-			{
-				pi = 5,
-				pos = V.v(785, 497)
-			},
-			{
-				pi = 5,
-				pos = V.v(812, 514)
-			},
-			{
-				pi = 5,
-				pos = V.v(814, 484)
-			}
-		}
+		top = {{
+			pi = 4,
+			pos = V.v(657, 608)
+		}, {
+			pi = 4,
+			pos = V.v(684, 594)
+		}, {
+			pi = 4,
+			pos = V.v(685, 622)
+		}},
+		bottom = {{
+			pi = 5,
+			pos = V.v(785, 497)
+		}, {
+			pi = 5,
+			pos = V.v(812, 514)
+		}, {
+			pi = 5,
+			pos = V.v(814, 484)
+		}}
 	}
-
 	self.alien_eggs = {}
 
 	for group_name, group in pairs(alien_egg_coords) do
@@ -219,10 +116,8 @@ function level:load(store)
 
 		for _, item in pairs(group) do
 			local e = E:create_entity("alien_egg")
-
 			e.pos = item.pos
 			e.spawner.pi = item.pi
-
 			LU.queue_insert(store, e)
 			table.insert(self.alien_eggs[group_name], e)
 		end
@@ -296,9 +191,7 @@ function level:load(store)
 			cycles = 15
 		}
 	}
-
 	local e
-
 	-- e = E:create_entity("decal_bird_blue")
 	-- e.pos = V.v(365 + REF_OX, -10)
 	-- e.tween.props[1].keys = {
@@ -311,9 +204,7 @@ function level:load(store)
 	-- 		v(685 + REF_OX, 590)
 	-- 	}
 	-- }
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal_bird_multicolor")
 	-- e.pos = V.v(1040 + REF_OX, 227)
 	-- e.tween.props[1].keys = {
@@ -327,20 +218,15 @@ function level:load(store)
 	-- 	}
 	-- }
 	-- e.render.sprites[1].flip_x = true
-
 	-- LU.queue_insert(store, e)
-
 	-- e = E:create_entity("decal_predator")
 	-- e.pos = V.v(667, 669)
 	-- e.click_play.achievement_flag = {
 	-- 	"YOUAREONEUGLYMOTHERFUCKER",
 	-- 	4
 	-- }
-
 	-- LU.queue_insert(store, e)
-
 	e = E:create_entity("background_sounds_jungle")
-
 	LU.queue_insert(store, e)
 end
 
@@ -353,7 +239,6 @@ function level:update(store)
 
 	while not store.waves_finished do
 		local wave_number = store.wave_group_number
-
 		self:y_spawn_aliens(store)
 
 		while wave_number == store.wave_group_number and not store.waves_finished do
@@ -373,7 +258,7 @@ function level:y_spawn_aliens(store)
 	local w = self.alien_waves[wave_number]
 
 	if not w then
-		return
+		return 
 	end
 
 	for i = 1, w.cycles do
@@ -383,11 +268,11 @@ function level:y_spawn_aliens(store)
 			coroutine.yield()
 
 			if wave_number ~= store.wave_group_number then
-				return
+				return 
 			end
 
 			if store.waves_finished then
-				return
+				return 
 			end
 		end
 

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_rocket_gunners.lua
-
+-- chunkname: @./kr5/data/animations/tower_rocket_gunners.lua
 local a = {
 	rocket_gunners_tower_sting_missiles_floor_decal_smoke_idle = {
 		prefix = "rocket_gunners_tower_sting_missiles_floor_decal_smoke",
@@ -447,5 +446,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

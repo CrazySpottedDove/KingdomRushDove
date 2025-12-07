@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage16_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage16_decos.lua
 local a = {
 	overseer_fx_overseer_proyectile_proyectile = {
 		prefix = "overseer_fx_overseer_proyectile",
@@ -127,5 +126,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

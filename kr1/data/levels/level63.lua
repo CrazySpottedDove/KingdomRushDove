@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level15.lua
-
+-- chunkname: @./kr3/data/levels/level15.lua
 local log = require("lib.klua.log"):new("level15")
 local signal = require("hump.signal")
 local km = require("lib.klua.macros")
@@ -10,7 +9,6 @@ local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
 local SU = require("script_utils")
-
 require("constants")
 
 local function fts(v)
@@ -21,28 +19,23 @@ local v = V.v
 local level = {}
 
 function level:load(store)
-	self.boss_rounds = {
-		{
-			pi = 1,
-			qty_per_egg = 2,
-			pos = v(259, 469)
-		},
-		{
-			pi = 5,
-			qty_per_egg = 2,
-			pos = v(524, 455)
-		},
-		{
-			pi = 6,
-			qty_per_egg = 3,
-			pos = v(845, 394)
-		},
-		{
-			pi = 4,
-			qty_per_egg = 3,
-			pos = v(567, 328)
-		}
-	}
+	self.boss_rounds = {{
+		pi = 1,
+		qty_per_egg = 2,
+		pos = v(259, 469)
+	}, {
+		pi = 5,
+		qty_per_egg = 2,
+		pos = v(524, 455)
+	}, {
+		pi = 6,
+		qty_per_egg = 3,
+		pos = v(845, 394)
+	}, {
+		pi = 4,
+		qty_per_egg = 3,
+		pos = v(567, 328)
+	}}
 	self.mactans_eggs = {
 		{
 			path_id = 2,
@@ -159,7 +152,6 @@ function level:update(store)
 	if store.level_mode ~= GAME_MODE_CAMPAIGN then
 		if table.contains(store.selected_hero, "hero_veznan") then
 			local veznan_deco = LU.list_entities(store.entities, "decal_s15_finished_veznan")[1]
-
 			LU.queue_remove(store, veznan_deco)
 		end
 
@@ -176,23 +168,18 @@ function level:update(store)
 		local s_mactans = E:create_entity("decal_s15_mactans")
 		local s_statue = E:create_entity("decal_s15_statue")
 		local s_crystal = E:create_entity("decal_s15_crystal")
-
 		LU.queue_insert(store, c_taunt)
 		LU.queue_insert(store, s_malicia)
 		LU.queue_insert(store, s_mactans)
 		LU.queue_insert(store, s_statue)
 		LU.queue_insert(store, s_crystal)
-
 		s_malicia.pos = v(579, 643)
 		s_mactans.pos = v(482, 647)
 		s_mactans.decal_statue = s_statue
 		s_statue.pos = v(544, 662)
 		s_crystal.pos = v(544, 742)
-
 		local mactans = LU.list_entities(store.entities, "enemy_mactans")[1]
-
 		mactans.mactans_deco = s_mactans
-
 		coroutine.yield()
 
 		if not store.restarted then
@@ -220,14 +207,12 @@ function level:update(store)
 		end
 
 		c_taunt.interrupt = true
-
 		signal.emit("hide-gui")
 		signal.emit("show-curtains")
 		signal.emit("pan-zoom-camera", 3, {
 			x = 512,
 			y = 672
 		}, 2)
-
 		s_mactans.phase_signal = "stop"
 		s_malicia.phase_signal = "stop"
 
@@ -239,7 +224,6 @@ function level:update(store)
 		U.y_wait(store, 3)
 		SU.y_show_taunt_set(store, c_taunt.taunts, "custom_malicia", "BREAKING", nil, 1.5, true)
 		U.y_wait(store, 1.5)
-
 		s_mactans.phase_signal = "single_attack"
 		s_malicia.phase_signal = "single_attack"
 
@@ -248,68 +232,39 @@ function level:update(store)
 		until s_mactans.phase == "idle" and s_malicia.phase == "idle"
 
 		U.y_wait(store, 1.5)
-
 		s_statue.phase_signal = "break"
 		s_crystal.tween.disabled = true
-
 		local crystal_s = s_crystal.render.sprites[1]
-
-		U.y_ease_keys(store, {
-			s_crystal.pos,
-			s_crystal.render.sprites[1].offset
-		}, {
-			"y",
-			"y"
-		}, {
-			s_crystal.pos.y,
-			s_crystal.render.sprites[1].offset.y
-		}, {
-			s_crystal.pos.y - 27,
-			0
-		}, fts(20), {
-			"quad-in"
-		})
+		U.y_ease_keys(store, {s_crystal.pos, s_crystal.render.sprites[1].offset}, {"y", "y"}, {s_crystal.pos.y, s_crystal.render.sprites[1].offset.y}, {s_crystal.pos.y - 27, 0}, fts(20), {"quad-in"})
 
 		while s_statue.phase ~= "broken" do
 			coroutine.yield()
 		end
 
 		local fx = E:create_entity("fx_s15_crystal_shine")
-
 		fx.pos.x, fx.pos.y = s_crystal.pos.x, s_crystal.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
-
 		LU.queue_insert(store, fx)
-
 		s_mactans.phase_signal = "jump"
 		s_malicia.phase_signal = "jump"
-
 		U.y_wait(store, fts(34))
 		SU.y_show_taunt_set(store, c_taunt.taunts, "custom_malicia", "MINE", nil, 1, false)
 		SU.y_show_taunt_set(store, c_taunt.taunts, "custom_mactans", "MINE", nil, 1, false)
 		U.y_wait(store, fts(37))
-
 		fx = E:create_entity("fx_s15_crystal_transformation")
 		fx.pos.x, fx.pos.y = s_crystal.pos.x, s_crystal.pos.y
-
 		U.animation_start(fx, "explosion", nil, store.tick_ts, false)
 		LU.queue_insert(store, fx)
 		LU.queue_remove(store, s_crystal)
 		U.y_wait(store, fts(100))
-
 		local circle = E:create_entity("fx_s15_white_circle")
-
 		circle.pos.x, circle.pos.y = s_crystal.pos.x, s_crystal.pos.y
 		circle.render.sprites[1].ts = store.tick_ts
-
 		LU.queue_insert(store, circle)
 		U.y_wait(store, 0.5)
-
 		local boss = E:create_entity("eb_spider")
-
 		boss.pos.x, boss.pos.y = 544, 643
 		boss.megaspawner = LU.list_entities(store.entities, "mega_spawner")[1]
-
 		LU.queue_insert(store, boss)
 		LU.queue_remove(store, s_statue)
 
@@ -343,7 +298,7 @@ function level:update(store)
 
 		store.custom_game_outcome = {
 			-- next_item_name = "kr3_end"
-            next_item_name = "map",
+			next_item_name = "map"
 		}
 	end
 

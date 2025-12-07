@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_dragon_bone.lua
-
+-- chunkname: @./kr5/data/animations/hero_dragon_bone.lua
 local a = {
 	hero_dragon_bone_hero_walk = {
 		prefix = "hero_dragon_bone_hero",
@@ -212,5 +211,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

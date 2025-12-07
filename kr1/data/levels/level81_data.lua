@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level81_data.lua
-
+-- chunkname: @./kr1/data/levels/level81_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -568,153 +567,43 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			flags = 4294967295,
-			to = 11,
-			from = 1,
-			path_id = 5
-		}
-	},
-	level_mode_overrides = {
-		{},
-		{},
-		{}
-	},
+	invalid_path_ranges = {{
+		flags = 4294967295,
+		to = 11,
+		from = 1,
+		path_id = 5
+	}},
+	level_mode_overrides = {{}, {}, {}},
 	nav_mesh = {
-		{
-			4,
-			nil,
-			17,
-			2
-		},
-		{
-			4,
-			1,
-			17,
-			3
-		},
-		{
-			4,
-			2,
-			17,
-			13
-		},
-		{
-			5,
-			nil,
-			3,
-			8
-		},
+		{4, nil, 17, 2},
+		{4, 1, 17, 3},
+		{4, 2, 17, 13},
+		{5, nil, 3, 8},
 		{
 			[3] = 4,
 			[4] = 6
 		},
-		{
-			nil,
-			5,
-			8,
-			7
-		},
-		{
-			nil,
-			6,
-			10,
-			21
-		},
-		{
-			6,
-			4,
-			9,
-			10
-		},
-		{
-			10,
-			3,
-			13,
-			11
-		},
-		{
-			7,
-			8,
-			9,
-			20
-		},
-		{
-			10,
-			9,
-			13,
-			12
-		},
-		{
-			20,
-			11,
-			16
-		},
-		{
-			9,
-			3,
-			14,
-			16
-		},
-		{
-			13,
-			17,
-			15,
-			16
-		},
-		{
-			14,
-			18,
-			nil,
-			19
-		},
-		{
-			12,
-			14,
-			19
-		},
-		{
-			3,
-			1,
-			18,
-			15
-		},
-		{
-			17,
-			1,
-			nil,
-			15
-		},
-		{
-			16,
-			15
-		},
-		{
-			21,
-			10,
-			12
-		},
-		{
-			nil,
-			7,
-			20
-		}
+		{nil, 5, 8, 7},
+		{nil, 6, 10, 21},
+		{6, 4, 9, 10},
+		{10, 3, 13, 11},
+		{7, 8, 9, 20},
+		{10, 9, 13, 12},
+		{20, 11, 16},
+		{9, 3, 14, 16},
+		{13, 17, 15, 16},
+		{14, 18, nil, 19},
+		{12, 14, 19},
+		{3, 1, 18, 15},
+		{17, 1, nil, 15},
+		{16, 15},
+		{21, 10, 12},
+		{nil, 7, 20}
 	},
 	pan_extension = {
 		bottom = -10,
 		top = 20
 	},
-	required_sounds = {
-		"music_stage81",
-		"EndlessOrcsSounds"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_enemies_acaroth",
-		"go_stages_grass",
-		"go_stage14",
-		"go_stage81",
-		"go_stage81_bg"
-	}
+	required_sounds = {"music_stage81", "EndlessOrcsSounds"},
+	required_textures = {"go_enemies_grass", "go_enemies_acaroth", "go_stages_grass", "go_stage14", "go_stage81", "go_stage81_bg"}
 }

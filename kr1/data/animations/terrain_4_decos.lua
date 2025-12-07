@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/terrain_4_decos.lua
-
+-- chunkname: @./kr5/data/animations/terrain_4_decos.lua
 local a = {
 	cheshire_cat_easter_egg_cat_in = {
 		prefix = "cheshire_cat_easter_egg_cat",
@@ -47,5 +46,4 @@ local a = {
 		from = 21
 	}
 }
-
 return a

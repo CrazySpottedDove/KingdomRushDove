@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/klove/utf8_string.lua
-
+-- chunkname: @./lib/klove/utf8_string.lua
 local mappings = require("klove.utf8_tables")
 local utf8 = require("utf8")
 
@@ -12,7 +11,6 @@ function upper(s)
 
 	for p, c in utf8.codes(s) do
 		local mc = mappings.upper[c]
-
 		out = out .. utf8.char(mc or c)
 	end
 

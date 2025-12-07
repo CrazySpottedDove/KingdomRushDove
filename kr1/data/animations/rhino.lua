@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/rhino.lua
-
+-- chunkname: @./kr5/data/animations/rhino.lua
 local a = {
 	razing_rhino_razing_rhino_charge_hit_fx = {
 		prefix = "razing_rhino_razing_rhino_charge_hit_fx",
@@ -72,5 +71,4 @@ local a = {
 		from = 222
 	}
 }
-
 return a

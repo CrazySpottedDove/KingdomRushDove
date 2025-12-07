@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage21_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage21_decos.lua
 local a = {
 	Achievement_lagarto_juancho_creep_idle1 = {
 		prefix = "Achievement_lagarto_juancho_creep",
@@ -32,5 +31,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

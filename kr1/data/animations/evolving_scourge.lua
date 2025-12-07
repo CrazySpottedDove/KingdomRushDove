@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/evolving_scourge.lua
-
+-- chunkname: @./kr5/data/animations/evolving_scourge.lua
 local a = {
 	evolving_scourge_fase3_idle = {
 		prefix = "evolving_scourge_fase3",
@@ -122,5 +121,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

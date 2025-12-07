@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage_2_props.lua
-
+-- chunkname: @./kr5/data/animations/stage_2_props.lua
 local a = {
 	stage_2_props_wisp = {
 		prefix = "stage_2_props_wisp",
@@ -22,5 +21,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

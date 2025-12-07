@@ -1,17 +1,12 @@
-﻿-- chunkname: @./all/platform_services_iap_premium.lua
-
+-- chunkname: @./all/platform_services_iap_premium.lua
 local log = require("lib.klua.log"):new("platform_services_iap_premium")
-
 log.level = log.DEBUG_LEVEL
-
 require("lib.klua.table")
-
 local signal = require("hump.signal")
 local storage = require("storage")
 local PSU = require("platform_services_utils")
 local RC = require("remote_config")
 local tiap = {}
-
 tiap.can_be_paused = true
 tiap.update_interval = 1
 tiap.rc_suffix = "iap_premium"
@@ -97,25 +92,21 @@ end
 
 function tiap:purchase_product(id)
 	log.debug("platform_services_iap_premium does not support purchase_product")
-
 	return nil
 end
 
 function tiap:get_product(id, reference)
 	log.debug("platform_services_iap_premium does not support get_product")
-
 	return nil
 end
 
 function tiap:get_offers()
 	log.debug("platform_services_iap_premium does not show offers")
-
 	return {}
 end
 
 function tiap:get_hero_sales()
 	log.debug("platform_services_iap_premium does not show hero sales")
-
 	return {}
 end
 

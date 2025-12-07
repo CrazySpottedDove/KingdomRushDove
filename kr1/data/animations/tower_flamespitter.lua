@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_flamespitter.lua
-
+-- chunkname: @./kr5/data/animations/tower_flamespitter.lua
 local a = {
 	dwarven_flamespitter_tower_lvl1_tower_idle = {
 		prefix = "dwarven_flamespitter_tower_lvl1_tower",
@@ -352,5 +351,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

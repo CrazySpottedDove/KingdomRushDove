@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/terrain_3_decos.lua
-
+-- chunkname: @./kr5/data/animations/terrain_3_decos.lua
 local a = {
 	glare_stage_14_eyelid_2_3_idle_close = {
 		prefix = "glare_stage_14_eyelid_2_3",
@@ -602,5 +601,4 @@ local a = {
 		from = 2
 	}
 }
-
 return a

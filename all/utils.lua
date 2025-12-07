@@ -1,8 +1,6 @@
-﻿-- chunkname: @./all/utils.lua
+-- chunkname: @./all/utils.lua
 local log = require("lib.klua.log"):new("utils")
-
 require("lib.klua.table")
-
 local km = require("lib.klua.macros")
 local bit = require("bit")
 local bor = bit.bor
@@ -10,7 +8,6 @@ local band = bit.band
 local bnot = bit.bnot
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 local random = math.random
 local min = math.min
@@ -21,9 +18,7 @@ local cos = math.cos
 local abs = math.abs
 local atan2 = math.atan2
 local PI = math.pi
-
 local U = {}
-
 --- Import Functions From Seek
 local seek = require("seek")
 U.calculate_enemy_ffe_pos = seek.calculate_enemy_ffe_pos
@@ -45,59 +40,49 @@ U.find_first_enemy_between_range_filter_off = seek.find_first_enemy_between_rang
 U.find_first_enemy_between_range_filter_on = seek.find_first_enemy_between_range_filter_on
 U.find_biggest_enemy_in_range_filter_off = seek.find_biggest_enemy_in_range_filter_off
 U.find_biggest_enemy_in_range_filter_on = seek.find_biggest_enemy_in_range_filter_on
-U.find_foremost_enemy_with_max_coverage_in_range_filter_off =
-    seek.find_foremost_enemy_with_max_coverage_in_range_filter_off
-U.find_foremost_enemy_with_max_coverage_in_range_filter_on =
-    seek.find_foremost_enemy_with_max_coverage_in_range_filter_on
-U.find_foremost_enemy_with_max_coverage_between_range_filter_off =
-    seek.find_foremost_enemy_with_max_coverage_between_range_filter_off
-U.find_foremost_enemy_with_max_coverage_between_range_filter_on =
-    seek.find_foremost_enemy_with_max_coverage_between_range_filter_on
-U.find_foremost_enemy_with_flying_preference_in_range_filter_off =
-    seek.find_foremost_enemy_with_flying_preference_in_range_filter_off
-U.find_foremost_enemy_with_flying_preference_in_range_filter_on =
-    seek.find_foremost_enemy_with_flying_preference_in_range_filter_on
+U.find_foremost_enemy_with_max_coverage_in_range_filter_off = seek.find_foremost_enemy_with_max_coverage_in_range_filter_off
+U.find_foremost_enemy_with_max_coverage_in_range_filter_on = seek.find_foremost_enemy_with_max_coverage_in_range_filter_on
+U.find_foremost_enemy_with_max_coverage_between_range_filter_off = seek.find_foremost_enemy_with_max_coverage_between_range_filter_off
+U.find_foremost_enemy_with_max_coverage_between_range_filter_on = seek.find_foremost_enemy_with_max_coverage_between_range_filter_on
+U.find_foremost_enemy_with_flying_preference_in_range_filter_off = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off
+U.find_foremost_enemy_with_flying_preference_in_range_filter_on = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on
 U.find_enemies_in_range_filter_override = seek.find_enemies_in_range_filter_override
-U.detect_foremost_enemy_with_flying_preference_between_range_filter_off =
-    seek.detect_foremost_enemy_with_flying_preference_between_range_filter_off
-U.detect_foremost_enemy_with_flying_preference_between_range_filter_on =
-    seek.detect_foremost_enemy_with_flying_preference_between_range_filter_on
-U.detect_foremost_enemy_with_flying_preference_in_range_filter_off =
-    seek.detect_foremost_enemy_with_flying_preference_in_range_filter_off
-U.detect_foremost_enemy_with_flying_preference_in_range_filter_on =
-    seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on
----
+U.detect_foremost_enemy_with_flying_preference_between_range_filter_off = seek.detect_foremost_enemy_with_flying_preference_between_range_filter_off
+U.detect_foremost_enemy_with_flying_preference_between_range_filter_on = seek.detect_foremost_enemy_with_flying_preference_between_range_filter_on
+U.detect_foremost_enemy_with_flying_preference_in_range_filter_off = seek.detect_foremost_enemy_with_flying_preference_in_range_filter_off
+U.detect_foremost_enemy_with_flying_preference_in_range_filter_on = seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on
 
+---
 ---返回从 from 到 to 的随机数
 ---@param from number 起始值
 ---@param to number 结束值
 ---@return number 随机数
 function U.frandom(from, to)
-    return random() * (to - from) + from
+	return random() * (to - from) + from
 end
 
 ---随机返回 -1 或 1
 ---@return number 随机符号（-1 或 1）
 function U.random_sign()
-    return random() < 0.5 and -1 or 1
+	return random() < 0.5 and -1 or 1
 end
 
 ---对于索引从 1 开始的连续的数组，返回一个随机索引
 ---@param list table 概率数组（元素值表示权重）
 ---@return number 随机索引
 function U.random_table_idx(list)
-    local rn = random()
-    local acc = 0
+	local rn = random()
+	local acc = 0
 
-    for i = 1, #list do
-        if rn <= list[i] + acc then
-            return i
-        end
+	for i = 1, #list do
+		if rn <= list[i] + acc then
+			return i
+		end
 
-        acc = acc + list[i]
-    end
+		acc = acc + list[i]
+	end
 
-    return #list
+	return #list
 end
 
 ---协程：渐变多个键值
@@ -110,28 +95,25 @@ end
 ---@param easings table? 缓动函数数组（可选）
 ---@param fn function? 每帧回调函数（可选）
 function U.y_ease_keys(store, key_tables, key_names, froms, tos, duration, easings, fn)
-    local start_ts = store.tick_ts
-    local phase
+	local start_ts = store.tick_ts
+	local phase
+	easings = easings or {}
 
-    easings = easings or {}
+	repeat
+		local dt = store.tick_ts - start_ts
+		phase = km.clamp(0, 1, dt / duration)
 
-    repeat
-        local dt = store.tick_ts - start_ts
+		for i, t in ipairs(key_tables) do
+			local kn = key_names[i]
+			t[kn] = U.ease_value(froms[i], tos[i], phase, easings[i])
+		end
 
-        phase = km.clamp(0, 1, dt / duration)
+		if fn then
+			fn(dt, phase)
+		end
 
-        for i, t in ipairs(key_tables) do
-            local kn = key_names[i]
-
-            t[kn] = U.ease_value(froms[i], tos[i], phase, easings[i])
-        end
-
-        if fn then
-            fn(dt, phase)
-        end
-
-        coroutine.yield()
-    until phase >= 1
+		coroutine.yield()
+	until phase >= 1
 end
 
 ---协程：渐变单个键值
@@ -144,22 +126,20 @@ end
 ---@param easing string? 缓动函数（可选）
 ---@param fn function? 每帧回调函数（可选）
 function U.y_ease_key(store, key_table, key_name, from, to, duration, easing, fn)
-    local start_ts = store.tick_ts
-    local phase
+	local start_ts = store.tick_ts
+	local phase
 
-    repeat
-        local dt = store.tick_ts - start_ts
+	repeat
+		local dt = store.tick_ts - start_ts
+		phase = km.clamp(0, 1, dt / duration)
+		key_table[key_name] = U.ease_value(from, to, phase, easing)
 
-        phase = km.clamp(0, 1, dt / duration)
+		if fn then
+			fn(dt, phase)
+		end
 
-        key_table[key_name] = U.ease_value(from, to, phase, easing)
-
-        if fn then
-            fn(dt, phase)
-        end
-
-        coroutine.yield()
-    until phase >= 1
+		coroutine.yield()
+	until phase >= 1
 end
 
 ---计算缓动值
@@ -169,40 +149,40 @@ end
 ---@param easing string? 缓动函数（可选）
 ---@return number 缓动后的值
 function U.ease_value(from, to, phase, easing)
-    return from + (to - from) * U.ease_phase(phase, easing)
+	return from + (to - from) * U.ease_phase(phase, easing)
 end
 
 local function rotate_fn(f)
-    return function(s, ...)
-        return 1 - f(1 - s, ...)
-    end
+	return function(s, ...)
+		return 1 - f(1 - s, ...)
+	end
 end
 
 local easing_functions = {
-    linear = function(s)
-        return s
-    end,
-    quad = function(s)
-        return s * s
-    end,
-    cubic = function(s)
-        return s * s * s
-    end,
-    quart = function(s)
-        return s * s * s * s
-    end,
-    quint = function(s)
-        return s * s * s * s * s
-    end,
-    sine = function(s)
-        return 1 - cos(s * PI * 0.5)
-    end,
-    expo = function(s)
-        return 2 ^ (10 * (s - 1))
-    end,
-    circ = function(s)
-        return 1 - sqrt(1 - s * s)
-    end
+	linear = function(s)
+		return s
+	end,
+	quad = function(s)
+		return s * s
+	end,
+	cubic = function(s)
+		return s * s * s
+	end,
+	quart = function(s)
+		return s * s * s * s
+	end,
+	quint = function(s)
+		return s * s * s * s * s
+	end,
+	sine = function(s)
+		return 1 - cos(s * PI * 0.5)
+	end,
+	expo = function(s)
+		return 2 ^ (10 * (s - 1))
+	end,
+	circ = function(s)
+		return 1 - sqrt(1 - s * s)
+	end
 }
 
 ---计算缓动进度
@@ -210,40 +190,37 @@ local easing_functions = {
 ---@param easing string? 缓动函数名（可选）
 ---@return number 缓动后的进度
 function U.ease_phase(phase, easing)
-    phase = km.clamp(0, 1, phase)
-    easing = easing or ""
+	phase = km.clamp(0, 1, phase)
+	easing = easing or ""
+	local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
+	local fn = easing_functions[fn_name]
+	fn = fn or easing_functions.linear
 
-    local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
-    local fn = easing_functions[fn_name]
-
-    fn = fn or easing_functions.linear
-
-    if first_ease == "outin" then
-        if phase <= 0.5 then
-            return fn(phase * 2) * 0.5
-        else
-            return 0.5 + rotate_fn(fn)((phase - 0.5) * 2) * 0.5
-        end
-    elseif first_ease == "inout" then
-        if phase <= 0.5 then
-            return rotate_fn(fn)(phase * 2) * 0.5
-        else
-            return 0.5 + fn((phase - 0.5) * 2) * 0.5
-        end
-    elseif first_ease == "in" then
-        return rotate_fn(fn)(phase)
-    else
-        return fn(phase)
-    end
+	if first_ease == "outin" then
+		if phase <= 0.5 then
+			return fn(phase * 2) * 0.5
+		else
+			return 0.5 + rotate_fn(fn)((phase - 0.5) * 2) * 0.5
+		end
+	elseif first_ease == "inout" then
+		if phase <= 0.5 then
+			return rotate_fn(fn)(phase * 2) * 0.5
+		else
+			return 0.5 + fn((phase - 0.5) * 2) * 0.5
+		end
+	elseif first_ease == "in" then
+		return rotate_fn(fn)(phase)
+	else
+		return fn(phase)
+	end
 end
 
 ---计算悬停脉冲透明度
 ---@param t number 时间
 ---@return number 透明度值
 function U.hover_pulse_alpha(t)
-    local min, max, per = HOVER_PULSE_ALPHA_MIN, HOVER_PULSE_ALPHA_MAX, HOVER_PULSE_PERIOD
-
-    return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
+	local min, max, per = HOVER_PULSE_ALPHA_MIN, HOVER_PULSE_ALPHA_MAX, HOVER_PULSE_PERIOD
+	return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
 end
 
 ---检测点是否在椭圆内
@@ -253,10 +230,10 @@ end
 ---@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return boolean 是否在椭圆内
 function U.is_inside_ellipse(p, center, radius, aspect)
-    aspect = aspect or 0.7
-    local x = (p.x - center.x)
-    local y = (p.y - center.y) / aspect
-    return x * x + y * y <= radius * radius
+	aspect = aspect or 0.7
+	local x = (p.x - center.x)
+	local y = (p.y - center.y) / aspect
+	return x * x + y * y <= radius * radius
 end
 
 ---返回椭圆上指定角度的点
@@ -266,15 +243,13 @@ end
 ---@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return table 椭圆上的点坐标 {x, y}
 function U.point_on_ellipse(center, a, angle, aspect)
-    aspect = aspect or 0.7
-    angle = angle or 0
-
-    local b = a * aspect
-
-    return {
-        x = center.x + a * cos(angle),
-        y = center.y + b * sin(angle)
-    }
+	aspect = aspect or 0.7
+	angle = angle or 0
+	local b = a * aspect
+	return {
+		x = center.x + a * cos(angle),
+		y = center.y + b * sin(angle)
+	}
 end
 
 ---计算点在椭圆内的距离因子
@@ -285,23 +260,21 @@ end
 ---@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return number 距离因子（0-1）
 function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
-    aspect = aspect or 0.7
+	aspect = aspect or 0.7
+	local vx, vy = p.x - center.x, p.y - center.y
+	local angle = V.angleTo(vx, vy)
+	local a = radius
+	local b = radius * aspect
+	local v_len = V.len(vx, vy)
+	local ab_len = V.len(a * cos(angle), b * sin(angle))
 
-    local vx, vy = p.x - center.x, p.y - center.y
-    local angle = V.angleTo(vx, vy)
-    local a = radius
-    local b = radius * aspect
-    local v_len = V.len(vx, vy)
-    local ab_len = V.len(a * cos(angle), b * sin(angle))
-
-    if min_radius then
-        local ma, mb = min_radius, min_radius * aspect
-        local mab_len = V.len(ma * cos(angle), mb * sin(angle))
-
-        return km.clamp(0, 1, (v_len - mab_len) / (ab_len - mab_len))
-    else
-        return km.clamp(0, 1, v_len / ab_len)
-    end
+	if min_radius then
+		local ma, mb = min_radius, min_radius * aspect
+		local mab_len = V.len(ma * cos(angle), mb * sin(angle))
+		return km.clamp(0, 1, (v_len - mab_len) / (ab_len - mab_len))
+	else
+		return km.clamp(0, 1, v_len / ab_len)
+	end
 end
 
 ---协程：等待指定时间，可提前中断
@@ -310,17 +283,17 @@ end
 ---@param break_func function? 中断函数（可选）
 ---@return boolean 是否被中断
 function U.y_wait(store, time, break_func)
-    local start_ts = store.tick_ts
+	local start_ts = store.tick_ts
 
-    while time > store.tick_ts - start_ts do
-        if break_func and break_func(store, time) then
-            return true
-        end
+	while time > store.tick_ts - start_ts do
+		if break_func and break_func(store, time) then
+			return true
+		end
 
-        coroutine.yield()
-    end
+		coroutine.yield()
+	end
 
-    return false
+	return false
 end
 
 ---开始实体动画
@@ -332,37 +305,37 @@ end
 ---@param idx number? 指定精灵索引（可选，默认所有精灵）
 ---@param force_ts boolean? 是否强制设置时间戳（可选）
 function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
-    loop = (loop == -1 or loop == true) and true or false
+	loop = (loop == -1 or loop == true) and true or false
+	local first, last
 
-    local first, last
+	if idx then
+		first, last = idx, idx
+	else
+		first, last = 1, #entity.render.sprites
+	end
 
-    if idx then
-        first, last = idx, idx
-    else
-        first, last = 1, #entity.render.sprites
-    end
+	for i = first, last do
+		local a = entity.render.sprites[i]
 
-    for i = first, last do
-        local a = entity.render.sprites[i]
+		if not a.ignore_start then
+			if flip_x ~= nil then
+				a.flip_x = flip_x
+			end
 
-        if not a.ignore_start then
-            if flip_x ~= nil then
-                a.flip_x = flip_x
-            end
-            if a.animated then
-                a.loop = loop or a.loop_forced == true
+			if a.animated then
+				a.loop = loop or a.loop_forced == true
 
-                if not a.loop or force_ts then
-                    a.ts = ts
-                    a.runs = 0
-                end
+				if not a.loop or force_ts then
+					a.ts = ts
+					a.runs = 0
+				end
 
-                if name then
-                    a.name = name
-                end
-            end
-        end
-    end
+				if name then
+					a.name = name
+				end
+			end
+		end
+	end
 end
 
 ---检查动画是否完成指定次数
@@ -371,20 +344,18 @@ end
 ---@param times number? 完成次数（可选，默认1）
 ---@return boolean 是否完成
 function U.animation_finished(entity, idx, times)
-    idx = idx or 1
-    times = times or 1
+	idx = idx or 1
+	times = times or 1
+	local a = entity.render.sprites[idx]
 
-    local a = entity.render.sprites[idx]
-
-    if a.loop then
-        -- if times == 1 then
-        --     log.debug("waiting for looping animation for entity %s - ", entity.id, entity.template_name)
-        -- end
-
-        return times <= a.runs
-    else
-        return a.runs > 0
-    end
+	if a.loop then
+		-- if times == 1 then
+		--     log.debug("waiting for looping animation for entity %s - ", entity.id, entity.template_name)
+		-- end
+		return times <= a.runs
+	else
+		return a.runs > 0
+	end
 end
 
 ---协程：等待动画完成指定次数
@@ -392,11 +363,11 @@ end
 ---@param idx number? 精灵索引（可选，默认1）
 ---@param times number? 完成次数（可选，默认1）
 function U.y_animation_wait(entity, idx, times)
-    idx = idx or 1
+	idx = idx or 1
 
-    while not U.animation_finished(entity, idx, times) do
-        coroutine.yield()
-    end
+	while not U.animation_finished(entity, idx, times) do
+		coroutine.yield()
+	end
 end
 
 ---根据角度获取动画名称和翻转状态
@@ -406,75 +377,73 @@ end
 ---@param idx number? 精灵索引（可选，默认1）
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_for_angle(e, group, angle, idx)
-    idx = idx or 1
+	idx = idx or 1
+	local a = e.render.sprites[idx]
+	local angles = a.angles and a.angles[group] or nil
 
-    local a = e.render.sprites[idx]
-    local angles = a.angles and a.angles[group] or nil
+	if not angles then
+		return group, angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
+	elseif #angles == 1 then
+		return angles[1], angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
+	elseif #angles == 2 then
+		local flip_x = angle > PI * 0.5 and angle < 3 * PI * 0.5
 
-    if not angles then
-        return group, angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
-    elseif #angles == 1 then
-        return angles[1], angle > PI * 0.5 and angle < 3 * PI * 0.5, 1
-    elseif #angles == 2 then
-        local flip_x = angle > PI * 0.5 and angle < 3 * PI * 0.5
+		if angle > 0 and angle < PI then
+			if a.angles_flip_horizontal and a.angles_flip_horizontal[1] then
+				flip_x = not flip_x
+			end
 
-        if angle > 0 and angle < PI then
-            if a.angles_flip_horizontal and a.angles_flip_horizontal[1] then
-                flip_x = not flip_x
-            end
+			return angles[1], flip_x, 1
+		else
+			if a.angles_flip_horizontal and a.angles_flip_horizontal[2] then
+				flip_x = not flip_x
+			end
 
-            return angles[1], flip_x, 1
-        else
-            if a.angles_flip_horizontal and a.angles_flip_horizontal[2] then
-                flip_x = not flip_x
-            end
+			return angles[2], flip_x, 2
+		end
+	elseif #angles == 3 then
+		local o_name, o_flip, o_idx
+		local a1, a2, a3, a4 = 45, 135, 225, 315
 
-            return angles[2], flip_x, 2
-        end
-    elseif #angles == 3 then
-        local o_name, o_flip, o_idx
-        local a1, a2, a3, a4 = 45, 135, 225, 315
+		if a.angles_custom and a.angles_custom[group] then
+			a1, a2, a3, a4 = unpack(a.angles_custom[group], 1, 4)
+		end
 
-        if a.angles_custom and a.angles_custom[group] then
-            a1, a2, a3, a4 = unpack(a.angles_custom[group], 1, 4)
-        end
+		local quadrant = a._last_quadrant
+		local stickiness = a.angles_stickiness and a.angles_stickiness[group]
 
-        local quadrant = a._last_quadrant
-        local stickiness = a.angles_stickiness and a.angles_stickiness[group]
+		if stickiness and quadrant then
+			local skew = stickiness * ((quadrant == 1 or quadrant == 3) and 1 or -1)
+			a1, a3 = a1 - skew, a3 - skew
+			a2, a4 = a2 + skew, a4 + skew
+		end
 
-        if stickiness and quadrant then
-            local skew = stickiness * ((quadrant == 1 or quadrant == 3) and 1 or -1)
+		local angle_deg = angle * 180 / PI
 
-            a1, a3 = a1 - skew, a3 - skew
-            a2, a4 = a2 + skew, a4 + skew
-        end
+		if a1 <= angle_deg and angle_deg < a2 then
+			o_name, o_flip, o_idx = angles[2], false, 2
+			quadrant = 1
+		elseif a2 <= angle_deg and angle_deg < a3 then
+			o_name, o_flip, o_idx = angles[1], true, 1
+			quadrant = 2
+		elseif a3 <= angle_deg and angle_deg < a4 then
+			o_name, o_flip, o_idx = angles[3], false, 3
+			quadrant = 3
+		else
+			o_name, o_flip, o_idx = angles[1], false, 1
+			quadrant = 4
+		end
 
-        local angle_deg = angle * 180 / PI
+		if stickiness then
+			a._last_quadrant = quadrant
+		end
 
-        if a1 <= angle_deg and angle_deg < a2 then
-            o_name, o_flip, o_idx = angles[2], false, 2
-            quadrant = 1
-        elseif a2 <= angle_deg and angle_deg < a3 then
-            o_name, o_flip, o_idx = angles[1], true, 1
-            quadrant = 2
-        elseif a3 <= angle_deg and angle_deg < a4 then
-            o_name, o_flip, o_idx = angles[3], false, 3
-            quadrant = 3
-        else
-            o_name, o_flip, o_idx = angles[1], false, 1
-            quadrant = 4
-        end
+		if a.angles_flip_vertical and a.angles_flip_vertical[group] then
+			o_flip = angle > PI * 0.5 and angle < 3 * PI * 0.5
+		end
 
-        if stickiness then
-            a._last_quadrant = quadrant
-        end
-
-        if a.angles_flip_vertical and a.angles_flip_vertical[group] then
-            o_flip = angle > PI * 0.5 and angle < 3 * PI * 0.5
-        end
-
-        return o_name, o_flip, o_idx
-    end
+		return o_name, o_flip, o_idx
+	end
 end
 
 ---根据面向点获取动画名称
@@ -486,23 +455,21 @@ end
 ---@param use_path boolean? 是否使用路径点（可选）
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
-    local fx, fy
+	local fx, fy
 
-    if e.nav_path and use_path then
-        local npos = P:node_pos(e.nav_path)
+	if e.nav_path and use_path then
+		local npos = P:node_pos(e.nav_path)
+		fx, fy = npos.x, npos.y
+	else
+		fx, fy = e.pos.x, e.pos.y
+	end
 
-        fx, fy = npos.x, npos.y
-    else
-        fx, fy = e.pos.x, e.pos.y
-    end
+	if offset then
+		fx, fy = fx + offset.x, fy + offset.y
+	end
 
-    if offset then
-        fx, fy = fx + offset.x, fy + offset.y
-    end
-
-    local angle = km.unroll(atan2(point.y - fy, point.x - fx))
-
-    return U.animation_name_for_angle(e, group, angle, idx)
+	local angle = km.unroll(atan2(point.y - fy, point.x - fx))
+	return U.animation_name_for_angle(e, group, angle, idx)
 end
 
 ---协程：播放动画并等待完成
@@ -513,12 +480,12 @@ end
 ---@param times number? 播放次数（可选）
 ---@param idx number? 精灵索引（可选）
 function U.y_animation_play(entity, name, flip_x, ts, times, idx)
-    -- local loop = times and times > 1
-    U.animation_start(entity, name, flip_x, ts, times and times > 1, idx, true)
+	-- local loop = times and times > 1
+	U.animation_start(entity, name, flip_x, ts, times and times > 1, idx, true)
 
-    while not U.animation_finished(entity, idx, times) do
-        coroutine.yield()
-    end
+	while not U.animation_finished(entity, idx, times) do
+		coroutine.yield()
+	end
 end
 
 ---开始指定组的动画
@@ -529,19 +496,20 @@ end
 ---@param loop boolean? 是否循环（可选）
 ---@param group string? 组名（可选）
 function U.animation_start_group(entity, name, flip_x, ts, loop, group)
-    if not group then
-        U.animation_start(entity, name, flip_x, ts, loop)
+	if not group then
+		U.animation_start(entity, name, flip_x, ts, loop)
+		return 
+	end
 
-        return
-    end
-    local sprites = entity.render.sprites
-    for i = 1, #sprites do
-        local s = sprites[i]
+	local sprites = entity.render.sprites
 
-        if s.group == group then
-            U.animation_start(entity, name, flip_x, ts, loop, i)
-        end
-    end
+	for i = 1, #sprites do
+		local s = sprites[i]
+
+		if s.group == group then
+			U.animation_start(entity, name, flip_x, ts, loop, i)
+		end
+	end
 end
 
 ---检查指定组的动画是否完成
@@ -550,17 +518,19 @@ end
 ---@param times number? 完成次数（可选）
 ---@return boolean 是否完成
 function U.animation_finished_group(entity, group, times)
-    if not group then
-        return U.animation_finished(entity, nil, times)
-    end
-    local sprites = entity.render.sprites
-    for i = 1, #sprites do
-        local s = sprites[i]
+	if not group then
+		return U.animation_finished(entity, nil, times)
+	end
 
-        if s.group == group and U.animation_finished(entity, i, times) then
-            return true
-        end
-    end
+	local sprites = entity.render.sprites
+
+	for i = 1, #sprites do
+		local s = sprites[i]
+
+		if s.group == group and U.animation_finished(entity, i, times) then
+			return true
+		end
+	end
 end
 
 ---协程：播放指定组的动画并等待完成
@@ -571,31 +541,28 @@ end
 ---@param times number? 播放次数（可选）
 ---@param group string? 组名（可选）
 function U.y_animation_play_group(entity, name, flip_x, ts, times, group)
-    if not group then
-        U.y_animation_play(entity, name, flip_x, ts, times)
+	if not group then
+		U.y_animation_play(entity, name, flip_x, ts, times)
+		return 
+	end
 
-        return
-    end
+	-- local loop = times and times > 1
+	U.animation_start_group(entity, name, flip_x, ts, times and times > 1, group)
+	local idx
+	local sprites = entity.render.sprites
 
-    -- local loop = times and times > 1
+	for i = 1, #sprites do
+		if sprites[i].group == group then
+			idx = i
+			break
+		end
+	end
 
-    U.animation_start_group(entity, name, flip_x, ts, times and times > 1, group)
-
-    local idx
-    local sprites = entity.render.sprites
-    for i = 1, #sprites do
-        if sprites[i].group == group then
-            idx = i
-
-            break
-        end
-    end
-
-    if idx then
-        while not U.animation_finished(entity, idx, times) do
-            coroutine.yield()
-        end
-    end
+	if idx then
+		while not U.animation_finished(entity, idx, times) do
+			coroutine.yield()
+		end
+	end
 end
 
 ---协程：等待指定组的动画完成
@@ -603,21 +570,19 @@ end
 ---@param group string? 组名（可选）
 ---@param times number? 完成次数（可选）
 function U.y_animation_wait_group(entity, group, times)
-    if not group then
-        U.y_animation_wait(entity, nil, times)
+	if not group then
+		U.y_animation_wait(entity, nil, times)
+		return 
+	end
 
-        return
-    end
+	for i = 1, #entity.render.sprites do
+		local s = entity.render.sprites[i]
 
-    for i = 1, #entity.render.sprites do
-        local s = entity.render.sprites[i]
-
-        if s.group == group then
-            U.y_animation_wait(entity, i, times)
-
-            break
-        end
-    end
+		if s.group == group then
+			U.y_animation_wait(entity, i, times)
+			break
+		end
+	end
 end
 
 ---获取实体的动画时间戳
@@ -625,18 +590,19 @@ end
 ---@param group string? 组名（可选）
 ---@return number 时间戳
 function U.get_animation_ts(entity, group)
-    if not group then
-        return entity.render.sprites[1].ts
-    else
-        local sprites = entity.render.sprites
-        for i = 1, #sprites do
-            local s = sprites[i]
+	if not group then
+		return entity.render.sprites[1].ts
+	else
+		local sprites = entity.render.sprites
 
-            if s.group == group then
-                return s.ts
-            end
-        end
-    end
+		for i = 1, #sprites do
+			local s = sprites[i]
+
+			if s.group == group then
+				return s.ts
+			end
+		end
+	end
 end
 
 ---隐藏指定范围的精灵
@@ -645,31 +611,31 @@ end
 ---@param to number? 结束索引（可选）
 ---@param keep boolean? 是否保持隐藏计数（可选）
 function U.sprites_hide(entity, from, to, keep)
-    if not entity or not entity.render then
-        return
-    end
+	if not entity or not entity.render then
+		return 
+	end
 
-    from = from or 1
-    local sprites = entity.render.sprites
-    to = to or #sprites
+	from = from or 1
+	local sprites = entity.render.sprites
+	to = to or #sprites
 
-    for i = from, to do
-        local s = sprites[i]
+	for i = from, to do
+		local s = sprites[i]
 
-        if keep then
-            if s.hidden and s.hidden_count == 0 then
-                s.hidden_count = 1
-            end
+		if keep then
+			if s.hidden and s.hidden_count == 0 then
+				s.hidden_count = 1
+			end
 
-            if not s.hidden and s.hidden_count > 0 then
-                s.hidden_count = 0
-            end
+			if not s.hidden and s.hidden_count > 0 then
+				s.hidden_count = 0
+			end
 
-            s.hidden_count = s.hidden_count + 1
-        end
+			s.hidden_count = s.hidden_count + 1
+		end
 
-        s.hidden = true
-    end
+		s.hidden = true
+	end
 end
 
 ---显示指定范围的精灵
@@ -678,40 +644,40 @@ end
 ---@param to number? 结束索引（可选）
 ---@param restore boolean? 是否恢复隐藏状态（可选）
 function U.sprites_show(entity, from, to, restore)
-    if not entity or not entity.render then
-        return
-    end
+	if not entity or not entity.render then
+		return 
+	end
 
-    from = from or 1
-    to = to or #entity.render.sprites
+	from = from or 1
+	to = to or #entity.render.sprites
 
-    for i = from, to do
-        local s = entity.render.sprites[i]
+	for i = from, to do
+		local s = entity.render.sprites[i]
 
-        if restore then
-            s.hidden_count = max(0, s.hidden_count - 1)
-            s.hidden = s.hidden_count > 0
-        else
-            s.hidden_count = 0
-            s.hidden = nil
-        end
-    end
+		if restore then
+			s.hidden_count = max(0, s.hidden_count - 1)
+			s.hidden = s.hidden_count > 0
+		else
+			s.hidden_count = 0
+			s.hidden = nil
+		end
+	end
 end
 
 ---设置移动目标
 ---@param e table 实体
 ---@param pos table 目标位置 {x, y}
 function U.set_destination(e, pos)
-    e.motion.dest.x = pos.x
-    e.motion.dest.y = pos.y
-    e.motion.arrived = false
+	e.motion.dest.x = pos.x
+	e.motion.dest.y = pos.y
+	e.motion.arrived = false
 end
 
 ---设置实体朝向
 ---@param e table 实体，必须有.heading 属性
 ---@param dest table 目标位置 {x, y}
 function U.set_heading(e, dest)
-    e.heading.angle = atan2(dest.y - e.pos.y, dest.x - e.pos.x)
+	e.heading.angle = atan2(dest.y - e.pos.y, dest.x - e.pos.x)
 end
 
 ---移动实体到目标位置
@@ -721,49 +687,47 @@ end
 ---@param unsnapped boolean? 是否不强制停在目标点（可选）
 ---@return boolean 是否到达目标
 function U.walk(e, dt, accel, unsnapped)
-    if e.motion.arrived then
-        return true
-    end
+	if e.motion.arrived then
+		return true
+	end
 
-    local m = e.motion
-    local pos = e.pos
-    local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
-    local v_angle = atan2(vy, vx)
-    local v_len = V.len(vx, vy)
+	local m = e.motion
+	local pos = e.pos
+	local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
+	local v_angle = atan2(vy, vx)
+	local v_len = V.len(vx, vy)
 
-    if accel then
-        if not (m.speed_limit and m.max_speed >= m.speed_limit) then
-            U.speed_inc_self(e, accel * dt)
-        end
-    end
+	if accel then
+		if not (m.speed_limit and m.max_speed >= m.speed_limit) then
+			U.speed_inc_self(e, accel * dt)
+		end
+	end
 
-    local step = e.motion.real_speed * dt
+	local step = e.motion.real_speed * dt
+	local nx, ny = cos(v_angle), sin(v_angle)
 
-    local nx, ny = cos(v_angle), sin(v_angle)
+	if v_len <= step and not (e.teleport and e.teleport.pending) then
+		if unsnapped then
+			pos.x, pos.y = pos.x + step * nx, pos.y + step * ny
+		else
+			pos.x, pos.y = m.dest.x, m.dest.y
+		end
 
-    if v_len <= step and not (e.teleport and e.teleport.pending) then
-        if unsnapped then
-            pos.x, pos.y = pos.x + step * nx, pos.y + step * ny
-        else
-            pos.x, pos.y = m.dest.x, m.dest.y
-        end
+		m.speed.x, m.speed.y = 0, 0
+		m.arrived = true
+		return true
+	end
 
-        m.speed.x, m.speed.y = 0, 0
-        m.arrived = true
+	if e.heading then
+		e.heading.angle = v_angle
+	end
 
-        return true
-    end
-
-    if e.heading then
-        e.heading.angle = v_angle
-    end
-    local true_step = min(step, v_len)
-    local sx, sy = true_step * nx, true_step * ny
-    pos.x, pos.y = pos.x + sx, pos.y + sy
-    m.speed.x, m.speed.y = sx / dt, sy / dt
-    m.arrived = false
-
-    return false
+	local true_step = min(step, v_len)
+	local sx, sy = true_step * nx, true_step * ny
+	pos.x, pos.y = pos.x + sx, pos.y + sy
+	m.speed.x, m.speed.y = sx / dt, sy / dt
+	m.arrived = false
+	return false
 end
 
 ---强制移动一步
@@ -771,25 +735,25 @@ end
 ---@param dt number 时间增量
 ---@param dest table 目标位置 {x, y}
 function U.force_motion_step(this, dt, dest)
-    local fm = this.force_motion
-    local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-    local dist = V.len(dx, dy)
-    local ramp_radius = fm.ramp_radius
-    local df
+	local fm = this.force_motion
+	local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+	local dist = V.len(dx, dy)
+	local ramp_radius = fm.ramp_radius
+	local df
 
-    if not ramp_radius then
-        df = 1
-    elseif ramp_radius < dist then
-        df = fm.ramp_max_factor
-    else
-        df = max(dist / ramp_radius, fm.ramp_min_factor)
-    end
+	if not ramp_radius then
+		df = 1
+	elseif ramp_radius < dist then
+		df = fm.ramp_max_factor
+	else
+		df = max(dist / ramp_radius, fm.ramp_min_factor)
+	end
 
-    fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
-    fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(dt, fm.a.x, fm.a.y))
-    fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
-    this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(dt, fm.v.x, fm.v.y))
-    fm.a.x, fm.a.y = V.mul(-1 * fm.fr / dt, fm.v.x, fm.v.y)
+	fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step * df, dx, dy)))
+	fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(dt, fm.a.x, fm.a.y))
+	fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
+	this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(dt, fm.v.x, fm.v.y))
+	fm.a.x, fm.a.y = V.mul(-1 * fm.fr / dt, fm.v.x, fm.v.y)
 end
 
 ---搜索最近的士兵
@@ -802,24 +766,25 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 最近的士兵
 function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
-    local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 
-    if not soldiers or #soldiers == 0 then
-        return nil
-    else
-        table.sort(soldiers, function(e1, e2)
-            local e1_mock = band(e1.vis.flags, F_MOCKING) ~= 0
-            local e2_mock = band(e2.vis.flags, F_MOCKING) ~= 0
-            if e1_mock and not e2_mock then
-                return true
-            elseif not e1_mock and e2_mock then
-                return false
-            end
-            return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
-        end)
+	if not soldiers or #soldiers == 0 then
+		return nil
+	else
+		table.sort(soldiers, function(e1, e2)
+			local e1_mock = band(e1.vis.flags, F_MOCKING) ~= 0
+			local e2_mock = band(e2.vis.flags, F_MOCKING) ~= 0
 
-        return soldiers[1]
-    end
+			if e1_mock and not e2_mock then
+				return true
+			elseif not e1_mock and e2_mock then
+				return false
+			end
+
+			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
+		end)
+		return soldiers[1]
+	end
 end
 
 ---搜索范围内的士兵
@@ -832,18 +797,15 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的士兵列表
 function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
-    local soldiers = table.filter(entities, function(k, v)
-        return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and
-                   band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
-                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-                   (not filter_func or filter_func(v, origin))
-    end)
+	local soldiers = table.filter(entities, function(k, v)
+		return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+	end)
 
-    if not soldiers or #soldiers == 0 then
-        return nil
-    else
-        return soldiers
-    end
+	if not soldiers or #soldiers == 0 then
+		return nil
+	else
+		return soldiers
+	end
 end
 
 ---搜索最近的敌人
@@ -856,17 +818,16 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 最近的敌人, table? 所有范围内的敌人
 function U.find_nearest_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
-    local targets = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+	local targets = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
 
-    if not targets or #targets == 0 then
-        return nil
-    else
-        table.sort(targets, function(e1, e2)
-            return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
-        end)
-
-        return targets[1], targets
-    end
+	if not targets or #targets == 0 then
+		return nil
+	else
+		table.sort(targets, function(e1, e2)
+			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
+		end)
+		return targets[1], targets
+	end
 end
 
 ---搜索最近的目标
@@ -879,17 +840,16 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 最近的目标, table? 所有范围内的目标
 function U.find_nearest_target(entities, origin, min_range, max_range, flags, bans, filter_func)
-    local targets = U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local targets = U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
 
-    if not targets or #targets == 0 then
-        return nil
-    else
-        table.sort(targets, function(e1, e2)
-            return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
-        end)
-
-        return targets[1], targets
-    end
+	if not targets or #targets == 0 then
+		return nil
+	else
+		table.sort(targets, function(e1, e2)
+			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
+		end)
+		return targets[1], targets
+	end
 end
 
 ---搜索范围内的目标
@@ -902,20 +862,15 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的目标列表
 function U.find_targets_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
-    local targets = table.filter(entities, function(k, v)
-        return not v.pending_removal and v.vis and (v.enemy or v.soldier) and v.health and not v.health.dead and
-                   band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and
-                   U.is_inside_ellipse(v.pos, origin, max_range) and
-                   (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and
-                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-                   (not filter_func or filter_func(v, origin))
-    end)
+	local targets = table.filter(entities, function(k, v)
+		return not v.pending_removal and v.vis and (v.enemy or v.soldier) and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (not v.nav_path or P:is_node_valid(v.nav_path.pi, v.nav_path.ni)) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+	end)
 
-    if not targets or #targets == 0 then
-        return nil
-    else
-        return targets
-    end
+	if not targets or #targets == 0 then
+		return nil
+	else
+		return targets
+	end
 end
 
 ---搜索第一个敌人
@@ -928,28 +883,29 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 第一个敌人
 function U.find_first_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
-    if max_range == math.huge then
-        for _, e in pairs(store.enemies) do
-            if not e.pending_removal and not e.health.dead and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
-                0 and (not filter_func or filter_func(e, origin)) then
-                return e
-            end
-        end
-        return nil
-    end
-    if min_range == 0 then
-        if filter_func then
-            return seek.find_first_enemy_in_range_filter_on(origin, max_range, flags, bans, filter_func)
-        else
-            return seek.find_first_enemy_in_range_filter_off(origin, max_range, flags, bans)
-        end
-    else
-        if filter_func then
-            return seek.find_first_enemy_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_func)
-        else
-            return seek.find_first_enemy_between_range_filter_off(origin, min_range, max_range, flags, bans)
-        end
-    end
+	if max_range == math.huge then
+		for _, e in pairs(store.enemies) do
+			if not e.pending_removal and not e.health.dead and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) == 0 and (not filter_func or filter_func(e, origin)) then
+				return e
+			end
+		end
+
+		return nil
+	end
+
+	if min_range == 0 then
+		if filter_func then
+			return seek.find_first_enemy_in_range_filter_on(origin, max_range, flags, bans, filter_func)
+		else
+			return seek.find_first_enemy_in_range_filter_off(origin, max_range, flags, bans)
+		end
+	else
+		if filter_func then
+			return seek.find_first_enemy_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_func)
+		else
+			return seek.find_first_enemy_between_range_filter_off(origin, min_range, max_range, flags, bans)
+		end
+	end
 end
 
 ---随机选择一个目标
@@ -962,23 +918,18 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 随机目标
 function U.find_random_target(entities, origin, min_range, max_range, flags, bans, filter_func)
-    flags = flags or 0
-    bans = bans or 0
+	flags = flags or 0
+	bans = bans or 0
+	local targets = table.filter(entities, function(k, v)
+		return not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+	end)
 
-    local targets = table.filter(entities, function(k, v)
-        return not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and
-                   band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and
-                   (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and
-                   (not filter_func or filter_func(v, origin))
-    end)
-
-    if not targets or #targets == 0 then
-        return nil
-    else
-        local idx = random(1, #targets)
-
-        return targets[idx]
-    end
+	if not targets or #targets == 0 then
+		return nil
+	else
+		local idx = random(1, #targets)
+		return targets[idx]
+	end
 end
 
 ---随机选择一个敌人
@@ -991,8 +942,8 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 随机敌人
 function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
-    local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    return enemies and enemies[random(1, #enemies)] or nil
+	local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+	return enemies and enemies[random(1, #enemies)] or nil
 end
 
 ---搜索随机敌人及其预测位置
@@ -1006,11 +957,13 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 随机敌人, table? 敌人预测位置
 function U.find_random_enemy_with_pos(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func)
-    local random_enemy = U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
-    if not random_enemy then
-        return nil, nil
-    end
-    return random_enemy, U.calculate_enemy_ffe_pos(random_enemy, prediction_time)
+	local random_enemy = U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
+
+	if not random_enemy then
+		return nil, nil
+	end
+
+	return random_enemy, U.calculate_enemy_ffe_pos(random_enemy, prediction_time)
 end
 
 ---搜索范围内的敌人
@@ -1023,19 +976,19 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的敌人列表
 function U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    if min_range == 0 then
-        if filter_func then
-            return seek.find_enemies_in_range_filter_on(origin, max_range, flags, bans, filter_func)
-        else
-            return seek.find_enemies_in_range_filter_off(origin, max_range, flags, bans)
-        end
-    else
-        if filter_func then
-            return seek.find_enemies_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_func)
-        else
-            return seek.find_enemies_between_range_filter_off(origin, min_range, max_range, flags, bans)
-        end
-    end
+	if min_range == 0 then
+		if filter_func then
+			return seek.find_enemies_in_range_filter_on(origin, max_range, flags, bans, filter_func)
+		else
+			return seek.find_enemies_in_range_filter_off(origin, max_range, flags, bans)
+		end
+	else
+		if filter_func then
+			return seek.find_enemies_between_range_filter_on(origin, min_range, max_range, flags, bans, filter_func)
+		else
+			return seek.find_enemies_between_range_filter_off(origin, min_range, max_range, flags, bans)
+		end
+	end
 end
 
 ---检查范围内是否有敌人（开销更小）
@@ -1048,7 +1001,7 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return boolean 是否有敌人
 function U.has_enemy_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    return U.find_first_enemy(store, origin, min_range, max_range, flags, bans, filter_func) ~= nil
+	return U.find_first_enemy(store, origin, min_range, max_range, flags, bans, filter_func) ~= nil
 end
 
 ---检查范围内是否有足够数量的敌人（开销更小）
@@ -1061,15 +1014,14 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@param count number 需要的敌人数量
 function U.has_enough_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func, count)
-    local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
-    return enemies and #enemies >= count
+	local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+	return enemies and #enemies >= count
 end
 
 local function nearest_to_goal_cmp(e1, e2)
-    local p1 = e1.enemy.nav_path
-    local p2 = e2.enemy.nav_path
-
-    return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
+	local p1 = e1.enemy.nav_path
+	local p2 = e2.enemy.nav_path
+	return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
 ---搜索路径上的敌人
@@ -1083,42 +1035,36 @@ end
 ---@param only_upstream boolean? 是否只搜索上游（可选）
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 路径上的敌人列表
-function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_range, max_path_dist, flags, bans,
-    only_upstream, filter_func)
-    max_path_dist = max_path_dist or 30
-    flags = flags or 0
-    bans = bans or 0
+function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_range, max_path_dist, flags, bans, only_upstream, filter_func)
+	max_path_dist = max_path_dist or 30
+	flags = flags or 0
+	bans = bans or 0
+	local result = {}
+	local nearest_nodes = P:nearest_nodes(origin.x, origin.y)
 
-    local result = {}
-    local nearest_nodes = P:nearest_nodes(origin.x, origin.y)
+	for _, n in pairs(nearest_nodes) do
+		local opi, ospi, oni, odist = unpack(n, 1, 4)
 
-    for _, n in pairs(nearest_nodes) do
-        local opi, ospi, oni, odist = unpack(n, 1, 4)
+		if max_path_dist < odist or not P:is_node_valid(opi, oni) then
+		-- block empty
+		else
+			for _, e in pairs(entities) do
+				if not e.pending_removal and not e.health.dead and e.nav_path.pi == opi and (only_upstream == true and oni > e.nav_path.ni or only_upstream == false and oni < e.nav_path.ni or only_upstream == nil) and e.vis and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) == 0 and min_node_range <= abs(e.nav_path.ni - oni) and max_node_range >= abs(e.nav_path.ni - oni) and (not filter_func or filter_func(e, origin)) then
+					table.insert(result, {
+						enemy = e,
+						origin = n
+					})
+				end
+			end
+		end
+	end
 
-        if max_path_dist < odist or not P:is_node_valid(opi, oni) then
-            -- block empty
-        else
-            for _, e in pairs(entities) do
-                if not e.pending_removal and not e.health.dead and e.nav_path.pi == opi and
-                    (only_upstream == true and oni > e.nav_path.ni or only_upstream == false and oni < e.nav_path.ni or
-                        only_upstream == nil) and e.vis and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) ==
-                    0 and min_node_range <= abs(e.nav_path.ni - oni) and max_node_range >= abs(e.nav_path.ni - oni) and
-                    (not filter_func or filter_func(e, origin)) then
-                    table.insert(result, {
-                        enemy = e,
-                        origin = n
-                    })
-                end
-            end
-        end
-    end
-
-    if not result or #result == 0 then
-        return nil
-    else
-        table.sort(result, nearest_to_goal_cmp)
-        return result
-    end
+	if not result or #result == 0 then
+		return nil
+	else
+		table.sort(result, nearest_to_goal_cmp)
+		return result
+	end
 end
 
 ---重新搜索最前面的敌人
@@ -1130,12 +1076,13 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table 最前面的敌人
 function U.refind_foremost_enemy(last_enemy, store, flags, bans)
-    local new_enemy = U.detect_foremost_enemy_in_range_filter_off(last_enemy.pos, 50, flags, bans)
-    if new_enemy then
-        return new_enemy
-    else
-        return last_enemy
-    end
+	local new_enemy = U.detect_foremost_enemy_in_range_filter_off(last_enemy.pos, 50, flags, bans)
+
+	if new_enemy then
+		return new_enemy
+	else
+		return last_enemy
+	end
 end
 
 ---搜索具有最大覆盖范围的最前面敌人
@@ -1150,25 +1097,20 @@ end
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@param cover_range number 覆盖范围
 ---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
-function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_range, prediction_time, flags, bans,
-    filter_func, min_override_flags, cover_range)
-    if min_range == 0 then
-        if filter_func then
-            return seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, max_range, prediction_time,
-                flags, bans, cover_range, filter_func)
-        else
-            return seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, max_range, prediction_time,
-                flags, bans, cover_range)
-        end
-    else
-        if filter_func then
-            return seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(origin, min_range, max_range,
-                prediction_time, flags, bans, cover_range, filter_func)
-        else
-            return seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(origin, min_range, max_range,
-                prediction_time, flags, bans, cover_range)
-        end
-    end
+function U.find_foremost_enemy_with_max_coverage(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags, cover_range)
+	if min_range == 0 then
+		if filter_func then
+			return seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, max_range, prediction_time, flags, bans, cover_range, filter_func)
+		else
+			return seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, max_range, prediction_time, flags, bans, cover_range)
+		end
+	else
+		if filter_func then
+			return seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(origin, min_range, max_range, prediction_time, flags, bans, cover_range, filter_func)
+		else
+			return seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(origin, min_range, max_range, prediction_time, flags, bans, cover_range)
+		end
+	end
 end
 
 ---搜索优先飞行单位的最前面敌人
@@ -1182,21 +1124,20 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table? 最前面的敌人, table? 所有范围内的敌人, table? 最前面敌人的预测位置
-function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans,
-    filter_func, min_override_flags)
-    local enemy, enemies
-    if filter_func then
-        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin, max_range, flags,
-            bans, filter_func)
-    else
-        enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(origin, max_range, flags,
-            bans)
-    end
+function U.find_foremost_enemy_with_flying_preference(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	local enemy, enemies
 
-    if not enemy then
-        return nil, nil, nil
-    end
-    return enemy, enemies, U.calculate_enemy_ffe_pos(enemy, prediction_time)
+	if filter_func then
+		enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(origin, max_range, flags, bans, filter_func)
+	else
+		enemy, enemies = seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(origin, max_range, flags, bans)
+	end
+
+	if not enemy then
+		return nil, nil, nil
+	end
+
+	return enemy, enemies, U.calculate_enemy_ffe_pos(enemy, prediction_time)
 end
 
 ---搜索最前面的敌人
@@ -1210,24 +1151,20 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@param min_override_flags number? 最小覆盖标志（可选）
 ---@return table? 最前面的敌人, table? 所有范围内的敌人 , table? 最前面敌人的预测位置
-function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func,
-    min_override_flags)
-    if min_range == 0 then
-        if filter_func then
-            return seek.find_foremost_enemy_in_range_filter_on(origin, max_range, prediction_time, flags, bans,
-                filter_func)
-        else
-            return seek.find_foremost_enemy_in_range_filter_off(origin, max_range, prediction_time, flags, bans)
-        end
-    else
-        if filter_func then
-            return seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max_range, prediction_time,
-                flags, bans, filter_func)
-        else
-            return seek.find_foremost_enemy_between_range_filter_off(origin, min_range, max_range, prediction_time,
-                flags, bans)
-        end
-    end
+function U.find_foremost_enemy(store, origin, min_range, max_range, prediction_time, flags, bans, filter_func, min_override_flags)
+	if min_range == 0 then
+		if filter_func then
+			return seek.find_foremost_enemy_in_range_filter_on(origin, max_range, prediction_time, flags, bans, filter_func)
+		else
+			return seek.find_foremost_enemy_in_range_filter_off(origin, max_range, prediction_time, flags, bans)
+		end
+	else
+		if filter_func then
+			return seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max_range, prediction_time, flags, bans, filter_func)
+		else
+			return seek.find_foremost_enemy_between_range_filter_off(origin, min_range, max_range, prediction_time, flags, bans)
+		end
+	end
 end
 
 ---搜索范围内的塔
@@ -1237,19 +1174,15 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 范围内的塔列表
 function U.find_towers_in_range(entities, origin, attack, filter_func)
-    local towers = table.filter(entities, function(k, v)
-        return not v.pending_removal and not v.tower.blocked and
-                   (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and
-                   U.is_inside_ellipse(v.pos, origin, attack.max_range) and
-                   (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, origin, attack.min_range)) and
-                   (not filter_func or filter_func(v, origin, attack))
-    end)
+	local towers = table.filter(entities, function(k, v)
+		return not v.pending_removal and not v.tower.blocked and (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and U.is_inside_ellipse(v.pos, origin, attack.max_range) and (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, origin, attack.min_range)) and (not filter_func or filter_func(v, origin, attack))
+	end)
 
-    if not towers or #towers == 0 then
-        return nil
-    else
-        return towers
-    end
+	if not towers or #towers == 0 then
+		return nil
+	else
+		return towers
+	end
 end
 
 ---搜索指定位置的实体
@@ -1259,36 +1192,33 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 找到的实体
 function U.find_entity_at_pos(entities, x, y, filter_func)
-    local found = {}
+	local found = {}
 
-    for _, e in pairs(entities) do
-        if e.pos and e.ui and e.ui.can_click then
-            local r = e.ui.click_rect
+	for _, e in pairs(entities) do
+		if e.pos and e.ui and e.ui.can_click then
+			local r = e.ui.click_rect
 
-            if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y +
-                r.pos.y + r.size.y and (not filter_func or filter_func(e)) then
-                table.insert(found, e)
-            end
-        end
-    end
+			if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y + r.pos.y + r.size.y and (not filter_func or filter_func(e)) then
+				table.insert(found, e)
+			end
+		end
+	end
 
-    table.sort(found, function(e1, e2)
-        if e1.ui.z == e2.ui.z then
-            return e1.pos.y < e2.pos.y
-        else
-            return e1.ui.z > e2.ui.z
-        end
-    end)
+	table.sort(found, function(e1, e2)
+		if e1.ui.z == e2.ui.z then
+			return e1.pos.y < e2.pos.y
+		else
+			return e1.ui.z > e2.ui.z
+		end
+	end)
 
-    if #found > 0 then
-        local e = found[1]
-
-        log.paranoid("entity:%s template:%s", e.id, e.template_name)
-
-        return e
-    else
-        return nil
-    end
+	if #found > 0 then
+		local e = found[1]
+		log.paranoid("entity:%s template:%s", e.id, e.template_name)
+		return e
+	else
+		return nil
+	end
 end
 
 ---搜索指定位置的所有实体
@@ -1298,22 +1228,23 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 找到的实体列表
 function U.find_entities_at_pos(entities, x, y, filter_func)
-    local found = {}
+	local found = {}
 
-    for _, e in pairs(entities) do
-        if e.pos and e.ui and e.ui.can_click then
-            local r = e.ui.click_rect
+	for _, e in pairs(entities) do
+		if e.pos and e.ui and e.ui.can_click then
+			local r = e.ui.click_rect
 
-            if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y +
-                r.pos.y + r.size.y and (not filter_func or filter_func(e)) then
-                table.insert(found, e)
-            end
-        end
-    end
-    if #found == 0 then
-        return nil
-    end
-    return found
+			if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y + r.pos.y + r.size.y and (not filter_func or filter_func(e)) then
+				table.insert(found, e)
+			end
+		end
+	end
+
+	if #found == 0 then
+		return nil
+	end
+
+	return found
 end
 
 ---搜索有敌人的路径
@@ -1323,61 +1254,59 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 有敌人的路径列表
 function U.find_paths_with_enemies(entities, flags, bans, filter_func)
-    local pis = {}
+	local pis = {}
 
-    for _, e in pairs(entities) do
-        if not e.pending_removal and e.nav_path and e.health and not e.health.dead and e.vis and band(e.vis.flags, bans) ==
-            0 and band(e.vis.bans, flags) == 0 and (not filter_func or filter_func(e)) then
-            pis[e.nav_path.pi] = true
-        end
-    end
+	for _, e in pairs(entities) do
+		if not e.pending_removal and e.nav_path and e.health and not e.health.dead and e.vis and band(e.vis.flags, bans) == 0 and band(e.vis.bans, flags) == 0 and (not filter_func or filter_func(e)) then
+			pis[e.nav_path.pi] = true
+		end
+	end
 
-    local out = {}
+	local out = {}
 
-    for pi, _ in pairs(pis) do
-        table.insert(out, pi)
-    end
+	for pi, _ in pairs(pis) do
+		table.insert(out, pi)
+	end
 
-    if #out < 1 then
-        return nil
-    else
-        return out
-    end
+	if #out < 1 then
+		return nil
+	else
+		return out
+	end
 end
 
 ---获取攻击顺序
 ---@param attacks table 攻击列表
 ---@return table 攻击顺序索引数组
 function U.attack_order(attacks)
-    local order = {}
+	local order = {}
 
-    for i = 1, #attacks do
-        local a = attacks[i]
+	for i = 1, #attacks do
+		local a = attacks[i]
+		table.insert(order, {
+			id = i,
+			chance = a.chance or 1,
+			cooldown = a.cooldown
+		})
+	end
 
-        table.insert(order, {
-            id = i,
-            chance = a.chance or 1,
-            cooldown = a.cooldown
-        })
-    end
+	table.sort(order, function(o1, o2)
+		if o1.chance ~= o2.chance then
+			return o1.chance < o2.chance
+		elseif o1.cooldown and o2.cooldown and o1.cooldown ~= o2.cooldown then
+			return o1.cooldown > o2.cooldown
+		else
+			return o1.id < o2.id
+		end
+	end)
 
-    table.sort(order, function(o1, o2)
-        if o1.chance ~= o2.chance then
-            return o1.chance < o2.chance
-        elseif o1.cooldown and o2.cooldown and o1.cooldown ~= o2.cooldown then
-            return o1.cooldown > o2.cooldown
-        else
-            return o1.id < o2.id
-        end
-    end)
+	local out = {}
 
-    local out = {}
+	for i = 1, #order do
+		out[i] = order[i].id
+	end
 
-    for i = 1, #order do
-        out[i] = order[i].id
-    end
-
-    return out
+	return out
 end
 
 ---获取近战位置
@@ -1387,36 +1316,33 @@ end
 ---@param back boolean? 是否在后面（可选）
 ---@return table? 士兵位置, boolean? 士兵是否在右侧
 function U.melee_slot_position(soldier, enemy, rank, back)
-    if not rank then
-        rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
+	if not rank then
+		rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
 
-        if not rank then
-            return nil
-        end
-    end
+		if not rank then
+			return nil
+		end
+	end
 
-    local idx = km.zmod(rank, 3)
-    local x_off, y_off = 0, 0
+	local idx = km.zmod(rank, 3)
+	local x_off, y_off = 0, 0
 
-    if idx == 2 then
-        x_off = -3
-        y_off = -6
-    elseif idx == 3 then
-        x_off = -3
-        y_off = 6
-    end
+	if idx == 2 then
+		x_off = -3
+		y_off = -6
+	elseif idx == 3 then
+		x_off = -3
+		y_off = 6
+	end
 
-    local soldier_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) < PI * 0.5
+	local soldier_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) < PI * 0.5
 
-    if back then
-        soldier_on_the_right = not soldier_on_the_right
-    end
+	if back then
+		soldier_on_the_right = not soldier_on_the_right
+	end
 
-    local soldier_pos = V.v(enemy.pos.x + (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x) *
-                                (soldier_on_the_right and 1 or -1),
-        enemy.pos.y + enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
-
-    return soldier_pos, soldier_on_the_right
+	local soldier_pos = V.v(enemy.pos.x + (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x) * (soldier_on_the_right and 1 or -1), enemy.pos.y + enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
+	return soldier_pos, soldier_on_the_right
 end
 
 ---获取近战位置
@@ -1426,36 +1352,33 @@ end
 ---@param back boolean|nil 是否在后面（可选）
 ---@return table|nil 敌人位置, boolean|nil 敌人是否在右侧
 function U.melee_slot_enemy_position(enemy, soldier, rank, back)
-    if not rank then
-        rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
+	if not rank then
+		rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
 
-        if not rank then
-            return nil
-        end
-    end
+		if not rank then
+			return nil
+		end
+	end
 
-    local idx = km.zmod(rank, 3)
-    local x_off, y_off = 0, 0
+	local idx = km.zmod(rank, 3)
+	local x_off, y_off = 0, 0
 
-    if idx == 2 then
-        x_off = -3
-        y_off = -6
-    elseif idx == 3 then
-        x_off = -3
-        y_off = 6
-    end
+	if idx == 2 then
+		x_off = -3
+		y_off = -6
+	elseif idx == 3 then
+		x_off = -3
+		y_off = 6
+	end
 
-    local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
+	local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
 
-    if back then
-        enemy_on_the_right = not enemy_on_the_right
-    end
+	if back then
+		enemy_on_the_right = not enemy_on_the_right
+	end
 
-    local enemy_pos = V.v(soldier.pos.x + (soldier.soldier.melee_slot.x + x_off + enemy.enemy.melee_slot_offset.x) *
-                              (enemy_on_the_right and 1 or -1),
-        soldier.pos.y + soldier.soldier.melee_slot.y + y_off + enemy.enemy.melee_slot_offset.y)
-
-    return enemy_pos, enemy_on_the_right
+	local enemy_pos = V.v(soldier.pos.x + (soldier.soldier.melee_slot.x + x_off + enemy.enemy.melee_slot_offset.x) * (enemy_on_the_right and 1 or -1), soldier.pos.y + soldier.soldier.melee_slot.y + y_off + enemy.enemy.melee_slot_offset.y)
+	return enemy_pos, enemy_on_the_right
 end
 
 ---获取集结队形位置
@@ -1465,22 +1388,19 @@ end
 ---@param angle_offset number? 角度偏移（可选）
 ---@return table 位置坐标, table 中心点坐标
 function U.rally_formation_position(idx, barrack, count, angle_offset)
-    local pos
+	local pos
+	count = count or #barrack.soldiers
+	angle_offset = angle_offset or 0
 
-    count = count or #barrack.soldiers
-    angle_offset = angle_offset or 0
+	if count == 1 then
+		pos = V.vclone(barrack.rally_pos)
+	else
+		local a = 2 * PI / count
+		pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
+	end
 
-    if count == 1 then
-        pos = V.vclone(barrack.rally_pos)
-    else
-        local a = 2 * PI / count
-
-        pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
-    end
-
-    local center = V.vclone(barrack.rally_pos)
-
-    return pos, center
+	local center = V.vclone(barrack.rally_pos)
+	return pos, center
 end
 
 ---获取拦截者
@@ -1488,14 +1408,13 @@ end
 ---@param blocked table 被拦截实体
 ---@return table? 拦截者实体
 function U.get_blocker(store, blocked)
-    if blocked.enemy and #blocked.enemy.blockers > 0 then
-        local blocker_id = blocked.enemy.blockers[1]
-        local blocker = store.entities[blocker_id]
+	if blocked.enemy and #blocked.enemy.blockers > 0 then
+		local blocker_id = blocked.enemy.blockers[1]
+		local blocker = store.entities[blocker_id]
+		return blocker
+	end
 
-        return blocker
-    end
-
-    return nil
+	return nil
 end
 
 ---获取被拦截者
@@ -1503,10 +1422,9 @@ end
 ---@param blocker table 拦截者实体
 ---@return table? 被拦截者实体
 function U.get_blocked(store, blocker)
-    local blocked_id = blocker.soldier.target_id
-    local blocked = store.entities[blocked_id]
-
-    return blocked
+	local blocked_id = blocker.soldier.target_id
+	local blocked = store.entities[blocked_id]
+	return blocked
 end
 
 ---获取拦截者排名
@@ -1514,14 +1432,14 @@ end
 ---@param blocker table 拦截者实体
 ---@return number? 排名
 function U.blocker_rank(store, blocker)
-    local blocked_id = blocker.soldier.target_id
-    local blocked = store.entities[blocked_id]
+	local blocked_id = blocker.soldier.target_id
+	local blocked = store.entities[blocked_id]
 
-    if blocked then
-        return table.keyforobject(blocked.enemy.blockers, blocker.id)
-    end
+	if blocked then
+		return table.keyforobject(blocked.enemy.blockers, blocker.id)
+	end
 
-    return nil
+	return nil
 end
 
 ---检查被拦截者是否有效
@@ -1529,25 +1447,24 @@ end
 ---@param blocker table 拦截者实体
 ---@return boolean 是否有效
 function U.is_blocked_valid(store, blocker)
-    local blocked_id = blocker.soldier.target_id
-    local blocked = store.entities[blocked_id]
-
-    return blocked and not blocked.health.dead and (not blocked.vis or bit.band(blocked.vis.bans, F_BLOCK) == 0)
+	local blocked_id = blocker.soldier.target_id
+	local blocked = store.entities[blocked_id]
+	return blocked and not blocked.health.dead and (not blocked.vis or bit.band(blocked.vis.bans, F_BLOCK) == 0)
 end
 
 ---解除所有拦截
 ---@param store table game.store
 ---@param blocked table 被拦截实体
 function U.unblock_all(store, blocked)
-    for _, blocker_id in pairs(blocked.enemy.blockers) do
-        local blocker = store.entities[blocker_id]
+	for _, blocker_id in pairs(blocked.enemy.blockers) do
+		local blocker = store.entities[blocker_id]
 
-        if blocker then
-            blocker.soldier.target_id = nil
-        end
-    end
+		if blocker then
+			blocker.soldier.target_id = nil
+		end
+	end
 
-    blocked.enemy.blockers = {}
+	blocked.enemy.blockers = {}
 end
 
 ---安全移除拦截者
@@ -1555,25 +1472,26 @@ end
 ---@param blocked table 被拦截实体
 ---@param blocker_id number 拦截者ID
 function U.dec_blocker(store, blocked, blocker_id)
-    table.removeobject(blocked.enemy.blockers, blocker_id)
-    if #blocked.enemy.blockers > 1 then
-        local last = table.remove(blocked.enemy.blockers)
-        table.insert(blocked.enemy.blockers, 1, last)
-    end
+	table.removeobject(blocked.enemy.blockers, blocker_id)
+
+	if #blocked.enemy.blockers > 1 then
+		local last = table.remove(blocked.enemy.blockers)
+		table.insert(blocked.enemy.blockers, 1, last)
+	end
 end
 
 ---解除目标拦截
 ---@param store table game.store
 ---@param blocker table 拦截者实体
 function U.unblock_target(store, blocker)
-    local blocked_id = blocker.soldier.target_id
-    local blocked = store.entities[blocked_id]
+	local blocked_id = blocker.soldier.target_id
+	local blocked = store.entities[blocked_id]
 
-    if blocked then
-        U.dec_blocker(store, blocked, blocker.id)
-    end
+	if blocked then
+		U.dec_blocker(store, blocked, blocker.id)
+	end
 
-    blocker.soldier.target_id = nil
+	blocker.soldier.target_id = nil
 end
 
 ---拦截敌人
@@ -1581,15 +1499,14 @@ end
 ---@param blocker table 拦截者实体
 ---@param blocked table 被拦截实体
 function U.block_enemy(store, blocker, blocked)
-    if blocker.soldier.target_id ~= blocked.id then
-        U.unblock_target(store, blocker)
-    end
+	if blocker.soldier.target_id ~= blocked.id then
+		U.unblock_target(store, blocker)
+	end
 
-    if not table.keyforobject(blocked.enemy.blockers, blocker.id) then
-        table.insert(blocked.enemy.blockers, blocker.id)
-
-        blocker.soldier.target_id = blocked.id
-    end
+	if not table.keyforobject(blocked.enemy.blockers, blocker.id) then
+		table.insert(blocked.enemy.blockers, blocker.id)
+		blocker.soldier.target_id = blocked.id
+	end
 end
 
 ---替换拦截者
@@ -1597,54 +1514,54 @@ end
 ---@param old table 旧拦截者
 ---@param new table 新拦截者
 function U.replace_blocker(store, old, new)
-    local blocked_id = old.soldier.target_id
-    local blocked = store.entities[blocked_id]
+	local blocked_id = old.soldier.target_id
+	local blocked = store.entities[blocked_id]
 
-    if blocked then
-        local idx = table.keyforobject(blocked.enemy.blockers, old.id)
+	if blocked then
+		local idx = table.keyforobject(blocked.enemy.blockers, old.id)
 
-        if idx then
-            blocked.enemy.blockers[idx] = new.id
-            new.soldier.target_id = blocked.id
-            old.soldier.target_id = nil
-        end
-    end
+		if idx then
+			blocked.enemy.blockers[idx] = new.id
+			new.soldier.target_id = blocked.id
+			old.soldier.target_id = nil
+		end
+	end
 end
 
 ---清理无效拦截者
 ---@param store table game.store
 ---@param blocked table 被拦截实体
 function U.cleanup_blockers(store, blocked)
-    local blockers = blocked.enemy.blockers
+	local blockers = blocked.enemy.blockers
 
-    if not blockers then
-        return
-    end
+	if not blockers then
+		return 
+	end
 
-    for i = #blockers, 1, -1 do
-        local blocker_id = blockers[i]
+	for i = #blockers, 1, -1 do
+		local blocker_id = blockers[i]
 
-        if not store.entities[blocker_id] then
-            log.debug("cleanup_blockers for (%s) %s removing id %s", blocked.id, blocked.template_name, blocker_id)
-            table.remove(blockers, i)
-        end
-    end
+		if not store.entities[blocker_id] then
+			log.debug("cleanup_blockers for (%s) %s removing id %s", blocked.id, blocked.template_name, blocker_id)
+			table.remove(blockers, i)
+		end
+	end
 end
 
 local function calc_explosion_protection(armor)
-    return armor * (0.2 * armor + 0.4)
+	return armor * (0.2 * armor + 0.4)
 end
 
 local function calc_stab_protection(armor)
-    return armor * (2 - armor)
+	return armor * (2 - armor)
 end
 
 local function calc_mixed_protection(armor, magic_armor)
-    if magic_armor > armor then
-        return armor
-    else
-        return (magic_armor + armor) * 0.5
-    end
+	if magic_armor > armor then
+		return armor
+	else
+		return (magic_armor + armor) * 0.5
+	end
 end
 
 ---预测伤害
@@ -1652,66 +1569,65 @@ end
 ---@param damage table 伤害属性
 ---@return number 实际伤害值
 function U.predict_damage(entity, damage)
-    if band(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
-        if entity.health.damage_factor > 1 then
-            return entity.health.hp_max * (1 - entity.health.instakill_resistance) * entity.health.damage_factor
-        else
-            return entity.health.hp_max * (1 - entity.health.instakill_resistance)
-        end
-    end
+	if band(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_EAT)) ~= 0 then
+		if entity.health.damage_factor > 1 then
+			return entity.health.hp_max * (1 - entity.health.instakill_resistance) * entity.health.damage_factor
+		else
+			return entity.health.hp_max * (1 - entity.health.instakill_resistance)
+		end
+	end
 
-    local protection = 0
+	local protection = 0
 
-    if band(damage.damage_type, DAMAGE_POISON) ~= 0 then
-        protection = entity.health.poison_armor
-    elseif band(damage.damage_type, DAMAGE_TRUE) ~= 0 then
-        protection = 0
-    elseif band(damage.damage_type, DAMAGE_PHYSICAL) ~= 0 then
-        protection = entity.health.armor - damage.reduce_armor
-    elseif band(damage.damage_type, DAMAGE_MAGICAL) ~= 0 then
-        protection = entity.health.magic_armor - damage.reduce_magic_armor
-    elseif band(damage.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-        protection = calc_explosion_protection(entity.health.magic_armor - damage.reduce_magic_armor)
-    elseif band(damage.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
-        protection = 0
-    elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
-        protection = calc_explosion_protection(entity.health.armor - damage.reduce_armor)
-    elseif band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
-        protection = (entity.health.armor - damage.reduce_armor) * 0.5
-    elseif band(damage.damage_type, DAMAGE_SHOT) ~= 0 then
-        protection = (entity.health.armor - damage.reduce_armor) * 0.7
-    elseif band(damage.damage_type, DAMAGE_STAB) ~= 0 then
-        protection = calc_stab_protection(entity.health.armor - damage.reduce_armor)
-    elseif band(damage.damage_type, DAMAGE_MIXED) ~= 0 then
-        protection = calc_mixed_protection(entity.health.armor - damage.reduce_armor,
-            entity.health.magic_armor - damage.reduce_magic_armor)
-    elseif damage.damage_type == DAMAGE_NONE then
-        protection = 1
-    end
+	if band(damage.damage_type, DAMAGE_POISON) ~= 0 then
+		protection = entity.health.poison_armor
+	elseif band(damage.damage_type, DAMAGE_TRUE) ~= 0 then
+		protection = 0
+	elseif band(damage.damage_type, DAMAGE_PHYSICAL) ~= 0 then
+		protection = entity.health.armor - damage.reduce_armor
+	elseif band(damage.damage_type, DAMAGE_MAGICAL) ~= 0 then
+		protection = entity.health.magic_armor - damage.reduce_magic_armor
+	elseif band(damage.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
+		protection = calc_explosion_protection(entity.health.magic_armor - damage.reduce_magic_armor)
+	elseif band(damage.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
+		protection = 0
+	elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
+		protection = calc_explosion_protection(entity.health.armor - damage.reduce_armor)
+	elseif band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
+		protection = (entity.health.armor - damage.reduce_armor) * 0.5
+	elseif band(damage.damage_type, DAMAGE_SHOT) ~= 0 then
+		protection = (entity.health.armor - damage.reduce_armor) * 0.7
+	elseif band(damage.damage_type, DAMAGE_STAB) ~= 0 then
+		protection = calc_stab_protection(entity.health.armor - damage.reduce_armor)
+	elseif band(damage.damage_type, DAMAGE_MIXED) ~= 0 then
+		protection = calc_mixed_protection(entity.health.armor - damage.reduce_armor, entity.health.magic_armor - damage.reduce_magic_armor)
+	elseif damage.damage_type == DAMAGE_NONE then
+		protection = 1
+	end
 
-    protection = km.clamp(0, 1, protection)
+	protection = km.clamp(0, 1, protection)
+	local rounded_damage = damage.value
 
-    local rounded_damage = damage.value
-    if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
-        rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
-    end
+	if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
+		rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
+	end
 
-    if band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 and entity.health.damage_factor_electrical then
-        rounded_damage = km.round(rounded_damage * entity.health.damage_factor_electrical)
-    end
+	if band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 and entity.health.damage_factor_electrical then
+		rounded_damage = km.round(rounded_damage * entity.health.damage_factor_electrical)
+	end
 
-    -- 该类攻击对护甲高的敌人伤害更高
-    if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
-        rounded_damage = rounded_damage + rounded_damage * protection * protection * 2 / (1 - protection)
-    end
+	-- 该类攻击对护甲高的敌人伤害更高
+	if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
+		rounded_damage = rounded_damage + rounded_damage * protection * protection * 2 / (1 - protection)
+	end
 
-    rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1 - protection))
+	rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1 - protection))
 
-    if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and rounded_damage >= entity.health.hp then
-        rounded_damage = entity.health.hp - 1
-    end
+	if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and rounded_damage >= entity.health.hp then
+		rounded_damage = entity.health.hp - 1
+	end
 
-    return rounded_damage
+	return rounded_damage
 end
 
 ---检查是否已见过
@@ -1719,36 +1635,36 @@ end
 ---@param id number 实体ID
 ---@return boolean 是否已见过
 function U.is_seen(store, id)
-    return store.seen[id]
+	return store.seen[id]
 end
 
 ---标记为已见过
 ---@param store table game.store
 ---@param id number 实体ID
 function U.mark_seen(store, id)
-    if not store.seen[id] then
-        store.seen[id] = true
-        store.seen_dirty = true
-    end
+	if not store.seen[id] then
+		store.seen[id] = true
+		store.seen_dirty = true
+	end
 end
 
 ---计算星星数量
 ---@param slot table 存档槽位
 ---@return number 战役星星数, number 英雄模式星星数, number 铁人模式星星数
 function U.count_stars(slot)
-    local campaign = 0
-    local heroic = 0
-    local iron = 0
+	local campaign = 0
+	local heroic = 0
+	local iron = 0
 
-    for i, v in pairs(slot.levels) do
-        if i < 80 then
-            heroic = heroic + (v[GAME_MODE_HEROIC] and 1 or 0)
-            iron = iron + (v[GAME_MODE_IRON] and 1 or 0)
-            campaign = campaign + (v.stars or 0)
-        end
-    end
+	for i, v in pairs(slot.levels) do
+		if i < 80 then
+			heroic = heroic + (v[GAME_MODE_HEROIC] and 1 or 0)
+			iron = iron + (v[GAME_MODE_IRON] and 1 or 0)
+			campaign = campaign + (v.stars or 0)
+		end
+	end
 
-    return campaign + heroic + iron, heroic, iron
+	return campaign + heroic + iron, heroic, iron
 end
 
 ---搜索范围内的下一个关卡
@@ -1756,40 +1672,36 @@ end
 ---@param cur number 当前关卡
 ---@return number 下一个关卡
 function U.find_next_level_in_ranges(ranges, cur)
-    local last_range = ranges[#ranges]
-    local nex = last_range[#last_range]
+	local last_range = ranges[#ranges]
+	local nex = last_range[#last_range]
 
-    for ri, r in ipairs(ranges) do
-        if r.list then
-            local idx = table.keyforobject(r, cur)
+	for ri, r in ipairs(ranges) do
+		if r.list then
+			local idx = table.keyforobject(r, cur)
 
-            if idx then
-                if idx < #r then
-                    nex = r[idx + 1]
+			if idx then
+				if idx < #r then
+					nex = r[idx + 1]
+					break
+				elseif ri < #ranges then
+					nex = ranges[ri + 1][1]
+					break
+				end
+			end
+		else
+			local r1, r2 = unpack(r)
 
-                    break
-                elseif ri < #ranges then
-                    nex = ranges[ri + 1][1]
+			if r1 == cur or r2 and r1 <= cur and cur < r2 then
+				nex = cur + 1
+				break
+			elseif r2 and cur == r2 and ri < #ranges then
+				nex = ranges[ri + 1][1]
+				break
+			end
+		end
+	end
 
-                    break
-                end
-            end
-        else
-            local r1, r2 = unpack(r)
-
-            if r1 == cur or r2 and r1 <= cur and cur < r2 then
-                nex = cur + 1
-
-                break
-            elseif r2 and cur == r2 and ri < #ranges then
-                nex = ranges[ri + 1][1]
-
-                break
-            end
-        end
-    end
-
-    return nex
+	return nex
 end
 
 ---解锁范围内的下一个关卡
@@ -1799,50 +1711,46 @@ end
 ---@param generation number 世代
 ---@return boolean 是否有变化
 function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, generation)
-    local level_ranges = game_settings["level_ranges" .. generation]
-    local last_campaign_level = game_settings["main_campaign_levels" .. generation]
-    local dirty = false
+	local level_ranges = game_settings["level_ranges" .. generation]
+	local last_campaign_level = game_settings["main_campaign_levels" .. generation]
+	local dirty = false
 
-    local function sanitize_unlock(idx)
-        levels[idx] = {}
+	local function sanitize_unlock(idx)
+		levels[idx] = {}
 
-        if not unlock_data.new_level then
-            unlock_data.new_level = idx
-        end
+		if not unlock_data.new_level then
+			unlock_data.new_level = idx
+		end
 
-        table.insert(unlock_data.unlocked_levels, idx)
+		table.insert(unlock_data.unlocked_levels, idx)
+		dirty = true
+		log.debug(">>> sanitizing : added level %s", idx)
+	end
 
-        dirty = true
+	if levels[last_campaign_level] and levels[last_campaign_level][GAME_MODE_CAMPAIGN] then
+		for i = 2, #level_ranges do
+			local range = level_ranges[i]
 
-        log.debug(">>> sanitizing : added level %s", idx)
-    end
+			if not levels[range[1]] then
+				levels[range[1]] = {}
+				table.insert(unlock_data.unlocked_levels, range[1])
+				dirty = true
+			end
+		end
+	end
 
-    if levels[last_campaign_level] and levels[last_campaign_level][GAME_MODE_CAMPAIGN] then
-        for i = 2, #level_ranges do
-            local range = level_ranges[i]
+	for _, range in pairs(level_ranges) do
+		if range[2] then
+			for i = range[1], range[2] - 1 do
+				if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
+					sanitize_unlock(i + 1)
+					break
+				end
+			end
+		end
+	end
 
-            if not levels[range[1]] then
-                levels[range[1]] = {}
-
-                table.insert(unlock_data.unlocked_levels, range[1])
-
-                dirty = true
-            end
-        end
-    end
-
-    for _, range in pairs(level_ranges) do
-        if range[2] then
-            for i = range[1], range[2] - 1 do
-                if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
-                    sanitize_unlock(i + 1)
-                    break
-                end
-            end
-        end
-    end
-
-    return dirty
+	return dirty
 end
 
 ---检查标志是否通过
@@ -1850,7 +1758,7 @@ end
 ---@param vis_x table 目标视觉属性
 ---@return boolean 是否通过
 function U.flags_pass(vis, vis_x)
-    return band(vis.flags, vis_x.vis_bans) == 0 and band(vis.bans, vis_x.vis_flags) == 0
+	return band(vis.flags, vis_x.vis_bans) == 0 and band(vis.bans, vis_x.vis_flags) == 0
 end
 
 ---设置标志位
@@ -1858,7 +1766,7 @@ end
 ---@param flag number 要设置的标志位
 ---@return number 设置后的值
 function U.flag_set(value, flag)
-    return bor(value, flag)
+	return bor(value, flag)
 end
 
 ---清除标志位
@@ -1866,7 +1774,7 @@ end
 ---@param flag number 要清除的标志位
 ---@return number 清除后的值
 function U.flag_clear(value, flag)
-    return band(value, bnot(flag))
+	return band(value, bnot(flag))
 end
 
 ---检查是否包含标志位
@@ -1874,58 +1782,56 @@ end
 ---@param flag number 要检查的标志位
 ---@return boolean 是否包含
 function U.flag_has(value, flag)
-    return band(value, flag) ~= 0
+	return band(value, flag) ~= 0
 end
 
 function U.push_bans(t, value, op)
-    if not getmetatable(t) then
-        setmetatable(t, vis_meta)
-    end
+	if not getmetatable(t) then
+		setmetatable(t, vis_meta)
+	end
 
-    if not t._bans_stack then
-        rawset(t, "_bans_stack", {})
-        table.insert(t._bans_stack, {"set", t.bans})
-        rawset(t, "bans", nil)
-    end
+	if not t._bans_stack then
+		rawset(t, "_bans_stack", {})
+		table.insert(t._bans_stack, {"set", t.bans})
+		rawset(t, "bans", nil)
+	end
 
-    op = op or "bor"
+	op = op or "bor"
 
-    if op ~= "set" and not bit[op] then
-        if DEBUG then
-            assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
-        else
-            return
-        end
-    end
+	if op ~= "set" and not bit[op] then
+		if DEBUG then
+			assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
+		else
+			return 
+		end
+	end
 
-    local row = {op, value}
-
-    table.insert(t._bans_stack, row)
-    rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
-
-    return row
+	local row = {op, value}
+	table.insert(t._bans_stack, row)
+	rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+	return row
 end
 
 function U.calc_vis_stack(s)
-    local o = 0
+	local o = 0
 
-    for _, r in pairs(s) do
-        local op, flag = unpack(r)
+	for _, r in pairs(s) do
+		local op, flag = unpack(r)
 
-        if op == "set" then
-            o = flag
-        else
-            local fop = bit[op]
+		if op == "set" then
+			o = flag
+		else
+			local fop = bit[op]
 
-            if not fop then
-                -- block empty
-            else
-                o = fop(o, flag)
-            end
-        end
-    end
+			if not fop then
+			-- block empty
+			else
+				o = fop(o, flag)
+			end
+		end
+	end
 
-    return o
+	return o
 end
 
 ---获取英雄等级
@@ -1933,26 +1839,25 @@ end
 ---@param thresholds table 等级阈值数组
 ---@return number 等级, number 下一级进度（0-1）
 function U.get_hero_level(xp, thresholds)
-    local level = 1
+	local level = 1
 
-    while level < 10 and xp >= thresholds[level] do
-        level = level + 1
-    end
+	while level < 10 and xp >= thresholds[level] do
+		level = level + 1
+	end
 
-    local phase
+	local phase
 
-    if level > #thresholds then
-        phase = 1
-    elseif xp == thresholds[level] then
-        phase = 0
-    else
-        local this_xp = thresholds[level - 1] or 0
-        local next_xp = thresholds[level]
+	if level > #thresholds then
+		phase = 1
+	elseif xp == thresholds[level] then
+		phase = 0
+	else
+		local this_xp = thresholds[level - 1] or 0
+		local next_xp = thresholds[level]
+		phase = (xp - this_xp) / (next_xp - this_xp)
+	end
 
-        phase = (xp - this_xp) / (next_xp - this_xp)
-    end
-
-    return level, phase
+	return level, phase
 end
 
 ---获取所有作用于实体的mod
@@ -1961,18 +1866,22 @@ end
 ---@param list table? 排除列表（可选）
 ---@return table mod列表
 function U.get_modifiers(store, entity, list)
-    local result = {}
-    local mods = entity._applied_mods
-    if not mods then
-        return result
-    end
-    for i = 1, #mods do
-        local mod = mods[i]
-        if not list or table.contains(list, mod.template_name) then
-            result[#result + 1] = mod
-        end
-    end
-    return result
+	local result = {}
+	local mods = entity._applied_mods
+
+	if not mods then
+		return result
+	end
+
+	for i = 1, #mods do
+		local mod = mods[i]
+
+		if not list or table.contains(list, mod.template_name) then
+			result[#result + 1] = mod
+		end
+	end
+
+	return result
 end
 
 ---检查实体是否有指定mod
@@ -1982,19 +1891,23 @@ end
 ---@return boolean 是否有mod
 ---@return table mod列表
 function U.has_modifiers(store, entity, mod_name)
-    local mods = entity._applied_mods
-    if not mods then
-        return false, {}
-    end
-    local result = {}
-    for i = 1, #mods do
-        local mod = mods[i]
-        if not mod_name or mod_name == mod.template_name then
-            result[#result + 1] = mod
-        end
-    end
+	local mods = entity._applied_mods
 
-    return #result > 0, result
+	if not mods then
+		return false, {}
+	end
+
+	local result = {}
+
+	for i = 1, #mods do
+		local mod = mods[i]
+
+		if not mod_name or mod_name == mod.template_name then
+			result[#result + 1] = mod
+		end
+	end
+
+	return #result > 0, result
 end
 
 ---检查实体是否有指定mod
@@ -2003,18 +1916,21 @@ end
 ---@param mod_name string mod名称
 ---@return boolean 是否有指定mod
 function U.has_modifier(store, entity, mod_name)
-    local mods = entity._applied_mods
-    if not mods then
-        return false
-    end
-    for i = 1, #mods do
-        local mod = mods[i]
-        if mod_name == mod.template_name then
-            return true
-        end
-    end
+	local mods = entity._applied_mods
 
-    return false
+	if not mods then
+		return false
+	end
+
+	for i = 1, #mods do
+		local mod = mods[i]
+
+		if mod_name == mod.template_name then
+			return true
+		end
+	end
+
+	return false
 end
 
 ---检查实体是否有列表中的mod
@@ -2023,17 +1939,21 @@ end
 ---@param list table mod名称列表
 ---@return boolean 是否有列表中的mod
 function U.has_modifier_in_list(store, entity, list)
-    local mods = entity._applied_mods
-    if not mods then
-        return false
-    end
-    for i = 1, #mods do
-        local mod = mods[i]
-        if table.contains(list, mod.template_name) then
-            return true
-        end
-    end
-    return false
+	local mods = entity._applied_mods
+
+	if not mods then
+		return false
+	end
+
+	for i = 1, #mods do
+		local mod = mods[i]
+
+		if table.contains(list, mod.template_name) then
+			return true
+		end
+	end
+
+	return false
 end
 
 ---检查实体是否有指定类型的mod
@@ -2042,99 +1962,103 @@ end
 ---@param ... string mod类型
 ---@return boolean 是否有指定类型的mod, table mod列表
 function U.has_modifier_types(store, entity, ...)
-    local mods = entity._applied_mods
-    if not mods then
-        return false, {}
-    end
-    local result = {}
-    local types = {...}
-    for i = 1, #mods do
-        local mod = mods[i]
-        if table.contains(types, mod.modifier.type) then
-            result[#result + 1] = mod
-        end
-    end
+	local mods = entity._applied_mods
 
-    return #result > 0, result
+	if not mods then
+		return false, {}
+	end
+
+	local result = {}
+	local types = {...}
+
+	for i = 1, #mods do
+		local mod = mods[i]
+
+		if table.contains(types, mod.modifier.type) then
+			result[#result + 1] = mod
+		end
+	end
+
+	return #result > 0, result
 end
 
 ---计算实体的真实最大速度
 ---@param entity table 实体
 ---@return number 真实最大速度
 function U.real_max_speed(entity)
-    return km.clamp(1, 10000, (entity.motion.max_speed + entity.motion.buff) * entity.motion.factor)
+	return km.clamp(1, 10000, (entity.motion.max_speed + entity.motion.buff) * entity.motion.factor)
 end
 
 ---乘以速度因子
 ---@param entity table 实体
 ---@param factor number 因子
 function U.speed_mul(entity, factor)
-    entity.motion.factor = entity.motion.factor * factor
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.factor = entity.motion.factor * factor
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---除以速度因子
 ---@param entity table 实体
 ---@param factor number 因子
 function U.speed_div(entity, factor)
-    entity.motion.factor = entity.motion.factor / factor
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.factor = entity.motion.factor / factor
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---增加速度增益
 ---@param entity table 实体
 ---@param amount number 增量
 function U.speed_inc(entity, amount)
-    entity.motion.buff = entity.motion.buff + amount
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.buff = entity.motion.buff + amount
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---减少速度增益
 ---@param entity table 实体
 ---@param amount number 减量
 function U.speed_dec(entity, amount)
-    entity.motion.buff = entity.motion.buff - amount
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.buff = entity.motion.buff - amount
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---乘以自身速度
 ---@param entity table 实体
 ---@param factor number 因子
 function U.speed_mul_self(entity, factor)
-    entity.motion.max_speed = entity.motion.max_speed * factor
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.max_speed = entity.motion.max_speed * factor
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---除以自身速度
 ---@param entity table 实体
 ---@param factor number 因子
 function U.speed_div_self(entity, factor)
-    entity.motion.max_speed = entity.motion.max_speed / factor
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.max_speed = entity.motion.max_speed / factor
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---增加自身速度
 ---@param entity table 实体
 ---@param amount number 增量
 function U.speed_inc_self(entity, amount)
-    entity.motion.max_speed = entity.motion.max_speed + amount
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.max_speed = entity.motion.max_speed + amount
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---减少自身速度
 ---@param entity table 实体
 ---@param amount number 减量
 function U.speed_dec_self(entity, amount)
-    entity.motion.max_speed = entity.motion.max_speed - amount
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.max_speed = entity.motion.max_speed - amount
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---更新最大速度
 ---@param entity table 实体
 ---@param max_speed number 最大速度
 function U.update_max_speed(entity, max_speed)
-    entity.motion.max_speed = max_speed
-    entity.motion.real_speed = U.real_max_speed(entity)
+	entity.motion.max_speed = max_speed
+	entity.motion.real_speed = U.real_max_speed(entity)
 end
 
 ---搜索传送时机
@@ -2144,31 +2068,37 @@ end
 ---@param trigger_count number 触发数量
 ---@return table? 传送目标
 function U.find_teleport_moment(store, center, range, trigger_count)
-    local enemies = U.find_enemies_in_range(store, center, 0, range, F_NONE, F_NONE)
-    if not enemies then
-        return nil
-    end
-    local enemy_hp_max = 0
-    local target = nil
-    local soldier_count = 0
+	local enemies = U.find_enemies_in_range(store, center, 0, range, F_NONE, F_NONE)
 
-    for _, e in pairs(enemies) do
-        target = e
-        if e.health.hp > enemy_hp_max then
-            enemy_hp_max = e.health.hp
-        end
-    end
-    local enemy_count = #enemies
+	if not enemies then
+		return nil
+	end
 
-    for _, s in pairs(store.soldiers) do
-        if not s.pending_removal and not s.health.dead and U.is_inside_ellipse(s.pos, center, range) then
-            soldier_count = soldier_count + 1
-        end
-    end
-    if ((enemy_count >= trigger_count) or (enemy_hp_max >= BIG_ENEMY_HP)) and enemy_count > soldier_count then
-        return target
-    end
-    return nil
+	local enemy_hp_max = 0
+	local target = nil
+	local soldier_count = 0
+
+	for _, e in pairs(enemies) do
+		target = e
+
+		if e.health.hp > enemy_hp_max then
+			enemy_hp_max = e.health.hp
+		end
+	end
+
+	local enemy_count = #enemies
+
+	for _, s in pairs(store.soldiers) do
+		if not s.pending_removal and not s.health.dead and U.is_inside_ellipse(s.pos, center, range) then
+			soldier_count = soldier_count + 1
+		end
+	end
+
+	if ((enemy_count >= trigger_count) or (enemy_hp_max >= BIG_ENEMY_HP)) and enemy_count > soldier_count then
+		return target
+	end
+
+	return nil
 end
 
 ---函数追加
@@ -2176,32 +2106,32 @@ end
 ---@param f2 function? 第二个函数
 ---@return function 组合后的函数
 function U.function_append(f1, f2)
-    return function(...)
-        if not f1 or f1(...) then
-            return not f2 or f2(...)
-        else
-            return false
-        end
-    end
+	return function(...)
+		if not f1 or f1(...) then
+			return not f2 or f2(...)
+		else
+			return false
+		end
+	end
 end
 
 ---追加mod
 ---@param entity table 实体
 ---@param mod_name string mod名称
 function U.append_mod(entity, mod_name)
-    if entity.mod then
-        if type(entity.mod) == "table" then
-            entity.mods = entity.mod
-            table.insert(entity.mods, mod_name)
-            entity.mod = nil
-        else
-            entity.mods = {entity.mod, mod_name}
-            entity.mod = nil
-        end
-    else
-        entity.mods = entity.mods or {}
-        table.insert(entity.mods, mod_name)
-    end
+	if entity.mod then
+		if type(entity.mod) == "table" then
+			entity.mods = entity.mod
+			table.insert(entity.mods, mod_name)
+			entity.mod = nil
+		else
+			entity.mods = {entity.mod, mod_name}
+			entity.mod = nil
+		end
+	else
+		entity.mods = entity.mods or {}
+		table.insert(entity.mods, mod_name)
+	end
 end
 
 ---修改字符串的有前导零数字后缀
@@ -2211,228 +2141,223 @@ end
 ---@param num? integer 替换模式，替换为指定数
 ---@return string 处理后的字符串
 function U.str_reset_leading_zero(str, add, subtract, num)
-    local str_num = string.match(str, "%d+$")
+	local str_num = string.match(str, "%d+$")
 
-    if str_num then
-        local format_str = "%0" .. #str_num .. "d"
+	if str_num then
+		local format_str = "%0" .. #str_num .. "d"
 
-        local function gsub(int)
-            return string.gsub(str, "%d+$", string.format(format_str, int))
-        end
+		local function gsub(int)
+			return string.gsub(str, "%d+$", string.format(format_str, int))
+		end
 
-        if add then
-            str = gsub(str_num + add)
-        elseif subtract then
-            str = gsub(str_num - subtract)
-        elseif num then
-            str = gsub(num)
-        end
-    end
+		if add then
+			str = gsub(str_num + add)
+		elseif subtract then
+			str = gsub(str_num - subtract)
+		elseif num then
+			str = gsub(num)
+		end
+	end
 
-    return str
+	return str
 end
 
 local function get_value(obj, path)
-    local p = {}
+	local p = {}
 
-    for v in path:gmatch("[^%.%[%]]+") do
-        local i = tonumber(v)
+	for v in path:gmatch("[^%.%[%]]+") do
+		local i = tonumber(v)
 
-        if i then
-            table.insert(p, i)
-        else
-            table.insert(p, v)
-        end
-    end
+		if i then
+			table.insert(p, i)
+		else
+			table.insert(p, v)
+		end
+	end
 
-    local val = obj
+	local val = obj
+	log.paranoid("values are " .. getfulldump(p))
 
-    log.paranoid("values are " .. getfulldump(p))
+	for _, v in ipairs(p) do
+		val = val[v]
 
-    for _, v in ipairs(p) do
-        val = val[v]
+		if not val then
+			return nil
+		end
+	end
 
-        if not val then
-            return nil
-        end
-    end
-
-    return val
+	return val
 end
 
 function U.dynamic_format(tbl, s)
-    local i, f
+	local i, f
 
-    if not s then
-        return s
-    end
+	if not s then
+		return s
+	end
 
-    repeat
-        i = string.find(s, "%$")
+	repeat
+		i = string.find(s, "%$")
 
-        if i then
-            f = string.find(s, "%$", i + 1)
+		if i then
+			f = string.find(s, "%$", i + 1)
 
-            if f then
-                log.paranoid("index i " .. i .. " end " .. f)
+			if f then
+				log.paranoid("index i " .. i .. " end " .. f)
+				local p = string.sub(s, i + 1, f - 2)
+				local v = get_value(tbl, p)
 
-                local p = string.sub(s, i + 1, f - 2)
-                local v = get_value(tbl, p)
+				if not v then
+					v = ""
+				elseif string.sub(s, f + 1, f + 1) == "%" then
+					v = v * 100
+				end
 
-                if not v then
-                    v = ""
-                elseif string.sub(s, f + 1, f + 1) == "%" then
-                    v = v * 100
-                end
+				s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)
+			end
+		end
+	until not i or not f
 
-                s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)
-            end
-        end
-    until not i or not f
-
-    return s
+	return s
 end
 
 local b = require("kr1.data.balance")
+
 function U.balance_format(s)
-    local i, f
+	local i, f
 
-    if not s then
-        return s
-    end
+	if not s then
+		return s
+	end
 
-    repeat
-        i = string.find(s, "%$")
+	repeat
+		i = string.find(s, "%$")
 
-        if i then
-            f = string.find(s, "%$", i + 1)
+		if i then
+			f = string.find(s, "%$", i + 1)
 
-            if f then
-                log.paranoid("index i " .. i .. " end " .. f)
+			if f then
+				log.paranoid("index i " .. i .. " end " .. f)
+				local p = string.sub(s, i + 1, f - 2)
+				local v = get_value(b, p)
 
-                local p = string.sub(s, i + 1, f - 2)
-                local v = get_value(b, p)
+				if not v then
+					v = ""
+				elseif string.sub(s, f + 1, f + 1) == "%" then
+					v = v * 100
+				end
 
-                if not v then
-                    v = ""
-                elseif string.sub(s, f + 1, f + 1) == "%" then
-                    v = v * 100
-                end
+				s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)
+			end
+		end
+	until not i or not f
 
-                s = string.sub(s, 1, i - 2) .. v .. string.sub(s, f + 1)
-            end
-        end
-    until not i or not f
-
-    return s
+	return s
 end
 
 function U.soldier_inherit_tower_buff_factor(soldier, tower)
-    soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
-    soldier.cooldown_factor = soldier.cooldown_factor * tower.tower.cooldown_factor
+	soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
+	soldier.cooldown_factor = soldier.cooldown_factor * tower.tower.cooldown_factor
 end
 
 local vis_meta = {}
 
 function vis_meta.__index(t, k)
-    if k == "bans" then
-        return t._bans_stack_value
-    end
+	if k == "bans" then
+		return t._bans_stack_value
+	end
 end
 
 function vis_meta.__newindex(t, k, v)
-    if k == "bans" then
-        rawset(t, "_bans_stack", nil)
-        rawset(t, "_bans_stack_value", nil)
-        rawset(t, "bans", v)
-    else
-        rawset(t, k, v)
-    end
+	if k == "bans" then
+		rawset(t, "_bans_stack", nil)
+		rawset(t, "_bans_stack_value", nil)
+		rawset(t, "bans", v)
+	else
+		rawset(t, k, v)
+	end
 end
 
 function U.calc_vis_stack(s)
-    local o = 0
+	local o = 0
 
-    for _, r in pairs(s) do
-        local op, flag = unpack(r)
+	for _, r in pairs(s) do
+		local op, flag = unpack(r)
 
-        if op == "set" then
-            o = flag
-        else
-            local fop = bit[op]
+		if op == "set" then
+			o = flag
+		else
+			local fop = bit[op]
 
-            if not fop then
-                -- block empty
-            else
-                o = fop(o, flag)
-            end
-        end
-    end
+			if not fop then
+			-- block empty
+			else
+				o = fop(o, flag)
+			end
+		end
+	end
 
-    return o
+	return o
 end
 
 function U.push_bans(t, value, op)
-    if not getmetatable(t) then
-        setmetatable(t, vis_meta)
-    end
+	if not getmetatable(t) then
+		setmetatable(t, vis_meta)
+	end
 
-    if not t._bans_stack then
-        rawset(t, "_bans_stack", {})
-        table.insert(t._bans_stack, {"set", t.bans})
-        rawset(t, "bans", nil)
-    end
+	if not t._bans_stack then
+		rawset(t, "_bans_stack", {})
+		table.insert(t._bans_stack, {"set", t.bans})
+		rawset(t, "bans", nil)
+	end
 
-    op = op or "bor"
+	op = op or "bor"
 
-    if op ~= "set" and not bit[op] then
-        if DEBUG then
-            assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
-        else
-            return
-        end
-    end
+	if op ~= "set" and not bit[op] then
+		if DEBUG then
+			assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
+		else
+			return 
+		end
+	end
 
-    local row = {op, value}
-
-    table.insert(t._bans_stack, row)
-    rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
-
-    return row
+	local row = {op, value}
+	table.insert(t._bans_stack, row)
+	rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+	return row
 end
 
 function U.pop_bans(t, ref)
-    if not t._bans_stack then
-        if DEBUG then
-            log.error("error in pop_ban: nil _bans_stack for vis table %s", t)
+	if not t._bans_stack then
+		if DEBUG then
+			log.error("error in pop_ban: nil _bans_stack for vis table %s", t)
+			return 
+		else
+			return 
+		end
+	end
 
-            return
-        else
-            return
-        end
-    end
+	if #t._bans_stack <= 1 then
+		if DEBUG then
+			assert(false, "error in pop_ban: popping with stack size <= 1 for vis " .. tostring(t))
+		else
+			return 
+		end
+	end
 
-    if #t._bans_stack <= 1 then
-        if DEBUG then
-            assert(false, "error in pop_ban: popping with stack size <= 1 for vis " .. tostring(t))
-        else
-            return
-        end
-    end
+	local ti = table.keyforobject(t._bans_stack, ref)
 
-    local ti = table.keyforobject(t._bans_stack, ref)
+	if ti ~= nil then
+		table.remove(t._bans_stack, ti)
 
-    if ti ~= nil then
-        table.remove(t._bans_stack, ti)
-
-        if #t._bans_stack == 1 then
-            rawset(t, "bans", t._bans_stack[1][2])
-            rawset(t, "_bans_stack", nil)
-            rawset(t, "_bans_stack_value", nil)
-        else
-            rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
-        end
-    end
+		if #t._bans_stack == 1 then
+			rawset(t, "bans", t._bans_stack[1][2])
+			rawset(t, "_bans_stack", nil)
+			rawset(t, "_bans_stack_value", nil)
+		else
+			rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+		end
+	end
 end
 
 ---根据来自哪代拼接字符串
@@ -2440,13 +2365,12 @@ end
 ---@param str string 字符串
 ---@return string 处理后的字符串, string? 来自哪代
 function U.splicing_from_kr(from_kr, str)
-    if from_kr and from_kr ~= 1 then
-        local kr = "kr" .. from_kr
+	if from_kr and from_kr ~= 1 then
+		local kr = "kr" .. from_kr
+		return kr .. "_" .. str, kr
+	end
 
-        return kr .. "_" .. str, kr
-    end
-
-    return str
+	return str
 end
 
 --- 为游戏全局的实体添加一个插入钩子，只在实体成功插入时调用
@@ -2454,18 +2378,19 @@ end
 ---@param id number
 ---@param func function 回调函数(this, store)
 function U.insert_insert_hook(store, id, func)
-    store.last_hooks.on_insert[id] = func
+	store.last_hooks.on_insert[id] = func
 end
+
 function U.remove_insert_hook(store, id)
-    store.last_hooks.on_insert[id] = nil
+	store.last_hooks.on_insert[id] = nil
 end
 
 function U.insert_remove_hook(store, id, func)
-    store.last_hooks.on_remove[id] = func
+	store.last_hooks.on_remove[id] = func
 end
 
 function U.insert_remove_hook(store, id)
-    store.last_hooks.on_remove[id] = nil
+	store.last_hooks.on_remove[id] = nil
 end
 
 --- 添加处理塔升级时buff继承的回调函数
@@ -2473,24 +2398,24 @@ end
 ---@param func function 回调函数(this, store)
 ---@param func_key string 函数键值，防止重复添加
 function U.insert_tower_upgrade_function(entity, func, func_key)
-    if not entity.tower_upgrade_persistent_data.upgrade_functions[func_key] then
-        entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = func
-    end
+	if not entity.tower_upgrade_persistent_data.upgrade_functions[func_key] then
+		entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = func
+	end
 end
 
 --- 移除处理塔升级时buff继承的回调函数
 ---@param entity table 防御塔
 ---@param func_key string 函数键值
 function U.remove_tower_upgrade_function(entity, func_key)
-    entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = nil
+	entity.tower_upgrade_persistent_data.upgrade_functions[func_key] = nil
 end
 
 function U.safe_int_string(value)
-    return value and string.format("%i", value) or "-"
+	return value and string.format("%i", value) or "-"
 end
 
 function U.safe_float_string(value)
-    return value and string.format("%.2f", value) or "-"
+	return value and string.format("%.2f", value) or "-"
 end
 
 --- 是否在矩形区域内
@@ -2501,132 +2426,145 @@ end
 --- @param p table 待判断点
 --- @return is_inside boolean 是否在矩形区域内
 function U.is_inside_square(o, half_x, half_y, r, p)
-    local cos_r = cos(r)
-    local sin_r = sin(r)
+	local cos_r = cos(r)
+	local sin_r = sin(r)
+	local dx = p.x - o.x
+	local dy = p.y - o.y
+	local local_x = dx * cos_r + dy * sin_r
+	local local_y = -dx * sin_r + dy * cos_r
 
-    local dx = p.x - o.x
-    local dy = p.y - o.y
+	if abs(local_x) <= half_x and abs(local_y) <= half_y then
+		return true
+	end
 
-    local local_x = dx * cos_r + dy * sin_r
-    local local_y = -dx * sin_r + dy * cos_r
-
-    if abs(local_x) <= half_x and abs(local_y) <= half_y then
-        return true
-    end
-    return false
+	return false
 end
 
 -- 根据标志位的引用计数表计算最终标志位
 local function gain_f(f_refs)
-    local new_f = F_NONE
-    for _, flag_pair in pairs(f_refs) do
-        if flag_pair[2] > 0 then
-            new_f = bor(new_f, flag_pair[1])
-        elseif flag_pair[2] < 0 then
-            new_f = band(new_f, bnot(flag_pair[1]))
-        end
-    end
-    return new_f
+	local new_f = F_NONE
+
+	for _, flag_pair in pairs(f_refs) do
+		if flag_pair[2] > 0 then
+			new_f = bor(new_f, flag_pair[1])
+		elseif flag_pair[2] < 0 then
+			new_f = band(new_f, bnot(flag_pair[1]))
+		end
+	end
+
+	return new_f
 end
 
 --- 为 vis.flags 添加引用计数标志位，并更新 vis.flags
 ---@param vis number
 ---@param mask number
 function U.flags_add(vis, mask)
-    local f_refs = vis.flag_refs
-    if not f_refs then
-        f_refs = {{vis.flags, 1}}
-        vis.flag_refs = f_refs
-    end
+	local f_refs = vis.flag_refs
 
-    for _, flag_pair in pairs(f_refs) do
-        if flag_pair[1] == mask then
-            flag_pair[2] = flag_pair[2] + 1
-            if flag_pair[2] == 0 then
-                table.removeobject(f_refs, flag_pair)
-            end
-            vis.flags = gain_f(f_refs)
-            return
-        end
-    end
+	if not f_refs then
+		f_refs = {{vis.flags, 1}}
+		vis.flag_refs = f_refs
+	end
 
-    f_refs[#f_refs + 1] = {mask, 1}
-    vis.flags = gain_f(f_refs)
+	for _, flag_pair in pairs(f_refs) do
+		if flag_pair[1] == mask then
+			flag_pair[2] = flag_pair[2] + 1
+
+			if flag_pair[2] == 0 then
+				table.removeobject(f_refs, flag_pair)
+			end
+
+			vis.flags = gain_f(f_refs)
+			return 
+		end
+	end
+
+	f_refs[#f_refs + 1] = {mask, 1}
+	vis.flags = gain_f(f_refs)
 end
 
 --- 为 vis.flags 移除引用计数标志位，并更新 vis.flags
 ---@param vis number
 ---@param mask number
 function U.flags_remove(vis, mask)
-    local f_refs = vis.flag_refs
-    if not f_refs then
-        f_refs = {{vis.flags, 1}}
-        vis.flag_refs = f_refs
-    end
+	local f_refs = vis.flag_refs
 
-    for _, flag_pair in pairs(f_refs) do
-        if flag_pair[1] == mask then
-            flag_pair[2] = flag_pair[2] - 1
-            if flag_pair[2] == 0 then
-                table.removeobject(f_refs, flag_pair)
-            end
-            vis.flags = gain_f(f_refs)
-            return
-        end
-    end
+	if not f_refs then
+		f_refs = {{vis.flags, 1}}
+		vis.flag_refs = f_refs
+	end
 
-    f_refs[#f_refs + 1] = {mask, -1}
-    vis.flags = gain_f(f_refs)
+	for _, flag_pair in pairs(f_refs) do
+		if flag_pair[1] == mask then
+			flag_pair[2] = flag_pair[2] - 1
+
+			if flag_pair[2] == 0 then
+				table.removeobject(f_refs, flag_pair)
+			end
+
+			vis.flags = gain_f(f_refs)
+			return 
+		end
+	end
+
+	f_refs[#f_refs + 1] = {mask, -1}
+	vis.flags = gain_f(f_refs)
 end
 
 --- 为 vis.bans 添加引用计数标志位，并更新 vis.bans
 ---@param vis number
 ---@param mask number
 function U.bans_add(vis, mask)
-    local f_refs = vis.ban_refs
-    if not f_refs then
-        f_refs = {{vis.bans, 1}}
-        vis.ban_refs = f_refs
-    end
+	local f_refs = vis.ban_refs
 
-    for _, flag_pair in pairs(f_refs) do
-        if flag_pair[1] == mask then
-            flag_pair[2] = flag_pair[2] + 1
-            if flag_pair[2] == 0 then
-                table.removeobject(f_refs, flag_pair)
-            end
-            vis.bans = gain_f(f_refs)
-            return
-        end
-    end
+	if not f_refs then
+		f_refs = {{vis.bans, 1}}
+		vis.ban_refs = f_refs
+	end
 
-    f_refs[#f_refs + 1] = {mask, 1}
-    vis.bans = gain_f(f_refs)
+	for _, flag_pair in pairs(f_refs) do
+		if flag_pair[1] == mask then
+			flag_pair[2] = flag_pair[2] + 1
+
+			if flag_pair[2] == 0 then
+				table.removeobject(f_refs, flag_pair)
+			end
+
+			vis.bans = gain_f(f_refs)
+			return 
+		end
+	end
+
+	f_refs[#f_refs + 1] = {mask, 1}
+	vis.bans = gain_f(f_refs)
 end
 
 --- 为 vis.bans 移除引用计数标志位，并更新 vis.bans
 ---@param vis number
 ---@param mask number
 function U.bans_remove(vis, mask)
-    local f_refs = vis.ban_refs
-    if not f_refs then
-        f_refs = {{vis.bans, 1}}
-        vis.ban_refs = f_refs
-    end
+	local f_refs = vis.ban_refs
 
-    for _, flag_pair in pairs(f_refs) do
-        if flag_pair[1] == mask then
-            flag_pair[2] = flag_pair[2] - 1
-            if flag_pair[2] == 0 then
-                table.removeobject(f_refs, flag_pair)
-            end
-            vis.bans = gain_f(f_refs)
-            return
-        end
-    end
+	if not f_refs then
+		f_refs = {{vis.bans, 1}}
+		vis.ban_refs = f_refs
+	end
 
-    f_refs[#f_refs + 1] = {mask, -1}
-    vis.bans = gain_f(f_refs)
+	for _, flag_pair in pairs(f_refs) do
+		if flag_pair[1] == mask then
+			flag_pair[2] = flag_pair[2] - 1
+
+			if flag_pair[2] == 0 then
+				table.removeobject(f_refs, flag_pair)
+			end
+
+			vis.bans = gain_f(f_refs)
+			return 
+		end
+	end
+
+	f_refs[#f_refs + 1] = {mask, -1}
+	vis.bans = gain_f(f_refs)
 end
 
 return U

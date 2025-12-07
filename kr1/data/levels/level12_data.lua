@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level12_data.lua
-
+-- chunkname: @./kr1/data/levels/level12_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 3,
@@ -200,32 +199,25 @@ return {
 		},
 		{
 			template = "graveyard_controller",
-			["graveyard.spawn_pos"] = {
-				{
-					x = 109,
-					y = 370
-				},
-				{
-					x = 140,
-					y = 355
-				},
-				{
-					x = 107,
-					y = 333
-				},
-				{
-					x = 200,
-					y = 354
-				},
-				{
-					x = 150,
-					y = 316
-				},
-				{
-					x = 161,
-					y = 340
-				}
-			},
+			["graveyard.spawn_pos"] = {{
+				x = 109,
+				y = 370
+			}, {
+				x = 140,
+				y = 355
+			}, {
+				x = 107,
+				y = 333
+			}, {
+				x = 200,
+				y = 354
+			}, {
+				x = 150,
+				y = 316
+			}, {
+				x = 161,
+				y = 340
+			}},
 			pos = {
 				x = 201,
 				y = 315
@@ -430,9 +422,7 @@ return {
 			template = "veznan_portal",
 			["editor.game_mode"] = 0,
 			portal_idx = 3,
-			out_nodes = {
-				221
-			},
+			out_nodes = {221},
 			pos = {
 				x = 520,
 				y = 137
@@ -442,9 +432,7 @@ return {
 			template = "veznan_portal",
 			["editor.game_mode"] = 0,
 			portal_idx = 2,
-			out_nodes = {
-				146
-			},
+			out_nodes = {146},
 			pos = {
 				x = 520,
 				y = 300
@@ -454,121 +442,49 @@ return {
 			template = "veznan_portal",
 			["editor.game_mode"] = 0,
 			portal_idx = 1,
-			out_nodes = {
-				101
-			},
+			out_nodes = {101},
 			pos = {
 				x = 520,
 				y = 453
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			from = 1,
-			to = 10,
-			path_id = 1
-		},
-		{
-			from = 1,
-			to = 10,
-			path_id = 2
-		}
-	},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6
-		},
-		{
-			max_upgrade_level = 6
-		},
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_engineer"
-			}
-		}
-	},
-    unlock_towers = {"tower_tricannon_lvl4"},
+	invalid_path_ranges = {{
+		from = 1,
+		to = 10,
+		path_id = 1
+	}, {
+		from = 1,
+		to = 10,
+		path_id = 2
+	}},
+	level_mode_overrides = {{
+		max_upgrade_level = 6
+	}, {
+		max_upgrade_level = 6
+	}, {
+		max_upgrade_level = 6,
+		locked_towers = {"tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_tricannon_lvl4"},
 	nav_mesh = {
-		{
-			nil,
-			2,
-			6
-		},
-		{
-			nil,
-			10,
-			6,
-			1
-		},
-		{
-			4,
-			7
-		},
-		{
-			5,
-			8,
-			3
-		},
-		{
-			6,
-			9,
-			4
-		},
-		{
-			2,
-			10,
-			5
-		},
-		{
-			8,
-			13,
-			nil,
-			3
-		},
-		{
-			9,
-			13,
-			7,
-			4
-		},
-		{
-			10,
-			nil,
-			8,
-			5
-		},
-		{
-			nil,
-			11,
-			9,
-			2
-		},
-		{
-			nil,
-			12,
-			9,
-			10
-		},
+		{nil, 2, 6},
+		{nil, 10, 6, 1},
+		{4, 7},
+		{5, 8, 3},
+		{6, 9, 4},
+		{2, 10, 5},
+		{8, 13, nil, 3},
+		{9, 13, 7, 4},
+		{10, nil, 8, 5},
+		{nil, 11, 9, 2},
+		{nil, 12, 9, 10},
 		{
 			[3] = 13,
 			[4] = 11
 		},
-		{
-			12,
-			nil,
-			nil,
-			7
-		}
+		{12, nil, nil, 7}
 	},
-	required_sounds = {
-		"music_stage12",
-		"VeznanEffects"
-	},
-	required_textures = {
-		"go_enemies_wastelands",
-		"go_stage12",
-		"go_stage12_bg"
-	}
+	required_sounds = {"music_stage12", "VeznanEffects"},
+	required_textures = {"go_enemies_wastelands", "go_stage12", "go_stage12_bg"}
 }

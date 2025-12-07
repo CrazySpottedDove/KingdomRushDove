@@ -1,4662 +1,1490 @@
 return {
 	Lucerna_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			3,
-			10,
-			118,
-			93
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1500,
-			852,
-			92,
-			67
-		},
-		alias = {
-			"Lucerna_0002"
-		}
+		size = {213, 170},
+		trim = {3, 10, 118, 93},
+		a_size = {2048, 2048},
+		f_quad = {1500, 852, 92, 67},
+		alias = {"Lucerna_0002"}
 	},
 	Lucerna_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			53,
-			48,
-			107,
-			60
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1990,
-			924,
-			53,
-			62
-		},
-		alias = {
-			"Lucerna_0004"
-		}
+		size = {213, 170},
+		trim = {53, 48, 107, 60},
+		a_size = {2048, 2048},
+		f_quad = {1990, 924, 53, 62},
+		alias = {"Lucerna_0004"}
 	},
 	Lucerna_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			49,
-			45,
-			98,
-			60
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1972,
-			592,
-			66,
-			65
-		},
-		alias = {
-			"Lucerna_0006"
-		}
+		size = {213, 170},
+		trim = {49, 45, 98, 60},
+		a_size = {2048, 2048},
+		f_quad = {1972, 592, 66, 65},
+		alias = {"Lucerna_0006"}
 	},
 	Lucerna_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			42,
-			52,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1771,
-			1079,
-			92,
-			80
-		},
-		alias = {
-			"Lucerna_0008"
-		}
+		size = {213, 170},
+		trim = {69, 42, 52, 48},
+		a_size = {2048, 2048},
+		f_quad = {1771, 1079, 92, 80},
+		alias = {"Lucerna_0008"}
 	},
 	Lucerna_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			23,
-			36,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1572,
-			107,
-			106
-		},
-		alias = {
-			"Lucerna_0010"
-		}
+		size = {213, 170},
+		trim = {70, 23, 36, 41},
+		a_size = {2048, 2048},
+		f_quad = {634, 1572, 107, 106},
+		alias = {"Lucerna_0010"}
 	},
 	Lucerna_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			79,
-			19,
-			32,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1707,
-			592,
-			102,
-			113
-		},
-		alias = {
-			"Lucerna_0012"
-		}
+		size = {213, 170},
+		trim = {79, 19, 32, 38},
+		a_size = {2048, 2048},
+		f_quad = {1707, 592, 102, 113},
+		alias = {"Lucerna_0012"}
 	},
 	Lucerna_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			26,
-			36,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1204,
-			96,
-			100
-		},
-		alias = {
-			"Lucerna_0014"
-		}
+		size = {213, 170},
+		trim = {81, 26, 36, 44},
+		a_size = {2048, 2048},
+		f_quad = {774, 1204, 96, 100},
+		alias = {"Lucerna_0014"}
 	},
 	Lucerna_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			29,
-			35,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1292,
-			96,
-			95
-		},
-		alias = {
-			"Lucerna_0016"
-		}
+		size = {213, 170},
+		trim = {82, 29, 35, 46},
+		a_size = {2048, 2048},
+		f_quad = {874, 1292, 96, 95},
+		alias = {"Lucerna_0016"}
 	},
 	Lucerna_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			27,
-			35,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1410,
-			97,
-			98
-		},
-		alias = {
-			"Lucerna_0018"
-		}
+		size = {213, 170},
+		trim = {81, 27, 35, 45},
+		a_size = {2048, 2048},
+		f_quad = {774, 1410, 97, 98},
+		alias = {"Lucerna_0018"}
 	},
 	Lucerna_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			26,
-			32,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1783,
-			99,
-			100
-		},
-		alias = {
-			"Lucerna_0020"
-		}
+		size = {213, 170},
+		trim = {82, 26, 32, 44},
+		a_size = {2048, 2048},
+		f_quad = {634, 1783, 99, 100},
+		alias = {"Lucerna_0020"}
 	},
 	Lucerna_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			29,
-			36,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1390,
-			96,
-			95
-		},
-		alias = {
-			"Lucerna_0022"
-		}
+		size = {213, 170},
+		trim = {81, 29, 36, 46},
+		a_size = {2048, 2048},
+		f_quad = {874, 1390, 96, 95},
+		alias = {"Lucerna_0022"}
 	},
 	Lucerna_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			27,
-			35,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1715,
-			96,
-			98
-		},
-		alias = {
-			"Lucerna_0024"
-		}
+		size = {213, 170},
+		trim = {82, 27, 35, 45},
+		a_size = {2048, 2048},
+		f_quad = {774, 1715, 96, 98},
+		alias = {"Lucerna_0024"}
 	},
 	Lucerna_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			26,
-			35,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			998,
-			97,
-			100
-		},
-		alias = {
-			"Lucerna_0026"
-		}
+		size = {213, 170},
+		trim = {81, 26, 35, 44},
+		a_size = {2048, 2048},
+		f_quad = {774, 998, 97, 100},
+		alias = {"Lucerna_0026"}
 	},
 	Lucerna_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			29,
-			32,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			998,
-			99,
-			95
-		},
-		alias = {
-			"Lucerna_0028"
-		}
+		size = {213, 170},
+		trim = {82, 29, 32, 46},
+		a_size = {2048, 2048},
+		f_quad = {874, 998, 99, 95},
+		alias = {"Lucerna_0028"}
 	},
 	Lucerna_0029 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			27,
-			36,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1816,
-			96,
-			98
-		},
-		alias = {
-			"Lucerna_0030"
-		}
+		size = {213, 170},
+		trim = {81, 27, 36, 45},
+		a_size = {2048, 2048},
+		f_quad = {774, 1816, 96, 98},
+		alias = {"Lucerna_0030"}
 	},
 	Lucerna_0031 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			26,
-			35,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1307,
-			96,
-			100
-		},
-		alias = {
-			"Lucerna_0032"
-		}
+		size = {213, 170},
+		trim = {82, 26, 35, 44},
+		a_size = {2048, 2048},
+		f_quad = {774, 1307, 96, 100},
+		alias = {"Lucerna_0032"}
 	},
 	Lucerna_0033 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			29,
-			35,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1096,
-			97,
-			95
-		},
-		alias = {
-			"Lucerna_0034"
-		}
+		size = {213, 170},
+		trim = {81, 29, 35, 46},
+		a_size = {2048, 2048},
+		f_quad = {874, 1096, 97, 95},
+		alias = {"Lucerna_0034"}
 	},
 	Lucerna_0035 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			27,
-			36,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1917,
-			95,
-			98
-		},
-		alias = {
-			"Lucerna_0036"
-		}
+		size = {213, 170},
+		trim = {82, 27, 36, 45},
+		a_size = {2048, 2048},
+		f_quad = {774, 1917, 95, 98},
+		alias = {"Lucerna_0036"}
 	},
 	Lucerna_0037 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			26,
-			35,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1101,
-			97,
-			100
-		},
-		alias = {
-			"Lucerna_0038"
-		}
+		size = {213, 170},
+		trim = {81, 26, 35, 44},
+		a_size = {2048, 2048},
+		f_quad = {774, 1101, 97, 100},
+		alias = {"Lucerna_0038"}
 	},
 	Lucerna_0039 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			29,
-			35,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1488,
-			96,
-			95
-		},
-		alias = {
-			"Lucerna_0040"
-		}
+		size = {213, 170},
+		trim = {82, 29, 35, 46},
+		a_size = {2048, 2048},
+		f_quad = {874, 1488, 96, 95},
+		alias = {"Lucerna_0040"}
 	},
 	Lucerna_0041 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			27,
-			32,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1886,
-			100,
-			98
-		},
-		alias = {
-			"Lucerna_0042"
-		}
+		size = {213, 170},
+		trim = {81, 27, 32, 45},
+		a_size = {2048, 2048},
+		f_quad = {634, 1886, 100, 98},
+		alias = {"Lucerna_0042"}
 	},
 	Lucerna_0043 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			26,
-			36,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1612,
-			95,
-			100
-		},
-		alias = {
-			"Lucerna_0044"
-		}
+		size = {213, 170},
+		trim = {82, 26, 36, 44},
+		a_size = {2048, 2048},
+		f_quad = {774, 1612, 95, 100},
+		alias = {"Lucerna_0044"}
 	},
 	Lucerna_0045 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			29,
-			35,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1194,
-			97,
-			95
-		},
-		alias = {
-			"Lucerna_0046"
-		}
+		size = {213, 170},
+		trim = {81, 29, 35, 46},
+		a_size = {2048, 2048},
+		f_quad = {874, 1194, 97, 95},
+		alias = {"Lucerna_0046"}
 	},
 	Lucerna_0047 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			82,
-			27,
-			34,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			1511,
-			97,
-			98
-		},
-		alias = {
-			"Lucerna_0048"
-		}
+		size = {213, 170},
+		trim = {82, 27, 34, 45},
+		a_size = {2048, 2048},
+		f_quad = {774, 1511, 97, 98},
+		alias = {"Lucerna_0048"}
 	},
 	Lucerna_0049 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			81,
-			26,
-			43,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1689,
-			89,
-			100
-		},
-		alias = {
-			"Lucerna_0050"
-		}
+		size = {213, 170},
+		trim = {81, 26, 43, 44},
+		a_size = {2048, 2048},
+		f_quad = {874, 1689, 89, 100},
+		alias = {"Lucerna_0050"}
 	},
 	Lucerna_0051 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			80,
-			26,
-			42,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1586,
-			91,
-			100
-		},
-		alias = {
-			"Lucerna_0052"
-		}
+		size = {213, 170},
+		trim = {80, 26, 42, 44},
+		a_size = {2048, 2048},
+		f_quad = {874, 1586, 91, 100},
+		alias = {"Lucerna_0052"}
 	},
 	Lucerna_0053 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			101,
-			23,
-			39,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1972,
-			405,
-			73,
-			108
-		},
-		alias = {
-			"Lucerna_0054"
-		}
+		size = {213, 170},
+		trim = {101, 23, 39, 39},
+		a_size = {2048, 2048},
+		f_quad = {1972, 405, 73, 108},
+		alias = {"Lucerna_0054"}
 	},
 	Lucerna_0055 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			107,
-			3,
-			12,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1443,
-			94,
-			126
-		},
-		alias = {
-			"Lucerna_0056"
-		}
+		size = {213, 170},
+		trim = {107, 3, 12, 41},
+		a_size = {2048, 2048},
+		f_quad = {634, 1443, 94, 126},
+		alias = {"Lucerna_0056"}
 	},
 	Lucerna_explosion_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			33,
-			20,
-			32,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1366,
-			63,
-			74
-		},
-		alias = {
-			"Lucerna_explosion_0002"
-		}
+		size = {128, 114},
+		trim = {33, 20, 32, 20},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1366, 63, 74},
+		alias = {"Lucerna_explosion_0002"}
 	},
 	Lucerna_explosion_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			30,
-			12,
-			29,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1400,
-			69,
-			80
-		},
+		size = {128, 114},
+		trim = {30, 12, 29, 22},
+		a_size = {2048, 2048},
+		f_quad = {976, 1400, 69, 80},
 		alias = {}
 	},
 	Lucerna_explosion_0004 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			30,
-			12,
-			29,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1315,
-			69,
-			82
-		},
+		size = {128, 114},
+		trim = {30, 12, 29, 20},
+		a_size = {2048, 2048},
+		f_quad = {976, 1315, 69, 82},
 		alias = {}
 	},
 	Lucerna_explosion_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			32,
-			9,
-			29,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			842,
-			67,
-			85
-		},
+		size = {128, 114},
+		trim = {32, 9, 29, 20},
+		a_size = {2048, 2048},
+		f_quad = {180, 842, 67, 85},
 		alias = {}
 	},
 	Lucerna_explosion_0006 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			32,
-			9,
-			29,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			595,
-			67,
-			86
-		},
+		size = {128, 114},
+		trim = {32, 9, 29, 19},
+		a_size = {2048, 2048},
+		f_quad = {180, 595, 67, 86},
 		alias = {}
 	},
 	Lucerna_explosion_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			33,
-			5,
-			28,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			179,
-			1688,
-			67,
-			90
-		},
+		size = {128, 114},
+		trim = {33, 5, 28, 19},
+		a_size = {2048, 2048},
+		f_quad = {179, 1688, 67, 90},
 		alias = {}
 	},
 	Lucerna_explosion_0008 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			33,
-			5,
-			28,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			349,
-			67,
-			89
-		},
+		size = {128, 114},
+		trim = {33, 5, 28, 20},
+		a_size = {2048, 2048},
+		f_quad = {180, 349, 67, 89},
 		alias = {}
 	},
 	Lucerna_explosion_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			34,
-			3,
-			28,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			556,
-			1799,
-			66,
-			91
-		},
+		size = {128, 114},
+		trim = {34, 3, 28, 20},
+		a_size = {2048, 2048},
+		f_quad = {556, 1799, 66, 91},
 		alias = {}
 	},
 	Lucerna_explosion_0010 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			34,
-			3,
-			28,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			556,
-			1893,
-			66,
-			91
-		},
+		size = {128, 114},
+		trim = {34, 3, 28, 20},
+		a_size = {2048, 2048},
+		f_quad = {556, 1893, 66, 91},
 		alias = {}
 	},
 	Lucerna_explosion_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			34,
-			3,
-			28,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			1226,
-			66,
-			91
-		},
+		size = {128, 114},
+		trim = {34, 3, 28, 20},
+		a_size = {2048, 2048},
+		f_quad = {180, 1226, 66, 91},
 		alias = {}
 	},
 	Lucerna_explosion_0012 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			34,
-			3,
-			28,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1483,
-			66,
-			83
-		},
+		size = {128, 114},
+		trim = {34, 3, 28, 28},
+		a_size = {2048, 2048},
+		f_quad = {976, 1483, 66, 83},
 		alias = {}
 	},
 	Lucerna_explosion_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			35,
-			3,
-			29,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1580,
-			158,
-			64,
-			82
-		},
+		size = {128, 114},
+		trim = {35, 3, 29, 29},
+		a_size = {2048, 2048},
+		f_quad = {1580, 158, 64, 82},
 		alias = {}
 	},
 	Lucerna_explosion_0014 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			35,
-			3,
-			29,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1813,
-			64,
-			77
-		},
+		size = {128, 114},
+		trim = {35, 3, 29, 34},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1813, 64, 77},
 		alias = {}
 	},
 	Lucerna_explosion_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			35,
-			3,
-			30,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1893,
-			63,
-			76
-		},
+		size = {128, 114},
+		trim = {35, 3, 30, 35},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1893, 63, 76},
 		alias = {}
 	},
 	Lucerna_explosion_0016 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			37,
-			3,
-			30,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1443,
-			61,
-			74
-		},
+		size = {128, 114},
+		trim = {37, 3, 30, 37},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1443, 61, 74},
 		alias = {}
 	},
 	Lucerna_explosion_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			39,
-			4,
-			32,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1556,
-			57,
-			71
-		},
+		size = {128, 114},
+		trim = {39, 4, 32, 39},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1556, 57, 71},
 		alias = {}
 	},
 	Lucerna_explosion_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			39,
-			42,
-			38,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			2017,
-			51,
-			28
-		},
-		alias = {
-			"Lucerna_explosion_0020"
-		}
+		size = {128, 114},
+		trim = {39, 42, 38, 44},
+		a_size = {2048, 2048},
+		f_quad = {1149, 2017, 51, 28},
+		alias = {"Lucerna_explosion_0020"}
 	},
 	Lucerna_explosion_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			40,
-			42,
-			38,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1166,
-			819,
-			50,
-			27
-		},
-		alias = {
-			"Lucerna_explosion_0022"
-		}
+		size = {128, 114},
+		trim = {40, 42, 38, 45},
+		a_size = {2048, 2048},
+		f_quad = {1166, 819, 50, 27},
+		alias = {"Lucerna_explosion_0022"}
 	},
 	Lucerna_explosion_shadow = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			42,
-			73,
-			41,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1297,
-			819,
-			45,
-			22
-		},
+		size = {128, 114},
+		trim = {42, 73, 41, 19},
+		a_size = {2048, 2048},
+		f_quad = {1297, 819, 45, 22},
 		alias = {}
 	},
 	Lucerna_fearDecal_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			0,
-			0,
-			213,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1188,
-			5,
-			213,
-			170
-		},
-		alias = {
-			"Lucerna_fearDecal_0027",
-			"Lucerna_fearDecal_0028"
-		}
+		size = {213, 170},
+		trim = {0, 0, 213, 170},
+		a_size = {2048, 2048},
+		f_quad = {1188, 5, 213, 170},
+		alias = {"Lucerna_fearDecal_0027", "Lucerna_fearDecal_0028"}
 	},
 	Lucerna_fearDecal_0002 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			52,
-			86,
-			49,
-			45
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1743,
-			543,
-			112,
-			39
-		},
+		size = {213, 170},
+		trim = {52, 86, 49, 45},
+		a_size = {2048, 2048},
+		f_quad = {1743, 543, 112, 39},
 		alias = {}
 	},
 	Lucerna_fearDecal_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			49,
-			85,
-			46,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			665,
-			118,
-			42
-		},
+		size = {213, 170},
+		trim = {49, 85, 46, 43},
+		a_size = {2048, 2048},
+		f_quad = {1190, 665, 118, 42},
 		alias = {}
 	},
 	Lucerna_fearDecal_0004 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			49,
-			85,
-			46,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1023,
-			671,
-			118,
-			41
-		},
+		size = {213, 170},
+		trim = {49, 85, 46, 44},
+		a_size = {2048, 2048},
+		f_quad = {1023, 671, 118, 41},
 		alias = {}
 	},
 	Lucerna_fearDecal_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			46,
-			83,
-			44,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1612,
-			804,
-			123,
-			44
-		},
-		alias = {
-			"Lucerna_fearDecal_0006",
-			"Lucerna_fearDecal_0019",
-			"Lucerna_fearDecal_0020"
-		}
+		size = {213, 170},
+		trim = {46, 83, 44, 43},
+		a_size = {2048, 2048},
+		f_quad = {1612, 804, 123, 44},
+		alias = {"Lucerna_fearDecal_0006", "Lucerna_fearDecal_0019", "Lucerna_fearDecal_0020"}
 	},
 	Lucerna_fearDecal_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			44,
-			83,
-			41,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			842,
-			666,
-			128,
-			46
-		},
-		alias = {
-			"Lucerna_fearDecal_0008",
-			"Lucerna_fearDecal_0021",
-			"Lucerna_fearDecal_0022"
-		}
+		size = {213, 170},
+		trim = {44, 83, 41, 41},
+		a_size = {2048, 2048},
+		f_quad = {842, 666, 128, 46},
+		alias = {"Lucerna_fearDecal_0008", "Lucerna_fearDecal_0021", "Lucerna_fearDecal_0022"}
 	},
 	Lucerna_fearDecal_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			41,
-			82,
-			38,
-			41
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1987,
-			134,
-			47
-		},
-		alias = {
-			"Lucerna_fearDecal_0010"
-		}
+		size = {213, 170},
+		trim = {41, 82, 38, 41},
+		a_size = {2048, 2048},
+		f_quad = {634, 1987, 134, 47},
+		alias = {"Lucerna_fearDecal_0010"}
 	},
 	Lucerna_fearDecal_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			39,
-			81,
-			35,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1534,
-			663,
-			139,
-			49
-		},
-		alias = {
-			"Lucerna_fearDecal_0012"
-		}
+		size = {213, 170},
+		trim = {39, 81, 35, 40},
+		a_size = {2048, 2048},
+		f_quad = {1534, 663, 139, 49},
+		alias = {"Lucerna_fearDecal_0012"}
 	},
 	Lucerna_fearDecal_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			55,
-			87,
-			52,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1858,
-			543,
-			106,
-			37
-		},
-		alias = {
-			"Lucerna_fearDecal_0014"
-		}
+		size = {213, 170},
+		trim = {55, 87, 52, 46},
+		a_size = {2048, 2048},
+		f_quad = {1858, 543, 106, 37},
+		alias = {"Lucerna_fearDecal_0014"}
 	},
 	Lucerna_fearDecal_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			52,
-			86,
-			49,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1933,
-			667,
-			112,
-			40
-		},
-		alias = {
-			"Lucerna_fearDecal_0016"
-		}
+		size = {213, 170},
+		trim = {52, 86, 49, 44},
+		a_size = {2048, 2048},
+		f_quad = {1933, 667, 112, 40},
+		alias = {"Lucerna_fearDecal_0016"}
 	},
 	Lucerna_fearDecal_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			49,
-			85,
-			46,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1648,
-			197,
-			118,
-			41
-		},
-		alias = {
-			"Lucerna_fearDecal_0018",
-			"Lucerna_fearDecal_0023"
-		}
+		size = {213, 170},
+		trim = {49, 85, 46, 44},
+		a_size = {2048, 2048},
+		f_quad = {1648, 197, 118, 41},
+		alias = {"Lucerna_fearDecal_0018", "Lucerna_fearDecal_0023"}
 	},
 	Lucerna_fearDecal_0024 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			49,
-			85,
-			46,
-			44
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1812,
-			667,
-			118,
-			41
-		},
+		size = {213, 170},
+		trim = {49, 85, 46, 44},
+		a_size = {2048, 2048},
+		f_quad = {1812, 667, 118, 41},
 		alias = {}
 	},
 	Lucerna_fearDecal_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			46,
-			84,
-			44,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1370,
-			669,
-			123,
-			43
-		},
+		size = {213, 170},
+		trim = {46, 84, 44, 43},
+		a_size = {2048, 2048},
+		f_quad = {1370, 669, 123, 43},
 		alias = {}
 	},
 	Lucerna_fearDecal_0026 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			92,
-			66,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			2007,
-			79,
-			28
-		},
+		size = {213, 170},
+		trim = {68, 92, 66, 50},
+		a_size = {2048, 2048},
+		f_quad = {1062, 2007, 79, 28},
 		alias = {}
 	},
 	Lucerna_fearModifier_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			71,
-			71
-		},
-		trim = {
-			7,
-			24,
-			7,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1972,
-			2003,
-			57,
-			42
-		},
-		alias = {
-			"Lucerna_fearModifier_0004"
-		}
+		size = {71, 71},
+		trim = {7, 24, 7, 5},
+		a_size = {2048, 2048},
+		f_quad = {1972, 2003, 57, 42},
+		alias = {"Lucerna_fearModifier_0004"}
 	},
 	Lucerna_possession_decal_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			36,
-			36,
-			39,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			224,
-			31,
-			16
-		},
+		size = {106, 73},
+		trim = {36, 36, 39, 21},
+		a_size = {2048, 2048},
+		f_quad = {2006, 224, 31, 16},
 		alias = {}
 	},
 	Lucerna_possession_decal_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			23,
-			13,
-			18,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1978,
-			1840,
-			65,
-			52
-		},
+		size = {106, 73},
+		trim = {23, 13, 18, 8},
+		a_size = {2048, 2048},
+		f_quad = {1978, 1840, 65, 52},
 		alias = {}
 	},
 	Lucerna_possession_decal_0004 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			21,
-			10,
-			18,
-			8
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1866,
-			1667,
-			67,
-			55
-		},
+		size = {106, 73},
+		trim = {21, 10, 18, 8},
+		a_size = {2048, 2048},
+		f_quad = {1866, 1667, 67, 55},
 		alias = {}
 	},
 	Lucerna_possession_decal_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			21,
-			12,
-			15,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1991,
-			70,
-			54
-		},
+		size = {106, 73},
+		trim = {21, 12, 15, 7},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1991, 70, 54},
 		alias = {}
 	},
 	Lucerna_possession_decal_0006 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			20,
-			11,
-			16,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1720,
-			1667,
-			70,
-			53
-		},
+		size = {106, 73},
+		trim = {20, 11, 16, 9},
+		a_size = {2048, 2048},
+		f_quad = {1720, 1667, 70, 53},
 		alias = {}
 	},
 	Lucerna_possession_decal_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1793,
-			1667,
-			70,
-			53
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 9},
+		a_size = {2048, 2048},
+		f_quad = {1793, 1667, 70, 53},
 		alias = {}
 	},
 	Lucerna_possession_decal_0008 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1667,
-			70,
-			55
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 7},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1667, 70, 55},
 		alias = {}
 	},
 	Lucerna_possession_decal_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1647,
-			1667,
-			70,
-			55
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 7},
+		a_size = {2048, 2048},
+		f_quad = {1647, 1667, 70, 55},
 		alias = {}
 	},
 	Lucerna_possession_decal_0010 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1614,
-			70,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 5},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1614, 70, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1674,
-			70,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 5},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1674, 70, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0012 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1794,
-			69,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 5},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1794, 69, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1854,
-			69,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 5},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1854, 69, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0014 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1863,
-			68,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 4},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1863, 68, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1924,
-			68,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 4},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1924, 68, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0016 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1724,
-			1428,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 3},
+		a_size = {2048, 2048},
+		f_quad = {1724, 1428, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1796,
-			1428,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 3},
+		a_size = {2048, 2048},
+		f_quad = {1796, 1428, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0018 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1505,
-			1428,
-			68,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 2},
+		a_size = {2048, 2048},
+		f_quad = {1505, 1428, 68, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1576,
-			1428,
-			68,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 2},
+		a_size = {2048, 2048},
+		f_quad = {1576, 1428, 68, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0020 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1938,
-			1491,
-			68,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 3},
+		a_size = {2048, 2048},
+		f_quad = {1938, 1491, 68, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1553,
-			68,
-			59
-		},
-		alias = {
-			"Lucerna_possession_decal_0049"
-		}
+		size = {106, 73},
+		trim = {19, 11, 19, 3},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1553, 68, 59},
+		alias = {"Lucerna_possession_decal_0049"}
 	},
 	Lucerna_possession_decal_0022 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1868,
-			1428,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 3},
+		a_size = {2048, 2048},
+		f_quad = {1868, 1428, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1940,
-			1428,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 3},
+		a_size = {2048, 2048},
+		f_quad = {1940, 1428, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0024 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1515,
-			1366,
-			70,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 3},
+		a_size = {2048, 2048},
+		f_quad = {1515, 1366, 70, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			9,
-			17,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1562,
-			1229,
-			70,
-			61
-		},
+		size = {106, 73},
+		trim = {19, 9, 17, 3},
+		a_size = {2048, 2048},
+		f_quad = {1562, 1229, 70, 61},
 		alias = {}
 	},
 	Lucerna_possession_decal_0026 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			9,
-			17,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1855,
-			1229,
-			70,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 9, 17, 4},
+		a_size = {2048, 2048},
+		f_quad = {1855, 1229, 70, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			10,
-			17,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1588,
-			1366,
-			70,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 10, 17, 4},
+		a_size = {2048, 2048},
+		f_quad = {1588, 1366, 70, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0028 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			10,
-			16,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1635,
-			1229,
-			71,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 10, 16, 3},
+		a_size = {2048, 2048},
+		f_quad = {1635, 1229, 71, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0029 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			10,
-			16,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1709,
-			1229,
-			71,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 10, 16, 3},
+		a_size = {2048, 2048},
+		f_quad = {1709, 1229, 71, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0030 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			10,
-			16,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1928,
-			1229,
-			71,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 10, 16, 4},
+		a_size = {2048, 2048},
+		f_quad = {1928, 1229, 71, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0031 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			10,
-			16,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1366,
-			71,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 10, 16, 4},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1366, 71, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0032 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			10,
-			16,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			556,
-			1987,
-			71,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 10, 16, 5},
+		a_size = {2048, 2048},
+		f_quad = {556, 1987, 71, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0033 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			15,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1955,
-			1366,
-			72,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 15, 5},
+		a_size = {2048, 2048},
+		f_quad = {1955, 1366, 72, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0034 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			16,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1864,
-			1491,
-			71,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 16, 5},
+		a_size = {2048, 2048},
+		f_quad = {1864, 1491, 71, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0035 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1734,
-			70,
-			57
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 5},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1734, 70, 57},
 		alias = {}
 	},
 	Lucerna_possession_decal_0036 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			16,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1807,
-			1366,
-			71,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 16, 4},
+		a_size = {2048, 2048},
+		f_quad = {1807, 1366, 71, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0037 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			16,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1881,
-			1366,
-			71,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 16, 4},
+		a_size = {2048, 2048},
+		f_quad = {1881, 1366, 71, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0038 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1718,
-			1491,
-			70,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 4},
+		a_size = {2048, 2048},
+		f_quad = {1718, 1491, 70, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0039 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1791,
-			1491,
-			70,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 4},
+		a_size = {2048, 2048},
+		f_quad = {1791, 1491, 70, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0040 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1553,
-			69,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 4},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1553, 69, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0041 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1573,
-			1553,
-			69,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 4},
+		a_size = {2048, 2048},
+		f_quad = {1573, 1553, 69, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0042 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1553,
-			69,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 4},
+		a_size = {2048, 2048},
+		f_quad = {1645, 1553, 69, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0043 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1717,
-			1553,
-			69,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 4},
+		a_size = {2048, 2048},
+		f_quad = {1717, 1553, 69, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0044 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1428,
-			69,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 2},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1428, 69, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0045 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1433,
-			1428,
-			69,
-			60
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 2},
+		a_size = {2048, 2048},
+		f_quad = {1433, 1428, 69, 60},
 		alias = {}
 	},
 	Lucerna_possession_decal_0046 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1615,
-			68,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 3},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1615, 68, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0047 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1677,
-			68,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 3},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1677, 68, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0048 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1739,
-			68,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 3},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1739, 68, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0050 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			19,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1801,
-			68,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 19, 3},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1801, 68, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0051 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1491,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 3},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1491, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0052 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			18,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1789,
-			1553,
-			69,
-			58
-		},
+		size = {106, 73},
+		trim = {19, 11, 18, 4},
+		a_size = {2048, 2048},
+		f_quad = {1789, 1553, 69, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0053 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			11,
-			17,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1661,
-			1366,
-			70,
-			59
-		},
+		size = {106, 73},
+		trim = {19, 11, 17, 3},
+		a_size = {2048, 2048},
+		f_quad = {1661, 1366, 70, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0054 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			19,
-			9,
-			18,
-			3
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1783,
-			1229,
-			69,
-			61
-		},
+		size = {106, 73},
+		trim = {19, 9, 18, 3},
+		a_size = {2048, 2048},
+		f_quad = {1783, 1229, 69, 61},
 		alias = {}
 	},
 	Lucerna_possession_decal_0055 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			20,
-			9,
-			17,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1502,
-			1491,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {20, 9, 17, 5},
+		a_size = {2048, 2048},
+		f_quad = {1502, 1491, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0056 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			20,
-			10,
-			17,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1861,
-			1553,
-			69,
-			58
-		},
+		size = {106, 73},
+		trim = {20, 10, 17, 5},
+		a_size = {2048, 2048},
+		f_quad = {1861, 1553, 69, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0057 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			20,
-			10,
-			17,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1491,
-			69,
-			59
-		},
+		size = {106, 73},
+		trim = {20, 10, 17, 4},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1491, 69, 59},
 		alias = {}
 	},
 	Lucerna_possession_decal_0058 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			21,
-			10,
-			17,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1430,
-			1985,
-			68,
-			58
-		},
+		size = {106, 73},
+		trim = {21, 10, 17, 5},
+		a_size = {2048, 2048},
+		f_quad = {1430, 1985, 68, 58},
 		alias = {}
 	},
 	Lucerna_possession_decal_0059 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			21,
-			10,
-			17,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1725,
-			68,
-			56
-		},
+		size = {106, 73},
+		trim = {21, 10, 17, 7},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1725, 68, 56},
 		alias = {}
 	},
 	Lucerna_possession_decal_0060 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			21,
-			10,
-			17,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1784,
-			68,
-			56
-		},
+		size = {106, 73},
+		trim = {21, 10, 17, 7},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1784, 68, 56},
 		alias = {}
 	},
 	Lucerna_possession_decal_0061 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			23,
-			10,
-			19,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			1840,
-			64,
-			54
-		},
+		size = {106, 73},
+		trim = {23, 10, 19, 9},
+		a_size = {2048, 2048},
+		f_quad = {1773, 1840, 64, 54},
 		alias = {}
 	},
 	Lucerna_possession_decal_0063 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			27,
-			15,
-			22,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			179,
-			1781,
-			57,
-			42
-		},
+		size = {106, 73},
+		trim = {27, 15, 22, 16},
+		a_size = {2048, 2048},
+		f_quad = {179, 1781, 57, 42},
 		alias = {}
 	},
 	Lucerna_possession_decal_0065 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			36,
-			15,
-			34,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			5,
-			36,
-			31
-		},
+		size = {106, 73},
+		trim = {36, 15, 34, 27},
+		a_size = {2048, 2048},
+		f_quad = {2006, 5, 36, 31},
 		alias = {}
 	},
 	Lucerna_possession_decal_0066 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			36,
-			15,
-			35,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			736,
-			1783,
-			35,
-			31
-		},
+		size = {106, 73},
+		trim = {36, 15, 35, 27},
+		a_size = {2048, 2048},
+		f_quad = {736, 1783, 35, 31},
 		alias = {}
 	},
 	Lucerna_possession_decal_0067 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			35,
-			15,
-			35,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1258,
-			819,
-			36,
-			29
-		},
+		size = {106, 73},
+		trim = {35, 15, 35, 29},
+		a_size = {2048, 2048},
+		f_quad = {1258, 819, 36, 29},
 		alias = {}
 	},
 	Lucerna_possession_decal_0068 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			35,
-			22,
-			43,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			224,
-			930,
-			28,
-			22
-		},
+		size = {106, 73},
+		trim = {35, 22, 43, 29},
+		a_size = {2048, 2048},
+		f_quad = {224, 930, 28, 22},
 		alias = {}
 	},
 	Lucerna_possession_decal_0069 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			35,
-			23,
-			43,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			737,
-			1963,
-			28,
-			21
-		},
+		size = {106, 73},
+		trim = {35, 23, 43, 29},
+		a_size = {2048, 2048},
+		f_quad = {737, 1963, 28, 21},
 		alias = {}
 	},
 	Lucerna_possession_decal_0070 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			35,
-			23,
-			43,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1563,
-			28,
-			21
-		},
+		size = {106, 73},
+		trim = {35, 23, 43, 29},
+		a_size = {2048, 2048},
+		f_quad = {425, 1563, 28, 21},
 		alias = {}
 	},
 	Lucerna_possession_decal_0071 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			38,
-			27,
-			59,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2031,
-			1711,
-			9,
-			8
-		},
+		size = {106, 73},
+		trim = {38, 27, 59, 38},
+		a_size = {2048, 2048},
+		f_quad = {2031, 1711, 9, 8},
 		alias = {}
 	},
 	Lucerna_possession_decal_0072 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			38,
-			27,
-			59,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			448,
-			1720,
-			9,
-			7
-		},
-		alias = {
-			"Lucerna_possession_decal_0073"
-		}
+		size = {106, 73},
+		trim = {38, 27, 59, 39},
+		a_size = {2048, 2048},
+		f_quad = {448, 1720, 9, 7},
+		alias = {"Lucerna_possession_decal_0073"}
 	},
 	Lucerna_possession_decal_0074 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			0,
-			0,
-			106,
-			73
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1309,
-			1079,
-			106,
-			73
-		},
+		size = {106, 73},
+		trim = {0, 0, 106, 73},
+		a_size = {2048, 2048},
+		f_quad = {1309, 1079, 106, 73},
 		alias = {}
 	},
 	Lucerna_possession_projectile_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			48,
-			39,
-			30,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			448,
-			1730,
-			7,
-			7
-		},
-		alias = {
-			"Lucerna_possession_projectile_0002"
-		}
+		size = {85, 85},
+		trim = {48, 39, 30, 39},
+		a_size = {2048, 2048},
+		f_quad = {448, 1730, 7, 7},
+		alias = {"Lucerna_possession_projectile_0002"}
 	},
 	Lucerna_possession_projectile_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			33,
-			35,
-			20,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2012,
-			1428,
-			32,
-			48
-		},
-		alias = {
-			"Lucerna_possession_projectile_0004"
-		}
+		size = {85, 85},
+		trim = {33, 35, 20, 2},
+		a_size = {2048, 2048},
+		f_quad = {2012, 1428, 32, 48},
+		alias = {"Lucerna_possession_projectile_0004"}
 	},
 	Lucerna_possession_projectile_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			33,
-			34,
-			22,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1508,
-			30,
-			23
-		},
-		alias = {
-			"Lucerna_possession_projectile_0006"
-		}
+		size = {85, 85},
+		trim = {33, 34, 22, 28},
+		a_size = {2048, 2048},
+		f_quad = {425, 1508, 30, 23},
+		alias = {"Lucerna_possession_projectile_0006"}
 	},
 	Lucerna_possession_projectile_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			28,
-			31,
-			26,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1107,
-			31,
-			26
-		},
-		alias = {
-			"Lucerna_possession_projectile_0008"
-		}
+		size = {85, 85},
+		trim = {28, 31, 26, 28},
+		a_size = {2048, 2048},
+		f_quad = {425, 1107, 31, 26},
+		alias = {"Lucerna_possession_projectile_0008"}
 	},
 	Lucerna_possession_projectile_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			28,
-			27,
-			25,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			133,
-			32,
-			29
-		},
-		alias = {
-			"Lucerna_possession_projectile_0010"
-		}
+		size = {85, 85},
+		trim = {28, 27, 25, 29},
+		a_size = {2048, 2048},
+		f_quad = {2006, 133, 32, 29},
+		alias = {"Lucerna_possession_projectile_0010"}
 	},
 	Lucerna_possession_projectile_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			27,
-			24,
-			24,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			736,
-			1817,
-			34,
-			31
-		},
-		alias = {
-			"Lucerna_possession_projectile_0012"
-		}
+		size = {85, 85},
+		trim = {27, 24, 24, 30},
+		a_size = {2048, 2048},
+		f_quad = {736, 1817, 34, 31},
+		alias = {"Lucerna_possession_projectile_0012"}
 	},
 	Lucerna_possession_projectile_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			26,
-			25,
-			24,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1496,
-			669,
-			35,
-			34
-		},
-		alias = {
-			"Lucerna_possession_projectile_0014"
-		}
+		size = {85, 85},
+		trim = {26, 25, 24, 26},
+		a_size = {2048, 2048},
+		f_quad = {1496, 669, 35, 34},
+		alias = {"Lucerna_possession_projectile_0014"}
 	},
 	Lucerna_possession_projectile_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			24,
-			25,
-			27,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			737,
-			1886,
-			34,
-			34
-		},
+		size = {85, 85},
+		trim = {24, 25, 27, 26},
+		a_size = {2048, 2048},
+		f_quad = {737, 1886, 34, 34},
 		alias = {}
 	},
 	Lucerna_possession_projectile_0016 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			25,
-			23,
-			24,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2009,
-			1491,
-			36,
-			37
-		},
-		alias = {
-			"Lucerna_possession_projectile_0017"
-		}
+		size = {85, 85},
+		trim = {25, 23, 24, 25},
+		a_size = {2048, 2048},
+		f_quad = {2009, 1491, 36, 37},
+		alias = {"Lucerna_possession_projectile_0017"}
 	},
 	Lucerna_possession_projectile_0018 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			26,
-			22,
-			22,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			731,
-			1443,
-			37,
-			38
-		},
-		alias = {
-			"Lucerna_possession_projectile_0019"
-		}
+		size = {85, 85},
+		trim = {26, 22, 22, 25},
+		a_size = {2048, 2048},
+		f_quad = {731, 1443, 37, 38},
+		alias = {"Lucerna_possession_projectile_0019"}
 	},
 	Lucerna_possession_projectile_0020 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			26,
-			24,
-			21,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			731,
-			1484,
-			38,
-			37
-		},
-		alias = {
-			"Lucerna_possession_projectile_0021"
-		}
+		size = {85, 85},
+		trim = {26, 24, 21, 24},
+		a_size = {2048, 2048},
+		f_quad = {731, 1484, 38, 37},
+		alias = {"Lucerna_possession_projectile_0021"}
 	},
 	Lucerna_possession_projectile_0022 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			24,
-			27,
-			22,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			731,
-			1524,
-			39,
-			35
-		},
-		alias = {
-			"Lucerna_possession_projectile_0023"
-		}
+		size = {85, 85},
+		trim = {24, 27, 22, 23},
+		a_size = {2048, 2048},
+		f_quad = {731, 1524, 39, 35},
+		alias = {"Lucerna_possession_projectile_0023"}
 	},
 	Lucerna_possession_projectile_0024 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			25,
-			27,
-			22,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			733,
-			1156,
-			38,
-			35
-		},
-		alias = {
-			"Lucerna_possession_projectile_0025"
-		}
+		size = {85, 85},
+		trim = {25, 27, 22, 23},
+		a_size = {2048, 2048},
+		f_quad = {733, 1156, 38, 35},
+		alias = {"Lucerna_possession_projectile_0025"}
 	},
 	Lucerna_possession_projectile_0026 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			25,
-			26,
-			23,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			733,
-			1194,
-			37,
-			35
-		},
-		alias = {
-			"Lucerna_possession_projectile_0027"
-		}
+		size = {85, 85},
+		trim = {25, 26, 23, 24},
+		a_size = {2048, 2048},
+		f_quad = {733, 1194, 37, 35},
+		alias = {"Lucerna_possession_projectile_0027"}
 	},
 	Lucerna_possession_projectile_0028 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			25,
-			25,
-			27,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			733,
-			1232,
-			33,
-			36
-		},
-		alias = {
-			"Lucerna_possession_projectile_0029"
-		}
+		size = {85, 85},
+		trim = {25, 25, 27, 24},
+		a_size = {2048, 2048},
+		f_quad = {733, 1232, 33, 36},
+		alias = {"Lucerna_possession_projectile_0029"}
 	},
 	Lucerna_possession_projectile_0030 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			23,
-			22,
-			25,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2002,
-			1229,
-			37,
-			40
-		},
-		alias = {
-			"Lucerna_possession_projectile_0031"
-		}
+		size = {85, 85},
+		trim = {23, 22, 25, 23},
+		a_size = {2048, 2048},
+		f_quad = {2002, 1229, 37, 40},
+		alias = {"Lucerna_possession_projectile_0031"}
 	},
 	Lucerna_possession_projectile_0032 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			23,
-			21,
-			24,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1144,
-			671,
-			38,
-			41
-		},
-		alias = {
-			"Lucerna_possession_projectile_0033"
-		}
+		size = {85, 85},
+		trim = {23, 21, 24, 23},
+		a_size = {2048, 2048},
+		f_quad = {1144, 671, 38, 41},
+		alias = {"Lucerna_possession_projectile_0033"}
 	},
 	Lucerna_possession_projectile_0034 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			23,
-			21,
-			24,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2005,
-			1553,
-			38,
-			40
-		},
-		alias = {
-			"Lucerna_possession_projectile_0035"
-		}
+		size = {85, 85},
+		trim = {23, 21, 24, 24},
+		a_size = {2048, 2048},
+		f_quad = {2005, 1553, 38, 40},
+		alias = {"Lucerna_possession_projectile_0035"}
 	},
 	Lucerna_possession_projectile_0036 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			23,
-			20,
-			24,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			1667,
-			38,
-			41
-		},
-		alias = {
-			"Lucerna_possession_projectile_0037"
-		}
+		size = {85, 85},
+		trim = {23, 20, 24, 24},
+		a_size = {2048, 2048},
+		f_quad = {2006, 1667, 38, 41},
+		alias = {"Lucerna_possession_projectile_0037"}
 	},
 	Lucerna_projectileTrail_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			19,
-			17,
-			17,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			237,
-			2011,
-			21,
-			22
-		},
-		alias = {
-			"Lucerna_projectileTrail_0002"
-		}
+		size = {57, 57},
+		trim = {19, 17, 17, 18},
+		a_size = {2048, 2048},
+		f_quad = {237, 2011, 21, 22},
+		alias = {"Lucerna_projectileTrail_0002"}
 	},
 	Lucerna_projectileTrail_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			17,
-			16,
-			14,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1534,
-			26,
-			26
-		},
-		alias = {
-			"Lucerna_projectileTrail_0004"
-		}
+		size = {57, 57},
+		trim = {17, 16, 14, 15},
+		a_size = {2048, 2048},
+		f_quad = {425, 1534, 26, 26},
+		alias = {"Lucerna_projectileTrail_0004"}
 	},
 	Lucerna_projectileTrail_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			15,
-			15,
-			12,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1017,
-			30,
-			28
-		},
-		alias = {
-			"Lucerna_projectileTrail_0006"
-		}
+		size = {57, 57},
+		trim = {15, 15, 12, 14},
+		a_size = {2048, 2048},
+		f_quad = {425, 1017, 30, 28},
+		alias = {"Lucerna_projectileTrail_0006"}
 	},
 	Lucerna_projectileTrail_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			14,
-			12,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			826,
-			31,
-			29
-		},
-		alias = {
-			"Lucerna_projectileTrail_0008"
-		}
+		size = {57, 57},
+		trim = {14, 14, 12, 14},
+		a_size = {2048, 2048},
+		f_quad = {425, 826, 31, 29},
+		alias = {"Lucerna_projectileTrail_0008"}
 	},
 	Lucerna_projectileTrail_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			14,
-			12,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			736,
-			1851,
-			31,
-			30
-		},
-		alias = {
-			"Lucerna_projectileTrail_0010"
-		}
+		size = {57, 57},
+		trim = {14, 14, 12, 13},
+		a_size = {2048, 2048},
+		f_quad = {736, 1851, 31, 30},
+		alias = {"Lucerna_projectileTrail_0010"}
 	},
 	Lucerna_projectileTrail_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			15,
-			15,
-			12,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1077,
-			30,
-			27
-		},
-		alias = {
-			"Lucerna_projectileTrail_0012"
-		}
+		size = {57, 57},
+		trim = {15, 15, 12, 15},
+		a_size = {2048, 2048},
+		f_quad = {425, 1077, 30, 27},
+		alias = {"Lucerna_projectileTrail_0012"}
 	},
 	Lucerna_projectileTrail_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			17,
-			17,
-			14,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2016,
-			516,
-			26,
-			24
-		},
-		alias = {
-			"Lucerna_projectileTrail_0014"
-		}
+		size = {57, 57},
+		trim = {17, 17, 14, 16},
+		a_size = {2048, 2048},
+		f_quad = {2016, 516, 26, 24},
+		alias = {"Lucerna_projectileTrail_0014"}
 	},
 	Lucerna_projectileTrail_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			21,
-			19,
-			15,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			239,
-			1804,
-			21,
-			19
-		},
-		alias = {
-			"Lucerna_projectileTrail_0016"
-		}
+		size = {57, 57},
+		trim = {21, 19, 15, 19},
+		a_size = {2048, 2048},
+		f_quad = {239, 1804, 21, 19},
+		alias = {"Lucerna_projectileTrail_0016"}
 	},
 	Lucerna_projectile_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			18,
-			4,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			39,
-			39,
-			24
-		},
-		alias = {
-			"Lucerna_projectile_0004"
-		}
+		size = {57, 57},
+		trim = {14, 18, 4, 15},
+		a_size = {2048, 2048},
+		f_quad = {2006, 39, 39, 24},
+		alias = {"Lucerna_projectile_0004"}
 	},
 	Lucerna_projectile_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			18,
-			2,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1294,
-			379,
-			41,
-			23
-		},
-		alias = {
-			"Lucerna_projectile_0006"
-		}
+		size = {57, 57},
+		trim = {14, 18, 2, 16},
+		a_size = {2048, 2048},
+		f_quad = {1294, 379, 41, 23},
+		alias = {"Lucerna_projectile_0006"}
 	},
 	Lucerna_projectile_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			18,
-			1,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			2021,
-			42,
-			24
-		},
-		alias = {
-			"Lucerna_projectile_0008"
-		}
+		size = {57, 57},
+		trim = {14, 18, 1, 15},
+		a_size = {2048, 2048},
+		f_quad = {1773, 2021, 42, 24},
+		alias = {"Lucerna_projectile_0008"}
 	},
 	Lucerna_projectile_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			18,
-			1,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			726,
-			1413,
-			42,
-			25
-		},
-		alias = {
-			"Lucerna_projectile_0010"
-		}
+		size = {57, 57},
+		trim = {14, 18, 1, 14},
+		a_size = {2048, 2048},
+		f_quad = {726, 1413, 42, 25},
+		alias = {"Lucerna_projectile_0010"}
 	},
 	Lucerna_projectile_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			18,
-			2,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1972,
-			516,
-			41,
-			24
-		},
-		alias = {
-			"Lucerna_projectile_0012"
-		}
+		size = {57, 57},
+		trim = {14, 18, 2, 15},
+		a_size = {2048, 2048},
+		f_quad = {1972, 516, 41, 24},
+		alias = {"Lucerna_projectile_0012"}
 	},
 	Lucerna_Ship_ability_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			194,
-			111,
-			116
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			66,
-			30,
-			31
-		},
-		alias = {
-			"Lucerna_Ship_ability_0002"
-		}
+		size = {256, 341},
+		trim = {115, 194, 111, 116},
+		a_size = {2048, 2048},
+		f_quad = {2006, 66, 30, 31},
+		alias = {"Lucerna_Ship_ability_0002"}
 	},
 	Lucerna_Ship_ability_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			93,
-			187,
-			104,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			1897,
-			59,
-			58
-		},
-		alias = {
-			"Lucerna_Ship_ability_0006"
-		}
+		size = {256, 341},
+		trim = {93, 187, 104, 96},
+		a_size = {2048, 2048},
+		f_quad = {1773, 1897, 59, 58},
+		alias = {"Lucerna_Ship_ability_0006"}
 	},
 	Lucerna_Ship_ability_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			88,
-			190,
-			99,
-			92
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1646,
-			1491,
-			69,
-			59
-		},
-		alias = {
-			"Lucerna_Ship_ability_0008"
-		}
+		size = {256, 341},
+		trim = {88, 190, 99, 92},
+		a_size = {2048, 2048},
+		f_quad = {1646, 1491, 69, 59},
+		alias = {"Lucerna_Ship_ability_0008"}
 	},
 	Lucerna_Ship_ability_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			87,
-			192,
-			93,
-			87
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1802,
-			1297,
-			76,
-			62
-		},
-		alias = {
-			"Lucerna_Ship_ability_0010"
-		}
+		size = {256, 341},
+		trim = {87, 192, 93, 87},
+		a_size = {2048, 2048},
+		f_quad = {1802, 1297, 76, 62},
+		alias = {"Lucerna_Ship_ability_0010"}
 	},
 	Lucerna_Ship_ability_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			192,
-			89,
-			82
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1297,
-			84,
-			67
-		},
-		alias = {
-			"Lucerna_Ship_ability_0012"
-		}
+		size = {256, 341},
+		trim = {83, 192, 89, 82},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1297, 84, 67},
+		alias = {"Lucerna_Ship_ability_0012"}
 	},
 	Lucerna_Ship_ability_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			74,
-			191,
-			77,
-			78
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1547,
-			1079,
-			105,
-			72
-		},
-		alias = {
-			"Lucerna_Ship_ability_0014"
-		}
+		size = {256, 341},
+		trim = {74, 191, 77, 78},
+		a_size = {2048, 2048},
+		f_quad = {1547, 1079, 105, 72},
+		alias = {"Lucerna_Ship_ability_0014"}
 	},
 	Lucerna_Ship_ability_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			75,
-			189,
-			74,
-			69
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1079,
-			107,
-			83
-		},
-		alias = {
-			"Lucerna_Ship_ability_0016"
-		}
+		size = {256, 341},
+		trim = {75, 189, 74, 69},
+		a_size = {2048, 2048},
+		f_quad = {976, 1079, 107, 83},
+		alias = {"Lucerna_Ship_ability_0016"}
 	},
 	Lucerna_Ship_ability_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			76,
-			194,
-			71,
-			67
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1086,
-			1079,
-			109,
-			80
-		},
-		alias = {
-			"Lucerna_Ship_ability_0018"
-		}
+		size = {256, 341},
+		trim = {76, 194, 71, 67},
+		a_size = {2048, 2048},
+		f_quad = {1086, 1079, 109, 80},
+		alias = {"Lucerna_Ship_ability_0018"}
 	},
 	Lucerna_Ship_ability_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			75,
-			197,
-			66,
-			66
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			998,
-			115,
-			78
-		},
-		alias = {
-			"Lucerna_Ship_ability_0020"
-		}
+		size = {256, 341},
+		trim = {75, 197, 66, 66},
+		a_size = {2048, 2048},
+		f_quad = {976, 998, 115, 78},
+		alias = {"Lucerna_Ship_ability_0020"}
 	},
 	Lucerna_Ship_ability_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			77,
-			208,
-			66,
-			68
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1655,
-			1079,
-			113,
-			65
-		},
-		alias = {
-			"Lucerna_Ship_ability_0022"
-		}
+		size = {256, 341},
+		trim = {77, 208, 66, 68},
+		a_size = {2048, 2048},
+		f_quad = {1655, 1079, 113, 65},
+		alias = {"Lucerna_Ship_ability_0022"}
 	},
 	Lucerna_Ship_ability_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			211,
-			68,
-			68
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1238,
-			1229,
-			80,
-			62
-		},
-		alias = {
-			"Lucerna_Ship_ability_0024"
-		}
+		size = {256, 341},
+		trim = {108, 211, 68, 68},
+		a_size = {2048, 2048},
+		f_quad = {1238, 1229, 80, 62},
+		alias = {"Lucerna_Ship_ability_0024"}
 	},
 	Lucerna_Ship_ability_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			111,
-			219,
-			66,
-			72
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1614,
-			79,
-			50
-		},
-		alias = {
-			"Lucerna_Ship_ability_0026"
-		}
+		size = {256, 341},
+		trim = {111, 219, 66, 72},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1614, 79, 50},
+		alias = {"Lucerna_Ship_ability_0026"}
 	},
 	Lucerna_Ship_flag_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			108,
-			138,
-			182
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1905,
-			1895,
-			66,
-			51
-		},
-		alias = {
-			"Lucerna_Ship_flag_0004"
-		}
+		size = {256, 341},
+		trim = {52, 108, 138, 182},
+		a_size = {2048, 2048},
+		f_quad = {1905, 1895, 66, 51},
+		alias = {"Lucerna_Ship_flag_0004"}
 	},
 	Lucerna_Ship_flag_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			106,
-			138,
-			182
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1910,
-			1782,
-			66,
-			53
-		},
-		alias = {
-			"Lucerna_Ship_flag_0008"
-		}
+		size = {256, 341},
+		trim = {52, 106, 138, 182},
+		a_size = {2048, 2048},
+		f_quad = {1910, 1782, 66, 53},
+		alias = {"Lucerna_Ship_flag_0008"}
 	},
 	Lucerna_Ship_flag_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			51,
-			105,
-			138,
-			181
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1936,
-			1667,
-			67,
-			55
-		},
-		alias = {
-			"Lucerna_Ship_flag_0010"
-		}
+		size = {256, 341},
+		trim = {51, 105, 138, 181},
+		a_size = {2048, 2048},
+		f_quad = {1936, 1667, 67, 55},
+		alias = {"Lucerna_Ship_flag_0010"}
 	},
 	Lucerna_Ship_flag_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			53,
-			104,
-			138,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1974,
-			1895,
-			65,
-			51
-		},
-		alias = {
-			"Lucerna_Ship_flag_0016"
-		}
+		size = {256, 341},
+		trim = {53, 104, 138, 186},
+		a_size = {2048, 2048},
+		f_quad = {1974, 1895, 65, 51},
+		alias = {"Lucerna_Ship_flag_0016"}
 	},
 	Lucerna_Ship_flag_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			53,
-			101,
-			138,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1842,
-			1782,
-			65,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_flag_0020"
-		}
+		size = {256, 341},
+		trim = {53, 101, 138, 186},
+		a_size = {2048, 2048},
+		f_quad = {1842, 1782, 65, 54},
+		alias = {"Lucerna_Ship_flag_0020"}
 	},
 	Lucerna_Ship_flag_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			103,
-			138,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1840,
-			1840,
-			66,
-			52
-		},
-		alias = {
-			"Lucerna_Ship_flag_0022"
-		}
+		size = {256, 341},
+		trim = {52, 103, 138, 186},
+		a_size = {2048, 2048},
+		f_quad = {1840, 1840, 66, 52},
+		alias = {"Lucerna_Ship_flag_0022"}
 	},
 	Lucerna_Ship_flag_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			103,
-			138,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1979,
-			1782,
-			66,
-			53
-		},
-		alias = {
-			"Lucerna_Ship_flag_0024"
-		}
+		size = {256, 341},
+		trim = {52, 103, 138, 185},
+		a_size = {2048, 2048},
+		f_quad = {1979, 1782, 66, 53},
+		alias = {"Lucerna_Ship_flag_0024"}
 	},
 	Lucerna_Ship_flag_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			105,
-			138,
-			181
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			1782,
-			66,
-			55
-		},
-		alias = {
-			"Lucerna_Ship_flag_0026"
-		}
+		size = {256, 341},
+		trim = {52, 105, 138, 181},
+		a_size = {2048, 2048},
+		f_quad = {1773, 1782, 66, 55},
+		alias = {"Lucerna_Ship_flag_0026"}
 	},
 	Lucerna_Ship_flag_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			53,
-			107,
-			138,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1972,
-			1949,
-			65,
-			51
-		},
-		alias = {
-			"Lucerna_Ship_flag_0028"
-		}
+		size = {256, 341},
+		trim = {53, 107, 138, 183},
+		a_size = {2048, 2048},
+		f_quad = {1972, 1949, 65, 51},
+		alias = {"Lucerna_Ship_flag_0028"}
 	},
 	Lucerna_Ship_flag_0029 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			105,
-			138,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1909,
-			1840,
-			66,
-			52
-		},
-		alias = {
-			"Lucerna_Ship_flag_0030"
-		}
+		size = {256, 341},
+		trim = {52, 105, 138, 184},
+		a_size = {2048, 2048},
+		f_quad = {1909, 1840, 66, 52},
+		alias = {"Lucerna_Ship_flag_0030"}
 	},
 	Lucerna_Ship_layer1_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			0,
-			0,
-			256,
-			341
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			5,
-			256,
-			341
-		},
+		size = {256, 341},
+		trim = {0, 0, 256, 341},
+		a_size = {2048, 2048},
+		f_quad = {5, 5, 256, 341},
 		alias = {
 			"Lucerna_Ship_layer1_0002",
 			"Lucerna_Ship_layer1_0003",
@@ -5584,366 +2412,114 @@ return {
 	},
 	Lucerna_Ship_layer1_0280 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			98,
-			207,
-			107,
-			103
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1840,
-			2014,
-			51,
-			31
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0281"
-		}
+		size = {256, 341},
+		trim = {98, 207, 107, 103},
+		a_size = {2048, 2048},
+		f_quad = {1840, 2014, 51, 31},
+		alias = {"Lucerna_Ship_layer1_0281"}
 	},
 	Lucerna_Ship_layer1_0282 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			87,
-			206,
-			89,
-			95
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			1482,
-			80,
-			40
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0283"
-		}
+		size = {256, 341},
+		trim = {87, 206, 89, 95},
+		a_size = {2048, 2048},
+		f_quad = {180, 1482, 80, 40},
+		alias = {"Lucerna_Ship_layer1_0283"}
 	},
 	Lucerna_Ship_layer1_0284 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			91,
-			204,
-			91,
-			90
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1827,
-			1614,
-			74,
-			47
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0285"
-		}
+		size = {256, 341},
+		trim = {91, 204, 91, 90},
+		a_size = {2048, 2048},
+		f_quad = {1827, 1614, 74, 47},
+		alias = {"Lucerna_Ship_layer1_0285"}
 	},
 	Lucerna_Ship_layer1_0286 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			89,
-			202,
-			90,
-			85
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1435,
-			1366,
-			77,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0287"
-		}
+		size = {256, 341},
+		trim = {89, 202, 90, 85},
+		a_size = {2048, 2048},
+		f_quad = {1435, 1366, 77, 54},
+		alias = {"Lucerna_Ship_layer1_0287"}
 	},
 	Lucerna_Ship_layer1_0288 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			84,
-			202,
-			91,
-			77
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1154,
-			1229,
-			81,
-			62
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0289"
-		}
+		size = {256, 341},
+		trim = {84, 202, 91, 77},
+		a_size = {2048, 2048},
+		f_quad = {1154, 1229, 81, 62},
+		alias = {"Lucerna_Ship_layer1_0289"}
 	},
 	Lucerna_Ship_layer1_0290 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			72,
-			206,
-			91,
-			70
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1786,
-			852,
-			93,
-			65
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0291"
-		}
+		size = {256, 341},
+		trim = {72, 206, 91, 70},
+		a_size = {2048, 2048},
+		f_quad = {1786, 852, 93, 65},
+		alias = {"Lucerna_Ship_layer1_0291"}
 	},
 	Lucerna_Ship_layer1_0292 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			66,
-			205,
-			90,
-			65
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1094,
-			998,
-			100,
-			71
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0293"
-		}
+		size = {256, 341},
+		trim = {66, 205, 90, 65},
+		a_size = {2048, 2048},
+		f_quad = {1094, 998, 100, 71},
+		alias = {"Lucerna_Ship_layer1_0293"}
 	},
 	Lucerna_Ship_layer1_0294 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			62,
-			207,
-			86,
-			61
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1198,
-			1079,
-			108,
-			73
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0295"
-		}
+		size = {256, 341},
+		trim = {62, 207, 86, 61},
+		a_size = {2048, 2048},
+		f_quad = {1198, 1079, 108, 73},
+		alias = {"Lucerna_Ship_layer1_0295"}
 	},
 	Lucerna_Ship_layer1_0296 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			89,
-			211,
-			91,
-			107
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			344,
-			2017,
-			76,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0297",
-			"Lucerna_Ship_layer1_0298",
-			"Lucerna_Ship_layer1_0299"
-		}
+		size = {256, 341},
+		trim = {89, 211, 91, 107},
+		a_size = {2048, 2048},
+		f_quad = {344, 2017, 76, 23},
+		alias = {"Lucerna_Ship_layer1_0297", "Lucerna_Ship_layer1_0298", "Lucerna_Ship_layer1_0299"}
 	},
 	Lucerna_Ship_layer1_0300 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			89,
-			210,
-			90,
-			108
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			2017,
-			77,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0301"
-		}
+		size = {256, 341},
+		trim = {89, 210, 90, 108},
+		a_size = {2048, 2048},
+		f_quad = {264, 2017, 77, 23},
+		alias = {"Lucerna_Ship_layer1_0301"}
 	},
 	Lucerna_Ship_layer1_0302 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			91,
-			211,
-			91,
-			105
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			2018,
-			74,
-			25
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0303"
-		}
+		size = {256, 341},
+		trim = {91, 211, 91, 105},
+		a_size = {2048, 2048},
+		f_quad = {774, 2018, 74, 25},
+		alias = {"Lucerna_Ship_layer1_0303"}
 	},
 	Lucerna_Ship_layer1_0304 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			102,
-			203,
-			103,
-			109
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			2015,
-			51,
-			29
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0305"
-		}
+		size = {256, 341},
+		trim = {102, 203, 103, 109},
+		a_size = {2048, 2048},
+		f_quad = {1361, 2015, 51, 29},
+		alias = {"Lucerna_Ship_layer1_0305"}
 	},
 	Lucerna_Ship_layer1_0306 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			196,
-			112,
-			115
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1219,
-			819,
-			36,
-			30
-		},
-		alias = {
-			"Lucerna_Ship_layer1_0307"
-		}
+		size = {256, 341},
+		trim = {108, 196, 112, 115},
+		a_size = {2048, 2048},
+		f_quad = {1219, 819, 36, 30},
+		alias = {"Lucerna_Ship_layer1_0307"}
 	},
 	Lucerna_Ship_layer2_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1198,
-			924,
-			96,
-			61
-		},
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1198, 924, 96, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0002",
 			"Lucerna_Ship_layer2_0057",
@@ -5962,26 +2538,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1297,
-			924,
-			96,
-			61
-		},
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1297, 924, 96, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0004",
 			"Lucerna_Ship_layer2_0059",
@@ -6000,26 +2560,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1396,
-			924,
-			96,
-			61
-		},
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1396, 924, 96, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0006",
 			"Lucerna_Ship_layer2_0061",
@@ -6038,26 +2582,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			80,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1260,
-			1165,
-			95,
-			61
-		},
+		size = {256, 341},
+		trim = {81, 182, 80, 98},
+		a_size = {2048, 2048},
+		f_quad = {1260, 1165, 95, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0008",
 			"Lucerna_Ship_layer2_0063",
@@ -6076,26 +2604,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			182,
-			80,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1495,
-			924,
-			96,
-			61
-		},
+		size = {256, 341},
+		trim = {80, 182, 80, 98},
+		a_size = {2048, 2048},
+		f_quad = {1495, 924, 96, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0010",
 			"Lucerna_Ship_layer2_0065",
@@ -6114,26 +2626,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			182,
-			80,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1594,
-			924,
-			96,
-			61
-		},
+		size = {256, 341},
+		trim = {80, 182, 80, 98},
+		a_size = {2048, 2048},
+		f_quad = {1594, 924, 96, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0012",
 			"Lucerna_Ship_layer2_0067",
@@ -6152,26 +2648,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			182,
-			80,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1693,
-			924,
-			96,
-			61
-		},
+		size = {256, 341},
+		trim = {80, 182, 80, 98},
+		a_size = {2048, 2048},
+		f_quad = {1693, 924, 96, 61},
 		alias = {
 			"Lucerna_Ship_layer2_0014",
 			"Lucerna_Ship_layer2_0069",
@@ -6190,162 +2670,42 @@ return {
 	},
 	Lucerna_Ship_layer2_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			80,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1358,
-			1165,
-			95,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0016",
-			"Lucerna_Ship_layer2_0071",
-			"Lucerna_Ship_layer2_0072",
-			"Lucerna_Ship_layer2_0294",
-			"Lucerna_Ship_layer2_0295",
-			"Lucerna_Ship_layer2_0322",
-			"Lucerna_Ship_layer2_0323",
-			"Lucerna_Ship_layer2_0350",
-			"Lucerna_Ship_layer2_0351"
-		}
+		size = {256, 341},
+		trim = {81, 182, 80, 98},
+		a_size = {2048, 2048},
+		f_quad = {1358, 1165, 95, 61},
+		alias = {"Lucerna_Ship_layer2_0016", "Lucerna_Ship_layer2_0071", "Lucerna_Ship_layer2_0072", "Lucerna_Ship_layer2_0294", "Lucerna_Ship_layer2_0295", "Lucerna_Ship_layer2_0322", "Lucerna_Ship_layer2_0323", "Lucerna_Ship_layer2_0350", "Lucerna_Ship_layer2_0351"}
 	},
 	Lucerna_Ship_layer2_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1792,
-			924,
-			96,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0018",
-			"Lucerna_Ship_layer2_0073",
-			"Lucerna_Ship_layer2_0074",
-			"Lucerna_Ship_layer2_0296",
-			"Lucerna_Ship_layer2_0297",
-			"Lucerna_Ship_layer2_0324",
-			"Lucerna_Ship_layer2_0325",
-			"Lucerna_Ship_layer2_0352",
-			"Lucerna_Ship_layer2_0353"
-		}
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1792, 924, 96, 61},
+		alias = {"Lucerna_Ship_layer2_0018", "Lucerna_Ship_layer2_0073", "Lucerna_Ship_layer2_0074", "Lucerna_Ship_layer2_0296", "Lucerna_Ship_layer2_0297", "Lucerna_Ship_layer2_0324", "Lucerna_Ship_layer2_0325", "Lucerna_Ship_layer2_0352", "Lucerna_Ship_layer2_0353"}
 	},
 	Lucerna_Ship_layer2_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1891,
-			924,
-			96,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0020",
-			"Lucerna_Ship_layer2_0075",
-			"Lucerna_Ship_layer2_0076",
-			"Lucerna_Ship_layer2_0298",
-			"Lucerna_Ship_layer2_0299",
-			"Lucerna_Ship_layer2_0326",
-			"Lucerna_Ship_layer2_0327",
-			"Lucerna_Ship_layer2_0354",
-			"Lucerna_Ship_layer2_0355"
-		}
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1891, 924, 96, 61},
+		alias = {"Lucerna_Ship_layer2_0020", "Lucerna_Ship_layer2_0075", "Lucerna_Ship_layer2_0076", "Lucerna_Ship_layer2_0298", "Lucerna_Ship_layer2_0299", "Lucerna_Ship_layer2_0326", "Lucerna_Ship_layer2_0327", "Lucerna_Ship_layer2_0354", "Lucerna_Ship_layer2_0355"}
 	},
 	Lucerna_Ship_layer2_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1165,
-			96,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0022",
-			"Lucerna_Ship_layer2_0077",
-			"Lucerna_Ship_layer2_0078",
-			"Lucerna_Ship_layer2_0300",
-			"Lucerna_Ship_layer2_0301",
-			"Lucerna_Ship_layer2_0328",
-			"Lucerna_Ship_layer2_0329",
-			"Lucerna_Ship_layer2_0356",
-			"Lucerna_Ship_layer2_0357"
-		}
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1165, 96, 61},
+		alias = {"Lucerna_Ship_layer2_0022", "Lucerna_Ship_layer2_0077", "Lucerna_Ship_layer2_0078", "Lucerna_Ship_layer2_0300", "Lucerna_Ship_layer2_0301", "Lucerna_Ship_layer2_0328", "Lucerna_Ship_layer2_0329", "Lucerna_Ship_layer2_0356", "Lucerna_Ship_layer2_0357"}
 	},
 	Lucerna_Ship_layer2_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			183,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1456,
-			1165,
-			96,
-			60
-		},
+		size = {256, 341},
+		trim = {81, 183, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1456, 1165, 96, 60},
 		alias = {
 			"Lucerna_Ship_layer2_0024",
 			"Lucerna_Ship_layer2_0079",
@@ -6362,26 +2722,10 @@ return {
 	},
 	Lucerna_Ship_layer2_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			183,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1555,
-			1165,
-			96,
-			60
-		},
+		size = {256, 341},
+		trim = {81, 183, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1555, 1165, 96, 60},
 		alias = {
 			"Lucerna_Ship_layer2_0026",
 			"Lucerna_Ship_layer2_0081",
@@ -6398,542 +2742,162 @@ return {
 	},
 	Lucerna_Ship_layer2_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			183,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1654,
-			1165,
-			96,
-			60
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0028",
-			"Lucerna_Ship_layer2_0083",
-			"Lucerna_Ship_layer2_0084",
-			"Lucerna_Ship_layer2_0279",
-			"Lucerna_Ship_layer2_0306",
-			"Lucerna_Ship_layer2_0307",
-			"Lucerna_Ship_layer2_0334",
-			"Lucerna_Ship_layer2_0335",
-			"Lucerna_Ship_layer2_0362",
-			"Lucerna_Ship_layer2_0363"
-		}
+		size = {256, 341},
+		trim = {81, 183, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1654, 1165, 96, 60},
+		alias = {"Lucerna_Ship_layer2_0028", "Lucerna_Ship_layer2_0083", "Lucerna_Ship_layer2_0084", "Lucerna_Ship_layer2_0279", "Lucerna_Ship_layer2_0306", "Lucerna_Ship_layer2_0307", "Lucerna_Ship_layer2_0334", "Lucerna_Ship_layer2_0335", "Lucerna_Ship_layer2_0362", "Lucerna_Ship_layer2_0363"}
 	},
 	Lucerna_Ship_layer2_0029 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1161,
-			1165,
-			96,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0030",
-			"Lucerna_Ship_layer2_0056"
-		}
+		size = {256, 341},
+		trim = {81, 182, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1161, 1165, 96, 61},
+		alias = {"Lucerna_Ship_layer2_0030", "Lucerna_Ship_layer2_0056"}
 	},
 	Lucerna_Ship_layer2_0031 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			183,
-			79,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1753,
-			1165,
-			95,
-			60
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0032"
-		}
+		size = {256, 341},
+		trim = {82, 183, 79, 98},
+		a_size = {2048, 2048},
+		f_quad = {1753, 1165, 95, 60},
+		alias = {"Lucerna_Ship_layer2_0032"}
 	},
 	Lucerna_Ship_layer2_0033 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			182,
-			47,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1418,
-			1079,
-			126,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0034"
-		}
+		size = {256, 341},
+		trim = {83, 182, 47, 98},
+		a_size = {2048, 2048},
+		f_quad = {1418, 1079, 126, 61},
+		alias = {"Lucerna_Ship_layer2_0034"}
 	},
 	Lucerna_Ship_layer2_0035 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			76,
-			174,
-			32,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			924,
-			148,
-			71
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0036"
-		}
+		size = {256, 341},
+		trim = {76, 174, 32, 96},
+		a_size = {2048, 2048},
+		f_quad = {774, 924, 148, 71},
+		alias = {"Lucerna_Ship_layer2_0036"}
 	},
 	Lucerna_Ship_layer2_0037 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			77,
-			176,
-			9,
-			97
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1534,
-			592,
-			170,
-			68
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0038"
-		}
+		size = {256, 341},
+		trim = {77, 176, 9, 97},
+		a_size = {2048, 2048},
+		f_quad = {1534, 592, 170, 68},
+		alias = {"Lucerna_Ship_layer2_0038"}
 	},
 	Lucerna_Ship_layer2_0039 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			76,
-			174,
-			2,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			842,
-			592,
-			178,
-			71
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0040"
-		}
+		size = {256, 341},
+		trim = {76, 174, 2, 96},
+		a_size = {2048, 2048},
+		f_quad = {842, 592, 178, 71},
+		alias = {"Lucerna_Ship_layer2_0040"}
 	},
 	Lucerna_Ship_layer2_0041 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			77,
-			174,
-			2,
-			97
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1190,
-			592,
-			177,
-			70
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0042"
-		}
+		size = {256, 341},
+		trim = {77, 174, 2, 97},
+		a_size = {2048, 2048},
+		f_quad = {1190, 592, 177, 70},
+		alias = {"Lucerna_Ship_layer2_0042"}
 	},
 	Lucerna_Ship_layer2_0043 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			76,
-			172,
-			7,
-			92
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1404,
-			158,
-			173,
-			77
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0044"
-		}
+		size = {256, 341},
+		trim = {76, 172, 7, 92},
+		a_size = {2048, 2048},
+		f_quad = {1404, 158, 173, 77},
+		alias = {"Lucerna_Ship_layer2_0044"}
 	},
 	Lucerna_Ship_layer2_0045 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			78,
-			170,
-			14,
-			95
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1023,
-			592,
-			164,
-			76
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0046"
-		}
+		size = {256, 341},
+		trim = {78, 170, 14, 95},
+		a_size = {2048, 2048},
+		f_quad = {1023, 592, 164, 76},
+		alias = {"Lucerna_Ship_layer2_0046"}
 	},
 	Lucerna_Ship_layer2_0047 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			169,
-			16,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1370,
-			592,
-			161,
-			74
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0048"
-		}
+		size = {256, 341},
+		trim = {79, 169, 16, 98},
+		a_size = {2048, 2048},
+		f_quad = {1370, 592, 161, 74},
+		alias = {"Lucerna_Ship_layer2_0048"}
 	},
 	Lucerna_Ship_layer2_0049 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			171,
-			18,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1812,
-			592,
-			157,
-			72
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0050"
-		}
+		size = {256, 341},
+		trim = {81, 171, 18, 98},
+		a_size = {2048, 2048},
+		f_quad = {1812, 592, 157, 72},
+		alias = {"Lucerna_Ship_layer2_0050"}
 	},
 	Lucerna_Ship_layer2_0051 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			174,
-			21,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			774,
-			852,
-			154,
-			69
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0052"
-		}
+		size = {256, 341},
+		trim = {81, 174, 21, 98},
+		a_size = {2048, 2048},
+		f_quad = {774, 852, 154, 69},
+		alias = {"Lucerna_Ship_layer2_0052"}
 	},
 	Lucerna_Ship_layer2_0053 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			176,
-			35,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			931,
-			852,
-			140,
-			67
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0054"
-		}
+		size = {256, 341},
+		trim = {81, 176, 35, 98},
+		a_size = {2048, 2048},
+		f_quad = {931, 852, 140, 67},
+		alias = {"Lucerna_Ship_layer2_0054"}
 	},
 	Lucerna_Ship_layer2_0055 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			180,
-			46,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1074,
-			852,
-			129,
-			63
-		},
+		size = {256, 341},
+		trim = {81, 180, 46, 98},
+		a_size = {2048, 2048},
+		f_quad = {1074, 852, 129, 63},
 		alias = {}
 	},
 	Lucerna_Ship_layer2_0253 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			78,
-			178,
-			83,
-			97
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1304,
-			852,
-			95,
-			66
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0254"
-		}
+		size = {256, 341},
+		trim = {78, 178, 83, 97},
+		a_size = {2048, 2048},
+		f_quad = {1304, 852, 95, 66},
+		alias = {"Lucerna_Ship_layer2_0254"}
 	},
 	Lucerna_Ship_layer2_0255 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			77,
-			177,
-			84,
-			97
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1206,
-			852,
-			95,
-			67
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0256",
-			"Lucerna_Ship_layer2_0259",
-			"Lucerna_Ship_layer2_0260",
-			"Lucerna_Ship_layer2_0263",
-			"Lucerna_Ship_layer2_0264",
-			"Lucerna_Ship_layer2_0267",
-			"Lucerna_Ship_layer2_0268",
-			"Lucerna_Ship_layer2_0271",
-			"Lucerna_Ship_layer2_0272"
-		}
+		size = {256, 341},
+		trim = {77, 177, 84, 97},
+		a_size = {2048, 2048},
+		f_quad = {1206, 852, 95, 67},
+		alias = {"Lucerna_Ship_layer2_0256", "Lucerna_Ship_layer2_0259", "Lucerna_Ship_layer2_0260", "Lucerna_Ship_layer2_0263", "Lucerna_Ship_layer2_0264", "Lucerna_Ship_layer2_0267", "Lucerna_Ship_layer2_0268", "Lucerna_Ship_layer2_0271", "Lucerna_Ship_layer2_0272"}
 	},
 	Lucerna_Ship_layer2_0257 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			78,
-			178,
-			83,
-			97
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1402,
-			852,
-			95,
-			66
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0258",
-			"Lucerna_Ship_layer2_0261",
-			"Lucerna_Ship_layer2_0262",
-			"Lucerna_Ship_layer2_0265",
-			"Lucerna_Ship_layer2_0266",
-			"Lucerna_Ship_layer2_0269",
-			"Lucerna_Ship_layer2_0270"
-		}
+		size = {256, 341},
+		trim = {78, 178, 83, 97},
+		a_size = {2048, 2048},
+		f_quad = {1402, 852, 95, 66},
+		alias = {"Lucerna_Ship_layer2_0258", "Lucerna_Ship_layer2_0261", "Lucerna_Ship_layer2_0262", "Lucerna_Ship_layer2_0265", "Lucerna_Ship_layer2_0266", "Lucerna_Ship_layer2_0269", "Lucerna_Ship_layer2_0270"}
 	},
 	Lucerna_Ship_layer2_0273 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			180,
-			81,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1687,
-			852,
-			96,
-			63
-		},
-		alias = {
-			"Lucerna_Ship_layer2_0274"
-		}
+		size = {256, 341},
+		trim = {79, 180, 81, 98},
+		a_size = {2048, 2048},
+		f_quad = {1687, 852, 96, 63},
+		alias = {"Lucerna_Ship_layer2_0274"}
 	},
 	Lucerna_Ship_layer3_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			58,
-			99,
-			34,
-			106
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			1660,
-			164,
-			136
-		},
+		size = {256, 341},
+		trim = {58, 99, 34, 106},
+		a_size = {2048, 2048},
+		f_quad = {460, 1660, 164, 136},
 		alias = {
 			"Lucerna_Ship_layer3_0002",
 			"Lucerna_Ship_layer3_0003",
@@ -7161,1034 +3125,330 @@ return {
 	},
 	Lucerna_Ship_layer3_0141 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			99,
-			32,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1514,
-			246,
-			176,
-			146
-		},
+		size = {256, 341},
+		trim = {48, 99, 32, 96},
+		a_size = {2048, 2048},
+		f_quad = {1514, 246, 176, 146},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0142 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			99,
-			32,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1693,
-			246,
-			176,
-			146
-		},
+		size = {256, 341},
+		trim = {48, 99, 32, 96},
+		a_size = {2048, 2048},
+		f_quad = {1693, 246, 176, 146},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0143 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			107,
-			29,
-			100
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			715,
-			179,
-			134
-		},
+		size = {256, 341},
+		trim = {48, 107, 29, 100},
+		a_size = {2048, 2048},
+		f_quad = {634, 715, 179, 134},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0144 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			107,
-			29,
-			100
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			816,
-			715,
-			179,
-			134
-		},
+		size = {256, 341},
+		trim = {48, 107, 29, 100},
+		a_size = {2048, 2048},
+		f_quad = {816, 715, 179, 134},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0145 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			106,
-			29,
-			59
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1197,
-			405,
-			180,
-			176
-		},
+		size = {256, 341},
+		trim = {47, 106, 29, 59},
+		a_size = {2048, 2048},
+		f_quad = {1197, 405, 180, 176},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0146 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			106,
-			29,
-			59
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1380,
-			405,
-			180,
-			176
-		},
+		size = {256, 341},
+		trim = {47, 106, 29, 59},
+		a_size = {2048, 2048},
+		f_quad = {1380, 405, 180, 176},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0147 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			46,
-			92,
-			29,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			828,
-			5,
-			181,
-			222
-		},
+		size = {256, 341},
+		trim = {46, 92, 29, 27},
+		a_size = {2048, 2048},
+		f_quad = {828, 5, 181, 222},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0148 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			46,
-			92,
-			37,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1012,
-			5,
-			173,
-			222
-		},
+		size = {256, 341},
+		trim = {46, 92, 37, 27},
+		a_size = {2048, 2048},
+		f_quad = {1012, 5, 173, 222},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0149 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			78,
-			38,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			559,
-			170,
-			261
-		},
+		size = {256, 341},
+		trim = {48, 78, 38, 2},
+		a_size = {2048, 2048},
+		f_quad = {460, 559, 170, 261},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0150 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			78,
-			38,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			823,
-			170,
-			261
-		},
+		size = {256, 341},
+		trim = {48, 78, 38, 2},
+		a_size = {2048, 2048},
+		f_quad = {460, 823, 170, 261},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0151 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			46,
-			67,
-			41,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			282,
-			169,
-			274
-		},
+		size = {256, 341},
+		trim = {46, 67, 41, 0},
+		a_size = {2048, 2048},
+		f_quad = {460, 282, 169, 274},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0152 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			46,
-			67,
-			39,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			5,
-			171,
-			274
-		},
+		size = {256, 341},
+		trim = {46, 67, 39, 0},
+		a_size = {2048, 2048},
+		f_quad = {460, 5, 171, 274},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0153 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			45,
-			62,
-			39,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			544,
-			172,
-			279
-		},
+		size = {256, 341},
+		trim = {45, 62, 39, 0},
+		a_size = {2048, 2048},
+		f_quad = {264, 544, 172, 279},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0154 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			45,
-			62,
-			38,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			262,
-			173,
-			279
-		},
+		size = {256, 341},
+		trim = {45, 62, 38, 0},
+		a_size = {2048, 2048},
+		f_quad = {264, 262, 173, 279},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0155 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			43,
-			38,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1526,
-			171,
-			297
-		},
+		size = {256, 341},
+		trim = {47, 43, 38, 1},
+		a_size = {2048, 2048},
+		f_quad = {5, 1526, 171, 297},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0156 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			43,
-			37,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1226,
-			172,
-			297
-		},
+		size = {256, 341},
+		trim = {47, 43, 37, 1},
+		a_size = {2048, 2048},
+		f_quad = {5, 1226, 172, 297},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0157 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			41,
-			37,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			349,
-			172,
-			300
-		},
+		size = {256, 341},
+		trim = {47, 41, 37, 0},
+		a_size = {2048, 2048},
+		f_quad = {5, 349, 172, 300},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0158 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			41,
-			37,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			652,
-			172,
-			300
-		},
+		size = {256, 341},
+		trim = {47, 41, 37, 0},
+		a_size = {2048, 2048},
+		f_quad = {5, 652, 172, 300},
 		alias = {}
 	},
 	Lucerna_Ship_layer3_0159 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			61,
-			39,
-			37,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			1132,
-			158,
-			302
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0160"
-		}
+		size = {256, 341},
+		trim = {61, 39, 37, 0},
+		a_size = {2048, 2048},
+		f_quad = {264, 1132, 158, 302},
+		alias = {"Lucerna_Ship_layer3_0160"}
 	},
 	Lucerna_Ship_layer3_0161 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			61,
-			38,
-			37,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			826,
-			158,
-			303
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0162"
-		}
+		size = {256, 341},
+		trim = {61, 38, 37, 0},
+		a_size = {2048, 2048},
+		f_quad = {264, 826, 158, 303},
+		alias = {"Lucerna_Ship_layer3_0162"}
 	},
 	Lucerna_Ship_layer3_0163 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			61,
-			39,
-			37,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			1437,
-			158,
-			301
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0164"
-		}
+		size = {256, 341},
+		trim = {61, 39, 37, 1},
+		a_size = {2048, 2048},
+		f_quad = {264, 1437, 158, 301},
+		alias = {"Lucerna_Ship_layer3_0164"}
 	},
 	Lucerna_Ship_layer3_0165 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			59,
-			132,
-			34,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1840,
-			5,
-			163,
-			207
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0166"
-		}
+		size = {256, 341},
+		trim = {59, 132, 34, 2},
+		a_size = {2048, 2048},
+		f_quad = {1840, 5, 163, 207},
+		alias = {"Lucerna_Ship_layer3_0166"}
 	},
 	Lucerna_Ship_layer3_0175 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			291,
-			101,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			973,
-			666,
-			47,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0176",
-			"Lucerna_Ship_layer3_0211",
-			"Lucerna_Ship_layer3_0212"
-		}
+		size = {256, 341},
+		trim = {108, 291, 101, 7},
+		a_size = {2048, 2048},
+		f_quad = {973, 666, 47, 43},
+		alias = {"Lucerna_Ship_layer3_0176", "Lucerna_Ship_layer3_0211", "Lucerna_Ship_layer3_0212"}
 	},
 	Lucerna_Ship_layer3_0177 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			289,
-			96,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1738,
-			804,
-			52,
-			45
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0178",
-			"Lucerna_Ship_layer3_0213",
-			"Lucerna_Ship_layer3_0214"
-		}
+		size = {256, 341},
+		trim = {108, 289, 96, 7},
+		a_size = {2048, 2048},
+		f_quad = {1738, 804, 52, 45},
+		alias = {"Lucerna_Ship_layer3_0178", "Lucerna_Ship_layer3_0213", "Lucerna_Ship_layer3_0214"}
 	},
 	Lucerna_Ship_layer3_0181 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			294,
-			90,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1905,
-			2004,
-			58,
-			40
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0182",
-			"Lucerna_Ship_layer3_0217",
-			"Lucerna_Ship_layer3_0218"
-		}
+		size = {256, 341},
+		trim = {108, 294, 90, 7},
+		a_size = {2048, 2048},
+		f_quad = {1905, 2004, 58, 40},
+		alias = {"Lucerna_Ship_layer3_0182", "Lucerna_Ship_layer3_0217", "Lucerna_Ship_layer3_0218"}
 	},
 	Lucerna_Ship_layer3_0197 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			102,
-			291,
-			101,
-			7
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1991,
-			1614,
-			53,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0198"
-		}
+		size = {256, 341},
+		trim = {102, 291, 101, 7},
+		a_size = {2048, 2048},
+		f_quad = {1991, 1614, 53, 43},
+		alias = {"Lucerna_Ship_layer3_0198"}
 	},
 	Lucerna_Ship_layer3_0226 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			85,
-			224,
-			64,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1922,
-			715,
-			107,
-			117
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0227"
-		}
+		size = {256, 341},
+		trim = {85, 224, 64, 0},
+		a_size = {2048, 2048},
+		f_quad = {1922, 715, 107, 117},
+		alias = {"Lucerna_Ship_layer3_0227"}
 	},
 	Lucerna_Ship_layer3_0228 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			92,
-			183,
-			68,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1156,
-			96,
-			139
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0229"
-		}
+		size = {256, 341},
+		trim = {92, 183, 68, 19},
+		a_size = {2048, 2048},
+		f_quad = {634, 1156, 96, 139},
+		alias = {"Lucerna_Ship_layer3_0229"}
 	},
 	Lucerna_Ship_layer3_0230 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			149,
-			61,
-			52
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1013,
-			116,
-			140
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0231"
-		}
+		size = {256, 341},
+		trim = {79, 149, 61, 52},
+		a_size = {2048, 2048},
+		f_quad = {634, 1013, 116, 140},
+		alias = {"Lucerna_Ship_layer3_0231"}
 	},
 	Lucerna_Ship_layer3_0232 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			144,
-			53,
-			67
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1488,
-			715,
-			121,
-			130
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0233"
-		}
+		size = {256, 341},
+		trim = {82, 144, 53, 67},
+		a_size = {2048, 2048},
+		f_quad = {1488, 715, 121, 130},
+		alias = {"Lucerna_Ship_layer3_0233"}
 	},
 	Lucerna_Ship_layer3_0234 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			144,
-			49,
-			76
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1794,
-			715,
-			125,
-			121
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0235"
-		}
+		size = {256, 341},
+		trim = {82, 144, 49, 76},
+		a_size = {2048, 2048},
+		f_quad = {1794, 715, 125, 121},
+		alias = {"Lucerna_Ship_layer3_0235"}
 	},
 	Lucerna_Ship_layer3_0236 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			71,
-			109,
-			56,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1356,
-			715,
-			129,
-			134
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0237"
-		}
+		size = {256, 341},
+		trim = {71, 109, 56, 98},
+		a_size = {2048, 2048},
+		f_quad = {1356, 715, 129, 134},
+		alias = {"Lucerna_Ship_layer3_0237"}
 	},
 	Lucerna_Ship_layer3_0238 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			13,
-			93,
-			2,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1404,
-			5,
-			241,
-			150
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0239"
-		}
+		size = {256, 341},
+		trim = {13, 93, 2, 98},
+		a_size = {2048, 2048},
+		f_quad = {1404, 5, 241, 150},
+		alias = {"Lucerna_Ship_layer3_0239"}
 	},
 	Lucerna_Ship_layer3_0240 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			16,
-			90,
-			0,
-			93
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1826,
-			240,
-			158
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0241"
-		}
+		size = {256, 341},
+		trim = {16, 90, 0, 93},
+		a_size = {2048, 2048},
+		f_quad = {5, 1826, 240, 158},
+		alias = {"Lucerna_Ship_layer3_0241"}
 	},
 	Lucerna_Ship_layer3_0242 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			31,
-			87,
-			10,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			246,
-			215,
-			156
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0243"
-		}
+		size = {256, 341},
+		trim = {31, 87, 10, 98},
+		a_size = {2048, 2048},
+		f_quad = {634, 246, 215, 156},
+		alias = {"Lucerna_Ship_layer3_0243"}
 	},
 	Lucerna_Ship_layer3_0244 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			47,
-			87,
-			13,
-			90
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			998,
-			405,
-			196,
-			164
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0245"
-		}
+		size = {256, 341},
+		trim = {47, 87, 13, 90},
+		a_size = {2048, 2048},
+		f_quad = {998, 405, 196, 164},
+		alias = {"Lucerna_Ship_layer3_0245"}
 	},
 	Lucerna_Ship_layer3_0246 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			45,
-			87,
-			34,
-			78
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1563,
-			405,
-			177,
-			176
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0247"
-		}
+		size = {256, 341},
+		trim = {45, 87, 34, 78},
+		a_size = {2048, 2048},
+		f_quad = {1563, 405, 177, 176},
+		alias = {"Lucerna_Ship_layer3_0247"}
 	},
 	Lucerna_Ship_layer3_0248 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			41,
-			88,
-			34,
-			69
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			405,
-			181,
-			184
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0249"
-		}
+		size = {256, 341},
+		trim = {41, 88, 34, 69},
+		a_size = {2048, 2048},
+		f_quad = {634, 405, 181, 184},
+		alias = {"Lucerna_Ship_layer3_0249"}
 	},
 	Lucerna_Ship_layer3_0250 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			35,
-			89,
-			32,
-			63
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1648,
-			5,
-			189,
-			189
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0251"
-		}
+		size = {256, 341},
+		trim = {35, 89, 32, 63},
+		a_size = {2048, 2048},
+		f_quad = {1648, 5, 189, 189},
+		alias = {"Lucerna_Ship_layer3_0251"}
 	},
 	Lucerna_Ship_layer3_0252 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			58,
-			99,
-			34,
-			98
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			1513,
-			164,
-			144
-		},
+		size = {256, 341},
+		trim = {58, 99, 34, 98},
+		a_size = {2048, 2048},
+		f_quad = {460, 1513, 164, 144},
 		alias = {}
 	},
 	Lucerna_Ship_layer4_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			130,
-			177,
-			95,
-			135
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			858,
-			31,
-			29
-		},
+		size = {256, 341},
+		trim = {130, 177, 95, 135},
+		a_size = {2048, 2048},
+		f_quad = {425, 858, 31, 29},
 		alias = {
 			"Lucerna_Ship_layer4_0002",
 			"Lucerna_Ship_layer4_0013",
@@ -8235,26 +3495,10 @@ return {
 	},
 	Lucerna_Ship_layer4_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			131,
-			177,
-			95,
-			135
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			953,
-			30,
-			29
-		},
+		size = {256, 341},
+		trim = {131, 177, 95, 135},
+		a_size = {2048, 2048},
+		f_quad = {425, 953, 30, 29},
 		alias = {
 			"Lucerna_Ship_layer4_0004",
 			"Lucerna_Ship_layer4_0015",
@@ -8298,26 +3542,10 @@ return {
 	},
 	Lucerna_Ship_layer4_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			130,
-			177,
-			95,
-			135
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			890,
-			31,
-			29
-		},
+		size = {256, 341},
+		trim = {130, 177, 95, 135},
+		a_size = {2048, 2048},
+		f_quad = {425, 890, 31, 29},
 		alias = {
 			"Lucerna_Ship_layer4_0006",
 			"Lucerna_Ship_layer4_0017",
@@ -8360,26 +3588,10 @@ return {
 	},
 	Lucerna_Ship_layer4_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			129,
-			178,
-			95,
-			135
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			922,
-			32,
-			28
-		},
+		size = {256, 341},
+		trim = {129, 178, 95, 135},
+		a_size = {2048, 2048},
+		f_quad = {425, 922, 32, 28},
 		alias = {
 			"Lucerna_Ship_layer4_0008",
 			"Lucerna_Ship_layer4_0019",
@@ -8420,26 +3632,10 @@ return {
 	},
 	Lucerna_Ship_layer4_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			131,
-			177,
-			95,
-			135
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			985,
-			30,
-			29
-		},
+		size = {256, 341},
+		trim = {131, 177, 95, 135},
+		a_size = {2048, 2048},
+		f_quad = {425, 985, 30, 29},
 		alias = {
 			"Lucerna_Ship_layer4_0010",
 			"Lucerna_Ship_layer4_0021",
@@ -8478,26 +3674,10 @@ return {
 	},
 	Lucerna_Ship_layer4_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			130,
-			176,
-			95,
-			135
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			100,
-			31,
-			30
-		},
+		size = {256, 341},
+		trim = {130, 176, 95, 135},
+		a_size = {2048, 2048},
+		f_quad = {2006, 100, 31, 30},
 		alias = {
 			"Lucerna_Ship_layer4_0012",
 			"Lucerna_Ship_layer4_0023",
@@ -8536,26 +3716,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1426,
-			379,
-			40,
-			23
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 132},
+		a_size = {2048, 2048},
+		f_quad = {1426, 379, 40, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0006",
 			"Lucerna_Ship_layer5_0033",
@@ -8576,26 +3740,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1469,
-			379,
-			40,
-			23
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 132},
+		a_size = {2048, 2048},
+		f_quad = {1469, 379, 40, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0008",
 			"Lucerna_Ship_layer5_0035",
@@ -8616,26 +3764,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1338,
-			379,
-			41,
-			23
-		},
+		size = {256, 341},
+		trim = {79, 186, 136, 132},
+		a_size = {2048, 2048},
+		f_quad = {1338, 379, 41, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0016",
 			"Lucerna_Ship_layer5_0043",
@@ -8652,26 +3784,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1382,
-			379,
-			41,
-			23
-		},
+		size = {256, 341},
+		trim = {79, 186, 136, 132},
+		a_size = {2048, 2048},
+		f_quad = {1382, 379, 41, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0018",
 			"Lucerna_Ship_layer5_0045",
@@ -8688,26 +3804,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2002,
-			1272,
-			41,
-			22
-		},
+		size = {256, 341},
+		trim = {79, 186, 136, 133},
+		a_size = {2048, 2048},
+		f_quad = {2002, 1272, 41, 22},
 		alias = {
 			"Lucerna_Ship_layer5_0024",
 			"Lucerna_Ship_layer5_0051",
@@ -8724,6403 +3824,1970 @@ return {
 	},
 	Lucerna_Ship_layer5_0061 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			182,
-			130,
-			124
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			726,
-			1339,
-			45,
-			35
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0062"
-		}
+		size = {256, 341},
+		trim = {81, 182, 130, 124},
+		a_size = {2048, 2048},
+		f_quad = {726, 1339, 45, 35},
+		alias = {"Lucerna_Ship_layer5_0062"}
 	},
 	Lucerna_Ship_layer5_0063 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			76,
-			178,
-			136,
-			125
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			726,
-			1298,
-			44,
-			38
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0064"
-		}
+		size = {256, 341},
+		trim = {76, 178, 136, 125},
+		a_size = {2048, 2048},
+		f_quad = {726, 1298, 44, 38},
+		alias = {"Lucerna_Ship_layer5_0064"}
 	},
 	Lucerna_Ship_layer5_0067 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			78,
-			179,
-			135,
-			129
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			726,
-			1377,
-			43,
-			33
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0068"
-		}
+		size = {256, 341},
+		trim = {78, 179, 135, 129},
+		a_size = {2048, 2048},
+		f_quad = {726, 1377, 43, 33},
+		alias = {"Lucerna_Ship_layer5_0068"}
 	},
 	Lucerna_Ship_layer5_0079 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			930,
-			41,
-			22
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0080"
-		}
+		size = {256, 341},
+		trim = {79, 186, 136, 133},
+		a_size = {2048, 2048},
+		f_quad = {180, 930, 41, 22},
+		alias = {"Lucerna_Ship_layer5_0080"}
 	},
 	Lucerna_Ship_layer6_0031 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			130,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1311,
-			665,
-			56,
-			45
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0032"
-		}
+		size = {256, 341},
+		trim = {118, 130, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {1311, 665, 56, 45},
+		alias = {"Lucerna_Ship_layer6_0032"}
 	},
 	Lucerna_Ship_layer6_0035 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			109,
-			68,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1297,
-			74,
-			66
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0036"
-		}
+		size = {256, 341},
+		trim = {114, 109, 68, 166},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1297, 74, 66},
+		alias = {"Lucerna_Ship_layer6_0036"}
 	},
 	Lucerna_Ship_layer6_0037 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			120,
-			79,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1840,
-			1895,
-			62,
-			55
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0038"
-		}
+		size = {256, 341},
+		trim = {115, 120, 79, 166},
+		a_size = {2048, 2048},
+		f_quad = {1840, 1895, 62, 55},
+		alias = {"Lucerna_Ship_layer6_0038"}
 	},
 	Lucerna_Ship_layer6_0039 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			113,
-			72,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1491,
-			66,
-			62
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0040"
-		}
+		size = {256, 341},
+		trim = {118, 113, 72, 166},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1491, 66, 62},
+		alias = {"Lucerna_Ship_layer6_0040"}
 	},
 	Lucerna_Ship_layer6_0041 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			116,
-			116,
-			75,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1889,
-			65,
-			59
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0042"
-		}
+		size = {256, 341},
+		trim = {116, 116, 75, 166},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1889, 65, 59},
+		alias = {"Lucerna_Ship_layer6_0042"}
 	},
 	Lucerna_Ship_layer6_0043 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			117,
-			114,
-			73,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1630,
-			66,
-			61
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0044"
-		}
+		size = {256, 341},
+		trim = {117, 114, 73, 166},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1630, 66, 61},
+		alias = {"Lucerna_Ship_layer6_0044"}
 	},
 	Lucerna_Ship_layer6_0061 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			111,
-			130,
-			59,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1656,
-			1614,
-			86,
-			45
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0062"
-		}
+		size = {256, 341},
+		trim = {111, 130, 59, 166},
+		a_size = {2048, 2048},
+		f_quad = {1656, 1614, 86, 45},
+		alias = {"Lucerna_Ship_layer6_0062"}
 	},
 	Lucerna_Ship_layer6_0063 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			116,
-			62,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1936,
-			1165,
-			81,
-			59
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0064"
-		}
+		size = {256, 341},
+		trim = {113, 116, 62, 166},
+		a_size = {2048, 2048},
+		f_quad = {1936, 1165, 81, 59},
+		alias = {"Lucerna_Ship_layer6_0064"}
 	},
 	Lucerna_Ship_layer6_0065 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			118,
-			59,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			150,
-			1987,
-			84,
-			57
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0066"
-		}
+		size = {256, 341},
+		trim = {113, 118, 59, 166},
+		a_size = {2048, 2048},
+		f_quad = {150, 1987, 84, 57},
+		alias = {"Lucerna_Ship_layer6_0066"}
 	},
 	Lucerna_Ship_layer6_0067 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			118,
-			60,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1372,
-			1297,
-			83,
-			57
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0068"
-		}
+		size = {256, 341},
+		trim = {113, 118, 60, 166},
+		a_size = {2048, 2048},
+		f_quad = {1372, 1297, 83, 57},
+		alias = {"Lucerna_Ship_layer6_0068"}
 	},
 	Lucerna_Ship_layer6_0069 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			118,
-			60,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1458,
-			1297,
-			83,
-			57
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0070"
-		}
+		size = {256, 341},
+		trim = {113, 118, 60, 166},
+		a_size = {2048, 2048},
+		f_quad = {1458, 1297, 83, 57},
+		alias = {"Lucerna_Ship_layer6_0070"}
 	},
 	Lucerna_Ship_layer6_0071 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			118,
-			60,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1544,
-			1297,
-			83,
-			57
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0072"
-		}
+		size = {256, 341},
+		trim = {113, 118, 60, 166},
+		a_size = {2048, 2048},
+		f_quad = {1544, 1297, 83, 57},
+		alias = {"Lucerna_Ship_layer6_0072"}
 	},
 	Lucerna_Ship_layer6_0073 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			118,
-			60,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1630,
-			1297,
-			83,
-			57
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0074"
-		}
+		size = {256, 341},
+		trim = {113, 118, 60, 166},
+		a_size = {2048, 2048},
+		f_quad = {1630, 1297, 83, 57},
+		alias = {"Lucerna_Ship_layer6_0074"}
 	},
 	Lucerna_Ship_layer6_0075 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			118,
-			60,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1716,
-			1297,
-			83,
-			57
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0076"
-		}
+		size = {256, 341},
+		trim = {113, 118, 60, 166},
+		a_size = {2048, 2048},
+		f_quad = {1716, 1297, 83, 57},
+		alias = {"Lucerna_Ship_layer6_0076"}
 	},
 	Lucerna_Ship_layer6_0077 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			115,
-			61,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1851,
-			1165,
-			82,
-			60
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0078"
-		}
+		size = {256, 341},
+		trim = {113, 115, 61, 166},
+		a_size = {2048, 2048},
+		f_quad = {1851, 1165, 82, 60},
+		alias = {"Lucerna_Ship_layer6_0078"}
 	},
 	Lucerna_Ship_layer6_0079 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			64,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1745,
-			1614,
-			79,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0080"
-		}
+		size = {256, 341},
+		trim = {113, 127, 64, 166},
+		a_size = {2048, 2048},
+		f_quad = {1745, 1614, 79, 48},
+		alias = {"Lucerna_Ship_layer6_0080"}
 	},
 	Lucerna_Ship_layer6_0085 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			111,
-			130,
-			82,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1769,
-			197,
-			63,
-			46
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0086"
-		}
+		size = {256, 341},
+		trim = {111, 130, 82, 165},
+		a_size = {2048, 2048},
+		f_quad = {1769, 197, 63, 46},
+		alias = {"Lucerna_Ship_layer6_0086"}
 	},
 	Lucerna_Ship_layer6_0087 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			121,
-			101,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1501,
-			1914,
-			53,
-			74
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0088"
-		}
+		size = {256, 341},
+		trim = {121, 101, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {1501, 1914, 53, 74},
+		alias = {"Lucerna_Ship_layer6_0088"}
 	},
 	Lucerna_Ship_layer6_0089 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			87,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			199,
-			1052,
-			59,
-			88
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0090"
-		}
+		size = {256, 341},
+		trim = {115, 87, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {199, 1052, 59, 88},
+		alias = {"Lucerna_Ship_layer6_0090"}
 	},
 	Lucerna_Ship_layer6_0091 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			81,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			199,
-			955,
-			56,
-			94
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0092"
-		}
+		size = {256, 341},
+		trim = {118, 81, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {199, 955, 56, 94},
+		alias = {"Lucerna_Ship_layer6_0092"}
 	},
 	Lucerna_Ship_layer6_0093 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			117,
-			84,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1617,
-			57,
-			91
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0094"
-		}
+		size = {256, 341},
+		trim = {117, 84, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1617, 57, 91},
+		alias = {"Lucerna_Ship_layer6_0094"}
 	},
 	Lucerna_Ship_layer6_0095 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			117,
-			95,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			199,
-			1143,
-			57,
-			80
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0096"
-		}
+		size = {256, 341},
+		trim = {117, 95, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {199, 1143, 57, 80},
+		alias = {"Lucerna_Ship_layer6_0096"}
 	},
 	Lucerna_Ship_layer6_0097 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			117,
-			115,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			1958,
-			57,
-			60
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0098"
-		}
+		size = {256, 341},
+		trim = {117, 115, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {1773, 1958, 57, 60},
+		alias = {"Lucerna_Ship_layer6_0098"}
 	},
 	Lucerna_Ship_layer6_0310 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			98,
-			133,
-			74,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1904,
-			1614,
-			84,
-			41
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0311"
-		}
+		size = {256, 341},
+		trim = {98, 133, 74, 167},
+		a_size = {2048, 2048},
+		f_quad = {1904, 1614, 84, 41},
+		alias = {"Lucerna_Ship_layer6_0311"}
 	},
 	Lucerna_Ship_layer6_0312 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			146,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1415,
-			26,
-			28
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0313",
-			"Lucerna_Ship_layer6_0340",
-			"Lucerna_Ship_layer6_0341"
-		}
+		size = {256, 341},
+		trim = {148, 146, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1415, 26, 28},
+		alias = {"Lucerna_Ship_layer6_0313", "Lucerna_Ship_layer6_0340", "Lucerna_Ship_layer6_0341"}
 	},
 	Lucerna_Ship_layer6_0314 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			146,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1446,
-			26,
-			28
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0315",
-			"Lucerna_Ship_layer6_0342",
-			"Lucerna_Ship_layer6_0343"
-		}
+		size = {256, 341},
+		trim = {148, 146, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1446, 26, 28},
+		alias = {"Lucerna_Ship_layer6_0315", "Lucerna_Ship_layer6_0342", "Lucerna_Ship_layer6_0343"}
 	},
 	Lucerna_Ship_layer6_0316 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			145,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1291,
-			26,
-			29
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0317",
-			"Lucerna_Ship_layer6_0344",
-			"Lucerna_Ship_layer6_0345"
-		}
+		size = {256, 341},
+		trim = {148, 145, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1291, 26, 29},
+		alias = {"Lucerna_Ship_layer6_0317", "Lucerna_Ship_layer6_0344", "Lucerna_Ship_layer6_0345"}
 	},
 	Lucerna_Ship_layer6_0318 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			145,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1323,
-			26,
-			29
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0319",
-			"Lucerna_Ship_layer6_0346",
-			"Lucerna_Ship_layer6_0347"
-		}
+		size = {256, 341},
+		trim = {148, 145, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1323, 26, 29},
+		alias = {"Lucerna_Ship_layer6_0319", "Lucerna_Ship_layer6_0346", "Lucerna_Ship_layer6_0347"}
 	},
 	Lucerna_Ship_layer6_0320 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			146,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1477,
-			26,
-			28
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0321",
-			"Lucerna_Ship_layer6_0348",
-			"Lucerna_Ship_layer6_0349"
-		}
+		size = {256, 341},
+		trim = {148, 146, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1477, 26, 28},
+		alias = {"Lucerna_Ship_layer6_0321", "Lucerna_Ship_layer6_0348", "Lucerna_Ship_layer6_0349"}
 	},
 	Lucerna_Ship_layer6_0322 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			147,
-			145,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			744,
-			1638,
-			27,
-			29
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0323",
-			"Lucerna_Ship_layer6_0350",
-			"Lucerna_Ship_layer6_0351"
-		}
+		size = {256, 341},
+		trim = {147, 145, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {744, 1638, 27, 29},
+		alias = {"Lucerna_Ship_layer6_0323", "Lucerna_Ship_layer6_0350", "Lucerna_Ship_layer6_0351"}
 	},
 	Lucerna_Ship_layer6_0324 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			147,
-			145,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			744,
-			1572,
-			27,
-			30
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0325",
-			"Lucerna_Ship_layer6_0352",
-			"Lucerna_Ship_layer6_0353"
-		}
+		size = {256, 341},
+		trim = {147, 145, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {744, 1572, 27, 30},
+		alias = {"Lucerna_Ship_layer6_0325", "Lucerna_Ship_layer6_0352", "Lucerna_Ship_layer6_0353"}
 	},
 	Lucerna_Ship_layer6_0326 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			147,
-			145,
-			82,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			744,
-			1605,
-			27,
-			30
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0327",
-			"Lucerna_Ship_layer6_0354",
-			"Lucerna_Ship_layer6_0355"
-		}
+		size = {256, 341},
+		trim = {147, 145, 82, 166},
+		a_size = {2048, 2048},
+		f_quad = {744, 1605, 27, 30},
+		alias = {"Lucerna_Ship_layer6_0327", "Lucerna_Ship_layer6_0354", "Lucerna_Ship_layer6_0355"}
 	},
 	Lucerna_Ship_layer6_0328 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			147,
-			145,
-			83,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1197,
-			26,
-			30
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0329",
-			"Lucerna_Ship_layer6_0332",
-			"Lucerna_Ship_layer6_0333",
-			"Lucerna_Ship_layer6_0356",
-			"Lucerna_Ship_layer6_0357"
-		}
+		size = {256, 341},
+		trim = {147, 145, 83, 166},
+		a_size = {2048, 2048},
+		f_quad = {425, 1197, 26, 30},
+		alias = {"Lucerna_Ship_layer6_0329", "Lucerna_Ship_layer6_0332", "Lucerna_Ship_layer6_0333", "Lucerna_Ship_layer6_0356", "Lucerna_Ship_layer6_0357"}
 	},
 	Lucerna_Ship_layer6_0330 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			145,
-			83,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2020,
-			1165,
-			25,
-			30
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0331",
-			"Lucerna_Ship_layer6_0358",
-			"Lucerna_Ship_layer6_0359"
-		}
+		size = {256, 341},
+		trim = {148, 145, 83, 166},
+		a_size = {2048, 2048},
+		f_quad = {2020, 1165, 25, 30},
+		alias = {"Lucerna_Ship_layer6_0331", "Lucerna_Ship_layer6_0358", "Lucerna_Ship_layer6_0359"}
 	},
 	Lucerna_Ship_layer6_0334 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			147,
-			145,
-			83,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1230,
-			26,
-			30
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0335"
-		}
+		size = {256, 341},
+		trim = {147, 145, 83, 166},
+		a_size = {2048, 2048},
+		f_quad = {425, 1230, 26, 30},
+		alias = {"Lucerna_Ship_layer6_0335"}
 	},
 	Lucerna_Ship_layer6_0336 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			147,
-			145,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1165,
-			27,
-			29
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0337"
-		}
+		size = {256, 341},
+		trim = {147, 145, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1165, 27, 29},
+		alias = {"Lucerna_Ship_layer6_0337"}
 	},
 	Lucerna_Ship_layer6_0338 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			145,
-			82,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1355,
-			26,
-			29
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0339"
-		}
+		size = {256, 341},
+		trim = {148, 145, 82, 167},
+		a_size = {2048, 2048},
+		f_quad = {425, 1355, 26, 29},
+		alias = {"Lucerna_Ship_layer6_0339"}
 	},
 	Lucerna_Ship_layer6_0360 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			98,
-			133,
-			74,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1960,
-			1725,
-			84,
-			42
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0361"
-		}
+		size = {256, 341},
+		trim = {98, 133, 74, 166},
+		a_size = {2048, 2048},
+		f_quad = {1960, 1725, 84, 42},
+		alias = {"Lucerna_Ship_layer6_0361"}
 	},
 	Lucerna_Ship_lvlup_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			53,
-			150,
-			63,
-			126
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1188,
-			178,
-			140,
-			65
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0002"
-		}
+		size = {256, 341},
+		trim = {53, 150, 63, 126},
+		a_size = {2048, 2048},
+		f_quad = {1188, 178, 140, 65},
+		alias = {"Lucerna_Ship_lvlup_0002"}
 	},
 	Lucerna_Ship_lvlup_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			42,
-			123,
-			49,
-			90
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			998,
-			715,
-			165,
-			128
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0004"
-		}
+		size = {256, 341},
+		trim = {42, 123, 49, 90},
+		a_size = {2048, 2048},
+		f_quad = {998, 715, 165, 128},
+		alias = {"Lucerna_Ship_lvlup_0004"}
 	},
 	Lucerna_Ship_lvlup_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			35,
-			90,
-			44,
-			68
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			818,
-			405,
-			177,
-			183
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0006"
-		}
+		size = {256, 341},
+		trim = {35, 90, 44, 68},
+		a_size = {2048, 2048},
+		f_quad = {818, 405, 177, 183},
+		alias = {"Lucerna_Ship_lvlup_0006"}
 	},
 	Lucerna_Ship_lvlup_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			30,
-			57,
-			35,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			5,
-			191,
-			238
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0008"
-		}
+		size = {256, 341},
+		trim = {30, 57, 35, 46},
+		a_size = {2048, 2048},
+		f_quad = {634, 5, 191, 238},
+		alias = {"Lucerna_Ship_lvlup_0008"}
 	},
 	Lucerna_Ship_lvlup_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			34,
-			51,
-			29,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			5,
-			193,
-			254
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0010"
-		}
+		size = {256, 341},
+		trim = {34, 51, 29, 36},
+		a_size = {2048, 2048},
+		f_quad = {264, 5, 193, 254},
+		alias = {"Lucerna_Ship_lvlup_0010"}
 	},
 	Lucerna_Ship_lvlup_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			41,
-			46,
-			24,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			955,
-			191,
-			268
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0012"
-		}
+		size = {256, 341},
+		trim = {41, 46, 24, 27},
+		a_size = {2048, 2048},
+		f_quad = {5, 955, 191, 268},
+		alias = {"Lucerna_Ship_lvlup_0012"}
 	},
 	Lucerna_Ship_lvlup_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			56,
-			44,
-			27,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			264,
-			1741,
-			173,
-			273
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0014"
-		}
+		size = {256, 341},
+		trim = {56, 44, 27, 24},
+		a_size = {2048, 2048},
+		f_quad = {264, 1741, 173, 273},
+		alias = {"Lucerna_Ship_lvlup_0014"}
 	},
 	Lucerna_Ship_lvlup_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			61,
-			48,
-			34,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			1087,
-			161,
-			271
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0016"
-		}
+		size = {256, 341},
+		trim = {61, 48, 34, 22},
+		a_size = {2048, 2048},
+		f_quad = {460, 1087, 161, 271},
+		alias = {"Lucerna_Ship_lvlup_0016"}
 	},
 	Lucerna_Ship_lvlup_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			101,
-			65,
-			62,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			1799,
-			93,
-			238
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0018"
-		}
+		size = {256, 341},
+		trim = {101, 65, 62, 38},
+		a_size = {2048, 2048},
+		f_quad = {460, 1799, 93, 238},
+		alias = {"Lucerna_Ship_lvlup_0018"}
 	},
 	Lucerna_Ship_lvlup_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			124,
-			152,
-			62,
-			144
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1967,
-			543,
-			70,
-			45
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0020"
-		}
+		size = {256, 341},
+		trim = {124, 152, 62, 144},
+		a_size = {2048, 2048},
+		f_quad = {1967, 543, 70, 45},
+		alias = {"Lucerna_Ship_lvlup_0020"}
 	},
 	Lucerna_Ship_lvlup_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			91,
-			155,
-			52,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1844,
-			1725,
-			113,
-			31
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0022"
-		}
+		size = {256, 341},
+		trim = {91, 155, 52, 155},
+		a_size = {2048, 2048},
+		f_quad = {1844, 1725, 113, 31},
+		alias = {"Lucerna_Ship_lvlup_0022"}
 	},
 	Lucerna_Ship_lvlup_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			76,
-			162,
-			47,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1840,
-			215,
-			133,
-			18
-		},
-		alias = {
-			"Lucerna_Ship_lvlup_0024",
-			"Lucerna_Ship_lvlup_0025",
-			"Lucerna_Ship_lvlup_0026",
-			"Lucerna_Ship_lvlup_0027"
-		}
+		size = {256, 341},
+		trim = {76, 162, 47, 161},
+		a_size = {2048, 2048},
+		f_quad = {1840, 215, 133, 18},
+		alias = {"Lucerna_Ship_lvlup_0024", "Lucerna_Ship_lvlup_0025", "Lucerna_Ship_lvlup_0026", "Lucerna_Ship_lvlup_0027"}
 	},
 	Lucerna_Ship_remosBack_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			114,
-			110
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2009,
-			1531,
-			28,
-			18
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0002"
-		}
+		size = {256, 341},
+		trim = {114, 213, 114, 110},
+		a_size = {2048, 2048},
+		f_quad = {2009, 1531, 28, 18},
+		alias = {"Lucerna_Ship_remosBack_0002"}
 	},
 	Lucerna_Ship_remosBack_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			213,
-			114,
-			111
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1508,
-			1143,
-			27,
-			17
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0004"
-		}
+		size = {256, 341},
+		trim = {115, 213, 114, 111},
+		a_size = {2048, 2048},
+		f_quad = {1508, 1143, 27, 17},
+		alias = {"Lucerna_Ship_remosBack_0004"}
 	},
 	Lucerna_Ship_remosBack_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			213,
-			113,
-			112
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			998,
-			572,
-			28,
-			16
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0006"
-		}
+		size = {256, 341},
+		trim = {115, 213, 113, 112},
+		a_size = {2048, 2048},
+		f_quad = {998, 572, 28, 16},
+		alias = {"Lucerna_Ship_remosBack_0006"}
 	},
 	Lucerna_Ship_remosBack_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			213,
-			113,
-			112
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1029,
-			572,
-			28,
-			16
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0008"
-		}
+		size = {256, 341},
+		trim = {115, 213, 113, 112},
+		a_size = {2048, 2048},
+		f_quad = {1029, 572, 28, 16},
+		alias = {"Lucerna_Ship_remosBack_0008"}
 	},
 	Lucerna_Ship_remosBack_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			213,
-			113,
-			113
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1655,
-			1147,
-			28,
-			15
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0010"
-		}
+		size = {256, 341},
+		trim = {115, 213, 113, 113},
+		a_size = {2048, 2048},
+		f_quad = {1655, 1147, 28, 15},
+		alias = {"Lucerna_Ship_remosBack_0010"}
 	},
 	Lucerna_Ship_remosBack_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			213,
-			113,
-			113
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1686,
-			1147,
-			28,
-			15
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0012"
-		}
+		size = {256, 341},
+		trim = {115, 213, 113, 113},
+		a_size = {2048, 2048},
+		f_quad = {1686, 1147, 28, 15},
+		alias = {"Lucerna_Ship_remosBack_0012"}
 	},
 	Lucerna_Ship_remosBack_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			113,
-			113
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2005,
-			1596,
-			29,
-			15
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0014"
-		}
+		size = {256, 341},
+		trim = {114, 213, 113, 113},
+		a_size = {2048, 2048},
+		f_quad = {2005, 1596, 29, 15},
+		alias = {"Lucerna_Ship_remosBack_0014"}
 	},
 	Lucerna_Ship_remosBack_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			113,
-			112
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1476,
-			1143,
-			29,
-			16
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0016"
-		}
+		size = {256, 341},
+		trim = {114, 213, 113, 112},
+		a_size = {2048, 2048},
+		f_quad = {1476, 1143, 29, 16},
+		alias = {"Lucerna_Ship_remosBack_0016"}
 	},
 	Lucerna_Ship_remosBack_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			114,
-			111
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1903,
-			1759,
-			28,
-			17
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0018"
-		}
+		size = {256, 341},
+		trim = {114, 213, 114, 111},
+		a_size = {2048, 2048},
+		f_quad = {1903, 1759, 28, 17},
+		alias = {"Lucerna_Ship_remosBack_0018"}
 	},
 	Lucerna_Ship_remosBack_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			115,
-			110
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1976,
-			215,
-			27,
-			18
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0020"
-		}
+		size = {256, 341},
+		trim = {114, 213, 115, 110},
+		a_size = {2048, 2048},
+		f_quad = {1976, 215, 27, 18},
+		alias = {"Lucerna_Ship_remosBack_0020"}
 	},
 	Lucerna_Ship_remosBack_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			116,
-			110
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1418,
-			1143,
-			26,
-			18
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0022"
-		}
+		size = {256, 341},
+		trim = {114, 213, 116, 110},
+		a_size = {2048, 2048},
+		f_quad = {1418, 1143, 26, 18},
+		alias = {"Lucerna_Ship_remosBack_0022"}
 	},
 	Lucerna_Ship_remosBack_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			116,
-			109
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1844,
-			1759,
-			26,
-			19
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0024"
-		}
+		size = {256, 341},
+		trim = {114, 213, 116, 109},
+		a_size = {2048, 2048},
+		f_quad = {1844, 1759, 26, 19},
+		alias = {"Lucerna_Ship_remosBack_0024"}
 	},
 	Lucerna_Ship_remosBack_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			116,
-			110
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1447,
-			1143,
-			26,
-			18
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0026"
-		}
+		size = {256, 341},
+		trim = {114, 213, 116, 110},
+		a_size = {2048, 2048},
+		f_quad = {1447, 1143, 26, 18},
+		alias = {"Lucerna_Ship_remosBack_0026"}
 	},
 	Lucerna_Ship_remosBack_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			213,
-			115,
-			110
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1873,
-			1759,
-			27,
-			18
-		},
-		alias = {
-			"Lucerna_Ship_remosBack_0028"
-		}
+		size = {256, 341},
+		trim = {114, 213, 115, 110},
+		a_size = {2048, 2048},
+		f_quad = {1873, 1759, 27, 18},
+		alias = {"Lucerna_Ship_remosBack_0028"}
 	},
 	Lucerna_Ship_remos_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			86,
-			208,
-			139,
-			107
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1136,
-			31,
-			26
-		},
-		alias = {
-			"Lucerna_Ship_remos_0002"
-		}
+		size = {256, 341},
+		trim = {86, 208, 139, 107},
+		a_size = {2048, 2048},
+		f_quad = {425, 1136, 31, 26},
+		alias = {"Lucerna_Ship_remos_0002"}
 	},
 	Lucerna_Ship_remos_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			87,
-			208,
-			139,
-			108
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1387,
-			30,
-			25
-		},
-		alias = {
-			"Lucerna_Ship_remos_0004"
-		}
+		size = {256, 341},
+		trim = {87, 208, 139, 108},
+		a_size = {2048, 2048},
+		f_quad = {425, 1387, 30, 25},
+		alias = {"Lucerna_Ship_remos_0004"}
 	},
 	Lucerna_Ship_remos_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			86,
-			208,
-			139,
-			108
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1263,
-			31,
-			25
-		},
-		alias = {
-			"Lucerna_Ship_remos_0006"
-		}
+		size = {256, 341},
+		trim = {86, 208, 139, 108},
+		a_size = {2048, 2048},
+		f_quad = {425, 1263, 31, 25},
+		alias = {"Lucerna_Ship_remos_0006"}
 	},
 	Lucerna_Ship_remos_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			208,
-			139,
-			109
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			733,
-			1271,
-			35,
-			24
-		},
-		alias = {
-			"Lucerna_Ship_remos_0014"
-		}
+		size = {256, 341},
+		trim = {82, 208, 139, 109},
+		a_size = {2048, 2048},
+		f_quad = {733, 1271, 35, 24},
+		alias = {"Lucerna_Ship_remos_0014"}
 	},
 	Lucerna_Ship_remos_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			208,
-			139,
-			107
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			195,
-			35,
-			26
-		},
-		alias = {
-			"Lucerna_Ship_remos_0022"
-		}
+		size = {256, 341},
+		trim = {82, 208, 139, 107},
+		a_size = {2048, 2048},
+		f_quad = {2006, 195, 35, 26},
+		alias = {"Lucerna_Ship_remos_0022"}
 	},
 	Lucerna_Ship_remos_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			208,
-			139,
-			106
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			165,
-			34,
-			27
-		},
-		alias = {
-			"Lucerna_Ship_remos_0024"
-		}
+		size = {256, 341},
+		trim = {83, 208, 139, 106},
+		a_size = {2048, 2048},
+		f_quad = {2006, 165, 34, 27},
+		alias = {"Lucerna_Ship_remos_0024"}
 	},
 	Lucerna_Ship_remos_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			85,
-			208,
-			139,
-			107
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1048,
-			32,
-			26
-		},
-		alias = {
-			"Lucerna_Ship_remos_0028"
-		}
+		size = {256, 341},
+		trim = {85, 208, 139, 107},
+		a_size = {2048, 2048},
+		f_quad = {425, 1048, 32, 26},
+		alias = {"Lucerna_Ship_remos_0028"}
 	},
 	Lucerna_Ship_shadow = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			54,
-			14
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1922,
-			835,
-			54,
-			14
-		},
+		size = {54, 14},
+		trim = {0, 0, 0, 0},
+		a_size = {2048, 2048},
+		f_quad = {1922, 835, 54, 14},
 		alias = {}
 	},
 	Lucerna_Ship_teleport_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			213,
-			157,
-			16,
-			144
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1676,
-			663,
-			27,
-			40
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0002",
-			"Lucerna_Ship_teleport_0055",
-			"Lucerna_Ship_teleport_0056"
-		}
+		size = {256, 341},
+		trim = {213, 157, 16, 144},
+		a_size = {2048, 2048},
+		f_quad = {1676, 663, 27, 40},
+		alias = {"Lucerna_Ship_teleport_0002", "Lucerna_Ship_teleport_0055", "Lucerna_Ship_teleport_0056"}
 	},
 	Lucerna_Ship_teleport_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			186,
-			117,
-			18,
-			125
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1711,
-			52,
-			99
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0006",
-			"Lucerna_Ship_teleport_0051",
-			"Lucerna_Ship_teleport_0052"
-		}
+		size = {256, 341},
+		trim = {186, 117, 18, 125},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1711, 52, 99},
+		alias = {"Lucerna_Ship_teleport_0006", "Lucerna_Ship_teleport_0051", "Lucerna_Ship_teleport_0052"}
 	},
 	Lucerna_Ship_teleport_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			148,
-			86,
-			19,
-			113
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1298,
-			89,
-			142
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0008",
-			"Lucerna_Ship_teleport_0049",
-			"Lucerna_Ship_teleport_0050"
-		}
+		size = {256, 341},
+		trim = {148, 86, 19, 113},
+		a_size = {2048, 2048},
+		f_quad = {634, 1298, 89, 142},
+		alias = {"Lucerna_Ship_teleport_0008", "Lucerna_Ship_teleport_0049", "Lucerna_Ship_teleport_0050"}
 	},
 	Lucerna_Ship_teleport_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			105,
-			81,
-			14,
-			102
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			852,
-			137,
-			158
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0010",
-			"Lucerna_Ship_teleport_0047",
-			"Lucerna_Ship_teleport_0048"
-		}
+		size = {256, 341},
+		trim = {105, 81, 14, 102},
+		a_size = {2048, 2048},
+		f_quad = {634, 852, 137, 158},
+		alias = {"Lucerna_Ship_teleport_0010", "Lucerna_Ship_teleport_0047", "Lucerna_Ship_teleport_0048"}
 	},
 	Lucerna_Ship_teleport_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			91,
-			84,
-			7,
-			104
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1872,
-			246,
-			158,
-			153
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0012",
-			"Lucerna_Ship_teleport_0045",
-			"Lucerna_Ship_teleport_0046"
-		}
+		size = {256, 341},
+		trim = {91, 84, 7, 104},
+		a_size = {2048, 2048},
+		f_quad = {1872, 246, 158, 153},
+		alias = {"Lucerna_Ship_teleport_0012", "Lucerna_Ship_teleport_0045", "Lucerna_Ship_teleport_0046"}
 	},
 	Lucerna_Ship_teleport_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			87,
-			13,
-			105
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			460,
-			1361,
-			160,
-			149
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0014",
-			"Lucerna_Ship_teleport_0043",
-			"Lucerna_Ship_teleport_0044"
-		}
+		size = {256, 341},
+		trim = {83, 87, 13, 105},
+		a_size = {2048, 2048},
+		f_quad = {460, 1361, 160, 149},
+		alias = {"Lucerna_Ship_teleport_0014", "Lucerna_Ship_teleport_0043", "Lucerna_Ship_teleport_0044"}
 	},
 	Lucerna_Ship_teleport_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			33,
-			109,
-			5,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			852,
-			246,
-			218,
-			136
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0042"
-		}
+		size = {256, 341},
+		trim = {33, 109, 5, 96},
+		a_size = {2048, 2048},
+		f_quad = {852, 246, 218, 136},
+		alias = {"Lucerna_Ship_teleport_0042"}
 	},
 	Lucerna_Ship_teleport_0016 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			33,
-			109,
-			5,
-			96
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1073,
-			246,
-			218,
-			136
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0041"
-		}
+		size = {256, 341},
+		trim = {33, 109, 5, 96},
+		a_size = {2048, 2048},
+		f_quad = {1073, 246, 218, 136},
+		alias = {"Lucerna_Ship_teleport_0041"}
 	},
 	Lucerna_Ship_teleport_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			27,
-			105,
-			3,
-			101
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1743,
-			405,
-			226,
-			135
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0018",
-			"Lucerna_Ship_teleport_0039",
-			"Lucerna_Ship_teleport_0040"
-		}
+		size = {256, 341},
+		trim = {27, 105, 3, 101},
+		a_size = {2048, 2048},
+		f_quad = {1743, 405, 226, 135},
+		alias = {"Lucerna_Ship_teleport_0018", "Lucerna_Ship_teleport_0039", "Lucerna_Ship_teleport_0040"}
 	},
 	Lucerna_Ship_teleport_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			32,
-			110,
-			7,
-			101
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1294,
-			246,
-			217,
-			130
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0020",
-			"Lucerna_Ship_teleport_0037",
-			"Lucerna_Ship_teleport_0038"
-		}
+		size = {256, 341},
+		trim = {32, 110, 7, 101},
+		a_size = {2048, 2048},
+		f_quad = {1294, 246, 217, 130},
+		alias = {"Lucerna_Ship_teleport_0020", "Lucerna_Ship_teleport_0037", "Lucerna_Ship_teleport_0038"}
 	},
 	Lucerna_Ship_teleport_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			39,
-			116,
-			12,
-			105
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			592,
-			205,
-			120
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0022",
-			"Lucerna_Ship_teleport_0035",
-			"Lucerna_Ship_teleport_0036"
-		}
+		size = {256, 341},
+		trim = {39, 116, 12, 105},
+		a_size = {2048, 2048},
+		f_quad = {634, 592, 205, 120},
+		alias = {"Lucerna_Ship_teleport_0022", "Lucerna_Ship_teleport_0035", "Lucerna_Ship_teleport_0036"}
 	},
 	Lucerna_Ship_teleport_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			45,
-			127,
-			24,
-			113
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1166,
-			715,
-			187,
-			101
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0024",
-			"Lucerna_Ship_teleport_0033",
-			"Lucerna_Ship_teleport_0034"
-		}
+		size = {256, 341},
+		trim = {45, 127, 24, 113},
+		a_size = {2048, 2048},
+		f_quad = {1166, 715, 187, 101},
+		alias = {"Lucerna_Ship_teleport_0024", "Lucerna_Ship_teleport_0033", "Lucerna_Ship_teleport_0034"}
 	},
 	Lucerna_Ship_teleport_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			48,
-			135,
-			29,
-			120
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1612,
-			715,
-			179,
-			86
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0026",
-			"Lucerna_Ship_teleport_0031",
-			"Lucerna_Ship_teleport_0032"
-		}
+		size = {256, 341},
+		trim = {48, 135, 29, 120},
+		a_size = {2048, 2048},
+		f_quad = {1612, 715, 179, 86},
+		alias = {"Lucerna_Ship_teleport_0026", "Lucerna_Ship_teleport_0031", "Lucerna_Ship_teleport_0032"}
 	},
 	Lucerna_Ship_teleport_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			61,
-			148,
-			53,
-			139
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1987,
-			142,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0028",
-			"Lucerna_Ship_teleport_0029",
-			"Lucerna_Ship_teleport_0030"
-		}
+		size = {256, 341},
+		trim = {61, 148, 53, 139},
+		a_size = {2048, 2048},
+		f_quad = {5, 1987, 142, 54},
+		alias = {"Lucerna_Ship_teleport_0028", "Lucerna_Ship_teleport_0029", "Lucerna_Ship_teleport_0030"}
 	},
 	Lucerna_totemDecal_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			106,
-			73,
-			84,
-			76
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			237,
-			1987,
-			23,
-			21
-		},
-		alias = {
-			"Lucerna_totemDecal_0002",
-			"Lucerna_totemDecal_0037",
-			"Lucerna_totemDecal_0038"
-		}
+		size = {213, 170},
+		trim = {106, 73, 84, 76},
+		a_size = {2048, 2048},
+		f_quad = {237, 1987, 23, 21},
+		alias = {"Lucerna_totemDecal_0002", "Lucerna_totemDecal_0037", "Lucerna_totemDecal_0038"}
 	},
 	Lucerna_totemDecal_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			96,
-			68,
-			94,
-			82
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1934,
-			1759,
-			23,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0004"
-		}
+		size = {213, 170},
+		trim = {96, 68, 94, 82},
+		a_size = {2048, 2048},
+		f_quad = {1934, 1759, 23, 20},
+		alias = {"Lucerna_totemDecal_0004"}
 	},
 	Lucerna_totemDecal_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			86,
-			63,
-			107,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1720,
-			20,
-			18
-		},
-		alias = {
-			"Lucerna_totemDecal_0006"
-		}
+		size = {213, 170},
+		trim = {86, 63, 107, 89},
+		a_size = {2048, 2048},
+		f_quad = {425, 1720, 20, 18},
+		alias = {"Lucerna_totemDecal_0006"}
 	},
 	Lucerna_totemDecal_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			79,
-			60,
-			114,
-			91
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			751,
-			1727,
-			20,
-			19
-		},
-		alias = {
-			"Lucerna_totemDecal_0008"
-		}
+		size = {213, 170},
+		trim = {79, 60, 114, 91},
+		a_size = {2048, 2048},
+		f_quad = {751, 1727, 20, 19},
+		alias = {"Lucerna_totemDecal_0008"}
 	},
 	Lucerna_totemDecal_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			76,
-			62,
-			119,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			753,
-			1013,
-			18,
-			19
-		},
-		alias = {
-			"Lucerna_totemDecal_0010"
-		}
+		size = {213, 170},
+		trim = {76, 62, 119, 89},
+		a_size = {2048, 2048},
+		f_quad = {753, 1013, 18, 19},
+		alias = {"Lucerna_totemDecal_0010"}
 	},
 	Lucerna_totemDecal_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			73,
-			65,
-			121,
-			86
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1676,
-			19,
-			19
-		},
-		alias = {
-			"Lucerna_totemDecal_0012"
-		}
+		size = {213, 170},
+		trim = {73, 65, 121, 86},
+		a_size = {2048, 2048},
+		f_quad = {425, 1676, 19, 19},
+		alias = {"Lucerna_totemDecal_0012"}
 	},
 	Lucerna_totemDecal_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			71,
-			68,
-			122,
-			82
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			851,
-			2018,
-			20,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0014"
-		}
+		size = {213, 170},
+		trim = {71, 68, 122, 82},
+		a_size = {2048, 2048},
+		f_quad = {851, 2018, 20, 20},
+		alias = {"Lucerna_totemDecal_0014"}
 	},
 	Lucerna_totemDecal_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			73,
-			71,
-			121,
-			79
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1818,
-			2021,
-			19,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0016"
-		}
+		size = {213, 170},
+		trim = {73, 71, 121, 79},
+		a_size = {2048, 2048},
+		f_quad = {1818, 2021, 19, 20},
+		alias = {"Lucerna_totemDecal_0016"}
 	},
 	Lucerna_totemDecal_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			76,
-			73,
-			117,
-			77
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			751,
-			1681,
-			20,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0018"
-		}
+		size = {213, 170},
+		trim = {76, 73, 117, 77},
+		a_size = {2048, 2048},
+		f_quad = {751, 1681, 20, 20},
+		alias = {"Lucerna_totemDecal_0018"}
 	},
 	Lucerna_totemDecal_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			83,
-			73,
-			106,
-			76
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2020,
-			1198,
-			24,
-			21
-		},
-		alias = {
-			"Lucerna_totemDecal_0020"
-		}
+		size = {213, 170},
+		trim = {83, 73, 106, 76},
+		a_size = {2048, 2048},
+		f_quad = {2020, 1198, 24, 21},
+		alias = {"Lucerna_totemDecal_0020"}
 	},
 	Lucerna_totemDecal_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			94,
-			68,
-			96,
-			82
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1587,
-			23,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0022"
-		}
+		size = {213, 170},
+		trim = {94, 68, 96, 82},
+		a_size = {2048, 2048},
+		f_quad = {425, 1587, 23, 20},
+		alias = {"Lucerna_totemDecal_0022"}
 	},
 	Lucerna_totemDecal_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			106,
-			63,
-			86,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1655,
-			21,
-			18
-		},
-		alias = {
-			"Lucerna_totemDecal_0024"
-		}
+		size = {213, 170},
+		trim = {106, 63, 86, 89},
+		a_size = {2048, 2048},
+		f_quad = {425, 1655, 21, 18},
+		alias = {"Lucerna_totemDecal_0024"}
 	},
 	Lucerna_totemDecal_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			114,
-			60,
-			79,
-			91
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			751,
-			1749,
-			20,
-			19
-		},
-		alias = {
-			"Lucerna_totemDecal_0026"
-		}
+		size = {213, 170},
+		trim = {114, 60, 79, 91},
+		a_size = {2048, 2048},
+		f_quad = {751, 1749, 20, 19},
+		alias = {"Lucerna_totemDecal_0026"}
 	},
 	Lucerna_totemDecal_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			118,
-			62,
-			76,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1698,
-			19,
-			19
-		},
-		alias = {
-			"Lucerna_totemDecal_0028"
-		}
+		size = {213, 170},
+		trim = {118, 62, 76, 89},
+		a_size = {2048, 2048},
+		f_quad = {425, 1698, 19, 19},
+		alias = {"Lucerna_totemDecal_0028"}
 	},
 	Lucerna_totemDecal_0029 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			120,
-			65,
-			73,
-			86
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1610,
-			20,
-			19
-		},
-		alias = {
-			"Lucerna_totemDecal_0030"
-		}
+		size = {213, 170},
+		trim = {120, 65, 73, 86},
+		a_size = {2048, 2048},
+		f_quad = {425, 1610, 20, 19},
+		alias = {"Lucerna_totemDecal_0030"}
 	},
 	Lucerna_totemDecal_0031 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			122,
-			68,
-			72,
-			82
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			425,
-			1632,
-			19,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0032"
-		}
+		size = {213, 170},
+		trim = {122, 68, 72, 82},
+		a_size = {2048, 2048},
+		f_quad = {425, 1632, 19, 20},
+		alias = {"Lucerna_totemDecal_0032"}
 	},
 	Lucerna_totemDecal_0033 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			120,
-			71,
-			73,
-			79
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			751,
-			1704,
-			20,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0034"
-		}
+		size = {213, 170},
+		trim = {120, 71, 73, 79},
+		a_size = {2048, 2048},
+		f_quad = {751, 1704, 20, 20},
+		alias = {"Lucerna_totemDecal_0034"}
 	},
 	Lucerna_totemDecal_0035 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			116,
-			73,
-			76,
-			77
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			239,
-			1781,
-			21,
-			20
-		},
-		alias = {
-			"Lucerna_totemDecal_0036"
-		}
+		size = {213, 170},
+		trim = {116, 73, 76, 77},
+		a_size = {2048, 2048},
+		f_quad = {239, 1781, 21, 20},
+		alias = {"Lucerna_totemDecal_0036"}
 	},
 	Lucerna_totem_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			42,
-			66,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			1320,
-			77,
-			78
-		},
+		size = {213, 170},
+		trim = {70, 42, 66, 50},
+		a_size = {2048, 2048},
+		f_quad = {180, 1320, 77, 78},
 		alias = {}
 	},
 	Lucerna_totem_0002 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			42,
-			66,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			1401,
-			77,
-			78
-		},
+		size = {213, 170},
+		trim = {70, 42, 66, 50},
+		a_size = {2048, 2048},
+		f_quad = {180, 1401, 77, 78},
 		alias = {}
 	},
 	Lucerna_totem_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			42,
-			64,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			179,
-			1606,
-			79,
-			79
-		},
+		size = {213, 170},
+		trim = {70, 42, 64, 49},
+		a_size = {2048, 2048},
+		f_quad = {179, 1606, 79, 79},
 		alias = {}
 	},
 	Lucerna_totem_0004 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			42,
-			63,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1963,
-			1079,
-			80,
-			79
-		},
+		size = {213, 170},
+		trim = {70, 42, 63, 49},
+		a_size = {2048, 2048},
+		f_quad = {1963, 1079, 80, 79},
 		alias = {}
 	},
 	Lucerna_totem_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			42,
-			62,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			179,
-			1526,
-			82,
-			77
-		},
+		size = {213, 170},
+		trim = {69, 42, 62, 51},
+		a_size = {2048, 2048},
+		f_quad = {179, 1526, 82, 77},
 		alias = {}
 	},
 	Lucerna_totem_0006 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			42,
-			61,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1849,
-			998,
-			83,
-			77
-		},
+		size = {213, 170},
+		trim = {69, 42, 61, 51},
+		a_size = {2048, 2048},
+		f_quad = {1849, 998, 83, 77},
 		alias = {}
 	},
 	Lucerna_totem_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			42,
-			59,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1567,
-			998,
-			86,
-			77
-		},
+		size = {213, 170},
+		trim = {68, 42, 59, 51},
+		a_size = {2048, 2048},
+		f_quad = {1567, 998, 86, 77},
 		alias = {}
 	},
 	Lucerna_totem_0008 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			42,
-			58,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1387,
-			998,
-			87,
-			77
-		},
+		size = {213, 170},
+		trim = {68, 42, 58, 51},
+		a_size = {2048, 2048},
+		f_quad = {1387, 998, 87, 77},
 		alias = {}
 	},
 	Lucerna_totem_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			42,
-			57,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1477,
-			998,
-			87,
-			77
-		},
+		size = {213, 170},
+		trim = {69, 42, 57, 51},
+		a_size = {2048, 2048},
+		f_quad = {1477, 998, 87, 77},
 		alias = {}
 	},
 	Lucerna_totem_0010 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			42,
-			56,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1197,
-			998,
-			89,
-			77
-		},
+		size = {213, 170},
+		trim = {68, 42, 56, 51},
+		a_size = {2048, 2048},
+		f_quad = {1197, 998, 89, 77},
 		alias = {}
 	},
 	Lucerna_totem_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			42,
-			54,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1952,
-			91,
-			77
-		},
+		size = {213, 170},
+		trim = {68, 42, 54, 51},
+		a_size = {2048, 2048},
+		f_quad = {874, 1952, 91, 77},
 		alias = {}
 	},
 	Lucerna_totem_0012 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			67,
-			42,
-			54,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1872,
-			92,
-			77
-		},
+		size = {213, 170},
+		trim = {67, 42, 54, 51},
+		a_size = {2048, 2048},
+		f_quad = {874, 1872, 92, 77},
 		alias = {}
 	},
 	Lucerna_totem_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			67,
-			42,
-			52,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1866,
-			1079,
-			94,
-			77
-		},
+		size = {213, 170},
+		trim = {67, 42, 52, 51},
+		a_size = {2048, 2048},
+		f_quad = {1866, 1079, 94, 77},
 		alias = {}
 	},
 	Lucerna_totem_0014 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			42,
-			51,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			1792,
-			93,
-			77
-		},
+		size = {213, 170},
+		trim = {69, 42, 51, 51},
+		a_size = {2048, 2048},
+		f_quad = {874, 1792, 93, 77},
 		alias = {}
 	},
 	Lucerna_totem_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1650,
-			70,
-			77
-		},
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {976, 1650, 70, 77},
 		alias = {}
 	},
 	Lucerna_totem_0016 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1730,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0017"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {976, 1730, 70, 77},
+		alias = {"Lucerna_totem_0017"}
 	},
 	Lucerna_totem_0018 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1810,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0019"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {976, 1810, 70, 77},
+		alias = {"Lucerna_totem_0019"}
 	},
 	Lucerna_totem_0020 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1890,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0021"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {976, 1890, 70, 77},
+		alias = {"Lucerna_totem_0021"}
 	},
 	Lucerna_totem_0022 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1367,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0023"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1367, 70, 77},
+		alias = {"Lucerna_totem_0023"}
 	},
 	Lucerna_totem_0024 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1447,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0025"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1447, 70, 77},
+		alias = {"Lucerna_totem_0025"}
 	},
 	Lucerna_totem_0026 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1527,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0027"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1527, 70, 77},
+		alias = {"Lucerna_totem_0027"}
 	},
 	Lucerna_totem_0028 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1607,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0029"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1607, 70, 77},
+		alias = {"Lucerna_totem_0029"}
 	},
 	Lucerna_totem_0030 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1687,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0031"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1687, 70, 77},
+		alias = {"Lucerna_totem_0031"}
 	},
 	Lucerna_totem_0032 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1767,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0033"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1767, 70, 77},
+		alias = {"Lucerna_totem_0033"}
 	},
 	Lucerna_totem_0034 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1847,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0035"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1847, 70, 77},
+		alias = {"Lucerna_totem_0035"}
 	},
 	Lucerna_totem_0036 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1927,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0037"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1927, 70, 77},
+		alias = {"Lucerna_totem_0037"}
 	},
 	Lucerna_totem_0038 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1297,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0039"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1297, 70, 77},
+		alias = {"Lucerna_totem_0039"}
 	},
 	Lucerna_totem_0040 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1377,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0041"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1377, 70, 77},
+		alias = {"Lucerna_totem_0041"}
 	},
 	Lucerna_totem_0042 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1457,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0043"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1457, 70, 77},
+		alias = {"Lucerna_totem_0043"}
 	},
 	Lucerna_totem_0044 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1537,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0045"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1537, 70, 77},
+		alias = {"Lucerna_totem_0045"}
 	},
 	Lucerna_totem_0046 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1617,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0047"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1617, 70, 77},
+		alias = {"Lucerna_totem_0047"}
 	},
 	Lucerna_totem_0048 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1697,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0049"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1697, 70, 77},
+		alias = {"Lucerna_totem_0049"}
 	},
 	Lucerna_totem_0050 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1777,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0051"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1777, 70, 77},
+		alias = {"Lucerna_totem_0051"}
 	},
 	Lucerna_totem_0052 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1857,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0053"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1857, 70, 77},
+		alias = {"Lucerna_totem_0053"}
 	},
 	Lucerna_totem_0054 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			1937,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0055"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1149, 1937, 70, 77},
+		alias = {"Lucerna_totem_0055"}
 	},
 	Lucerna_totem_0056 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1297,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0057"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1297, 70, 77},
+		alias = {"Lucerna_totem_0057"}
 	},
 	Lucerna_totem_0058 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1377,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0059"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1377, 70, 77},
+		alias = {"Lucerna_totem_0059"}
 	},
 	Lucerna_totem_0060 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1457,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0061"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1457, 70, 77},
+		alias = {"Lucerna_totem_0061"}
 	},
 	Lucerna_totem_0062 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1537,
-			70,
-			77
-		},
-		alias = {
-			"Lucerna_totem_0063"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 51},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1537, 70, 77},
+		alias = {"Lucerna_totem_0063"}
 	},
 	Lucerna_totem_0064 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1970,
-			70,
-			75
-		},
-		alias = {
-			"Lucerna_totem_0065"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 53},
+		a_size = {2048, 2048},
+		f_quad = {976, 1970, 70, 75},
+		alias = {"Lucerna_totem_0065"}
 	},
 	Lucerna_totem_0066 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			42,
-			71,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1569,
-			70,
-			78
-		},
-		alias = {
-			"Lucerna_totem_0067"
-		}
+		size = {213, 170},
+		trim = {72, 42, 71, 50},
+		a_size = {2048, 2048},
+		f_quad = {976, 1569, 70, 78},
+		alias = {"Lucerna_totem_0067"}
 	},
 	Lucerna_totem_0068 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			44,
-			66,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			684,
-			75,
-			76
-		},
+		size = {213, 170},
+		trim = {72, 44, 66, 50},
+		a_size = {2048, 2048},
+		f_quad = {180, 684, 75, 76},
 		alias = {}
 	},
 	Lucerna_totem_0069 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			72,
-			44,
-			66,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			763,
-			75,
-			76
-		},
+		size = {213, 170},
+		trim = {72, 44, 66, 50},
+		a_size = {2048, 2048},
+		f_quad = {180, 763, 75, 76},
 		alias = {}
 	},
 	Lucerna_totem_0070 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			47,
-			64,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			518,
-			79,
-			74
-		},
+		size = {213, 170},
+		trim = {70, 47, 64, 49},
+		a_size = {2048, 2048},
+		f_quad = {180, 518, 79, 74},
 		alias = {}
 	},
 	Lucerna_totem_0071 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			70,
-			47,
-			63,
-			49
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			180,
-			441,
-			80,
-			74
-		},
+		size = {213, 170},
+		trim = {70, 47, 63, 49},
+		a_size = {2048, 2048},
+		f_quad = {180, 441, 80, 74},
 		alias = {}
 	},
 	Lucerna_totem_0072 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			48,
-			62,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1240,
-			82,
-			72
-		},
+		size = {213, 170},
+		trim = {69, 48, 62, 50},
+		a_size = {2048, 2048},
+		f_quad = {976, 1240, 82, 72},
 		alias = {}
 	},
 	Lucerna_totem_0073 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			48,
-			61,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			976,
-			1165,
-			83,
-			72
-		},
+		size = {213, 170},
+		trim = {69, 48, 61, 50},
+		a_size = {2048, 2048},
+		f_quad = {976, 1165, 83, 72},
 		alias = {}
 	},
 	Lucerna_totem_0074 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			51,
-			59,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1019,
-			924,
-			86,
-			69
-		},
+		size = {213, 170},
+		trim = {68, 51, 59, 50},
+		a_size = {2048, 2048},
+		f_quad = {1019, 924, 86, 69},
 		alias = {}
 	},
 	Lucerna_totem_0075 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			51,
-			58,
-			50
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1882,
-			852,
-			87,
-			69
-		},
+		size = {213, 170},
+		trim = {68, 51, 58, 50},
+		a_size = {2048, 2048},
+		f_quad = {1882, 852, 87, 69},
 		alias = {}
 	},
 	Lucerna_totem_0076 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			51,
-			57,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1108,
-			924,
-			87,
-			68
-		},
+		size = {213, 170},
+		trim = {69, 51, 57, 51},
+		a_size = {2048, 2048},
+		f_quad = {1108, 924, 87, 68},
 		alias = {}
 	},
 	Lucerna_totem_0077 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			50,
-			56,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1595,
-			852,
-			89,
-			69
-		},
+		size = {213, 170},
+		trim = {68, 50, 56, 51},
+		a_size = {2048, 2048},
+		f_quad = {1595, 852, 89, 69},
 		alias = {}
 	},
 	Lucerna_totem_0078 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			49,
-			54,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1935,
-			998,
-			91,
-			70
-		},
+		size = {213, 170},
+		trim = {68, 49, 54, 51},
+		a_size = {2048, 2048},
+		f_quad = {1935, 998, 91, 70},
 		alias = {}
 	},
 	Lucerna_totem_0079 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			68,
-			49,
-			54,
-			51
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			925,
-			924,
-			91,
-			70
-		},
+		size = {213, 170},
+		trim = {68, 49, 54, 51},
+		a_size = {2048, 2048},
+		f_quad = {925, 924, 91, 70},
 		alias = {}
 	},
 	Lucerna_totem_0080 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			67,
-			48,
-			52,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1656,
-			998,
-			94,
-			69
-		},
+		size = {213, 170},
+		trim = {67, 48, 52, 53},
+		a_size = {2048, 2048},
+		f_quad = {1656, 998, 94, 69},
 		alias = {}
 	},
 	Lucerna_totem_0081 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			213,
-			170
-		},
-		trim = {
-			69,
-			48,
-			51,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1753,
-			998,
-			93,
-			69
-		},
+		size = {213, 170},
+		trim = {69, 48, 51, 53},
+		a_size = {2048, 2048},
+		f_quad = {1753, 998, 93, 69},
 		alias = {}
 	},
 	lucerna_unitghosts_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1951,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0002"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1951, 61, 61},
+		alias = {"lucerna_unitghosts_0002"}
 	},
 	lucerna_unitghosts_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1843,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0004"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1843, 61, 61},
+		alias = {"lucerna_unitghosts_0004"}
 	},
 	lucerna_unitghosts_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1907,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0006"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1907, 61, 61},
+		alias = {"lucerna_unitghosts_0006"}
 	},
 	lucerna_unitghosts_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			1971,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0008"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1574, 1971, 61, 61},
+		alias = {"lucerna_unitghosts_0008"}
 	},
 	lucerna_unitghosts_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1520,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0010"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1520, 61, 61},
+		alias = {"lucerna_unitghosts_0010"}
 	},
 	lucerna_unitghosts_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1584,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0012"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1584, 61, 61},
+		alias = {"lucerna_unitghosts_0012"}
 	},
 	lucerna_unitghosts_0013 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1648,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0014"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1648, 61, 61},
+		alias = {"lucerna_unitghosts_0014"}
 	},
 	lucerna_unitghosts_0015 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1712,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0016"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1712, 61, 61},
+		alias = {"lucerna_unitghosts_0016"}
 	},
 	lucerna_unitghosts_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1776,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0018"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1776, 61, 61},
+		alias = {"lucerna_unitghosts_0018"}
 	},
 	lucerna_unitghosts_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1840,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0020"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1840, 61, 61},
+		alias = {"lucerna_unitghosts_0020"}
 	},
 	lucerna_unitghosts_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1904,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0022"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1904, 61, 61},
+		alias = {"lucerna_unitghosts_0022"}
 	},
 	lucerna_unitghosts_0023 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1295,
-			1968,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0024"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1295, 1968, 61, 61},
+		alias = {"lucerna_unitghosts_0024"}
 	},
 	lucerna_unitghosts_0025 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1725,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0026"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1645, 1725, 61, 61},
+		alias = {"lucerna_unitghosts_0026"}
 	},
 	lucerna_unitghosts_0027 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1789,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0028"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1645, 1789, 61, 61},
+		alias = {"lucerna_unitghosts_0028"}
 	},
 	lucerna_unitghosts_0029 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1853,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0030"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1645, 1853, 61, 61},
+		alias = {"lucerna_unitghosts_0030"}
 	},
 	lucerna_unitghosts_0031 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1917,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0032"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1645, 1917, 61, 61},
+		alias = {"lucerna_unitghosts_0032"}
 	},
 	lucerna_unitghosts_0033 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1645,
-			1981,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0034"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1645, 1981, 61, 61},
+		alias = {"lucerna_unitghosts_0034"}
 	},
 	lucerna_unitghosts_0035 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			12,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1881,
-			1297,
-			77,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0036"
-		}
+		size = {114, 99},
+		trim = {25, 34, 12, 4},
+		a_size = {2048, 2048},
+		f_quad = {1881, 1297, 77, 61},
+		alias = {"lucerna_unitghosts_0036"}
 	},
 	lucerna_unitghosts_0037 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			12,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1961,
-			1297,
-			77,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0038"
-		}
+		size = {114, 99},
+		trim = {25, 34, 12, 4},
+		a_size = {2048, 2048},
+		f_quad = {1961, 1297, 77, 61},
+		alias = {"lucerna_unitghosts_0038"}
 	},
 	lucerna_unitghosts_0039 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			12,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1321,
-			1229,
-			77,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0040"
-		}
+		size = {114, 99},
+		trim = {25, 34, 12, 4},
+		a_size = {2048, 2048},
+		f_quad = {1321, 1229, 77, 61},
+		alias = {"lucerna_unitghosts_0040"}
 	},
 	lucerna_unitghosts_0041 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			15,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1485,
-			1229,
-			74,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0042"
-		}
+		size = {114, 99},
+		trim = {25, 34, 15, 4},
+		a_size = {2048, 2048},
+		f_quad = {1485, 1229, 74, 61},
+		alias = {"lucerna_unitghosts_0042"}
 	},
 	lucerna_unitghosts_0043 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			18,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1972,
-			852,
-			71,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0044"
-		}
+		size = {114, 99},
+		trim = {25, 34, 18, 4},
+		a_size = {2048, 2048},
+		f_quad = {1972, 852, 71, 61},
+		alias = {"lucerna_unitghosts_0044"}
 	},
 	lucerna_unitghosts_0045 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			25,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1825,
-			64,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0046"
-		}
+		size = {114, 99},
+		trim = {25, 34, 25, 4},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1825, 64, 61},
+		alias = {"lucerna_unitghosts_0046"}
 	},
 	lucerna_unitghosts_0047 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			32,
-			27,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1694,
-			62,
-			63
-		},
-		alias = {
-			"lucerna_unitghosts_0048"
-		}
+		size = {114, 99},
+		trim = {25, 32, 27, 4},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1694, 62, 63},
+		alias = {"lucerna_unitghosts_0048"}
 	},
 	lucerna_unitghosts_0049 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1709,
-			1725,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0050"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1709, 1725, 61, 61},
+		alias = {"lucerna_unitghosts_0050"}
 	},
 	lucerna_unitghosts_0051 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1709,
-			1789,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0052"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1709, 1789, 61, 61},
+		alias = {"lucerna_unitghosts_0052"}
 	},
 	lucerna_unitghosts_0053 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1709,
-			1853,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0054"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1709, 1853, 61, 61},
+		alias = {"lucerna_unitghosts_0054"}
 	},
 	lucerna_unitghosts_0055 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			28,
-			4
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1709,
-			1917,
-			61,
-			61
-		},
-		alias = {
-			"lucerna_unitghosts_0056"
-		}
+		size = {114, 99},
+		trim = {25, 34, 28, 4},
+		a_size = {2048, 2048},
+		f_quad = {1709, 1917, 61, 61},
+		alias = {"lucerna_unitghosts_0056"}
 	},
 	lucerna_unitghosts_0057 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			34,
-			29,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1709,
-			1981,
-			60,
-			60
-		},
-		alias = {
-			"lucerna_unitghosts_0058"
-		}
+		size = {114, 99},
+		trim = {25, 34, 29, 5},
+		a_size = {2048, 2048},
+		f_quad = {1709, 1981, 60, 60},
+		alias = {"lucerna_unitghosts_0058"}
 	},
 	lucerna_unitghosts_0059 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			27,
-			35,
-			29,
-			6
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1840,
-			1953,
-			58,
-			58
-		},
-		alias = {
-			"lucerna_unitghosts_0060"
-		}
+		size = {114, 99},
+		trim = {27, 35, 29, 6},
+		a_size = {2048, 2048},
+		f_quad = {1840, 1953, 58, 58},
+		alias = {"lucerna_unitghosts_0060"}
 	},
 	lucerna_unitghosts_0063 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			28,
-			38,
-			22,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1905,
-			1949,
-			64,
-			52
-		},
-		alias = {
-			"lucerna_unitghosts_0064"
-		}
+		size = {114, 99},
+		trim = {28, 38, 22, 9},
+		a_size = {2048, 2048},
+		f_quad = {1905, 1949, 64, 52},
+		alias = {"lucerna_unitghosts_0064"}
 	},
 	lucerna_unitghosts_0065 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			20,
-			33,
-			13,
-			9
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1401,
-			1229,
-			81,
-			57
-		},
-		alias = {
-			"lucerna_unitghosts_0066"
-		}
+		size = {114, 99},
+		trim = {20, 33, 13, 9},
+		a_size = {2048, 2048},
+		f_quad = {1401, 1229, 81, 57},
+		alias = {"lucerna_unitghosts_0066"}
 	},
 	lucerna_unitghosts_0067 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			16,
-			29,
-			9,
-			5
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1062,
-			1229,
-			89,
-			65
-		},
-		alias = {
-			"lucerna_unitghosts_0068"
-		}
+		size = {114, 99},
+		trim = {16, 29, 9, 5},
+		a_size = {2048, 2048},
+		f_quad = {1062, 1229, 89, 65},
+		alias = {"lucerna_unitghosts_0068"}
 	},
 	lucerna_unitghosts_0069 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			13,
-			26,
-			6,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1289,
-			998,
-			95,
-			71
-		},
-		alias = {
-			"lucerna_unitghosts_0070"
-		}
+		size = {114, 99},
+		trim = {13, 26, 6, 2},
+		a_size = {2048, 2048},
+		f_quad = {1289, 998, 95, 71},
+		alias = {"lucerna_unitghosts_0070"}
 	},
 	lucerna_unitghosts_0071 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			47,
-			72,
-			45,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			1711,
-			22,
-			11
-		},
-		alias = {
-			"lucerna_unitghosts_0072",
-			"lucerna_unitghosts_0073",
-			"lucerna_unitghosts_0074",
-			"lucerna_unitghosts_0075"
-		}
+		size = {114, 99},
+		trim = {47, 72, 45, 16},
+		a_size = {2048, 2048},
+		f_quad = {2006, 1711, 22, 11},
+		alias = {"lucerna_unitghosts_0072", "lucerna_unitghosts_0073", "lucerna_unitghosts_0074", "lucerna_unitghosts_0075"}
 	},
 	lucerna_unitghosts_shadow = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			45,
-			75,
-			45,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			237,
-			2036,
-			24,
-			7
-		},
+		size = {114, 99},
+		trim = {45, 75, 45, 17},
+		a_size = {2048, 2048},
+		f_quad = {237, 2036, 24, 7},
 		alias = {}
 	},
 	lucerna_unitghost_vfxs_0001 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			49,
-			8,
-			34,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			737,
-			1923,
-			31,
-			37
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0002"
-		}
+		size = {114, 99},
+		trim = {49, 8, 34, 54},
+		a_size = {2048, 2048},
+		f_quad = {737, 1923, 31, 37},
+		alias = {"lucerna_unitghost_vfxs_0002"}
 	},
 	lucerna_unitghost_vfxs_0003 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			25,
-			17,
-			25,
-			12
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			1972,
-			64,
-			70
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0004"
-		}
+		size = {114, 99},
+		trim = {25, 17, 25, 12},
+		a_size = {2048, 2048},
+		f_quad = {1222, 1972, 64, 70},
+		alias = {"lucerna_unitghost_vfxs_0004"}
 	},
 	lucerna_unitghost_vfxs_0005 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			27,
-			24,
-			24,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1361,
-			1760,
-			63,
-			62
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0006"
-		}
+		size = {114, 99},
+		trim = {27, 24, 24, 13},
+		a_size = {2048, 2048},
+		f_quad = {1361, 1760, 63, 62},
+		alias = {"lucerna_unitghost_vfxs_0006"}
 	},
 	lucerna_unitghost_vfxs_0007 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			34,
-			28,
-			11,
-			13
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1933,
-			1553,
-			69,
-			58
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0008"
-		}
+		size = {114, 99},
+		trim = {34, 28, 11, 13},
+		a_size = {2048, 2048},
+		f_quad = {1933, 1553, 69, 58},
+		alias = {"lucerna_unitghost_vfxs_0008"}
 	},
 	lucerna_unitghost_vfxs_0009 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			32,
-			26,
-			12,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1734,
-			1366,
-			70,
-			59
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0010"
-		}
+		size = {114, 99},
+		trim = {32, 26, 12, 14},
+		a_size = {2048, 2048},
+		f_quad = {1734, 1366, 70, 59},
+		alias = {"lucerna_unitghost_vfxs_0010"}
 	},
 	lucerna_unitghost_vfxs_0011 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			29,
-			26,
-			15,
-			11
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1331,
-			178,
-			70,
-			62
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0012"
-		}
+		size = {114, 99},
+		trim = {29, 26, 15, 11},
+		a_size = {2048, 2048},
+		f_quad = {1331, 178, 70, 62},
+		alias = {"lucerna_unitghost_vfxs_0012"}
 	},
 	lucerna_unitghost_vfxs_0017 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			22,
-			25,
-			24,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1773,
-			1725,
-			68,
-			54
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0018"
-		}
+		size = {114, 99},
+		trim = {22, 25, 24, 20},
+		a_size = {2048, 2048},
+		f_quad = {1773, 1725, 68, 54},
+		alias = {"lucerna_unitghost_vfxs_0018"}
 	},
 	lucerna_unitghost_vfxs_0019 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			19,
-			22,
-			21,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1647,
-			1428,
-			74,
-			55
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0020"
-		}
+		size = {114, 99},
+		trim = {19, 22, 21, 22},
+		a_size = {2048, 2048},
+		f_quad = {1647, 1428, 74, 55},
+		alias = {"lucerna_unitghost_vfxs_0020"}
 	},
 	lucerna_unitghost_vfxs_0021 = {
 		a_name = "kr4_hero_lucerna-1.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			0,
-			0,
-			114,
-			99
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			634,
-			1681,
-			114,
-			99
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0022",
-			"lucerna_unitghost_vfxs_0023",
-			"lucerna_unitghost_vfxs_0024",
-			"lucerna_unitghost_vfxs_0025",
-			"lucerna_unitghost_vfxs_0026",
-			"lucerna_unitghost_vfxs_0027",
-			"lucerna_unitghost_vfxs_0028"
-		}
+		size = {114, 99},
+		trim = {0, 0, 114, 99},
+		a_size = {2048, 2048},
+		f_quad = {634, 1681, 114, 99},
+		alias = {"lucerna_unitghost_vfxs_0022", "lucerna_unitghost_vfxs_0023", "lucerna_unitghost_vfxs_0024", "lucerna_unitghost_vfxs_0025", "lucerna_unitghost_vfxs_0026", "lucerna_unitghost_vfxs_0027", "lucerna_unitghost_vfxs_0028"}
 	},
 	Lucerna_explosion_0018 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			128,
-			114
-		},
-		trim = {
-			39,
-			42,
-			37,
-			39
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			784,
-			52,
-			33
-		},
+		size = {128, 114},
+		trim = {39, 42, 37, 39},
+		a_size = {1024, 1024},
+		f_quad = {5, 784, 52, 33},
 		alias = {}
 	},
 	Lucerna_fearModifier_0001 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			71,
-			71
-		},
-		trim = {
-			9,
-			28,
-			10,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			581,
-			52,
-			36
-		},
-		alias = {
-			"Lucerna_fearModifier_0002"
-		}
+		size = {71, 71},
+		trim = {9, 28, 10, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 581, 52, 36},
+		alias = {"Lucerna_fearModifier_0002"}
 	},
 	Lucerna_possession_decal_0002 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			28,
-			17,
-			22,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			564,
-			168,
-			56,
-			44
-		},
+		size = {106, 73},
+		trim = {28, 17, 22, 12},
+		a_size = {1024, 1024},
+		f_quad = {564, 168, 56, 44},
 		alias = {}
 	},
 	Lucerna_possession_decal_0062 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			24,
-			14,
-			22,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			123,
-			168,
-			60,
-			45
-		},
+		size = {106, 73},
+		trim = {24, 14, 22, 14},
+		a_size = {1024, 1024},
+		f_quad = {123, 168, 60, 45},
 		alias = {}
 	},
 	Lucerna_possession_decal_0064 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			106,
-			73
-		},
-		trim = {
-			36,
-			15,
-			22,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			935,
-			48,
-			34
-		},
+		size = {106, 73},
+		trim = {36, 15, 22, 24},
+		a_size = {1024, 1024},
+		f_quad = {5, 935, 48, 34},
 		alias = {}
 	},
 	Lucerna_projectile_0001 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			57,
-			57
-		},
-		trim = {
-			14,
-			18,
-			3,
-			15
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			972,
-			40,
-			24
-		},
-		alias = {
-			"Lucerna_projectile_0002"
-		}
+		size = {57, 57},
+		trim = {14, 18, 3, 15},
+		a_size = {1024, 1024},
+		f_quad = {5, 972, 40, 24},
+		alias = {"Lucerna_projectile_0002"}
 	},
 	Lucerna_Ship_ability_0003 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			98,
-			191,
-			107,
-			111
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			458,
-			51,
-			39
-		},
-		alias = {
-			"Lucerna_Ship_ability_0004"
-		}
+		size = {256, 341},
+		trim = {98, 191, 107, 111},
+		a_size = {1024, 1024},
+		f_quad = {5, 458, 51, 39},
+		alias = {"Lucerna_Ship_ability_0004"}
 	},
 	Lucerna_Ship_ability_0027 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			137,
-			220,
-			68,
-			83
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			540,
-			51,
-			38
-		},
-		alias = {
-			"Lucerna_Ship_ability_0028"
-		}
+		size = {256, 341},
+		trim = {137, 220, 68, 83},
+		a_size = {1024, 1024},
+		f_quad = {5, 540, 51, 38},
+		alias = {"Lucerna_Ship_ability_0028"}
 	},
 	Lucerna_Ship_flag_0001 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			55,
-			108,
-			138,
-			184
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			555,
-			5,
-			63,
-			49
-		},
-		alias = {
-			"Lucerna_Ship_flag_0002"
-		}
+		size = {256, 341},
+		trim = {55, 108, 138, 184},
+		a_size = {1024, 1024},
+		f_quad = {555, 5, 63, 49},
+		alias = {"Lucerna_Ship_flag_0002"}
 	},
 	Lucerna_Ship_flag_0005 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			108,
-			138,
-			183
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			73,
-			5,
-			66,
-			50
-		},
-		alias = {
-			"Lucerna_Ship_flag_0006"
-		}
+		size = {256, 341},
+		trim = {52, 108, 138, 183},
+		a_size = {1024, 1024},
+		f_quad = {73, 5, 66, 50},
+		alias = {"Lucerna_Ship_flag_0006"}
 	},
 	Lucerna_Ship_flag_0011 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			54,
-			105,
-			138,
-			186
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			347,
-			5,
-			64,
-			50
-		},
-		alias = {
-			"Lucerna_Ship_flag_0012"
-		}
+		size = {256, 341},
+		trim = {54, 105, 138, 186},
+		a_size = {1024, 1024},
+		f_quad = {347, 5, 64, 50},
+		alias = {"Lucerna_Ship_flag_0012"}
 	},
 	Lucerna_Ship_flag_0013 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			106,
-			138,
-			186
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			278,
-			5,
-			66,
-			49
-		},
-		alias = {
-			"Lucerna_Ship_flag_0014"
-		}
+		size = {256, 341},
+		trim = {52, 106, 138, 186},
+		a_size = {1024, 1024},
+		f_quad = {278, 5, 66, 49},
+		alias = {"Lucerna_Ship_flag_0014"}
 	},
 	Lucerna_Ship_flag_0017 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			52,
-			106,
-			138,
-			185
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			142,
-			5,
-			66,
-			50
-		},
-		alias = {
-			"Lucerna_Ship_flag_0018"
-		}
+		size = {256, 341},
+		trim = {52, 106, 138, 185},
+		a_size = {1024, 1024},
+		f_quad = {142, 5, 66, 50},
+		alias = {"Lucerna_Ship_flag_0018"}
 	},
 	Lucerna_Ship_flag_0031 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			53,
-			107,
-			138,
-			187
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			750,
-			5,
-			65,
-			47
-		},
-		alias = {
-			"Lucerna_Ship_flag_0032"
-		}
+		size = {256, 341},
+		trim = {53, 107, 138, 187},
+		a_size = {1024, 1024},
+		f_quad = {750, 5, 65, 47},
+		alias = {"Lucerna_Ship_flag_0032"}
 	},
 	Lucerna_Ship_flag_0033 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			54,
-			108,
-			138,
-			184
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			414,
-			5,
-			64,
-			49
-		},
-		alias = {
-			"Lucerna_Ship_flag_0034"
-		}
+		size = {256, 341},
+		trim = {54, 108, 138, 184},
+		a_size = {1024, 1024},
+		f_quad = {414, 5, 64, 49},
+		alias = {"Lucerna_Ship_flag_0034"}
 	},
 	Lucerna_Ship_flag_0035 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			53,
-			108,
-			138,
-			182
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			65,
-			51
-		},
-		alias = {
-			"Lucerna_Ship_flag_0036"
-		}
+		size = {256, 341},
+		trim = {53, 108, 138, 182},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 65, 51},
+		alias = {"Lucerna_Ship_flag_0036"}
 	},
 	Lucerna_Ship_flag_0037 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			54,
-			108,
-			138,
-			182
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			211,
-			5,
-			64,
-			51
-		},
-		alias = {
-			"Lucerna_Ship_flag_0038"
-		}
+		size = {256, 341},
+		trim = {54, 108, 138, 182},
+		a_size = {1024, 1024},
+		f_quad = {211, 5, 64, 51},
+		alias = {"Lucerna_Ship_flag_0038"}
 	},
 	Lucerna_Ship_flag_0039 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			58,
-			108,
-			138,
-			184
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			672,
-			59,
-			60,
-			49
-		},
-		alias = {
-			"Lucerna_Ship_flag_0040"
-		}
+		size = {256, 341},
+		trim = {58, 108, 138, 184},
+		a_size = {1024, 1024},
+		f_quad = {672, 59, 60, 49},
+		alias = {"Lucerna_Ship_flag_0040"}
 	},
 	Lucerna_Ship_flag_0041 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			58,
-			108,
-			138,
-			179
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			130,
-			59,
-			60,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_flag_0042"
-		}
+		size = {256, 341},
+		trim = {58, 108, 138, 179},
+		a_size = {1024, 1024},
+		f_quad = {130, 59, 60, 54},
+		alias = {"Lucerna_Ship_flag_0042"}
 	},
 	Lucerna_Ship_flag_0043 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			55,
-			108,
-			138,
-			184
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			621,
-			5,
-			63,
-			49
-		},
-		alias = {
-			"Lucerna_Ship_flag_0044"
-		}
+		size = {256, 341},
+		trim = {55, 108, 138, 184},
+		a_size = {1024, 1024},
+		f_quad = {621, 5, 63, 49},
+		alias = {"Lucerna_Ship_flag_0044"}
 	},
 	Lucerna_Ship_flag_0045 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			57,
-			108,
-			138,
-			187
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			892,
-			117,
-			61,
-			46
-		},
-		alias = {
-			"Lucerna_Ship_flag_0046"
-		}
+		size = {256, 341},
+		trim = {57, 108, 138, 187},
+		a_size = {1024, 1024},
+		f_quad = {892, 117, 61, 46},
+		alias = {"Lucerna_Ship_flag_0046"}
 	},
 	Lucerna_Ship_flag_0047 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			56,
-			108,
-			138,
-			187
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			827,
-			117,
-			62,
-			46
-		},
-		alias = {
-			"Lucerna_Ship_flag_0048"
-		}
+		size = {256, 341},
+		trim = {56, 108, 138, 187},
+		a_size = {1024, 1024},
+		f_quad = {827, 117, 62, 46},
+		alias = {"Lucerna_Ship_flag_0048"}
 	},
 	Lucerna_Ship_flag_0049 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			58,
-			108,
-			138,
-			183
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			890,
-			5,
-			60,
-			50
-		},
-		alias = {
-			"Lucerna_Ship_flag_0050"
-		}
+		size = {256, 341},
+		trim = {58, 108, 138, 183},
+		a_size = {1024, 1024},
+		f_quad = {890, 5, 60, 50},
+		alias = {"Lucerna_Ship_flag_0050"}
 	},
 	Lucerna_Ship_layer3_0167 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			99,
-			297,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			125,
-			221,
-			56,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0168",
-			"Lucerna_Ship_layer3_0203",
-			"Lucerna_Ship_layer3_0204"
-		}
+		size = {256, 341},
+		trim = {99, 297, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {125, 221, 56, 37},
+		alias = {"Lucerna_Ship_layer3_0168", "Lucerna_Ship_layer3_0203", "Lucerna_Ship_layer3_0204"}
 	},
 	Lucerna_Ship_layer3_0169 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			102,
-			297,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			500,
-			53,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0170",
-			"Lucerna_Ship_layer3_0205",
-			"Lucerna_Ship_layer3_0206"
-		}
+		size = {256, 341},
+		trim = {102, 297, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 500, 53, 37},
+		alias = {"Lucerna_Ship_layer3_0170", "Lucerna_Ship_layer3_0205", "Lucerna_Ship_layer3_0206"}
 	},
 	Lucerna_Ship_layer3_0171 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			297,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			704,
-			47,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0172",
-			"Lucerna_Ship_layer3_0207",
-			"Lucerna_Ship_layer3_0208"
-		}
+		size = {256, 341},
+		trim = {108, 297, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 704, 47, 37},
+		alias = {"Lucerna_Ship_layer3_0172", "Lucerna_Ship_layer3_0207", "Lucerna_Ship_layer3_0208"}
 	},
 	Lucerna_Ship_layer3_0173 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			295,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			620,
-			47,
-			39
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0174",
-			"Lucerna_Ship_layer3_0209",
-			"Lucerna_Ship_layer3_0210"
-		}
+		size = {256, 341},
+		trim = {108, 295, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 620, 47, 39},
+		alias = {"Lucerna_Ship_layer3_0174", "Lucerna_Ship_layer3_0209", "Lucerna_Ship_layer3_0210"}
 	},
 	Lucerna_Ship_layer3_0179 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			291,
-			92,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			623,
-			168,
-			56,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0180",
-			"Lucerna_Ship_layer3_0215",
-			"Lucerna_Ship_layer3_0216"
-		}
+		size = {256, 341},
+		trim = {108, 291, 92, 7},
+		a_size = {1024, 1024},
+		f_quad = {623, 168, 56, 43},
+		alias = {"Lucerna_Ship_layer3_0180", "Lucerna_Ship_layer3_0215", "Lucerna_Ship_layer3_0216"}
 	},
 	Lucerna_Ship_layer3_0183 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			297,
-			88,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			791,
-			168,
-			60,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0184",
-			"Lucerna_Ship_layer3_0219",
-			"Lucerna_Ship_layer3_0220"
-		}
+		size = {256, 341},
+		trim = {108, 297, 88, 7},
+		a_size = {1024, 1024},
+		f_quad = {791, 168, 60, 37},
+		alias = {"Lucerna_Ship_layer3_0184", "Lucerna_Ship_layer3_0219", "Lucerna_Ship_layer3_0220"}
 	},
 	Lucerna_Ship_layer3_0185 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			297,
-			89,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			63,
-			221,
-			59,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0186",
-			"Lucerna_Ship_layer3_0221",
-			"Lucerna_Ship_layer3_0222"
-		}
+		size = {256, 341},
+		trim = {108, 297, 89, 7},
+		a_size = {1024, 1024},
+		f_quad = {63, 221, 59, 37},
+		alias = {"Lucerna_Ship_layer3_0186", "Lucerna_Ship_layer3_0221", "Lucerna_Ship_layer3_0222"}
 	},
 	Lucerna_Ship_layer3_0187 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			297,
-			92,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			184,
-			221,
-			56,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0188",
-			"Lucerna_Ship_layer3_0223",
-			"Lucerna_Ship_layer3_0224"
-		}
+		size = {256, 341},
+		trim = {108, 297, 92, 7},
+		a_size = {1024, 1024},
+		f_quad = {184, 221, 56, 37},
+		alias = {"Lucerna_Ship_layer3_0188", "Lucerna_Ship_layer3_0223", "Lucerna_Ship_layer3_0224"}
 	},
 	Lucerna_Ship_layer3_0189 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			297,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			744,
-			47,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0190",
-			"Lucerna_Ship_layer3_0225"
-		}
+		size = {256, 341},
+		trim = {108, 297, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 744, 47, 37},
+		alias = {"Lucerna_Ship_layer3_0190", "Lucerna_Ship_layer3_0225"}
 	},
 	Lucerna_Ship_layer3_0191 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			295,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			662,
-			47,
-			39
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0192"
-		}
+		size = {256, 341},
+		trim = {108, 295, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 662, 47, 39},
+		alias = {"Lucerna_Ship_layer3_0192"}
 	},
 	Lucerna_Ship_layer3_0193 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			108,
-			291,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			412,
-			47,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0194"
-		}
+		size = {256, 341},
+		trim = {108, 291, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {5, 412, 47, 43},
+		alias = {"Lucerna_Ship_layer3_0194"}
 	},
 	Lucerna_Ship_layer3_0195 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			106,
-			289,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			854,
-			168,
-			49,
-			45
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0196"
-		}
+		size = {256, 341},
+		trim = {106, 289, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {854, 168, 49, 45},
+		alias = {"Lucerna_Ship_layer3_0196"}
 	},
 	Lucerna_Ship_layer3_0199 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			100,
-			294,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			906,
-			168,
-			55,
-			40
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0200"
-		}
+		size = {256, 341},
+		trim = {100, 294, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {906, 168, 55, 40},
+		alias = {"Lucerna_Ship_layer3_0200"}
 	},
 	Lucerna_Ship_layer3_0201 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			98,
-			297,
-			101,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			964,
-			168,
-			57,
-			37
-		},
-		alias = {
-			"Lucerna_Ship_layer3_0202"
-		}
+		size = {256, 341},
+		trim = {98, 297, 101, 7},
+		a_size = {1024, 1024},
+		f_quad = {964, 168, 57, 37},
+		alias = {"Lucerna_Ship_layer3_0202"}
 	},
 	Lucerna_Ship_layer5_0001 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			670,
-			221,
-			40,
-			22
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {670, 221, 40, 22},
 		alias = {
 			"Lucerna_Ship_layer5_0002",
 			"Lucerna_Ship_layer5_0029",
@@ -15141,26 +5808,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0003 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			713,
-			221,
-			40,
-			22
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {713, 221, 40, 22},
 		alias = {
 			"Lucerna_Ship_layer5_0004",
 			"Lucerna_Ship_layer5_0031",
@@ -15181,26 +5832,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0009 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			243,
-			221,
-			40,
-			23
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {243, 221, 40, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0010",
 			"Lucerna_Ship_layer5_0037",
@@ -15221,26 +5856,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0011 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			286,
-			221,
-			40,
-			23
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {286, 221, 40, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0012",
 			"Lucerna_Ship_layer5_0039",
@@ -15261,26 +5880,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0013 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			329,
-			221,
-			40,
-			23
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {329, 221, 40, 23},
 		alias = {
 			"Lucerna_Ship_layer5_0014",
 			"Lucerna_Ship_layer5_0041",
@@ -15301,26 +5904,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0019 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			756,
-			221,
-			40,
-			22
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {756, 221, 40, 22},
 		alias = {
 			"Lucerna_Ship_layer5_0020",
 			"Lucerna_Ship_layer5_0047",
@@ -15337,26 +5924,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0021 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			799,
-			221,
-			40,
-			22
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {799, 221, 40, 22},
 		alias = {
 			"Lucerna_Ship_layer5_0022",
 			"Lucerna_Ship_layer5_0049",
@@ -15373,26 +5944,10 @@ return {
 	},
 	Lucerna_Ship_layer5_0025 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			842,
-			221,
-			40,
-			22
-		},
+		size = {256, 341},
+		trim = {80, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {842, 221, 40, 22},
 		alias = {
 			"Lucerna_Ship_layer5_0026",
 			"Lucerna_Ship_layer5_0053",
@@ -15409,1693 +5964,506 @@ return {
 	},
 	Lucerna_Ship_layer5_0027 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			885,
-			221,
-			40,
-			22
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0028",
-			"Lucerna_Ship_layer5_0055",
-			"Lucerna_Ship_layer5_0056",
-			"Lucerna_Ship_layer5_0279",
-			"Lucerna_Ship_layer5_0306",
-			"Lucerna_Ship_layer5_0307",
-			"Lucerna_Ship_layer5_0334",
-			"Lucerna_Ship_layer5_0335",
-			"Lucerna_Ship_layer5_0362",
-			"Lucerna_Ship_layer5_0363"
-		}
+		size = {256, 341},
+		trim = {80, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {885, 221, 40, 22},
+		alias = {"Lucerna_Ship_layer5_0028", "Lucerna_Ship_layer5_0055", "Lucerna_Ship_layer5_0056", "Lucerna_Ship_layer5_0279", "Lucerna_Ship_layer5_0306", "Lucerna_Ship_layer5_0307", "Lucerna_Ship_layer5_0334", "Lucerna_Ship_layer5_0335", "Lucerna_Ship_layer5_0362", "Lucerna_Ship_layer5_0363"}
 	},
 	Lucerna_Ship_layer5_0057 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			181,
-			130,
-			124
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			896,
-			46,
-			36
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0058"
-		}
+		size = {256, 341},
+		trim = {80, 181, 130, 124},
+		a_size = {1024, 1024},
+		f_quad = {5, 896, 46, 36},
+		alias = {"Lucerna_Ship_layer5_0058"}
 	},
 	Lucerna_Ship_layer5_0059 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			72,
-			179,
-			136,
-			127
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			858,
-			48,
-			35
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0060"
-		}
+		size = {256, 341},
+		trim = {72, 179, 136, 127},
+		a_size = {1024, 1024},
+		f_quad = {5, 858, 48, 35},
+		alias = {"Lucerna_Ship_layer5_0060"}
 	},
 	Lucerna_Ship_layer5_0065 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			181,
-			126,
-			125
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			820,
-			49,
-			35
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0066"
-		}
+		size = {256, 341},
+		trim = {81, 181, 126, 125},
+		a_size = {1024, 1024},
+		f_quad = {5, 820, 49, 35},
+		alias = {"Lucerna_Ship_layer5_0066"}
 	},
 	Lucerna_Ship_layer5_0069 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			186,
-			135,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			372,
-			221,
-			40,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0070"
-		}
+		size = {256, 341},
+		trim = {81, 186, 135, 132},
+		a_size = {1024, 1024},
+		f_quad = {372, 221, 40, 23},
+		alias = {"Lucerna_Ship_layer5_0070"}
 	},
 	Lucerna_Ship_layer5_0071 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			502,
-			221,
-			39,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0072"
-		}
+		size = {256, 341},
+		trim = {81, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {502, 221, 39, 23},
+		alias = {"Lucerna_Ship_layer5_0072"}
 	},
 	Lucerna_Ship_layer5_0073 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			544,
-			221,
-			39,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0074"
-		}
+		size = {256, 341},
+		trim = {81, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {544, 221, 39, 23},
+		alias = {"Lucerna_Ship_layer5_0074"}
 	},
 	Lucerna_Ship_layer5_0075 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			586,
-			221,
-			39,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0076"
-		}
+		size = {256, 341},
+		trim = {81, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {586, 221, 39, 23},
+		alias = {"Lucerna_Ship_layer5_0076"}
 	},
 	Lucerna_Ship_layer5_0077 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			81,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			628,
-			221,
-			39,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0078"
-		}
+		size = {256, 341},
+		trim = {81, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {628, 221, 39, 23},
+		alias = {"Lucerna_Ship_layer5_0078"}
 	},
 	Lucerna_Ship_layer5_0081 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			80,
-			186,
-			136,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			415,
-			221,
-			40,
-			23
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0082"
-		}
+		size = {256, 341},
+		trim = {80, 186, 136, 132},
+		a_size = {1024, 1024},
+		f_quad = {415, 221, 40, 23},
+		alias = {"Lucerna_Ship_layer5_0082"}
 	},
 	Lucerna_Ship_layer5_0083 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			79,
-			186,
-			136,
-			133
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			458,
-			221,
-			41,
-			22
-		},
-		alias = {
-			"Lucerna_Ship_layer5_0084"
-		}
+		size = {256, 341},
+		trim = {79, 186, 136, 133},
+		a_size = {1024, 1024},
+		f_quad = {458, 221, 41, 22},
+		alias = {"Lucerna_Ship_layer5_0084"}
 	},
 	Lucerna_Ship_layer6_0001 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			735,
-			59,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0002",
-			"Lucerna_Ship_layer6_0127",
-			"Lucerna_Ship_layer6_0128",
-			"Lucerna_Ship_layer6_0280",
-			"Lucerna_Ship_layer6_0281"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {735, 59, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0002", "Lucerna_Ship_layer6_0127", "Lucerna_Ship_layer6_0128", "Lucerna_Ship_layer6_0280", "Lucerna_Ship_layer6_0281"}
 	},
 	Lucerna_Ship_layer6_0003 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			799,
-			59,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0004",
-			"Lucerna_Ship_layer6_0129",
-			"Lucerna_Ship_layer6_0130",
-			"Lucerna_Ship_layer6_0282",
-			"Lucerna_Ship_layer6_0283"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {799, 59, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0004", "Lucerna_Ship_layer6_0129", "Lucerna_Ship_layer6_0130", "Lucerna_Ship_layer6_0282", "Lucerna_Ship_layer6_0283"}
 	},
 	Lucerna_Ship_layer6_0005 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			863,
-			59,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0006",
-			"Lucerna_Ship_layer6_0131",
-			"Lucerna_Ship_layer6_0132",
-			"Lucerna_Ship_layer6_0284",
-			"Lucerna_Ship_layer6_0285"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {863, 59, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0006", "Lucerna_Ship_layer6_0131", "Lucerna_Ship_layer6_0132", "Lucerna_Ship_layer6_0284", "Lucerna_Ship_layer6_0285"}
 	},
 	Lucerna_Ship_layer6_0007 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			927,
-			59,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0008",
-			"Lucerna_Ship_layer6_0133",
-			"Lucerna_Ship_layer6_0134",
-			"Lucerna_Ship_layer6_0286",
-			"Lucerna_Ship_layer6_0287"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {927, 59, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0008", "Lucerna_Ship_layer6_0133", "Lucerna_Ship_layer6_0134", "Lucerna_Ship_layer6_0286", "Lucerna_Ship_layer6_0287"}
 	},
 	Lucerna_Ship_layer6_0009 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			63,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0010",
-			"Lucerna_Ship_layer6_0135",
-			"Lucerna_Ship_layer6_0136",
-			"Lucerna_Ship_layer6_0288",
-			"Lucerna_Ship_layer6_0289"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {63, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0010", "Lucerna_Ship_layer6_0135", "Lucerna_Ship_layer6_0136", "Lucerna_Ship_layer6_0288", "Lucerna_Ship_layer6_0289"}
 	},
 	Lucerna_Ship_layer6_0011 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			127,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0012",
-			"Lucerna_Ship_layer6_0137",
-			"Lucerna_Ship_layer6_0138",
-			"Lucerna_Ship_layer6_0290",
-			"Lucerna_Ship_layer6_0291"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {127, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0012", "Lucerna_Ship_layer6_0137", "Lucerna_Ship_layer6_0138", "Lucerna_Ship_layer6_0290", "Lucerna_Ship_layer6_0291"}
 	},
 	Lucerna_Ship_layer6_0013 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			191,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0014",
-			"Lucerna_Ship_layer6_0139",
-			"Lucerna_Ship_layer6_0140",
-			"Lucerna_Ship_layer6_0292",
-			"Lucerna_Ship_layer6_0293"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {191, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0014", "Lucerna_Ship_layer6_0139", "Lucerna_Ship_layer6_0140", "Lucerna_Ship_layer6_0292", "Lucerna_Ship_layer6_0293"}
 	},
 	Lucerna_Ship_layer6_0015 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			255,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0016",
-			"Lucerna_Ship_layer6_0294",
-			"Lucerna_Ship_layer6_0295"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {255, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0016", "Lucerna_Ship_layer6_0294", "Lucerna_Ship_layer6_0295"}
 	},
 	Lucerna_Ship_layer6_0017 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			319,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0018",
-			"Lucerna_Ship_layer6_0296",
-			"Lucerna_Ship_layer6_0297"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {319, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0018", "Lucerna_Ship_layer6_0296", "Lucerna_Ship_layer6_0297"}
 	},
 	Lucerna_Ship_layer6_0019 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			383,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0020",
-			"Lucerna_Ship_layer6_0298",
-			"Lucerna_Ship_layer6_0299"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {383, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0020", "Lucerna_Ship_layer6_0298", "Lucerna_Ship_layer6_0299"}
 	},
 	Lucerna_Ship_layer6_0021 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			575,
-			117,
-			60,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0022",
-			"Lucerna_Ship_layer6_0300",
-			"Lucerna_Ship_layer6_0301"
-		}
+		size = {256, 341},
+		trim = {113, 127, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {575, 117, 60, 48},
+		alias = {"Lucerna_Ship_layer6_0022", "Lucerna_Ship_layer6_0300", "Lucerna_Ship_layer6_0301"}
 	},
 	Lucerna_Ship_layer6_0023 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			638,
-			117,
-			60,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0024",
-			"Lucerna_Ship_layer6_0302",
-			"Lucerna_Ship_layer6_0303"
-		}
+		size = {256, 341},
+		trim = {113, 127, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {638, 117, 60, 48},
+		alias = {"Lucerna_Ship_layer6_0024", "Lucerna_Ship_layer6_0302", "Lucerna_Ship_layer6_0303"}
 	},
 	Lucerna_Ship_layer6_0025 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			701,
-			117,
-			60,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0026",
-			"Lucerna_Ship_layer6_0304",
-			"Lucerna_Ship_layer6_0305"
-		}
+		size = {256, 341},
+		trim = {113, 127, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {701, 117, 60, 48},
+		alias = {"Lucerna_Ship_layer6_0026", "Lucerna_Ship_layer6_0304", "Lucerna_Ship_layer6_0305"}
 	},
 	Lucerna_Ship_layer6_0027 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			447,
-			117,
-			61,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0028",
-			"Lucerna_Ship_layer6_0055",
-			"Lucerna_Ship_layer6_0056",
-			"Lucerna_Ship_layer6_0306",
-			"Lucerna_Ship_layer6_0307"
-		}
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {447, 117, 61, 48},
+		alias = {"Lucerna_Ship_layer6_0028", "Lucerna_Ship_layer6_0055", "Lucerna_Ship_layer6_0056", "Lucerna_Ship_layer6_0306", "Lucerna_Ship_layer6_0307"}
 	},
 	Lucerna_Ship_layer6_0029 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			764,
-			117,
-			60,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0030"
-		}
+		size = {256, 341},
+		trim = {114, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {764, 117, 60, 48},
+		alias = {"Lucerna_Ship_layer6_0030"}
 	},
 	Lucerna_Ship_layer6_0033 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			119,
-			132,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			682,
-			168,
-			55,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0034"
-		}
+		size = {256, 341},
+		trim = {119, 132, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {682, 168, 55, 43},
+		alias = {"Lucerna_Ship_layer6_0034"}
 	},
 	Lucerna_Ship_layer6_0045 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			117,
-			120,
-			79,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			59,
-			60,
-			55
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0046"
-		}
+		size = {256, 341},
+		trim = {117, 120, 79, 166},
+		a_size = {1024, 1024},
+		f_quad = {5, 59, 60, 55},
+		alias = {"Lucerna_Ship_layer6_0046"}
 	},
 	Lucerna_Ship_layer6_0047 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			117,
-			125,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			63,
-			168,
-			57,
-			50
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0048"
-		}
+		size = {256, 341},
+		trim = {117, 125, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {63, 168, 57, 50},
+		alias = {"Lucerna_Ship_layer6_0048"}
 	},
 	Lucerna_Ship_layer6_0049 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			115,
-			128,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			956,
-			117,
-			58,
-			47
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0050"
-		}
+		size = {256, 341},
+		trim = {115, 128, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {956, 117, 58, 47},
+		alias = {"Lucerna_Ship_layer6_0050"}
 	},
 	Lucerna_Ship_layer6_0051 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			116,
-			131,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			444,
-			168,
-			57,
-			44
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0052"
-		}
+		size = {256, 341},
+		trim = {116, 131, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {444, 168, 57, 44},
+		alias = {"Lucerna_Ship_layer6_0052"}
 	},
 	Lucerna_Ship_layer6_0053 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			111,
-			132,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			314,
-			168,
-			62,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0054"
-		}
+		size = {256, 341},
+		trim = {111, 132, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {314, 168, 62, 43},
+		alias = {"Lucerna_Ship_layer6_0054"}
 	},
 	Lucerna_Ship_layer6_0057 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			131,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			186,
-			168,
-			61,
-			44
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0058"
-		}
+		size = {256, 341},
+		trim = {113, 131, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {186, 168, 61, 44},
+		alias = {"Lucerna_Ship_layer6_0058"}
 	},
 	Lucerna_Ship_layer6_0059 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			114,
-			124,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			687,
-			5,
-			60,
-			51
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0060"
-		}
+		size = {256, 341},
+		trim = {114, 124, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {687, 5, 60, 51},
+		alias = {"Lucerna_Ship_layer6_0060"}
 	},
 	Lucerna_Ship_layer6_0081 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			81,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			549,
-			59,
-			62,
-			48
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0082"
-		}
+		size = {256, 341},
+		trim = {113, 127, 81, 166},
+		a_size = {1024, 1024},
+		f_quad = {549, 59, 62, 48},
+		alias = {"Lucerna_Ship_layer6_0082"}
 	},
 	Lucerna_Ship_layer6_0083 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			131,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			250,
-			168,
-			61,
-			44
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0084"
-		}
+		size = {256, 341},
+		trim = {113, 131, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {250, 168, 61, 44},
+		alias = {"Lucerna_Ship_layer6_0084"}
 	},
 	Lucerna_Ship_layer6_0253 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			121,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			254,
-			59,
-			56,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0254"
-		}
+		size = {256, 341},
+		trim = {118, 121, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {254, 59, 56, 54},
+		alias = {"Lucerna_Ship_layer6_0254"}
 	},
 	Lucerna_Ship_layer6_0255 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			119,
-			119,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			117,
-			55,
-			56
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0256"
-		}
+		size = {256, 341},
+		trim = {119, 119, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {5, 117, 55, 56},
+		alias = {"Lucerna_Ship_layer6_0256"}
 	},
 	Lucerna_Ship_layer6_0257 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			121,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			313,
-			59,
-			56,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0258"
-		}
+		size = {256, 341},
+		trim = {118, 121, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {313, 59, 56, 54},
+		alias = {"Lucerna_Ship_layer6_0258"}
 	},
 	Lucerna_Ship_layer6_0259 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			119,
-			119,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			176,
-			55,
-			56
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0260"
-		}
+		size = {256, 341},
+		trim = {119, 119, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {5, 176, 55, 56},
+		alias = {"Lucerna_Ship_layer6_0260"}
 	},
 	Lucerna_Ship_layer6_0261 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			121,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			372,
-			59,
-			56,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0262"
-		}
+		size = {256, 341},
+		trim = {118, 121, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {372, 59, 56, 54},
+		alias = {"Lucerna_Ship_layer6_0262"}
 	},
 	Lucerna_Ship_layer6_0263 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			119,
-			119,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			235,
-			55,
-			56
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0264"
-		}
+		size = {256, 341},
+		trim = {119, 119, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {5, 235, 55, 56},
+		alias = {"Lucerna_Ship_layer6_0264"}
 	},
 	Lucerna_Ship_layer6_0265 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			121,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			431,
-			59,
-			56,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0266"
-		}
+		size = {256, 341},
+		trim = {118, 121, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {431, 59, 56, 54},
+		alias = {"Lucerna_Ship_layer6_0266"}
 	},
 	Lucerna_Ship_layer6_0267 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			119,
-			119,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			294,
-			55,
-			56
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0268"
-		}
+		size = {256, 341},
+		trim = {119, 119, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {5, 294, 55, 56},
+		alias = {"Lucerna_Ship_layer6_0268"}
 	},
 	Lucerna_Ship_layer6_0269 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			121,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			490,
-			59,
-			56,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0270"
-		}
+		size = {256, 341},
+		trim = {118, 121, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {490, 59, 56, 54},
+		alias = {"Lucerna_Ship_layer6_0270"}
 	},
 	Lucerna_Ship_layer6_0271 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			119,
-			119,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			353,
-			55,
-			56
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0272"
-		}
+		size = {256, 341},
+		trim = {119, 119, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {5, 353, 55, 56},
+		alias = {"Lucerna_Ship_layer6_0272"}
 	},
 	Lucerna_Ship_layer6_0273 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			118,
-			121,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			614,
-			59,
-			55,
-			54
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0274"
-		}
+		size = {256, 341},
+		trim = {118, 121, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {614, 59, 55, 54},
+		alias = {"Lucerna_Ship_layer6_0274"}
 	},
 	Lucerna_Ship_layer6_0275 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			116,
-			131,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			504,
-			168,
-			57,
-			44
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0276"
-		}
+		size = {256, 341},
+		trim = {116, 131, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {504, 168, 57, 44},
+		alias = {"Lucerna_Ship_layer6_0276"}
 	},
 	Lucerna_Ship_layer6_0277 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			111,
-			132,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			379,
-			168,
-			62,
-			43
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0278"
-		}
+		size = {256, 341},
+		trim = {111, 132, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {379, 168, 62, 43},
+		alias = {"Lucerna_Ship_layer6_0278"}
 	},
 	Lucerna_Ship_layer6_0279 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			113,
-			127,
-			82,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			511,
-			117,
-			61,
-			48
-		},
+		size = {256, 341},
+		trim = {113, 127, 82, 166},
+		a_size = {1024, 1024},
+		f_quad = {511, 117, 61, 48},
 		alias = {}
 	},
 	Lucerna_Ship_layer6_0308 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			104,
-			131,
-			81,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			481,
-			5,
-			71,
-			44
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0309"
-		}
+		size = {256, 341},
+		trim = {104, 131, 81, 166},
+		a_size = {1024, 1024},
+		f_quad = {481, 5, 71, 44},
+		alias = {"Lucerna_Ship_layer6_0309"}
 	},
 	Lucerna_Ship_layer6_0362 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			104,
-			131,
-			83,
-			166
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			818,
-			5,
-			69,
-			44
-		},
-		alias = {
-			"Lucerna_Ship_layer6_0363"
-		}
+		size = {256, 341},
+		trim = {104, 131, 83, 166},
+		a_size = {1024, 1024},
+		f_quad = {818, 5, 69, 44},
+		alias = {"Lucerna_Ship_layer6_0363"}
 	},
 	Lucerna_Ship_remos_0007 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			84,
-			208,
-			139,
-			108
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			138,
-			261,
-			33,
-			25
-		},
-		alias = {
-			"Lucerna_Ship_remos_0008"
-		}
+		size = {256, 341},
+		trim = {84, 208, 139, 108},
+		a_size = {1024, 1024},
+		f_quad = {138, 261, 33, 25},
+		alias = {"Lucerna_Ship_remos_0008"}
 	},
 	Lucerna_Ship_remos_0009 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			208,
-			139,
-			109
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			174,
-			261,
-			34,
-			24
-		},
-		alias = {
-			"Lucerna_Ship_remos_0010"
-		}
+		size = {256, 341},
+		trim = {83, 208, 139, 109},
+		a_size = {1024, 1024},
+		f_quad = {174, 261, 34, 24},
+		alias = {"Lucerna_Ship_remos_0010"}
 	},
 	Lucerna_Ship_remos_0011 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			208,
-			139,
-			109
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			211,
-			261,
-			34,
-			24
-		},
-		alias = {
-			"Lucerna_Ship_remos_0012"
-		}
+		size = {256, 341},
+		trim = {83, 208, 139, 109},
+		a_size = {1024, 1024},
+		f_quad = {211, 261, 34, 24},
+		alias = {"Lucerna_Ship_remos_0012"}
 	},
 	Lucerna_Ship_remos_0015 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			208,
-			139,
-			109
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			100,
-			261,
-			35,
-			24
-		},
-		alias = {
-			"Lucerna_Ship_remos_0016"
-		}
+		size = {256, 341},
+		trim = {82, 208, 139, 109},
+		a_size = {1024, 1024},
+		f_quad = {100, 261, 35, 24},
+		alias = {"Lucerna_Ship_remos_0016"}
 	},
 	Lucerna_Ship_remos_0017 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			83,
-			208,
-			139,
-			108
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			63,
-			261,
-			34,
-			25
-		},
-		alias = {
-			"Lucerna_Ship_remos_0018"
-		}
+		size = {256, 341},
+		trim = {83, 208, 139, 108},
+		a_size = {1024, 1024},
+		f_quad = {63, 261, 34, 25},
+		alias = {"Lucerna_Ship_remos_0018"}
 	},
 	Lucerna_Ship_remos_0019 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			82,
-			208,
-			139,
-			108
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			928,
-			221,
-			35,
-			25
-		},
-		alias = {
-			"Lucerna_Ship_remos_0020"
-		}
+		size = {256, 341},
+		trim = {82, 208, 139, 108},
+		a_size = {1024, 1024},
+		f_quad = {928, 221, 35, 25},
+		alias = {"Lucerna_Ship_remos_0020"}
 	},
 	Lucerna_Ship_remos_0025 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			84,
-			208,
-			139,
-			107
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			966,
-			221,
-			33,
-			26
-		},
-		alias = {
-			"Lucerna_Ship_remos_0026"
-		}
+		size = {256, 341},
+		trim = {84, 208, 139, 107},
+		a_size = {1024, 1024},
+		f_quad = {966, 221, 33, 26},
+		alias = {"Lucerna_Ship_remos_0026"}
 	},
 	Lucerna_Ship_teleport_0003 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			256,
-			341
-		},
-		trim = {
-			189,
-			162,
-			19,
-			132
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			740,
-			168,
-			48,
-			47
-		},
-		alias = {
-			"Lucerna_Ship_teleport_0004",
-			"Lucerna_Ship_teleport_0053",
-			"Lucerna_Ship_teleport_0054"
-		}
+		size = {256, 341},
+		trim = {189, 162, 19, 132},
+		a_size = {1024, 1024},
+		f_quad = {740, 168, 48, 47},
+		alias = {"Lucerna_Ship_teleport_0004", "Lucerna_Ship_teleport_0053", "Lucerna_Ship_teleport_0054"}
 	},
 	lucerna_unitghosts_0061 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			28,
-			37,
-			27,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			68,
-			59,
-			59,
-			55
-		},
-		alias = {
-			"lucerna_unitghosts_0062"
-		}
+		size = {114, 99},
+		trim = {28, 37, 27, 7},
+		a_size = {1024, 1024},
+		f_quad = {68, 59, 59, 55},
+		alias = {"lucerna_unitghosts_0062"}
 	},
 	lucerna_unitghost_vfxs_0013 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			34,
-			29,
-			22,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			193,
-			59,
-			58,
-			53
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0014"
-		}
+		size = {114, 99},
+		trim = {34, 29, 22, 17},
+		a_size = {1024, 1024},
+		f_quad = {193, 59, 58, 53},
+		alias = {"lucerna_unitghost_vfxs_0014"}
 	},
 	lucerna_unitghost_vfxs_0015 = {
 		a_name = "kr4_hero_lucerna-2.dds",
-		size = {
-			114,
-			99
-		},
-		trim = {
-			26,
-			29,
-			27,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			953,
-			5,
-			61,
-			49
-		},
-		alias = {
-			"lucerna_unitghost_vfxs_0016"
-		}
+		size = {114, 99},
+		trim = {26, 29, 27, 21},
+		a_size = {1024, 1024},
+		f_quad = {953, 5, 61, 49},
+		alias = {"lucerna_unitghost_vfxs_0016"}
 	}
 }

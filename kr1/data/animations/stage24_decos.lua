@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage24_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage24_decos.lua
 local a = {
 	dlc_enanos_stage_02_LAYERS_factorygate_in = {
 		prefix = "dlc_enanos_stage_02_LAYERS_factorygate",
@@ -87,5 +86,4 @@ local a = {
 		from = 136
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/all/tower_panda.lua
-
+-- chunkname: @./kr5/data/animations/all/tower_panda.lua
 local a = {
 	tower_pandas_target_ray_run = {
 		prefix = "tower_pandas_target_ray",
@@ -722,5 +721,4 @@ local a = {
 		from = 54
 	}
 }
-
 return a

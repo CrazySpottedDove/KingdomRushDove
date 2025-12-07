@@ -1,2420 +1,763 @@
-﻿-- chunkname: @./kr3-desktop/assets/images/fullhd/go_stages_ancient_metropolis.lua
-
+-- chunkname: @./kr3-desktop/assets/images/fullhd/go_stages_ancient_metropolis.lua
 return {
 	ancientNecropolisTeleport_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			15,
-			29,
-			16,
-			31
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			589,
-			137,
-			89
-		},
-		alias = {
-			"ancientNecropolisTeleport_0002"
-		}
+		size = {168, 149},
+		trim = {15, 29, 16, 31},
+		a_size = {2048, 1024},
+		f_quad = {6, 589, 137, 89},
+		alias = {"ancientNecropolisTeleport_0002"}
 	},
 	ancientNecropolisTeleport_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			18,
-			31,
-			19,
-			33
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			6,
-			131,
-			85
-		},
-		alias = {
-			"ancientNecropolisTeleport_0004"
-		}
+		size = {168, 149},
+		trim = {18, 31, 19, 33},
+		a_size = {2048, 1024},
+		f_quad = {265, 6, 131, 85},
+		alias = {"ancientNecropolisTeleport_0004"}
 	},
 	ancientNecropolisTeleport_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			21,
-			33,
-			21,
-			35
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			385,
-			126,
-			81
-		},
-		alias = {
-			"ancientNecropolisTeleport_0006"
-		}
+		size = {168, 149},
+		trim = {21, 33, 21, 35},
+		a_size = {2048, 1024},
+		f_quad = {265, 385, 126, 81},
+		alias = {"ancientNecropolisTeleport_0006"}
 	},
 	ancientNecropolisTeleport_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			24,
-			35,
-			24,
-			37
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			228,
-			120,
-			77
-		},
-		alias = {
-			"ancientNecropolisTeleport_0008"
-		}
+		size = {168, 149},
+		trim = {24, 35, 24, 37},
+		a_size = {2048, 1024},
+		f_quad = {402, 228, 120, 77},
+		alias = {"ancientNecropolisTeleport_0008"}
 	},
 	ancientNecropolisTeleport_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			26,
-			35,
-			26,
-			37
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			646,
-			116,
-			77
-		},
-		alias = {
-			"ancientNecropolisTeleport_0010"
-		}
+		size = {168, 149},
+		trim = {26, 35, 26, 37},
+		a_size = {2048, 1024},
+		f_quad = {402, 646, 116, 77},
+		alias = {"ancientNecropolisTeleport_0010"}
 	},
 	ancientNecropolisTeleport_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			25,
-			35,
-			25,
-			36
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			480,
-			118,
-			78
-		},
-		alias = {
-			"ancientNecropolisTeleport_0012"
-		}
+		size = {168, 149},
+		trim = {25, 35, 25, 36},
+		a_size = {2048, 1024},
+		f_quad = {402, 480, 118, 78},
+		alias = {"ancientNecropolisTeleport_0012"}
 	},
 	ancientNecropolisTeleport_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			24,
-			34,
-			24,
-			35
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			142,
-			120,
-			80
-		},
-		alias = {
-			"ancientNecropolisTeleport_0014"
-		}
+		size = {168, 149},
+		trim = {24, 34, 24, 35},
+		a_size = {2048, 1024},
+		f_quad = {402, 142, 120, 80},
+		alias = {"ancientNecropolisTeleport_0014"}
 	},
 	ancientNecropolisTeleport_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			23,
-			34,
-			24,
-			35
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			895,
-			121,
-			80
-		},
-		alias = {
-			"ancientNecropolisTeleport_0016"
-		}
+		size = {168, 149},
+		trim = {23, 34, 24, 35},
+		a_size = {2048, 1024},
+		f_quad = {265, 895, 121, 80},
+		alias = {"ancientNecropolisTeleport_0016"}
 	},
 	ancientNecropolisTeleport_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			22,
-			33,
-			23,
-			34
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			723,
-			123,
-			82
-		},
-		alias = {
-			"ancientNecropolisTeleport_0018"
-		}
+		size = {168, 149},
+		trim = {22, 33, 23, 34},
+		a_size = {2048, 1024},
+		f_quad = {265, 723, 123, 82},
+		alias = {"ancientNecropolisTeleport_0018"}
 	},
 	ancientNecropolisTeleport_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			21,
-			32,
-			22,
-			34
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			509,
-			125,
-			83
-		},
-		alias = {
-			"ancientNecropolisTeleport_0020"
-		}
+		size = {168, 149},
+		trim = {21, 32, 22, 34},
+		a_size = {2048, 1024},
+		f_quad = {265, 509, 125, 83},
+		alias = {"ancientNecropolisTeleport_0020"}
 	},
 	ancientNecropolisTeleport_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			20,
-			32,
-			21,
-			33
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			260,
-			127,
-			84
-		},
-		alias = {
-			"ancientNecropolisTeleport_0022"
-		}
+		size = {168, 149},
+		trim = {20, 32, 21, 33},
+		a_size = {2048, 1024},
+		f_quad = {265, 260, 127, 84},
+		alias = {"ancientNecropolisTeleport_0022"}
 	},
 	ancientNecropolisTeleport_0023 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			19,
-			31,
-			20,
-			32
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			97,
-			129,
-			86
-		},
-		alias = {
-			"ancientNecropolisTeleport_0024"
-		}
+		size = {168, 149},
+		trim = {19, 31, 20, 32},
+		a_size = {2048, 1024},
+		f_quad = {265, 97, 129, 86},
+		alias = {"ancientNecropolisTeleport_0024"}
 	},
 	ancientNecropolisTeleport_0025 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			18,
-			30,
-			19,
-			32
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			929,
-			131,
-			87
-		},
-		alias = {
-			"ancientNecropolisTeleport_0026"
-		}
+		size = {168, 149},
+		trim = {18, 30, 19, 32},
+		a_size = {2048, 1024},
+		f_quad = {6, 929, 131, 87},
+		alias = {"ancientNecropolisTeleport_0026"}
 	},
 	ancientNecropolisTeleport_0027 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			17,
-			30,
-			18,
-			31
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			780,
-			133,
-			88
-		},
-		alias = {
-			"ancientNecropolisTeleport_0028"
-		}
+		size = {168, 149},
+		trim = {17, 30, 18, 31},
+		a_size = {2048, 1024},
+		f_quad = {6, 780, 133, 88},
+		alias = {"ancientNecropolisTeleport_0028"}
 	},
 	ancientNecropolisTeleport_0029 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			16,
-			29,
-			17,
-			30
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			684,
-			135,
-			90
-		},
-		alias = {
-			"ancientNecropolisTeleport_0030"
-		}
+		size = {168, 149},
+		trim = {16, 29, 17, 30},
+		a_size = {2048, 1024},
+		f_quad = {6, 684, 135, 90},
+		alias = {"ancientNecropolisTeleport_0030"}
 	},
 	ancientNecropolisTeleport_0031 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			15,
-			28,
-			16,
-			30
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			492,
-			137,
-			91
-		},
-		alias = {
-			"ancientNecropolisTeleport_0032"
-		}
+		size = {168, 149},
+		trim = {15, 28, 16, 30},
+		a_size = {2048, 1024},
+		f_quad = {6, 492, 137, 91},
+		alias = {"ancientNecropolisTeleport_0032"}
 	},
 	ancientNecropolisTeleport_0033 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			14,
-			28,
-			16,
-			30
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			395,
-			138,
-			91
-		},
-		alias = {
-			"ancientNecropolisTeleport_0034"
-		}
+		size = {168, 149},
+		trim = {14, 28, 16, 30},
+		a_size = {2048, 1024},
+		f_quad = {6, 395, 138, 91},
+		alias = {"ancientNecropolisTeleport_0034"}
 	},
 	ancientNecropolisTeleport_0035 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			21,
-			33,
-			22,
-			35
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			598,
-			125,
-			81
-		},
-		alias = {
-			"ancientNecropolisTeleport_0036"
-		}
+		size = {168, 149},
+		trim = {21, 33, 22, 35},
+		a_size = {2048, 1024},
+		f_quad = {265, 598, 125, 81},
+		alias = {"ancientNecropolisTeleport_0036"}
 	},
 	ancientNecropolisTeleport_0037 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			23,
-			35,
-			23,
-			36
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			811,
-			122,
-			78
-		},
-		alias = {
-			"ancientNecropolisTeleport_0038"
-		}
+		size = {168, 149},
+		trim = {23, 35, 23, 36},
+		a_size = {2048, 1024},
+		f_quad = {265, 811, 122, 78},
+		alias = {"ancientNecropolisTeleport_0038"}
 	},
 	ancientNecropolisTeleport_0039 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			25,
-			36,
-			25,
-			37
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			564,
-			118,
-			76
-		},
-		alias = {
-			"ancientNecropolisTeleport_0040"
-		}
+		size = {168, 149},
+		trim = {25, 36, 25, 37},
+		a_size = {2048, 1024},
+		f_quad = {402, 564, 118, 76},
+		alias = {"ancientNecropolisTeleport_0040"}
 	},
 	ancientNecropolisTeleport_0041 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			168,
-			149
-		},
-		trim = {
-			26,
-			37,
-			27,
-			38
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			898,
-			115,
-			74
-		},
+		size = {168, 149},
+		trim = {26, 37, 27, 38},
+		a_size = {2048, 1024},
+		f_quad = {402, 898, 115, 74},
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			13,
-			12,
-			13,
-			12
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			637,
-			42,
-			44
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0002"
-		}
+		size = {68, 68},
+		trim = {13, 12, 13, 12},
+		a_size = {2048, 1024},
+		f_quad = {1143, 637, 42, 44},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0002"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			7,
-			3,
-			7,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			6,
-			54,
-			61
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0004"
-		}
+		size = {68, 68},
+		trim = {7, 3, 7, 4},
+		a_size = {2048, 1024},
+		f_quad = {1025, 6, 54, 61},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0004"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			5,
-			1,
-			5,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			110,
-			58,
-			67
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0006"
-		}
+		size = {68, 68},
+		trim = {5, 1, 5, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 110, 58, 67},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0006"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			3,
-			2,
-			3,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			785,
-			62,
-			64
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0008"
-		}
+		size = {68, 68},
+		trim = {3, 2, 3, 2},
+		a_size = {2048, 1024},
+		f_quad = {884, 785, 62, 64},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0008"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			3,
-			6,
-			3,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			855,
-			62,
-			57
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0010"
-		}
+		size = {68, 68},
+		trim = {3, 6, 3, 5},
+		a_size = {2048, 1024},
+		f_quad = {884, 855, 62, 57},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0010"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			1,
-			5,
-			1,
-			3
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			104,
-			66,
-			60
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0012"
-		}
+		size = {68, 68},
+		trim = {1, 5, 1, 3},
+		a_size = {2048, 1024},
+		f_quad = {884, 104, 66, 60},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0012"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			869,
-			68,
-			68
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0014"
-		}
+		size = {68, 68},
+		trim = {0, 0, 0, 0},
+		a_size = {2048, 1024},
+		f_quad = {806, 869, 68, 68},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0014"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			3,
-			0,
-			3,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			711,
-			62,
-			68
-		},
-		alias = {
-			"ancientNecropolisTeleport_creepFx_big_0016"
-		}
+		size = {68, 68},
+		trim = {3, 0, 3, 0},
+		a_size = {2048, 1024},
+		f_quad = {884, 711, 62, 68},
+		alias = {"ancientNecropolisTeleport_creepFx_big_0016"}
 	},
 	ancientNecropolisTeleport_creepFx_big_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			5,
-			1,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			183,
-			58,
-			66
-		},
+		size = {68, 68},
+		trim = {5, 1, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {957, 183, 58, 66},
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			5,
-			1,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			255,
-			58,
-			66
-		},
+		size = {68, 68},
+		trim = {5, 1, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {957, 255, 58, 66},
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			12,
-			11,
-			11,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1780,
-			49,
-			45,
-			46
-		},
+		size = {68, 68},
+		trim = {12, 11, 11, 11},
+		a_size = {2048, 1024},
+		f_quad = {1780, 49, 45, 46},
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			68,
-			68
-		},
-		trim = {
-			12,
-			11,
-			11,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1831,
-			49,
-			45,
-			46
-		},
+		size = {68, 68},
+		trim = {12, 11, 11, 11},
+		a_size = {2048, 1024},
+		f_quad = {1831, 49, 45, 46},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			14,
-			63,
-			51,
-			24
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			627,
-			179,
-			11,
-			11
-		},
+		size = {76, 98},
+		trim = {14, 63, 51, 24},
+		a_size = {2048, 1024},
+		f_quad = {627, 179, 11, 11},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			14,
-			59,
-			51,
-			28
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			627,
-			196,
-			11,
-			11
-		},
+		size = {76, 98},
+		trim = {14, 59, 51, 28},
+		a_size = {2048, 1024},
+		f_quad = {627, 196, 11, 11},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			55,
-			51,
-			33
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			237,
-			476,
-			10,
-			10
-		},
+		size = {76, 98},
+		trim = {15, 55, 51, 33},
+		a_size = {2048, 1024},
+		f_quad = {237, 476, 10, 10},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			14,
-			51,
-			13,
-			12
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1653,
-			6,
-			49,
-			35
-		},
+		size = {76, 98},
+		trim = {14, 51, 13, 12},
+		a_size = {2048, 1024},
+		f_quad = {1653, 6, 49, 35},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			46,
-			13,
-			16
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1708,
-			6,
-			48,
-			36
-		},
+		size = {76, 98},
+		trim = {15, 46, 13, 16},
+		a_size = {2048, 1024},
+		f_quad = {1708, 6, 48, 36},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			42,
-			13,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1251,
-			49,
-			48,
-			49
-		},
+		size = {76, 98},
+		trim = {15, 42, 13, 7},
+		a_size = {2048, 1024},
+		f_quad = {1251, 49, 48, 49},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			38,
-			13,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1305,
-			49,
-			48,
-			49
-		},
+		size = {76, 98},
+		trim = {15, 38, 13, 11},
+		a_size = {2048, 1024},
+		f_quad = {1305, 49, 48, 49},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			34,
-			13,
-			15
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1359,
-			49,
-			48,
-			49
-		},
+		size = {76, 98},
+		trim = {15, 34, 13, 15},
+		a_size = {2048, 1024},
+		f_quad = {1359, 49, 48, 49},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			30,
-			13,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1197,
-			49,
-			48,
-			57
-		},
+		size = {76, 98},
+		trim = {15, 30, 13, 11},
+		a_size = {2048, 1024},
+		f_quad = {1197, 49, 48, 57},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			26,
-			13,
-			14
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			942,
-			48,
-			58
-		},
+		size = {76, 98},
+		trim = {15, 26, 13, 14},
+		a_size = {2048, 1024},
+		f_quad = {1085, 942, 48, 58},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			22,
-			13,
-			18
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			49,
-			48,
-			58
-		},
+		size = {76, 98},
+		trim = {15, 22, 13, 18},
+		a_size = {2048, 1024},
+		f_quad = {1143, 49, 48, 58},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			15,
-			18,
-			14,
-			22
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1413,
-			49,
-			47,
-			58
-		},
+		size = {76, 98},
+		trim = {15, 18, 14, 22},
+		a_size = {2048, 1024},
+		f_quad = {1413, 49, 47, 58},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			16,
-			14,
-			14,
-			9
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			113,
-			46,
-			75
-		},
+		size = {76, 98},
+		trim = {16, 14, 14, 9},
+		a_size = {2048, 1024},
+		f_quad = {1143, 113, 46, 75},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0014 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			16,
-			10,
-			14,
-			14
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			194,
-			46,
-			74
-		},
+		size = {76, 98},
+		trim = {16, 10, 14, 14},
+		a_size = {2048, 1024},
+		f_quad = {1143, 194, 46, 74},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			16,
-			6,
-			14,
-			20
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			274,
-			46,
-			72
-		},
+		size = {76, 98},
+		trim = {16, 6, 14, 20},
+		a_size = {2048, 1024},
+		f_quad = {1143, 274, 46, 72},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0016 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			22,
-			26,
-			14,
-			25
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			923,
-			40,
-			47
-		},
+		size = {76, 98},
+		trim = {22, 26, 14, 25},
+		a_size = {2048, 1024},
+		f_quad = {1143, 923, 40, 47},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			22,
-			22,
-			14,
-			31
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			976,
-			40,
-			45
-		},
+		size = {76, 98},
+		trim = {22, 22, 14, 31},
+		a_size = {2048, 1024},
+		f_quad = {1143, 976, 40, 45},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			22,
-			18,
-			14,
-			36
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			113,
-			40,
-			44
-		},
+		size = {76, 98},
+		trim = {22, 18, 14, 36},
+		a_size = {2048, 1024},
+		f_quad = {1195, 113, 40, 44},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			22,
-			33,
-			20,
-			42
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1569,
-			356,
-			34,
-			23
-		},
+		size = {76, 98},
+		trim = {22, 33, 20, 42},
+		a_size = {2048, 1024},
+		f_quad = {1569, 356, 34, 23},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			22,
-			29,
-			21,
-			47
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1649,
-			356,
-			33,
-			22
-		},
+		size = {76, 98},
+		trim = {22, 29, 21, 47},
+		a_size = {2048, 1024},
+		f_quad = {1649, 356, 33, 22},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			23,
-			26,
-			21,
-			53
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1688,
-			356,
-			32,
-			19
-		},
+		size = {76, 98},
+		trim = {23, 26, 21, 53},
+		a_size = {2048, 1024},
+		f_quad = {1688, 356, 32, 19},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0022 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			23,
-			22,
-			40,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			865,
-			998,
-			13,
-			18
-		},
+		size = {76, 98},
+		trim = {23, 22, 40, 58},
+		a_size = {2048, 1024},
+		f_quad = {865, 998, 13, 18},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0023 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			26,
-			24,
-			40,
-			64
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			364,
-			10,
-			10
-		},
+		size = {76, 98},
+		trim = {26, 24, 40, 64},
+		a_size = {2048, 1024},
+		f_quad = {616, 364, 10, 10},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0024 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			26,
-			19,
-			40,
-			69
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			409,
-			10,
-			10
-		},
+		size = {76, 98},
+		trim = {26, 19, 40, 69},
+		a_size = {2048, 1024},
+		f_quad = {616, 409, 10, 10},
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0025 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			76,
-			98
-		},
-		trim = {
-			26,
-			14,
-			41,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			248,
-			859,
-			9,
-			9
-		},
+		size = {76, 98},
+		trim = {26, 14, 41, 75},
+		a_size = {2048, 1024},
+		f_quad = {248, 859, 9, 9},
 		alias = {}
 	},
 	crystalArcane_groundFreeze1_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			149,
-			113
-		},
-		trim = {
-			53,
-			42,
-			55,
-			42
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			792,
-			41,
-			29
-		},
-		alias = {
-			"crystalArcane_groundFreeze1_0002"
-		}
+		size = {149, 113},
+		trim = {53, 42, 55, 42},
+		a_size = {2048, 1024},
+		f_quad = {1143, 792, 41, 29},
+		alias = {"crystalArcane_groundFreeze1_0002"}
 	},
 	crystalArcane_groundFreeze1_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			149,
-			113
-		},
-		trim = {
-			13,
-			16,
-			21,
-			16
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			811,
-			115,
-			81
-		},
-		alias = {
-			"crystalArcane_groundFreeze1_0004"
-		}
+		size = {149, 113},
+		trim = {13, 16, 21, 16},
+		a_size = {2048, 1024},
+		f_quad = {402, 811, 115, 81},
+		alias = {"crystalArcane_groundFreeze1_0004"}
 	},
 	crystalArcane_groundFreeze1_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			149,
-			113
-		},
-		trim = {
-			0,
-			9,
-			10,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			292,
-			139,
-			97
-		},
-		alias = {
-			"crystalArcane_groundFreeze1_0006",
-			"crystalArcane_groundFreeze1_0007",
-			"crystalArcane_groundFreeze1_0008",
-			"crystalArcane_groundFreeze1_0009",
-			"crystalArcane_groundFreeze1_0010",
-			"crystalArcane_groundFreeze1_0011"
-		}
+		size = {149, 113},
+		trim = {0, 9, 10, 7},
+		a_size = {2048, 1024},
+		f_quad = {6, 292, 139, 97},
+		alias = {"crystalArcane_groundFreeze1_0006", "crystalArcane_groundFreeze1_0007", "crystalArcane_groundFreeze1_0008", "crystalArcane_groundFreeze1_0009", "crystalArcane_groundFreeze1_0010", "crystalArcane_groundFreeze1_0011"}
 	},
 	crystalArcane_groundFreeze2_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			155,
-			113
-		},
-		trim = {
-			55,
-			45,
-			62,
-			39
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1552,
-			113,
-			38,
-			29
-		},
-		alias = {
-			"crystalArcane_groundFreeze2_0002"
-		}
+		size = {155, 113},
+		trim = {55, 45, 62, 39},
+		a_size = {2048, 1024},
+		f_quad = {1552, 113, 38, 29},
+		alias = {"crystalArcane_groundFreeze2_0002"}
 	},
 	crystalArcane_groundFreeze2_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			155,
-			113
-		},
-		trim = {
-			25,
-			25,
-			30,
-			13
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			149,
-			589,
-			100,
-			75
-		},
-		alias = {
-			"crystalArcane_groundFreeze2_0004"
-		}
+		size = {155, 113},
+		trim = {25, 25, 30, 13},
+		a_size = {2048, 1024},
+		f_quad = {149, 589, 100, 75},
+		alias = {"crystalArcane_groundFreeze2_0004"}
 	},
 	crystalArcane_groundFreeze2_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			155,
-			113
-		},
-		trim = {
-			15,
-			18,
-			20,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			45,
-			120,
-			91
-		},
-		alias = {
-			"crystalArcane_groundFreeze2_0006",
-			"crystalArcane_groundFreeze2_0007",
-			"crystalArcane_groundFreeze2_0008",
-			"crystalArcane_groundFreeze2_0009",
-			"crystalArcane_groundFreeze2_0010",
-			"crystalArcane_groundFreeze2_0011"
-		}
+		size = {155, 113},
+		trim = {15, 18, 20, 4},
+		a_size = {2048, 1024},
+		f_quad = {402, 45, 120, 91},
+		alias = {"crystalArcane_groundFreeze2_0006", "crystalArcane_groundFreeze2_0007", "crystalArcane_groundFreeze2_0008", "crystalArcane_groundFreeze2_0009", "crystalArcane_groundFreeze2_0010", "crystalArcane_groundFreeze2_0011"}
 	},
 	crystalArcane_groundFreeze_base = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			253,
-			163
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			6,
-			253,
-			163
-		},
+		size = {253, 163},
+		trim = {0, 0, 0, 0},
+		a_size = {2048, 1024},
+		f_quad = {6, 6, 253, 163},
 		alias = {}
 	},
 	crystalArcane_groundFreeze_fx_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			27,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			975,
-			54,
-			46
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0002"
-		}
+		size = {56, 73},
+		trim = {1, 27, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 975, 54, 46},
+		alias = {"crystalArcane_groundFreeze_fx_0002"}
 	},
 	crystalArcane_groundFreeze_fx_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			18,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			73,
-			54,
-			55
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0004"
-		}
+		size = {56, 73},
+		trim = {1, 18, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 73, 54, 55},
+		alias = {"crystalArcane_groundFreeze_fx_0004"}
 	},
 	crystalArcane_groundFreeze_fx_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			8,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			762,
-			54,
-			65
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0006"
-		}
+		size = {56, 73},
+		trim = {1, 8, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 762, 54, 65},
+		alias = {"crystalArcane_groundFreeze_fx_0006"}
 	},
 	crystalArcane_groundFreeze_fx_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			8,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			833,
-			54,
-			65
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0008"
-		}
+		size = {56, 73},
+		trim = {1, 8, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 833, 54, 65},
+		alias = {"crystalArcane_groundFreeze_fx_0008"}
 	},
 	crystalArcane_groundFreeze_fx_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			8,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			904,
-			54,
-			65
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0010"
-		}
+		size = {56, 73},
+		trim = {1, 8, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 904, 54, 65},
+		alias = {"crystalArcane_groundFreeze_fx_0010"}
 	},
 	crystalArcane_groundFreeze_fx_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			7,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			546,
-			54,
-			66
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0012"
-		}
+		size = {56, 73},
+		trim = {1, 7, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 546, 54, 66},
+		alias = {"crystalArcane_groundFreeze_fx_0012"}
 	},
 	crystalArcane_groundFreeze_fx_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			7,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			618,
-			54,
-			66
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0014"
-		}
+		size = {56, 73},
+		trim = {1, 7, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 618, 54, 66},
+		alias = {"crystalArcane_groundFreeze_fx_0014"}
 	},
 	crystalArcane_groundFreeze_fx_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			7,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			690,
-			54,
-			66
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0016"
-		}
+		size = {56, 73},
+		trim = {1, 7, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 690, 54, 66},
+		alias = {"crystalArcane_groundFreeze_fx_0016"}
 	},
 	crystalArcane_groundFreeze_fx_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			6,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			327,
-			54,
-			67
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0018"
-		}
+		size = {56, 73},
+		trim = {1, 6, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 327, 54, 67},
+		alias = {"crystalArcane_groundFreeze_fx_0018"}
 	},
 	crystalArcane_groundFreeze_fx_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			6,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			400,
-			54,
-			67
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0020"
-		}
+		size = {56, 73},
+		trim = {1, 6, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 400, 54, 67},
+		alias = {"crystalArcane_groundFreeze_fx_0020"}
 	},
 	crystalArcane_groundFreeze_fx_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			1,
-			6,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			473,
-			54,
-			67
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0022"
-		}
+		size = {56, 73},
+		trim = {1, 6, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {957, 473, 54, 67},
+		alias = {"crystalArcane_groundFreeze_fx_0022"}
 	},
 	crystalArcane_groundFreeze_fx_0023 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			5,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			586,
-			53,
-			68
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0024"
-		}
+		size = {56, 73},
+		trim = {2, 5, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 586, 53, 68},
+		alias = {"crystalArcane_groundFreeze_fx_0024"}
 	},
 	crystalArcane_groundFreeze_fx_0025 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			5,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			660,
-			53,
-			68
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0026"
-		}
+		size = {56, 73},
+		trim = {2, 5, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 660, 53, 68},
+		alias = {"crystalArcane_groundFreeze_fx_0026"}
 	},
 	crystalArcane_groundFreeze_fx_0027 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			5,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			734,
-			53,
-			68
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0028"
-		}
+		size = {56, 73},
+		trim = {2, 5, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 734, 53, 68},
+		alias = {"crystalArcane_groundFreeze_fx_0028"}
 	},
 	crystalArcane_groundFreeze_fx_0029 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			286,
-			53,
-			69
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0030"
-		}
+		size = {56, 73},
+		trim = {2, 4, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 286, 53, 69},
+		alias = {"crystalArcane_groundFreeze_fx_0030"}
 	},
 	crystalArcane_groundFreeze_fx_0031 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			361,
-			53,
-			69
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0032"
-		}
+		size = {56, 73},
+		trim = {2, 4, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 361, 53, 69},
+		alias = {"crystalArcane_groundFreeze_fx_0032"}
 	},
 	crystalArcane_groundFreeze_fx_0033 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			436,
-			53,
-			69
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0034"
-		}
+		size = {56, 73},
+		trim = {2, 4, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 436, 53, 69},
+		alias = {"crystalArcane_groundFreeze_fx_0034"}
 	},
 	crystalArcane_groundFreeze_fx_0035 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			511,
-			53,
-			69
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0036"
-		}
+		size = {56, 73},
+		trim = {2, 4, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 511, 53, 69},
+		alias = {"crystalArcane_groundFreeze_fx_0036"}
 	},
 	crystalArcane_groundFreeze_fx_0037 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			3,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			134,
-			53,
-			70
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0038"
-		}
+		size = {56, 73},
+		trim = {2, 3, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 134, 53, 70},
+		alias = {"crystalArcane_groundFreeze_fx_0038"}
 	},
 	crystalArcane_groundFreeze_fx_0039 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			2,
-			3,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			210,
-			53,
-			70
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0040"
-		}
+		size = {56, 73},
+		trim = {2, 3, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1025, 210, 53, 70},
+		alias = {"crystalArcane_groundFreeze_fx_0040"}
 	},
 	crystalArcane_groundFreeze_fx_0041 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			3,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			203,
-			52,
-			70
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0042"
-		}
+		size = {56, 73},
+		trim = {3, 3, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 203, 52, 70},
+		alias = {"crystalArcane_groundFreeze_fx_0042"}
 	},
 	crystalArcane_groundFreeze_fx_0043 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			2,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			49,
-			52,
-			71
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0044"
-		}
+		size = {56, 73},
+		trim = {3, 2, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 49, 52, 71},
+		alias = {"crystalArcane_groundFreeze_fx_0044"}
 	},
 	crystalArcane_groundFreeze_fx_0045 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			2,
-			1,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			126,
-			52,
-			71
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0046"
-		}
+		size = {56, 73},
+		trim = {3, 2, 1, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 126, 52, 71},
+		alias = {"crystalArcane_groundFreeze_fx_0046"}
 	},
 	crystalArcane_groundFreeze_fx_0047 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			2,
-			2,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			562,
-			51,
-			71
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0048"
-		}
+		size = {56, 73},
+		trim = {3, 2, 2, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 562, 51, 71},
+		alias = {"crystalArcane_groundFreeze_fx_0048"}
 	},
 	crystalArcane_groundFreeze_fx_0049 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			1,
-			2,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			328,
-			51,
-			72
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0050"
-		}
+		size = {56, 73},
+		trim = {3, 1, 2, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 328, 51, 72},
+		alias = {"crystalArcane_groundFreeze_fx_0050"}
 	},
 	crystalArcane_groundFreeze_fx_0051 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			1,
-			2,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			406,
-			51,
-			72
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0052"
-		}
+		size = {56, 73},
+		trim = {3, 1, 2, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 406, 51, 72},
+		alias = {"crystalArcane_groundFreeze_fx_0052"}
 	},
 	crystalArcane_groundFreeze_fx_0053 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			3,
-			1,
-			2,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			484,
-			51,
-			72
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0054"
-		}
+		size = {56, 73},
+		trim = {3, 1, 2, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 484, 51, 72},
+		alias = {"crystalArcane_groundFreeze_fx_0054"}
 	},
 	crystalArcane_groundFreeze_fx_0055 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			4,
-			0,
-			2,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			690,
-			50,
-			73
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0056"
-		}
+		size = {56, 73},
+		trim = {4, 0, 2, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 690, 50, 73},
+		alias = {"crystalArcane_groundFreeze_fx_0056"}
 	},
 	crystalArcane_groundFreeze_fx_0057 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			73
-		},
-		trim = {
-			4,
-			0,
-			2,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			769,
-			50,
-			73
-		},
-		alias = {
-			"crystalArcane_groundFreeze_fx_0058"
-		}
+		size = {56, 73},
+		trim = {4, 0, 2, 0},
+		a_size = {2048, 1024},
+		f_quad = {1085, 769, 50, 73},
+		alias = {"crystalArcane_groundFreeze_fx_0058"}
 	},
 	crystalArcane_layer10_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			100,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			253,
-			476,
-			3,
-			2
-		},
+		size = {214, 146},
+		trim = {108, 100, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {253, 476, 3, 2},
 		alias = {
 			"crystalArcane_layer10_0002",
 			"crystalArcane_layer10_0003",
@@ -3535,908 +1878,282 @@ return {
 	},
 	crystalArcane_layer10_0187 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			69,
-			37,
-			69,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			813,
-			76,
-			51
-		},
-		alias = {
-			"crystalArcane_layer10_0188"
-		}
+		size = {214, 146},
+		trim = {69, 37, 69, 58},
+		a_size = {2048, 1024},
+		f_quad = {529, 813, 76, 51},
+		alias = {"crystalArcane_layer10_0188"}
 	},
 	crystalArcane_layer10_0189 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			69,
-			37,
-			69,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			870,
-			76,
-			51
-		},
-		alias = {
-			"crystalArcane_layer10_0190"
-		}
+		size = {214, 146},
+		trim = {69, 37, 69, 58},
+		a_size = {2048, 1024},
+		f_quad = {529, 870, 76, 51},
+		alias = {"crystalArcane_layer10_0190"}
 	},
 	crystalArcane_layer10_0191 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			69,
-			37,
-			69,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			927,
-			76,
-			51
-		},
-		alias = {
-			"crystalArcane_layer10_0192"
-		}
+		size = {214, 146},
+		trim = {69, 37, 69, 58},
+		a_size = {2048, 1024},
+		f_quad = {529, 927, 76, 51},
+		alias = {"crystalArcane_layer10_0192"}
 	},
 	crystalArcane_layer10_0193 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			69,
-			37,
-			69,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			6,
-			76,
-			51
-		},
-		alias = {
-			"crystalArcane_layer10_0194"
-		}
+		size = {214, 146},
+		trim = {69, 37, 69, 58},
+		a_size = {2048, 1024},
+		f_quad = {645, 6, 76, 51},
+		alias = {"crystalArcane_layer10_0194"}
 	},
 	crystalArcane_layer10_0195 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			22,
-			67,
-			56
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			217,
-			81,
-			68
-		},
-		alias = {
-			"crystalArcane_layer10_0196"
-		}
+		size = {214, 146},
+		trim = {66, 22, 67, 56},
+		a_size = {2048, 1024},
+		f_quad = {529, 217, 81, 68},
+		alias = {"crystalArcane_layer10_0196"}
 	},
 	crystalArcane_layer10_0197 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			58,
-			15,
-			59,
-			53
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			145,
-			780,
-			97,
-			78
-		},
-		alias = {
-			"crystalArcane_layer10_0198"
-		}
+		size = {214, 146},
+		trim = {58, 15, 59, 53},
+		a_size = {2048, 1024},
+		f_quad = {145, 780, 97, 78},
+		alias = {"crystalArcane_layer10_0198"}
 	},
 	crystalArcane_layer10_0199 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			52,
-			2,
-			52,
-			50
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			6,
-			110,
-			94
-		},
-		alias = {
-			"crystalArcane_layer10_0200"
-		}
+		size = {214, 146},
+		trim = {52, 2, 52, 50},
+		a_size = {2048, 1024},
+		f_quad = {529, 6, 110, 94},
+		alias = {"crystalArcane_layer10_0200"}
 	},
 	crystalArcane_layer10_0201 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			49,
-			0,
-			50,
-			47
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			144,
-			874,
-			115,
-			99
-		},
-		alias = {
-			"crystalArcane_layer10_0202"
-		}
+		size = {214, 146},
+		trim = {49, 0, 50, 47},
+		a_size = {2048, 1024},
+		f_quad = {144, 874, 115, 99},
+		alias = {"crystalArcane_layer10_0202"}
 	},
 	crystalArcane_layer10_0203 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			55,
-			28,
-			55,
-			50
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			151,
-			292,
-			104,
-			68
-		},
-		alias = {
-			"crystalArcane_layer10_0204"
-		}
+		size = {214, 146},
+		trim = {55, 28, 55, 50},
+		a_size = {2048, 1024},
+		f_quad = {151, 292, 104, 68},
+		alias = {"crystalArcane_layer10_0204"}
 	},
 	crystalArcane_layer10_0205 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			52,
-			25,
-			52,
-			48
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			149,
-			492,
-			110,
-			73
-		},
-		alias = {
-			"crystalArcane_layer10_0206"
-		}
+		size = {214, 146},
+		trim = {52, 25, 52, 48},
+		a_size = {2048, 1024},
+		f_quad = {149, 492, 110, 73},
+		alias = {"crystalArcane_layer10_0206"}
 	},
 	crystalArcane_layer10_0207 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			49,
-			24,
-			49,
-			46
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			729,
-			116,
-			76
-		},
-		alias = {
-			"crystalArcane_layer10_0208"
-		}
+		size = {214, 146},
+		trim = {49, 24, 49, 46},
+		a_size = {2048, 1024},
+		f_quad = {402, 729, 116, 76},
+		alias = {"crystalArcane_layer10_0208"}
 	},
 	crystalArcane_layer10_0209 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			47,
-			23,
-			48,
-			45
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			396,
-			119,
-			78
-		},
-		alias = {
-			"crystalArcane_layer10_0210"
-		}
+		size = {214, 146},
+		trim = {47, 23, 48, 45},
+		a_size = {2048, 1024},
+		f_quad = {402, 396, 119, 78},
+		alias = {"crystalArcane_layer10_0210"}
 	},
 	crystalArcane_layer10_0211 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			47,
-			23,
-			48,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			311,
-			119,
-			79
-		},
-		alias = {
-			"crystalArcane_layer10_0212"
-		}
+		size = {214, 146},
+		trim = {47, 23, 48, 44},
+		a_size = {2048, 1024},
+		f_quad = {402, 311, 119, 79},
+		alias = {"crystalArcane_layer10_0212"}
 	},
 	crystalArcane_layer10_0264 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			64,
-			67,
-			53
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			147,
-			742,
-			81,
-			29
-		},
-		alias = {
-			"crystalArcane_layer10_0265"
-		}
+		size = {214, 146},
+		trim = {66, 64, 67, 53},
+		a_size = {2048, 1024},
+		f_quad = {147, 742, 81, 29},
+		alias = {"crystalArcane_layer10_0265"}
 	},
 	crystalArcane_layer10_0266 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			62,
-			67,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			597,
-			81,
-			33
-		},
-		alias = {
-			"crystalArcane_layer10_0267"
-		}
+		size = {214, 146},
+		trim = {66, 62, 67, 51},
+		a_size = {2048, 1024},
+		f_quad = {529, 597, 81, 33},
+		alias = {"crystalArcane_layer10_0267"}
 	},
 	crystalArcane_layer10_0268 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			60,
-			67,
-			53
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			636,
-			81,
-			33
-		},
-		alias = {
-			"crystalArcane_layer10_0269"
-		}
+		size = {214, 146},
+		trim = {66, 60, 67, 53},
+		a_size = {2048, 1024},
+		f_quad = {529, 636, 81, 33},
+		alias = {"crystalArcane_layer10_0269"}
 	},
 	crystalArcane_layer10_0270 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			58,
-			67,
-			55
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			675,
-			81,
-			33
-		},
-		alias = {
-			"crystalArcane_layer10_0271"
-		}
+		size = {214, 146},
+		trim = {66, 58, 67, 55},
+		a_size = {2048, 1024},
+		f_quad = {529, 675, 81, 33},
+		alias = {"crystalArcane_layer10_0271"}
 	},
 	crystalArcane_layer10_0272 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			55,
-			67,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			144,
-			979,
-			81,
-			40
-		},
-		alias = {
-			"crystalArcane_layer10_0273"
-		}
+		size = {214, 146},
+		trim = {66, 55, 67, 51},
+		a_size = {2048, 1024},
+		f_quad = {144, 979, 81, 40},
+		alias = {"crystalArcane_layer10_0273"}
 	},
 	crystalArcane_layer10_0274 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			53,
-			67,
-			54
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			291,
-			81,
-			39
-		},
-		alias = {
-			"crystalArcane_layer10_0275"
-		}
+		size = {214, 146},
+		trim = {66, 53, 67, 54},
+		a_size = {2048, 1024},
+		f_quad = {529, 291, 81, 39},
+		alias = {"crystalArcane_layer10_0275"}
 	},
 	crystalArcane_layer10_0276 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			51,
-			67,
-			56
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			336,
-			81,
-			39
-		},
-		alias = {
-			"crystalArcane_layer10_0277"
-		}
+		size = {214, 146},
+		trim = {66, 51, 67, 56},
+		a_size = {2048, 1024},
+		f_quad = {529, 336, 81, 39},
+		alias = {"crystalArcane_layer10_0277"}
 	},
 	crystalArcane_layer10_0278 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			58,
-			69,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			232,
-			73,
-			30
-		},
-		alias = {
-			"crystalArcane_layer10_0279"
-		}
+		size = {214, 146},
+		trim = {72, 58, 69, 58},
+		a_size = {2048, 1024},
+		f_quad = {727, 232, 73, 30},
+		alias = {"crystalArcane_layer10_0279"}
 	},
 	crystalArcane_layer10_0280 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			62,
-			67,
-			54
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			150,
-			455,
-			81,
-			30
-		},
-		alias = {
-			"crystalArcane_layer10_0281"
-		}
+		size = {214, 146},
+		trim = {66, 62, 67, 54},
+		a_size = {2048, 1024},
+		f_quad = {150, 455, 81, 30},
+		alias = {"crystalArcane_layer10_0281"}
 	},
 	crystalArcane_layer10_0282 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			60,
-			67,
-			52
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			557,
-			81,
-			34
-		},
-		alias = {
-			"crystalArcane_layer10_0283"
-		}
+		size = {214, 146},
+		trim = {66, 60, 67, 52},
+		a_size = {2048, 1024},
+		f_quad = {529, 557, 81, 34},
+		alias = {"crystalArcane_layer10_0283"}
 	},
 	crystalArcane_layer10_0284 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			57,
-			67,
-			54
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			516,
-			81,
-			35
-		},
-		alias = {
-			"crystalArcane_layer10_0285"
-		}
+		size = {214, 146},
+		trim = {66, 57, 67, 54},
+		a_size = {2048, 1024},
+		f_quad = {529, 516, 81, 35},
+		alias = {"crystalArcane_layer10_0285"}
 	},
 	crystalArcane_layer10_0286 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			56,
-			67,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			714,
-			81,
-			33
-		},
-		alias = {
-			"crystalArcane_layer10_0287"
-		}
+		size = {214, 146},
+		trim = {66, 56, 67, 57},
+		a_size = {2048, 1024},
+		f_quad = {529, 714, 81, 33},
+		alias = {"crystalArcane_layer10_0287"}
 	},
 	crystalArcane_layer10_0288 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			54,
-			67,
-			53
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			381,
-			81,
-			39
-		},
-		alias = {
-			"crystalArcane_layer10_0289"
-		}
+		size = {214, 146},
+		trim = {66, 54, 67, 53},
+		a_size = {2048, 1024},
+		f_quad = {529, 381, 81, 39},
+		alias = {"crystalArcane_layer10_0289"}
 	},
 	crystalArcane_layer10_0290 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			52,
-			67,
-			55
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			426,
-			81,
-			39
-		},
-		alias = {
-			"crystalArcane_layer10_0291"
-		}
+		size = {214, 146},
+		trim = {66, 52, 67, 55},
+		a_size = {2048, 1024},
+		f_quad = {529, 426, 81, 39},
+		alias = {"crystalArcane_layer10_0291"}
 	},
 	crystalArcane_layer10_0292 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			50,
-			67,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			471,
-			81,
-			39
-		},
-		alias = {
-			"crystalArcane_layer10_0293"
-		}
+		size = {214, 146},
+		trim = {66, 50, 67, 57},
+		a_size = {2048, 1024},
+		f_quad = {529, 471, 81, 39},
+		alias = {"crystalArcane_layer10_0293"}
 	},
 	crystalArcane_layer10_0294 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			57,
-			69,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			268,
-			73,
-			30
-		},
-		alias = {
-			"crystalArcane_layer10_0295"
-		}
+		size = {214, 146},
+		trim = {72, 57, 69, 59},
+		a_size = {2048, 1024},
+		f_quad = {727, 268, 73, 30},
+		alias = {"crystalArcane_layer10_0295"}
 	},
 	crystalArcane_layer10_0296 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			61,
-			70,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			304,
-			73,
-			24
-		},
-		alias = {
-			"crystalArcane_layer10_0297"
-		}
+		size = {214, 146},
+		trim = {71, 61, 70, 61},
+		a_size = {2048, 1024},
+		f_quad = {727, 304, 73, 24},
+		alias = {"crystalArcane_layer10_0297"}
 	},
 	crystalArcane_layer10_0298 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			59,
-			70,
-			64
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			151,
-			366,
-			73,
-			23
-		},
-		alias = {
-			"crystalArcane_layer10_0299"
-		}
+		size = {214, 146},
+		trim = {71, 59, 70, 64},
+		a_size = {2048, 1024},
+		f_quad = {151, 366, 73, 23},
+		alias = {"crystalArcane_layer10_0299"}
 	},
 	crystalArcane_layer10_0300 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			56,
-			71,
-			66
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			6,
-			72,
-			24
-		},
+		size = {214, 146},
+		trim = {71, 56, 71, 66},
+		a_size = {2048, 1024},
+		f_quad = {806, 6, 72, 24},
 		alias = {}
 	},
 	crystalArcane_layer11_0262 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			57,
-			66,
-			57,
-			28
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			147,
-			684,
-			100,
-			52
-		},
-		alias = {
-			"crystalArcane_layer11_0263"
-		}
+		size = {214, 146},
+		trim = {57, 66, 57, 28},
+		a_size = {2048, 1024},
+		f_quad = {147, 684, 100, 52},
+		alias = {"crystalArcane_layer11_0263"}
 	},
 	crystalArcane_layer11_0264 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			57,
-			66,
-			56,
-			26
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			157,
-			175,
-			101,
-			54
-		},
-		alias = {
-			"crystalArcane_layer11_0265"
-		}
+		size = {214, 146},
+		trim = {57, 66, 56, 26},
+		a_size = {2048, 1024},
+		f_quad = {157, 175, 101, 54},
+		alias = {"crystalArcane_layer11_0265"}
 	},
 	crystalArcane_layer11_0266 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			57,
-			66,
-			56,
-			26
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			150,
-			395,
-			101,
-			54
-		},
+		size = {214, 146},
+		trim = {57, 66, 56, 26},
+		a_size = {2048, 1024},
+		f_quad = {150, 395, 101, 54},
 		alias = {
 			"crystalArcane_layer11_0267",
 			"crystalArcane_layer11_0268",
@@ -4474,130 +2191,42 @@ return {
 	},
 	crystalArcane_layer11_0299 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			61,
-			66,
-			61,
-			29
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			160,
-			92,
-			51
-		},
-		alias = {
-			"crystalArcane_layer11_0300"
-		}
+		size = {214, 146},
+		trim = {61, 66, 61, 29},
+		a_size = {2048, 1024},
+		f_quad = {529, 160, 92, 51},
+		alias = {"crystalArcane_layer11_0300"}
 	},
 	crystalArcane_layer11_0301 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			60,
-			66,
-			60,
-			32
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			106,
-			94,
-			48
-		},
-		alias = {
-			"crystalArcane_layer11_0302"
-		}
+		size = {214, 146},
+		trim = {60, 66, 60, 32},
+		a_size = {2048, 1024},
+		f_quad = {529, 106, 94, 48},
+		alias = {"crystalArcane_layer11_0302"}
 	},
 	crystalArcane_layer11_0303 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			60,
-			66,
-			60,
-			34
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			978,
-			94,
-			46
-		},
-		alias = {
-			"crystalArcane_layer11_0304"
-		}
+		size = {214, 146},
+		trim = {60, 66, 60, 34},
+		a_size = {2048, 1024},
+		f_quad = {402, 978, 94, 46},
+		alias = {"crystalArcane_layer11_0304"}
 	},
 	crystalArcane_layer11_0305 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			60,
-			85,
-			60,
-			54
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			157,
-			275,
-			94,
-			7
-		},
-		alias = {
-			"crystalArcane_layer11_0306"
-		}
+		size = {214, 146},
+		trim = {60, 85, 60, 54},
+		a_size = {2048, 1024},
+		f_quad = {157, 275, 94, 7},
+		alias = {"crystalArcane_layer11_0306"}
 	},
 	crystalArcane_layer1_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			66,
-			58,
-			68,
-			34
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			753,
-			80,
-			54
-		},
+		size = {214, 146},
+		trim = {66, 58, 68, 34},
+		a_size = {2048, 1024},
+		f_quad = {529, 753, 80, 54},
 		alias = {
 			"crystalArcane_layer1_0002",
 			"crystalArcane_layer1_0003",
@@ -4921,26 +2550,10 @@ return {
 	},
 	crystalArcane_layer2_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			60,
-			70,
-			49
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			529,
-			984,
-			73,
-			37
-		},
+		size = {214, 146},
+		trim = {71, 60, 70, 49},
+		a_size = {2048, 1024},
+		f_quad = {529, 984, 73, 37},
 		alias = {
 			"crystalArcane_layer2_0002",
 			"crystalArcane_layer2_0003",
@@ -5264,786 +2877,242 @@ return {
 	},
 	crystalArcane_layer3_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1451,
-			163,
-			36,
-			39
-		},
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1451, 163, 36, 39},
 		alias = {}
 	},
 	crystalArcane_layer3_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1493,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0003"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1493, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0003"}
 	},
 	crystalArcane_layer3_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1535,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0005"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1535, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0005"}
 	},
 	crystalArcane_layer3_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1577,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0007"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1577, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0007"}
 	},
 	crystalArcane_layer3_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1619,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0009",
-			"crystalArcane_layer3_0034",
-			"crystalArcane_layer3_0035"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1619, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0009", "crystalArcane_layer3_0034", "crystalArcane_layer3_0035"}
 	},
 	crystalArcane_layer3_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1661,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0011"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1661, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0011"}
 	},
 	crystalArcane_layer3_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1703,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0013"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1703, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0013"}
 	},
 	crystalArcane_layer3_0014 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1745,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0015"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1745, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0015"}
 	},
 	crystalArcane_layer3_0016 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1787,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0017"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1787, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0017"}
 	},
 	crystalArcane_layer3_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1829,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0019"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1829, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0019"}
 	},
 	crystalArcane_layer3_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1871,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0021"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1871, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0021"}
 	},
 	crystalArcane_layer3_0022 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1913,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0023"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1913, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0023"}
 	},
 	crystalArcane_layer3_0024 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1955,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0025"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1955, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0025"}
 	},
 	crystalArcane_layer3_0026 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1997,
-			163,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0027"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1997, 163, 36, 39},
+		alias = {"crystalArcane_layer3_0027"}
 	},
 	crystalArcane_layer3_0028 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			810,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0029"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 810, 36, 39},
+		alias = {"crystalArcane_layer3_0029"}
 	},
 	crystalArcane_layer3_0030 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			855,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0031"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 855, 36, 39},
+		alias = {"crystalArcane_layer3_0031"}
 	},
 	crystalArcane_layer3_0032 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			900,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0033"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 900, 36, 39},
+		alias = {"crystalArcane_layer3_0033"}
 	},
 	crystalArcane_layer3_0036 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			945,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0037"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 945, 36, 39},
+		alias = {"crystalArcane_layer3_0037"}
 	},
 	crystalArcane_layer3_0038 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0039"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1282, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0039"}
 	},
 	crystalArcane_layer3_0040 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1324,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0041"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1324, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0041"}
 	},
 	crystalArcane_layer3_0042 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1366,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0043"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1366, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0043"}
 	},
 	crystalArcane_layer3_0044 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1408,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0045"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1408, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0045"}
 	},
 	crystalArcane_layer3_0046 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1450,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0047"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1450, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0047"}
 	},
 	crystalArcane_layer3_0048 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1492,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0049",
-			"crystalArcane_layer3_0050",
-			"crystalArcane_layer3_0051",
-			"crystalArcane_layer3_0052",
-			"crystalArcane_layer3_0053",
-			"crystalArcane_layer3_0054",
-			"crystalArcane_layer3_0055"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1492, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0049", "crystalArcane_layer3_0050", "crystalArcane_layer3_0051", "crystalArcane_layer3_0052", "crystalArcane_layer3_0053", "crystalArcane_layer3_0054", "crystalArcane_layer3_0055"}
 	},
 	crystalArcane_layer3_0056 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			58,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1812,
-			113,
-			36,
-			44
-		},
-		alias = {
-			"crystalArcane_layer3_0057"
-		}
+		size = {214, 146},
+		trim = {108, 58, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1812, 113, 36, 44},
+		alias = {"crystalArcane_layer3_0057"}
 	},
 	crystalArcane_layer3_0058 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			55,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1283,
-			163,
-			36,
-			47
-		},
-		alias = {
-			"crystalArcane_layer3_0059"
-		}
+		size = {214, 146},
+		trim = {108, 55, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1283, 163, 36, 47},
+		alias = {"crystalArcane_layer3_0059"}
 	},
 	crystalArcane_layer3_0060 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			52,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			754,
-			36,
-			50
-		},
-		alias = {
-			"crystalArcane_layer3_0061"
-		}
+		size = {214, 146},
+		trim = {108, 52, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 754, 36, 50},
+		alias = {"crystalArcane_layer3_0061"}
 	},
 	crystalArcane_layer3_0062 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			50,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			696,
-			36,
-			52
-		},
-		alias = {
-			"crystalArcane_layer3_0063"
-		}
+		size = {214, 146},
+		trim = {108, 50, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 696, 36, 52},
+		alias = {"crystalArcane_layer3_0063"}
 	},
 	crystalArcane_layer3_0064 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			283,
-			36,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0065"
-		}
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 283, 36, 53},
+		alias = {"crystalArcane_layer3_0065"}
 	},
 	crystalArcane_layer3_0066 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			342,
-			36,
-			53
-		},
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 342, 36, 53},
 		alias = {
 			"crystalArcane_layer3_0067",
 			"crystalArcane_layer3_0068",
@@ -6162,26 +3231,10 @@ return {
 	},
 	crystalArcane_layer3_0176 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			100,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			253,
-			484,
-			3,
-			2
-		},
+		size = {214, 146},
+		trim = {108, 100, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {253, 484, 3, 2},
 		alias = {
 			"crystalArcane_layer3_0177",
 			"crystalArcane_layer3_0178",
@@ -6216,734 +3269,226 @@ return {
 	},
 	crystalArcane_layer3_0206 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			53,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			954,
-			37,
-			49
-		},
-		alias = {
-			"crystalArcane_layer3_0207"
-		}
+		size = {214, 146},
+		trim = {108, 53, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 954, 37, 49},
+		alias = {"crystalArcane_layer3_0207"}
 	},
 	crystalArcane_layer3_0208 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			59,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1854,
-			113,
-			36,
-			43
-		},
-		alias = {
-			"crystalArcane_layer3_0209",
-			"crystalArcane_layer3_0243",
-			"crystalArcane_layer3_0244"
-		}
+		size = {214, 146},
+		trim = {108, 59, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1854, 113, 36, 43},
+		alias = {"crystalArcane_layer3_0209", "crystalArcane_layer3_0243", "crystalArcane_layer3_0244"}
 	},
 	crystalArcane_layer3_0210 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			64,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1640,
-			113,
-			37,
-			38
-		},
-		alias = {
-			"crystalArcane_layer3_0211",
-			"crystalArcane_layer3_0245",
-			"crystalArcane_layer3_0246"
-		}
+		size = {214, 146},
+		trim = {108, 64, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1640, 113, 37, 38},
+		alias = {"crystalArcane_layer3_0211", "crystalArcane_layer3_0245", "crystalArcane_layer3_0246"}
 	},
 	crystalArcane_layer3_0212 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			62,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1367,
-			163,
-			36,
-			40
-		},
-		alias = {
-			"crystalArcane_layer3_0213",
-			"crystalArcane_layer3_0247",
-			"crystalArcane_layer3_0248"
-		}
+		size = {214, 146},
+		trim = {108, 62, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1367, 163, 36, 40},
+		alias = {"crystalArcane_layer3_0213", "crystalArcane_layer3_0247", "crystalArcane_layer3_0248"}
 	},
 	crystalArcane_layer3_0214 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1534,
-			218,
-			36,
-			39
-		},
-		alias = {
-			"crystalArcane_layer3_0249"
-		}
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1534, 218, 36, 39},
+		alias = {"crystalArcane_layer3_0249"}
 	},
 	crystalArcane_layer3_0217 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			401,
-			36,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0218"
-		}
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 401, 36, 53},
+		alias = {"crystalArcane_layer3_0218"}
 	},
 	crystalArcane_layer3_0219 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			460,
-			36,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0220"
-		}
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 460, 36, 53},
+		alias = {"crystalArcane_layer3_0220"}
 	},
 	crystalArcane_layer3_0221 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			482,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0222"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 482, 37, 53},
+		alias = {"crystalArcane_layer3_0222"}
 	},
 	crystalArcane_layer3_0223 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			541,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0224"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 541, 37, 53},
+		alias = {"crystalArcane_layer3_0224"}
 	},
 	crystalArcane_layer3_0225 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			600,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0226"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 600, 37, 53},
+		alias = {"crystalArcane_layer3_0226"}
 	},
 	crystalArcane_layer3_0227 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			659,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0228"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 659, 37, 53},
+		alias = {"crystalArcane_layer3_0228"}
 	},
 	crystalArcane_layer3_0229 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			718,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0230"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 718, 37, 53},
+		alias = {"crystalArcane_layer3_0230"}
 	},
 	crystalArcane_layer3_0231 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			777,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0232"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 777, 37, 53},
+		alias = {"crystalArcane_layer3_0232"}
 	},
 	crystalArcane_layer3_0233 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			836,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0234"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 836, 37, 53},
+		alias = {"crystalArcane_layer3_0234"}
 	},
 	crystalArcane_layer3_0235 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			895,
-			37,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0236"
-		}
+		size = {214, 146},
+		trim = {108, 49, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 895, 37, 53},
+		alias = {"crystalArcane_layer3_0236"}
 	},
 	crystalArcane_layer3_0237 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			519,
-			36,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0238"
-		}
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 519, 36, 53},
+		alias = {"crystalArcane_layer3_0238"}
 	},
 	crystalArcane_layer3_0239 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			578,
-			36,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0240"
-		}
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 578, 36, 53},
+		alias = {"crystalArcane_layer3_0240"}
 	},
 	crystalArcane_layer3_0241 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			637,
-			36,
-			53
-		},
-		alias = {
-			"crystalArcane_layer3_0242"
-		}
+		size = {214, 146},
+		trim = {108, 49, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 637, 36, 53},
+		alias = {"crystalArcane_layer3_0242"}
 	},
 	crystalArcane_layer3_0252 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			43,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			218,
-			36,
-			59
-		},
-		alias = {
-			"crystalArcane_layer3_0253"
-		}
+		size = {214, 146},
+		trim = {108, 43, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 218, 36, 59},
+		alias = {"crystalArcane_layer3_0253"}
 	},
 	crystalArcane_layer3_0254 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			40,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			414,
-			37,
-			62
-		},
-		alias = {
-			"crystalArcane_layer3_0255"
-		}
+		size = {214, 146},
+		trim = {108, 40, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 414, 37, 62},
+		alias = {"crystalArcane_layer3_0255"}
 	},
 	crystalArcane_layer3_0256 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			38,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			344,
-			37,
-			64
-		},
-		alias = {
-			"crystalArcane_layer3_0257"
-		}
+		size = {214, 146},
+		trim = {108, 38, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 344, 37, 64},
+		alias = {"crystalArcane_layer3_0257"}
 	},
 	crystalArcane_layer3_0258 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			37,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			273,
-			37,
-			65
-		},
-		alias = {
-			"crystalArcane_layer3_0259"
-		}
+		size = {214, 146},
+		trim = {108, 37, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 273, 37, 65},
+		alias = {"crystalArcane_layer3_0259"}
 	},
 	crystalArcane_layer3_0260 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			59,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1896,
-			113,
-			36,
-			43
-		},
-		alias = {
-			"crystalArcane_layer3_0261"
-		}
+		size = {214, 146},
+		trim = {108, 59, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1896, 113, 36, 43},
+		alias = {"crystalArcane_layer3_0261"}
 	},
 	crystalArcane_layer3_0262 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			64,
-			69,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1683,
-			113,
-			37,
-			38
-		},
-		alias = {
-			"crystalArcane_layer3_0263"
-		}
+		size = {214, 146},
+		trim = {108, 64, 69, 44},
+		a_size = {2048, 1024},
+		f_quad = {1683, 113, 37, 38},
+		alias = {"crystalArcane_layer3_0263"}
 	},
 	crystalArcane_layer3_0264 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			60,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1938,
-			113,
-			36,
-			42
-		},
-		alias = {
-			"crystalArcane_layer3_0265"
-		}
+		size = {214, 146},
+		trim = {108, 60, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1938, 113, 36, 42},
+		alias = {"crystalArcane_layer3_0265"}
 	},
 	crystalArcane_layer3_0266 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			64,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1618,
-			218,
-			36,
-			38
-		},
-		alias = {
-			"crystalArcane_layer3_0267"
-		}
+		size = {214, 146},
+		trim = {108, 64, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1618, 218, 36, 38},
+		alias = {"crystalArcane_layer3_0267"}
 	},
 	crystalArcane_layer3_0268 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			62,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1409,
-			163,
-			36,
-			40
-		},
-		alias = {
-			"crystalArcane_layer3_0269"
-		}
+		size = {214, 146},
+		trim = {108, 62, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1409, 163, 36, 40},
+		alias = {"crystalArcane_layer3_0269"}
 	},
 	crystalArcane_layer3_0270 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			63,
-			70,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1576,
-			218,
-			36,
-			39
-		},
+		size = {214, 146},
+		trim = {108, 63, 70, 44},
+		a_size = {2048, 1024},
+		f_quad = {1576, 218, 36, 39},
 		alias = {
 			"crystalArcane_layer3_0271",
 			"crystalArcane_layer3_0272",
@@ -6998,624 +3543,194 @@ return {
 	},
 	crystalArcane_layer4_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			637,
-			19,
-			14
-		},
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 637, 19, 14},
 		alias = {}
 	},
 	crystalArcane_layer4_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			657,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0003"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 657, 19, 14},
+		alias = {"crystalArcane_layer4_0003"}
 	},
 	crystalArcane_layer4_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			677,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0005"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 677, 19, 14},
+		alias = {"crystalArcane_layer4_0005"}
 	},
 	crystalArcane_layer4_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			697,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0007"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 697, 19, 14},
+		alias = {"crystalArcane_layer4_0007"}
 	},
 	crystalArcane_layer4_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			717,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0009",
-			"crystalArcane_layer4_0034",
-			"crystalArcane_layer4_0035"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 717, 19, 14},
+		alias = {"crystalArcane_layer4_0009", "crystalArcane_layer4_0034", "crystalArcane_layer4_0035"}
 	},
 	crystalArcane_layer4_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			737,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0011"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 737, 19, 14},
+		alias = {"crystalArcane_layer4_0011"}
 	},
 	crystalArcane_layer4_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			757,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0013"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 757, 19, 14},
+		alias = {"crystalArcane_layer4_0013"}
 	},
 	crystalArcane_layer4_0014 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			777,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0015"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 777, 19, 14},
+		alias = {"crystalArcane_layer4_0015"}
 	},
 	crystalArcane_layer4_0016 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			797,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0017"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 797, 19, 14},
+		alias = {"crystalArcane_layer4_0017"}
 	},
 	crystalArcane_layer4_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			817,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0019"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 817, 19, 14},
+		alias = {"crystalArcane_layer4_0019"}
 	},
 	crystalArcane_layer4_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			837,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0021"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 837, 19, 14},
+		alias = {"crystalArcane_layer4_0021"}
 	},
 	crystalArcane_layer4_0022 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			857,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0023"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 857, 19, 14},
+		alias = {"crystalArcane_layer4_0023"}
 	},
 	crystalArcane_layer4_0024 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			877,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0025"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 877, 19, 14},
+		alias = {"crystalArcane_layer4_0025"}
 	},
 	crystalArcane_layer4_0026 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			897,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0027"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 897, 19, 14},
+		alias = {"crystalArcane_layer4_0027"}
 	},
 	crystalArcane_layer4_0028 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			917,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0029"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 917, 19, 14},
+		alias = {"crystalArcane_layer4_0029"}
 	},
 	crystalArcane_layer4_0030 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			937,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0031"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 937, 19, 14},
+		alias = {"crystalArcane_layer4_0031"}
 	},
 	crystalArcane_layer4_0032 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			957,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0033"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 957, 19, 14},
+		alias = {"crystalArcane_layer4_0033"}
 	},
 	crystalArcane_layer4_0036 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			977,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0037"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 977, 19, 14},
+		alias = {"crystalArcane_layer4_0037"}
 	},
 	crystalArcane_layer4_0038 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			997,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0039"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 997, 19, 14},
+		alias = {"crystalArcane_layer4_0039"}
 	},
 	crystalArcane_layer4_0040 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			469,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0041"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1496, 469, 19, 14},
+		alias = {"crystalArcane_layer4_0041"}
 	},
 	crystalArcane_layer4_0042 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1521,
-			469,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0043"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1521, 469, 19, 14},
+		alias = {"crystalArcane_layer4_0043"}
 	},
 	crystalArcane_layer4_0044 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1546,
-			469,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0045"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1546, 469, 19, 14},
+		alias = {"crystalArcane_layer4_0045"}
 	},
 	crystalArcane_layer4_0046 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1571,
-			469,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0047"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1571, 469, 19, 14},
+		alias = {"crystalArcane_layer4_0047"}
 	},
 	crystalArcane_layer4_0048 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1596,
-			469,
-			19,
-			14
-		},
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1596, 469, 19, 14},
 		alias = {
 			"crystalArcane_layer4_0049",
 			"crystalArcane_layer4_0050",
@@ -7632,156 +3747,50 @@ return {
 	},
 	crystalArcane_layer4_0060 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			76,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2026,
-			88,
-			20,
-			19
-		},
-		alias = {
-			"crystalArcane_layer4_0061"
-		}
+		size = {214, 146},
+		trim = {97, 76, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {2026, 88, 20, 19},
+		alias = {"crystalArcane_layer4_0061"}
 	},
 	crystalArcane_layer4_0062 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			73,
-			97,
-			52
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1896,
-			386,
-			20,
-			21
-		},
-		alias = {
-			"crystalArcane_layer4_0063"
-		}
+		size = {214, 146},
+		trim = {97, 73, 97, 52},
+		a_size = {2048, 1024},
+		f_quad = {1896, 386, 20, 21},
+		alias = {"crystalArcane_layer4_0063"}
 	},
 	crystalArcane_layer4_0064 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			70,
-			97,
-			54
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			336,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0065"
-		}
+		size = {214, 146},
+		trim = {97, 70, 97, 54},
+		a_size = {2048, 1024},
+		f_quad = {616, 336, 20, 22},
+		alias = {"crystalArcane_layer4_0065"}
 	},
 	crystalArcane_layer4_0066 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			68,
-			97,
-			56
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			381,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0067"
-		}
+		size = {214, 146},
+		trim = {97, 68, 97, 56},
+		a_size = {2048, 1024},
+		f_quad = {616, 381, 20, 22},
+		alias = {"crystalArcane_layer4_0067"}
 	},
 	crystalArcane_layer4_0068 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			426,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0069"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 426, 20, 22},
+		alias = {"crystalArcane_layer4_0069"}
 	},
 	crystalArcane_layer4_0070 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			471,
-			20,
-			22
-		},
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 471, 20, 22},
 		alias = {
 			"crystalArcane_layer4_0071",
 			"crystalArcane_layer4_0072",
@@ -7896,734 +3905,226 @@ return {
 	},
 	crystalArcane_layer4_0206 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			71,
-			97,
-			53
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			516,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0207"
-		}
+		size = {214, 146},
+		trim = {97, 71, 97, 53},
+		a_size = {2048, 1024},
+		f_quad = {616, 516, 20, 22},
+		alias = {"crystalArcane_layer4_0207"}
 	},
 	crystalArcane_layer4_0208 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			77,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			547,
-			19,
-			18
-		},
-		alias = {
-			"crystalArcane_layer4_0209",
-			"crystalArcane_layer4_0243",
-			"crystalArcane_layer4_0244"
-		}
+		size = {214, 146},
+		trim = {98, 77, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 547, 19, 18},
+		alias = {"crystalArcane_layer4_0209", "crystalArcane_layer4_0243", "crystalArcane_layer4_0244"}
 	},
 	crystalArcane_layer4_0210 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			82,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			611,
-			851,
-			20,
-			13
-		},
-		alias = {
-			"crystalArcane_layer4_0211",
-			"crystalArcane_layer4_0245",
-			"crystalArcane_layer4_0246"
-		}
+		size = {214, 146},
+		trim = {97, 82, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {611, 851, 20, 13},
+		alias = {"crystalArcane_layer4_0211", "crystalArcane_layer4_0245", "crystalArcane_layer4_0246"}
 	},
 	crystalArcane_layer4_0212 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			80,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			595,
-			19,
-			15
-		},
-		alias = {
-			"crystalArcane_layer4_0213",
-			"crystalArcane_layer4_0247",
-			"crystalArcane_layer4_0248"
-		}
+		size = {214, 146},
+		trim = {98, 80, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 595, 19, 15},
+		alias = {"crystalArcane_layer4_0213", "crystalArcane_layer4_0247", "crystalArcane_layer4_0248"}
 	},
 	crystalArcane_layer4_0214 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1621,
-			469,
-			19,
-			14
-		},
-		alias = {
-			"crystalArcane_layer4_0249"
-		}
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1621, 469, 19, 14},
+		alias = {"crystalArcane_layer4_0249"}
 	},
 	crystalArcane_layer4_0217 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			557,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0218"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 557, 20, 22},
+		alias = {"crystalArcane_layer4_0218"}
 	},
 	crystalArcane_layer4_0219 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			597,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0220"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 597, 20, 22},
+		alias = {"crystalArcane_layer4_0220"}
 	},
 	crystalArcane_layer4_0221 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			636,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0222"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 636, 20, 22},
+		alias = {"crystalArcane_layer4_0222"}
 	},
 	crystalArcane_layer4_0223 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			675,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0224"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 675, 20, 22},
+		alias = {"crystalArcane_layer4_0224"}
 	},
 	crystalArcane_layer4_0225 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			714,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0226"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {616, 714, 20, 22},
+		alias = {"crystalArcane_layer4_0226"}
 	},
 	crystalArcane_layer4_0227 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2027,
-			6,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0228"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {2027, 6, 20, 22},
+		alias = {"crystalArcane_layer4_0228"}
 	},
 	crystalArcane_layer4_0229 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2020,
-			310,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0230"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {2020, 310, 20, 22},
+		alias = {"crystalArcane_layer4_0230"}
 	},
 	crystalArcane_layer4_0231 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1726,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0232"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {1726, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0232"}
 	},
 	crystalArcane_layer4_0233 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1752,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0234"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {1752, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0234"}
 	},
 	crystalArcane_layer4_0235 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1778,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0236"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {1778, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0236"}
 	},
 	crystalArcane_layer4_0237 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1804,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0238"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {1804, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0238"}
 	},
 	crystalArcane_layer4_0239 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1830,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0240"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {1830, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0240"}
 	},
 	crystalArcane_layer4_0241 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			67,
-			97,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1856,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0242"
-		}
+		size = {214, 146},
+		trim = {97, 67, 97, 57},
+		a_size = {2048, 1024},
+		f_quad = {1856, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0242"}
 	},
 	crystalArcane_layer4_0252 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			61,
-			97,
-			63
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1882,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0253"
-		}
+		size = {214, 146},
+		trim = {97, 61, 97, 63},
+		a_size = {2048, 1024},
+		f_quad = {1882, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0253"}
 	},
 	crystalArcane_layer4_0254 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			58,
-			97,
-			66
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1908,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0255"
-		}
+		size = {214, 146},
+		trim = {97, 58, 97, 66},
+		a_size = {2048, 1024},
+		f_quad = {1908, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0255"}
 	},
 	crystalArcane_layer4_0256 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			57,
-			97,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1934,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer4_0257"
-		}
+		size = {214, 146},
+		trim = {97, 57, 97, 67},
+		a_size = {2048, 1024},
+		f_quad = {1934, 356, 20, 22},
+		alias = {"crystalArcane_layer4_0257"}
 	},
 	crystalArcane_layer4_0258 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			55,
-			97,
-			68
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			260,
-			20,
-			23
-		},
-		alias = {
-			"crystalArcane_layer4_0259"
-		}
+		size = {214, 146},
+		trim = {97, 55, 97, 68},
+		a_size = {2048, 1024},
+		f_quad = {616, 260, 20, 23},
+		alias = {"crystalArcane_layer4_0259"}
 	},
 	crystalArcane_layer4_0260 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			77,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			571,
-			19,
-			18
-		},
-		alias = {
-			"crystalArcane_layer4_0261"
-		}
+		size = {214, 146},
+		trim = {98, 77, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 571, 19, 18},
+		alias = {"crystalArcane_layer4_0261"}
 	},
 	crystalArcane_layer4_0262 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			82,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			450,
-			20,
-			13
-		},
-		alias = {
-			"crystalArcane_layer4_0263"
-		}
+		size = {214, 146},
+		trim = {97, 82, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1471, 450, 20, 13},
+		alias = {"crystalArcane_layer4_0263"}
 	},
 	crystalArcane_layer4_0264 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			78,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2020,
-			287,
-			20,
-			17
-		},
-		alias = {
-			"crystalArcane_layer4_0265"
-		}
+		size = {214, 146},
+		trim = {97, 78, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {2020, 287, 20, 17},
+		alias = {"crystalArcane_layer4_0265"}
 	},
 	crystalArcane_layer4_0266 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			82,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1497,
-			450,
-			19,
-			13
-		},
-		alias = {
-			"crystalArcane_layer4_0267"
-		}
+		size = {214, 146},
+		trim = {98, 82, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1497, 450, 19, 13},
+		alias = {"crystalArcane_layer4_0267"}
 	},
 	crystalArcane_layer4_0268 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			80,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			1009,
-			20,
-			15
-		},
-		alias = {
-			"crystalArcane_layer4_0269"
-		}
+		size = {214, 146},
+		trim = {97, 80, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1195, 1009, 20, 15},
+		alias = {"crystalArcane_layer4_0269"}
 	},
 	crystalArcane_layer4_0270 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			81,
-			97,
-			51
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1646,
-			469,
-			19,
-			14
-		},
+		size = {214, 146},
+		trim = {98, 81, 97, 51},
+		a_size = {2048, 1024},
+		f_quad = {1646, 469, 19, 14},
 		alias = {
 			"crystalArcane_layer4_0271",
 			"crystalArcane_layer4_0272",
@@ -8678,806 +4179,250 @@ return {
 	},
 	crystalArcane_layer5_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1596,
-			141,
-			20,
-			16
-		},
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1596, 141, 20, 16},
 		alias = {}
 	},
 	crystalArcane_layer5_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2026,
-			411,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0003"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {2026, 411, 20, 16},
+		alias = {"crystalArcane_layer5_0003"}
 	},
 	crystalArcane_layer5_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			450,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0005"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 450, 20, 16},
+		alias = {"crystalArcane_layer5_0005"}
 	},
 	crystalArcane_layer5_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			472,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0007"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 472, 20, 16},
+		alias = {"crystalArcane_layer5_0007"}
 	},
 	crystalArcane_layer5_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			494,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0009",
-			"crystalArcane_layer5_0034",
-			"crystalArcane_layer5_0035"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 494, 20, 16},
+		alias = {"crystalArcane_layer5_0009", "crystalArcane_layer5_0034", "crystalArcane_layer5_0035"}
 	},
 	crystalArcane_layer5_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			516,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0011"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 516, 20, 16},
+		alias = {"crystalArcane_layer5_0011"}
 	},
 	crystalArcane_layer5_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			538,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0013"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 538, 20, 16},
+		alias = {"crystalArcane_layer5_0013"}
 	},
 	crystalArcane_layer5_0014 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			560,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0015"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 560, 20, 16},
+		alias = {"crystalArcane_layer5_0015"}
 	},
 	crystalArcane_layer5_0016 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			582,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0017"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 582, 20, 16},
+		alias = {"crystalArcane_layer5_0017"}
 	},
 	crystalArcane_layer5_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			604,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0019"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 604, 20, 16},
+		alias = {"crystalArcane_layer5_0019"}
 	},
 	crystalArcane_layer5_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			626,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0021"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 626, 20, 16},
+		alias = {"crystalArcane_layer5_0021"}
 	},
 	crystalArcane_layer5_0022 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			648,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0023"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 648, 20, 16},
+		alias = {"crystalArcane_layer5_0023"}
 	},
 	crystalArcane_layer5_0024 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			670,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0025"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 670, 20, 16},
+		alias = {"crystalArcane_layer5_0025"}
 	},
 	crystalArcane_layer5_0026 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			692,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0027"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 692, 20, 16},
+		alias = {"crystalArcane_layer5_0027"}
 	},
 	crystalArcane_layer5_0028 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			714,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0029"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 714, 20, 16},
+		alias = {"crystalArcane_layer5_0029"}
 	},
 	crystalArcane_layer5_0030 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			736,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0031"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 736, 20, 16},
+		alias = {"crystalArcane_layer5_0031"}
 	},
 	crystalArcane_layer5_0032 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			758,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0033"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 758, 20, 16},
+		alias = {"crystalArcane_layer5_0033"}
 	},
 	crystalArcane_layer5_0036 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			780,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0037"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 780, 20, 16},
+		alias = {"crystalArcane_layer5_0037"}
 	},
 	crystalArcane_layer5_0038 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			802,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0039"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 802, 20, 16},
+		alias = {"crystalArcane_layer5_0039"}
 	},
 	crystalArcane_layer5_0040 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			824,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0041"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 824, 20, 16},
+		alias = {"crystalArcane_layer5_0041"}
 	},
 	crystalArcane_layer5_0042 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			846,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0043"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 846, 20, 16},
+		alias = {"crystalArcane_layer5_0043"}
 	},
 	crystalArcane_layer5_0044 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			868,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0045"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 868, 20, 16},
+		alias = {"crystalArcane_layer5_0045"}
 	},
 	crystalArcane_layer5_0046 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			890,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0047"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 890, 20, 16},
+		alias = {"crystalArcane_layer5_0047"}
 	},
 	crystalArcane_layer5_0048 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			912,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0049"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 912, 20, 16},
+		alias = {"crystalArcane_layer5_0049"}
 	},
 	crystalArcane_layer5_0050 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			934,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0051"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 934, 20, 16},
+		alias = {"crystalArcane_layer5_0051"}
 	},
 	crystalArcane_layer5_0052 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			58,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1896,
-			413,
-			20,
-			21
-		},
-		alias = {
-			"crystalArcane_layer5_0053"
-		}
+		size = {214, 146},
+		trim = {71, 58, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1896, 413, 20, 21},
+		alias = {"crystalArcane_layer5_0053"}
 	},
 	crystalArcane_layer5_0054 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			55,
-			123,
-			70
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1922,
-			386,
-			20,
-			21
-		},
-		alias = {
-			"crystalArcane_layer5_0055"
-		}
+		size = {214, 146},
+		trim = {71, 55, 123, 70},
+		a_size = {2048, 1024},
+		f_quad = {1922, 386, 20, 21},
+		alias = {"crystalArcane_layer5_0055"}
 	},
 	crystalArcane_layer5_0056 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			52,
-			123,
-			73
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1922,
-			413,
-			20,
-			21
-		},
-		alias = {
-			"crystalArcane_layer5_0057"
-		}
+		size = {214, 146},
+		trim = {71, 52, 123, 73},
+		a_size = {2048, 1024},
+		f_quad = {1922, 413, 20, 21},
+		alias = {"crystalArcane_layer5_0057"}
 	},
 	crystalArcane_layer5_0058 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			50,
-			123,
-			74
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1960,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0059"
-		}
+		size = {214, 146},
+		trim = {71, 50, 123, 74},
+		a_size = {2048, 1024},
+		f_quad = {1960, 356, 20, 22},
+		alias = {"crystalArcane_layer5_0059"}
 	},
 	crystalArcane_layer5_0060 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1986,
-			356,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0061"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1986, 356, 20, 22},
+		alias = {"crystalArcane_layer5_0061"}
 	},
 	crystalArcane_layer5_0062 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2012,
-			356,
-			20,
-			22
-		},
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {2012, 356, 20, 22},
 		alias = {
 			"crystalArcane_layer5_0063",
 			"crystalArcane_layer5_0064",
@@ -9600,734 +4545,226 @@ return {
 	},
 	crystalArcane_layer5_0206 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			53,
-			123,
-			71
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			1002,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0207"
-		}
+		size = {214, 146},
+		trim = {71, 53, 123, 71},
+		a_size = {2048, 1024},
+		f_quad = {1405, 1002, 20, 22},
+		alias = {"crystalArcane_layer5_0207"}
 	},
 	crystalArcane_layer5_0208 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			59,
-			124,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			469,
-			19,
-			20
-		},
-		alias = {
-			"crystalArcane_layer5_0209"
-		}
+		size = {214, 146},
+		trim = {71, 59, 124, 67},
+		a_size = {2048, 1024},
+		f_quad = {1471, 469, 19, 20},
+		alias = {"crystalArcane_layer5_0209"}
 	},
 	crystalArcane_layer5_0210 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			231,
-			1008,
-			21,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0211",
-			"crystalArcane_layer5_0245",
-			"crystalArcane_layer5_0246"
-		}
+		size = {214, 146},
+		trim = {70, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {231, 1008, 21, 16},
+		alias = {"crystalArcane_layer5_0211", "crystalArcane_layer5_0245", "crystalArcane_layer5_0246"}
 	},
 	crystalArcane_layer5_0212 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			62,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2026,
-			386,
-			20,
-			17
-		},
-		alias = {
-			"crystalArcane_layer5_0213",
-			"crystalArcane_layer5_0247",
-			"crystalArcane_layer5_0248"
-		}
+		size = {214, 146},
+		trim = {71, 62, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {2026, 386, 20, 17},
+		alias = {"crystalArcane_layer5_0213", "crystalArcane_layer5_0247", "crystalArcane_layer5_0248"}
 	},
 	crystalArcane_layer5_0214 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			956,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0249"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 956, 20, 16},
+		alias = {"crystalArcane_layer5_0249"}
 	},
 	crystalArcane_layer5_0217 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1688,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0218"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1688, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0218"}
 	},
 	crystalArcane_layer5_0219 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1688,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0220",
-			"crystalArcane_layer5_0223",
-			"crystalArcane_layer5_0224"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1688, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0220", "crystalArcane_layer5_0223", "crystalArcane_layer5_0224"}
 	},
 	crystalArcane_layer5_0221 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1714,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0222"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1714, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0222"}
 	},
 	crystalArcane_layer5_0225 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1714,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0226"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1714, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0226"}
 	},
 	crystalArcane_layer5_0227 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1740,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0228"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1740, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0228"}
 	},
 	crystalArcane_layer5_0229 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1740,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0230"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1740, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0230"}
 	},
 	crystalArcane_layer5_0231 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1766,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0232"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1766, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0232"}
 	},
 	crystalArcane_layer5_0233 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1766,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0234"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1766, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0234"}
 	},
 	crystalArcane_layer5_0235 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1792,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0236"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1792, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0236"}
 	},
 	crystalArcane_layer5_0237 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1792,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0238"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1792, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0238"}
 	},
 	crystalArcane_layer5_0239 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1818,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0240"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1818, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0240"}
 	},
 	crystalArcane_layer5_0241 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			49,
-			123,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1818,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0242"
-		}
+		size = {214, 146},
+		trim = {71, 49, 123, 75},
+		a_size = {2048, 1024},
+		f_quad = {1818, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0242"}
 	},
 	crystalArcane_layer5_0243 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			59,
-			124,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			495,
-			19,
-			20
-		},
-		alias = {
-			"crystalArcane_layer5_0244"
-		}
+		size = {214, 146},
+		trim = {71, 59, 124, 67},
+		a_size = {2048, 1024},
+		f_quad = {1471, 495, 19, 20},
+		alias = {"crystalArcane_layer5_0244"}
 	},
 	crystalArcane_layer5_0252 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			43,
-			123,
-			81
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1844,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0253"
-		}
+		size = {214, 146},
+		trim = {71, 43, 123, 81},
+		a_size = {2048, 1024},
+		f_quad = {1844, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0253"}
 	},
 	crystalArcane_layer5_0254 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			40,
-			123,
-			84
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1844,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0255"
-		}
+		size = {214, 146},
+		trim = {71, 40, 123, 84},
+		a_size = {2048, 1024},
+		f_quad = {1844, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0255"}
 	},
 	crystalArcane_layer5_0256 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			39,
-			123,
-			85
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1870,
-			386,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0257"
-		}
+		size = {214, 146},
+		trim = {71, 39, 123, 85},
+		a_size = {2048, 1024},
+		f_quad = {1870, 386, 20, 22},
+		alias = {"crystalArcane_layer5_0257"}
 	},
 	crystalArcane_layer5_0258 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			37,
-			123,
-			87
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1870,
-			414,
-			20,
-			22
-		},
-		alias = {
-			"crystalArcane_layer5_0259"
-		}
+		size = {214, 146},
+		trim = {71, 37, 123, 87},
+		a_size = {2048, 1024},
+		f_quad = {1870, 414, 20, 22},
+		alias = {"crystalArcane_layer5_0259"}
 	},
 	crystalArcane_layer5_0260 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			59,
-			124,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			521,
-			19,
-			20
-		},
-		alias = {
-			"crystalArcane_layer5_0261"
-		}
+		size = {214, 146},
+		trim = {71, 59, 124, 67},
+		a_size = {2048, 1024},
+		f_quad = {1471, 521, 19, 20},
+		alias = {"crystalArcane_layer5_0261"}
 	},
 	crystalArcane_layer5_0262 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			64,
-			122,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			237,
-			455,
-			22,
-			15
-		},
-		alias = {
-			"crystalArcane_layer5_0263"
-		}
+		size = {214, 146},
+		trim = {70, 64, 122, 67},
+		a_size = {2048, 1024},
+		f_quad = {237, 455, 22, 15},
+		alias = {"crystalArcane_layer5_0263"}
 	},
 	crystalArcane_layer5_0264 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			60,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2000,
-			386,
-			20,
-			19
-		},
-		alias = {
-			"crystalArcane_layer5_0265"
-		}
+		size = {214, 146},
+		trim = {71, 60, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {2000, 386, 20, 19},
+		alias = {"crystalArcane_layer5_0265"}
 	},
 	crystalArcane_layer5_0266 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			978,
-			20,
-			16
-		},
-		alias = {
-			"crystalArcane_layer5_0267"
-		}
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 978, 20, 16},
+		alias = {"crystalArcane_layer5_0267"}
 	},
 	crystalArcane_layer5_0268 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			62,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2000,
-			411,
-			20,
-			17
-		},
-		alias = {
-			"crystalArcane_layer5_0269"
-		}
+		size = {214, 146},
+		trim = {71, 62, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {2000, 411, 20, 17},
+		alias = {"crystalArcane_layer5_0269"}
 	},
 	crystalArcane_layer5_0270 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			63,
-			123,
-			67
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			1000,
-			20,
-			16
-		},
+		size = {214, 146},
+		trim = {71, 63, 123, 67},
+		a_size = {2048, 1024},
+		f_quad = {1445, 1000, 20, 16},
 		alias = {
 			"crystalArcane_layer5_0271",
 			"crystalArcane_layer5_0272",
@@ -10382,1560 +4819,498 @@ return {
 	},
 	crystalArcane_layer6_0176 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			38,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			63,
-			74,
-			51
-		},
+		size = {214, 146},
+		trim = {71, 38, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 63, 74, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0177 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			38,
-			71,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			842,
-			73,
-			51
-		},
-		alias = {
-			"crystalArcane_layer6_0178"
-		}
+		size = {214, 146},
+		trim = {70, 38, 71, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 842, 73, 51},
+		alias = {"crystalArcane_layer6_0178"}
 	},
 	crystalArcane_layer6_0179 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			39,
-			76,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			456,
-			65,
-			48
-		},
+		size = {214, 146},
+		trim = {73, 39, 76, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 456, 65, 48},
 		alias = {}
 	},
 	crystalArcane_layer6_0180 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			39,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			863,
-			72,
-			49
-		},
+		size = {214, 146},
+		trim = {71, 39, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {727, 863, 72, 49},
 		alias = {}
 	},
 	crystalArcane_layer6_0181 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			38,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			758,
-			69,
-			50
-		},
+		size = {214, 146},
+		trim = {74, 38, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 758, 69, 50},
 		alias = {}
 	},
 	crystalArcane_layer6_0182 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			38,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			751,
-			72,
-			50
-		},
+		size = {214, 146},
+		trim = {71, 38, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {727, 751, 72, 50},
 		alias = {}
 	},
 	crystalArcane_layer6_0183 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			38,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			120,
-			74,
-			51
-		},
+		size = {214, 146},
+		trim = {71, 38, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 120, 74, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0184 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			38,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			177,
-			74,
-			51
-		},
+		size = {214, 146},
+		trim = {71, 38, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 177, 74, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0185 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			38,
-			71,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			899,
-			73,
-			51
-		},
+		size = {214, 146},
+		trim = {70, 38, 71, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 899, 73, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0186 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			38,
-			71,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			956,
-			73,
-			51
-		},
+		size = {214, 146},
+		trim = {70, 38, 71, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 956, 73, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0187 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			38,
-			72,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			409,
-			70,
-			50
-		},
+		size = {214, 146},
+		trim = {72, 38, 72, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 409, 70, 50},
 		alias = {}
 	},
 	crystalArcane_layer6_0188 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			39,
-			72,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			918,
-			72,
-			49
-		},
+		size = {214, 146},
+		trim = {70, 39, 72, 58},
+		a_size = {2048, 1024},
+		f_quad = {727, 918, 72, 49},
 		alias = {}
 	},
 	crystalArcane_layer6_0189 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			38,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			353,
-			71,
-			50
-		},
+		size = {214, 146},
+		trim = {72, 38, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 353, 71, 50},
 		alias = {}
 	},
 	crystalArcane_layer6_0190 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			38,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			234,
-			74,
-			51
-		},
+		size = {214, 146},
+		trim = {71, 38, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 234, 74, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0191 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			38,
-			71,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			6,
-			73,
-			51
-		},
+		size = {214, 146},
+		trim = {70, 38, 71, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 6, 73, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0192 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			39,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			120,
-			73,
-			50
-		},
+		size = {214, 146},
+		trim = {71, 39, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 120, 73, 50},
 		alias = {}
 	},
 	crystalArcane_layer6_0193 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			39,
-			72,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			973,
-			72,
-			49
-		},
+		size = {214, 146},
+		trim = {70, 39, 72, 58},
+		a_size = {2048, 1024},
+		f_quad = {727, 973, 72, 49},
 		alias = {}
 	},
 	crystalArcane_layer6_0194 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			39,
-			74,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			814,
-			69,
-			49
-		},
+		size = {214, 146},
+		trim = {71, 39, 74, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 814, 69, 49},
 		alias = {}
 	},
 	crystalArcane_layer6_0195 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			39,
-			77,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			657,
-			63,
-			48
-		},
+		size = {214, 146},
+		trim = {74, 39, 77, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 657, 63, 48},
 		alias = {}
 	},
 	crystalArcane_layer6_0196 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			77,
-			38,
-			74,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			602,
-			63,
-			49
-		},
+		size = {214, 146},
+		trim = {77, 38, 74, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 602, 63, 49},
 		alias = {}
 	},
 	crystalArcane_layer6_0197 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			78,
-			38,
-			72,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			546,
-			64,
-			50
-		},
+		size = {214, 146},
+		trim = {78, 38, 72, 58},
+		a_size = {2048, 1024},
+		f_quad = {884, 546, 64, 50},
 		alias = {}
 	},
 	crystalArcane_layer6_0198 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			76,
-			37,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			6,
-			67,
-			51
-		},
+		size = {214, 146},
+		trim = {76, 37, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {884, 6, 67, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0199 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			37,
-			70,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			587,
-			69,
-			51
-		},
+		size = {214, 146},
+		trim = {75, 37, 70, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 587, 69, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0200 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			37,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			237,
-			71,
-			52
-		},
+		size = {214, 146},
+		trim = {74, 37, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {806, 237, 71, 52},
 		alias = {}
 	},
 	crystalArcane_layer6_0201 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			37,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			578,
-			72,
-			52
-		},
+		size = {214, 146},
+		trim = {73, 37, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 578, 72, 52},
 		alias = {}
 	},
 	crystalArcane_layer6_0202 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			37,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			552,
-			73,
-			52
-		},
+		size = {214, 146},
+		trim = {72, 37, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 552, 73, 52},
 		alias = {}
 	},
 	crystalArcane_layer6_0203 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			37,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			610,
-			73,
-			52
-		},
+		size = {214, 146},
+		trim = {72, 37, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 610, 73, 52},
 		alias = {}
 	},
 	crystalArcane_layer6_0204 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			37,
-			69,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			668,
-			73,
-			52
-		},
+		size = {214, 146},
+		trim = {72, 37, 69, 57},
+		a_size = {2048, 1024},
+		f_quad = {645, 668, 73, 52},
 		alias = {}
 	},
 	crystalArcane_layer6_0205 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			37,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			636,
-			72,
-			52
-		},
+		size = {214, 146},
+		trim = {72, 37, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 636, 72, 52},
 		alias = {}
 	},
 	crystalArcane_layer6_0206 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			38,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			694,
-			72,
-			51
-		},
+		size = {214, 146},
+		trim = {72, 38, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 694, 72, 51},
 		alias = {}
 	},
 	crystalArcane_layer6_0207 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			39,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			807,
-			72,
-			50
-		},
+		size = {214, 146},
+		trim = {72, 39, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 807, 72, 50},
 		alias = {}
 	},
 	crystalArcane_layer7_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			263,
-			35,
-			40
-		},
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1405, 263, 35, 40},
 		alias = {}
 	},
 	crystalArcane_layer7_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1446,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0003"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1446, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0003"}
 	},
 	crystalArcane_layer7_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1487,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0005"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1487, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0005"}
 	},
 	crystalArcane_layer7_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1528,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0007"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1528, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0007"}
 	},
 	crystalArcane_layer7_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1569,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0009",
-			"crystalArcane_layer7_0034",
-			"crystalArcane_layer7_0035"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1569, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0009", "crystalArcane_layer7_0034", "crystalArcane_layer7_0035"}
 	},
 	crystalArcane_layer7_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1610,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0011"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1610, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0011"}
 	},
 	crystalArcane_layer7_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1651,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0013"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1651, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0013"}
 	},
 	crystalArcane_layer7_0014 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1692,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0015"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1692, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0015"}
 	},
 	crystalArcane_layer7_0016 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1733,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0017"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1733, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0017"}
 	},
 	crystalArcane_layer7_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1774,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0019"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1774, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0019"}
 	},
 	crystalArcane_layer7_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1815,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0021"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1815, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0021"}
 	},
 	crystalArcane_layer7_0022 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1856,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0023",
-			"crystalArcane_layer7_0056",
-			"crystalArcane_layer7_0057"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1856, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0023", "crystalArcane_layer7_0056", "crystalArcane_layer7_0057"}
 	},
 	crystalArcane_layer7_0024 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1897,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0025"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1897, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0025"}
 	},
 	crystalArcane_layer7_0026 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1938,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0027"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1938, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0027"}
 	},
 	crystalArcane_layer7_0028 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1979,
-			263,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0029"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1979, 263, 35, 40},
+		alias = {"crystalArcane_layer7_0029"}
 	},
 	crystalArcane_layer7_0030 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0031"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0031"}
 	},
 	crystalArcane_layer7_0032 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			356,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0033"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 356, 35, 40},
+		alias = {"crystalArcane_layer7_0033"}
 	},
 	crystalArcane_layer7_0036 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			402,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0037"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 402, 35, 40},
+		alias = {"crystalArcane_layer7_0037"}
 	},
 	crystalArcane_layer7_0038 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			448,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0039"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 448, 35, 40},
+		alias = {"crystalArcane_layer7_0039"}
 	},
 	crystalArcane_layer7_0040 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			494,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0041"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 494, 35, 40},
+		alias = {"crystalArcane_layer7_0041"}
 	},
 	crystalArcane_layer7_0042 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			540,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0043"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 540, 35, 40},
+		alias = {"crystalArcane_layer7_0043"}
 	},
 	crystalArcane_layer7_0044 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			586,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0045"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 586, 35, 40},
+		alias = {"crystalArcane_layer7_0045"}
 	},
 	crystalArcane_layer7_0046 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			632,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0047"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 632, 35, 40},
+		alias = {"crystalArcane_layer7_0047"}
 	},
 	crystalArcane_layer7_0048 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			678,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0049",
-			"crystalArcane_layer7_0050",
-			"crystalArcane_layer7_0051",
-			"crystalArcane_layer7_0052",
-			"crystalArcane_layer7_0053",
-			"crystalArcane_layer7_0054",
-			"crystalArcane_layer7_0055"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1323, 678, 35, 40},
+		alias = {"crystalArcane_layer7_0049", "crystalArcane_layer7_0050", "crystalArcane_layer7_0051", "crystalArcane_layer7_0052", "crystalArcane_layer7_0053", "crystalArcane_layer7_0054", "crystalArcane_layer7_0055"}
 	},
 	crystalArcane_layer7_0058 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			43,
-			90,
-			63
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			724,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0059"
-		}
+		size = {214, 146},
+		trim = {89, 43, 90, 63},
+		a_size = {2048, 1024},
+		f_quad = {1323, 724, 35, 40},
+		alias = {"crystalArcane_layer7_0059"}
 	},
 	crystalArcane_layer7_0060 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			40,
-			90,
-			66
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			770,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0061"
-		}
+		size = {214, 146},
+		trim = {89, 40, 90, 66},
+		a_size = {2048, 1024},
+		f_quad = {1323, 770, 35, 40},
+		alias = {"crystalArcane_layer7_0061"}
 	},
 	crystalArcane_layer7_0062 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			37,
-			90,
-			69
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			816,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0063"
-		}
+		size = {214, 146},
+		trim = {89, 37, 90, 69},
+		a_size = {2048, 1024},
+		f_quad = {1323, 816, 35, 40},
+		alias = {"crystalArcane_layer7_0063"}
 	},
 	crystalArcane_layer7_0064 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			35,
-			90,
-			71
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			862,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0065"
-		}
+		size = {214, 146},
+		trim = {89, 35, 90, 71},
+		a_size = {2048, 1024},
+		f_quad = {1323, 862, 35, 40},
+		alias = {"crystalArcane_layer7_0065"}
 	},
 	crystalArcane_layer7_0066 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			33,
-			90,
-			73
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			908,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0067"
-		}
+		size = {214, 146},
+		trim = {89, 33, 90, 73},
+		a_size = {2048, 1024},
+		f_quad = {1323, 908, 35, 40},
+		alias = {"crystalArcane_layer7_0067"}
 	},
 	crystalArcane_layer7_0068 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			31,
-			90,
-			75
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			954,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0069"
-		}
+		size = {214, 146},
+		trim = {89, 31, 90, 75},
+		a_size = {2048, 1024},
+		f_quad = {1323, 954, 35, 40},
+		alias = {"crystalArcane_layer7_0069"}
 	},
 	crystalArcane_layer7_0070 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			310,
-			35,
-			40
-		},
+		size = {214, 146},
+		trim = {89, 29, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1364, 310, 35, 40},
 		alias = {
 			"crystalArcane_layer7_0071",
 			"crystalArcane_layer7_0072",
@@ -12044,512 +5419,154 @@ return {
 	},
 	crystalArcane_layer7_0170 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0171"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1405, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0171"}
 	},
 	crystalArcane_layer7_0172 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1446,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0173"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1446, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0173"}
 	},
 	crystalArcane_layer7_0174 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1744,
-			218,
-			35,
-			39
-		},
-		alias = {
-			"crystalArcane_layer7_0175"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1744, 218, 35, 39},
+		alias = {"crystalArcane_layer7_0175"}
 	},
 	crystalArcane_layer7_0176 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1785,
-			218,
-			35,
-			39
-		},
-		alias = {
-			"crystalArcane_layer7_0177"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1785, 218, 35, 39},
+		alias = {"crystalArcane_layer7_0177"}
 	},
 	crystalArcane_layer7_0178 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1487,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0179"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1487, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0179"}
 	},
 	crystalArcane_layer7_0180 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1528,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0181"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1528, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0181"}
 	},
 	crystalArcane_layer7_0182 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1569,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0183"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1569, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0183"}
 	},
 	crystalArcane_layer7_0184 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			359,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0185"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 359, 35, 41},
+		alias = {"crystalArcane_layer7_0185"}
 	},
 	crystalArcane_layer7_0186 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			406,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0187"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 406, 35, 41},
+		alias = {"crystalArcane_layer7_0187"}
 	},
 	crystalArcane_layer7_0188 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			453,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0189"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 453, 35, 41},
+		alias = {"crystalArcane_layer7_0189"}
 	},
 	crystalArcane_layer7_0190 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			500,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0191"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 500, 35, 41},
+		alias = {"crystalArcane_layer7_0191"}
 	},
 	crystalArcane_layer7_0192 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			547,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0193",
-			"crystalArcane_layer7_0194",
-			"crystalArcane_layer7_0195"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 547, 35, 41},
+		alias = {"crystalArcane_layer7_0193", "crystalArcane_layer7_0194", "crystalArcane_layer7_0195"}
 	},
 	crystalArcane_layer7_0196 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			594,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0197",
-			"crystalArcane_layer7_0235",
-			"crystalArcane_layer7_0236"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 594, 35, 41},
+		alias = {"crystalArcane_layer7_0197", "crystalArcane_layer7_0235", "crystalArcane_layer7_0236"}
 	},
 	crystalArcane_layer7_0198 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1610,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0199",
-			"crystalArcane_layer7_0241",
-			"crystalArcane_layer7_0242"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1610, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0199", "crystalArcane_layer7_0241", "crystalArcane_layer7_0242"}
 	},
 	crystalArcane_layer7_0200 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1651,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0201",
-			"crystalArcane_layer7_0202",
-			"crystalArcane_layer7_0203",
-			"crystalArcane_layer7_0204",
-			"crystalArcane_layer7_0205",
-			"crystalArcane_layer7_0206",
-			"crystalArcane_layer7_0207"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1651, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0201", "crystalArcane_layer7_0202", "crystalArcane_layer7_0203", "crystalArcane_layer7_0204", "crystalArcane_layer7_0205", "crystalArcane_layer7_0206", "crystalArcane_layer7_0207"}
 	},
 	crystalArcane_layer7_0208 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			91,
-			41,
-			91,
-			65
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			828,
-			32,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0209",
-			"crystalArcane_layer7_0243",
-			"crystalArcane_layer7_0244"
-		}
+		size = {214, 146},
+		trim = {91, 41, 91, 65},
+		a_size = {2048, 1024},
+		f_quad = {1405, 828, 32, 40},
+		alias = {"crystalArcane_layer7_0209", "crystalArcane_layer7_0243", "crystalArcane_layer7_0244"}
 	},
 	crystalArcane_layer7_0210 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			47,
-			89,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1660,
-			218,
-			36,
-			38
-		},
-		alias = {
-			"crystalArcane_layer7_0211",
-			"crystalArcane_layer7_0245",
-			"crystalArcane_layer7_0246"
-		}
+		size = {214, 146},
+		trim = {89, 47, 89, 61},
+		a_size = {2048, 1024},
+		f_quad = {1660, 218, 36, 38},
+		alias = {"crystalArcane_layer7_0211", "crystalArcane_layer7_0245", "crystalArcane_layer7_0246"}
 	},
 	crystalArcane_layer7_0212 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			90,
-			44,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			488,
-			34,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0213",
-			"crystalArcane_layer7_0247",
-			"crystalArcane_layer7_0248"
-		}
+		size = {214, 146},
+		trim = {90, 44, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1405, 488, 34, 41},
+		alias = {"crystalArcane_layer7_0213", "crystalArcane_layer7_0247", "crystalArcane_layer7_0248"}
 	},
 	crystalArcane_layer7_0214 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1692,
-			310,
-			35,
-			40
-		},
+		size = {214, 146},
+		trim = {89, 45, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1692, 310, 35, 40},
 		alias = {
 			"crystalArcane_layer7_0249",
 			"crystalArcane_layer7_0270",
@@ -12606,1586 +5623,490 @@ return {
 	},
 	crystalArcane_layer7_0217 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1826,
-			218,
-			35,
-			39
-		},
-		alias = {
-			"crystalArcane_layer7_0218"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1826, 218, 35, 39},
+		alias = {"crystalArcane_layer7_0218"}
 	},
 	crystalArcane_layer7_0219 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1733,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0220"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1733, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0220"}
 	},
 	crystalArcane_layer7_0221 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			641,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0222"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 641, 35, 41},
+		alias = {"crystalArcane_layer7_0222"}
 	},
 	crystalArcane_layer7_0223 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			688,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0224"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 688, 35, 41},
+		alias = {"crystalArcane_layer7_0224"}
 	},
 	crystalArcane_layer7_0225 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			735,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0226"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 735, 35, 41},
+		alias = {"crystalArcane_layer7_0226"}
 	},
 	crystalArcane_layer7_0227 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			782,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0228"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 782, 35, 41},
+		alias = {"crystalArcane_layer7_0228"}
 	},
 	crystalArcane_layer7_0229 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			829,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0230"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 829, 35, 41},
+		alias = {"crystalArcane_layer7_0230"}
 	},
 	crystalArcane_layer7_0231 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			876,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0232"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 876, 35, 41},
+		alias = {"crystalArcane_layer7_0232"}
 	},
 	crystalArcane_layer7_0233 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			923,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0234"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 76},
+		a_size = {2048, 1024},
+		f_quad = {1282, 923, 35, 41},
+		alias = {"crystalArcane_layer7_0234"}
 	},
 	crystalArcane_layer7_0237 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			30,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1867,
-			218,
-			35,
-			39
-		},
-		alias = {
-			"crystalArcane_layer7_0238"
-		}
+		size = {214, 146},
+		trim = {89, 30, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1867, 218, 35, 39},
+		alias = {"crystalArcane_layer7_0238"}
 	},
 	crystalArcane_layer7_0239 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			29,
-			90,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1774,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0240"
-		}
+		size = {214, 146},
+		trim = {89, 29, 90, 77},
+		a_size = {2048, 1024},
+		f_quad = {1774, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0240"}
 	},
 	crystalArcane_layer7_0252 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			23,
-			90,
-			82
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			970,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0253"
-		}
+		size = {214, 146},
+		trim = {89, 23, 90, 82},
+		a_size = {2048, 1024},
+		f_quad = {1282, 970, 35, 41},
+		alias = {"crystalArcane_layer7_0253"}
 	},
 	crystalArcane_layer7_0254 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			20,
-			90,
-			85
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			263,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0255"
-		}
+		size = {214, 146},
+		trim = {89, 20, 90, 85},
+		a_size = {2048, 1024},
+		f_quad = {1323, 263, 35, 41},
+		alias = {"crystalArcane_layer7_0255"}
 	},
 	crystalArcane_layer7_0256 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			19,
-			90,
-			86
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			263,
-			35,
-			41
-		},
-		alias = {
-			"crystalArcane_layer7_0257"
-		}
+		size = {214, 146},
+		trim = {89, 19, 90, 86},
+		a_size = {2048, 1024},
+		f_quad = {1364, 263, 35, 41},
+		alias = {"crystalArcane_layer7_0257"}
 	},
 	crystalArcane_layer7_0258 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			18,
-			90,
-			88
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1815,
-			310,
-			35,
-			40
-		},
-		alias = {
-			"crystalArcane_layer7_0259"
-		}
+		size = {214, 146},
+		trim = {89, 18, 90, 88},
+		a_size = {2048, 1024},
+		f_quad = {1815, 310, 35, 40},
+		alias = {"crystalArcane_layer7_0259"}
 	},
 	crystalArcane_layer7_0260 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			45,
-			90,
-			62
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1908,
-			218,
-			35,
-			39
-		},
-		alias = {
-			"crystalArcane_layer7_0261"
-		}
+		size = {214, 146},
+		trim = {89, 45, 90, 62},
+		a_size = {2048, 1024},
+		f_quad = {1908, 218, 35, 39},
+		alias = {"crystalArcane_layer7_0261"}
 	},
 	crystalArcane_layer7_0262 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			88,
-			50,
-			88,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1420,
-			113,
-			38,
-			35
-		},
-		alias = {
-			"crystalArcane_layer7_0263"
-		}
+		size = {214, 146},
+		trim = {88, 50, 88, 61},
+		a_size = {2048, 1024},
+		f_quad = {1420, 113, 38, 35},
+		alias = {"crystalArcane_layer7_0263"}
 	},
 	crystalArcane_layer7_0264 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			90,
-			42,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			439,
-			34,
-			43
-		},
-		alias = {
-			"crystalArcane_layer7_0265"
-		}
+		size = {214, 146},
+		trim = {90, 42, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1405, 439, 34, 43},
+		alias = {"crystalArcane_layer7_0265"}
 	},
 	crystalArcane_layer7_0266 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			47,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1949,
-			218,
-			35,
-			38
-		},
-		alias = {
-			"crystalArcane_layer7_0267"
-		}
+		size = {214, 146},
+		trim = {89, 47, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1949, 218, 35, 38},
+		alias = {"crystalArcane_layer7_0267"}
 	},
 	crystalArcane_layer7_0268 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			89,
-			43,
-			90,
-			61
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			263,
-			35,
-			42
-		},
-		alias = {
-			"crystalArcane_layer7_0269"
-		}
+		size = {214, 146},
+		trim = {89, 43, 90, 61},
+		a_size = {2048, 1024},
+		f_quad = {1282, 263, 35, 42},
+		alias = {"crystalArcane_layer7_0269"}
 	},
 	crystalArcane_layer8_0067 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			55,
-			125,
-			79
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			241,
-			571,
-			15,
-			12
-		},
-		alias = {
-			"crystalArcane_layer8_0068"
-		}
+		size = {214, 146},
+		trim = {74, 55, 125, 79},
+		a_size = {2048, 1024},
+		f_quad = {241, 571, 15, 12},
+		alias = {"crystalArcane_layer8_0068"}
 	},
 	crystalArcane_layer8_0069 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			54,
-			125,
-			78
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1671,
-			469,
-			16,
-			14
-		},
-		alias = {
-			"crystalArcane_layer8_0070"
-		}
+		size = {214, 146},
+		trim = {73, 54, 125, 78},
+		a_size = {2048, 1024},
+		f_quad = {1671, 469, 16, 14},
+		alias = {"crystalArcane_layer8_0070"}
 	},
 	crystalArcane_layer8_0071 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			70,
-			53,
-			125,
-			78
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1471,
-			616,
-			19,
-			15
-		},
-		alias = {
-			"crystalArcane_layer8_0072"
-		}
+		size = {214, 146},
+		trim = {70, 53, 125, 78},
+		a_size = {2048, 1024},
+		f_quad = {1471, 616, 19, 15},
+		alias = {"crystalArcane_layer8_0072"}
 	},
 	crystalArcane_layer8_0073 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			51,
-			125,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			739,
-			17,
-			19
-		},
-		alias = {
-			"crystalArcane_layer8_0074"
-		}
+		size = {214, 146},
+		trim = {72, 51, 125, 76},
+		a_size = {2048, 1024},
+		f_quad = {1496, 739, 17, 19},
+		alias = {"crystalArcane_layer8_0074"}
 	},
 	crystalArcane_layer8_0075 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			52,
-			125,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			764,
-			17,
-			18
-		},
-		alias = {
-			"crystalArcane_layer8_0076"
-		}
+		size = {214, 146},
+		trim = {72, 52, 125, 76},
+		a_size = {2048, 1024},
+		f_quad = {1496, 764, 17, 18},
+		alias = {"crystalArcane_layer8_0076"}
 	},
 	crystalArcane_layer8_0077 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			51,
-			125,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			583,
-			18,
-			19
-		},
-		alias = {
-			"crystalArcane_layer8_0078"
-		}
+		size = {214, 146},
+		trim = {71, 51, 125, 76},
+		a_size = {2048, 1024},
+		f_quad = {1496, 583, 18, 19},
+		alias = {"crystalArcane_layer8_0078"}
 	},
 	crystalArcane_layer8_0085 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			101,
-			73,
-			100,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2035,
-			49,
-			13,
-			14
-		},
-		alias = {
-			"crystalArcane_layer8_0086"
-		}
+		size = {214, 146},
+		trim = {101, 73, 100, 59},
+		a_size = {2048, 1024},
+		f_quad = {2035, 49, 13, 14},
+		alias = {"crystalArcane_layer8_0086"}
 	},
 	crystalArcane_layer8_0087 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			101,
-			72,
-			98,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			964,
-			15,
-			15
-		},
-		alias = {
-			"crystalArcane_layer8_0088"
-		}
+		size = {214, 146},
+		trim = {101, 72, 98, 59},
+		a_size = {2048, 1024},
+		f_quad = {1496, 964, 15, 15},
+		alias = {"crystalArcane_layer8_0088"}
 	},
 	crystalArcane_layer8_0089 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			101,
-			71,
-			95,
-			60
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			657,
-			18,
-			15
-		},
-		alias = {
-			"crystalArcane_layer8_0090"
-		}
+		size = {214, 146},
+		trim = {101, 71, 95, 60},
+		a_size = {2048, 1024},
+		f_quad = {1496, 657, 18, 15},
+		alias = {"crystalArcane_layer8_0090"}
 	},
 	crystalArcane_layer8_0091 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			103,
-			70,
-			96,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			939,
-			15,
-			19
-		},
-		alias = {
-			"crystalArcane_layer8_0092"
-		}
+		size = {214, 146},
+		trim = {103, 70, 96, 57},
+		a_size = {2048, 1024},
+		f_quad = {1496, 939, 15, 19},
+		alias = {"crystalArcane_layer8_0092"}
 	},
 	crystalArcane_layer8_0093 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			101,
-			70,
-			96,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			788,
-			17,
-			18
-		},
-		alias = {
-			"crystalArcane_layer8_0094"
-		}
+		size = {214, 146},
+		trim = {101, 70, 96, 58},
+		a_size = {2048, 1024},
+		f_quad = {1496, 788, 17, 18},
+		alias = {"crystalArcane_layer8_0094"}
 	},
 	crystalArcane_layer8_0095 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			100,
-			70,
-			96,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			633,
-			18,
-			18
-		},
-		alias = {
-			"crystalArcane_layer8_0096"
-		}
+		size = {214, 146},
+		trim = {100, 70, 96, 58},
+		a_size = {2048, 1024},
+		f_quad = {1496, 633, 18, 18},
+		alias = {"crystalArcane_layer8_0096"}
 	},
 	crystalArcane_layer8_0122 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			126,
-			54,
-			74,
-			78
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1693,
-			469,
-			14,
-			14
-		},
-		alias = {
-			"crystalArcane_layer8_0123"
-		}
+		size = {214, 146},
+		trim = {126, 54, 74, 78},
+		a_size = {2048, 1024},
+		f_quad = {1693, 469, 14, 14},
+		alias = {"crystalArcane_layer8_0123"}
 	},
 	crystalArcane_layer8_0124 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			127,
-			53,
-			72,
-			78
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			985,
-			15,
-			15
-		},
-		alias = {
-			"crystalArcane_layer8_0125"
-		}
+		size = {214, 146},
+		trim = {127, 53, 72, 78},
+		a_size = {2048, 1024},
+		f_quad = {1496, 985, 15, 15},
+		alias = {"crystalArcane_layer8_0125"}
 	},
 	crystalArcane_layer8_0126 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			126,
-			52,
-			70,
-			79
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			678,
-			18,
-			15
-		},
-		alias = {
-			"crystalArcane_layer8_0127"
-		}
+		size = {214, 146},
+		trim = {126, 52, 70, 79},
+		a_size = {2048, 1024},
+		f_quad = {1496, 678, 18, 15},
+		alias = {"crystalArcane_layer8_0127"}
 	},
 	crystalArcane_layer8_0128 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			128,
-			51,
-			70,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			914,
-			16,
-			19
-		},
-		alias = {
-			"crystalArcane_layer8_0129"
-		}
+		size = {214, 146},
+		trim = {128, 51, 70, 76},
+		a_size = {2048, 1024},
+		f_quad = {1496, 914, 16, 19},
+		alias = {"crystalArcane_layer8_0129"}
 	},
 	crystalArcane_layer8_0130 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			126,
-			51,
-			70,
-			76
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			608,
-			18,
-			19
-		},
-		alias = {
-			"crystalArcane_layer8_0131"
-		}
+		size = {214, 146},
+		trim = {126, 51, 70, 76},
+		a_size = {2048, 1024},
+		f_quad = {1496, 608, 18, 19},
+		alias = {"crystalArcane_layer8_0131"}
 	},
 	crystalArcane_layer8_0132 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			126,
-			51,
-			71,
-			77
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			812,
-			17,
-			18
-		},
-		alias = {
-			"crystalArcane_layer8_0133"
-		}
+		size = {214, 146},
+		trim = {126, 51, 71, 77},
+		a_size = {2048, 1024},
+		f_quad = {1496, 812, 17, 18},
+		alias = {"crystalArcane_layer8_0133"}
 	},
 	crystalArcane_layer8_0168 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			37,
-			74,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			288,
-			65,
-			50
-		},
-		alias = {
-			"crystalArcane_layer8_0169"
-		}
+		size = {214, 146},
+		trim = {75, 37, 74, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 288, 65, 50},
+		alias = {"crystalArcane_layer8_0169"}
 	},
 	crystalArcane_layer8_0170 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			36,
-			72,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			644,
-			69,
-			51
-		},
-		alias = {
-			"crystalArcane_layer8_0171"
-		}
+		size = {214, 146},
+		trim = {73, 36, 72, 59},
+		a_size = {2048, 1024},
+		f_quad = {806, 644, 69, 51},
+		alias = {"crystalArcane_layer8_0171"}
 	},
 	crystalArcane_layer8_0172 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			36,
-			70,
-			60
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			176,
-			73,
-			50
-		},
-		alias = {
-			"crystalArcane_layer8_0173"
-		}
+		size = {214, 146},
+		trim = {71, 36, 70, 60},
+		a_size = {2048, 1024},
+		f_quad = {727, 176, 73, 50},
+		alias = {"crystalArcane_layer8_0173"}
 	},
 	crystalArcane_layer8_0174 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			36,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			401,
-			72,
-			53
-		},
-		alias = {
-			"crystalArcane_layer8_0175"
-		}
+		size = {214, 146},
+		trim = {72, 36, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 401, 72, 53},
+		alias = {"crystalArcane_layer8_0175"}
 	},
 	crystalArcane_layer8_0176 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			36,
-			70,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			726,
-			73,
-			52
-		},
-		alias = {
-			"crystalArcane_layer8_0177"
-		}
+		size = {214, 146},
+		trim = {71, 36, 70, 58},
+		a_size = {2048, 1024},
+		f_quad = {645, 726, 73, 52},
+		alias = {"crystalArcane_layer8_0177"}
 	},
 	crystalArcane_layer8_0178 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			36,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			295,
-			71,
-			52
-		},
-		alias = {
-			"crystalArcane_layer8_0179"
-		}
+		size = {214, 146},
+		trim = {72, 36, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 295, 71, 52},
+		alias = {"crystalArcane_layer8_0179"}
 	},
 	crystalArcane_layer8_0215 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			37,
-			74,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			344,
-			65,
-			50
-		},
-		alias = {
-			"crystalArcane_layer8_0216"
-		}
+		size = {214, 146},
+		trim = {75, 37, 74, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 344, 65, 50},
+		alias = {"crystalArcane_layer8_0216"}
 	},
 	crystalArcane_layer8_0217 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			35,
-			72,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			529,
-			69,
-			52
-		},
-		alias = {
-			"crystalArcane_layer8_0218"
-		}
+		size = {214, 146},
+		trim = {73, 35, 72, 59},
+		a_size = {2048, 1024},
+		f_quad = {806, 529, 69, 52},
+		alias = {"crystalArcane_layer8_0218"}
 	},
 	crystalArcane_layer8_0219 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			34,
-			70,
-			60
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			784,
-			73,
-			52
-		},
-		alias = {
-			"crystalArcane_layer8_0220"
-		}
+		size = {214, 146},
+		trim = {71, 34, 70, 60},
+		a_size = {2048, 1024},
+		f_quad = {645, 784, 73, 52},
+		alias = {"crystalArcane_layer8_0220"}
 	},
 	crystalArcane_layer8_0221 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			36,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			460,
-			72,
-			53
-		},
-		alias = {
-			"crystalArcane_layer8_0222"
-		}
+		size = {214, 146},
+		trim = {72, 36, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 460, 72, 53},
+		alias = {"crystalArcane_layer8_0222"}
 	},
 	crystalArcane_layer8_0223 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			28,
-			70,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			291,
-			73,
-			60
-		},
-		alias = {
-			"crystalArcane_layer8_0224"
-		}
+		size = {214, 146},
+		trim = {71, 28, 70, 58},
+		a_size = {2048, 1024},
+		f_quad = {645, 291, 73, 60},
+		alias = {"crystalArcane_layer8_0224"}
 	},
 	crystalArcane_layer8_0225 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			26,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			36,
-			71,
-			62
-		},
-		alias = {
-			"crystalArcane_layer8_0226"
-		}
+		size = {214, 146},
+		trim = {72, 26, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 36, 71, 62},
+		alias = {"crystalArcane_layer8_0226"}
 	},
 	crystalArcane_layer8_0227 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			96,
-			26,
-			97,
-			104
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			502,
-			978,
-			21,
-			16
-		},
-		alias = {
-			"crystalArcane_layer8_0228"
-		}
+		size = {214, 146},
+		trim = {96, 26, 97, 104},
+		a_size = {2048, 1024},
+		f_quad = {502, 978, 21, 16},
+		alias = {"crystalArcane_layer8_0228"}
 	},
 	crystalArcane_layer8_0229 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			25,
-			99,
-			100
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			529,
-			18,
-			21
-		},
-		alias = {
-			"crystalArcane_layer8_0230"
-		}
+		size = {214, 146},
+		trim = {97, 25, 99, 100},
+		a_size = {2048, 1024},
+		f_quad = {1496, 529, 18, 21},
+		alias = {"crystalArcane_layer8_0230"}
 	},
 	crystalArcane_layer8_0231 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			25,
-			97,
-			100
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1948,
-			386,
-			20,
-			21
-		},
-		alias = {
-			"crystalArcane_layer8_0232"
-		}
+		size = {214, 146},
+		trim = {97, 25, 97, 100},
+		a_size = {2048, 1024},
+		f_quad = {1948, 386, 20, 21},
+		alias = {"crystalArcane_layer8_0232"}
 	},
 	crystalArcane_layer8_0233 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			25,
-			96,
-			101
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1974,
-			386,
-			20,
-			20
-		},
-		alias = {
-			"crystalArcane_layer8_0234"
-		}
+		size = {214, 146},
+		trim = {98, 25, 96, 101},
+		a_size = {2048, 1024},
+		f_quad = {1974, 386, 20, 20},
+		alias = {"crystalArcane_layer8_0234"}
 	},
 	crystalArcane_layer8_0250 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			30,
-			74,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			225,
-			65,
-			57
-		},
-		alias = {
-			"crystalArcane_layer8_0251"
-		}
+		size = {214, 146},
+		trim = {75, 30, 74, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 225, 65, 57},
+		alias = {"crystalArcane_layer8_0251"}
 	},
 	crystalArcane_layer8_0252 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			29,
-			72,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			465,
-			69,
-			58
-		},
-		alias = {
-			"crystalArcane_layer8_0253"
-		}
+		size = {214, 146},
+		trim = {73, 29, 72, 59},
+		a_size = {2048, 1024},
+		f_quad = {806, 465, 69, 58},
+		alias = {"crystalArcane_layer8_0253"}
 	},
 	crystalArcane_layer8_0254 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			29,
-			70,
-			60
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			489,
-			73,
-			57
-		},
-		alias = {
-			"crystalArcane_layer8_0255"
-		}
+		size = {214, 146},
+		trim = {71, 29, 70, 60},
+		a_size = {2048, 1024},
+		f_quad = {645, 489, 73, 57},
+		alias = {"crystalArcane_layer8_0255"}
 	},
 	crystalArcane_layer8_0256 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			28,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			334,
-			72,
-			61
-		},
-		alias = {
-			"crystalArcane_layer8_0257"
-		}
+		size = {214, 146},
+		trim = {72, 28, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 334, 72, 61},
+		alias = {"crystalArcane_layer8_0257"}
 	},
 	crystalArcane_layer8_0258 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			28,
-			70,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			357,
-			73,
-			60
-		},
-		alias = {
-			"crystalArcane_layer8_0259"
-		}
+		size = {214, 146},
+		trim = {71, 28, 70, 58},
+		a_size = {2048, 1024},
+		f_quad = {645, 357, 73, 60},
+		alias = {"crystalArcane_layer8_0259"}
 	},
 	crystalArcane_layer8_0260 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			28,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			171,
-			71,
-			60
-		},
-		alias = {
-			"crystalArcane_layer8_0261"
-		}
+		size = {214, 146},
+		trim = {72, 28, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 171, 71, 60},
+		alias = {"crystalArcane_layer8_0261"}
 	},
 	crystalArcane_layer9_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			100,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			149,
-			670,
-			3,
-			2
-		},
+		size = {214, 146},
+		trim = {108, 100, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {149, 670, 3, 2},
 		alias = {
 			"crystalArcane_layer9_0002",
 			"crystalArcane_layer9_0003",
@@ -14426,3296 +6347,1034 @@ return {
 	},
 	crystalArcane_layer9_0074 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			53,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			163,
-			39,
-			49
-		},
-		alias = {
-			"crystalArcane_layer9_0075"
-		}
+		size = {214, 146},
+		trim = {72, 53, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 163, 39, 49},
+		alias = {"crystalArcane_layer9_0075"}
 	},
 	crystalArcane_layer9_0076 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			78,
-			60,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			718,
-			33,
-			42
-		},
-		alias = {
-			"crystalArcane_layer9_0077"
-		}
+		size = {214, 146},
+		trim = {78, 60, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 718, 33, 42},
+		alias = {"crystalArcane_layer9_0077"}
 	},
 	crystalArcane_layer9_0078 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			78,
-			60,
-			101,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1282,
-			311,
-			35,
-			42
-		},
-		alias = {
-			"crystalArcane_layer9_0079"
-		}
+		size = {214, 146},
+		trim = {78, 60, 101, 44},
+		a_size = {2048, 1024},
+		f_quad = {1282, 311, 35, 42},
+		alias = {"crystalArcane_layer9_0079"}
 	},
 	crystalArcane_layer9_0080 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			76,
-			58,
-			100,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1376,
-			113,
-			38,
-			44
-		},
-		alias = {
-			"crystalArcane_layer9_0081"
-		}
+		size = {214, 146},
+		trim = {76, 58, 100, 44},
+		a_size = {2048, 1024},
+		f_quad = {1376, 113, 38, 44},
+		alias = {"crystalArcane_layer9_0081"}
 	},
 	crystalArcane_layer9_0082 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			55,
-			100,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			739,
-			41,
-			47
-		},
-		alias = {
-			"crystalArcane_layer9_0083"
-		}
+		size = {214, 146},
+		trim = {73, 55, 100, 44},
+		a_size = {2048, 1024},
+		f_quad = {1143, 739, 41, 47},
+		alias = {"crystalArcane_layer9_0083"}
 	},
 	crystalArcane_layer9_0084 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			60,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1980,
-			113,
-			36,
-			42
-		},
-		alias = {
-			"crystalArcane_layer9_0085"
-		}
+		size = {214, 146},
+		trim = {75, 60, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {1980, 113, 36, 42},
+		alias = {"crystalArcane_layer9_0085"}
 	},
 	crystalArcane_layer9_0086 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			60,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1325,
-			163,
-			36,
-			42
-		},
-		alias = {
-			"crystalArcane_layer9_0087"
-		}
+		size = {214, 146},
+		trim = {75, 60, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {1325, 163, 36, 42},
+		alias = {"crystalArcane_layer9_0087"}
 	},
 	crystalArcane_layer9_0088 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			67,
-			103,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1702,
-			218,
-			36,
-			35
-		},
-		alias = {
-			"crystalArcane_layer9_0089"
-		}
+		size = {214, 146},
+		trim = {75, 67, 103, 44},
+		a_size = {2048, 1024},
+		f_quad = {1702, 218, 36, 35},
+		alias = {"crystalArcane_layer9_0089"}
 	},
 	crystalArcane_layer9_0124 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			102,
-			68,
-			96,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			836,
-			16,
-			34
-		},
-		alias = {
-			"crystalArcane_layer9_0125"
-		}
+		size = {214, 146},
+		trim = {102, 68, 96, 44},
+		a_size = {2048, 1024},
+		f_quad = {1496, 836, 16, 34},
+		alias = {"crystalArcane_layer9_0125"}
 	},
 	crystalArcane_layer9_0126 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			65,
-			82,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			615,
-			753,
-			24,
-			37
-		},
-		alias = {
-			"crystalArcane_layer9_0127"
-		}
+		size = {214, 146},
+		trim = {108, 65, 82, 44},
+		a_size = {2048, 1024},
+		f_quad = {615, 753, 24, 37},
+		alias = {"crystalArcane_layer9_0127"}
 	},
 	crystalArcane_layer9_0128 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			107,
-			55,
-			73,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			386,
-			34,
-			47
-		},
-		alias = {
-			"crystalArcane_layer9_0129"
-		}
+		size = {214, 146},
+		trim = {107, 55, 73, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 386, 34, 47},
+		alias = {"crystalArcane_layer9_0129"}
 	},
 	crystalArcane_layer9_0130 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			106,
-			53,
-			71,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			163,
-			37,
-			49
-		},
-		alias = {
-			"crystalArcane_layer9_0131"
-		}
+		size = {214, 146},
+		trim = {106, 53, 71, 44},
+		a_size = {2048, 1024},
+		f_quad = {1240, 163, 37, 49},
+		alias = {"crystalArcane_layer9_0131"}
 	},
 	crystalArcane_layer9_0132 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			104,
-			53,
-			71,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1195,
-			218,
-			39,
-			49
-		},
-		alias = {
-			"crystalArcane_layer9_0133"
-		}
+		size = {214, 146},
+		trim = {104, 53, 71, 44},
+		a_size = {2048, 1024},
+		f_quad = {1195, 218, 39, 49},
+		alias = {"crystalArcane_layer9_0133"}
 	},
 	crystalArcane_layer9_0134 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			55,
-			76,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1481,
-			386,
-			30,
-			47
-		},
-		alias = {
-			"crystalArcane_layer9_0135"
-		}
+		size = {214, 146},
+		trim = {108, 55, 76, 44},
+		a_size = {2048, 1024},
+		f_quad = {1481, 386, 30, 47},
+		alias = {"crystalArcane_layer9_0135"}
 	},
 	crystalArcane_layer9_0136 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			56,
-			77,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1552,
-			386,
-			29,
-			46
-		},
-		alias = {
-			"crystalArcane_layer9_0137"
-		}
+		size = {214, 146},
+		trim = {108, 56, 77, 44},
+		a_size = {2048, 1024},
+		f_quad = {1552, 386, 29, 46},
+		alias = {"crystalArcane_layer9_0137"}
 	},
 	crystalArcane_layer9_0138 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			56,
-			77,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1587,
-			386,
-			29,
-			46
-		},
+		size = {214, 146},
+		trim = {108, 56, 77, 44},
+		a_size = {2048, 1024},
+		f_quad = {1587, 386, 29, 46},
 		alias = {}
 	},
 	crystalArcane_layer9_0139 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			53,
-			73,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			608,
-			33,
-			49
-		},
+		size = {214, 146},
+		trim = {108, 53, 73, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 608, 33, 49},
 		alias = {}
 	},
 	crystalArcane_layer9_0140 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			53,
-			73,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			663,
-			33,
-			49
-		},
+		size = {214, 146},
+		trim = {108, 53, 73, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 663, 33, 49},
 		alias = {}
 	},
 	crystalArcane_layer9_0141 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			48,
-			79,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1622,
-			386,
-			27,
-			54
-		},
-		alias = {
-			"crystalArcane_layer9_0142"
-		}
+		size = {214, 146},
+		trim = {108, 48, 79, 44},
+		a_size = {2048, 1024},
+		f_quad = {1622, 386, 27, 54},
+		alias = {"crystalArcane_layer9_0142"}
 	},
 	crystalArcane_layer9_0143 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			49,
-			79,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1655,
-			386,
-			27,
-			53
-		},
-		alias = {
-			"crystalArcane_layer9_0144"
-		}
+		size = {214, 146},
+		trim = {108, 49, 79, 44},
+		a_size = {2048, 1024},
+		f_quad = {1655, 386, 27, 53},
+		alias = {"crystalArcane_layer9_0144"}
 	},
 	crystalArcane_layer9_0145 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			51,
-			77,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1517,
-			386,
-			29,
-			51
-		},
-		alias = {
-			"crystalArcane_layer9_0146"
-		}
+		size = {214, 146},
+		trim = {108, 51, 77, 44},
+		a_size = {2048, 1024},
+		f_quad = {1517, 386, 29, 51},
+		alias = {"crystalArcane_layer9_0146"}
 	},
 	crystalArcane_layer9_0147 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			46,
-			74,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			766,
-			32,
-			56
-		},
-		alias = {
-			"crystalArcane_layer9_0148"
-		}
+		size = {214, 146},
+		trim = {108, 46, 74, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 766, 32, 56},
+		alias = {"crystalArcane_layer9_0148"}
 	},
 	crystalArcane_layer9_0149 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			44,
-			76,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			874,
-			30,
-			58
-		},
-		alias = {
-			"crystalArcane_layer9_0150"
-		}
+		size = {214, 146},
+		trim = {108, 44, 76, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 874, 30, 58},
+		alias = {"crystalArcane_layer9_0150"}
 	},
 	crystalArcane_layer9_0151 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			44,
-			76,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			938,
-			30,
-			58
-		},
-		alias = {
-			"crystalArcane_layer9_0152"
-		}
+		size = {214, 146},
+		trim = {108, 44, 76, 44},
+		a_size = {2048, 1024},
+		f_quad = {1405, 938, 30, 58},
+		alias = {"crystalArcane_layer9_0152"}
 	},
 	crystalArcane_layer9_0153 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			108,
-			44,
-			76,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1445,
-			386,
-			30,
-			58
-		},
-		alias = {
-			"crystalArcane_layer9_0154"
-		}
+		size = {214, 146},
+		trim = {108, 44, 76, 44},
+		a_size = {2048, 1024},
+		f_quad = {1445, 386, 30, 58},
+		alias = {"crystalArcane_layer9_0154"}
 	},
 	crystalArcane_layer9_0168 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			52,
-			97,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1572,
-			49,
-			46,
-			50
-		},
-		alias = {
-			"crystalArcane_layer9_0169"
-		}
+		size = {214, 146},
+		trim = {71, 52, 97, 44},
+		a_size = {2048, 1024},
+		f_quad = {1572, 49, 46, 50},
+		alias = {"crystalArcane_layer9_0169"}
 	},
 	crystalArcane_layer9_0170 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			78,
-			59,
-			84,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			279,
-			52,
-			43
-		},
-		alias = {
-			"crystalArcane_layer9_0171"
-		}
+		size = {214, 146},
+		trim = {78, 59, 84, 44},
+		a_size = {2048, 1024},
+		f_quad = {1085, 279, 52, 43},
+		alias = {"crystalArcane_layer9_0171"}
 	},
 	crystalArcane_layer9_0172 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			77,
-			55,
-			75,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			918,
-			62,
-			47
-		},
-		alias = {
-			"crystalArcane_layer9_0173"
-		}
+		size = {214, 146},
+		trim = {77, 55, 75, 44},
+		a_size = {2048, 1024},
+		f_quad = {884, 918, 62, 47},
+		alias = {"crystalArcane_layer9_0173"}
 	},
 	crystalArcane_layer9_0174 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			53,
-			73,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			170,
-			66,
-			49
-		},
-		alias = {
-			"crystalArcane_layer9_0175"
-		}
+		size = {214, 146},
+		trim = {75, 53, 73, 44},
+		a_size = {2048, 1024},
+		f_quad = {884, 170, 66, 49},
+		alias = {"crystalArcane_layer9_0175"}
 	},
 	crystalArcane_layer9_0176 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			53,
-			73,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			943,
-			68,
-			49
-		},
-		alias = {
-			"crystalArcane_layer9_0177"
-		}
+		size = {214, 146},
+		trim = {73, 53, 73, 44},
+		a_size = {2048, 1024},
+		f_quad = {806, 943, 68, 49},
+		alias = {"crystalArcane_layer9_0177"}
 	},
 	crystalArcane_layer9_0178 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			55,
-			78,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			971,
-			62,
-			47
-		},
-		alias = {
-			"crystalArcane_layer9_0179"
-		}
+		size = {214, 146},
+		trim = {74, 55, 78, 44},
+		a_size = {2048, 1024},
+		f_quad = {884, 971, 62, 47},
+		alias = {"crystalArcane_layer9_0179"}
 	},
 	crystalArcane_layer9_0180 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			56,
-			78,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			6,
-			62,
-			46
-		},
-		alias = {
-			"crystalArcane_layer9_0181"
-		}
+		size = {214, 146},
+		trim = {74, 56, 78, 44},
+		a_size = {2048, 1024},
+		f_quad = {957, 6, 62, 46},
+		alias = {"crystalArcane_layer9_0181"}
 	},
 	crystalArcane_layer9_0182 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			74,
-			56,
-			79,
-			44
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			957,
-			58,
-			61,
-			46
-		},
-		alias = {
-			"crystalArcane_layer9_0183"
-		}
+		size = {214, 146},
+		trim = {74, 56, 79, 44},
+		a_size = {2048, 1024},
+		f_quad = {957, 58, 61, 46},
+		alias = {"crystalArcane_layer9_0183"}
 	},
 	crystalArcane_layer9_0215 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			75,
-			37,
-			74,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			400,
-			65,
-			50
-		},
-		alias = {
-			"crystalArcane_layer9_0216"
-		}
+		size = {214, 146},
+		trim = {75, 37, 74, 59},
+		a_size = {2048, 1024},
+		f_quad = {884, 400, 65, 50},
+		alias = {"crystalArcane_layer9_0216"}
 	},
 	crystalArcane_layer9_0217 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			73,
-			36,
-			72,
-			59
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			701,
-			69,
-			51
-		},
-		alias = {
-			"crystalArcane_layer9_0218"
-		}
+		size = {214, 146},
+		trim = {73, 36, 72, 59},
+		a_size = {2048, 1024},
+		f_quad = {806, 701, 69, 51},
+		alias = {"crystalArcane_layer9_0218"}
 	},
 	crystalArcane_layer9_0219 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			35,
-			70,
-			60
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			63,
-			73,
-			51
-		},
-		alias = {
-			"crystalArcane_layer9_0220"
-		}
+		size = {214, 146},
+		trim = {71, 35, 70, 60},
+		a_size = {2048, 1024},
+		f_quad = {727, 63, 73, 51},
+		alias = {"crystalArcane_layer9_0220"}
 	},
 	crystalArcane_layer9_0221 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			36,
-			70,
-			57
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			727,
-			519,
-			72,
-			53
-		},
-		alias = {
-			"crystalArcane_layer9_0222"
-		}
+		size = {214, 146},
+		trim = {72, 36, 70, 57},
+		a_size = {2048, 1024},
+		f_quad = {727, 519, 72, 53},
+		alias = {"crystalArcane_layer9_0222"}
 	},
 	crystalArcane_layer9_0223 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			71,
-			28,
-			70,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			645,
-			423,
-			73,
-			60
-		},
-		alias = {
-			"crystalArcane_layer9_0224"
-		}
+		size = {214, 146},
+		trim = {71, 28, 70, 58},
+		a_size = {2048, 1024},
+		f_quad = {645, 423, 73, 60},
+		alias = {"crystalArcane_layer9_0224"}
 	},
 	crystalArcane_layer9_0225 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			72,
-			27,
-			71,
-			58
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			104,
-			71,
-			61
-		},
-		alias = {
-			"crystalArcane_layer9_0226"
-		}
+		size = {214, 146},
+		trim = {72, 27, 71, 58},
+		a_size = {2048, 1024},
+		f_quad = {806, 104, 71, 61},
+		alias = {"crystalArcane_layer9_0226"}
 	},
 	crystalArcane_layer9_0227 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			96,
-			26,
-			97,
-			104
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			502,
-			1000,
-			21,
-			16
-		},
-		alias = {
-			"crystalArcane_layer9_0228"
-		}
+		size = {214, 146},
+		trim = {96, 26, 97, 104},
+		a_size = {2048, 1024},
+		f_quad = {502, 1000, 21, 16},
+		alias = {"crystalArcane_layer9_0228"}
 	},
 	crystalArcane_layer9_0229 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			25,
-			99,
-			100
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			556,
-			18,
-			21
-		},
-		alias = {
-			"crystalArcane_layer9_0230"
-		}
+		size = {214, 146},
+		trim = {97, 25, 99, 100},
+		a_size = {2048, 1024},
+		f_quad = {1496, 556, 18, 21},
+		alias = {"crystalArcane_layer9_0230"}
 	},
 	crystalArcane_layer9_0231 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			97,
-			25,
-			97,
-			100
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1948,
-			413,
-			20,
-			21
-		},
-		alias = {
-			"crystalArcane_layer9_0232"
-		}
+		size = {214, 146},
+		trim = {97, 25, 97, 100},
+		a_size = {2048, 1024},
+		f_quad = {1948, 413, 20, 21},
+		alias = {"crystalArcane_layer9_0232"}
 	},
 	crystalArcane_layer9_0233 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			214,
-			146
-		},
-		trim = {
-			98,
-			25,
-			96,
-			101
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1974,
-			412,
-			20,
-			20
-		},
-		alias = {
-			"crystalArcane_layer9_0234"
-		}
+		size = {214, 146},
+		trim = {98, 25, 96, 101},
+		a_size = {2048, 1024},
+		f_quad = {1974, 412, 20, 20},
+		alias = {"crystalArcane_layer9_0234"}
 	},
 	crystalArcane_ray_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			0,
-			5,
-			93,
-			6
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1240,
-			990,
-			36,
-			26
-		},
-		alias = {
-			"crystalArcane_ray_0002"
-		}
+		size = {129, 37},
+		trim = {0, 5, 93, 6},
+		a_size = {2048, 1024},
+		f_quad = {1240, 990, 36, 26},
+		alias = {"crystalArcane_ray_0002"}
 	},
 	crystalArcane_ray_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			0,
-			12,
-			0,
-			9
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			238,
-			129,
-			16
-		},
-		alias = {
-			"crystalArcane_ray_0004"
-		}
+		size = {129, 37},
+		trim = {0, 12, 0, 9},
+		a_size = {2048, 1024},
+		f_quad = {265, 238, 129, 16},
+		alias = {"crystalArcane_ray_0004"}
 	},
 	crystalArcane_ray_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			0,
-			10,
-			0,
-			10
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			215,
-			129,
-			17
-		},
-		alias = {
-			"crystalArcane_ray_0006"
-		}
+		size = {129, 37},
+		trim = {0, 10, 0, 10},
+		a_size = {2048, 1024},
+		f_quad = {265, 215, 129, 17},
+		alias = {"crystalArcane_ray_0006"}
 	},
 	crystalArcane_ray_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			0,
-			11,
-			0,
-			6
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			189,
-			129,
-			20
-		},
-		alias = {
-			"crystalArcane_ray_0008"
-		}
+		size = {129, 37},
+		trim = {0, 11, 0, 6},
+		a_size = {2048, 1024},
+		f_quad = {265, 189, 129, 20},
+		alias = {"crystalArcane_ray_0008"}
 	},
 	crystalArcane_ray_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			1,
-			4,
-			1,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			350,
-			127,
-			29
-		},
-		alias = {
-			"crystalArcane_ray_0010"
-		}
+		size = {129, 37},
+		trim = {1, 4, 1, 4},
+		a_size = {2048, 1024},
+		f_quad = {265, 350, 127, 29},
+		alias = {"crystalArcane_ray_0010"}
 	},
 	crystalArcane_ray_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			1,
-			2,
-			2,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			472,
-			126,
-			31
-		},
-		alias = {
-			"crystalArcane_ray_0012"
-		}
+		size = {129, 37},
+		trim = {1, 2, 2, 4},
+		a_size = {2048, 1024},
+		f_quad = {265, 472, 126, 31},
+		alias = {"crystalArcane_ray_0012"}
 	},
 	crystalArcane_ray_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			1,
-			1,
-			3,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			685,
-			125,
-			32
-		},
-		alias = {
-			"crystalArcane_ray_0014"
-		}
+		size = {129, 37},
+		trim = {1, 1, 3, 4},
+		a_size = {2048, 1024},
+		f_quad = {265, 685, 125, 32},
+		alias = {"crystalArcane_ray_0014"}
 	},
 	crystalArcane_ray_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			1,
-			1,
-			7,
-			3
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			402,
-			6,
-			121,
-			33
-		},
-		alias = {
-			"crystalArcane_ray_0016"
-		}
+		size = {129, 37},
+		trim = {1, 1, 7, 3},
+		a_size = {2048, 1024},
+		f_quad = {402, 6, 121, 33},
+		alias = {"crystalArcane_ray_0016"}
 	},
 	crystalArcane_ray_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			1,
-			1,
-			7,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			265,
-			981,
-			121,
-			34
-		},
-		alias = {
-			"crystalArcane_ray_0018"
-		}
+		size = {129, 37},
+		trim = {1, 1, 7, 2},
+		a_size = {2048, 1024},
+		f_quad = {265, 981, 121, 34},
+		alias = {"crystalArcane_ray_0018"}
 	},
 	crystalArcane_ray_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			20,
-			1,
-			8,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			157,
-			235,
-			101,
-			34
-		},
-		alias = {
-			"crystalArcane_ray_0020"
-		}
+		size = {129, 37},
+		trim = {20, 1, 8, 2},
+		a_size = {2048, 1024},
+		f_quad = {157, 235, 101, 34},
+		alias = {"crystalArcane_ray_0020"}
 	},
 	crystalArcane_ray_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			54,
-			1,
-			8,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			63,
-			67,
-			35
-		},
-		alias = {
-			"crystalArcane_ray_0022"
-		}
+		size = {129, 37},
+		trim = {54, 1, 8, 1},
+		a_size = {2048, 1024},
+		f_quad = {884, 63, 67, 35},
+		alias = {"crystalArcane_ray_0022"}
 	},
 	crystalArcane_ray_0023 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			129,
-			37
-		},
-		trim = {
-			55,
-			6,
-			9,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			884,
-			510,
-			65,
-			30
-		},
-		alias = {
-			"crystalArcane_ray_0024"
-		}
+		size = {129, 37},
+		trim = {55, 6, 9, 1},
+		a_size = {2048, 1024},
+		f_quad = {884, 510, 65, 30},
+		alias = {"crystalArcane_ray_0024"}
 	},
 	crystalArcane_towerBuff_base = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			169,
-			169
-		},
-		trim = {
-			11,
-			53,
-			13,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			175,
-			145,
-			111
-		},
+		size = {169, 169},
+		trim = {11, 53, 13, 5},
+		a_size = {2048, 1024},
+		f_quad = {6, 175, 145, 111},
 		alias = {}
 	},
 	crystalArcane_towerBuff_bubbles_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			8,
-			20,
-			2,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			489,
-			18,
-			34
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0002"
-		}
+		size = {28, 56},
+		trim = {8, 20, 2, 2},
+		a_size = {2048, 1024},
+		f_quad = {1496, 489, 18, 34},
+		alias = {"crystalArcane_towerBuff_bubbles_0002"}
 	},
 	crystalArcane_towerBuff_bubbles_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			7,
-			17,
-			4,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2031,
-			218,
-			17,
-			34
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0004"
-		}
+		size = {28, 56},
+		trim = {7, 17, 4, 5},
+		a_size = {2048, 1024},
+		f_quad = {2031, 218, 17, 34},
+		alias = {"crystalArcane_towerBuff_bubbles_0004"}
 	},
 	crystalArcane_towerBuff_bubbles_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			6,
-			14,
-			5,
-			8
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			699,
-			17,
-			34
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0006"
-		}
+		size = {28, 56},
+		trim = {6, 14, 5, 8},
+		a_size = {2048, 1024},
+		f_quad = {1496, 699, 17, 34},
+		alias = {"crystalArcane_towerBuff_bubbles_0006"}
 	},
 	crystalArcane_towerBuff_bubbles_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			5,
-			10,
-			7,
-			14
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1496,
-			876,
-			16,
-			32
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0008"
-		}
+		size = {28, 56},
+		trim = {5, 10, 7, 14},
+		a_size = {2048, 1024},
+		f_quad = {1496, 876, 16, 32},
+		alias = {"crystalArcane_towerBuff_bubbles_0008"}
 	},
 	crystalArcane_towerBuff_bubbles_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			5,
-			8,
-			9,
-			21
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1520,
-			489,
-			14,
-			27
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0010"
-		}
+		size = {28, 56},
+		trim = {5, 8, 9, 21},
+		a_size = {2048, 1024},
+		f_quad = {1520, 489, 14, 27},
+		alias = {"crystalArcane_towerBuff_bubbles_0010"}
 	},
 	crystalArcane_towerBuff_bubbles_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			4,
-			18,
-			2,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			291,
-			22,
-			36
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0012"
-		}
+		size = {28, 56},
+		trim = {4, 18, 2, 2},
+		a_size = {2048, 1024},
+		f_quad = {616, 291, 22, 36},
+		alias = {"crystalArcane_towerBuff_bubbles_0012"}
 	},
 	crystalArcane_towerBuff_bubbles_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			3,
-			14,
-			2,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			616,
-			217,
-			23,
-			37
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0014"
-		}
+		size = {28, 56},
+		trim = {3, 14, 2, 5},
+		a_size = {2048, 1024},
+		f_quad = {616, 217, 23, 37},
+		alias = {"crystalArcane_towerBuff_bubbles_0014"}
 	},
 	crystalArcane_towerBuff_bubbles_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			1,
-			11,
-			1,
-			9
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			611,
-			870,
-			26,
-			36
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0016"
-		}
+		size = {28, 56},
+		trim = {1, 11, 1, 9},
+		a_size = {2048, 1024},
+		f_quad = {611, 870, 26, 36},
+		alias = {"crystalArcane_towerBuff_bubbles_0016"}
 	},
 	crystalArcane_towerBuff_bubbles_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			1,
-			7,
-			1,
-			14
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			611,
-			927,
-			26,
-			35
-		},
-		alias = {
-			"crystalArcane_towerBuff_bubbles_0018"
-		}
+		size = {28, 56},
+		trim = {1, 7, 1, 14},
+		a_size = {2048, 1024},
+		f_quad = {611, 927, 26, 35},
+		alias = {"crystalArcane_towerBuff_bubbles_0018"}
 	},
 	crystalArcane_towerBuff_bubbles_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			28,
-			56
-		},
-		trim = {
-			14,
-			24,
-			2,
-			19
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			627,
-			160,
-			12,
-			13
-		},
+		size = {28, 56},
+		trim = {14, 24, 2, 19},
+		a_size = {2048, 1024},
+		f_quad = {627, 160, 12, 13},
 		alias = {}
 	},
 	crystalArcane_towerBuff_fx_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			146,
-			90
-		},
-		trim = {
-			57,
-			12,
-			56,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			535,
-			33,
-			67
-		},
+		size = {146, 90},
+		trim = {57, 12, 56, 11},
+		a_size = {2048, 1024},
+		f_quad = {1405, 535, 33, 67},
 		alias = {}
 	},
 	crystalArcane_towerBuff_fx_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			146,
-			90
-		},
-		trim = {
-			7,
-			21,
-			7,
-			20
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			6,
-			874,
-			132,
-			49
-		},
+		size = {146, 90},
+		trim = {7, 21, 7, 20},
+		a_size = {2048, 1024},
+		f_quad = {6, 874, 132, 49},
 		alias = {}
 	},
 	crystalArcane_towerBuff_soldiersBase_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			3,
-			14,
-			3,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1429,
-			6,
-			50,
-			32
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0002"
-		}
+		size = {56, 48},
+		trim = {3, 14, 3, 2},
+		a_size = {2048, 1024},
+		f_quad = {1429, 6, 50, 32},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0002"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			14,
-			6,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			526,
-			44,
-			32
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0004"
-		}
+		size = {56, 48},
+		trim = {6, 14, 6, 2},
+		a_size = {2048, 1024},
+		f_quad = {1143, 526, 44, 32},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0004"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1933,
-			49,
-			45,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0006"
-		}
+		size = {56, 48},
+		trim = {6, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1933, 49, 45, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0006"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1984,
-			49,
-			45,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0008"
-		}
+		size = {56, 48},
+		trim = {6, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1984, 49, 45, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0008"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1624,
-			49,
-			46,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0010"
-		}
+		size = {56, 48},
+		trim = {5, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1624, 49, 46, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0010"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			4,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1762,
-			6,
-			47,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0012"
-		}
+		size = {56, 48},
+		trim = {5, 14, 4, 1},
+		a_size = {2048, 1024},
+		f_quad = {1762, 6, 47, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0012"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			4,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1815,
-			6,
-			47,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0014"
-		}
+		size = {56, 48},
+		trim = {5, 14, 4, 1},
+		a_size = {2048, 1024},
+		f_quad = {1815, 6, 47, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0014"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			2,
-			14,
-			2,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1144,
-			6,
-			52,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0016"
-		}
+		size = {56, 48},
+		trim = {2, 14, 2, 1},
+		a_size = {2048, 1024},
+		f_quad = {1144, 6, 52, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0016"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			4,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1868,
-			6,
-			47,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0018"
-		}
+		size = {56, 48},
+		trim = {5, 14, 4, 1},
+		a_size = {2048, 1024},
+		f_quad = {1868, 6, 47, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0018"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1676,
-			49,
-			46,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0020"
-		}
+		size = {56, 48},
+		trim = {5, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1676, 49, 46, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0020"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1728,
-			49,
-			46,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0022"
-		}
+		size = {56, 48},
+		trim = {5, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1728, 49, 46, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0022"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0023 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			352,
-			45,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0024"
-		}
+		size = {56, 48},
+		trim = {6, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1143, 352, 45, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0024"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0025 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			391,
-			45,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0026"
-		}
+		size = {56, 48},
+		trim = {6, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1143, 391, 45, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0026"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0027 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			14,
-			5,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			430,
-			45,
-			33
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0028"
-		}
+		size = {56, 48},
+		trim = {6, 14, 5, 1},
+		a_size = {2048, 1024},
+		f_quad = {1143, 430, 45, 33},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0028"}
 	},
 	crystalArcane_towerBuff_soldiersBase_0029 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			3,
-			14,
-			3,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1485,
-			6,
-			50,
-			32
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBase_0030"
-		}
+		size = {56, 48},
+		trim = {3, 14, 3, 2},
+		a_size = {2048, 1024},
+		f_quad = {1485, 6, 50, 32},
+		alias = {"crystalArcane_towerBuff_soldiersBase_0030"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			7,
-			27,
-			8,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1624,
-			88,
-			41,
-			19
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0002"
-		}
+		size = {56, 48},
+		trim = {7, 27, 8, 2},
+		a_size = {2048, 1024},
+		f_quad = {1624, 88, 41, 19},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0002"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			7,
-			26,
-			9,
-			3
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1676,
-			88,
-			40,
-			19
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0004"
-		}
+		size = {56, 48},
+		trim = {7, 26, 9, 3},
+		a_size = {2048, 1024},
+		f_quad = {1676, 88, 40, 19},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0004"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			7,
-			25,
-			9,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1728,
-			88,
-			40,
-			19
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0006"
-		}
+		size = {56, 48},
+		trim = {7, 25, 9, 4},
+		a_size = {2048, 1024},
+		f_quad = {1728, 88, 40, 19},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0006"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			8,
-			24,
-			10,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1933,
-			88,
-			38,
-			19
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0008"
-		}
+		size = {56, 48},
+		trim = {8, 24, 10, 5},
+		a_size = {2048, 1024},
+		f_quad = {1933, 88, 38, 19},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0008"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			9,
-			24,
-			11,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1984,
-			88,
-			36,
-			17
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0010"
-		}
+		size = {56, 48},
+		trim = {9, 24, 11, 7},
+		a_size = {2048, 1024},
+		f_quad = {1984, 88, 36, 17},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0010"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			7,
-			26,
-			8,
-			2
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			897,
-			41,
-			20
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0012"
-		}
+		size = {56, 48},
+		trim = {7, 26, 8, 2},
+		a_size = {2048, 1024},
+		f_quad = {1143, 897, 41, 20},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0012"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			25,
-			8,
-			3
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			1004,
-			42,
-			20
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0014"
-		}
+		size = {56, 48},
+		trim = {6, 25, 8, 3},
+		a_size = {2048, 1024},
+		f_quad = {1025, 1004, 42, 20},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0014"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			24,
-			8,
-			4
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			687,
-			42,
-			20
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0016"
-		}
+		size = {56, 48},
+		trim = {6, 24, 8, 4},
+		a_size = {2048, 1024},
+		f_quad = {1143, 687, 42, 20},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0016"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			23,
-			8,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			713,
-			42,
-			20
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersBubbles_0018"
-		}
+		size = {56, 48},
+		trim = {6, 23, 8, 5},
+		a_size = {2048, 1024},
+		f_quad = {1143, 713, 42, 20},
+		alias = {"crystalArcane_towerBuff_soldiersBubbles_0018"}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			28,
-			8,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			1006,
-			42,
-			13
-		},
+		size = {56, 48},
+		trim = {6, 28, 8, 7},
+		a_size = {2048, 1024},
+		f_quad = {1085, 1006, 42, 13},
 		alias = {}
 	},
 	crystalArcane_towerBuff_soldiersFx_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			22,
-			4,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1921,
-			6,
-			47,
-			25
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0002"
-		}
+		size = {56, 48},
+		trim = {5, 22, 4, 1},
+		a_size = {2048, 1024},
+		f_quad = {1921, 6, 47, 25},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0002"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			19,
-			4,
-			6
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1466,
-			79,
-			47,
-			23
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0004"
-		}
+		size = {56, 48},
+		trim = {5, 19, 4, 6},
+		a_size = {2048, 1024},
+		f_quad = {1466, 79, 47, 23},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0004"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			16,
-			4,
-			8
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1974,
-			6,
-			47,
-			24
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0006"
-		}
+		size = {56, 48},
+		trim = {5, 16, 4, 8},
+		a_size = {2048, 1024},
+		f_quad = {1974, 6, 47, 24},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0006"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			14,
-			4,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1519,
-			49,
-			47,
-			23
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0008"
-		}
+		size = {56, 48},
+		trim = {5, 14, 4, 11},
+		a_size = {2048, 1024},
+		f_quad = {1519, 49, 47, 23},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0008"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			11,
-			4,
-			13
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1466,
-			49,
-			47,
-			24
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0010"
-		}
+		size = {56, 48},
+		trim = {5, 11, 4, 13},
+		a_size = {2048, 1024},
+		f_quad = {1466, 49, 47, 24},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0010"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			5,
-			9,
-			4,
-			16
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1519,
-			78,
-			47,
-			23
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0012"
-		}
+		size = {56, 48},
+		trim = {5, 9, 4, 16},
+		a_size = {2048, 1024},
+		f_quad = {1519, 78, 47, 23},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0012"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			7,
-			5,
-			18
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			469,
-			45,
-			23
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0014"
-		}
+		size = {56, 48},
+		trim = {6, 7, 5, 18},
+		a_size = {2048, 1024},
+		f_quad = {1143, 469, 45, 23},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0014"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			6,
-			6,
-			5,
-			20
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			498,
-			45,
-			22
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0016"
-		}
+		size = {56, 48},
+		trim = {6, 6, 5, 20},
+		a_size = {2048, 1024},
+		f_quad = {1143, 498, 45, 22},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0016"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			7,
-			4,
-			6,
-			22
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			609,
-			43,
-			22
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0018"
-		}
+		size = {56, 48},
+		trim = {7, 4, 6, 22},
+		a_size = {2048, 1024},
+		f_quad = {1143, 609, 43, 22},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0018"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			23,
-			3,
-			22,
-			24
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			248,
-			780,
-			11,
-			21
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0020"
-		}
+		size = {56, 48},
+		trim = {23, 3, 22, 24},
+		a_size = {2048, 1024},
+		f_quad = {248, 780, 11, 21},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0020"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			23,
-			2,
-			22,
-			26
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			248,
-			807,
-			11,
-			20
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0022"
-		}
+		size = {56, 48},
+		trim = {23, 2, 22, 26},
+		a_size = {2048, 1024},
+		f_quad = {248, 807, 11, 20},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0022"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0023 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			23,
-			1,
-			22,
-			27
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			248,
-			833,
-			11,
-			20
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0024"
-		}
+		size = {56, 48},
+		trim = {23, 1, 22, 27},
+		a_size = {2048, 1024},
+		f_quad = {248, 833, 11, 20},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0024"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0025 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			23,
-			1,
-			23,
-			28
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			629,
-			106,
-			10,
-			19
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0026"
-		}
+		size = {56, 48},
+		trim = {23, 1, 23, 28},
+		a_size = {2048, 1024},
+		f_quad = {629, 106, 10, 19},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0026"}
 	},
 	crystalArcane_towerBuff_soldiersFx_0027 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			56,
-			48
-		},
-		trim = {
-			23,
-			1,
-			23,
-			29
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			629,
-			131,
-			10,
-			18
-		},
-		alias = {
-			"crystalArcane_towerBuff_soldiersFx_0028"
-		}
+		size = {56, 48},
+		trim = {23, 1, 23, 29},
+		a_size = {2048, 1024},
+		f_quad = {629, 131, 10, 18},
+		alias = {"crystalArcane_towerBuff_soldiersFx_0028"}
 	},
 	spiderEgg_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			17,
-			13,
-			12,
-			14
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			827,
-			41,
-			29
-		},
+		size = {70, 56},
+		trim = {17, 13, 12, 14},
+		a_size = {2048, 1024},
+		f_quad = {1143, 827, 41, 29},
 		alias = {}
 	},
 	spiderEgg_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			17,
-			13,
-			12,
-			14
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			862,
-			41,
-			29
-		},
+		size = {70, 56},
+		trim = {17, 13, 12, 14},
+		a_size = {2048, 1024},
+		f_quad = {1143, 862, 41, 29},
 		alias = {}
 	},
 	spiderEgg_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			15,
-			13,
-			18,
-			12
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1726,
-			113,
-			37,
-			31
-		},
+		size = {70, 56},
+		trim = {15, 13, 18, 12},
+		a_size = {2048, 1024},
+		f_quad = {1726, 113, 37, 31},
 		alias = {}
 	},
 	spiderEgg_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			15,
-			13,
-			18,
-			12
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1769,
-			113,
-			37,
-			31
-		},
+		size = {70, 56},
+		trim = {15, 13, 18, 12},
+		a_size = {2048, 1024},
+		f_quad = {1769, 113, 37, 31},
 		alias = {}
 	},
 	spiderEgg_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			14,
-			13,
-			18,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1464,
-			113,
-			38,
-			32
-		},
+		size = {70, 56},
+		trim = {14, 13, 18, 11},
+		a_size = {2048, 1024},
+		f_quad = {1464, 113, 38, 32},
 		alias = {}
 	},
 	spiderEgg_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			14,
-			13,
-			18,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1508,
-			113,
-			38,
-			32
-		},
+		size = {70, 56},
+		trim = {14, 13, 18, 11},
+		a_size = {2048, 1024},
+		f_quad = {1508, 113, 38, 32},
 		alias = {}
 	},
 	spiderEgg_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			683,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 683, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			21,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1323,
-			1000,
-			35,
-			24
-		},
+		size = {70, 56},
+		trim = {16, 21, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1323, 1000, 35, 24},
 		alias = {}
 	},
 	spiderEgg_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			22,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1487,
-			356,
-			35,
-			23
-		},
+		size = {70, 56},
+		trim = {16, 22, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1487, 356, 35, 23},
 		alias = {}
 	},
 	spiderEgg_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			714,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 714, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			745,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 745, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			21,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			962,
-			35,
-			24
-		},
+		size = {70, 56},
+		trim = {16, 21, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 962, 35, 24},
 		alias = {}
 	},
 	spiderEgg_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			776,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 776, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0014 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			19,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			587,
-			35,
-			26
-		},
+		size = {70, 56},
+		trim = {16, 19, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 587, 35, 26},
 		alias = {}
 	},
 	spiderEgg_0015 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1938,
-			310,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1938, 310, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0016 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			17,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1990,
-			218,
-			35,
-			28
-		},
+		size = {70, 56},
+		trim = {16, 17, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1990, 218, 35, 28},
 		alias = {}
 	},
 	spiderEgg_0017 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1979,
-			310,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1979, 310, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0018 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			19,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			619,
-			35,
-			26
-		},
+		size = {70, 56},
+		trim = {16, 19, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 619, 35, 26},
 		alias = {}
 	},
 	spiderEgg_0019 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			356,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 356, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0020 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			389,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 389, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0021 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			422,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 422, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0022 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			455,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 455, 35, 27},
 		alias = {
 			"spiderEgg_0023",
 			"spiderEgg_0024",
@@ -17747,1225 +7406,394 @@ return {
 	},
 	spiderEgg_0036 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			807,
-			35,
-			25
-		},
-		alias = {
-			"spiderEgg_0042"
-		}
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 807, 35, 25},
+		alias = {"spiderEgg_0042"}
 	},
 	spiderEgg_0037 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			21,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			992,
-			35,
-			24
-		},
-		alias = {
-			"spiderEgg_0043"
-		}
+		size = {70, 56},
+		trim = {16, 21, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 992, 35, 24},
+		alias = {"spiderEgg_0043"}
 	},
 	spiderEgg_0038 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			19,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			651,
-			35,
-			26
-		},
-		alias = {
-			"spiderEgg_0044"
-		}
+		size = {70, 56},
+		trim = {16, 19, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 651, 35, 26},
+		alias = {"spiderEgg_0044"}
 	},
 	spiderEgg_0039 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			17,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1856,
-			310,
-			35,
-			28
-		},
-		alias = {
-			"spiderEgg_0045"
-		}
+		size = {70, 56},
+		trim = {16, 17, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1856, 310, 35, 28},
+		alias = {"spiderEgg_0045"}
 	},
 	spiderEgg_0040 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			488,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 488, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0046 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			521,
-			35,
-			27
-		},
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 521, 35, 27},
 		alias = {}
 	},
 	spiderEgg_0047 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			838,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 838, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0048 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			869,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 869, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0061 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			18,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			554,
-			35,
-			27
-		},
-		alias = {
-			"spiderEgg_0062"
-		}
+		size = {70, 56},
+		trim = {16, 18, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 554, 35, 27},
+		alias = {"spiderEgg_0062"}
 	},
 	spiderEgg_0063 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			900,
-			35,
-			25
-		},
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 900, 35, 25},
 		alias = {}
 	},
 	spiderEgg_0064 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			21,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1405,
-			356,
-			35,
-			24
-		},
+		size = {70, 56},
+		trim = {16, 21, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1405, 356, 35, 24},
 		alias = {}
 	},
 	spiderEgg_0065 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			22,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1528,
-			356,
-			35,
-			23
-		},
+		size = {70, 56},
+		trim = {16, 22, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1528, 356, 35, 23},
 		alias = {}
 	},
 	spiderEgg_0066 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			17,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1897,
-			310,
-			35,
-			28
-		},
+		size = {70, 56},
+		trim = {16, 17, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1897, 310, 35, 28},
 		alias = {}
 	},
 	spiderEgg_0067 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			6,
-			11,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1143,
-			564,
-			43,
-			39
-		},
+		size = {70, 56},
+		trim = {16, 6, 11, 11},
+		a_size = {2048, 1024},
+		f_quad = {1143, 564, 43, 39},
 		alias = {}
 	},
 	spiderEgg_0068 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			3,
-			9,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1882,
-			49,
-			45,
-			42
-		},
-		alias = {
-			"spiderEgg_0069"
-		}
+		size = {70, 56},
+		trim = {16, 3, 9, 11},
+		a_size = {2048, 1024},
+		f_quad = {1882, 49, 45, 42},
+		alias = {"spiderEgg_0069"}
 	},
 	spiderEgg_0070 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			2,
-			15,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1241,
-			113,
-			39,
-			43
-		},
-		alias = {
-			"spiderEgg_0071"
-		}
+		size = {70, 56},
+		trim = {16, 2, 15, 11},
+		a_size = {2048, 1024},
+		f_quad = {1241, 113, 39, 43},
+		alias = {"spiderEgg_0071"}
 	},
 	spiderEgg_0072 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			3,
-			15,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1286,
-			113,
-			39,
-			42
-		},
-		alias = {
-			"spiderEgg_0073"
-		}
+		size = {70, 56},
+		trim = {16, 3, 15, 11},
+		a_size = {2048, 1024},
+		f_quad = {1286, 113, 39, 42},
+		alias = {"spiderEgg_0073"}
 	},
 	spiderEgg_0074 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			4,
-			15,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1331,
-			113,
-			39,
-			41
-		},
-		alias = {
-			"spiderEgg_0075"
-		}
+		size = {70, 56},
+		trim = {16, 4, 15, 11},
+		a_size = {2048, 1024},
+		f_quad = {1331, 113, 39, 41},
+		alias = {"spiderEgg_0075"}
 	},
 	spiderEgg_0076 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			70,
-			56
-		},
-		trim = {
-			16,
-			20,
-			19,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1364,
-			931,
-			35,
-			25
-		},
-		alias = {
-			"spiderEgg_0077",
-			"spiderEgg_0078",
-			"spiderEgg_0079",
-			"spiderEgg_0080",
-			"spiderEgg_0081",
-			"spiderEgg_0082",
-			"spiderEgg_0083",
-			"spiderEgg_0084",
-			"spiderEgg_0085",
-			"spiderEgg_0086"
-		}
+		size = {70, 56},
+		trim = {16, 20, 19, 11},
+		a_size = {2048, 1024},
+		f_quad = {1364, 931, 35, 25},
+		alias = {"spiderEgg_0077", "spiderEgg_0078", "spiderEgg_0079", "spiderEgg_0080", "spiderEgg_0081", "spiderEgg_0082", "spiderEgg_0083", "spiderEgg_0084", "spiderEgg_0085", "spiderEgg_0086"}
 	},
 	terrain3_ducks_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			42,
-			31
-		},
-		trim = {
-			9,
-			5,
-			9,
-			8
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2020,
-			263,
-			24,
-			18
-		},
+		size = {42, 31},
+		trim = {9, 5, 9, 8},
+		a_size = {2048, 1024},
+		f_quad = {2020, 263, 24, 18},
 		alias = {}
 	},
 	terrain3_ducks_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			42,
-			31
-		},
-		trim = {
-			8,
-			3,
-			5,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			230,
-			366,
-			29,
-			21
-		},
-		alias = {
-			"terrain3_ducks_0003"
-		}
+		size = {42, 31},
+		trim = {8, 3, 5, 7},
+		a_size = {2048, 1024},
+		f_quad = {230, 366, 29, 21},
+		alias = {"terrain3_ducks_0003"}
 	},
 	terrain3_ducks_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			42,
-			31
-		},
-		trim = {
-			4,
-			5,
-			4,
-			8
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1609,
-			356,
-			34,
-			18
-		},
+		size = {42, 31},
+		trim = {4, 5, 4, 8},
+		a_size = {2048, 1024},
+		f_quad = {1609, 356, 34, 18},
 		alias = {}
 	},
 	terrain3_ducks_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			42,
-			31
-		},
-		trim = {
-			3,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1596,
-			113,
-			38,
-			22
-		},
+		size = {42, 31},
+		trim = {3, 4, 1, 5},
+		a_size = {2048, 1024},
+		f_quad = {1596, 113, 38, 22},
 		alias = {}
 	},
 	terrain3_ducks_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			42,
-			31
-		},
-		trim = {
-			9,
-			4,
-			7,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			2022,
-			113,
-			26,
-			26
-		},
+		size = {42, 31},
+		trim = {9, 4, 7, 1},
+		a_size = {2048, 1024},
+		f_quad = {2022, 113, 26, 26},
 		alias = {}
 	},
 	terrain3_ducks_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			42,
-			31
-		},
-		trim = {
-			9,
-			4,
-			8,
-			0
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			234,
-			742,
-			25,
-			27
-		},
-		alias = {
-			"terrain3_ducks_0008"
-		}
+		size = {42, 31},
+		trim = {9, 4, 8, 0},
+		a_size = {2048, 1024},
+		f_quad = {234, 742, 25, 27},
+		alias = {"terrain3_ducks_0008"}
 	},
 	terrain3_eggs_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			28,
-			14,
-			28,
-			11
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			231,
-			979,
-			28,
-			23
-		},
+		size = {84, 48},
+		trim = {28, 14, 28, 11},
+		a_size = {2048, 1024},
+		f_quad = {231, 979, 28, 23},
 		alias = {}
 	},
 	terrain3_eggs_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			23,
-			7,
-			10,
-			6
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1260,
-			6,
-			51,
-			35
-		},
+		size = {84, 48},
+		trim = {23, 7, 10, 6},
+		a_size = {2048, 1024},
+		f_quad = {1260, 6, 51, 35},
 		alias = {}
 	},
 	terrain3_eggs_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			23,
-			4,
-			8,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			961,
-			53,
-			37
-		},
+		size = {84, 48},
+		trim = {23, 4, 8, 7},
+		a_size = {2048, 1024},
+		f_quad = {1025, 961, 53, 37},
 		alias = {}
 	},
 	terrain3_eggs_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			23,
-			4,
-			8,
-			7
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			6,
-			53,
-			37
-		},
+		size = {84, 48},
+		trim = {23, 4, 8, 7},
+		a_size = {2048, 1024},
+		f_quad = {1085, 6, 53, 37},
 		alias = {}
 	},
 	terrain3_eggs_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			20,
-			2,
-			15,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			848,
-			49,
-			41
-		},
+		size = {84, 48},
+		trim = {20, 2, 15, 5},
+		a_size = {2048, 1024},
+		f_quad = {1085, 848, 49, 41},
 		alias = {}
 	},
 	terrain3_eggs_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			20,
-			2,
-			15,
-			5
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			895,
-			49,
-			41
-		},
+		size = {84, 48},
+		trim = {20, 2, 15, 5},
+		a_size = {2048, 1024},
+		f_quad = {1085, 895, 49, 41},
 		alias = {}
 	},
 	terrain3_eggs_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			19,
-			0,
-			14,
-			3
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1085,
-			639,
-			51,
-			45
-		},
+		size = {84, 48},
+		trim = {19, 0, 14, 3},
+		a_size = {2048, 1024},
+		f_quad = {1085, 639, 51, 45},
 		alias = {}
 	},
 	terrain3_eggs_0008 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			19,
-			0,
-			12,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			808,
-			53,
-			47
-		},
+		size = {84, 48},
+		trim = {19, 0, 12, 1},
+		a_size = {2048, 1024},
+		f_quad = {1025, 808, 53, 47},
 		alias = {}
 	},
 	terrain3_eggs_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			19,
-			3,
-			12,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			861,
-			53,
-			44
-		},
+		size = {84, 48},
+		trim = {19, 3, 12, 1},
+		a_size = {2048, 1024},
+		f_quad = {1025, 861, 53, 44},
 		alias = {}
 	},
 	terrain3_eggs_0010 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			19,
-			3,
-			12,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1025,
-			911,
-			53,
-			44
-		},
+		size = {84, 48},
+		trim = {19, 3, 12, 1},
+		a_size = {2048, 1024},
+		f_quad = {1025, 911, 53, 44},
 		alias = {}
 	},
 	terrain3_eggs_0011 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			22,
-			13,
-			12,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1317,
-			6,
-			50,
-			34
-		},
+		size = {84, 48},
+		trim = {22, 13, 12, 1},
+		a_size = {2048, 1024},
+		f_quad = {1317, 6, 50, 34},
 		alias = {}
 	},
 	terrain3_eggs_0012 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			22,
-			14,
-			12,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1373,
-			6,
-			50,
-			33
-		},
+		size = {84, 48},
+		trim = {22, 14, 12, 1},
+		a_size = {2048, 1024},
+		f_quad = {1373, 6, 50, 33},
 		alias = {}
 	},
 	terrain3_eggs_0013 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			84,
-			48
-		},
-		trim = {
-			22,
-			15,
-			12,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1541,
-			6,
-			50,
-			32
-		},
+		size = {84, 48},
+		trim = {22, 15, 12, 1},
+		a_size = {2048, 1024},
+		f_quad = {1541, 6, 50, 32},
 		alias = {}
 	},
 	terrain3_pajarombriz_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			65,
-			42
-		},
-		trim = {
-			16,
-			10,
-			14,
-			8
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1446,
-			356,
-			35,
-			24
-		},
+		size = {65, 42},
+		trim = {16, 10, 14, 8},
+		a_size = {2048, 1024},
+		f_quad = {1446, 356, 35, 24},
 		alias = {}
 	},
 	terrain3_pajarombriz_0002 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			65,
-			42
-		},
-		trim = {
-			12,
-			7,
-			1,
-			10
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1202,
-			6,
-			52,
-			25
-		},
-		alias = {
-			"terrain3_pajarombriz_0003"
-		}
+		size = {65, 42},
+		trim = {12, 7, 1, 10},
+		a_size = {2048, 1024},
+		f_quad = {1202, 6, 52, 25},
+		alias = {"terrain3_pajarombriz_0003"}
 	},
 	terrain3_pajarombriz_0004 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			65,
-			42
-		},
-		trim = {
-			13,
-			10,
-			2,
-			8
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1597,
-			6,
-			50,
-			24
-		},
+		size = {65, 42},
+		trim = {13, 10, 2, 8},
+		a_size = {2048, 1024},
+		f_quad = {1597, 6, 50, 24},
 		alias = {}
 	},
 	terrain3_pajarombriz_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			65,
-			42
-		},
-		trim = {
-			9,
-			9,
-			3,
-			9
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			806,
-			998,
-			53,
-			24
-		},
+		size = {65, 42},
+		trim = {9, 9, 3, 9},
+		a_size = {2048, 1024},
+		f_quad = {806, 998, 53, 24},
 		alias = {}
 	},
 	terrain3_pajarombriz_0006 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			65,
-			42
-		},
-		trim = {
-			20,
-			8,
-			14,
-			3
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			608,
-			984,
-			31,
-			31
-		},
+		size = {65, 42},
+		trim = {20, 8, 14, 3},
+		a_size = {2048, 1024},
+		f_quad = {608, 984, 31, 31},
 		alias = {}
 	},
 	terrain3_pajarombriz_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			65,
-			42
-		},
-		trim = {
-			19,
-			9,
-			19,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			611,
-			813,
-			27,
-			32
-		},
-		alias = {
-			"terrain3_pajarombriz_0008"
-		}
+		size = {65, 42},
+		trim = {19, 9, 19, 1},
+		a_size = {2048, 1024},
+		f_quad = {611, 813, 27, 32},
+		alias = {"terrain3_pajarombriz_0008"}
 	},
 	terrain3_spiders_0001 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			17,
-			14
-		},
-		trim = {
-			0,
-			1,
-			0,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			149,
-			571,
-			17,
-			12
-		},
-		alias = {
-			"terrain3_spiders_0002"
-		}
+		size = {17, 14},
+		trim = {0, 1, 0, 1},
+		a_size = {2048, 1024},
+		f_quad = {149, 571, 17, 12},
+		alias = {"terrain3_spiders_0002"}
 	},
 	terrain3_spiders_0003 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			17,
-			14
-		},
-		trim = {
-			0,
-			0,
-			0,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			1522,
-			450,
-			17,
-			13
-		},
-		alias = {
-			"terrain3_spiders_0004"
-		}
+		size = {17, 14},
+		trim = {0, 0, 0, 1},
+		a_size = {2048, 1024},
+		f_quad = {1522, 450, 17, 13},
+		alias = {"terrain3_spiders_0004"}
 	},
 	terrain3_spiders_0005 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			17,
-			14
-		},
-		trim = {
-			0,
-			1,
-			0,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			172,
-			571,
-			17,
-			12
-		},
-		alias = {
-			"terrain3_spiders_0006"
-		}
+		size = {17, 14},
+		trim = {0, 1, 0, 1},
+		a_size = {2048, 1024},
+		f_quad = {172, 571, 17, 12},
+		alias = {"terrain3_spiders_0006"}
 	},
 	terrain3_spiders_0007 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			17,
-			14
-		},
-		trim = {
-			0,
-			1,
-			0,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			195,
-			571,
-			17,
-			12
-		},
-		alias = {
-			"terrain3_spiders_0008"
-		}
+		size = {17, 14},
+		trim = {0, 1, 0, 1},
+		a_size = {2048, 1024},
+		f_quad = {195, 571, 17, 12},
+		alias = {"terrain3_spiders_0008"}
 	},
 	terrain3_spiders_0009 = {
 		a_name = "go_stages_ancient_metropolis-1.dds",
-		size = {
-			17,
-			14
-		},
-		trim = {
-			0,
-			1,
-			0,
-			1
-		},
-		a_size = {
-			2048,
-			1024
-		},
-		f_quad = {
-			218,
-			571,
-			17,
-			12
-		},
-		alias = {
-			"terrain3_spiders_0010"
-		}
+		size = {17, 14},
+		trim = {0, 1, 0, 1},
+		a_size = {2048, 1024},
+		f_quad = {218, 571, 17, 12},
+		alias = {"terrain3_spiders_0010"}
 	}
 }

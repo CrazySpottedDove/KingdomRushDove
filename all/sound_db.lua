@@ -1,15 +1,11 @@
-﻿-- chunkname: @./all/sound_db.lua
-
+-- chunkname: @./all/sound_db.lua
 local log = require("lib.klua.log"):new("sound_db")
-
 require("lib.klua.table")
-
 local km = require("lib.klua.macros")
 local LA = love.audio
 local LS = love.sound
 local FS = love.filesystem
 local sound_db = {}
-
 sound_db.path = nil
 sound_db.sources = {}
 sound_db.source_uses = {}
@@ -31,46 +27,42 @@ sound_db.progress = 0
 sound_db.groups_total = 0
 sound_db.groups_done = 0
 sound_db.sounds_uses = {}
+
 local function is_file(path)
-    local info = love.filesystem.getInfo(path)
-    return info and info.type == "file"
+	local info = love.filesystem.getInfo(path)
+	return info and info.type == "file"
 end
 
 local _THREADS_ENABLED = true
 
 -- 音频加载的动态线程数计算
 local function calculate_audio_thread_count()
-    local cpu_count = love.system.getProcessorCount() or 4
+	local cpu_count = love.system.getProcessorCount() or 4
+	-- 音频加载的线程数应该比图像加载更保守
+	local thread_count
 
-    -- 音频加载的线程数应该比图像加载更保守
-    local thread_count
+	if cpu_count <= 2 then
+		thread_count = 2 -- 低端设备：2个线程
+	elseif cpu_count <= 4 then
+		thread_count = 3 -- 四核：3个线程
+	elseif cpu_count <= 8 then
+		thread_count = 4 -- 八核：4个线程
+	else
+		thread_count = 6 -- 高端CPU：最多6个线程
+	end
 
-    if cpu_count <= 2 then
-        thread_count = 2 -- 低端设备：2个线程
-    elseif cpu_count <= 4 then
-        thread_count = 3 -- 四核：3个线程
-    elseif cpu_count <= 8 then
-        thread_count = 4 -- 八核：4个线程
-    else
-        thread_count = 6 -- 高端CPU：最多6个线程
-    end
-
-    log.info("Audio loading: %d CPU cores -> %d threads", cpu_count, thread_count)
-
-    return thread_count
+	log.info("Audio loading: %d CPU cores -> %d threads", cpu_count, thread_count)
+	return thread_count
 end
 
 -- 替换固定的 _MAX_THREADS = 8
 local _MAX_THREADS = calculate_audio_thread_count()
-
 local _LOAD_AUDIO_THREAD_CODE = "local cin,cout,th_i = ...\nrequire \"love.filesystem\"\nrequire \"love.audio\"\nrequire \"love.sound\"\nlocal file_count = 0\nwhile true do\n    -- get params\n    local file = cin:demand()\n    if file == 'QUIT' then goto quit end\n    local mode = cin:demand()\n    local id = cin:demand()\n    \n  local info = love.filesystem.getInfo(file) \n if (not info) or (info.type ~= 'file')  then\n        cout:push({'ERROR','Not a file',file})\n    else\n        local ok, result = pcall(love.audio.newSource, file, mode)\n        collectgarbage()\n        if ok and result then\n            cout:push({'OK',result,id})\n            file_count = file_count + 1\n        else\n            cout:push({'ERROR',result,file})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
 
 function sound_db:init(path)
 	log.debug("path:%s", path)
-
 	self.path = path
 	self.files_path = path .. "/files"
-
 	local f_settings = FS.load(path .. "/settings.lua")()
 
 	if f_settings.source_groups then
@@ -78,21 +70,19 @@ function sound_db:init(path)
 			self.source_groups[gid] = {
 				max_sources = group.max_sources
 			}
-            if gid ~= "MUSIC" and  gid ~= "REFCOUNTED" then
-                self.source_groups[gid].max_sources = math.floor(group.max_sources * (SOUND_POOL_SIZE_FACTOR or 1))
-            end
+
+			if gid ~= "MUSIC" and gid ~= "REFCOUNTED" then
+				self.source_groups[gid].max_sources = math.floor(group.max_sources * (SOUND_POOL_SIZE_FACTOR or 1))
+			end
+
 			self.active_sources[gid] = self.active_sources[gid] or {}
 		end
 	end
 
 	local f_sounds = FS.load(path .. "/sounds.lua")()
-
 	self.sounds = f_sounds
-
 	local f_groups = FS.load(path .. "/groups.lua")()
-
 	self.groups = f_groups
-
 	local f_extra = FS.load(path .. "/extra.lua")()
 
 	if f_extra.sounds then
@@ -140,9 +130,9 @@ function sound_db:queue_load_done()
 	if not self.load_queue_current and #self.load_queue == 0 then
 		self.progress = 1
 		self.groups_total = 0
-
 		return true
 	end
+
 	::label_2_0::
 
 	if not self.co then
@@ -155,7 +145,6 @@ function sound_db:queue_load_done()
 
 		if coroutine.status(self.co) ~= "dead" and err == nil then
 			self.progress = (self.groups_done + self.group_progress) / self.groups_total
-
 			return false
 		end
 
@@ -165,29 +154,25 @@ function sound_db:queue_load_done()
 
 		self.co = nil
 		self.groups_done = self.groups_done + 1
-
 		log.info("group %s done (%d/%d)", name, self.groups_done, self.groups_total)
 	end
 
 	if #self.load_queue > 0 then
 		self.load_queue_current = table.remove(self.load_queue, 1)
-
 		goto label_2_0
 	end
 
 	log.debug("sound queue loaded")
-    collectgarbage()
+	collectgarbage()
 	self.load_queue_current = nil
 	self.progress = 1
 	self.groups_total = 0
-
 	return true
 end
 
 function sound_db:queue_load_group(name)
 	log.info("queued %s", name)
 	table.insert(self.load_queue, name)
-
 	self.groups_total = self.groups_total + 1
 
 	if #self.load_queue == 1 and not self.load_queue_current then
@@ -198,49 +183,37 @@ end
 
 function sound_db:load_group(name, yielding, filter)
 	local rt_start = love.timer.getTime()
-
 	log.debug("loading sound group %s", name)
 
 	if not self.groups[name] then
 		log.error("sound group %s not found", name)
-
-		return
+		return 
 	end
 
 	if self.sounds_uses[name] then
 		self.sounds_uses[name] = self.sounds_uses[name] + 1
-
 		log.debug("sounds %s already loaded", name)
-
-		return
+		return 
 	end
 
 	self.sounds_uses[name] = 1
 	self.group_progress = 0
-
 	local files = {}
 	local group = self.groups[name]
 
 	if group.files then
 		for _, f in pairs(group.files) do
-			table.insert(files, {
-				f,
-				group.stream or false
-			})
+			table.insert(files, {f, group.stream or false})
 		end
 	end
 
 	if group.sounds then
 		for _, s in pairs(self.groups[name].sounds) do
 			log.debug("   getting sound %s from group %s", s, name)
-
 			local sound = self.sounds[s]
 
 			for _, f in pairs(sound.files) do
-				table.insert(files, {
-					f,
-					sound.stream or false
-				})
+				table.insert(files, {f, sound.stream or false})
 			end
 		end
 	end
@@ -253,23 +226,14 @@ function sound_db:load_group(name, yielding, filter)
 			local th = love.thread.newThread(_LOAD_AUDIO_THREAD_CODE)
 			local cin = love.thread.newChannel()
 			local cout = love.thread.newChannel()
-
 			th:start(cin, cout, i)
 
 			if love.nx then
-				th:setAffinity({
-					false,
-					true,
-					true
-				})
+				th:setAffinity({false, true, true})
 				log.paranoid(" ++++ SOUND_DB THREAD %s AFFINITY %s", th, getdump(th:getAffinity()))
 			end
 
-			table.insert(load_threads, {
-				th,
-				cin,
-				cout
-			})
+			table.insert(load_threads, {th, cin, cout})
 		end
 
 		for _, item in pairs(files) do
@@ -281,11 +245,9 @@ function sound_db:load_group(name, yielding, filter)
 			else
 				local file = string.format(self.files_path .. "/%s", fn)
 				local cin = load_threads[th_i][2]
-
 				cin:push(file)
 				cin:push(mode)
 				cin:push(fn)
-
 				th_i = km.zmod(th_i + 1, #load_threads)
 			end
 		end
@@ -311,10 +273,7 @@ function sound_db:load_group(name, yielding, filter)
 						log.error("Failed to create audio source for file: %s. Error: %s", r3, r2)
 					elseif r1 == "OK" then
 						local fn, master_src = r3, r2
-
-						self.sources[fn] = {
-							master_src
-						}
+						self.sources[fn] = {master_src}
 						self.source_uses[fn] = 1
 					end
 				end
@@ -327,14 +286,12 @@ function sound_db:load_group(name, yielding, filter)
 
 			if yielding and yield_every == 1000 then
 				yield_every = 0
-
 				coroutine.yield()
 			end
 		end
 
 		load_threads = nil
-
-		-- collectgarbage("collect")
+	-- collectgarbage("collect")
 	else
 		local yield_every = 0
 
@@ -351,13 +308,10 @@ function sound_db:load_group(name, yielding, filter)
 					local ok, master_src = pcall(love.audio.newSource, file, mode)
 
 					if ok and master_src then
-						self.sources[fn] = {
-							master_src
-						}
+						self.sources[fn] = {master_src}
 						self.source_uses[fn] = 1
-
 						log.paranoid("Created audio source for %s", file)
-						-- collectgarbage()
+					-- collectgarbage()
 					end
 				end
 			end
@@ -366,101 +320,101 @@ function sound_db:load_group(name, yielding, filter)
 
 			if yielding and yield_every == 1000 then
 				yield_every = 0
-
 				coroutine.yield()
 			end
 		end
 	end
 
 	log.info("Done loading sounds from group %s - time: %s", name, love.timer.getTime() - rt_start)
-
 	self.group_progress = 1
 end
 
 function sound_db:unload_group(name)
 	if not self.sounds_uses[name] then
 		log.error("sound group %s not loaded. cannot unload", name)
-
-		return
+		return 
 	end
 
 	self.sounds_uses[name] = self.sounds_uses[name] - 1
 
 	if self.sounds_uses[name] > 0 then
-		return
+		return 
 	end
 
 	local group = self.groups[name]
 
 	if group.keep then
-		return
+		return 
 	end
 
 	self.sounds_uses[name] = nil
+	local sources = self.sources
+	local source_uses = self.source_uses
+	local files = group.files
 
-    local sources = self.sources
-    local source_uses = self.source_uses
-    local files = group.files
 	if files then
-        for i=1,#files do
-            local f = files[i]
+		for i = 1, #files do
+			local f = files[i]
 
-            if sources[f] then
-                for _, s in pairs(sources[f]) do
-                    s:stop()
-                end
+			if sources[f] then
+				for _, s in pairs(sources[f]) do
+					s:stop()
+				end
 
-                source_uses[f] = source_uses[f] - 1
+				source_uses[f] = source_uses[f] - 1
 
-                if source_uses[f] < 1 then
-                    sources[f] = nil
-                    source_uses[f] = 0
-                end
-            end
-            -- collectgarbage()
+				if source_uses[f] < 1 then
+					sources[f] = nil
+					source_uses[f] = 0
+				end
+			end
+		-- collectgarbage()
 		end
 	end
-    local sounds = group.sounds
-    if sounds then
-        for i=1,#sounds do
-            local s = sounds[i]
-            local sound = self.sounds[s]
-            local sound_files = sound.files
-            for i=1,#sound_files do
-                local f = sound_files[i]
-                if sources[f] then
-                    for _, s in pairs(sources[f]) do
-                        s:stop()
-                    end
 
-                    source_uses[f] = source_uses[f] - 1
+	local sounds = group.sounds
 
-                    if source_uses[f] < 1 then
-                        sources[f] = nil
-                        source_uses[f] = 0
-                    end
-                end
-            end
-            -- collectgarbage()
-        end
-    end
-    -- local t1 = love.timer.getTime()
-	-- collectgarbage()
-    -- local t2 = love.timer.getTime()
-    -- print("Sound group " .. name .. " unloaded. GC took " .. (t2 - t1) .. " seconds.")
+	if sounds then
+		for i = 1, #sounds do
+			local s = sounds[i]
+			local sound = self.sounds[s]
+			local sound_files = sound.files
+
+			for i = 1, #sound_files do
+				local f = sound_files[i]
+
+				if sources[f] then
+					for _, s in pairs(sources[f]) do
+						s:stop()
+					end
+
+					source_uses[f] = source_uses[f] - 1
+
+					if source_uses[f] < 1 then
+						sources[f] = nil
+						source_uses[f] = 0
+					end
+				end
+			end
+		-- collectgarbage()
+		end
+	end
+-- local t1 = love.timer.getTime()
+-- collectgarbage()
+-- local t2 = love.timer.getTime()
+-- print("Sound group " .. name .. " unloaded. GC took " .. (t2 - t1) .. " seconds.")
 end
 
 sound_db.request_queue = {}
 
 function sound_db:queue(id, options)
 	if not id then
-		return
+		return 
 	end
 
 	if not self.sounds[id] then
 		log.error("SOUND WITH ID %s NOT FOUND", tostring(id))
-
-		return
+		return 
 	end
 
 	local opts
@@ -476,7 +430,6 @@ function sound_db:queue(id, options)
 		options = opts,
 		qts = self.ts
 	}
-
 	table.insert(self.request_queue, req)
 end
 
@@ -488,11 +441,9 @@ function sound_db:stop(id)
 
 		if opts and (opts.loop or sound_db.sounds[id].interruptible) then
 			log.paranoid("Sound %s stopping queued", id)
-
 			local stop_req = {
 				id = id
 			}
-
 			table.insert(sound_db.stop_queue, stop_req)
 		else
 			log.paranoid("Sound %s not interruptible nor loopable. Ignoring stop request.", id)
@@ -505,18 +456,15 @@ function sound_db:stop_group(gid)
 
 	if gid then
 		log.paranoid("Group %s stopping queued", gid)
-
 		local stop_req = {
 			gid = gid
 		}
-
 		table.insert(sound_db.stop_queue, stop_req)
 	end
 end
 
 function sound_db:stop_all()
 	LA.stop()
-
 	self.ref_counters = {}
 end
 
@@ -570,7 +518,6 @@ function sound_db:set_main_gain_fx(gain)
 		TAUNTS = gain,
 		REFCOUNTED = gain
 	}
-
 	sound_db:set_groups_gains(fx_groups)
 end
 
@@ -600,10 +547,8 @@ function sound_db:_stop_sources(req)
 
 	if req.id and self.sounds[req.id].ref_counted then
 		local rc = self.ref_counters[req.id] or 0
-
 		rc = rc - 1
 		self.ref_counters[req.id] = rc
-
 		log.paranoid("sound %s refcount is now %d", req.id, rc)
 
 		if rc > 0 then
@@ -630,7 +575,6 @@ function sound_db:update(dt)
 
 	for i = #sound_db.stop_queue, 1, -1 do
 		local stop_request = sound_db.stop_queue[i]
-
 		self:_stop_sources(stop_request, self.active_sources)
 
 		if not self.ref_counters[stop_request.id] then
@@ -644,16 +588,16 @@ function sound_db:update(dt)
 		table.remove(sound_db.stop_queue, i)
 	end
 
-    if not self.paused then
-        for gid, group_active_sources in pairs(self.active_sources) do
-            for i = #group_active_sources, 1, -1 do
-                if not group_active_sources[i].source:isPlaying() then
-                    log.paranoid("Reclaiming source %s", group_active_sources[i].source)
-                    table.remove(group_active_sources, i)
-                end
-            end
-        end
-    end
+	if not self.paused then
+		for gid, group_active_sources in pairs(self.active_sources) do
+			for i = #group_active_sources, 1, -1 do
+				if not group_active_sources[i].source:isPlaying() then
+					log.paranoid("Reclaiming source %s", group_active_sources[i].source)
+					table.remove(group_active_sources, i)
+				end
+			end
+		end
+	end
 
 	local queue = sound_db.request_queue
 	local reqs_due = {}
@@ -678,13 +622,12 @@ function sound_db:play(request)
 	local play_due = true
 
 	if options.chance and math.random() >= options.chance then
-		return
+		return 
 	end
 
 	if options.every then
 		if every_counter ~= 0 then
 			play_due = false
-
 			log.paranoid("%s plays every %d requests. (remaining: %d )", request.id, options.every, options.every - every_counter)
 		end
 
@@ -698,7 +641,6 @@ function sound_db:play(request)
 
 	if options.ref_counted then
 		local rc = self.ref_counters[request.id] or 0
-
 		rc = rc + 1
 
 		if rc ~= 1 then
@@ -712,7 +654,6 @@ function sound_db:play(request)
 
 	if options.mode == "sequence" then
 		table.insert(pools, self.sources[options.files[se.sequence or 1]])
-
 		se.sequence = (se.sequence or 1) % #options.files + 1
 	elseif options.mode == "random" then
 		table.insert(pools, self.sources[options.files[math.random(1, #options.files)]])
@@ -726,8 +667,7 @@ function sound_db:play(request)
 
 	if not pools or #pools == 0 then
 		log.error("SOUND %s defined but sound sources missing. Missing file during load?", request.id)
-
-		return
+		return 
 	end
 
 	if play_due then
@@ -765,7 +705,6 @@ local function get_or_create_source(source_pool)
 
 		if not source:isPlaying() then
 			log.paranoid("Found free source at %d", i)
-
 			break
 		else
 			source = nil
@@ -774,9 +713,7 @@ local function get_or_create_source(source_pool)
 
 	if not source then
 		log.paranoid("No free sources in pool %s. Creating a new one", tostring(source_pool))
-
 		source = source_pool[1]:clone()
-
 		table.insert(source_pool, source)
 	end
 
@@ -790,8 +727,7 @@ function sound_db:_play(request, source_pool)
 
 	if not active_sources[opts.source_group] then
 		log.error("SOUND %s group %s not found", request.id, opts.source_group)
-
-		return
+		return 
 	end
 
 	local active = #active_sources[opts.source_group]
@@ -800,22 +736,18 @@ function sound_db:_play(request, source_pool)
 
 	if max == 0 then
 		log.info("max_sources for %s is 0", opts.source_group)
-
-		return
+		return 
 	end
 
 	if active < max then
 		source = get_or_create_source(source_pool)
 	else
 		log.paranoid("No free sources for %s. Source group %s maxed out at %d.", request.id, opts.source_group, max)
-
 		local ste_idx = soon_to_stop_source(active_sources[opts.source_group])
 		local ste_ast = active_sources[opts.source_group][ste_idx]
-
 		log.paranoid("Stopping evicted source %s (%s) in group %s", ste_ast.id, tostring(ste_ast.source), opts.source_group)
 		ste_ast.source:stop()
 		table.remove(active_sources[opts.source_group], ste_idx)
-
 		source = get_or_create_source(source_pool)
 	end
 
@@ -826,7 +758,6 @@ function sound_db:_play(request, source_pool)
 			vol = opts.gain
 		elseif type(opts.gain) == "table" then
 			local min, max = opts.gain[1], opts.gain[2]
-
 			vol = min + (max - min) * math.random()
 		end
 	end
@@ -840,7 +771,6 @@ function sound_db:_play(request, source_pool)
 
 	source:setVolume(vol)
 	source:setLooping(opts.loop or false)
-
 	local success = source:play()
 
 	if success then
@@ -857,7 +787,6 @@ function sound_db:_play(request, source_pool)
 			source = source,
 			ref_vol = ref_vol
 		}
-
 		table.insert(active_sources[opts.source_group], ast)
 	else
 		log.error("source:play() failed! source: %s sound_id: %s", tostring(source), request.id)

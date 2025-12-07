@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/darksteel_hammerer.lua
-
+-- chunkname: @./kr5/data/animations/darksteel_hammerer.lua
 local a = {
 	darksteel_hammerer_creep_idle = {
 		prefix = "darksteel_hammerer_creep",
@@ -32,5 +31,4 @@ local a = {
 		from = 98
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_robot.lua
-
+-- chunkname: @./kr5/data/animations/hero_robot.lua
 local a = {
 	Blaze_tren = {
 		prefix = "Blaze_tren",
@@ -187,5 +186,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

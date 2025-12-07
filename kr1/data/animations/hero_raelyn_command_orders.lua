@@ -1,7 +1,6 @@
-﻿-- chunkname: @./kr5/data/animations/hero_raelyn_command_orders.lua
-
+-- chunkname: @./kr5/data/animations/hero_raelyn_command_orders.lua
 local a = {
-hero_raelyn_command_orders_dark_knight_idle = {
+	hero_raelyn_command_orders_dark_knight_idle = {
 		prefix = "hero_raelyn_command_orders_dark_knight",
 		to = 8,
 		from = 1
@@ -50,7 +49,6 @@ hero_raelyn_command_orders_dark_knight_idle = {
 		prefix = "hero_raelyn_command_orders_dark_knight",
 		to = 78,
 		from = 39
-	},
+	}
 }
-
 return a

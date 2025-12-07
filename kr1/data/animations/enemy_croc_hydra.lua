@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_croc_hydra.lua
-
+-- chunkname: @./kr5/data/animations/enemy_croc_hydra.lua
 local a = {
 	hydra_projectile_trail = {
 		prefix = "hydra_trail",
@@ -12,5 +11,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

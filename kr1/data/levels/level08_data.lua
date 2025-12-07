@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level08_data.lua
-
+-- chunkname: @./kr1/data/levels/level08_data.lua
 return {
 	level_terrain_type = 1,
 	locked_hero = false,
@@ -96,9 +95,7 @@ return {
 				x = 820,
 				y = 399
 			},
-			track_names = {
-				"1"
-			}
+			track_names = {"1"}
 		},
 		{
 			["editor.r"] = 3.3861802251067e-15,
@@ -382,125 +379,42 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			from = 105,
-			path_id = 2
-		},
-		{
-			from = 1,
-			to = 9,
-			path_id = 4
-		}
-	},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 5,
-			locked_towers = {
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 5,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_mage",
-			}
-		}
-	},
-    unlock_towers = {"tower_bfg","tower_barbarian"},
+	invalid_path_ranges = {{
+		from = 105,
+		path_id = 2
+	}, {
+		from = 1,
+		to = 9,
+		path_id = 4
+	}},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 5,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 5,
+		locked_towers = {"tower_build_archer", "tower_build_mage"}
+	}},
+	unlock_towers = {"tower_bfg", "tower_barbarian"},
 	nav_mesh = {
-		{
-			2,
-			nil,
-			20,
-			3
-		},
-		{
-			nil,
-			nil,
-			1,
-			10
-		},
-		{
-			9,
-			1,
-			4,
-			9
-		},
-		{
-			3,
-			20,
-			5,
-			8
-		},
-		{
-			4,
-			91,
-			6,
-			7
-		},
-		{
-			5,
-			91,
-			nil,
-			7
-		},
-		{
-			8,
-			5,
-			6,
-			11
-		},
-		{
-			9,
-			4,
-			7,
-			11
-		},
-		{
-			10,
-			3,
-			8,
-			11
-		},
-		{
-			nil,
-			2,
-			9,
-			11
-		},
-		{
-			9,
-			8,
-			7
-		},
-		[20] = {
-			1,
-			nil,
-			91,
-			4
-		},
-		[91] = {
-			20,
-			nil,
-			6,
-			5
-		}
+		{2, nil, 20, 3},
+		{nil, nil, 1, 10},
+		{9, 1, 4, 9},
+		{3, 20, 5, 8},
+		{4, 91, 6, 7},
+		{5, 91, nil, 7},
+		{8, 5, 6, 11},
+		{9, 4, 7, 11},
+		{10, 3, 8, 11},
+		{nil, 2, 9, 11},
+		{9, 8, 7},
+		[20] = {1, nil, 91, 4},
+		[91] = {20, nil, 6, 5}
 	},
-	required_sounds = {
-		"music_stage08"
-	},
-	required_textures = {
-		"go_enemies_ice",
-		"go_stages_ice",
-		"go_stage08",
-		"go_stage08_bg"
-	}
+	required_sounds = {"music_stage08"},
+	required_textures = {"go_enemies_ice", "go_stages_ice", "go_stage08", "go_stage08_bg"}
 }

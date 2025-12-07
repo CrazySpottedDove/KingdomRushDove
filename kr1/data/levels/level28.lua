@@ -1,26 +1,14 @@
-﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level02.lua
-
+-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level02.lua
 local log = require("lib.klua.log"):new("level02")
 local signal = require("hump.signal")
 local E = require("entity_db")
 local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
-
 require("constants")
-
 local level = {}
-
-level.required_sounds = {
-	"music_stage28",
-	"SpecialStargate"
-}
-level.required_textures = {
-	"go_enemies_desert",
-	"go_stages_desert",
-	"go_stage28",
-	"go_stage28_bg"
-}
+level.required_sounds = {"music_stage28", "SpecialStargate"}
+level.required_textures = {"go_enemies_desert", "go_stages_desert", "go_stage28", "go_stage28_bg"}
 
 function level:init(store)
 	store.level_terrain_type = TERRAIN_STYLE_DESERT
@@ -28,30 +16,15 @@ function level:init(store)
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		self.max_upgrade_level = 6
-		self.locked_towers = {
-			"tower_archer_3",
-			"tower_barrack_3",
-			"tower_engineer_3",
-			"tower_mage_3",
-		}
+		self.locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_engineer_3", "tower_mage_3"}
 	elseif store.level_mode == GAME_MODE_HEROIC then
 		self.locked_hero = true
 		self.max_upgrade_level = 3
-		self.locked_towers = {
-			"tower_archer_3",
-			"tower_barrack_3",
-			"tower_engineer_3",
-			"tower_mage_3",
-		}
+		self.locked_towers = {"tower_archer_3", "tower_barrack_3", "tower_engineer_3", "tower_mage_3"}
 	elseif store.level_mode == GAME_MODE_IRON then
 		self.locked_hero = true
 		self.max_upgrade_level = 3
-		self.locked_towers = {
-			"tower_build_archer",
-			"tower_barrack_3",
-			"tower_build_engineer",
-			"tower_mage_3"
-		}
+		self.locked_towers = {"tower_build_archer", "tower_barrack_3", "tower_build_engineer", "tower_mage_3"}
 	end
 end
 
@@ -68,113 +41,31 @@ function level:load(store)
 	end
 
 	local x
-
 	self.nav_mesh = {
-		{
-			2,
-			10,
-			x,
-			x
-		},
-		{
-			11,
-			10,
-			1,
-			12
-		},
-		{
-			4,
-			9,
-			10,
-			11
-		},
-		{
-			x,
-			7,
-			3,
-			13
-		},
-		{
-			6,
-			x,
-			x,
-			10
-		},
-		{
-			x,
-			x,
-			5,
-			7
-		},
-		{
-			x,
-			6,
-			8,
-			4
-		},
-		{
-			7,
-			5,
-			x,
-			9
-		},
-		{
-			4,
-			8,
-			x,
-			3
-		},
-		{
-			3,
-			5,
-			x,
-			2
-		},
-		{
-			13,
-			3,
-			2,
-			12
-		},
-		{
-			x,
-			11,
-			2,
-			x
-		},
-		{
-			x,
-			4,
-			11,
-			x
-		},
-		{
-			4,
-			7,
-			3,
-			13
-		},
-		{
-			6,
-			x,
-			5,
-			8
-		}
+		{2, 10, x, x},
+		{11, 10, 1, 12},
+		{4, 9, 10, 11},
+		{x, 7, 3, 13},
+		{6, x, x, 10},
+		{x, x, 5, 7},
+		{x, 6, 8, 4},
+		{7, 5, x, 9},
+		{4, 8, x, 3},
+		{3, 5, x, 2},
+		{13, 3, 2, 12},
+		{x, 11, 2, x},
+		{x, 4, 11, x},
+		{4, 7, 3, 13},
+		{6, x, 5, 8}
 	}
 	self.custom_spawn_pos = V.v(600, 590)
-
 -- 	local e
-
 -- 	e = E:create_entity("decal_snake")
 -- 	e.pos.x, e.pos.y = 161, 327
-
 -- 	LU.queue_insert(store, e)
-
 -- 	e = E:create_entity("decal_stargate")
 -- 	e.pos.x, e.pos.y = 561, 100
-
 -- 	LU.queue_insert(store, e)
-
 -- 	for _, p in pairs({
 -- 		V.v(297, 709),
 -- 		V.v(327, 712),
@@ -182,7 +73,6 @@ function level:load(store)
 -- 	}) do
 -- 		e = E:create_entity("decal_chicken")
 -- 		e.pos = p
-
 -- 		LU.queue_insert(store, e)
 -- 	end
 end

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level20_data.lua
-
+-- chunkname: @./kr3/data/levels/level20_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 5,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"MetropolisAmbienceSound"
-			}
+			sounds = {"MetropolisAmbienceSound"}
 		},
 		{
 			template = "decal",
@@ -408,17 +405,8 @@ return {
 		{
 			load_file = "level68_spawner",
 			template = "mega_spawner",
-			spawn_nodes = {
-				60,
-				90,
-				110
-			},
-			spawn_waves = {
-				"Boss_Path_1",
-				"Boss_Path_2",
-				"Boss_Path_3",
-				"Boss_Path_4"
-			}
+			spawn_nodes = {60, 90, 110},
+			spawn_waves = {"Boss_Path_1", "Boss_Path_2", "Boss_Path_3", "Boss_Path_4"}
 		},
 		{
 			["tower.holder_id"] = "12",
@@ -618,119 +606,29 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_engineer"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_barrack", "tower_build_engineer"}
+	}},
 	nav_mesh = {
-		{
-			4,
-			7,
-			8,
-			11
-		},
-		{
-			6,
-			nil,
-			7,
-			3
-		},
-		{
-			6,
-			2,
-			4,
-			14
-		},
-		{
-			3,
-			2,
-			1,
-			11
-		},
-		{
-			nil,
-			nil,
-			6,
-			13
-		},
-		{
-			5,
-			2,
-			3,
-			13
-		},
-		{
-			2,
-			nil,
-			8,
-			1
-		},
-		{
-			1,
-			nil,
-			nil,
-			10
-		},
-		{
-			12,
-			10,
-			10
-		},
-		{
-			9,
-			8
-		},
-		{
-			14,
-			1,
-			10,
-			12
-		},
-		{
-			14,
-			11,
-			9
-		},
-		{
-			5,
-			6,
-			14
-		},
-		{
-			13,
-			3,
-			11,
-			12
-		}
+		{4, 7, 8, 11},
+		{6, nil, 7, 3},
+		{6, 2, 4, 14},
+		{3, 2, 1, 11},
+		{nil, nil, 6, 13},
+		{5, 2, 3, 13},
+		{2, nil, 8, 1},
+		{1, nil, nil, 10},
+		{12, 10, 10},
+		{9, 8},
+		{14, 1, 10, 12},
+		{14, 11, 9},
+		{5, 6, 14},
+		{13, 3, 11, 12}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage68",
-		"ElvesCreepServant",
-		"MetropolisAmbienceSounds",
-		"ElvesCreepEvoker",
-		"ElvesCreepGolem",
-		"ElvesScourger",
-		"ElvesCreepAvenger",
-		"ElvesCreepMountedAvenger",
-		"ElvesCreepScreecher",
-		"ElvesBajNimenBossSounds"
-	},
-	required_textures = {
-		"go_enemies_ancient_metropolis",
-		"go_enemies_bittering_rancor",
-		"go_stage68",
-		"go_stage68_bg",
-		"go_stages_faerie_grove",
-		"go_stages_bittering_rancor"
-	}
+	required_sounds = {"music_stage68", "ElvesCreepServant", "MetropolisAmbienceSounds", "ElvesCreepEvoker", "ElvesCreepGolem", "ElvesScourger", "ElvesCreepAvenger", "ElvesCreepMountedAvenger", "ElvesCreepScreecher", "ElvesBajNimenBossSounds"},
+	required_textures = {"go_enemies_ancient_metropolis", "go_enemies_bittering_rancor", "go_stage68", "go_stage68_bg", "go_stages_faerie_grove", "go_stages_bittering_rancor"}
 }

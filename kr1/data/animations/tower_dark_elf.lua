@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_dark_elf.lua
-
+-- chunkname: @./kr5/data/animations/tower_dark_elf.lua
 local a = {
 	harrasser_idle = {
 		prefix = "harrasser",
@@ -307,5 +306,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

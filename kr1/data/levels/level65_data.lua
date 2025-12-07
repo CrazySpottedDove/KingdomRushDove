@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level17_data.lua
-
+-- chunkname: @./kr3/data/levels/level17_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"HulkingRageAmbienceSound"
-			}
+			sounds = {"HulkingRageAmbienceSound"}
 		},
 		{
 			template = "crystal_unstable",
@@ -125,10 +122,7 @@ return {
 		},
 		{
 			template = "decal_hr_crystal_skull",
-			["delayed_play.achievement_flag"] = {
-				"MITCHELL_HEDGES",
-				2
-			},
+			["delayed_play.achievement_flag"] = {"MITCHELL_HEDGES", 2},
 			pos = {
 				x = 980,
 				y = 339
@@ -411,109 +405,28 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_mage"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_archer", "tower_build_mage"}
+	}},
 	nav_mesh = {
-		{
-			3,
-			nil,
-			6,
-			3
-		},
-		{
-			3,
-			6,
-			4,
-			9
-		},
-		{
-			nil,
-			1,
-			2,
-			8
-		},
-		{
-			9,
-			2,
-			5,
-			13
-		},
-		{
-			4,
-			7,
-			nil,
-			12
-		},
-		{
-			1,
-			nil,
-			7,
-			2
-		},
-		{
-			6,
-			6,
-			nil,
-			5
-		},
-		{
-			nil,
-			3,
-			11
-		},
-		{
-			3,
-			2,
-			4,
-			11
-		},
-		{
-			11,
-			4,
-			13
-		},
-		{
-			8,
-			9,
-			10
-		},
-		{
-			13,
-			5
-		},
-		{
-			10,
-			4,
-			12
-		}
+		{3, nil, 6, 3},
+		{3, 6, 4, 9},
+		{nil, 1, 2, 8},
+		{9, 2, 5, 13},
+		{4, 7, nil, 12},
+		{1, nil, 7, 2},
+		{6, 6, nil, 5},
+		{nil, 3, 11},
+		{3, 2, 4, 11},
+		{11, 4, 13},
+		{8, 9, 10},
+		{13, 5},
+		{10, 4, 12}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage65",
-		"ElvesLevelHRSounds",
-		"ElvesHeroBabyMalik",
-		"ElvesUnstableCrystalSounds",
-		"ElvenWoodsAmbienceSounds",
-		"ElvesCreepHyena",
-		"ElvesMalikSpecialSounds"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_enemies_hulking_rage",
-		"go_stage65",
-		"go_stage65_bg",
-		"go_hero_baby_malik",
-		"go_stages_hulking_rage"
-	}
+	required_sounds = {"music_stage65", "ElvesLevelHRSounds", "ElvesHeroBabyMalik", "ElvesUnstableCrystalSounds", "ElvenWoodsAmbienceSounds", "ElvesCreepHyena", "ElvesMalikSpecialSounds"},
+	required_textures = {"go_enemies_elven_woods", "go_enemies_hulking_rage", "go_stage65", "go_stage65_bg", "go_hero_baby_malik", "go_stages_hulking_rage"}
 }

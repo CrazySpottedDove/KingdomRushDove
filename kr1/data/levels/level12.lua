@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level12.lua
-
+-- chunkname: @./kr1/data/levels/level12.lua
 local log = require("lib.klua.log"):new("level21")
 local signal = require("hump.signal")
 local E = require("entity_db")
@@ -8,7 +7,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -24,31 +22,23 @@ end
 function level:update(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		local boss = E:create_entity("eb_veznan")
-
 		boss.pos = V.vclone(boss.pos_castle)
-
 		LU.queue_insert(store, boss)
-
 		self.boss = boss
-
 		U.mark_seen(store, boss.template_name)
 		coroutine.yield()
 		U.y_wait(store, 1)
-
 		self.boss.phase_signal = "welcome"
 
 		while self.boss.phase ~= "castle" do
 			coroutine.yield()
 		end
 
-		while not store.waves_finished or LU.has_alive_enemies(store, {
-			"eb_veznan"
-		}) do
+		while not store.waves_finished or LU.has_alive_enemies(store, {"eb_veznan"}) do
 			coroutine.yield()
 		end
 
 		S:queue("MusicBossFight")
-
 		self.boss.phase_signal = "descend"
 
 		while self.boss.phase ~= "death" do

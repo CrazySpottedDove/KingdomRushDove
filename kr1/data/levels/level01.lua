@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level01.lua
-
+-- chunkname: @./kr1/data/levels/level01.lua
 local log = require("lib.klua.log"):new("level01")
 local signal = require("hump.signal")
 local E = require("entity_db")
@@ -8,7 +7,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -20,7 +18,6 @@ local level = {}
 function level:update(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		self.manual_hero_insertion = true
-
 		signal.emit("show-balloon", "TB_START")
 		signal.emit("show-balloon", "TB_BUILD")
 		signal.emit("wave-notification", "view", "TUTORIAL_1")

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./all/shop_views.lua
-
+-- chunkname: @./all/shop_views.lua
 local log = require("lib.klua.log"):new("shop_views")
 local class = require("middleclass")
 local signal = require("hump.signal")
@@ -13,12 +12,10 @@ local iap_data = require("data.iap_data")
 local G = love.graphics
 local IS_PHONE = KR_TARGET == "phone"
 local IS_TABLET = KR_TARGET == "tablet"
-
 GemsStoreView = class("GemsStoreView", KView)
 
 function GemsStoreView:initialize(size)
 	KView.initialize(self, size)
-
 	self:ci("gems_store_close_button").on_click = function(this)
 		S:queue("GUIButtonCommon")
 		self:hide()
@@ -35,12 +32,10 @@ function GemsStoreView:show(no_title)
 	end
 
 	GemsStoreItemView:reload(self:get_window())
-
 	self:get_window():ci("modal_bg_transparent_view").hidden = false
 	self:ci("gems_store_items_slider").pos.x = self:ci("gems_store_items_slider").drag_limits.pos.x
 	self.hidden = false
 	self.pos.y = -self.size.y
-
 	local timer = self:get_window().timer
 
 	if IS_PHONE then
@@ -63,16 +58,13 @@ function GemsStoreView:show(no_title)
 		v.hidden = false
 		v.alpha = 0
 		v.pos.y = v.pos_hidden.y
-		v.timers = {
-			timer:tween(0.5, v, {
-				alpha = 1
-			}, "out-quad"),
-			timer:tween(0.5, v.pos, {
-				y = v.pos_shown.y
-			}, "out-quad", function()
-				v.timer = nil
-			end)
-		}
+		v.timers = {timer:tween(0.5, v, {
+			alpha = 1
+		}, "out-quad"), timer:tween(0.5, v.pos, {
+			y = v.pos_shown.y
+		}, "out-quad", function()
+			v.timer = nil
+		end)}
 	end
 
 	if IS_TABLET then
@@ -82,7 +74,6 @@ end
 
 function GemsStoreView:hide()
 	self:get_window():ci("modal_bg_transparent_view").hidden = true
-
 	local timer = self:get_window().timer
 
 	if IS_PHONE then
@@ -104,17 +95,14 @@ function GemsStoreView:hide()
 			end
 		end
 
-		v.timers = {
-			timer:tween(0.3, v, {
-				alpha = 0
-			}, "in-quad"),
-			timer:tween(0.3, v.pos, {
-				y = v.pos_hidden.y
-			}, "in-quad", function()
-				v.hidden = true
-				v.timer = nil
-			end)
-		}
+		v.timers = {timer:tween(0.3, v, {
+			alpha = 0
+		}, "in-quad"), timer:tween(0.3, v.pos, {
+			y = v.pos_hidden.y
+		}, "in-quad", function()
+			v.hidden = true
+			v.timer = nil
+		end)}
 	end
 end
 
@@ -122,7 +110,6 @@ ShopView = class("ShopView", KView)
 
 function ShopView:initialize(size)
 	KView.initialize(self, size)
-
 	self:ci("shop_buy_button").on_click = function(this)
 		local v = self:ci("shop_items").selected_view
 		local user_data = storage:load_slot()
@@ -146,7 +133,6 @@ function ShopView:initialize(size)
 					}, "in-expo", function()
 						self:ci("shop_failure_arm").hidden = true
 					end)
-
 					local b = self:ci("shop_failure_balloon")
 
 					if b.timer_h then
@@ -167,13 +153,11 @@ function ShopView:initialize(size)
 			end
 		end
 	end
+
 	self:ci("shop_help_view").on_click = function(this)
 		local user_data = storage:load_slot()
-
 		user_data.seen.shop_help = true
-
 		storage:save_slot(user_data)
-
 		this.hidden = true
 	end
 	self:ci("shop_done_button").on_click = function(this)
@@ -198,7 +182,6 @@ function ShopView:show(initial_item_name)
 	end
 
 	ShopBagItemView:load_all(self:ci("shop_bag_items").children)
-
 	local item_idx = self:ci("shop_items").initial_item or 1
 	local item
 
@@ -206,7 +189,6 @@ function ShopView:show(initial_item_name)
 		for _, c in pairs(self:ci("shop_items").children) do
 			if c.item_name == initial_item_name then
 				item = c
-
 				break
 			end
 		end
@@ -220,9 +202,7 @@ function ShopView:show(initial_item_name)
 
 	signal.emit(SGN_SHOP_GEMS_CHANGED)
 	signal.emit(SGN_SHOP_SHOWN)
-
 	self.hidden = false
-
 	local FADE_IN_TIME = IS_TABLET and 0.5 or 0.5
 	local HIDDEN_Y = IS_TABLET and -self.size.y or -50
 
@@ -239,11 +219,9 @@ function ShopView:show(initial_item_name)
 
 			ov.alpha = 0
 			ov.hidden = false
-			ov.timers = {
-				timer:tween(FADE_IN_TIME, ov, {
-					alpha = 1
-				})
-			}
+			ov.timers = {timer:tween(FADE_IN_TIME, ov, {
+				alpha = 1
+			})}
 		end
 
 		if self.timers then
@@ -254,16 +232,13 @@ function ShopView:show(initial_item_name)
 
 		self.pos.y = HIDDEN_Y
 		self.alpha = 0
-		self.timers = {
-			timer:tween(FADE_IN_TIME, self, {
-				alpha = 1
-			}, "out-quad"),
-			timer:tween(FADE_IN_TIME, self.pos, {
-				y = 0
-			}, "out-quad", function()
-				self.timers = nil
-			end)
-		}
+		self.timers = {timer:tween(FADE_IN_TIME, self, {
+			alpha = 1
+		}, "out-quad"), timer:tween(FADE_IN_TIME, self.pos, {
+			y = 0
+		}, "out-quad", function()
+			self.timers = nil
+		end)}
 	end
 end
 
@@ -281,13 +256,11 @@ function ShopView:hide()
 				end
 			end
 
-			ov.timers = {
-				timer:tween(FADE_OUT_TIME, ov, {
-					alpha = 0
-				}, "linear", function()
-					ov.hidden = true
-				end)
-			}
+			ov.timers = {timer:tween(FADE_OUT_TIME, ov, {
+				alpha = 0
+			}, "linear", function()
+				ov.hidden = true
+			end)}
 		end
 
 		if self.timers then
@@ -296,50 +269,35 @@ function ShopView:hide()
 			end
 		end
 
-		self.timers = {
-			timer:tween(FADE_OUT_TIME, self, {
-				alpha = 0
-			}, "in-quad"),
-			timer:tween(FADE_OUT_TIME, self.pos, {
-				y = HIDDEN_Y
-			}, "in-quad", function()
-				self.hidden = true
-				self.timers = nil
-
-				signal.emit(SGN_SHOP_HIDDEN)
-				signal.emit(SGN_SHOP_GEMS_CHANGED)
-			end)
-		}
+		self.timers = {timer:tween(FADE_OUT_TIME, self, {
+			alpha = 0
+		}, "in-quad"), timer:tween(FADE_OUT_TIME, self.pos, {
+			y = HIDDEN_Y
+		}, "in-quad", function()
+			self.hidden = true
+			self.timers = nil
+			signal.emit(SGN_SHOP_HIDDEN)
+			signal.emit(SGN_SHOP_GEMS_CHANGED)
+		end)}
 	else
 		self.hidden = true
-
 		signal.emit(SGN_SHOP_HIDDEN)
 		signal.emit(SGN_SHOP_GEMS_CHANGED)
 	end
 end
 
 ShopItemView = class("ShopItemView", KView)
-ShopItemView.static.instance_keys = {
-	"id",
-	"pos",
-	"item_name"
-}
-ShopItemView.static.init_arg_names = {
-	"item_name"
-}
+ShopItemView.static.instance_keys = {"id", "pos", "item_name"}
+ShopItemView.static.init_arg_names = {"item_name"}
 
 function ShopItemView:initialize(item_name)
 	local sd = iap_data.shop_data[item_name]
-
 	self.item_name = item_name
 	self.item_idx = sd.item_idx
 	self.price = sd.price
-
 	local image = KImageView:new(string.format("inaps_Icons_%04i", self.item_idx))
 	local glow = KImageView:new(string.format("inaps_IconsGlow_%04i", self.item_idx))
-
 	KView.initialize(self, image.size)
-
 	self.anchor.x, self.anchor.y = self.size.x * 0.5, self.size.y * 0.5
 
 	if KR_TARGET == "phone" then
@@ -399,8 +357,7 @@ function ShopItemView:buy()
 
 	if ud.gems < self.price then
 		log.debug("Price exceeds available gems")
-
-		return
+		return 
 	end
 
 	if not ud.bag[self.item_name] then
@@ -409,7 +366,6 @@ function ShopItemView:buy()
 
 	ud.bag[self.item_name] = ud.bag[self.item_name] + 1
 	ud.gems = ud.gems - self.price
-
 	storage:save_slot(ud, nil, true)
 	signal.emit(SGN_SHOP_GEMS_CHANGED)
 	ShopBagItemView:load_all(self:get_window():get_child_by_id("shop_bag_items").children)
@@ -422,7 +378,6 @@ function ShopItemView:buy()
 
 	local timer = self:get_window().timer
 	local b = self:get_window():get_child_by_id("shop_success_balloon")
-
 	b.hidden = false
 	b.alpha = 1
 
@@ -463,7 +418,6 @@ function ShopBagItemView:buy_fx()
 	self:get_window().timer:tween(0.2, self.scale, {
 		x = 1
 	}, "out-back")
-
 	local p = BuyFxParticlesView:new("inaps_gemParticle_0001", 1)
 
 	if KR_TARGET == "phone" then
@@ -476,17 +430,8 @@ function ShopBagItemView:buy_fx()
 end
 
 GemsStoreItemView = class("GemsStoreItemView", KImageView)
-GemsStoreItemView.static.instance_keys = {
-	"id",
-	"pos",
-	"item_name",
-	"item_image"
-}
-GemsStoreItemView.static.init_arg_names = {
-	"size",
-	"item_name",
-	"item_image"
-}
+GemsStoreItemView.static.instance_keys = {"id", "pos", "item_name", "item_image"}
+GemsStoreItemView.static.init_arg_names = {"size", "item_name", "item_image"}
 
 function GemsStoreItemView.static:reload(window)
 	for _, v in pairs(window:get_child_by_id("gems_store_items_slider").children) do
@@ -498,7 +443,6 @@ end
 
 function GemsStoreItemView:initialize(size, item_name, item_image)
 	KImageView.initialize(self, size)
-
 	self.item_name = item_name
 	self.item_image = item_image
 	self:ci("play_button").on_click = function()
@@ -509,11 +453,8 @@ function GemsStoreItemView:initialize(size, item_name, item_image)
 		S:queue("GUIButtonCommon")
 		self:buy_iap()
 	end
-
 	self:ci("image"):set_image(item_image)
-
 	self:ci("title").text = _("MAP_INAPP_" .. string.upper(item_name))
-
 	local mp = self:ci("most_popular")
 	local bv = self:ci("best_value")
 
@@ -530,7 +471,6 @@ end
 
 function GemsStoreItemView:load()
 	local product = PS.services.iap and PS.services.iap:get_product(self.item_name) or {}
-
 	self:ci("reward").text = product.reward or ""
 
 	if product.play_ad then
@@ -548,12 +488,11 @@ function GemsStoreItemView:play_ad()
 
 	if not product or not product.play_ad or not product.gems then
 		log.error("Item product for %s not found or not gems.", self.item_name)
-
-		return
+		return 
 	end
 
 	if not PS.services.ads then
-		-- block empty
+	-- block empty
 	else
 		local provider = PS.services.ads:get_provider_with_video_ad()
 
@@ -564,11 +503,10 @@ function GemsStoreItemView:play_ad()
 				gems = product.reward
 			}
 		}, AD_TYPE_REWARDED) then
-			-- block empty
+		-- block empty
 		else
 			signal.emit(SGN_SHOP_SHOW_IAP_PROGRESS)
-
-			return
+			return 
 		end
 	end
 
@@ -580,22 +518,17 @@ function GemsStoreItemView:buy_iap()
 	if not PS.services.iap or not PS.services.iap:purchase_product(self.item_name) then
 		signal.emit(SGN_SHOP_SHOW_MESSAGE, "iap_error")
 		log.error("Error trying to purchase product %s", self.item_name)
-
-		return
+		return 
 	end
 
 	signal.emit(SGN_SHOP_SHOW_IAP_PROGRESS)
 end
 
 MessageView = class("MessageView", KView)
-MessageView.static.instance_keys = {
-	"id",
-	"pos"
-}
+MessageView.static.instance_keys = {"id", "pos"}
 
 function MessageView:initialize(size)
 	KView.initialize(self, size)
-
 	self:ci("message_view_close_button").on_click = function(this)
 		S:queue("GUIButtonCommon")
 		self:hide()
@@ -612,7 +545,6 @@ function MessageView:show(kind, arg)
 	end
 
 	local PS = require("platform_services")
-
 	self.callback = nil
 
 	if kind == "reward" then
@@ -625,7 +557,6 @@ function MessageView:show(kind, arg)
 		end
 	elseif kind == "iap_error" then
 		local service_name = PS.services.iap and PS.services.iap.SRV_DISPLAY_NAME or "Store"
-
 		wid("message_view_label").text = string.format(string.gsub(_("IAP_CONNECTION_ERROR"), "@", "s"), service_name)
 	elseif kind == "channel_quit_game" then
 		if arg and arg ~= "" then
@@ -641,8 +572,7 @@ function MessageView:show(kind, arg)
 		end
 	else
 		log.error("show_message called with unknown kind. skipping")
-
-		return
+		return 
 	end
 
 	self.hidden = false
@@ -653,14 +583,10 @@ function MessageView:hide()
 end
 
 IapProgressView = class("IapProgressView", KView)
-IapProgressView.static.instance_keys = {
-	"id",
-	"pos"
-}
+IapProgressView.static.instance_keys = {"id", "pos"}
 
 function IapProgressView:update(dt)
 	local v = self:ci("iap_progress_spinner")
-
 	v.r = v.r - dt * math.pi
 end
 
@@ -668,17 +594,13 @@ BuyFxParticlesView = class("BuyFxParticlesView", KView)
 
 function BuyFxParticlesView:initialize(particle_image, max_scale)
 	KView.initialize(self)
-
 	local ss = I:s(particle_image)
 	local p_scale = ss.ref_scale or 1
 	local c = G.newCanvas(ss.size[1], ss.size[2])
-
 	G.setCanvas(c)
 	G.draw(I:i(ss.atlas), ss.quad)
 	G.setCanvas()
-
 	local ps = G.newParticleSystem(c, 500)
-
 	ps:setDirection(0)
 	ps:setSpread(2 * math.pi)
 	ps:setSizes(0.2 * p_scale, (max_scale or 2) * p_scale)
@@ -688,7 +610,6 @@ function BuyFxParticlesView:initialize(particle_image, max_scale)
 	ps:setRadialAcceleration(-200)
 	ps:setColors(255, 255, 255, 255, 255, 255, 255, 0)
 	ps:emit(20)
-
 	self.particle_system = ps
 	self.ts = love.timer.getTime()
 end
@@ -696,8 +617,7 @@ end
 function BuyFxParticlesView:update(dt)
 	if love.timer.getTime() - self.ts > 1 then
 		self.parent:remove_child(self)
-
-		return
+		return 
 	end
 
 	self.particle_system:update(dt)

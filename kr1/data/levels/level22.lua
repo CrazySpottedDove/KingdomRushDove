@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level22.lua
-
+-- chunkname: @./kr1/data/levels/level22.lua
 local log = require("lib.klua.log"):new("level22")
 local signal = require("hump.signal")
 local E = require("entity_db")
@@ -8,7 +7,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -24,12 +22,10 @@ function level:update(store)
 		end
 
 		local boss
-
 		log.debug("+++++++++++++++ wait for boss")
 
 		while not boss do
 			boss = LU.list_entities(store.entities, "eb_myconid")[1]
-
 			coroutine.yield()
 		end
 

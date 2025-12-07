@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/revenant_soulcaller.lua
-
+-- chunkname: @./kr5/data/animations/revenant_soulcaller.lua
 local a = {
 	revenant_soulcaller_unit_idle = {
 		prefix = "revenant_soulcaller_unit",
@@ -77,5 +76,4 @@ local a = {
 		from = 21
 	}
 }
-
 return a

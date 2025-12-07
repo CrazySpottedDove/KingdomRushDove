@@ -1,20 +1,14 @@
-﻿-- chunkname: @./all/game_editor_classes.lua
-
+-- chunkname: @./all/game_editor_classes.lua
 local log = require("lib.klua.log"):new("game_editor_classes")
-
 log.level = log.DEBUG_LEVEL
-
 local km = require("lib.klua.macros")
-
 require("lib.klua.table")
 require("klove.kui")
-
 local class = require("middleclass")
 local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local utf8 = require("utf8")
-
 KE_CONST = {}
 KE_CONST.PROP_OX = 0
 KE_CONST.PROP_W = 180
@@ -26,20 +20,14 @@ KE_CONST.PROP_NUM_SEP = 2
 KE_CONST.font_name = "infobar_name"
 KE_CONST.font_size = 12
 KELayout = class("KELayout", KView)
-KELayout.static.init_arg_names = {
-	"style",
-	"separation"
-}
+KELayout.static.init_arg_names = {"style", "separation"}
 KELayout.static.serialize_children = true
-
 KELayout:append_serialize_keys("style")
 
 function KELayout:initialize(style, separation)
 	KView.initialize(self)
-
 	self.style = style or "vertical"
 	self.separation = separation or V.v(6, 6)
-
 	self:update_layout()
 end
 
@@ -64,14 +52,11 @@ function KELayout:update_layout()
 end
 
 KESep = class("KESep", KLabel)
-KESep.static.init_arg_names = {
-	"title"
-}
+KESep.static.init_arg_names = {"title"}
 KESep.static.serialize_children = false
 
 function KESep:initialize(title)
 	KLabel.initialize(self, V.v(KE_CONST.PROP_W, KE_CONST.PROP_H + KE_CONST.PROP_H / 2))
-
 	self.text = title
 	self.text_offset = V.v(0, KE_CONST.PROP_H / 2)
 	self.font_name = KE_CONST.font_name
@@ -79,21 +64,15 @@ function KESep:initialize(title)
 end
 
 KENum = class("KENum", KView)
-KENum.static.init_arg_names = {
-	"style",
-	"value",
-	"step"
-}
+KENum.static.init_arg_names = {"style", "value", "step"}
 KENum.static.serialize_children = false
 
 function KENum:initialize(style, value, step)
 	KView.initialize(self)
-
 	self.value = value or 0
 	self.step = step or 1
 	self.shift_mult = 10
 	self.ctrl_mult = 0.1
-
 	local w = KE_CONST.PROP_W - KE_CONST.PROP_NUM_BTN_W
 
 	if style == "half" then
@@ -101,32 +80,17 @@ function KENum:initialize(style, value, step)
 	end
 
 	local lv = KLabel:new(V.v(w, KE_CONST.PROP_H))
-
 	lv.text = self.value
 	lv.text_align = "left"
-	lv.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
+	lv.colors.background = {0, 0, 0, 20}
 	lv.font_name = KE_CONST.font_name
 	lv.font_size = KE_CONST.font_size
-
 	self:add_child(lv)
-
 	self.lv = lv
-
 	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
-
 	lb.text = "+"
 	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, 0)
-	lb.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
+	lb.colors.background = {0, 0, 0, 20}
 
 	function lb.on_click()
 		local m = 1
@@ -143,17 +107,10 @@ function KENum:initialize(style, value, step)
 	end
 
 	self:add_child(lb)
-
 	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
-
 	lb.text = "-"
 	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, KE_CONST.PROP_H / 2)
-	lb.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
+	lb.colors.background = {0, 0, 0, 20}
 
 	function lb.on_click()
 		local m = 1
@@ -170,7 +127,6 @@ function KENum:initialize(style, value, step)
 	end
 
 	self:add_child(lb)
-
 	self.size = V.v(lb.pos.x + lb.size.x, KE_CONST.PROP_H)
 end
 
@@ -180,7 +136,6 @@ end
 
 function KENum:set_value(value, silent)
 	self.value = value
-
 	self:update()
 
 	if self.on_change and not silent then
@@ -189,19 +144,13 @@ function KENum:set_value(value, silent)
 end
 
 KEEnum = class("KEEnum", KView)
-KEEnum.static.init_arg_names = {
-	"style",
-	"list",
-	"index"
-}
+KEEnum.static.init_arg_names = {"style", "list", "index"}
 KEEnum.static.serialize_children = false
 
 function KEEnum:initialize(style, list, index)
 	KView.initialize(self)
-
 	self.index = index
 	self.list = list or {}
-
 	local w = KE_CONST.PROP_W - KE_CONST.PROP_NUM_BTN_W
 
 	if style == "half" then
@@ -209,56 +158,33 @@ function KEEnum:initialize(style, list, index)
 	end
 
 	local lv = KLabel:new(V.v(w, KE_CONST.PROP_H))
-
 	lv.text = self.value or ""
 	lv.text_align = "left"
-	lv.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
+	lv.colors.background = {0, 0, 0, 20}
 	lv.font_name = KE_CONST.font_name
 	lv.font_size = KE_CONST.font_size
-
 	self:add_child(lv)
-
 	self.lv = lv
-
 	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
-
 	lb.text = "+"
 	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, 0)
-	lb.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
+	lb.colors.background = {0, 0, 0, 20}
 
 	function lb.on_click()
 		self:set_value((self.index or 0) + 1)
 	end
 
 	self:add_child(lb)
-
 	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
-
 	lb.text = "-"
 	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, KE_CONST.PROP_H / 2)
-	lb.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
+	lb.colors.background = {0, 0, 0, 20}
 
 	function lb.on_click()
 		self:set_value((self.index or 0) - 1)
 	end
 
 	self:add_child(lb)
-
 	self.size = V.v(lb.pos.x + lb.size.x, KE_CONST.PROP_H)
 end
 
@@ -306,74 +232,50 @@ function KEList:initialize(size)
 	KScrollList.initialize(self, size)
 
 	if not self.colors.background then
-		self.colors.background = {
-			0,
-			0,
-			0,
-			30
-		}
+		self.colors.background = {0, 0, 0, 30}
 	end
 end
 
 KEProp = class("KEProp", KView)
-KEProp.static.init_arg_names = {
-	"title",
-	"value",
-	"editable"
-}
+KEProp.static.init_arg_names = {"title", "value", "editable"}
 KEProp.static.serialize_children = false
 
 function KEProp:initialize(title, value, editable)
 	KView.initialize(self)
-
 	self.value = value or ""
 	self.editable = editable
 	self.prop_type = PT_STRING
-
 	local h = 0
 	local lt = KLabel:new(V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
-
 	lt.text = title
 	lt.text_align = "left"
 	lt.pos = V.v(KE_CONST.PROP_OX, 0)
 	lt.font_name = KE_CONST.font_name
 	lt.font_size = KE_CONST.font_size
-
 	self:add_child(lt)
-
 	self.lt = lt
 	h = h + lt.size.y
-
 	local lv
-
 	lv = KLabel:new(V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
 	lv.text = value or ""
 	lv.text_align = "left"
 	lv.font_name = KE_CONST.font_name
 	lv.font_size = KE_CONST.font_size
 	lv.pos = V.v(KE_CONST.PROP_OX, KE_CONST.PROP_H)
-	lv.colors.background = {
-		0,
-		0,
-		0,
-		20
-	}
-
+	lv.colors.background = {0, 0, 0, 20}
 	self:add_child(lv)
-
 	self.lv = lv
 	h = h + lv.size.y
 	self.size = V.v(lt.size.x, h)
 end
 
 function KEProp:update(dt)
-	return
+	return 
 end
 
 function KEProp:set_value(value, silent)
 	self.value = value
 	self.lv.text = value
-
 	self:update()
 
 	if self.on_change and not silent then
@@ -383,17 +285,16 @@ end
 
 function KEProp:on_textinput(t)
 	if not self.editable then
-		return
+		return 
 	end
 
 	self:set_value(self.value .. t)
-
 	return true
 end
 
 function KEProp:on_keypressed(key)
 	if not self.editable then
-		return
+		return 
 	end
 
 	if key == "backspace" then
@@ -402,7 +303,6 @@ function KEProp:on_keypressed(key)
 
 		if byteoffset then
 			text = string.sub(text, 1, byteoffset - 1)
-
 			self:set_value(text)
 		end
 	elseif key == "delete" then
@@ -411,35 +311,24 @@ function KEProp:on_keypressed(key)
 end
 
 KEPropNum = class("KEPropNum", KView)
-KEPropNum.static.init_arg_names = {
-	"title",
-	"value",
-	"step"
-}
+KEPropNum.static.init_arg_names = {"title", "value", "step"}
 KEPropNum.static.serialize_children = false
 
 function KEPropNum:initialize(title, value, step)
 	KView.initialize(self)
-
 	self.value = value
 	self.prop_type = PT_NUMBER
-
 	local h = 0
 	local lt = KLabel:new(V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
-
 	lt.text = title
 	lt.text_align = "left"
 	lt.font_name = KE_CONST.font_name
 	lt.font_size = KE_CONST.font_size
 	lt.pos = V.v(KE_CONST.PROP_OX, 0)
-
 	self:add_child(lt)
-
 	self.lt = lt
 	h = h + lt.size.y
-
 	local lv = KENum:new("full", value, step)
-
 	lv.pos = V.v(KE_CONST.PROP_OX, KE_CONST.PROP_H)
 
 	function lv.on_change(this)
@@ -451,9 +340,7 @@ function KEPropNum:initialize(title, value, step)
 	end
 
 	self.lv = lv
-
 	self:add_child(lv)
-
 	h = h + lv.size.y
 	self.size = V.v(lt.size.x, h)
 end
@@ -472,46 +359,31 @@ function KEPropNum:set_value(value, silent)
 end
 
 KEPropCoords = class("KEPropCoords", KView)
-KEPropCoords.static.init_arg_names = {
-	"title",
-	"value",
-	"step"
-}
+KEPropCoords.static.init_arg_names = {"title", "value", "step"}
 KEPropCoords.static.serialize_children = false
 
 function KEPropCoords:initialize(title, value, step)
 	KView.initialize(self)
-
 	step = step or 1
 	value = value or V.v(0, 0)
 	self.prop_type = PT_COORDS
-
 	local h = 0
 	local lt = KLabel:new(V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
-
 	lt.text = title
 	lt.text_align = "left"
 	lt.pos = V.v(KE_CONST.PROP_OX, 0)
 	lt.font_name = KE_CONST.font_name
 	lt.font_size = KE_CONST.font_size
-
 	self:add_child(lt)
-
 	self.lt = lt
 	h = h + lt.size.y
-
 	local lv1 = KENum:new("half", value.x, step)
-
 	lv1.pos = V.v(KE_CONST.PROP_OX, KE_CONST.PROP_H)
 	self.lv1 = lv1
-
 	self:add_child(lv1)
-
 	local lv2 = KENum:new("half", value.y, step)
-
 	lv2.pos = V.v(lv1.pos.x + lv1.size.x + KE_CONST.PROP_NUM_SEP, KE_CONST.PROP_H)
 	self.lv2 = lv2
-
 	self:add_child(lv2)
 
 	function lv1.on_change(this)
@@ -542,22 +414,14 @@ function KEPropCoords:set_value(value, silent)
 end
 
 KEButton = class("KEButton", KButton)
-KEButton.static.init_arg_names = {
-	"title"
-}
+KEButton.static.init_arg_names = {"title"}
 
 function KEButton:initialize(title)
 	KButton.initialize(self, V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
-
 	self.text = title
 	self.font_name = KE_CONST.font_name
 	self.font_size = KE_CONST.font_size
-	self.colors.background = {
-		0,
-		0,
-		0,
-		40
-	}
+	self.colors.background = {0, 0, 0, 40}
 
 	if self.size and self.font_size and (not self.text_offset or self.text_offset.y == 0) then
 		self.text_offset = V.v(self.text_offset.x or 0, (self.size.y - self.font_size) / 2)
@@ -566,38 +430,22 @@ end
 
 function KEButton:activate()
 	self.active = true
-	self.colors.background = {
-		200,
-		200,
-		0,
-		60
-	}
+	self.colors.background = {200, 200, 0, 60}
 end
 
 function KEButton:deactivate()
 	self.active = false
-	self.colors.background = {
-		0,
-		0,
-		0,
-		40
-	}
+	self.colors.background = {0, 0, 0, 40}
 end
 
 KEPropBool = class("KEPropBool", KEButton)
-KEPropBool.static.init_arg_names = {
-	"title",
-	"value",
-	"inactive_title"
-}
+KEPropBool.static.init_arg_names = {"title", "value", "inactive_title"}
 
 function KEPropBool:initialize(title, value, inactive_title)
 	KEButton.initialize(self, title)
-
 	self.value = value
 	self.active_title = title
 	self.inactive_title = inactive_title
-
 	self:update(0)
 end
 
@@ -605,11 +453,9 @@ function KEPropBool:update(dt)
 	if self.value ~= self.active then
 		if self.value then
 			self:activate()
-
 			self.text = self.active_title
 		else
 			self:deactivate()
-
 			self.text = self.inactive_title or self.active_title
 		end
 	end
@@ -620,7 +466,6 @@ end
 function KEPropBool:set_value(value, silent)
 	self.active = "force update"
 	self.value = value
-
 	self:update(0)
 
 	if self.on_change and not silent then
@@ -640,13 +485,11 @@ end
 
 function KEPicker:on_down(btn, x, y)
 	self.tracking = true
-
 	self.gui:down_tool(btn, x, y)
 end
 
 function KEPicker:on_up(btn, x, y)
 	self.tracking = false
-
 	self.gui:up_tool(btn, x, y)
 end
 
@@ -659,11 +502,13 @@ function KEPicker:update(dt)
 		self._last_pos.y = y
 	end
 
-	if self.gui.are_axes_in_range({x = x, y = y}, self._last_pos) then
+	if self.gui.are_axes_in_range({
+		x = x,
+		y = y
+	}, self._last_pos) then
 		local down_1 = love.mouse.isDown(1)
 		local down_2 = love.mouse.isDown(2)
 		local down = self.tracking and (down_1 and 1 or down_2 and 2 or nil)
-
 		self.gui:move_tool(x, y, down)
 	end
 
@@ -676,17 +521,13 @@ KEPointerPos.static.serialize_children = false
 
 function KEPointerPos:initialize(size)
 	KView.initialize(self, size)
-
 	local lt = KLabel:new(V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
-
 	lt.text = ""
 	lt.text_align = "left"
 	lt.pos = V.v(KE_CONST.PROP_OX, 0)
 	lt.font_name = KE_CONST.font_name
 	lt.font_size = KE_CONST.font_size
-
 	self:add_child(lt)
-
 	self.lt = lt
 end
 
@@ -695,28 +536,20 @@ KECellInfo.static.serialize_children = false
 
 function KECellInfo:initialize(size)
 	KView.initialize(self, size)
-
 	local lt = KLabel:new(V.v(KE_CONST.PROP_W / 2, KE_CONST.PROP_H))
-
 	lt.text = ""
 	lt.text_align = "left"
 	lt.pos = V.v(KE_CONST.PROP_OX, 0)
 	lt.font_name = KE_CONST.font_name
 	lt.font_size = KE_CONST.font_size
-
 	self:add_child(lt)
-
 	self.lt = lt
-
 	local gt = KLabel:new(V.v(KE_CONST.PROP_W / 2, KE_CONST.PROP_H))
-
 	gt.text = ""
 	gt.text_align = "right"
 	gt.pos = V.v(KE_CONST.PROP_OX + KE_CONST.PROP_W / 2, 0)
 	gt.font_name = KE_CONST.font_name
 	gt.font_size = KE_CONST.font_size
-
 	self:add_child(gt)
-
 	self.gt = gt
 end

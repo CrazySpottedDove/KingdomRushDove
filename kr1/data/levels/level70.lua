@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level22.lua
-
+-- chunkname: @./kr3/data/levels/level22.lua
 local log = require("lib.klua.log"):new("level22")
 local km = require("lib.klua.macros")
 local signal = require("hump.signal")
@@ -9,7 +8,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -19,12 +17,11 @@ end
 local level = {}
 
 function level:load(store)
-	return
+	return 
 end
 
 function level:update(store)
 	coroutine.yield()
-
 	local h = LU.insert_hero(store, "hero_bolverk", V.v(769, 75))
 
 	while store.wave_group_number < 1 do
@@ -37,13 +34,10 @@ function level:update(store)
 		end
 
 		local boss = E:create_entity("eb_balrog")
-
 		boss.nav_path.pi = 2
 		boss.nav_path.ni = P:get_start_node(boss.nav_path.pi)
-
 		LU.queue_insert(store, boss)
 		coroutine.yield()
-
 		local megaspawner = LU.list_entities(store.entities, "mega_spawner")[1]
 		local spawn_nodes = table.deepclone(megaspawner.spawn_nodes)
 		local spawn_idx = 1
@@ -51,7 +45,6 @@ function level:update(store)
 		while not boss.health.dead do
 			if spawn_nodes[1] and boss.nav_path.ni >= spawn_nodes[1] then
 				table.remove(spawn_nodes, 1)
-
 				megaspawner.manual_wave = megaspawner.spawn_waves[spawn_idx]
 				spawn_idx = km.zmod(spawn_idx + 1, #megaspawner.spawn_waves)
 			end

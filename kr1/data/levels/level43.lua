@@ -1,5 +1,4 @@
-﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level17.lua
-
+-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level17.lua
 local log = require("lib.klua.log"):new("level17")
 local E = require("entity_db")
 local U = require("utils")
@@ -7,41 +6,25 @@ local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local S = require("sound_db")
 local P = require("path_db")
-
 require("constants")
-
 local level = {}
-
-level.required_sounds = {
-	"music_stage43",
-	"PirateBoatSounds",
-	"RisingTidesSounds",
-	"SpecialMermaid"
-}
-level.required_textures = {
-	"go_enemies_desert",
-	"go_enemies_rising_tides",
-	"go_stages_rising_tides",
-	"go_stage43",
-	"go_stage43_bg",
-	"go_hero_pirate"
-}
+level.required_sounds = {"music_stage43", "PirateBoatSounds", "RisingTidesSounds", "SpecialMermaid"}
+level.required_textures = {"go_enemies_desert", "go_enemies_rising_tides", "go_stages_rising_tides", "go_stage43", "go_stage43_bg", "go_hero_pirate"}
 local x = nil
 level.nav_mesh = {
-    [0] = {7, 1, x, 10},
-    {2, x, x, 0},
-    {21, x, 1, 7},
-    {4, 21, 21, 5},
-    {x, 3, 5, 6},
-    {4, 3, 7, 66},
-    {x, 4, 66, x},
-    {5, 2, 0, 8},
-    {66, 7, 10, x},
-    [10] = {8, 0, x, x},
-    [21] = {3, x, 2, 7},
-    [66] = {6, 5, 8, x}
+	[0] = {7, 1, x, 10},
+	{2, x, x, 0},
+	{21, x, 1, 7},
+	{4, 21, 21, 5},
+	{x, 3, 5, 6},
+	{4, 3, 7, 66},
+	{x, 4, 66, x},
+	{5, 2, 0, 8},
+	{66, 7, 10, x},
+	[10] = {8, 0, x, x},
+	[21] = {3, x, 2, 7},
+	[66] = {6, 5, 8, x}
 }
-
 
 function level:init(store)
 	store.level_terrain_type = TERRAIN_STYLE_BEACH
@@ -52,36 +35,19 @@ function level:init(store)
 	self.locked_powers = {}
 
 	if store.level_mode == GAME_MODE_IRON then
-		self.locked_towers = {
-			"tower_build_archer",
-			"tower_build_engineer",
-		}
+		self.locked_towers = {"tower_build_archer", "tower_build_engineer"}
 	end
 end
 
 function level:load(store)
 	LU.insert_background(store, "Stage17_0001", Z_BACKGROUND)
 	LU.insert_defend_points(store, self.locations.exits, store.level_terrain_type)
-
-	local flags = {
-		{
-			"decal_defense_flag_water",
-			1000,
-			177
-		},
-		{
-			"decal_defense_flag_water",
-			1000,
-			85
-		}
-	}
+	local flags = {{"decal_defense_flag_water", 1000, 177}, {"decal_defense_flag_water", 1000, 85}}
 
 	for _, f in pairs(flags) do
 		local e = E:create_entity(f[1])
-
 		e.pos.x, e.pos.y = f[2], f[3]
 		e.render.sprites[1].ts = U.frandom(0, 0.5)
-
 		LU.queue_insert(store, e)
 	end
 
@@ -106,14 +72,12 @@ function level:load(store)
 	end
 
 	local e
-
 	e = E:create_entity("decal")
 	e.render.sprites[1].animated = false
 	e.render.sprites[1].name = "Stage17_boat_top_0001"
 	e.render.sprites[1].anchor = V.v(0.5, 0.1)
 	e.render.sprites[1].z = Z_OBJECTS
 	e.pos.x, e.pos.y = 84, 129
-
 	LU.queue_insert(store, e)
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -123,9 +87,7 @@ function level:load(store)
 		e.render.sprites[1].anchor = V.v(0.5, 0.1)
 		e.render.sprites[1].z = Z_OBJECTS
 		e.pos.x, e.pos.y = 84, 129
-
 		LU.queue_insert(store, e)
-
 		self.ship_cover = e
 		e = E:create_entity("decal")
 		e.render.sprites[1].animation = {
@@ -137,9 +99,7 @@ function level:load(store)
 		e.render.sprites[1].loop = false
 		e.render.sprites[1].z = Z_DECALS
 		e.pos.x, e.pos.y = 182, 160
-
 		LU.queue_insert(store, e)
-
 		self.ship_blown = e
 	end
 
@@ -151,9 +111,7 @@ function level:load(store)
 	}
 	e.render.sprites[1].z = Z_DECALS
 	e.pos.x, e.pos.y = 447, 737
-
 	LU.queue_insert(store, e)
-
 	e = E:create_entity("decal")
 	e.render.sprites[1].animation = {
 		prefix = "Stage17_waterFall_waves",
@@ -162,9 +120,7 @@ function level:load(store)
 	}
 	e.render.sprites[1].z = Z_DECALS
 	e.pos.x, e.pos.y = 447, 737
-
 	LU.queue_insert(store, e)
-
 	-- local fish_pos = {
 	-- 	V.v(37, 400),
 	-- 	V.v(93, 557),
@@ -176,14 +132,11 @@ function level:load(store)
 	-- 	V.v(704, 688),
 	-- 	V.v(1003, 143)
 	-- }
-
 	-- for _, p in pairs(fish_pos) do
 	-- 	e = E:create_entity("decal_jumping_fish2")
 	-- 	e.pos = p
-
 	-- 	LU.queue_insert(store, e)
 	-- end
-
 	local water_sparks = {
 		V.v(97, 642),
 		V.v(110, 570),
@@ -221,7 +174,6 @@ function level:load(store)
 		e.render.sprites[1].ts = U.frandom(0, 0.5)
 		e.render.sprites[1].z = Z_DECALS
 		e.pos = p
-
 		LU.queue_insert(store, e)
 	end
 
@@ -231,111 +183,106 @@ function level:load(store)
 	e.render.sprites[1].anchor = V.v(0.5, 0)
 	e.render.sprites[1].z = Z_OBJECTS
 	e.pos.x, e.pos.y = 147, 381
-
 	LU.queue_insert(store, e)
-
-	-- local wave_pos = {
-	-- 	{
-	-- 		158,
-	-- 		634,
-	-- 		70
-	-- 	},
-	-- 	{
-	-- 		881,
-	-- 		84,
-	-- 		-175
-	-- 	},
-	-- 	{
-	-- 		990,
-	-- 		190,
-	-- 		-5
-	-- 	},
-	-- 	{
-	-- 		306,
-	-- 		254,
-	-- 		-169
-	-- 	},
-	-- 	{
-	-- 		398,
-	-- 		232,
-	-- 		180
-	-- 	},
-	-- 	{
-	-- 		535,
-	-- 		326,
-	-- 		180
-	-- 	},
-	-- 	{
-	-- 		694,
-	-- 		390,
-	-- 		126
-	-- 	},
-	-- 	{
-	-- 		751,
-	-- 		540,
-	-- 		180
-	-- 	},
-	-- 	{
-	-- 		635,
-	-- 		550,
-	-- 		-19
-	-- 	},
-	-- 	{
-	-- 		732,
-	-- 		715,
-	-- 		0
-	-- 	},
-	-- 	{
-	-- 		653,
-	-- 		663,
-	-- 		-76
-	-- 	},
-	-- 	{
-	-- 		484,
-	-- 		551,
-	-- 		26
-	-- 	},
-	-- 	{
-	-- 		456,
-	-- 		637,
-	-- 		103
-	-- 	},
-	-- 	{
-	-- 		337,
-	-- 		628,
-	-- 		-88
-	-- 	},
-	-- 	{
-	-- 		341,
-	-- 		488,
-	-- 		-17
-	-- 	},
-	-- 	{
-	-- 		232,
-	-- 		503,
-	-- 		27
-	-- 	},
-	-- 	{
-	-- 		259,
-	-- 		345,
-	-- 		0
-	-- 	}
-	-- }
-
-	-- for _, v in pairs(wave_pos) do
-	-- 	local x, y, r = unpack(v)
-
-	-- 	e = E:create_entity("decal_water_wave_16")
-	-- 	e.pos = V.v(x, y)
-	-- 	e.render.sprites[1].r = math.pi * -1 * r / 180
-
-	-- 	LU.queue_insert(store, e)
-	-- end
+-- local wave_pos = {
+-- 	{
+-- 		158,
+-- 		634,
+-- 		70
+-- 	},
+-- 	{
+-- 		881,
+-- 		84,
+-- 		-175
+-- 	},
+-- 	{
+-- 		990,
+-- 		190,
+-- 		-5
+-- 	},
+-- 	{
+-- 		306,
+-- 		254,
+-- 		-169
+-- 	},
+-- 	{
+-- 		398,
+-- 		232,
+-- 		180
+-- 	},
+-- 	{
+-- 		535,
+-- 		326,
+-- 		180
+-- 	},
+-- 	{
+-- 		694,
+-- 		390,
+-- 		126
+-- 	},
+-- 	{
+-- 		751,
+-- 		540,
+-- 		180
+-- 	},
+-- 	{
+-- 		635,
+-- 		550,
+-- 		-19
+-- 	},
+-- 	{
+-- 		732,
+-- 		715,
+-- 		0
+-- 	},
+-- 	{
+-- 		653,
+-- 		663,
+-- 		-76
+-- 	},
+-- 	{
+-- 		484,
+-- 		551,
+-- 		26
+-- 	},
+-- 	{
+-- 		456,
+-- 		637,
+-- 		103
+-- 	},
+-- 	{
+-- 		337,
+-- 		628,
+-- 		-88
+-- 	},
+-- 	{
+-- 		341,
+-- 		488,
+-- 		-17
+-- 	},
+-- 	{
+-- 		232,
+-- 		503,
+-- 		27
+-- 	},
+-- 	{
+-- 		259,
+-- 		345,
+-- 		0
+-- 	}
+-- }
+-- for _, v in pairs(wave_pos) do
+-- 	local x, y, r = unpack(v)
+-- 	e = E:create_entity("decal_water_wave_16")
+-- 	e.pos = V.v(x, y)
+-- 	e.render.sprites[1].r = math.pi * -1 * r / 180
+-- 	LU.queue_insert(store, e)
+-- end
 end
 
 function level:update(store)
 	LU.insert_hero(store)
-    LU.insert_hero(store, "hero_steam_frigate", V.v(646, 421))
+	LU.insert_hero(store, "hero_steam_frigate", V.v(646, 421))
 
 	while store.wave_group_number < 1 do
 		coroutine.yield()
@@ -350,7 +297,6 @@ function level:update(store)
 		self.ship_blown.render.sprites[1].hidden = false
 		self.ship_blown.render.sprites[1].ts = store.tick_ts
 		self.ship_blown.render.sprites[1].runs = 0
-
 		S:queue("RTBoatBreak")
 	end
 

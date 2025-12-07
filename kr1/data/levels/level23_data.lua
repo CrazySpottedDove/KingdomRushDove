@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level23_data.lua
-
+-- chunkname: @./kr1/data/levels/level23_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds_blackburn",
-			sounds = {
-				"BlackburnGhosts"
-			}
+			sounds = {"BlackburnGhosts"}
 		},
 		{
 			["render.sprites[1].flip_x"] = true,
@@ -542,103 +539,25 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_engineer"
-			}
+			locked_towers = {"tower_build_barrack", "tower_build_engineer"}
 		}
 	},
 	nav_mesh = {
-		{
-			3,
-			4,
-			6,
-			2
-		},
-		{
-			5,
-			1,
-			12,
-			8
-		},
-		{
-			nil,
-			4,
-			1,
-			5
-		},
-		{
-			3,
-			nil,
-			6,
-			1
-		},
-		{
-			3,
-			3,
-			2,
-			9
-		},
-		{
-			1,
-			4,
-			7,
-			2
-		},
-		{
-			6,
-			nil,
-			nil,
-			12
-		},
-		{
-			5,
-			2,
-			11,
-			9
-		},
-		{
-			5,
-			8,
-			11
-		},
-		{
-			11,
-			13,
-			14
-		},
-		{
-			8,
-			13,
-			10
-		},
-		{
-			2,
-			7,
-			14,
-			13
-		},
-		{
-			8,
-			12,
-			14,
-			10
-		},
-		{
-			13,
-			12,
-			nil,
-			10
-		}
+		{3, 4, 6, 2},
+		{5, 1, 12, 8},
+		{nil, 4, 1, 5},
+		{3, nil, 6, 1},
+		{3, 3, 2, 9},
+		{1, 4, 7, 2},
+		{6, nil, nil, 12},
+		{5, 2, 11, 9},
+		{5, 8, 11},
+		{11, 13, 14},
+		{8, 13, 10},
+		{2, 7, 14, 13},
+		{8, 12, 14, 10},
+		{13, 12, nil, 10}
 	},
-	required_sounds = {
-		"music_stage23",
-		"BlackburnSounds"
-	},
-	required_textures = {
-		"go_enemies_blackburn",
-		"go_stages_blackburn",
-		"go_stage23",
-		"go_stage23_bg"
-	}
+	required_sounds = {"music_stage23", "BlackburnSounds"},
+	required_textures = {"go_enemies_blackburn", "go_stages_blackburn", "go_stage23", "go_stage23_bg"}
 }

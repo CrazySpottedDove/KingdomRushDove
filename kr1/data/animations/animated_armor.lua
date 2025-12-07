@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/animated_armor.lua
-
+-- chunkname: @./kr5/data/animations/animated_armor.lua
 local a = {
 	armor_idle = {
 		prefix = "armor",
@@ -57,5 +56,4 @@ local a = {
 		from = 233
 	}
 }
-
 return a

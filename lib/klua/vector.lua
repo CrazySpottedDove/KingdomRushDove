@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/klua/vector.lua
-
+-- chunkname: @./lib/klua/vector.lua
 local V = require("hump.vector-light")
 
 function V.v(vx, vy)
@@ -48,14 +47,8 @@ end
 
 function V.rclone(r)
 	return {
-		pos = {
-			r.pos.x,
-			r.pos.y
-		},
-		size = {
-			r.size.x,
-			r.size.y
-		}
+		pos = {r.pos.x, r.pos.y},
+		size = {r.size.x, r.size.y}
 	}
 end
 

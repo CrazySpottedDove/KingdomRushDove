@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/scrap_speedster.lua
-
+-- chunkname: @./kr5/data/animations/scrap_speedster.lua
 local a = {
 	scrap_speedster_trail = {
 		prefix = "scrap_speedster_trail",
@@ -37,5 +36,4 @@ local a = {
 		from = 79
 	}
 }
-
 return a

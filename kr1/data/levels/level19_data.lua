@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level19_data.lua
-
+-- chunkname: @./kr1/data/levels/level19_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 2,
@@ -40,10 +39,7 @@ return {
 		},
 		{
 			template = "decal_frozen_mushroom",
-			["click_play.achievement_flag"] = {
-				"DEFEAT_MUSHROOM",
-				1
-			},
+			["click_play.achievement_flag"] = {"DEFEAT_MUSHROOM", 1},
 			pos = {
 				x = 874,
 				y = 55
@@ -51,10 +47,7 @@ return {
 		},
 		{
 			template = "decal_frozen_mushroom",
-			["click_play.achievement_flag"] = {
-				"DEFEAT_MUSHROOM",
-				2
-			},
+			["click_play.achievement_flag"] = {"DEFEAT_MUSHROOM", 2},
 			pos = {
 				x = 689,
 				y = 90
@@ -62,10 +55,7 @@ return {
 		},
 		{
 			template = "decal_frozen_mushroom",
-			["click_play.achievement_flag"] = {
-				"DEFEAT_MUSHROOM",
-				4
-			},
+			["click_play.achievement_flag"] = {"DEFEAT_MUSHROOM", 4},
 			pos = {
 				x = 190,
 				y = 123
@@ -73,10 +63,7 @@ return {
 		},
 		{
 			template = "decal_frozen_mushroom",
-			["click_play.achievement_flag"] = {
-				"DEFEAT_MUSHROOM",
-				8
-			},
+			["click_play.achievement_flag"] = {"DEFEAT_MUSHROOM", 8},
 			pos = {
 				x = 921,
 				y = 379
@@ -84,10 +71,7 @@ return {
 		},
 		{
 			template = "decal_frozen_mushroom",
-			["click_play.achievement_flag"] = {
-				"DEFEAT_MUSHROOM",
-				16
-			},
+			["click_play.achievement_flag"] = {"DEFEAT_MUSHROOM", 16},
 			pos = {
 				x = 162,
 				y = 579
@@ -400,111 +384,26 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_mage"
-			}
+			locked_towers = {"tower_build_barrack", "tower_build_mage"}
 		}
 	},
 	nav_mesh = {
-		{
-			4,
-			6,
-			3
-		},
-		{
-			3,
-			7,
-			7
-		},
-		{
-			1,
-			5,
-			2,
-			2
-		},
-		{
-			nil,
-			10,
-			6,
-			1
-		},
-		{
-			6,
-			9,
-			7,
-			3
-		},
-		{
-			4,
-			11,
-			5,
-			1
-		},
-		{
-			5,
-			12,
-			nil,
-			2
-		},
-		{
-			11,
-			14,
-			9,
-			6
-		},
-		{
-			8,
-			13,
-			12,
-			5
-		},
-		{
-			nil,
-			15,
-			11,
-			4
-		},
-		{
-			10,
-			15,
-			8,
-			6
-		},
-		{
-			9,
-			nil,
-			nil,
-			7
-		},
-		{
-			14,
-			nil,
-			9,
-			8
-		},
-		{
-			15,
-			nil,
-			13,
-			8
-		},
-		{
-			10,
-			nil,
-			14,
-			11
-		}
+		{4, 6, 3},
+		{3, 7, 7},
+		{1, 5, 2, 2},
+		{nil, 10, 6, 1},
+		{6, 9, 7, 3},
+		{4, 11, 5, 1},
+		{5, 12, nil, 2},
+		{11, 14, 9, 6},
+		{8, 13, 12, 5},
+		{nil, 15, 11, 4},
+		{10, 15, 8, 6},
+		{9, nil, nil, 7},
+		{14, nil, 9, 8},
+		{15, nil, 13, 8},
+		{10, nil, 14, 11}
 	},
-	required_sounds = {
-		"music_stage19",
-		"MushroomSounds"
-	},
-	required_textures = {
-		"go_enemies_ice",
-		"go_enemies_storm",
-		"go_stages_ice",
-		"go_stage19",
-		"go_stage19_bg"
-	}
+	required_sounds = {"music_stage19", "MushroomSounds"},
+	required_textures = {"go_enemies_ice", "go_enemies_storm", "go_stages_ice", "go_stage19", "go_stage19_bg"}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/vile_spawner.lua
-
+-- chunkname: @./kr5/data/animations/vile_spawner.lua
 local a = {
 	vile_spawner_hit_fx_attack_1_hit = {
 		prefix = "vile_spawner_hit_fx",
@@ -82,5 +81,4 @@ local a = {
 		from = 117
 	}
 }
-
 return a

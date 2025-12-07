@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/md5.lua
-
+-- chunkname: @./lib/md5.lua
 local md5 = {
 	_VERSION = "md5.lua 1.1.0",
 	_URL = "https://github.com/kikito/md5.lua",
@@ -94,9 +93,7 @@ else
 		function bit_or(m, n)
 			local tbl_m = to_bits(m)
 			local tbl_n = to_bits(n)
-
 			expand(tbl_m, tbl_n)
-
 			local tbl = {}
 
 			for i = 1, #tbl_m do
@@ -113,9 +110,7 @@ else
 		function bit_and(m, n)
 			local tbl_m = to_bits(m)
 			local tbl_n = to_bits(n)
-
 			expand(tbl_m, tbl_n)
-
 			local tbl = {}
 
 			for i = 1, #tbl_m do
@@ -132,9 +127,7 @@ else
 		function bit_xor(m, n)
 			local tbl_m = to_bits(m)
 			local tbl_n = to_bits(n)
-
 			expand(tbl_m, tbl_n)
-
 			local tbl = {}
 
 			for i = 1, #tbl_m do
@@ -210,13 +203,10 @@ end
 
 local function cut_le_str(s, ...)
 	local o, r = 1, {}
-	local args = {
-		...
-	}
+	local args = {...}
 
 	for i = 1, #args do
 		table.insert(r, str2lei(sub(s, o, o + args[i] - 1)))
-
 		o = o + args[i]
 	end
 
@@ -316,14 +306,12 @@ end
 
 local function z(ff, a, b, c, d, x, s, ac)
 	a = bit_and(a + ff(b, c, d) + x + ac, 4294967295)
-
 	return bit_or(bit_lshift(bit_and(a, bit_rshift(4294967295, s)), s), bit_rshift(a, 32 - s)) + b
 end
 
 local function transform(A, B, C, D, X)
 	local a, b, c, d = A, B, C, D
 	local t = CONSTS
-
 	a = z(f, a, b, c, d, X[0], 7, t[1])
 	d = z(f, d, a, b, c, X[1], 12, t[2])
 	c = z(f, c, d, a, b, X[2], 17, t[3])
@@ -388,7 +376,6 @@ local function transform(A, B, C, D, X)
 	d = z(i, d, a, b, c, X[11], 10, t[62])
 	c = z(i, c, d, a, b, X[2], 15, t[63])
 	b = z(i, b, c, d, a, X[9], 21, t[64])
-
 	return bit_and(A + a, 4294967295), bit_and(B + b, 4294967295), bit_and(C + c, 4294967295), bit_and(D + d, 4294967295)
 end
 
@@ -398,15 +385,12 @@ local function md5_update(self, s)
 
 	for ii = 1, #s - 63, 64 do
 		local X = cut_le_str(sub(s, ii, ii + 63), 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
-
 		assert(#X == 16)
-
 		X[0] = table.remove(X, 1)
 		self.a, self.b, self.c, self.d = transform(self.a, self.b, self.c, self.d, X)
 	end
 
 	self.buf = sub(s, math.floor(#s / 64) * 64 + 1, #s)
-
 	return self
 end
 
@@ -423,10 +407,8 @@ local function md5_finish(self)
 	end
 
 	local s = char(128) .. rep(char(0), padLen - 1) .. lei2str(bit_and(8 * msgLen, 4294967295)) .. lei2str(math.floor(msgLen / 536870912))
-
 	md5_update(self, s)
 	assert(self.pos % 64 == 0)
-
 	return lei2str(self.a) .. lei2str(self.b) .. lei2str(self.c) .. lei2str(self.d)
 end
 

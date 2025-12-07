@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level18.lua
-
+-- chunkname: @./kr3/data/levels/level18.lua
 local log = require("lib.klua.log"):new("level17")
 local signal = require("hump.signal")
 local km = require("lib.klua.macros")
@@ -9,7 +8,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -21,18 +19,12 @@ local level = {}
 function level:update(store)
 	if store.level_mode == GAME_MODE_CAMPAIGN then
 		self.megaspawner = LU.list_entities(store.entities, "mega_spawner")[1]
-
 		local boss = E:create_entity("eb_bram")
-
 		boss.pos = V.vclone(boss.pos_sitting)
-
 		LU.queue_insert(store, boss)
-
 		self.boss = boss
-
 		coroutine.yield()
 		U.y_wait(store, 1)
-
 		boss.phase_signal = "welcome"
 
 		while self.boss.phase ~= "sitting" do
@@ -54,7 +46,6 @@ function level:update(store)
 		end
 
 		P:activate_path(boss.nav_path.pi)
-
 		local spawn_idx = 1
 
 		while self.boss.phase ~= "dead" do

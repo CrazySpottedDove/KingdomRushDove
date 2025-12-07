@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level21_data.lua
-
+-- chunkname: @./kr1/data/levels/level21_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -63,110 +62,26 @@ return {
 		},
 		{
 			template = "burning_floor_controller",
-			cooldowns = {
-				{
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					},
-					{
-						3,
-						5
-					}
-				},
-				{
-					{
-						1,
-						40
-					},
-					{
-						13,
-						10
-					},
-					{
-						2,
-						10
-					},
-					{
-						2,
-						10
-					},
-					{
-						3,
-						10
-					}
-				},
-				{
-					{
-						5,
-						9999
-					}
-				}
-			},
+			cooldowns = {{
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5},
+				{3, 5}
+			}, {{1, 40}, {13, 10}, {2, 10}, {2, 10}, {3, 10}}, {{5, 9999}}},
 			pos = {
 				x = 254,
 				y = 262
@@ -525,9 +440,7 @@ return {
 		},
 		{
 			template = "decal_inferno_portal",
-			out_nodes = {
-				3
-			},
+			out_nodes = {3},
 			pos = {
 				x = 316,
 				y = 697
@@ -1047,105 +960,29 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_engineer"
-			}
+			locked_towers = {"tower_build_engineer"}
 		}
 	},
 	nav_mesh = {
-		{
-			4,
-			7,
-			8
-		},
-		{
-			3,
-			nil,
-			7,
-			4
-		},
-		{
-			6,
-			nil,
-			2,
-			6
-		},
-		{
-			5,
-			2,
-			1
-		},
-		{
-			9,
-			6,
-			4,
-			10
-		},
-		{
-			11,
-			3,
-			3,
-			9
-		},
-		{
-			2,
-			nil,
-			8,
-			1
-		},
-		{
-			7,
-			nil,
-			nil,
-			1
-		},
-		{
-			12,
-			6,
-			10,
-			10
-		},
-		{
-			9,
-			5,
-			4
-		},
-		{
-			14,
-			nil,
-			6,
-			6
-		},
-		{
-			15,
-			14,
-			9
-		},
+		{4, 7, 8},
+		{3, nil, 7, 4},
+		{6, nil, 2, 6},
+		{5, 2, 1},
+		{9, 6, 4, 10},
+		{11, 3, 3, 9},
+		{2, nil, 8, 1},
+		{7, nil, nil, 1},
+		{12, 6, 10, 10},
+		{9, 5, 4},
+		{14, nil, 6, 6},
+		{15, 14, 9},
 		{
 			[3] = 14,
 			[4] = 15
 		},
-		{
-			13,
-			11,
-			11,
-			12
-		},
-		{
-			nil,
-			13,
-			12
-		}
+		{13, 11, 11, 12},
+		{nil, 13, 12}
 	},
-	required_sounds = {
-		"music_stage21",
-		"InfernoSounds"
-	},
-	required_textures = {
-		"go_enemies_wastelands",
-		"go_enemies_torment",
-		"go_stages_rotten_torment",
-		"go_stage21",
-		"go_stage21_bg"
-	}
+	required_sounds = {"music_stage21", "InfernoSounds"},
+	required_textures = {"go_enemies_wastelands", "go_enemies_torment", "go_stages_rotten_torment", "go_stage21", "go_stage21_bg"}
 }

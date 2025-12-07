@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level19_data.lua
-
+-- chunkname: @./kr3/data/levels/level19_data.lua
 return {
 	show_comic_idx = 8,
 	locked_hero = false,
@@ -8,9 +7,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"MetropolisAmbienceSound"
-			}
+			sounds = {"MetropolisAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -516,99 +513,24 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_mage"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_archer", "tower_build_mage"}
+	}},
 	nav_mesh = {
-		{
-			14,
-			4,
-			2,
-			13
-		},
-		{
-			4,
-			6,
-			nil,
-			1
-		},
-		{
-			5,
-			6,
-			8,
-			14
-		},
-		{
-			8,
-			6,
-			2,
-			1
-		},
-		{
-			7,
-			nil,
-			3,
-			11
-		},
-		{
-			3,
-			nil,
-			nil,
-			8
-		},
-		{
-			nil,
-			nil,
-			5,
-			10
-		},
-		{
-			3,
-			6,
-			4,
-			14
-		},
-		{
-			nil,
-			10,
-			12,
-			12
-		},
-		{
-			nil,
-			7,
-			11,
-			9
-		},
-		{
-			10,
-			5,
-			14,
-			12
-		},
-		{
-			9,
-			11,
-			13
-		},
-		{
-			12,
-			14,
-			1
-		},
-		{
-			11,
-			8,
-			1,
-			13
-		}
+		{14, 4, 2, 13},
+		{4, 6, nil, 1},
+		{5, 6, 8, 14},
+		{8, 6, 2, 1},
+		{7, nil, 3, 11},
+		{3, nil, nil, 8},
+		{nil, nil, 5, 10},
+		{3, 6, 4, 14},
+		{nil, 10, 12, 12},
+		{nil, 7, 11, 9},
+		{10, 5, 14, 12},
+		{9, 11, 13},
+		{12, 14, 1},
+		{11, 8, 1, 13}
 	},
 	pan_extension = {
 		bottom = -40,
@@ -627,12 +549,5 @@ return {
 		"ElvesCreepMountedAvenger",
 		"ElvesCreepScreecher"
 	},
-	required_textures = {
-		"go_enemies_ancient_metropolis",
-		"go_enemies_bittering_rancor",
-		"go_stage67",
-		"go_stage67_bg",
-		"go_stages_faerie_grove",
-		"go_stages_bittering_rancor"
-	}
+	required_textures = {"go_enemies_ancient_metropolis", "go_enemies_bittering_rancor", "go_stage67", "go_stage67_bg", "go_stages_faerie_grove", "go_stages_bittering_rancor"}
 }

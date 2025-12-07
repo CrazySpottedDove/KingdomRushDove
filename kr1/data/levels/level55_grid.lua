@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level07_grid.lua
-
+-- chunkname: @./kr3/data/levels/level07_grid.lua
 return {
 	ox = -192,
 	oy = -48,

@@ -1,626 +1,202 @@
 return {
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			4,
-			6,
-			10,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			878,
-			426,
-			40,
-			25
-		},
+		size = {54, 37},
+		trim = {4, 6, 10, 6},
+		a_size = {1024, 1024},
+		f_quad = {878, 426, 40, 25},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			4,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			816,
-			41,
-			30
-		},
+		size = {54, 37},
+		trim = {6, 4, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {114, 816, 41, 30},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			4,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			849,
-			41,
-			30
-		},
+		size = {54, 37},
+		trim = {6, 4, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {114, 849, 41, 30},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			3,
-			6,
-			10,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			978,
-			917,
-			41,
-			25
-		},
+		size = {54, 37},
+		trim = {3, 6, 10, 6},
+		a_size = {1024, 1024},
+		f_quad = {978, 917, 41, 25},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			4,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			882,
-			41,
-			30
-		},
+		size = {54, 37},
+		trim = {6, 4, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {114, 882, 41, 30},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			5,
-			6,
-			10,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			921,
-			426,
-			39,
-			25
-		},
+		size = {54, 37},
+		trim = {5, 6, 10, 6},
+		a_size = {1024, 1024},
+		f_quad = {921, 426, 39, 25},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			5,
-			4,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			714,
-			42,
-			30
-		},
+		size = {54, 37},
+		trim = {5, 4, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {114, 714, 42, 30},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			5,
-			4,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			747,
-			42,
-			30
-		},
+		size = {54, 37},
+		trim = {5, 4, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {114, 747, 42, 30},
 		alias = {}
 	},
 	warmongers_rocket_tower_ghost = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			128,
-			156
-		},
-		trim = {
-			3,
-			48,
-			8,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			519,
-			561,
-			117,
-			105
-		},
+		size = {128, 156},
+		trim = {3, 48, 8, 3},
+		a_size = {1024, 1024},
+		f_quad = {519, 561, 117, 105},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			19,
-			71,
-			22,
-			10
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			949,
-			669,
-			65,
-			72
-		},
+		size = {106, 153},
+		trim = {19, 71, 22, 10},
+		a_size = {1024, 1024},
+		f_quad = {949, 669, 65, 72},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			9,
-			29,
-			16,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			519,
-			886,
-			81,
-			120
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0005"
-		}
+		size = {106, 153},
+		trim = {9, 29, 16, 4},
+		a_size = {1024, 1024},
+		f_quad = {519, 886, 81, 120},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0005"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			3,
-			15,
-			4,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			481,
-			99,
-			136
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0007"
-		}
+		size = {106, 153},
+		trim = {3, 15, 4, 2},
+		a_size = {1024, 1024},
+		f_quad = {161, 481, 99, 136},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0007"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			0,
-			10,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			776,
-			106,
-			142
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0009"
-		}
+		size = {106, 153},
+		trim = {0, 10, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {5, 776, 106, 142},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0009"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			0,
-			4,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			330,
-			106,
-			149
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0011"
-		}
+		size = {106, 153},
+		trim = {0, 4, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {5, 330, 106, 149},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0011"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0012 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			0,
-			0,
-			0,
-			10
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			630,
-			106,
-			143
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0013"
-		}
+		size = {106, 153},
+		trim = {0, 0, 0, 10},
+		a_size = {1024, 1024},
+		f_quad = {5, 630, 106, 143},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0013"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0014 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			1,
-			0,
-			0,
-			8
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			482,
-			105,
-			145
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0015"
-		}
+		size = {106, 153},
+		trim = {1, 0, 0, 8},
+		a_size = {1024, 1024},
+		f_quad = {5, 482, 105, 145},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0015"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0016 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			2,
-			0,
-			2,
-			41
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			519,
-			669,
-			102,
-			112
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0017"
-		}
+		size = {106, 153},
+		trim = {2, 0, 2, 41},
+		a_size = {1024, 1024},
+		f_quad = {519, 669, 102, 112},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0017"}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0018 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			2,
-			1,
-			4,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			519,
-			784,
-			100,
-			99
-		},
+		size = {106, 153},
+		trim = {2, 1, 4, 53},
+		a_size = {1024, 1024},
+		f_quad = {519, 784, 100, 99},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			16,
-			14,
-			19,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			969,
-			771,
-			50,
-			51
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_0004"
-		}
+		size = {85, 71},
+		trim = {16, 14, 19, 6},
+		a_size = {1024, 1024},
+		f_quad = {969, 771, 50, 51},
+		alias = {"warmongers_rocket_tower_lvl4_box_0004"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0014 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			40,
-			36,
-			25,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			1001,
-			446,
-			20,
-			5
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0015"
-		}
+		size = {85, 71},
+		trim = {40, 36, 25, 30},
+		a_size = {1024, 1024},
+		f_quad = {1001, 446, 20, 5},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0015"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0022 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			25,
-			16,
-			24,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			949,
-			744,
-			36,
-			23
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0023"
-		}
+		size = {85, 71},
+		trim = {25, 16, 24, 32},
+		a_size = {1024, 1024},
+		f_quad = {949, 744, 36, 23},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0023"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0046 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			23,
-			22,
-			25,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			957,
-			212,
-			37,
-			17
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0047"
-		}
+		size = {85, 71},
+		trim = {23, 22, 25, 32},
+		a_size = {1024, 1024},
+		f_quad = {957, 212, 37, 17},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0047"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0048 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			53,
-			39,
-			28,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			123,
-			472,
-			4,
-			3
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0049"
-		}
+		size = {85, 71},
+		trim = {53, 39, 28, 29},
+		a_size = {1024, 1024},
+		f_quad = {123, 472, 4, 3},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0049"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			5,
-			6,
-			5,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			1001,
-			426,
-			18,
-			17
-		},
+		size = {28, 28},
+		trim = {5, 6, 5, 5},
+		a_size = {1024, 1024},
+		f_quad = {1001, 426, 18, 17},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			2,
-			2,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			132,
-			977,
-			22,
-			23
-		},
+		size = {28, 28},
+		trim = {2, 2, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {132, 977, 22, 23},
 		alias = {
 			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0008",
 			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0009",
@@ -637,635 +213,202 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0019 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			2,
-			0,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			132,
-			921,
-			22,
-			25
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0020",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0021",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0022",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0023",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0024",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0025",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0026",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0027",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0028",
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0029"
-		}
+		size = {28, 28},
+		trim = {2, 0, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {132, 921, 22, 25},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0020", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0021", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0022", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0023", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0024", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0025", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0026", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0027", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0028", "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0029"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0014 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			38,
-			35,
-			29,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			463,
-			18,
-			6
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0015"
-		}
+		size = {85, 71},
+		trim = {38, 35, 29, 30},
+		a_size = {1024, 1024},
+		f_quad = {114, 463, 18, 6},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0015"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0016 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			29,
-			21,
-			25,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			988,
-			744,
-			31,
-			20
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0017"
-		}
+		size = {85, 71},
+		trim = {29, 21, 25, 30},
+		a_size = {1024, 1024},
+		f_quad = {988, 744, 31, 20},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0017"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0022 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			25,
-			15,
-			25,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			963,
-			426,
-			35,
-			24
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0023"
-		}
+		size = {85, 71},
+		trim = {25, 15, 25, 32},
+		a_size = {1024, 1024},
+		f_quad = {963, 426, 35, 24},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0023"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0032 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			10,
-			8,
-			26,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			969,
-			825,
-			49,
-			33
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0033"
-		}
+		size = {85, 71},
+		trim = {10, 8, 26, 30},
+		a_size = {1024, 1024},
+		f_quad = {969, 825, 49, 33},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0033"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0040 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			40,
-			13,
-			14,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			698,
-			975,
-			31,
-			28
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0041",
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0042",
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0043"
-		}
+		size = {85, 71},
+		trim = {40, 13, 14, 30},
+		a_size = {1024, 1024},
+		f_quad = {698, 975, 31, 28},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0041", "warmongers_rocket_tower_lvl4_box_goblin_right_0042", "warmongers_rocket_tower_lvl4_box_goblin_right_0043"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0044 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			26,
-			6,
-			21,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			780,
-			38,
-			33
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0045"
-		}
+		size = {85, 71},
+		trim = {26, 6, 21, 32},
+		a_size = {1024, 1024},
+		f_quad = {114, 780, 38, 33},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0045"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0046 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			26,
-			21,
-			22,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			980,
-			1000,
-			37,
-			18
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0047"
-		}
+		size = {85, 71},
+		trim = {26, 21, 22, 32},
+		a_size = {1024, 1024},
+		f_quad = {980, 1000, 37, 18},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0047"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0048 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			49,
-			37,
-			30,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			472,
-			6,
-			4
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0049"
-		}
+		size = {85, 71},
+		trim = {49, 37, 30, 30},
+		a_size = {1024, 1024},
+		f_quad = {114, 472, 6, 4},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0049"}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			27,
-			36,
-			21,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			624,
-			669,
-			105,
-			99
-		},
+		size = {153, 163},
+		trim = {27, 36, 21, 28},
+		a_size = {1024, 1024},
+		f_quad = {624, 669, 105, 99},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			27,
-			36,
-			21,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			624,
-			771,
-			105,
-			99
-		},
+		size = {153, 163},
+		trim = {27, 36, 21, 28},
+		a_size = {1024, 1024},
+		f_quad = {624, 771, 105, 99},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			22,
-			32,
-			14,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			566,
-			117,
-			109
-		},
+		size = {153, 163},
+		trim = {22, 32, 14, 22},
+		a_size = {1024, 1024},
+		f_quad = {279, 566, 117, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			22,
-			32,
-			14,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			678,
-			117,
-			109
-		},
+		size = {153, 163},
+		trim = {22, 32, 14, 22},
+		a_size = {1024, 1024},
+		f_quad = {279, 678, 117, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			31,
-			8,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			118,
-			129,
-			114
-		},
+		size = {153, 163},
+		trim = {16, 31, 8, 18},
+		a_size = {1024, 1024},
+		f_quad = {161, 118, 129, 114},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0009 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			32,
-			8,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			425,
-			118,
-			129,
-			113
-		},
+		size = {153, 163},
+		trim = {16, 32, 8, 18},
+		a_size = {1024, 1024},
+		f_quad = {425, 118, 129, 113},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			14,
-			34,
-			9,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			435,
-			5,
-			130,
-			110
-		},
+		size = {153, 163},
+		trim = {14, 34, 9, 19},
+		a_size = {1024, 1024},
+		f_quad = {435, 5, 130, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0011 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			14,
-			34,
-			8,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			689,
-			118,
-			131,
-			110
-		},
+		size = {153, 163},
+		trim = {14, 34, 8, 19},
+		a_size = {1024, 1024},
+		f_quad = {689, 118, 131, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0012 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			15,
-			33,
-			4,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			5,
-			134,
-			110
-		},
+		size = {153, 163},
+		trim = {15, 33, 4, 20},
+		a_size = {1024, 1024},
+		f_quad = {161, 5, 134, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0013 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			15,
-			33,
-			15,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			235,
-			123,
-			110
-		},
+		size = {153, 163},
+		trim = {15, 33, 15, 20},
+		a_size = {1024, 1024},
+		f_quad = {279, 235, 123, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0014 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			31,
-			17,
-			52
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			846,
-			771,
-			120,
-			80
-		},
+		size = {153, 163},
+		trim = {16, 31, 17, 52},
+		a_size = {1024, 1024},
+		f_quad = {846, 771, 120, 80},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0015 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			31,
-			17,
-			52
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			732,
-			864,
-			120,
-			80
-		},
+		size = {153, 163},
+		trim = {16, 31, 17, 52},
+		a_size = {1024, 1024},
+		f_quad = {732, 864, 120, 80},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0017 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			15,
-			41,
-			17,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			732,
-			947,
-			121,
-			66
-		},
+		size = {153, 163},
+		trim = {15, 41, 17, 56},
+		a_size = {1024, 1024},
+		f_quad = {732, 947, 121, 66},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0019 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			128,
-			66,
-			14,
-			82
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			698,
-			1006,
-			11,
-			15
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0019"
-		}
+		size = {153, 163},
+		trim = {128, 66, 14, 82},
+		a_size = {1024, 1024},
+		f_quad = {698, 1006, 11, 15},
+		alias = {"warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0019"}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0020 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			129,
-			72,
-			13,
-			78
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			712,
-			1006,
-			11,
-			13
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0020"
-		}
+		size = {153, 163},
+		trim = {129, 72, 13, 78},
+		a_size = {1024, 1024},
+		f_quad = {712, 1006, 11, 13},
+		alias = {"warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0020"}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0021 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			0,
-			0,
-			153,
-			163
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			153,
-			163
-		},
+		size = {153, 163},
+		trim = {0, 0, 153, 163},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 153, 163},
 		alias = {
 			"warmongers_rocket_tower_lvl4_cluster_air_explosion_0022",
 			"warmongers_rocket_tower_lvl4_cluster_air_explosion_0023",
@@ -1292,362 +435,122 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			27,
-			36,
-			21,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			624,
-			873,
-			105,
-			99
-		},
+		size = {153, 163},
+		trim = {27, 36, 21, 28},
+		a_size = {1024, 1024},
+		f_quad = {624, 873, 105, 99},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			27,
-			36,
-			21,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			732,
-			669,
-			105,
-			99
-		},
+		size = {153, 163},
+		trim = {27, 36, 21, 28},
+		a_size = {1024, 1024},
+		f_quad = {732, 669, 105, 99},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			22,
-			32,
-			14,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			790,
-			117,
-			109
-		},
+		size = {153, 163},
+		trim = {22, 32, 14, 22},
+		a_size = {1024, 1024},
+		f_quad = {279, 790, 117, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			22,
-			32,
-			14,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			902,
-			117,
-			109
-		},
+		size = {153, 163},
+		trim = {22, 32, 14, 22},
+		a_size = {1024, 1024},
+		f_quad = {279, 902, 117, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			31,
-			8,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			118,
-			129,
-			114
-		},
+		size = {153, 163},
+		trim = {16, 31, 8, 18},
+		a_size = {1024, 1024},
+		f_quad = {293, 118, 129, 114},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0009 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			32,
-			8,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			557,
-			118,
-			129,
-			113
-		},
+		size = {153, 163},
+		trim = {16, 32, 8, 18},
+		a_size = {1024, 1024},
+		f_quad = {557, 118, 129, 113},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			14,
-			34,
-			9,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			568,
-			5,
-			130,
-			110
-		},
+		size = {153, 163},
+		trim = {14, 34, 9, 19},
+		a_size = {1024, 1024},
+		f_quad = {568, 5, 130, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0011 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			14,
-			34,
-			8,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			823,
-			118,
-			131,
-			110
-		},
+		size = {153, 163},
+		trim = {14, 34, 8, 19},
+		a_size = {1024, 1024},
+		f_quad = {823, 118, 131, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0012 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			15,
-			33,
-			4,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			298,
-			5,
-			134,
-			110
-		},
+		size = {153, 163},
+		trim = {15, 33, 4, 20},
+		a_size = {1024, 1024},
+		f_quad = {298, 5, 134, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0013 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			15,
-			33,
-			15,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			405,
-			235,
-			123,
-			110
-		},
+		size = {153, 163},
+		trim = {15, 33, 15, 20},
+		a_size = {1024, 1024},
+		f_quad = {405, 235, 123, 110},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0014 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			31,
-			17,
-			52
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			855,
-			864,
-			120,
-			80
-		},
+		size = {153, 163},
+		trim = {16, 31, 17, 52},
+		a_size = {1024, 1024},
+		f_quad = {855, 864, 120, 80},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0017 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			15,
-			41,
-			17,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			856,
-			947,
-			121,
-			66
-		},
+		size = {153, 163},
+		trim = {15, 41, 17, 56},
+		a_size = {1024, 1024},
+		f_quad = {856, 947, 121, 66},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_projectile_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			1,
-			5,
-			2,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			132,
-			1003,
-			25,
-			18
-		},
+		size = {28, 28},
+		trim = {1, 5, 2, 5},
+		a_size = {1024, 1024},
+		f_quad = {132, 1003, 25, 18},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_projectile_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			4,
-			2,
-			3,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			132,
-			949,
-			21,
-			25
-		},
+		size = {28, 28},
+		trim = {4, 2, 3, 1},
+		a_size = {1024, 1024},
+		f_quad = {132, 949, 21, 25},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer1_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			8,
-			76,
-			4,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			878,
-			348,
-			139,
-			75
-		},
+		size = {151, 156},
+		trim = {8, 76, 4, 5},
+		a_size = {1024, 1024},
+		f_quad = {878, 348, 139, 75},
 		alias = {
 			"warmongers_rocket_tower_lvl4_layer1_0002",
 			"warmongers_rocket_tower_lvl4_layer1_0003",
@@ -1731,154 +634,50 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_layer2_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			20,
-			67,
-			91,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			113,
-			584,
-			40,
-			40
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer2_0002"
-		}
+		size = {151, 156},
+		trim = {20, 67, 91, 49},
+		a_size = {1024, 1024},
+		f_quad = {113, 584, 40, 40},
+		alias = {"warmongers_rocket_tower_lvl4_layer2_0002"}
 	},
 	warmongers_rocket_tower_lvl4_layer2_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			24,
-			67,
-			92,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			630,
-			35,
-			39
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer2_0004"
-		}
+		size = {151, 156},
+		trim = {24, 67, 92, 50},
+		a_size = {1024, 1024},
+		f_quad = {114, 630, 35, 39},
+		alias = {"warmongers_rocket_tower_lvl4_layer2_0004"}
 	},
 	warmongers_rocket_tower_lvl4_layer2_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			22,
-			69,
-			92,
-			45
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			373,
-			37,
-			42
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer2_0006"
-		}
+		size = {151, 156},
+		trim = {22, 69, 92, 45},
+		a_size = {1024, 1024},
+		f_quad = {114, 373, 37, 42},
+		alias = {"warmongers_rocket_tower_lvl4_layer2_0006"}
 	},
 	warmongers_rocket_tower_lvl4_layer2_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			20,
-			64,
-			90,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			113,
-			482,
-			41,
-			48
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer2_0008"
-		}
+		size = {151, 156},
+		trim = {20, 64, 90, 44},
+		a_size = {1024, 1024},
+		f_quad = {113, 482, 41, 48},
+		alias = {"warmongers_rocket_tower_lvl4_layer2_0008"}
 	},
 	warmongers_rocket_tower_lvl4_layer2_0009 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			22,
-			63,
-			89,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			980,
-			947,
-			40,
-			50
-		},
+		size = {151, 156},
+		trim = {22, 63, 89, 43},
+		a_size = {1024, 1024},
+		f_quad = {980, 947, 40, 50},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer2_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			0,
-			0,
-			151,
-			156
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			171,
-			151,
-			156
-		},
+		size = {151, 156},
+		trim = {0, 0, 151, 156},
+		a_size = {1024, 1024},
+		f_quad = {5, 171, 151, 156},
 		alias = {
 			"warmongers_rocket_tower_lvl4_layer2_0011",
 			"warmongers_rocket_tower_lvl4_layer2_0012",
@@ -2086,1707 +885,562 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_layer3_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			20,
-			67,
-			91,
-			49
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			330,
-			40,
-			40
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer3_0002"
-		}
+		size = {151, 156},
+		trim = {20, 67, 91, 49},
+		a_size = {1024, 1024},
+		f_quad = {114, 330, 40, 40},
+		alias = {"warmongers_rocket_tower_lvl4_layer3_0002"}
 	},
 	warmongers_rocket_tower_lvl4_layer3_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			24,
-			67,
-			92,
-			50
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			672,
-			35,
-			39
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer3_0004"
-		}
+		size = {151, 156},
+		trim = {24, 67, 92, 50},
+		a_size = {1024, 1024},
+		f_quad = {114, 672, 35, 39},
+		alias = {"warmongers_rocket_tower_lvl4_layer3_0004"}
 	},
 	warmongers_rocket_tower_lvl4_layer3_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			22,
-			69,
-			92,
-			45
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			418,
-			37,
-			42
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer3_0006"
-		}
+		size = {151, 156},
+		trim = {22, 69, 92, 45},
+		a_size = {1024, 1024},
+		f_quad = {114, 418, 37, 42},
+		alias = {"warmongers_rocket_tower_lvl4_layer3_0006"}
 	},
 	warmongers_rocket_tower_lvl4_layer3_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			20,
-			64,
-			90,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			113,
-			533,
-			41,
-			48
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer3_0008"
-		}
+		size = {151, 156},
+		trim = {20, 64, 90, 44},
+		a_size = {1024, 1024},
+		f_quad = {113, 533, 41, 48},
+		alias = {"warmongers_rocket_tower_lvl4_layer3_0008"}
 	},
 	warmongers_rocket_tower_lvl4_layer3_0009 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			22,
-			63,
-			89,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			978,
-			864,
-			40,
-			50
-		},
+		size = {151, 156},
+		trim = {22, 63, 89, 43},
+		a_size = {1024, 1024},
+		f_quad = {978, 864, 40, 50},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0027 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			49,
-			73,
-			31,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			624,
-			975,
-			71,
-			45
-		},
+		size = {151, 156},
+		trim = {49, 73, 31, 38},
+		a_size = {1024, 1024},
+		f_quad = {624, 975, 71, 45},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0038 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			10,
-			26,
-			30,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			732,
-			771,
-			111,
-			90
-		},
+		size = {151, 156},
+		trim = {10, 26, 30, 40},
+		a_size = {1024, 1024},
+		f_quad = {732, 771, 111, 90},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0039 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			10,
-			21,
-			28,
-			39
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			523,
-			348,
-			113,
-			96
-		},
+		size = {151, 156},
+		trim = {10, 21, 28, 39},
+		a_size = {1024, 1024},
+		f_quad = {523, 348, 113, 96},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0040 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			23,
-			17,
-			20,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			913,
-			235,
-			108,
-			101
-		},
+		size = {151, 156},
+		trim = {23, 17, 20, 38},
+		a_size = {1024, 1024},
+		f_quad = {913, 235, 108, 101},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0041 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			22,
-			17,
-			13,
-			36
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			767,
-			561,
-			116,
-			103
-		},
+		size = {151, 156},
+		trim = {22, 17, 13, 36},
+		a_size = {1024, 1024},
+		f_quad = {767, 561, 116, 103},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0042 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			20,
-			20,
-			12,
-			34
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			892,
-			454,
-			119,
-			102
-		},
+		size = {151, 156},
+		trim = {20, 20, 12, 34},
+		a_size = {1024, 1024},
+		f_quad = {892, 454, 119, 102},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0043 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			19,
-			24,
-			8,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			921,
-			124,
-			100
-		},
+		size = {151, 156},
+		trim = {19, 24, 8, 32},
+		a_size = {1024, 1024},
+		f_quad = {5, 921, 124, 100},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0044 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			17,
-			26,
-			10,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			765,
-			454,
-			124,
-			98
-		},
+		size = {151, 156},
+		trim = {17, 26, 10, 32},
+		a_size = {1024, 1024},
+		f_quad = {765, 454, 124, 98},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0045 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			15,
-			24,
-			16,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			642,
-			454,
-			120,
-			102
-		},
+		size = {151, 156},
+		trim = {15, 24, 16, 30},
+		a_size = {1024, 1024},
+		f_quad = {642, 454, 120, 102},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0046 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			14,
-			24,
-			17,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			519,
-			454,
-			120,
-			104
-		},
+		size = {151, 156},
+		trim = {14, 24, 17, 28},
+		a_size = {1024, 1024},
+		f_quad = {519, 454, 120, 104},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0047 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			12,
-			24,
-			10,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			833,
-			5,
-			129,
-			106
-		},
+		size = {151, 156},
+		trim = {12, 24, 10, 26},
+		a_size = {1024, 1024},
+		f_quad = {833, 5, 129, 106},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0048 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			10,
-			25,
-			12,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			701,
-			5,
-			129,
-			107
-		},
+		size = {151, 156},
+		trim = {10, 25, 12, 24},
+		a_size = {1024, 1024},
+		f_quad = {701, 5, 129, 107},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0049 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			10,
-			29,
-			13,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			531,
-			235,
-			128,
-			103
-		},
+		size = {151, 156},
+		trim = {10, 29, 13, 24},
+		a_size = {1024, 1024},
+		f_quad = {531, 235, 128, 103},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0050 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			34,
-			15,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			639,
-			561,
-			125,
-			97
-		},
+		size = {151, 156},
+		trim = {11, 34, 15, 25},
+		a_size = {1024, 1024},
+		f_quad = {639, 561, 125, 97},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0051 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			42,
-			16,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			639,
-			348,
-			124,
-			87
-		},
+		size = {151, 156},
+		trim = {11, 42, 16, 27},
+		a_size = {1024, 1024},
+		f_quad = {639, 348, 124, 87},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0054 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			42,
-			28,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			945,
-			112,
-			72
-		},
+		size = {151, 156},
+		trim = {11, 42, 28, 42},
+		a_size = {1024, 1024},
+		f_quad = {161, 945, 112, 72},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0056 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			41,
-			15,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			785,
-			235,
-			125,
-			103
-		},
+		size = {151, 156},
+		trim = {11, 41, 15, 12},
+		a_size = {1024, 1024},
+		f_quad = {785, 235, 125, 103},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0057 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			41,
-			15,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			348,
-			125,
-			103
-		},
+		size = {151, 156},
+		trim = {11, 41, 15, 12},
+		a_size = {1024, 1024},
+		f_quad = {279, 348, 125, 103},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0058 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			17,
-			25,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			235,
-			115,
-			120
-		},
+		size = {151, 156},
+		trim = {17, 25, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {161, 235, 115, 120},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0059 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			17,
-			25,
-			19,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			358,
-			115,
-			120
-		},
+		size = {151, 156},
+		trim = {17, 25, 19, 11},
+		a_size = {1024, 1024},
+		f_quad = {161, 358, 115, 120},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0060 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			23,
-			25,
-			12,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			400,
-			454,
-			116,
-			108
-		},
+		size = {151, 156},
+		trim = {23, 25, 12, 23},
+		a_size = {1024, 1024},
+		f_quad = {400, 454, 116, 108},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0061 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			23,
-			25,
-			12,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			400,
-			565,
-			116,
-			108
-		},
+		size = {151, 156},
+		trim = {23, 25, 12, 23},
+		a_size = {1024, 1024},
+		f_quad = {400, 565, 116, 108},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0012 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			17,
-			34,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			840,
-			669,
-			106,
-			95
-		},
+		size = {151, 156},
+		trim = {11, 17, 34, 44},
+		a_size = {1024, 1024},
+		f_quad = {840, 669, 106, 95},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0013 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			10,
-			17,
-			32,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			766,
-			348,
-			109,
-			99
-		},
+		size = {151, 156},
+		trim = {10, 17, 32, 40},
+		a_size = {1024, 1024},
+		f_quad = {766, 348, 109, 99},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0014 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			7,
-			13,
-			30,
-			34
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			400,
-			676,
-			114,
-			109
-		},
+		size = {151, 156},
+		trim = {7, 13, 30, 34},
+		a_size = {1024, 1024},
+		f_quad = {400, 676, 114, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0015 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			5,
-			13,
-			28,
-			34
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			279,
-			454,
-			118,
-			109
-		},
+		size = {151, 156},
+		trim = {5, 13, 28, 34},
+		a_size = {1024, 1024},
+		f_quad = {279, 454, 118, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0016 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			4,
-			10,
-			27,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			662,
-			235,
-			120,
-			109
-		},
+		size = {151, 156},
+		trim = {4, 10, 27, 37},
+		a_size = {1024, 1024},
+		f_quad = {662, 235, 120, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0017 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			8,
-			10,
-			32,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			620,
-			111,
-			109
-		},
+		size = {151, 156},
+		trim = {8, 10, 32, 37},
+		a_size = {1024, 1024},
+		f_quad = {161, 620, 111, 109},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0018 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			7,
-			10,
-			30,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			400,
-			788,
-			114,
-			108
-		},
+		size = {151, 156},
+		trim = {7, 10, 30, 38},
+		a_size = {1024, 1024},
+		f_quad = {400, 788, 114, 108},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0019 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			7,
-			10,
-			30,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			400,
-			899,
-			114,
-			108
-		},
+		size = {151, 156},
+		trim = {7, 10, 30, 38},
+		a_size = {1024, 1024},
+		f_quad = {400, 899, 114, 108},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0020 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			8,
-			10,
-			31,
-			41
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			886,
-			561,
-			112,
-			105
-		},
+		size = {151, 156},
+		trim = {8, 10, 31, 41},
+		a_size = {1024, 1024},
+		f_quad = {886, 561, 112, 105},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0021 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			8,
-			10,
-			31,
-			41
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			732,
-			112,
-			105
-		},
+		size = {151, 156},
+		trim = {8, 10, 31, 41},
+		a_size = {1024, 1024},
+		f_quad = {161, 732, 112, 105},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0022 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			8,
-			11,
-			30,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			161,
-			840,
-			113,
-			102
-		},
+		size = {151, 156},
+		trim = {8, 11, 30, 43},
+		a_size = {1024, 1024},
+		f_quad = {161, 840, 113, 102},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0023 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			8,
-			11,
-			30,
-			43
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			407,
-			348,
-			113,
-			102
-		},
+		size = {151, 156},
+		trim = {8, 11, 30, 43},
+		a_size = {1024, 1024},
+		f_quad = {407, 348, 113, 102},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0024 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			36,
-			11,
-			59,
-			54
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			965,
-			5,
-			56,
-			91
-		},
+		size = {151, 156},
+		trim = {36, 11, 59, 54},
+		a_size = {1024, 1024},
+		f_quad = {965, 5, 56, 91},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0025 = {
 		a_name = "kr4_warmongers_tower_rocket-1.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			42,
-			11,
-			59,
-			54
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			957,
-			118,
-			50,
-			91
-		},
+		size = {151, 156},
+		trim = {42, 11, 59, 54},
+		a_size = {1024, 1024},
+		f_quad = {957, 118, 50, 91},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			119,
-			82
-		},
-		trim = {
-			29,
-			16,
-			12,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			821,
-			88,
-			78,
-			47
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_lvl4_0004"
-		}
+		size = {119, 82},
+		trim = {29, 16, 12, 19},
+		a_size = {1024, 1024},
+		f_quad = {821, 88, 78, 47},
+		alias = {"warmongers_rocket_shooter_proyectile_lvl4_0004"}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			119,
-			82
-		},
-		trim = {
-			29,
-			16,
-			8,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			651,
-			88,
-			82,
-			49
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_lvl4_0005"
-		}
+		size = {119, 82},
+		trim = {29, 16, 8, 17},
+		a_size = {1024, 1024},
+		f_quad = {651, 88, 82, 49},
+		alias = {"warmongers_rocket_shooter_proyectile_lvl4_0005"}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			119,
-			82
-		},
-		trim = {
-			29,
-			12,
-			4,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			297,
-			88,
-			86,
-			58
-		},
+		size = {119, 82},
+		trim = {29, 12, 4, 12},
+		a_size = {1024, 1024},
+		f_quad = {297, 88, 86, 58},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			119,
-			82
-		},
-		trim = {
-			29,
-			16,
-			12,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			902,
-			88,
-			78,
-			47
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_lvl4_special_0004"
-		}
+		size = {119, 82},
+		trim = {29, 16, 12, 19},
+		a_size = {1024, 1024},
+		f_quad = {902, 88, 78, 47},
+		alias = {"warmongers_rocket_shooter_proyectile_lvl4_special_0004"}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			119,
-			82
-		},
-		trim = {
-			29,
-			16,
-			8,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			736,
-			88,
-			82,
-			49
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_lvl4_special_0005"
-		}
+		size = {119, 82},
+		trim = {29, 16, 8, 17},
+		a_size = {1024, 1024},
+		f_quad = {736, 88, 82, 49},
+		alias = {"warmongers_rocket_shooter_proyectile_lvl4_special_0005"}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			119,
-			82
-		},
-		trim = {
-			29,
-			11,
-			4,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			208,
-			88,
-			86,
-			59
-		},
+		size = {119, 82},
+		trim = {29, 11, 4, 12},
+		a_size = {1024, 1024},
+		f_quad = {208, 88, 86, 59},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			4,
-			6,
-			14,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			609,
-			145,
-			36,
-			26
-		},
+		size = {54, 37},
+		trim = {4, 6, 14, 5},
+		a_size = {1024, 1024},
+		f_quad = {609, 145, 36, 26},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			442,
-			41,
-			28
-		},
+		size = {54, 37},
+		trim = {6, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 442, 41, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			473,
-			41,
-			28
-		},
+		size = {54, 37},
+		trim = {6, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 473, 41, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			8,
-			5,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			628,
-			39,
-			29
-		},
+		size = {54, 37},
+		trim = {8, 5, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {182, 628, 39, 29},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			9,
-			5,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			723,
-			38,
-			29
-		},
+		size = {54, 37},
+		trim = {9, 5, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {182, 723, 38, 29},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0009 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			10,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			820,
-			37,
-			28
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_particle1_lvl4_0009"
-		}
+		size = {54, 37},
+		trim = {10, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 820, 37, 28},
+		alias = {"warmongers_rocket_shooter_proyectile_particle1_lvl4_0009"}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			13,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			942,
-			34,
-			28
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_particle1_lvl4_0010"
-		}
+		size = {54, 37},
+		trim = {13, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 942, 34, 28},
+		alias = {"warmongers_rocket_shooter_proyectile_particle1_lvl4_0010"}
 	},
 	warmongers_rocket_shooter_proyectile_lvl4_special_particle_0011 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			0,
-			0,
-			54,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			982,
-			54,
-			37
-		},
-		alias = {
-			"warmongers_rocket_shooter_proyectile_particle1_lvl4_0011",
-			"warmongers_rocket_shooter_proyectile_particle2_lvl4_0011"
-		}
+		size = {54, 37},
+		trim = {0, 0, 54, 37},
+		a_size = {1024, 1024},
+		f_quad = {5, 982, 54, 37},
+		alias = {"warmongers_rocket_shooter_proyectile_particle1_lvl4_0011", "warmongers_rocket_shooter_proyectile_particle2_lvl4_0011"}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			3,
-			6,
-			14,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			569,
-			145,
-			37,
-			26
-		},
+		size = {54, 37},
+		trim = {3, 6, 14, 5},
+		a_size = {1024, 1024},
+		f_quad = {569, 145, 37, 26},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			504,
-			41,
-			28
-		},
+		size = {54, 37},
+		trim = {6, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 504, 41, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			535,
-			41,
-			28
-		},
+		size = {54, 37},
+		trim = {6, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 535, 41, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			4,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			700,
-			140,
-			41,
-			30
-		},
+		size = {54, 37},
+		trim = {6, 4, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {700, 140, 41, 30},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			8,
-			5,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			660,
-			39,
-			29
-		},
+		size = {54, 37},
+		trim = {8, 5, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {182, 660, 39, 29},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle1_lvl4_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			9,
-			5,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			755,
-			38,
-			29
-		},
+		size = {54, 37},
+		trim = {9, 5, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {182, 755, 38, 29},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			5,
-			6,
-			15,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			273,
-			263,
-			34,
-			26
-		},
+		size = {54, 37},
+		trim = {5, 6, 15, 5},
+		a_size = {1024, 1024},
+		f_quad = {273, 263, 34, 26},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			5,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			380,
-			42,
-			28
-		},
+		size = {54, 37},
+		trim = {5, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 380, 42, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			5,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			411,
-			42,
-			28
-		},
+		size = {54, 37},
+		trim = {5, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 411, 42, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0007 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			5,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			744,
-			140,
-			41,
-			29
-		},
+		size = {54, 37},
+		trim = {6, 5, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {744, 140, 41, 29},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			6,
-			5,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			348,
-			41,
-			29
-		},
+		size = {54, 37},
+		trim = {6, 5, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {182, 348, 41, 29},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0009 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			7,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			692,
-			40,
-			28
-		},
+		size = {54, 37},
+		trim = {7, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 692, 40, 28},
 		alias = {}
 	},
 	warmongers_rocket_shooter_proyectile_particle2_lvl4_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			54,
-			37
-		},
-		trim = {
-			10,
-			5,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			851,
-			37,
-			28
-		},
+		size = {54, 37},
+		trim = {10, 5, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {182, 851, 37, 28},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_blue_explosion_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			106,
-			153
-		},
-		trim = {
-			22,
-			86,
-			26,
-			16
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			742,
-			58,
-			51
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_blue_explosion_0002"
-		}
+		size = {106, 153},
+		trim = {22, 86, 26, 16},
+		a_size = {1024, 1024},
+		f_quad = {104, 742, 58, 51},
+		alias = {"warmongers_rocket_tower_lvl4_blue_explosion_0002"}
 	},
 	warmongers_rocket_tower_lvl4_box_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			17,
-			20,
-			19,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			263,
-			49,
-			45
-		},
+		size = {85, 71},
+		trim = {17, 20, 19, 6},
+		a_size = {1024, 1024},
+		f_quad = {182, 263, 49, 45},
 		alias = {
 			"warmongers_rocket_tower_lvl4_box_0056",
 			"warmongers_rocket_tower_lvl4_box_0057",
@@ -3816,100 +1470,34 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_box_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			17,
-			18,
-			20,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			898,
-			48,
-			47
-		},
+		size = {85, 71},
+		trim = {17, 18, 20, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 898, 48, 47},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			17,
-			9,
-			11,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			624,
-			57,
-			56
-		},
+		size = {85, 71},
+		trim = {17, 9, 11, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 624, 57, 56},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			13,
-			9,
-			10,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			959,
-			5,
-			62,
-			56
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_0007"
-		}
+		size = {85, 71},
+		trim = {13, 9, 10, 6},
+		a_size = {1024, 1024},
+		f_quad = {959, 5, 62, 56},
+		alias = {"warmongers_rocket_tower_lvl4_box_0007"}
 	},
 	warmongers_rocket_tower_lvl4_box_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			8,
-			14,
-			8,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			410,
-			69,
-			51
-		},
+		size = {85, 71},
+		trim = {8, 14, 8, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 410, 69, 51},
 		alias = {
 			"warmongers_rocket_tower_lvl4_box_0009",
 			"warmongers_rocket_tower_lvl4_box_0012",
@@ -3951,202 +1539,66 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_box_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			8,
-			15,
-			8,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			518,
-			69,
-			50
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_0011"
-		}
+		size = {85, 71},
+		trim = {8, 15, 8, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 518, 69, 50},
+		alias = {"warmongers_rocket_tower_lvl4_box_0011"}
 	},
 	warmongers_rocket_tower_lvl4_box_0047 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			8,
-			15,
-			8,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			571,
-			69,
-			50
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_0048"
-		}
+		size = {85, 71},
+		trim = {8, 15, 8, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 571, 69, 50},
+		alias = {"warmongers_rocket_tower_lvl4_box_0048"}
 	},
 	warmongers_rocket_tower_lvl4_box_0049 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			8,
-			14,
-			8,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			464,
-			69,
-			51
-		},
+		size = {85, 71},
+		trim = {8, 14, 8, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 464, 69, 51},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_0050 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			13,
-			9,
-			9,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			351,
-			63,
-			56
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_0051"
-		}
+		size = {85, 71},
+		trim = {13, 9, 9, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 351, 63, 56},
+		alias = {"warmongers_rocket_tower_lvl4_box_0051"}
 	},
 	warmongers_rocket_tower_lvl4_box_0052 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			17,
-			9,
-			11,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			683,
-			57,
-			56
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_0053"
-		}
+		size = {85, 71},
+		trim = {17, 9, 11, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 683, 57, 56},
+		alias = {"warmongers_rocket_tower_lvl4_box_0053"}
 	},
 	warmongers_rocket_tower_lvl4_box_0054 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			16,
-			14,
-			19,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			844,
-			50,
-			51
-		},
+		size = {85, 71},
+		trim = {16, 14, 19, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 844, 50, 51},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_0055 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			17,
-			18,
-			20,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			948,
-			48,
-			47
-		},
+		size = {85, 71},
+		trim = {17, 18, 20, 6},
+		a_size = {1024, 1024},
+		f_quad = {104, 948, 48, 47},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			0,
-			0,
-			85,
-			71
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			701,
-			5,
-			85,
-			71
-		},
+		size = {85, 71},
+		trim = {0, 0, 85, 71},
+		a_size = {1024, 1024},
+		f_quad = {701, 5, 85, 71},
 		alias = {
 			"warmongers_rocket_tower_lvl4_box_goblin_left_0002",
 			"warmongers_rocket_tower_lvl4_box_goblin_left_0003",
@@ -4237,848 +1689,266 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0016 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			26,
-			22,
-			27,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			998,
-			32,
-			19
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0017"
-		}
+		size = {85, 71},
+		trim = {26, 22, 27, 30},
+		a_size = {1024, 1024},
+		f_quad = {104, 998, 32, 19},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0017"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0018 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			26,
-			9,
-			24,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			787,
-			35,
-			30
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0019"
-		}
+		size = {85, 71},
+		trim = {26, 9, 24, 32},
+		a_size = {1024, 1024},
+		f_quad = {182, 787, 35, 30},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0019"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0020 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			25,
-			12,
-			23,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			912,
-			37,
-			27
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0021"
-		}
+		size = {85, 71},
+		trim = {25, 12, 23, 32},
+		a_size = {1024, 1024},
+		f_quad = {182, 912, 37, 27},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0021"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0024 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			25,
-			13,
-			24,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			263,
-			36,
-			26
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0025",
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0026",
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0027",
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0028",
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0029"
-		}
+		size = {85, 71},
+		trim = {25, 13, 24, 32},
+		a_size = {1024, 1024},
+		f_quad = {234, 263, 36, 26},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0025", "warmongers_rocket_tower_lvl4_box_goblin_left_0026", "warmongers_rocket_tower_lvl4_box_goblin_left_0027", "warmongers_rocket_tower_lvl4_box_goblin_left_0028", "warmongers_rocket_tower_lvl4_box_goblin_left_0029"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0030 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			28,
-			12,
-			16,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			566,
-			41,
-			28
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0031"
-		}
+		size = {85, 71},
+		trim = {28, 12, 16, 31},
+		a_size = {1024, 1024},
+		f_quad = {182, 566, 41, 28},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0031"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0032 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			27,
-			9,
-			10,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			821,
-			138,
-			48,
-			33
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0033"
-		}
+		size = {85, 71},
+		trim = {27, 9, 10, 29},
+		a_size = {1024, 1024},
+		f_quad = {821, 138, 48, 33},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0033"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0034 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			31,
-			11,
-			7,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			453,
-			129,
-			47,
-			34
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0035"
-		}
+		size = {85, 71},
+		trim = {31, 11, 7, 26},
+		a_size = {1024, 1024},
+		f_quad = {453, 129, 47, 34},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0035"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0036 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			18,
-			9,
-			21,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			922,
-			138,
-			46,
-			30
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0037"
-		}
+		size = {85, 71},
+		trim = {18, 9, 21, 32},
+		a_size = {1024, 1024},
+		f_quad = {922, 138, 46, 30},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0037"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0038 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			15,
-			11,
-			24,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			971,
-			138,
-			46,
-			30
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0039"
-		}
+		size = {85, 71},
+		trim = {15, 11, 24, 30},
+		a_size = {1024, 1024},
+		f_quad = {971, 138, 46, 30},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0039"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0040 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			14,
-			14,
-			39,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			292,
-			32,
-			29
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0041",
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0042",
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0043"
-		}
+		size = {85, 71},
+		trim = {14, 14, 39, 28},
+		a_size = {1024, 1024},
+		f_quad = {234, 292, 32, 29},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0041", "warmongers_rocket_tower_lvl4_box_goblin_left_0042", "warmongers_rocket_tower_lvl4_box_goblin_left_0043"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_left_0044 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			21,
-			7,
-			25,
-			33
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			62,
-			982,
-			39,
-			31
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_left_0045"
-		}
+		size = {85, 71},
+		trim = {21, 7, 25, 33},
+		a_size = {1024, 1024},
+		f_quad = {62, 982, 39, 31},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_left_0045"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			2,
-			8,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			1003,
-			22,
-			17
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0002"
-		}
+		size = {28, 28},
+		trim = {2, 8, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {182, 1003, 22, 17},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0002"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			2,
-			5,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			157,
-			869,
-			22,
-			20
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0004"
-		}
+		size = {28, 28},
+		trim = {2, 5, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {157, 869, 22, 20},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0004"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0005 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			2,
-			3,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			157,
-			844,
-			22,
-			22
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0006"
-		}
+		size = {28, 28},
+		trim = {2, 3, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {157, 844, 22, 22},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0006"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_mine_floor_0030 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			28,
-			28
-		},
-		trim = {
-			2,
-			2,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			788,
-			140,
-			22,
-			23
-		},
+		size = {28, 28},
+		trim = {2, 2, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {788, 140, 22, 23},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0018 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			24,
-			8,
-			25,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			983,
-			88,
-			36,
-			31
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0019"
-		}
+		size = {85, 71},
+		trim = {24, 8, 25, 32},
+		a_size = {1024, 1024},
+		f_quad = {983, 88, 36, 31},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0019"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0020 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			23,
-			11,
-			24,
-			33
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			882,
-			38,
-			27
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0021"
-		}
+		size = {85, 71},
+		trim = {23, 11, 24, 33},
+		a_size = {1024, 1024},
+		f_quad = {182, 882, 38, 27},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0021"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0024 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			25,
-			12,
-			25,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			973,
-			35,
-			27
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0025",
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0026",
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0027",
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0028",
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0029"
-		}
+		size = {85, 71},
+		trim = {25, 12, 25, 32},
+		a_size = {1024, 1024},
+		f_quad = {182, 973, 35, 27},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0025", "warmongers_rocket_tower_lvl4_box_goblin_right_0026", "warmongers_rocket_tower_lvl4_box_goblin_right_0027", "warmongers_rocket_tower_lvl4_box_goblin_right_0028", "warmongers_rocket_tower_lvl4_box_goblin_right_0029"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0030 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			17,
-			11,
-			27,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			597,
-			41,
-			28
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0031"
-		}
+		size = {85, 71},
+		trim = {17, 11, 27, 32},
+		a_size = {1024, 1024},
+		f_quad = {182, 597, 41, 28},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0031"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0034 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			7,
-			10,
-			31,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			182,
-			311,
-			47,
-			34
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0035"
-		}
+		size = {85, 71},
+		trim = {7, 10, 31, 27},
+		a_size = {1024, 1024},
+		f_quad = {182, 311, 47, 34},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0035"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0036 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			21,
-			8,
-			17,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			872,
-			138,
-			47,
-			32
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0037"
-		}
+		size = {85, 71},
+		trim = {21, 8, 17, 31},
+		a_size = {1024, 1024},
+		f_quad = {872, 138, 47, 32},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0037"}
 	},
 	warmongers_rocket_tower_lvl4_box_goblin_right_0038 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			85,
-			71
-		},
-		trim = {
-			24,
-			10,
-			15,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			651,
-			140,
-			46,
-			30
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_box_goblin_right_0039"
-		}
+		size = {85, 71},
+		trim = {24, 10, 15, 31},
+		a_size = {1024, 1024},
+		f_quad = {651, 140, 46, 30},
+		alias = {"warmongers_rocket_tower_lvl4_box_goblin_right_0039"}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			41,
-			41,
-			29,
-			47
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			529,
-			5,
-			83,
-			75
-		},
+		size = {153, 163},
+		trim = {41, 41, 29, 47},
+		a_size = {1024, 1024},
+		f_quad = {529, 5, 83, 75},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			33,
-			39,
-			24,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			263,
-			96,
-			93
-		},
+		size = {153, 163},
+		trim = {33, 39, 24, 31},
+		a_size = {1024, 1024},
+		f_quad = {5, 263, 96, 93},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			33,
-			39,
-			24,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			359,
-			96,
-			93
-		},
+		size = {153, 163},
+		trim = {33, 39, 24, 31},
+		a_size = {1024, 1024},
+		f_quad = {5, 359, 96, 93},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0016 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			18,
-			41,
-			19,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			764,
-			174,
-			116,
-			66
-		},
+		size = {153, 163},
+		trim = {18, 41, 19, 56},
+		a_size = {1024, 1024},
+		f_quad = {764, 174, 116, 66},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_air_explosion_0018 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			14,
-			61,
-			15,
-			64
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			386,
-			88,
-			124,
-			38
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0018"
-		}
+		size = {153, 163},
+		trim = {14, 61, 15, 64},
+		a_size = {1024, 1024},
+		f_quad = {386, 88, 124, 38},
+		alias = {"warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0018"}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			41,
-			41,
-			29,
-			47
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			615,
-			5,
-			83,
-			75
-		},
+		size = {153, 163},
+		trim = {41, 41, 29, 47},
+		a_size = {1024, 1024},
+		f_quad = {615, 5, 83, 75},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			33,
-			39,
-			24,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			455,
-			96,
-			93
-		},
+		size = {153, 163},
+		trim = {33, 39, 24, 31},
+		a_size = {1024, 1024},
+		f_quad = {5, 455, 96, 93},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0003 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			33,
-			39,
-			24,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			551,
-			96,
-			93
-		},
+		size = {153, 163},
+		trim = {33, 39, 24, 31},
+		a_size = {1024, 1024},
+		f_quad = {5, 551, 96, 93},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0015 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			16,
-			31,
-			17,
-			52
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			120,
-			80
-		},
+		size = {153, 163},
+		trim = {16, 31, 17, 52},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 120, 80},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_cluster_blue_air_explosion_0016 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			153,
-			163
-		},
-		trim = {
-			18,
-			41,
-			19,
-			56
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			883,
-			174,
-			116,
-			66
-		},
+		size = {153, 163},
+		trim = {18, 41, 19, 56},
+		a_size = {1024, 1024},
+		f_quad = {883, 174, 116, 66},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0001 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			37,
-			30,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			789,
-			5,
-			82,
-			73
-		},
+		size = {151, 156},
+		trim = {37, 30, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {789, 5, 82, 73},
 		alias = {
 			"warmongers_rocket_tower_lvl4_layer4_0066",
 			"warmongers_rocket_tower_lvl4_layer4_0067",
@@ -5098,130 +1968,42 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_layer4_0002 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			29,
-			31,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			907,
-			90,
-			72
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer4_0003"
-		}
+		size = {151, 156},
+		trim = {29, 31, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {5, 907, 90, 72},
+		alias = {"warmongers_rocket_tower_lvl4_layer4_0003"}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0004 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			22,
-			34,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			339,
-			5,
-			97,
-			69
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer4_0005"
-		}
+		size = {151, 156},
+		trim = {22, 34, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {339, 5, 97, 69},
+		alias = {"warmongers_rocket_tower_lvl4_layer4_0005"}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0006 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			17,
-			34,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			234,
-			5,
-			102,
-			69
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer4_0007"
-		}
+		size = {151, 156},
+		trim = {17, 34, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {234, 5, 102, 69},
+		alias = {"warmongers_rocket_tower_lvl4_layer4_0007"}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0008 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			16,
-			34,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			128,
-			5,
-			103,
-			69
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer4_0009"
-		}
+		size = {151, 156},
+		trim = {16, 34, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {128, 5, 103, 69},
+		alias = {"warmongers_rocket_tower_lvl4_layer4_0009"}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			55,
-			73,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			386,
-			129,
-			64,
-			30
-		},
+		size = {151, 156},
+		trim = {55, 73, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {386, 129, 64, 30},
 		alias = {
 			"warmongers_rocket_tower_lvl4_layer4_0011",
 			"warmongers_rocket_tower_lvl4_layer4_0012",
@@ -5242,438 +2024,146 @@ return {
 	},
 	warmongers_rocket_tower_lvl4_layer4_0026 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			55,
-			73,
-			31,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			796,
-			65,
-			45
-		},
+		size = {151, 156},
+		trim = {55, 73, 31, 38},
+		a_size = {1024, 1024},
+		f_quad = {104, 796, 65, 45},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0028 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			42,
-			64,
-			30,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			569,
-			88,
-			79,
-			54
-		},
+		size = {151, 156},
+		trim = {42, 64, 30, 38},
+		a_size = {1024, 1024},
+		f_quad = {569, 88, 79, 54},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0029 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			35,
-			55,
-			30,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			119,
-			88,
-			86,
-			63
-		},
+		size = {151, 156},
+		trim = {35, 55, 30, 38},
+		a_size = {1024, 1024},
+		f_quad = {119, 88, 86, 63},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0030 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			29,
-			40,
-			30,
-			39
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			827,
-			92,
-			77
-		},
+		size = {151, 156},
+		trim = {29, 40, 30, 39},
+		a_size = {1024, 1024},
+		f_quad = {5, 827, 92, 77},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0031 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			24,
-			32,
-			30,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			553,
-			174,
-			97,
-			84
-		},
+		size = {151, 156},
+		trim = {24, 32, 30, 40},
+		a_size = {1024, 1024},
+		f_quad = {553, 174, 97, 84},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0032 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			24,
-			28,
-			32,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			647,
-			95,
-			88
-		},
+		size = {151, 156},
+		trim = {24, 28, 32, 40},
+		a_size = {1024, 1024},
+		f_quad = {5, 647, 95, 88},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0033 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			24,
-			30,
-			32,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			738,
-			95,
-			86
-		},
+		size = {151, 156},
+		trim = {24, 30, 32, 40},
+		a_size = {1024, 1024},
+		f_quad = {5, 738, 95, 86},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0034 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			18,
-			31,
-			32,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			449,
-			174,
-			101,
-			85
-		},
+		size = {151, 156},
+		trim = {18, 31, 32, 40},
+		a_size = {1024, 1024},
+		f_quad = {449, 174, 101, 85},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0035 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			12,
-			34,
-			30,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			224,
-			174,
-			109,
-			82
-		},
+		size = {151, 156},
+		trim = {12, 34, 30, 40},
+		a_size = {1024, 1024},
+		f_quad = {224, 174, 109, 82},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0036 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			38,
-			30,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			336,
-			174,
-			110,
-			78
-		},
+		size = {151, 156},
+		trim = {11, 38, 30, 40},
+		a_size = {1024, 1024},
+		f_quad = {336, 174, 110, 78},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0037 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			10,
-			33,
-			30,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			88,
-			111,
-			83
-		},
+		size = {151, 156},
+		trim = {10, 33, 30, 40},
+		a_size = {1024, 1024},
+		f_quad = {5, 88, 111, 83},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0052 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			15,
-			42,
-			30,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			174,
-			106,
-			86
-		},
+		size = {151, 156},
+		trim = {15, 42, 30, 28},
+		a_size = {1024, 1024},
+		f_quad = {5, 174, 106, 86},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0053 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			15,
-			42,
-			29,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			174,
-			107,
-			84
-		},
+		size = {151, 156},
+		trim = {15, 42, 29, 30},
+		a_size = {1024, 1024},
+		f_quad = {114, 174, 107, 84},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0055 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			11,
-			42,
-			32,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			653,
-			174,
-			108,
-			72
-		},
+		size = {151, 156},
+		trim = {11, 42, 32, 42},
+		a_size = {1024, 1024},
+		f_quad = {653, 174, 108, 72},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0062 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			32,
-			29,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			439,
-			5,
-			87,
-			74
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer4_0063"
-		}
+		size = {151, 156},
+		trim = {32, 29, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {439, 5, 87, 74},
+		alias = {"warmongers_rocket_tower_lvl4_layer4_0063"}
 	},
 	warmongers_rocket_tower_lvl4_layer4_0064 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			37,
-			34,
-			32,
-			53
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			874,
-			5,
-			82,
-			69
-		},
-		alias = {
-			"warmongers_rocket_tower_lvl4_layer4_0065"
-		}
+		size = {151, 156},
+		trim = {37, 34, 32, 53},
+		a_size = {1024, 1024},
+		f_quad = {874, 5, 82, 69},
+		alias = {"warmongers_rocket_tower_lvl4_layer4_0065"}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0010 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			37,
-			20,
-			61,
-			55
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			513,
-			88,
-			53,
-			81
-		},
+		size = {151, 156},
+		trim = {37, 20, 61, 55},
+		a_size = {1024, 1024},
+		f_quad = {513, 88, 53, 81},
 		alias = {}
 	},
 	warmongers_rocket_tower_lvl4_layer5_0011 = {
 		a_name = "kr4_warmongers_tower_rocket-2.dds",
-		size = {
-			151,
-			156
-		},
-		trim = {
-			27,
-			20,
-			49,
-			51
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			104,
-			263,
-			75,
-			85
-		},
+		size = {151, 156},
+		trim = {27, 20, 49, 51},
+		a_size = {1024, 1024},
+		f_quad = {104, 263, 75, 85},
 		alias = {}
 	}
 }

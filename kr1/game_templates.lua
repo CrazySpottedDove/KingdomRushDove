@@ -7,20 +7,23 @@ local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
 require("templates")
-local function adx(v)
-    return v - anchor_x * image_x
-end
-local function ady(v)
-    return v - anchor_y * image_y
-end
-local function v(x, y)
-    return {
-        x = x,
-        y = y
-    }
-end
-require("game_templates_utils")
 
+local function adx(v)
+	return v - anchor_x * image_x
+end
+
+local function ady(v)
+	return v - anchor_y * image_y
+end
+
+local function v(x, y)
+	return {
+		x = x,
+		y = y
+	}
+end
+
+require("game_templates_utils")
 ----------
 package.loaded.foundamental_towers = nil
 package.loaded.mage_towers = nil
@@ -31,7 +34,6 @@ package.loaded.barrack_towers = nil
 package.loaded.enemies = nil
 package.loaded.boss = nil
 package.loaded.hero_boss = nil
-
 require("foundamental_towers")
 require("mage_towers")
 require("archer_towers")
@@ -42,12 +44,10 @@ require("enemies")
 require("boss")
 require("hero_boss")
 ----------
-
 tt = E:register_t("pop_crit", "pop")
 tt.render.sprites[1].name = "pop_0003"
 tt = E:register_t("pop_headshot", "pop")
 tt.render.sprites[1].name = "pop_0007"
-
 tt = RT("ps_bolt_sorcerer", "particle_system")
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.animated = false
@@ -76,7 +76,6 @@ tt.particle_system.emit_speed = {120, 120}
 tt.particle_system.emission_rate = 90
 tt.particle_system.source_lifetime = 2
 tt.particle_system.z = Z_OBJECTS
-
 tt = E:register_t("ps_flare_flareon", "particle_system")
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.animated = false
@@ -105,9 +104,7 @@ tt.particle_system.scale_var = {0.8, 1.2}
 tt.particle_system.scales_x = {1, 0.3}
 tt.particle_system.scales_y = {1, 0.3}
 tt = RT("ps_hacksaw_sawblade")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {255, 200, 0, 0}
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 120
@@ -118,9 +115,7 @@ tt.particle_system.particle_lifetime = {fts(12), fts(12)}
 tt.particle_system.scales_x = {1, 0.5}
 tt.particle_system.scales_y = {1.5, 0.5}
 tt = RT("ps_elora_run")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 10
@@ -141,9 +136,7 @@ tt.particle_system.emission_rate = 2.5
 tt.particle_system.source_lifetime = nil
 tt.particle_system.z = Z_OBJECTS
 tt = RT("ps_ignus_run")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {255, 200, 0}
 tt.particle_system.anchor = vec_2(0.5, 0.1)
 tt.particle_system.animated = true
@@ -173,9 +166,7 @@ tt.particle_system.emission_rate = 2.5
 tt.particle_system.source_lifetime = nil
 tt.particle_system.z = Z_OBJECTS
 tt = RT("ps_stage_snow")
-
 AC(tt, "pos", "particle_system")
-
 tt.pos = vec_2(512, 768)
 tt.particle_system.alphas = {255, 255, 255, 0}
 tt.particle_system.emission_rate = 8
@@ -193,7 +184,6 @@ tt.render.sprites[1].anchor.y = 0.5
 tt.render.sprites[1].prefix = "fx_teleport_arcane"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
-
 tt = RT("fx_bolt_sorcerer_hit", "fx")
 tt.render.sprites[1].prefix = "bolt_sorcerer"
 tt.render.sprites[1].name = "hit"
@@ -269,7 +259,6 @@ tt = RT("decal_zombiemancer_raise", "decal_timed")
 tt.render.sprites[1].name = "decal_paladin_holystrike"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].color = {0, 255, 0}
-
 tt = E:register_t("decal_oni_torment_sword", "decal_scripted")
 tt.render.sprites[1].prefix = "decal_oni_torment_sword_1"
 tt.render.sprites[1].name = "in"
@@ -277,9 +266,7 @@ tt.render.sprites[1].anchor.y = 0.16666666666666666
 tt.main_script.update = scripts.decal_oni_torment_sword.update
 tt.duration = 0.5
 tt.delay = 0.01
-tt.sword_names = {"decal_oni_torment_sword_1", "decal_oni_torment_sword_2", "decal_oni_torment_sword_3",
-                  "decal_oni_torment_sword_1"}
-
+tt.sword_names = {"decal_oni_torment_sword_1", "decal_oni_torment_sword_2", "decal_oni_torment_sword_3", "decal_oni_torment_sword_1"}
 tt = RT("decal_ignus_flaming", "decal_timed")
 tt.render.sprites[1].name = "decal_ignus_flaming"
 tt.render.sprites[1].z = Z_DECALS
@@ -301,25 +288,18 @@ tt = RT("decal_blackburn_smash_ground", "decal_timed")
 tt.render.sprites[1].name = "fx_blackburn_smash_ground"
 tt.render.sprites[1].z = Z_DECALS
 tt = RT("veznan_portal", "decal_scripted")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].prefix = "veznan_portal"
 tt.render.sprites[1].z = Z_DECALS
 tt.fx_out = "fx_demon_portal_out"
 tt.main_script.update = scripts.veznan_portal.update
 tt.out_nodes = nil
-tt.spawn_groups = {{{0.5, {{4, 7, "enemy_demon"}}}, {0.8, {{3, 3, "enemy_demon_wolf"}}},
-                    {1, {{5, 5, "enemy_demon"}, {1, 1, "enemy_demon_mage"}}}},
-                   {{0.5, {{2, 5, "enemy_demon"}}}, {0.8, {{2, 2, "enemy_demon_wolf"}}}, {1, {{3, 3, "enemy_demon"}}}},
-                   {{1, {{3, 3, "enemy_demon"}}}}}
+tt.spawn_groups = {{{0.5, {{4, 7, "enemy_demon"}}}, {0.8, {{3, 3, "enemy_demon_wolf"}}}, {1, {{5, 5, "enemy_demon"}, {1, 1, "enemy_demon_mage"}}}}, {{0.5, {{2, 5, "enemy_demon"}}}, {0.8, {{2, 2, "enemy_demon_wolf"}}}, {1, {{3, 3, "enemy_demon"}}}}, {{1, {{3, 3, "enemy_demon"}}}}}
 tt.portal_idx = 1
 tt.spawn_interval = fts(30)
 tt.pi = 1
 tt = E:register_t("decal_s12_shoutbox", "decal_tween")
-
 E:add_comps(tt, "texts")
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "boss_veznan_taunts_love_0001"
 tt.render.sprites[1].z = Z_BULLETS
@@ -373,11 +353,8 @@ tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 tt.render.sprites[1].name = "hobgoblin_decal"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
-
 tt = RT("tower_sasquash_holder")
-
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor", "main_script")
-
 tt.tower.type = "holder_sasquash"
 tt.tower.level = 1
 tt.tower.can_be_mod = false
@@ -399,9 +376,7 @@ tt.render.sprites[1].name = "tower_sasquash_unfreeze"
 tt.render.sprites[1].offset = vec_2(-9, 13)
 tt.render.sprites[1].z = Z_EFFECTS
 tt = RT("tower_sasquash", "tower")
-
 AC(tt, "barrack")
-
 tt.info.portrait = "info_portraits_towers_0014"
 tt.barrack.max_soldiers = 1
 tt.barrack.rally_range = 288
@@ -428,7 +403,6 @@ tt.tower.terrain_style = nil
 tt.tower.type = "sasquash"
 tt.ui.click_rect = r(-40, -30, 80, 90)
 tt.ui.has_nav_mesh = true
-
 tt = RT("soldier_sasquash", "soldier_militia")
 image_y = 80
 anchor_y = 0.17
@@ -465,10 +439,8 @@ tt.ui.click_rect = r(-20, 0, 40, 40)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, ady(30))
 tt.unit.price = 400
-
 tt = RT("soldier_s6_imperial_guard", "soldier_militia")
 AC(tt, "editor")
-
 anchor_y = 0.15
 anchor_x = 0.5
 image_y = 41
@@ -497,7 +469,7 @@ tt.soldier.melee_slot_offset = vec_2(8, 0)
 tt.unit.mod_offset = vec_2(adx(27), ady(22))
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}}
 tt.editor.overrides = {
-    ["health.hp"] = 250
+	["health.hp"] = 250
 }
 tt = RT("re_farmer", "soldier_militia")
 AC(tt, "reinforcement", "tween", "nav_grid")
@@ -572,18 +544,17 @@ tt.ranged.attacks[1].animation = IS_PHONE_OR_TABLET and "ranged_attack_p" or "ra
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(6, 13)}
 
 for i = 1, 3 do
-    for j, name in ipairs({"re_farmer", "re_farmer_well_fed", "re_conscript", "re_warrior", "re_legionnaire",
-                           "re_legionnaire_ranged"}) do
-        local fn = name .. "_" .. i
-        -- local base_t = E:get_template(name)
-        local t = RT(fn, name)
-        t.render.sprites[1].prefix = fn
-        t.info.portrait = string.format("info_portraits_soldiers_%04d", t.info.portrait_idxs[i])
-    end
+	for j, name in ipairs({"re_farmer", "re_farmer_well_fed", "re_conscript", "re_warrior", "re_legionnaire", "re_legionnaire_ranged"}) do
+		local fn = name .. "_" .. i
+		-- local base_t = E:get_template(name)
+		local t = RT(fn, name)
+		t.render.sprites[1].prefix = fn
+		t.info.portrait = string.format("info_portraits_soldiers_%04d", t.info.portrait_idxs[i])
+	end
 end
 
 for i = 1, 3 do
-    E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
+	E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
 end
 
 tt = RT("spear_legionnaire", "arrow")
@@ -593,11 +564,9 @@ tt.bullet.flight_time = fts(20)
 tt.bullet.miss_decal = "decal_spear"
 tt.render.sprites[1].name = "spear"
 tt.sound_events.insert = "AxeSound"
-
 tt = RT("arrow_shadow_archer", "arrow")
 tt.bullet.damage_min = 20
 tt.bullet.damage_max = 30
-
 tt = RT("axe_troll_axe_thrower", "arrow")
 tt.bullet.damage_min = 40
 tt.bullet.damage_max = 80
@@ -634,7 +603,6 @@ tt.bullet.particles_name = "ps_flare_flareon"
 tt.bullet.pop = nil
 tt.render.sprites[1].name = "demon_flareon_flare"
 tt.render.sprites[1].animated = true
-
 tt = RT("bolt_necromancer", "bolt_enemy")
 tt.bullet.align_with_trajectory = true
 tt.bullet.damage_max = 40
@@ -655,7 +623,6 @@ tt.bullet.mod = "mod_witch_frog"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].prefix = "bolt_witch"
 tt.sound_events.insert = "kr4_tower_wickedsisters_attack_v1"
-
 tt = RT("bolt_magnus", "bolt")
 tt.bullet.vis_flags = F_RANGED
 tt.bullet.vis_bans = 0
@@ -672,7 +639,6 @@ tt = RT("bolt_magnus_illusion", "bolt_magnus")
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
 tt.bullet.xp_gain_factor = nil
-
 tt = RT("bomb_goblin_zapper", "bomb")
 tt.bullet.damage_bans = F_ENEMY
 tt.bullet.damage_flags = F_AREA
@@ -704,7 +670,6 @@ tt.main_script.update = scripts.enemy_bomb.update
 tt.render.sprites[1].name = "Proyectile_RottenShot"
 tt.sound_events.insert = "swamp_thing_bomb_shot"
 tt.sound_events.hit = "swamp_thing_bomb_explosion"
-
 tt = RT("bomb_greenmuck", "bomb")
 tt.bullet.damage_bans = F_ENEMY
 tt.bullet.damage_flags = F_AREA
@@ -721,7 +686,6 @@ tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
 tt.render.sprites[1].name = "Proyectile_RottenBoss"
 tt.sound_events.hit = "swamp_thing_bomb_explosion"
-
 tt = RT("ray_arcane", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.mod = "mod_ray_arcane"
@@ -752,7 +716,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_sorcerer_polymorph"
 tt.sound_events.insert = "PolymorphSound"
 tt.track_target = true
-
 tt = RT("ray_sunray", "bullet")
 tt.bullet.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_MAGICAL, DAMAGE_NO_SPAWNS)
 tt.bullet.hit_time = fts(3)
@@ -770,12 +733,10 @@ tt.sound_events.insert = "PolymorphSound"
 tt.track_target = true
 tt.ray_duration = fts(11)
 tt.ray_y_scales = {0.4, 0.6, 0.8, 1}
-
 tt = RT("ray_hero_thor", "ray_tesla")
 tt.bullet.mod = "mod_ray_hero_thor"
 tt.render.sprites[1].name = "ray_hero_thor"
 tt.main_script.update = scripts.ray_thor.update
-
 tt = RT("shotgun_bolin", "shotgun")
 tt.bullet.damage_max = 90
 tt.bullet.damage_min = 45
@@ -787,7 +748,6 @@ tt.bullet.min_speed = 20 * FPS
 tt.bullet.max_speed = 20 * FPS
 tt.bullet.xp_gain_factor = 2.4
 tt.sound_events.insert = "ShotgunSound"
-
 tt = E:register_t("enemy_spider_rotten_egg", "decal_scripted")
 E:add_comps(tt, "render", "spawner", "tween")
 tt.main_script.update = scripts.enemies_spawner.update
@@ -805,11 +765,8 @@ tt.spawner.animation_start = "start"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
-
 tt = E:register_t("myconid_spawner")
-
 E:add_comps(tt, "pos", "spawner", "main_script")
-
 tt.main_script.update = scripts.enemies_spawner.update
 tt.spawner.count = 2
 tt.spawner.random_cycle = {0, 1}
@@ -819,11 +776,10 @@ tt.spawner.random_subpath = true
 tt.spawner.initial_spawn_animation = "raise"
 tt.spawner.spawn_sound = "EnemyMushroomBorn"
 tt.spawner.spawn_sound_args = {
-    delay = fts(29)
+	delay = fts(29)
 }
 tt.spawner.check_node_valid = true
 tt.spawner.use_node_pos = true
-
 tt = RT("aura_teleport_arcane", "aura")
 AC(tt, "render")
 tt.aura.mod = "mod_teleport_arcane"
@@ -842,7 +798,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "TeleporthSound"
-
 tt = RT("aura_ignus_idle", "aura")
 tt.aura.duration = 0
 tt.particles_name = "ps_hero_ignus_idle"
@@ -850,17 +805,13 @@ tt.emit_states = {"idle", "attack"}
 tt.main_script.update = scripts.aura_ignus_particles.update
 tt.particle_offsets = {vec_2(-17, 16), vec_2(-12, 27), vec_2(4, 37), vec_2(2, 35), vec_2(12, 22), vec_2(14, 13)}
 tt.flip_offset = vec_2(3, 0)
-
 tt = RT("aura_10yr_idle", "aura")
 tt.aura.duration = 0
 tt.particles_name = "ps_hero_10yr_idle"
 tt.emit_states = {"idle", "running"}
 tt.main_script.update = scripts.aura_10yr_particles.update
-tt.particle_offsets = {vec_2(-25.714285714285715, 25.714285714285715), vec_2(-15.714285714285715, 37.142857142857146),
-                       vec_2(0, 45.714285714285715), vec_2(8.571428571428571, 42.85714285714286),
-                       vec_2(14.285714285714286, 32.85714285714286), vec_2(21.42857142857143, 21.42857142857143)}
+tt.particle_offsets = {vec_2(-25.714285714285715, 25.714285714285715), vec_2(-15.714285714285715, 37.142857142857146), vec_2(0, 45.714285714285715), vec_2(8.571428571428571, 42.85714285714286), vec_2(14.285714285714286, 32.85714285714286), vec_2(21.42857142857143, 21.42857142857143)}
 tt.flip_offset = vec_2(3, 0)
-
 tt = E:register_t("aura_troll_regen", "aura")
 AC(tt, "regen")
 tt.main_script.update = scripts.aura_unit_regen.update
@@ -868,28 +819,22 @@ tt.regen.cooldown = fts(6)
 tt.regen.health = 1
 tt.regen.ignore_stun = true
 tt.regen.ignore_freeze = false
-
 tt = E:register_t("aura_forest_troll_regen", "aura_troll_regen")
 AC(tt, "regen")
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(4)
 tt.regen.health = 4
-
 tt = E:register_t("aura_troll_axe_thrower_regen", "aura_troll_regen")
 AC(tt, "regen")
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(6)
 tt.regen.health = 2
-
 tt = E:register_t("aura_troll_brute_regen", "aura_forest_troll_regen")
-
 tt = E:register_t("aura_troll_chieftain_regen", "aura_troll_regen")
 tt.regen.cooldown = fts(6)
 tt.regen.health = 4
-
 tt = E:register_t("aura_ulgukhai_regen", "aura_forest_troll_regen")
 tt.regen.ignore_mods = true
-
 tt = E:register_t("aura_goblin_zapper_death", "aura")
 tt.aura.cycles = 1
 tt.aura.damage_min = 50
@@ -899,7 +844,6 @@ tt.aura.radius = 60
 tt.aura.vis_bans = bor(F_ENEMY)
 tt.aura.vis_flags = bor(F_RANGED)
 tt.main_script.update = scripts.aura_apply_damage.update
-
 tt = E:register_t("aura_demon_death", "aura")
 tt.aura.cycles = 1
 tt.aura.damage_min = 50
@@ -911,15 +855,12 @@ tt.aura.track_damage = true
 tt.aura.vis_bans = bor(F_ENEMY)
 tt.aura.vis_flags = bor(F_RANGED)
 tt.main_script.update = scripts.aura_apply_damage.update
-
 tt = E:register_t("aura_demon_mage_death", "aura_demon_death")
 tt.aura.damage_min = 200
 tt.aura.damage_max = 400
-
 tt = E:register_t("aura_demon_wolf_death", "aura_demon_death")
 tt.aura.damage_min = 70
 tt.aura.damage_max = 140
-
 tt = E:register_t("aura_rotten_lesser_death", "aura")
 tt.aura.cycles = 1
 tt.aura.radius = 60
@@ -928,7 +869,6 @@ tt.aura.vis_bans = bor(F_ENEMY)
 tt.aura.vis_flags = bor(F_MOD, F_POISON)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
-
 tt = E:register_t("aura_swamp_thing_regen", "aura")
 AC(tt, "regen")
 tt.main_script.update = scripts.aura_unit_regen.update
@@ -936,15 +876,12 @@ tt.regen.cooldown = fts(2)
 tt.regen.health = 1
 tt.regen.ignore_stun = false
 tt.regen.ignore_freeze = false
-
 tt = E:register_t("aura_flareon_death", "aura_demon_death")
 tt.aura.damage_min = 40
 tt.aura.damage_max = 80
-
 tt = E:register_t("aura_gulaemon_death", "aura_demon_death")
 tt.aura.damage_min = 200
 tt.aura.damage_max = 400
-
 tt = E:register_t("aura_burning_floor", "aura")
 E:add_comps(tt, "render", "tween")
 tt.aura.active = false
@@ -966,7 +903,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{fts(0), 0}, {fts(30), 255}}
 tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 2
-
 tt = E:register_t("burning_floor_controller")
 E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.burning_floor_controller.update
@@ -974,17 +910,12 @@ tt = E:register_t("aura_demon_cerberus_death", "aura_demon_death")
 tt.aura.damage_min = 666
 tt.aura.damage_max = 666
 tt.aura.radius = 120
-
 tt = E:register_t("aura_troll_skater_regen", "aura_troll_regen")
-
 AC(tt, "regen")
-
 tt.regen.cooldown = fts(4)
 tt.regen.health = 1
 tt = RT("graveyard_controller")
-
 AC(tt, "graveyard", "main_script")
-
 tt.main_script.update = scripts.graveyard_controller.update
 tt.graveyard.dead_time = 0.5
 tt.graveyard.check_interval = 0.25
@@ -997,8 +928,7 @@ tt.graveyard.vis_bans = F_BOSS
 tt = RT("graveyard_s110", "graveyard_controller")
 tt.main_script.update = scripts.graveyard_s110.update
 tt.graveyard.keep_gold = false
-tt.graveyard.spawns_by_health = {{"enemy_skeleton", 400}, {"enemy_halloween_zombie", 600}, {"enemy_skeleton_big", 1000},
-                                 {"enemy_gnoll_bloodsydian", 2000}, {"enemy_blade", 3750}, {"eb_alleria", 9e+99}}
+tt.graveyard.spawns_by_health = {{"enemy_skeleton", 400}, {"enemy_halloween_zombie", 600}, {"enemy_skeleton_big", 1000}, {"enemy_gnoll_bloodsydian", 2000}, {"enemy_blade", 3750}, {"eb_alleria", 9e+99}}
 tt.graveyard.vis_has = bor(F_ENEMY, F_FRIEND)
 tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_HERO
@@ -1010,24 +940,20 @@ tt.graveyard.vis_has = F_FRIEND
 tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_HERO
 tt = RT("s15_rotten_spawner")
-
 AC(tt, "main_script", "editor")
-
 tt.main_script.update = scripts.s15_rotten_spawner.update
 tt.entity = "enemy_rotten_tree"
 tt.spawn_margin = {30, 60}
 tt.spawn_timers = {
-    {10, 0},
-    [11] = {15, 1},
-    [14] = {10, 0},
-    [15] = {15, 2},
-    [17] = {15, 3},
-    [20] = {15, 6}
+	{10, 0},
+	[11] = {15, 1},
+	[14] = {10, 0},
+	[15] = {15, 2},
+	[17] = {15, 3},
+	[20] = {15, 6}
 }
 tt = RT("s11_lava_spawner")
-
 AC(tt, "main_script")
-
 tt.main_script.update = scripts.s11_lava_spawner.update
 tt.entity = "enemy_lava_elemental"
 tt.cooldown = 400
@@ -1051,10 +977,10 @@ tt = RT("veznan_souls_aura", "aura")
 tt.main_script.update = scripts.veznan_souls_aura.update
 tt.aura.track_source = true
 tt.souls = {
-    angles = {d2r(30), d2r(130)},
-    count = 60,
-    delay_frames = 10,
-    entity = "veznan_soul"
+	angles = {d2r(30), d2r(130)},
+	count = 60,
+	delay_frames = 10,
+	entity = "veznan_soul"
 }
 tt = RT("kingpin_damage_aura", "aura")
 tt.main_script.update = scripts.aura_apply_damage.update
@@ -1068,9 +994,7 @@ tt.aura.track_source = true
 tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
 tt.aura.vis_flags = bor(F_RANGED)
 tt = RT("aura_elder_shaman_healing", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.mod = "mod_elder_shaman_heal"
 tt.aura.mod_args = nil
 tt.aura.cycle_time = 0.5
@@ -1130,31 +1054,23 @@ tt = RT("mod_arcane_shatter", "mod_damage")
 tt.damage_min = 0.035
 tt.damage_max = 0.035
 tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
-
 tt = RT("mod_arcane_shatter_little", "mod_damage")
 tt.damage_min = 0.02
 tt.damage_max = 0.02
 tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
-
 tt = RT("mod_slow_curse", "mod_slow")
 tt.main_script.insert = scripts.mod_slow_curse.insert
 tt.modifier.excluded_templates = {"enemy_demon_cerberus"}
-
 tt = RT("mod_ray_sunray_hit", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.duration = fts(24)
 tt.render.sprites[1].name = "fx_ray_sunray_hit"
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
-
 tt = E:register_t("mod_shaman_heal", "modifier")
-
 E:add_comps(tt, "hps", "render")
-
 tt.hps.heal_min = 50
 tt.hps.heal_max = 50
 tt.hps.heal_every = 9e+99
@@ -1167,9 +1083,7 @@ tt.main_script.update = scripts.mod_hps.update
 tt.modifier.duration = fts(24)
 tt.modifier.allows_duplicates = true
 tt = E:register_t("mod_rocketeer_speed_buff", "modifier")
-
 AC(tt, "fast")
-
 tt.main_script.insert = scripts.mod_rocketeer_speed_buff.insert
 tt.main_script.remove = scripts.mod_rocketeer_speed_buff.remove
 tt.main_script.update = scripts.mod_track_target.update
@@ -1178,7 +1092,6 @@ tt.modifier.type = MOD_TYPE_FAST
 tt.sound_events.insert = "EnemyRocketeer"
 tt.fast.factor = 3.6041666666666665
 tt.walk_angles = {"walkingRightLeft_fast", "walkingUp_fast", "walkingDown_fast"}
-
 tt = RT("mod_troll_rage", "modifier")
 AC(tt, "render")
 tt.extra_armor = 0.5
@@ -1196,9 +1109,7 @@ tt.render.sprites[1].anchor.y = 0.2
 tt.render.sprites[1].name = "mod_troll_rage"
 tt = RT("mod_troll_heal", "mod_shaman_heal")
 tt = RT("mod_demon_shield", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.bans = {"mod_sorcerer_curse_dps", "mod_sorcerer_curse_armor"}
 tt.modifier.remove_banned = true
 tt.modifier.duration = 1e+99
@@ -1234,7 +1145,6 @@ tt.dps.damage_every = fts(11)
 tt.dps.damage_type = DAMAGE_POISON
 tt.modifier.duration = 3
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)
-
 tt = RT("mod_gulaemon_fly", "modifier")
 -- tt.main_script.queue = scripts.mod_gulaemon_fly.queue
 -- tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
@@ -1258,9 +1168,7 @@ tt.modifier.duration = 1000000000
 tt = RT("mod_burning_floor_burn", "mod_flareon_burn")
 tt.modifier.duration = 0.5
 tt = RT("mod_witch_frog", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.animation_delay = 0.8
 tt.main_script.insert = scripts.mod_witch_frog.insert
 tt.main_script.update = scripts.mod_witch_frog.update
@@ -1279,11 +1187,8 @@ tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {1.5, vec_2(16, 0)}}
 tt.tween.props[1].name = "offset"
 tt.tween.remove = false
-
 tt = E:register_t("mod_jt_tower", "modifier")
-
 E:add_comps(tt, "render", "tween", "ui")
-
 tt.main_script.update = scripts.mod_jt_tower.update
 tt.render.sprites[1].draw_order = 10
 tt.render.sprites[1].loop = false
@@ -1293,21 +1198,21 @@ tt.render.sprites[1].prefix = "mod_jt"
 tt.render.sprites[1].z = Z_OBJECTS
 
 if IS_CONSOLE then
-    tt.render.sprites[2] = CC("sprite")
-    tt.render.sprites[2].alpha = 150
-    tt.render.sprites[2].alpha_focused = 255
-    tt.render.sprites[2].alpha_unfocused = 150
-    tt.render.sprites[2].animated = false
-    tt.render.sprites[2].name = "joystick_shortcuts_hud_0007"
-    tt.render.sprites[2].name_focused = "joystick_shortcuts_hud_halo_0007"
-    tt.render.sprites[2].name_unfocused = "joystick_shortcuts_hud_0007"
-    tt.render.sprites[2].offset.y = 20
-    tt.render.sprites[2].scale = vec_1(1.6)
+	tt.render.sprites[2] = CC("sprite")
+	tt.render.sprites[2].alpha = 150
+	tt.render.sprites[2].alpha_focused = 255
+	tt.render.sprites[2].alpha_unfocused = 150
+	tt.render.sprites[2].animated = false
+	tt.render.sprites[2].name = "joystick_shortcuts_hud_0007"
+	tt.render.sprites[2].name_focused = "joystick_shortcuts_hud_halo_0007"
+	tt.render.sprites[2].name_unfocused = "joystick_shortcuts_hud_0007"
+	tt.render.sprites[2].offset.y = 20
+	tt.render.sprites[2].scale = vec_1(1.6)
 else
-    tt.render.sprites[2] = CC("sprite")
-    tt.render.sprites[2].name = "decal_jt_tap"
-    tt.render.sprites[2].offset = vec_2(10, 20)
-    tt.render.sprites[2].random_ts = fts(7)
+	tt.render.sprites[2] = CC("sprite")
+	tt.render.sprites[2].name = "decal_jt_tap"
+	tt.render.sprites[2].offset = vec_2(10, 20)
+	tt.render.sprites[2].random_ts = fts(7)
 end
 
 tt.render.sprites[2].draw_order = 11
@@ -1321,11 +1226,11 @@ tt.tween.props[1].disabled = true
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
 
 if IS_CONSOLE then
-    tt.tween.props[2] = CC("tween_prop")
-    tt.tween.props[2].name = "scale"
-    tt.tween.props[2].keys = {{0, vec_1(1.6)}, {0.25, vec_1(1.9)}, {0.5, vec_1(1.6)}}
-    tt.tween.props[2].sprite_id = 2
-    tt.tween.props[2].loop = true
+	tt.tween.props[2] = CC("tween_prop")
+	tt.tween.props[2].name = "scale"
+	tt.tween.props[2].keys = {{0, vec_1(1.6)}, {0.25, vec_1(1.9)}, {0.5, vec_1(1.6)}}
+	tt.tween.props[2].sprite_id = 2
+	tt.tween.props[2].loop = true
 end
 
 tt.ui.can_select = false
@@ -1364,11 +1269,11 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.tween.remove = false
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
-
 tt = E:register_t("mod_veznan_tower", "modifier")
 E:add_comps(tt, "render", "ui")
+
 if IS_CONSOLE then
-    E:add_comps(tt, "tween")
+	E:add_comps(tt, "tween")
 end
 
 tt.click_time = 4
@@ -1382,21 +1287,21 @@ tt.render.sprites[1].prefix = "mod_veznan"
 tt.render.sprites[1].z = Z_OBJECTS
 
 if IS_CONSOLE then
-    tt.render.sprites[2] = CC("sprite")
-    tt.render.sprites[2].alpha = 150
-    tt.render.sprites[2].alpha_focused = 255
-    tt.render.sprites[2].alpha_unfocused = 150
-    tt.render.sprites[2].animated = false
-    tt.render.sprites[2].name = "joystick_shortcuts_hud_0007"
-    tt.render.sprites[2].name_focused = "joystick_shortcuts_hud_halo_0007"
-    tt.render.sprites[2].name_unfocused = "joystick_shortcuts_hud_0007"
-    tt.render.sprites[2].offset.y = 20
-    tt.render.sprites[2].scale = vec_1(1.6)
+	tt.render.sprites[2] = CC("sprite")
+	tt.render.sprites[2].alpha = 150
+	tt.render.sprites[2].alpha_focused = 255
+	tt.render.sprites[2].alpha_unfocused = 150
+	tt.render.sprites[2].animated = false
+	tt.render.sprites[2].name = "joystick_shortcuts_hud_0007"
+	tt.render.sprites[2].name_focused = "joystick_shortcuts_hud_halo_0007"
+	tt.render.sprites[2].name_unfocused = "joystick_shortcuts_hud_0007"
+	tt.render.sprites[2].offset.y = 20
+	tt.render.sprites[2].scale = vec_1(1.6)
 else
-    tt.render.sprites[2] = CC("sprite")
-    tt.render.sprites[2].name = "decal_veznan_tap"
-    tt.render.sprites[2].offset = vec_2(10, 20)
-    tt.render.sprites[2].random_ts = fts(7)
+	tt.render.sprites[2] = CC("sprite")
+	tt.render.sprites[2].name = "decal_veznan_tap"
+	tt.render.sprites[2].offset = vec_2(10, 20)
+	tt.render.sprites[2].random_ts = fts(7)
 end
 
 tt.render.sprites[2].draw_order = 11
@@ -1408,12 +1313,12 @@ tt.sound_click = "VeznanHoldHit"
 tt.sound_released = "VeznanHoldDissipate"
 
 if IS_CONSOLE then
-    tt.tween.remove = false
-    tt.tween.props[1] = CC("tween_prop")
-    tt.tween.props[1].name = "scale"
-    tt.tween.props[1].keys = {{0, vec_1(1.6)}, {0.25, vec_1(1.9)}, {0.5, vec_1(1.6)}}
-    tt.tween.props[1].sprite_id = 2
-    tt.tween.props[1].loop = true
+	tt.tween.remove = false
+	tt.tween.props[1] = CC("tween_prop")
+	tt.tween.props[1].name = "scale"
+	tt.tween.props[1].keys = {{0, vec_1(1.6)}, {0.25, vec_1(1.9)}, {0.5, vec_1(1.6)}}
+	tt.tween.props[1].sprite_id = 2
+	tt.tween.props[1].loop = true
 end
 
 tt.ui.can_click = true
@@ -1429,20 +1334,14 @@ tt.dps.damage_max = nil
 tt.dps.damage_every = fts(15)
 tt.modifier.duration = 1
 tt = RT("mod_elder_shaman_speed", "mod_slow")
-
 AC(tt, "render")
-
 tt.slow.factor = nil
 tt.modifier.duration = 3
 tt.render.sprites[1].name = "mod_elder_shaman_speed"
-
 E:set_template("user_power_1", E:get_template("power_fireball_control"))
 E:set_template("user_power_2", E:get_template("power_reinforcements_control"))
-
 tt = RT("decal_sheep_big", "decal_delayed_click_play")
-
 AC(tt, "tween")
-
 tt.delayed_play.achievement_inc = "SHEEP_KILLER"
 tt.delayed_play.click_interrupts = true
 tt.delayed_play.click_tweens = true
@@ -1484,9 +1383,7 @@ tt.render.sprites[1].name = "decal_boat_big_idle"
 tt = RT("decal_boat_small", "decal_loop")
 tt.render.sprites[1].name = "decal_boat_small_idle"
 tt = RT("decal_fish", "decal_scripted")
-
 AC(tt, "ui")
-
 tt.render.sprites[1].prefix = "decal_fish"
 tt.render.sprites[1].name = "jump"
 tt.render.sprites[1].loop = false
@@ -1496,20 +1393,16 @@ tt.ui.can_click = true
 tt.ui.can_select = false
 tt.ui.click_rect = r(-24, -17, 48, 34)
 tt.achievement_id = "CATCH_A_FISH"
-
 tt = RT("decal_water_spark", "decal_loop")
 tt.render.sprites[1].name = "decal_water_spark_play"
-
 tt = E:register_t("decal_water_wave", "decal_delayed_play")
 tt.render.sprites[1].name = "decal_water_wave_play"
 tt.delayed_play.min_delay = 1
 tt.delayed_play.max_delay = 3
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "decal_water_wave_play"
-
 tt = RT("decal_goat", "decal_sheep_big")
 tt.render.sprites[1].prefix = "decal_goat"
-
 tt = RT("decal_tunnel_light", "decal_scripted")
 AC(tt, "tween")
 tt.main_script.update = scripts.decal_tunnel_light.update
@@ -1529,9 +1422,7 @@ tt = RT("decal_burner_small", "decal_loop")
 tt.render.sprites[1].anchor = vec_2(0.5, 0.11)
 tt.render.sprites[1].name = "decal_burner_small_idle"
 tt = E:register_t("decal_fredo", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.render.sprites[1].prefix = "decal_fredo"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.1)
@@ -1554,9 +1445,7 @@ tt.delayed_play.max_delay = fts(400)
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "decal_swamp_bubble_jump"
 tt = E:register_t("decal_demon_portal_big", "decal_scripted")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "decal_demon_portal_big_active"
 tt.main_script.update = scripts.decal_demon_portal_big.update
 tt.fx_out = "fx_demon_portal_out"
@@ -1569,9 +1458,7 @@ tt.tween.props[1].keys = {{fts(0), 0}, {fts(30), 180}, {fts(40), 255}}
 tt.out_nodes = nil
 tt.shutdown_timeout = 5
 tt = E:register_t("decal_s17_barricade", "decal")
-
 E:add_comps(tt, "editor", "main_script")
-
 tt.boss_name = "eb_kingpin"
 tt.boss_spawn_wave = 15
 tt.main_script.update = scripts.decal_s17_barricade.update
@@ -1584,9 +1471,7 @@ tt = RT("decal_bandits_flag", "decal_loop")
 tt.render.sprites[1].random_ts = fts(14)
 tt.render.sprites[1].name = "decal_bandits_flag_idle"
 tt = E:register_t("decal_scrat", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.render.sprites[1].prefix = "decal_scrat"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
@@ -1600,9 +1485,7 @@ tt.main_script.update = scripts.decal_scrat.update
 tt.ui.can_click = true
 tt.ui.click_rect = r(-45, 5, 40, 40)
 tt = RT("fx_decal_scrat_touch", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "decal_scrat_touch_fx"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.sound_events.insert = "JtHitIce"
@@ -1656,9 +1539,7 @@ tt = E:register_t("decal_s23_splinter_pizza", "decal_s23_splinter")
 tt.main_script.update = scripts.decal_s23_splinter_pizza.update
 tt.render.sprites[1].prefix = "decal_s23_splinter_pizza"
 tt = E:register_t("decal_bat_flying", "decal_delayed_play")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].prefix = "decal_bat_flying"
 tt.render.sprites[1].name = "play"
 tt.render.sprites[1].z = Z_BULLETS
@@ -1670,109 +1551,355 @@ tt.delayed_play.play_duration = 2
 tt.tween.remove = false
 tt.tween.props[1].name = "offset"
 local bat_speed_per_node = 0.035
-local bat_paths = {{vec_2(-7.74, 618.5), vec_2(-0.64, 619.52), vec_2(6.27, 620.86), vec_2(13.12, 622.27),
-                    vec_2(19.97, 623.81), vec_2(26.62, 625.54), vec_2(33.41, 627.46), vec_2(40, 629.57),
-                    vec_2(46.59, 631.87), vec_2(53.12, 634.43), vec_2(59.39, 637.06), vec_2(65.66, 639.87),
-                    vec_2(71.74, 643.07), vec_2(77.63, 646.34), vec_2(83.52, 650.05), vec_2(89.15, 653.89),
-                    vec_2(94.66, 658.11), vec_2(99.71, 662.72), vec_2(104.7, 667.65), vec_2(109.12, 672.9),
-                    vec_2(113.22, 678.59), vec_2(116.86, 684.54), vec_2(119.94, 690.82), vec_2(122.5, 697.41),
-                    vec_2(124.42, 704.06), vec_2(125.7, 710.91), vec_2(126.08, 717.95), vec_2(125.25, 724.8),
-                    vec_2(123.2, 731.58), vec_2(120.06, 737.86), vec_2(116.1, 743.87), vec_2(111.68, 749.7),
-                    vec_2(107.2, 755.26), vec_2(102.72, 760.7), vec_2(98.18, 766.21), vec_2(94.21, 771.9),
-                    vec_2(90.56, 777.79), vec_2(87.68, 784.19)},
-                   {vec_2(502.46, 774.14), vec_2(503.42, 767.23), vec_2(504.7, 760.38), vec_2(506.11, 753.54),
-                    vec_2(507.84, 746.75), vec_2(509.76, 739.97), vec_2(511.81, 733.44), vec_2(514.18, 727.1),
-                    vec_2(516.99, 720.96), vec_2(520.13, 715.01), vec_2(523.97, 709.38), vec_2(528.45, 704.38),
-                    vec_2(534.21, 700.42), vec_2(540.8, 698.11), vec_2(547.71, 698.11), vec_2(554.69, 699.01),
-                    vec_2(561.47, 700.86), vec_2(568, 703.36), vec_2(574.27, 706.62), vec_2(580.16, 710.46),
-                    vec_2(585.73, 714.62), vec_2(590.98, 718.78), vec_2(596.29, 722.69), vec_2(602.5, 725.7),
-                    vec_2(609.54, 726.59), vec_2(617.09, 725.82), vec_2(624.38, 724.93), vec_2(631.36, 724.1),
-                    vec_2(638.27, 723.65), vec_2(645.12, 723.65), vec_2(652.03, 724.35), vec_2(658.82, 725.7),
-                    vec_2(665.47, 728.13), vec_2(671.94, 731.33), vec_2(677.7, 735.23), vec_2(683.14, 739.97),
-                    vec_2(688, 745.15), vec_2(692.42, 750.78), vec_2(696.26, 756.67), vec_2(699.71, 762.88),
-                    vec_2(702.85, 769.09), vec_2(706.24, 776.83)},
-                   {vec_2(1031.49, 454.02), vec_2(1024.38, 455.17), vec_2(1017.54, 456.45), vec_2(1010.62, 457.79),
-                    vec_2(1003.84, 459.39), vec_2(997.12, 461.18), vec_2(990.46, 462.98), vec_2(983.74, 465.15),
-                    vec_2(977.15, 467.46), vec_2(970.62, 469.95), vec_2(964.42, 472.64), vec_2(958.21, 475.46),
-                    vec_2(952.13, 478.53), vec_2(946.18, 481.86), vec_2(940.35, 485.5), vec_2(934.72, 489.41),
-                    vec_2(929.28, 493.7), vec_2(924.16, 498.24), vec_2(919.3, 503.1), vec_2(914.69, 508.48),
-                    vec_2(910.66, 514.05), vec_2(907.01, 520), vec_2(903.94, 526.27), vec_2(901.31, 532.74),
-                    vec_2(899.33, 539.52), vec_2(898.05, 546.37), vec_2(897.73, 553.28), vec_2(898.56, 560.26),
-                    vec_2(900.54, 566.98), vec_2(903.55, 573.18), vec_2(907.58, 579.2), vec_2(912, 585.15),
-                    vec_2(916.48, 590.72), vec_2(920.9, 596.29), vec_2(925.44, 601.6), vec_2(929.41, 607.3),
-                    vec_2(933.06, 613.18), vec_2(936.38, 619.26), vec_2(939.52, 625.6), vec_2(941.95, 632.06),
-                    vec_2(944, 638.72), vec_2(945.6, 645.57), vec_2(946.69, 652.61), vec_2(947.46, 659.78),
-                    vec_2(947.84, 666.75), vec_2(947.9, 673.79), vec_2(947.65, 680.83), vec_2(947.14, 687.87),
-                    vec_2(946.3, 694.85), vec_2(945.22, 701.89), vec_2(942.78, 708.61), vec_2(939.71, 715.26),
-                    vec_2(936.32, 721.47), vec_2(932.86, 727.42), vec_2(929.02, 733.44), vec_2(925.06, 739.14),
-                    vec_2(920.83, 744.77), vec_2(916.54, 750.21), vec_2(912, 755.58), vec_2(907.26, 760.7),
-                    vec_2(902.34, 765.82), vec_2(897.41, 770.82), vec_2(892.29, 775.42), vec_2(887.17, 780.22)},
-                   {vec_2(1028.54, 116.61), vec_2(1022.78, 120.96), vec_2(1016.9, 124.99), vec_2(1010.82, 128.83),
-                    vec_2(1004.74, 132.22), vec_2(998.46, 135.3), vec_2(992, 138.18), vec_2(985.41, 140.61),
-                    vec_2(978.75, 142.66), vec_2(971.78, 144.19), vec_2(964.86, 145.6), vec_2(957.76, 146.37),
-                    vec_2(950.66, 146.69), vec_2(943.62, 146.56), vec_2(936.77, 145.41), vec_2(930.05, 142.98),
-                    vec_2(924.1, 139.07), vec_2(918.85, 134.27), vec_2(914.37, 128.58), vec_2(910.72, 122.43),
-                    vec_2(907.46, 115.71), vec_2(904.64, 108.99), vec_2(902.14, 102.27), vec_2(899.71, 95.42),
-                    vec_2(897.54, 88.77), vec_2(895.49, 81.98), vec_2(893.38, 75.52), vec_2(891.26, 68.99),
-                    vec_2(889.09, 62.46), vec_2(886.98, 56), vec_2(884.61, 49.6), vec_2(882.05, 43.14),
-                    vec_2(879.1, 36.8), vec_2(875.84, 30.72), vec_2(872, 24.7), vec_2(867.78, 19.33),
-                    vec_2(862.98, 14.21), vec_2(857.54, 9.79), vec_2(851.46, 6.02), vec_2(845.38, 2.56),
-                    vec_2(839.36, -1.28), vec_2(833.47, -5.25), vec_2(827.78, -9.28), vec_2(822.4, -13.95)},
-                   {vec_2(687.1, -12.1), vec_2(685.76, -5.12), vec_2(684.22, 1.79), vec_2(682.5, 8.64),
-                    vec_2(680.7, 15.42), vec_2(678.72, 22.08), vec_2(676.61, 28.67), vec_2(674.3, 35.26),
-                    vec_2(671.81, 41.86), vec_2(669.18, 48.26), vec_2(666.11, 54.66), vec_2(663.17, 60.8),
-                    vec_2(659.78, 66.75), vec_2(656.32, 72.45), vec_2(652.42, 78.08), vec_2(648.13, 83.33),
-                    vec_2(643.33, 88.19), vec_2(637.95, 92.67), vec_2(631.94, 96.13), vec_2(625.41, 98.5),
-                    vec_2(618.43, 99.58), vec_2(611.52, 99.52), vec_2(604.48, 99.26), vec_2(597.5, 98.69),
-                    vec_2(590.53, 97.66), vec_2(583.62, 96.26), vec_2(576.83, 94.46), vec_2(570.11, 92.35),
-                    vec_2(563.46, 89.79), vec_2(556.99, 86.91), vec_2(550.66, 83.9), vec_2(544.38, 80.64),
-                    vec_2(538.43, 77.12), vec_2(532.48, 73.79), vec_2(526.59, 70.34), vec_2(520.58, 67.07),
-                    vec_2(514.24, 64.06), vec_2(507.9, 61.44), vec_2(501.31, 59.52), vec_2(494.34, 58.43),
-                    vec_2(487.36, 59.01), vec_2(480.64, 61.12), vec_2(474.5, 64.58), vec_2(468.61, 68.8),
-                    vec_2(463.3, 73.66), vec_2(458.18, 78.78), vec_2(453.25, 83.97), vec_2(448.51, 89.09),
-                    vec_2(443.9, 94.02), vec_2(439.04, 98.82), vec_2(433.92, 103.49), vec_2(428.42, 107.71),
-                    vec_2(422.53, 111.3), vec_2(416.06, 113.66), vec_2(409.15, 114.82), vec_2(402.18, 113.98),
-                    vec_2(395.39, 111.3), vec_2(389.38, 107.33), vec_2(383.94, 102.53), vec_2(379.01, 97.34),
-                    vec_2(374.4, 91.84), vec_2(370.18, 86.14), vec_2(366.14, 80.26), vec_2(362.37, 74.24),
-                    vec_2(358.66, 68.1), vec_2(355.14, 62.08), vec_2(351.87, 55.94), vec_2(348.42, 50.05),
-                    vec_2(345.09, 44.1), vec_2(341.82, 38.08), vec_2(338.24, 32.13), vec_2(333.95, 26.24),
-                    vec_2(329.28, 20.8), vec_2(324.29, 15.74), vec_2(319.1, 10.69), vec_2(313.6, 6.08),
-                    vec_2(307.97, 1.73), vec_2(302.34, -2.37), vec_2(296.45, -6.27), vec_2(290.56, -10.11),
-                    vec_2(284.54, -13.76)},
-                   {vec_2(-12.86, 155.9), vec_2(-5.76, 157.18), vec_2(1.34, 158.66), vec_2(8.19, 160.26),
-                    vec_2(15.17, 161.98), vec_2(22.02, 163.84), vec_2(28.67, 165.89), vec_2(35.2, 168.06),
-                    vec_2(41.73, 170.43), vec_2(48.13, 173.06), vec_2(54.46, 176), vec_2(60.54, 179.26),
-                    vec_2(66.62, 182.91), vec_2(72.26, 187.01), vec_2(77.63, 191.62), vec_2(82.3, 196.86),
-                    vec_2(85.95, 202.69), vec_2(88, 209.47), vec_2(87.55, 216.58), vec_2(84.93, 223.3),
-                    vec_2(81.15, 229.44), vec_2(76.74, 235.2), vec_2(72.13, 240.77), vec_2(67.46, 246.4),
-                    vec_2(63.17, 251.97), vec_2(59.71, 257.98), vec_2(57.02, 264.45), vec_2(56.06, 271.55),
-                    vec_2(56.38, 278.66), vec_2(57.73, 285.7), vec_2(59.78, 292.8), vec_2(62.14, 299.78),
-                    vec_2(64.58, 306.5), vec_2(66.94, 313.15), vec_2(69.31, 319.68), vec_2(71.42, 326.27),
-                    vec_2(73.34, 332.99), vec_2(74.75, 339.9), vec_2(75.52, 346.82), vec_2(75.39, 353.86),
-                    vec_2(74.05, 360.83), vec_2(71.04, 367.23), vec_2(66.37, 372.61), vec_2(60.03, 376.26),
-                    vec_2(52.93, 378.62), vec_2(46.21, 380.93), vec_2(39.55, 383.42), vec_2(33.22, 386.37),
-                    vec_2(26.82, 389.44), vec_2(20.67, 392.9), vec_2(14.72, 396.61), vec_2(9.09, 400.7),
-                    vec_2(3.71, 405.25), vec_2(-1.28, 410.24), vec_2(-5.82, 415.68), vec_2(-11.46, 420.54)}}
+local bat_paths = {{
+	vec_2(-7.74, 618.5),
+	vec_2(-0.64, 619.52),
+	vec_2(6.27, 620.86),
+	vec_2(13.12, 622.27),
+	vec_2(19.97, 623.81),
+	vec_2(26.62, 625.54),
+	vec_2(33.41, 627.46),
+	vec_2(40, 629.57),
+	vec_2(46.59, 631.87),
+	vec_2(53.12, 634.43),
+	vec_2(59.39, 637.06),
+	vec_2(65.66, 639.87),
+	vec_2(71.74, 643.07),
+	vec_2(77.63, 646.34),
+	vec_2(83.52, 650.05),
+	vec_2(89.15, 653.89),
+	vec_2(94.66, 658.11),
+	vec_2(99.71, 662.72),
+	vec_2(104.7, 667.65),
+	vec_2(109.12, 672.9),
+	vec_2(113.22, 678.59),
+	vec_2(116.86, 684.54),
+	vec_2(119.94, 690.82),
+	vec_2(122.5, 697.41),
+	vec_2(124.42, 704.06),
+	vec_2(125.7, 710.91),
+	vec_2(126.08, 717.95),
+	vec_2(125.25, 724.8),
+	vec_2(123.2, 731.58),
+	vec_2(120.06, 737.86),
+	vec_2(116.1, 743.87),
+	vec_2(111.68, 749.7),
+	vec_2(107.2, 755.26),
+	vec_2(102.72, 760.7),
+	vec_2(98.18, 766.21),
+	vec_2(94.21, 771.9),
+	vec_2(90.56, 777.79),
+	vec_2(87.68, 784.19)
+}, {
+	vec_2(502.46, 774.14),
+	vec_2(503.42, 767.23),
+	vec_2(504.7, 760.38),
+	vec_2(506.11, 753.54),
+	vec_2(507.84, 746.75),
+	vec_2(509.76, 739.97),
+	vec_2(511.81, 733.44),
+	vec_2(514.18, 727.1),
+	vec_2(516.99, 720.96),
+	vec_2(520.13, 715.01),
+	vec_2(523.97, 709.38),
+	vec_2(528.45, 704.38),
+	vec_2(534.21, 700.42),
+	vec_2(540.8, 698.11),
+	vec_2(547.71, 698.11),
+	vec_2(554.69, 699.01),
+	vec_2(561.47, 700.86),
+	vec_2(568, 703.36),
+	vec_2(574.27, 706.62),
+	vec_2(580.16, 710.46),
+	vec_2(585.73, 714.62),
+	vec_2(590.98, 718.78),
+	vec_2(596.29, 722.69),
+	vec_2(602.5, 725.7),
+	vec_2(609.54, 726.59),
+	vec_2(617.09, 725.82),
+	vec_2(624.38, 724.93),
+	vec_2(631.36, 724.1),
+	vec_2(638.27, 723.65),
+	vec_2(645.12, 723.65),
+	vec_2(652.03, 724.35),
+	vec_2(658.82, 725.7),
+	vec_2(665.47, 728.13),
+	vec_2(671.94, 731.33),
+	vec_2(677.7, 735.23),
+	vec_2(683.14, 739.97),
+	vec_2(688, 745.15),
+	vec_2(692.42, 750.78),
+	vec_2(696.26, 756.67),
+	vec_2(699.71, 762.88),
+	vec_2(702.85, 769.09),
+	vec_2(706.24, 776.83)
+}, {
+	vec_2(1031.49, 454.02),
+	vec_2(1024.38, 455.17),
+	vec_2(1017.54, 456.45),
+	vec_2(1010.62, 457.79),
+	vec_2(1003.84, 459.39),
+	vec_2(997.12, 461.18),
+	vec_2(990.46, 462.98),
+	vec_2(983.74, 465.15),
+	vec_2(977.15, 467.46),
+	vec_2(970.62, 469.95),
+	vec_2(964.42, 472.64),
+	vec_2(958.21, 475.46),
+	vec_2(952.13, 478.53),
+	vec_2(946.18, 481.86),
+	vec_2(940.35, 485.5),
+	vec_2(934.72, 489.41),
+	vec_2(929.28, 493.7),
+	vec_2(924.16, 498.24),
+	vec_2(919.3, 503.1),
+	vec_2(914.69, 508.48),
+	vec_2(910.66, 514.05),
+	vec_2(907.01, 520),
+	vec_2(903.94, 526.27),
+	vec_2(901.31, 532.74),
+	vec_2(899.33, 539.52),
+	vec_2(898.05, 546.37),
+	vec_2(897.73, 553.28),
+	vec_2(898.56, 560.26),
+	vec_2(900.54, 566.98),
+	vec_2(903.55, 573.18),
+	vec_2(907.58, 579.2),
+	vec_2(912, 585.15),
+	vec_2(916.48, 590.72),
+	vec_2(920.9, 596.29),
+	vec_2(925.44, 601.6),
+	vec_2(929.41, 607.3),
+	vec_2(933.06, 613.18),
+	vec_2(936.38, 619.26),
+	vec_2(939.52, 625.6),
+	vec_2(941.95, 632.06),
+	vec_2(944, 638.72),
+	vec_2(945.6, 645.57),
+	vec_2(946.69, 652.61),
+	vec_2(947.46, 659.78),
+	vec_2(947.84, 666.75),
+	vec_2(947.9, 673.79),
+	vec_2(947.65, 680.83),
+	vec_2(947.14, 687.87),
+	vec_2(946.3, 694.85),
+	vec_2(945.22, 701.89),
+	vec_2(942.78, 708.61),
+	vec_2(939.71, 715.26),
+	vec_2(936.32, 721.47),
+	vec_2(932.86, 727.42),
+	vec_2(929.02, 733.44),
+	vec_2(925.06, 739.14),
+	vec_2(920.83, 744.77),
+	vec_2(916.54, 750.21),
+	vec_2(912, 755.58),
+	vec_2(907.26, 760.7),
+	vec_2(902.34, 765.82),
+	vec_2(897.41, 770.82),
+	vec_2(892.29, 775.42),
+	vec_2(887.17, 780.22)
+}, {
+	vec_2(1028.54, 116.61),
+	vec_2(1022.78, 120.96),
+	vec_2(1016.9, 124.99),
+	vec_2(1010.82, 128.83),
+	vec_2(1004.74, 132.22),
+	vec_2(998.46, 135.3),
+	vec_2(992, 138.18),
+	vec_2(985.41, 140.61),
+	vec_2(978.75, 142.66),
+	vec_2(971.78, 144.19),
+	vec_2(964.86, 145.6),
+	vec_2(957.76, 146.37),
+	vec_2(950.66, 146.69),
+	vec_2(943.62, 146.56),
+	vec_2(936.77, 145.41),
+	vec_2(930.05, 142.98),
+	vec_2(924.1, 139.07),
+	vec_2(918.85, 134.27),
+	vec_2(914.37, 128.58),
+	vec_2(910.72, 122.43),
+	vec_2(907.46, 115.71),
+	vec_2(904.64, 108.99),
+	vec_2(902.14, 102.27),
+	vec_2(899.71, 95.42),
+	vec_2(897.54, 88.77),
+	vec_2(895.49, 81.98),
+	vec_2(893.38, 75.52),
+	vec_2(891.26, 68.99),
+	vec_2(889.09, 62.46),
+	vec_2(886.98, 56),
+	vec_2(884.61, 49.6),
+	vec_2(882.05, 43.14),
+	vec_2(879.1, 36.8),
+	vec_2(875.84, 30.72),
+	vec_2(872, 24.7),
+	vec_2(867.78, 19.33),
+	vec_2(862.98, 14.21),
+	vec_2(857.54, 9.79),
+	vec_2(851.46, 6.02),
+	vec_2(845.38, 2.56),
+	vec_2(839.36, -1.28),
+	vec_2(833.47, -5.25),
+	vec_2(827.78, -9.28),
+	vec_2(822.4, -13.95)
+}, {
+	vec_2(687.1, -12.1),
+	vec_2(685.76, -5.12),
+	vec_2(684.22, 1.79),
+	vec_2(682.5, 8.64),
+	vec_2(680.7, 15.42),
+	vec_2(678.72, 22.08),
+	vec_2(676.61, 28.67),
+	vec_2(674.3, 35.26),
+	vec_2(671.81, 41.86),
+	vec_2(669.18, 48.26),
+	vec_2(666.11, 54.66),
+	vec_2(663.17, 60.8),
+	vec_2(659.78, 66.75),
+	vec_2(656.32, 72.45),
+	vec_2(652.42, 78.08),
+	vec_2(648.13, 83.33),
+	vec_2(643.33, 88.19),
+	vec_2(637.95, 92.67),
+	vec_2(631.94, 96.13),
+	vec_2(625.41, 98.5),
+	vec_2(618.43, 99.58),
+	vec_2(611.52, 99.52),
+	vec_2(604.48, 99.26),
+	vec_2(597.5, 98.69),
+	vec_2(590.53, 97.66),
+	vec_2(583.62, 96.26),
+	vec_2(576.83, 94.46),
+	vec_2(570.11, 92.35),
+	vec_2(563.46, 89.79),
+	vec_2(556.99, 86.91),
+	vec_2(550.66, 83.9),
+	vec_2(544.38, 80.64),
+	vec_2(538.43, 77.12),
+	vec_2(532.48, 73.79),
+	vec_2(526.59, 70.34),
+	vec_2(520.58, 67.07),
+	vec_2(514.24, 64.06),
+	vec_2(507.9, 61.44),
+	vec_2(501.31, 59.52),
+	vec_2(494.34, 58.43),
+	vec_2(487.36, 59.01),
+	vec_2(480.64, 61.12),
+	vec_2(474.5, 64.58),
+	vec_2(468.61, 68.8),
+	vec_2(463.3, 73.66),
+	vec_2(458.18, 78.78),
+	vec_2(453.25, 83.97),
+	vec_2(448.51, 89.09),
+	vec_2(443.9, 94.02),
+	vec_2(439.04, 98.82),
+	vec_2(433.92, 103.49),
+	vec_2(428.42, 107.71),
+	vec_2(422.53, 111.3),
+	vec_2(416.06, 113.66),
+	vec_2(409.15, 114.82),
+	vec_2(402.18, 113.98),
+	vec_2(395.39, 111.3),
+	vec_2(389.38, 107.33),
+	vec_2(383.94, 102.53),
+	vec_2(379.01, 97.34),
+	vec_2(374.4, 91.84),
+	vec_2(370.18, 86.14),
+	vec_2(366.14, 80.26),
+	vec_2(362.37, 74.24),
+	vec_2(358.66, 68.1),
+	vec_2(355.14, 62.08),
+	vec_2(351.87, 55.94),
+	vec_2(348.42, 50.05),
+	vec_2(345.09, 44.1),
+	vec_2(341.82, 38.08),
+	vec_2(338.24, 32.13),
+	vec_2(333.95, 26.24),
+	vec_2(329.28, 20.8),
+	vec_2(324.29, 15.74),
+	vec_2(319.1, 10.69),
+	vec_2(313.6, 6.08),
+	vec_2(307.97, 1.73),
+	vec_2(302.34, -2.37),
+	vec_2(296.45, -6.27),
+	vec_2(290.56, -10.11),
+	vec_2(284.54, -13.76)
+}, {
+	vec_2(-12.86, 155.9),
+	vec_2(-5.76, 157.18),
+	vec_2(1.34, 158.66),
+	vec_2(8.19, 160.26),
+	vec_2(15.17, 161.98),
+	vec_2(22.02, 163.84),
+	vec_2(28.67, 165.89),
+	vec_2(35.2, 168.06),
+	vec_2(41.73, 170.43),
+	vec_2(48.13, 173.06),
+	vec_2(54.46, 176),
+	vec_2(60.54, 179.26),
+	vec_2(66.62, 182.91),
+	vec_2(72.26, 187.01),
+	vec_2(77.63, 191.62),
+	vec_2(82.3, 196.86),
+	vec_2(85.95, 202.69),
+	vec_2(88, 209.47),
+	vec_2(87.55, 216.58),
+	vec_2(84.93, 223.3),
+	vec_2(81.15, 229.44),
+	vec_2(76.74, 235.2),
+	vec_2(72.13, 240.77),
+	vec_2(67.46, 246.4),
+	vec_2(63.17, 251.97),
+	vec_2(59.71, 257.98),
+	vec_2(57.02, 264.45),
+	vec_2(56.06, 271.55),
+	vec_2(56.38, 278.66),
+	vec_2(57.73, 285.7),
+	vec_2(59.78, 292.8),
+	vec_2(62.14, 299.78),
+	vec_2(64.58, 306.5),
+	vec_2(66.94, 313.15),
+	vec_2(69.31, 319.68),
+	vec_2(71.42, 326.27),
+	vec_2(73.34, 332.99),
+	vec_2(74.75, 339.9),
+	vec_2(75.52, 346.82),
+	vec_2(75.39, 353.86),
+	vec_2(74.05, 360.83),
+	vec_2(71.04, 367.23),
+	vec_2(66.37, 372.61),
+	vec_2(60.03, 376.26),
+	vec_2(52.93, 378.62),
+	vec_2(46.21, 380.93),
+	vec_2(39.55, 383.42),
+	vec_2(33.22, 386.37),
+	vec_2(26.82, 389.44),
+	vec_2(20.67, 392.9),
+	vec_2(14.72, 396.61),
+	vec_2(9.09, 400.7),
+	vec_2(3.71, 405.25),
+	vec_2(-1.28, 410.24),
+	vec_2(-5.82, 415.68),
+	vec_2(-11.46, 420.54)
+}}
 
 for i, b in ipairs(bat_paths) do
-    tt = E:register_t("decal_bat_flying_" .. i, "decal_bat_flying")
-    local keys = {}
-    local t = 0
+	tt = E:register_t("decal_bat_flying_" .. i, "decal_bat_flying")
+	local keys = {}
+	local t = 0
 
-    for _, p in pairs(b) do
-        table.insert(keys, {t, p})
+	for _, p in pairs(b) do
+		table.insert(keys, {t, p})
+		t = t + bat_speed_per_node
+	end
 
-        t = t + bat_speed_per_node
-    end
-
-    tt.tween.props[1].keys = keys
-    tt.delayed_play.play_duration = t
+	tt.tween.props[1].keys = keys
+	tt.delayed_play.play_duration = t
 end
 
 tt = E:register_t("decal_s24_nevermore", "decal_click_play")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 tt.render.sprites[1].prefix = "decal_s24_nevermore"
@@ -1836,7 +1963,6 @@ tt.render.sprites[1].anchor.y = 0.125
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.decal_s81_percussionist.update
 tt.play_loops = 0
-
 tt = E:register_t("tower_archer_hammerhold", "tower")
 E:add_comps(tt, "attacks")
 tt.tower.type = "archer_hammerhold"
@@ -1867,11 +1993,9 @@ tt.attacks.list[1].bullet = "arrow_hammerhold"
 tt.attacks.list[1].cooldown = 0.7
 tt.attacks.list[1].shoot_time = fts(5)
 tt.attacks.list[1].bullet_start_offset = {vec_2(0, 50)}
-
 tt = E:register_t("arrow_hammerhold", "arrow")
 tt.bullet.damage_min = 5
 tt.bullet.damage_max = 10
-
 tt = E:register_t("decal_tusken", "decal_scripted")
 E:add_comps(tt, "bullet_attack")
 tt.render.sprites[1].prefix = "decal_tusken"
@@ -1884,7 +2008,6 @@ tt.bullet_attack.shoot_time = fts(2)
 tt.bullet_attack.cooldown_min = 10
 tt.bullet_attack.cooldown_max = 20
 tt.bullet_attack.bullet_start_offset = vec_2(3, 7)
-
 tt = E:register_t("bullet_tusken", "shotgun")
 tt.bullet.damage_min = 100
 tt.bullet.damage_max = 200
@@ -1892,7 +2015,6 @@ tt.bullet.min_speed = 40 * FPS
 tt.bullet.max_speed = 40 * FPS
 tt.bullet.hit_blood_fx = "fx_blood_splat"
 tt.bullet.miss_fx = "fx_smoke_bullet"
-
 tt = E:register_t("sand_worm", "decal_scripted")
 E:add_comps(tt, "area_attack")
 tt.render.sprites[1].prefix = "sand_worm"
@@ -1908,7 +2030,6 @@ tt.area_attack.hit_time = 6
 tt.area_attack.damage_type = DAMAGE_EAT
 tt.area_attack.vis_flags = bor(F_EAT)
 tt.area_attack.vis_bans = bor(F_FLYING)
-
 tt = E:register_t("fx_sand_worm_incoming", "decal_tween")
 tt.render.sprites[1].anchor.y = 0.44
 tt.render.sprites[1].z = Z_DECALS
@@ -1916,20 +2037,17 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].name = "sand_worm_incoming"
 tt.tween.props[1].keys = {{0, 0}, {0.6, 255}}
 tt.tween.remove = false
-
 tt = E:register_t("fx_sand_worm_out", "decal_tween")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].name = "sandworm_decal_out"
 tt.tween.props[1].keys = {{1, 255}, {3.5, 0}}
-
 tt = E:register_t("decal_palm_tree", "decal_timed")
 tt.timed.disabled = true
 tt.render.sprites[1].prefix = "decal_palm_tree"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -40
-
 tt = E:register_t("decal_palm_land", "decal_tween")
 tt.pos = vec_2(REF_W * 0.5, REF_H * 0.5)
 tt.tween.disabled = true
@@ -1938,19 +2056,16 @@ tt.tween.remove = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
 tt = E:register_t("decal_lumberjack", "decal")
 tt.render.sprites[1].prefix = "lumberjack"
 tt.render.sprites[1].anchor.y = 0.19
 tt.render.sprites[1].flip_x = true
 tt.render.sprites[1].z = Z_OBJECTS
-
 tt = E:register_t("decal_ship_door", "decal")
 tt.render.sprites[1].prefix = "decal_ship_door"
 tt.render.sprites[1].name = "closed"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
-
 tt = E:register_t("pirate_cannons", "decal_scripted")
 E:add_comps(tt, "attacks")
 tt.main_script.update = scripts.pirate_cannons.update
@@ -1970,7 +2085,6 @@ tt.attacks.list[1].max_cooldown = 60
 tt.attacks.list[1].shoot_time = fts(29)
 tt.attacks.list[1].max_error = 20
 tt.attacks.list[1].min_error = 5
-
 tt = E:register_t("decal_pirate_cannon_target", "decal_tween")
 tt.render.sprites[1].name = "Stage4_ShipCrosshair"
 tt.render.sprites[1].animated = false
@@ -1978,12 +2092,10 @@ tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = true
 tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{0, vec_2(1.86, 1.86)}, {fts(20), vec_2(1.05, 1.05)}, {fts(23), vec_2(0.95, 0.95)},
-                          {fts(26), vec_2(1.05, 1.05)}, {fts(28), vec_2(1, 1)}}
+tt.tween.props[1].keys = {{0, vec_2(1.86, 1.86)}, {fts(20), vec_2(1.05, 1.05)}, {fts(23), vec_2(0.95, 0.95)}, {fts(26), vec_2(1.05, 1.05)}, {fts(28), vec_2(1, 1)}}
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "alpha"
 tt.tween.props[2].keys = {{0, 0}, {fts(20), 255}, {fts(74), 255}, {fts(78), 0}}
-
 tt = E:register_t("bomb_pirate_cannon", "bullet")
 tt.render = nil
 tt.main_script.update = scripts.bomb_pirate_cannon.update
@@ -1996,15 +2108,13 @@ tt.bullet.damage_type = DAMAGE_PHYSICAL
 tt.bullet.hit_fx = "fx_explosion_small"
 tt.bullet.hit_decal = "decal_bomb_crater"
 tt.sound_events.hit = "BombExplosionSound"
-
 tt = E:register_t("decal_efreeti_tent", "decal")
 tt.render.sprites[1].name = "boss_corps_efreeti"
 tt.render.sprites[1].animated = false
 tt = E:register_t("decal_efreeti_door", "decal_scripted")
 tt.main_script.update = scripts.decal_efreeti_door.update
 tt.smoke_positions = {vec_2(521, 674), vec_2(618, 642)}
-tt.stone_positions = {{vec_2(599, 664), 1, false}, {vec_2(688, 592), 0.8, false}, {vec_2(479, 647), 0.8, false},
-                      {vec_2(519, 682), 1, true}, {vec_2(625, 608), 0.8, true}, {vec_2(416, 663), 0.8, true}}
+tt.stone_positions = {{vec_2(599, 664), 1, false}, {vec_2(688, 592), 0.8, false}, {vec_2(479, 647), 0.8, false}, {vec_2(519, 682), 1, true}, {vec_2(625, 608), 0.8, true}, {vec_2(416, 663), 0.8, true}}
 tt.render.sprites[1].prefix = "efreeti_door_floor"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = false
@@ -2035,7 +2145,6 @@ tt.render.sprites[7].name = "efreeti_door_eyes_effect"
 tt.render.sprites[7].offset = vec_2(-51, -55)
 tt.render.sprites[7].hidden = true
 tt.render.sprites[7].loop = false
-
 tt = E:register_t("decal_efreeti_door_broken", "decal")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].name = "efreeti_statue_left"
@@ -2045,21 +2154,17 @@ tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].name = "efreeti_statue_right"
 tt.render.sprites[2].offset = vec_2(72, -120)
 tt.render.sprites[2].anchor.y = 0.08
-
 tt = E:register_t("decal_lumberjack_shaman", "decal")
 tt.render.sprites[1].prefix = "lumberjack_shaman"
 tt.render.sprites[1].anchor.y = 0.18
-
 tt = E:register_t("background_sounds_jungle", "background_sounds")
 tt.min_delay = 20
 tt.max_delay = 25
 tt.sounds = {"JungleAmbienceSound"}
-
 tt = E:register_t("background_sounds_underground", "background_sounds")
 tt.min_delay = 15
 tt.max_delay = 20
 tt.sounds = {"UndergroundAmbienceSound"}
-
 tt = E:register_t("tower_holder_blocked")
 E:add_comps(tt, "tower", "tower_holder", "pos", "render", "ui", "sound_events")
 tt.tower.level = 1
@@ -2071,15 +2176,12 @@ tt.render.sprites[1].offset = vec_2(0, 17)
 tt.render.sprites[1].z = Z_DECALS
 tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.sound_events.remove = "GUITowerSell"
-
 tt = E:register_t("tower_holder_blocked_jungle", "tower_holder_blocked")
 tt.tower.type = "holder_blocked_jungle"
 tt.tower_holder.unblock_price = 100
-
 tt = E:register_t("tower_holder_blocked_underground", "tower_holder_blocked")
 tt.tower.type = "holder_blocked_underground"
 tt.tower_holder.unblock_price = 200
-
 tt = E:register_t("carnivorous_plant", "decal_scripted")
 E:add_comps(tt, "area_attack")
 tt.main_script.update = scripts.carnivorous_plant.update
@@ -2093,7 +2195,6 @@ tt.area_attack.damage_radius = 55
 tt.area_attack.hit_time = fts(10)
 tt.area_attack.vis_flags = F_EAT
 tt.area_attack.damage_type = DAMAGE_EAT
-
 tt = E:register_t("enemy_cannibal_volcano", "enemy")
 E:add_comps(tt, "melee", "tween")
 anchor_y = 0.15
@@ -2128,7 +2229,6 @@ tt.unit.marker_offset = vec_2(0, ady(16))
 tt.unit.mod_offset = vec_2(0, ady(36))
 tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MOCKING)
 tt.vis.bans = bor(F_SKELETON, F_UNDEAD)
-
 tt = E:register_t("decal_volcano_virgin", "decal_scripted")
 E:add_comps(tt, "motion")
 tt.render.sprites[1].prefix = "volcano_virgin"
@@ -2136,7 +2236,6 @@ tt.render.sprites[1].name = "heart"
 tt.render.sprites[1].anchor.y = 0.15
 tt.motion.max_speed = 1 * FPS
 tt.main_script.update = scripts.decal_volcano_virgin.update
-
 tt = E:register_t("bomb_volcano", "bullet")
 tt.bullet.damage_max = 160
 tt.bullet.damage_min = 100
@@ -2159,7 +2258,6 @@ tt.render.sprites[1].name = "Stage9_lavaShot"
 tt.sound_events.insert = "SpecialVolcanoLavaShoot"
 tt.sound_events.hit = "SpecialVolcanoLavaShootHit"
 tt.sound_events.remove = "BombExplosionSound"
-
 tt = E:register_t("decal_volcano_bubble", "decal_delayed_play")
 tt.render.sprites[1].prefix = "volcano_lava"
 tt.render.sprites[1].name = "bubble"
@@ -2167,7 +2265,6 @@ tt.delayed_play.min_delay = 5
 tt.delayed_play.max_delay = 5
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "bubble"
-
 tt = E:register_t("decal_volcano_smoke", "decal_delayed_play")
 tt.render.sprites[1].prefix = "volcano_lava"
 tt.render.sprites[1].name = "smoke"
@@ -2175,7 +2272,6 @@ tt.delayed_play.min_delay = 3
 tt.delayed_play.max_delay = 3
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "smoke"
-
 tt = E:register_t("decal_bouncing_bridge", "decal_scripted")
 tt.main_script.update = scripts.decal_bouncing_bridge.update
 tt.render.sprites[1].prefix = "decal_bouncing_bridge"
@@ -2187,17 +2283,14 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].z = Z_OBJECTS
 tt.render.sprites[2].sort_y = 495
 tt.bridge_width = 160
-
 tt = E:register_t("decal_monkey_corps_1", "decal_tween")
 tt.render.sprites[1].name = "decal_monkey_corps_1"
 tt.tween.remove = false
 tt.tween.props[1].loop = true
 tt.tween.props[1].name = "flip_x"
 tt.tween.props[1].keys = {{0, false}, {3, true}, {6, false}}
-
 tt = E:register_t("decal_monkey_corps_2", "decal")
 tt.render.sprites[1].name = "decal_monkey_corps_2"
-
 tt = E:register_t("decal_monkey_corps_3", "decal_delayed_sequence")
 tt.render.sprites[1].prefix = "decal_monkey_corps_3"
 tt.render.sprites[1].name = "idle"
@@ -2206,7 +2299,6 @@ tt.render.sprites[1].hidden = nil
 tt.delayed_sequence.animations = {"jump", "jump", "jump", "idle"}
 tt.delayed_sequence.min_delay = 0
 tt.delayed_sequence.max_delay = 1
-
 tt = E:register_t("indiana_puzzle_button_a", "decal")
 E:add_comps(tt, "ui")
 tt.render.sprites[1].name = "idle"
@@ -2215,15 +2307,12 @@ tt.render.sprites[1].z = Z_DECALS + 6
 tt.ui.can_click = false
 tt.ui.click_rect = r(-22, -22, 44, 44)
 tt.puzzle_value = 1
-
 tt = E:register_t("indiana_puzzle_button_b", "indiana_puzzle_button_a")
 tt.render.sprites[1].prefix = "indiana_puzzle_button_b"
 tt.puzzle_value = 2
-
 tt = E:register_t("indiana_puzzle_button_c", "indiana_puzzle_button_a")
 tt.render.sprites[1].prefix = "indiana_puzzle_button_c"
 tt.puzzle_value = 3
-
 tt = E:register_t("decal_indiana", "decal_tween")
 tt.render.sprites[1].prefix = "decal_indiana"
 tt.render.sprites[1].hidden = true
@@ -2231,11 +2320,9 @@ tt.render.sprites[1].z = Z_DECALS + 4
 tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
 tt = E:register_t("decal_indiana_question_marks", "decal_timed")
 tt.render.sprites[1].name = "decal_indiana_question_marks"
 tt.timed.runs = 5
-
 tt = E:register_t("decal_indiana_boulder", "decal_scripted")
 E:add_comps(tt, "motion")
 tt.render.sprites[1].name = "decal_indiana_boulder"
@@ -2243,7 +2330,6 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS + 4
 tt.motion.max_speed = 3.9 * FPS
 tt.main_script.update = scripts.decal_indiana_boulder.update
-
 tt = E:register_t("decal_black_dragon", "decal_scripted")
 E:add_comps(tt, "motion", "attacks", "tween", "ui", "sound_events")
 tt.main_script.update = scripts.decal_black_dragon.update
@@ -2285,13 +2371,11 @@ tt.wakeup_cooldown_max = 16
 tt.sleep_pos = vec_2(610, 579)
 tt.speed_fly = 12 * FPS
 tt.speed_takeoff = 5 * FPS
-
 tt = E:register_t("fx_black_dragon_flame_hit", "decal_tween")
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].name = "black_dragon_flame_hit"
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}
-
 tt = E:register_t("ps_black_dragon_flame")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.animated = true
@@ -2305,7 +2389,6 @@ tt.particle_system.loop = false
 tt.particle_system.name = "black_dragon_flame"
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 tt.particle_system.scale_same_aspect = true
-
 tt = E:register_t("ps_black_dragon_fire")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.alphas = {255, 255, 0}
@@ -2318,7 +2401,6 @@ tt.particle_system.name = "black_dragon_fire"
 tt.particle_system.particle_lifetime = {fts(20), fts(25)}
 tt.particle_system.scale_same_aspect = true
 tt.particle_system.anchor = vec_2(0.5, 0.25)
-
 tt = E:register_t("mod_black_dragon", "modifier")
 E:add_comps(tt, "render")
 tt.modifier.duration = 7
@@ -2327,7 +2409,6 @@ tt.render.sprites[1].prefix = "black_dragon_tower_fire"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].anchor.y = 0.19
 tt.render.sprites[1].sort_y_offset = -1
-
 tt = E:register_t("button_steal_dragon_gold")
 E:add_comps(tt, "pos", "main_script", "ui")
 tt.main_script.update = scripts.button_steal_dragon_gold.update
@@ -2335,7 +2416,6 @@ tt.ui.can_click = true
 tt.ui.click_rect = r(0, 0, 88, 67)
 tt.gold_to_steal = 100
 tt.fx = "fx_coin_jump"
-
 local decal_whale = E:register_t("decal_whale", "decal_scripted")
 E:add_comps(decal_whale, "nav_path")
 decal_whale.path_origin_offset = vec_2(36, 36)
@@ -2343,10 +2423,10 @@ decal_whale.main_script.insert = scripts.decal_whale.insert
 decal_whale.main_script.update = scripts.decal_whale.update
 
 for i = 1, 3 do
-    decal_whale.render.sprites[i] = E:clone_c("sprite")
-    decal_whale.render.sprites[i].prefix = "decal_whale_l" .. i
-    decal_whale.render.sprites[i].name = "show"
-    decal_whale.render.sprites[i].hidden = true
+	decal_whale.render.sprites[i] = E:clone_c("sprite")
+	decal_whale.render.sprites[i].prefix = "decal_whale_l" .. i
+	decal_whale.render.sprites[i].name = "show"
+	decal_whale.render.sprites[i].hidden = true
 end
 
 decal_whale.render.sprites[4] = E:clone_c("sprite")
@@ -2359,7 +2439,6 @@ decal_whale.render.sprites[5].prefix = "decal_whale_eye"
 decal_whale.render.sprites[5].name = "idle"
 decal_whale.render.sprites[5].hidden = true
 decal_whale.render.sprites[5].sort_y_offset = -1 * decal_whale.path_origin_offset.y - 3
-
 local fx_whale_incoming = E:register_t("fx_whale_incoming", "decal_tween")
 fx_whale_incoming.tween.remove = true
 fx_whale_incoming.tween.props[1].name = "alpha"
@@ -2367,11 +2446,9 @@ fx_whale_incoming.tween.props[1].keys = {{0, 0}, {2, 255}, {4, 255}}
 fx_whale_incoming.render.sprites[1].name = "fx_whale_incoming"
 fx_whale_incoming.render.sprites[1].z = Z_DECALS + 2
 fx_whale_incoming.render.sprites[1].loop = true
-
 tt = E:register_t("decal_water_barricade", "decal")
 tt.render.sprites[1].prefix = "decal_water_barricade"
 tt.render.sprites[1].name = "idle"
-
 tt = E:register_t("ps_bomb_volcano")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.alphas = {200, 0}
@@ -2385,7 +2462,6 @@ tt.particle_system.scale_same_aspect = true
 tt.particle_system.scale_var = {0.6, 1.2}
 tt.particle_system.scales_x = {1, 1.5}
 tt.particle_system.scales_y = {1, 1.5}
-
 tt = E:register_t("ps_bomb_gunboat", "ps_bomb_volcano")
 tt.particle_system.name = "bomb_gunboat_particle"
 tt.particle_system.animated = true
@@ -2394,7 +2470,6 @@ tt.particle_system.particle_lifetime = {0.15, 0.25}
 tt.particle_system.scales_x = {1, 1.7}
 tt.particle_system.scales_y = {1, 1.7}
 tt.particle_system.scale_var = {0.8, 1.2}
-
 tt = E:register_t("moon_controller", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.pos.x = REF_W * 0.5
@@ -2424,7 +2499,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].sprite_id = 4
 tt.tween.props[2].keys = {{0, 0}, {0.5, 255}}
-
 tt = E:register_t("decal_moon_dark", "decal_tween")
 tt.pos.x = REF_W * 0.5
 tt.pos.y = REF_H + 1 + 77 * (IS_PHONE and 1.45 or 1)
@@ -2438,7 +2512,6 @@ tt.tween.props[1].name = "r"
 tt.tween.props[1].keys = {{0, math.pi / 5}, {0, math.pi * 0.5}}
 tt.tween.disabled = true
 tt.tween.remove = false
-
 tt = E:register_t("decal_moon_light", "decal_tween")
 tt.pos.x = REF_W * 0.5
 tt.pos.y = REF_H + 1 + 77 * (IS_PHONE and 1.45 or 1)
@@ -2458,7 +2531,6 @@ tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
 tt.tween.reverse = true
 tt.tween.ts = -1
-
 tt = E:register_t("decal_moon_overlay", "decal_tween")
 tt.pos.x = REF_W * 0.5
 tt.pos.y = REF_H * 0.5
@@ -2470,16 +2542,13 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 44}}
 tt.tween.remove = false
 tt.tween.reverse = true
 tt.tween.ts = -1
-
 tt = E:register_t("moon_enemy_aura", "aura")
 tt.main_script.update = scripts.moon_enemy_aura.update
-
 tt = E:register_t("points_spawner")
 E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.points_spawner.update
 tt.manual_wave = nil
 tt.interrupt = false
-
 tt = E:register_t("decal_moon_activated", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.main_script.update = scripts.decal_moon_activated.update
@@ -2491,7 +2560,6 @@ tt.tween.reverse = true
 tt.tween.ts = -1
 tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 0}, {1, 255}}
-
 tt = E:register_t("decal_taunting_dracula", "decal_scripted")
 tt.main_script.update = scripts.decal_taunting_dracula.update
 tt.render.sprites[1].prefix = "decal_taunting_dracula"
@@ -2513,7 +2581,6 @@ tt.taunt.dracula_positions = {vec_2(328, 615), vec_2(708, 615)}
 tt.taunt.taunt_positions = {vec_2(327, 558), vec_2(707, 558)}
 tt.taunt.ts = 0
 tt.taunt.showing = nil
-
 tt = E:register_t("decal_dracula_shoutbox", "decal_tween")
 E:add_comps(tt, "texts", "timed")
 tt.render.sprites[1].name = "HalloweenBoss_tauntBox"
@@ -2538,7 +2605,6 @@ tt.tween.props[1].loop = true
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
-
 tt = E:register_t("decal_moria_gate", "decal_scripted")
 E:add_comps(tt, "tween", "ui")
 tt.render.sprites[1].name = "moria_0001"
@@ -2556,7 +2622,6 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 0}, {0.6, 255}, {0.9, 150}}
 tt.main_script.update = scripts.click_run_tween.update
 tt.ui.click_rect = r(-25, 0, 50, 80)
-
 tt = E:register_t("decal_stage22_reptile", "decal_scripted")
 E:add_comps(tt, "ui", "motion")
 tt.render.sprites[1].prefix = "decal_stage22_reptile"
@@ -2566,7 +2631,6 @@ tt.ui.click_rect = r(-15, -5, 30, 40)
 tt.main_script.update = scripts.decal_stage22_reptile.update
 tt.climb_distance = 140
 tt.motion.max_speed = 2 * FPS
-
 tt = E:register_t("pop_mage", "pop")
 tt.render.sprites[1].name = "elven_pops_0001"
 tt = E:register_t("pop_archer", "pop")
@@ -2617,20 +2681,15 @@ tt = E:register_t("pop_mactans", "pop")
 tt.render.sprites[1].name = "mactans_pop"
 tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
 tt = E:register_t("ps_arrow_arcane_special")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "archer_arcane_particle"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.scales_y = {1, 0}
 tt.particle_system.emission_rate = 30
-
 tt = E:register_t("ps_bolt_elves_1")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "mage_proy_particle"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {fts(15), fts(15)}
@@ -2649,9 +2708,7 @@ tt.particle_system.name = "mage_highElven_proy_particle"
 tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.scales_y = {1, 0.5}
 tt = E:register_t("ps_bolt_wild_magus")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "mage_wild_proy_particle"
 tt.particle_system.alphas = {180, 12}
 tt.particle_system.animated = false
@@ -2660,9 +2717,7 @@ tt.particle_system.scales_y = {1, 0.5}
 tt.particle_system.scales_x = {1, 0.5}
 tt.particle_system.emission_rate = 60
 tt = E:register_t("ps_high_elven_sentinel")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "mage_highElven_balls_0020"
 tt.particle_system.animated = false
 tt.particle_system.alphas = {200, 0}
@@ -2678,11 +2733,8 @@ tt.particle_system.name = "plant_magicBlosom_particle"
 tt.particle_system.particle_lifetime = {fts(10), fts(15)}
 tt.particle_system.scales_y = {1, 0.3}
 tt.particle_system.alphas = {190, 120, 0}
-
 tt = E:register_t("ps_shield_elves_denas")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "shield_elves_denas_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2693,9 +2745,7 @@ tt.particle_system.scales_y = {1.5, 0.5}
 tt.particle_system.track_rotation = true
 tt.particle_system.z = Z_BULLETS
 tt = E:register_t("ps_freeze_arivan")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "arivan_freeze_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2703,9 +2753,7 @@ tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLETS
 tt = E:register_t("ps_fireball_arivan")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.names = {"arivan_fireball_particle_1", "arivan_fireball_particle_2"}
 tt.particle_system.loop = false
 tt.particle_system.cycle_names = true
@@ -2715,9 +2763,7 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.track_rotation = true
 tt.particle_system.z = Z_BULLETS
 tt = E:register_t("ps_twilight_scourger_banshee")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.animation_fps = 15
 tt.particle_system.emission_rate = 15
@@ -2729,9 +2775,7 @@ tt.particle_system.emit_rotation_spread = math.pi
 tt.particle_system.sort_y_offset = 2
 tt.particle_system.z = Z_OBJECTS
 tt = E:register_t("ps_nav_faerie_red")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 3
 tt.particle_system.anchor.y = 0.28125
@@ -2742,9 +2786,7 @@ tt.particle_system.z = Z_OBJECTS
 tt = E:register_t("ps_nav_faerie_yellow", "ps_nav_faerie_red")
 tt.particle_system.name = "nav_faerie_particle_yellow"
 tt = E:register_t("ps_drow_queen_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.anchor.y = 0.35384615384615387
 tt.particle_system.animated = true
 tt.particle_system.cycle_names = true
@@ -2754,9 +2796,7 @@ tt.particle_system.names = {"s11_malicia_particle1", "s11_malicia_particle2"}
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_OBJECTS
 tt = E:register_t("ps_bolt_faustus")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "bolt_faustus_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2764,9 +2804,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.emit_rotation_spread = math.pi
 tt = E:register_t("ps_bolt_lance_faustus")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "bolt_lance_faustus_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2774,9 +2812,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.emission_rate = 90
 tt.particle_system.emit_rotation_spread = math.pi
 tt = E:register_t("ps_bullet_liquid_fire_faustus")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.emission_rate = 20
 tt.particle_system.emit_duration = fts(10)
 tt.particle_system.emit_speed = {250, 250}
@@ -2796,9 +2832,7 @@ tt.particle_system.emit_duration = nil
 tt.particle_system.emit_speed = {500, 500}
 tt.particle_system.emit_rotation_spread = math.pi / 8
 tt = E:register_t("ps_bullet_twilight_evoker")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "twilight_evoker_bolt_particle"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {0.25, 0.25}
@@ -2807,9 +2841,7 @@ tt.particle_system.scales_y = {0.8, 0.05}
 tt.particle_system.emission_rate = 30
 tt.particle_system.track_rotation = true
 tt = E:register_t("ps_bullet_twilight_heretic")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.names = {"bullet_twilight_heretic_particle_1", "bullet_twilight_heretic_particle_2"}
 tt.particle_system.animated = true
 tt.particle_system.cycle_names = true
@@ -2818,9 +2850,7 @@ tt.particle_system.emission_rate = 45
 tt.particle_system.track_rotation = true
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt = E:register_t("ps_twilight_heretic_consume_ball_particle")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "twilight_heretic_consume_ball_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2828,9 +2858,7 @@ tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.track_rotation = true
 tt = E:register_t("ps_razorboar_rampage")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "razorboar_rampage_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2839,9 +2867,7 @@ tt.particle_system.emission_rate = 10
 tt.particle_system.emit_area_spread = vec_2(16, 6)
 tt.particle_system.emit_offset = vec_2(0, 28)
 tt = E:register_t("ps_emit_breath_baby_ashbite")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 30
 tt.particle_system.emit_rotation_spread = math.pi
@@ -2850,9 +2876,7 @@ tt.particle_system.name = "baby_ashbite_breath_particle"
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 tt = E:register_t("ps_emit_fiery_mist_baby_ashbite")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 30
 tt.particle_system.emit_rotation_spread = math.pi
@@ -2861,9 +2885,7 @@ tt.particle_system.name = "baby_ashbite_fierymist_particle"
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 tt = RT("ps_dagger_drow")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "dagger_drow_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2871,9 +2893,7 @@ tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt = RT("ps_fireball_veznan_demon")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {255, 40}
 tt.particle_system.animated = false
 tt.particle_system.emission_rate = 30
@@ -2886,9 +2906,7 @@ tt.particle_system.scales_y = {1, 1.5}
 tt.particle_system.scale_same_aspect = false
 tt.particle_system.scale_var = {0.35, 0.8}
 tt = E:register_t("ps_veznan_soulburn")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "veznan_hero_soulBurn_particle"
 tt.particle_system.animated = false
 tt.particle_system.loop = false
@@ -2899,9 +2917,7 @@ tt.particle_system.scales_y = {1, 1.25}
 tt.particle_system.scale_var = {0.25, 1}
 tt.particle_system.alphas = {255, 0}
 tt = RT("ps_bullet_rag_trail")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "razzAndRaggs_hero_proy_particle"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {0.2, 0.2}
@@ -2909,9 +2925,7 @@ tt.particle_system.alphas = {255, 12}
 tt.particle_system.scales_y = {0.8, 0.05}
 tt.particle_system.emission_rate = 30
 tt = RT("ps_durax_transfer")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "ps_durax_transfer"
 tt.particle_system.animated = true
 tt.particle_system.animation_fps = 15
@@ -2924,9 +2938,7 @@ tt.particle_system.sort_y_offset = 2
 tt = RT("ps_durax_clone_transfer", "ps_durax_transfer")
 tt.particle_system.alphas = {150}
 tt = RT("ps_bullet_lilith_trail")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "fallen_angel_hero_proy_particle"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {0.2, 0.2}
@@ -2934,9 +2946,7 @@ tt.particle_system.alphas = {255, 12}
 tt.particle_system.scales_y = {0.8, 0.05}
 tt.particle_system.emission_rate = 30
 tt = RT("ps_missile_phoenix")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.animation_fps = 50
 tt.particle_system.emission_rate = 50
@@ -2950,9 +2960,7 @@ tt = RT("ps_missile_phoenix_small", "ps_missile_phoenix")
 tt.particle_system.scale_var = {0.65, 0.65}
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 tt = RT("ps_missile_wilbur")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "hero_wilburg_missile_particle"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {1.6, 1.8}
@@ -2964,9 +2972,7 @@ tt.particle_system.scale_same_aspect = false
 tt.particle_system.emit_spread = math.pi
 tt.particle_system.emission_rate = 30
 tt = RT("ps_bomb_lava_fireball")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {200, 0}
 tt.particle_system.animated = false
 tt.particle_system.emission_rate = 60
@@ -2985,9 +2991,7 @@ tt.particle_system.emit_area_spread = vec_2(4, 4)
 tt.particle_system.emission_rate = 60
 tt.particle_system.track_rotation = true
 tt = RT("ps_bullet_rod_dragon_fire")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 50
 tt.particle_system.emit_area_spread = vec_2(4, 4)
@@ -3034,9 +3038,7 @@ tt = E:register_t("fx_arrow_silver_mark_hit", "fx")
 tt.render.sprites[1].name = "fx_arrow_silver_mark_hit"
 tt.render.sprites[1].sort_y_offset = -20
 tt = E:register_t("fx_arrow_silver_sentence_hit", "fx")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_arrow_silver_sentence_hit"
 tt.sound_events.insert = "TowerGoldenBowInstakill"
 tt = E:register_t("fx_arrow_silver_sentence_shot", "fx")
@@ -3046,16 +3048,12 @@ tt.render.sprites[1].name = "bolt_wild_magus_hit"
 tt = E:register_t("fx_ray_wild_magus_hit", "fx")
 tt.render.sprites[1].name = "fx_ray_wild_magus_hit"
 tt = E:register_t("fx_eldritch_explosion", "fx")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_eldritch_explosion"
 tt.render.sprites[1].sort_y_offset = -5
 tt.sound_events.insert = "TowerWildMagusDoomExplote"
 tt = E:register_t("fx_druid_bear_spawn_rune", "decal")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].anchor = vec_2(0.48148148148148145, 0.7291666666666666)
 tt.render.sprites[1].name = "fx_druid_bear_spawn_rune"
 tt.render.sprites[1].loop = false
@@ -3063,8 +3061,7 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.tween.props[1].keys = {{0, 255}, {fts(9), 255}, {fts(15), 255}, {fts(25), 64}}
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{fts(0), vec_2(1, 1)}, {fts(9), vec_2(1, 1)}, {fts(11), vec_2(0.77, 0.77)},
-                          {fts(13), vec_2(0.85, 0.85)}, {fts(19), vec_2(0.65, 0.45)}}
+tt.tween.props[2].keys = {{fts(0), vec_2(1, 1)}, {fts(9), vec_2(1, 1)}, {fts(11), vec_2(0.77, 0.77)}, {fts(13), vec_2(0.85, 0.85)}, {fts(19), vec_2(0.65, 0.45)}}
 tt.tween.props[3] = E:clone_c("tween_prop")
 tt.tween.props[3].name = "offset"
 tt.tween.props[3].keys = {{0, vec_2(0, 32)}, {fts(9), vec_2(0, 32)}, {fts(13), vec_2(0, 32)}, {fts(25), vec_2(0, 4)}}
@@ -3072,9 +3069,7 @@ tt = E:register_t("fx_druid_bear_spawn_effect", "fx")
 tt.render.sprites[1].name = "fx_druid_bear_spawn_effect"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.28125)
 tt = E:register_t("fx_druid_bear_spawn_decal", "decal")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].anchor = vec_2(0.5, 0.28125)
 tt.render.sprites[1].name = "fx_druid_bear_spawn_decal"
 tt.render.sprites[1].loop = false
@@ -3082,8 +3077,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 0}, {fts(6), 0}, {fts(7), 255}, {fts(26), 255}, {fts(36), 102}, {fts(41), 0}}
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{fts(0), vec_2(0.35, 0.35)}, {fts(6), vec_2(0.35, 0.35)}, {fts(10), vec_2(1, 1)},
-                          {fts(16), vec_2(0.8, 0.8)}}
+tt.tween.props[2].keys = {{fts(0), vec_2(0.35, 0.35)}, {fts(6), vec_2(0.35, 0.35)}, {fts(10), vec_2(1, 1)}, {fts(16), vec_2(0.8, 0.8)}}
 tt = E:register_t("fx_druid_bear_death_rune", "fx_druid_bear_spawn_rune")
 tt.render.sprites[1].name = "fx_druid_bear_death_rune"
 tt.render.sprites[1].time_offset = fts(-38)
@@ -3094,9 +3088,7 @@ tt.tween.props[2].keys = {{0, vec_2(1, 1)}}
 tt.tween.props[3].keys = {{0, vec_2(0, 20)}, {fts(10), vec_2(0, 36)}, {fts(19), vec_2(0, 40)}}
 tt.tween.props[3].time_offset = fts(-28)
 tt = E:register_t("fx_druid_bear_death_effect", "fx_druid_bear_spawn_effect")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "fx_druid_bear_death_effect"
 tt.render.sprites[1].time_offset = fts(-28)
 tt.tween.remove = false
@@ -3113,9 +3105,7 @@ tt = E:register_t("fx_clobber_smoke_ring", "fx")
 tt.render.sprites[1].name = "fx_clobber_smoke_ring"
 tt.render.sprites[1].z = Z_DECALS
 tt = E:register_t("fx_forest_circle", "fx")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "forestKeeper_circle1_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[2] = E:clone_c("sprite")
@@ -3180,9 +3170,7 @@ tt.render.sprites[1].anchor.y = 0.16666666666666666
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {2, 0}}
 tt = E:register_t("fx_bravebark_teleport_out", "decal_tween")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].name = "bravebark_teleportOutFx"
 tt.render.sprites[1].anchor.y = 0.15517241379310345
 tt.render.sprites[2] = E:clone_c("sprite")
@@ -3259,16 +3247,12 @@ tt = RT("fx_rag_ultimate", "fx")
 tt.render.sprites[1].name = "fx_rag_ultimate"
 tt.render.sprites[1].anchor.y = 0.2
 tt = RT("fx_rag_raggified", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "rag_polymorphed_fx"
 tt.render.sprites[1].size_scales = {vec_1(0.75), vec_1(1), vec_1(1)}
 tt.sound_events.insert = "ElvesHeroRagTransform"
 tt = RT("fx_rabbit_kamihare_explode", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_rabbit_kamihare_explode"
 tt.render.sprites[1].anchor.y = 0.13793103448275862
 tt.render.sprites[1].z = Z_OBJECTS
@@ -3293,9 +3277,7 @@ tt.render.sprites[1].name = "fx_durax_ultimate_fang_extra_2"
 tt = E:register_t("fx_ray_durax_hit", "fx")
 tt.render.sprites[1].name = "fx_ray_durax_hit"
 tt = RT("fx_shardseed_hit", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_shardseed_hit"
 tt.render.sprites[1].anchor.y = 0.46296296296296297
 tt.sound_events.insert = "ElvesHeroDuraxShardSpearHit"
@@ -3308,9 +3290,7 @@ tt.render.sprites[1].name = "lilith_soul_eater_explosion_anim"
 tt = RT("fx_lilith_ranged_hit", "fx")
 tt.render.sprites[1].name = "fx_lilith_ranged_hit"
 tt = RT("fx_lynn_explosion", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_lynn_explosion"
 tt.render.sprites[1].anchor.y = 0.3706896551724138
 tt.sound_events.insert = "BombExplosionSound"
@@ -3462,27 +3442,21 @@ tt.tween.props[3] = E:clone_c("tween_prop")
 tt.tween.props[3].name = "offset"
 tt.tween.props[3].keys = {{0, vec_2(0, 0)}, {fts(28), vec_2(20, 8)}, {fts(43), vec_2(26, 14)}}
 tt = E:register_t("fx_bullet_pixie_instakill_hit_big", "fx")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].anchor.y = 0.11764705882352941
 tt.render.sprites[1].name = "fx_bullet_pixie_instakill_hit"
 tt.sound_events.insert = "BombExplosionSound"
 tt = E:register_t("fx_bullet_pixie_instakill_hit_small", "fx_bullet_pixie_instakill_hit_big")
 tt.render.sprites[1].scale = vec_1(0.8)
 tt = E:register_t("fx_bullet_pixie_poison_hit_big", "fx")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].anchor.y = 0
 tt.render.sprites[1].name = "fx_bullet_pixie_poison_hit"
 tt.sound_events.insert = "ElvesGnomePoison"
 tt = E:register_t("fx_bullet_pixie_poison_hit_small", "fx_bullet_pixie_poison_hit_big")
 tt.render.sprites[1].scale = vec_1(0.8)
 tt = E:register_t("fx_mod_pixie_polymorph_big", "fx")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].anchor.y = 0.11764705882352941
 tt.render.sprites[1].name = "fx_mod_pixie_polymorph"
 tt.sound_events.insert = "ElvesGnomePolymorf"
@@ -3536,38 +3510,28 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(1)}, {fts(35), vec_1(0.23)}}
 
 for i = 0, 2 do
-    local s = CC("sprite")
-
-    s.name = "crystalUnstable_healAura_ring"
-    s.animated = false
-    s.z = Z_DECALS
-
-    table.insert(tt.render.sprites, s)
-
-    local p = CC("tween_prop")
-
-    p.sprite_id = #tt.render.sprites
-    p.keys = {{fts(0 + i * 4), 51}, {fts(10 + i * 4), 255}, {fts(20 + i * 4), 0}}
-
-    table.insert(tt.tween.props, p)
-
-    p = CC("tween_prop")
-    p.sprite_id = #tt.render.sprites
-    p.name = "scale"
-    p.keys = {{fts(0 + i * 4), vec_1(0.42)}, {fts(10 + i * 4), vec_1(0.68)}, {fts(20 + i * 4), vec_1(1)}}
-
-    table.insert(tt.tween.props, p)
+	local s = CC("sprite")
+	s.name = "crystalUnstable_healAura_ring"
+	s.animated = false
+	s.z = Z_DECALS
+	table.insert(tt.render.sprites, s)
+	local p = CC("tween_prop")
+	p.sprite_id = #tt.render.sprites
+	p.keys = {{fts(0 + i * 4), 51}, {fts(10 + i * 4), 255}, {fts(20 + i * 4), 0}}
+	table.insert(tt.tween.props, p)
+	p = CC("tween_prop")
+	p.sprite_id = #tt.render.sprites
+	p.name = "scale"
+	p.keys = {{fts(0 + i * 4), vec_1(0.42)}, {fts(10 + i * 4), vec_1(0.68)}, {fts(20 + i * 4), vec_1(1)}}
+	table.insert(tt.tween.props, p)
 end
 
-for i, pos in ipairs({vec_2(-22, 8), vec_2(7, 0), vec_2(-2, 2), vec_2(23, 15), vec_2(-29, 5), vec_2(11, -4),
-                      vec_2(-4, 21)}) do
-    local s = CC("sprite")
-
-    s.name = "fx_crystal_unstable_bubbles"
-    s.time_offset = i * fts(1)
-    s.offset = pos
-
-    table.insert(tt.render.sprites, s)
+for i, pos in ipairs({vec_2(-22, 8), vec_2(7, 0), vec_2(-2, 2), vec_2(23, 15), vec_2(-29, 5), vec_2(11, -4), vec_2(-4, 21)}) do
+	local s = CC("sprite")
+	s.name = "fx_crystal_unstable_bubbles"
+	s.time_offset = i * fts(1)
+	s.offset = pos
+	table.insert(tt.render.sprites, s)
 end
 
 tt = E:register_t("decal_arcane_burst_ground", "decal_tween")
@@ -3644,9 +3608,7 @@ tt.tween.props[2].keys = {{0, vec_2(0, 0)}, {0.35, vec_2(0, 0)}}
 tt.tween.props[3] = E:clone_c("tween_prop")
 tt.tween.props[3].name = "r"
 tt.tween.props[3].keys = {{0, 0}, {0.35, 0}}
-
 tt = RT("decal_bram_enemy_clone", "decal_bravebark_branchball_enemy_clone")
-
 tt = E:register_t("decal_bravebark_ultimate", "decal_sequence")
 tt.render.sprites[1].prefix = "bravebark_spikedRoots"
 tt.render.sprites[1].name = "in"
@@ -3717,7 +3679,6 @@ tt.render.sprites[1].scale = vec_1(0.6)
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 130}, {2.5, 130}, {3.25, 0}}
-
 tt = RT("decal_lilith_soul_eater_ball", "decal_scripted")
 AC(tt, "force_motion", "sound_events")
 tt.render.sprites[1].name = "lilith_soul_eater_ball_loop"
@@ -3736,7 +3697,6 @@ tt.hit_fx = "fx_lilith_soul_eater_ball_hit"
 tt.hit_mod = "mod_lilith_soul_eater_damage_factor"
 tt.stolen_damage = nil
 tt.sound_events.insert = "ElvesHeroLilithSoulEater"
-
 tt = RT("decal_lilith_reapers_harvest", "decal_timed")
 tt.render.sprites[1].name = "lilith_reapers_harvest_decal_anim"
 tt.render.sprites[1].z = Z_DECALS
@@ -3796,9 +3756,7 @@ tt.tween.props[3].sprite_id = 2
 tt.tween.props[4] = table.deepclone(tt.tween.props[2])
 tt.tween.props[4].sprite_id = 2
 tt = E:register_t("decal_twilight_heretic_consume_ball", "decal_scripted")
-
 E:add_comps(tt, "force_motion")
-
 tt.render.sprites[1].name = "twilight_heretic_consumeProy"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_EFFECTS
@@ -3824,25 +3782,21 @@ tt.render.sprites[1].anchor.y = 0.16
 tt.main_script.update = scripts.decal_drider_cocoon.update
 tt.duration = 5
 tt = E:register_t("decal_arachnomancer_mini_spider", "decal_scripted")
-
 E:add_comps(tt, "motion")
-
 tt.render.sprites[1].anchor.y = 0.25
 tt.render.sprites[1].prefix = "arachnomancer_mini_spider"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.spider_offsets = {vec_2(20, -5), vec_2(-20, -5), vec_2(0, 23)}
 tt.main_script.update = scripts.decal_arachnomancer_mini_spider.update
 tt.motion.max_speed = 7.5
 tt.max_delta_y = 10
 tt = E:register_t("decal_webspawn_enemy_spider_arachnomancer", "decal_scripted")
-
 E:add_comps(tt, "nav_path")
-
 tt.main_script.insert = scripts.delayed_spawn.insert
 tt.main_script.update = scripts.delayed_spawn.update
 tt.render.sprites[1].prefix = "arachnomancer_webspawn"
@@ -3866,8 +3820,7 @@ tt = RT("decal_mactans_path_web_1", "decal_tween")
 tt.render.sprites[1].name = "spiderQueen_floorNet_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS - 1
-tt.tween.props[1].keys = {{0, 0}, {"this.fade_duration", 255}, {"this.duration-this.fade_duration", 255},
-                          {"this.duration", 0}}
+tt.tween.props[1].keys = {{0, 0}, {"this.fade_duration", 255}, {"this.duration-this.fade_duration", 255}, {"this.duration", 0}}
 tt = RT("decal_mactans_path_web_2", "decal_mactans_path_web_1")
 tt.render.sprites[1].name = "spiderQueen_floorNet_0002"
 tt = RT("decal_mactans_path_web_3", "decal_mactans_path_web_1")
@@ -3890,9 +3843,7 @@ tt.tween.props[2].keys = {{fts(11), vec_1(0.3)}, {fts(65), vec_1(0.6)}}
 tt.tween.props[2].name = "scale"
 tt.tween.remove = true
 tt = RT("decal_catapult_endless", "decal_scripted")
-
 AC(tt, "ranged", "editor")
-
 tt.editor.props = {{"x_inside", PT_NUMBER}}
 tt.duration = 2
 tt.x_inside = 955
@@ -3915,29 +3866,28 @@ tt.ranged.attacks[1].count = 1
 tt.ranged.attacks[1].barrel_payload_idx = nil
 tt.ranged.attacks[1].munition_type = 0
 tt.ranged.attacks[1].munition_settings = {
-    [0] = {
-        [0] = "catapult_endless_layer8",
-        "catapult_endless_layer9",
-        bullet = "bullet_catapult_endless_rock"
-    },
-    {
-        [0] = "catapult_endless_layer6",
-        "catapult_endless_layer3",
-        bullet = "bullet_catapult_endless_spiked"
-    },
-    {
-        [0] = "catapult_endless_layer5",
-        "catapult_endless_layer2",
-        bullet = "bullet_catapult_endless_bomb"
-    },
-    {
-        [0] = "catapult_endless_layer7",
-        "catapult_endless_layer4",
-        bullet = "bullet_catapult_endless_barrel"
-    }
+	[0] = {
+		[0] = "catapult_endless_layer8",
+		"catapult_endless_layer9",
+		bullet = "bullet_catapult_endless_rock"
+	},
+	{
+		[0] = "catapult_endless_layer6",
+		"catapult_endless_layer3",
+		bullet = "bullet_catapult_endless_spiked"
+	},
+	{
+		[0] = "catapult_endless_layer5",
+		"catapult_endless_layer2",
+		bullet = "bullet_catapult_endless_bomb"
+	},
+	{
+		[0] = "catapult_endless_layer7",
+		"catapult_endless_layer4",
+		bullet = "bullet_catapult_endless_barrel"
+	}
 }
-tt.ranged.attacks[1].barrel_payloads = {"enemy_gnoll_reaver", "enemy_gnoll_burner", "enemy_gnoll_gnawer",
-                                        "enemy_gnoll_blighter"}
+tt.ranged.attacks[1].barrel_payloads = {"enemy_gnoll_reaver", "enemy_gnoll_burner", "enemy_gnoll_gnawer", "enemy_gnoll_blighter"}
 tt = E:register_t("decal_crystal_arcane_freeze_center", "decal_tween")
 tt.render.sprites[1].name = "crystalArcane_groundFreeze_base"
 tt.render.sprites[1].animated = false
@@ -3953,7 +3903,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {"this.duration", 255}, {"this.duration+0.3", 0}}
 tt = E:register_t("decal_crystal_arcane_freeze_2", "decal_crystal_arcane_freeze_1")
 tt.render.sprites[1].name = "decal_crystal_arcane_freeze_2"
-
 tt = E:register_t("tower_holder_elven_woods", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_ELVEN_WOODS
 tt.render.sprites[1].name = "build_terrain_0001"
@@ -3972,13 +3921,9 @@ tt.render.sprites[1].name = "build_terrain_0005"
 tt = E:register_t("tower_holder_forgotten_treasures", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_FORGOTTEN_TREASURES
 tt.render.sprites[1].name = "build_terrain_0006"
-
 tt = RT("tower_bastion_holder")
-
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor", "editor_script")
-
-tt.editor.props = {{"tower.default_rally_pos", PT_COORDS}, {"tower.holder_id", PT_STRING},
-                   {"editor.game_mode", PT_NUMBER}}
+tt.editor.props = {{"tower.default_rally_pos", PT_COORDS}, {"tower.holder_id", PT_STRING}, {"editor.game_mode", PT_NUMBER}}
 tt.editor_script.insert = scripts.editor_tower.insert
 tt.editor_script.remove = scripts.editor_tower.remove
 tt.tower.type = "holder_bastion"
@@ -4000,9 +3945,7 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].anchor.y = 0.3153846153846154
 tt.ui.click_rect = r(-40, -10, 80, 90)
 tt = RT("tower_bastion", "tower")
-
 AC(tt, "attacks", "powers")
-
 tt.info.portrait = "kr3_info_portraits_towers_0020"
 tt.info.i18n_key = "ELVES_TOWER_BASTION"
 tt.info.fn = scripts.tower_bastion.get_info
@@ -4022,13 +3965,12 @@ tt.render.sprites[1].hidden = true
 tt.render.sprites[1].hover_off_hidden = true
 
 for i = 1, 4 do
-    local s = CC("sprite")
-
-    s.prefix = "galahadriansBastion_layer" .. i
-    s.name = "idle"
-    s.anchor.y = 0.3153846153846154
-    s.group = "animated"
-    tt.render.sprites[i + 1] = s
+	local s = CC("sprite")
+	s.prefix = "galahadriansBastion_layer" .. i
+	s.name = "idle"
+	s.anchor.y = 0.3153846153846154
+	s.group = "animated"
+	tt.render.sprites[i + 1] = s
 end
 
 tt.sound_events.mute_on_level_insert = true
@@ -4063,9 +4005,7 @@ tt.render.sprites[1].name = "flying"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt = RT("aura_razor_edge", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.cycle_time = fts(6)
 tt.aura.damage_min = 2
 tt.aura.damage_max = 4
@@ -4083,18 +4023,17 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 255}, {0.2, 255}, {"this.aura.duration-0.2", 255}, {"this.aura.duration", 0}}
 
 for i = 2, 4 do
-    local s = CC("sprite")
-
-    s.name = "bullet_razor_edge_smoke"
-    s.loop = true
-    s.random_ts = 0.4
-    s.anchor.y = 0
-    s.offset.x = ({0, -15, 0, 15})[i]
-    s.offset.y = ({0, -20, -5, -20})[i]
-    tt.render.sprites[i] = s
-    tt.tween.props[i] = table.deepclone(tt.tween.props[1])
-    tt.tween.props[i].sprite_id = i
-    tt.tween.props[i].keys[1][2] = 0
+	local s = CC("sprite")
+	s.name = "bullet_razor_edge_smoke"
+	s.loop = true
+	s.random_ts = 0.4
+	s.anchor.y = 0
+	s.offset.x = ({0, -15, 0, 15})[i]
+	s.offset.y = ({0, -20, -5, -20})[i]
+	tt.render.sprites[i] = s
+	tt.tween.props[i] = table.deepclone(tt.tween.props[1])
+	tt.tween.props[i].sprite_id = i
+	tt.tween.props[i].keys[1][2] = 0
 end
 
 tt = E:register_t("soldier_bravebark", "soldier_militia")
@@ -4131,7 +4070,6 @@ tt.sound_events.insert = nil
 tt.unit.level = 0
 tt.unit.mod_offset = vec_2(0, 15)
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN, F_POISON)
-
 tt = E:register_t("soldier_xin_shadow", "soldier")
 E:add_comps(tt, "melee")
 image_y = 64
@@ -4169,11 +4107,10 @@ tt.melee.attacks[1].xp_gain_factor = 0
 tt.melee.attacks[1].chance = 1
 
 for i = 2, 4 do
-    local a = table.deepclone(tt.melee.attacks[1])
-
-    a.animation = "attack" .. i
-    a.chance = 1 / i
-    tt.melee.attacks[i] = a
+	local a = table.deepclone(tt.melee.attacks[1])
+	a.animation = "attack" .. i
+	a.chance = 1 / i
+	tt.melee.attacks[i] = a
 end
 
 tt.melee.cooldown = fts(15)
@@ -4184,23 +4121,20 @@ tt.min_wait = 0.1
 tt.max_wait = 0.4
 
 for i = 1, 4 do
-    tt.melee.attacks[i].damage_type = DAMAGE_TRUE
-    tt.melee.attacks[i].sound = "ElvesHeroXinPandamoniumHit"
+	tt.melee.attacks[i].damage_type = DAMAGE_TRUE
+	tt.melee.attacks[i].sound = "ElvesHeroXinPandamoniumHit"
 end
 
 tt.sound_events.insert = "ElvesHeroXinAfterTeleportIn"
 tt.sound_events.death = "ElvesHeroXinAfterTeleportOut"
-
 tt = RT("rabbit_kamihare", "decal_scripted")
-
 AC(tt, "nav_path", "motion", "custom_attack")
-
 tt.render.sprites[1].prefix = "rabbit"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].anchor.y = 0.20512820512820512
 tt.main_script.update = scripts.rabbit_kamihare.update
@@ -4212,7 +4146,6 @@ tt.custom_attack.vis_flags = bor(F_RANGED)
 tt.custom_attack.vis_bans = bor(F_FLYING)
 tt.custom_attack.aura = "aura_rabbit_kamihare"
 tt.custom_attack.hit_fx = "fx_rabbit_kamihare_explode"
-
 tt = RT("soldier_lilith_angel", "soldier_xin_shadow")
 tt.angel_damage_type = DAMAGE_TRUE
 tt.sound_events.insert = "ElvesHeroLilithAngelsCast"
@@ -4231,9 +4164,7 @@ tt.melee.attacks[3] = nil
 tt.melee.attacks[4] = nil
 tt.melee.cooldown = 0
 tt = RT("bomb_wilbur", "rabbit_kamihare")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].prefix = "bomb_wilbur"
 tt.render.sprites[1].anchor.y = 0.11666666666666667
 tt.render.sprites[1].random_ts = 0.5
@@ -4247,7 +4178,6 @@ tt.custom_attack.aura = "aura_bomb_wilbur"
 tt.custom_attack.hit_fx = nil
 tt.sound_events.insert = "ElvesHeroGyroBombsMarch"
 tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
-
 -- tt = E:register_t("soldier_re_0", "soldier_militia")
 -- E:add_comps(tt, "reinforcement", "tween")
 -- image_y = 54
@@ -4282,7 +4212,6 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- tt.unit.mod_offset = vec_2(0, 14)
 -- tt.unit.level = 0
 -- tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
-
 -- tt = E:register_t("soldier_re_1", "soldier_re_0")
 -- tt.unit.level = 1
 -- tt.health.hp_max = 60
@@ -4290,7 +4219,6 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- tt.melee.attacks[1].damage_max = 5
 -- tt.melee.attacks[1].damage_min = 3
 -- tt.render.sprites[1].prefix = "soldier_re_%s0"
-
 -- tt = E:register_t("soldier_re_2", "soldier_re_1")
 -- E:add_comps(tt, "ranged")
 -- tt.unit.level = 2
@@ -4307,7 +4235,6 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- tt.ranged.attacks[1].min_range = 10
 -- tt.ranged.attacks[1].animation = "shoot"
 -- tt.ranged.attacks[1].bullet_start_offset = {vec_2(0, 22)}
-
 -- tt = E:register_t("soldier_re_3", "soldier_re_2")
 -- tt.unit.level = 3
 -- tt.health.hp_max = 100
@@ -4318,7 +4245,6 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- tt.render.sprites[1].prefix = "soldier_re_%s2"
 -- tt.ranged.attacks[1].bullet = "arrow_soldier_re_3"
 -- tt.ranged.attacks[1].max_range = 150
-
 -- tt = E:register_t("soldier_re_4", "soldier_re_3")
 -- tt.cooldown = 10
 -- tt.unit.level = 4
@@ -4330,7 +4256,6 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- tt.render.sprites[1].prefix = "soldier_re_%s2"
 -- tt.ranged.attacks[1].bullet = "arrow_soldier_re_4"
 -- tt.ranged.attacks[1].max_range = 150
-
 -- tt = E:register_t("soldier_re_5", "soldier_re_4")
 -- tt.unit.level = 5
 -- tt.health.hp_max = 150
@@ -4349,23 +4274,19 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- tt.soldier.melee_slot_offset = vec_2(8, 0)
 -- tt.unit.hit_offset = vec_2(0, 15)
 -- tt.unit.mod_offset = vec_2(0, 22)
-
 -- for i, k in ipairs({"A", "B", "C"}) do
 --     for j = 0, 5 do
 --         local name = string.format("soldier_re_%i", j)
 --         local base_t = E:get_template(name)
 --         local fn = name .. "_" .. i
 --         local t = E:register_t(fn, base_t)
-
 --         t.render.sprites[1].prefix = string.format(t.render.sprites[1].prefix, k)
 --         t.info.portrait = string.format("kr3_portraits_sc_00%02d", t.info.portrait_idxs[i])
 --     end
 -- end
-
 -- for i = 1, 3 do
 --     E:set_template("re_current_" .. i, E:get_template("soldier_re_0_" .. i))
 -- end
-
 tt = E:register_t("fx_elves_denas_flash", "fx")
 tt.render.sprites[1].name = "fx_elves_denas_flash"
 tt = E:register_t("shield_elves_denas", "bullet")
@@ -4380,7 +4301,6 @@ tt.rebound_range = 125
 tt = E:register_t("fx_shield_elves_denas_hit", "fx")
 tt.render.sprites[1].name = "fx_shield_elves_denas_hit"
 tt.render.sprites[1].z = Z_EFFECTS - 1
-
 tt = E:register_t("decal_minidragon_faustus", "decal_scripted")
 E:add_comps(tt, "motion", "attacks")
 tt.main_script.update = scripts.decal_minidragon_faustus.update
@@ -4403,11 +4323,8 @@ tt.render.sprites[2].offset = vec_2(0, 70)
 tt.emit_ox = 180
 tt.cast_ox = 80
 tt.image_w = 40
-
 -- tt = E:register_t("hero_alleria", "stage_hero")
-
 -- E:add_comps(tt, "melee", "ranged")
-
 -- image_y = 66
 -- anchor_y = 15 / image_y
 -- tt.health.armor = 0
@@ -4511,9 +4428,7 @@ tt.image_w = 40
 -- tt.bullet.prediction_error = nil
 -- tt.extra_arrows = 3
 -- tt = E:register_t("alleria_cat", "soldier")
-
 -- E:add_comps(tt, "nav_grid")
-
 -- anchor_y = 0.2619047619047619
 -- image_y = 42
 -- tt.behaviour_attack = {}
@@ -4551,9 +4466,7 @@ tt.image_w = 40
 -- tt.unit.explode_fx = nil
 -- tt.vis.bans = F_ALL
 tt = RT("hero_baby_malik", "stage_hero")
-
 AC(tt, "melee")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {320, 345, 370, 395, 420, 445, 470, 495, 520, 545}
 tt.hero.level_stats.melee_damage_max = {17, 18, 20, 21, 23, 24, 25, 27, 28, 30}
@@ -4631,7 +4544,6 @@ tt.melee.attacks[4].hit_offset = vec_2(22, 0)
 tt.melee.attacks[4].hit_time = fts(17)
 tt.melee.attacks[4].sound = "HeroReinforcementJump"
 tt.melee.attacks[4].xp_from_skill = "fissure"
-
 tt = E:register_t("plant_magic_blossom", "decal_scripted")
 E:add_comps(tt, "custom_attack", "ui", "plant")
 tt.custom_attack.cooldown = 30
@@ -4650,9 +4562,7 @@ tt.ui.can_click = true
 tt.ui.can_select = false
 tt.ui.click_rect = r(-24, -5, 48, 78)
 tt = E:register_t("plant_poison_pumpkin", "decal_scripted")
-
 E:add_comps(tt, "custom_attack", "ui", "plant", "editor")
-
 tt.custom_attack.cooldown = 25
 tt.custom_attack.range = 170
 tt.custom_attack.mods = {"mod_plant_poison_pumpkin_slow", "mod_plant_poison_pumpkin"}
@@ -4666,9 +4576,7 @@ tt.ui.can_click = true
 tt.ui.can_select = false
 tt.ui.click_rect = r(-30, -5, 60, 54)
 tt = E:register_t("crystal_arcane", "decal_scripted")
-
 E:add_comps(tt, "attacks", "ui", "crystal", "editor", "tween")
-
 tt.main_script.update = scripts.crystal_arcane.update
 tt.attacks.cooldown = math.floor(19.148936170212767) * 47 / 30
 tt.attacks.list[1] = E:clone_c("bullet_attack")
@@ -4702,12 +4610,11 @@ tt.attacks.list[3].fx_base = "fx_crystal_arcane_buff"
 tt.attacks.list[3].excluded_templates = {}
 
 for i = 1, 11 do
-    local s = E:clone_c("sprite")
-
-    s.prefix = "crystal_arcane_layer" .. i
-    s.name = "loading"
-    s.anchor.y = 0.38461538461538464
-    tt.render.sprites[i] = s
+	local s = E:clone_c("sprite")
+	s.prefix = "crystal_arcane_layer" .. i
+	s.name = "loading"
+	s.anchor.y = 0.38461538461538464
+	tt.render.sprites[i] = s
 end
 
 tt.tween.remove = false
@@ -4722,9 +4629,7 @@ tt.tween.props[1].sprite_id = 2
 tt.ui.click_rect = r(-30, -15, 60, 55)
 tt.ui.can_select = false
 tt = RT("crystal_unstable", "decal_scripted")
-
 AC(tt, "attacks", "crystal", "editor")
-
 tt.main_script.update = scripts.crystal_unstable.update
 tt.attacks.cooldown = 15
 tt.attacks.list[1] = CC("mod_attack")
@@ -4766,18 +4671,15 @@ tt.attacks.list[3].vis_flags = bor(F_RANGED)
 tt.attacks.list[3].vis_bans = bor(F_BOSS)
 
 for i = 1, 4 do
-    local s = E:clone_c("sprite")
-
-    s.prefix = "crystal_unstable_layer" .. i
-    s.name = "loading"
-    s.anchor.y = 0.18828451882845187
-    tt.render.sprites[i] = s
+	local s = E:clone_c("sprite")
+	s.prefix = "crystal_unstable_layer" .. i
+	s.name = "loading"
+	s.anchor.y = 0.18828451882845187
+	tt.render.sprites[i] = s
 end
 
 tt = RT("paralyzing_tree", "decal_scripted")
-
 E:add_comps(tt, "custom_attack", "ui", "plant")
-
 tt.render.sprites[1].anchor.y = 0.31976744186046513
 tt.render.sprites[1].prefix = "paralyzing_tree"
 tt.render.sprites[1].name = "loading"
@@ -4804,7 +4706,6 @@ tt = RT("fx_paralyzing_tree_2", "fx_paralyzing_tree_1")
 tt.render.sprites[1].name = "fx_paralyzing_tree_2"
 tt = RT("fx_paralyzing_tree_3", "fx_paralyzing_tree_1")
 tt.render.sprites[1].name = "fx_paralyzing_tree_3"
-
 tt = E:register_t("bolt_elves_1", "bolt_elves")
 tt.alter_reality_chance = 0.1
 tt.alter_reality_mod = "mod_teleport_mage"
@@ -4822,7 +4723,6 @@ tt.bullet.damage_min = 17
 tt.bullet.damage_max = 28
 tt.bullet.particles_name = "ps_bolt_elves_3"
 tt.render.sprites[1].scale = vec_2(1, 1)
-
 tt = E:register_t("arrow_soldier_barrack_2", "arrow")
 tt.bullet.damage_max = 7
 tt.bullet.damage_min = 3
@@ -4850,7 +4750,6 @@ tt.bullet.damage_min = 10
 tt = E:register_t("arrow_soldier_re_5", "arrow_soldier_re_2")
 tt.bullet.damage_max = 30
 tt.bullet.damage_min = 20
-
 tt = E:register_t("bolt_lance_faustus", "bolt")
 tt.bullet.acceleration_factor = 0.25
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -4882,9 +4781,9 @@ tt.sound_events.hit = nil
 tt.render.sprites[1].name = "bravebark_hero_mignonSeed"
 tt = RT("catha_fury", "bullet")
 tt.animations = {
-    loop = "dashLoop",
-    start = "dashStart",
-    attack = "dashHit"
+	loop = "dashLoop",
+	start = "dashStart",
+	attack = "dashHit"
 }
 tt.bullet.damage_max = nil
 tt.bullet.damage_min = nil
@@ -4900,11 +4799,9 @@ tt.render.sprites[1].name = "dashStart"
 tt.render.sprites[1].prefix = "hero_catha"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.sound_events.hit = "ElvesHeroCathaFuryHit"
-
 tt = RT("knife_soldier_catha", "knife_catha")
 tt.bullet.xp_gain_factor = nil
 tt.bullet.mod = "mod_soldier_catha_curse"
-
 tt = RT("fireball_veznan_demon", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.damage_radius = 40
@@ -4923,7 +4820,6 @@ tt.render.sprites[1].anchor.x = 0.7352941176470589
 tt.render.sprites[1].name = "fireball_veznan_demon"
 tt.sound_events.insert = "ElvesHeroVeznanDemonFireballThrow"
 tt.sound_events.hit = "ElvesHeroVeznanDemonFireballHit"
-
 tt = RT("ray_rag", "bullet")
 tt.image_width = 164
 tt.main_script.update = scripts.ray_simple.update
@@ -4933,7 +4829,6 @@ tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.hit_time = fts(5)
 tt.bullet.mod = "mod_rag_raggified"
-
 tt = RT("bullet_rag_throw", "arrow")
 tt.bullet.damage_max = nil
 tt.bullet.damage_min = nil
@@ -5001,9 +4896,8 @@ tt.sound_events.insert = "ElvesHeroDuraxShardSpearThrow"
 tt = RT("spear_durax_clone", "spear_durax")
 tt.render.sprites[1].shader = "p_tint"
 tt.render.sprites[1].shader_args = {
-    tint_color = {0, 1, 1, 1}
+	tint_color = {0, 1, 1, 1}
 }
-
 tt = RT("meteor_lilith", "bullet")
 tt.main_script.update = scripts.meteor_lilith.update
 tt.bullet.damage_max = nil
@@ -5018,7 +4912,6 @@ tt.render.sprites[1].name = "fallen_angel_hero_ultimate_meteor"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.x = 0.9166666666666666
 tt.sound_events.hit = "ElvesHeroLilithMeteorsHit"
-
 tt = E:register_t("torch_gnoll_burner", "arrow")
 tt.bullet.mod = "mod_gnoll_burner"
 tt.bullet.damage_max = 6
@@ -5041,7 +4934,7 @@ tt.render.sprites[1].prefix = "gnoll_blighter_energy"
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.travel = {"travel", "travelUp", "travelDown"}
 tt.render.sprites[1].angles_stickiness = {
-    travel = 10
+	travel = 10
 }
 tt.bullet.hit_fx = "fx_bolt_gnoll_blighter_hit"
 tt.bullet.damage_max = 75
@@ -5099,9 +4992,7 @@ tt.render.sprites[1].name = "twilight_heretic_proy_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = "BoltSorcererSound"
 tt = E:register_t("bullet_arachnomancer_spawn", "bomb")
-
 E:add_comps(tt, "nav_path")
-
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.flight_time = fts(17)
 tt.bullet.hide_radius = nil
@@ -5217,7 +5108,6 @@ tt.bullet.align_with_trajectory = true
 tt.initial_impulse = 12000
 tt.initial_impulse_duration = 0.15
 tt.upgrades_disabled = true
-
 tt = E:register_t("ray_crystal_arcane", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.mod = "mod_ray_crystal_arcane"
@@ -5228,7 +5118,6 @@ tt.main_script.update = scripts.ray_simple.update
 tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_crystal_arcane"
-
 tt = E:register_t("aura_liquid_fire_flame_faustus", "aura")
 E:add_comps(tt, "render", "tween")
 tt.main_script.insert = scripts.aura_apply_mod.insert
@@ -5247,7 +5136,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.aura.duration-1", 255}, {"
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(0.5)}, {0.5, vec_1(1)}}
-
 tt = E:register_t("aura_minidragon_faustus", "aura_liquid_fire_flame_faustus")
 tt.aura.mod = "mod_minidragon_faustus"
 tt.tween.props[1].keys = {{0, 0}, {0.05, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
@@ -5262,7 +5150,6 @@ tt.aura.radius = 100
 tt.aura.vis_flags = bor(F_RANGED, F_SPELLCASTER)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
 tt.aura.targets_per_cycle = nil
-
 tt = E:register_t("aura_bravebark_springsap", "aura")
 E:add_comps(tt, "render", "tween")
 tt.aura.cycle_time = fts(3)
@@ -5307,9 +5194,7 @@ tt.aura.vis_bans = bor(F_FRIEND)
 tt.aura.vis_flags = bor(F_RANGED)
 tt.main_script.update = scripts.aura_apply_damage.update
 tt = RT("aura_lilith_infernal_wheel", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.duration = 5
 tt.aura.cycle_time = fts(10)
 tt.aura.mod = "mod_lilith_infernal_wheel"
@@ -5336,14 +5221,12 @@ tt.aura.vis_flags = bor(F_MOD, F_RANGED)
 tt.aura.excluded_templates = {"enemy_hyena"}
 tt.aura.mod = "mod_lilith_soul_eater_track"
 tt.main_script.update = scripts.aura_lilith_soul_eater.update
-
 tt = RT("aura_bruce_hps", "aura")
 AC(tt, "hps")
 tt.aura.duration = -1
 tt.main_script.update = scripts.aura_bruce_hps.update
 tt.hps.heal_max = 3
 tt.hps.heal_every = 1
-
 tt = RT("aura_bomb_wilbur", "aura_rabbit_kamihare")
 tt.aura.damage_min = 110
 tt.aura.damage_max = 155
@@ -5353,9 +5236,7 @@ tt = RT("aura_bobbing_wilbur", "aura")
 tt.aura.duration = -1
 tt.main_script.update = scripts.aura_wilbur_bobbing.update
 tt = RT("aura_box_wilbur", "decal_scripted")
-
 AC(tt, "spawner", "sound_events")
-
 tt.render.sprites[1].anchor.y = 0.25
 tt.render.sprites[1].name = "box_wilbur_open"
 tt.render.sprites[1].loop = false
@@ -5365,9 +5246,7 @@ tt.spawner.count = nil
 tt.sound_events.insert = "ElvesHeroGyroBoombBoxTouchdown"
 tt.main_script.update = scripts.aura_box_wilbur.update
 tt = RT("aura_smoke_wilbur", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.cycle_time = 0.2
 tt.aura.duration = nil
 tt.aura.mod = "mod_slow_wilbur"
@@ -5377,20 +5256,19 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
 for i, offset in ipairs({vec_2(25, -20), vec_2(-11, -20), vec_2(7, 5)}) do
-    local s = CC("sprite")
-
-    s.name = "decal_wilbur_smoke"
-    s.offset = offset
-    s.anchor.y = 0.15
-    s.scale = vec_2(1, 1)
-    tt.render.sprites[i] = s
-    tt.tween.props[2 * i - 1] = CC("tween_prop")
-    tt.tween.props[2 * i - 1].keys = {{0, 0}, {0.6, 255}, {"this.aura.duration-0.6", 255}, {"this.aura.duration", 0}}
-    tt.tween.props[2 * i - 1].sprite_id = i
-    tt.tween.props[2 * i] = CC("tween_prop")
-    tt.tween.props[2 * i].keys = {{0, vec_1(0.3)}, {fts(13), vec_1(1.1)}, {fts(15), vec_1(1)}}
-    tt.tween.props[2 * i].name = "scale"
-    tt.tween.props[2 * i].sprite_id = i
+	local s = CC("sprite")
+	s.name = "decal_wilbur_smoke"
+	s.offset = offset
+	s.anchor.y = 0.15
+	s.scale = vec_2(1, 1)
+	tt.render.sprites[i] = s
+	tt.tween.props[2 * i - 1] = CC("tween_prop")
+	tt.tween.props[2 * i - 1].keys = {{0, 0}, {0.6, 255}, {"this.aura.duration-0.6", 255}, {"this.aura.duration", 0}}
+	tt.tween.props[2 * i - 1].sprite_id = i
+	tt.tween.props[2 * i] = CC("tween_prop")
+	tt.tween.props[2 * i].keys = {{0, vec_1(0.3)}, {fts(13), vec_1(1.1)}, {fts(15), vec_1(1)}}
+	tt.tween.props[2 * i].name = "scale"
+	tt.tween.props[2 * i].sprite_id = i
 end
 
 tt.render.sprites[4] = CC("sprite")
@@ -5406,9 +5284,7 @@ tt.aura.cycle_time = 0.25
 tt.aura.mod = "mod_gnoll_gnawer"
 tt.aura.vis_flags = F_RANGED
 tt = E:register_t("aura_ettin_regen", "aura")
-
 E:add_comps(tt, "regen")
-
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.ignore_stun = true
 tt.regen.ignore_freeze = false
@@ -5438,21 +5314,18 @@ tt.main_script.remove = scripts.aura_razorboar_rage.remove
 tt.damage_hp_factor = 1
 tt.aura.track_source = true
 tt = RT("aura_spider_sprint", "aura")
-
 AC(tt, "editor", "editor_script")
-
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.aura.duration = -1
 tt.aura.mod = "mod_spider_sprint"
 tt.aura.cycle_time = fts(10)
-tt.aura.allowed_templates = {"enemy_drider", "enemy_spider_tarantula", "enemy_spider_arachnomancer",
-                             "enemy_spider_son_of_mactans", "enemy_sword_spider", "enemy_webspitting_spider"}
+tt.aura.allowed_templates = {"enemy_drider", "enemy_spider_tarantula", "enemy_spider_arachnomancer", "enemy_spider_son_of_mactans", "enemy_sword_spider", "enemy_webspitting_spider"}
 tt.editor.components = {"render"}
 tt.editor.overrides = {
-    ["render.sprites[1].hidden"] = false,
-    ["render.sprites[1].animated"] = false,
-    ["render.sprites[1].name"] = "editor_red_circle"
+	["render.sprites[1].hidden"] = false,
+	["render.sprites[1].animated"] = false,
+	["render.sprites[1].name"] = "editor_red_circle"
 }
 tt.editor.props = {{"aura.radius", PT_NUMBER}}
 tt.editor_script.update = scripts.editor_aura_spider_sprint.update
@@ -5476,18 +5349,14 @@ tt.step_delay = fts(0.5)
 tt.aura.duration = 5
 tt.fade_duration = fts(3)
 tt = RT("aura_ogre_magi_regen", "aura")
-
 AC(tt, "regen")
-
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(5)
 tt.regen.health = 5
 tt.regen.ignore_stun = true
 tt.regen.ignore_freeze = false
 tt = RT("aura_ogre_magi_shield", "aura")
-
 AC(tt, "render")
-
 tt.aura.cast_resets_sprite_id = 2
 tt.aura.cycle_time = 1.5
 tt.aura.duration = -1
@@ -5519,9 +5388,7 @@ tt.aura.enemy_mod = "mod_shadow_champion"
 tt.aura.soldier_mod = "mod_dark_spitters"
 tt.aura.include_enemies = {"enemy_shadows_spawns", "enemy_dark_spitters", "enemy_grim_devourers"}
 tt = RT("aura_bullet_balrog", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.cycle_time = fts(10)
 tt.aura.duration = 10
 tt.aura.mod = "mod_balrog"
@@ -5542,16 +5409,13 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(0.42)}, {fts(12), vec_1(1)}}
 tt.tween.props[3] = CC("tween_prop")
 tt.tween.props[3].name = "offset"
-tt.tween.props[3].keys = {{0, vec_2(0, -10)}, {fts(55), vec_2(30, -20)}, {fts(110), vec_2(35, -5)},
-                          {fts(165), vec_2(-35, -8)}, {fts(220), vec_2(25, -20)}, {fts(275), vec_2(-30, -20)}}
+tt.tween.props[3].keys = {{0, vec_2(0, -10)}, {fts(55), vec_2(30, -20)}, {fts(110), vec_2(35, -5)}, {fts(165), vec_2(-35, -8)}, {fts(220), vec_2(25, -20)}, {fts(275), vec_2(-30, -20)}}
 tt.tween.props[3].loop = true
 tt.tween.props[3].sprite_id = 2
 tt.tween.props[3].interp = "step"
 tt.tween.remove = false
 tt = RT("aura_twilight_brute", "aura")
-
 AC(tt, "render")
-
 tt.aura.cycle_time = fts(10)
 tt.aura.duration = -1
 tt.aura.filter_source = true
@@ -5609,10 +5473,10 @@ tt.modifier.duration = 0.5
 tt.slow.factor = 0.5
 
 for _, n in pairs({"barrack_1", "barrack_2", "barrack_3", "blade", "forest", "drow"}) do
-    tt = E:register_t("mod_moon_forged_blades_" .. n, "mod_damage")
-    tt.damage_max = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_min)
-    tt.damage_min = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_max)
-    tt.damage_type = DAMAGE_MAGICAL
+	tt = E:register_t("mod_moon_forged_blades_" .. n, "mod_damage")
+	tt.damage_max = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_min)
+	tt.damage_min = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_max)
+	tt.damage_type = DAMAGE_MAGICAL
 end
 
 tt = E:register_t("eldritch_enemy_decal", "decal_tween")
@@ -5621,8 +5485,20 @@ tt.tween.remove = true
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {}
 
-for i, s in ipairs({1.06, 1.02, 1.11, 1.05, 1.14, 1.08, 1.116, 1.1, 1.18, 1.13, 1.24}) do
-    tt.tween.props[1].keys[i] = {(i - 1) * fts(2), vec_2(s, s)}
+for i, s in ipairs({
+	1.06,
+	1.02,
+	1.11,
+	1.05,
+	1.14,
+	1.08,
+	1.116,
+	1.1,
+	1.18,
+	1.13,
+	1.24
+}) do
+	tt.tween.props[1].keys[i] = {(i - 1) * fts(2), vec_2(s, s)}
 end
 
 tt = E:register_t("mod_ward", "modifier")
@@ -5682,7 +5558,6 @@ tt.custom_offsets.enemy_grim_devourers = vec_2(0, 39)
 tt.custom_offsets.enemy_mounted_avenger = vec_2(0, 63)
 tt.custom_offsets.enemy_shadow_champion = vec_2(0, 55)
 tt.custom_offsets.enemy_shadows_spawns = vec_2(0, 34)
-
 tt = E:register_t("mod_druid_sylvan_affected", "modifier")
 E:add_comps(tt, "render")
 tt.modifier.duration = fts(18)
@@ -5693,7 +5568,6 @@ tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
-
 tt = E:register_t("mod_plant_poison_pumpkin_slow", "mod_slow")
 tt.modifier.duration = 4
 tt.slow.factor = 0.5
@@ -5706,7 +5580,6 @@ tt.dps.damage_max = 2
 tt.dps.kill = true
 tt.dps.damage_every = fts(3)
 tt.dps.damage_type = DAMAGE_POISON
-
 tt = E:register_t("mod_enervation_faustus", "modifier")
 E:add_comps(tt, "render", "tween")
 tt.main_script.insert = scripts.mod_silence.insert
@@ -5718,9 +5591,7 @@ tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
 tt = E:register_t("mod_liquid_fire_faustus", "modifier")
-
 E:add_comps(tt, "dps", "render")
-
 tt.dps.damage_max = nil
 tt.dps.damage_min = nil
 tt.dps.damage_type = DAMAGE_TRUE
@@ -5735,9 +5606,7 @@ tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].draw_order = 10
 tt = E:register_t("mod_minidragon_faustus", "mod_liquid_fire_faustus")
 tt = E:register_t("mod_bravebark_branchball", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.main_script.queue = scripts.mod_bravebark_branchball.queue
 tt.main_script.update = scripts.mod_bravebark_branchball.update
 tt.custom_anchors = {}
@@ -5750,9 +5619,7 @@ tt.render.sprites[1].anchor.y = 0.22727272727272727
 tt = E:register_t("mod_bravebark_ultimate", "mod_shock_and_awe")
 tt.modifier.duration = 1
 tt = E:register_t("mod_bravebark_springsap", "modifier")
-
 E:add_comps(tt, "hps", "render", "tween")
-
 tt.modifier.use_mod_offset = false
 tt.modifier.duration = 3 * fts(3)
 tt.modifier.bans = {"mod_son_of_mactans_poison", "mod_drider_poison", "mod_dark_spitters", "mod_balrog"}
@@ -5768,7 +5635,6 @@ tt.render.sprites[1].anchor.y = 0.1
 tt.render.sprites[1].sort_y_offset = -1
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.15, 255}}
-
 tt = RT("mod_catha_curse", "mod_stun")
 tt.main_script.insert = scripts.mod_catha_curse.insert
 tt.modifier.vis_bans = bor(F_BOSS)
@@ -5788,9 +5654,7 @@ tt.main_script.insert = scripts.mod_stun.insert
 tt.modifier.vis_bans = 0
 tt.xp_from_skill = nil
 tt = RT("mod_catha_soul", "modifier")
-
 AC(tt, "render", "hps")
-
 tt.hps.heal_every = 9e+99
 tt.hps.heal_max = nil
 tt.hps.heal_min = nil
@@ -5805,9 +5669,7 @@ tt.render.sprites[1].anchor.y = 0.2631578947368421
 tt = RT("mod_veznan_ultimate_stun", "mod_stun")
 tt.modifier.duration = 2
 tt = RT("mod_veznan_demon_fire", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(29)
@@ -5823,14 +5685,11 @@ tt = RT("mod_veznan_shackles_stun", "mod_stun")
 tt.render.sprites[1].prefix = "veznan_hero_shackles"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].name = "start"
-tt.render.sprites[1].size_anchors = {vec_2(0.5, 0.7222222222222222), vec_2(0.5, 0.5483870967741935),
-                                     vec_2(0.5, 0.4838709677419355)}
+tt.render.sprites[1].size_anchors = {vec_2(0.5, 0.7222222222222222), vec_2(0.5, 0.5483870967741935), vec_2(0.5, 0.4838709677419355)}
 tt.modifier.animation_phases = true
 tt.modifier.duration = 3
 tt = RT("mod_veznan_shackles_dps", "modifier")
-
 AC(tt, "dps")
-
 tt.modifier.duration = 3
 tt.dps.damage_min = 2
 tt.dps.damage_max = 2
@@ -5860,7 +5719,6 @@ tt.modifier.duration = fts(34)
 tt = RT("mod_lilith_soul_eater_track", "modifier")
 tt.main_script.update = scripts.mod_lilith_soul_eater_track.update
 tt.modifier.duration = fts(11)
-
 tt = RT("mod_lilith_soul_eater_damage_factor", "modifier")
 AC(tt, "render", "tween")
 tt.inflicted_damage_factor = nil
@@ -5886,14 +5744,13 @@ tt.tween.props[1] = CC("tween_prop")
 tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {"this.modifier.duration-0.3", 255}, {"this.modifier.duration", 0}}
 
 for i = 2, 4 do
-    tt.tween.props[i] = table.deepclone(tt.tween.props[1])
-    tt.tween.props[i].sprite_id = i
+	tt.tween.props[i] = table.deepclone(tt.tween.props[1])
+	tt.tween.props[i].sprite_id = i
 end
 
 tt.tween.props[5] = CC("tween_prop")
 tt.tween.props[5].name = "anchor"
-tt.tween.props[5].keys = {{0, vec_2(0.5, 0.6538461538461539)}, {fts(12), vec_2(0.5, 0.34615384615384615)},
-                          {fts(24), vec_2(0.5, 0.6538461538461539)}}
+tt.tween.props[5].keys = {{0, vec_2(0.5, 0.6538461538461539)}, {fts(12), vec_2(0.5, 0.34615384615384615)}, {fts(24), vec_2(0.5, 0.6538461538461539)}}
 tt.tween.props[5].loop = true
 tt.tween.props[5].interp = "sine"
 tt.tween.props[5].sprite_id = 2
@@ -5901,7 +5758,6 @@ tt.tween.props[6] = table.deepclone(tt.tween.props[5])
 tt.tween.props[6].sprite_id = 3
 tt.tween.props[7] = table.deepclone(tt.tween.props[5])
 tt.tween.props[7].sprite_id = 4
-
 tt = RT("mod_lilith_infernal_wheel", "mod_lava")
 tt.modifier.duration = fts(31)
 tt.dps.damage_type = DAMAGE_TRUE
@@ -5936,15 +5792,13 @@ tt.render.sprites[1].size_names = nil
 tt.render.sprites[1].anchor.y = 0.0975609756097561
 tt.render.sprites[1].prefix = "bruce_ultimate_twister"
 tt.sound_events.insert_args = {
-    ignore = 1
+	ignore = 1
 }
 tt.sound_events.insert = {"ElvesHeroBruceGuardianLionsLoopStart", "ElvesHeroBruceGuardianLionsLoop"}
 tt.sound_events.remove_stop = "ElvesHeroBruceGuardianLionsLoop"
 tt.sound_events.remove = "ElvesHeroBruceGuardianLionsLoopEnd"
 tt = RT("mod_lion_bruce_damage", "modifier")
-
 AC(tt, "dps", "mark_flags")
-
 tt.dps.damage_min = nil
 tt.dps.damage_max = nil
 tt.dps.damage_every = fts(10)
@@ -5955,14 +5809,10 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
-
 tt = RT("mod_slow_wilbur", "mod_slow")
 tt.slow.factor = nil
-
 tt = E:register_t("mod_gnoll_burner", "modifier")
-
 E:add_comps(tt, "dps", "render", "mark_flags")
-
 tt.dps.damage_min = 4
 tt.dps.damage_max = 4
 tt.dps.damage_type = DAMAGE_TRUE
@@ -5980,9 +5830,7 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].draw_order = 10
 tt = E:register_t("mod_gnoll_gnawer", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.modifier.duration = fts(10)
 tt.modifier.use_mod_offset = false
 tt.inflicted_damage_factor = 1.5
@@ -5993,9 +5841,7 @@ tt.render.sprites[1].name = "mod_gnoll_gnawer"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.28125)
 tt.render.sprites[1].z = Z_DECALS
 tt = E:register_t("mod_gnoll_blighter", "modifier")
-
 E:add_comps(tt, "render", "tween")
-
 tt.main_script.update = scripts.mod_gnoll_blighter.update
 tt.modifier.duration = 4.9
 tt.render.sprites[1].name = "mod_gnoll_blighter"
@@ -6005,7 +5851,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = 10
 tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {tt.modifier.duration - 0.3, 255}, {tt.modifier.duration, 0}}
 tt.tween.remove = false
-
 tt = E:register_t("mod_twilight_elf_harasser", "modifier")
 E:add_comps(tt, "mark_flags")
 tt.mark_flags.vis_bans = F_CUSTOM
@@ -6013,7 +5858,6 @@ tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.mod_mark_flags.update
 tt.modifier.duration = fts(20)
-
 tt = E:register_t("mod_redcap_heal", "modifier")
 E:add_comps(tt, "hps")
 tt.main_script.insert = scripts.mod_redcap_heal.insert
@@ -6023,11 +5867,8 @@ tt.hps.heal_max = 25
 tt.hps.heal_every = fts(3)
 tt.modifier.duration = 2
 tt.hit_fx = "fx_redcap_death_blow"
-
 tt = E:register_t("mod_twilight_scourger_lash", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.render.sprites[1].prefix = "mod_twilight_scourger_lash"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
@@ -6044,9 +5885,7 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.speed_factor = 1.4
 tt.damage_factor = 2
 tt = E:register_t("mod_twilight_scourger_banshee", "modifier")
-
 E:add_comps(tt, "render", "tween")
-
 tt.main_script.update = scripts.mod_twilight_scourger_banshee.update
 tt.modifier.hide_tower = false
 tt.modifier.duration = 10
@@ -6070,11 +5909,10 @@ tt.render.sprites[5].time_offset = fts(6)
 tt.tween.remove = false
 
 for i = 1, 5 do
-    local p = E:clone_c("tween_prop")
-
-    p.keys = {{0, 0}, {0.2, 255}, {"this.modifier.duration-0.2", 255}, {"this.modifier.duration", 0}}
-    p.sprite_id = i
-    tt.tween.props[i] = p
+	local p = E:clone_c("tween_prop")
+	p.keys = {{0, 0}, {0.2, 255}, {"this.modifier.duration-0.2", 255}, {"this.modifier.duration", 0}}
+	p.sprite_id = i
+	tt.tween.props[i] = p
 end
 
 tt = E:register_t("mod_spider_web", "modifier")
@@ -6101,11 +5939,9 @@ tt.modifier.custom_scales.hero_bravebark = vec_1(1)
 tt.modifier.custom_scales.hero_xin = vec_1(1)
 tt.modifier.custom_scales.soldier_forest = vec_1(0.75)
 tt.modifier.custom_scales.soldier_druid_bear = vec_1(0.75)
-
 tt = E:register_t("mod_mactans_spider_web", "mod_spider_web")
 tt.modifier.duration = 5
 tt.modifier.duration_heroes = 3
-
 tt = E:register_t("mod_twilight_evoker_silence", "modifier")
 E:add_comps(tt, "render", "tween")
 tt.main_script.update = scripts.mod_tower_silence.update
@@ -6142,9 +5978,7 @@ tt.render.sprites[1].prefix = "mod_twilight_evoker_heal"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].loop = false
 tt = E:register_t("mod_twilight_heretic_consume", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.modifier.duration = 3
 tt.render.sprites[1].name = "twilight_heretic_fire"
 tt.render.sprites[1].anchor.y = 0.17567567567567569
@@ -6158,9 +5992,7 @@ tt.main_script.insert = scripts.mod_twilight_heretic_consume.insert
 tt.main_script.remove = scripts.mod_twilight_heretic_consume.remove
 tt.main_script.update = scripts.mod_twilight_heretic_consume.update
 tt = E:register_t("mod_twilight_heretic_servant", "modifier")
-
 E:add_comps(tt, "render", "dps", "tween")
-
 tt.dps.damage_min = 5
 tt.dps.damage_max = 5
 tt.dps.damage_every = fts(11)
@@ -6177,9 +6009,7 @@ tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}
 tt = E:register_t("mod_drider_poison", "modifier")
-
 E:add_comps(tt, "render", "dps")
-
 tt.modifier.duration = 10
 tt.modifier.vis_flags = bor(F_MOD, F_POISON)
 tt.render.sprites[1].name = "mod_drider_poison"
@@ -6190,9 +6020,7 @@ tt.dps.damage_max = 2
 tt.dps.damage_min = 2
 tt.dps.damage_type = DAMAGE_POISON
 tt = E:register_t("mod_razorboar_rampage_enemy", "modifier")
-
 E:add_comps(tt, "dps", "render")
-
 tt.dps.damage_min = 125
 tt.dps.damage_max = 155
 tt.dps.damage_every = fts(30)
@@ -6221,22 +6049,20 @@ tt = RT("mod_spider_sprint", "mod_slow")
 tt.slow.factor = 2
 tt.modifier.duration = fts(12)
 tt = RT("mod_mactans_tower_block", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.main_script.update = scripts.mod_mactans_tower_block.update
 tt.modifier.duration = 5
 
 for i = 1, 4 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].anchor.y = 0.18461538461538463
-    tt.render.sprites[i].draw_order = 10
-    tt.render.sprites[i].sort_y_offset = -2
-    tt.render.sprites[i].name = "mactans_towerWebs_000" .. i
-    tt.render.sprites[i].animated = false
-    tt.tween.props[i] = CC("tween_prop")
-    tt.tween.props[i].keys = {{fts(17) * (i - 1), 0}, {fts(17) * i, 255}}
-    tt.tween.props[i].sprite_id = i
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].anchor.y = 0.18461538461538463
+	tt.render.sprites[i].draw_order = 10
+	tt.render.sprites[i].sort_y_offset = -2
+	tt.render.sprites[i].name = "mactans_towerWebs_000" .. i
+	tt.render.sprites[i].animated = false
+	tt.tween.props[i] = CC("tween_prop")
+	tt.tween.props[i].keys = {{fts(17) * (i - 1), 0}, {fts(17) * i, 255}}
+	tt.tween.props[i].sprite_id = i
 end
 
 tt.render.sprites[5] = CC("sprite")
@@ -6248,9 +6074,7 @@ tt.render.sprites[5].name = "end"
 tt.render.sprites[5].hidden = true
 tt.tween.remove = false
 tt = RT("mod_bloodsydian_warlock", "modifier")
-
 AC(tt, "render", "spawner", "sound_events")
-
 tt.main_script.update = scripts.mod_bloodsydian_warlock.update
 tt.render.sprites[1].prefix = "bloodsydianGnoll_respawn"
 tt.render.sprites[1].name = "start"
@@ -6261,9 +6085,7 @@ tt.incubation_time_variance = 0.15
 tt.spawn_name = "enemy_gnoll_bloodsydian"
 tt.sound_events.insert = "ElvesCrystallizingGnoll"
 tt = RT("mod_ogre_magi_shield", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.duration = 6
 tt.modifier.deflect_factor = 0.5
 tt.main_script.insert = scripts.mod_ogre_magi_shield.insert
@@ -6287,7 +6109,6 @@ tt.modifier.duration_heroes = 3
 tt.render.sprites[1].prefix = "mod_screecher_bat_stun"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].size_names = nil
-
 tt = RT("mod_dark_spitters", "modifier")
 AC(tt, "render", "dps")
 tt.explode_fx = "fx_unit_explode"
@@ -6303,7 +6124,6 @@ tt.dps.damage_every = fts(11)
 tt.dps.damage_max = 10
 tt.dps.damage_min = 10
 tt.dps.damage_type = DAMAGE_POISON
-
 tt = RT("mod_shadow_champion", "mod_gnoll_boss")
 tt.main_script.insert = scripts.mod_shadow_champion.insert
 tt.main_script.remove = scripts.mod_shadow_champion.remove
@@ -6325,9 +6145,7 @@ tt.modifier.custom_scales.hero_xin = vec_1(1)
 tt.modifier.custom_scales.soldier_forest = vec_1(0.7)
 tt.modifier.custom_scales.soldier_druid_bear = vec_1(0.7)
 tt = RT("mod_twilight_brute", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.inflicted_damage_factor = 1.25
 tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
@@ -6339,8 +6157,7 @@ tt.modifier.resets_same_tween_offset = fts(10)
 tt.render.sprites[1].name = "mod_twilight_bannerbearer"
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
-tt.tween.props[1].keys =
-    {{0, 0}, {fts(10), 255}, {"this.modifier.duration-(10/30)", 255}, {"this.modifier.duration", 0}}
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {"this.modifier.duration-(10/30)", 255}, {"this.modifier.duration", 0}}
 tt = RT("mod_teleport_ainyl", "mod_teleport")
 tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
 tt.max_times_applied = nil
@@ -6350,9 +6167,7 @@ tt.delay_end = fts(2)
 tt.fx_start = "fx_teleport_scroll"
 tt.fx_end = "fx_teleport_scroll"
 tt = RT("mod_block_tower_ainyl", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.main_script.update = scripts.mod_block_tower_ainyl.update
 tt.modifier.hide_tower = false
 tt.modifier.duration = 10
@@ -6377,11 +6192,10 @@ tt.render.sprites[5].time_offset = fts(6)
 tt.tween.remove = false
 
 for i = 1, 5 do
-    local p = E:clone_c("tween_prop")
-
-    p.keys = {{0, 0}, {0.2, 255}, {"this.modifier.duration-0.2", 255}, {"this.modifier.duration", 0}}
-    p.sprite_id = i
-    tt.tween.props[i] = p
+	local p = E:clone_c("tween_prop")
+	p.keys = {{0, 0}, {0.2, 255}, {"this.modifier.duration-0.2", 255}, {"this.modifier.duration", 0}}
+	p.sprite_id = i
+	tt.tween.props[i] = p
 end
 
 tt = RT("mod_shield_ainyl", "modifier")
@@ -6395,7 +6209,6 @@ tt.render.sprites[1].prefix = "ainyl_shield"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].anchor.y = 0.4
-
 tt = E:register_t("mod_pixie_teleport", "mod_teleport_mage")
 E:add_comps(tt, "sound_events")
 tt.max_times_applied = nil
@@ -6404,11 +6217,8 @@ tt.nodes_offset = -50
 tt.fx_start = "fx_mod_pixie_teleport"
 tt.fx_end = "fx_mod_pixie_teleport"
 tt.sound_events.insert = "ElvesGnomeTeleport"
-
 tt = E:register_t("mod_ray_crystal_arcane", "modifier")
-
 E:add_comps(tt, "dps")
-
 tt.modifier.duration = fts(16)
 tt.dps.damage_every = fts(4)
 tt.dps.damage_min = 150 / (tt.modifier.duration / tt.dps.damage_every)
@@ -6418,9 +6228,7 @@ tt.dps.kill = false
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt = E:register_t("mod_crystal_arcane_freeze", "mod_freeze")
-
 E:add_comps(tt, "render")
-
 tt.modifier.duration = 4
 tt.modifier.vis_bans = F_BOSS
 tt.render.sprites[1].prefix = "freeze_creep"
@@ -6435,9 +6243,7 @@ tt.custom_suffixes = {}
 tt.custom_suffixes.flying = "_air"
 tt.custom_animations = {"start", "end"}
 tt = E:register_t("mod_crystal_arcane_buff", "modifier")
-
 E:add_comps(tt, "render", "tween")
-
 tt.damage_factor = 1.75
 tt.modifier.duration = 5
 tt.main_script.insert = scripts.mod_tower_factors.insert
@@ -6447,19 +6253,18 @@ tt.render.sprites[1].name = "crystalArcane_towerBuff_base"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.11666666666666667
 tt.render.sprites[1].z = Z_TOWER_BASES + 1
-
 local offsets = {nil, vec_2(-30, 10), vec_2(-10, 0), vec_2(10, 0), vec_2(30, 10)}
 
 for i = 2, 5 do
-    tt.render.sprites[i] = E:clone_c("sprite")
-    tt.render.sprites[i].name = "fx_crystal_arcane_tower"
-    tt.render.sprites[i].anchor.y = 0.11666666666666667
-    tt.render.sprites[i].sort_y_offset = -2
-    tt.render.sprites[i].offset = offsets[i]
-    tt.render.sprites[i].flip_x = i >= 4
-    tt.tween.props[i] = E:clone_c("tween_prop")
-    tt.tween.props[i].keys = {{0, 0}, {0.3, 255}, {"this.modifier.duration-0.3", 255}, {"this.modifier.duration", 0}}
-    tt.tween.props[i].sprite_id = i
+	tt.render.sprites[i] = E:clone_c("sprite")
+	tt.render.sprites[i].name = "fx_crystal_arcane_tower"
+	tt.render.sprites[i].anchor.y = 0.11666666666666667
+	tt.render.sprites[i].sort_y_offset = -2
+	tt.render.sprites[i].offset = offsets[i]
+	tt.render.sprites[i].flip_x = i >= 4
+	tt.tween.props[i] = E:clone_c("tween_prop")
+	tt.tween.props[i].keys = {{0, 0}, {0.3, 255}, {"this.modifier.duration-0.3", 255}, {"this.modifier.duration", 0}}
+	tt.tween.props[i].sprite_id = i
 end
 
 tt.tween.remove = false
@@ -6469,9 +6274,7 @@ tt.tween.props[1].loop = true
 tt.tween.props[6] = E:clone_c("tween_prop")
 tt.tween.props[6].keys = {{0, 0}, {0.3, 255}, {"this.modifier.duration-0.3", 255}, {"this.modifier.duration", 0}}
 tt = E:register_t("mod_crystal_arcane_buff_soldier", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
@@ -6502,9 +6305,7 @@ tt.modifier.vis_bans = bor(F_BOSS)
 tt.nodes_offset = -10
 tt = RT("mod_crystal_unstable_infuse", "mod_bloodsydian_warlock")
 tt = RT("mod_crystal_unstable_heal", "modifier")
-
 AC(tt, "hps", "render")
-
 tt.hps.heal_every = 1000000000
 tt.hps.heal_max = 200
 tt.hps.heal_min = 200
@@ -6517,14 +6318,11 @@ tt.modifier.vis_bans = bor(F_BOSS)
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "fx_heal_crystal_unstable"
 tt = RT("mactans_controller")
-
 AC(tt, "main_script")
-
 tt.main_script.insert = scripts.mactans_controller.insert
 tt.main_script.update = scripts.mactans_controller.update
 tt.sequence = nil
 tt.sequence_groups = nil
-
 tt = E:register_t("power_thunder_control")
 E:add_comps(tt, "user_power", "pos", "main_script", "user_selection")
 tt.cooldown = 70
@@ -6587,9 +6385,7 @@ tt = E:register_t("mod_power_thunder_slow", "mod_slow")
 tt.modifier.duration = 0.25
 tt.slow.factor = 0.4
 tt = E:register_t("fx_power_thunder_1", "decal_tween")
-
 E:add_comps(tt, "sound_events")
-
 tt.image_h = 496
 tt.render.sprites[1].name = "ray_0001"
 tt.render.sprites[1].animated = false
@@ -6611,9 +6407,7 @@ tt = E:register_t("fx_power_thunder_explosion_decal", "fx")
 tt.render.sprites[1].name = "decal_power_thunder_explosion"
 tt.render.sprites[1].z = Z_DECALS
 tt = E:register_t("overlay_power_thunder_flash", "decal_tween")
-
 E:add_comps(tt, "tween")
-
 image_y = 64
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "square_ffffff"
@@ -6629,9 +6423,7 @@ tt.tween.remove = false
 tt.ts = 0
 tt.cooldown = 0
 tt = E:register_t("fx_power_thunder_drop", "fx")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "lightning_storm_rain_drop"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.x = 1
@@ -6639,20 +6431,14 @@ tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt = E:register_t("fx_power_thunder_rain_splash", "fx")
 tt.render.sprites[1].name = "fx_power_thunder_rain_splash"
 -- tt = E:register_t("power_hero_control")
-
 -- E:add_comps(tt, "user_power", "pos", "main_script", "user_selection")
-
 -- tt.main_script.insert = scripts.power_hero_control.insert
 -- tt.user_selection.can_select_point_fn = scripts.power_hero_control.can_select_point
-
 -- E:set_template("user_power_1", E:get_template("power_thunder_control"))
 -- E:set_template("user_power_2", E:get_template("power_reinforcements_control"))
 -- E:set_template("user_power_3", E:get_template("power_hero_control"))
-
 tt = RT("user_item_teleport_scroll", "user_item")
-
 AC(tt, "aura", "render", "tween", "sound_events")
-
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.aura.mod = "mod_teleport_scroll"
@@ -6665,15 +6451,14 @@ tt.aura.vis_bans = bor(F_FRIEND, F_HERO, F_FREEZE)
 tt.aura.targets_per_cycle = nil
 tt.render.sprites[1].name = "decal_user_power_teleport"
 
-for i, o in ipairs({vec_2(-20, 26), vec_2(-4, 36), vec_2(19, 29), vec_2(-24, -3), vec_2(-3, 6), vec_2(26, 6),
-                    vec_2(-11, -15), vec_2(4, -15)}) do
-    tt.render.sprites[i + 1] = CC("sprite")
-    tt.render.sprites[i + 1].name = "fx_user_power_teleport_bubbles"
-    tt.render.sprites[i + 1].offset = o
-    tt.render.sprites[i + 1].loop = false
-    tt.render.sprites[i + 1].hide_after_runs = 1
-    tt.render.sprites[i + 1].scale = math.random() < 0.5 and vec_2(-1, 1) or vec_2(1, 1)
-    tt.render.sprites[i + 1].anchor.y = 0.078125
+for i, o in ipairs({vec_2(-20, 26), vec_2(-4, 36), vec_2(19, 29), vec_2(-24, -3), vec_2(-3, 6), vec_2(26, 6), vec_2(-11, -15), vec_2(4, -15)}) do
+	tt.render.sprites[i + 1] = CC("sprite")
+	tt.render.sprites[i + 1].name = "fx_user_power_teleport_bubbles"
+	tt.render.sprites[i + 1].offset = o
+	tt.render.sprites[i + 1].loop = false
+	tt.render.sprites[i + 1].hide_after_runs = 1
+	tt.render.sprites[i + 1].scale = math.random() < 0.5 and vec_2(-1, 1) or vec_2(1, 1)
+	tt.render.sprites[i + 1].anchor.y = 0.078125
 end
 
 tt.sound_events.insert = "ElvesInAppTeleportScroll"
@@ -6694,9 +6479,7 @@ tt = RT("fx_teleport_scroll", "fx")
 tt.render.sprites[1].name = "fx_user_power_teleport"
 tt.render.sprites[1].size_scales = {vec_1(0.8), vec_1(1), vec_1(1.5)}
 tt = RT("user_item_gem_timewarp", "user_item")
-
 AC(tt, "aura", "sound_events")
-
 tt.main_script.update = scripts.user_item_gem_timewarp.update
 tt.aura.custom_fx = "fx_gem_timewarp_bubble"
 tt.aura.mod_teleport = "mod_teleport_gem"
@@ -6718,21 +6501,18 @@ tt.modifier.duration = 10
 tt.slow.factor = 0.5
 tt = RT("fx_gem_timewarp_bubble", "fx")
 
-for i, o in ipairs({vec_2(-20, 26), vec_2(-4, 36), vec_2(19, 29), vec_2(-24, -3), vec_2(-3, 6), vec_2(26, 6),
-                    vec_2(-11, -15), vec_2(4, -15)}) do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].name = "fx_user_power_teleport_bubbles"
-    tt.render.sprites[i].offset = o
-    tt.render.sprites[i].loop = false
-    tt.render.sprites[i].hide_after_runs = 1
-    tt.render.sprites[i].scale = math.random() < 0.5 and vec_2(-1, 1) or vec_2(1, 1)
-    tt.render.sprites[i].anchor.y = 0.078125
+for i, o in ipairs({vec_2(-20, 26), vec_2(-4, 36), vec_2(19, 29), vec_2(-24, -3), vec_2(-3, 6), vec_2(26, 6), vec_2(-11, -15), vec_2(4, -15)}) do
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].name = "fx_user_power_teleport_bubbles"
+	tt.render.sprites[i].offset = o
+	tt.render.sprites[i].loop = false
+	tt.render.sprites[i].hide_after_runs = 1
+	tt.render.sprites[i].scale = math.random() < 0.5 and vec_2(-1, 1) or vec_2(1, 1)
+	tt.render.sprites[i].anchor.y = 0.078125
 end
 
 tt = RT("user_item_wrath_of_elynia", "user_item")
-
 AC(tt, "aura", "sound_events")
-
 tt.main_script.update = scripts.user_item_wrath_of_elynia.update
 tt.aura.mod_slow = "mod_slow_elynia"
 tt.aura.mod_kill = "mod_kill_elynia"
@@ -6766,8 +6546,7 @@ tt.tween.props[1].keys = {{0, vec_2(0, 1)}, {fts(4), vec_2(1, 1)}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_2(0.046875, 5.953125)}, {fts(2), vec_2(0.09375, 5.953125)},
-                          {fts(4), vec_2(0.046875, 5.953125)}}
+tt.tween.props[2].keys = {{0, vec_2(0.046875, 5.953125)}, {fts(2), vec_2(0.09375, 5.953125)}, {fts(4), vec_2(0.046875, 5.953125)}}
 tt.tween.props[2].loop = true
 tt = RT("decal_elynia_big_explosion", "decal_tween")
 tt.render.sprites[1].animated = false
@@ -6794,55 +6573,53 @@ tt.render.sprites[5].offset.y = 10
 tt.render.sprites[5].z = Z_EFFECTS
 
 for _, d in pairs({{vec_2(6, 12), 2}, {vec_2(-30, 36), 4}, {vec_2(13, -41), 6}, {vec_2(-31, 45), 8}}) do
-    local s = CC("sprite")
-
-    s.hide_after_runs = 1
-    s.loop = false
-    s.name = "fx_elynia_particle"
-    s.offset.x, s.offset.y = d[1].x, d[1].y
-    s.scale = vec_1(1.2)
-    s.time_offset = -1 * fts(d[2])
-
-    table.insert(tt.render.sprites, s)
+	local s = CC("sprite")
+	s.hide_after_runs = 1
+	s.loop = false
+	s.name = "fx_elynia_particle"
+	s.offset.x, s.offset.y = d[1].x, d[1].y
+	s.scale = vec_1(1.2)
+	s.time_offset = -1 * fts(d[2])
+	table.insert(tt.render.sprites, s)
 end
 
 tt.tween.remove = true
 tt.tween.props = {{
-    name = "alpha",
-    sprite_id = 1,
-    keys = {{0, 255}, {fts(17), 0}}
+	name = "alpha",
+	sprite_id = 1,
+	keys = {{0, 255}, {fts(17), 0}}
 }, {
-    name = "scale",
-    sprite_id = 1,
-    keys = {{0, vec_1(1)}, {fts(17), vec_1(4.7)}}
+	name = "scale",
+	sprite_id = 1,
+	keys = {{0, vec_1(1)}, {fts(17), vec_1(4.7)}}
 }, {
-    name = "alpha",
-    sprite_id = 2,
-    keys = {{0, 255}, {fts(26), 0}}
+	name = "alpha",
+	sprite_id = 2,
+	keys = {{0, 255}, {fts(26), 0}}
 }, {
-    name = "alpha",
-    sprite_id = 3,
-    keys = {{0, 255}, {fts(22), 0}}
+	name = "alpha",
+	sprite_id = 3,
+	keys = {{0, 255}, {fts(22), 0}}
 }, {
-    name = "scale",
-    sprite_id = 3,
-    keys = {{0, vec_1(1)}, {fts(22), vec_1(2.1)}}
+	name = "scale",
+	sprite_id = 3,
+	keys = {{0, vec_1(1)}, {fts(22), vec_1(2.1)}}
 }, {
-    name = "alpha",
-    sprite_id = 4,
-    keys = {{0, 255}, {fts(17), 255}, {fts(22), 0}}
+	name = "alpha",
+	sprite_id = 4,
+	keys = {{0, 255}, {fts(17), 255}, {fts(22), 0}}
 }, {
-    name = "scale",
-    sprite_id = 4,
-    keys = {{0, vec_1(1)}, {fts(22), vec_1(2.1)}}
+	name = "scale",
+	sprite_id = 4,
+	keys = {{0, vec_1(1)}, {fts(22), vec_1(2.1)}}
 }, {
-    name = "alpha",
-    sprite_id = 5,
-    keys = {{0, 255}, {fts(16), 0}}
+	name = "alpha",
+	sprite_id = 5,
+	keys = {{0, 255}, {fts(16), 0}}
 }, {
-    name = "scale",
-    sprite_id = 5,
-    keys = {{0, vec_1(1)}, {fts(16), vec_1(3.5)}}
+	name = "scale",
+	sprite_id = 5,
+	keys = {{0, vec_1(1)}, {fts(16), vec_1(3.5)}}
 }}
 tt = RT("fx_elynia_creep_explosion", "decal_tween")
 tt.render.sprites[1].name = "elynia_creepExplosion_glowDecal"
@@ -6860,9 +6637,7 @@ tt.render.sprites[1].anchor.y = 0.2076923076923077
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {fts(25) + 1, 255}, {fts(25) + 1.2, 0}}
 -- tt = RT("user_item_horn_heroism", "user_item")
-
 -- AC(tt, "aura", "mod_attack", "sound_events", "render", "tween")
-
 -- tt.main_script.update = scripts.user_item_horn_heroism.update
 -- tt.aura.mod = "mod_horn_heroism_soldier"
 -- tt.aura.radius = 250
@@ -6897,9 +6672,7 @@ tt.tween.props[1].keys = {{0, 255}, {fts(25) + 1, 255}, {fts(25) + 1.2, 0}}
 --     keys = {{fts(13), vec_1(1)}, {fts(29), vec_1(2.7)}}
 -- }}
 -- tt = RT("mod_horn_heroism_soldier", "modifier")
-
 -- AC(tt, "render", "tween")
-
 -- tt.modifier.duration = 10
 -- tt.modifier.use_mod_offset = false
 -- tt.modifier.resets_same_tween = true
@@ -6912,9 +6685,7 @@ tt.tween.props[1].keys = {{0, 255}, {fts(25) + 1, 255}, {fts(25) + 1.2, 0}}
 -- tt.render.sprites[1].anchor.y = 0.15384615384615385
 -- tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {10 - fts(10), 255}, {10, 0}}
 -- tt = RT("mod_horn_heroism_tower", "modifier")
-
 -- AC(tt, "render", "tween")
-
 -- tt.modifier.duration = 15
 -- tt.modifier.resets_same_tween = true
 -- tt.main_script.insert = scripts.mod_tower_factors.insert
@@ -6953,9 +6724,7 @@ tt.tween.props[1].keys = {{0, 255}, {fts(25) + 1, 255}, {fts(25) + 1.2, 0}}
 --     keys = {{0, 0}, {fts(10), 1}, {15 - fts(10), 1}, {15, 0}}
 -- }}
 -- tt = RT("user_item_rod_dragon_fire", "user_item")
-
 -- AC(tt, "aura", "render", "attacks")
-
 -- tt.aura.duration = 10
 -- tt.attacks.list[1] = CC("bullet_attack")
 -- tt.attacks.list[1].cooldown = 0.6
@@ -7034,9 +6803,7 @@ tt.delayed_play.max_delay = 15
 tt.delayed_play.idle_animation = "idle"
 tt.delayed_play.play_animation = "smoke"
 tt = E:register_t("decal_stage01_bird1", "decal_delayed_play")
-
 E:add_comps(tt, "tween")
-
 tt = E:register_t("decal_bird_1", "decal_tween")
 tt.render.sprites[1].prefix = "decal_bird_1"
 tt.render.sprites[1].name = "play"
@@ -7045,9 +6812,7 @@ tt.tween.props[1].name = "offset"
 tt = E:register_t("decal_bird_2", "decal_bird_1")
 tt.render.sprites[1].prefix = "decal_bird_2"
 tt = E:register_t("birds_controller")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.birds_controller.update
 tt.origins = {}
 tt.destinations = {}
@@ -7068,9 +6833,9 @@ tt = E:register_t("decal_stage_02_bigwaves", "decal")
 tt.render.sprites[1].name = "decal_stage_02_bigwaves_idle"
 
 for i = 1, 6 do
-    tt = E:register_t("decal_stage_02_stone_" .. i, "decal")
-    tt.render.sprites[1].name = "stage2_stones_000" .. i
-    tt.render.sprites[1].animated = false
+	tt = E:register_t("decal_stage_02_stone_" .. i, "decal")
+	tt.render.sprites[1].name = "stage2_stones_000" .. i
+	tt.render.sprites[1].animated = false
 end
 
 tt = E:register_t("decal_stage_02_bridge_mask", "decal")
@@ -7080,9 +6845,7 @@ tt = E:register_t("decal_stage_02_bridge_shadows", "decal")
 tt.render.sprites[1].name = "stage2_shadows"
 tt.render.sprites[1].animated = false
 tt = E:register_t("decal_bambi", "decal_scripted")
-
 E:add_comps(tt, "ui", "motion")
-
 tt.render.sprites[1].prefix = "decal_bambi"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = false
@@ -7094,9 +6857,7 @@ tt.ui.can_select = false
 tt.run_offset = nil
 tt.motion.max_speed = 99.9
 tt = E:register_t("decal_rabbit", "decal_scripted")
-
 E:add_comps(tt, "ui", "tween")
-
 tt.render.sprites[1].prefix = "decal_rabbit"
 tt.render.sprites[1].name = "ears"
 tt.render.sprites[1].loop = false
@@ -7107,21 +6868,16 @@ tt.main_script.update = scripts.decal_rabbit.update
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
 tt.tween.ts = 0
-tt.ani_sequence = {{"ears", 5, 15}, {"popout", 1, 3, "hide1"}, {"travel1", 1, 3, "hide2"}, {"travel2", 1.5, 3, "hide3"},
-                   {"travel3", 1, 3, "hide1"}, {"hide1"}, {nil, 10, 20}}
+tt.ani_sequence = {{"ears", 5, 15}, {"popout", 1, 3, "hide1"}, {"travel1", 1, 3, "hide2"}, {"travel2", 1.5, 3, "hide3"}, {"travel3", 1, 3, "hide1"}, {"hide1"}, {nil, 10, 20}}
 tt = E:register_t("decal_s03_bridge", "decal_static")
-
 E:add_comps(tt, "ui")
-
 tt.ui.click_rect = r(-83, -48, 166, 96)
 tt.ui.can_select = false
 tt.render.sprites[1].name = "stage3_bridge"
 tt.render.sprites[1].z = Z_DECALS + 2
 tt.render.sprites[1].sort_y_offset = 48
 tt = E:register_t("decal_crane", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.render.sprites[1].prefix = "decal_crane"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[2] = E:clone_c("sprite")
@@ -7137,9 +6893,7 @@ tt.final_click_animation = "final_click"
 tt.play_time = {10, 45}
 tt.final_clicks = {3, 6}
 tt = E:register_t("river_object_controller")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.river_object_controller.update
 tt.river_objects = {"barrel", "barrel", "chest", "wilson", "submarine"}
 tt.min_time = 12
@@ -7147,9 +6901,7 @@ tt.max_time = 24
 tt.max_chests = 3
 tt.max_hobbits = 13
 tt = E:register_t("decal_river_object", "decal_scripted")
-
 E:add_comps(tt, "nav_path", "motion", "ui", "tween", "sound_events")
-
 tt.main_script.update = scripts.decal_river_object.update
 tt.motion.max_speed = 1.5 * FPS
 tt.ui.click_rect = r(-18, -5, 36, 36)
@@ -7194,18 +6946,14 @@ tt.render.sprites[1].prefix = "decal_river_object_submarine"
 tt.render.sprites[1].anchor.y = 0.20454545454545456
 tt.sound_events.save = "ElvesAchievementYellowSubmarine"
 tt = E:register_t("fx_waterfall_splash", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_waterfall_splash"
 tt.render.sprites[1].anchor.y = 0.21875
 tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].z = Z_OBJECTS
 tt.sound_events.insert = "ElvesWaterfallMid"
 tt = E:register_t("decal_s04_land_1", "decal_background")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "Stage04_0003"
 tt.render.sprites[1].z = Z_DECALS + 1
 tt.editor.game_mode = 1
@@ -7216,9 +6964,7 @@ tt = E:register_t("decal_s04_land_2", "decal_s04_land_1")
 tt.render.sprites[1].name = "Stage04_0004"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt = E:register_t("decal_s04_tree_burn", "decal_timed")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].prefix = "decal_s04_tree_burn"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "idle"
@@ -7229,9 +6975,7 @@ tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
 tt = E:register_t("decal_s04_charcoal_1", "decal_tween")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].name = "stage4_fire_decal_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = vec_2(1, 1)
@@ -7253,9 +6997,7 @@ tt.render.sprites[1].name = "idle"
 tt = E:register_t("fx_torch_gnoll_burner_explosion_stage04", "fx")
 tt.render.sprites[1].name = "fx_torch_gnoll_burner_explosion_stage04"
 tt = E:register_t("fx_s04_tree_fire_1", "decal_timed")
-
 E:add_comps(tt, "editor")
-
 tt.timed.disabled = true
 tt.render.sprites[1].name = "fx_s04_tree_fire_1"
 tt.render.sprites[1].loop = false
@@ -7263,18 +7005,15 @@ tt.render.sprites[1].hidden = true
 tt.render.sprites[1].z = Z_EFFECTS
 tt.editor.game_mode = 1
 tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER},
-                   {"editor.tag", PT_NUMBER}}
+tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
 tt.editor.overrides = {
-    ["render.sprites[1].hidden"] = false,
-    ["render.sprites[1].loop"] = true
+	["render.sprites[1].hidden"] = false,
+	["render.sprites[1].loop"] = true
 }
 tt = E:register_t("fx_s04_tree_fire_2", "fx_s04_tree_fire_1")
 tt.render.sprites[1].name = "fx_s04_tree_fire_2"
 tt = E:register_t("decal_george_jungle", "decal_scripted")
-
 E:add_comps(tt, "ui", "tween")
-
 tt.main_script.update = scripts.decal_george_jungle.update
 tt.render.sprites[1].anchor.y = 1
 tt.render.sprites[1].prefix = "decal_george_jungle_liana"
@@ -7308,9 +7047,7 @@ tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {{0}, {0.3}}
 tt.achievement = "GEORGE_FALL"
 tt = E:register_t("decal_tree_ewok", "decal_scripted")
-
 E:add_comps(tt, "motion", "nav_path", "ranged", "unit")
-
 tt.main_script.update = scripts.decal_tree_ewok.update
 tt.render.sprites[1].anchor.y = 0.08333333333333333
 tt.render.sprites[1].prefix = "decal_tree_ewok"
@@ -7333,9 +7070,7 @@ tt.bullet.flight_time = fts(33)
 tt.render.sprites[1].name = "ewok_2_proy_0001"
 tt.sound_events.insert = "AxeSound"
 tt = E:register_t("tower_ewok_holder")
-
 E:add_comps(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor")
-
 tt.tower.type = "holder_ewok"
 tt.tower.level = 1
 tt.tower.can_be_mod = false
@@ -7350,7 +7085,6 @@ tt.render.sprites[2].name = "ewok_hut_0001"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 32)
 tt.ui.click_rect = r(-40, -10, 80, 90)
-
 tt = E:register_t("decal_s05_tree_round", "decal")
 tt.render.sprites[1].name = "stage5_tree"
 tt.render.sprites[1].animated = false
@@ -7360,9 +7094,7 @@ tt.render.sprites[1].name = "stage5_pine"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.08333333333333333
 tt = E:register_t("decal_bush_statue", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.main_script.insert = scripts.decal_bush_statue.insert
 tt.main_script.update = scripts.decal_bush_statue.update
 tt.render.sprites[1].animated = false
@@ -7375,16 +7107,12 @@ tt.bush_idx = nil
 tt.ui.click_rect = r(-40, 0, 80, 66)
 tt.ui.can_select = false
 tt = E:register_t("fx_bush_statue_click", "fx")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].name = "fx_bush_statue_click"
 tt.render.sprites[1].offset.y = 34
 tt.sound_events.insert = "ElvesAchievementScissorFingers"
 tt = E:register_t("decal_s06_eagle", "decal_delayed_sequence")
-
 E:add_comps(tt, "editor")
-
 tt.delayed_sequence.animations = {"1", "2", "3", "4"}
 tt.delayed_sequence.random = true
 tt.delayed_sequence.max_delay = 3
@@ -7392,9 +7120,7 @@ tt.render.sprites[1].prefix = "decal_s06_eagle"
 tt.render.sprites[1].name = "1"
 tt.render.sprites[1].z = Z_OBJECTS + 1
 tt = E:register_t("decal_s06_boxed_boss", "decal_delayed_play")
-
 E:add_comps(tt, "editor")
-
 tt.delayed_play.min_delay = 5
 tt.delayed_play.min_delay = 10
 tt.render.sprites[1].prefix = "decal_s06_boxed_boss_l1"
@@ -7408,17 +7134,15 @@ tt.render.sprites[3].z = Z_OBJECTS + 1
 tt = E:register_t("decal_s06_jailed_boss", "decal")
 
 for i = 1, 6 do
-    tt.render.sprites[i] = E:clone_c("sprite")
-    tt.render.sprites[i].prefix = "decal_s06_jailed_boss_l" .. i
-    tt.render.sprites[i].name = "walk"
-    tt.render.sprites[i].anchor.y = 0.26373626373626374
+	tt.render.sprites[i] = E:clone_c("sprite")
+	tt.render.sprites[i].prefix = "decal_s06_jailed_boss_l" .. i
+	tt.render.sprites[i].name = "walk"
+	tt.render.sprites[i].anchor.y = 0.26373626373626374
 end
 
 tt.render.sprites[6].sort_y_offset = -10
 tt = E:register_t("soldier_gryphon_guard", "soldier_barrack_1")
-
 E:add_comps(tt, "ranged")
-
 tt.health.hp_max = 1
 tt.health.immune_to = DAMAGE_ALL_TYPES
 tt.health_bar = nil
@@ -7445,17 +7169,13 @@ tt.bullet.damage_min = 10
 tt.bullet.flight_time = fts(12)
 tt.bullet.reset_to_target_pos = true
 tt = E:register_t("soldier_gryphon_guard_upper", "soldier_gryphon_guard")
-
 E:add_comps(tt, "auras")
-
 tt.ranged.attacks[1].filter_fn = scripts.soldier_gryphon_guard.upper_ranged_filter_fn
 tt.auras.list[1] = E:clone_c("aura_attack")
 tt.auras.list[1].name = "aura_soldier_gryphon_guard_upper"
 tt.auras.list[1].cooldown = 0
 tt = E:register_t("soldier_gryphon_guard_lower", "soldier_gryphon_guard")
-
 E:add_comps(tt, "auras", "tween")
-
 tt.ranged.attacks[1].filter_fn = scripts.soldier_gryphon_guard.lower_ranged_filter_fn
 tt.auras.list[1] = E:clone_c("aura_attack")
 tt.auras.list[1].name = "aura_soldier_gryphon_guard_lower"
@@ -7476,9 +7196,7 @@ tt.hidden_max = 3
 tt.hidden_min = 1
 tt.idle_time_to_hide = 5
 tt = E:register_t("decal_gryphon", "decal_scripted")
-
 E:add_comps(tt, "attacks", "ui", "sound_events")
-
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].cooldown = fts(3)
 tt.attacks.list[1].bullet = "bullet_gryphon"
@@ -7504,8 +7222,8 @@ tt.ui.click_rect = r(-40, -106, 80, 100)
 tt.ui.can_select = false
 tt.ui.can_click = true
 tt.custom = {
-    left = {},
-    right = {}
+	left = {},
+	right = {}
 }
 tt.custom.left.initial_duration = 4.6
 tt.custom.left.default_duration = 4
@@ -7548,12 +7266,9 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_2(0.75, 0.75)}, {fts(4), vec_2(1.075, 1.075)}, {fts(7), vec_2(0.96, 0.96)},
-                          {fts(9), vec_2(1, 1)}}
+tt.tween.props[2].keys = {{0, vec_2(0.75, 0.75)}, {fts(4), vec_2(1.075, 1.075)}, {fts(7), vec_2(0.96, 0.96)}, {fts(9), vec_2(1, 1)}}
 tt = E:register_t("gryphon_controller")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.gryphon_controller.update
 tt = E:register_t("decal_obelix", "decal_delayed_click_play")
 tt.render.sprites[1].prefix = "decal_obelix"
@@ -7567,39 +7282,37 @@ tt.delayed_play.play_animation = "hammer"
 tt.delayed_play.required_clicks = 1
 
 for i = 1, 4 do
-    tt = E:register_t("decal_wisp_" .. i, "decal")
-    tt.render.sprites[1].name = string.format("decal_wisp_%i_l1", i)
-    tt.render.sprites[1].random_ts = 3
-    tt.render.sprites[2] = E:clone_c("sprite")
-    tt.render.sprites[2].name = string.format("decal_wisp_%i_l2", i)
-    tt.render.sprites[2].random_ts = 3
+	tt = E:register_t("decal_wisp_" .. i, "decal")
+	tt.render.sprites[1].name = string.format("decal_wisp_%i_l1", i)
+	tt.render.sprites[1].random_ts = 3
+	tt.render.sprites[2] = E:clone_c("sprite")
+	tt.render.sprites[2].name = string.format("decal_wisp_%i_l2", i)
+	tt.render.sprites[2].random_ts = 3
 
-    if i ~= 4 then
-        tt.render.sprites[3] = E:clone_c("sprite")
-        tt.render.sprites[3].name = string.format("decal_wisp_%i_l3", i)
-        tt.render.sprites[3].random_ts = 3
-    end
+	if i ~= 4 then
+		tt.render.sprites[3] = E:clone_c("sprite")
+		tt.render.sprites[3].name = string.format("decal_wisp_%i_l3", i)
+		tt.render.sprites[3].random_ts = 3
+	end
 
-    if i == 2 or i == 3 then
-        tt.render.sprites[3] = E:clone_c("sprite")
-        tt.render.sprites[3].name = string.format("decal_wisp_%i_l4", i)
-        tt.render.sprites[3].random_ts = 3
-    end
+	if i == 2 or i == 3 then
+		tt.render.sprites[3] = E:clone_c("sprite")
+		tt.render.sprites[3].name = string.format("decal_wisp_%i_l4", i)
+		tt.render.sprites[3].random_ts = 3
+	end
 end
 
 for i = 5, 10 do
-    tt = E:register_t("decal_wisp_" .. i, "decal_delayed_play")
-    tt.render.sprites[1].prefix = "decal_wisp_" .. i
-    tt.render.sprites[1].name = "play"
-    tt.delayed_play.min_delay = 3
-    tt.delayed_play.max_delay = 6
-    tt.delayed_play.idle_animation = nil
+	tt = E:register_t("decal_wisp_" .. i, "decal_delayed_play")
+	tt.render.sprites[1].prefix = "decal_wisp_" .. i
+	tt.render.sprites[1].name = "play"
+	tt.delayed_play.min_delay = 3
+	tt.delayed_play.max_delay = 6
+	tt.delayed_play.idle_animation = nil
 end
 
 tt = E:register_t("decal_s08_magic_bean", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.achievement_id = "BEANS"
 tt.main_script.update = scripts.decal_s08_magic_bean.update
 tt.ui.click_rect = r(-25, -25, 50, 50)
@@ -7608,17 +7321,15 @@ tt.reward_gold = 150
 tt.reward_fx = "fx_coin_jump"
 
 for i = 1, 5 do
-    tt.render.sprites[i] = E:clone_c("sprite")
-    tt.render.sprites[i].prefix = "decal_s08_magic_bean_l" .. i
-    tt.render.sprites[i].name = "step1"
-    tt.render.sprites[i].loop = false
-    tt.render.sprites[i].anchor.y = 0.1076923076923077
+	tt.render.sprites[i] = E:clone_c("sprite")
+	tt.render.sprites[i].prefix = "decal_s08_magic_bean_l" .. i
+	tt.render.sprites[i].name = "step1"
+	tt.render.sprites[i].loop = false
+	tt.render.sprites[i].anchor.y = 0.1076923076923077
 end
 
 tt = E:register_t("decal_s08_peekaboo", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.main_script.update = scripts.decal_s08_peakaboo.update
 tt.render.sprites[1].name = "out"
 tt.ui.click_rect = r(-30, -25, 60, 50)
@@ -7635,9 +7346,7 @@ tt = E:register_t("decal_s08_peekaboo_pork", "decal_s08_peekaboo")
 tt.render.sprites[1].prefix = "decal_s08_peekaboo_pork"
 tt.achievement_flag = {"PEEKABOO", 4}
 tt = E:register_t("decal_s08_hansel_gretel", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.main_script.update = scripts.decal_s08_hansel_gretel.update
 tt.ui.click_rect = r(-70, -60, 140, 120)
 tt.ui.can_select = false
@@ -7648,9 +7357,7 @@ tt.render.sprites[2].prefix = "decal_s08_hansel_gretel_door"
 tt.render.sprites[2].name = "close"
 tt.render.sprites[2].loop = false
 tt = E:register_t("decal_s08_witch", "decal_scripted")
-
 E:add_comps(tt, "ui", "motion")
-
 tt.render.sprites[1].prefix = "decal_s08_witch"
 tt.render.sprites[1].anchor.y = 0.07407407407407407
 tt.ui.click_rect = r(-30, -25, 60, 50)
@@ -7672,9 +7379,7 @@ tt.main_script.update = scripts.aura_waterfall_entrance.update
 tt.waterfall_nodes = nil
 tt.show_fx = "fx_waterfall_splash"
 tt = E:register_t("decal_s09_land_3", "decal_background")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "Stage09_0002"
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS
 tt.editor.game_mode = 1
@@ -7686,9 +7391,7 @@ tt.render.sprites[1].name = "Stage09_0003"
 tt = E:register_t("decal_s09_land_1", "decal_s09_land_3")
 tt.render.sprites[1].name = "Stage09_0004"
 tt = E:register_t("decal_s09_crystal_1", "decal_timed")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].prefix = "decal_s09_crystal_1"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.3941176470588235
@@ -7751,9 +7454,7 @@ tt = E:register_t("decal_s09_crystal_debris_mod", "decal_s09_crystal_debris")
 tt.render.sprites[3].sort_y_offset = 1
 tt.render.sprites[4].sort_y_offset = 1
 tt = E:register_t("decal_s09_crystal_serpent_back", "decal_tween")
-
 E:add_comps(tt, "sound_events")
-
 tt.render.sprites[1].name = "crystal_serpent_appear"
 tt.render.sprites[1].loop = false
 tt.tween.props[1].name = "offset"
@@ -7775,9 +7476,7 @@ tt.bullet.flight_time = fts(17)
 tt.bullet.particles_name = "ps_bullet_crystal_serpent_fly"
 tt.main_script.update = scripts.bullet_crystal_serpent.update
 tt = E:register_t("mod_crystal_serpent", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.main_script.update = scripts.mod_tower_block.update
 tt.modifier.hide_tower = false
 tt.modifier.duration = 7
@@ -7787,9 +7486,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].prefix = "crystal_serpent_block_tower"
 tt = E:register_t("ps_bullet_crystal_serpent_fly")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {255, 255, 0}
 tt.particle_system.emission_rate = 10
 tt.particle_system.emit_area_spread = vec_2(10, 10)
@@ -7801,9 +7498,7 @@ tt.particle_system.scales_x = {0.3, 1, 1.05}
 tt.particle_system.scales_y = {0.3, 1, 1.05}
 tt.particle_system.scale_same_aspect = true
 tt = E:register_t("ps_bullet_crystal_serpent_hit")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.alphas = {255, 255, 255, 0}
 tt.particle_system.emission_rate = 120
 tt.particle_system.emit_area_spread = vec_2(90, 60)
@@ -7831,15 +7526,12 @@ tt.delayed_play.min_delay = 1
 tt.delayed_play.max_delay = 3
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "play"
-
 tt = E:register_t("decal_faerie_dragon_freeze_enemy", "decal_freeze_enemy")
 tt.shader_args = {
-    tint_color = {0.9725490196078431, 0.6627450980392157, 0.9882352941176471, 1}
+	tint_color = {0.9725490196078431, 0.6627450980392157, 0.9882352941176471, 1}
 }
 tt = E:register_t("decal_s10_gnome", "decal_scripted")
-
 E:add_comps(tt, "ui")
-
 tt.ui.click_rect = r(-23, -19, 46, 38)
 tt.ui.can_select = false
 tt.render.sprites[1].prefix = "decal_s10_gnome"
@@ -7851,13 +7543,9 @@ tt.gnome_actions = {"guitar", "diamond", "sleep", "teleport", "flip"}
 tt = E:register_t("decal_s10_gnome_walking", "decal_s10_gnome")
 tt.walk_points = nil
 tt.walk_time = 1.5
-
 table.insert(tt.gnome_actions, "walk")
-
 tt = E:register_t("decal_faerie_crystal", "decal_scripted")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "fairy_crystals_0002"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].alpha = 0
@@ -7878,20 +7566,16 @@ tt.tween.props[2].keys = {{fts(0), 255}, {fts(10), 0}}
 tt.tween.props[2].sprite_id = 2
 tt.main_script.update = scripts.decal_faerie_crystal.update
 tt = E:register_t("faerie_trails")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.insert = scripts.faerie_trails.insert
 tt.main_script.update = scripts.faerie_trails.update
 tt.path_speeds = {
-    [0] = 1 * FPS,
-    2.5 * FPS
+	[0] = 1 * FPS,
+	2.5 * FPS
 }
 tt.path_speed_per_wave = nil
 tt = E:register_t("nav_faerie")
-
 E:add_comps(tt, "pos", "render", "nav_path", "motion", "main_script", "tween")
-
 tt.main_script.update = scripts.nav_faerie.update
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "fairy_energyBall_red_0016"
@@ -7908,9 +7592,7 @@ tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(10), vec_1(0.8)}, {fts(20), vec_1(
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt = E:register_t("simon_controller")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.simon_controller.update
 tt.initial_sequence_length = 4
 tt.reward_base = 25
@@ -7918,9 +7600,7 @@ tt.reward_inc = 15
 tt.achievement_id = "SIMON"
 tt.achievement_count = 9
 tt = E:register_t("simon_mushroom_1", "decal_tween")
-
 E:add_comps(tt, "ui", "sound_events")
-
 tt.ui.click_rect = r(-20, 10, 40, 30)
 tt.ui.can_select = false
 tt.render.sprites[1].name = "stage8_symon_fungus1_0001"
@@ -7953,9 +7633,7 @@ tt.render.sprites[2].name = "stage8_symon_fungus4_0002"
 tt.render.sprites[3].name = "stage8_symon_fungus4_0003"
 tt.sound_events.touch = "ElvesSimonBlue"
 tt = E:register_t("simon_gnome_mushrooom_glow", "decal_tween")
-
 E:add_comps(tt, "ui")
-
 tt.ui.can_select = false
 tt.ui.click_rect = r(-20, -20, 40, 50)
 tt.render.sprites[1].name = "stage8_symon_bigGlow"
@@ -7970,7 +7648,6 @@ tt.render.sprites[1].name = "simon_gnome_fx"
 tt = E:register_t("simon_gnome_sign", "fx")
 tt.render.sprites[1].name = "simon_gnome_sign"
 tt.render.sprites[1].offset = vec_2(30, 15)
-
 tt = E:register_t("decal_pixie", "decal_scripted")
 E:add_comps(tt, "idle_flip", "soldier", "unit")
 tt.idle_flip.animations = {"idle", "scratch"}
@@ -7985,7 +7662,6 @@ tt.attack_ts = 0
 tt.target_id = nil
 tt.attack = nil
 tt.attack_level = nil
-
 tt = E:register_t("decal_drow_queen_portal", "decal_scripted")
 E:add_comps(tt, "editor", "tween")
 tt.render.sprites[1].animated = false
@@ -8021,9 +7697,7 @@ tt = E:register_t("fx_drow_queen_portal", "fx")
 tt.render.sprites[1].name = "fx_drow_queen_portal"
 tt.render.sprites[1].anchor.y = 0.22
 tt = E:register_t("decal_s11_door_glow", "decal_tween")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "stage11_doorGlow"
 tt.render.sprites[1].alpha = 0
@@ -8038,12 +7712,10 @@ tt.tween.props[2].multiply = true
 tt.editor.tag = 1
 tt.editor.props = {{"editor.tag", PT_NUMBER}}
 tt.editor.overrides = {
-    ["render.sprites[1].alpha"] = 255
+	["render.sprites[1].alpha"] = 255
 }
 tt = E:register_t("decal_s11_zealot_rune", "decal_tween")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].alpha = 0
 tt.render.sprites[1].offset = vec_2(-40, 0)
@@ -8054,7 +7726,7 @@ tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
 tt.editor.tag = 1
 tt.editor.props = {{"editor.tag", PT_NUMBER}}
 tt.editor.overrides = {
-    ["render.sprites[1].alpha"] = 255
+	["render.sprites[1].alpha"] = 255
 }
 tt = E:register_t("decal_s11_mactans", "decal")
 tt.render.sprites[1].prefix = "mactans"
@@ -8067,15 +7739,14 @@ tt.netting_duration = 2.6
 tt = E:register_t("decal_mactans_thread", "decal")
 
 for i = 1, math.ceil(48) do
-    local s = E:clone_c("sprite")
-
-    s.name = i % 2 == 0 and "mactans_particles_0010" or "mactans_particles_0010"
-    s.animated = false
-    s.anchor.y = 0
-    s.offset.y = i * 16 + 60
-    s.flip_x = math.random() < 0.5
-    s.z = Z_OBJECTS_SKY
-    tt.render.sprites[i] = s
+	local s = E:clone_c("sprite")
+	s.name = i % 2 == 0 and "mactans_particles_0010" or "mactans_particles_0010"
+	s.animated = false
+	s.anchor.y = 0
+	s.offset.y = i * 16 + 60
+	s.flip_x = math.random() < 0.5
+	s.z = Z_OBJECTS_SKY
+	tt.render.sprites[i] = s
 end
 
 tt = E:register_t("decal_mactans_shadow", "decal_tween")
@@ -8107,13 +7778,10 @@ tt.render.sprites[1].animated = false
 tt.tween.random_ts = fts(80)
 tt.tween.remove = false
 tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, vec_2(0, 1)}, {fts(20), vec_2(0, 2)}, {fts(40), vec_2(0, 1)}, {fts(60), vec_2(0, 0)},
-                          {fts(80), vec_2(0, 1)}}
+tt.tween.props[1].keys = {{0, vec_2(0, 1)}, {fts(20), vec_2(0, 2)}, {fts(40), vec_2(0, 1)}, {fts(60), vec_2(0, 0)}, {fts(80), vec_2(0, 1)}}
 tt.tween.props[1].loop = true
 tt = E:register_t("decal_s12_lemur", "decal_scripted")
-
 E:add_comps(tt, "nav_path", "motion", "tween", "ui")
-
 tt.render.sprites[1].prefix = "decal_s12_lemur"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.13333333333333333
@@ -8131,9 +7799,7 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.main_script.update = scripts.decal_s12_lemur.update
 tt.ui.click_rect = r(-15, 0, 30, 30)
 tt = E:register_t("birds_formation_controller")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.birds_formation_controller.update
 tt.wait_time = {20, 60}
 tt.bird_template = "decal_bird_formation"
@@ -8142,9 +7808,7 @@ tt.tween.remove = true
 tt.tween.props[1].name = "offset"
 tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt = E:register_t("decal_metropolis_portal", "decal_scripted")
-
 E:add_comps(tt, "tween", "editor")
-
 tt.main_script.update = scripts.decal_metropolis_portal.update
 tt.render.sprites[1].prefix = "decal_metropolis_portal"
 tt.render.sprites[1].name = "start"
@@ -8168,14 +7832,14 @@ tt.tween.reverse = true
 tt.tween.remove = false
 
 for i = 1, 6 do
-    tt.tween.props[i] = E:clone_c("tween_prop")
-    tt.tween.props[i].keys = {{0, 0}, {0.5, 255}}
-    tt.tween.props[i].sprite_id = i
+	tt.tween.props[i] = E:clone_c("tween_prop")
+	tt.tween.props[i].keys = {{0, 0}, {0.5, 255}}
+	tt.tween.props[i].sprite_id = i
 end
 
 tt.editor.props = {{"editor.tag", PT_NUMBER}}
 tt.editor.overrides = {
-    ["render.sprites[1].name"] = "loop"
+	["render.sprites[1].name"] = "loop"
 }
 tt.detection_tags = {}
 tt.detection_pahts = nil
@@ -8203,9 +7867,7 @@ tt = E:register_t("fx_teleport_metropolis", "fx")
 tt.render.sprites[1].name = "fx_teleport_metropolis"
 tt.render.sprites[1].size_scales = {vec_1(0.83), vec_1(1), vec_1(1.5)}
 tt = E:register_t("decal_s13_relic_book", "decal_delayed_click_play")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].prefix = "decal_s13_relic_book"
 tt.ui.click_rect = r(-20, -30, 40, 30)
 tt.delayed_play.min_delay = 3
@@ -8225,9 +7887,7 @@ tt.click_play.achievement_flag = {"SORCERERS_APPRENTICE", 2}
 tt.click_play.play_once = true
 tt.click_play.clicked_sound = "ElvesAchievementSorcapprenticeBroom"
 tt = E:register_t("decal_s13_relic_hat", "decal_click_play")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].prefix = "decal_s13_relic_hat"
 tt.ui.click_rect = r(-20, -40, 40, 30)
 tt.tween.remove = false
@@ -8238,9 +7898,7 @@ tt.click_play.achievement_flag = {"SORCERERS_APPRENTICE", 4}
 tt.click_play.play_once = true
 tt.click_play.clicked_sound = "ElvesAchievementSorcapprenticeHat"
 tt = E:register_t("tower_black_baby_dragon", "tower")
-
 E:add_comps(tt, "attacks", "user_selection")
-
 tt.tower.type = "baby_black_dragon"
 tt.tower.can_be_mod = false
 tt.tower.can_hover = false
@@ -8254,9 +7912,7 @@ tt.attacks.list[1].price = 100
 tt.render = nil
 tt.user_selection.ignore_point = true
 tt = E:register_t("decal_black_baby_dragon", "decal_scripted")
-
 E:add_comps(tt, "motion", "attacks", "tween", "sound_events", "nav_path")
-
 tt.main_script.update = scripts.decal_black_baby_dragon.update
 tt.motion.max_speed = 10 * FPS
 tt.attacks.list[1] = E:clone_c("aura_attack")
@@ -8291,22 +7947,20 @@ tt.wakeup_cooldown_min = 5
 tt.wakeup_cooldown_max = 16
 tt.sleep_pos = nil
 tt.dragon_passes = {{
-    path_id = 8,
-    ranges = {{10, 75}, {125, 220}}
+	path_id = 8,
+	ranges = {{10, 75}, {125, 220}}
 }, {
-    path_id = 9,
-    ranges = {{80, 120}}
+	path_id = 9,
+	ranges = {{80, 120}}
 }, {
-    path_id = 10,
-    ranges = {{80, 140}}
+	path_id = 10,
+	ranges = {{80, 140}}
 }}
 tt.sound_events.fire_loop = "ElvesBlackBabyFirebreathLoop"
 tt.sound_events.fire_start = "ElvesBlackBabyFirebreathLoopStart"
 tt.sound_events.fire_stop = "ElvesBlackBabyFirebreathLoopEnd"
 tt = E:register_t("aura_black_baby_dragon", "aura")
-
 E:add_comps(tt, "render", "tween")
-
 tt.aura.duration = 5
 tt.aura.mod = "mod_black_baby_dragon"
 tt.aura.radius = 50
@@ -8338,9 +7992,7 @@ tt.dps.damage_every = 0.2
 tt.insert_damage = 150
 tt.main_script.insert = scripts.mod_black_baby_dragon.insert
 tt = E:register_t("ps_baby_black_dragon_flame")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 30
 tt.particle_system.emit_direction = -math.pi / 6
@@ -8388,11 +8040,8 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
-
 tt = RT("decal_s14_break_egg", "decal_scripted")
-
 AC(tt, "ui", "click_play", "tween")
-
 tt.render.sprites[1].prefix = "decal_s14_break_egg"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.38235294117647056
@@ -8404,9 +8053,7 @@ tt.tween.remove = false
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, vec_1(1)}, {fts(1), vec_1(1.2)}, {fts(6), vec_1(1)}}
 tt = RT("decal_s14_break_spider", "decal_scripted")
-
 AC(tt, "tween")
-
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].name = "decal_s14_break_spider"
 tt.tween.props[1].keys = {{0, 255}, {0.75, 255}, {1, 0}}
@@ -8414,9 +8061,7 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {{0, vec_2(0, 0)}, {2, vec_2(1, 1)}}
 tt = RT("decal_s15_mactans", "decal_scripted")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].prefix = "stage15_mactans_l1"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.09047619047619047
@@ -8424,9 +8069,7 @@ tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].prefix = "stage15_mactans_l2"
 tt.main_script.update = scripts.decal_s15_mactans.update
 tt = RT("decal_s15_malicia", "decal_scripted")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].prefix = "stage15_malicia"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.057692307692307696
@@ -8437,17 +8080,13 @@ tt.render.sprites[2].anchor = vec_2(0.64, 0.21666666666666667)
 tt.render.sprites[2].offset = vec_2(-2, 57)
 tt.main_script.update = scripts.decal_s15_malicia.update
 tt = RT("decal_s15_statue", "decal_scripted")
-
 AC(tt, "editor")
-
 tt.main_script.update = scripts.decal_s15_statue.update
 tt.render.sprites[1].prefix = "stage15_shield"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.20161290322580644
 tt = RT("decal_s15_crystal", "decal_tween")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "stage15_crystal"
 tt.render.sprites[1].animated = false
 tt.tween.remove = false
@@ -8460,9 +8099,9 @@ tt.render.sprites[1].name = "stage15_crystal_fx"
 tt = RT("fx_s15_crystal_transformation", "fx")
 
 for i = 1, 4 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].prefix = "stage15_crystal_l" .. i
-    tt.render.sprites[i].name = "explosion"
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "stage15_crystal_l" .. i
+	tt.render.sprites[i].name = "explosion"
 end
 
 tt = RT("fx_s15_white_circle", "decal_tween")
@@ -8476,32 +8115,27 @@ tt.tween.props[1].keys = {{fts(3), vec_1(0.3)}, {fts(6), vec_1(70)}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].keys = {{0, 255}, {1, 255}, {2, 0}}
 tt = RT("decal_s15_finished_gem", "decal")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "stage15_bossDecal_gem"
 tt.render.sprites[1].anchor.y = 0.22580645161290322
 tt.render.sprites[1].animated = false
 tt = RT("decal_s15_finished_veznan", "decal_delayed_play")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].prefix = "decal_s15_finished_veznan"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.1111111111111111
 tt.delayed_play.min_delay = 5
 tt.delayed_play.max_delay = 15
 tt = RT("decal_s15_finished_guard", "decal_delayed_sequence")
-
 AC(tt, "editor")
 
 for i = 1, 4 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].prefix = "decal_s15_finished_guard_layer" .. i
-    tt.render.sprites[i].name = "idle"
-    tt.render.sprites[i].anchor.y = 0.12195121951219512
-    tt.render.sprites[i].loop = i > 2
-    tt.render.sprites[i].hidden = i == 4
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "decal_s15_finished_guard_layer" .. i
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].anchor.y = 0.12195121951219512
+	tt.render.sprites[i].loop = i > 2
+	tt.render.sprites[i].hidden = i == 4
 end
 
 tt.delayed_sequence.animations = {"idle", "blink", "blink", "sleep"}
@@ -8511,14 +8145,12 @@ tt.delayed_sequence.random = nil
 tt = RT("decal_s15_finished_guard_flipped", "decal_s15_finished_guard")
 
 for i = 1, 4 do
-    tt.render.sprites[i].flip_x = true
-    tt.render.sprites[i].hidden = i == 3
+	tt.render.sprites[i].flip_x = true
+	tt.render.sprites[i].hidden = i == 3
 end
 
 tt = RT("taunts_s15_controller")
-
 AC(tt, "main_script", "taunts", "editor")
-
 tt.load_file = "level63_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.main_script.update = scripts.taunts_controller.update
@@ -8566,9 +8198,7 @@ tt.delayed_play.clicked_sound = "ElvesCrystalSkull"
 tt.ui.can_select = false
 tt.ui.click_rect = r(-13, -13, 28, 24)
 tt = RT("decal_s16_land_1", "decal_background")
-
 AC(tt, "tween")
-
 tt.render.sprites[1].name = "Stage16_0003"
 tt.render.sprites[1].z = Z_DECALS + 1
 tt.tween.remove = true
@@ -8578,9 +8208,7 @@ tt = RT("decal_s16_land_2", "decal_s16_land_1")
 tt.render.sprites[1].name = "Stage04_0002"
 tt.render.sprites[1].z = Z_DECALS - 1
 tt = RT("decal_s16_ground_archers_land", "decal_tween")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "groundArchers"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.2857142857142857
@@ -8589,18 +8217,14 @@ tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
 tt = RT("soldier_s16_ground_archer", "soldier_gryphon_guard_upper")
-
 AC(tt, "editor")
-
 tt.ranged.attacks[1].filter_fn = nil
 tt.render.sprites[1].prefix = "soldier_s16_ground_archer"
 tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].min_range = 30
 tt.render.sprites[1].z = Z_OBJECTS
 tt = RT("decal_s16_bush_holder", "decal_tween")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "stage16_bushHolders"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.2857142857142857
@@ -8608,9 +8232,7 @@ tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.26, 0}}
 tt = RT("decal_s16_bush_burner", "decal")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "stage16_bushGnollBurner"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.2777777777777778
@@ -8621,9 +8243,7 @@ tt = RT("fx_s16_bush_burner", "fx")
 tt.render.sprites[1].name = "fx_s16_bush_burner"
 tt.render.sprites[1].anchor.y = 0.3548387096774194
 tt = E:register_t("fx_s16_burner_explosion", "decal_timed")
-
 E:add_comps(tt, "editor")
-
 tt.timed.disabled = true
 tt.render.sprites[1].name = "fx_s16_burner_explosion"
 tt.render.sprites[1].loop = false
@@ -8632,16 +8252,13 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].anchor.y = 0.09740259740259741
 tt.editor.game_mode = 1
 tt.editor.tag = 1
-tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER},
-                   {"editor.tag", PT_NUMBER}}
+tt.editor.props = {{"render.sprites[1].r", PT_NUMBER, math.pi / 180}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
 tt.editor.overrides = {
-    ["render.sprites[1].hidden"] = false,
-    ["render.sprites[1].loop"] = true
+	["render.sprites[1].hidden"] = false,
+	["render.sprites[1].loop"] = true
 }
 tt = RT("gnoll_bush_spawner", "decal_scripted")
-
 AC(tt, "spawner", "editor")
-
 tt.render.sprites[1].name = "stage16_bushSpawner"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.2833333333333333
@@ -8655,9 +8272,7 @@ tt.spawn_once = nil
 tt.spawn_data = nil
 tt.editor.props = {{"spawner.name", PT_STRING}, {"spawner.pi", PT_NUMBER}}
 tt = RT("gnoll_bush", "decal_scripted")
-
 AC(tt, "nav_path", "motion", "main_script", "spawner", "unit")
-
 tt.render.sprites[1].prefix = "gnollBush"
 tt.render.sprites[1].anchor.y = 0.3548387096774194
 tt.render.sprites[1].name = "idle"
@@ -8668,9 +8283,9 @@ tt.spawner.entity = nil
 tt.spawner.count = 1
 tt.spawner.random_subpath = true
 tt.spawner.patch_props = {
-    enemy = {
-        gold = 0
-    }
+	enemy = {
+		gold = 0
+	}
 }
 tt.walk_nodes_range = {5, 10}
 tt.walk_wait = 1
@@ -8685,9 +8300,7 @@ tt = RT("decal_hr_worker_b", "decal")
 tt.render.sprites[1].name = "decal_hr_worker_b"
 tt.render.sprites[1].anchor.y = 0.20833333333333334
 tt = RT("malik_slave_controller", "decal_scripted")
-
 AC(tt, "editor")
-
 tt.fn_can_power = scripts.malik_slave_controller.fn_can_power
 tt.hero_spawn_pos = vec_2(736, 639)
 tt.main_script.update = scripts.malik_slave_controller.update
@@ -8696,9 +8309,9 @@ tt.thunder_rect = r(655, 595, 164, 56)
 tt.wait_time = fts(159)
 tt.achievement_id = "FREEDOM_FIGHTER"
 tt.walk_points = {
-    malik = {vec_2(973, 655), vec_2(808, 632), vec_2(748, 666)},
-    gnoll_left = {vec_2(935, 651), vec_2(700, 605)},
-    gnoll_right = {vec_2(1016, 673), vec_2(795, 631)}
+	malik = {vec_2(973, 655), vec_2(808, 632), vec_2(748, 666)},
+	gnoll_left = {vec_2(935, 651), vec_2(700, 605)},
+	gnoll_right = {vec_2(1016, 673), vec_2(795, 631)}
 }
 tt = RT("decal_gnoll_gnawer", "decal_scripted")
 AC(tt, "motion", "nav_grid", "motion", "tween")
@@ -8709,7 +8322,6 @@ tt.motion.max_speed = 2 * FPS
 tt.main_script.update = scripts.decal_walking.update
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
 tt = RT("decal_baby_malik_slave", "decal_scripted")
 AC(tt, "motion", "nav_grid", "motion")
 tt.render.sprites[1].anchor.y = 0.184
@@ -8718,7 +8330,6 @@ tt.render.sprites[1].name = "idle"
 tt.main_script.update = scripts.decal_walking.update
 tt.motion.max_speed = 2 * FPS
 tt.main_script.update = scripts.decal_walking.update
-
 tt = RT("decal_baby_malik_slave_banner", "decal_tween")
 tt.render.sprites[1].name = "malikAfro_sign"
 tt.render.sprites[1].animated = false
@@ -8728,24 +8339,19 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 100}, {fts(4), 255}, {fts(71), 255}, {fts(75), 0}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_1(0.75)}, {fts(4), vec_1(1.075)}, {fts(7), vec_1(0.9625)}, {fts(9), vec_1(1)},
-                          {fts(69), vec_1(1)}, {fts(71), vec_1(1.075)}, {fts(75), vec_1(0.75)}}
+tt.tween.props[2].keys = {{0, vec_1(0.75)}, {fts(4), vec_1(1.075)}, {fts(7), vec_1(0.9625)}, {fts(9), vec_1(1)}, {fts(69), vec_1(1)}, {fts(71), vec_1(1.075)}, {fts(75), vec_1(0.75)}}
 tt = RT("decal_baby_malik_slave_free", "decal")
 tt.render.sprites[1].name = "decal_baby_malik_free"
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = vec_2(0.33101851851851855, 0.27976190476190477)
 tt = RT("decal_s18_statue", "decal")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "stage18_statue"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.176056338028169
 tt = RT("decal_s18_roadrunner_bush", "decal_scripted")
-
 AC(tt, "editor", "ui")
-
 tt.render.sprites[1].name = "decal_s18_roadrunner_bush_shake"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor.y = 0.3
@@ -8759,9 +8365,7 @@ tt = RT("fx_roadruner_bush_explode", "fx")
 tt.render.sprites[1].name = "gnollBush_explode"
 tt.render.sprites[1].anchor.y = 0.3548387096774194
 tt = RT("decal_s18_roadrunner", "decal_tween")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "decal_s18_roadrunner_run"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].anchor.y = 0.125
@@ -8770,29 +8374,21 @@ tt.sound_events.insert = "ElvesRoadRunner"
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {2.2, vec_2(-369, 14)}}
 tt = RT("decal_s18_coyote", "decal")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].prefix = "decal_s18_coyote"
 tt.render.sprites[1].name = "pull"
 tt.render.sprites[1].anchor.y = 0.19230769230769232
 tt.pos = vec_2(138, 383)
 tt.sound_events.push = "BombExplosionSound"
 tt = RT("decal_s18_flag_head", "decal")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "decal_s18_flag_head"
 tt = RT("decal_s18_boss_head", "decal")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "stage_18_head"
 tt.render.sprites[1].animated = false
 tt = RT("taunts_s18_defeated_controller")
-
 AC(tt, "main_script", "taunts", "editor")
-
 tt.load_file = "level66_taunts"
 tt.main_script.insert = scripts.taunts_controller.insert
 tt.main_script.update = scripts.taunts_controller.update
@@ -8810,9 +8406,7 @@ tt.taunts.sets.right_head.format = "ELVES_ENEMY_DEATH_TAUNT_%04i"
 tt.taunts.sets.right_head.decal_name = "decal_s18_shoutbox"
 tt.taunts.sets.right_head.pos = vec_2(791, 680)
 tt = E:register_t("decal_s18_shoutbox", "decal_tween")
-
 E:add_comps(tt, "texts")
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "theBeheader_taunt"
 tt.render.sprites[1].z = Z_BULLETS
@@ -8841,9 +8435,7 @@ tt.tween.props[4] = table.deepclone(tt.tween.props[3])
 tt.tween.props[4].sprite_id = 2
 tt.tween.remove = true
 tt = RT("decal_s19_drizzt", "decal_scripted")
-
 AC(tt, "editor", "ui")
-
 tt.render.sprites[1].prefix = "decal_s19_drizzt"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = false
@@ -8853,7 +8445,7 @@ tt.spawn_cooldown = {10, 15}
 tt.sound_clicked = "ElvesDrizztGrowl"
 tt.sound_chase = "ElvesDrizztUnsheathe"
 tt.sound_chase_params = {
-    delay = fts(23)
+	delay = fts(23)
 }
 tt.ui.click_rect = r(90, -30, 40, 30)
 tt.ui.can_select = false
@@ -8903,9 +8495,7 @@ tt.delayed_play.min_delay = 3
 tt.delayed_play.max_delay = 8
 tt.delayed_play.idle_animation = nil
 tt = RT("lava_fireball_controller")
-
 AC(tt, "main_script")
-
 tt.main_script.update = scripts.lava_fireball_controller.update
 tt.bullet = "bomb_lava_fireball"
 tt.launch_fx = "fx_bomb_lava_fireball_launch"
@@ -8937,16 +8527,13 @@ tt.render.sprites[1].name = "fireball_explosion"
 tt.render.sprites[1].anchor.y = 0.15
 tt.render.sprites[1].z = Z_OBJECTS
 tt = RT("decal_stage81_burner", "decal")
-
 AC(tt, "editor")
-
 tt.render.sprites[1].name = "decal_s81_burner"
 tt = E:register_t("decal_endless_shoutbox", "decal_s18_shoutbox")
 tt.render.sprites[1].name = "hee-haw_taunt"
 tt.texts.list[1].color = {233, 189, 255}
 tt.texts.list[1].size = vec_2(180, 58)
 tt.texts.list[1].font_size = 20
-
 tt = E:register_t("decal_regson_heal_ball", "decal_scripted")
 E:add_comps(tt, "force_motion")
 tt.render.sprites[1].name = "regson_heal_ball_travel"
@@ -8964,15 +8551,12 @@ tt.force_motion.max_flight_height = 60
 tt.main_script.update = scripts.decal_regson_heal_ball.update
 tt.fx_spawn = "fx_regson_heal_ball_spawn"
 tt.fx_receive = "fx_regson_heal"
-
 tt = E:register_t("fx_regson_heal_ball_spawn", "fx")
 tt.render.sprites[1].name = "fx_regson_heal_ball_spawn"
 tt.render.sprites[1].anchor.y = 0.35
-
 tt = E:register_t("fx_regson_heal", "fx")
 tt.render.sprites[1].name = "fx_regson_heal"
 tt.render.sprites[1].sort_y_offset = -1
-
 tt = E:register_t("decal_alric_soul_ball", "decal_regson_heal_ball")
 tt.render.sprites[1].color = {255, 122, 0}
 tt.hp_factor = 0.1
@@ -8982,28 +8566,24 @@ tt.render.sprites[1].scale = vec_1(0.9)
 tt.render.sprites[1].alpha = 200
 tt.render.sprites[2].scale = vec_1(0.9)
 tt.side_effect = function(hero, store)
-    local cool_next = hero.melee.attacks[3].cooldown - (hero.melee.attacks[3].ts - store.tick_ts)
-    if cool_next > 0 then
-        hero.melee.attacks[3].ts = hero.melee.attacks[3].ts - cool_next * 0.1
-    end
+	local cool_next = hero.melee.attacks[3].cooldown - (hero.melee.attacks[3].ts - store.tick_ts)
+
+	if cool_next > 0 then
+		hero.melee.attacks[3].ts = hero.melee.attacks[3].ts - cool_next * 0.1
+	end
 end
 
 tt = E:register_t("fx_alric_soul_ball_spawn", "fx_regson_heal_ball_spawn")
 tt.render.sprites[1].color = {255, 122, 0}
 tt.render.sprites[1].scale = vec_1(0.9)
 tt.render.sprites[1].alpha = 200
-
 tt = E:register_t("fx_alric_receive_soul", "fx_regson_heal")
 tt.render.sprites[1].color = {255, 122, 0}
 tt.render.sprites[1].scale = vec_1(0.9)
 tt.render.sprites[1].alpha = 200
-
 -- kr5
-
 tt = E:register_t("ps_hero_hunter_walk_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "mist_run_trail_run"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9016,7 +8596,6 @@ tt.particle_system.emit_offsets = {vec_2(13, 12), vec_2(-13, 12)}
 tt.particle_system.z = Z_OBJECTS
 tt.particle_system.particle_lifetime = {fts(14), fts(14)}
 tt.emit_direction = d2r(90)
-
 tt = E:register_t("fx_hero_hunter_skill_heal_strike_hit", "fx")
 tt.render.sprites[1].name = "mistystep_hit_run"
 tt = E:register_t("fx_hero_hunter_ranged_attack", "fx")
@@ -9031,11 +8610,8 @@ tt = E:register_t("fx_hero_hunter_steal", "fx")
 tt.render.sprites[1].name = "duskbeast_coin_run"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
-
 tt = E:register_t("ps_hero_space_elf_basic_attack_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "hero_therien_ranged_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9044,19 +8620,14 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.anchor = vec_2(0.5, 0.5)
 tt.particle_system.emit_area_spread = vec_2(5, 5)
-
 tt = E:register_t("fx_hero_space_elf_ranged_hit", "fx")
 tt.render.sprites[1].name = "hero_therien_ranged_hit_idle"
-
 tt = E:register_t("fx_hero_space_elf_melee_hit", "fx")
 tt.render.sprites[1].name = "hero_therien_melee_hit_idle"
-
 tt = E:register_t("fx_hero_space_elf_astral_reflection_spawn", "fx")
 tt.render.sprites[1].name = "hero_therien_reflection_spawn_fx_idle"
-
 tt = E:register_t("fx_hero_space_elf_black_aegis_hit", "fx")
 tt.render.sprites[1].name = "hero_therien_black_aegis_hit"
-
 tt = E:register_t("decal_hero_space_elf_ultimate", "decal_timed")
 tt.render.sprites[1].name = "hero_therien_void_prison_floor_fx_idle"
 tt.render.sprites[1].z = Z_DECALS
@@ -9075,7 +8646,6 @@ tt.tween.disabled = false
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {1.5, 255}, {1.8, 0}}
 tt.tween.remove = true
-
 tt = E:register_t("hero_raelyn_command_orders_hit_fx", "fx")
 tt.render.sprites[1].name = "hero_raelyn_command_orders_hit_fx_Idle1_1"
 tt = E:register_t("hero_raelyn_ultimate_entity_spawn_mod_decal", "modifier")
@@ -9091,13 +8661,11 @@ tt.render.sprites[1].name = "hero_raelyn_onslaught_fx_idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].hide_after_runs = 1
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
-
 tt = E:register_t("fx_hero_venom_melee_attack_hit", "fx5")
 tt.render.sprites[1].name = "hero_venom_hit_fx_idle"
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt = E:register_t("fx_hero_venom_beast_lvl_up", "fx5")
 tt.render.sprites[1].name = "hero_venom_levelup_fx_idle"
-
 tt = E:register_t("decal_hero_venom_slimewalk", "decal_timed")
 tt.render.sprites[1].prefix = "hero_venom_run_particle"
 tt.render.sprites[1].animated = true
@@ -9105,10 +8673,8 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].fps = 15
 tt.timed.duration = fts(20)
-
 tt = E:register_t("decal_hero_venom_spike_b", "decal_hero_venom_spike_a")
 tt.render.sprites[1].prefix = "hero_venom_spike_b"
-
 tt = E:register_t("decal_hero_venom_death", "decal_scripted")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "hero_venom_death_decal"
@@ -9121,7 +8687,6 @@ tt.tween.disabled = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.tween.remove = false
-
 tt = E:register_t("ps_hero_witch_ranged_basic_trail")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "hero_witch_ranged_attack_particle"
@@ -9130,7 +8695,6 @@ tt.particle_system.loop = false
 tt.particle_system.emission_rate = 60
 tt.particle_system.particle_lifetime = {fts(5), fts(8)}
 tt.particle_system.emit_rotation_spread = math.pi * 0.5
-
 tt = E:register_t("ps_hero_witch_spark_1")
 E:add_comps(tt, "pos", "particle_system", "main_script")
 tt.particle_system.name = "hero_witch_walk_particle"
@@ -9149,7 +8713,6 @@ tt.particle_system.animation_fps = 15
 tt.particle_system.sort_y_offset = -40
 tt.main_script.update = scripts.ps_hero_mecha_smoke.update
 tt.emit_direction_sides = {2 * math.pi / 3, math.pi / 3}
-
 tt = E:register_t("ps_bullet_hero_witch_skill_polymorph")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "hero_witch_skill_1_particle_idle"
@@ -9165,15 +8728,12 @@ tt.particle_system.emit_offset = vec_2(0, 0)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.emit_offset_relative = vec_2(-15, 0)
-
 tt = E:register_t("fx_hero_witch_basic_ranged_hit", "fx")
 tt.render.sprites[1].name = "hero_witch_ranged_attack_hit"
 tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
-
 tt = E:register_t("fx_hero_witch_ultimate", "fx")
 tt.render.sprites[1].name = "hero_witch_ultimate_teleport_fx"
 tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
-
 tt = E:register_t("fx_hero_witch_skill_path_aoe_in", "fx")
 tt.render.sprites[1].name = "hero_witch_skill_4_potion_in_layer1_in"
 tt.render.sprites[1].z = Z_DECALS
@@ -9191,7 +8751,6 @@ tt = E:register_t("decal_hero_witch_ultimate", "decal_timed")
 tt.render.sprites[1].name = "hero_witch_ultimate_teleport_decal"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vec_1(KR5_SCALE_FACTOR)
-
 tt = E:register_t("tower_tricannon_bomb_4_trail")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "tricannon_tower_lvl4_particle"
@@ -9203,7 +8762,6 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {0.7, 0.85}
-
 tt = E:register_t("tower_tricannon_bomb_4_bombardment_trail")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "tricannon_tower_lvl4_particle"
@@ -9215,7 +8773,6 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {0.7, 0.85}
-
 tt = E:register_t("tower_tricannon_bomb_4_overheated_trail")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "tricannon_tower_lvl4_particle_overheat"
@@ -9226,106 +8783,79 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(3, 3)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {0.7, 0.85}
-
 tt = E:register_t("mod_endless_archer_insight", "mod_health_damage_factor_inc")
 -- package.loaded.soldier_enemies = nil
 -- require("soldier_enemies")
-
 tt = RT("cricet_random_eff_aura", "decal_scripted")
-
 -- AC(tt, "editor")
-
 tt.render.sprites[1].prefix = "cricet_random_eff"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.cricet_random_eff_aura.update
-
 tt.vis_flags = F_MOD
 tt.vis_bans = 0
 tt.trigger_range = 50
 tt.mod = "cricet_random_eff_mod"
-
 tt = RT("cricet_random_eff_mod", "decal_scripted")
-
 tt.render.sprites[1].prefix = "cricet_random_eff_mod"
 tt.render.sprites[1].name = "give"
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.cricet_random_eff_mod.insert
 tt.main_script.update = scripts.cricet_random_eff_mod.update
-
 tt.vis_flags = F_MOD
 tt.vis_bans = 0
 tt.range = 50
 tt.random_mods = {"mod_cricet_add_hp", "mod_cricet_protection", "mod_cricet_attack", "mod_cricet_faster"}
-
 tt = RT("mod_cricet_add_hp", "mod_shaman_heal")
-
 tt.main_script.insert = scripts.mod_cricet_add_hp.insert
 tt.main_script.update = scripts.mod_cricet_add_hp.update
-
 tt.hps.heal = 0.4
-
 tt = RT("mod_cricet_protection", "modifier")
-
 AC(tt, "render")
-
 tt.render.sprites[1].prefix = "criket_random_eff_mod_protection"
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_cricet_protection.insert
 tt.main_script.update = scripts.mod_cricet_protection.update
 tt.main_script.remove = scripts.mod_cricet_protection.remove
-
 tt.modifier.protection = 1.3
 tt.modifier.duration = -1
-
 tt = RT("mod_cricet_attack", "modifier")
-
 AC(tt, "render")
-
 tt.render.sprites[1].prefix = "criket_random_eff_mod_attack"
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_cricet_attack.insert
 tt.main_script.update = scripts.mod_cricet_attack.update
 tt.main_script.remove = scripts.mod_cricet_attack.remove
-
 tt.modifier.damage_factor = 1.5
 tt.modifier.duration = -1
-
 tt = RT("mod_cricet_faster", "modifier")
-
 AC(tt, "render")
-
 tt.render.sprites[1].prefix = "criket_random_eff_mod_faster"
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_cricet_faster.insert
 tt.main_script.update = scripts.mod_cricet_faster.update
 tt.main_script.remove = scripts.mod_cricet_faster.remove
-
 tt.modifier.speed_factor = 1.3
 tt.modifier.duration = -1
-
 tt = RT("endless_barrack_synergy_aura", "aura")
 tt.aura.mod = "mod_endless_barrack_synergy"
 tt.aura.radius = 180
 tt.aura.cycle_time = 1
 tt.main_script.insert = scripts.endless_barrack_synergy_aura.insert
 tt.main_script.update = scripts.endless_barrack_synergy_aura.update
-
 tt = RT("mod_endless_barrack_synergy", "modifier")
 tt.extra_damage = nil
 tt.modifier.duration = 4
 tt.main_script.insert = scripts.mod_endless_barrack_synergy.insert
 tt.main_script.update = scripts.mod_endless_barrack_synergy.update
 tt.main_script.remove = scripts.mod_endless_barrack_synergy.remove
-
 tt = RT("mod_endless_engineer_aftermath", "modifier")
 tt.main_script.insert = scripts.mod_endless_engineer_aftermath.insert
 tt.radius = 60
 tt.value = 20
 tt.main_script.update = nil
 tt.main_script.remove = nil
-
 tt = RT("aura_endless_engineer_aftermath_ray", "aura_tesla_overcharge")
 tt.aura.duration = fts(22)
 tt.aura.radius = 120
@@ -9336,7 +8866,6 @@ tt.aura.damage_type = DAMAGE_ELECTRICAL
 tt.aura.excluded_templates = {"enemy_spectral_knight"}
 tt.main_script.update = scripts.aura_endless_engineer_aftermath_ray.update
 tt.particles_name = "ps_tesla_overcharge"
-
 tt = E:register_t("endless_mage_thunder")
 E:add_comps(tt, "user_power", "pos", "main_script")
 tt.cooldown = 70
@@ -9392,7 +8921,6 @@ tt.thunders[2].range = 9999
 tt.thunders[2].targeting = "random"
 tt.vis_bans = bor(F_FRIEND)
 tt.vis_flags = bor(F_RANGED)
-
 tt = E:register_t("ps_bullet_tower_ray_sheep")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "channeler_tower_mutation_projectile_particle_idle"
@@ -9408,7 +8936,6 @@ tt.particle_system.emit_offset = vec_2(0, 0)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.emit_offset_relative = vec_2(-15, 0)
-
 tt = E:register_t("fx_tower_ray_hit_start", "fx")
 tt.render.sprites[1].name = "channeler_tower_crystal_union_fx_run"
 tt = E:register_t("fx_tower_ray_hit_source", "fx")
@@ -9426,9 +8953,7 @@ tt.render.sprites[1].name = "channeler_tower_mutation_fx_idle"
 tt = E:register_t("fx_tower_ray_lvl4_attack_sheep_hit_big", "fx")
 tt.render.sprites[1].name = "channeler_tower_mutation_fx_big_idle"
 tt = E:register_t("fx_tower_ray_lvl4_shock", "fx")
-
 E:add_comps(tt, "main_script")
-
 tt.render.sprites[1].prefix = "channeler_tower_lvl4_idle_shock_fx_"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = true
@@ -9436,7 +8961,6 @@ tt.render.sprites[1].draw_order = 3
 tt.render.sprites[1].z = Z_OBJECT
 tt.main_script.update = scripts.fx_tower_ray_lvl4_shock.update
 tt.timed.runs = 1e+99
-
 tt = E:register_t("moon_controller_s91", "moon_controller")
 tt.main_script.update = scripts.moon_controller_s91.update
 tt.transit_time = 5
@@ -9447,11 +8971,8 @@ tt.enemy_speed_factor = 1.2
 tt.enemy_cooldown_factor = 0.8
 tt.enemy_health_factor = 0.8
 tt.spawn_creep = "enemy_deviltide_shark_ghost"
-
 tt = E:register_t("ps_bullet_tower_sand")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "tower_sand_lvl4_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9461,9 +8982,7 @@ tt.particle_system.emit_area_spread = vec_2(10, 0)
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt = E:register_t("ps_bullet_tower_sand_skill_gold")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "tower_sand_lvl4_skill_1_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9473,9 +8992,7 @@ tt.particle_system.emit_area_spread = vec_2(10, 0)
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt = E:register_t("ps_aura_tower_sand_skill_big_blade")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "tower_sand_lvl4_skill_2_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9484,7 +9001,6 @@ tt.particle_system.animation_fps = 30
 tt.particle_system.emit_area_spread = vec_1(0)
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_BULLET_PARTICLES
-
 tt = E:register_t("fx_bullet_tower_sand_hit", "fx")
 tt.render.sprites[1].name = "tower_sand_basic_hit"
 tt = E:register_t("fx_bullet_tower_sand_skill_gold_hit", "fx")
@@ -9494,9 +9010,7 @@ tt.render.sprites[1].name = "tower_sand_lvl4_skill_1_coins_hit"
 tt = E:register_t("fx_aura_tower_sand_skill_big_blade", "fx")
 tt.render.sprites[1].name = "tower_sand_lvl4_skill_2_hit_FX_loop"
 tt = E:register_t("royal_archer_tower_lvl4_arrow_armor_breaker_trail_particle")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_idle_1"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9504,9 +9018,7 @@ tt.particle_system.emission_rate = 200
 tt.particle_system.animation_fps = 20
 tt.particle_system.track_rotation = true
 tt = E:register_t("ps_rapacious_hunter_eagle_royal_archers")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_attack_particle"
 tt.particle_system.animated = false
 tt.particle_system.loop = false
@@ -9528,26 +9040,19 @@ tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_eagle_hit_fx", "fx")
 tt.render.sprites[1].name = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_rapacious_hunter_hit_fx"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hide_after_runs = 1
-
 tt = E:register_t("defend_flag", "decal")
 tt.render.sprites[1].name = "defendFlag"
 tt.render.sprites[1].z = Z_BACKGROUND
 tt.render.sprites[1].animated = false
-
 tt = E:register_t("defend_flag_water", "defend_flag")
 tt.render.sprites[1].name = "defendFlag_water"
-
 tt = E:register_t("decal_street_lamp", "decal")
 AC(tt, "lights")
 tt.lights[1].radius = 70
-
 tt = E:register_t("decal_lamp", "decal_street_lamp")
 tt.lights[1].radius = 70
-
 tt = E:register_t("fx_tower_arcane_wizard_ray_hit_start", "fx")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "arcane_wizard_tower_ray_start_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
@@ -9558,9 +9063,7 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(18), 255}, {fts(25), 0}}
 tt.tween.remove = false
 tt = E:register_t("fx_tower_arcane_wizard_ray_hit", "fx")
-
 E:add_comps(tt)
-
 tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS + 1
@@ -9580,9 +9083,7 @@ tt.render.sprites[1].fps = 25
 tt.timed.duration = fts(17)
 tt.timed.runs = 1e+99
 tt = E:register_t("decal_tower_arcane_wizard_empowerment_preview", "decal_tween")
-
 E:add_comps(tt, "render", "tween")
-
 tt.range_factor = 1
 tt.render.sprites[1].name = "arcane_wizard_tower_empowerment_indicator"
 tt.render.sprites[1].animated = false
@@ -9591,11 +9092,8 @@ tt.render.sprites[1].offset.y = 5
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
 tt.tween.remove = false
-
 tt = E:register_t("ps_tower_rocket_gunners_sting_missiles_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "rocket_gunners_tower_sting_missiles_particles_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9607,7 +9105,6 @@ tt.particle_system.emit_offset = vec_2(0, 0)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {fts(9), fts(9)}
 tt.emit_offset_relative = vec_2(-15, 0)
-
 tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_floor", "fx")
 tt.render.sprites[1].name = "rocket_gunners_tower_hit_fx_floor_idle"
 tt.render.sprites[1].z = Z_DECALS
@@ -9630,9 +9127,7 @@ tt = E:register_t("fx_soldier_tower_rocket_gunners_land", "fx")
 tt.render.sprites[1].name = "rocket_gunners_tower_landing_fx_idle"
 tt.render.sprites[1].z = Z_DECALS
 tt = E:register_t("fx_bullet_soldier_tower_rocket_gunners_sting_missiles_smoke", "fx")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "rocket_gunners_tower_sting_missiles_floor_decal_smoke_idle"
 tt.render.sprites[1].loop = true
 tt.timed.duration = 1e+99
@@ -9640,7 +9135,6 @@ tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
 tt.tween.remove = true
-
 tt = E:register_t("decal_soldier_shadow", "decal_scripted")
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
@@ -9649,7 +9143,6 @@ tt.max_height = 50
 tt.shadow_shrink = 0.4
 tt.entity = nil
 tt.dissapear_time = 14
-
 tt = E:register_t("decal_soldier_tower_rocket_gunners_shadow", "decal_soldier_shadow")
 tt.render.sprites[1].name = "rocket_gunners_tower_gunner_shadow"
 tt.shadow_shrink = 0.25
@@ -9659,11 +9152,8 @@ tt.render.sprites[1].animated = false
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
 tt.tween.remove = true
-
 tt = E:register_t("ps_bullet_tower_flamespitter_skill_bomb")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "dwarven_flamespitter_tower_blazing_trail_projectile_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -9701,22 +9191,20 @@ tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_scorching_torches_part
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.timed.duration = fts(10)
-
 tt = RT("s72_rotten_spawner", "s15_rotten_spawner")
 AC(tt, "main_script", "editor")
 tt.main_script.update = scripts.s15_rotten_spawner.update
 tt.entity = "enemy_rotten_tree"
 tt.spawn_margin = {30, 60}
 tt.spawn_timers = {
-    {9, 0},
-    [10] = {15, 1},
-    [11] = {13.5, 1},
-    [12] = {10, 1},
-    [13] = {15, 2},
-    [14] = {15, 3},
-    [15] = {15, 4}
+	{9, 0},
+	[10] = {15, 1},
+	[11] = {13.5, 1},
+	[12] = {10, 1},
+	[13] = {15, 2},
+	[14] = {15, 3},
+	[15] = {15, 4}
 }
-
 tt = E:register_t("moon_controller_s72", "moon_controller")
 tt.main_script.update = scripts.moon_controller_s72.update
 tt.transit_time = 5
@@ -9729,21 +9217,19 @@ tt.enemy_hp_buff = 0.1
 tt.insert_hook = scripts.moon_controller_s72.insert_hook
 tt.insert_hook_remove = scripts.moon_controller_s72.insert_hook_remove
 tt.spawn = {
-    [7] = {"enemy_zombie"},
-    [4] = {"enemy_zombie"},
-    [6] = {"enemy_skeleton"},
-    [5] = {"enemy_ghoul"},
-    [8] = {"enemy_halloween_zombie"}
+	[7] = {"enemy_zombie"},
+	[4] = {"enemy_zombie"},
+	[6] = {"enemy_skeleton"},
+	[5] = {"enemy_ghoul"},
+	[8] = {"enemy_halloween_zombie"}
 }
 tt.spawn_count_function = function(store)
-    return 2 + (store.wave_group_number or 0) * 3
+	return 2 + (store.wave_group_number or 0) * 3
 end
 tt.spawn_gaps = 3
-
 tt = E:register_t("s72_init")
 AC(tt, "main_script")
 tt.main_script.insert = scripts.s72_init.insert
-
 tt = E:register_t("ps_bullet_tower_ballista_skill_bomb_trail_A")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "ballista_tower_junk_particle_projectile_1"
@@ -9753,7 +9239,6 @@ tt.particle_system.emission_rate = 15
 tt.particle_system.animation_fps = 30
 tt.particle_system.emit_area_spread = v(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
-
 tt = E:register_t("ps_bullet_tower_ballista_skill_bomb_trail_B")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "ballista_tower_junk_particle_projectile_2"
@@ -9763,7 +9248,6 @@ tt.particle_system.emission_rate = 10
 tt.particle_system.animation_fps = 30
 tt.particle_system.emit_area_spread = v(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
-
 tt = E:register_t("fx_tower_ballista_shot", "fx")
 tt.render.sprites[1].name = "ballista_tower_arrow_fx_idle"
 tt = E:register_t("fx_tower_ballista_final_shot", "fx")
@@ -9773,19 +9257,15 @@ tt.render.sprites[1].name = "ballista_tower_hit_2"
 tt = E:register_t("fx_bullet_tower_ballista_final_shot_hit", "fx")
 tt.render.sprites[1].name = "ballista_tower_special_hit_idle"
 tt = E:register_t("fx_bullet_tower_ballista_missed_arrow", "fx")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "ballista_tower_missed_arrow"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.timed.duration = 6
 tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
-
 tt = E:register_t("fx_bullet_tower_ballista_missed_arrow_dust", "fx")
 tt.render.sprites[1].name = "ballista_tower_missed_arrow_dust"
-
 tt = E:register_t("fx_bullet_tower_ballista_missed_arrow_decal", "fx")
 E:add_comps(tt, "tween")
 tt.render.sprites[1].name = "ballista_tower_missed_arrow_decal"
@@ -9795,20 +9275,16 @@ tt.timed.duration = 6
 tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
-
 tt = E:register_t("fx_bullet_tower_ballista_bomb_spawn", "fx")
 tt.render.sprites[1].name = "ballista_tower_bomb_fx_idle"
-
 tt = E:register_t("fx_bullet_tower_ballista_bomb_junk_floor", "fx")
 tt.render.sprites[1].name = "ballista_tower_junk_particle_floor"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS
 tt.timed.duration = fts(16)
 tt.timed.runs = 1e+99
-
 tt = E:register_t("fx_bullet_tower_ballista_bomb_explosion", "fx")
 tt.render.sprites[1].name = "ballista_tower_bomb_explotion_idle"
-
 tt = E:register_t("ps_bullet_tower_barrel")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "barrel_tower_projectile_particle"
@@ -9823,7 +9299,6 @@ tt.particle_system.emit_speed = {20, 20}
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.scale_var = {0.3, 0.5}
 tt.particle_system.alphas = {255, 255, 255, 0}
-
 tt = E:register_t("ps_bullet_tower_barrel_skill_barrel")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "barrel_tower_lvl4_bad_barrel_projectile_particle_idle"
@@ -9834,7 +9309,6 @@ tt.particle_system.animation_fps = 30
 tt.particle_system.emit_area_spread = vec_2(10, 0)
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_BULLET_PARTICLES
-
 tt = E:register_t("fx_bullet_tower_barrel", "fx")
 tt.render.sprites[1].name = "barrel_tower_projectile_hit_fx_idle"
 tt.render.sprites[1].z = Z_OBJECTS

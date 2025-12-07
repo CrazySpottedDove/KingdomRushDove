@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level06_data.lua
-
+-- chunkname: @./kr1/data/levels/level06_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -995,124 +994,36 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 4,
-			locked_towers = {}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 4,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_mage",
-				"tower_build_engineer",
-			}
-		}
-	},
-    unlock_towers = {"tower_arcane_wizard","tower_paladin"},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 4,
+		locked_towers = {}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 4,
+		locked_towers = {"tower_build_archer", "tower_build_mage", "tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_arcane_wizard", "tower_paladin"},
 	nav_mesh = {
-		{
-			2,
-			4,
-			3
-		},
-		{
-			7,
-			6,
-			1
-		},
-		{
-			4,
-			8,
-			nil,
-			1
-		},
-		{
-			5,
-			9,
-			3,
-			1
-		},
-		{
-			6,
-			9,
-			4,
-			2
-		},
-		{
-			7,
-			10,
-			5,
-			2
-		},
-		{
-			nil,
-			11,
-			6,
-			2
-		},
-		{
-			9,
-			15,
-			3,
-			3
-		},
-		{
-			10,
-			14,
-			8,
-			4
-		},
-		{
-			11,
-			12,
-			9,
-			6
-		},
-		{
-			7,
-			13,
-			10,
-			7
-		},
-		{
-			13,
-			nil,
-			14,
-			10
-		},
-		{
-			nil,
-			nil,
-			12,
-			11
-		},
-		{
-			12,
-			nil,
-			15,
-			9
-		},
-		{
-			14,
-			nil,
-			nil,
-			8
-		}
+		{2, 4, 3},
+		{7, 6, 1},
+		{4, 8, nil, 1},
+		{5, 9, 3, 1},
+		{6, 9, 4, 2},
+		{7, 10, 5, 2},
+		{nil, 11, 6, 2},
+		{9, 15, 3, 3},
+		{10, 14, 8, 4},
+		{11, 12, 9, 6},
+		{7, 13, 10, 7},
+		{13, nil, 14, 10},
+		{nil, nil, 12, 11},
+		{12, nil, 15, 9},
+		{14, nil, nil, 8}
 	},
-	required_sounds = {
-		"music_stage06"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_stages_grass",
-		"go_stage06",
-		"go_stage06_bg"
-	}
+	required_sounds = {"music_stage06"},
+	required_textures = {"go_enemies_grass", "go_stages_grass", "go_stage06", "go_stage06_bg"}
 }

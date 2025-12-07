@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level01_data.lua
-
+-- chunkname: @./kr1/data/levels/level01_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -235,98 +234,21 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_powers = {
-				true,
-				true
-			},
-			locked_towers = {
-				"tower_archer_2",
-				"tower_barrack_2",
-				"tower_engineer_2",
-				"tower_mage_2"
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 2,
-			locked_towers = {
-				"tower_archer_2",
-				"tower_barrack_2",
-				"tower_engineer_2",
-				"tower_mage_2"
-			}
-		},
-		{
-			locked_hero = true,
-			max_upgrade_level = 2,
-			locked_towers = {
-				"tower_barrack_2",
-				"tower_engineer_2",
-				"tower_build_archer",
-				"tower_build_mage"
-			}
-		}
-	},
-	nav_mesh = {
-		{
-			6,
-			nil,
-			nil,
-			8
-		},
-		{
-			nil,
-			7,
-			5
-		},
-		{
-			4,
-			8,
-			nil,
-			5
-		},
-		{
-			7,
-			8,
-			3,
-			5
-		},
-		{
-			2,
-			7,
-			4
-		},
-		{
-			4,
-			nil,
-			1,
-			8
-		},
-		{
-			2,
-			nil,
-			4,
-			5
-		},
-		{
-			4,
-			6,
-			nil,
-			3
-		}
-	},
-	required_sounds = {
-		"music_stage01"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_stages_grass",
-		"go_stage01",
-		"go_stage01_bg",
-		"gui_tutorial",
-        -- "go_hero_alleria"
-	}
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_powers = {true, true},
+		locked_towers = {"tower_archer_2", "tower_barrack_2", "tower_engineer_2", "tower_mage_2"}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 2,
+		locked_towers = {"tower_archer_2", "tower_barrack_2", "tower_engineer_2", "tower_mage_2"}
+	}, {
+		locked_hero = true,
+		max_upgrade_level = 2,
+		locked_towers = {"tower_barrack_2", "tower_engineer_2", "tower_build_archer", "tower_build_mage"}
+	}},
+	nav_mesh = {{6, nil, nil, 8}, {nil, 7, 5}, {4, 8, nil, 5}, {7, 8, 3, 5}, {2, 7, 4}, {4, nil, 1, 8}, {2, nil, 4, 5}, {4, 6, nil, 3}},
+	required_sounds = {"music_stage01"},
+	required_textures = {"go_enemies_grass", "go_stages_grass", "go_stage01", "go_stage01_bg", "gui_tutorial"}
+-- "go_hero_alleria"
 }

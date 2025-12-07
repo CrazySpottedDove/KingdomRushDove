@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage15_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage15_decos.lua
 local a = {
 	denas_decal_Idle = {
 		prefix = "denas_decal",
@@ -242,5 +241,4 @@ local a = {
 		from = 43
 	}
 }
-
 return a

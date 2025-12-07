@@ -1,7 +1,5 @@
-﻿-- chunkname: @./all/debug_tools.lua
-
+-- chunkname: @./all/debug_tools.lua
 local log = require("lib.klua.log"):new("debug_tools")
-
 log.level = log.DEBUG_LEVEL
 dd = {}
 
@@ -36,10 +34,8 @@ end
 function dd.ne(name)
 	local E = require("entity_db")
 	local e = E:create_entity(name)
-
 	e.nav_path.pi = game.dbg_active_pi
 	e.nav_path.spi = math.random(1, 3)
-
 	game.simulation:queue_insert_entity(e)
 end
 
@@ -80,7 +76,6 @@ end
 
 function dd.sshot()
 	local signal = require("hump.signal")
-
 	signal.emit("hide-gui")
 
 	for _, e in pairs(game.store.entities) do
@@ -125,9 +120,7 @@ function dd.victory()
 		level_mode = game.store.level_mode,
 		level_difficulty = game.store.level_difficulty
 	}
-
 	game.store.game_outcome = outcome
-
 	signal.emit("game-victory", game.store)
 	signal.emit("game-victory-after", game.store)
 end
@@ -141,12 +134,10 @@ DEBUG_NNI = 1
 
 function dd.nn(force_nni)
 	local signal = require("hump.signal")
-
 	ggd = require("data.game_gui_data")
 	eel = table.map(ggd.notifications, function(k, v)
 		return k
 	end)
-
 	table.sort(eel)
 
 	if game.game_gui.notiview then
@@ -158,14 +149,11 @@ function dd.nn(force_nni)
 	end
 
 	DEBUG_NNI = force_nni or DEBUG_NNI
-
 	local noti_name = eel[DEBUG_NNI]
-
 	log.debug("DEBUG_NNI:%s  %s", DEBUG_NNI, noti_name)
 
 	if noti_name then
 		signal.emit("wave-notification", "view", noti_name, true)
-
 		DEBUG_NNI = DEBUG_NNI + 1
 	else
 		DEBUG_NNI = 1
@@ -178,13 +166,11 @@ local aai = 1
 
 function dd.aa(force_aai)
 	local signal = require("hump.signal")
-
 	ad = require("data.achievements_data")
 	aai = force_aai or aai
 
 	if ad[aai] then
 		signal.emit("got-achievement", ad[aai].name)
-
 		aai = aai + 1
 	else
 		aai = 1
@@ -229,8 +215,7 @@ function dd.dump_flags(v)
 	local out = ""
 
 	for i = 31, 0, -1 do
-		local m = 2^i
-
+		local m = 2 ^ i
 		out = out .. (bit.band(m, v) ~= 0 and "1" or "0")
 		out = out .. (i % 4 == 0 and " " or "")
 	end
@@ -247,22 +232,12 @@ function dd.dump_flags(v)
 end
 
 function dd.build(template)
-	local templates = {
-		"tower_totem",
-		"tower_crossbow",
-		"tower_assassin",
-		"tower_templar",
-		"tower_dwaarp",
-		"tower_mech",
-		"tower_archmage",
-		"tower_necromancer"
-	}
+	local templates = {"tower_totem", "tower_crossbow", "tower_assassin", "tower_templar", "tower_dwaarp", "tower_mech", "tower_archmage", "tower_necromancer"}
 	local i = 1
 
 	for _, h in pairs(game.store.entities) do
 		if h.tower_holder then
 			local tn = template or templates[i]
-
 			i = i + 1
 
 			if i > #templates then
@@ -299,20 +274,15 @@ function dd.cat(filename)
 	end
 
 	local fs = f:read("*a")
-
 	f:close()
-
 	return fs
 end
 
 function dd.copy_file(src, dst)
 	local fin = io.open(src)
 	local c = fin:read("*all")
-
 	fin:close()
-
 	local fout = io.open(dst, "w")
-
 	fout:write(c)
 	fout:flush()
 	fout:close()
@@ -370,7 +340,6 @@ function dd.get_local(name, stack_offset)
 
 		if n == name then
 			print(v)
-
 			return v
 		end
 
@@ -410,7 +379,7 @@ function dd.wid(n)
 	local ai = director.active_item
 
 	if not ai then
-		return
+		return 
 	end
 
 	if ai.game_gui and ai.game_gui.window then
@@ -422,9 +391,7 @@ end
 
 function dd.help()
 	out = " \ndd.aa(force_id)  : show achievement (force_id is optional)\ndd.build(tpl)    : build all towers of template, or cycle from list\ndd.cat(filename) : returns a file\ndd.copy_file(s,d): copy file, passing through memory\ndd.d(table)      : return dump of table\ndd.dl(table)     : list entities list with id and template\ndd.dump_flags(v) : dumps wich flags match\ndd.e(id)         : return entity with id\ndd.ed(id,comp)   : return dump of entity with id, or component dump if specified\ndd.f(comp)       : filter and print entities that have specified component\ndd.fd(table)     : return full dump of table\ndd.hex(d,fr,to)  : returns hex dump string of d[fr..to]\ndd.trace(co)     : returns coroutine stack trace\ndd.hook_count(n) : dumps trace after n instructions (100.000.000 for finding infinite loops)\ndd.ft(template)  : return array of entities of template\ndd.ls(path)      : returns printed list of files in path (only for unix)\ndd.ne(name)      : create and insert new entity with template name\ndd.nn(force_id)  : show notification (force_id is optional)\ndd.se()          : return entity selected from the gui\ndd.sid()         : return id of entity selected from the gui\ndd.sk(string)    : send the key names, separated by space(eg: \"tab f q =\")\ndd.sshot()       : prepare the screen for a screenshot (hide hero, gui, holders, etc.)\ndd.wid(n)        : returns kui view with id in director.active_item\n-- debug.debug() utils\ndd.get_local(name) : returns local variable with name\n"
-
 	print(out)
-
 	return out
 end
 

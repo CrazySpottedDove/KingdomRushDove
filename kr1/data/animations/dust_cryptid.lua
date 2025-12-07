@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/dust_cryptid.lua
-
+-- chunkname: @./kr5/data/animations/dust_cryptid.lua
 local a = {
 	dust_cryptid_dust_fx_loop = {
 		prefix = "dust_cryptid_dust_fx",
@@ -37,5 +36,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

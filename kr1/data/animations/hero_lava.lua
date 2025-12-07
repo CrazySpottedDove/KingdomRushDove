@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_lava.lua
-
+-- chunkname: @./kr5/data/animations/hero_lava.lua
 local a = {
 	hero_lava_hero_idle = {
 		prefix = "hero_lava_hero",
@@ -152,5 +151,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

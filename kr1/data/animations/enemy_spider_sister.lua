@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_spider_sister.lua
-
+-- chunkname: @./kr5/data/animations/enemy_spider_sister.lua
 local a = {
 	spider_sister_fx_attack_1_projectile = {
 		prefix = "spider_sister_fx",
@@ -62,5 +61,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

@@ -1,31 +1,22 @@
-﻿-- chunkname: @./all/platform_services_http.lua
-
+-- chunkname: @./all/platform_services_http.lua
 local log = require("lib.klua.log"):new("platform_services_http")
-
 require("lib.klua.table")
 require("lib.klua.string")
-
 local signal = require("hump.signal")
 local json = require("json")
 local PSU = require("platform_services_utils")
-
 require("constants")
 require("version")
-
 local http = {}
-
 http.can_be_paused = true
 http.update_interval = 1
 http.SRV_ID = 80
 http.SRV_DISPLAY_NAME = "Http client"
-
 local proxy, ffi
 
 if KR_PLATFORM == "ios" or KR_PLATFORM == "mac" then
 	ffi = require("ffi")
-
 	ffi.cdef("bool khttps_init_service(void);\nint  khttps_get_request_status(int rid);\nvoid khttps_delete_request(int rid);\nint  khttps_create_request_https(const char* method, const char* url, const char* headers);\nvoid khttps_delete_https_response(int rid);\nint  khttps_get_https_response_code(int rid);\nconst char* khttps_get_https_response_headers(int rid);\nconst char* khttps_get_https_response_data(int rid, unsigned long* len);\n")
-
 	proxy = {}
 
 	if KR_PLATFORM == "ios" then
@@ -44,7 +35,6 @@ if KR_PLATFORM == "ios" or KR_PLATFORM == "mac" then
 		end
 
 		local result = proxy.C.khttps_create_request_https(method, url, headers)
-
 		return result
 	end
 
@@ -70,7 +60,6 @@ if KR_PLATFORM == "ios" or KR_PLATFORM == "mac" then
 		end
 
 		local str = ffi.string(proxy.C.khttps_get_https_response_headers(rid))
-
 		return str
 	end
 
@@ -94,7 +83,6 @@ if KR_PLATFORM == "ios" or KR_PLATFORM == "mac" then
 	function proxy.get_request_status(rid)
 		if http.inited then
 			local result = proxy.C.khttps_get_request_status(rid)
-
 			return result
 		else
 			return -1
@@ -111,7 +99,6 @@ function http:init(name, params)
 		if KR_PLATFORM == "android" then
 			if not require("jni") then
 				log.error("platform_services_http requires jni.lua. not initialized")
-
 				return nil
 			end
 		elseif KR_PLATFORM == "mac" then
@@ -119,7 +106,6 @@ function http:init(name, params)
 
 			if not self.lib then
 				log.error("Error loading khttps library")
-
 				return false
 			end
 
@@ -131,7 +117,6 @@ function http:init(name, params)
 
 			if result ~= 1 then
 				log.error("platform_services_http init failed")
-
 				return nil
 			end
 		end
@@ -145,7 +130,7 @@ end
 
 function http:shutdown(name)
 	if self.inited then
-		-- block empty
+	-- block empty
 	end
 
 	self.inited = nil
@@ -158,15 +143,13 @@ end
 
 function http:get_request_status(rid)
 	local result = proxy.get_request_status(rid)
-
 	log.paranoid("get_request_status (%s) result: %s", rid, result)
-
 	return result
 end
 
 function http:cancel_request(rid)
 	if not rid then
-		return
+		return 
 	end
 
 	self.prq:remove(rid)
@@ -180,7 +163,6 @@ function http:string_to_header(str)
 
 	for _, l in pairs(lines) do
 		local k, v = unpack(string.split(l, ":"))
-
 		t[k] = v
 	end
 
@@ -208,13 +190,10 @@ function http:parse_json(data)
 end
 
 function http:date_to_time(date)
-	local m = {
-		string.match(date, "(%d%d%d%d)%-(%d%d)%-(%d%d)T?(%d?%d?):?(%d?%d?)")
-	}
+	local m = {string.match(date, "(%d%d%d%d)%-(%d%d)%-(%d%d)T?(%d?%d?):?(%d?%d?)")}
 
 	if not m or #m < 3 then
 		log.error("invalid input date:%s. fallback to current date", date)
-
 		return os.time()
 	end
 
@@ -248,7 +227,6 @@ function http:date_to_time(date)
 	end
 
 	o = o or os.time()
-
 	return o
 end
 
@@ -259,11 +237,10 @@ end
 function http:get(url, header, callback, timeout)
 	local function cb_get(status, req)
 		if not self.prq:contains(req.id) then
-			return
+			return 
 		end
 
 		log.debug("cb_get(status:%s, req.id:%s)", status, req.id)
-
 		local success = status == 0
 		local rid, code, header_out, data
 
@@ -281,10 +258,8 @@ function http:get(url, header, callback, timeout)
 
 	local header_str = self:header_to_string(header)
 	local rid = proxy.create_request_https(self.SRV_ID, "GET", url, header_str)
-
 	self.prq:add(rid, "http_get:" .. url, cb_get, timeout)
 	log.debug("http get:%s, rid:%s, header:%s", url, rid, header_str)
-
 	return rid
 end
 

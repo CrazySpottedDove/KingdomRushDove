@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage_6_modes.lua
-
+-- chunkname: @./kr5/data/animations/stage_6_modes.lua
 local a = {
 	stage_6_poolparty_deco_weapons = {
 		prefix = "stage_6_poolparty_deco_weapons",
@@ -98,5 +97,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

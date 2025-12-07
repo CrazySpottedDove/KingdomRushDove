@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/mad_tinkerer.lua
-
+-- chunkname: @./kr5/data/animations/mad_tinkerer.lua
 local a = {
 	mad_tinkerer_idle = {
 		prefix = "mad_tinkerer_creep",
@@ -92,5 +91,4 @@ local a = {
 		from = 52
 	}
 }
-
 return a

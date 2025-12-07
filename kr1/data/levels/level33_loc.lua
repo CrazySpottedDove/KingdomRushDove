@@ -1,5 +1,4 @@
-﻿-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level07_loc.lua
-
+-- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/data/levels/level07_loc.lua
 return {
 	holders = {
 		{
@@ -250,47 +249,40 @@ return {
 			}
 		}
 	},
-	entrances = {
-		{
-			len = 310.0086276829442,
-			r = 2.8188582758368677,
-			pos = {
-				x = 34,
-				y = 477
-			}
-		},
-		{
-			len = 310.00650022781343,
-			r = 1.3956977461799307,
-			pos = {
-				x = 639,
-				y = 731
-			}
-		},
-		{
-			len = 310.0062901739414,
-			r = -2.8892030128702206,
-			pos = {
-				x = 40,
-				y = 261
-			}
-		},
-		{
-			len = 310.01656257995586,
-			r = 0.056914681972192405,
-			pos = {
-				x = 987,
-				y = 434
-			}
+	entrances = {{
+		len = 310.0086276829442,
+		r = 2.8188582758368677,
+		pos = {
+			x = 34,
+			y = 477
 		}
-	},
-	exits = {
-		{
-			id = "defend_1",
-			pos = {
-				x = 528,
-				y = 85
-			}
+	}, {
+		len = 310.00650022781343,
+		r = 1.3956977461799307,
+		pos = {
+			x = 639,
+			y = 731
 		}
-	}
+	}, {
+		len = 310.0062901739414,
+		r = -2.8892030128702206,
+		pos = {
+			x = 40,
+			y = 261
+		}
+	}, {
+		len = 310.01656257995586,
+		r = 0.056914681972192405,
+		pos = {
+			x = 987,
+			y = 434
+		}
+	}},
+	exits = {{
+		id = "defend_1",
+		pos = {
+			x = 528,
+			y = 85
+		}
+	}}
 }

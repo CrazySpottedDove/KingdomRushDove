@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hog_invader.lua
-
+-- chunkname: @./kr5/data/animations/hog_invader.lua
 local a = {
 	hog_invader_raise = {
 		prefix = "hog_invader",
@@ -37,5 +36,4 @@ local a = {
 		from = 86
 	}
 }
-
 return a

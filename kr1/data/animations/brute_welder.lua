@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/brute_welder.lua
-
+-- chunkname: @./kr5/data/animations/brute_welder.lua
 local a = {
 	brute_welder_creep_idle = {
 		prefix = "brute_welder_creep",
@@ -57,5 +56,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

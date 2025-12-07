@@ -1,714 +1,234 @@
 return {
 	tower_preview_tricannon = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			170,
-			270
-		},
-		trim = {
-			13,
-			57,
-			18,
-			121
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1282,
-			382,
-			139,
-			92
-		},
+		size = {170, 270},
+		trim = {13, 57, 18, 121},
+		a_size = {2048, 2048},
+		f_quad = {1282, 382, 139, 92},
 		alias = {}
 	},
 	tricannon_tower_build = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			173,
-			139
-		},
-		trim = {
-			14,
-			14,
-			37,
-			54
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			593,
-			122,
-			71
-		},
+		size = {173, 139},
+		trim = {14, 14, 37, 54},
+		a_size = {2048, 2048},
+		f_quad = {467, 593, 122, 71},
 		alias = {}
 	},
 	tricannon_tower_fissure_decal = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			97,
-			77
-		},
-		trim = {
-			0,
-			0,
-			0,
-			1
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1180,
-			97,
-			76
-		},
+		size = {97, 77},
+		trim = {0, 0, 0, 1},
+		a_size = {2048, 2048},
+		f_quad = {352, 1180, 97, 76},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0001 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			2,
-			2,
-			2,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1835,
-			593,
-			71,
-			56
-		},
+		size = {75, 60},
+		trim = {2, 2, 2, 2},
+		a_size = {2048, 2048},
+		f_quad = {1835, 593, 71, 56},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			2,
-			2,
-			2,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1909,
-			593,
-			71,
-			56
-		},
+		size = {75, 60},
+		trim = {2, 2, 2, 2},
+		a_size = {2048, 2048},
+		f_quad = {1909, 593, 71, 56},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0003 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			0,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			848,
-			593,
-			74,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 0, 2},
+		a_size = {2048, 2048},
+		f_quad = {848, 593, 74, 58},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0004 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1002,
-			593,
-			73,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 1, 2},
+		a_size = {2048, 2048},
+		f_quad = {1002, 593, 73, 58},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0005 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1078,
-			593,
-			73,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 1, 2},
+		a_size = {2048, 2048},
+		f_quad = {1078, 593, 73, 58},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0006 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1154,
-			593,
-			73,
-			58
-		},
+		size = {75, 60},
+		trim = {1, 0, 1, 2},
+		a_size = {2048, 2048},
+		f_quad = {1154, 593, 73, 58},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0007 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			0,
-			0,
-			1,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			925,
-			593,
-			74,
-			58
-		},
+		size = {75, 60},
+		trim = {0, 0, 1, 2},
+		a_size = {2048, 2048},
+		f_quad = {925, 593, 74, 58},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0008 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			1,
-			3,
-			0,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1532,
-			593,
-			74,
-			55
-		},
+		size = {75, 60},
+		trim = {1, 3, 0, 2},
+		a_size = {2048, 2048},
+		f_quad = {1532, 593, 74, 55},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0009 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			0,
-			2,
-			1,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1455,
-			593,
-			74,
-			56
-		},
+		size = {75, 60},
+		trim = {0, 2, 1, 2},
+		a_size = {2048, 2048},
+		f_quad = {1455, 593, 74, 56},
 		alias = {}
 	},
 	tricannon_tower_fissure_hit_0010 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			75,
-			60
-		},
-		trim = {
-			0,
-			0,
-			0,
-			2
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1931,
-			75,
-			58
-		},
+		size = {75, 60},
+		trim = {0, 0, 0, 2},
+		a_size = {2048, 2048},
+		f_quad = {352, 1931, 75, 58},
 		alias = {}
 	},
 	tricannon_tower_lvl4_bomb = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			60,
-			48
-		},
-		trim = {
-			14,
-			13,
-			15,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1188,
-			667,
-			31,
-			21
-		},
+		size = {60, 48},
+		trim = {14, 13, 15, 14},
+		a_size = {2048, 2048},
+		f_quad = {1188, 667, 31, 21},
 		alias = {}
 	},
 	tricannon_tower_lvl4_bomb_overheat = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			60,
-			48
-		},
-		trim = {
-			14,
-			13,
-			15,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1222,
-			667,
-			31,
-			21
-		},
+		size = {60, 48},
+		trim = {14, 13, 15, 14},
+		a_size = {2048, 2048},
+		f_quad = {1222, 667, 31, 21},
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0001 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			14,
-			13,
-			14,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			2026,
-			20,
-			19
-		},
+		size = {48, 48},
+		trim = {14, 13, 14, 16},
+		a_size = {2048, 2048},
+		f_quad = {559, 2026, 20, 19},
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			15,
-			14,
-			15,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2024,
-			702,
-			18,
-			17
-		},
+		size = {48, 48},
+		trim = {15, 14, 15, 17},
+		a_size = {2048, 2048},
+		f_quad = {2024, 702, 18, 17},
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0003 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			16,
-			16,
-			17,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			827,
-			650,
-			15,
-			13
-		},
+		size = {48, 48},
+		trim = {16, 16, 17, 19},
+		a_size = {2048, 2048},
+		f_quad = {827, 650, 15, 13},
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0004 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			17,
-			17,
-			19,
-			19
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1471,
-			260,
-			12,
-			12
-		},
+		size = {48, 48},
+		trim = {17, 17, 19, 19},
+		a_size = {2048, 2048},
+		f_quad = {1471, 260, 12, 12},
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0005 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			18,
-			18,
-			19,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1109,
-			685,
-			11,
-			10
-		},
+		size = {48, 48},
+		trim = {18, 18, 19, 20},
+		a_size = {2048, 2048},
+		f_quad = {1109, 685, 11, 10},
 		alias = {}
 	},
 	tricannon_tower_lvl4_particle_0006 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			0,
-			0,
-			48,
-			48
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			97,
-			1994,
-			48,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0015"
-		}
+		size = {48, 48},
+		trim = {0, 0, 48, 48},
+		a_size = {2048, 2048},
+		f_quad = {97, 1994, 48, 48},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0015"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0001 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			15,
-			17,
-			14,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			186,
-			1652,
-			19,
-			17
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0002"
-		}
+		size = {48, 48},
+		trim = {15, 17, 14, 14},
+		a_size = {2048, 2048},
+		f_quad = {186, 1652, 19, 17},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0002"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0003 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			15,
-			15,
-			14,
-			14
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1934,
-			131,
-			19,
-			19
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0004"
-		}
+		size = {48, 48},
+		trim = {15, 15, 14, 14},
+		a_size = {2048, 2048},
+		f_quad = {1934, 131, 19, 19},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0004"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0005 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			15,
-			16,
-			15,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2024,
-			722,
-			18,
-			17
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0006"
-		}
+		size = {48, 48},
+		trim = {15, 16, 15, 15},
+		a_size = {2048, 2048},
+		f_quad = {2024, 722, 18, 17},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0006"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0007 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			17,
-			17,
-			16,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1926,
-			259,
-			15,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0008"
-		}
+		size = {48, 48},
+		trim = {17, 17, 16, 16},
+		a_size = {2048, 2048},
+		f_quad = {1926, 259, 15, 15},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0008"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0009 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			18,
-			18,
-			17,
-			16
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1740,
-			650,
-			13,
-			14
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0010"
-		}
+		size = {48, 48},
+		trim = {18, 18, 17, 16},
+		a_size = {2048, 2048},
+		f_quad = {1740, 650, 13, 14},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0010"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0011 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			19,
-			19,
-			18,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2031,
-			251,
-			11,
-			11
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0012"
-		}
+		size = {48, 48},
+		trim = {19, 19, 18, 18},
+		a_size = {2048, 2048},
+		f_quad = {2031, 251, 11, 11},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0012"}
 	},
 	tricannon_tower_lvl4_particle_overheat_0013 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			48,
-			48
-		},
-		trim = {
-			19,
-			19,
-			19,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			864,
-			686,
-			10,
-			11
-		},
-		alias = {
-			"tricannon_tower_lvl4_particle_overheat_0014"
-		}
+		size = {48, 48},
+		trim = {19, 19, 19, 18},
+		a_size = {2048, 2048},
+		f_quad = {864, 686, 10, 11},
+		alias = {"tricannon_tower_lvl4_particle_overheat_0014"}
 	},
 	tricannon_tower_lvl4_tower_layer10_0001 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			0,
-			0,
-			210,
-			344
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			5,
-			210,
-			344
-		},
+		size = {210, 344},
+		trim = {0, 0, 210, 344},
+		a_size = {2048, 2048},
+		f_quad = {5, 5, 210, 344},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer10_0002",
 			"tricannon_tower_lvl4_tower_layer10_0003",
@@ -1553,26 +1073,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer10_0213 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			56,
-			82,
-			50,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1633,
-			489,
-			104,
-			92
-		},
+		size = {210, 344},
+		trim = {56, 82, 50, 170},
+		a_size = {2048, 2048},
+		f_quad = {1633, 489, 104, 92},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer10_0214",
 			"tricannon_tower_lvl4_tower_layer10_0215",
@@ -1658,26 +1162,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer1_0001 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			22,
-			65,
-			29,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1514,
-			5,
-			159,
-			122
-		},
+		size = {210, 344},
+		trim = {22, 65, 29, 157},
+		a_size = {2048, 2048},
+		f_quad = {1514, 5, 159, 122},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer1_0202",
 			"tricannon_tower_lvl4_tower_layer1_0203",
@@ -1704,26 +1192,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer1_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			22,
-			133,
-			58,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			715,
-			593,
-			130,
-			54
-		},
+		size = {210, 344},
+		trim = {22, 133, 58, 157},
+		a_size = {2048, 2048},
+		f_quad = {715, 593, 130, 54},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer1_0003",
 			"tricannon_tower_lvl4_tower_layer1_0004",
@@ -1996,26 +1468,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			80,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1016,
-			382,
-			130,
-			99
-		},
+		size = {210, 344},
+		trim = {29, 80, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {1016, 382, 130, 99},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0003",
 			"tricannon_tower_lvl4_tower_layer2_0004",
@@ -2128,116 +1584,34 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0023 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			80,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1149,
-			382,
-			130,
-			99
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0024",
-			"tricannon_tower_lvl4_tower_layer2_0094",
-			"tricannon_tower_lvl4_tower_layer2_0095",
-			"tricannon_tower_lvl4_tower_layer2_0234",
-			"tricannon_tower_lvl4_tower_layer2_0235"
-		}
+		size = {210, 344},
+		trim = {29, 80, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {1149, 382, 130, 99},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0024", "tricannon_tower_lvl4_tower_layer2_0094", "tricannon_tower_lvl4_tower_layer2_0095", "tricannon_tower_lvl4_tower_layer2_0234", "tricannon_tower_lvl4_tower_layer2_0235"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0025 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			80,
-			51,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1896,
-			277,
-			130,
-			100
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0026",
-			"tricannon_tower_lvl4_tower_layer2_0096",
-			"tricannon_tower_lvl4_tower_layer2_0097",
-			"tricannon_tower_lvl4_tower_layer2_0236",
-			"tricannon_tower_lvl4_tower_layer2_0237"
-		}
+		size = {210, 344},
+		trim = {29, 80, 51, 164},
+		a_size = {2048, 2048},
+		f_quad = {1896, 277, 130, 100},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0026", "tricannon_tower_lvl4_tower_layer2_0096", "tricannon_tower_lvl4_tower_layer2_0097", "tricannon_tower_lvl4_tower_layer2_0236", "tricannon_tower_lvl4_tower_layer2_0237"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0027 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			80,
-			51,
-			163
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1364,
-			277,
-			130,
-			101
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0028",
-			"tricannon_tower_lvl4_tower_layer2_0098",
-			"tricannon_tower_lvl4_tower_layer2_0099",
-			"tricannon_tower_lvl4_tower_layer2_0238",
-			"tricannon_tower_lvl4_tower_layer2_0239"
-		}
+		size = {210, 344},
+		trim = {29, 80, 51, 163},
+		a_size = {2048, 2048},
+		f_quad = {1364, 277, 130, 101},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0028", "tricannon_tower_lvl4_tower_layer2_0098", "tricannon_tower_lvl4_tower_layer2_0099", "tricannon_tower_lvl4_tower_layer2_0238", "tricannon_tower_lvl4_tower_layer2_0239"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0029 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			80,
-			51,
-			163
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1497,
-			277,
-			130,
-			101
-		},
+		size = {210, 344},
+		trim = {29, 80, 51, 163},
+		a_size = {2048, 2048},
+		f_quad = {1497, 277, 130, 101},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0030",
 			"tricannon_tower_lvl4_tower_layer2_0033",
@@ -2274,436 +1648,130 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0031 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			80,
-			51,
-			163
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1630,
-			277,
-			130,
-			101
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0032",
-			"tricannon_tower_lvl4_tower_layer2_0102",
-			"tricannon_tower_lvl4_tower_layer2_0242",
-			"tricannon_tower_lvl4_tower_layer2_0243"
-		}
+		size = {210, 344},
+		trim = {29, 80, 51, 163},
+		a_size = {2048, 2048},
+		f_quad = {1630, 277, 130, 101},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0032", "tricannon_tower_lvl4_tower_layer2_0102", "tricannon_tower_lvl4_tower_layer2_0242", "tricannon_tower_lvl4_tower_layer2_0243"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			84,
-			55,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			994,
-			489,
-			126,
-			95
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0049",
-			"tricannon_tower_lvl4_tower_layer2_0259",
-			"tricannon_tower_lvl4_tower_layer2_0260"
-		}
+		size = {210, 344},
+		trim = {29, 84, 55, 165},
+		a_size = {2048, 2048},
+		f_quad = {994, 489, 126, 95},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0049", "tricannon_tower_lvl4_tower_layer2_0259", "tricannon_tower_lvl4_tower_layer2_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			92,
-			55,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1504,
-			489,
-			126,
-			86
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0051",
-			"tricannon_tower_lvl4_tower_layer2_0261",
-			"tricannon_tower_lvl4_tower_layer2_0262"
-		}
+		size = {210, 344},
+		trim = {29, 92, 55, 166},
+		a_size = {2048, 2048},
+		f_quad = {1504, 489, 126, 86},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0051", "tricannon_tower_lvl4_tower_layer2_0261", "tricannon_tower_lvl4_tower_layer2_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			82,
-			55,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			730,
-			489,
-			126,
-			97
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0053",
-			"tricannon_tower_lvl4_tower_layer2_0263",
-			"tricannon_tower_lvl4_tower_layer2_0264"
-		}
+		size = {210, 344},
+		trim = {29, 82, 55, 165},
+		a_size = {2048, 2048},
+		f_quad = {730, 489, 126, 97},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0053", "tricannon_tower_lvl4_tower_layer2_0263", "tricannon_tower_lvl4_tower_layer2_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			78,
-			55,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			489,
-			126,
-			101
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0055",
-			"tricannon_tower_lvl4_tower_layer2_0265",
-			"tricannon_tower_lvl4_tower_layer2_0266"
-		}
+		size = {210, 344},
+		trim = {29, 78, 55, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 489, 126, 101},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0055", "tricannon_tower_lvl4_tower_layer2_0265", "tricannon_tower_lvl4_tower_layer2_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			28,
-			83,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			596,
-			489,
-			131,
-			96
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0057",
-			"tricannon_tower_lvl4_tower_layer2_0267",
-			"tricannon_tower_lvl4_tower_layer2_0268"
-		}
+		size = {210, 344},
+		trim = {28, 83, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {596, 489, 131, 96},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0057", "tricannon_tower_lvl4_tower_layer2_0267", "tricannon_tower_lvl4_tower_layer2_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			86,
-			55,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1123,
-			489,
-			126,
-			92
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0063",
-			"tricannon_tower_lvl4_tower_layer2_0273",
-			"tricannon_tower_lvl4_tower_layer2_0274"
-		}
+		size = {210, 344},
+		trim = {29, 86, 55, 166},
+		a_size = {2048, 2048},
+		f_quad = {1123, 489, 126, 92},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0063", "tricannon_tower_lvl4_tower_layer2_0273", "tricannon_tower_lvl4_tower_layer2_0274"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0103 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			83,
-			51,
-			163
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1424,
-			382,
-			130,
-			98
-		},
+		size = {210, 344},
+		trim = {29, 83, 51, 163},
+		a_size = {2048, 2048},
+		f_quad = {1424, 382, 130, 98},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0104 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			83,
-			51,
-			163
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1557,
-			382,
-			130,
-			98
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0105",
-			"tricannon_tower_lvl4_tower_layer2_0106",
-			"tricannon_tower_lvl4_tower_layer2_0107",
-			"tricannon_tower_lvl4_tower_layer2_0108",
-			"tricannon_tower_lvl4_tower_layer2_0109"
-		}
+		size = {210, 344},
+		trim = {29, 83, 51, 163},
+		a_size = {2048, 2048},
+		f_quad = {1557, 382, 130, 98},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0105", "tricannon_tower_lvl4_tower_layer2_0106", "tricannon_tower_lvl4_tower_layer2_0107", "tricannon_tower_lvl4_tower_layer2_0108", "tricannon_tower_lvl4_tower_layer2_0109"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0110 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			83,
-			51,
-			163
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1690,
-			382,
-			130,
-			98
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0111",
-			"tricannon_tower_lvl4_tower_layer2_0112",
-			"tricannon_tower_lvl4_tower_layer2_0113",
-			"tricannon_tower_lvl4_tower_layer2_0114"
-		}
+		size = {210, 344},
+		trim = {29, 83, 51, 163},
+		a_size = {2048, 2048},
+		f_quad = {1690, 382, 130, 98},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0111", "tricannon_tower_lvl4_tower_layer2_0112", "tricannon_tower_lvl4_tower_layer2_0113", "tricannon_tower_lvl4_tower_layer2_0114"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0117 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			78,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1763,
-			277,
-			130,
-			101
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0118"
-		}
+		size = {210, 344},
+		trim = {29, 78, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {1763, 277, 130, 101},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0118"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0119 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			76,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			1932,
-			130,
-			103
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0120"
-		}
+		size = {210, 344},
+		trim = {29, 76, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {218, 1932, 130, 103},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0120"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0121 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			28,
-			80,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			596,
-			382,
-			131,
-			99
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0122"
-		}
+		size = {210, 344},
+		trim = {28, 80, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {596, 382, 131, 99},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0122"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0123 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			75,
-			55,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			382,
-			126,
-			104
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0124"
-		}
+		size = {210, 344},
+		trim = {29, 75, 55, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 382, 126, 104},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0124"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0125 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			81,
-			51,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1823,
-			382,
-			130,
-			98
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0126"
-		}
+		size = {210, 344},
+		trim = {29, 81, 51, 165},
+		a_size = {2048, 2048},
+		f_quad = {1823, 382, 130, 98},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0126"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0143 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			65,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			160,
-			141,
-			114
-		},
+		size = {210, 344},
+		trim = {29, 65, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 160, 141, 114},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0144",
 			"tricannon_tower_lvl4_tower_layer2_0145",
@@ -2744,490 +1812,162 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0179 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			69,
-			40,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1043,
-			160,
-			141,
-			109
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0180"
-		}
+		size = {210, 344},
+		trim = {29, 69, 40, 166},
+		a_size = {2048, 2048},
+		f_quad = {1043, 160, 141, 109},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0180"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0181 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			71,
-			40,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1187,
-			160,
-			141,
-			107
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0182"
-		}
+		size = {210, 344},
+		trim = {29, 71, 40, 166},
+		a_size = {2048, 2048},
+		f_quad = {1187, 160, 141, 107},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0182"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0183 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			76,
-			40,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			277,
-			141,
-			102
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0184"
-		}
+		size = {210, 344},
+		trim = {29, 76, 40, 166},
+		a_size = {2048, 2048},
+		f_quad = {467, 277, 141, 102},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0184"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0185 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			65,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			160,
-			141,
-			114
-		},
+		size = {210, 344},
+		trim = {29, 65, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {611, 160, 141, 114},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0186 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			65,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			755,
-			160,
-			141,
-			114
-		},
+		size = {210, 344},
+		trim = {29, 65, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {755, 160, 141, 114},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0187 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			56,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1676,
-			5,
-			141,
-			123
-		},
+		size = {210, 344},
+		trim = {29, 56, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {1676, 5, 141, 123},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0188 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			56,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1820,
-			5,
-			141,
-			123
-		},
+		size = {210, 344},
+		trim = {29, 56, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {1820, 5, 141, 123},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0189 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			40,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1226,
-			5,
-			141,
-			139
-		},
+		size = {210, 344},
+		trim = {29, 40, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {1226, 5, 141, 139},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0190 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			40,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1370,
-			5,
-			141,
-			139
-		},
+		size = {210, 344},
+		trim = {29, 40, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {1370, 5, 141, 139},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0191 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			32,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			938,
-			5,
-			141,
-			147
-		},
+		size = {210, 344},
+		trim = {29, 32, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {938, 5, 141, 147},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0192 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			32,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			5,
-			141,
-			147
-		},
+		size = {210, 344},
+		trim = {29, 32, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {1082, 5, 141, 147},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0193 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			29,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			650,
-			5,
-			141,
-			150
-		},
+		size = {210, 344},
+		trim = {29, 29, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {650, 5, 141, 150},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0194 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			29,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			794,
-			5,
-			141,
-			150
-		},
+		size = {210, 344},
+		trim = {29, 29, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {794, 5, 141, 150},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0195 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			27,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1684,
-			141,
-			152
-		},
+		size = {210, 344},
+		trim = {29, 27, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {5, 1684, 141, 152},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0196 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			27,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1839,
-			141,
-			152
-		},
+		size = {210, 344},
+		trim = {29, 27, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {5, 1839, 141, 152},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0197 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			27,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			5,
-			141,
-			152
-		},
+		size = {210, 344},
+		trim = {29, 27, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {218, 5, 141, 152},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0198 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			28,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			362,
-			5,
-			141,
-			151
-		},
+		size = {210, 344},
+		trim = {29, 28, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {362, 5, 141, 151},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0199 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			28,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			506,
-			5,
-			141,
-			151
-		},
+		size = {210, 344},
+		trim = {29, 28, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {506, 5, 141, 151},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0200 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			29,
-			65,
-			40,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			899,
-			160,
-			141,
-			114
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0201"
-		}
+		size = {210, 344},
+		trim = {29, 65, 40, 165},
+		a_size = {2048, 2048},
+		f_quad = {899, 160, 141, 114},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0201"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0202 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			82,
-			120,
-			78,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			928,
-			667,
-			50,
-			15
-		},
+		size = {210, 344},
+		trim = {82, 120, 78, 209},
+		a_size = {2048, 2048},
+		f_quad = {928, 667, 50, 15},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0203",
 			"tricannon_tower_lvl4_tower_layer9_0213",
@@ -3245,26 +1985,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0204 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			120,
-			77,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1706,
-			259,
-			52,
-			15
-		},
+		size = {210, 344},
+		trim = {81, 120, 77, 209},
+		a_size = {2048, 2048},
+		f_quad = {1706, 259, 52, 15},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0205",
 			"tricannon_tower_lvl4_tower_layer9_0215",
@@ -3281,56 +2005,18 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0206 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			120,
-			77,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1761,
-			259,
-			52,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer9_0217",
-			"tricannon_tower_lvl4_tower_layer9_0228",
-			"tricannon_tower_lvl4_tower_layer9_0239",
-			"tricannon_tower_lvl4_tower_layer9_0250",
-			"tricannon_tower_lvl4_tower_layer9_0272"
-		}
+		size = {210, 344},
+		trim = {81, 120, 77, 209},
+		a_size = {2048, 2048},
+		f_quad = {1761, 259, 52, 15},
+		alias = {"tricannon_tower_lvl4_tower_layer9_0217", "tricannon_tower_lvl4_tower_layer9_0228", "tricannon_tower_lvl4_tower_layer9_0239", "tricannon_tower_lvl4_tower_layer9_0250", "tricannon_tower_lvl4_tower_layer9_0272"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0207 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			120,
-			77,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1816,
-			259,
-			52,
-			15
-		},
+		size = {210, 344},
+		trim = {81, 120, 77, 209},
+		a_size = {2048, 2048},
+		f_quad = {1816, 259, 52, 15},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0208",
 			"tricannon_tower_lvl4_tower_layer9_0218",
@@ -3347,26 +2033,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0209 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			122,
-			79,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1137,
-			684,
-			48,
-			13
-		},
+		size = {210, 344},
+		trim = {83, 122, 79, 209},
+		a_size = {2048, 2048},
+		f_quad = {1137, 684, 48, 13},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0210",
 			"tricannon_tower_lvl4_tower_layer9_0220",
@@ -3383,26 +2053,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0211 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			121,
-			79,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			813,
-			686,
-			48,
-			13
-		},
+		size = {210, 344},
+		trim = {83, 121, 79, 210},
+		a_size = {2048, 2048},
+		f_quad = {813, 686, 48, 13},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer2_0212",
 			"tricannon_tower_lvl4_tower_layer9_0222",
@@ -3419,178 +2073,58 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer2_0281 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			120,
-			79,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1038,
-			685,
-			48,
-			14
-		},
+		size = {210, 344},
+		trim = {83, 120, 79, 210},
+		a_size = {2048, 2048},
+		f_quad = {1038, 685, 48, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer2_0282 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			82,
-			120,
-			78,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			981,
-			667,
-			50,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0283"
-		}
+		size = {210, 344},
+		trim = {82, 120, 78, 209},
+		a_size = {2048, 2048},
+		f_quad = {981, 667, 50, 15},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0283"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0284 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			76,
-			119,
-			73,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			813,
-			667,
-			61,
-			16
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0285"
-		}
+		size = {210, 344},
+		trim = {76, 119, 73, 209},
+		a_size = {2048, 2048},
+		f_quad = {813, 667, 61, 16},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0285"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0286 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			76,
-			119,
-			73,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1586,
-			259,
-			61,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0287"
-		}
+		size = {210, 344},
+		trim = {76, 119, 73, 210},
+		a_size = {2048, 2048},
+		f_quad = {1586, 259, 61, 15},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0287"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0288 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			74,
-			118,
-			70,
-			220
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1762,
-			653,
-			66,
-			6
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer2_0289"
-		}
+		size = {210, 344},
+		trim = {74, 118, 70, 220},
+		a_size = {2048, 2048},
+		f_quad = {1762, 653, 66, 6},
+		alias = {"tricannon_tower_lvl4_tower_layer2_0289"}
 	},
 	tricannon_tower_lvl4_tower_layer2_0290 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			88,
-			129,
-			85,
-			213
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1455,
-			652,
-			37,
-			2
-		},
+		size = {210, 344},
+		trim = {88, 129, 85, 213},
+		a_size = {2048, 2048},
+		f_quad = {1455, 652, 37, 2},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			114,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1998,
-			30,
-			47
-		},
+		size = {210, 344},
+		trim = {31, 114, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {513, 1998, 30, 47},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer3_0003",
 			"tricannon_tower_lvl4_tower_layer3_0004",
@@ -3728,26 +2262,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer3_0013 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			115,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1508,
-			750,
-			30,
-			46
-		},
+		size = {210, 344},
+		trim = {31, 115, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1508, 750, 30, 46},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer3_0014",
 			"tricannon_tower_lvl4_tower_layer3_0019",
@@ -3764,474 +2282,138 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer3_0015 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			32,
-			119,
-			137,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1389,
-			41,
-			42
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0016",
-			"tricannon_tower_lvl4_tower_layer3_0086",
-			"tricannon_tower_lvl4_tower_layer3_0087",
-			"tricannon_tower_lvl4_tower_layer3_0226",
-			"tricannon_tower_lvl4_tower_layer3_0227"
-		}
+		size = {210, 344},
+		trim = {32, 119, 137, 183},
+		a_size = {2048, 2048},
+		f_quad = {513, 1389, 41, 42},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0016", "tricannon_tower_lvl4_tower_layer3_0086", "tricannon_tower_lvl4_tower_layer3_0087", "tricannon_tower_lvl4_tower_layer3_0226", "tricannon_tower_lvl4_tower_layer3_0227"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0017 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			33,
-			115,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1772,
-			750,
-			28,
-			46
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0018",
-			"tricannon_tower_lvl4_tower_layer3_0088",
-			"tricannon_tower_lvl4_tower_layer3_0089",
-			"tricannon_tower_lvl4_tower_layer3_0228",
-			"tricannon_tower_lvl4_tower_layer3_0229"
-		}
+		size = {210, 344},
+		trim = {33, 115, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1772, 750, 28, 46},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0018", "tricannon_tower_lvl4_tower_layer3_0088", "tricannon_tower_lvl4_tower_layer3_0089", "tricannon_tower_lvl4_tower_layer3_0228", "tricannon_tower_lvl4_tower_layer3_0229"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0021 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			32,
-			119,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1900,
-			750,
-			29,
-			42
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0022",
-			"tricannon_tower_lvl4_tower_layer3_0092",
-			"tricannon_tower_lvl4_tower_layer3_0093",
-			"tricannon_tower_lvl4_tower_layer3_0232",
-			"tricannon_tower_lvl4_tower_layer3_0233"
-		}
+		size = {210, 344},
+		trim = {32, 119, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1900, 750, 29, 42},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0022", "tricannon_tower_lvl4_tower_layer3_0092", "tricannon_tower_lvl4_tower_layer3_0093", "tricannon_tower_lvl4_tower_layer3_0232", "tricannon_tower_lvl4_tower_layer3_0233"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			117,
-			149,
-			182
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			750,
-			30,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0049",
-			"tricannon_tower_lvl4_tower_layer3_0259",
-			"tricannon_tower_lvl4_tower_layer3_0260"
-		}
+		size = {210, 344},
+		trim = {31, 117, 149, 182},
+		a_size = {2048, 2048},
+		f_quad = {1574, 750, 30, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0049", "tricannon_tower_lvl4_tower_layer3_0259", "tricannon_tower_lvl4_tower_layer3_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			122,
-			149,
-			181
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1867,
-			750,
-			30,
-			41
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0051",
-			"tricannon_tower_lvl4_tower_layer3_0261",
-			"tricannon_tower_lvl4_tower_layer3_0262"
-		}
+		size = {210, 344},
+		trim = {31, 122, 149, 181},
+		a_size = {2048, 2048},
+		f_quad = {1867, 750, 30, 41},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0051", "tricannon_tower_lvl4_tower_layer3_0261", "tricannon_tower_lvl4_tower_layer3_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			116,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1607,
-			750,
-			30,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0053",
-			"tricannon_tower_lvl4_tower_layer3_0263",
-			"tricannon_tower_lvl4_tower_layer3_0264"
-		}
+		size = {210, 344},
+		trim = {31, 116, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1607, 750, 30, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0053", "tricannon_tower_lvl4_tower_layer3_0263", "tricannon_tower_lvl4_tower_layer3_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			113,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1376,
-			750,
-			30,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0055",
-			"tricannon_tower_lvl4_tower_layer3_0265",
-			"tricannon_tower_lvl4_tower_layer3_0266"
-		}
+		size = {210, 344},
+		trim = {31, 113, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1376, 750, 30, 48},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0055", "tricannon_tower_lvl4_tower_layer3_0265", "tricannon_tower_lvl4_tower_layer3_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			117,
-			149,
-			182
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1640,
-			750,
-			30,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0057",
-			"tricannon_tower_lvl4_tower_layer3_0267",
-			"tricannon_tower_lvl4_tower_layer3_0268"
-		}
+		size = {210, 344},
+		trim = {31, 117, 149, 182},
+		a_size = {2048, 2048},
+		f_quad = {1640, 750, 30, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0057", "tricannon_tower_lvl4_tower_layer3_0267", "tricannon_tower_lvl4_tower_layer3_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			118,
-			149,
-			182
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1739,
-			750,
-			30,
-			44
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0063",
-			"tricannon_tower_lvl4_tower_layer3_0273",
-			"tricannon_tower_lvl4_tower_layer3_0274"
-		}
+		size = {210, 344},
+		trim = {31, 118, 149, 182},
+		a_size = {2048, 2048},
+		f_quad = {1739, 750, 30, 44},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0063", "tricannon_tower_lvl4_tower_layer3_0273", "tricannon_tower_lvl4_tower_layer3_0274"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0103 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			116,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1673,
-			750,
-			30,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0104",
-			"tricannon_tower_lvl4_tower_layer3_0105",
-			"tricannon_tower_lvl4_tower_layer3_0106",
-			"tricannon_tower_lvl4_tower_layer3_0107",
-			"tricannon_tower_lvl4_tower_layer3_0108",
-			"tricannon_tower_lvl4_tower_layer3_0109"
-		}
+		size = {210, 344},
+		trim = {31, 116, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1673, 750, 30, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0104", "tricannon_tower_lvl4_tower_layer3_0105", "tricannon_tower_lvl4_tower_layer3_0106", "tricannon_tower_lvl4_tower_layer3_0107", "tricannon_tower_lvl4_tower_layer3_0108", "tricannon_tower_lvl4_tower_layer3_0109"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0110 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			116,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1706,
-			750,
-			30,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0111",
-			"tricannon_tower_lvl4_tower_layer3_0112",
-			"tricannon_tower_lvl4_tower_layer3_0113",
-			"tricannon_tower_lvl4_tower_layer3_0114"
-		}
+		size = {210, 344},
+		trim = {31, 116, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1706, 750, 30, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0111", "tricannon_tower_lvl4_tower_layer3_0112", "tricannon_tower_lvl4_tower_layer3_0113", "tricannon_tower_lvl4_tower_layer3_0114"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0117 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			113,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1409,
-			750,
-			30,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0118"
-		}
+		size = {210, 344},
+		trim = {31, 113, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1409, 750, 30, 48},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0118"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0119 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			112,
-			149,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1442,
-			750,
-			30,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0120"
-		}
+		size = {210, 344},
+		trim = {31, 112, 149, 184},
+		a_size = {2048, 2048},
+		f_quad = {1442, 750, 30, 48},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0120"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0121 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			114,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1475,
-			750,
-			30,
-			47
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0122"
-		}
+		size = {210, 344},
+		trim = {31, 114, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1475, 750, 30, 47},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0122"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0123 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			111,
-			149,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1842,
-			30,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0124"
-		}
+		size = {210, 344},
+		trim = {31, 111, 149, 184},
+		a_size = {2048, 2048},
+		f_quad = {513, 1842, 30, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0124"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0125 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			115,
-			149,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1541,
-			750,
-			30,
-			46
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0126"
-		}
+		size = {210, 344},
+		trim = {31, 115, 149, 183},
+		a_size = {2048, 2048},
+		f_quad = {1541, 750, 30, 46},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0126"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0143 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			136,
-			66,
-			172
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			670,
-			750,
-			72,
-			36
-		},
+		size = {210, 344},
+		trim = {72, 136, 66, 172},
+		a_size = {2048, 2048},
+		f_quad = {670, 750, 72, 36},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer3_0144",
 			"tricannon_tower_lvl4_tower_layer3_0145",
@@ -4348,90 +2530,26 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer3_0151 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			137,
-			66,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1349,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0152",
-			"tricannon_tower_lvl4_tower_layer3_0185",
-			"tricannon_tower_lvl4_tower_layer3_0186",
-			"tricannon_tower_lvl4_tower_layer5_0018",
-			"tricannon_tower_lvl4_tower_layer5_0019",
-			"tricannon_tower_lvl4_tower_layer5_0229",
-			"tricannon_tower_lvl4_tower_layer5_0230"
-		}
+		size = {210, 344},
+		trim = {72, 137, 66, 170},
+		a_size = {2048, 2048},
+		f_quad = {1349, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0152", "tricannon_tower_lvl4_tower_layer3_0185", "tricannon_tower_lvl4_tower_layer3_0186", "tricannon_tower_lvl4_tower_layer5_0018", "tricannon_tower_lvl4_tower_layer5_0019", "tricannon_tower_lvl4_tower_layer5_0229", "tricannon_tower_lvl4_tower_layer5_0230"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0153 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			140,
-			66,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1424,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0154",
-			"tricannon_tower_lvl4_tower_layer5_0020",
-			"tricannon_tower_lvl4_tower_layer5_0021",
-			"tricannon_tower_lvl4_tower_layer5_0091",
-			"tricannon_tower_lvl4_tower_layer5_0092",
-			"tricannon_tower_lvl4_tower_layer5_0231",
-			"tricannon_tower_lvl4_tower_layer5_0232"
-		}
+		size = {210, 344},
+		trim = {72, 140, 66, 167},
+		a_size = {2048, 2048},
+		f_quad = {1424, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0154", "tricannon_tower_lvl4_tower_layer5_0020", "tricannon_tower_lvl4_tower_layer5_0021", "tricannon_tower_lvl4_tower_layer5_0091", "tricannon_tower_lvl4_tower_layer5_0092", "tricannon_tower_lvl4_tower_layer5_0231", "tricannon_tower_lvl4_tower_layer5_0232"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0155 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			149,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1499,
-			702,
-			72,
-			37
-		},
+		size = {210, 344},
+		trim = {72, 149, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {1499, 702, 72, 37},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer3_0156",
 			"tricannon_tower_lvl4_tower_layer3_0159",
@@ -4486,442 +2604,138 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer3_0157 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			151,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			895,
-			750,
-			72,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0158",
-			"tricannon_tower_lvl4_tower_layer5_0024",
-			"tricannon_tower_lvl4_tower_layer5_0025",
-			"tricannon_tower_lvl4_tower_layer5_0095",
-			"tricannon_tower_lvl4_tower_layer5_0096",
-			"tricannon_tower_lvl4_tower_layer5_0235",
-			"tricannon_tower_lvl4_tower_layer5_0236"
-		}
+		size = {210, 344},
+		trim = {72, 151, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {895, 750, 72, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0158", "tricannon_tower_lvl4_tower_layer5_0024", "tricannon_tower_lvl4_tower_layer5_0025", "tricannon_tower_lvl4_tower_layer5_0095", "tricannon_tower_lvl4_tower_layer5_0096", "tricannon_tower_lvl4_tower_layer5_0235", "tricannon_tower_lvl4_tower_layer5_0236"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0163 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			135,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			968,
-			72,
-			51
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0164",
-			"tricannon_tower_lvl4_tower_layer3_0171",
-			"tricannon_tower_lvl4_tower_layer3_0172"
-		}
+		size = {210, 344},
+		trim = {72, 135, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {140, 968, 72, 51},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0164", "tricannon_tower_lvl4_tower_layer3_0171", "tricannon_tower_lvl4_tower_layer3_0172"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0165 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			140,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1233,
-			72,
-			46
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0166",
-			"tricannon_tower_lvl4_tower_layer3_0173",
-			"tricannon_tower_lvl4_tower_layer3_0174"
-		}
+		size = {210, 344},
+		trim = {72, 140, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {140, 1233, 72, 46},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0166", "tricannon_tower_lvl4_tower_layer3_0173", "tricannon_tower_lvl4_tower_layer3_0174"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0167 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			132,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			409,
-			72,
-			54
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0168",
-			"tricannon_tower_lvl4_tower_layer3_0175",
-			"tricannon_tower_lvl4_tower_layer3_0176"
-		}
+		size = {210, 344},
+		trim = {72, 132, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {140, 409, 72, 54},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0168", "tricannon_tower_lvl4_tower_layer3_0175", "tricannon_tower_lvl4_tower_layer3_0176"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0169 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			139,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1183,
-			72,
-			47
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0170",
-			"tricannon_tower_lvl4_tower_layer3_0177",
-			"tricannon_tower_lvl4_tower_layer3_0178"
-		}
+		size = {210, 344},
+		trim = {72, 139, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {140, 1183, 72, 47},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0170", "tricannon_tower_lvl4_tower_layer3_0177", "tricannon_tower_lvl4_tower_layer3_0178"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0179 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			150,
-			66,
-			159
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			970,
-			750,
-			72,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0180"
-		}
+		size = {210, 344},
+		trim = {72, 150, 66, 159},
+		a_size = {2048, 2048},
+		f_quad = {970, 750, 72, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0180"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0181 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			149,
-			66,
-			158
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1574,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0182"
-		}
+		size = {210, 344},
+		trim = {72, 149, 66, 158},
+		a_size = {2048, 2048},
+		f_quad = {1574, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0182"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0183 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			150,
-			66,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			824,
-			702,
-			72,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0184"
-		}
+		size = {210, 344},
+		trim = {72, 150, 66, 155},
+		a_size = {2048, 2048},
+		f_quad = {824, 702, 72, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0184"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0187 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			131,
-			66,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			540,
-			702,
-			72,
-			43
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer3_0188"
-		}
+		size = {210, 344},
+		trim = {72, 131, 66, 170},
+		a_size = {2048, 2048},
+		f_quad = {540, 702, 72, 43},
+		alias = {"tricannon_tower_lvl4_tower_layer3_0188"}
 	},
 	tricannon_tower_lvl4_tower_layer3_0282 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			56,
-			82,
-			51,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1740,
-			489,
-			103,
-			92
-		},
+		size = {210, 344},
+		trim = {56, 82, 51, 170},
+		a_size = {2048, 2048},
+		f_quad = {1740, 489, 103, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0283 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			56,
-			82,
-			51,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1846,
-			489,
-			103,
-			92
-		},
+		size = {210, 344},
+		trim = {56, 82, 51, 170},
+		a_size = {2048, 2048},
+		f_quad = {1846, 489, 103, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0284 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			56,
-			82,
-			51,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			616,
-			103,
-			92
-		},
+		size = {210, 344},
+		trim = {56, 82, 51, 170},
+		a_size = {2048, 2048},
+		f_quad = {352, 616, 103, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0285 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			56,
-			82,
-			51,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			711,
-			103,
-			92
-		},
+		size = {210, 344},
+		trim = {56, 82, 51, 170},
+		a_size = {2048, 2048},
+		f_quad = {352, 711, 103, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0286 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			57,
-			82,
-			51,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			806,
-			102,
-			92
-		},
+		size = {210, 344},
+		trim = {57, 82, 51, 170},
+		a_size = {2048, 2048},
+		f_quad = {352, 806, 102, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0287 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			57,
-			82,
-			52,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			901,
-			101,
-			92
-		},
+		size = {210, 344},
+		trim = {57, 82, 52, 170},
+		a_size = {2048, 2048},
+		f_quad = {352, 901, 101, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer3_0288 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			58,
-			84,
-			53,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			996,
-			99,
-			90
-		},
+		size = {210, 344},
+		trim = {58, 84, 53, 170},
+		a_size = {2048, 2048},
+		f_quad = {352, 996, 99, 90},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			65,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			466,
-			73,
-			53
-		},
+		size = {210, 344},
+		trim = {69, 65, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 466, 73, 53},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer4_0003",
 			"tricannon_tower_lvl4_tower_layer4_0004",
@@ -5043,2743 +2857,842 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer4_0032 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			70,
-			65,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			634,
-			72,
-			53
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0033",
-			"tricannon_tower_lvl4_tower_layer4_0243",
-			"tricannon_tower_lvl4_tower_layer4_0244"
-		}
+		size = {210, 344},
+		trim = {70, 65, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 634, 72, 53},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0033", "tricannon_tower_lvl4_tower_layer4_0243", "tricannon_tower_lvl4_tower_layer4_0244"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0034 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			65,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			912,
-			70,
-			53
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0035",
-			"tricannon_tower_lvl4_tower_layer4_0245",
-			"tricannon_tower_lvl4_tower_layer4_0246"
-		}
+		size = {210, 344},
+		trim = {72, 65, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 912, 70, 53},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0035", "tricannon_tower_lvl4_tower_layer4_0245", "tricannon_tower_lvl4_tower_layer4_0246"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0036 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			73,
-			65,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1022,
-			69,
-			53
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0037",
-			"tricannon_tower_lvl4_tower_layer4_0247",
-			"tricannon_tower_lvl4_tower_layer4_0248"
-		}
+		size = {210, 344},
+		trim = {73, 65, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 1022, 69, 53},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0037", "tricannon_tower_lvl4_tower_layer4_0247", "tricannon_tower_lvl4_tower_layer4_0248"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0038 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			70,
-			63,
-			71,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			746,
-			69,
-			55
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0039",
-			"tricannon_tower_lvl4_tower_layer4_0249",
-			"tricannon_tower_lvl4_tower_layer4_0250"
-		}
+		size = {210, 344},
+		trim = {70, 63, 71, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 746, 69, 55},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0039", "tricannon_tower_lvl4_tower_layer4_0249", "tricannon_tower_lvl4_tower_layer4_0250"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0040 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			72,
-			71,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1456,
-			70,
-			46
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0041",
-			"tricannon_tower_lvl4_tower_layer4_0251",
-			"tricannon_tower_lvl4_tower_layer4_0252"
-		}
+		size = {210, 344},
+		trim = {69, 72, 71, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 1456, 70, 46},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0041", "tricannon_tower_lvl4_tower_layer4_0251", "tricannon_tower_lvl4_tower_layer4_0252"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0042 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			70,
-			68,
-			72,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1130,
-			68,
-			50
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0043",
-			"tricannon_tower_lvl4_tower_layer4_0253",
-			"tricannon_tower_lvl4_tower_layer4_0254"
-		}
+		size = {210, 344},
+		trim = {70, 68, 72, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 1130, 68, 50},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0043", "tricannon_tower_lvl4_tower_layer4_0253", "tricannon_tower_lvl4_tower_layer4_0254"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0044 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			73,
-			71,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			615,
-			702,
-			67,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0045",
-			"tricannon_tower_lvl4_tower_layer4_0255",
-			"tricannon_tower_lvl4_tower_layer4_0256"
-		}
+		size = {210, 344},
+		trim = {72, 73, 71, 226},
+		a_size = {2048, 2048},
+		f_quad = {615, 702, 67, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0045", "tricannon_tower_lvl4_tower_layer4_0255", "tricannon_tower_lvl4_tower_layer4_0256"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0046 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			71,
-			72,
-			69,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1505,
-			70,
-			46
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0047",
-			"tricannon_tower_lvl4_tower_layer4_0257",
-			"tricannon_tower_lvl4_tower_layer4_0258"
-		}
+		size = {210, 344},
+		trim = {71, 72, 69, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 1505, 70, 46},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0047", "tricannon_tower_lvl4_tower_layer4_0257", "tricannon_tower_lvl4_tower_layer4_0258"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			71,
-			76,
-			69,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			702,
-			70,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0049",
-			"tricannon_tower_lvl4_tower_layer4_0259",
-			"tricannon_tower_lvl4_tower_layer4_0260"
-		}
+		size = {210, 344},
+		trim = {71, 76, 69, 223},
+		a_size = {2048, 2048},
+		f_quad = {467, 702, 70, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0049", "tricannon_tower_lvl4_tower_layer4_0259", "tricannon_tower_lvl4_tower_layer4_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			71,
-			85,
-			69,
-			218
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			685,
-			702,
-			70,
-			41
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0051",
-			"tricannon_tower_lvl4_tower_layer4_0261",
-			"tricannon_tower_lvl4_tower_layer4_0262"
-		}
+		size = {210, 344},
+		trim = {71, 85, 69, 218},
+		a_size = {2048, 2048},
+		f_quad = {685, 702, 70, 41},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0051", "tricannon_tower_lvl4_tower_layer4_0261", "tricannon_tower_lvl4_tower_layer4_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			47,
-			68,
-			225
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1964,
-			5,
-			73,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0053"
-		}
+		size = {210, 344},
+		trim = {69, 47, 68, 225},
+		a_size = {2048, 2048},
+		f_quad = {1964, 5, 73, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0053"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			49,
-			68,
-			227
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1789,
-			73,
-			68
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0055"
-		}
+		size = {210, 344},
+		trim = {69, 49, 68, 227},
+		a_size = {2048, 2048},
+		f_quad = {352, 1789, 73, 68},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0055"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			63,
-			68,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1230,
-			593,
-			73,
-			58
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0057"
-		}
+		size = {210, 344},
+		trim = {69, 63, 68, 223},
+		a_size = {2048, 2048},
+		f_quad = {1230, 593, 73, 58},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0057"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0058 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			64,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			352,
-			73,
-			54
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0059"
-		}
+		size = {210, 344},
+		trim = {69, 64, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 352, 73, 54},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0059"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0060 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			65,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			522,
-			73,
-			53
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0061"
-		}
+		size = {210, 344},
+		trim = {69, 65, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 522, 73, 53},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0061"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			71,
-			68,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			804,
-			73,
-			51
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0063",
-			"tricannon_tower_lvl4_tower_layer4_0273",
-			"tricannon_tower_lvl4_tower_layer4_0274"
-		}
+		size = {210, 344},
+		trim = {69, 71, 68, 222},
+		a_size = {2048, 2048},
+		f_quad = {140, 804, 73, 51},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0063", "tricannon_tower_lvl4_tower_layer4_0273", "tricannon_tower_lvl4_tower_layer4_0274"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0103 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			69,
-			68,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			858,
-			73,
-			51
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0104",
-			"tricannon_tower_lvl4_tower_layer4_0105"
-		}
+		size = {210, 344},
+		trim = {69, 69, 68, 224},
+		a_size = {2048, 2048},
+		f_quad = {140, 858, 73, 51},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0104", "tricannon_tower_lvl4_tower_layer4_0105"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0106 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			71,
-			68,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1078,
-			73,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0107"
-		}
+		size = {210, 344},
+		trim = {69, 71, 68, 224},
+		a_size = {2048, 2048},
+		f_quad = {140, 1078, 73, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0107"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0108 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			75,
-			68,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1282,
-			73,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0109"
-		}
+		size = {210, 344},
+		trim = {69, 75, 68, 224},
+		a_size = {2048, 2048},
+		f_quad = {140, 1282, 73, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0109"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0110 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			76,
-			68,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1554,
-			73,
-			44
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0111",
-			"tricannon_tower_lvl4_tower_layer4_0112",
-			"tricannon_tower_lvl4_tower_layer4_0113",
-			"tricannon_tower_lvl4_tower_layer4_0114"
-		}
+		size = {210, 344},
+		trim = {69, 76, 68, 224},
+		a_size = {2048, 2048},
+		f_quad = {140, 1554, 73, 44},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0111", "tricannon_tower_lvl4_tower_layer4_0112", "tricannon_tower_lvl4_tower_layer4_0113", "tricannon_tower_lvl4_tower_layer4_0114"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0115 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			73,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1330,
-			73,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0116"
-		}
+		size = {210, 344},
+		trim = {69, 73, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 1330, 73, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0116"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0117 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			68,
-			60,
-			72,
-			227
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1762,
-			593,
-			70,
-			57
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0118"
-		}
+		size = {210, 344},
+		trim = {68, 60, 72, 227},
+		a_size = {2048, 2048},
+		f_quad = {1762, 593, 70, 57},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0118"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0119 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			62,
-			54,
-			59,
-			228
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1724,
-			89,
-			62
-		},
+		size = {210, 344},
+		trim = {62, 54, 59, 228},
+		a_size = {2048, 2048},
+		f_quad = {352, 1724, 89, 62},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0120 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			62,
-			42,
-			59,
-			228
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1429,
-			89,
-			74
-		},
+		size = {210, 344},
+		trim = {62, 42, 59, 228},
+		a_size = {2048, 2048},
+		f_quad = {352, 1429, 89, 74},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0121 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			61,
-			42,
-			65,
-			225
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1506,
-			84,
-			77
-		},
+		size = {210, 344},
+		trim = {61, 42, 65, 225},
+		a_size = {2048, 2048},
+		f_quad = {352, 1506, 84, 77},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0122 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			61,
-			35,
-			65,
-			225
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1342,
-			84,
-			84
-		},
+		size = {210, 344},
+		trim = {61, 35, 65, 225},
+		a_size = {2048, 2048},
+		f_quad = {352, 1342, 84, 84},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0123 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			62,
-			35,
-			59,
-			229
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1259,
-			89,
-			80
-		},
+		size = {210, 344},
+		trim = {62, 35, 59, 229},
+		a_size = {2048, 2048},
+		f_quad = {352, 1259, 89, 80},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0124 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			62,
-			30,
-			59,
-			229
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1956,
-			382,
-			89,
-			85
-		},
+		size = {210, 344},
+		trim = {62, 30, 59, 229},
+		a_size = {2048, 2048},
+		f_quad = {1956, 382, 89, 85},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0125 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			61,
-			30,
-			66,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1952,
-			489,
-			83,
-			88
-		},
+		size = {210, 344},
+		trim = {61, 30, 66, 226},
+		a_size = {2048, 2048},
+		f_quad = {1952, 489, 83, 88},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0126 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			61,
-			30,
-			66,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1952,
-			160,
-			83,
-			88
-		},
+		size = {210, 344},
+		trim = {61, 30, 66, 226},
+		a_size = {2048, 2048},
+		f_quad = {1952, 160, 83, 88},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0127 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			68,
-			64,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1685,
-			593,
-			74,
-			54
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0128"
-		}
+		size = {210, 344},
+		trim = {68, 64, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {1685, 593, 74, 54},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0128"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0131 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			65,
-			69,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			690,
-			72,
-			53
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0132"
-		}
+		size = {210, 344},
+		trim = {69, 65, 69, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 690, 72, 53},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0132"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0163 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			74,
-			140,
-			89,
-			189
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1087,
-			667,
-			47,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0164"
-		}
+		size = {210, 344},
+		trim = {74, 140, 89, 189},
+		a_size = {2048, 2048},
+		f_quad = {1087, 667, 47, 15},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0164"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0165 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			140,
-			82,
-			179
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1625,
-			130,
-			47,
-			25
-		},
+		size = {210, 344},
+		trim = {81, 140, 82, 179},
+		a_size = {2048, 2048},
+		f_quad = {1625, 130, 47, 25},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0166 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			140,
-			81,
-			180
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			762,
-			667,
-			48,
-			24
-		},
+		size = {210, 344},
+		trim = {81, 140, 81, 180},
+		a_size = {2048, 2048},
+		f_quad = {762, 667, 48, 24},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0167 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			144,
-			81,
-			180
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			877,
-			667,
-			48,
-			20
-		},
+		size = {210, 344},
+		trim = {81, 144, 81, 180},
+		a_size = {2048, 2048},
+		f_quad = {877, 667, 48, 20},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0168 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			88,
-			136,
-			76,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1518,
-			46,
-			24
-		},
+		size = {210, 344},
+		trim = {88, 136, 76, 184},
+		a_size = {2048, 2048},
+		f_quad = {559, 1518, 46, 24},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0169 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			88,
-			136,
-			76,
-			184
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1545,
-			46,
-			24
-		},
+		size = {210, 344},
+		trim = {88, 136, 76, 184},
+		a_size = {2048, 2048},
+		f_quad = {559, 1545, 46, 24},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0170 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			90,
-			132,
-			66,
-			189
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1877,
-			131,
-			54,
-			23
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0171"
-		}
+		size = {210, 344},
+		trim = {90, 132, 66, 189},
+		a_size = {2048, 2048},
+		f_quad = {1877, 131, 54, 23},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0171"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0172 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			85,
-			124,
-			62,
-			175
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			758,
-			702,
-			63,
-			45
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0173"
-		}
+		size = {210, 344},
+		trim = {85, 124, 62, 175},
+		a_size = {2048, 2048},
+		f_quad = {758, 702, 63, 45},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0173"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0174 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			125,
-			59,
-			159
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1382,
-			593,
-			70,
-			60
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0175"
-		}
+		size = {210, 344},
+		trim = {81, 125, 59, 159},
+		a_size = {2048, 2048},
+		f_quad = {1382, 593, 70, 60},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0175"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0176 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			71,
-			126,
-			53,
-			152
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1586,
-			86,
-			66
-		},
+		size = {210, 344},
+		trim = {71, 126, 53, 152},
+		a_size = {2048, 2048},
+		f_quad = {352, 1586, 86, 66},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0177 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			126,
-			52,
-			152
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1655,
-			86,
-			66
-		},
+		size = {210, 344},
+		trim = {72, 126, 52, 152},
+		a_size = {2048, 2048},
+		f_quad = {352, 1655, 86, 66},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0178 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			70,
-			140,
-			52,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1992,
-			88,
-			49
-		},
+		size = {210, 344},
+		trim = {70, 140, 52, 155},
+		a_size = {2048, 2048},
+		f_quad = {352, 1992, 88, 49},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0179 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			70,
-			140,
-			51,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1994,
-			89,
-			49
-		},
+		size = {210, 344},
+		trim = {70, 140, 51, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1994, 89, 49},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0180 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			68,
-			158,
-			51,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			668,
-			667,
-			91,
-			31
-		},
+		size = {210, 344},
+		trim = {68, 158, 51, 155},
+		a_size = {2048, 2048},
+		f_quad = {668, 667, 91, 31},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0181 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			68,
-			158,
-			49,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			572,
-			667,
-			93,
-			31
-		},
+		size = {210, 344},
+		trim = {68, 158, 49, 155},
+		a_size = {2048, 2048},
+		f_quad = {572, 667, 93, 31},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0182 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			67,
-			172,
-			49,
-			152
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1780,
-			131,
-			94,
-			20
-		},
+		size = {210, 344},
+		trim = {67, 172, 49, 152},
+		a_size = {2048, 2048},
+		f_quad = {1780, 131, 94, 20},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0183 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			65,
-			174,
-			48,
-			156
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1486,
-			259,
-			97,
-			14
-		},
+		size = {210, 344},
+		trim = {65, 174, 48, 156},
+		a_size = {2048, 2048},
+		f_quad = {1486, 259, 97, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0184 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			63,
-			168,
-			46,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1676,
-			131,
-			101,
-			19
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0185"
-		}
+		size = {210, 344},
+		trim = {63, 168, 46, 157},
+		a_size = {2048, 2048},
+		f_quad = {1676, 131, 101, 19},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0185"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0186 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			62,
-			173,
-			45,
-			153
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1270,
-			750,
-			103,
-			18
-		},
+		size = {210, 344},
+		trim = {62, 173, 45, 153},
+		a_size = {2048, 2048},
+		f_quad = {1270, 750, 103, 18},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0187 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			61,
-			175,
-			44,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1331,
-			260,
-			105,
-			14
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0188"
-		}
+		size = {210, 344},
+		trim = {61, 175, 44, 155},
+		a_size = {2048, 2048},
+		f_quad = {1331, 260, 105, 14},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0188"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0189 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			60,
-			172,
-			42,
-			154
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1514,
-			130,
-			108,
-			18
-		},
+		size = {210, 344},
+		trim = {60, 172, 42, 154},
+		a_size = {2048, 2048},
+		f_quad = {1514, 130, 108, 18},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0190 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			59,
-			176,
-			42,
-			154
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			715,
-			650,
-			109,
-			14
-		},
+		size = {210, 344},
+		trim = {59, 176, 42, 154},
+		a_size = {2048, 2048},
+		f_quad = {715, 650, 109, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0191 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			58,
-			175,
-			66,
-			154
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1956,
-			470,
-			86,
-			15
-		},
+		size = {210, 344},
+		trim = {58, 175, 66, 154},
+		a_size = {2048, 2048},
+		f_quad = {1956, 470, 86, 15},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer4_0192 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			127,
-			177,
-			66,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1246,
-			786,
-			17,
-			10
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0193"
-		}
+		size = {210, 344},
+		trim = {127, 177, 66, 157},
+		a_size = {2048, 2048},
+		f_quad = {1246, 786, 17, 10},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0193"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0194 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			127,
-			177,
-			66,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1634,
-			651,
-			17,
-			10
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0195"
-		}
+		size = {210, 344},
+		trim = {127, 177, 66, 157},
+		a_size = {2048, 2048},
+		f_quad = {1634, 651, 17, 10},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0195"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0196 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			127,
-			177,
-			66,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1654,
-			651,
-			17,
-			10
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0197"
-		}
+		size = {210, 344},
+		trim = {127, 177, 66, 157},
+		a_size = {2048, 2048},
+		f_quad = {1654, 651, 17, 10},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0197"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0198 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			127,
-			177,
-			66,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1089,
-			685,
-			17,
-			10
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0199"
-		}
+		size = {210, 344},
+		trim = {127, 177, 66, 157},
+		a_size = {2048, 2048},
+		f_quad = {1089, 685, 17, 10},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0199"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0263 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			47,
-			68,
-			225
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1964,
-			80,
-			73,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0264"
-		}
+		size = {210, 344},
+		trim = {69, 47, 68, 225},
+		a_size = {2048, 2048},
+		f_quad = {1964, 80, 73, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0265 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			49,
-			68,
-			227
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1860,
-			73,
-			68
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0266"
-		}
+		size = {210, 344},
+		trim = {69, 49, 68, 227},
+		a_size = {2048, 2048},
+		f_quad = {352, 1860, 73, 68},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0267 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			63,
-			68,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1306,
-			593,
-			73,
-			58
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0268"
-		}
+		size = {210, 344},
+		trim = {69, 63, 68, 223},
+		a_size = {2048, 2048},
+		f_quad = {1306, 593, 73, 58},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0269 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			63,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1609,
-			593,
-			73,
-			55
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0270"
-		}
+		size = {210, 344},
+		trim = {69, 63, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {1609, 593, 73, 55},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0270"}
 	},
 	tricannon_tower_lvl4_tower_layer4_0271 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			69,
-			65,
-			68,
-			226
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			578,
-			73,
-			53
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer4_0272"
-		}
+		size = {210, 344},
+		trim = {69, 65, 68, 226},
+		a_size = {2048, 2048},
+		f_quad = {140, 578, 73, 53},
+		alias = {"tricannon_tower_lvl4_tower_layer4_0272"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0042 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			148,
-			66,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			899,
-			702,
-			72,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0043",
-			"tricannon_tower_lvl4_tower_layer5_0253",
-			"tricannon_tower_lvl4_tower_layer5_0254"
-		}
+		size = {210, 344},
+		trim = {72, 148, 66, 157},
+		a_size = {2048, 2048},
+		f_quad = {899, 702, 72, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0043", "tricannon_tower_lvl4_tower_layer5_0253", "tricannon_tower_lvl4_tower_layer5_0254"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0044 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			150,
-			66,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			974,
-			702,
-			72,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0045",
-			"tricannon_tower_lvl4_tower_layer5_0255",
-			"tricannon_tower_lvl4_tower_layer5_0256"
-		}
+		size = {210, 344},
+		trim = {72, 150, 66, 155},
+		a_size = {2048, 2048},
+		f_quad = {974, 702, 72, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0045", "tricannon_tower_lvl4_tower_layer5_0255", "tricannon_tower_lvl4_tower_layer5_0256"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0046 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			134,
-			66,
-			174
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			745,
-			750,
-			72,
-			36
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0047",
-			"tricannon_tower_lvl4_tower_layer5_0257",
-			"tricannon_tower_lvl4_tower_layer5_0258"
-		}
+		size = {210, 344},
+		trim = {72, 134, 66, 174},
+		a_size = {2048, 2048},
+		f_quad = {745, 750, 72, 36},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0047", "tricannon_tower_lvl4_tower_layer5_0257", "tricannon_tower_lvl4_tower_layer5_0258"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			136,
-			66,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1199,
-			702,
-			72,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0049",
-			"tricannon_tower_lvl4_tower_layer5_0259",
-			"tricannon_tower_lvl4_tower_layer5_0260"
-		}
+		size = {210, 344},
+		trim = {72, 136, 66, 170},
+		a_size = {2048, 2048},
+		f_quad = {1199, 702, 72, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0049", "tricannon_tower_lvl4_tower_layer5_0259", "tricannon_tower_lvl4_tower_layer5_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			140,
-			66,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1195,
-			750,
-			72,
-			33
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0051",
-			"tricannon_tower_lvl4_tower_layer5_0261",
-			"tricannon_tower_lvl4_tower_layer5_0262"
-		}
+		size = {210, 344},
+		trim = {72, 140, 66, 171},
+		a_size = {2048, 2048},
+		f_quad = {1195, 750, 72, 33},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0051", "tricannon_tower_lvl4_tower_layer5_0261", "tricannon_tower_lvl4_tower_layer5_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			136,
-			66,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1649,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0053",
-			"tricannon_tower_lvl4_tower_layer5_0263",
-			"tricannon_tower_lvl4_tower_layer5_0264"
-		}
+		size = {210, 344},
+		trim = {72, 136, 66, 171},
+		a_size = {2048, 2048},
+		f_quad = {1649, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0053", "tricannon_tower_lvl4_tower_layer5_0263", "tricannon_tower_lvl4_tower_layer5_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			134,
-			66,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1049,
-			702,
-			72,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0055",
-			"tricannon_tower_lvl4_tower_layer5_0265",
-			"tricannon_tower_lvl4_tower_layer5_0266"
-		}
+		size = {210, 344},
+		trim = {72, 134, 66, 171},
+		a_size = {2048, 2048},
+		f_quad = {1049, 702, 72, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0055", "tricannon_tower_lvl4_tower_layer5_0265", "tricannon_tower_lvl4_tower_layer5_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			136,
-			66,
-			172
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			820,
-			750,
-			72,
-			36
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0057",
-			"tricannon_tower_lvl4_tower_layer5_0267",
-			"tricannon_tower_lvl4_tower_layer5_0268"
-		}
+		size = {210, 344},
+		trim = {72, 136, 66, 172},
+		a_size = {2048, 2048},
+		f_quad = {820, 750, 72, 36},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0057", "tricannon_tower_lvl4_tower_layer5_0267", "tricannon_tower_lvl4_tower_layer5_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			138,
-			66,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1045,
-			750,
-			72,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0063",
-			"tricannon_tower_lvl4_tower_layer5_0273",
-			"tricannon_tower_lvl4_tower_layer5_0274"
-		}
+		size = {210, 344},
+		trim = {72, 138, 66, 171},
+		a_size = {2048, 2048},
+		f_quad = {1045, 750, 72, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0063", "tricannon_tower_lvl4_tower_layer5_0273", "tricannon_tower_lvl4_tower_layer5_0274"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0103 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			150,
-			66,
-			159
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1120,
-			750,
-			72,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0104",
-			"tricannon_tower_lvl4_tower_layer5_0105",
-			"tricannon_tower_lvl4_tower_layer5_0106",
-			"tricannon_tower_lvl4_tower_layer5_0107",
-			"tricannon_tower_lvl4_tower_layer5_0108",
-			"tricannon_tower_lvl4_tower_layer5_0109",
-			"tricannon_tower_lvl4_tower_layer5_0110",
-			"tricannon_tower_lvl4_tower_layer5_0111",
-			"tricannon_tower_lvl4_tower_layer5_0112"
-		}
+		size = {210, 344},
+		trim = {72, 150, 66, 159},
+		a_size = {2048, 2048},
+		f_quad = {1120, 750, 72, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0104", "tricannon_tower_lvl4_tower_layer5_0105", "tricannon_tower_lvl4_tower_layer5_0106", "tricannon_tower_lvl4_tower_layer5_0107", "tricannon_tower_lvl4_tower_layer5_0108", "tricannon_tower_lvl4_tower_layer5_0109", "tricannon_tower_lvl4_tower_layer5_0110", "tricannon_tower_lvl4_tower_layer5_0111", "tricannon_tower_lvl4_tower_layer5_0112"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0113 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			151,
-			66,
-			156
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1724,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0114"
-		}
+		size = {210, 344},
+		trim = {72, 151, 66, 156},
+		a_size = {2048, 2048},
+		f_quad = {1724, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0114"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0115 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			131,
-			66,
-			176
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1799,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0116"
-		}
+		size = {210, 344},
+		trim = {72, 131, 66, 176},
+		a_size = {2048, 2048},
+		f_quad = {1799, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0116"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0117 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			132,
-			66,
-			173
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1124,
-			702,
-			72,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0118"
-		}
+		size = {210, 344},
+		trim = {72, 132, 66, 173},
+		a_size = {2048, 2048},
+		f_quad = {1124, 702, 72, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0118"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0119 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			135,
-			66,
-			172
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1874,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0120"
-		}
+		size = {210, 344},
+		trim = {72, 135, 66, 172},
+		a_size = {2048, 2048},
+		f_quad = {1874, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0120"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0123 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			134,
-			66,
-			172
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1274,
-			702,
-			72,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0124"
-		}
+		size = {210, 344},
+		trim = {72, 134, 66, 172},
+		a_size = {2048, 2048},
+		f_quad = {1274, 702, 72, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0124"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0125 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			72,
-			136,
-			66,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1949,
-			702,
-			72,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0126"
-		}
+		size = {210, 344},
+		trim = {72, 136, 66, 171},
+		a_size = {2048, 2048},
+		f_quad = {1949, 702, 72, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0126"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0143 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			137,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1284,
-			27,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0144"
-		}
+		size = {210, 344},
+		trim = {46, 148, 137, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1284, 27, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0144"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0145 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			136,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1130,
-			28,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0146"
-		}
+		size = {210, 344},
+		trim = {46, 148, 136, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1130, 28, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0146"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0147 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			139,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			439,
-			1506,
-			25,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0148"
-		}
+		size = {210, 344},
+		trim = {46, 148, 139, 161},
+		a_size = {2048, 2048},
+		f_quad = {439, 1506, 25, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0148"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0149 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			45,
-			149,
-			139,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1474,
-			26,
-			34
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0150"
-		}
+		size = {210, 344},
+		trim = {45, 149, 139, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1474, 26, 34},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0150"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0151 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			139,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			439,
-			1544,
-			25,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0152"
-		}
+		size = {210, 344},
+		trim = {46, 148, 139, 161},
+		a_size = {2048, 2048},
+		f_quad = {439, 1544, 25, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0152"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0153 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			148,
-			126,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			428,
-			1891,
-			35,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0154",
-			"tricannon_tower_lvl4_tower_layer5_0183",
-			"tricannon_tower_lvl4_tower_layer5_0184"
-		}
+		size = {210, 344},
+		trim = {49, 148, 126, 161},
+		a_size = {2048, 2048},
+		f_quad = {428, 1891, 35, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0154", "tricannon_tower_lvl4_tower_layer5_0183", "tricannon_tower_lvl4_tower_layer5_0184"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0155 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			47,
-			136,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			428,
-			1841,
-			33,
-			47
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0156"
-		}
+		size = {210, 344},
+		trim = {47, 136, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {428, 1841, 33, 47},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0156"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0157 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			44,
-			135,
-			137,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			186,
-			1378,
-			29,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0158"
-		}
+		size = {210, 344},
+		trim = {44, 135, 137, 161},
+		a_size = {2048, 2048},
+		f_quad = {186, 1378, 29, 48},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0158"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0159 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			135,
-			138,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			186,
-			1601,
-			29,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0160"
-		}
+		size = {210, 344},
+		trim = {43, 135, 138, 161},
+		a_size = {2048, 2048},
+		f_quad = {186, 1601, 29, 48},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0160"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0161 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			105,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			750,
-			56,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0162"
-		}
+		size = {210, 344},
+		trim = {49, 134, 105, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 750, 56, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0162"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0163 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			133,
-			116,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			869,
-			45,
-			50
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0164",
-			"tricannon_tower_lvl4_tower_layer5_0171",
-			"tricannon_tower_lvl4_tower_layer5_0172"
-		}
+		size = {210, 344},
+		trim = {49, 133, 116, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 869, 45, 50},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0164", "tricannon_tower_lvl4_tower_layer5_0171", "tricannon_tower_lvl4_tower_layer5_0172"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0165 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			133,
-			124,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1283,
-			37,
-			50
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0166"
-		}
+		size = {210, 344},
+		trim = {49, 133, 124, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1283, 37, 50},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0166"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0167 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			48,
-			134,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			428,
-			1789,
-			32,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0168"
-		}
+		size = {210, 344},
+		trim = {48, 134, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {428, 1789, 32, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0168"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0169 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			118,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1993,
-			43,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0170",
-			"tricannon_tower_lvl4_tower_layer5_0177",
-			"tricannon_tower_lvl4_tower_layer5_0178"
-		}
+		size = {210, 344},
+		trim = {49, 134, 118, 161},
+		a_size = {2048, 2048},
+		f_quad = {467, 1993, 43, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0170", "tricannon_tower_lvl4_tower_layer5_0177", "tricannon_tower_lvl4_tower_layer5_0178"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0173 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			133,
-			124,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1336,
-			37,
-			50
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0174"
-		}
+		size = {210, 344},
+		trim = {49, 133, 124, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1336, 37, 50},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0174"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0175 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			48,
-			134,
-			131,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1532,
-			31,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0176"
-		}
+		size = {210, 344},
+		trim = {48, 134, 131, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1532, 31, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0176"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0179 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			133,
-			116,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			922,
-			45,
-			50
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0180"
-		}
+		size = {210, 344},
+		trim = {49, 133, 116, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 922, 45, 50},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0180"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0181 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			142,
-			121,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1434,
-			40,
-			41
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0182"
-		}
+		size = {210, 344},
+		trim = {49, 142, 121, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1434, 40, 41},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0182"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0185 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1480,
-			32,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0186"
-		}
+		size = {210, 344},
+		trim = {46, 148, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1480, 32, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0186"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0187 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			45,
-			148,
-			139,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1398,
-			26,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0188"
-		}
+		size = {210, 344},
+		trim = {45, 148, 139, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1398, 26, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0188"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0189 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			138,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1436,
-			26,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0190"
-		}
+		size = {210, 344},
+		trim = {46, 148, 138, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1436, 26, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0190"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0191 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			47,
-			148,
-			135,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1168,
-			28,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0192"
-		}
+		size = {210, 344},
+		trim = {47, 148, 135, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1168, 28, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0192"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0193 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			137,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1322,
-			27,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0194"
-		}
+		size = {210, 344},
+		trim = {46, 148, 137, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1322, 27, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0194"}
 	},
 	tricannon_tower_lvl4_tower_layer5_0195 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			148,
-			137,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1360,
-			27,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer5_0196",
-			"tricannon_tower_lvl4_tower_layer5_0197",
-			"tricannon_tower_lvl4_tower_layer5_0198",
-			"tricannon_tower_lvl4_tower_layer5_0199",
-			"tricannon_tower_lvl4_tower_layer5_0200",
-			"tricannon_tower_lvl4_tower_layer5_0201"
-		}
+		size = {210, 344},
+		trim = {46, 148, 137, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1360, 27, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer5_0196", "tricannon_tower_lvl4_tower_layer5_0197", "tricannon_tower_lvl4_tower_layer5_0198", "tricannon_tower_lvl4_tower_layer5_0199", "tricannon_tower_lvl4_tower_layer5_0200", "tricannon_tower_lvl4_tower_layer5_0201"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			134,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			430,
-			1931,
-			34,
-			49
-		},
+		size = {210, 344},
+		trim = {46, 134, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {430, 1931, 34, 49},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer6_0003",
 			"tricannon_tower_lvl4_tower_layer6_0066",
@@ -7803,458 +3716,130 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer6_0004 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1584,
-			31,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0005",
-			"tricannon_tower_lvl4_tower_layer6_0075",
-			"tricannon_tower_lvl4_tower_layer6_0076",
-			"tricannon_tower_lvl4_tower_layer6_0215",
-			"tricannon_tower_lvl4_tower_layer6_0216"
-		}
+		size = {210, 344},
+		trim = {49, 134, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1584, 31, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0005", "tricannon_tower_lvl4_tower_layer6_0075", "tricannon_tower_lvl4_tower_layer6_0076", "tricannon_tower_lvl4_tower_layer6_0215", "tricannon_tower_lvl4_tower_layer6_0216"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0006 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1636,
-			31,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0007",
-			"tricannon_tower_lvl4_tower_layer6_0077",
-			"tricannon_tower_lvl4_tower_layer6_0078",
-			"tricannon_tower_lvl4_tower_layer6_0217",
-			"tricannon_tower_lvl4_tower_layer6_0218"
-		}
+		size = {210, 344},
+		trim = {49, 134, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1636, 31, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0007", "tricannon_tower_lvl4_tower_layer6_0077", "tricannon_tower_lvl4_tower_layer6_0078", "tricannon_tower_lvl4_tower_layer6_0217", "tricannon_tower_lvl4_tower_layer6_0218"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0008 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			131,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1894,
-			30,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0009",
-			"tricannon_tower_lvl4_tower_layer6_0219",
-			"tricannon_tower_lvl4_tower_layer6_0220"
-		}
+		size = {210, 344},
+		trim = {49, 134, 131, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1894, 30, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0009", "tricannon_tower_lvl4_tower_layer6_0219", "tricannon_tower_lvl4_tower_layer6_0220"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0010 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			131,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1946,
-			30,
-			49
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0011",
-			"tricannon_tower_lvl4_tower_layer6_0081",
-			"tricannon_tower_lvl4_tower_layer6_0082",
-			"tricannon_tower_lvl4_tower_layer6_0221",
-			"tricannon_tower_lvl4_tower_layer6_0222"
-		}
+		size = {210, 344},
+		trim = {49, 134, 131, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1946, 30, 49},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0011", "tricannon_tower_lvl4_tower_layer6_0081", "tricannon_tower_lvl4_tower_layer6_0082", "tricannon_tower_lvl4_tower_layer6_0221", "tricannon_tower_lvl4_tower_layer6_0222"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0012 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			147,
-			134,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1206,
-			27,
-			36
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0013",
-			"tricannon_tower_lvl4_tower_layer6_0223",
-			"tricannon_tower_lvl4_tower_layer6_0224"
-		}
+		size = {210, 344},
+		trim = {49, 147, 134, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1206, 27, 36},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0013", "tricannon_tower_lvl4_tower_layer6_0223", "tricannon_tower_lvl4_tower_layer6_0224"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0014 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			146,
-			134,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1050,
-			27,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0015",
-			"tricannon_tower_lvl4_tower_layer6_0225",
-			"tricannon_tower_lvl4_tower_layer6_0226"
-		}
+		size = {210, 344},
+		trim = {49, 146, 134, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1050, 27, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0015", "tricannon_tower_lvl4_tower_layer6_0225", "tricannon_tower_lvl4_tower_layer6_0226"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0016 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			886,
-			28,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0017",
-			"tricannon_tower_lvl4_tower_layer6_0227",
-			"tricannon_tower_lvl4_tower_layer6_0228"
-		}
+		size = {210, 344},
+		trim = {49, 145, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 886, 28, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0017", "tricannon_tower_lvl4_tower_layer6_0227", "tricannon_tower_lvl4_tower_layer6_0228"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0018 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1900,
-			28,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0019",
-			"tricannon_tower_lvl4_tower_layer6_0229",
-			"tricannon_tower_lvl4_tower_layer6_0230"
-		}
+		size = {210, 344},
+		trim = {49, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1900, 28, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0019", "tricannon_tower_lvl4_tower_layer6_0229", "tricannon_tower_lvl4_tower_layer6_0230"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0020 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1942,
-			28,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0021",
-			"tricannon_tower_lvl4_tower_layer6_0231",
-			"tricannon_tower_lvl4_tower_layer6_0232"
-		}
+		size = {210, 344},
+		trim = {49, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1942, 28, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0021", "tricannon_tower_lvl4_tower_layer6_0231", "tricannon_tower_lvl4_tower_layer6_0232"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0022 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			48,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1018,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0023",
-			"tricannon_tower_lvl4_tower_layer6_0233",
-			"tricannon_tower_lvl4_tower_layer6_0234"
-		}
+		size = {210, 344},
+		trim = {48, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1018, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0023", "tricannon_tower_lvl4_tower_layer6_0233", "tricannon_tower_lvl4_tower_layer6_0234"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0024 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1932,
-			750,
-			31,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0025",
-			"tricannon_tower_lvl4_tower_layer6_0026",
-			"tricannon_tower_lvl4_tower_layer6_0027",
-			"tricannon_tower_lvl4_tower_layer6_0235",
-			"tricannon_tower_lvl4_tower_layer6_0236",
-			"tricannon_tower_lvl4_tower_layer6_0237",
-			"tricannon_tower_lvl4_tower_layer6_0238"
-		}
+		size = {210, 344},
+		trim = {46, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {1932, 750, 31, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0025", "tricannon_tower_lvl4_tower_layer6_0026", "tricannon_tower_lvl4_tower_layer6_0027", "tricannon_tower_lvl4_tower_layer6_0235", "tricannon_tower_lvl4_tower_layer6_0236", "tricannon_tower_lvl4_tower_layer6_0237", "tricannon_tower_lvl4_tower_layer6_0238"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0028 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			48,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1060,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0029",
-			"tricannon_tower_lvl4_tower_layer6_0101",
-			"tricannon_tower_lvl4_tower_layer6_0102",
-			"tricannon_tower_lvl4_tower_layer6_0239",
-			"tricannon_tower_lvl4_tower_layer6_0240"
-		}
+		size = {210, 344},
+		trim = {48, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1060, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0029", "tricannon_tower_lvl4_tower_layer6_0101", "tricannon_tower_lvl4_tower_layer6_0102", "tricannon_tower_lvl4_tower_layer6_0239", "tricannon_tower_lvl4_tower_layer6_0240"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0030 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1984,
-			28,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0031",
-			"tricannon_tower_lvl4_tower_layer6_0241",
-			"tricannon_tower_lvl4_tower_layer6_0242"
-		}
+		size = {210, 344},
+		trim = {49, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1984, 28, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0031", "tricannon_tower_lvl4_tower_layer6_0241", "tricannon_tower_lvl4_tower_layer6_0242"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0032 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1102,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0033",
-			"tricannon_tower_lvl4_tower_layer6_0243",
-			"tricannon_tower_lvl4_tower_layer6_0244"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1102, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0033", "tricannon_tower_lvl4_tower_layer6_0243", "tricannon_tower_lvl4_tower_layer6_0244"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0034 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1144,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0035",
-			"tricannon_tower_lvl4_tower_layer6_0245",
-			"tricannon_tower_lvl4_tower_layer6_0246"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1144, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0035", "tricannon_tower_lvl4_tower_layer6_0245", "tricannon_tower_lvl4_tower_layer6_0246"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0036 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1186,
-			29,
-			39
-		},
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1186, 29, 39},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer6_0037",
 			"tricannon_tower_lvl4_tower_layer6_0038",
@@ -8283,883 +3868,266 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer6_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1572,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0049",
-			"tricannon_tower_lvl4_tower_layer6_0259",
-			"tricannon_tower_lvl4_tower_layer6_0260"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1572, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0049", "tricannon_tower_lvl4_tower_layer6_0259", "tricannon_tower_lvl4_tower_layer6_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			148,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			642,
-			842,
-			29,
-			35
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0051",
-			"tricannon_tower_lvl4_tower_layer6_0261",
-			"tricannon_tower_lvl4_tower_layer6_0262"
-		}
+		size = {210, 344},
+		trim = {49, 148, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {642, 842, 29, 35},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0051", "tricannon_tower_lvl4_tower_layer6_0261", "tricannon_tower_lvl4_tower_layer6_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1613,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0053",
-			"tricannon_tower_lvl4_tower_layer6_0263",
-			"tricannon_tower_lvl4_tower_layer6_0264"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1613, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0053", "tricannon_tower_lvl4_tower_layer6_0263", "tricannon_tower_lvl4_tower_layer6_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1228,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0055",
-			"tricannon_tower_lvl4_tower_layer6_0265",
-			"tricannon_tower_lvl4_tower_layer6_0266"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1228, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0055", "tricannon_tower_lvl4_tower_layer6_0265", "tricannon_tower_lvl4_tower_layer6_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1654,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0057",
-			"tricannon_tower_lvl4_tower_layer6_0267",
-			"tricannon_tower_lvl4_tower_layer6_0268"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1654, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0057", "tricannon_tower_lvl4_tower_layer6_0267", "tricannon_tower_lvl4_tower_layer6_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0058 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1270,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0059",
-			"tricannon_tower_lvl4_tower_layer6_0060",
-			"tricannon_tower_lvl4_tower_layer6_0061",
-			"tricannon_tower_lvl4_tower_layer6_0269",
-			"tricannon_tower_lvl4_tower_layer6_0270",
-			"tricannon_tower_lvl4_tower_layer6_0271",
-			"tricannon_tower_lvl4_tower_layer6_0272"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1270, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0059", "tricannon_tower_lvl4_tower_layer6_0060", "tricannon_tower_lvl4_tower_layer6_0061", "tricannon_tower_lvl4_tower_layer6_0269", "tricannon_tower_lvl4_tower_layer6_0270", "tricannon_tower_lvl4_tower_layer6_0271", "tricannon_tower_lvl4_tower_layer6_0272"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			146,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			642,
-			802,
-			29,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0063",
-			"tricannon_tower_lvl4_tower_layer6_0273",
-			"tricannon_tower_lvl4_tower_layer6_0274"
-		}
+		size = {210, 344},
+		trim = {49, 146, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {642, 802, 29, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0063", "tricannon_tower_lvl4_tower_layer6_0273", "tricannon_tower_lvl4_tower_layer6_0274"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0064 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			139,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1803,
-			750,
-			29,
-			44
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0275"
-		}
+		size = {210, 344},
+		trim = {49, 139, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {1803, 750, 29, 44},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0275"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0065 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			139,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1835,
-			750,
-			29,
-			44
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0276"
-		}
+		size = {210, 344},
+		trim = {49, 139, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {1835, 750, 29, 44},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0276"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0079 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			132,
-			131,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1478,
-			30,
-			51
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0080"
-		}
+		size = {210, 344},
+		trim = {49, 132, 131, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1478, 30, 51},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0080"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0083 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			147,
-			134,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1245,
-			27,
-			36
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0084"
-		}
+		size = {210, 344},
+		trim = {49, 147, 134, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1245, 27, 36},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0084"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0085 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			146,
-			134,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1090,
-			27,
-			37
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0086"
-		}
+		size = {210, 344},
+		trim = {49, 146, 134, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1090, 27, 37},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0086"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0087 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			802,
-			28,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0088"
-		}
+		size = {210, 344},
+		trim = {49, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 802, 28, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0088"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0089 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			844,
-			28,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0090"
-		}
+		size = {210, 344},
+		trim = {49, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 844, 28, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0090"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0091 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			48,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1312,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0092"
-		}
+		size = {210, 344},
+		trim = {48, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1312, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0092"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0093 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			144,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1966,
-			750,
-			31,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0094",
-			"tricannon_tower_lvl4_tower_layer6_0095",
-			"tricannon_tower_lvl4_tower_layer6_0096",
-			"tricannon_tower_lvl4_tower_layer6_0097",
-			"tricannon_tower_lvl4_tower_layer6_0098",
-			"tricannon_tower_lvl4_tower_layer6_0099",
-			"tricannon_tower_lvl4_tower_layer6_0100"
-		}
+		size = {210, 344},
+		trim = {46, 144, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {1966, 750, 31, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0094", "tricannon_tower_lvl4_tower_layer6_0095", "tricannon_tower_lvl4_tower_layer6_0096", "tricannon_tower_lvl4_tower_layer6_0097", "tricannon_tower_lvl4_tower_layer6_0098", "tricannon_tower_lvl4_tower_layer6_0099", "tricannon_tower_lvl4_tower_layer6_0100"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0103 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			927,
-			28,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0104"
-		}
+		size = {210, 344},
+		trim = {49, 145, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 927, 28, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0104"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0105 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			968,
-			28,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0106"
-		}
+		size = {210, 344},
+		trim = {49, 145, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 968, 28, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0106"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0107 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1695,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0108"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1695, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0108"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0109 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1736,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0110"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1736, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0110"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0111 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1777,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0112",
-			"tricannon_tower_lvl4_tower_layer6_0113",
-			"tricannon_tower_lvl4_tower_layer6_0114"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1777, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0112", "tricannon_tower_lvl4_tower_layer6_0113", "tricannon_tower_lvl4_tower_layer6_0114"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0115 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1354,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0116",
-			"tricannon_tower_lvl4_tower_layer6_0127",
-			"tricannon_tower_lvl4_tower_layer6_0128",
-			"tricannon_tower_lvl4_tower_layer6_0129",
-			"tricannon_tower_lvl4_tower_layer6_0130",
-			"tricannon_tower_lvl4_tower_layer6_0131",
-			"tricannon_tower_lvl4_tower_layer6_0132",
-			"tricannon_tower_lvl4_tower_layer6_0133",
-			"tricannon_tower_lvl4_tower_layer6_0134",
-			"tricannon_tower_lvl4_tower_layer6_0135"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1354, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0116", "tricannon_tower_lvl4_tower_layer6_0127", "tricannon_tower_lvl4_tower_layer6_0128", "tricannon_tower_lvl4_tower_layer6_0129", "tricannon_tower_lvl4_tower_layer6_0130", "tricannon_tower_lvl4_tower_layer6_0131", "tricannon_tower_lvl4_tower_layer6_0132", "tricannon_tower_lvl4_tower_layer6_0133", "tricannon_tower_lvl4_tower_layer6_0134", "tricannon_tower_lvl4_tower_layer6_0135"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0117 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1396,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0118"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1396, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0118"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0119 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			143,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2000,
-			750,
-			29,
-			40
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0120"
-		}
+		size = {210, 344},
+		trim = {49, 143, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {2000, 750, 29, 40},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0120"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0121 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			144,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1438,
-			29,
-			39
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0122"
-		}
+		size = {210, 344},
+		trim = {49, 144, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1438, 29, 39},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0122"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0123 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			143,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			975,
-			29,
-			40
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0124"
-		}
+		size = {210, 344},
+		trim = {49, 143, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 975, 29, 40},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0124"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0125 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1818,
-			29,
-			38
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer6_0126"
-		}
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1818, 29, 38},
+		alias = {"tricannon_tower_lvl4_tower_layer6_0126"}
 	},
 	tricannon_tower_lvl4_tower_layer6_0136 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			132,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			1859,
-			29,
-			38
-		},
+		size = {210, 344},
+		trim = {49, 145, 132, 161},
+		a_size = {2048, 2048},
+		f_quad = {559, 1859, 29, 38},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0137 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			145,
-			133,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1009,
-			28,
-			38
-		},
+		size = {210, 344},
+		trim = {49, 145, 133, 161},
+		a_size = {2048, 2048},
+		f_quad = {611, 1009, 28, 38},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0138 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			135,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1740,
-			31,
-			48
-		},
+		size = {210, 344},
+		trim = {49, 135, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1740, 31, 48},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0139 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			135,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1791,
-			31,
-			48
-		},
+		size = {210, 344},
+		trim = {49, 135, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1791, 31, 48},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0140 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			134,
-			130,
-			161
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1688,
-			31,
-			49
-		},
+		size = {210, 344},
+		trim = {49, 134, 130, 161},
+		a_size = {2048, 2048},
+		f_quad = {513, 1688, 31, 49},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer6_0143 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			155,
-			147,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			1511,
-			26,
-			32
-		},
+		size = {210, 344},
+		trim = {155, 147, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {611, 1511, 26, 32},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer6_0144",
 			"tricannon_tower_lvl4_tower_layer6_0145",
@@ -9223,26 +4191,10 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer7_0002 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			975,
-			43,
-			71
-		},
+		size = {210, 344},
+		trim = {138, 108, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 975, 43, 71},
 		alias = {
 			"tricannon_tower_lvl4_tower_layer7_0003",
 			"tricannon_tower_lvl4_tower_layer7_0004",
@@ -9339,2240 +4291,698 @@ return {
 	},
 	tricannon_tower_lvl4_tower_layer7_0022 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1049,
-			43,
-			71
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0023",
-			"tricannon_tower_lvl4_tower_layer7_0093",
-			"tricannon_tower_lvl4_tower_layer7_0094",
-			"tricannon_tower_lvl4_tower_layer7_0233",
-			"tricannon_tower_lvl4_tower_layer7_0234"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 1049, 43, 71},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0023", "tricannon_tower_lvl4_tower_layer7_0093", "tricannon_tower_lvl4_tower_layer7_0094", "tricannon_tower_lvl4_tower_layer7_0233", "tricannon_tower_lvl4_tower_layer7_0234"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0024 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			149,
-			1827,
-			43,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0025",
-			"tricannon_tower_lvl4_tower_layer7_0095",
-			"tricannon_tower_lvl4_tower_layer7_0096",
-			"tricannon_tower_lvl4_tower_layer7_0235",
-			"tricannon_tower_lvl4_tower_layer7_0236"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {149, 1827, 43, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0025", "tricannon_tower_lvl4_tower_layer7_0095", "tricannon_tower_lvl4_tower_layer7_0096", "tricannon_tower_lvl4_tower_layer7_0235", "tricannon_tower_lvl4_tower_layer7_0236"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0026 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			149,
-			1902,
-			43,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0027",
-			"tricannon_tower_lvl4_tower_layer7_0097",
-			"tricannon_tower_lvl4_tower_layer7_0098",
-			"tricannon_tower_lvl4_tower_layer7_0237",
-			"tricannon_tower_lvl4_tower_layer7_0238"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {149, 1902, 43, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0027", "tricannon_tower_lvl4_tower_layer7_0097", "tricannon_tower_lvl4_tower_layer7_0098", "tricannon_tower_lvl4_tower_layer7_0237", "tricannon_tower_lvl4_tower_layer7_0238"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0028 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			110,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1345,
-			43,
-			70
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0029",
-			"tricannon_tower_lvl4_tower_layer7_0099",
-			"tricannon_tower_lvl4_tower_layer7_0100",
-			"tricannon_tower_lvl4_tower_layer7_0239",
-			"tricannon_tower_lvl4_tower_layer7_0240"
-		}
+		size = {210, 344},
+		trim = {138, 110, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1345, 43, 70},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0029", "tricannon_tower_lvl4_tower_layer7_0099", "tricannon_tower_lvl4_tower_layer7_0100", "tricannon_tower_lvl4_tower_layer7_0239", "tricannon_tower_lvl4_tower_layer7_0240"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0030 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1418,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0031",
-			"tricannon_tower_lvl4_tower_layer7_0101",
-			"tricannon_tower_lvl4_tower_layer7_0102",
-			"tricannon_tower_lvl4_tower_layer7_0241",
-			"tricannon_tower_lvl4_tower_layer7_0242"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1418, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0031", "tricannon_tower_lvl4_tower_layer7_0101", "tricannon_tower_lvl4_tower_layer7_0102", "tricannon_tower_lvl4_tower_layer7_0241", "tricannon_tower_lvl4_tower_layer7_0242"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0032 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1490,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0033",
-			"tricannon_tower_lvl4_tower_layer7_0243",
-			"tricannon_tower_lvl4_tower_layer7_0244"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1490, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0033", "tricannon_tower_lvl4_tower_layer7_0243", "tricannon_tower_lvl4_tower_layer7_0244"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0034 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1562,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0035",
-			"tricannon_tower_lvl4_tower_layer7_0245",
-			"tricannon_tower_lvl4_tower_layer7_0246"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1562, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0035", "tricannon_tower_lvl4_tower_layer7_0245", "tricannon_tower_lvl4_tower_layer7_0246"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0036 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1634,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0037",
-			"tricannon_tower_lvl4_tower_layer7_0247",
-			"tricannon_tower_lvl4_tower_layer7_0248"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1634, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0037", "tricannon_tower_lvl4_tower_layer7_0247", "tricannon_tower_lvl4_tower_layer7_0248"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0038 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1706,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0039",
-			"tricannon_tower_lvl4_tower_layer7_0249",
-			"tricannon_tower_lvl4_tower_layer7_0250"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1706, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0039", "tricannon_tower_lvl4_tower_layer7_0249", "tricannon_tower_lvl4_tower_layer7_0250"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0040 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1778,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0041",
-			"tricannon_tower_lvl4_tower_layer7_0251",
-			"tricannon_tower_lvl4_tower_layer7_0252"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1778, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0041", "tricannon_tower_lvl4_tower_layer7_0251", "tricannon_tower_lvl4_tower_layer7_0252"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0042 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1922,
-			43,
-			68
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0043",
-			"tricannon_tower_lvl4_tower_layer7_0253",
-			"tricannon_tower_lvl4_tower_layer7_0254"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 1922, 43, 68},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0043", "tricannon_tower_lvl4_tower_layer7_0253", "tricannon_tower_lvl4_tower_layer7_0254"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0044 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1123,
-			43,
-			71
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0045",
-			"tricannon_tower_lvl4_tower_layer7_0115",
-			"tricannon_tower_lvl4_tower_layer7_0116",
-			"tricannon_tower_lvl4_tower_layer7_0255",
-			"tricannon_tower_lvl4_tower_layer7_0256"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 1123, 43, 71},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0045", "tricannon_tower_lvl4_tower_layer7_0115", "tricannon_tower_lvl4_tower_layer7_0116", "tricannon_tower_lvl4_tower_layer7_0255", "tricannon_tower_lvl4_tower_layer7_0256"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			111,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			750,
-			43,
-			68
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0049",
-			"tricannon_tower_lvl4_tower_layer7_0259",
-			"tricannon_tower_lvl4_tower_layer7_0260"
-		}
+		size = {210, 344},
+		trim = {138, 111, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {513, 750, 43, 68},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0049", "tricannon_tower_lvl4_tower_layer7_0259", "tricannon_tower_lvl4_tower_layer7_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			117,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1167,
-			43,
-			62
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0051",
-			"tricannon_tower_lvl4_tower_layer7_0261",
-			"tricannon_tower_lvl4_tower_layer7_0262"
-		}
+		size = {210, 344},
+		trim = {138, 117, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {513, 1167, 43, 62},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0051", "tricannon_tower_lvl4_tower_layer7_0261", "tricannon_tower_lvl4_tower_layer7_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			109,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1197,
-			43,
-			71
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0053",
-			"tricannon_tower_lvl4_tower_layer7_0263",
-			"tricannon_tower_lvl4_tower_layer7_0264"
-		}
+		size = {210, 344},
+		trim = {138, 109, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 1197, 43, 71},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0053", "tricannon_tower_lvl4_tower_layer7_0263", "tricannon_tower_lvl4_tower_layer7_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			106,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1601,
-			43,
-			74
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0055",
-			"tricannon_tower_lvl4_tower_layer7_0265",
-			"tricannon_tower_lvl4_tower_layer7_0266"
-		}
+		size = {210, 344},
+		trim = {138, 106, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {140, 1601, 43, 74},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0055", "tricannon_tower_lvl4_tower_layer7_0265", "tricannon_tower_lvl4_tower_layer7_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			110,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1850,
-			43,
-			69
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0057",
-			"tricannon_tower_lvl4_tower_layer7_0267",
-			"tricannon_tower_lvl4_tower_layer7_0268"
-		}
+		size = {210, 344},
+		trim = {138, 110, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 1850, 43, 69},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0057", "tricannon_tower_lvl4_tower_layer7_0267", "tricannon_tower_lvl4_tower_layer7_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			137,
-			112,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			149,
-			1977,
-			44,
-			67
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0063",
-			"tricannon_tower_lvl4_tower_layer7_0273",
-			"tricannon_tower_lvl4_tower_layer7_0274"
-		}
+		size = {210, 344},
+		trim = {137, 112, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {149, 1977, 44, 67},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0063", "tricannon_tower_lvl4_tower_layer7_0273", "tricannon_tower_lvl4_tower_layer7_0274"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0066 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			1271,
-			43,
-			71
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0067",
-			"tricannon_tower_lvl4_tower_layer7_0068",
-			"tricannon_tower_lvl4_tower_layer7_0069",
-			"tricannon_tower_lvl4_tower_layer7_0070",
-			"tricannon_tower_lvl4_tower_layer7_0071",
-			"tricannon_tower_lvl4_tower_layer7_0072",
-			"tricannon_tower_lvl4_tower_layer7_0277",
-			"tricannon_tower_lvl4_tower_layer7_0278",
-			"tricannon_tower_lvl4_tower_layer7_0279",
-			"tricannon_tower_lvl4_tower_layer7_0280"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 1271, 43, 71},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0067", "tricannon_tower_lvl4_tower_layer7_0068", "tricannon_tower_lvl4_tower_layer7_0069", "tricannon_tower_lvl4_tower_layer7_0070", "tricannon_tower_lvl4_tower_layer7_0071", "tricannon_tower_lvl4_tower_layer7_0072", "tricannon_tower_lvl4_tower_layer7_0277", "tricannon_tower_lvl4_tower_layer7_0278", "tricannon_tower_lvl4_tower_layer7_0279", "tricannon_tower_lvl4_tower_layer7_0280"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0103 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			113,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			961,
-			43,
-			66
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0104",
-			"tricannon_tower_lvl4_tower_layer7_0105",
-			"tricannon_tower_lvl4_tower_layer7_0106"
-		}
+		size = {210, 344},
+		trim = {138, 113, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {513, 961, 43, 66},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0104", "tricannon_tower_lvl4_tower_layer7_0105", "tricannon_tower_lvl4_tower_layer7_0106"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0107 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			113,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			821,
-			43,
-			67
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0108"
-		}
+		size = {210, 344},
+		trim = {138, 113, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {513, 821, 43, 67},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0108"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0109 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			113,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1030,
-			43,
-			66
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0110"
-		}
+		size = {210, 344},
+		trim = {138, 113, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {513, 1030, 43, 66},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0110"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0111 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			113,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			891,
-			43,
-			67
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0112"
-		}
+		size = {210, 344},
+		trim = {138, 113, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {513, 891, 43, 67},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0112"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0113 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			114,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1099,
-			43,
-			65
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0114"
-		}
+		size = {210, 344},
+		trim = {138, 114, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {513, 1099, 43, 65},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0114"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0117 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			107,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			750,
-			43,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0118"
-		}
+		size = {210, 344},
+		trim = {138, 107, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {467, 750, 43, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0118"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0119 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			105,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			149,
-			1684,
-			43,
-			74
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0120"
-		}
+		size = {210, 344},
+		trim = {138, 105, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {149, 1684, 43, 74},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0120"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0121 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			825,
-			43,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0122"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 825, 43, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0122"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0123 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			104,
-			29,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			140,
-			1378,
-			43,
-			75
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0124"
-		}
+		size = {210, 344},
+		trim = {138, 104, 29, 165},
+		a_size = {2048, 2048},
+		f_quad = {140, 1378, 43, 75},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0124"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0125 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			138,
-			108,
-			29,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			900,
-			43,
-			72
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer7_0126"
-		}
+		size = {210, 344},
+		trim = {138, 108, 29, 164},
+		a_size = {2048, 2048},
+		f_quad = {467, 900, 43, 72},
+		alias = {"tricannon_tower_lvl4_tower_layer7_0126"}
 	},
 	tricannon_tower_lvl4_tower_layer7_0185 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			60,
-			134,
-			54,
-			191
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1270,
-			771,
-			96,
-			19
-		},
+		size = {210, 344},
+		trim = {60, 134, 54, 191},
+		a_size = {2048, 2048},
+		f_quad = {1270, 771, 96, 19},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0186 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			60,
-			85,
-			54,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			1089,
-			96,
-			88
-		},
+		size = {210, 344},
+		trim = {60, 85, 54, 171},
+		a_size = {2048, 2048},
+		f_quad = {352, 1089, 96, 88},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0187 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			83,
-			41,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1378,
-			489,
-			123,
-			91
-		},
+		size = {210, 344},
+		trim = {46, 83, 41, 170},
+		a_size = {2048, 2048},
+		f_quad = {1378, 489, 123, 91},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0188 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			82,
-			41,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1252,
-			489,
-			123,
-			92
-		},
+		size = {210, 344},
+		trim = {46, 82, 41, 170},
+		a_size = {2048, 2048},
+		f_quad = {1252, 489, 123, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0189 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			38,
-			82,
-			32,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			730,
-			382,
-			140,
-			92
-		},
+		size = {210, 344},
+		trim = {38, 82, 32, 170},
+		a_size = {2048, 2048},
+		f_quad = {730, 382, 140, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0190 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			38,
-			82,
-			32,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			873,
-			382,
-			140,
-			92
-		},
+		size = {210, 344},
+		trim = {38, 82, 32, 170},
+		a_size = {2048, 2048},
+		f_quad = {873, 382, 140, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0191 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			36,
-			82,
-			30,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1070,
-			277,
-			144,
-			92
-		},
+		size = {210, 344},
+		trim = {36, 82, 30, 170},
+		a_size = {2048, 2048},
+		f_quad = {1070, 277, 144, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0192 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			36,
-			82,
-			30,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1217,
-			277,
-			144,
-			92
-		},
+		size = {210, 344},
+		trim = {36, 82, 30, 170},
+		a_size = {2048, 2048},
+		f_quad = {1217, 277, 144, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0193 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			33,
-			82,
-			26,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			611,
-			277,
-			151,
-			95
-		},
+		size = {210, 344},
+		trim = {33, 82, 26, 167},
+		a_size = {2048, 2048},
+		f_quad = {611, 277, 151, 95},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0194 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			33,
-			82,
-			26,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			765,
-			277,
-			151,
-			95
-		},
+		size = {210, 344},
+		trim = {33, 82, 26, 167},
+		a_size = {2048, 2048},
+		f_quad = {765, 277, 151, 95},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0195 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			32,
-			82,
-			26,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1642,
-			160,
-			152,
-			96
-		},
+		size = {210, 344},
+		trim = {32, 82, 26, 166},
+		a_size = {2048, 2048},
+		f_quad = {1642, 160, 152, 96},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0196 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			32,
-			82,
-			26,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1797,
-			160,
-			152,
-			96
-		},
+		size = {210, 344},
+		trim = {32, 82, 26, 166},
+		a_size = {2048, 2048},
+		f_quad = {1797, 160, 152, 96},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0197 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			32,
-			82,
-			26,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1331,
-			160,
-			152,
-			97
-		},
+		size = {210, 344},
+		trim = {32, 82, 26, 165},
+		a_size = {2048, 2048},
+		f_quad = {1331, 160, 152, 97},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0198 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			31,
-			82,
-			26,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1486,
-			160,
-			153,
-			96
-		},
+		size = {210, 344},
+		trim = {31, 82, 26, 166},
+		a_size = {2048, 2048},
+		f_quad = {1486, 160, 153, 96},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0199 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			34,
-			82,
-			28,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			919,
-			277,
-			148,
-			95
-		},
+		size = {210, 344},
+		trim = {34, 82, 28, 167},
+		a_size = {2048, 2048},
+		f_quad = {919, 277, 148, 95},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer7_0200 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			42,
-			82,
-			36,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			859,
-			489,
-			132,
-			92
-		},
+		size = {210, 344},
+		trim = {42, 82, 36, 170},
+		a_size = {2048, 2048},
+		f_quad = {859, 489, 132, 92},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0046 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			71,
-			134,
-			63,
-			191
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1952,
-			251,
-			76,
-			19
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0047",
-			"tricannon_tower_lvl4_tower_layer8_0257",
-			"tricannon_tower_lvl4_tower_layer8_0258"
-		}
+		size = {210, 344},
+		trim = {71, 134, 63, 191},
+		a_size = {2048, 2048},
+		f_quad = {1952, 251, 76, 19},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0047", "tricannon_tower_lvl4_tower_layer8_0257", "tricannon_tower_lvl4_tower_layer8_0258"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0048 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			58,
-			127,
-			50,
-			185
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			467,
-			667,
-			102,
-			32
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0049",
-			"tricannon_tower_lvl4_tower_layer8_0259",
-			"tricannon_tower_lvl4_tower_layer8_0260"
-		}
+		size = {210, 344},
+		trim = {58, 127, 50, 185},
+		a_size = {2048, 2048},
+		f_quad = {467, 667, 102, 32},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0049", "tricannon_tower_lvl4_tower_layer8_0259", "tricannon_tower_lvl4_tower_layer8_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0050 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			49,
-			111,
-			41,
-			174
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			592,
-			593,
-			120,
-			59
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0051",
-			"tricannon_tower_lvl4_tower_layer8_0261",
-			"tricannon_tower_lvl4_tower_layer8_0262"
-		}
+		size = {210, 344},
+		trim = {49, 111, 41, 174},
+		a_size = {2048, 2048},
+		f_quad = {592, 593, 120, 59},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0051", "tricannon_tower_lvl4_tower_layer8_0261", "tricannon_tower_lvl4_tower_layer8_0262"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0052 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			19,
-			38,
-			172
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			1468,
-			126,
-			153
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0053"
-		}
+		size = {210, 344},
+		trim = {46, 19, 38, 172},
+		a_size = {2048, 2048},
+		f_quad = {218, 1468, 126, 153},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0053"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0054 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			18,
-			36,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			822,
-			131,
-			159
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0055"
-		}
+		size = {210, 344},
+		trim = {43, 18, 36, 167},
+		a_size = {2048, 2048},
+		f_quad = {218, 822, 131, 159},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0055"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0056 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			16,
-			36,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			160,
-			131,
-			162
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0057"
-		}
+		size = {210, 344},
+		trim = {43, 16, 36, 166},
+		a_size = {2048, 2048},
+		f_quad = {218, 160, 131, 162},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0057"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0058 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			352,
-			132,
-			164
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 165},
+		a_size = {2048, 2048},
+		f_quad = {5, 352, 132, 164},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0059 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			519,
-			132,
-			164
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 165},
+		a_size = {2048, 2048},
+		f_quad = {5, 519, 132, 164},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0060 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1020,
-			132,
-			163
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 166},
+		a_size = {2048, 2048},
+		f_quad = {5, 1020, 132, 163},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0061 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1186,
-			132,
-			163
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 166},
+		a_size = {2048, 2048},
+		f_quad = {5, 1186, 132, 163},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0062 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			44,
-			14,
-			36,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			490,
-			130,
-			163
-		},
+		size = {210, 344},
+		trim = {44, 14, 36, 167},
+		a_size = {2048, 2048},
+		f_quad = {218, 490, 130, 163},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0063 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			44,
-			19,
-			36,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			1146,
-			130,
-			158
-		},
+		size = {210, 344},
+		trim = {44, 19, 36, 167},
+		a_size = {2048, 2048},
+		f_quad = {218, 1146, 130, 158},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0064 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			53,
-			19,
-			45,
-			176
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			1780,
-			112,
-			149
-		},
+		size = {210, 344},
+		trim = {53, 19, 45, 176},
+		a_size = {2048, 2048},
+		f_quad = {218, 1780, 112, 149},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0065 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			53,
-			19,
-			45,
-			176
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			160,
-			112,
-			149
-		},
+		size = {210, 344},
+		trim = {53, 19, 45, 176},
+		a_size = {2048, 2048},
+		f_quad = {352, 160, 112, 149},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0066 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			78,
-			18,
-			82,
-			263
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			149,
-			1761,
-			50,
-			63
-		},
+		size = {210, 344},
+		trim = {78, 18, 82, 263},
+		a_size = {2048, 2048},
+		f_quad = {149, 1761, 50, 63},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0067 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			79,
-			26,
-			82,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			810,
-			49,
-			56
-		},
+		size = {210, 344},
+		trim = {79, 26, 82, 262},
+		a_size = {2048, 2048},
+		f_quad = {559, 810, 49, 56},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0068 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			85,
-			34,
-			82,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			513,
-			1232,
-			43,
-			48
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0279"
-		}
+		size = {210, 344},
+		trim = {85, 34, 82, 262},
+		a_size = {2048, 2048},
+		f_quad = {513, 1232, 43, 48},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0279"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0069 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			95,
-			33,
-			88,
-			288
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			186,
-			1429,
-			27,
-			23
-		},
+		size = {210, 344},
+		trim = {95, 33, 88, 288},
+		a_size = {2048, 2048},
+		f_quad = {186, 1429, 27, 23},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0070 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			95,
-			40,
-			86,
-			291
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1439,
-			260,
-			29,
-			13
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0071",
-			"tricannon_tower_lvl4_tower_layer8_0280"
-		}
+		size = {210, 344},
+		trim = {95, 40, 86, 291},
+		a_size = {2048, 2048},
+		f_quad = {1439, 260, 29, 13},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0071", "tricannon_tower_lvl4_tower_layer8_0280"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0263 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			46,
-			19,
-			38,
-			172
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			1624,
-			126,
-			153
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0264"
-		}
+		size = {210, 344},
+		trim = {46, 19, 38, 172},
+		a_size = {2048, 2048},
+		f_quad = {218, 1624, 126, 153},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0264"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0265 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			18,
-			36,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			984,
-			131,
-			159
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0266"
-		}
+		size = {210, 344},
+		trim = {43, 18, 36, 167},
+		a_size = {2048, 2048},
+		f_quad = {218, 984, 131, 159},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0266"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0267 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			16,
-			36,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			325,
-			131,
-			162
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer8_0268"
-		}
+		size = {210, 344},
+		trim = {43, 16, 36, 166},
+		a_size = {2048, 2048},
+		f_quad = {218, 325, 131, 162},
+		alias = {"tricannon_tower_lvl4_tower_layer8_0268"}
 	},
 	tricannon_tower_lvl4_tower_layer8_0269 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			686,
-			132,
-			164
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 165},
+		a_size = {2048, 2048},
+		f_quad = {5, 686, 132, 164},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0270 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			165
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			853,
-			132,
-			164
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 165},
+		a_size = {2048, 2048},
+		f_quad = {5, 853, 132, 164},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0271 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1352,
-			132,
-			163
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 166},
+		a_size = {2048, 2048},
+		f_quad = {5, 1352, 132, 163},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0272 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			43,
-			15,
-			35,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1518,
-			132,
-			163
-		},
+		size = {210, 344},
+		trim = {43, 15, 35, 166},
+		a_size = {2048, 2048},
+		f_quad = {5, 1518, 132, 163},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0273 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			44,
-			14,
-			36,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			656,
-			130,
-			163
-		},
+		size = {210, 344},
+		trim = {44, 14, 36, 167},
+		a_size = {2048, 2048},
+		f_quad = {218, 656, 130, 163},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0274 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			44,
-			19,
-			36,
-			167
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			218,
-			1307,
-			130,
-			158
-		},
+		size = {210, 344},
+		trim = {44, 19, 36, 167},
+		a_size = {2048, 2048},
+		f_quad = {218, 1307, 130, 158},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0275 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			53,
-			19,
-			45,
-			176
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			312,
-			112,
-			149
-		},
+		size = {210, 344},
+		trim = {53, 19, 45, 176},
+		a_size = {2048, 2048},
+		f_quad = {352, 312, 112, 149},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0276 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			53,
-			19,
-			45,
-			176
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			352,
-			464,
-			112,
-			149
-		},
+		size = {210, 344},
+		trim = {53, 19, 45, 176},
+		a_size = {2048, 2048},
+		f_quad = {352, 464, 112, 149},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0277 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			78,
-			18,
-			82,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1983,
-			593,
-			50,
-			65
-		},
+		size = {210, 344},
+		trim = {78, 18, 82, 261},
+		a_size = {2048, 2048},
+		f_quad = {1983, 593, 50, 65},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer8_0278 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			79,
-			26,
-			82,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			559,
-			750,
-			49,
-			57
-		},
+		size = {210, 344},
+		trim = {79, 26, 82, 261},
+		a_size = {2048, 2048},
+		f_quad = {559, 750, 49, 57},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0259 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			80,
-			122,
-			77,
-			207
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1650,
-			259,
-			53,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer9_0260"
-		}
+		size = {210, 344},
+		trim = {80, 122, 77, 207},
+		a_size = {2048, 2048},
+		f_quad = {1650, 259, 53, 15},
+		alias = {"tricannon_tower_lvl4_tower_layer9_0260"}
 	},
 	tricannon_tower_lvl4_tower_layer9_0261 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			126,
-			77,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1685,
-			650,
-			52,
-			14
-		},
+		size = {210, 344},
+		trim = {81, 126, 77, 204},
+		a_size = {2048, 2048},
+		f_quad = {1685, 650, 52, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0262 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			126,
-			77,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			928,
-			685,
-			52,
-			14
-		},
+		size = {210, 344},
+		trim = {81, 126, 77, 204},
+		a_size = {2048, 2048},
+		f_quad = {928, 685, 52, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0263 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			122,
-			77,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			983,
-			685,
-			52,
-			14
-		},
+		size = {210, 344},
+		trim = {81, 122, 77, 208},
+		a_size = {2048, 2048},
+		f_quad = {983, 685, 52, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0264 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			122,
-			79,
-			209
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1195,
-			786,
-			48,
-			13
-		},
+		size = {210, 344},
+		trim = {83, 122, 79, 209},
+		a_size = {2048, 2048},
+		f_quad = {1195, 786, 48, 13},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0265 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			121,
-			79,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1532,
-			651,
-			48,
-			13
-		},
+		size = {210, 344},
+		trim = {83, 121, 79, 210},
+		a_size = {2048, 2048},
+		f_quad = {1532, 651, 48, 13},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0266 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			120,
-			79,
-			210
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1137,
-			667,
-			48,
-			14
-		},
+		size = {210, 344},
+		trim = {83, 120, 79, 210},
+		a_size = {2048, 2048},
+		f_quad = {1137, 667, 48, 14},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0267 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			83,
-			123,
-			79,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1583,
-			651,
-			48,
-			13
-		},
+		size = {210, 344},
+		trim = {83, 123, 79, 208},
+		a_size = {2048, 2048},
+		f_quad = {1583, 651, 48, 13},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0268 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			82,
-			122,
-			78,
-			207
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1034,
-			667,
-			50,
-			15
-		},
+		size = {210, 344},
+		trim = {82, 122, 78, 207},
+		a_size = {2048, 2048},
+		f_quad = {1034, 667, 50, 15},
 		alias = {}
 	},
 	tricannon_tower_lvl4_tower_layer9_0273 = {
 		a_name = "go_towers_tricannon-1.dds",
-		size = {
-			210,
-			344
-		},
-		trim = {
-			81,
-			123,
-			77,
-			206
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1871,
-			259,
-			52,
-			15
-		},
-		alias = {
-			"tricannon_tower_lvl4_tower_layer9_0274"
-		}
+		size = {210, 344},
+		trim = {81, 123, 77, 206},
+		a_size = {2048, 2048},
+		f_quad = {1871, 259, 52, 15},
+		alias = {"tricannon_tower_lvl4_tower_layer9_0274"}
 	}
 }

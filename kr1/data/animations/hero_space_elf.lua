@@ -1,7 +1,6 @@
-﻿-- chunkname: @./kr5/data/animations/hero_space_elf.lua
-
+-- chunkname: @./kr5/data/animations/hero_space_elf.lua
 local a = {
-	 hero_therien_therien_idle = {
+	hero_therien_therien_idle = {
 		prefix = "hero_therien_therien",
 		to = 24,
 		from = 1
@@ -310,7 +309,6 @@ local a = {
 		prefix = "hero_therien_rift_fx_decal",
 		to = 69,
 		from = 62
-	},
+	}
 }
-
 return a

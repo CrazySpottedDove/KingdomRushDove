@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/noxious_horror.lua
-
+-- chunkname: @./kr5/data/animations/noxious_horror.lua
 local a = {
 	noxious_horror_glare_aura_on = {
 		prefix = "noxious_horror_glare_aura",
@@ -77,5 +76,4 @@ local a = {
 		from = 116
 	}
 }
-
 return a

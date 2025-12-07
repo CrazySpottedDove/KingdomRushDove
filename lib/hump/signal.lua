@@ -1,20 +1,16 @@
-﻿-- chunkname: @./lib/hump/signal.lua
-
+-- chunkname: @./lib/hump/signal.lua
 local Registry = {}
 
 function Registry:__index(key)
 	return Registry[key] or (function()
 		local t = {}
-
 		rawset(self, key, t)
-
 		return t
 	end)()
 end
 
 function Registry:register(s, f)
 	self[s][f] = f
-
 	return f
 end
 
@@ -25,9 +21,7 @@ function Registry:emit(s, ...)
 end
 
 function Registry:remove(s, ...)
-	local f = {
-		...
-	}
+	local f = {...}
 
 	for i = 1, select("#", ...) do
 		self[s][f[i]] = nil
@@ -35,9 +29,7 @@ function Registry:remove(s, ...)
 end
 
 function Registry:clear(...)
-	local s = {
-		...
-	}
+	local s = {...}
 
 	for i = 1, select("#", ...) do
 		self[s[i]] = {}

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/game_animations_new.lua
-
+-- chunkname: @./kr5/data/animations/game_animations_new.lua
 local a = {
 	explosion_KR5_big = {
 		prefix = "explosion_KR5_big",
@@ -173,76 +172,25 @@ local a = {
 	},
 	hero_alleria5_shoot = {
 		prefix = "hero_alleria5",
-		ranges = {
-			{
-				54,
-				63
-			},
-			{
-				74,
-				79
-			}
-		}
+		ranges = {{54, 63}, {74, 79}}
 	},
 	hero_alleria5_whistling_arrow_shoot = {
 		prefix = "hero_alleria5",
 		ranges = {
-			{
-				54,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				63,
-				63
-			},
-			{
-				74,
-				79
-			}
+			{54, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{63, 63},
+			{74, 79}
 		}
 	},
 	hero_alleria5_whistling_arrow_bullet = {
@@ -490,13 +438,7 @@ local a = {
 	},
 	hero_velann_friends_on_the_other_side_imp_teleport_out = {
 		prefix = "hero_velann_friends_on_the_other_side_imp",
-		frames = {
-			100,
-			99,
-			98,
-			97,
-			96
-		}
+		frames = {100, 99, 98, 97, 96}
 	},
 	hero_velann_voices_from_beyond_mod = {
 		prefix = "hero_velann_voices_from_beyond_fx_above",
@@ -1425,20 +1367,7 @@ local a = {
 	},
 	turtle_shaman_HealFX_decal = {
 		prefix = "turtle_shaman",
-		ranges = {
-			{
-				311,
-				315
-			},
-			{
-				316,
-				343
-			},
-			{
-				344,
-				351
-			}
-		}
+		ranges = {{311, 315}, {316, 343}, {344, 351}}
 	},
 	bear_vanguard_idle = {
 		prefix = "bear_vanguard",
@@ -3311,5 +3240,4 @@ local a = {
 		from = 12
 	}
 }
-
 return a

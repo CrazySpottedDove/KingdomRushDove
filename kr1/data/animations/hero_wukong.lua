@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/all/hero_wukong.lua
-
+-- chunkname: @./kr5/data/animations/all/hero_wukong.lua
 local a = {
 	hero_wukong_hit_wukong_run = {
 		prefix = "hero_wukong_hit_wukong",
@@ -272,5 +271,4 @@ local a = {
 		from = 36
 	}
 }
-
 return a

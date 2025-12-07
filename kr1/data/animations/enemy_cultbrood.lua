@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_cultbrood.lua
-
+-- chunkname: @./kr5/data/animations/enemy_cultbrood.lua
 local a = {
 	cultbrood_hit_run = {
 		prefix = "cultbrood_hit",
@@ -62,5 +61,4 @@ local a = {
 		from = 185
 	}
 }
-
 return a

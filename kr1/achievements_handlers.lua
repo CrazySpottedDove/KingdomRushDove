@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/achievements_handlers.lua
-
+-- chunkname: @./kr1/achievements_handlers.lua
 local log = require("lib.klua.log"):new("achievements_handlers")
 local signal = require("hump.signal")
 local bit = require("bit")
@@ -73,14 +72,7 @@ function ah:h_entity_damaged(entity, damage)
 	if damage and damage.source_id then
 		local s = game.store.entities[damage.source_id]
 
-		if entity.health and entity.health.hp > 0 and s and table.contains({
-			"aura_demon_death",
-			"aura_demon_mage_death",
-			"aura_demon_wolf_death",
-			"aura_flareon_death",
-			"aura_gulaemon_death",
-			"aura_demon_cerberus_death"
-		}, s.template_name) then
+		if entity.health and entity.health.hp > 0 and s and table.contains({"aura_demon_death", "aura_demon_mage_death", "aura_demon_wolf_death", "aura_flareon_death", "aura_gulaemon_death", "aura_demon_cerberus_death"}, s.template_name) then
 			self.A:inc_check("WE_DINE_IN_HELL")
 		elseif s and s.template_name == "soldier_elf" then
 			self.A:inc_check("STILL_COUNTS_AS_ONE", damage.value)
@@ -91,8 +83,7 @@ end
 function ah:h_entity_killed(entity, damage)
 	if not entity then
 		log.debug("nil entity")
-
-		return
+		return 
 	end
 
 	if entity.enemy then
@@ -136,7 +127,6 @@ function ah:h_entity_killed(entity, damage)
 
 			if s.template_name == "soldier_barbarian" then
 				s._barbarian_rush_counter = 1 + (s._barbarian_rush_counter or 0)
-
 				self.A:high_check("BARBARIAN_RUSH", s._barbarian_rush_counter)
 			end
 		end
@@ -188,7 +178,6 @@ function ah:h_game_victory(store)
 			elseif i == go.level_idx then
 				local l_stars = l.stars or 0
 				local go_stars = go.stars or 0
-
 				stars = stars + (go.level_mode == GAME_MODE_CAMPAIGN and math.max(l_stars, go_stars) or l_stars) + ((go.level_mode == GAME_MODE_HEROIC or l[GAME_MODE_HEROIC]) and 1 or 0) + ((go.level_mode == GAME_MODE_IRON or l[GAME_MODE_IRON]) and 1 or 0)
 			else
 				stars = stars + (l.stars or 0) + (l[GAME_MODE_HEROIC] and 1 or 0) + (l[GAME_MODE_IRON] and 1 or 0)
@@ -201,7 +190,6 @@ function ah:h_game_victory(store)
 	self.A:high_check("EARN15_STARS", stars)
 	self.A:high_check("EARN30_STARS", stars)
 	self.A:high_check("EARN45_STARS", stars)
-
 	local done_c, done_h, done_i, done_g = true, true, true, true
 
 	if slot and slot.levels then
@@ -210,7 +198,6 @@ function ah:h_game_victory(store)
 
 			if not lv then
 				done_c, done_h, done_i, done_g = false, false, false, false
-
 				break
 			end
 

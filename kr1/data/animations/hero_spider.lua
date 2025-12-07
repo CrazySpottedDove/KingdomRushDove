@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_spider.lua
-
+-- chunkname: @./kr5/data/animations/hero_spider.lua
 local a = {
 	hero_spider_05_modifier_run = {
 		prefix = "hero_spider_07_modifier",
@@ -172,5 +171,4 @@ local a = {
 		from = 59
 	}
 }
-
 return a

@@ -1,2980 +1,970 @@
 return {
 	arcane_wizard_tower_build = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			139,
-			119
-		},
-		trim = {
-			13,
-			13,
-			22,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			759,
-			606,
-			104,
-			60
-		},
+		size = {139, 119},
+		trim = {13, 13, 22, 46},
+		a_size = {2048, 2048},
+		f_quad = {759, 606, 104, 60},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_decal = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			156,
-			116
-		},
-		trim = {
-			17,
-			15,
-			15,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			606,
-			124,
-			63
-		},
+		size = {156, 116},
+		trim = {17, 15, 15, 38},
+		a_size = {2048, 2048},
+		f_quad = {510, 606, 124, 63},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_indicator = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			159,
-			77
-		},
-		trim = {
-			14,
-			17,
-			16,
-			15
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1572,
-			553,
-			129,
-			45
-		},
+		size = {159, 77},
+		trim = {14, 17, 16, 15},
+		a_size = {2048, 2048},
+		f_quad = {1572, 553, 129, 45},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {654, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0002 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			764,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {764, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {874, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0004 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			984,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {984, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1094,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1094, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0006 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1204,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1204, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1314,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1314, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1424,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1424, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1534,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1534, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0010 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1644,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1644, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1754,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1754, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1864,
-			672,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1864, 672, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {654, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			764,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {764, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {874, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1698,
-			606,
-			107,
-			48
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 42},
+		a_size = {2048, 2048},
+		f_quad = {1698, 606, 107, 48},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			984,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {984, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0018 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1094,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1094, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0019 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1204,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1204, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0020 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1314,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1314, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0021 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1424,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1424, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0022 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1534,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1534, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0023 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1644,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1644, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0024 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1754,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1754, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0025 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1864,
-			722,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1864, 722, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0026 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			772,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {654, 772, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0027 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			764,
-			772,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {764, 772, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0028 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			874,
-			772,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {874, 772, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0029 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			984,
-			772,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {984, 772, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_empowerment_particles_0030 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			148,
-			116
-		},
-		trim = {
-			21,
-			26,
-			20,
-			43
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1094,
-			772,
-			107,
-			47
-		},
+		size = {148, 116},
+		trim = {21, 26, 20, 43},
+		a_size = {2048, 2048},
+		f_quad = {1094, 772, 107, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			23,
-			32,
-			25,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			987,
-			60,
-			65
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_big_0002"
-		}
+		size = {108, 119},
+		trim = {23, 32, 25, 22},
+		a_size = {2048, 2048},
+		f_quad = {118, 987, 60, 65},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_big_0002"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			23,
-			36,
-			25,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			812,
-			60,
-			57
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_big_0004"
-		}
+		size = {108, 119},
+		trim = {23, 36, 25, 26},
+		a_size = {2048, 2048},
+		f_quad = {117, 812, 60, 57},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_big_0004"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			23,
-			44,
-			24,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1317,
-			61,
-			54
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_big_0006"
-		}
+		size = {108, 119},
+		trim = {23, 44, 24, 21},
+		a_size = {2048, 2048},
+		f_quad = {118, 1317, 61, 54},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_big_0006"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			24,
-			43,
-			23,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1198,
-			61,
-			55
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_big_0008"
-		}
+		size = {108, 119},
+		trim = {24, 43, 23, 21},
+		a_size = {2048, 2048},
+		f_quad = {118, 1198, 61, 55},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_big_0008"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			24,
-			41,
-			23,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			752,
-			61,
-			57
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_big_0010"
-		}
+		size = {108, 119},
+		trim = {24, 41, 23, 21},
+		a_size = {2048, 2048},
+		f_quad = {117, 752, 61, 57},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_big_0010"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			24,
-			36,
-			22,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			340,
-			62,
-			62
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_big_0012"
-		}
+		size = {108, 119},
+		trim = {24, 36, 22, 21},
+		a_size = {2048, 2048},
+		f_quad = {118, 340, 62, 62},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_big_0012"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			108,
-			119
-		},
-		trim = {
-			24,
-			72,
-			31,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1413,
-			881,
-			53,
-			26
-		},
+		size = {108, 119},
+		trim = {24, 72, 31, 21},
+		a_size = {2048, 2048},
+		f_quad = {1413, 881, 53, 26},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			26,
-			27,
-			24,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1334,
-			41,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_small_0002"
-		}
+		size = {91, 94},
+		trim = {26, 27, 24, 22},
+		a_size = {2048, 2048},
+		f_quad = {581, 1334, 41, 45},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_small_0002"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			26,
-			30,
-			23,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			952,
-			42,
-			39
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_small_0004"
-		}
+		size = {91, 94},
+		trim = {26, 30, 23, 25},
+		a_size = {2048, 2048},
+		f_quad = {693, 952, 42, 39},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_small_0004"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			26,
-			35,
-			23,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			994,
-			42,
-			37
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_small_0006"
-		}
+		size = {91, 94},
+		trim = {26, 35, 23, 22},
+		a_size = {2048, 2048},
+		f_quad = {693, 994, 42, 37},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_small_0006"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			27,
-			35,
-			23,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1077,
-			41,
-			37
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_small_0008"
-		}
+		size = {91, 94},
+		trim = {27, 35, 23, 22},
+		a_size = {2048, 2048},
+		f_quad = {693, 1077, 41, 37},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_small_0008"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			27,
-			32,
-			22,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1983,
-			42,
-			40
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_small_0010"
-		}
+		size = {91, 94},
+		trim = {27, 32, 22, 22},
+		a_size = {2048, 2048},
+		f_quad = {581, 1983, 42, 40},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_small_0010"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			26,
-			29,
-			22,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1288,
-			43,
-			43
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_dirt_small_0012"
-		}
+		size = {91, 94},
+		trim = {26, 29, 22, 22},
+		a_size = {2048, 2048},
+		f_quad = {581, 1288, 43, 43},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_dirt_small_0012"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_small_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			91,
-			94
-		},
-		trim = {
-			27,
-			54,
-			28,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2006,
-			634,
-			36,
-			18
-		},
+		size = {91, 94},
+		trim = {27, 54, 28, 22},
+		a_size = {2048, 2048},
+		f_quad = {2006, 634, 36, 18},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			56,
-			46,
-			49,
-			53
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			689,
-			63,
-			60
-		},
+		size = {168, 159},
+		trim = {56, 46, 49, 53},
+		a_size = {2048, 2048},
+		f_quad = {117, 689, 63, 60},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0002 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			48,
-			36,
-			38,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1956,
-			5,
-			82,
-			77
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0003"
-		}
+		size = {168, 159},
+		trim = {48, 36, 38, 46},
+		a_size = {2048, 2048},
+		f_quad = {1956, 5, 82, 77},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0003"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0004 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			42,
-			34,
-			35,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			653,
-			91,
-			89
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0005"
-		}
+		size = {168, 159},
+		trim = {42, 34, 35, 36},
+		a_size = {2048, 2048},
+		f_quad = {411, 653, 91, 89},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0005"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0006 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			26,
-			23,
-			26,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1609,
-			5,
-			116,
-			102
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0007"
-		}
+		size = {168, 159},
+		trim = {26, 23, 26, 34},
+		a_size = {2048, 2048},
+		f_quad = {1609, 5, 116, 102},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0007"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			14,
-			21,
-			14,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1933,
-			140,
-			100
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0009"
-		}
+		size = {168, 159},
+		trim = {14, 21, 14, 38},
+		a_size = {2048, 2048},
+		f_quad = {5, 1933, 140, 100},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0009"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0010 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			37,
-			19,
-			28,
-			40
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1639,
-			355,
-			103,
-			100
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0011"
-		}
+		size = {168, 159},
+		trim = {37, 19, 28, 40},
+		a_size = {2048, 2048},
+		f_quad = {1639, 355, 103, 100},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0011"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			42,
-			20,
-			30,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			553,
-			96,
-			97
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0013"
-		}
+		size = {168, 159},
+		trim = {42, 20, 30, 42},
+		a_size = {2048, 2048},
+		f_quad = {411, 553, 96, 97},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0013"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			66,
-			21,
-			34,
-			60
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			672,
-			68,
-			78
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0015"
-		}
+		size = {168, 159},
+		trim = {66, 21, 34, 60},
+		a_size = {2048, 2048},
+		f_quad = {510, 672, 68, 78},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0015"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_hit_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			168,
-			159
-		},
-		trim = {
-			67,
-			26,
-			66,
-			89
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1001,
-			35,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_hit_0017"
-		}
+		size = {168, 159},
+		trim = {67, 26, 66, 89},
+		a_size = {2048, 2048},
+		f_quad = {654, 1001, 35, 44},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_hit_0017"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			257,
-			27,
-			22,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			905,
-			462,
-			244,
-			37
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_ray_0002"
-		}
+		size = {523, 91},
+		trim = {257, 27, 22, 27},
+		a_size = {2048, 2048},
+		f_quad = {905, 462, 244, 37},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_ray_0002"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			257,
-			27,
-			22,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			462,
-			244,
-			40
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_ray_0004"
-		}
+		size = {523, 91},
+		trim = {257, 27, 22, 24},
+		a_size = {2048, 2048},
+		f_quad = {411, 462, 244, 40},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_ray_0004"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			257,
-			27,
-			22,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			658,
-			462,
-			244,
-			38
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_ray_0006"
-		}
+		size = {523, 91},
+		trim = {257, 27, 22, 26},
+		a_size = {2048, 2048},
+		f_quad = {658, 462, 244, 38},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_ray_0006"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			257,
-			31,
-			22,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1152,
-			462,
-			244,
-			33
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_ray_0008"
-		}
+		size = {523, 91},
+		trim = {257, 31, 22, 27},
+		a_size = {2048, 2048},
+		f_quad = {1152, 462, 244, 33},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_ray_0008"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			257,
-			24,
-			23,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			524,
-			246,
-			243,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_disintegration_ray_0010"
-		}
+		size = {523, 91},
+		trim = {257, 24, 23, 20},
+		a_size = {2048, 2048},
+		f_quad = {524, 246, 243, 47},
+		alias = {"arcane_wizard_tower_lvl4_disintegration_ray_0010"}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			247,
-			24,
-			24,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1012,
-			5,
-			252,
-			47
-		},
+		size = {523, 91},
+		trim = {247, 24, 24, 20},
+		a_size = {2048, 2048},
+		f_quad = {1012, 5, 252, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			247,
-			24,
-			24,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1012,
-			55,
-			252,
-			47
-		},
+		size = {523, 91},
+		trim = {247, 24, 24, 20},
+		a_size = {2048, 2048},
+		f_quad = {1012, 55, 252, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			284,
-			24,
-			23,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			524,
-			296,
-			216,
-			47
-		},
+		size = {523, 91},
+		trim = {284, 24, 23, 20},
+		a_size = {2048, 2048},
+		f_quad = {524, 296, 216, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			284,
-			24,
-			23,
-			20
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1420,
-			355,
-			216,
-			47
-		},
+		size = {523, 91},
+		trim = {284, 24, 23, 20},
+		a_size = {2048, 2048},
+		f_quad = {1420, 355, 216, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			285,
-			25,
-			23,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1420,
-			405,
-			215,
-			45
-		},
+		size = {523, 91},
+		trim = {285, 25, 23, 21},
+		a_size = {2048, 2048},
+		f_quad = {1420, 405, 215, 45},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			286,
-			25,
-			23,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			505,
-			214,
-			45
-		},
+		size = {523, 91},
+		trim = {286, 25, 23, 21},
+		a_size = {2048, 2048},
+		f_quad = {411, 505, 214, 45},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			287,
-			30,
-			39,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1832,
-			462,
-			197,
-			27
-		},
+		size = {523, 91},
+		trim = {287, 30, 39, 34},
+		a_size = {2048, 2048},
+		f_quad = {1832, 462, 197, 27},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0018 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			287,
-			31,
-			40,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1808,
-			606,
-			196,
-			25
-		},
+		size = {523, 91},
+		trim = {287, 31, 40, 35},
+		a_size = {2048, 2048},
+		f_quad = {1808, 606, 196, 25},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_0019 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			523,
-			91
-		},
-		trim = {
-			288,
-			32,
-			40,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1808,
-			634,
-			195,
-			23
-		},
+		size = {523, 91},
+		trim = {288, 32, 40, 36},
+		a_size = {2048, 2048},
+		f_quad = {1808, 634, 195, 23},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			41,
-			41,
-			43,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1393,
-			32,
-			34
-		},
+		size = {116, 114},
+		trim = {41, 41, 43, 39},
+		a_size = {2048, 2048},
+		f_quad = {693, 1393, 32, 34},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0002 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			40,
-			41,
-			43,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1356,
-			33,
-			34
-		},
+		size = {116, 114},
+		trim = {40, 41, 43, 39},
+		a_size = {2048, 2048},
+		f_quad = {693, 1356, 33, 34},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			40,
-			40,
-			43,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1318,
-			33,
-			35
-		},
+		size = {116, 114},
+		trim = {40, 40, 43, 39},
+		a_size = {2048, 2048},
+		f_quad = {693, 1318, 33, 35},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0004 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			40,
-			40,
-			42,
-			39
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1280,
-			34,
-			35
-		},
+		size = {116, 114},
+		trim = {40, 40, 42, 39},
+		a_size = {2048, 2048},
+		f_quad = {693, 1280, 34, 35},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			40,
-			39,
-			42,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1986,
-			34,
-			37
-		},
+		size = {116, 114},
+		trim = {40, 39, 42, 38},
+		a_size = {2048, 2048},
+		f_quad = {654, 1986, 34, 37},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0006 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			39,
-			39,
-			41,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1945,
-			36,
-			38
-		},
+		size = {116, 114},
+		trim = {39, 39, 41, 37},
+		a_size = {2048, 2048},
+		f_quad = {654, 1945, 36, 38},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			38,
-			39,
-			41,
-			38
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1159,
-			37,
-			37
-		},
+		size = {116, 114},
+		trim = {38, 39, 41, 38},
+		a_size = {2048, 2048},
+		f_quad = {693, 1159, 37, 37},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			38,
-			38,
-			41,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1117,
-			37,
-			39
-		},
+		size = {116, 114},
+		trim = {38, 38, 41, 37},
+		a_size = {2048, 2048},
+		f_quad = {693, 1117, 37, 39},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			37,
-			37,
-			41,
-			37
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1034,
-			38,
-			40
-		},
+		size = {116, 114},
+		trim = {37, 37, 41, 37},
+		a_size = {2048, 2048},
+		f_quad = {693, 1034, 38, 40},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0010 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			35,
-			37,
-			40,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1939,
-			41,
-			41
-		},
+		size = {116, 114},
+		trim = {35, 37, 40, 36},
+		a_size = {2048, 2048},
+		f_quad = {581, 1939, 41, 41},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			34,
-			36,
-			40,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1860,
-			42,
-			42
-		},
+		size = {116, 114},
+		trim = {34, 36, 40, 36},
+		a_size = {2048, 2048},
+		f_quad = {581, 1860, 42, 42},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			33,
-			37,
-			39,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1816,
-			44,
-			41
-		},
+		size = {116, 114},
+		trim = {33, 37, 39, 36},
+		a_size = {2048, 2048},
+		f_quad = {581, 1816, 44, 41},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			32,
-			36,
-			39,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1198,
-			45,
-			42
-		},
+		size = {116, 114},
+		trim = {32, 36, 39, 36},
+		a_size = {2048, 2048},
+		f_quad = {581, 1198, 45, 42},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			32,
-			34,
-			38,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			872,
-			46,
-			44
-		},
+		size = {116, 114},
+		trim = {32, 34, 38, 36},
+		a_size = {2048, 2048},
+		f_quad = {117, 872, 46, 44},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			32,
-			32,
-			38,
-			36
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1670,
-			46,
-			46
-		},
+		size = {116, 114},
+		trim = {32, 32, 38, 36},
+		a_size = {2048, 2048},
+		f_quad = {510, 1670, 46, 46},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			32,
-			30,
-			37,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1568,
-			47,
-			49
-		},
+		size = {116, 114},
+		trim = {32, 30, 37, 35},
+		a_size = {2048, 2048},
+		f_quad = {510, 1568, 47, 49},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			32,
-			29,
-			36,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			133,
-			1123,
-			48,
-			50
-		},
+		size = {116, 114},
+		trim = {32, 29, 36, 35},
+		a_size = {2048, 2048},
+		f_quad = {133, 1123, 48, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0018 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			34,
-			32,
-			36,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			135,
-			544,
-			46,
-			47
-		},
+		size = {116, 114},
+		trim = {34, 32, 36, 35},
+		a_size = {2048, 2048},
+		f_quad = {135, 544, 46, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0019 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			34,
-			32,
-			36,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1620,
-			46,
-			47
-		},
+		size = {116, 114},
+		trim = {34, 32, 36, 35},
+		a_size = {2048, 2048},
+		f_quad = {510, 1620, 46, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0020 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			48,
-			47,
-			49,
-			46
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1668,
-			648,
-			19,
-			21
-		},
+		size = {116, 114},
+		trim = {48, 47, 49, 46},
+		a_size = {2048, 2048},
+		f_quad = {1668, 648, 19, 21},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0021 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			43,
-			42,
-			45,
-			33
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			623,
-			1766,
-			28,
-			39
-		},
+		size = {116, 114},
+		trim = {43, 42, 45, 33},
+		a_size = {2048, 2048},
+		f_quad = {623, 1766, 28, 39},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0022 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			42,
-			41,
-			43,
-			33
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1237,
-			31,
-			40
-		},
+		size = {116, 114},
+		trim = {42, 41, 43, 33},
+		a_size = {2048, 2048},
+		f_quad = {693, 1237, 31, 40},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0023 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			39,
-			38,
-			41,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			952,
-			36,
-			46
-		},
+		size = {116, 114},
+		trim = {39, 38, 41, 30},
+		a_size = {2048, 2048},
+		f_quad = {654, 952, 36, 46},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0024 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			38,
-			34,
-			36,
-			30
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1719,
-			42,
-			50
-		},
+		size = {116, 114},
+		trim = {38, 34, 36, 30},
+		a_size = {2048, 2048},
+		f_quad = {510, 1719, 42, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0025 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			36,
-			34,
-			36,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			135,
-			490,
-			44,
-			51
-		},
+		size = {116, 114},
+		trim = {36, 34, 36, 29},
+		a_size = {2048, 2048},
+		f_quad = {135, 490, 44, 51},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0026 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			35,
-			33,
-			34,
-			29
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			133,
-			1068,
-			47,
-			52
-		},
+		size = {116, 114},
+		trim = {35, 33, 34, 29},
+		a_size = {2048, 2048},
+		f_quad = {133, 1068, 47, 52},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0027 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			32,
-			30,
-			33,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1994,
-			137,
-			51,
-			56
-		},
+		size = {116, 114},
+		trim = {32, 30, 33, 28},
+		a_size = {2048, 2048},
+		f_quad = {1994, 137, 51, 56},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0028 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			29,
-			28,
-			30,
-			28
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1256,
-			57,
-			58
-		},
+		size = {116, 114},
+		trim = {29, 28, 30, 28},
+		a_size = {2048, 2048},
+		f_quad = {118, 1256, 57, 58},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0029 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			27,
-			25,
-			28,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			405,
-			61,
-			63
-		},
+		size = {116, 114},
+		trim = {27, 25, 28, 26},
+		a_size = {2048, 2048},
+		f_quad = {118, 405, 61, 63},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0030 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			26,
-			23,
-			26,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			117,
-			620,
-			64,
-			66
-		},
+		size = {116, 114},
+		trim = {26, 23, 26, 25},
+		a_size = {2048, 2048},
+		f_quad = {117, 620, 64, 66},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0031 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			24,
-			21,
-			24,
-			23
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			753,
-			68,
-			70
-		},
+		size = {116, 114},
+		trim = {24, 21, 24, 23},
+		a_size = {2048, 2048},
+		f_quad = {510, 753, 68, 70},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0032 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			23,
-			20,
-			23,
-			22
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1974,
-			672,
-			70,
-			72
-		},
+		size = {116, 114},
+		trim = {23, 20, 23, 22},
+		a_size = {2048, 2048},
+		f_quad = {1974, 672, 70, 72},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0033 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			22,
-			19,
-			22,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1914,
-			72,
-			74
-		},
+		size = {116, 114},
+		trim = {22, 19, 22, 21},
+		a_size = {2048, 2048},
+		f_quad = {411, 1914, 72, 74},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0034 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			23,
-			20,
-			23,
-			21
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			672,
-			70,
-			73
-		},
+		size = {116, 114},
+		trim = {23, 20, 23, 21},
+		a_size = {2048, 2048},
+		f_quad = {581, 672, 70, 73},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0035 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			26,
-			24,
-			27,
-			26
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			920,
-			63,
-			64
-		},
+		size = {116, 114},
+		trim = {26, 24, 27, 26},
+		a_size = {2048, 2048},
+		f_quad = {118, 920, 63, 64},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0036 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			25,
-			32,
-			30,
-			33
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1771,
-			61,
-			49
-		},
+		size = {116, 114},
+		trim = {25, 32, 30, 33},
+		a_size = {2048, 2048},
+		f_quad = {118, 1771, 61, 49},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0037 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			25,
-			32,
-			31,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1718,
-			60,
-			50
-		},
+		size = {116, 114},
+		trim = {25, 32, 31, 32},
+		a_size = {2048, 2048},
+		f_quad = {118, 1718, 60, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0038 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			31,
-			31,
-			36,
-			42
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1872,
-			49,
-			41
-		},
+		size = {116, 114},
+		trim = {31, 31, 36, 42},
+		a_size = {2048, 2048},
+		f_quad = {510, 1872, 49, 41},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_disintegration_ray_charge_origin_0039 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			116,
-			114
-		},
-		trim = {
-			0,
-			0,
-			116,
-			114
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			893,
-			5,
-			116,
-			114
-		},
+		size = {116, 114},
+		trim = {0, 0, 116, 114},
+		a_size = {2048, 2048},
+		f_quad = {893, 5, 116, 114},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_ray_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			250,
-			30,
-			39,
-			33
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1012,
-			105,
-			211,
-			28
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0002"
-		}
+		size = {500, 91},
+		trim = {250, 30, 39, 33},
+		a_size = {2048, 2048},
+		f_quad = {1012, 105, 211, 28},
+		alias = {"arcane_wizard_tower_lvl4_ray_0002"}
 	},
 	arcane_wizard_tower_lvl4_ray_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			254,
-			32,
-			28,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1704,
-			553,
-			218,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0004"
-		}
+		size = {500, 91},
+		trim = {254, 32, 28, 34},
+		a_size = {2048, 2048},
+		f_quad = {1704, 553, 218, 25},
+		alias = {"arcane_wizard_tower_lvl4_ray_0004"}
 	},
 	arcane_wizard_tower_lvl4_ray_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			253,
-			32,
-			23,
-			34
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1345,
-			553,
-			224,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0006"
-		}
+		size = {500, 91},
+		trim = {253, 32, 23, 34},
+		a_size = {2048, 2048},
+		f_quad = {1345, 553, 224, 25},
+		alias = {"arcane_wizard_tower_lvl4_ray_0006"}
 	},
 	arcane_wizard_tower_lvl4_ray_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			249,
-			32,
-			26,
-			35
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			824,
-			505,
-			225,
-			24
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0008"
-		}
+		size = {500, 91},
+		trim = {249, 32, 26, 35},
+		a_size = {2048, 2048},
+		f_quad = {824, 505, 225, 24},
+		alias = {"arcane_wizard_tower_lvl4_ray_0008"}
 	},
 	arcane_wizard_tower_lvl4_ray_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			247,
-			29,
-			26,
-			31
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1399,
-			462,
-			227,
-			31
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0010"
-		}
+		size = {500, 91},
+		trim = {247, 29, 26, 31},
+		a_size = {2048, 2048},
+		f_quad = {1399, 462, 227, 31},
+		alias = {"arcane_wizard_tower_lvl4_ray_0010"}
 	},
 	arcane_wizard_tower_lvl4_ray_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			251,
-			26,
-			49,
-			32
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1629,
-			462,
-			200,
-			33
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0012"
-		}
+		size = {500, 91},
+		trim = {251, 26, 49, 32},
+		a_size = {2048, 2048},
+		f_quad = {1629, 462, 200, 33},
+		alias = {"arcane_wizard_tower_lvl4_ray_0012"}
 	},
 	arcane_wizard_tower_lvl4_ray_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			258,
-			20,
-			49,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			628,
-			505,
-			193,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0014"
-		}
+		size = {500, 91},
+		trim = {258, 20, 49, 27},
+		a_size = {2048, 2048},
+		f_quad = {628, 505, 193, 44},
+		alias = {"arcane_wizard_tower_lvl4_ray_0014"}
 	},
 	arcane_wizard_tower_lvl4_ray_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			262,
-			17,
-			54,
-			27
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1850,
-			409,
-			184,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0016"
-		}
+		size = {500, 91},
+		trim = {262, 17, 54, 27},
+		a_size = {2048, 2048},
+		f_quad = {1850, 409, 184, 47},
+		alias = {"arcane_wizard_tower_lvl4_ray_0016"}
 	},
 	arcane_wizard_tower_lvl4_ray_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			261,
-			16,
-			55,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1850,
-			355,
-			184,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0018"
-		}
+		size = {500, 91},
+		trim = {261, 16, 55, 24},
+		a_size = {2048, 2048},
+		f_quad = {1850, 355, 184, 51},
+		alias = {"arcane_wizard_tower_lvl4_ray_0018"}
 	},
 	arcane_wizard_tower_lvl4_ray_0019 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			279,
-			17,
-			56,
-			24
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			553,
-			165,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0020"
-		}
+		size = {500, 91},
+		trim = {279, 17, 56, 24},
+		a_size = {2048, 2048},
+		f_quad = {510, 553, 165, 50},
+		alias = {"arcane_wizard_tower_lvl4_ray_0020"}
 	},
 	arcane_wizard_tower_lvl4_ray_0021 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			500,
-			91
-		},
-		trim = {
-			310,
-			16,
-			57,
-			25
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			678,
-			553,
-			133,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_ray_0022",
-			"arcane_wizard_tower_lvl4_ray_0023",
-			"arcane_wizard_tower_lvl4_ray_0024"
-		}
+		size = {500, 91},
+		trim = {310, 16, 57, 25},
+		a_size = {2048, 2048},
+		f_quad = {678, 553, 133, 50},
+		alias = {"arcane_wizard_tower_lvl4_ray_0022", "arcane_wizard_tower_lvl4_ray_0023", "arcane_wizard_tower_lvl4_ray_0024"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer1_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			24,
-			50,
-			32,
-			153
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			5,
-			120,
-			129
-		},
+		size = {176, 332},
+		trim = {24, 50, 32, 153},
+		a_size = {2048, 2048},
+		f_quad = {411, 5, 120, 129},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer1_0002",
 			"arcane_wizard_tower_lvl4_tower_layer1_0193",
@@ -3163,26 +1153,10 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer1_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			0,
-			0,
-			176,
-			332
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			5,
-			176,
-			332
-		},
+		size = {176, 332},
+		trim = {0, 0, 176, 332},
+		a_size = {2048, 2048},
+		f_quad = {5, 5, 176, 332},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer1_0004",
 			"arcane_wizard_tower_lvl4_tower_layer1_0005",
@@ -4081,82 +2055,26 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer1_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			58,
-			39,
-			57,
-			270
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			2016,
-			61,
-			23
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer1_0015",
-			"arcane_wizard_tower_lvl4_tower_layer1_0056",
-			"arcane_wizard_tower_lvl4_tower_layer1_0057"
-		}
+		size = {176, 332},
+		trim = {58, 39, 57, 270},
+		a_size = {2048, 2048},
+		f_quad = {510, 2016, 61, 23},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer1_0015", "arcane_wizard_tower_lvl4_tower_layer1_0056", "arcane_wizard_tower_lvl4_tower_layer1_0057"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer1_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			62,
-			33,
-			60,
-			268
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1905,
-			54,
-			31
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer1_0017",
-			"arcane_wizard_tower_lvl4_tower_layer1_0058",
-			"arcane_wizard_tower_lvl4_tower_layer1_0059"
-		}
+		size = {176, 332},
+		trim = {62, 33, 60, 268},
+		a_size = {2048, 2048},
+		f_quad = {581, 1905, 54, 31},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer1_0017", "arcane_wizard_tower_lvl4_tower_layer1_0058", "arcane_wizard_tower_lvl4_tower_layer1_0059"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer1_0087 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			24,
-			50,
-			32,
-			153
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			534,
-			5,
-			120,
-			129
-		},
+		size = {176, 332},
+		trim = {24, 50, 32, 153},
+		a_size = {2048, 2048},
+		f_quad = {534, 5, 120, 129},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer1_0088",
 			"arcane_wizard_tower_lvl4_tower_layer1_0089",
@@ -4267,26 +2185,10 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			32,
-			154
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1267,
-			5,
-			111,
-			107
-		},
+		size = {176, 332},
+		trim = {33, 71, 32, 154},
+		a_size = {2048, 2048},
+		f_quad = {1267, 5, 111, 107},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer2_0002",
 			"arcane_wizard_tower_lvl4_tower_layer5_0003",
@@ -4377,262 +2279,82 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0092 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			45,
-			86,
-			43,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			964,
-			881,
-			88,
-			23
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0145",
-			"arcane_wizard_tower_lvl4_tower_layer4_0008",
-			"arcane_wizard_tower_lvl4_tower_layer4_0050"
-		}
+		size = {176, 332},
+		trim = {45, 86, 43, 223},
+		a_size = {2048, 2048},
+		f_quad = {964, 881, 88, 23},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0145", "arcane_wizard_tower_lvl4_tower_layer4_0008", "arcane_wizard_tower_lvl4_tower_layer4_0050"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0093 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			38,
-			83,
-			36,
-			227
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1463,
-			581,
-			102,
-			22
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0146"
-		}
+		size = {176, 332},
+		trim = {38, 83, 36, 227},
+		a_size = {2048, 2048},
+		f_quad = {1463, 581, 102, 22},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0146"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0094 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			31,
-			78,
-			30,
-			232
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1345,
-			581,
-			115,
-			22
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0147"
-		}
+		size = {176, 332},
+		trim = {31, 78, 30, 232},
+		a_size = {2048, 2048},
+		f_quad = {1345, 581, 115, 22},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0147"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0095 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			26,
-			69,
-			24,
-			236
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1052,
-			505,
-			126,
-			27
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0148"
-		}
+		size = {176, 332},
+		trim = {26, 69, 24, 236},
+		a_size = {2048, 2048},
+		f_quad = {1052, 505, 126, 27},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0148"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0096 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			32,
-			64,
-			29,
-			240
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1589,
-			505,
-			115,
-			28
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0149"
-		}
+		size = {176, 332},
+		trim = {32, 64, 29, 240},
+		a_size = {2048, 2048},
+		f_quad = {1589, 505, 115, 28},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0149"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0097 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			35,
-			61,
-			33,
-			244
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			2018,
-			108,
-			27
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0150"
-		}
+		size = {176, 332},
+		trim = {35, 61, 33, 244},
+		a_size = {2048, 2048},
+		f_quad = {184, 2018, 108, 27},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0150"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0098 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			40,
-			58,
-			37,
-			249
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			771,
-			881,
-			99,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0151"
-		}
+		size = {176, 332},
+		trim = {40, 58, 37, 249},
+		a_size = {2048, 2048},
+		f_quad = {771, 881, 99, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0151"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0099 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			45,
-			54,
-			43,
-			253
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			873,
-			881,
-			88,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0152"
-		}
+		size = {176, 332},
+		trim = {45, 54, 43, 253},
+		a_size = {2048, 2048},
+		f_quad = {873, 881, 88, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0152"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0100 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			49,
-			53,
-			47,
-			258
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1965,
-			505,
-			80,
-			21
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0153"
-		}
+		size = {176, 332},
+		trim = {49, 53, 47, 258},
+		a_size = {2048, 2048},
+		f_quad = {1965, 505, 80, 21},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0153"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0201 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			122,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1055,
-			881,
-			90,
-			16
-		},
+		size = {176, 332},
+		trim = {43, 122, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {1055, 881, 90, 16},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer2_0202",
 			"arcane_wizard_tower_lvl4_tower_layer2_0234",
@@ -4653,144 +2375,42 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0203 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			122,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1148,
-			881,
-			90,
-			16
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0204",
-			"arcane_wizard_tower_lvl4_tower_layer2_0233",
-			"arcane_wizard_tower_lvl4_tower_layer2_0252",
-			"arcane_wizard_tower_lvl4_tower_layer2_0253",
-			"arcane_wizard_tower_lvl4_tower_layer2_0282"
-		}
+		size = {176, 332},
+		trim = {43, 122, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {1148, 881, 90, 16},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0204", "arcane_wizard_tower_lvl4_tower_layer2_0233", "arcane_wizard_tower_lvl4_tower_layer2_0252", "arcane_wizard_tower_lvl4_tower_layer2_0253", "arcane_wizard_tower_lvl4_tower_layer2_0282"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0205 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			122,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1241,
-			881,
-			90,
-			16
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0254"
-		}
+		size = {176, 332},
+		trim = {43, 122, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {1241, 881, 90, 16},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0254"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0206 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			745,
-			90,
-			88
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0207",
-			"arcane_wizard_tower_lvl4_tower_layer2_0231",
-			"arcane_wizard_tower_lvl4_tower_layer2_0255",
-			"arcane_wizard_tower_lvl4_tower_layer2_0256",
-			"arcane_wizard_tower_lvl4_tower_layer2_0280"
-		}
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 745, 90, 88},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0207", "arcane_wizard_tower_lvl4_tower_layer2_0231", "arcane_wizard_tower_lvl4_tower_layer2_0255", "arcane_wizard_tower_lvl4_tower_layer2_0256", "arcane_wizard_tower_lvl4_tower_layer2_0280"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0208 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			836,
-			90,
-			88
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0209",
-			"arcane_wizard_tower_lvl4_tower_layer2_0229",
-			"arcane_wizard_tower_lvl4_tower_layer2_0230",
-			"arcane_wizard_tower_lvl4_tower_layer2_0257",
-			"arcane_wizard_tower_lvl4_tower_layer2_0258",
-			"arcane_wizard_tower_lvl4_tower_layer2_0278",
-			"arcane_wizard_tower_lvl4_tower_layer2_0279"
-		}
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 836, 90, 88},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0209", "arcane_wizard_tower_lvl4_tower_layer2_0229", "arcane_wizard_tower_lvl4_tower_layer2_0230", "arcane_wizard_tower_lvl4_tower_layer2_0257", "arcane_wizard_tower_lvl4_tower_layer2_0258", "arcane_wizard_tower_lvl4_tower_layer2_0278", "arcane_wizard_tower_lvl4_tower_layer2_0279"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0210 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			927,
-			90,
-			88
-		},
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 927, 90, 88},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer2_0211",
 			"arcane_wizard_tower_lvl4_tower_layer2_0227",
@@ -4811,26 +2431,10 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0212 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1018,
-			90,
-			88
-		},
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 1018, 90, 88},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer2_0213",
 			"arcane_wizard_tower_lvl4_tower_layer2_0214",
@@ -4887,115 +2491,34 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0225 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1109,
-			90,
-			88
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0226",
-			"arcane_wizard_tower_lvl4_tower_layer2_0274",
-			"arcane_wizard_tower_lvl4_tower_layer2_0275",
-			"arcane_wizard_tower_lvl4_tower_layer3_0033",
-			"arcane_wizard_tower_lvl4_tower_layer3_0034",
-			"arcane_wizard_tower_lvl4_tower_layer3_0075",
-			"arcane_wizard_tower_lvl4_tower_layer3_0076"
-		}
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 1109, 90, 88},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0226", "arcane_wizard_tower_lvl4_tower_layer2_0274", "arcane_wizard_tower_lvl4_tower_layer2_0275", "arcane_wizard_tower_lvl4_tower_layer3_0033", "arcane_wizard_tower_lvl4_tower_layer3_0034", "arcane_wizard_tower_lvl4_tower_layer3_0075", "arcane_wizard_tower_lvl4_tower_layer3_0076"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer2_0232 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1200,
-			90,
-			88
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer2_0281"
-		}
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 1200, 90, 88},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer2_0281"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer3_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			148,
-			1933,
-			33,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0193",
-			"arcane_wizard_tower_lvl4_tower_layer5_0194",
-			"arcane_wizard_tower_lvl4_tower_layer5_0238",
-			"arcane_wizard_tower_lvl4_tower_layer5_0239",
-			"arcane_wizard_tower_lvl4_tower_layer5_0240",
-			"arcane_wizard_tower_lvl4_tower_layer5_0241"
-		}
+		size = {176, 332},
+		trim = {72, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {148, 1933, 33, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0193", "arcane_wizard_tower_lvl4_tower_layer5_0194", "arcane_wizard_tower_lvl4_tower_layer5_0238", "arcane_wizard_tower_lvl4_tower_layer5_0239", "arcane_wizard_tower_lvl4_tower_layer5_0240", "arcane_wizard_tower_lvl4_tower_layer5_0241"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer3_0002 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			64,
-			71,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1240,
-			32,
-			46
-		},
+		size = {176, 332},
+		trim = {73, 64, 71, 222},
+		a_size = {2048, 2048},
+		f_quad = {654, 1240, 32, 46},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer4_0182",
 			"arcane_wizard_tower_lvl4_tower_layer4_0183",
@@ -5018,90 +2541,26 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer3_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1291,
-			90,
-			88
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer3_0015",
-			"arcane_wizard_tower_lvl4_tower_layer3_0039",
-			"arcane_wizard_tower_lvl4_tower_layer3_0040",
-			"arcane_wizard_tower_lvl4_tower_layer3_0056",
-			"arcane_wizard_tower_lvl4_tower_layer3_0057",
-			"arcane_wizard_tower_lvl4_tower_layer3_0081",
-			"arcane_wizard_tower_lvl4_tower_layer3_0082"
-		}
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 1291, 90, 88},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer3_0015", "arcane_wizard_tower_lvl4_tower_layer3_0039", "arcane_wizard_tower_lvl4_tower_layer3_0040", "arcane_wizard_tower_lvl4_tower_layer3_0056", "arcane_wizard_tower_lvl4_tower_layer3_0057", "arcane_wizard_tower_lvl4_tower_layer3_0081", "arcane_wizard_tower_lvl4_tower_layer3_0082"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer3_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			50,
-			43,
-			194
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1382,
-			90,
-			88
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer3_0017",
-			"arcane_wizard_tower_lvl4_tower_layer3_0037",
-			"arcane_wizard_tower_lvl4_tower_layer3_0038",
-			"arcane_wizard_tower_lvl4_tower_layer3_0058",
-			"arcane_wizard_tower_lvl4_tower_layer3_0059",
-			"arcane_wizard_tower_lvl4_tower_layer3_0079",
-			"arcane_wizard_tower_lvl4_tower_layer3_0080"
-		}
+		size = {176, 332},
+		trim = {43, 50, 43, 194},
+		a_size = {2048, 2048},
+		f_quad = {411, 1382, 90, 88},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer3_0017", "arcane_wizard_tower_lvl4_tower_layer3_0037", "arcane_wizard_tower_lvl4_tower_layer3_0038", "arcane_wizard_tower_lvl4_tower_layer3_0058", "arcane_wizard_tower_lvl4_tower_layer3_0059", "arcane_wizard_tower_lvl4_tower_layer3_0079", "arcane_wizard_tower_lvl4_tower_layer3_0080"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer3_0087 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			32,
-			154
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1381,
-			5,
-			111,
-			107
-		},
+		size = {176, 332},
+		trim = {33, 71, 32, 154},
+		a_size = {2048, 2048},
+		f_quad = {1381, 5, 111, 107},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer3_0088",
 			"arcane_wizard_tower_lvl4_tower_layer3_0089",
@@ -5212,26 +2671,10 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer3_0193 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			32,
-			154
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1495,
-			5,
-			111,
-			107
-		},
+		size = {176, 332},
+		trim = {33, 71, 32, 154},
+		a_size = {2048, 2048},
+		f_quad = {1495, 5, 111, 107},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer3_0194",
 			"arcane_wizard_tower_lvl4_tower_layer3_0195",
@@ -5334,390 +2777,122 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			38,
-			83,
-			36,
-			227
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1704,
-			581,
-			102,
-			22
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0051"
-		}
+		size = {176, 332},
+		trim = {38, 83, 36, 227},
+		a_size = {2048, 2048},
+		f_quad = {1704, 581, 102, 22},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0051"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0010 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			31,
-			78,
-			29,
-			231
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1609,
-			110,
-			116,
-			23
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0052"
-		}
+		size = {176, 332},
+		trim = {31, 78, 29, 231},
+		a_size = {2048, 2048},
+		f_quad = {1609, 110, 116, 23},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0052"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			26,
-			69,
-			24,
-			235
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1814,
-			772,
-			126,
-			28
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0053"
-		}
+		size = {176, 332},
+		trim = {26, 69, 24, 235},
+		a_size = {2048, 2048},
+		f_quad = {1814, 772, 126, 28},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0053"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			32,
-			65,
-			30,
-			240
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			881,
-			114,
-			27
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0054"
-		}
+		size = {176, 332},
+		trim = {32, 65, 30, 240},
+		a_size = {2048, 2048},
+		f_quad = {654, 881, 114, 27},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0054"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			35,
-			62,
-			33,
-			244
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			2015,
-			108,
-			26
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0055"
-		}
+		size = {176, 332},
+		trim = {35, 62, 33, 244},
+		a_size = {2048, 2048},
+		f_quad = {297, 2015, 108, 26},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0055"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			40,
-			45,
-			38,
-			249
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1577,
-			772,
-			98,
-			38
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0056"
-		}
+		size = {176, 332},
+		trim = {40, 45, 38, 249},
+		a_size = {2048, 2048},
+		f_quad = {1577, 772, 98, 38},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0056"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			45,
-			45,
-			43,
-			253
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1943,
-			772,
-			88,
-			34
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0057"
-		}
+		size = {176, 332},
+		trim = {45, 45, 43, 253},
+		a_size = {2048, 2048},
+		f_quad = {1943, 772, 88, 34},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0057"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			49,
-			45,
-			47,
-			258
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			728,
-			911,
-			80,
-			29
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0058"
-		}
+		size = {176, 332},
+		trim = {49, 45, 47, 258},
+		a_size = {2048, 2048},
+		f_quad = {728, 911, 80, 29},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0058"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			59,
-			45,
-			58,
-			271
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1974,
-			747,
-			59,
-			16
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0059"
-		}
+		size = {176, 332},
+		trim = {59, 45, 58, 271},
+		a_size = {2048, 2048},
+		f_quad = {1974, 747, 59, 16},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0059"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0087 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			65,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1338,
-			33,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0088"
-		}
+		size = {176, 332},
+		trim = {72, 65, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1338, 33, 44},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0088"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0089 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			67,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1809,
-			33,
-			42
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0090"
-		}
+		size = {176, 332},
+		trim = {72, 67, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1809, 33, 42},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0090"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0091 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			148,
-			1981,
-			33,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0092"
-		}
+		size = {176, 332},
+		trim = {72, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {148, 1981, 33, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0092"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0093 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			68,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1916,
-			42,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0094"
-		}
+		size = {176, 332},
+		trim = {68, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {510, 1916, 42, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0094"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0095 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			70,
-			62,
-			67,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2005,
-			246,
-			39,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0096"
-		}
+		size = {176, 332},
+		trim = {70, 62, 67, 223},
+		a_size = {2048, 2048},
+		f_quad = {2005, 246, 39, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0096"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0097 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1382,
-			41,
-			45
-		},
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1382, 41, 45},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer4_0098",
 			"arcane_wizard_tower_lvl4_tower_layer4_0099",
@@ -5744,371 +2919,106 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0119 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			848,
-			41,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0120"
-		}
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 848, 41, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0120"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0121 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			68,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1966,
-			42,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0122"
-		}
+		size = {176, 332},
+		trim = {68, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {510, 1966, 42, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0122"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0123 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1048,
-			33,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0124"
-		}
+		size = {176, 332},
+		trim = {72, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1048, 33, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0124"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0125 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			66,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1670,
-			33,
-			43
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0126"
-		}
+		size = {176, 332},
+		trim = {72, 66, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1670, 33, 43},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0126"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0127 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			65,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1385,
-			33,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0128"
-		}
+		size = {176, 332},
+		trim = {72, 65, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1385, 33, 44},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0128"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0129 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1096,
-			33,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0130",
-			"arcane_wizard_tower_lvl4_tower_layer4_0131",
-			"arcane_wizard_tower_lvl4_tower_layer4_0132",
-			"arcane_wizard_tower_lvl4_tower_layer4_0133",
-			"arcane_wizard_tower_lvl4_tower_layer4_0134",
-			"arcane_wizard_tower_lvl4_tower_layer4_0135",
-			"arcane_wizard_tower_lvl4_tower_layer4_0136",
-			"arcane_wizard_tower_lvl4_tower_layer4_0137",
-			"arcane_wizard_tower_lvl4_tower_layer4_0138",
-			"arcane_wizard_tower_lvl4_tower_layer4_0139"
-		}
+		size = {176, 332},
+		trim = {72, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1096, 33, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0130", "arcane_wizard_tower_lvl4_tower_layer4_0131", "arcane_wizard_tower_lvl4_tower_layer4_0132", "arcane_wizard_tower_lvl4_tower_layer4_0133", "arcane_wizard_tower_lvl4_tower_layer4_0134", "arcane_wizard_tower_lvl4_tower_layer4_0135", "arcane_wizard_tower_lvl4_tower_layer4_0136", "arcane_wizard_tower_lvl4_tower_layer4_0137", "arcane_wizard_tower_lvl4_tower_layer4_0138", "arcane_wizard_tower_lvl4_tower_layer4_0139"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0140 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			65,
-			71,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1526,
-			32,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0141",
-			"arcane_wizard_tower_lvl4_tower_layer6_0244",
-			"arcane_wizard_tower_lvl4_tower_layer6_0245",
-			"arcane_wizard_tower_lvl4_tower_layer7_0045",
-			"arcane_wizard_tower_lvl4_tower_layer7_0046"
-		}
+		size = {176, 332},
+		trim = {73, 65, 71, 222},
+		a_size = {2048, 2048},
+		f_quad = {654, 1526, 32, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0141", "arcane_wizard_tower_lvl4_tower_layer6_0244", "arcane_wizard_tower_lvl4_tower_layer6_0245", "arcane_wizard_tower_lvl4_tower_layer7_0045", "arcane_wizard_tower_lvl4_tower_layer7_0046"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0142 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			67,
-			71,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1899,
-			32,
-			43
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0143",
-			"arcane_wizard_tower_lvl4_tower_layer6_0246",
-			"arcane_wizard_tower_lvl4_tower_layer6_0247",
-			"arcane_wizard_tower_lvl4_tower_layer7_0047",
-			"arcane_wizard_tower_lvl4_tower_layer7_0048"
-		}
+		size = {176, 332},
+		trim = {73, 67, 71, 222},
+		a_size = {2048, 2048},
+		f_quad = {654, 1899, 32, 43},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0143", "arcane_wizard_tower_lvl4_tower_layer6_0246", "arcane_wizard_tower_lvl4_tower_layer6_0247", "arcane_wizard_tower_lvl4_tower_layer7_0047", "arcane_wizard_tower_lvl4_tower_layer7_0048"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0144 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			64,
-			71,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1289,
-			32,
-			46
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0145",
-			"arcane_wizard_tower_lvl4_tower_layer6_0248",
-			"arcane_wizard_tower_lvl4_tower_layer6_0249",
-			"arcane_wizard_tower_lvl4_tower_layer7_0049",
-			"arcane_wizard_tower_lvl4_tower_layer7_0050"
-		}
+		size = {176, 332},
+		trim = {73, 64, 71, 222},
+		a_size = {2048, 2048},
+		f_quad = {654, 1289, 32, 46},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0145", "arcane_wizard_tower_lvl4_tower_layer6_0248", "arcane_wizard_tower_lvl4_tower_layer6_0249", "arcane_wizard_tower_lvl4_tower_layer7_0049", "arcane_wizard_tower_lvl4_tower_layer7_0050"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0146 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			68,
-			62,
-			65,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1772,
-			43,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0147",
-			"arcane_wizard_tower_lvl4_tower_layer6_0250",
-			"arcane_wizard_tower_lvl4_tower_layer6_0251",
-			"arcane_wizard_tower_lvl4_tower_layer7_0051",
-			"arcane_wizard_tower_lvl4_tower_layer7_0052"
-		}
+		size = {176, 332},
+		trim = {68, 62, 65, 223},
+		a_size = {2048, 2048},
+		f_quad = {510, 1772, 43, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0147", "arcane_wizard_tower_lvl4_tower_layer6_0250", "arcane_wizard_tower_lvl4_tower_layer6_0251", "arcane_wizard_tower_lvl4_tower_layer7_0051", "arcane_wizard_tower_lvl4_tower_layer7_0052"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0148 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			70,
-			62,
-			67,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2005,
-			296,
-			39,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0149",
-			"arcane_wizard_tower_lvl4_tower_layer6_0252",
-			"arcane_wizard_tower_lvl4_tower_layer6_0253",
-			"arcane_wizard_tower_lvl4_tower_layer7_0053",
-			"arcane_wizard_tower_lvl4_tower_layer7_0054"
-		}
+		size = {176, 332},
+		trim = {70, 62, 67, 223},
+		a_size = {2048, 2048},
+		f_quad = {2005, 296, 39, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0149", "arcane_wizard_tower_lvl4_tower_layer6_0252", "arcane_wizard_tower_lvl4_tower_layer6_0253", "arcane_wizard_tower_lvl4_tower_layer7_0053", "arcane_wizard_tower_lvl4_tower_layer7_0054"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0150 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1430,
-			41,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0151",
-			"arcane_wizard_tower_lvl4_tower_layer6_0254",
-			"arcane_wizard_tower_lvl4_tower_layer6_0255",
-			"arcane_wizard_tower_lvl4_tower_layer7_0055",
-			"arcane_wizard_tower_lvl4_tower_layer7_0056"
-		}
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1430, 41, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0151", "arcane_wizard_tower_lvl4_tower_layer6_0254", "arcane_wizard_tower_lvl4_tower_layer6_0255", "arcane_wizard_tower_lvl4_tower_layer7_0055", "arcane_wizard_tower_lvl4_tower_layer7_0056"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0152 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1478,
-			41,
-			45
-		},
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1478, 41, 45},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer4_0153",
 			"arcane_wizard_tower_lvl4_tower_layer4_0154",
@@ -6140,26 +3050,10 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0155 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1526,
-			41,
-			45
-		},
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1526, 41, 45},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer4_0156",
 			"arcane_wizard_tower_lvl4_tower_layer4_0159",
@@ -6182,26 +3076,10 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0157 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1574,
-			41,
-			45
-		},
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1574, 41, 45},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer4_0158",
 			"arcane_wizard_tower_lvl4_tower_layer4_0161",
@@ -6222,496 +3100,146 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0172 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			898,
-			41,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0077"
-		}
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 898, 41, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0077"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0173 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			948,
-			41,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0078"
-		}
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 948, 41, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0078"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0174 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			68,
-			62,
-			65,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1822,
-			43,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0175",
-			"arcane_wizard_tower_lvl4_tower_layer6_0279",
-			"arcane_wizard_tower_lvl4_tower_layer6_0280",
-			"arcane_wizard_tower_lvl4_tower_layer7_0079",
-			"arcane_wizard_tower_lvl4_tower_layer7_0080"
-		}
+		size = {176, 332},
+		trim = {68, 62, 65, 223},
+		a_size = {2048, 2048},
+		f_quad = {510, 1822, 43, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0175", "arcane_wizard_tower_lvl4_tower_layer6_0279", "arcane_wizard_tower_lvl4_tower_layer6_0280", "arcane_wizard_tower_lvl4_tower_layer7_0079", "arcane_wizard_tower_lvl4_tower_layer7_0080"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0176 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1574,
-			32,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0177",
-			"arcane_wizard_tower_lvl4_tower_layer6_0281",
-			"arcane_wizard_tower_lvl4_tower_layer6_0282",
-			"arcane_wizard_tower_lvl4_tower_layer7_0081",
-			"arcane_wizard_tower_lvl4_tower_layer7_0082"
-		}
+		size = {176, 332},
+		trim = {73, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1574, 32, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0177", "arcane_wizard_tower_lvl4_tower_layer6_0281", "arcane_wizard_tower_lvl4_tower_layer6_0282", "arcane_wizard_tower_lvl4_tower_layer7_0081", "arcane_wizard_tower_lvl4_tower_layer7_0082"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0178 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			66,
-			71,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1762,
-			32,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0179",
-			"arcane_wizard_tower_lvl4_tower_layer6_0283",
-			"arcane_wizard_tower_lvl4_tower_layer6_0284",
-			"arcane_wizard_tower_lvl4_tower_layer7_0083",
-			"arcane_wizard_tower_lvl4_tower_layer7_0084"
-		}
+		size = {176, 332},
+		trim = {73, 66, 71, 222},
+		a_size = {2048, 2048},
+		f_quad = {654, 1762, 32, 44},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0179", "arcane_wizard_tower_lvl4_tower_layer6_0283", "arcane_wizard_tower_lvl4_tower_layer6_0284", "arcane_wizard_tower_lvl4_tower_layer7_0083", "arcane_wizard_tower_lvl4_tower_layer7_0084"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0180 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			65,
-			71,
-			222
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1622,
-			32,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0181",
-			"arcane_wizard_tower_lvl4_tower_layer6_0285",
-			"arcane_wizard_tower_lvl4_tower_layer6_0286",
-			"arcane_wizard_tower_lvl4_tower_layer7_0085",
-			"arcane_wizard_tower_lvl4_tower_layer7_0086"
-		}
+		size = {176, 332},
+		trim = {73, 65, 71, 222},
+		a_size = {2048, 2048},
+		f_quad = {654, 1622, 32, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0181", "arcane_wizard_tower_lvl4_tower_layer6_0285", "arcane_wizard_tower_lvl4_tower_layer6_0286", "arcane_wizard_tower_lvl4_tower_layer7_0085", "arcane_wizard_tower_lvl4_tower_layer7_0086"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0195 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1473,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0196",
-			"arcane_wizard_tower_lvl4_tower_layer4_0244",
-			"arcane_wizard_tower_lvl4_tower_layer4_0245"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1473, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0196", "arcane_wizard_tower_lvl4_tower_layer4_0244", "arcane_wizard_tower_lvl4_tower_layer4_0245"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0197 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1536,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0198",
-			"arcane_wizard_tower_lvl4_tower_layer4_0246",
-			"arcane_wizard_tower_lvl4_tower_layer4_0247"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1536, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0198", "arcane_wizard_tower_lvl4_tower_layer4_0246", "arcane_wizard_tower_lvl4_tower_layer4_0247"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0199 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			74,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			748,
-			355,
-			109,
-			103
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0200",
-			"arcane_wizard_tower_lvl4_tower_layer4_0248",
-			"arcane_wizard_tower_lvl4_tower_layer4_0249"
-		}
+		size = {176, 332},
+		trim = {34, 74, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {748, 355, 109, 103},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0200", "arcane_wizard_tower_lvl4_tower_layer4_0248", "arcane_wizard_tower_lvl4_tower_layer4_0249"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0201 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			73,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1892,
-			246,
-			110,
-			104
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0202",
-			"arcane_wizard_tower_lvl4_tower_layer4_0250",
-			"arcane_wizard_tower_lvl4_tower_layer4_0251"
-		}
+		size = {176, 332},
+		trim = {33, 73, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1892, 246, 110, 104},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0202", "arcane_wizard_tower_lvl4_tower_layer4_0250", "arcane_wizard_tower_lvl4_tower_layer4_0251"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0203 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			73,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			524,
-			355,
-			109,
-			104
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0204",
-			"arcane_wizard_tower_lvl4_tower_layer4_0252",
-			"arcane_wizard_tower_lvl4_tower_layer4_0253"
-		}
+		size = {176, 332},
+		trim = {34, 73, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {524, 355, 109, 104},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0204", "arcane_wizard_tower_lvl4_tower_layer4_0252", "arcane_wizard_tower_lvl4_tower_layer4_0253"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0205 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			73,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			636,
-			355,
-			109,
-			104
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0254"
-		}
+		size = {176, 332},
+		trim = {34, 73, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {636, 355, 109, 104},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0254"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0206 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1909,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0255"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1909, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0255"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0207 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1728,
-			5,
-			111,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0256"
-		}
+		size = {176, 332},
+		trim = {33, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1728, 5, 111, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0256"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0208 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			525,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0257"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {525, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0257"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0209 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			638,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0258"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {638, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0258"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0210 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			770,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0211",
-			"arcane_wizard_tower_lvl4_tower_layer4_0259",
-			"arcane_wizard_tower_lvl4_tower_layer4_0260"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {770, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0211", "arcane_wizard_tower_lvl4_tower_layer4_0259", "arcane_wizard_tower_lvl4_tower_layer4_0260"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0212 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			882,
-			246,
-			109,
-			106
-		},
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {882, 246, 109, 106},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer4_0213",
 			"arcane_wizard_tower_lvl4_tower_layer4_0214",
@@ -6742,1654 +3270,522 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0225 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1842,
-			5,
-			111,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0226",
-			"arcane_wizard_tower_lvl4_tower_layer4_0274",
-			"arcane_wizard_tower_lvl4_tower_layer4_0275"
-		}
+		size = {176, 332},
+		trim = {33, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1842, 5, 111, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0226", "arcane_wizard_tower_lvl4_tower_layer4_0274", "arcane_wizard_tower_lvl4_tower_layer4_0275"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0227 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			751,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0228",
-			"arcane_wizard_tower_lvl4_tower_layer4_0276",
-			"arcane_wizard_tower_lvl4_tower_layer4_0277"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {751, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0228", "arcane_wizard_tower_lvl4_tower_layer4_0276", "arcane_wizard_tower_lvl4_tower_layer4_0277"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0229 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			994,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0278"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {994, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0278"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0230 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			864,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0279"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {864, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0279"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0231 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			977,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0280"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {977, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0280"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0232 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1090,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0281"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1090, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0281"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0233 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			73,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1778,
-			246,
-			111,
-			104
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0282"
-		}
+		size = {176, 332},
+		trim = {33, 73, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1778, 246, 111, 104},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0282"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0234 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			73,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			355,
-			110,
-			104
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0283"
-		}
+		size = {176, 332},
+		trim = {33, 73, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 355, 110, 104},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0283"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0235 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			74,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			860,
-			355,
-			109,
-			103
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0284"
-		}
+		size = {176, 332},
+		trim = {34, 74, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {860, 355, 109, 103},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0284"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0236 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			74,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			972,
-			355,
-			109,
-			103
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0285"
-		}
+		size = {176, 332},
+		trim = {34, 74, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {972, 355, 109, 103},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0285"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0237 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1599,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0286"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1599, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0286"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0238 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			117,
-			73,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1708,
-			30,
-			32
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0287"
-		}
+		size = {176, 332},
+		trim = {73, 117, 73, 183},
+		a_size = {2048, 2048},
+		f_quad = {693, 1708, 30, 32},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0287"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer4_0239 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			117,
-			73,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1743,
-			30,
-			32
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer4_0240",
-			"arcane_wizard_tower_lvl4_tower_layer4_0241",
-			"arcane_wizard_tower_lvl4_tower_layer4_0288",
-			"arcane_wizard_tower_lvl4_tower_layer4_0289",
-			"arcane_wizard_tower_lvl4_tower_layer4_0290",
-			"arcane_wizard_tower_lvl4_tower_layer6_0044",
-			"arcane_wizard_tower_lvl4_tower_layer6_0086"
-		}
+		size = {176, 332},
+		trim = {73, 117, 73, 183},
+		a_size = {2048, 2048},
+		f_quad = {693, 1743, 30, 32},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer4_0240", "arcane_wizard_tower_lvl4_tower_layer4_0241", "arcane_wizard_tower_lvl4_tower_layer4_0288", "arcane_wizard_tower_lvl4_tower_layer4_0289", "arcane_wizard_tower_lvl4_tower_layer4_0290", "arcane_wizard_tower_lvl4_tower_layer6_0044", "arcane_wizard_tower_lvl4_tower_layer6_0086"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0092 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			50,
-			112,
-			50,
-			202
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1334,
-			881,
-			76,
-			18
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0145"
-		}
+		size = {176, 332},
+		trim = {50, 112, 50, 202},
+		a_size = {2048, 2048},
+		f_quad = {1334, 881, 76, 18},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0145"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0093 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			40,
-			110,
-			40,
-			203
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1809,
-			581,
-			96,
-			19
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0146"
-		}
+		size = {176, 332},
+		trim = {40, 110, 40, 203},
+		a_size = {2048, 2048},
+		f_quad = {1809, 581, 96, 19},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0146"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0094 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			30,
-			105,
-			30,
-			204
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1925,
-			553,
-			116,
-			23
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0147"
-		}
+		size = {176, 332},
+		trim = {30, 105, 30, 204},
+		a_size = {2048, 2048},
+		f_quad = {1925, 553, 116, 23},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0147"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0095 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			100,
-			22,
-			207
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1181,
-			505,
-			133,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0148"
-		}
+		size = {176, 332},
+		trim = {21, 100, 22, 207},
+		a_size = {2048, 2048},
+		f_quad = {1181, 505, 133, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0148"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0096 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			24,
-			50,
-			25,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			490,
-			127,
-			127
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0149"
-		}
+		size = {176, 332},
+		trim = {24, 50, 25, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 490, 127, 127},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0149"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0097 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			25,
-			50,
-			26,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1068,
-			125,
-			127
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0150"
-		}
+		size = {176, 332},
+		trim = {25, 50, 26, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1068, 125, 127},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0150"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0098 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			28,
-			50,
-			29,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			657,
-			5,
-			119,
-			127
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0151"
-		}
+		size = {176, 332},
+		trim = {28, 50, 29, 155},
+		a_size = {2048, 2048},
+		f_quad = {657, 5, 119, 127},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0151"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0099 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			32,
-			50,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1885,
-			111,
-			127
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0152"
-		}
+		size = {176, 332},
+		trim = {32, 50, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1885, 111, 127},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0152"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0100 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			50,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			779,
-			5,
-			111,
-			127
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0153"
-		}
+		size = {176, 332},
+		trim = {33, 50, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {779, 5, 111, 127},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0153"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0101 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			33,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1472,
-			109,
-			144
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0154"
-		}
+		size = {176, 332},
+		trim = {34, 33, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1472, 109, 144},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0154"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0102 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			33,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1198,
-			110,
-			144
-		},
+		size = {176, 332},
+		trim = {33, 33, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1198, 110, 144},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0103 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			726,
-			109,
-			143
-		},
+		size = {176, 332},
+		trim = {34, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 726, 109, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0104 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			872,
-			109,
-			143
-		},
+		size = {176, 332},
+		trim = {34, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 872, 109, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0105 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			36,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			5,
-			111,
-			141
-		},
+		size = {176, 332},
+		trim = {33, 36, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 5, 111, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0106 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			36,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1164,
-			110,
-			141
-		},
+		size = {176, 332},
+		trim = {34, 36, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1164, 110, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0107 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			36,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			149,
-			111,
-			141
-		},
+		size = {176, 332},
+		trim = {33, 36, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 149, 111, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0108 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			36,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1308,
-			110,
-			141
-		},
+		size = {176, 332},
+		trim = {33, 36, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1308, 110, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0109 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			35,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1740,
-			109,
-			142
-		},
+		size = {176, 332},
+		trim = {34, 35, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1740, 109, 142},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0110 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			35,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1619,
-			110,
-			142
-		},
+		size = {176, 332},
+		trim = {33, 35, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1619, 110, 142},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0111 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			33,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1345,
-			110,
-			144
-		},
+		size = {176, 332},
+		trim = {33, 33, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1345, 110, 144},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0112 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			33,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1492,
-			110,
-			144
-		},
+		size = {176, 332},
+		trim = {34, 33, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1492, 110, 144},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0113 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			30,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			620,
-			109,
-			147
-		},
+		size = {176, 332},
+		trim = {34, 30, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 620, 109, 147},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0114 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			30,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			340,
-			110,
-			147
-		},
+		size = {176, 332},
+		trim = {33, 30, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 340, 110, 147},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0115 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			32,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			920,
-			110,
-			145
-		},
+		size = {176, 332},
+		trim = {33, 32, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 920, 110, 145},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0116 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			32,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			446,
-			109,
-			145
-		},
+		size = {176, 332},
+		trim = {34, 32, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 446, 109, 145},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0117 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			33,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1639,
-			110,
-			144
-		},
+		size = {176, 332},
+		trim = {34, 33, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1639, 110, 144},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0118 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			33,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			1786,
-			110,
-			144
-		},
+		size = {176, 332},
+		trim = {33, 33, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 1786, 110, 144},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0119 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			742,
-			110,
-			143
-		},
+		size = {176, 332},
+		trim = {33, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 742, 110, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0120 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1018,
-			109,
-			143
-		},
+		size = {176, 332},
+		trim = {34, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1018, 109, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0121 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			36,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			293,
-			111,
-			141
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0174"
-		}
+		size = {176, 332},
+		trim = {33, 36, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 293, 111, 141},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0174"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0122 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			45,
-			36,
-			45,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1286,
-			822,
-			86,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0175"
-		}
+		size = {176, 332},
+		trim = {45, 36, 45, 246},
+		a_size = {2048, 2048},
+		f_quad = {1286, 822, 86, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0175"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0123 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			35,
-			43,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			742,
-			822,
-			90,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0176"
-		}
+		size = {176, 332},
+		trim = {43, 35, 43, 246},
+		a_size = {2048, 2048},
+		f_quad = {742, 822, 90, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0176"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0155 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			33,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			5,
-			110,
-			144
-		},
+		size = {176, 332},
+		trim = {33, 33, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 5, 110, 144},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0156 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			888,
-			110,
-			143
-		},
+		size = {176, 332},
+		trim = {33, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 888, 110, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0157 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1034,
-			110,
-			143
-		},
+		size = {176, 332},
+		trim = {33, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1034, 110, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0158 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			36,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			437,
-			111,
-			141
-		},
+		size = {176, 332},
+		trim = {33, 36, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 437, 111, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0159 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			36,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1452,
-			110,
-			141
-		},
+		size = {176, 332},
+		trim = {34, 36, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1452, 110, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0160 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			36,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			1596,
-			110,
-			141
-		},
+		size = {176, 332},
+		trim = {33, 36, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 1596, 110, 141},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0161 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			35,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1764,
-			110,
-			142
-		},
+		size = {176, 332},
+		trim = {33, 35, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1764, 110, 142},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0162 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			35,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			297,
-			581,
-			110,
-			142
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0163"
-		}
+		size = {176, 332},
+		trim = {33, 35, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {297, 581, 110, 142},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0163"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0164 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			33,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			152,
-			110,
-			144
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0165"
-		}
+		size = {176, 332},
+		trim = {33, 33, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 152, 110, 144},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0165"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0166 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			30,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			5,
-			770,
-			109,
-			147
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0167"
-		}
+		size = {176, 332},
+		trim = {34, 30, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {5, 770, 109, 147},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0167"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0168 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			32,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			594,
-			109,
-			145
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0169"
-		}
+		size = {176, 332},
+		trim = {34, 32, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 594, 109, 145},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0169"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0170 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			33,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			299,
-			110,
-			144
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0171"
-		}
+		size = {176, 332},
+		trim = {34, 33, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 299, 110, 144},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0171"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0172 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1180,
-			110,
-			143
-		},
+		size = {176, 332},
+		trim = {33, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1180, 110, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0173 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			34,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			184,
-			1326,
-			110,
-			143
-		},
+		size = {176, 332},
+		trim = {33, 34, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {184, 1326, 110, 143},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0195 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			65,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1432,
-			33,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0196",
-			"arcane_wizard_tower_lvl4_tower_layer7_0003",
-			"arcane_wizard_tower_lvl4_tower_layer7_0004"
-		}
+		size = {176, 332},
+		trim = {72, 65, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1432, 33, 44},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0196", "arcane_wizard_tower_lvl4_tower_layer7_0003", "arcane_wizard_tower_lvl4_tower_layer7_0004"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0197 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			67,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1854,
-			33,
-			42
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0198",
-			"arcane_wizard_tower_lvl4_tower_layer7_0005",
-			"arcane_wizard_tower_lvl4_tower_layer7_0006"
-		}
+		size = {176, 332},
+		trim = {72, 67, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1854, 33, 42},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0198", "arcane_wizard_tower_lvl4_tower_layer7_0005", "arcane_wizard_tower_lvl4_tower_layer7_0006"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0199 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1144,
-			33,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0200",
-			"arcane_wizard_tower_lvl4_tower_layer7_0007",
-			"arcane_wizard_tower_lvl4_tower_layer7_0008"
-		}
+		size = {176, 332},
+		trim = {72, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1144, 33, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0200", "arcane_wizard_tower_lvl4_tower_layer7_0007", "arcane_wizard_tower_lvl4_tower_layer7_0008"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0201 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			68,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			748,
-			42,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0202",
-			"arcane_wizard_tower_lvl4_tower_layer7_0009",
-			"arcane_wizard_tower_lvl4_tower_layer7_0010"
-		}
+		size = {176, 332},
+		trim = {68, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 748, 42, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0202", "arcane_wizard_tower_lvl4_tower_layer7_0009", "arcane_wizard_tower_lvl4_tower_layer7_0010"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0203 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			70,
-			62,
-			67,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1766,
-			39,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0204",
-			"arcane_wizard_tower_lvl4_tower_layer7_0011",
-			"arcane_wizard_tower_lvl4_tower_layer7_0012"
-		}
+		size = {176, 332},
+		trim = {70, 62, 67, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1766, 39, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0204", "arcane_wizard_tower_lvl4_tower_layer7_0011", "arcane_wizard_tower_lvl4_tower_layer7_0012"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0205 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1622,
-			41,
-			45
-		},
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1622, 41, 45},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer5_0206",
 			"arcane_wizard_tower_lvl4_tower_layer5_0207",
@@ -8422,1108 +3818,338 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0228 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			998,
-			41,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0229"
-		}
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 998, 41, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0229"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0230 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			68,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			798,
-			42,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0231",
-			"arcane_wizard_tower_lvl4_tower_layer7_0037",
-			"arcane_wizard_tower_lvl4_tower_layer7_0038"
-		}
+		size = {176, 332},
+		trim = {68, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 798, 42, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0231", "arcane_wizard_tower_lvl4_tower_layer7_0037", "arcane_wizard_tower_lvl4_tower_layer7_0038"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0232 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			64,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1192,
-			33,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0233",
-			"arcane_wizard_tower_lvl4_tower_layer7_0039",
-			"arcane_wizard_tower_lvl4_tower_layer7_0040"
-		}
+		size = {176, 332},
+		trim = {72, 64, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1192, 33, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0233", "arcane_wizard_tower_lvl4_tower_layer7_0039", "arcane_wizard_tower_lvl4_tower_layer7_0040"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0234 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			66,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1716,
-			33,
-			43
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0235",
-			"arcane_wizard_tower_lvl4_tower_layer7_0041",
-			"arcane_wizard_tower_lvl4_tower_layer7_0042"
-		}
+		size = {176, 332},
+		trim = {72, 66, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1716, 33, 43},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0235", "arcane_wizard_tower_lvl4_tower_layer7_0041", "arcane_wizard_tower_lvl4_tower_layer7_0042"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0236 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			72,
-			65,
-			71,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			1479,
-			33,
-			44
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer5_0237",
-			"arcane_wizard_tower_lvl4_tower_layer7_0043",
-			"arcane_wizard_tower_lvl4_tower_layer7_0044"
-		}
+		size = {176, 332},
+		trim = {72, 65, 71, 223},
+		a_size = {2048, 2048},
+		f_quad = {654, 1479, 33, 44},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer5_0237", "arcane_wizard_tower_lvl4_tower_layer7_0043", "arcane_wizard_tower_lvl4_tower_layer7_0044"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0251 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			79,
-			67,
-			77,
-			242
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2021,
-			855,
-			20,
-			23
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0202"
-		}
+		size = {176, 332},
+		trim = {79, 67, 77, 242},
+		a_size = {2048, 2048},
+		f_quad = {2021, 855, 20, 23},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0202"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0252 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			79,
-			66,
-			76,
-			242
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			743,
-			296,
-			21,
-			24
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0203"
-		}
+		size = {176, 332},
+		trim = {79, 66, 76, 242},
+		a_size = {2048, 2048},
+		f_quad = {743, 296, 21, 24},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0203"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0253 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			78,
-			66,
-			76,
-			242
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			626,
-			1860,
-			22,
-			24
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0204"
-		}
+		size = {176, 332},
+		trim = {78, 66, 76, 242},
+		a_size = {2048, 2048},
+		f_quad = {626, 1860, 22, 24},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0204"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0254 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			78,
-			66,
-			75,
-			242
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			628,
-			1816,
-			23,
-			24
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0205"
-		}
+		size = {176, 332},
+		trim = {78, 66, 75, 242},
+		a_size = {2048, 2048},
+		f_quad = {628, 1816, 23, 24},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0205"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0255 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			77,
-			66,
-			75,
-			241
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			627,
-			1288,
-			24,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0206"
-		}
+		size = {176, 332},
+		trim = {77, 66, 75, 241},
+		a_size = {2048, 2048},
+		f_quad = {627, 1288, 24, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0206"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0256 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			76,
-			66,
-			74,
-			241
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			2007,
-			606,
-			26,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0207"
-		}
+		size = {176, 332},
+		trim = {76, 66, 74, 241},
+		a_size = {2048, 2048},
+		f_quad = {2007, 606, 26, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0207"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0257 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			76,
-			66,
-			74,
-			241
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			625,
-			1939,
-			26,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0208"
-		}
+		size = {176, 332},
+		trim = {76, 66, 74, 241},
+		a_size = {2048, 2048},
+		f_quad = {625, 1939, 26, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0208"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0258 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			75,
-			65,
-			73,
-			241
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1226,
-			105,
-			28,
-			26
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0209"
-		}
+		size = {176, 332},
+		trim = {75, 65, 73, 241},
+		a_size = {2048, 2048},
+		f_quad = {1226, 105, 28, 26},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0209"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0259 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			71,
-			50,
-			68,
-			247
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1199,
-			37,
-			35
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0210"
-		}
+		size = {176, 332},
+		trim = {71, 50, 68, 247},
+		a_size = {2048, 2048},
+		f_quad = {693, 1199, 37, 35},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0210"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0260 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			67,
-			37,
-			64,
-			253
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1243,
-			45,
-			42
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0211"
-		}
+		size = {176, 332},
+		trim = {67, 37, 64, 253},
+		a_size = {2048, 2048},
+		f_quad = {581, 1243, 45, 42},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0211"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0261 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			64,
-			28,
-			61,
-			257
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1994,
-			196,
-			51,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0212"
-		}
+		size = {176, 332},
+		trim = {64, 28, 61, 257},
+		a_size = {2048, 2048},
+		f_quad = {1994, 196, 51, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0212"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0262 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			61,
-			21,
-			59,
-			260
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1878,
-			56,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0213"
-		}
+		size = {176, 332},
+		trim = {61, 21, 59, 260},
+		a_size = {2048, 2048},
+		f_quad = {118, 1878, 56, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0213"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0263 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			60,
-			16,
-			58,
-			261
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1490,
-			58,
-			55
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0214"
-		}
+		size = {176, 332},
+		trim = {60, 16, 58, 261},
+		a_size = {2048, 2048},
+		f_quad = {118, 1490, 58, 55},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0214"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0264 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			59,
-			15,
-			58,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1374,
-			59,
-			55
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0215"
-		}
+		size = {176, 332},
+		trim = {59, 15, 58, 262},
+		a_size = {2048, 2048},
+		f_quad = {118, 1374, 59, 55},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0215"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0265 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			59,
-			15,
-			58,
-			262
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1432,
-			59,
-			55
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0216"
-		}
+		size = {176, 332},
+		trim = {59, 15, 58, 262},
+		a_size = {2048, 2048},
+		f_quad = {118, 1432, 59, 55},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0216"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0266 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			60,
-			15,
-			58,
-			263
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1548,
-			58,
-			54
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0217"
-		}
+		size = {176, 332},
+		trim = {60, 15, 58, 263},
+		a_size = {2048, 2048},
+		f_quad = {118, 1548, 58, 54},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0217"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0267 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			60,
-			15,
-			59,
-			263
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1605,
-			57,
-			54
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0218"
-		}
+		size = {176, 332},
+		trim = {60, 15, 59, 263},
+		a_size = {2048, 2048},
+		f_quad = {118, 1605, 57, 54},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0218"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0268 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			60,
-			15,
-			58,
-			264
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1662,
-			58,
-			53
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0219"
-		}
+		size = {176, 332},
+		trim = {60, 15, 58, 264},
+		a_size = {2048, 2048},
+		f_quad = {118, 1662, 58, 53},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0219"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0269 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			61,
-			15,
-			59,
-			265
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			118,
-			1823,
-			56,
-			52
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0220"
-		}
+		size = {176, 332},
+		trim = {61, 15, 59, 265},
+		a_size = {2048, 2048},
+		f_quad = {118, 1823, 56, 52},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0220"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0270 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			61,
-			15,
-			59,
-			266
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			826,
-			56,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0221"
-		}
+		size = {176, 332},
+		trim = {61, 15, 59, 266},
+		a_size = {2048, 2048},
+		f_quad = {510, 826, 56, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0221"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0271 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			61,
-			15,
-			59,
-			266
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			880,
-			56,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0222"
-		}
+		size = {176, 332},
+		trim = {61, 15, 59, 266},
+		a_size = {2048, 2048},
+		f_quad = {510, 880, 56, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0222"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0272 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			62,
-			15,
-			60,
-			267
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			934,
-			54,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0223"
-		}
+		size = {176, 332},
+		trim = {62, 15, 60, 267},
+		a_size = {2048, 2048},
+		f_quad = {510, 934, 54, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0223"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0273 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			62,
-			15,
-			60,
-			268
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			987,
-			54,
-			49
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0224"
-		}
+		size = {176, 332},
+		trim = {62, 15, 60, 268},
+		a_size = {2048, 2048},
+		f_quad = {510, 987, 54, 49},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0224"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer5_0274 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			63,
-			15,
-			61,
-			269
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1359,
-			52,
-			48
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0225"
-		}
+		size = {176, 332},
+		trim = {63, 15, 61, 269},
+		a_size = {2048, 2048},
+		f_quad = {510, 1359, 52, 48},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0225"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1662,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0042",
-			"arcane_wizard_tower_lvl4_tower_layer6_0050",
-			"arcane_wizard_tower_lvl4_tower_layer6_0084"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1662, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0042", "arcane_wizard_tower_lvl4_tower_layer6_0050", "arcane_wizard_tower_lvl4_tower_layer6_0084"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1725,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0051"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1725, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0051"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0010 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1788,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0052"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1788, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0052"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			41,
-			117,
-			40,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1851,
-			95,
-			60
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0053"
-		}
+		size = {176, 332},
+		trim = {41, 117, 40, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 1851, 95, 60},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0053"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			74,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1084,
-			355,
-			109,
-			103
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0054"
-		}
+		size = {176, 332},
+		trim = {34, 74, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1084, 355, 109, 103},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0054"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			74,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1196,
-			355,
-			109,
-			103
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0055"
-		}
+		size = {176, 332},
+		trim = {34, 74, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1196, 355, 109, 103},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0055"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1106,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0056"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1106, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0056"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1203,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0057"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1203, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0057"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1316,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0058"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1316, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0058"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1218,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0059"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1218, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0059"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0018 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1429,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0019",
-			"arcane_wizard_tower_lvl4_tower_layer6_0060",
-			"arcane_wizard_tower_lvl4_tower_layer6_0061"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1429, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0019", "arcane_wizard_tower_lvl4_tower_layer6_0060", "arcane_wizard_tower_lvl4_tower_layer6_0061"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0020 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1542,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0021",
-			"arcane_wizard_tower_lvl4_tower_layer6_0032",
-			"arcane_wizard_tower_lvl4_tower_layer6_0062",
-			"arcane_wizard_tower_lvl4_tower_layer6_0063",
-			"arcane_wizard_tower_lvl4_tower_layer6_0074"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1542, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0021", "arcane_wizard_tower_lvl4_tower_layer6_0032", "arcane_wizard_tower_lvl4_tower_layer6_0062", "arcane_wizard_tower_lvl4_tower_layer6_0063", "arcane_wizard_tower_lvl4_tower_layer6_0074"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0022 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1330,
-			246,
-			109,
-			106
-		},
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1330, 246, 109, 106},
 		alias = {
 			"arcane_wizard_tower_lvl4_tower_layer6_0023",
 			"arcane_wizard_tower_lvl4_tower_layer6_0024",
@@ -9548,1891 +4174,586 @@ return {
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0033 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1442,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0075"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1442, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0075"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0034 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1655,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0076"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1655, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0076"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0035 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1768,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0077"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {1768, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0077"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0036 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1881,
-			137,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0078"
-		}
+		size = {176, 332},
+		trim = {33, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1881, 137, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0078"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0037 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1554,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0079"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1554, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0079"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0038 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			246,
-			110,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0080"
-		}
+		size = {176, 332},
+		trim = {34, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 246, 110, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0080"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0039 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			33,
-			71,
-			32,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			137,
-			111,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0081"
-		}
+		size = {176, 332},
+		trim = {33, 71, 32, 155},
+		a_size = {2048, 2048},
+		f_quad = {411, 137, 111, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0081"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0040 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			71,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1666,
-			246,
-			109,
-			106
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0082"
-		}
+		size = {176, 332},
+		trim = {34, 71, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1666, 246, 109, 106},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0082"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0041 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			34,
-			74,
-			33,
-			155
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1308,
-			355,
-			109,
-			103
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0083"
-		}
+		size = {176, 332},
+		trim = {34, 74, 33, 155},
+		a_size = {2048, 2048},
+		f_quad = {1308, 355, 109, 103},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0083"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0043 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			73,
-			117,
-			73,
-			183
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1778,
-			30,
-			32
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0085"
-		}
+		size = {176, 332},
+		trim = {73, 117, 73, 183},
+		a_size = {2048, 2048},
+		f_quad = {693, 1778, 30, 32},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0085"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer6_0277 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1048,
-			41,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer6_0278"
-		}
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1048, 41, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer6_0278"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0018 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1670,
-			41,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0019",
-			"arcane_wizard_tower_lvl4_tower_layer7_0022",
-			"arcane_wizard_tower_lvl4_tower_layer7_0023",
-			"arcane_wizard_tower_lvl4_tower_layer7_0026",
-			"arcane_wizard_tower_lvl4_tower_layer7_0027",
-			"arcane_wizard_tower_lvl4_tower_layer7_0030",
-			"arcane_wizard_tower_lvl4_tower_layer7_0031",
-			"arcane_wizard_tower_lvl4_tower_layer7_0034"
-		}
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1670, 41, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0019", "arcane_wizard_tower_lvl4_tower_layer7_0022", "arcane_wizard_tower_lvl4_tower_layer7_0023", "arcane_wizard_tower_lvl4_tower_layer7_0026", "arcane_wizard_tower_lvl4_tower_layer7_0027", "arcane_wizard_tower_lvl4_tower_layer7_0030", "arcane_wizard_tower_lvl4_tower_layer7_0031", "arcane_wizard_tower_lvl4_tower_layer7_0034"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0020 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			64,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1718,
-			41,
-			45
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0021",
-			"arcane_wizard_tower_lvl4_tower_layer7_0024",
-			"arcane_wizard_tower_lvl4_tower_layer7_0025",
-			"arcane_wizard_tower_lvl4_tower_layer7_0028",
-			"arcane_wizard_tower_lvl4_tower_layer7_0029",
-			"arcane_wizard_tower_lvl4_tower_layer7_0032",
-			"arcane_wizard_tower_lvl4_tower_layer7_0033"
-		}
+		size = {176, 332},
+		trim = {69, 64, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1718, 41, 45},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0021", "arcane_wizard_tower_lvl4_tower_layer7_0024", "arcane_wizard_tower_lvl4_tower_layer7_0025", "arcane_wizard_tower_lvl4_tower_layer7_0028", "arcane_wizard_tower_lvl4_tower_layer7_0029", "arcane_wizard_tower_lvl4_tower_layer7_0032", "arcane_wizard_tower_lvl4_tower_layer7_0033"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0035 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1098,
-			41,
-			47
-		},
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1098, 41, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0036 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			69,
-			62,
-			66,
-			223
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			581,
-			1148,
-			41,
-			47
-		},
+		size = {176, 332},
+		trim = {69, 62, 66, 223},
+		a_size = {2048, 2048},
+		f_quad = {581, 1148, 41, 47},
 		alias = {}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0201 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			151,
-			22,
-			157
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1453,
-			505,
-			133,
-			24
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0250"
-		}
+		size = {176, 332},
+		trim = {21, 151, 22, 157},
+		a_size = {2048, 2048},
+		f_quad = {1453, 505, 133, 24},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0250"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0202 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			146,
-			22,
-			159
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1678,
-			772,
-			133,
-			27
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0251"
-		}
+		size = {176, 332},
+		trim = {21, 146, 22, 159},
+		a_size = {2048, 2048},
+		f_quad = {1678, 772, 133, 27},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0251"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0203 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			142,
-			22,
-			160
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1899,
-			822,
-			133,
-			30
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0252"
-		}
+		size = {176, 332},
+		trim = {21, 142, 22, 160},
+		a_size = {2048, 2048},
+		f_quad = {1899, 822, 133, 30},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0252"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0204 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			137,
-			22,
-			162
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1441,
-			772,
-			133,
-			33
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0253"
-		}
+		size = {176, 332},
+		trim = {21, 137, 22, 162},
+		a_size = {2048, 2048},
+		f_quad = {1441, 772, 133, 33},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0253"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0205 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			132,
-			22,
-			164
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1204,
-			772,
-			133,
-			36
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0254"
-		}
+		size = {176, 332},
+		trim = {21, 132, 22, 164},
+		a_size = {2048, 2048},
+		f_quad = {1204, 772, 133, 36},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0254"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0206 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			127,
-			22,
-			166
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1562,
-			606,
-			133,
-			39
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0255"
-		}
+		size = {176, 332},
+		trim = {21, 127, 22, 166},
+		a_size = {2048, 2048},
+		f_quad = {1562, 606, 133, 39},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0255"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0207 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			122,
-			22,
-			169
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1426,
-			606,
-			133,
-			41
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0256"
-		}
+		size = {176, 332},
+		trim = {21, 122, 22, 169},
+		a_size = {2048, 2048},
+		f_quad = {1426, 606, 133, 41},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0256"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0208 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			116,
-			22,
-			170
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1082,
-			553,
-			133,
-			46
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0257"
-		}
+		size = {176, 332},
+		trim = {21, 116, 22, 170},
+		a_size = {2048, 2048},
+		f_quad = {1082, 553, 133, 46},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0257"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0209 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			113,
-			22,
-			171
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			814,
-			553,
-			133,
-			48
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0258"
-		}
+		size = {176, 332},
+		trim = {21, 113, 22, 171},
+		a_size = {2048, 2048},
+		f_quad = {814, 553, 133, 48},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0258"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0210 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			23,
-			108,
-			24,
-			176
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			950,
-			553,
-			129,
-			48
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0259"
-		}
+		size = {176, 332},
+		trim = {23, 108, 24, 176},
+		a_size = {2048, 2048},
+		f_quad = {950, 553, 129, 48},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0259"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0211 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			26,
-			103,
-			26,
-			181
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1218,
-			553,
-			124,
-			48
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0260"
-		}
+		size = {176, 332},
+		trim = {26, 103, 26, 181},
+		a_size = {2048, 2048},
+		f_quad = {1218, 553, 124, 48},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0260"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0212 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			29,
-			98,
-			29,
-			186
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			983,
-			606,
-			118,
-			48
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0261"
-		}
+		size = {176, 332},
+		trim = {29, 98, 29, 186},
+		a_size = {2048, 2048},
+		f_quad = {983, 606, 118, 48},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0261"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0213 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			31,
-			91,
-			31,
-			190
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			866,
-			606,
-			114,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0262"
-		}
+		size = {176, 332},
+		trim = {31, 91, 31, 190},
+		a_size = {2048, 2048},
+		f_quad = {866, 606, 114, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0262"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0214 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			42,
-			84,
-			34,
-			192
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1218,
-			606,
-			100,
-			56
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0263"
-		}
+		size = {176, 332},
+		trim = {42, 84, 34, 192},
+		a_size = {2048, 2048},
+		f_quad = {1218, 606, 100, 56},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0263"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0215 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			40,
-			77,
-			38,
-			208
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1340,
-			772,
-			98,
-			47
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0264"
-		}
+		size = {176, 332},
+		trim = {40, 77, 38, 208},
+		a_size = {2048, 2048},
+		f_quad = {1340, 772, 98, 47},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0264"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer7_0216 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			64,
-			78,
-			41,
-			216
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			911,
-			71,
-			38
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer7_0265"
-		}
+		size = {176, 332},
+		trim = {64, 78, 41, 216},
+		a_size = {2048, 2048},
+		f_quad = {654, 911, 71, 38},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer7_0265"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			44,
-			115,
-			45,
-			199
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1908,
-			581,
-			87,
-			18
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0050"
-		}
+		size = {176, 332},
+		trim = {44, 115, 45, 199},
+		a_size = {2048, 2048},
+		f_quad = {1908, 581, 87, 18},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0050"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			36,
-			111,
-			37,
-			201
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1562,
-			648,
-			103,
-			20
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0051"
-		}
+		size = {176, 332},
+		trim = {36, 111, 37, 201},
+		a_size = {2048, 2048},
+		f_quad = {1562, 648, 103, 20},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0051"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0010 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			28,
-			107,
-			29,
-			203
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1899,
-			855,
-			119,
-			22
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0052"
-		}
+		size = {176, 332},
+		trim = {28, 107, 29, 203},
+		a_size = {2048, 2048},
+		f_quad = {1899, 855, 119, 22},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0052"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0011 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			21,
-			100,
-			22,
-			207
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1317,
-			505,
-			133,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0053"
-		}
+		size = {176, 332},
+		trim = {21, 100, 22, 207},
+		a_size = {2048, 2048},
+		f_quad = {1317, 505, 133, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0053"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0012 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			24,
-			95,
-			25,
-			212
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1707,
-			505,
-			127,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0054"
-		}
+		size = {176, 332},
+		trim = {24, 95, 25, 212},
+		a_size = {2048, 2048},
+		f_quad = {1707, 505, 127, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0054"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0013 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			25,
-			90,
-			26,
-			217
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1837,
-			505,
-			125,
-			25
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0055"
-		}
+		size = {176, 332},
+		trim = {25, 90, 26, 217},
+		a_size = {2048, 2048},
+		f_quad = {1837, 505, 125, 25},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0055"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0014 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			28,
-			51,
-			29,
-			224
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			637,
-			606,
-			119,
-			57
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0056"
-		}
+		size = {176, 332},
+		trim = {28, 51, 29, 224},
+		a_size = {2048, 2048},
+		f_quad = {637, 606, 119, 57},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0056"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0015 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			32,
-			51,
-			33,
-			230
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1104,
-			606,
-			111,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0057"
-		}
+		size = {176, 332},
+		trim = {32, 51, 33, 230},
+		a_size = {2048, 2048},
+		f_quad = {1104, 606, 111, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0057"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0016 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			37,
-			43,
-			37,
-			235
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1321,
-			606,
-			102,
-			54
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0058"
-		}
+		size = {176, 332},
+		trim = {37, 43, 37, 235},
+		a_size = {2048, 2048},
+		f_quad = {1321, 606, 102, 54},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0058"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0017 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			43,
-			45,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1956,
-			85,
-			85,
-			43
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0059"
-		}
+		size = {176, 332},
+		trim = {46, 43, 45, 246},
+		a_size = {2048, 2048},
+		f_quad = {1956, 85, 85, 43},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0059"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0018 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			33,
-			45,
-			247
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1023,
-			822,
-			85,
-			52
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0019",
-			"arcane_wizard_tower_lvl4_tower_layer8_0034",
-			"arcane_wizard_tower_lvl4_tower_layer8_0035",
-			"arcane_wizard_tower_lvl4_tower_layer8_0060",
-			"arcane_wizard_tower_lvl4_tower_layer8_0061",
-			"arcane_wizard_tower_lvl4_tower_layer8_0076",
-			"arcane_wizard_tower_lvl4_tower_layer8_0077"
-		}
+		size = {176, 332},
+		trim = {46, 33, 45, 247},
+		a_size = {2048, 2048},
+		f_quad = {1023, 822, 85, 52},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0019", "arcane_wizard_tower_lvl4_tower_layer8_0034", "arcane_wizard_tower_lvl4_tower_layer8_0035", "arcane_wizard_tower_lvl4_tower_layer8_0060", "arcane_wizard_tower_lvl4_tower_layer8_0061", "arcane_wizard_tower_lvl4_tower_layer8_0076", "arcane_wizard_tower_lvl4_tower_layer8_0077"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0020 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			47,
-			35,
-			46,
-			247
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1727,
-			822,
-			83,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0021",
-			"arcane_wizard_tower_lvl4_tower_layer8_0062",
-			"arcane_wizard_tower_lvl4_tower_layer8_0063"
-		}
+		size = {176, 332},
+		trim = {47, 35, 46, 247},
+		a_size = {2048, 2048},
+		f_quad = {1727, 822, 83, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0021", "arcane_wizard_tower_lvl4_tower_layer8_0062", "arcane_wizard_tower_lvl4_tower_layer8_0063"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0022 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			36,
-			44,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1375,
-			822,
-			86,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0023",
-			"arcane_wizard_tower_lvl4_tower_layer8_0064",
-			"arcane_wizard_tower_lvl4_tower_layer8_0065"
-		}
+		size = {176, 332},
+		trim = {46, 36, 44, 246},
+		a_size = {2048, 2048},
+		f_quad = {1375, 822, 86, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0023", "arcane_wizard_tower_lvl4_tower_layer8_0064", "arcane_wizard_tower_lvl4_tower_layer8_0065"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0024 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			36,
-			42,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			835,
-			822,
-			91,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0025",
-			"arcane_wizard_tower_lvl4_tower_layer8_0066",
-			"arcane_wizard_tower_lvl4_tower_layer8_0067"
-		}
+		size = {176, 332},
+		trim = {43, 36, 42, 246},
+		a_size = {2048, 2048},
+		f_quad = {835, 822, 91, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0025", "arcane_wizard_tower_lvl4_tower_layer8_0066", "arcane_wizard_tower_lvl4_tower_layer8_0067"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0026 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			35,
-			44,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1111,
-			822,
-			86,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0027",
-			"arcane_wizard_tower_lvl4_tower_layer8_0068",
-			"arcane_wizard_tower_lvl4_tower_layer8_0069"
-		}
+		size = {176, 332},
+		trim = {46, 35, 44, 246},
+		a_size = {2048, 2048},
+		f_quad = {1111, 822, 86, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0027", "arcane_wizard_tower_lvl4_tower_layer8_0068", "arcane_wizard_tower_lvl4_tower_layer8_0069"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0028 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			47,
-			33,
-			46,
-			247
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1200,
-			822,
-			83,
-			52
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0029",
-			"arcane_wizard_tower_lvl4_tower_layer8_0070",
-			"arcane_wizard_tower_lvl4_tower_layer8_0071"
-		}
+		size = {176, 332},
+		trim = {47, 33, 46, 247},
+		a_size = {2048, 2048},
+		f_quad = {1200, 822, 83, 52},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0029", "arcane_wizard_tower_lvl4_tower_layer8_0070", "arcane_wizard_tower_lvl4_tower_layer8_0071"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0030 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			30,
-			45,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			654,
-			822,
-			85,
-			56
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0031",
-			"arcane_wizard_tower_lvl4_tower_layer8_0072",
-			"arcane_wizard_tower_lvl4_tower_layer8_0073"
-		}
+		size = {176, 332},
+		trim = {46, 30, 45, 246},
+		a_size = {2048, 2048},
+		f_quad = {654, 822, 85, 56},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0031", "arcane_wizard_tower_lvl4_tower_layer8_0072", "arcane_wizard_tower_lvl4_tower_layer8_0073"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0032 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			32,
-			42,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			411,
-			1991,
-			91,
-			54
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0033",
-			"arcane_wizard_tower_lvl4_tower_layer8_0074",
-			"arcane_wizard_tower_lvl4_tower_layer8_0075"
-		}
+		size = {176, 332},
+		trim = {43, 32, 42, 246},
+		a_size = {2048, 2048},
+		f_quad = {411, 1991, 91, 54},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0033", "arcane_wizard_tower_lvl4_tower_layer8_0074", "arcane_wizard_tower_lvl4_tower_layer8_0075"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0036 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			47,
-			35,
-			46,
-			247
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1813,
-			822,
-			83,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0078"
-		}
+		size = {176, 332},
+		trim = {47, 35, 46, 247},
+		a_size = {2048, 2048},
+		f_quad = {1813, 822, 83, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0078"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0037 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			47,
-			34,
-			46,
-			247
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1641,
-			822,
-			83,
-			51
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0079"
-		}
+		size = {176, 332},
+		trim = {47, 34, 46, 247},
+		a_size = {2048, 2048},
+		f_quad = {1641, 822, 83, 51},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0079"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0038 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			36,
-			45,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1553,
-			822,
-			85,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0080"
-		}
+		size = {176, 332},
+		trim = {46, 36, 45, 246},
+		a_size = {2048, 2048},
+		f_quad = {1553, 822, 85, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0080"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0039 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			46,
-			36,
-			44,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1464,
-			822,
-			86,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0081"
-		}
+		size = {176, 332},
+		trim = {46, 36, 44, 246},
+		a_size = {2048, 2048},
+		f_quad = {1464, 822, 86, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0081"}
 	},
 	arcane_wizard_tower_lvl4_tower_layer8_0040 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			176,
-			332
-		},
-		trim = {
-			43,
-			36,
-			42,
-			246
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			929,
-			822,
-			91,
-			50
-		},
-		alias = {
-			"arcane_wizard_tower_lvl4_tower_layer8_0082"
-		}
+		size = {176, 332},
+		trim = {43, 36, 42, 246},
+		a_size = {2048, 2048},
+		f_quad = {929, 822, 91, 50},
+		alias = {"arcane_wizard_tower_lvl4_tower_layer8_0082"}
 	},
 	arcane_wizard_tower_preview = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			136,
-			199
-		},
-		trim = {
-			13,
-			14,
-			21,
-			86
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			1745,
-			355,
-			102,
-			99
-		},
+		size = {136, 199},
+		trim = {13, 14, 21, 86},
+		a_size = {2048, 2048},
+		f_quad = {1745, 355, 102, 99},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			19,
-			17,
-			15,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1039,
-			51,
-			51
-		},
+		size = {85, 85},
+		trim = {19, 17, 15, 17},
+		a_size = {2048, 2048},
+		f_quad = {510, 1039, 51, 51},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0002 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			19,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1147,
-			50,
-			50
-		},
+		size = {85, 85},
+		trim = {19, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1147, 50, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			19,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1200,
-			50,
-			50
-		},
+		size = {85, 85},
+		trim = {19, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1200, 50, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0004 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			20,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1410,
-			49,
-			50
-		},
+		size = {85, 85},
+		trim = {20, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1410, 49, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			20,
-			18,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1516,
-			49,
-			49
-		},
+		size = {85, 85},
+		trim = {20, 18, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1516, 49, 49},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0006 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			20,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1463,
-			49,
-			50
-		},
+		size = {85, 85},
+		trim = {20, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1463, 49, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			19,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1253,
-			50,
-			50
-		},
+		size = {85, 85},
+		trim = {19, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1253, 50, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			19,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1306,
-			50,
-			50
-		},
+		size = {85, 85},
+		trim = {19, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {510, 1306, 50, 50},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_end_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			85,
-			85
-		},
-		trim = {
-			19,
-			17,
-			15,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			510,
-			1093,
-			51,
-			51
-		},
+		size = {85, 85},
+		trim = {19, 17, 15, 17},
+		a_size = {2048, 2048},
+		f_quad = {510, 1093, 51, 51},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0001 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			16,
-			15,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1430,
-			32,
-			32
-		},
+		size = {62, 65},
+		trim = {15, 16, 15, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1430, 32, 32},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0002 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			16,
-			15,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1465,
-			32,
-			32
-		},
+		size = {62, 65},
+		trim = {15, 16, 15, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1465, 32, 32},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0003 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			16,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1500,
-			31,
-			32
-		},
+		size = {62, 65},
+		trim = {15, 16, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1500, 31, 32},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0004 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			17,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1640,
-			31,
-			31
-		},
+		size = {62, 65},
+		trim = {15, 17, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1640, 31, 31},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0005 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			17,
-			16,
-			18
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1813,
-			31,
-			30
-		},
+		size = {62, 65},
+		trim = {15, 17, 16, 18},
+		a_size = {2048, 2048},
+		f_quad = {693, 1813, 31, 30},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0006 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			17,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1674,
-			31,
-			31
-		},
+		size = {62, 65},
+		trim = {15, 17, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1674, 31, 31},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0007 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			16,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1535,
-			31,
-			32
-		},
+		size = {62, 65},
+		trim = {15, 16, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1535, 31, 32},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0008 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			16,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1570,
-			31,
-			32
-		},
+		size = {62, 65},
+		trim = {15, 16, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1570, 31, 32},
 		alias = {}
 	},
 	arcane_wizard_tower_ray_start_0009 = {
 		a_name = "go_towers_arcane_wizard-1.dds",
-		size = {
-			62,
-			65
-		},
-		trim = {
-			15,
-			16,
-			16,
-			17
-		},
-		a_size = {
-			2048,
-			2048
-		},
-		f_quad = {
-			693,
-			1605,
-			31,
-			32
-		},
+		size = {62, 65},
+		trim = {15, 16, 16, 17},
+		a_size = {2048, 2048},
+		f_quad = {693, 1605, 31, 32},
 		alias = {}
 	}
 }

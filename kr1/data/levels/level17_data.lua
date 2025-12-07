@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level17_data.lua
-
+-- chunkname: @./kr1/data/levels/level17_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -391,109 +390,26 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_mage",
-				"tower_build_engineer"
-			}
+			locked_towers = {"tower_build_mage", "tower_build_engineer"}
 		}
 	},
 	nav_mesh = {
-		{
-			4,
-			5,
-			3
-		},
-		{
-			6,
-			7
-		},
-		{
-			5,
-			9,
-			6,
-			1
-		},
-		{
-			nil,
-			9,
-			5,
-			1
-		},
-		{
-			4,
-			9,
-			3,
-			1
-		},
-		{
-			3,
-			8,
-			7,
-			2
-		},
-		{
-			6,
-			10,
-			nil,
-			2
-		},
-		{
-			9,
-			11,
-			6,
-			6
-		},
-		{
-			4,
-			13,
-			8,
-			5
-		},
-		{
-			11,
-			14,
-			nil,
-			7
-		},
-		{
-			12,
-			14,
-			10,
-			8
-		},
-		{
-			13,
-			14,
-			11,
-			8
-		},
-		{
-			nil,
-			15,
-			12,
-			9
-		},
-		{
-			15,
-			nil,
-			10,
-			11
-		},
-		{
-			nil,
-			nil,
-			14,
-			13
-		}
+		{4, 5, 3},
+		{6, 7},
+		{5, 9, 6, 1},
+		{nil, 9, 5, 1},
+		{4, 9, 3, 1},
+		{3, 8, 7, 2},
+		{6, 10, nil, 2},
+		{9, 11, 6, 6},
+		{4, 13, 8, 5},
+		{11, 14, nil, 7},
+		{12, 14, 10, 8},
+		{13, 14, 11, 8},
+		{nil, 15, 12, 9},
+		{15, nil, 10, 11},
+		{nil, nil, 14, 13}
 	},
-	required_sounds = {
-		"music_stage17"
-	},
-	required_textures = {
-		"go_enemies_grass",
-		"go_enemies_bandits",
-		"go_stages_grass",
-		"go_stage17",
-		"go_stage17_bg"
-	}
+	required_sounds = {"music_stage17"},
+	required_textures = {"go_enemies_grass", "go_enemies_bandits", "go_stages_grass", "go_stage17", "go_stage17_bg"}
 }

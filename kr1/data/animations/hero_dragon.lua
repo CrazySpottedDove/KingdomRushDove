@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_dragon.lua
-
+-- chunkname: @./kr5/data/animations/hero_dragon.lua
 local a = {
 	hero_lumenir_hero_walk = {
 		prefix = "hero_lumenir_hero",
@@ -186,11 +185,11 @@ local a = {
 		to = 18,
 		from = 1
 	},
-    hero_lumenir_light_companion_idle = {
-        prefix = "hero_lumenir_light_companion",
-        to = 18,
-        from = 1
-    },
+	hero_lumenir_light_companion_idle = {
+		prefix = "hero_lumenir_light_companion",
+		to = 18,
+		from = 1
+	},
 	hero_lumenir_light_companion_attack = {
 		prefix = "hero_lumenir_light_companion",
 		to = 55,
@@ -207,5 +206,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level13_data.lua
-
+-- chunkname: @./kr1/data/levels/level13_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -303,100 +302,25 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_mage",
-				"tower_build_engineer"
-			}
+			locked_towers = {"tower_build_mage", "tower_build_engineer"}
 		}
 	},
 	nav_mesh = {
-		{
-			nil,
-			8,
-			2
-		},
-		{
-			1,
-			9,
-			3
-		},
-		{
-			2,
-			10,
-			6
-		},
-		{
-			6,
-			12,
-			5
-		},
-		{
-			4,
-			11
-		},
-		{
-			3,
-			7,
-			4,
-			4
-		},
-		{
-			10,
-			14,
-			12,
-			6
-		},
-		{
-			nil,
-			13,
-			9,
-			1
-		},
-		{
-			8,
-			13,
-			10,
-			2
-		},
-		{
-			9,
-			13,
-			7,
-			3
-		},
-		{
-			12,
-			14,
-			nil,
-			5
-		},
-		{
-			6,
-			14,
-			11,
-			4
-		},
-		{
-			8,
-			nil,
-			14,
-			9
-		},
-		{
-			13,
-			nil,
-			11,
-			12
-		}
+		{nil, 8, 2},
+		{1, 9, 3},
+		{2, 10, 6},
+		{6, 12, 5},
+		{4, 11},
+		{3, 7, 4, 4},
+		{10, 14, 12, 6},
+		{nil, 13, 9, 1},
+		{8, 13, 10, 2},
+		{9, 13, 7, 3},
+		{12, 14, nil, 5},
+		{6, 14, 11, 4},
+		{8, nil, 14, 9},
+		{13, nil, 11, 12}
 	},
-	required_sounds = {
-		"music_stage13"
-	},
-	required_textures = {
-		"go_enemies_ice",
-		"go_enemies_sarelgaz",
-		"go_stages_ice",
-		"go_stage13",
-		"go_stage13_bg"
-	}
+	required_sounds = {"music_stage13"},
+	required_textures = {"go_enemies_ice", "go_enemies_sarelgaz", "go_stages_ice", "go_stage13", "go_stage13_bg"}
 }

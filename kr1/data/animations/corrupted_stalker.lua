@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/corrupted_stalker.lua
-
+-- chunkname: @./kr5/data/animations/corrupted_stalker.lua
 local a = {
 	corrupted_stalker_creep_idle = {
 		prefix = "corrupted_stalker_creep",
@@ -27,5 +26,4 @@ local a = {
 		from = 129
 	}
 }
-
 return a

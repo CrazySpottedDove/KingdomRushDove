@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1-desktop/data/game_gui_data.lua
-
+-- chunkname: @./kr1-desktop/data/game_gui_data.lua
 local V = require("lib.klua.vector")
 local v = V.v
 local i18n = require("i18n")
@@ -7,6 +6,7 @@ local i18n = require("i18n")
 local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
+
 local TOWER_MENU_BUTTON_X_UNIT = 62
 local TOWER_MENU_BUTTON_Y_UNIT = 64
 return {
@@ -16,13 +16,7 @@ return {
 			image = "encyclopedia_creeps_0001",
 			i18n_key = "ENEMY_GOBLIN",
 			layout = N_ENEMY,
-			icon_signals = {
-				{
-					"show-balloon",
-					"TB_NOTI",
-					1
-				}
-			}
+			icon_signals = {{"show-balloon", "TB_NOTI", 1}}
 		},
 		enemy_fat_orc = {
 			icon = "alert_creep_notxt_0002",
@@ -346,12 +340,7 @@ return {
 			image = "kr2_encyclopedia_creeps_0001",
 			icon = "kr2_alert_creep_notxt_0001",
 			layout = N_ENEMY,
-			icon_signals = {
-				{
-					"show-balloon",
-					"TB_NOTI"
-				}
-			}
+			icon_signals = {{"show-balloon", "TB_NOTI"}}
 		},
 		enemy_desert_raider = {
 			image = "kr2_encyclopedia_creeps_0002",
@@ -587,13 +576,7 @@ return {
 			image = "kr3_encyclopedia_creeps_0001",
 			icon = "kr3_alert_creep_notxt_0001",
 			layout = N_ENEMY,
-			icon_signals = {
-				{
-					"show-balloon",
-					"TB_NOTI",
-					1
-				}
-			}
+			icon_signals = {{"show-balloon", "TB_NOTI", 1}}
 		},
 		enemy_gnoll_burner = {
 			image = "kr3_encyclopedia_creeps_0002",
@@ -791,9 +774,7 @@ return {
 			sub = "TOWER_ARCHERS_SUBTITLE",
 			image = "kr3_encyclopedia_towers_0005",
 			layout = N_TOWER,
-			seen = {
-				"tower_arcane"
-			}
+			seen = {"tower_arcane"}
 		},
 		TOWER_BARRACK_BLADE = {
 			prefix = "TOWER_BARRACKS_BLADE",
@@ -801,9 +782,7 @@ return {
 			sub = "TOWER_BARRACKS_SUBTITLE",
 			image = "kr3_encyclopedia_towers_0008",
 			layout = N_TOWER,
-			seen = {
-				"tower_blade"
-			}
+			seen = {"tower_blade"}
 		},
 		TOWER_MAGE_WILD_MAGUS = {
 			prefix = "TOWER_MAGE_WILD_MAGUS",
@@ -811,9 +790,7 @@ return {
 			sub = "TOWER_MAGES_SUBTITLE",
 			image = "kr3_encyclopedia_towers_0004",
 			layout = N_TOWER,
-			seen = {
-				"tower_wild_magus"
-			}
+			seen = {"tower_wild_magus"}
 		},
 		TOWER_ROCK_THROWER_STONE_DRUID = {
 			prefix = "TOWER_STONE_DRUID",
@@ -821,9 +798,7 @@ return {
 			sub = "TOWER_ROCK_THROWER_SUBTITLE",
 			image = "kr3_encyclopedia_towers_0001",
 			layout = N_TOWER,
-			seen = {
-				"tower_druid"
-			}
+			seen = {"tower_druid"}
 		},
 		TOWER_MAGE_HIGH_ELVEN = {
 			prefix = "TOWER_MAGE_HIGH_ELVEN",
@@ -831,9 +806,7 @@ return {
 			sub = "TOWER_MAGES_SUBTITLE",
 			image = "kr3_encyclopedia_towers_0003",
 			layout = N_TOWER,
-			seen = {
-				"tower_high_elven"
-			}
+			seen = {"tower_high_elven"}
 		},
 		TOWER_ROCK_THROWER_ENTWOOD = {
 			prefix = "TOWER_ENTWOOD",
@@ -841,29 +814,15 @@ return {
 			sub = "TOWER_ROCK_THROWER_SUBTITLE",
 			image = "kr3_encyclopedia_towers_0002",
 			layout = N_TOWER,
-			seen = {
-				"tower_entwood"
-			}
+			seen = {"tower_entwood"}
 		},
 		TOWER_ARCHER_SILVER = {
 			always = true,
 			layout = N_TOWER_2,
-			images = {
-				"kr3_encyclopedia_towers_0006",
-				"kr3_encyclopedia_towers_0007"
-			},
-			prefixes = {
-				"TOWER_SILVER",
-				"TOWER_FOREST_KEEPERS"
-			},
-			subs = {
-				"TOWER_ARCHERS_SUBTITLE",
-				"TOWER_BARRACKS_SUBTITLE"
-			},
-			seen = {
-				"tower_silver",
-				"tower_forest"
-			}
+			images = {"kr3_encyclopedia_towers_0006", "kr3_encyclopedia_towers_0007"},
+			prefixes = {"TOWER_SILVER", "TOWER_FOREST_KEEPERS"},
+			subs = {"TOWER_ARCHERS_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
+			seen = {"tower_silver", "tower_forest"}
 		},
 		TOWER_DWAARP = {
 			prefix = "TOWER_DWAARP",
@@ -871,9 +830,7 @@ return {
 			sub = "TOWER_ENGINEERS_SUBTITLE",
 			image = "kr2_encyclopedia_towers_0004",
 			layout = N_TOWER,
-			seen = {
-				"tower_dwaarp"
-			}
+			seen = {"tower_dwaarp"}
 		},
 		TOWER_ARCHMAGE = {
 			prefix = "TOWER_ARCHMAGE",
@@ -881,9 +838,7 @@ return {
 			sub = "TOWER_MAGES_SUBTITLE",
 			image = "kr2_encyclopedia_towers_0003",
 			layout = N_TOWER,
-			seen = {
-				"tower_archmage"
-			}
+			seen = {"tower_archmage"}
 		},
 		TOWER_TEMPLARS = {
 			prefix = "TOWER_TEMPLAR",
@@ -891,9 +846,7 @@ return {
 			sub = "TOWER_BARRACKS_SUBTITLE",
 			image = "kr2_encyclopedia_towers_0006",
 			layout = N_TOWER,
-			seen = {
-				"tower_templar"
-			}
+			seen = {"tower_templar"}
 		},
 		TOWER_TOTEM = {
 			prefix = "TOWER_TOTEM",
@@ -901,9 +854,7 @@ return {
 			sub = "TOWER_ARCHERS_SUBTITLE",
 			image = "kr2_encyclopedia_towers_0005",
 			layout = N_TOWER,
-			seen = {
-				"tower_totem"
-			}
+			seen = {"tower_totem"}
 		},
 		TOWER_NECROMANCER = {
 			prefix = "TOWER_NECROMANCER",
@@ -911,9 +862,7 @@ return {
 			sub = "TOWER_MAGES_SUBTITLE",
 			image = "kr2_encyclopedia_towers_0007",
 			layout = N_TOWER,
-			seen = {
-				"tower_necromancer"
-			}
+			seen = {"tower_necromancer"}
 		},
 		TOWER_MECH = {
 			prefix = "TOWER_MECH",
@@ -921,29 +870,15 @@ return {
 			sub = "TOWER_ENGINEERS_SUBTITLE",
 			image = "kr2_encyclopedia_towers_0008",
 			layout = N_TOWER,
-			seen = {
-				"tower_mech"
-			}
+			seen = {"tower_mech"}
 		},
 		TOWER_ASSASINS_CROSSBOW = {
 			always = true,
 			layout = N_TOWER_2,
-			images = {
-				"kr2_encyclopedia_towers_0002",
-				"kr2_encyclopedia_towers_0001"
-			},
-			prefixes = {
-				"TOWER_ASSASSIN",
-				"TOWER_CROSSBOW"
-			},
-			subs = {
-				"TOWER_BARRACKS_SUBTITLE",
-				"TOWER_ARCHERS_SUBTITLE"
-			},
-			seen = {
-				"tower_assassin",
-				"tower_crossbow"
-			}
+			images = {"kr2_encyclopedia_towers_0002", "kr2_encyclopedia_towers_0001"},
+			prefixes = {"TOWER_ASSASSIN", "TOWER_CROSSBOW"},
+			subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ARCHERS_SUBTITLE"},
+			seen = {"tower_assassin", "tower_crossbow"}
 		},
 		TOWER_MUSKETEER = {
 			prefix = "TOWER_MUSKETEERS",
@@ -951,9 +886,7 @@ return {
 			sub = "TOWER_ARCHERS_SUBTITLE",
 			image = "encyclopedia_towers_0017",
 			layout = N_TOWER,
-			seen = {
-				"tower_musketeer"
-			}
+			seen = {"tower_musketeer"}
 		},
 		TOWER_RANGER = {
 			prefix = "TOWER_RANGERS",
@@ -961,9 +894,7 @@ return {
 			sub = "TOWER_ARCHERS_SUBTITLE",
 			image = "encyclopedia_towers_0013",
 			layout = N_TOWER,
-			seen = {
-				"tower_ranger"
-			}
+			seen = {"tower_ranger"}
 		},
 		TOWER_SORCERER = {
 			prefix = "TOWER_SORCERER",
@@ -971,9 +902,7 @@ return {
 			sub = "TOWER_MAGES_SUBTITLE",
 			image = "encyclopedia_towers_0019",
 			layout = N_TOWER,
-			seen = {
-				"tower_sorcerer"
-			}
+			seen = {"tower_sorcerer"}
 		},
 		TOWER_TESLA = {
 			prefix = "TOWER_TESLA",
@@ -981,83 +910,37 @@ return {
 			sub = "TOWER_ENGINEERS_SUBTITLE",
 			image = "encyclopedia_towers_0020",
 			layout = N_TOWER,
-			seen = {
-				"tower_tesla"
-			}
+			seen = {"tower_tesla"}
 		},
 		TOWER_BARBARIAN_BGF = {
 			always = true,
 			layout = N_TOWER_2,
-			images = {
-				"encyclopedia_towers_0018",
-				"encyclopedia_towers_0016"
-			},
-			prefixes = {
-				"TOWER_BARBARIANS",
-				"TOWER_BFG"
-			},
-			subs = {
-				"TOWER_BARRACKS_SUBTITLE",
-				"TOWER_ENGINEERS_SUBTITLE"
-			},
-			seen = {
-				"tower_barbarian",
-				"tower_bgf"
-			}
+			images = {"encyclopedia_towers_0018", "encyclopedia_towers_0016"},
+			prefixes = {"TOWER_BARBARIANS", "TOWER_BFG"},
+			subs = {"TOWER_BARRACKS_SUBTITLE", "TOWER_ENGINEERS_SUBTITLE"},
+			seen = {"tower_barbarian", "tower_bgf"}
 		},
 		TOWER_PALADIN = {
 			always = true,
 			layout = N_TOWER_2,
-			images = {
-				"encyclopedia_towers_0015",
-				"encyclopedia_towers_0014"
-			},
-			prefixes = {
-				"TOWER_ARCANE",
-				"TOWER_PALADINS"
-			},
-			subs = {
-				"TOWER_MAGES_SUBTITLE",
-				"TOWER_BARRACKS_SUBTITLE"
-			},
-			seen = {
-				"tower_arcane",
-				"tower_paladins"
-			}
+			images = {"encyclopedia_towers_0015", "encyclopedia_towers_0014"},
+			prefixes = {"TOWER_ARCANE", "TOWER_PALADINS"},
+			subs = {"TOWER_MAGES_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
+			seen = {"tower_arcane", "tower_paladins"}
 		},
 		TOWER_LEVEL2 = {
 			always = true,
 			level = 2,
 			layout = N_TOWER_4,
-			images = {
-				"encyclopedia_towers_0006",
-				"encyclopedia_towers_0005",
-				"encyclopedia_towers_0007",
-				"encyclopedia_towers_0008"
-			},
-			seen = {
-				"tower_barrack_2",
-				"tower_archer_2",
-				"tower_mage_2",
-				"tower_engineer_2"
-			}
+			images = {"encyclopedia_towers_0006", "encyclopedia_towers_0005", "encyclopedia_towers_0007", "encyclopedia_towers_0008"},
+			seen = {"tower_barrack_2", "tower_archer_2", "tower_mage_2", "tower_engineer_2"}
 		},
 		TOWER_LEVEL3 = {
 			always = true,
 			level = 3,
 			layout = N_TOWER_4,
-			images = {
-				"encyclopedia_towers_0010",
-				"encyclopedia_towers_0009",
-				"encyclopedia_towers_0011",
-				"encyclopedia_towers_0012"
-			},
-			seen = {
-				"tower_barrack_3",
-				"tower_archer_3",
-				"tower_mage_3",
-				"tower_engineer_3"
-			}
+			images = {"encyclopedia_towers_0010", "encyclopedia_towers_0009", "encyclopedia_towers_0011", "encyclopedia_towers_0012"},
+			seen = {"tower_barrack_3", "tower_archer_3", "tower_mage_3", "tower_engineer_3"}
 		},
 		TIP_ARMOR = {
 			paper = "notifications_tips_slides_notxt_0001",
@@ -1115,32 +998,14 @@ return {
 			always = true,
 			image = "tutorial_powers_polaroids_0002",
 			layout = N_POWER,
-			signals = {
-				{
-					"show-balloon",
-					"TB_POWER1"
-				},
-				{
-					"unlock-user-power",
-					1
-				}
-			}
+			signals = {{"show-balloon", "TB_POWER1"}, {"unlock-user-power", 1}}
 		},
 		POWER_REINFORCEMENT = {
 			prefix = "POWER_REINFORCEMENTS",
 			always = true,
 			image = "tutorial_powers_polaroids_0001",
 			layout = N_POWER,
-			signals = {
-				{
-					"show-balloon",
-					"TB_POWER2"
-				},
-				{
-					"unlock-user-power",
-					2
-				}
-			}
+			signals = {{"show-balloon", "TB_POWER2"}, {"unlock-user-power", 2}}
 		},
 		TUTORIAL_1 = {
 			next = "TUTORIAL_2",
@@ -1207,668 +1072,579 @@ return {
 		}
 	},
 	notification_slides = {
-		TB_BUILD = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "BUILD HERE!",
-				text_align = "center",
-				pos = v(10, 6),
-				size = v(160, 36),
-				font_size = CJK(20, 24, nil, 28)
+		TB_BUILD = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "BUILD HERE!",
+			text_align = "center",
+			pos = v(10, 6),
+			size = v(160, 36),
+			font_size = CJK(20, 24, nil, 28)
+		}},
+		TB_POWER1 = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "NEW POWER!",
+			text_align = "center",
+			pos = v(13, 6),
+			size = v(156, 36),
+			font_size = CJK(20, 24, nil, 28)
+		}},
+		TB_POWER2 = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "NEW POWER!",
+			text_align = "center",
+			pos = v(13, 6),
+			size = v(156, 36),
+			font_size = CJK(20, 24, nil, 28)
+		}},
+		TB_POWER3 = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "NEW POWER!",
+			text_align = "center",
+			pos = v(13, 6),
+			size = v(156, 36),
+			font_size = CJK(20, 24, nil, 28)
+		}},
+		TB_ROAD = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "CLICK ON THE ROAD",
+			text_align = "center",
+			pos = v(7, 6),
+			size = v(176, 36),
+			font_size = CJK(18, 21, nil, 25)
+		}},
+		TB_NOTI = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "CLICK HERE!",
+			text_align = "center",
+			pos = v(27, 7),
+			size = v(155, 36),
+			font_size = CJK(20, 24, nil, 28)
+		}},
+		TB_START = {{
+			vertical_align = "middle",
+			fit_lines = 2,
+			line_height = 0.8,
+			text_align = "center",
+			text = "START BATTLE!",
+			pos = v(8, 6),
+			size = v(150, 36),
+			font_size = CJK(18, 21, nil, 25)
+		}},
+		TB_WAVE = {{
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "INCOMING NEXT WAVE!",
+			text_align = "left",
+			pos = v(28, 6),
+			size = v(234, 34),
+			font_size = CJK(18, 21, nil, 25)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "CLICK TO CALL IT EARLY",
+			text_align = "left",
+			pos = v(28, 40),
+			size = v(234, 18),
+			font_size = CJK(10, 14, nil, 20)
+		}},
+		TUTORIAL_1 = {{
+			vertical_align = "middle",
+			text = "Objective",
+			font_size = 22,
+			text_align = "center",
+			pos = v(52, 60),
+			size = v(380, 30),
+			anchor = {
+				y = 30
 			}
-		},
-		TB_POWER1 = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "NEW POWER!",
-				text_align = "center",
-				pos = v(13, 6),
-				size = v(156, 36),
-				font_size = CJK(20, 24, nil, 28)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 1,
+			text = "protect your lands from the enemy attacks.",
+			font_size = 16,
+			text_align = "center",
+			line_height = 0.8,
+			color = "gray",
+			pos = v(47, 58),
+			size = v(390, 18)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 2,
+			text = "build defensive towers along the road to stop them.",
+			font_size = 12,
+			text_align = "center",
+			line_height = 0.8,
+			color = "gray",
+			pos = v(47, 78),
+			size = v(390, 26)
+		}, {
+			vertical_align = "middle",
+			color = "black",
+			font_size = 12,
+			text_align = "center",
+			text = "don't let enemies past this point.",
+			pos = v(220, 123),
+			size = v(148, 36),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			vertical_align = "middle",
+			color = "black",
+			font_size = 10,
+			text_align = "center",
+			text = "build towers to defend the road.",
+			pos = v(270, 231),
+			size = v(117, 27),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			vertical_align = "middle",
+			color = "black",
+			font_size = 11,
+			text_align = "center",
+			text = "earn gold by killing enemies.",
+			pos = v(178, 274),
+			size = v(117, 27),
+			line_height = CJK(0.8, nil, 1.1)
+		}},
+		TUTORIAL_2 = {{
+			text = "Tower construction",
+			text_align = "center",
+			r = 0,
+			font_size = 22,
+			pos = v(38, 50),
+			size = v(389, 30),
+			anchor = {
+				y = 30
 			}
-		},
-		TB_POWER2 = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "NEW POWER!",
-				text_align = "center",
-				pos = v(13, 6),
-				size = v(156, 36),
-				font_size = CJK(20, 24, nil, 28)
+		}, {
+			text = "Build towers on strategic points to stop the enemy hordes from getting through.",
+			color = "gray",
+			text_align = "center",
+			r = 0,
+			font_size = 14,
+			pos = v(46, 52),
+			size = v(373, 52)
+		}, {
+			vertical_align = "middle",
+			text_align = "center",
+			text = "click these!",
+			r = 0.17453292519943,
+			font_size = 13,
+			color = "dark_red",
+			pos = v(26, 126),
+			size = v(135, 30),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			vertical_align = "middle",
+			text_align = "center",
+			text = "this is a strategic point.",
+			r = 0,
+			font_size = 11,
+			line_height = 0.8,
+			color = "dark_red",
+			pos = v(35, 195),
+			size = v(123, 30)
+		}, {
+			vertical_align = "middle",
+			text_align = "center",
+			text = "select the tower you want to build!",
+			r = 0.087266462599716,
+			font_size = 10,
+			line_height = 0.8,
+			color = "dark_red",
+			pos = v(154, 244),
+			size = v(154, 34)
+		}, {
+			vertical_align = "middle",
+			text_align = "center",
+			text = "wOOt!",
+			r = 0.17453292519943,
+			font_size = 11,
+			line_height = 0.8,
+			color = "dark_red",
+			pos = v(310, 126),
+			size = v(135, 30)
+		}, {
+			vertical_align = "middle",
+			text_align = "center",
+			text = "ready for action!",
+			r = 0.17453292519943,
+			font_size = 12,
+			line_height = 0.8,
+			color = "dark_red",
+			pos = v(310, 221),
+			size = v(135, 30)
+		}},
+		TUTORIAL_3 = {{
+			text = "Basic Tower Types",
+			font_size = 22,
+			text_align = "center",
+			pos = v(54, 55),
+			size = v(482, 28),
+			anchor = {
+				y = 30
 			}
-		},
-		TB_POWER3 = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "NEW POWER!",
-				text_align = "center",
-				pos = v(13, 6),
-				size = v(156, 36),
-				font_size = CJK(20, 24, nil, 28)
+		}, {
+			text = "There are four basic types of towers available.",
+			color = "gray",
+			fit_lines = 1,
+			font_size = 16,
+			text_align = "center",
+			pos = v(54, 55),
+			size = v(482, 22)
+		}, {
+			text = "ARCHER TOWER",
+			color = "dark_red",
+			fit_lines = 1,
+			font_size = 14,
+			text_align = "center",
+			pos = v(24, 94),
+			size = v(127, 30)
+		}, {
+			text = "BARRACKS",
+			color = "dark_red",
+			fit_lines = 1,
+			font_size = 14,
+			text_align = "center",
+			pos = v(162, 94),
+			size = v(127, 30)
+		}, {
+			text = "MAGES’ GUILD",
+			color = "dark_red",
+			fit_lines = 1,
+			font_size = 14,
+			text_align = "center",
+			pos = v(301, 94),
+			size = v(127, 30)
+		}, {
+			text = "ARTILLERY",
+			color = "dark_red",
+			fit_lines = 1,
+			font_size = 14,
+			text_align = "center",
+			pos = v(441, 94),
+			size = v(126, 30)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 3,
+			text = "good rate of fire",
+			font_size = 12,
+			text_align = "center",
+			color = "gray",
+			pos = v(33, 219),
+			size = v(108, 30),
+			line_height = CJK(0.7, nil, 1)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 3,
+			text = "soldiers block enemies",
+			font_size = 12,
+			text_align = "center",
+			color = "gray",
+			pos = v(170, 218),
+			size = v(113, 32),
+			line_height = CJK(0.7, nil, 1)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 3,
+			text = "high damage, armor piercing",
+			font_size = 12,
+			text_align = "center",
+			color = "gray",
+			pos = v(310, 219),
+			size = v(110, 31),
+			line_height = CJK(0.7, nil, 1)
+		}, {
+			vertical_align = "middle",
+			fit_lines = 3,
+			text = "deals area damage",
+			font_size = 12,
+			text_align = "center",
+			color = "gray",
+			pos = v(450, 218),
+			size = v(109, 31),
+			line_height = CJK(0.7, nil, 1)
+		}},
+		TIP_ARMOR = {{
+			text = "ARMORED ENEMIES!",
+			fit_lines = 1,
+			font_size = 24,
+			pos = v(130, 50),
+			size = v(320, 30)
+		}, {
+			text = "some enemies wear armor of different strengths that protects them against non-magical attacks.",
+			font_size = 16,
+			fit_lines = 4,
+			color = "gray",
+			pos = v(130, CJK(80, nil, nil, 91)),
+			size = v(320, 80)
+		}, {
+			text = "resists damage from",
+			text_align = "center",
+			font_size = 15,
+			color = "red",
+			pos = v(113, 170),
+			size = v(117, 42)
+		}, {
+			text = "Armored enemies take less damage from marksmen, soldiers and artilleries.",
+			text_align = "center",
+			fit_lines = 3,
+			font_size = 18,
+			color = "gray",
+			pos = v(44, 286),
+			size = v(416, 70)
+		}},
+		TIP_ARMOR_MAGIC = {{
+			text = "MAGIC RESISTANT ENEMIES!",
+			fit_lines = 1,
+			font_size = 24,
+			pos = v(118, 81),
+			size = v(337, 30),
+			anchor = {
+				y = 30
 			}
-		},
-		TB_ROAD = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "CLICK ON THE ROAD",
-				text_align = "center",
-				pos = v(7, 6),
-				size = v(176, 36),
-				font_size = CJK(18, 21, nil, 25)
+		}, {
+			color = "gray",
+			fit_lines = 4,
+			text = "some enemies enjoy different levels of magic resistance that protects them against magical attacks.",
+			font_size = 16,
+			pos = v(118, CJK(78, 84, nil, 91)),
+			size = v(338, 80),
+			line_height = CJK(0.9, nil, 1)
+		}, {
+			text = "resist damage from",
+			text_align = "center",
+			font_size = 15,
+			color = "red",
+			pos = v(196, 169),
+			size = v(117, 42)
+		}, {
+			text = "Magic resistant enemies take less damage from wizards.",
+			text_align = "center",
+			fit_lines = 3,
+			font_size = 18,
+			color = "gray",
+			pos = v(54, 286),
+			size = v(400, 70)
+		}},
+		TIP_RALLY = {{
+			text = "COMMAND YOUR TROOPS!",
+			fit_lines = 1,
+			font_size = 24,
+			pos = v(118, 83),
+			size = v(337, 30),
+			anchor = {
+				y = 30
 			}
-		},
-		TB_NOTI = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "CLICK HERE!",
-				text_align = "center",
-				pos = v(27, 7),
-				size = v(155, 36),
-				font_size = CJK(20, 24, nil, 28)
+		}, {
+			color = "gray",
+			fit_lines = 4,
+			text = "you can adjust your soldiers rally point to make them defend a different area.",
+			font_size = 16,
+			pos = v(118, CJK(80, 86, nil, 91)),
+			size = v(338, 80),
+			line_height = CJK(0.9, nil, 1.1)
+		}, {
+			text = "rally range",
+			color = "blue",
+			font_size = 13,
+			text_align = "center",
+			pos = v(254, 139),
+			size = v(168, 21)
+		}, {
+			color = "red",
+			text = "select the rally point control",
+			font_size = 12,
+			text_align = "center",
+			pos = v(71, 319),
+			size = v(202, 42),
+			line_height = CJK(0.9, nil, 1.1)
+		}, {
+			color = "red",
+			text = "select where you want to move your soldiers",
+			font_size = 12,
+			text_align = "center",
+			pos = v(292, 319),
+			size = v(173, 42),
+			line_height = CJK(0.9, nil, 1.1)
+		}},
+		TIP_STRATEGY = {{
+			text = "STRATEGY BASICS!",
+			font_size = 24,
+			text_align = "center",
+			pos = v(53, 64),
+			size = v(408, 34),
+			anchor = {
+				y = 34
 			}
-		},
-		TB_START = {
-			{
-				vertical_align = "middle",
-				fit_lines = 2,
-				line_height = 0.8,
-				text_align = "center",
-				text = "START BATTLE!",
-				pos = v(8, 6),
-				size = v(150, 36),
-				font_size = CJK(18, 21, nil, 25)
+		}, {
+			color = "gray",
+			fit_lines = 4,
+			text = "Barracks are good for blocking the enemy but lack in attack power. Make sure you have enough firepower to support them!",
+			font_size = 16,
+			pos = v(60, 66),
+			size = v(399, 66),
+			line_height = CJK(0.9, nil, 1.1)
+		}, {
+			vertical_align = "middle",
+			text_align = "center",
+			text = "Support your soldiers with ranged towers!",
+			r = 0.176,
+			font_size = 13,
+			color = "black",
+			pos = v(245, 281),
+			size = v(133, 54),
+			line_height = CJK(0.8, nil, 1.1)
+		}},
+		TIP_ARMOR_HARD = {{
+			vertical_align = "middle",
+			text = "HEAVILY ARMORED ENEMIES!",
+			font_size = 22,
+			text_align = "center",
+			pos = v(60, 30),
+			size = v(392, 54)
+		}, {
+			text = "Some enemies wear heavy armor and are almost impervious to physical damage. In order to kill them hit them with magic attacks!",
+			font_size = 18,
+			text_align = "center",
+			pos = v(60, 75),
+			size = v(392, 60)
+		}, {
+			text = "Use the highest levels of wizards available!",
+			font_size = 16,
+			text_align = "center",
+			pos = v(196, 287),
+			size = v(141, 59)
+		}},
+		TIP_HEROES = {{
+			vertical_align = "middle",
+			text = "Hero at your command!",
+			font_size = 23,
+			text_align = "center",
+			pos = v(53, 60),
+			size = v(408, 38),
+			anchor = {
+				y = 38
 			}
-		},
-		TB_WAVE = {
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "INCOMING NEXT WAVE!",
-				text_align = "left",
-				pos = v(28, 6),
-				size = v(234, 34),
-				font_size = CJK(18, 21, nil, 25)
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "CLICK TO CALL IT EARLY",
-				text_align = "left",
-				pos = v(28, 40),
-				size = v(234, 18),
-				font_size = CJK(10, 14, nil, 20)
-			}
-		},
-		TUTORIAL_1 = {
-			{
-				vertical_align = "middle",
-				text = "Objective",
-				font_size = 22,
-				text_align = "center",
-				pos = v(52, 60),
-				size = v(380, 30),
-				anchor = {
-					y = 30
-				}
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 1,
-				text = "protect your lands from the enemy attacks.",
-				font_size = 16,
-				text_align = "center",
-				line_height = 0.8,
-				color = "gray",
-				pos = v(47, 58),
-				size = v(390, 18)
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 2,
-				text = "build defensive towers along the road to stop them.",
-				font_size = 12,
-				text_align = "center",
-				line_height = 0.8,
-				color = "gray",
-				pos = v(47, 78),
-				size = v(390, 26)
-			},
-			{
-				vertical_align = "middle",
-				color = "black",
-				font_size = 12,
-				text_align = "center",
-				text = "don't let enemies past this point.",
-				pos = v(220, 123),
-				size = v(148, 36),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				vertical_align = "middle",
-				color = "black",
-				font_size = 10,
-				text_align = "center",
-				text = "build towers to defend the road.",
-				pos = v(270, 231),
-				size = v(117, 27),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				vertical_align = "middle",
-				color = "black",
-				font_size = 11,
-				text_align = "center",
-				text = "earn gold by killing enemies.",
-				pos = v(178, 274),
-				size = v(117, 27),
-				line_height = CJK(0.8, nil, 1.1)
-			}
-		},
-		TUTORIAL_2 = {
-			{
-				text = "Tower construction",
-				text_align = "center",
-				r = 0,
-				font_size = 22,
-				pos = v(38, 50),
-				size = v(389, 30),
-				anchor = {
-					y = 30
-				}
-			},
-			{
-				text = "Build towers on strategic points to stop the enemy hordes from getting through.",
-				color = "gray",
-				text_align = "center",
-				r = 0,
-				font_size = 14,
-				pos = v(46, 52),
-				size = v(373, 52)
-			},
-			{
-				vertical_align = "middle",
-				text_align = "center",
-				text = "click these!",
-				r = 0.17453292519943,
-				font_size = 13,
-				color = "dark_red",
-				pos = v(26, 126),
-				size = v(135, 30),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				vertical_align = "middle",
-				text_align = "center",
-				text = "this is a strategic point.",
-				r = 0,
-				font_size = 11,
-				line_height = 0.8,
-				color = "dark_red",
-				pos = v(35, 195),
-				size = v(123, 30)
-			},
-			{
-				vertical_align = "middle",
-				text_align = "center",
-				text = "select the tower you want to build!",
-				r = 0.087266462599716,
-				font_size = 10,
-				line_height = 0.8,
-				color = "dark_red",
-				pos = v(154, 244),
-				size = v(154, 34)
-			},
-			{
-				vertical_align = "middle",
-				text_align = "center",
-				text = "wOOt!",
-				r = 0.17453292519943,
-				font_size = 11,
-				line_height = 0.8,
-				color = "dark_red",
-				pos = v(310, 126),
-				size = v(135, 30)
-			},
-			{
-				vertical_align = "middle",
-				text_align = "center",
-				text = "ready for action!",
-				r = 0.17453292519943,
-				font_size = 12,
-				line_height = 0.8,
-				color = "dark_red",
-				pos = v(310, 221),
-				size = v(135, 30)
-			}
-		},
-		TUTORIAL_3 = {
-			{
-				text = "Basic Tower Types",
-				font_size = 22,
-				text_align = "center",
-				pos = v(54, 55),
-				size = v(482, 28),
-				anchor = {
-					y = 30
-				}
-			},
-			{
-				text = "There are four basic types of towers available.",
-				color = "gray",
-				fit_lines = 1,
-				font_size = 16,
-				text_align = "center",
-				pos = v(54, 55),
-				size = v(482, 22)
-			},
-			{
-				text = "ARCHER TOWER",
-				color = "dark_red",
-				fit_lines = 1,
-				font_size = 14,
-				text_align = "center",
-				pos = v(24, 94),
-				size = v(127, 30)
-			},
-			{
-				text = "BARRACKS",
-				color = "dark_red",
-				fit_lines = 1,
-				font_size = 14,
-				text_align = "center",
-				pos = v(162, 94),
-				size = v(127, 30)
-			},
-			{
-				text = "MAGES’ GUILD",
-				color = "dark_red",
-				fit_lines = 1,
-				font_size = 14,
-				text_align = "center",
-				pos = v(301, 94),
-				size = v(127, 30)
-			},
-			{
-				text = "ARTILLERY",
-				color = "dark_red",
-				fit_lines = 1,
-				font_size = 14,
-				text_align = "center",
-				pos = v(441, 94),
-				size = v(126, 30)
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 3,
-				text = "good rate of fire",
-				font_size = 12,
-				text_align = "center",
-				color = "gray",
-				pos = v(33, 219),
-				size = v(108, 30),
-				line_height = CJK(0.7, nil, 1)
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 3,
-				text = "soldiers block enemies",
-				font_size = 12,
-				text_align = "center",
-				color = "gray",
-				pos = v(170, 218),
-				size = v(113, 32),
-				line_height = CJK(0.7, nil, 1)
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 3,
-				text = "high damage, armor piercing",
-				font_size = 12,
-				text_align = "center",
-				color = "gray",
-				pos = v(310, 219),
-				size = v(110, 31),
-				line_height = CJK(0.7, nil, 1)
-			},
-			{
-				vertical_align = "middle",
-				fit_lines = 3,
-				text = "deals area damage",
-				font_size = 12,
-				text_align = "center",
-				color = "gray",
-				pos = v(450, 218),
-				size = v(109, 31),
-				line_height = CJK(0.7, nil, 1)
-			}
-		},
-		TIP_ARMOR = {
-			{
-				text = "ARMORED ENEMIES!",
-				fit_lines = 1,
-				font_size = 24,
-				pos = v(130, 50),
-				size = v(320, 30)
-			},
-			{
-				text = "some enemies wear armor of different strengths that protects them against non-magical attacks.",
-				font_size = 16,
-				fit_lines = 4,
-				color = "gray",
-				pos = v(130, CJK(80, nil, nil, 91)),
-				size = v(320, 80)
-			},
-			{
-				text = "resists damage from",
-				text_align = "center",
-				font_size = 15,
-				color = "red",
-				pos = v(113, 170),
-				size = v(117, 42)
-			},
-			{
-				text = "Armored enemies take less damage from marksmen, soldiers and artilleries.",
-				text_align = "center",
-				fit_lines = 3,
-				font_size = 18,
-				color = "gray",
-				pos = v(44, 286),
-				size = v(416, 70)
-			}
-		},
-		TIP_ARMOR_MAGIC = {
-			{
-				text = "MAGIC RESISTANT ENEMIES!",
-				fit_lines = 1,
-				font_size = 24,
-				pos = v(118, 81),
-				size = v(337, 30),
-				anchor = {
-					y = 30
-				}
-			},
-			{
-				color = "gray",
-				fit_lines = 4,
-				text =
-				"some enemies enjoy different levels of magic resistance that protects them against magical attacks.",
-				font_size = 16,
-				pos = v(118, CJK(78, 84, nil, 91)),
-				size = v(338, 80),
-				line_height = CJK(0.9, nil, 1)
-			},
-			{
-				text = "resist damage from",
-				text_align = "center",
-				font_size = 15,
-				color = "red",
-				pos = v(196, 169),
-				size = v(117, 42)
-			},
-			{
-				text = "Magic resistant enemies take less damage from wizards.",
-				text_align = "center",
-				fit_lines = 3,
-				font_size = 18,
-				color = "gray",
-				pos = v(54, 286),
-				size = v(400, 70)
-			}
-		},
-		TIP_RALLY = {
-			{
-				text = "COMMAND YOUR TROOPS!",
-				fit_lines = 1,
-				font_size = 24,
-				pos = v(118, 83),
-				size = v(337, 30),
-				anchor = {
-					y = 30
-				}
-			},
-			{
-				color = "gray",
-				fit_lines = 4,
-				text = "you can adjust your soldiers rally point to make them defend a different area.",
-				font_size = 16,
-				pos = v(118, CJK(80, 86, nil, 91)),
-				size = v(338, 80),
-				line_height = CJK(0.9, nil, 1.1)
-			},
-			{
-				text = "rally range",
-				color = "blue",
-				font_size = 13,
-				text_align = "center",
-				pos = v(254, 139),
-				size = v(168, 21)
-			},
-			{
-				color = "red",
-				text = "select the rally point control",
-				font_size = 12,
-				text_align = "center",
-				pos = v(71, 319),
-				size = v(202, 42),
-				line_height = CJK(0.9, nil, 1.1)
-			},
-			{
-				color = "red",
-				text = "select where you want to move your soldiers",
-				font_size = 12,
-				text_align = "center",
-				pos = v(292, 319),
-				size = v(173, 42),
-				line_height = CJK(0.9, nil, 1.1)
-			}
-		},
-		TIP_STRATEGY = {
-			{
-				text = "STRATEGY BASICS!",
-				font_size = 24,
-				text_align = "center",
-				pos = v(53, 64),
-				size = v(408, 34),
-				anchor = {
-					y = 34
-				}
-			},
-			{
-				color = "gray",
-				fit_lines = 4,
-				text =
-				"Barracks are good for blocking the enemy but lack in attack power. Make sure you have enough firepower to support them!",
-				font_size = 16,
-				pos = v(60, 66),
-				size = v(399, 66),
-				line_height = CJK(0.9, nil, 1.1)
-			},
-			{
-				vertical_align = "middle",
-				text_align = "center",
-				text = "Support your soldiers with ranged towers!",
-				r = 0.176,
-				font_size = 13,
-				color = "black",
-				pos = v(245, 281),
-				size = v(133, 54),
-				line_height = CJK(0.8, nil, 1.1)
-			}
-		},
-		TIP_ARMOR_HARD = {
-			{
-				vertical_align = "middle",
-				text = "HEAVILY ARMORED ENEMIES!",
-				font_size = 22,
-				text_align = "center",
-				pos = v(60, 30),
-				size = v(392, 54)
-			},
-			{
-				text =
-				"Some enemies wear heavy armor and are almost impervious to physical damage. In order to kill them hit them with magic attacks!",
-				font_size = 18,
-				text_align = "center",
-				pos = v(60, 75),
-				size = v(392, 60)
-			},
-			{
-				text = "Use the highest levels of wizards available!",
-				font_size = 16,
-				text_align = "center",
-				pos = v(196, 287),
-				size = v(141, 59)
-			}
-		},
-		TIP_HEROES = {
-			{
-				vertical_align = "middle",
-				text = "Hero at your command!",
-				font_size = 23,
-				text_align = "center",
-				pos = v(53, 60),
-				size = v(408, 38),
-				anchor = {
-					y = 38
-				}
-			},
-			{
-				fit_lines = 3,
-				color = "gray",
-				font_size = 15,
-				text_align = "center",
-				text = "Heroes are elite units that can face strong enemies and support your forces.",
-				pos = v(50, 62),
-				size = v(408, 44),
-				line_height = CJK(0.75, nil, 1.1)
-			},
-			{
-				vertical_align = "middle",
-				color = "black",
-				font_size = 14,
-				text_align = "center",
-				text = "Select by clicking on the portrait or hero unit. Hotkey: space bar",
-				pos = v(136, 118),
-				size = v(189, 49),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				vertical_align = "middle",
-				color = "black",
-				font_size = 14,
-				text_align = "center",
-				text = "Click on the path to move the hero.",
-				pos = v(296, 255),
-				size = v(146, 40),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				color = "black",
-				text = "Shows level, health and experience.",
-				font_size = 15,
-				text_align = "center",
-				pos = v(37, 224),
-				size = v(102, 68),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				fit_lines = 2,
-				color = "gray",
-				font_size = 17,
-				text_align = "center",
-				text = "Heroes gain experience every time they damage an enemy or use an ability.",
-				pos = v(54, 310),
-				size = v(405, 54),
-				line_height = CJK(0.75, nil, 1.1)
-			}
-		},
-		TIP_UPGRADES = {
-			{
-				vertical_align = "middle",
-				text = "UPGRADES AND HEROES RESTRICTIONS!",
-				font_size = 25,
-				text_align = "left",
-				pos = v(114, 35),
-				size = v(331, 52)
-			},
-			{
-				text = "iron and heroic challenges may have restrictions on upgrades!",
-				font_size = 18,
-				text_align = "center",
-				pos = v(40, 108),
-				size = v(194, 100)
-			},
-			{
-				text = "check the stage description to see:",
-				font_size = 17,
-				text_align = "left",
-				pos = v(48, 288),
-				size = v(314, 26)
-			},
-			{
-				text = "- max upgrade level allowed",
-				font_size = 16,
-				text_align = "left",
-				pos = v(50, 310),
-				size = v(286, 24)
-			},
-			{
-				text = "- if heroes are allowed",
-				font_size = 16,
-				text_align = "left",
-				pos = v(50, 328),
-				size = v(286, 24)
-			},
-			{
-				color = "red",
-				text = "max lvl allowed",
-				font_size = 10,
-				text_align = "center",
-				pos = v(400, 316),
-				size = v(68, 20),
-				line_height = CJK(0.8, nil, 1.1)
-			},
-			{
-				color = "red",
-				text = "no heroes",
-				font_size = 10,
-				text_align = "center",
-				pos = v(406, 335),
-				size = v(57, 19),
-				line_height = CJK(0.8, nil, 1.1)
-			}
-		},
-		TIP_ELITE = {
-			{
-				vertical_align = "middle",
-				color = "red",
-				text = "ELITE STAGE!",
-				font_size = 28,
-				text_align = "center",
-				pos = v(60, 37),
-				size = v(392, 50)
-			},
-			{
-				text = "This is a stage of extreme difficulty.",
-				font_size = 23,
-				text_align = "center",
-				pos = v(60, 86),
-				size = v(392, 60)
-			},
-			{
-				text = "Over 50 stars are recommended to face this stage.",
-				font_size = 18,
-				text_align = "left",
-				pos = v(243, 231),
-				size = v(218, 108)
-			}
-		}
+		}, {
+			fit_lines = 3,
+			color = "gray",
+			font_size = 15,
+			text_align = "center",
+			text = "Heroes are elite units that can face strong enemies and support your forces.",
+			pos = v(50, 62),
+			size = v(408, 44),
+			line_height = CJK(0.75, nil, 1.1)
+		}, {
+			vertical_align = "middle",
+			color = "black",
+			font_size = 14,
+			text_align = "center",
+			text = "Select by clicking on the portrait or hero unit. Hotkey: space bar",
+			pos = v(136, 118),
+			size = v(189, 49),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			vertical_align = "middle",
+			color = "black",
+			font_size = 14,
+			text_align = "center",
+			text = "Click on the path to move the hero.",
+			pos = v(296, 255),
+			size = v(146, 40),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			color = "black",
+			text = "Shows level, health and experience.",
+			font_size = 15,
+			text_align = "center",
+			pos = v(37, 224),
+			size = v(102, 68),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			fit_lines = 2,
+			color = "gray",
+			font_size = 17,
+			text_align = "center",
+			text = "Heroes gain experience every time they damage an enemy or use an ability.",
+			pos = v(54, 310),
+			size = v(405, 54),
+			line_height = CJK(0.75, nil, 1.1)
+		}},
+		TIP_UPGRADES = {{
+			vertical_align = "middle",
+			text = "UPGRADES AND HEROES RESTRICTIONS!",
+			font_size = 25,
+			text_align = "left",
+			pos = v(114, 35),
+			size = v(331, 52)
+		}, {
+			text = "iron and heroic challenges may have restrictions on upgrades!",
+			font_size = 18,
+			text_align = "center",
+			pos = v(40, 108),
+			size = v(194, 100)
+		}, {
+			text = "check the stage description to see:",
+			font_size = 17,
+			text_align = "left",
+			pos = v(48, 288),
+			size = v(314, 26)
+		}, {
+			text = "- max upgrade level allowed",
+			font_size = 16,
+			text_align = "left",
+			pos = v(50, 310),
+			size = v(286, 24)
+		}, {
+			text = "- if heroes are allowed",
+			font_size = 16,
+			text_align = "left",
+			pos = v(50, 328),
+			size = v(286, 24)
+		}, {
+			color = "red",
+			text = "max lvl allowed",
+			font_size = 10,
+			text_align = "center",
+			pos = v(400, 316),
+			size = v(68, 20),
+			line_height = CJK(0.8, nil, 1.1)
+		}, {
+			color = "red",
+			text = "no heroes",
+			font_size = 10,
+			text_align = "center",
+			pos = v(406, 335),
+			size = v(57, 19),
+			line_height = CJK(0.8, nil, 1.1)
+		}},
+		TIP_ELITE = {{
+			vertical_align = "middle",
+			color = "red",
+			text = "ELITE STAGE!",
+			font_size = 28,
+			text_align = "center",
+			pos = v(60, 37),
+			size = v(392, 50)
+		}, {
+			text = "This is a stage of extreme difficulty.",
+			font_size = 23,
+			text_align = "center",
+			pos = v(60, 86),
+			size = v(392, 60)
+		}, {
+			text = "Over 50 stars are recommended to face this stage.",
+			font_size = 18,
+			text_align = "left",
+			pos = v(243, 231),
+			size = v(218, 108)
+		}}
 	},
 	-- 5,6,7,10,11,12,13,14,15,16,17,18,19,20
 	tower_menu_button_places = {
@@ -1876,33 +1652,29 @@ return {
 		v(124, 20),
 		v(24, 120),
 		v(124, 120),
-		v(74, 2),                             -- 0, 1
+		v(74, 2), -- 0, 1
 		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34), -- -1, 1
 		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34), -- 1, 1
 		v(128, 118),
 		v(74, 140),
-		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT),     -- -2, 2
-		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT),     -- 2, 2
-		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66),                                -- -2, 1
-		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66),                                -- 2, 1
-		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34),                                -- -3, 1
-		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34),                                -- 3, 1
-		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),         -- -1, 2
-		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),         -- 1, 2
-		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),     -- -3, 2
-		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT),     -- 3, 2
-		v(74, 2 - TOWER_MENU_BUTTON_Y_UNIT),                                     -- 0, 2
+		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT), -- -2, 2
+		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT), -- 2, 2
+		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66), -- -2, 1
+		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66), -- 2, 1
+		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34), -- -3, 1
+		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34), -- 3, 1
+		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -1, 2
+		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 1, 2
+		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -3, 2
+		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 3, 2
+		v(74, 2 - TOWER_MENU_BUTTON_Y_UNIT), -- 0, 2
 		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- -2, 3
 		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- 2, 3
 		v(74 - 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
-		v(74 + 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
+		v(74 + 4 * TOWER_MENU_BUTTON_X_UNIT, 2)
 	},
-	tower_menu_power_offset = {
-		-- 原版x差值18, 6 ，y差值7, 17
-		v(7, -16),
-		v(25, -9),
-		v(31, 8)
-	},
+	tower_menu_power_offset = {v(7, -16), v(25, -9), v(31, 8)},
+	-- 原版x差值18, 6 ，y差值7, 17
 	range_center_offset = v(0, -12),
 	tower_menu_button_width = 4 * TOWER_MENU_BUTTON_X_UNIT,
 	tower_menu_button_height = 2.5 * TOWER_MENU_BUTTON_Y_UNIT,
@@ -1923,6 +1695,6 @@ return {
 		[DAMAGE_SHOT] = "base_info_icons_0011",
 		[DAMAGE_RUDE] = "base_info_icons_0013",
 		[DAMAGE_STAB] = "base_info_icons_0010",
-		[DAMAGE_MIXED] = "base_info_icons_0001",
+		[DAMAGE_MIXED] = "base_info_icons_0001"
 	}
 }

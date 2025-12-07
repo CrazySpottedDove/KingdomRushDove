@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_stargazers.lua
-
+-- chunkname: @./kr5/data/animations/tower_stargazers.lua
 local a = {
 	elven_stargazers_tower_mark_start = {
 		prefix = "elven_stargazers_tower_mark",
@@ -399,5 +398,4 @@ local a = {
 		layer_from = 1
 	}
 }
-
 return a

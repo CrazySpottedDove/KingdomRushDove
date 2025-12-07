@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1-desktop/data/iap_data.lua
-
+-- chunkname: @./kr1-desktop/data/iap_data.lua
 return {
 	cheapest_item_cost = 50,
 	shop_data = {

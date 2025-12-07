@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level05_data.lua
-
+-- chunkname: @./kr3/data/levels/level05_data.lua
 return {
 	level_terrain_type = 1,
 	locked_hero = false,
@@ -11,9 +10,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvenWoodsAmbienceSound"
-			}
+			sounds = {"ElvenWoodsAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -775,122 +772,36 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 3,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_engineer"
-			}
-		}
-	},
-    unlock_towers = {"tower_blade"},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 3,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 3,
+		locked_towers = {"tower_build_barrack", "tower_build_engineer"}
+	}},
+	unlock_towers = {"tower_blade"},
 	nav_mesh = {
-		[10] = {
-			18,
-			11,
-			15,
-			19
-		},
-		[11] = {
-			23,
-			21,
-			16,
-			10
-		},
-		[12] = {
-			14,
-			nil,
-			21,
-			23
-		},
-		[13] = {
-			nil,
-			nil,
-			14,
-			22
-		},
-		[14] = {
-			13,
-			12,
-			23,
-			22
-		},
-		[15] = {
-			10,
-			16,
-			nil,
-			19
-		},
-		[16] = {
-			11,
-			nil,
-			nil,
-			15
-		},
-		[17] = {
-			nil,
-			22,
-			18,
-			19
-		},
-		[18] = {
-			17,
-			23,
-			10,
-			19
-		},
-		[19] = {
-			17,
-			10,
-			15
-		},
-		[21] = {
-			12,
-			nil,
-			16,
-			11
-		},
-		[22] = {
-			13,
-			14,
-			23,
-			17
-		},
-		[23] = {
-			14,
-			12,
-			11,
-			18
-		}
+		[10] = {18, 11, 15, 19},
+		[11] = {23, 21, 16, 10},
+		[12] = {14, nil, 21, 23},
+		[13] = {nil, nil, 14, 22},
+		[14] = {13, 12, 23, 22},
+		[15] = {10, 16, nil, 19},
+		[16] = {11, nil, nil, 15},
+		[17] = {nil, 22, 18, 19},
+		[18] = {17, 23, 10, 19},
+		[19] = {17, 10, 15},
+		[21] = {12, nil, 16, 11},
+		[22] = {13, 14, 23, 17},
+		[23] = {14, 12, 11, 18}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage53",
-		"ElvenWoodsAmbienceSounds",
-		"ElvesHeroAlleria",
-		"ElvesLevelFiveSounds",
-		"ElvesPlants",
-		"ElvesCreepHyena"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_stage53",
-		"go_stage53_bg",
-		"go_stages_elven_woods",
-		"go_hero_alleria"
-	}
+	required_sounds = {"music_stage53", "ElvenWoodsAmbienceSounds", "ElvesHeroAlleria", "ElvesLevelFiveSounds", "ElvesPlants", "ElvesCreepHyena"},
+	required_textures = {"go_enemies_elven_woods", "go_stage53", "go_stage53_bg", "go_stages_elven_woods", "go_hero_alleria"}
 }

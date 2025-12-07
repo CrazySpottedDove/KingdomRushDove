@@ -7,14 +7,16 @@ local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
 require("templates")
-local function adx(v)
-    return v - anchor_x * image_x
-end
-local function ady(v)
-    return v - anchor_y * image_y
-end
-require("game_templates_utils")
 
+local function adx(v)
+	return v - anchor_x * image_x
+end
+
+local function ady(v)
+	return v - anchor_y * image_y
+end
+
+require("game_templates_utils")
 tt = RT("tower_holder")
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "editor", "editor_script")
 tt.ui.click_rect = r(-40, -12, 80, 46)
@@ -23,10 +25,10 @@ tt.tower.level = 1
 tt.tower.type = "holder"
 tt.tower.can_be_mod = false
 tt.tower_holder.preview_ids = {
-    archer = 2,
-    engineer = 5,
-    barrack = 3,
-    mage = 4
+	archer = 2,
+	engineer = 5,
+	barrack = 3,
+	mage = 4
 }
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "build_terrain_%04i"
@@ -47,8 +49,7 @@ tt.render.sprites[4].offset = vec_2(0, 30)
 tt.render.sprites[5] = table.deepclone(tt.render.sprites[2])
 tt.render.sprites[5].name = "tower_preview_artillery"
 tt.render.sprites[5].offset = vec_2(0, 41)
-tt.editor.props = {{"tower.terrain_style", PT_NUMBER}, {"tower.default_rally_pos", PT_COORDS},
-                   {"tower.holder_id", PT_STRING}, {"ui.nav_mesh_id", PT_STRING}, {"editor.game_mode", PT_NUMBER}}
+tt.editor.props = {{"tower.terrain_style", PT_NUMBER}, {"tower.default_rally_pos", PT_COORDS}, {"tower.holder_id", PT_STRING}, {"ui.nav_mesh_id", PT_STRING}, {"editor.game_mode", PT_NUMBER}}
 tt.editor_script.insert = scripts.editor_tower.insert
 tt.editor_script.remove = scripts.editor_tower.remove
 tt = RT("tower_holder_grass", "tower_holder")
@@ -79,7 +80,6 @@ tt = RT("tower_build_engineer", "tower_build_archer")
 tt.build_name = "tower_engineer_1"
 tt.render.sprites[2].name = "tower_constructing_0001"
 tt.render.sprites[2].offset = vec_2(0, 41)
-
 tt = RT("tower_mage_1", "tower")
 AC(tt, "attacks")
 tt.tower.type = "mage"
@@ -108,8 +108,8 @@ tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "shootermage"
 tt.render.sprites[3].name = "idleDown"
 tt.render.sprites[3].angles = {
-    idle = {"idleUp", "idleDown"},
-    shoot = {"shootingUp", "shootingDown"}
+	idle = {"idleUp", "idleDown"},
+	shoot = {"shootingUp", "shootingDown"}
 }
 tt.render.sprites[3].offset = vec_2(1, 57)
 tt.render.sid_tower = 2
@@ -133,7 +133,6 @@ tt.attacks.list[1].bullet = "bolt_3"
 tt.attacks.list[1].bullet_start_offset = {vec_2(8, 70), vec_2(-5, 69)}
 tt.render.sprites[2].prefix = "towermagelvl3"
 tt.render.sprites[3].offset = vec_2(1, 62)
-
 tt = RT("bolt_1", "bolt")
 tt.bullet.damage_min = 11
 tt.bullet.damage_max = 19
@@ -143,7 +142,6 @@ tt.bullet.damage_max = 47
 tt = RT("bolt_3", "bolt")
 tt.bullet.damage_min = 44
 tt.bullet.damage_max = 81
-
 tt = RT("tower_engineer_1", "tower")
 AC(tt, "attacks")
 tt.tower.type = "engineer"
@@ -166,10 +164,10 @@ tt.render.sprites[1].name = "terrain_artillery_%04i"
 tt.render.sprites[1].offset = vec_2(0, 15)
 
 for i = 2, 8 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].prefix = "towerengineerlvl1_layer" .. i - 1
-    tt.render.sprites[i].name = "idle"
-    tt.render.sprites[i].offset = vec_2(0, 41)
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "towerengineerlvl1_layer" .. i - 1
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].offset = vec_2(0, 41)
 end
 
 tt.sound_events.insert = "EngineerTaunt"
@@ -183,10 +181,10 @@ tt.attacks.list[1].shoot_time = fts(12)
 tt.attacks.list[1].bullet_start_offset = vec_2(0, 53)
 
 for i = 2, 8 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].prefix = "towerengineerlvl2_layer" .. i - 1
-    tt.render.sprites[i].name = "idle"
-    tt.render.sprites[i].offset = vec_2(0, 42)
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "towerengineerlvl2_layer" .. i - 1
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].offset = vec_2(0, 42)
 end
 
 tt = RT("tower_engineer_3", "tower_engineer_1")
@@ -200,16 +198,14 @@ tt.attacks.list[1].shoot_time = fts(12)
 tt.attacks.list[1].bullet_start_offset = vec_2(0, 57)
 
 for i = 2, 8 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].prefix = "towerengineerlvl3_layer" .. i - 1
-    tt.render.sprites[i].name = "idle"
-    tt.render.sprites[i].offset = vec_2(0, 43)
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "towerengineerlvl3_layer" .. i - 1
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].offset = vec_2(0, 43)
 end
 
 tt = RT("tower_archer_1", "tower")
-
 AC(tt, "attacks")
-
 tt.tower.type = "archer"
 tt.tower.level = 1
 tt.tower.price = 70
@@ -226,16 +222,16 @@ tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "shooterarcherlvl1"
 tt.render.sprites[3].name = "idleDown"
 tt.render.sprites[3].angles = {
-    idle = {"idleUp", "idleDown"},
-    shoot = {"shootingUp", "shootingDown"}
+	idle = {"idleUp", "idleDown"},
+	shoot = {"shootingUp", "shootingDown"}
 }
 tt.render.sprites[3].offset = vec_2(-9, 51)
 tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].prefix = "shooterarcherlvl1"
 tt.render.sprites[4].name = "idleDown"
 tt.render.sprites[4].angles = {
-    idle = {"idleUp", "idleDown"},
-    shoot = {"shootingUp", "shootingDown"}
+	idle = {"idleUp", "idleDown"},
+	shoot = {"shootingUp", "shootingDown"}
 }
 tt.render.sprites[4].offset = vec_2(9, 51)
 tt.main_script.insert = scripts.tower_archer.insert
@@ -272,21 +268,17 @@ tt.render.sprites[4].offset = vec_2(9, 57)
 tt.attacks.range = 180
 tt.attacks.list[1].bullet = "arrow_3"
 tt.attacks.list[1].cooldown = 0.5
-
 tt = RT("arrow_1", "arrow")
 tt.bullet.damage_min = 4
 tt.bullet.damage_max = 7
-
 tt = RT("arrow_2", "arrow")
 tt.bullet.damage_min = 8
 tt.bullet.damage_max = 12
 tt.bullet.flight_time = fts(21)
-
 tt = RT("arrow_3", "arrow")
 tt.bullet.damage_min = 11
 tt.bullet.damage_max = 18
 tt.bullet.flight_time = fts(20)
-
 tt = RT("tower_barrack_1", "tower")
 AC(tt, "barrack")
 tt.tower.type = "barrack"
@@ -331,7 +323,6 @@ tt.render.sprites[2].name = "tower_barracks_lvl3_layer1_0001"
 tt.render.sprites[3].prefix = "towerbarracklvl3_door"
 tt.barrack.soldier_type = "soldier_knight"
 tt.barrack.rally_range = 155
-
 tt = RT("tower_neptune_holder")
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info")
 tt.tower.level = 1
@@ -349,7 +340,6 @@ tt.render.sprites[2].name = "neptuno_0001"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 39)
 tt.ui.click_rect = r(-40, -10, 80, 90)
-
 tt = RT("tower_neptune", "tower")
 AC(tt, "powers", "user_selection", "attacks")
 tt.tower.level = 1
@@ -421,7 +411,6 @@ tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "ray_neptune"
 tt.attacks.list[1].cooldown = 30
 tt.attacks.list[1].bullet_start_offset = vec_2(17, 105)
-
 tt = RT("ray_neptune", "bullet")
 tt.image_width = 358
 tt.main_script.update = scripts.ray_neptune.update
@@ -439,7 +428,6 @@ tt = RT("fx_ray_neptune_explosion", "decal_timed")
 tt.render.sprites[1].name = "ray_neptune_explosion"
 tt.render.sprites[1].anchor.y = 0.24444444444444444
 tt.render.sprites[1].z = Z_BULLETS
-
 tt = RT("rock_1", "bomb")
 tt.bullet.flight_time = fts(28)
 tt.bullet.damage_radius = 60
@@ -453,17 +441,14 @@ tt.render.sprites[1].name = "artillery_thrower_proy"
 tt.sound_events.insert = "TowerStoneDruidBoulderThrow"
 tt.sound_events.hit = "TowerStoneDruidBoulderExplote"
 tt.sound_events.hit_water = "RTWaterExplosion"
-
 tt = RT("rock_2", "rock_1")
 tt.bullet.damage_max = 30
 tt.bullet.damage_min = 18
 tt = RT("rock_3", "rock_1")
 tt.bullet.damage_max = 50
 tt.bullet.damage_min = 30
-
 tt = RT("mod_rock_slow", "mod_slow")
 tt.modifier.duration = 0.75
-
 tt = RT("soldier_barrack_1", "soldier_militia")
 AC(tt, "revive")
 image_y = 46
@@ -508,9 +493,7 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 10)
 tt = RT("soldier_barrack_2", "soldier_barrack_1")
-
 AC(tt, "ranged")
-
 image_y = 46
 anchor_y = 11 / image_y
 tt.health.armor = 0.4
@@ -542,4 +525,3 @@ tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].min_range = 25
 tt.render.sprites[1].prefix = "soldier_barrack_3"
 tt.unit.mod_offset = vec_2(0, 12)
-

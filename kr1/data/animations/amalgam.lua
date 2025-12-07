@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/amalgam.lua
-
+-- chunkname: @./kr5/data/animations/amalgam.lua
 local a = {
 	Amalgam_Death_Decal_decal = {
 		prefix = "Amalgam_Death_Decal",
@@ -72,5 +71,4 @@ local a = {
 		from = 313
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1-desktop/data/map_points.lua
-
+-- chunkname: @./kr1-desktop/data/map_points.lua
 return {
 	flags = {
 		{
@@ -184,20 +183,20 @@ return {
 				y = 102
 			}
 		},
-        [71] = {
+		[71] = {
 			number = "71",
 			pos = {
 				x = 1173,
 				y = 102
 			}
 		},
-        [72] = {
-            number = "72",
-            pos = {
-                x = 1445,
-                y = 172
-            }
-        },
+		[72] = {
+			number = "72",
+			pos = {
+				x = 1445,
+				y = 172
+			}
+		},
 		[1000] = {
 			number = "1000",
 			pos = {

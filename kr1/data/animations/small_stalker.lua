@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/small_stalker.lua
-
+-- chunkname: @./kr5/data/animations/small_stalker.lua
 local a = {
 	small_stalker_creep_idle = {
 		prefix = "small_stalker_creep",
@@ -37,5 +36,4 @@ local a = {
 		from = 163
 	}
 }
-
 return a

@@ -1,1014 +1,314 @@
 return {
 	deep_devils_reef_towers_lvl4_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			119,
-			168
-		},
-		trim = {
-			7,
-			32,
-			6,
-			12
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			105,
-			106,
-			124
-		},
-		alias = {
-			"deep_devils_reef_towers_lvl4_0002",
-			"deep_devils_reef_towers_lvl4_0003"
-		}
+		size = {119, 168},
+		trim = {7, 32, 6, 12},
+		a_size = {1024, 1024},
+		f_quad = {5, 105, 106, 124},
+		alias = {"deep_devils_reef_towers_lvl4_0002", "deep_devils_reef_towers_lvl4_0003"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			41,
-			34,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			976,
-			37,
-			37
-		},
+		size = {142, 97},
+		trim = {71, 41, 34, 19},
+		a_size = {1024, 1024},
+		f_quad = {233, 976, 37, 37},
 		alias = {}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0002 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			42,
-			34,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			793,
-			37,
-			37
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0003"
-		}
+		size = {142, 97},
+		trim = {71, 42, 34, 18},
+		a_size = {1024, 1024},
+		f_quad = {488, 793, 37, 37},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0003"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0004 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			38,
-			37,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			954,
-			34,
-			39
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0005"
-		}
+		size = {142, 97},
+		trim = {71, 38, 37, 20},
+		a_size = {1024, 1024},
+		f_quad = {488, 954, 34, 39},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0005"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0006 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			33,
-			38,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			773,
-			33,
-			43
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0007"
-		}
+		size = {142, 97},
+		trim = {71, 33, 38, 21},
+		a_size = {1024, 1024},
+		f_quad = {233, 773, 33, 43},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0007"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0008 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			33,
-			36,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			461,
-			35,
-			43
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0009"
-		}
+		size = {142, 97},
+		trim = {71, 33, 36, 21},
+		a_size = {1024, 1024},
+		f_quad = {233, 461, 35, 43},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0009"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0010 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			35,
-			34,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			906,
-			37,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0011"
-		}
+		size = {142, 97},
+		trim = {71, 35, 34, 21},
+		a_size = {1024, 1024},
+		f_quad = {66, 906, 37, 41},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0011"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0012 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			44,
-			35,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			924,
-			36,
-			33
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0013"
-		}
+		size = {142, 97},
+		trim = {71, 44, 35, 20},
+		a_size = {1024, 1024},
+		f_quad = {578, 924, 36, 33},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0013"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0014 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			41,
-			34,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			833,
-			37,
-			37
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0031",
-			"deep_devils_reef_tower_redspine_lv4_layer1_0032",
-			"deep_devils_reef_tower_redspine_lv4_layer1_0033",
-			"deep_devils_reef_tower_redspine_lv4_layer1_0034",
-			"deep_devils_reef_tower_redspine_lv4_layer1_0057",
-			"deep_devils_reef_tower_redspine_lv4_layer1_0058"
-		}
+		size = {142, 97},
+		trim = {71, 41, 34, 19},
+		a_size = {1024, 1024},
+		f_quad = {488, 833, 37, 37},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0031", "deep_devils_reef_tower_redspine_lv4_layer1_0032", "deep_devils_reef_tower_redspine_lv4_layer1_0033", "deep_devils_reef_tower_redspine_lv4_layer1_0034", "deep_devils_reef_tower_redspine_lv4_layer1_0057", "deep_devils_reef_tower_redspine_lv4_layer1_0058"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			46,
-			34,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			528,
-			905,
-			39,
-			32
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0016"
-		}
+		size = {142, 97},
+		trim = {69, 46, 34, 19},
+		a_size = {1024, 1024},
+		f_quad = {528, 905, 39, 32},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0016"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			68,
-			40,
-			35,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			537,
-			39,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0018"
-		}
+		size = {142, 97},
+		trim = {68, 40, 35, 19},
+		a_size = {1024, 1024},
+		f_quad = {233, 537, 39, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0018"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0019 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			67,
-			39,
-			35,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			864,
-			40,
-			39
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0020"
-		}
+		size = {142, 97},
+		trim = {67, 39, 35, 19},
+		a_size = {1024, 1024},
+		f_quad = {66, 864, 40, 39},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0020"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0021 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			39,
-			36,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			689,
-			37,
-			39
-		},
+		size = {142, 97},
+		trim = {69, 39, 36, 19},
+		a_size = {1024, 1024},
+		f_quad = {233, 689, 37, 39},
 		alias = {}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0022 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			39,
-			36,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			731,
-			37,
-			39
-		},
+		size = {142, 97},
+		trim = {69, 39, 36, 19},
+		a_size = {1024, 1024},
+		f_quad = {233, 731, 37, 39},
 		alias = {}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0023 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			49,
-			45,
-			47,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			528,
-			940,
-			46,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0024"
-		}
+		size = {142, 97},
+		trim = {49, 45, 47, 25},
+		a_size = {1024, 1024},
+		f_quad = {528, 940, 46, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0024"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0025 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			51,
-			41,
-			48,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			941,
-			43,
-			32
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0026"
-		}
+		size = {142, 97},
+		trim = {51, 41, 48, 24},
+		a_size = {1024, 1024},
+		f_quad = {233, 941, 43, 32},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0026"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0027 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			41,
-			39,
-			21
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			886,
-			34,
-			35
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0028"
-		}
+		size = {142, 97},
+		trim = {69, 41, 39, 21},
+		a_size = {1024, 1024},
+		f_quad = {578, 886, 34, 35},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0028"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0029 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			39,
-			36,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			873,
-			35,
-			39
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0030"
-		}
+		size = {142, 97},
+		trim = {71, 39, 36, 19},
+		a_size = {1024, 1024},
+		f_quad = {488, 873, 35, 39},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0030"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0035 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			66,
-			48,
-			35,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			990,
-			41,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0036"
-		}
+		size = {142, 97},
+		trim = {66, 48, 35, 19},
+		a_size = {1024, 1024},
+		f_quad = {66, 990, 41, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0036"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0037 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			64,
-			40,
-			35,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			742,
-			43,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0038"
-		}
+		size = {142, 97},
+		trim = {64, 40, 35, 19},
+		a_size = {1024, 1024},
+		f_quad = {66, 742, 43, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0038"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			63,
-			40,
-			36,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			783,
-			43,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0040"
-		}
+		size = {142, 97},
+		trim = {63, 40, 36, 19},
+		a_size = {1024, 1024},
+		f_quad = {66, 783, 43, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0040"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0041 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			65,
-			41,
-			36,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			950,
-			41,
-			37
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0042"
-		}
+		size = {142, 97},
+		trim = {65, 41, 36, 19},
+		a_size = {1024, 1024},
+		f_quad = {66, 950, 41, 37},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0042"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0043 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			42,
-			64,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			988,
-			43,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0044"
-		}
+		size = {142, 97},
+		trim = {35, 42, 64, 28},
+		a_size = {1024, 1024},
+		f_quad = {578, 988, 43, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0044"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0045 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			34,
-			42,
-			64,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			856,
-			44,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0046"
-		}
+		size = {142, 97},
+		trim = {34, 42, 64, 28},
+		a_size = {1024, 1024},
+		f_quad = {578, 856, 44, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0046"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0047 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			34,
-			42,
-			64,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			793,
-			44,
-			26
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0048"
-		}
+		size = {142, 97},
+		trim = {34, 42, 64, 29},
+		a_size = {1024, 1024},
+		f_quad = {677, 793, 44, 26},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0048"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0049 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			37,
-			44,
-			64,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			793,
-			41,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0050"
-		}
+		size = {142, 97},
+		trim = {37, 44, 64, 25},
+		a_size = {1024, 1024},
+		f_quad = {633, 793, 41, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0050"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0051 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			47,
-			52,
-			65,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			823,
-			822,
-			30,
-			20
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0052"
-		}
+		size = {142, 97},
+		trim = {47, 52, 65, 25},
+		a_size = {1024, 1024},
+		f_quad = {823, 822, 30, 20},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0052"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0053 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			72,
-			37,
-			37,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			528,
-			825,
-			33,
-			40
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0054"
-		}
+		size = {142, 97},
+		trim = {72, 37, 37, 20},
+		a_size = {1024, 1024},
+		f_quad = {528, 825, 33, 40},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0054"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0055 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			42,
-			34,
-			19
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			915,
-			37,
-			36
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0056"
-		}
+		size = {142, 97},
+		trim = {71, 42, 34, 19},
+		a_size = {1024, 1024},
+		f_quad = {488, 915, 37, 36},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0056"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0059 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			78,
-			47,
-			24,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			980,
-			77,
-			40,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0060"
-		}
+		size = {142, 97},
+		trim = {78, 47, 24, 25},
+		a_size = {1024, 1024},
+		f_quad = {980, 77, 40, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0060"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0061 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			80,
-			50,
-			19,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			724,
-			793,
-			43,
-			23
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0062"
-		}
+		size = {142, 97},
+		trim = {80, 50, 19, 24},
+		a_size = {1024, 1024},
+		f_quad = {724, 793, 43, 23},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0062"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0063 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			47,
-			14,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			960,
-			47,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0064"
-		}
+		size = {142, 97},
+		trim = {81, 47, 14, 25},
+		a_size = {1024, 1024},
+		f_quad = {578, 960, 47, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0064"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0065 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			49,
-			7,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			964,
-			54,
-			34
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0066"
-		}
+		size = {142, 97},
+		trim = {81, 49, 7, 14},
+		a_size = {1024, 1024},
+		f_quad = {354, 964, 54, 34},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0066"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0067 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			49,
-			8,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			624,
-			728,
-			53,
-			34
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0068"
-		}
+		size = {142, 97},
+		trim = {81, 49, 8, 14},
+		a_size = {1024, 1024},
+		f_quad = {624, 728, 53, 34},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0068"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0069 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			83,
-			49,
-			7,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			680,
-			728,
-			52,
-			34
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0070"
-		}
+		size = {142, 97},
+		trim = {83, 49, 7, 14},
+		a_size = {1024, 1024},
+		f_quad = {680, 728, 52, 34},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0070"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0071 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			54,
-			7,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			658,
-			658,
-			64,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0072"
-		}
+		size = {142, 97},
+		trim = {71, 54, 7, 14},
+		a_size = {1024, 1024},
+		f_quad = {658, 658, 64, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0072"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0073 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			73,
-			57,
-			7,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			790,
-			658,
-			62,
-			26
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0074"
-		}
+		size = {142, 97},
+		trim = {73, 57, 7, 14},
+		a_size = {1024, 1024},
+		f_quad = {790, 658, 62, 26},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0074"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0075 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			73,
-			55,
-			7,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			725,
-			658,
-			62,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0076"
-		}
+		size = {142, 97},
+		trim = {73, 55, 7, 14},
+		a_size = {1024, 1024},
+		f_quad = {725, 658, 62, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0076"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0077 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			74,
-			57,
-			7,
-			14
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			855,
-			658,
-			61,
-			26
-		},
+		size = {142, 97},
+		trim = {74, 57, 7, 14},
+		a_size = {1024, 1024},
+		f_quad = {855, 658, 61, 26},
 		alias = {
 			"deep_devils_reef_tower_redspine_lv4_layer1_0078",
 			"deep_devils_reef_tower_redspine_lv4_layer1_0079",
@@ -1026,130 +326,42 @@ return {
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0090 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			74,
-			45,
-			30,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			528,
-			868,
-			38,
-			34
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0091"
-		}
+		size = {142, 97},
+		trim = {74, 45, 30, 18},
+		a_size = {1024, 1024},
+		f_quad = {528, 868, 38, 34},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0091"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0092 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			18,
-			41,
-			86,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			607,
-			38,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0093"
-		}
+		size = {142, 97},
+		trim = {18, 41, 86, 18},
+		a_size = {1024, 1024},
+		f_quad = {233, 607, 38, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0093"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0094 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			17,
-			41,
-			87,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			648,
-			38,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0095"
-		}
+		size = {142, 97},
+		trim = {17, 41, 87, 18},
+		a_size = {1024, 1024},
+		f_quad = {233, 648, 38, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0095"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0096 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			18,
-			41,
-			76,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			388,
-			48,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer1_0097"
-		}
+		size = {142, 97},
+		trim = {18, 41, 76, 18},
+		a_size = {1024, 1024},
+		f_quad = {233, 388, 48, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer1_0097"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer1_0098 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			0,
-			0,
-			142,
-			97
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			5,
-			142,
-			97
-		},
+		size = {142, 97},
+		trim = {0, 0, 142, 97},
+		a_size = {1024, 1024},
+		f_quad = {5, 5, 142, 97},
 		alias = {
 			"deep_devils_reef_tower_redspine_lv4_layer1_0099",
 			"deep_devils_reef_tower_redspine_lv4_layer1_0100",
@@ -1180,892 +392,274 @@ return {
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			41,
-			46,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			708,
-			822,
-			25,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0014",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0031",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0032",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0033",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0034",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0057",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0058"
-		}
+		size = {142, 97},
+		trim = {71, 41, 46, 26},
+		a_size = {1024, 1024},
+		f_quad = {708, 822, 25, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0014", "deep_devils_reef_tower_redspine_lv4_layer2_0031", "deep_devils_reef_tower_redspine_lv4_layer2_0032", "deep_devils_reef_tower_redspine_lv4_layer2_0033", "deep_devils_reef_tower_redspine_lv4_layer2_0034", "deep_devils_reef_tower_redspine_lv4_layer2_0057", "deep_devils_reef_tower_redspine_lv4_layer2_0058"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0002 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			42,
-			49,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			999,
-			569,
-			22,
-			32
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0003"
-		}
+		size = {142, 97},
+		trim = {71, 42, 49, 23},
+		a_size = {1024, 1024},
+		f_quad = {999, 569, 22, 32},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0003"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0004 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			38,
-			47,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			708,
-			954,
-			24,
-			31
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0005"
-		}
+		size = {142, 97},
+		trim = {71, 38, 47, 28},
+		a_size = {1024, 1024},
+		f_quad = {708, 954, 24, 31},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0005"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0006 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			33,
-			44,
-			35
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			853,
-			27,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0007"
-		}
+		size = {142, 97},
+		trim = {71, 33, 44, 35},
+		a_size = {1024, 1024},
+		f_quad = {677, 853, 27, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0007"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0008 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			33,
-			43,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			885,
-			28,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0009"
-		}
+		size = {142, 97},
+		trim = {71, 33, 43, 37},
+		a_size = {1024, 1024},
+		f_quad = {677, 885, 28, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0009"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0010 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			35,
-			44,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			945,
-			27,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0011"
-		}
+		size = {142, 97},
+		trim = {71, 35, 44, 32},
+		a_size = {1024, 1024},
+		f_quad = {633, 945, 27, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0011"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0012 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			44,
-			44,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			915,
-			27,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0013"
-		}
+		size = {142, 97},
+		trim = {71, 44, 44, 25},
+		a_size = {1024, 1024},
+		f_quad = {677, 915, 27, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0013"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			46,
-			47,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			844,
-			793,
-			26,
-			26
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0016"
-		}
+		size = {142, 97},
+		trim = {69, 46, 47, 25},
+		a_size = {1024, 1024},
+		f_quad = {844, 793, 26, 26},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0016"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			68,
-			40,
-			47,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			946,
-			27,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0018"
-		}
+		size = {142, 97},
+		trim = {68, 40, 47, 29},
+		a_size = {1024, 1024},
+		f_quad = {677, 946, 27, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0018"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0019 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			67,
-			39,
-			47,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			822,
-			28,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0020"
-		}
+		size = {142, 97},
+		trim = {67, 39, 47, 30},
+		a_size = {1024, 1024},
+		f_quad = {677, 822, 28, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0020"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0021 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			39,
-			47,
-			29
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			677,
-			977,
-			26,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0022"
-		}
+		size = {142, 97},
+		trim = {69, 39, 47, 29},
+		a_size = {1024, 1024},
+		f_quad = {677, 977, 26, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0022"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0023 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			70,
-			45,
-			47,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			736,
-			822,
-			25,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0024"
-		}
+		size = {142, 97},
+		trim = {70, 45, 47, 25},
+		a_size = {1024, 1024},
+		f_quad = {736, 822, 25, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0024"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0025 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			41,
-			48,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			708,
-			855,
-			25,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0026"
-		}
+		size = {142, 97},
+		trim = {69, 41, 48, 26},
+		a_size = {1024, 1024},
+		f_quad = {708, 855, 25, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0026"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0027 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			69,
-			41,
-			48,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			708,
-			888,
-			25,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0028"
-		}
+		size = {142, 97},
+		trim = {69, 41, 48, 26},
+		a_size = {1024, 1024},
+		f_quad = {708, 888, 25, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0028"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0029 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			39,
-			47,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			708,
-			988,
-			24,
-			31
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0030"
-		}
+		size = {142, 97},
+		trim = {71, 39, 47, 27},
+		a_size = {1024, 1024},
+		f_quad = {708, 988, 24, 31},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0030"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0035 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			66,
-			48,
-			47,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			812,
-			793,
-			29,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0036"
-		}
+		size = {142, 97},
+		trim = {66, 48, 47, 25},
+		a_size = {1024, 1024},
+		f_quad = {812, 793, 29, 24},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0036"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0037 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			64,
-			40,
-			46,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			884,
-			32,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0038"
-		}
+		size = {142, 97},
+		trim = {64, 40, 46, 30},
+		a_size = {1024, 1024},
+		f_quad = {633, 884, 32, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0038"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			63,
-			40,
-			46,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			854,
-			33,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0040"
-		}
+		size = {142, 97},
+		trim = {63, 40, 46, 30},
+		a_size = {1024, 1024},
+		f_quad = {633, 854, 33, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0040"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0041 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			65,
-			41,
-			47,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			914,
-			30,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0042"
-		}
+		size = {142, 97},
+		trim = {65, 41, 47, 28},
+		a_size = {1024, 1024},
+		f_quad = {633, 914, 30, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0042"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0043 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			50,
-			42,
-			45,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			847,
-			47,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0044"
-		}
+		size = {142, 97},
+		trim = {50, 42, 45, 25},
+		a_size = {1024, 1024},
+		f_quad = {233, 847, 47, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0044"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0045 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			50,
-			42,
-			44,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			880,
-			48,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0046"
-		}
+		size = {142, 97},
+		trim = {50, 42, 44, 26},
+		a_size = {1024, 1024},
+		f_quad = {233, 880, 48, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0046"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0047 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			51,
-			42,
-			44,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			528,
-			793,
-			47,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0048"
-		}
+		size = {142, 97},
+		trim = {51, 42, 44, 26},
+		a_size = {1024, 1024},
+		f_quad = {528, 793, 47, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0048"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0049 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			42,
-			45,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			978,
-			658,
-			43,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0050"
-		}
+		size = {142, 97},
+		trim = {54, 42, 45, 26},
+		a_size = {1024, 1024},
+		f_quad = {978, 658, 43, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0050"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0053 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			72,
-			37,
-			46,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			978,
-			24,
-			33
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0054"
-		}
+		size = {142, 97},
+		trim = {72, 37, 46, 27},
+		a_size = {1024, 1024},
+		f_quad = {633, 978, 24, 33},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0054"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0055 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			42,
-			46,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			995,
-			329,
-			25,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0056"
-		}
+		size = {142, 97},
+		trim = {71, 42, 46, 26},
+		a_size = {1024, 1024},
+		f_quad = {995, 329, 25, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0056"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0059 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			78,
-			47,
-			37,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			873,
-			793,
-			27,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0060"
-		}
+		size = {142, 97},
+		trim = {78, 47, 37, 25},
+		a_size = {1024, 1024},
+		f_quad = {873, 793, 27, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0060"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0061 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			80,
-			50,
-			35,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			793,
-			822,
-			27,
-			23
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0062"
-		}
+		size = {142, 97},
+		trim = {80, 50, 35, 24},
+		a_size = {1024, 1024},
+		f_quad = {793, 822, 27, 23},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0062"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0063 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			47,
-			35,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			963,
-			793,
-			26,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0064"
-		}
+		size = {142, 97},
+		trim = {81, 47, 35, 25},
+		a_size = {1024, 1024},
+		f_quad = {963, 793, 26, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0064"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0065 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			49,
-			34,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			992,
-			793,
-			27,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0066",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0067",
-			"deep_devils_reef_tower_redspine_lv4_layer2_0068"
-		}
+		size = {142, 97},
+		trim = {81, 49, 34, 24},
+		a_size = {1024, 1024},
+		f_quad = {992, 793, 27, 24},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0066", "deep_devils_reef_tower_redspine_lv4_layer2_0067", "deep_devils_reef_tower_redspine_lv4_layer2_0068"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0069 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			83,
-			49,
-			33,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			764,
-			822,
-			26,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0070"
-		}
+		size = {142, 97},
+		trim = {83, 49, 33, 24},
+		a_size = {1024, 1024},
+		f_quad = {764, 822, 26, 24},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0070"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0071 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			71,
-			54,
-			38,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			856,
-			822,
-			33,
-			17
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0072"
-		}
+		size = {142, 97},
+		trim = {71, 54, 38, 26},
+		a_size = {1024, 1024},
+		f_quad = {856, 822, 33, 17},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0072"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0073 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			73,
-			57,
-			36,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			929,
-			822,
-			33,
-			16
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0074"
-		}
+		size = {142, 97},
+		trim = {73, 57, 36, 24},
+		a_size = {1024, 1024},
+		f_quad = {929, 822, 33, 16},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0074"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0075 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			73,
-			55,
-			35,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			529,
-			85,
-			34,
-			17
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0076"
-		}
+		size = {142, 97},
+		trim = {73, 55, 35, 25},
+		a_size = {1024, 1024},
+		f_quad = {529, 85, 34, 17},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0076"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0077 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			74,
-			57,
-			34,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			892,
-			822,
-			34,
-			16
-		},
+		size = {142, 97},
+		trim = {74, 57, 34, 24},
+		a_size = {1024, 1024},
+		f_quad = {892, 822, 34, 16},
 		alias = {
 			"deep_devils_reef_tower_redspine_lv4_layer2_0078",
 			"deep_devils_reef_tower_redspine_lv4_layer2_0079",
@@ -2083,1070 +677,330 @@ return {
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0090 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			74,
-			45,
-			43,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			736,
-			852,
-			25,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0091"
-		}
+		size = {142, 97},
+		trim = {74, 45, 43, 25},
+		a_size = {1024, 1024},
+		f_quad = {736, 852, 25, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0091"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0092 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			29,
-			41,
-			86,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			903,
-			793,
-			27,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0093"
-		}
+		size = {142, 97},
+		trim = {29, 41, 86, 31},
+		a_size = {1024, 1024},
+		f_quad = {903, 793, 27, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0093"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0094 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			28,
-			41,
-			87,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			933,
-			793,
-			27,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0095"
-		}
+		size = {142, 97},
+		trim = {28, 41, 87, 31},
+		a_size = {1024, 1024},
+		f_quad = {933, 793, 27, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0095"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer2_0096 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			27,
-			41,
-			76,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			770,
-			793,
-			39,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer2_0097"
-		}
+		size = {142, 97},
+		trim = {27, 41, 76, 31},
+		a_size = {1024, 1024},
+		f_quad = {770, 793, 39, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer2_0097"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			24,
-			47,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			330,
-			105,
-			60,
-			55
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0034",
-			"deep_devils_reef_tower_redspine_lv4_layer3_0057",
-			"deep_devils_reef_tower_redspine_lv4_layer3_0058"
-		}
+		size = {142, 97},
+		trim = {35, 24, 47, 18},
+		a_size = {1024, 1024},
+		f_quad = {330, 105, 60, 55},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0034", "deep_devils_reef_tower_redspine_lv4_layer3_0057", "deep_devils_reef_tower_redspine_lv4_layer3_0058"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0002 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			37,
-			29,
-			44,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			517,
-			61,
-			50
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0003"
-		}
+		size = {142, 97},
+		trim = {37, 29, 44, 18},
+		a_size = {1024, 1024},
+		f_quad = {354, 517, 61, 50},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0003"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0004 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			36,
-			20,
-			46,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			299,
-			60,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0005"
-		}
+		size = {142, 97},
+		trim = {36, 20, 46, 18},
+		a_size = {1024, 1024},
+		f_quad = {293, 299, 60, 59},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0005"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0006 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			32,
-			15,
-			48,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			359,
-			231,
-			62,
-			64
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0007"
-		}
+		size = {142, 97},
+		trim = {32, 15, 48, 18},
+		a_size = {1024, 1024},
+		f_quad = {359, 231, 62, 64},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0007"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0008 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			30,
-			14,
-			49,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			231,
-			63,
-			65
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0009"
-		}
+		size = {142, 97},
+		trim = {30, 14, 49, 18},
+		a_size = {1024, 1024},
+		f_quad = {293, 231, 63, 65},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0009"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0010 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			31,
-			17,
-			49,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			783,
-			166,
-			62,
-			62
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0011"
-		}
+		size = {142, 97},
+		trim = {31, 17, 49, 18},
+		a_size = {1024, 1024},
+		f_quad = {783, 166, 62, 62},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0011"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0012 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			34,
-			27,
-			46,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			812,
-			105,
-			62,
-			52
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0013"
-		}
+		size = {142, 97},
+		trim = {34, 27, 46, 18},
+		a_size = {1024, 1024},
+		f_quad = {812, 105, 62, 52},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0013"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0014 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			24,
-			47,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			393,
-			105,
-			60,
-			55
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0031",
-			"deep_devils_reef_tower_redspine_lv4_layer3_0032",
-			"deep_devils_reef_tower_redspine_lv4_layer3_0033"
-		}
+		size = {142, 97},
+		trim = {35, 24, 47, 18},
+		a_size = {1024, 1024},
+		f_quad = {393, 105, 60, 55},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0031", "deep_devils_reef_tower_redspine_lv4_layer3_0032", "deep_devils_reef_tower_redspine_lv4_layer3_0033"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			30,
-			30,
-			50,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			517,
-			62,
-			49
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0016"
-		}
+		size = {142, 97},
+		trim = {30, 30, 50, 18},
+		a_size = {1024, 1024},
+		f_quad = {418, 517, 62, 49},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0016"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			26,
-			25,
-			52,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			508,
-			299,
-			64,
-			54
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0018"
-		}
+		size = {142, 97},
+		trim = {26, 25, 52, 18},
+		a_size = {1024, 1024},
+		f_quad = {508, 299, 64, 54},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0018"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0019 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			24,
-			22,
-			54,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			688,
-			231,
-			64,
-			57
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0020"
-		}
+		size = {142, 97},
+		trim = {24, 22, 54, 18},
+		a_size = {1024, 1024},
+		f_quad = {688, 231, 64, 57},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0020"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0021 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			25,
-			22,
-			51,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			848,
-			166,
-			66,
-			57
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0022"
-		}
+		size = {142, 97},
+		trim = {25, 22, 51, 18},
+		a_size = {1024, 1024},
+		f_quad = {848, 166, 66, 57},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0022"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0023 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			32,
-			19,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			609,
-			105,
-			69,
-			47
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0024"
-		}
+		size = {142, 97},
+		trim = {54, 32, 19, 18},
+		a_size = {1024, 1024},
+		f_quad = {609, 105, 69, 47},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0024"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0025 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			26,
-			18,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			615,
-			231,
-			70,
-			53
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0026"
-		}
+		size = {142, 97},
+		trim = {54, 26, 18, 18},
+		a_size = {1024, 1024},
+		f_quad = {615, 231, 70, 53},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0026"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0027 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			52,
-			24,
-			17,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			638,
-			166,
-			73,
-			55
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0028"
-		}
+		size = {142, 97},
+		trim = {52, 24, 17, 18},
+		a_size = {1024, 1024},
+		f_quad = {638, 166, 73, 55},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0028"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0029 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			38,
-			21,
-			45,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			575,
-			299,
-			59,
-			58
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0030"
-		}
+		size = {142, 97},
+		trim = {38, 21, 45, 18},
+		a_size = {1024, 1024},
+		f_quad = {575, 299, 59, 58},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0030"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0035 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			28,
-			25,
-			55,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			951,
-			105,
-			59,
-			54
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0036"
-		}
+		size = {142, 97},
+		trim = {28, 25, 55, 18},
+		a_size = {1024, 1024},
+		f_quad = {951, 105, 59, 54},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0036"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0037 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			27,
-			15,
-			56,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			553,
-			231,
-			59,
-			64
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0038"
-		}
+		size = {142, 97},
+		trim = {27, 15, 56, 18},
+		a_size = {1024, 1024},
+		f_quad = {553, 231, 59, 64},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0038"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			24,
-			15,
-			56,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			424,
-			231,
-			62,
-			64
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0040"
-		}
+		size = {142, 97},
+		trim = {24, 15, 56, 18},
+		a_size = {1024, 1024},
+		f_quad = {424, 231, 62, 64},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0040"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0041 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			25,
-			15,
-			56,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			489,
-			231,
-			61,
-			64
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0042"
-		}
+		size = {142, 97},
+		trim = {25, 15, 56, 18},
+		a_size = {1024, 1024},
+		f_quad = {489, 231, 61, 64},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0042"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0043 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			39,
-			36,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			787,
-			52,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0044"
-		}
+		size = {142, 97},
+		trim = {54, 39, 36, 17},
+		a_size = {1024, 1024},
+		f_quad = {354, 787, 52, 41},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0044"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0045 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			40,
-			35,
-			16
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			699,
-			53,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0046"
-		}
+		size = {142, 97},
+		trim = {54, 40, 35, 16},
+		a_size = {1024, 1024},
+		f_quad = {354, 699, 53, 41},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0046"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0047 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			38,
-			35,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			743,
-			53,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0048"
-		}
+		size = {142, 97},
+		trim = {54, 38, 35, 18},
+		a_size = {1024, 1024},
+		f_quad = {354, 743, 53, 41},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0048"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0049 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			54,
-			34,
-			36,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			904,
-			52,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0050"
-		}
+		size = {142, 97},
+		trim = {54, 34, 36, 18},
+		a_size = {1024, 1024},
+		f_quad = {175, 904, 52, 45},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0050"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0051 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			47,
-			21,
-			39,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			865,
-			56,
-			58
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0052"
-		}
+		size = {142, 97},
+		trim = {47, 21, 39, 18},
+		a_size = {1024, 1024},
+		f_quad = {293, 865, 56, 58},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0052"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0053 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			37,
-			18,
-			46,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			755,
-			231,
-			59,
-			61
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0054"
-		}
+		size = {142, 97},
+		trim = {37, 18, 46, 18},
+		a_size = {1024, 1024},
+		f_quad = {755, 231, 59, 61},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0054"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0055 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			26,
-			47,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			361,
-			60,
-			53
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0056"
-		}
+		size = {142, 97},
+		trim = {35, 26, 47, 18},
+		a_size = {1024, 1024},
+		f_quad = {354, 361, 60, 53},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0056"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0059 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			45,
-			27,
-			43,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			926,
-			54,
-			52
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0060"
-		}
+		size = {142, 97},
+		trim = {45, 27, 43, 18},
+		a_size = {1024, 1024},
+		f_quad = {293, 926, 54, 52},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0060"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0061 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			48,
-			32,
-			41,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			804,
-			53,
-			47
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0062"
-		}
+		size = {142, 97},
+		trim = {48, 32, 41, 18},
+		a_size = {1024, 1024},
+		f_quad = {175, 804, 53, 47},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0062"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0063 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			49,
-			27,
-			33,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			907,
-			361,
-			60,
-			52
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0064"
-		}
+		size = {142, 97},
+		trim = {49, 27, 33, 18},
+		a_size = {1024, 1024},
+		f_quad = {907, 361, 60, 52},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0064"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0065 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			49,
-			30,
-			24,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			712,
-			299,
-			69,
-			49
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0066"
-		}
+		size = {142, 97},
+		trim = {49, 30, 24, 18},
+		a_size = {1024, 1024},
+		f_quad = {712, 299, 69, 49},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0066"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0067 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			49,
-			30,
-			15,
-			8
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			258,
-			166,
-			78,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0068"
-		}
+		size = {142, 97},
+		trim = {49, 30, 15, 8},
+		a_size = {1024, 1024},
+		f_quad = {258, 166, 78, 59},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0068"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0069 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			50,
-			30,
-			12,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			166,
-			80,
-			62
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0070"
-		}
+		size = {142, 97},
+		trim = {50, 30, 12, 5},
+		a_size = {1024, 1024},
+		f_quad = {175, 166, 80, 62},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0070"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0071 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			61,
-			45,
-			9,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			637,
-			299,
-			72,
-			47
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0072"
-		}
+		size = {142, 97},
+		trim = {61, 45, 9, 5},
+		a_size = {1024, 1024},
+		f_quad = {637, 299, 72, 47},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0072"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0073 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			61,
-			48,
-			8,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			456,
-			105,
-			73,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0074"
-		}
+		size = {142, 97},
+		trim = {61, 48, 8, 4},
+		a_size = {1024, 1024},
+		f_quad = {456, 105, 73, 45},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0074"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0075 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			61,
-			46,
-			6,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			430,
-			299,
-			75,
-			46
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0076"
-		}
+		size = {142, 97},
+		trim = {61, 46, 6, 5},
+		a_size = {1024, 1024},
+		f_quad = {430, 299, 75, 46},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0076"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0077 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			61,
-			49,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			532,
-			105,
-			74,
-			44
-		},
+		size = {142, 97},
+		trim = {61, 49, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {532, 105, 74, 44},
 		alias = {
 			"deep_devils_reef_tower_redspine_lv4_layer3_0078",
 			"deep_devils_reef_tower_redspine_lv4_layer3_0079",
@@ -3164,1249 +1018,386 @@ return {
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0090 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			34,
-			30,
-			42,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			743,
-			105,
-			66,
-			49
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0091"
-		}
+		size = {142, 97},
+		trim = {34, 30, 42, 18},
+		a_size = {1024, 1024},
+		f_quad = {743, 105, 66, 49},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0091"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0092 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			47,
-			20,
-			24,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			414,
-			166,
-			71,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0093"
-		}
+		size = {142, 97},
+		trim = {47, 20, 24, 18},
+		a_size = {1024, 1024},
+		f_quad = {414, 166, 71, 59},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0093"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0094 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			45,
-			20,
-			25,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			339,
-			166,
-			72,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0095"
-		}
+		size = {142, 97},
+		trim = {45, 20, 25, 18},
+		a_size = {1024, 1024},
+		f_quad = {339, 166, 72, 59},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0095"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0096 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			53,
-			20,
-			23,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			714,
-			166,
-			66,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0097"
-		}
+		size = {142, 97},
+		trim = {53, 20, 23, 18},
+		a_size = {1024, 1024},
+		f_quad = {714, 166, 66, 59},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0097"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0098 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			29,
-			6,
-			2,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			585,
-			5,
-			111,
-			73
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0099"
-		}
+		size = {142, 97},
+		trim = {29, 6, 2, 18},
+		a_size = {1024, 1024},
+		f_quad = {585, 5, 111, 73},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0099"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0100 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			32,
-			11,
-			3,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			892,
-			5,
-			107,
-			69
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0101"
-		}
+		size = {142, 97},
+		trim = {32, 11, 3, 17},
+		a_size = {1024, 1024},
+		f_quad = {892, 5, 107, 69},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0101"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0102 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			20,
-			4,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			390,
-			103,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0103"
-		}
+		size = {142, 97},
+		trim = {35, 20, 4, 18},
+		a_size = {1024, 1024},
+		f_quad = {5, 390, 103, 59},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0103"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0104 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			25,
-			30,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			166,
-			77,
-			54
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0105"
-		}
+		size = {142, 97},
+		trim = {35, 25, 30, 18},
+		a_size = {1024, 1024},
+		f_quad = {488, 166, 77, 54},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0105"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0106 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			32,
-			30,
-			39,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			356,
-			299,
-			71,
-			49
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0107"
-		}
+		size = {142, 97},
+		trim = {32, 30, 39, 18},
+		a_size = {1024, 1024},
+		f_quad = {356, 299, 71, 49},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0107"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer3_0108 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			39,
-			25,
-			44,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			681,
-			105,
-			59,
-			55
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer3_0109"
-		}
+		size = {142, 97},
+		trim = {39, 25, 44, 17},
+		a_size = {1024, 1024},
+		f_quad = {681, 105, 59, 55},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer3_0109"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			41,
-			38,
-			49,
-			26
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			735,
-			728,
-			52,
-			33
-		},
+		size = {142, 97},
+		trim = {41, 38, 49, 26},
+		a_size = {1024, 1024},
+		f_quad = {735, 728, 52, 33},
 		alias = {}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0002 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			43,
-			44,
-			46,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			996,
-			53,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0003"
-		}
+		size = {142, 97},
+		trim = {43, 44, 46, 28},
+		a_size = {1024, 1024},
+		f_quad = {175, 996, 53, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0003"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0004 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			42,
-			37,
-			47,
-			34
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			912,
-			53,
-			26
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0005"
-		}
+		size = {142, 97},
+		trim = {42, 37, 47, 34},
+		a_size = {1024, 1024},
+		f_quad = {233, 912, 53, 26},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0005"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0006 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			39,
-			33,
-			49,
-			40
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			552,
-			766,
-			54,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0007"
-		}
+		size = {142, 97},
+		trim = {39, 33, 49, 40},
+		a_size = {1024, 1024},
+		f_quad = {552, 766, 54, 24},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0007"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0008 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			36,
-			30,
-			50,
-			42
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			819,
-			56,
-			25
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0009"
-		}
+		size = {142, 97},
+		trim = {36, 30, 50, 42},
+		a_size = {1024, 1024},
+		f_quad = {233, 819, 56, 25},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0009"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0010 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			37,
-			34,
-			50,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			578,
-			55,
-			26
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0011"
-		}
+		size = {142, 97},
+		trim = {37, 34, 50, 37},
+		a_size = {1024, 1024},
+		f_quad = {233, 578, 55, 26},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0011"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0012 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			40,
-			42,
-			47,
-			28
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			507,
-			55,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0013"
-		}
+		size = {142, 97},
+		trim = {40, 42, 47, 28},
+		a_size = {1024, 1024},
+		f_quad = {233, 507, 55, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0013"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0014 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			41,
-			40,
-			49,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			793,
-			52,
-			26
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0031",
-			"deep_devils_reef_tower_redspine_lv4_layer4_0032",
-			"deep_devils_reef_tower_redspine_lv4_layer4_0033"
-		}
+		size = {142, 97},
+		trim = {41, 40, 49, 31},
+		a_size = {1024, 1024},
+		f_quad = {578, 793, 52, 26},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0031", "deep_devils_reef_tower_redspine_lv4_layer4_0032", "deep_devils_reef_tower_redspine_lv4_layer4_0033"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			37,
-			45,
-			52,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			783,
-			766,
-			53,
-			21
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0016"
-		}
+		size = {142, 97},
+		trim = {37, 45, 52, 31},
+		a_size = {1024, 1024},
+		f_quad = {783, 766, 53, 21},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0016"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			34,
-			39,
-			54,
-			35
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			726,
-			766,
-			54,
-			23
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0018"
-		}
+		size = {142, 97},
+		trim = {34, 39, 54, 35},
+		a_size = {1024, 1024},
+		f_quad = {726, 766, 54, 23},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0018"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0019 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			32,
-			37,
-			55,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			668,
-			766,
-			55,
-			23
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0020"
-		}
+		size = {142, 97},
+		trim = {32, 37, 55, 37},
+		a_size = {1024, 1024},
+		f_quad = {668, 766, 55, 23},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0020"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0021 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			33,
-			38,
-			53,
-			36
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			609,
-			766,
-			56,
-			23
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0022"
-		}
+		size = {142, 97},
+		trim = {33, 38, 53, 36},
+		a_size = {1024, 1024},
+		f_quad = {609, 766, 56, 23},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0022"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0023 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			66,
-			48,
-			38,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			633,
-			824,
-			38,
-			27
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0024"
-		}
+		size = {142, 97},
+		trim = {66, 48, 38, 22},
+		a_size = {1024, 1024},
+		f_quad = {633, 824, 38, 27},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0024"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0025 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			64,
-			43,
-			39,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			822,
-			39,
-			31
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0026"
-		}
+		size = {142, 97},
+		trim = {64, 43, 39, 23},
+		a_size = {1024, 1024},
+		f_quad = {578, 822, 39, 31},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0026"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0027 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			59,
-			41,
-			42,
-			24
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			980,
-			728,
-			41,
-			32
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0028"
-		}
+		size = {142, 97},
+		trim = {59, 41, 42, 24},
+		a_size = {1024, 1024},
+		f_quad = {980, 728, 41, 32},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0028"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0029 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			44,
-			37,
-			46,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			429,
-			52,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0030"
-		}
+		size = {142, 97},
+		trim = {44, 37, 46, 31},
+		a_size = {1024, 1024},
+		f_quad = {233, 429, 52, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0030"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0034 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			38,
-			47,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			659,
-			60,
-			37
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0057",
-			"deep_devils_reef_tower_redspine_lv4_layer4_0058"
-		}
+		size = {142, 97},
+		trim = {35, 38, 47, 22},
+		a_size = {1024, 1024},
+		f_quad = {354, 659, 60, 37},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0057", "deep_devils_reef_tower_redspine_lv4_layer4_0058"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0035 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			28,
-			25,
-			55,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			843,
-			59,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0036"
-		}
+		size = {142, 97},
+		trim = {28, 25, 55, 27},
+		a_size = {1024, 1024},
+		f_quad = {418, 843, 59, 45},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0036"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0037 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			27,
-			15,
-			59,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			570,
-			56,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0038"
-		}
+		size = {142, 97},
+		trim = {27, 15, 59, 37},
+		a_size = {1024, 1024},
+		f_quad = {354, 570, 56, 45},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0038"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			24,
-			15,
-			59,
-			38
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			938,
-			59,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0040"
-		}
+		size = {142, 97},
+		trim = {24, 15, 59, 38},
+		a_size = {1024, 1024},
+		f_quad = {418, 938, 59, 44},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0040"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0041 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			25,
-			15,
-			56,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			746,
-			61,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0042"
-		}
+		size = {142, 97},
+		trim = {25, 15, 56, 37},
+		a_size = {1024, 1024},
+		f_quad = {418, 746, 61, 45},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0042"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0043 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			79,
-			50,
-			37,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			995,
-			231,
-			26,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0044"
-		}
+		size = {142, 97},
+		trim = {79, 50, 37, 17},
+		a_size = {1024, 1024},
+		f_quad = {995, 231, 26, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0044"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0045 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			51,
-			35,
-			16
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			995,
-			264,
-			26,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0046"
-		}
+		size = {142, 97},
+		trim = {81, 51, 35, 16},
+		a_size = {1024, 1024},
+		f_quad = {995, 264, 26, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0046"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0047 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			81,
-			48,
-			35,
-			20
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			995,
-			297,
-			26,
-			29
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0048"
-		}
+		size = {142, 97},
+		trim = {81, 48, 35, 20},
+		a_size = {1024, 1024},
+		f_quad = {995, 297, 26, 29},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0048"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0049 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			78,
-			44,
-			39,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			708,
-			921,
-			25,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0050"
-		}
+		size = {142, 97},
+		trim = {78, 44, 39, 23},
+		a_size = {1024, 1024},
+		f_quad = {708, 921, 25, 30},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0050"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0051 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			47,
-			36,
-			39,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			831,
-			56,
-			36
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0052"
-		}
+		size = {142, 97},
+		trim = {47, 36, 39, 25},
+		a_size = {1024, 1024},
+		f_quad = {354, 831, 56, 36},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0052"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0053 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			37,
-			34,
-			46,
-			25
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			618,
-			59,
-			38
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0054"
-		}
+		size = {142, 97},
+		trim = {37, 34, 46, 25},
+		a_size = {1024, 1024},
+		f_quad = {354, 618, 59, 38},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0054"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0055 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			40,
-			47,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			985,
-			60,
-			35
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0056"
-		}
+		size = {142, 97},
+		trim = {35, 40, 47, 22},
+		a_size = {1024, 1024},
+		f_quad = {418, 985, 60, 35},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0056"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0059 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			45,
-			37,
-			42,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			981,
-			55,
-			37
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0060"
-		}
+		size = {142, 97},
+		trim = {45, 37, 42, 23},
+		a_size = {1024, 1024},
+		f_quad = {293, 981, 55, 37},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0060"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0061 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			49,
-			34,
-			39,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			952,
-			54,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0062"
-		}
+		size = {142, 97},
+		trim = {49, 34, 39, 22},
+		a_size = {1024, 1024},
+		f_quad = {175, 952, 54, 41},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0062"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0063 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			49,
-			30,
-			33,
-			23
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			891,
-			60,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0064"
-		}
+		size = {142, 97},
+		trim = {49, 30, 33, 23},
+		a_size = {1024, 1024},
+		f_quad = {418, 891, 60, 44},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0064"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0065 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			50,
-			40,
-			24,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			728,
-			68,
-			35
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0066"
-		}
+		size = {142, 97},
+		trim = {50, 40, 24, 22},
+		a_size = {1024, 1024},
+		f_quad = {488, 728, 68, 35},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0066"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0067 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			50,
-			44,
-			17,
-			22
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			562,
-			691,
-			75,
-			31
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0068"
-		}
+		size = {142, 97},
+		trim = {50, 44, 17, 22},
+		a_size = {1024, 1024},
+		f_quad = {562, 691, 75, 31},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0068"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0069 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			51,
-			44,
-			13,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			917,
-			166,
-			78,
-			48
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0070"
-		}
+		size = {142, 97},
+		trim = {51, 44, 13, 5},
+		a_size = {1024, 1024},
+		f_quad = {917, 166, 78, 48},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0070"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0071 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			77,
-			72,
-			11,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			896,
-			766,
-			54,
-			19
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0072"
-		}
+		size = {142, 97},
+		trim = {77, 72, 11, 6},
+		a_size = {1024, 1024},
+		f_quad = {896, 766, 54, 19},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0072"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0073 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			78,
-			73,
-			10,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			1001,
-			54,
-			20
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0074"
-		}
+		size = {142, 97},
+		trim = {78, 73, 10, 4},
+		a_size = {1024, 1024},
+		f_quad = {354, 1001, 54, 20},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0074"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0075 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			80,
-			72,
-			9,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			953,
-			766,
-			53,
-			19
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0076"
-		}
+		size = {142, 97},
+		trim = {80, 72, 9, 6},
+		a_size = {1024, 1024},
+		f_quad = {953, 766, 53, 19},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0076"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0077 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			80,
-			73,
-			8,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			839,
-			766,
-			54,
-			20
-		},
+		size = {142, 97},
+		trim = {80, 73, 8, 4},
+		a_size = {1024, 1024},
+		f_quad = {839, 766, 54, 20},
 		alias = {
 			"deep_devils_reef_tower_redspine_lv4_layer4_0078",
 			"deep_devils_reef_tower_redspine_lv4_layer4_0079",
@@ -4424,388 +1415,122 @@ return {
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0090 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			40,
-			43,
-			41,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			766,
-			61,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0091"
-		}
+		size = {142, 97},
+		trim = {40, 43, 41, 30},
+		a_size = {1024, 1024},
+		f_quad = {488, 766, 61, 24},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0091"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0092 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			62,
-			38,
-			24,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			919,
-			658,
-			56,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0093"
-		}
+		size = {142, 97},
+		trim = {62, 38, 24, 31},
+		a_size = {1024, 1024},
+		f_quad = {919, 658, 56, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0093"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0094 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			61,
-			38,
-			25,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			790,
-			728,
-			56,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0095"
-		}
+		size = {142, 97},
+		trim = {61, 38, 25, 31},
+		a_size = {1024, 1024},
+		f_quad = {790, 728, 56, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0095"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0096 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			65,
-			38,
-			23,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			923,
-			728,
-			54,
-			28
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0097"
-		}
+		size = {142, 97},
+		trim = {65, 38, 23, 31},
+		a_size = {1024, 1024},
+		f_quad = {923, 728, 54, 28},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0097"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0098 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			29,
-			6,
-			22,
-			39
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			236,
-			105,
-			91,
-			52
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0099"
-		}
+		size = {142, 97},
+		trim = {29, 6, 22, 39},
+		a_size = {1024, 1024},
+		f_quad = {236, 105, 91, 52},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0099"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0100 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			32,
-			33,
-			22,
-			30
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			564,
-			417,
-			88,
-			34
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0101"
-		}
+		size = {142, 97},
+		trim = {32, 33, 22, 30},
+		a_size = {1024, 1024},
+		f_quad = {564, 417, 88, 34},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0101"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0102 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			20,
-			32,
-			33
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			856,
-			299,
-			75,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0103"
-		}
+		size = {142, 97},
+		trim = {35, 20, 32, 33},
+		a_size = {1024, 1024},
+		f_quad = {856, 299, 75, 44},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0103"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0104 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			35,
-			25,
-			32,
-			32
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			865,
-			417,
-			75,
-			40
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0105"
-		}
+		size = {142, 97},
+		trim = {35, 25, 32, 32},
+		a_size = {1024, 1024},
+		f_quad = {865, 417, 75, 40},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0105"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0106 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			32,
-			30,
-			39,
-			33
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			691,
-			71,
-			34
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0107"
-		}
+		size = {142, 97},
+		trim = {32, 30, 39, 33},
+		a_size = {1024, 1024},
+		f_quad = {488, 691, 71, 34},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0107"}
 	},
 	deep_devils_reef_tower_redspine_lv4_layer4_0108 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			142,
-			97
-		},
-		trim = {
-			39,
-			34,
-			44,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			794,
-			59,
-			46
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_lv4_layer4_0109"
-		}
+		size = {142, 97},
+		trim = {39, 34, 44, 17},
+		a_size = {1024, 1024},
+		f_quad = {418, 794, 59, 46},
+		alias = {"deep_devils_reef_tower_redspine_lv4_layer4_0109"}
 	},
 	deep_devils_reef_tower_redspine_skill_net = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			44,
-			36
-		},
-		trim = {
-			5,
-			6,
-			3,
-			7
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			996,
-			36,
-			23
-		},
+		size = {44, 36},
+		trim = {5, 6, 3, 7},
+		a_size = {1024, 1024},
+		f_quad = {488, 996, 36, 23},
 		alias = {}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			8,
-			16,
-			7,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			232,
-			94,
-			78
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0002"
-		}
+		size = {109, 97},
+		trim = {8, 16, 7, 3},
+		a_size = {1024, 1024},
+		f_quad = {5, 232, 94, 78},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0002"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			12,
-			21,
-			12,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			452,
-			85,
-			71
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0004"
-		}
+		size = {109, 97},
+		trim = {12, 21, 12, 5},
+		a_size = {1024, 1024},
+		f_quad = {5, 452, 85, 71},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0004"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0005 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			10,
-			19,
-			9,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			313,
-			90,
-			74
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0006"
-		}
+		size = {109, 97},
+		trim = {10, 19, 9, 4},
+		a_size = {1024, 1024},
+		f_quad = {5, 313, 90, 74},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0006"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			13,
-			23,
-			13,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			526,
-			83,
-			69
-		},
+		size = {109, 97},
+		trim = {13, 23, 13, 5},
+		a_size = {1024, 1024},
+		f_quad = {5, 526, 83, 69},
 		alias = {
 			"deep_devils_reef_tower_redspine_skill_net_active_0008",
 			"deep_devils_reef_tower_redspine_skill_net_active_0009",
@@ -4840,3074 +1565,970 @@ return {
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0037 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			13,
-			23,
-			14,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			670,
-			82,
-			69
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0038",
-			"deep_devils_reef_tower_redspine_skill_net_active_0041",
-			"deep_devils_reef_tower_redspine_skill_net_active_0042"
-		}
+		size = {109, 97},
+		trim = {13, 23, 14, 5},
+		a_size = {1024, 1024},
+		f_quad = {5, 670, 82, 69},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0038", "deep_devils_reef_tower_redspine_skill_net_active_0041", "deep_devils_reef_tower_redspine_skill_net_active_0042"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			14,
-			23,
-			12,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			598,
-			83,
-			69
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0040",
-			"deep_devils_reef_tower_redspine_skill_net_active_0043",
-			"deep_devils_reef_tower_redspine_skill_net_active_0044",
-			"deep_devils_reef_tower_redspine_skill_net_active_0045",
-			"deep_devils_reef_tower_redspine_skill_net_active_0046",
-			"deep_devils_reef_tower_redspine_skill_net_active_0047"
-		}
+		size = {109, 97},
+		trim = {14, 23, 12, 5},
+		a_size = {1024, 1024},
+		f_quad = {5, 598, 83, 69},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0040", "deep_devils_reef_tower_redspine_skill_net_active_0043", "deep_devils_reef_tower_redspine_skill_net_active_0044", "deep_devils_reef_tower_redspine_skill_net_active_0045", "deep_devils_reef_tower_redspine_skill_net_active_0046", "deep_devils_reef_tower_redspine_skill_net_active_0047"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0048 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			2,
-			15,
-			0,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			475,
-			5,
-			107,
-			77
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0049"
-		}
+		size = {109, 97},
+		trim = {2, 15, 0, 5},
+		a_size = {1024, 1024},
+		f_quad = {475, 5, 107, 77},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0049"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0050 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			8,
-			12,
-			7,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			795,
-			5,
-			94,
-			81
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0051"
-		}
+		size = {109, 97},
+		trim = {8, 12, 7, 4},
+		a_size = {1024, 1024},
+		f_quad = {795, 5, 94, 81},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0051"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0052 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			2,
-			10,
-			5,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			370,
-			5,
-			102,
-			83
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0053"
-		}
+		size = {109, 97},
+		trim = {2, 10, 5, 4},
+		a_size = {1024, 1024},
+		f_quad = {370, 5, 102, 83},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0053"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0054 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			0,
-			5,
-			4,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			262,
-			5,
-			105,
-			89
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0055"
-		}
+		size = {109, 97},
+		trim = {0, 5, 4, 3},
+		a_size = {1024, 1024},
+		f_quad = {262, 5, 105, 89},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0055"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0056 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			9,
-			2,
-			7,
-			10
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			699,
-			5,
-			93,
-			85
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0057"
-		}
+		size = {109, 97},
+		trim = {9, 2, 7, 10},
+		a_size = {1024, 1024},
+		f_quad = {699, 5, 93, 85},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0057"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0058 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			23,
-			0,
-			19,
-			37
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			568,
-			166,
-			67,
-			60
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0059"
-		}
+		size = {109, 97},
+		trim = {23, 0, 19, 37},
+		a_size = {1024, 1024},
+		f_quad = {568, 166, 67, 60},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0059"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0060 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			32,
-			21,
-			34,
-			39
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			66,
-			824,
-			43,
-			37
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_active_0061"
-		}
+		size = {109, 97},
+		trim = {32, 21, 34, 39},
+		a_size = {1024, 1024},
+		f_quad = {66, 824, 43, 37},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_active_0061"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_active_0062 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			109,
-			97
-		},
-		trim = {
-			0,
-			0,
-			109,
-			97
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			150,
-			5,
-			109,
-			97
-		},
+		size = {109, 97},
+		trim = {0, 0, 109, 97},
+		a_size = {1024, 1024},
+		f_quad = {150, 5, 109, 97},
 		alias = {}
 	},
 	deep_devils_reef_tower_redspine_skill_net_decal_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			62,
-			37
-		},
-		trim = {
-			0,
-			5,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			559,
-			728,
-			62,
-			31
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_decal_0002",
-			"deep_devils_reef_tower_redspine_skill_net_decal_0005",
-			"deep_devils_reef_tower_redspine_skill_net_decal_0006"
-		}
+		size = {62, 37},
+		trim = {0, 5, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {559, 728, 62, 31},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_decal_0002", "deep_devils_reef_tower_redspine_skill_net_decal_0005", "deep_devils_reef_tower_redspine_skill_net_decal_0006"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_decal_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			62,
-			37
-		},
-		trim = {
-			0,
-			3,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			731,
-			691,
-			62,
-			33
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_decal_0004"
-		}
+		size = {62, 37},
+		trim = {0, 3, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {731, 691, 62, 33},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_decal_0004"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_decal_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			62,
-			37
-		},
-		trim = {
-			0,
-			3,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			796,
-			691,
-			62,
-			33
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_decal_0008"
-		}
+		size = {62, 37},
+		trim = {0, 3, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {796, 691, 62, 33},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_decal_0008"}
 	},
 	deep_devils_reef_tower_redspine_skill_net_decal_0009 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			62,
-			37
-		},
-		trim = {
-			0,
-			4,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			861,
-			691,
-			62,
-			32
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_skill_net_decal_0010"
-		}
+		size = {62, 37},
+		trim = {0, 4, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {861, 691, 62, 32},
+		alias = {"deep_devils_reef_tower_redspine_skill_net_decal_0010"}
 	},
 	deep_devils_reef_tower_redspine_spear_decal_lvl4_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			20,
-			48
-		},
-		trim = {
-			1,
-			5,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			271,
-			461,
-			19,
-			43
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_spear_decal_lvl4_0002"
-		}
+		size = {20, 48},
+		trim = {1, 5, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {271, 461, 19, 43},
+		alias = {"deep_devils_reef_tower_redspine_spear_decal_lvl4_0002"}
 	},
 	deep_devils_reef_tower_redspine_spear_decal_lvl4_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			20,
-			48
-		},
-		trim = {
-			0,
-			0,
-			2,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			93,
-			452,
-			18,
-			48
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_spear_decal_lvl4_0004"
-		}
+		size = {20, 48},
+		trim = {0, 0, 2, 0},
+		a_size = {1024, 1024},
+		f_quad = {93, 452, 18, 48},
+		alias = {"deep_devils_reef_tower_redspine_spear_decal_lvl4_0004"}
 	},
 	deep_devils_reef_tower_redspine_spear_decal_lvl4_0005 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			20,
-			48
-		},
-		trim = {
-			1,
-			3,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			998,
-			166,
-			18,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_spear_decal_lvl4_0006"
-		}
+		size = {20, 48},
+		trim = {1, 3, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {998, 166, 18, 45},
+		alias = {"deep_devils_reef_tower_redspine_spear_decal_lvl4_0006"}
 	},
 	deep_devils_reef_tower_redspine_spear_decal_lvl4_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			20,
-			48
-		},
-		trim = {
-			1,
-			2,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			1002,
-			5,
-			18,
-			46
-		},
-		alias = {
-			"deep_devils_reef_tower_redspine_spear_decal_lvl4_0008",
-			"deep_devils_reef_tower_redspine_spear_decal_lvl4_0009"
-		}
+		size = {20, 48},
+		trim = {1, 2, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {1002, 5, 18, 46},
+		alias = {"deep_devils_reef_tower_redspine_spear_decal_lvl4_0008", "deep_devils_reef_tower_redspine_spear_decal_lvl4_0009"}
 	},
 	deep_devils_reef_tower_redspine_spear_lvl4 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			54,
-			18
-		},
-		trim = {
-			2,
-			1,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			475,
-			85,
-			51,
-			15
-		},
+		size = {54, 18},
+		trim = {2, 1, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {475, 85, 51, 15},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_bolt = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			23,
-			23
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			965,
-			822,
-			23,
-			23
-		},
+		size = {23, 23},
+		trim = {0, 0, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {965, 822, 23, 23},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_hit_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			42,
-			44
-		},
-		trim = {
-			5,
-			4,
-			3,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			528,
-			970,
-			34,
-			36
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_hit_0002"
-		}
+		size = {42, 44},
+		trim = {5, 4, 3, 4},
+		a_size = {1024, 1024},
+		f_quad = {528, 970, 34, 36},
+		alias = {"deep_devils_reef_tower_shooter_hit_0002"}
 	},
 	deep_devils_reef_tower_shooter_hit_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			42,
-			44
-		},
-		trim = {
-			1,
-			3,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			978,
-			614,
-			41,
-			40
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_hit_0004"
-		}
+		size = {42, 44},
+		trim = {1, 3, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {978, 614, 41, 40},
+		alias = {"deep_devils_reef_tower_shooter_hit_0004"}
 	},
 	deep_devils_reef_tower_shooter_hit_0005 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			42,
-			44
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			970,
-			361,
-			42,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_hit_0006"
-		}
+		size = {42, 44},
+		trim = {0, 0, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {970, 361, 42, 44},
+		alias = {"deep_devils_reef_tower_shooter_hit_0006"}
 	},
 	deep_devils_reef_tower_shooter_hit_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			42,
-			44
-		},
-		trim = {
-			0,
-			0,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			870,
-			42,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_hit_0008"
-		}
+		size = {42, 44},
+		trim = {0, 0, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {354, 870, 42, 44},
+		alias = {"deep_devils_reef_tower_shooter_hit_0008"}
 	},
 	deep_devils_reef_tower_shooter_hit_0009 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			42,
-			44
-		},
-		trim = {
-			0,
-			0,
-			42,
-			44
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			917,
-			42,
-			44
-		},
+		size = {42, 44},
+		trim = {0, 0, 42, 44},
+		a_size = {1024, 1024},
+		f_quad = {354, 917, 42, 44},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			3,
-			26,
-			13,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			553,
-			58,
-			60
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0002"
-		}
+		size = {74, 88},
+		trim = {3, 26, 13, 2},
+		a_size = {1024, 1024},
+		f_quad = {293, 553, 58, 60},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0002"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			2,
-			27,
-			14,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			742,
-			58,
-			59
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0004"
-		}
+		size = {74, 88},
+		trim = {2, 27, 14, 2},
+		a_size = {1024, 1024},
+		f_quad = {293, 742, 58, 59},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0004"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0005 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			2,
-			29,
-			14,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			934,
-			299,
-			58,
-			57
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0006"
-		}
+		size = {74, 88},
+		trim = {2, 29, 14, 2},
+		a_size = {1024, 1024},
+		f_quad = {934, 299, 58, 57},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0006"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			3,
-			11,
-			14,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			231,
-			57,
-			75
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0008"
-		}
+		size = {74, 88},
+		trim = {3, 11, 14, 2},
+		a_size = {1024, 1024},
+		f_quad = {233, 231, 57, 75},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0008"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0009 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			5,
-			0,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			345,
-			57,
-			86
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0010"
-		}
+		size = {74, 88},
+		trim = {5, 0, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {114, 345, 57, 86},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0010"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0011 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			5,
-			0,
-			11,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			924,
-			58,
-			86
-		},
+		size = {74, 88},
+		trim = {5, 0, 11, 2},
+		a_size = {1024, 1024},
+		f_quad = {5, 924, 58, 86},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0012 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			5,
-			0,
-			11,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			166,
-			58,
-			86
-		},
+		size = {74, 88},
+		trim = {5, 0, 11, 2},
+		a_size = {1024, 1024},
+		f_quad = {114, 166, 58, 86},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0013 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			5,
-			1,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			434,
-			57,
-			85
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0014"
-		}
+		size = {74, 88},
+		trim = {5, 1, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {114, 434, 57, 85},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0014"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			8,
-			4,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			315,
-			54,
-			82
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0016"
-		}
+		size = {74, 88},
+		trim = {8, 4, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {175, 315, 54, 82},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0016"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			7,
-			4,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			696,
-			55,
-			82
-		},
+		size = {74, 88},
+		trim = {7, 4, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {114, 696, 55, 82},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0018 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			7,
-			7,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			400,
-			55,
-			79
-		},
+		size = {74, 88},
+		trim = {7, 7, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {175, 400, 55, 79},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0019 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			7,
-			7,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			482,
-			55,
-			79
-		},
+		size = {74, 88},
+		trim = {7, 7, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {175, 482, 55, 79},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0020 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			12,
-			7,
-			12,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			648,
-			50,
-			79
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0021",
-			"deep_devils_reef_tower_shooter_lvl4_0022",
-			"deep_devils_reef_tower_shooter_lvl4_0023"
-		}
+		size = {74, 88},
+		trim = {12, 7, 12, 2},
+		a_size = {1024, 1024},
+		f_quad = {175, 648, 50, 79},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0021", "deep_devils_reef_tower_shooter_lvl4_0022", "deep_devils_reef_tower_shooter_lvl4_0023"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0024 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			8,
-			17,
-			13,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			951,
-			53,
-			69
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0025"
-		}
+		size = {74, 88},
+		trim = {8, 17, 13, 2},
+		a_size = {1024, 1024},
+		f_quad = {114, 951, 53, 69},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0025"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0026 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			5,
-			22,
-			13,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			878,
-			231,
-			56,
-			64
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0027"
-		}
+		size = {74, 88},
+		trim = {5, 22, 13, 2},
+		a_size = {1024, 1024},
+		f_quad = {878, 231, 56, 64},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0027"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0028 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			3,
-			25,
-			13,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			361,
-			58,
-			61
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0029"
-		}
+		size = {74, 88},
+		trim = {3, 25, 13, 2},
+		a_size = {1024, 1024},
+		f_quad = {293, 361, 58, 61},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0029"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0030 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			3,
-			26,
-			13,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			616,
-			58,
-			60
-		},
+		size = {74, 88},
+		trim = {3, 26, 13, 2},
+		a_size = {1024, 1024},
+		f_quad = {293, 616, 58, 60},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0031 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			15,
-			26,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			425,
-			58,
-			61
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0032"
-		}
+		size = {74, 88},
+		trim = {15, 26, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {293, 425, 58, 61},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0032"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0033 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			16,
-			27,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			679,
-			58,
-			60
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0034"
-		}
+		size = {74, 88},
+		trim = {16, 27, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {293, 679, 58, 60},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0034"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0035 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			17,
-			29,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			804,
-			57,
-			58
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0036"
-		}
+		size = {74, 88},
+		trim = {17, 29, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {293, 804, 57, 58},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0036"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0037 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			17,
-			11,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			233,
-			309,
-			56,
-			76
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0038"
-		}
+		size = {74, 88},
+		trim = {17, 11, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {233, 309, 56, 76},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0038"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			0,
-			3,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			255,
-			57,
-			87
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0040"
-		}
+		size = {74, 88},
+		trim = {14, 0, 3, 1},
+		a_size = {1024, 1024},
+		f_quad = {114, 255, 57, 87},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0040"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0041 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			13,
-			0,
-			3,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			742,
-			58,
-			88
-		},
+		size = {74, 88},
+		trim = {13, 0, 3, 0},
+		a_size = {1024, 1024},
+		f_quad = {5, 742, 58, 88},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0042 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			13,
-			0,
-			3,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			5,
-			833,
-			58,
-			88
-		},
+		size = {74, 88},
+		trim = {13, 0, 3, 0},
+		a_size = {1024, 1024},
+		f_quad = {5, 833, 58, 88},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0043 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			3,
-			3,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			522,
-			57,
-			85
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0044"
-		}
+		size = {74, 88},
+		trim = {14, 3, 3, 0},
+		a_size = {1024, 1024},
+		f_quad = {114, 522, 57, 85},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0044"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0045 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			5,
-			6,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			781,
-			54,
-			83
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0046"
-		}
+		size = {74, 88},
+		trim = {14, 5, 6, 0},
+		a_size = {1024, 1024},
+		f_quad = {114, 781, 54, 83},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0046"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0047 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			5,
-			5,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			610,
-			55,
-			83
-		},
+		size = {74, 88},
+		trim = {14, 5, 5, 0},
+		a_size = {1024, 1024},
+		f_quad = {114, 610, 55, 83},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0048 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			7,
-			5,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			867,
-			55,
-			81
-		},
+		size = {74, 88},
+		trim = {14, 7, 5, 0},
+		a_size = {1024, 1024},
+		f_quad = {114, 867, 55, 81},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0049 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			7,
-			5,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			231,
-			55,
-			81
-		},
+		size = {74, 88},
+		trim = {14, 7, 5, 0},
+		a_size = {1024, 1024},
+		f_quad = {175, 231, 55, 81},
 		alias = {}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0050 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			14,
-			7,
-			10,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			564,
-			50,
-			81
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0051",
-			"deep_devils_reef_tower_shooter_lvl4_0052",
-			"deep_devils_reef_tower_shooter_lvl4_0053"
-		}
+		size = {74, 88},
+		trim = {14, 7, 10, 0},
+		a_size = {1024, 1024},
+		f_quad = {175, 564, 50, 81},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0051", "deep_devils_reef_tower_shooter_lvl4_0052", "deep_devils_reef_tower_shooter_lvl4_0053"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0054 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			15,
-			17,
-			6,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			730,
-			53,
-			71
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0055"
-		}
+		size = {74, 88},
+		trim = {15, 17, 6, 0},
+		a_size = {1024, 1024},
+		f_quad = {175, 730, 53, 71},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0055"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0056 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			16,
-			22,
-			3,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			937,
-			231,
-			55,
-			65
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0057"
-		}
+		size = {74, 88},
+		trim = {16, 22, 3, 1},
+		a_size = {1024, 1024},
+		f_quad = {937, 231, 55, 65},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0057"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0058 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			15,
-			25,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			817,
-			231,
-			58,
-			62
-		},
-		alias = {
-			"deep_devils_reef_tower_shooter_lvl4_0059"
-		}
+		size = {74, 88},
+		trim = {15, 25, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {817, 231, 58, 62},
+		alias = {"deep_devils_reef_tower_shooter_lvl4_0059"}
 	},
 	deep_devils_reef_tower_shooter_lvl4_0060 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			88
-		},
-		trim = {
-			15,
-			26,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			293,
-			489,
-			58,
-			61
-		},
+		size = {74, 88},
+		trim = {15, 26, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {293, 489, 58, 61},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_bolt_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			74,
-			6,
-			0,
-			9
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			566,
-			85,
-			14,
-			16
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_0002"
-		}
+		size = {88, 31},
+		trim = {74, 6, 0, 9},
+		a_size = {1024, 1024},
+		f_quad = {566, 85, 14, 16},
+		alias = {"deep_devils_reef_tower_storm_bolt_0002"}
 	},
 	deep_devils_reef_tower_storm_bolt_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			0,
-			88,
-			31
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			768,
-			569,
-			88,
-			31
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_0005",
-			"deep_devils_reef_tower_storm_bolt_0008",
-			"deep_devils_reef_tower_storm_bolt_0010",
-			"deep_devils_reef_tower_storm_bolt_0012",
-			"deep_devils_reef_tower_storm_bolt_0019"
-		}
+		size = {88, 31},
+		trim = {0, 0, 88, 31},
+		a_size = {1024, 1024},
+		f_quad = {768, 569, 88, 31},
+		alias = {"deep_devils_reef_tower_storm_bolt_0005", "deep_devils_reef_tower_storm_bolt_0008", "deep_devils_reef_tower_storm_bolt_0010", "deep_devils_reef_tower_storm_bolt_0012", "deep_devils_reef_tower_storm_bolt_0019"}
 	},
 	deep_devils_reef_tower_storm_bolt_0004 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			5,
-			0,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			926,
-			691,
-			88,
-			22
-		},
+		size = {88, 31},
+		trim = {0, 5, 0, 4},
+		a_size = {1024, 1024},
+		f_quad = {926, 691, 88, 22},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_bolt_0006 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			1,
-			1,
-			0,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			658,
-			87,
-			30
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_0007"
-		}
+		size = {88, 31},
+		trim = {1, 1, 0, 0},
+		a_size = {1024, 1024},
+		f_quad = {488, 658, 87, 30},
+		alias = {"deep_devils_reef_tower_storm_bolt_0007"}
 	},
 	deep_devils_reef_tower_storm_bolt_0009 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			4,
-			0,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			640,
-			691,
-			88,
-			26
-		},
+		size = {88, 31},
+		trim = {0, 4, 0, 1},
+		a_size = {1024, 1024},
+		f_quad = {640, 691, 88, 26},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_bolt_0011 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			6,
-			0,
-			4
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			585,
-			81,
-			88,
-			21
-		},
+		size = {88, 31},
+		trim = {0, 6, 0, 4},
+		a_size = {1024, 1024},
+		f_quad = {585, 81, 88, 21},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_bolt_0013 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			5,
-			3,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			892,
-			77,
-			85,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_0014"
-		}
+		size = {88, 31},
+		trim = {0, 5, 3, 2},
+		a_size = {1024, 1024},
+		f_quad = {892, 77, 85, 24},
+		alias = {"deep_devils_reef_tower_storm_bolt_0014"}
 	},
 	deep_devils_reef_tower_storm_bolt_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			4,
-			11,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			578,
-			658,
-			77,
-			24
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_0016"
-		}
+		size = {88, 31},
+		trim = {0, 4, 11, 3},
+		a_size = {1024, 1024},
+		f_quad = {578, 658, 77, 24},
+		alias = {"deep_devils_reef_tower_storm_bolt_0016"}
 	},
 	deep_devils_reef_tower_storm_bolt_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			88,
-			31
-		},
-		trim = {
-			0,
-			5,
-			17,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			849,
-			728,
-			71,
-			21
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_0018"
-		}
+		size = {88, 31},
+		trim = {0, 5, 17, 5},
+		a_size = {1024, 1024},
+		f_quad = {849, 728, 71, 21},
+		alias = {"deep_devils_reef_tower_storm_bolt_0018"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			20,
-			24,
-			20,
-			3
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			981,
-			466,
-			40,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0002"
-		}
+		size = {80, 71},
+		trim = {20, 24, 20, 3},
+		a_size = {1024, 1024},
+		f_quad = {981, 466, 40, 44},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0002"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			19,
-			17,
-			15,
-			10
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			973,
-			517,
-			46,
-			44
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0004"
-		}
+		size = {80, 71},
+		trim = {19, 17, 15, 10},
+		a_size = {1024, 1024},
+		f_quad = {973, 517, 46, 44},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0004"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0005 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			5,
-			13,
-			22,
-			11
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			175,
-			854,
-			53,
-			47
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0006"
-		}
+		size = {80, 71},
+		trim = {5, 13, 22, 11},
+		a_size = {1024, 1024},
+		f_quad = {175, 854, 53, 47},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0006"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			2,
-			8,
-			14,
-			15
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			466,
-			64,
-			48
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0008"
-		}
+		size = {80, 71},
+		trim = {2, 8, 14, 15},
+		a_size = {1024, 1024},
+		f_quad = {354, 466, 64, 48},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0008"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0009 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			2,
-			9,
-			7,
-			17
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			877,
-			105,
-			71,
-			45
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0010"
-		}
+		size = {80, 71},
+		trim = {2, 9, 7, 17},
+		a_size = {1024, 1024},
+		f_quad = {877, 105, 71, 45},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0010"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0011 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			6,
-			5,
-			5,
-			18
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			784,
-			299,
-			69,
-			48
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0012"
-		}
+		size = {80, 71},
+		trim = {6, 5, 5, 18},
+		a_size = {1024, 1024},
+		f_quad = {784, 299, 69, 48},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0012"}
 	},
 	deep_devils_reef_tower_storm_bolt_hit_0013 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			80,
-			71
-		},
-		trim = {
-			5,
-			1,
-			6,
-			27
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			943,
-			417,
-			69,
-			43
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_bolt_hit_0014"
-		}
+		size = {80, 71},
+		trim = {5, 1, 6, 27},
+		a_size = {1024, 1024},
+		f_quad = {943, 417, 69, 43},
+		alias = {"deep_devils_reef_tower_storm_bolt_hit_0014"}
 	},
 	deep_devils_reef_tower_storm_cloud_0001 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			483,
-			517,
-			67,
-			42
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {483, 517, 67, 42},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0002 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			859,
-			569,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {859, 569, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0003 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			929,
-			569,
-			67,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0035"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {929, 569, 67, 41},
+		alias = {"deep_devils_reef_tower_storm_cloud_0035"}
 	},
 	deep_devils_reef_tower_storm_cloud_0004 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			614,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {418, 614, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0005 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			553,
-			517,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0037"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {553, 517, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0037"}
 	},
 	deep_devils_reef_tower_storm_cloud_0006 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			614,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {488, 614, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0007 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			558,
-			614,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {558, 614, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0008 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			623,
-			517,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0040"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {623, 517, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0040"}
 	},
 	deep_devils_reef_tower_storm_cloud_0009 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			693,
-			517,
-			67,
-			42
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {693, 517, 67, 42},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0010 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			628,
-			614,
-			67,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0042"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {628, 614, 67, 41},
+		alias = {"deep_devils_reef_tower_storm_cloud_0042"}
 	},
 	deep_devils_reef_tower_storm_cloud_0011 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			698,
-			614,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {698, 614, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0012 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			768,
-			614,
-			67,
-			41
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0044"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {768, 614, 67, 41},
+		alias = {"deep_devils_reef_tower_storm_cloud_0044"}
 	},
 	deep_devils_reef_tower_storm_cloud_0013 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			838,
-			614,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {838, 614, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0014 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			908,
-			614,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {908, 614, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0015 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			658,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {418, 658, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0016 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			6
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			702,
-			67,
-			41
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 6},
+		a_size = {1024, 1024},
+		f_quad = {418, 702, 67, 41},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0017 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			763,
-			517,
-			67,
-			42
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {763, 517, 67, 42},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0018 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			833,
-			517,
-			67,
-			42
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {833, 517, 67, 42},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0019 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			903,
-			517,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0051"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {903, 517, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0051"}
 	},
 	deep_devils_reef_tower_storm_cloud_0020 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			421,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0052"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {421, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0052"}
 	},
 	deep_devils_reef_tower_storm_cloud_0021 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			491,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0053"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {491, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0053"}
 	},
 	deep_devils_reef_tower_storm_cloud_0022 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			561,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0054"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {561, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0054"}
 	},
 	deep_devils_reef_tower_storm_cloud_0023 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			631,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0055"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {631, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0055"}
 	},
 	deep_devils_reef_tower_storm_cloud_0024 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			701,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0056"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {701, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0056"}
 	},
 	deep_devils_reef_tower_storm_cloud_0025 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			771,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0057"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {771, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0057"}
 	},
 	deep_devils_reef_tower_storm_cloud_0026 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			841,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0058"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {841, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0058"}
 	},
 	deep_devils_reef_tower_storm_cloud_0027 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			911,
-			466,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0059"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {911, 466, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0059"}
 	},
 	deep_devils_reef_tower_storm_cloud_0028 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			418,
-			569,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0060"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {418, 569, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0060"}
 	},
 	deep_devils_reef_tower_storm_cloud_0029 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			488,
-			569,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0061"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {488, 569, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0061"}
 	},
 	deep_devils_reef_tower_storm_cloud_0030 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			558,
-			569,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0062"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {558, 569, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0062"}
 	},
 	deep_devils_reef_tower_storm_cloud_0031 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			628,
-			569,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0063"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {628, 569, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0063"}
 	},
 	deep_devils_reef_tower_storm_cloud_0032 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			698,
-			569,
-			67,
-			42
-		},
-		alias = {
-			"deep_devils_reef_tower_storm_cloud_0064"
-		}
+		size = {74, 51},
+		trim = {6, 4, 1, 5},
+		a_size = {1024, 1024},
+		f_quad = {698, 569, 67, 42},
+		alias = {"deep_devils_reef_tower_storm_cloud_0064"}
 	},
 	deep_devils_reef_tower_storm_cloud_0033 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			354,
-			417,
-			67,
-			46
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {354, 417, 67, 46},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0034 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			424,
-			417,
-			67,
-			46
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {424, 417, 67, 46},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0036 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			417,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {417, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0038 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			487,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {487, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0039 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			557,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {557, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0041 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			627,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {627, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0043 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			697,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {697, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0045 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			767,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {767, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0046 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			0
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			837,
-			361,
-			67,
-			47
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 0},
+		a_size = {1024, 1024},
+		f_quad = {837, 361, 67, 47},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0047 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			1
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			494,
-			417,
-			67,
-			46
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 1},
+		a_size = {1024, 1024},
+		f_quad = {494, 417, 67, 46},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0048 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			655,
-			417,
-			67,
-			45
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {655, 417, 67, 45},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0049 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			725,
-			417,
-			67,
-			45
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {725, 417, 67, 45},
 		alias = {}
 	},
 	deep_devils_reef_tower_storm_cloud_0050 = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			74,
-			51
-		},
-		trim = {
-			6,
-			4,
-			1,
-			2
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			795,
-			417,
-			67,
-			45
-		},
+		size = {74, 51},
+		trim = {6, 4, 1, 2},
+		a_size = {1024, 1024},
+		f_quad = {795, 417, 67, 45},
 		alias = {}
 	},
 	terrain_deep_devils_reef_towers = {
 		a_name = "kr4_deep_devils_tower-1.dds",
-		size = {
-			119,
-			168
-		},
-		trim = {
-			0,
-			105,
-			0,
-			5
-		},
-		a_size = {
-			1024,
-			1024
-		},
-		f_quad = {
-			114,
-			105,
-			119,
-			58
-		},
+		size = {119, 168},
+		trim = {0, 105, 0, 5},
+		a_size = {1024, 1024},
+		f_quad = {114, 105, 119, 58},
 		alias = {}
 	}
 }

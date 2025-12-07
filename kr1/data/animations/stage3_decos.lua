@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage3_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage3_decos.lua
 local a = {
 	stage3_decos_barriles2_idle = {
 		prefix = "stage3_decos_barriles2",
@@ -67,5 +66,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

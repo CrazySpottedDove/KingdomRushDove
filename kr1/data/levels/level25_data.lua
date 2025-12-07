@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level25_data.lua
-
+-- chunkname: @./kr1/data/levels/level25_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds_blackburn",
-			sounds = {
-				"BlackburnAmbienceBlackburn"
-			}
+			sounds = {"BlackburnAmbienceBlackburn"}
 		},
 		{
 			template = "decal_background",
@@ -1016,109 +1013,37 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			path_id = 7,
-			from = 1,
-			flags = NF_RALLY
-		}
-	},
+	invalid_path_ranges = {{
+		path_id = 7,
+		from = 1,
+		flags = NF_RALLY
+	}},
 	level_mode_overrides = {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_barrack"
-			}
+			locked_towers = {"tower_build_archer", "tower_build_barrack"}
 		}
 	},
 	nav_mesh = {
-		{
-			6,
-			4,
-			2,
-			9
-		},
-		{
-			1,
-			nil,
-			7,
-			12
-		},
+		{6, 4, 2, 9},
+		{1, nil, 7, 12},
 		{
 			[3] = 4,
 			[4] = 6
 		},
-		{
-			3,
-			3,
-			1,
-			1
-		},
-		{
-			6,
-			6,
-			9,
-			10
-		},
-		{
-			nil,
-			3,
-			1,
-			5
-		},
-		{
-			2,
-			nil,
-			8,
-			11
-		},
-		{
-			7,
-			nil,
-			13,
-			14
-		},
-		{
-			5,
-			1,
-			12,
-			10
-		},
-		{
-			5,
-			9,
-			12
-		},
-		{
-			12,
-			7,
-			14
-		},
-		{
-			10,
-			2,
-			11
-		},
-		{
-			14,
-			8
-		},
-		{
-			11,
-			8,
-			13
-		}
+		{3, 3, 1, 1},
+		{6, 6, 9, 10},
+		{nil, 3, 1, 5},
+		{2, nil, 8, 11},
+		{7, nil, 13, 14},
+		{5, 1, 12, 10},
+		{5, 9, 12},
+		{12, 7, 14},
+		{10, 2, 11},
+		{14, 8},
+		{11, 8, 13}
 	},
-	required_sounds = {
-		"music_stage25",
-		"BlackburnSounds"
-	},
-	required_textures = {
-		"go_enemies_blackburn",
-		"go_stages_blackburn",
-		"go_stage25",
-		"go_stage25_bg"
-	}
+	required_sounds = {"music_stage25", "BlackburnSounds"},
+	required_textures = {"go_enemies_blackburn", "go_stages_blackburn", "go_stage25", "go_stage25_bg"}
 }

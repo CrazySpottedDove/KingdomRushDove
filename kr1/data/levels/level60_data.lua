@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level12_data.lua
-
+-- chunkname: @./kr3/data/levels/level12_data.lua
 return {
 	locked_hero = false,
 	show_comic_idx = 3,
@@ -19,9 +18,7 @@ return {
 		},
 		{
 			template = "background_sounds",
-			sounds = {
-				"MetropolisAmbienceSound"
-			}
+			sounds = {"MetropolisAmbienceSound"}
 		},
 		{
 			template = "birds_formation_controller",
@@ -30,25 +27,17 @@ return {
 				x = 1300,
 				y = 500
 			},
-			names = {
-				"decal_bird_red",
-				"decal_bird_red",
-				"decal_bird_red"
-			},
-			offsets = {
-				{
-					x = 0,
-					y = 0
-				},
-				{
-					x = -104,
-					y = 0
-				},
-				{
-					x = 15,
-					y = -77
-				}
-			},
+			names = {"decal_bird_red", "decal_bird_red", "decal_bird_red"},
+			offsets = {{
+				x = 0,
+				y = 0
+			}, {
+				x = -104,
+				y = 0
+			}, {
+				x = 15,
+				y = -77
+			}},
 			to = {
 				x = 606,
 				y = 903
@@ -61,25 +50,17 @@ return {
 				x = -150,
 				y = 450
 			},
-			names = {
-				"decal_bird_duck",
-				"decal_bird_duck",
-				"decal_bird_duck"
-			},
-			offsets = {
-				{
-					x = 0,
-					y = 0
-				},
-				{
-					x = 30,
-					y = 6
-				},
-				{
-					x = 18,
-					y = 18
-				}
-			},
+			names = {"decal_bird_duck", "decal_bird_duck", "decal_bird_duck"},
+			offsets = {{
+				x = 0,
+				y = 0
+			}, {
+				x = 30,
+				y = 6
+			}, {
+				x = 18,
+				y = 18
+			}},
 			to = {
 				x = 420,
 				y = 838
@@ -92,9 +73,7 @@ return {
 				x = 974,
 				y = -70
 			},
-			names = {
-				"decal_bird_red"
-			},
+			names = {"decal_bird_red"},
 			to = {
 				x = 168,
 				y = 834
@@ -337,15 +316,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 2,
-			detection_paths = {
-				2,
-				4,
-				5,
-				6
-			},
-			detection_tags = {
-				2
-			},
+			detection_paths = {2, 4, 5, 6},
+			detection_tags = {2},
 			pos = {
 				x = 674,
 				y = 283
@@ -354,17 +326,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 1,
-			detection_paths = {
-				2,
-				4,
-				5,
-				7,
-				8
-			},
-			detection_tags = {
-				2,
-				1
-			},
+			detection_paths = {2, 4, 5, 7, 8},
+			detection_tags = {2, 1},
 			pos = {
 				x = 434,
 				y = 287
@@ -373,14 +336,8 @@ return {
 		{
 			template = "decal_metropolis_portal",
 			["editor.tag"] = 3,
-			detection_paths = {
-				6,
-				9
-			},
-			detection_tags = {
-				2,
-				3
-			},
+			detection_paths = {6, 9},
+			detection_tags = {2, 3},
 			pos = {
 				x = 399,
 				y = 672
@@ -624,105 +581,27 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{},
-		{},
-		{
-			locked_towers = {
-				"tower_build_engineer",
-				"tower_build_mage"
-			}
-		}
-	},
+	level_mode_overrides = {{}, {}, {
+		locked_towers = {"tower_build_engineer", "tower_build_mage"}
+	}},
 	nav_mesh = {
-		{
-			4,
-			2,
-			11,
-			3
-		},
-		{
-			1,
-			7,
-			12,
-			11
-		},
-		{
-			nil,
-			4,
-			6
-		},
-		{
-			nil,
-			1,
-			1,
-			3
-		},
-		{
-			6,
-			8,
-			10
-		},
-		{
-			3,
-			9,
-			5
-		},
-		{
-			2,
-			nil,
-			8,
-			12
-		},
-		{
-			9,
-			7,
-			10,
-			5
-		},
-		{
-			12,
-			7,
-			8,
-			6
-		},
-		{
-			5,
-			8
-		},
-		{
-			1,
-			2,
-			12,
-			3
-		},
-		{
-			11,
-			7,
-			9,
-			11
-		}
+		{4, 2, 11, 3},
+		{1, 7, 12, 11},
+		{nil, 4, 6},
+		{nil, 1, 1, 3},
+		{6, 8, 10},
+		{3, 9, 5},
+		{2, nil, 8, 12},
+		{9, 7, 10, 5},
+		{12, 7, 8, 6},
+		{5, 8},
+		{1, 2, 12, 3},
+		{11, 7, 9, 11}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage60",
-		"MetropolisAmbienceSounds",
-		"ElvesCrystalPlant",
-		"ElvesCreepArachnomancerSpiderSpawn",
-		"ElvesCreepAvenger",
-		"ElvesCreepEvoker",
-		"ElvesCreepGolem",
-		"ElvesCreepRazorboar",
-		"ElvesCreepSonOfMactans",
-		"ElvesScourger"
-	},
-	required_textures = {
-		"go_enemies_ancient_metropolis",
-		"go_stage60",
-		"go_stage60_bg",
-		"go_stages_ancient_metropolis"
-	}
+	required_sounds = {"music_stage60", "MetropolisAmbienceSounds", "ElvesCrystalPlant", "ElvesCreepArachnomancerSpiderSpawn", "ElvesCreepAvenger", "ElvesCreepEvoker", "ElvesCreepGolem", "ElvesCreepRazorboar", "ElvesCreepSonOfMactans", "ElvesScourger"},
+	required_textures = {"go_enemies_ancient_metropolis", "go_stage60", "go_stage60_bg", "go_stages_ancient_metropolis"}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_quickfeet_gator.lua
-
+-- chunkname: @./kr5/data/animations/enemy_quickfeet_gator.lua
 local a = {
 	quickfeet_gator_hit_projectile_run = {
 		prefix = "quickfeet_gator_hit_projectile",
@@ -127,5 +126,4 @@ local a = {
 		from = 303
 	}
 }
-
 return a

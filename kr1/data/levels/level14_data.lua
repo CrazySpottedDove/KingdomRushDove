@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level14_data.lua
-
+-- chunkname: @./kr1/data/levels/level14_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -444,114 +443,30 @@ return {
 	level_mode_overrides = {
 		[3] = {
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_archer"
-			}
+			locked_towers = {"tower_build_barrack", "tower_build_archer"}
 		}
 	},
 	nav_mesh = {
-		{
-			4,
-			6,
-			5
-		},
-		{
-			3,
-			7,
-			4,
-			1
-		},
-		{
-			nil,
-			8,
-			2,
-			1
-		},
-		{
-			2,
-			7,
-			6,
-			1
-		},
-		{
-			6,
-			10,
-			9,
-			1
-		},
-		{
-			4,
-			10,
-			5,
-			1
-		},
-		{
-			8,
-			13,
-			10,
-			4
-		},
-		{
-			nil,
-			12,
-			7,
-			3
-		},
-		{
-			10,
-			15,
-			nil,
-			5
-		},
-		{
-			7,
-			11,
-			9,
-			6
-		},
-		{
-			14,
-			16,
-			15,
-			10
-		},
+		{4, 6, 5},
+		{3, 7, 4, 1},
+		{nil, 8, 2, 1},
+		{2, 7, 6, 1},
+		{6, 10, 9, 1},
+		{4, 10, 5, 1},
+		{8, 13, 10, 4},
+		{nil, 12, 7, 3},
+		{10, 15, nil, 5},
+		{7, 11, 9, 6},
+		{14, 16, 15, 10},
 		{
 			[3] = 13,
 			[4] = 8
 		},
-		{
-			12,
-			nil,
-			14,
-			7
-		},
-		{
-			13,
-			nil,
-			16,
-			11
-		},
-		{
-			16,
-			nil,
-			nil,
-			9
-		},
-		{
-			14,
-			nil,
-			15,
-			11
-		}
+		{12, nil, 14, 7},
+		{13, nil, 16, 11},
+		{16, nil, nil, 9},
+		{14, nil, 15, 11}
 	},
-	required_sounds = {
-		"music_stage14"
-	},
-	required_textures = {
-		"go_enemies_acaroth",
-		"go_enemies_grass",
-		"go_stage14",
-		"go_stage14_bg"
-	}
+	required_sounds = {"music_stage14"},
+	required_textures = {"go_enemies_acaroth", "go_enemies_grass", "go_stage14", "go_stage14_bg"}
 }

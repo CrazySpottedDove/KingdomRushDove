@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_ballista.lua
-
+-- chunkname: @./kr5/data/animations/tower_ballista.lua
 local a = {
 	ballista_tower_missed_arrow_dust = {
 		prefix = "ballista_tower_missed_arrow_dust",
@@ -625,5 +624,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

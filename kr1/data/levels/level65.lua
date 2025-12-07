@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level17.lua
-
+-- chunkname: @./kr3/data/levels/level17.lua
 local log = require("lib.klua.log"):new("level17")
 local signal = require("hump.signal")
 local E = require("entity_db")
@@ -8,7 +7,6 @@ local U = require("utils")
 local LU = require("level_utils")
 local V = require("lib.klua.vector")
 local P = require("path_db")
-
 require("constants")
 
 local function fts(v)
@@ -19,24 +17,20 @@ local level = {}
 
 function level:fn_can_power(store, power_id, pos)
 	local controller = LU.list_entities(store.entities, "malik_slave_controller")[1]
-
 	return controller and controller.fn_can_power(controller, store, power_id, pos) or false
 end
 
 function level:load(store)
-	return
+	return 
 end
 
 function level:update(store)
 	if store.level_mode == GAME_MODE_IRON then
 		coroutine.yield()
-
 		local tpl = E:get_template("hero_baby_malik")
-
 		tpl.hero.level = 10
 		tpl.hero.skills.smash.level = 3
 		tpl.hero.skills.fissure.level = 3
-
 		local h = LU.insert_hero(store, "hero_baby_malik", store.level.locations.exits[2].pos)
 	end
 

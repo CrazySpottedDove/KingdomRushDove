@@ -1,5 +1,4 @@
-﻿-- chunkname: @./all/gui_utils.lua
-
+-- chunkname: @./all/gui_utils.lua
 local GU = {}
 local E = require("entity_db")
 
@@ -36,8 +35,8 @@ end
 function GU.cooldown_value_desc(v)
 	if not v or type(v) ~= "number" then
 		return "-"
-    elseif v >= 3 then
-        return _("CReload_1")
+	elseif v >= 3 then
+		return _("CReload_1")
 	elseif v >= 2 then
 		return _("CReload0")
 	elseif v >= 1.5 then
@@ -54,20 +53,20 @@ end
 function GU.speed_value_desc(v)
 	if not v or type(v) ~= "number" then
 		return _("None")
-    elseif v >= 80 then
-        return _("CSpeed4")
-    elseif v >= 60 then
-        return _("CSpeed3")
+	elseif v >= 80 then
+		return _("CSpeed4")
+	elseif v >= 60 then
+		return _("CSpeed3")
 	elseif v >= 45 then
 		return _("CSpeed2")
 	elseif v >= 21 then
 		return _("CSpeed1")
-    elseif v >= 16 then
+	elseif v >= 16 then
 		return _("CSpeed0")
-    elseif v >= 12 then
-        return _("CSpeed_1")
-    else
-        return _("CSpeed_2")
+	elseif v >= 12 then
+		return _("CSpeed_1")
+	else
+		return _("CSpeed_2")
 	end
 end
 
@@ -77,8 +76,9 @@ function GU.range_value_desc(v)
 	end
 
 	v = v * 2
-    if v >= 520 then
-        return _("CRange5")
+
+	if v >= 520 then
+		return _("CRange5")
 	elseif v >= 460 then
 		return _("CRange4")
 	elseif v >= 400 then
@@ -170,7 +170,6 @@ function GU.incoming_wave_report(group, path_index, game_mode)
 		if v > 0 then
 			local tpl = E:get_template(k)
 			local i18n_key = (tpl.info.i18n_key or string.upper(k)) .. "_NAME"
-
 			count[i18n_key] = (count[i18n_key] or 0) + v
 		end
 	end

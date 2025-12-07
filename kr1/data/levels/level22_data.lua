@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level22_data.lua
-
+-- chunkname: @./kr1/data/levels/level22_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -74,44 +73,34 @@ return {
 		},
 		{
 			template = "swamp_controller",
-			["graveyard.spawn_pos"] = {
-				{
-					x = 830,
-					y = 494
-				},
-				{
-					x = 816,
-					y = 503
-				},
-				{
-					x = 819,
-					y = 483
-				},
-				{
-					x = 807,
-					y = 492
-				},
-				{
-					x = 880,
-					y = 216
-				},
-				{
-					x = 866,
-					y = 211
-				},
-				{
-					x = 871,
-					y = 197
-				},
-				{
-					x = 857,
-					y = 200
-				},
-				{
-					x = 882,
-					y = 203
-				}
-			},
+			["graveyard.spawn_pos"] = {{
+				x = 830,
+				y = 494
+			}, {
+				x = 816,
+				y = 503
+			}, {
+				x = 819,
+				y = 483
+			}, {
+				x = 807,
+				y = 492
+			}, {
+				x = 880,
+				y = 216
+			}, {
+				x = 866,
+				y = 211
+			}, {
+				x = 871,
+				y = 197
+			}, {
+				x = 857,
+				y = 200
+			}, {
+				x = 882,
+				y = 203
+			}},
 			pos = {
 				x = 0,
 				y = 0
@@ -941,125 +930,32 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_engineer"
-			}
+			locked_towers = {"tower_build_archer", "tower_build_engineer"}
 		}
 	},
 	nav_mesh = {
-		{
-			3,
-			4,
-			nil,
-			2
-		},
-		{
-			14,
-			1,
-			nil,
-			7
-		},
-		{
-			6,
-			4,
-			1,
-			14
-		},
-		{
-			3,
-			nil,
-			1,
-			1
-		},
-		{
-			10,
-			10,
-			6,
-			15
-		},
-		{
-			5,
-			nil,
-			3,
-			15
-		},
-		{
-			17,
-			2,
-			8,
-			8
-		},
-		{
-			16,
-			7
-		},
-		{
-			nil,
-			10,
-			15,
-			12
-		},
+		{3, 4, nil, 2},
+		{14, 1, nil, 7},
+		{6, 4, 1, 14},
+		{3, nil, 1, 1},
+		{10, 10, 6, 15},
+		{5, nil, 3, 15},
+		{17, 2, 8, 8},
+		{16, 7},
+		{nil, 10, 15, 12},
 		{
 			[3] = 5,
 			[4] = 9
 		},
-		{
-			12,
-			9,
-			18,
-			13
-		},
-		{
-			nil,
-			9,
-			11,
-			13
-		},
-		{
-			12,
-			11,
-			18
-		},
-		{
-			15,
-			3,
-			2,
-			17
-		},
-		{
-			9,
-			6,
-			14,
-			18
-		},
-		{
-			18,
-			17,
-			8
-		},
-		{
-			18,
-			14,
-			7,
-			16
-		},
-		{
-			11,
-			15,
-			17,
-			13
-		}
+		{12, 9, 18, 13},
+		{nil, 9, 11, 13},
+		{12, 11, 18},
+		{15, 3, 2, 17},
+		{9, 6, 14, 18},
+		{18, 17, 8},
+		{18, 14, 7, 16},
+		{11, 15, 17, 13}
 	},
-	required_sounds = {
-		"music_stage22",
-		"MushroomSounds"
-	},
-	required_textures = {
-		"go_enemies_rotten",
-		"go_enemies_wastelands",
-		"go_stages_rotten_torment",
-		"go_stage22",
-		"go_stage22_bg"
-	}
+	required_sounds = {"music_stage22", "MushroomSounds"},
+	required_textures = {"go_enemies_rotten", "go_enemies_wastelands", "go_stages_rotten_torment", "go_stage22", "go_stage22_bg"}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/hero_bird.lua
-
+-- chunkname: @./kr5/data/animations/hero_bird.lua
 local a = {
 	gryph_slow_mod_run = {
 		prefix = "gryph_slow_mod",
@@ -187,5 +186,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

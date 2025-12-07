@@ -1,5 +1,4 @@
-﻿-- chunkname: @./lib/klua/table.lua
-
+-- chunkname: @./lib/klua/table.lua
 function table.keys(t)
 	local kk = {}
 	local count = 0
@@ -18,7 +17,6 @@ function table.keyforobject(t, o)
 	for k, v in pairs(t) do
 		if o == v then
 			key = k
-
 			break
 		end
 	end
@@ -96,7 +94,6 @@ function table.reverse(t1, deep)
 
 	for i = 1, l_t1 do
 		local e_t1 = t1[l_t1 - i + 1]
-
 		t2[i] = deep and table.deepclone(e_t1) or e_t1
 	end
 
@@ -210,7 +207,6 @@ end
 function table.slice(t, i1, i2)
 	local out = {}
 	local n = #t
-
 	i1 = i1 or 1
 	i2 = i2 or n
 
@@ -247,7 +243,6 @@ function table.random(t)
 		return nil
 	else
 		local idx = math.random(1, #t)
-
 		return t[idx], idx
 	end
 end
@@ -262,7 +257,6 @@ function table.random_order(t)
 
 	for i = 1, #t do
 		local ri = math.random(1, #tt)
-
 		table.insert(o, table.remove(tt, ri))
 	end
 
@@ -276,7 +270,6 @@ function table.safe_index(t, index)
 		return nil
 	else
 		local idx = math.min(index, size)
-
 		return t[idx], idx
 	end
 end

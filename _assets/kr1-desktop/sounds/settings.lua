@@ -1,5 +1,4 @@
-﻿-- chunkname: @./_assets/kr1-desktop/sounds/settings.lua
-
+-- chunkname: @./_assets/kr1-desktop/sounds/settings.lua
 return {
 	source_groups = {
 		BULLETS = {

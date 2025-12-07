@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level07_data.lua
-
+-- chunkname: @./kr3/data/levels/level07_data.lua
 return {
 	show_comic_idx = 2,
 	locked_hero = false,
@@ -8,9 +7,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"FaerieGroveAmbienceSound"
-			}
+			sounds = {"FaerieGroveAmbienceSound"}
 		},
 		{
 			template = "decal_background",
@@ -632,112 +629,35 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 4,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 4,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_mage",
-			}
-		}
-	},
-    unlock_towers = {"tower_druid"},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 4,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 4,
+		locked_towers = {"tower_build_barrack", "tower_build_mage"}
+	}},
+	unlock_towers = {"tower_druid"},
 	nav_mesh = {
-		{
-			13,
-			nil,
-			2,
-			11
-		},
-		{
-			1,
-			nil,
-			7,
-			12
-		},
-		{
-			4,
-			13,
-			6,
-			10
-		},
-		{
-			nil,
-			13,
-			3,
-			10
-		},
-		{
-			6,
-			7,
-			8
-		},
-		{
-			3,
-			12,
-			5
-		},
-		{
-			12,
-			2,
-			8,
-			5
-		},
-		{
-			5,
-			7,
-			nil,
-			5
-		},
-		[10] = {
-			nil,
-			4,
-			3
-		},
-		[11] = {
-			13,
-			1,
-			12,
-			3
-		},
-		[12] = {
-			11,
-			2,
-			7,
-			6
-		},
-		[13] = {
-			4,
-			1,
-			11,
-			3
-		}
+		{13, nil, 2, 11},
+		{1, nil, 7, 12},
+		{4, 13, 6, 10},
+		{nil, 13, 3, 10},
+		{6, 7, 8},
+		{3, 12, 5},
+		{12, 2, 8, 5},
+		{5, 7, nil, 5},
+		[10] = {nil, 4, 3},
+		[11] = {13, 1, 12, 3},
+		[12] = {11, 2, 7, 6},
+		[13] = {4, 1, 11, 3}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage55",
-		"ElvesVenomPlants",
-		"ElvesLevelSevenSounds",
-		"ElvesCreepHoplite",
-		"FaerieGroveAmbienceSounds"
-	},
-	required_textures = {
-		"go_enemies_faerie_grove",
-		"go_stage55",
-		"go_stage55_bg",
-		"go_stages_faerie_grove"
-	}
+	required_sounds = {"music_stage55", "ElvesVenomPlants", "ElvesLevelSevenSounds", "ElvesCreepHoplite", "FaerieGroveAmbienceSounds"},
+	required_textures = {"go_enemies_faerie_grove", "go_stage55", "go_stage55_bg", "go_stages_faerie_grove"}
 }

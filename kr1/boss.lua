@@ -7,14 +7,16 @@ local image_y = 0
 local tt = nil
 local scripts = require("game_scripts")
 require("templates")
-local function adx(v)
-    return v - anchor_x * image_x
-end
-local function ady(v)
-    return v - anchor_y * image_y
-end
-require("game_templates_utils")
 
+local function adx(v)
+	return v - anchor_x * image_x
+end
+
+local function ady(v)
+	return v - anchor_y * image_y
+end
+
+require("game_templates_utils")
 -- 毁灭者
 tt = RT("eb_juggernaut", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -39,10 +41,10 @@ tt.motion.max_speed = 0.4 * FPS
 tt.render.sprites[1].anchor = vec_2(0.5, 0.08)
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.render.sprites[1].prefix = "eb_juggernaut"
 tt.sound_events.death = "DeathJuggernaut"
@@ -77,7 +79,6 @@ tt.timed_attacks.list[1].vis_flags = F_RANGED
 tt.timed_attacks.list[2] = table.deepclone(tt.timed_attacks.list[1])
 tt.timed_attacks.list[2].bullet = "bomb_juggernaut"
 tt.timed_attacks.list[2].cooldown = 4
-
 tt = RT("bomb_juggernaut", "bomb")
 tt.bullet.damage_bans = F_ALL
 tt.bullet.damage_flags = 0
@@ -93,7 +94,6 @@ tt.main_script.update = scripts.enemy_bomb.update
 tt.bullet.hit_fx = nil
 tt.render.sprites[1].name = "bossJuggernaut_bomb_"
 tt.sound_events.hit = "BombExplosionSound"
-
 tt = RT("juggernaut_bomb_spawner", "decal_scripted")
 AC(tt, "render", "spawner", "tween")
 tt.main_script.update = scripts.enemies_spawner.update
@@ -114,7 +114,6 @@ tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
 tt.total_gold = 70
-
 tt = RT("enemy_golem_head", "enemy")
 AC(tt, "melee")
 anchor_y = 0.20588235294117646
@@ -143,7 +142,6 @@ tt.unit.hide_after_death = true
 tt.unit.hit_offset = vec_2(0, 8)
 tt.unit.mod_offset = vec_2(adx(22), ady(15))
 tt.unit.show_blood_pool = false
-
 tt = RT("missile_juggernaut", "bullet")
 tt.bullet.acceleration_factor = 0.1
 tt.bullet.damage_bans = bor(F_ENEMY, F_BOSS)
@@ -167,7 +165,6 @@ tt.render.sprites[1].prefix = "missile_bfg"
 tt.render.sprites[1].name = "flying"
 tt.sound_events.insert = "RocketLaunchSound"
 tt.sound_events.hit = "BombExplosionSound"
-
 -- 大雪怪
 tt = RT("eb_jt", "boss")
 AC(tt, "melee", "timed_attacks", "auras")
@@ -196,10 +193,10 @@ tt.motion.max_speed = 0.3 * FPS
 tt.render.sprites[1].anchor = vec_2(0.5, 0.08)
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.render.sprites[1].prefix = "eb_jt"
 tt.tap_decal = "decal_jt_tap"
@@ -225,10 +222,10 @@ tt.melee.attacks[1].hit_offset = tt.enemy.melee_slot
 tt.melee.attacks[1].hit_time = fts(15)
 tt.melee.attacks[1].sound = "JtEat"
 tt.melee.attacks[1].sound_args = {
-    delay = fts(6)
+	delay = fts(6)
 }
 tt.melee.attacks[1].side_effect = function(this, store, attack, target)
-    scripts.heal(this, 100)
+	scripts.heal(this, 100)
 end
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].cooldown = 10 + fts(29)
@@ -236,7 +233,7 @@ tt.timed_attacks.list[1].count = 4
 tt.timed_attacks.list[1].exhausted_duration = 2
 tt.timed_attacks.list[1].exhausted_sound = "JtRest"
 tt.timed_attacks.list[1].exhausted_sound_args = {
-    delay = fts(34)
+	delay = fts(34)
 }
 tt.timed_attacks.list[1].hit_decal = "decal_jt_ground_hit"
 tt.timed_attacks.list[1].hit_offset = vec_2(80, -10)
@@ -246,9 +243,8 @@ tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].mod = "mod_jt_tower"
 tt.timed_attacks.list[1].sound = "JtAttack"
 tt.timed_attacks.list[1].sound_args = {
-    delay = fts(6)
+	delay = fts(6)
 }
-
 -- 维兹南
 tt = RT("eb_veznan", "boss")
 AC(tt, "melee", "timed_attacks", "taunts")
@@ -276,10 +272,10 @@ tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_veznan"
 tt.render.sprites[1].name = "idleDown"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "VeznanDeath"
 tt.ui.click_rect = r(-11, -2, 22, 38)
@@ -346,13 +342,13 @@ tt.timed_attacks.list[1].mod = "mod_veznan_tower"
 tt.timed_attacks.list[1].sound = "VeznanHoldCast"
 tt.timed_attacks.list[1].attack_duration = fts(44)
 tt.timed_attacks.list[1].data = {
-    [9] = {13, 2},
-    [10] = {13, 3},
-    [11] = {14, 4},
-    [12] = {14, 5},
-    [13] = {16, 6},
-    [14] = {16, 7},
-    [15] = {18, 8}
+	[9] = {13, 2},
+	[10] = {13, 3},
+	[11] = {14, 4},
+	[12] = {14, 5},
+	[13] = {16, 6},
+	[14] = {16, 7},
+	[15] = {18, 8}
 }
 tt.timed_attacks.list[2] = CC("custom_attack")
 tt.timed_attacks.list[2].animation = "spellDown"
@@ -362,37 +358,36 @@ tt.timed_attacks.list[2].portal_name = "veznan_portal"
 tt.timed_attacks.list[2].sound = "VeznanPortalSummon"
 tt.timed_attacks.list[2].attack_duration = fts(44)
 tt.timed_attacks.list[2].data = {
-    [6] = {15, 3, {1, 0, 0}},
-    [7] = {10, 2, {1, 0, 0}},
-    [8] = {20, 3, {0, 1, 0}},
-    [9] = {15, 3, {1, 0, 0}},
-    [10] = {20, 3, {1, 1, 0}},
-    [11] = {15, 3, {1, 1, 0}},
-    [12] = {15, 3, {1, 1, 0}},
-    [13] = {15, 3, {0, 0, 1}},
-    [14] = {15, 3, {1, 1, 1}},
-    [15] = {15, 3, {1, 1, 1}}
+	[6] = {15, 3, {1, 0, 0}},
+	[7] = {10, 2, {1, 0, 0}},
+	[8] = {20, 3, {0, 1, 0}},
+	[9] = {15, 3, {1, 0, 0}},
+	[10] = {20, 3, {1, 1, 0}},
+	[11] = {15, 3, {1, 1, 0}},
+	[12] = {15, 3, {1, 1, 0}},
+	[13] = {15, 3, {0, 0, 1}},
+	[14] = {15, 3, {1, 1, 1}},
+	[15] = {15, 3, {1, 1, 1}}
 }
 tt.battle = {
-    ba_animation = "spell",
-    pa_animation = "spell",
-    pa_cooldown = 10,
-    pa_max_count = 40
+	ba_animation = "spell",
+	pa_animation = "spell",
+	pa_cooldown = 10,
+	pa_max_count = 40
 }
 tt.demon = {
-    health_bar_offset = vec_2(0, 118),
-    health_bar_scale = 1.8,
-    melee_slot = vec_2(50, 0),
-    speed = 0.6 * FPS,
-    sprites_prefix = "eb_veznan_demon",
-    transform_sound = "VeznanToDemon",
-    ui_click_rect = r(-25, -5, 50, 110),
-    unit_hit_offset = vec_2(0, 55),
-    unit_mod_offset = vec_2(0, 45),
-    unit_size = UNIT_SIZE_LARGE,
-    info_portrait = "info_portraits_enemies_0072"
+	health_bar_offset = vec_2(0, 118),
+	health_bar_scale = 1.8,
+	melee_slot = vec_2(50, 0),
+	speed = 0.6 * FPS,
+	sprites_prefix = "eb_veznan_demon",
+	transform_sound = "VeznanToDemon",
+	ui_click_rect = r(-25, -5, 50, 110),
+	unit_hit_offset = vec_2(0, 55),
+	unit_mod_offset = vec_2(0, 45),
+	unit_size = UNIT_SIZE_LARGE,
+	info_portrait = "info_portraits_enemies_0072"
 }
-
 -- 萨雷格兹
 tt = RT("eb_sarelgaz", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -428,10 +423,10 @@ tt.motion.max_speed = 0.34 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_sarelgaz"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "DeathEplosion"
 tt.sound_events.insert = "MusicBossFight"
@@ -448,7 +443,6 @@ tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.health_judger = true
-
 tt = RT("enemy_sarelgaz_egg", "decal_scripted")
 AC(tt, "render", "spawner", "tween")
 tt.main_script.update = scripts.enemies_spawner.update
@@ -468,7 +462,6 @@ tt.spawner.animation_start = "start"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
-
 -- 古拉克
 tt = RT("eb_gulthak", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -497,13 +490,13 @@ tt.motion.max_speed = 0.4 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_gulthak"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles_flip_vertical = {
-    walk = true
+	walk = true
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "DeathBig"
 tt.sound_events.insert = "MusicBossFight"
@@ -527,7 +520,6 @@ tt.timed_attacks.list[1].max_range = 320
 tt.timed_attacks.list[1].mod = "mod_gulthak_heal"
 tt.timed_attacks.list[1].sound = "EnemyHealing"
 tt.timed_attacks.list[1].vis_flags = bor(F_MOD)
-
 -- 绿泥树怪
 tt = RT("eb_greenmuck", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -553,10 +545,10 @@ tt.motion.max_speed = 0.3 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_greenmuck"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = nil
 tt.sound_events.insert = "MusicBossFight"
@@ -587,7 +579,6 @@ tt.timed_attacks.list[1].cooldown = 6
 tt.timed_attacks.list[1].shoot_time = fts(13)
 tt.timed_attacks.list[1].vis_flags = F_RANGED
 tt.timed_attacks.list[1].vis_bans = F_ENEMY
-
 -- 金并
 tt = RT("eb_kingpin", "enemy")
 AC(tt, "melee", "timed_attacks", "auras")
@@ -615,10 +606,10 @@ tt.motion.max_speed = 0.35 * FPS
 tt.render.sprites[1].anchor = vec_2(0.5, 0.13)
 tt.render.sprites[1].prefix = "eb_kingpin"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "DeathJuggernaut"
 tt.sound_events.insert = "MusicBossFight"
@@ -656,7 +647,6 @@ tt.timed_attacks.list[2].animation = "heal"
 tt.timed_attacks.list[2].max_count = 9999
 tt.timed_attacks.list[2].max_range = 100
 tt.timed_attacks.list[2].mod = "mod_kingpin_heal_others"
-
 -- 阿古克汗
 tt = RT("eb_ulgukhai", "boss")
 AC(tt, "melee", "auras")
@@ -685,10 +675,10 @@ tt.motion.max_speed = 0.3 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_ulgukhai"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "DeathBig"
 tt.sound_events.insert = "MusicBossFight"
@@ -713,7 +703,6 @@ tt.melee.attacks[1].hit_offset = vec_2(60, 0)
 tt.melee.attacks[1].hit_decal = "decal_ground_hit"
 tt.melee.attacks[1].hit_fx = "fx_ground_hit"
 tt.melee.attacks[1].sound_hit = "AreaAttack"
-
 -- 摩洛克
 tt = RT("eb_moloch", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -739,10 +728,10 @@ tt.motion.max_speed = 0.6 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_moloch"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "EnemyInfernoBossDeath"
 tt.ui.click_rect = r(-25, 0, 50, 100)
@@ -777,15 +766,13 @@ tt.timed_attacks.list[1].damage_radius = 100
 tt.timed_attacks.list[1].damage_type = DAMAGE_INSTAKILL
 tt.timed_attacks.list[1].hit_time = fts(15)
 tt.timed_attacks.list[1].min_targets = 2
-tt.timed_attacks.list[1].fx_list = {{"fx_moloch_rocks", {{36, -30}, {1, -10}, {90, -23}, {87, 5}, {49, -3}, {54, 17}}},
-                                    {"fx_moloch_ring", {{45, 0}}}}
+tt.timed_attacks.list[1].fx_list = {{"fx_moloch_rocks", {{36, -30}, {1, -10}, {90, -23}, {87, 5}, {49, -3}, {54, 17}}}, {"fx_moloch_ring", {{45, 0}}}}
 tt.timed_attacks.list[1].hit_offset = vec_2(20, 0)
 tt.timed_attacks.list[1].sound = "EnemyInfernoHorns"
 tt.timed_attacks.list[1].sound_args = {
-    delay = fts(5)
+	delay = fts(5)
 }
 tt.is_demon = true
-
 -- 蘑菇人
 tt = RT("eb_myconid", "boss")
 AC(tt, "melee", "timed_attacks")
@@ -809,10 +796,10 @@ tt.motion.max_speed = 0.65 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_myconid"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "EnemyMushroomBossDeath"
 tt.sound_events.insert = "MusicBossFight"
@@ -845,7 +832,6 @@ tt.timed_attacks.list[1].summon_counts = {2, 3, 3, 4, 4, 4, 3, 2}
 tt.timed_attacks.list[1].vis_bans = F_ENEMY
 tt.timed_attacks.list[1].vis_flags = bor(F_MOD, F_POISON)
 tt.timed_attacks.list[1].wait_times = {fts(15), fts(3), fts(6)}
-
 -- 布莱克本
 tt = RT("eb_blackburn", "boss")
 AC(tt, "melee", "timed_attacks", "auras")
@@ -871,10 +857,10 @@ tt.motion.max_speed = 0.5 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "eb_blackburn"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "EnemyBlackburnBossDeath"
 tt.sound_events.insert = "MusicBossFight"
@@ -917,10 +903,9 @@ tt.timed_attacks.list[1].mod = "mod_blackburn_stun"
 tt.timed_attacks.list[1].mod_towers = "mod_blackburn_tower"
 tt.timed_attacks.list[1].sound = "EnemyBlackburnBossSpecialStomp"
 tt.timed_attacks.list[1].sound_args = {
-    delay = fts(13)
+	delay = fts(13)
 }
 tt.timed_attacks.list[1].vis_flags = bor(F_MOD)
-
 -- unknown
 tt = RT("eb_elder_shaman", "decal_scripted")
 AC(tt, "attacks")
@@ -952,16 +937,16 @@ tt.render.sprites[1].prefix = "eb_elder_shaman"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.09259259259259259
 tt.taunt = {
-    delay_min = 15,
-    delay_max = 20,
-    duration = 4,
-    sets = {
-        welcome = {},
-        prebattle = {},
-        battle = {},
-        life_lost = {},
-        totem = {}
-    }
+	delay_min = 15,
+	delay_max = 20,
+	duration = 4,
+	sets = {
+		welcome = {},
+		prebattle = {},
+		battle = {},
+		life_lost = {},
+		totem = {}
+	}
 }
 tt.taunt.sets.welcome.format = "ENDLESS_BOSS_ORC_TAUNT_WELCOME_%04d"
 tt.taunt.sets.welcome.start_idx = 1
@@ -981,7 +966,6 @@ tt.taunt.sets.totem.end_idx = 1
 tt.taunt.offset = vec_2(0, -75)
 tt.taunt.ts = 0
 tt.taunt.next_ts = 0
-
 tt = RT("decal_elder_shaman_shoutbox", "decal_tween")
 AC(tt, "texts")
 tt.render.sprites[1].name = "HalloweenBoss_tauntBox"
@@ -1011,7 +995,6 @@ tt.tween.props[3].sprite_id = 1
 tt.tween.props[4] = table.deepclone(tt.tween.props[3])
 tt.tween.props[4].sprite_id = 2
 tt.tween.remove = false
-
 -- 纳泽鲁
 tt = RT("eb_efreeti", "boss")
 AC(tt, "attacks", "tween")
@@ -1101,7 +1084,6 @@ tt.sound_events.desintegrate = "BossEfreetiSnap"
 tt.sound_events.polymorph = "BossEfreetiSnap"
 tt.sound_events.spawn = "BossEfreetiSnap"
 tt.sound_events.sand = "BossEfreetiClap"
-
 tt = RT("mod_efreeti", "modifier")
 AC(tt, "render")
 tt.main_script.update = scripts.mod_tower_block.update
@@ -1113,7 +1095,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].prefix = "efreeti_sandblock_tower"
 tt.sound_events.finish = "BossEfreetiTowerReleased"
-
 tt = RT("eb_gorilla", "boss")
 AC(tt, "melee", "attacks", "idle_flip")
 anchor_y = 0.21
@@ -1186,15 +1167,12 @@ tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_SKELETON, F_BLOOD)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
-
 tt = RT("fx_gorilla_boss_heal", "fx")
 tt.render.sprites[1].name = "fx_gorilla_boss_heal"
 tt.render.sprites[1].anchor.y = 0.21
-
 tt = RT("fx_gorilla_boss_jump_smoke", "fx")
 tt.render.sprites[1].name = "fx_gorilla_boss_jump_smoke"
 tt.render.sprites[1].anchor.y = 0.12
-
 tt = RT("gorilla_boss_barrel", "bomb")
 tt.bullet.flight_time_base = fts(30)
 tt.bullet.flight_time_factor = fts(0.025)
@@ -1210,7 +1188,6 @@ tt.bullet.pop = nil
 tt.render.sprites[1].name = "CanibalBoos_Proy"
 tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
-
 tt = RT("enemy_gorilla_small", "enemy")
 AC(tt, "melee")
 anchor_y = 0.21
@@ -1236,7 +1213,7 @@ tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].prefix = "enemy_gorilla_small"
 tt.render.sprites[1].angles_flip_vertical = {
-    walk = true
+	walk = true
 }
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(13))
@@ -1244,7 +1221,6 @@ tt.unit.mod_offset = vec_2(0, ady(28))
 tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.death = "DeathBig"
-
 tt = RT("gorilla_small_liana", "decal_scripted")
 AC(tt, "sound_events")
 tt.main_script.update = scripts.gorilla_small_liana.update
@@ -1255,7 +1231,6 @@ tt.spawn_offset = {vec_2(-130, 38), vec_2(130, 38)}
 tt.spawn_time = fts(8)
 tt.spawn_dest = nil
 tt.sound_events.insert = "BossMonkeyMonkeysScreams"
-
 tt = RT("gorilla_small_falling", "bomb")
 tt.render.sprites[1].name = "CanibalBoos_Offspring_0030"
 tt.bullet.flight_time = fts(27)
@@ -1268,7 +1243,6 @@ tt.bullet.rotation_speed = nil
 tt.sound_events.insert = nil
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
-
 tt = RT("eb_umbra", "boss")
 AC(tt, "melee", "attacks")
 anchor_y = 0.18
@@ -1361,7 +1335,6 @@ tt.vis.bans_in_battlefield = bor(F_SKELETON, F_POISON, F_LETHAL, F_FREEZE)
 tt.vis.bans_in_pieces = F_ALL
 tt.vis.bans = tt.vis.bans_at_home
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
-
 tt = RT("decal_umbra_shoutbox", "decal_tween")
 AC(tt, "texts", "timed")
 tt.render.sprites[1].name = "finalBoss_tauntBox"
@@ -1386,7 +1359,6 @@ tt.tween.props[1].loop = true
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
-
 tt = RT("ray_umbra", "bullet")
 tt.image_width = 190
 tt.main_script.update = scripts.ray_enemy.update
@@ -1401,24 +1373,19 @@ tt.bullet.max_track_distance = 50
 tt.bullet.vis_bans = bor(F_ENEMY, F_FLYING)
 tt.bullet.hit_time = fts(7)
 tt.bullet.hit_fx = "fx_ray_umbra_explosion"
-
 tt = RT("ray_umbra_tower", "ray_umbra")
 tt.bullet.damage_radius = 0
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.hit_fx = nil
 tt.bullet.mod = "mod_umbra"
-
 tt = RT("fx_ray_umbra_explosion", "fx")
 tt.render.sprites[1].name = "ray_umbra_explosion"
-
 tt = RT("fx_ray_umbra_explosion_smoke", "fx")
 tt.render.sprites[1].name = "ray_umbra_explosion_smoke"
-
 tt = RT("fx_umbra_death_blast", "fx")
 tt.render.sprites[1].prefix = "umbra_death_blast"
 tt.render.sprites[1].name = "short"
 tt.render.sprites[1].anchor.y = 0.18
-
 tt = RT("mod_umbra", "modifier")
 AC(tt, "render")
 tt.main_script.update = scripts.mod_tower_remove.update
@@ -1426,7 +1393,6 @@ tt.modifier.hide_time = fts(22)
 tt.render.sprites[1].anchor.y = 0.19
 tt.render.sprites[1].z = Z_OBJECTS + 1
 tt.render.sprites[1].name = "umbra_tower_remove"
-
 tt = RT("umbra_portal", "decal_scripted")
 AC(tt, "render", "spawner")
 tt.main_script.update = scripts.umbra_portal.update
@@ -1440,11 +1406,9 @@ tt.spawner.animation_loop = "loop"
 tt.spawner.animation_end = "end"
 tt.spawner.ni_var = 3
 tt.spawner.spawn_fx = "fx_umbra_minion_spawn"
-
 tt = RT("fx_umbra_minion_spawn", "fx")
 tt.render.sprites[1].name = "umbra_minion_spawn"
 tt.render.sprites[1].anchor.y = 0.19
-
 tt = RT("enemy_umbra_minion", "enemy")
 AC(tt, "melee")
 anchor_y = 0.19
@@ -1478,7 +1442,6 @@ tt.unit.show_blood_pool = false
 tt.unit.hide_after_death = true
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_SKELETON)
-
 tt = RT("enemy_umbra_piece", "enemy")
 AC(tt, "melee", "timed")
 anchor_y = 0.21
@@ -1518,7 +1481,6 @@ tt.vis.bans = F_ALL
 tt.vis.bans_walking = bor(F_SKELETON, F_EAT, F_POISON, F_TWISTER, F_POLYMORPH, F_TELEPORT)
 tt.piece_respawn_delay = fts(35) + 3
 tt.piece_respawn_delay_repeating = fts(35)
-
 tt = RT("enemy_umbra_piece_flying", "bomb")
 tt.render.sprites[1].name = "enemy_umbra_piece_flying"
 tt.render.sprites[1].animated = true
@@ -1534,7 +1496,6 @@ tt.bullet.align_with_trajectory = true
 tt.sound_events.insert = nil
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
-
 tt = RT("fx_umbra_white_circle", "decal_tween")
 tt.render.sprites[1].name = "white_explosion"
 tt.render.sprites[1].animated = false
@@ -1543,7 +1504,6 @@ tt.render.sprites[1].z = Z_GUI - 2
 tt.tween.remove = false
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, vec_2(0.3, 0.3)}, {0.6, vec_2(20, 20)}}
-
 tt = RT("umbra_crystals", "decal_scripted")
 tt.render.sprites[1].prefix = "umbra_crystals"
 tt.render.sprites[1].name = "idle"
@@ -1558,18 +1518,15 @@ tt.render.sprites[3].name = "umbra_crystals_crack2"
 tt.render.sprites[4] = table.deepclone(tt.render.sprites[2])
 tt.render.sprites[4].name = "umbra_crystals_crack3"
 tt.main_script.update = scripts.decal_umbra_crystals.update
-
 tt = RT("umbra_crystals_broken", "decal")
 tt.render.sprites[1].name = "finalBoss_spawn_0108"
 tt.render.sprites[1].animated = false
-
 tt = RT("umbra_crystals_piece", "decal_tween")
 tt.render.sprites[1].name = "umbra_crystals_piece"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_OBJECTS
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {fts(21), 255}, {fts(21) + 1, 0}}
-
 tt = RT("umbra_guy", "decal_scripted")
 AC(tt, "attacks")
 tt.main_script.update = scripts.umbra_guy.update
@@ -1593,7 +1550,6 @@ tt.taunt.duration = 4
 tt.taunt.attack_duration = 1.25
 tt.taunt.shoutbox = "decal_umbra_guy_shoutbox"
 tt.taunt.ts = 0
-
 tt = RT("umbra_guy_force_field", "decal_tween")
 tt.render.sprites[1].name = "finalBoss_guy_forceShield_0013"
 tt.render.sprites[1].animated = false
@@ -1601,7 +1557,6 @@ tt.tween.remove = false
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(0.92, 0.92)}, {0.5, vec_2(1, 1)}}
 tt.tween.props[1].loop = true
-
 tt = RT("ray_umbra_guy", "bullet")
 tt.image_width = 238
 tt.main_script.update = scripts.ray_enemy.update
@@ -1617,10 +1572,8 @@ tt.bullet.vis_bans = bor(F_ENEMY, F_FLYING)
 tt.bullet.hit_time = fts(7)
 tt.bullet.hit_fx = "fx_ray_umbra_guy_explosion"
 tt.sound_events.insert = "TeslaAttack"
-
 tt = RT("fx_ray_umbra_guy_explosion", "fx")
 tt.render.sprites[1].name = "ray_umbra_guy_explosion"
-
 tt = RT("decal_umbra_guy_shoutbox", "decal_tween")
 AC(tt, "texts", "timed")
 tt.render.sprites[1].name = "finalBoss_GuyTauntBox"
@@ -1645,7 +1598,6 @@ tt.tween.props[1].loop = true
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
-
 tt = RT("eb_leviathan", "boss")
 AC(tt, "attacks")
 anchor_y = 0.15254237288135594
@@ -1689,12 +1641,10 @@ tt.vis.bans_in_battlefield = bor(F_STUN, F_BLOOD, F_DRILL, F_LETHAL, F_SKELETON,
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.sound_events.spawn = "RTBossSpawn"
 tt.sound_events.death = "RTBossDeath"
-
 tt = RT("leviathan_head", "decal")
 tt.render.sprites[1].prefix = "leviathan_head"
 tt.render.sprites[1].name = "show"
 tt.render.sprites[1].anchor.y = 0.4830508474576271
-
 tt = RT("leviathan_tentacle", "decal_scripted")
 tt.render.sprites[1].prefix = "leviathan_tentacle"
 tt.render.sprites[1].name = "show"
@@ -1706,7 +1656,6 @@ tt.search_off_x = 90
 tt.duration = 8
 tt.interrupt = nil
 tt.flip = nil
-
 tt = RT("fx_leviathan_incoming", "decal_tween")
 tt.tween.remove = true
 tt.tween.props[1].name = "alpha"
@@ -1718,7 +1667,6 @@ tt.render.sprites[1].name = "fx_leviathan_bubbles"
 tt.render.sprites[1].z = Z_DECALS + 2
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].anchor.y = 0.15254237288135594
-
 tt = RT("eb_dracula", "boss")
 AC(tt, "melee")
 image_y = 80
@@ -1764,7 +1712,6 @@ tt.vis.bans = bor(F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.sound_events.insert = "MusicBossFight"
 tt.sound_events.death = "HWBossVampireDeath"
-
 tt = RT("mod_dracula_lifesteal", "modifier")
 tt.modifier.duration = fts(50)
 tt.cycle_time = fts(2)
@@ -1772,7 +1719,6 @@ tt.heal_hp = 25
 tt.damage = 150
 tt.main_script.update = scripts.mod_dracula_lifesteal.update
 tt.sound_events.insert = "HWBossVampireLifesteal"
-
 tt = RT("dracula_damage_aura", "aura")
 AC(tt, "render")
 tt.aura.cycle_time = fts(2)
@@ -1790,7 +1736,6 @@ tt.render.sprites[1].name = "dracula_damage_aura"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].anchor = vec_2(0.5289855072463768, 0.48484848484848486)
 tt.render.sprites[1].z = Z_DECALS
-
 tt = RT("eb_saurian_king", "boss")
 AC(tt, "melee", "timed_attacks")
 image_y = 150
@@ -1812,7 +1757,7 @@ tt.motion.max_speed = 1.494 * FPS
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
@@ -1849,11 +1794,9 @@ tt.timed_attacks.list[1].min_damages = {5, 7, 12, 20, 30, 50, 70, 100}
 tt.timed_attacks.list[1].sound = "SaurianKingBossHammer"
 tt.timed_attacks.list[1].vis_flags = F_RANGED
 tt.timed_attacks.list[1].fx_offsets = {vec_2(48, -11), vec_2(62, 1)}
-
 tt = RT("decal_saurian_king_hammer", "fx")
 tt.render.sprites[1].name = "decal_saurian_king_hammer"
 tt.render.sprites[1].z = Z_DECALS
-
 tt = RT("mod_saurian_king_tongue", "modifier")
 tt.main_script.insert = scripts.mod_saurian_king_tongue.insert
 tt.modifier.damage_radius = 25
@@ -1861,7 +1804,6 @@ tt.modifier.damage_max = 150
 tt.modifier.damage_min = 100
 tt.modifier.vis_flags = F_MOD
 tt.modifier.vis_bans = bor(F_ENEMY, F_FLYING)
-
 tt = RT("eb_gnoll", "boss")
 AC(tt, "melee", "timed_attacks", "auras")
 tt.auras.list[1] = CC("aura_attack")
@@ -1917,7 +1859,6 @@ tt.timed_attacks.list[2].nis = {85, 135, 180}
 tt.timed_attacks.list[2].wave_names = {"Boss_Path_1", "Boss_Path_2", "Boss_Path_3", "Boss_Path_4"}
 tt.timed_attacks.list[2].hit_time = fts(8)
 tt.timed_attacks.list[2].sound = "ElvesHyenaGrowl"
-
 tt = RT("gnoll_boss_aura", "aura")
 AC(tt, "render", "tween")
 tt.aura.cycle_time = fts(5)
@@ -1946,7 +1887,6 @@ tt.tween.props[2].keys = {{0, vec_2(0.65, 0.65)}, {fts(30), vec_2(1.57, 1.57)}}
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].loop = true
-
 tt = RT("mod_gnoll_boss", "modifier")
 AC(tt, "render")
 tt.render.sprites[1].name = "bossHiena_creepFx"
@@ -1959,7 +1899,6 @@ tt.modifier.duration = fts(6)
 tt.modifier.use_mod_offset = false
 tt.extra_health_factor = 0.5
 tt.inflicted_damage_factor = 1.5
-
 tt = RT("eb_drow_queen", "boss")
 AC(tt, "melee", "taunts", "tween")
 tt.info.enc_icon = 27
@@ -2030,17 +1969,16 @@ tt.fly_offset_y = 26
 tt.pos_fighting = vec_2(347, 396)
 tt.pos_casting = vec_2(684, 404)
 tt.pos_sitting = vec_2(924, 416)
-tt.tower_block_sets = {{"12", "13", "14"}, {"12", "13", "14", "6"}, {"12", "13", "14", "6", "9", "5"},
-                       {"12", "13", "14", "6", "9", "5"}}
+tt.tower_block_sets = {{"12", "13", "14"}, {"12", "13", "14", "6"}, {"12", "13", "14", "6", "9", "5"}, {"12", "13", "14", "6", "9", "5"}}
 tt.power_block_duration = {8, 8, 8, 15}
 tt.taunts.delay_min = 15
 tt.taunts.delay_max = 20
 tt.taunts.duration = 4
 tt.taunts.sets = {
-    welcome = {},
-    prebattle = {},
-    casting = {},
-    sitting = {}
+	welcome = {},
+	prebattle = {},
+	casting = {},
+	sitting = {}
 }
 tt.taunts.sets.welcome.format = "EB_DROW_QUEEN_TAUNT_KIND_WELCOME_%04d"
 tt.taunts.sets.welcome.start_idx = 1
@@ -2059,7 +1997,6 @@ tt.taunts.sets.sitting.end_idx = 5
 tt.taunts.decal_name = "decal_drow_queen_shoutbox"
 tt.taunts.offset = vec_2(0, 0)
 tt.taunts.pos = vec_2(870, 376)
-
 tt = RT("decal_drow_queen_shoutbox", "decal_tween")
 AC(tt, "texts")
 tt.render.sprites[1].animated = false
@@ -2104,7 +2041,6 @@ tt.render.sprites[1].name = "s11_malicia_teleportLoop"
 tt.render.sprites[1].anchor.y = 0.35384615384615387
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = -24
-
 tt = RT("decal_drow_queen_shield", "decal_scripted")
 AC(tt, "tween", "health_bar", "health")
 tt.health.hp = 0
@@ -2131,18 +2067,15 @@ tt.tween.props[1].ignore_reverse = true
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].keys = {{0, 0}, {fts(11), 153}}
 tt.shield_hp = 0
-
 tt = RT("fx_drow_queen_shield_break", "fx")
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "s11_malicia_shield_break"
 tt.render.sprites[1].anchor.y = 0.15384615384615385
 tt.render.sprites[1].offset.x = -5
 tt.sound_events.insert = "ElvesMaliciaShieldBreak"
-
 tt = RT("fx_drow_queen_cast", "fx")
 tt.render.sprites[1].name = "s11_malicia_castFx"
 tt.render.sprites[1].anchor.y = 0.15384615384615385
-
 tt = RT("mod_drow_queen_tower_block", "modifier")
 AC(tt, "render", "tween")
 tt.main_script.update = scripts.mod_tower_block.update
@@ -2167,7 +2100,6 @@ tt.tween.props[3] = table.deepclone(tt.tween.props[1])
 tt.tween.props[3].sprite_id = 2
 tt.tween.props[4] = table.deepclone(tt.tween.props[2])
 tt.tween.props[4].sprite_id = 2
-
 tt = RT("eb_spider", "boss")
 AC(tt, "ranged", "timed_attacks", "taunts")
 tt.enemy.gold = 0
@@ -2175,8 +2107,7 @@ tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = vec_2(53, 0)
 tt.health.dead_lifetime = 50
 tt.health.hp_max = {12000, 15000, 19000, 21000}
-tt.health.hp_max_rounds = {{12000, 9000, 6000, 3000}, {15000, 11000, 7000, 3000}, {19000, 14000, 10000, 6000},
-                           {21000, 16000, 12000, 7000}}
+tt.health.hp_max_rounds = {{12000, 9000, 6000, 3000}, {15000, 11000, 7000, 3000}, {19000, 14000, 10000, 6000}, {21000, 16000, 12000, 7000}}
 tt.health.magic_armor = 0.5
 tt.health_bar.offset = vec_2(0, 106)
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
@@ -2188,14 +2119,13 @@ tt.main_script.update = scripts.eb_spider.update
 tt.motion.max_speed = 0.83 * FPS
 
 for i = 1, 6 do
-    local s = CC("sprite")
-
-    s.prefix = "eb_spider_layer" .. i
-    s.name = "idle"
-    s.anchor.y = 0.3
-    s.angles = {}
-    s.angles.walk = {"walkingRightLeft", "walkingDown", "walkingDown"}
-    tt.render.sprites[i] = s
+	local s = CC("sprite")
+	s.prefix = "eb_spider_layer" .. i
+	s.name = "idle"
+	s.anchor.y = 0.3
+	s.angles = {}
+	s.angles.walk = {"walkingRightLeft", "walkingDown", "walkingDown"}
+	tt.render.sprites[i] = s
 end
 
 tt.sound_events.death = "ElvesFinalBossDeath"
@@ -2210,8 +2140,8 @@ tt.taunts.decal_name = "decal_eb_spider_shoutbox"
 tt.taunts.duration = 2
 tt.taunts.offset = vec_2(130, 120)
 tt.taunts.sets = {
-    intro = CC("taunt_set"),
-    death = CC("taunt_set")
+	intro = CC("taunt_set"),
+	death = CC("taunt_set")
 }
 tt.taunts.sets.intro.format = "EB_SPIDER_TAUNT_KIND_OURS"
 tt.taunts.sets.death.format = "EB_SPIDER_DEATH_TAUNT"
@@ -2242,7 +2172,6 @@ tt.timed_attacks.list[3].shoot_time = fts(8)
 tt.timed_attacks.list[3].animations = {"shootTower_start", "shootTower_loop", "shootTower_end"}
 tt.timed_attacks.list[3].sound = "ElvesFinalBossSpiderSuperrayCharge"
 tt.timed_attacks.list[3].bullet_start_offset = {vec_2(19, 42)}
-
 tt = RT("ray_eb_spider", "bullet")
 tt.bullet.damage_max = 120
 tt.bullet.damage_min = 80
@@ -2258,7 +2187,6 @@ tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_eb_spider"
 tt.sound_events.insert = "ElvesFinalBosskillray"
-
 tt = RT("ray_eb_spider_tower", "ray_eb_spider")
 tt.bullet.damage_radius = 0
 tt.bullet.damage_type = DAMAGE_NONE
@@ -2267,12 +2195,10 @@ tt.bullet.mod = "mod_eb_spider_tower_remove"
 tt.image_width = 230
 tt.render.sprites[1].name = "ray_eb_spider_tower"
 tt.sound_events.insert = "ElvesFinalBossSpiderSuperrayDischarge"
-
 tt = RT("mod_eb_spider_tower_block", "mod_drow_queen_tower_block")
 tt.modifier.duration = 5
 tt.render.sprites[1].prefix = "eb_spider_tower_block"
 tt.render.sprites[2].name = "spiderQueen_towerNet_decal"
-
 tt = RT("mod_eb_spider_tower_remove", "modifier")
 AC(tt, "render", "tween")
 tt.main_script.update = scripts.mod_tower_remove.update
@@ -2316,29 +2242,26 @@ tt.tween.props[2].keys = {{0, vec_1(0)}, {0.55, vec_1(1)}, {0.6, vec_1(1)}}
 tt.tween.props[2].name = "scale"
 tt = RT("decal_eb_spider_death_second_rays", "decal_tween")
 tt.tween.remove = false
-
 local angles = {32, -48, 118, -128}
 
 for i = 1, 4 do
-    tt.render.sprites[i] = CC("sprite")
-    tt.render.sprites[i].name = "spiderQueen_deathShapes_0001"
-    tt.render.sprites[i].animated = false
-    tt.render.sprites[i].r = d2r(angles[i])
-    tt.render.sprites[i].z = Z_OBJECTS + 1
-
-    local d = (i - 1) * 9 + (i == 4 and 2 or 0)
-
-    tt.tween.props[2 * i - 1] = CC("tween_prop")
-    tt.tween.props[2 * i - 1].name = "scale"
-    tt.tween.props[2 * i - 1].keys = {{fts(0), vec_2(1, 1.25)}, {fts(2), vec_1(0.75)}, {fts(4), vec_2(1, 1.25)}}
-    tt.tween.props[2 * i - 1].sprite_id = i
-    tt.tween.props[2 * i - 1].time_offset = fts(i - 1)
-    tt.tween.props[2 * i - 1].loop = true
-    tt.tween.props[2 * i] = CC("tween_prop")
-    tt.tween.props[2 * i].name = "scale"
-    tt.tween.props[2 * i].keys = {{fts(d), vec_1(0)}, {fts(d + 2), vec_1(0.4)}, {fts(d + 3), vec_1(1)}}
-    tt.tween.props[2 * i].sprite_id = i
-    tt.tween.props[2 * i].multiply = true
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].name = "spiderQueen_deathShapes_0001"
+	tt.render.sprites[i].animated = false
+	tt.render.sprites[i].r = d2r(angles[i])
+	tt.render.sprites[i].z = Z_OBJECTS + 1
+	local d = (i - 1) * 9 + (i == 4 and 2 or 0)
+	tt.tween.props[2 * i - 1] = CC("tween_prop")
+	tt.tween.props[2 * i - 1].name = "scale"
+	tt.tween.props[2 * i - 1].keys = {{fts(0), vec_2(1, 1.25)}, {fts(2), vec_1(0.75)}, {fts(4), vec_2(1, 1.25)}}
+	tt.tween.props[2 * i - 1].sprite_id = i
+	tt.tween.props[2 * i - 1].time_offset = fts(i - 1)
+	tt.tween.props[2 * i - 1].loop = true
+	tt.tween.props[2 * i] = CC("tween_prop")
+	tt.tween.props[2 * i].name = "scale"
+	tt.tween.props[2 * i].keys = {{fts(d), vec_1(0)}, {fts(d + 2), vec_1(0.4)}, {fts(d + 3), vec_1(1)}}
+	tt.tween.props[2 * i].sprite_id = i
+	tt.tween.props[2 * i].multiply = true
 end
 
 tt.render.sprites[5] = CC("sprite")
@@ -2365,7 +2288,6 @@ tt.render.sprites[3].offset = vec_2(13, -13)
 tt.texts.list[1].font_size = i18n:cjk(28, nil, 22, nil)
 tt.texts.list[1].size = vec_2(158, 56)
 tt.texts.list[1].fit_height = true
-
 tt = RT("eb_bram", "boss")
 AC(tt, "melee", "timed_attacks", "taunts")
 tt.enemy.gold = 0
@@ -2389,10 +2311,10 @@ tt.render.sprites[1].flip_x = true
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingDown", "walkingDown"}
 tt.render.sprites[1].angles_custom = {
-    walk = {45, 120, 240, 315}
+	walk = {45, 120, 240, 315}
 }
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.sound_events.death = "ElvesBossBramDeath"
 tt.unit.click_rect = r(-35, 0, 70, 65)
@@ -2415,7 +2337,7 @@ tt.melee.attacks[1].damage_min = {100, 100, 100, 200}
 tt.melee.attacks[1].hit_time = fts(11)
 tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].fn_can = function(t, s, a, target)
-    return band(target.vis.flags, F_HERO) ~= 0
+	return band(target.vis.flags, F_HERO) ~= 0
 end
 tt.melee.attacks[2] = CC("melee_attack")
 tt.melee.attacks[2].animation = "attack"
@@ -2425,7 +2347,7 @@ tt.melee.attacks[2].mod = "mod_bram_slap"
 tt.melee.attacks[2].shared_cooldown = true
 tt.melee.attacks[2].sound_hit = "ElvesBossBramSlap"
 tt.melee.attacks[2].fn_can = function(t, s, a, target)
-    return band(target.vis.flags, F_HERO) == 0
+	return band(target.vis.flags, F_HERO) == 0
 end
 tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_EAT, F_INSTAKILL)
 tt.timed_attacks.list[1] = CC("mod_attack")
@@ -2456,13 +2378,11 @@ tt.taunts.sets.sitting.end_idx = 5
 tt.taunts.sets.prebattle = CC("taunt_set")
 tt.taunts.sets.prebattle.format = "BOSS_BRAM_TAUNT_PREBATTLE_%04d"
 tt.taunts.sets.prebattle.end_idx = 3
-
 tt = RT("mod_bram_slap", "modifier")
 tt.main_script.queue = scripts.mod_bram_slap.queue
 tt.main_script.update = scripts.mod_bram_slap.update
 tt.custom_anchors = {}
 tt.custom_anchors.default = vec_2(0.5, 0.45)
-
 tt = RT("eb_bajnimen", "boss")
 AC(tt, "melee", "ranged", "timed_attacks")
 tt.enemy.gold = 0
@@ -2500,7 +2420,7 @@ tt.melee.attacks[1].damage_min = {120, 120, 200}
 tt.melee.attacks[1].hit_time = fts(20)
 tt.melee.attacks[1].sound = "ElvesBajNimenBossTail"
 tt.melee.attacks[1].sound_args = {
-    delay = fts(5)
+	delay = fts(5)
 }
 tt.melee.attacks[1].uninterruptible = true
 tt.ranged.attacks[1].bullet = "bolt_bajnimen"
@@ -2534,7 +2454,6 @@ tt.timed_attacks.list[2].duration = 3
 tt.timed_attacks.list[2].sound = "ElvesBajNimenBossHeal"
 tt.timed_attacks.list[2].hit_offset = vec_2(0, 40)
 tt.timed_attacks.list[2].mod_offset = vec_2(0, 35)
-
 tt = RT("meteor_bajnimen", "arrow_hero_elves_archer_ultimate")
 tt.bullet.arrive_decal = "decal_bomb_crater"
 tt.bullet.hit_fx = "fx_meteor_bajnimen_explosion"
@@ -2546,7 +2465,6 @@ tt.bullet.damage_max = {80, 80, 200}
 tt.bullet.damage_min = {80, 80, 120}
 tt.render.sprites[1].name = "bajnimen_boss_storm_meteor"
 tt.sound_events.insert = "ElvesBajNimenBossShadowTravel"
-
 tt = RT("fx_meteor_bajnimen_explosion", "fx")
 AC(tt, "sound_events")
 tt.render.sprites[1].name = "fx_meteor_bajnimen_explosion"
@@ -2559,13 +2477,11 @@ tt.bullet.hit_fx = "fx_bolt_bajnimen_hit"
 tt.bullet.max_speed = 360
 tt.render.sprites[1].prefix = "bolt_bajnimen"
 tt.sound_events.insert = "BoltSorcererSound"
-
 tt = RT("fx_bolt_bajnimen_hit", "fx")
 AC(tt, "sound_events")
 tt.sound_events.insert = "ElvesBajNimenBossRangedAttack"
 tt.render.sprites[1].name = "fx_bolt_bajnimen_hit"
 tt.render.sprites[1].anchor.y = 0.16666666666666666
-
 tt = RT("eb_balrog", "boss")
 AC(tt, "melee", "timed_attacks")
 tt.enemy.gold = 0
@@ -2618,7 +2534,6 @@ tt.timed_attacks.list[1].bullet_start_offset = {vec_2(23, 82)}
 tt.timed_attacks.list[1].sound = "ElvesBalrogSpit"
 tt.timed_attacks.list[1].vis_bans = bor(F_ENEMY, F_FLYING)
 tt.timed_attacks.list[1].vis_flag = F_RANGED
-
 tt = RT("eb_hee_haw", "decal_scripted")
 AC(tt, "taunts", "attacks")
 tt.main_script.update = scripts.eb_hee_haw.update
@@ -2631,9 +2546,9 @@ tt.taunts.delay_min = 15
 tt.taunts.delay_max = 20
 tt.taunts.duration = 3.7
 tt.taunts.sets = {
-    welcome = {},
-    prebattle = {},
-    battle = {}
+	welcome = {},
+	prebattle = {},
+	battle = {}
 }
 tt.taunts.sets.welcome.format = "ENDLESS_BOSS_GNOLL_TAUNT_WELCOME_%04d"
 tt.taunts.sets.welcome.start_idx = 1
@@ -2660,7 +2575,6 @@ tt.attacks.list[3] = CC("bullet_attack")
 tt.attacks.list[3].shoot_time = fts(19)
 tt.attacks.list[3].bullet = "snare_hee_haw"
 tt.attacks.list[3].bullet_start_offset = vec_2(36, 160)
-
 tt = RT("eb_ainyl", "decal_scripted")
 AC(tt, "taunts", "attacks")
 tt.main_script.update = scripts.eb_ainyl.update
@@ -2670,9 +2584,9 @@ tt.taunts.delay_min = 15
 tt.taunts.delay_max = 20
 tt.taunts.duration = 3.7
 tt.taunts.sets = {
-    welcome = {},
-    prebattle = {},
-    battle = {}
+	welcome = {},
+	prebattle = {},
+	battle = {}
 }
 tt.taunts.sets.welcome.format = "ENDLESS_BOSS_TWILIGHT_TAUNT_WELCOME_%04d"
 tt.taunts.sets.welcome.start_idx = 1
@@ -2708,7 +2622,6 @@ tt.attacks.list[3].mod = "mod_shield_ainyl"
 tt.attacks.list[3].vis_bans = bor(F_BOSS, F_FLYING)
 tt.attacks.list[3].vis_flags = bor(F_RANGED)
 tt.attacks.list[3].sound = "EndlessAinylShield"
-
 tt = RT("eb_jack", "boss")
 AC(tt, "melee", "ranged", "auras", "regen")
 image_y = 104
@@ -2747,7 +2660,7 @@ tt.ranged.attacks[1].hold_advance = false
 tt.render.sprites[1].prefix = "enemy_headless_horseman"
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.insert = {"HWHeadlessHorsemanLaugh", "HWHeadlessHorsemanEntry"}
 tt.sound_events.death = nil
@@ -2762,7 +2675,6 @@ tt.regen.cooldown = 0.25
 tt.regen.health = 4
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.vis.bans = bor(F_SKELETON, F_TELEPORT, F_POLYMORPH, F_INSTAKILL, F_POISON)
-
 tt = RT("eb_jack_pumpkin", "bomb")
 tt.bullet.damage_min = 150
 tt.bullet.damage_max = 210
@@ -2775,14 +2687,12 @@ tt.render.sprites[1].name = "HalloweenRider_bomb"
 tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
 tt.sound_events.insert = nil
-
 tt = RT("eb_jack_spawner_aura", "aura")
 tt.main_script.update = scripts.eb_jack_spawner_aura.update
 tt.aura.cycle_time = 10
 tt.min_spawn_count = 4
 tt.max_spawn_count = 8
-tt.creeps = {"enemy_halloween_zombie","enemy_ghoul"}
-
+tt.creeps = {"enemy_halloween_zombie", "enemy_ghoul"}
 tt = RT("krdove_eb_elephant_cannibal", "boss")
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.11
@@ -2810,13 +2720,13 @@ tt.motion.max_speed = 0.4 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "krdove_eb_elephant_cannibal"
 tt.render.sprites[1].angles_stickiness = {
-    walk = 10
+	walk = 10
 }
 tt.render.sprites[1].angles_flip_vertical = {
-    walk = true
+	walk = true
 }
 tt.render.sprites[1].angles = {
-    walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
+	walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
 }
 tt.sound_events.death = "DeathBig"
 tt.sound_events.insert = "MusicBossFight"
@@ -2831,12 +2741,3 @@ tt.unit.marker_hidden = true
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
--- tt.timed_attacks.list[1] = CC("mod_attack")
--- tt.timed_attacks.list[1].animation = "heal"
--- tt.timed_attacks.list[1].cast_time = fts(14)
--- tt.timed_attacks.list[1].cooldown = 8
--- tt.timed_attacks.list[1].max_count = 20
--- tt.timed_attacks.list[1].max_range = 320
--- tt.timed_attacks.list[1].mod = "mod_gulthak_heal"
--- tt.timed_attacks.list[1].sound = "EnemyHealing"
--- tt.timed_attacks.list[1].vis_flags = bor(F_MOD)

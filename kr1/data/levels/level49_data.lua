@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level01_data.lua
-
+-- chunkname: @./kr3/data/levels/level01_data.lua
 return {
 	level_terrain_type = 1,
 	locked_hero = false,
@@ -12,64 +11,48 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvenWoodsAmbienceSound"
-			}
+			sounds = {"ElvenWoodsAmbienceSound"}
 		},
 		{
 			template = "birds_controller",
-			destinations = {
-				{
-					x = 1038,
-					y = 436
-				},
-				{
-					x = 1044,
-					y = 413
-				},
-				{
-					x = 649,
-					y = 832
-				},
-				{
-					x = 615,
-					y = 827
-				},
-				{
-					x = 641,
-					y = 832
-				},
-				{
-					x = 608,
-					y = 827
-				}
-			},
-			origins = {
-				{
-					x = 521,
-					y = -54
-				},
-				{
-					x = 528,
-					y = -77
-				},
-				{
-					x = 1043,
-					y = 482
-				},
-				{
-					x = 1044,
-					y = 459
-				},
-				{
-					x = -160,
-					y = 382
-				},
-				{
-					x = -160,
-					y = 359
-				}
-			}
+			destinations = {{
+				x = 1038,
+				y = 436
+			}, {
+				x = 1044,
+				y = 413
+			}, {
+				x = 649,
+				y = 832
+			}, {
+				x = 615,
+				y = 827
+			}, {
+				x = 641,
+				y = 832
+			}, {
+				x = 608,
+				y = 827
+			}},
+			origins = {{
+				x = 521,
+				y = -54
+			}, {
+				x = 528,
+				y = -77
+			}, {
+				x = 1043,
+				y = 482
+			}, {
+				x = 1044,
+				y = 459
+			}, {
+				x = -160,
+				y = 382
+			}, {
+				x = -160,
+				y = 359
+			}}
 		},
 		{
 			template = "decal_background",
@@ -575,112 +558,38 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_powers = {
-				true,
-				true,
-				true
-			},
-			locked_towers = {
-				"tower_archer_2",
-				"tower_barrack_2",
-				"tower_engineer_2",
-				"tower_mage_2"
-			}
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_powers = {true, true, true},
+		locked_towers = {"tower_archer_2", "tower_barrack_2", "tower_engineer_2", "tower_mage_2"}
+	}, {
+		max_upgrade_level = 2,
+		locked_powers = {
+			[3] = true
 		},
-		{
-			max_upgrade_level = 2,
-			locked_powers = {
-				[3] = true
-			},
-			locked_towers = {
-				"tower_archer_2",
-				"tower_barrack_2",
-				"tower_engineer_2",
-				"tower_mage_2"
-			}
+		locked_towers = {"tower_archer_2", "tower_barrack_2", "tower_engineer_2", "tower_mage_2"}
+	}, {
+		max_upgrade_level = 2,
+		locked_powers = {
+			[3] = true
 		},
-		{
-			max_upgrade_level = 2,
-			locked_powers = {
-				[3] = true
-			},
-			locked_towers = {
-				"tower_build_archer",
-				"tower_barrack_2",
-				"tower_build_mage",
-				"tower_engineer_2"
-			}
-		}
-	},
+		locked_towers = {"tower_build_archer", "tower_barrack_2", "tower_build_mage", "tower_engineer_2"}
+	}},
 	nav_mesh = {
-		[29] = {
-			37,
-			33,
-			nil,
-			35
-		},
-		[31] = {
-			45,
-			39,
-			37
-		},
-		[33] = {
-			37,
-			nil,
-			29,
-			35
-		},
-		[35] = {
-			37,
-			33,
-			29
-		},
-		[37] = {
-			39,
-			33,
-			29,
-			35
-		},
-		[39] = {
-			41,
-			43,
-			37,
-			31
-		},
-		[41] = {
-			45,
-			43,
-			39,
-			45
-		},
-		[43] = {
-			nil,
-			nil,
-			39,
-			41
-		},
-		[45] = {
-			nil,
-			41,
-			31
-		}
+		[29] = {37, 33, nil, 35},
+		[31] = {45, 39, 37},
+		[33] = {37, nil, 29, 35},
+		[35] = {37, 33, 29},
+		[37] = {39, 33, 29, 35},
+		[39] = {41, 43, 37, 31},
+		[41] = {45, 43, 39, 45},
+		[43] = {nil, nil, 39, 41},
+		[45] = {nil, 41, 31}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage49",
-		"ElvenWoodsAmbienceSounds"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_stage49",
-		"go_stage49_bg",
-		"go_stages_elven_woods",
-		"gui_tutorial"
-	}
+	required_sounds = {"music_stage49", "ElvenWoodsAmbienceSounds"},
+	required_textures = {"go_enemies_elven_woods", "go_stage49", "go_stage49_bg", "go_stages_elven_woods", "gui_tutorial"}
 }

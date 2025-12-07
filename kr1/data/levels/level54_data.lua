@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level06_data.lua
-
+-- chunkname: @./kr3/data/levels/level06_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 1,
@@ -7,9 +6,7 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvenWoodsAmbienceSound"
-			}
+			sounds = {"ElvenWoodsAmbienceSound"}
 		},
 		{
 			["render.sprites[1].sort_y"] = 375,
@@ -363,115 +360,35 @@ return {
 		}
 	},
 	invalid_path_ranges = {},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 4,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 4,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_barrack",
-			}
-		}
-	},
-    unlock_towers = {"tower_wild_magus"},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 4,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 4,
+		locked_towers = {"tower_build_archer", "tower_build_barrack"}
+	}},
+	unlock_towers = {"tower_wild_magus"},
 	nav_mesh = {
-		{
-			7,
-			6,
-			2
-		},
-		{
-			1,
-			5,
-			3
-		},
-		{
-			2,
-			4,
-			8
-		},
-		{
-			5,
-			11,
-			8,
-			3
-		},
-		{
-			6,
-			11,
-			4,
-			2
-		},
-		{
-			7,
-			10,
-			5,
-			1
-		},
-		{
-			nil,
-			12,
-			6,
-			1
-		},
-		{
-			4,
-			9,
-			nil,
-			3
-		},
-		{
-			11,
-			11,
-			nil,
-			8
-		},
-		{
-			12,
-			nil,
-			11,
-			6
-		},
-		{
-			10,
-			nil,
-			9,
-			4
-		},
-		{
-			nil,
-			nil,
-			10,
-			7
-		}
+		{7, 6, 2},
+		{1, 5, 3},
+		{2, 4, 8},
+		{5, 11, 8, 3},
+		{6, 11, 4, 2},
+		{7, 10, 5, 1},
+		{nil, 12, 6, 1},
+		{4, 9, nil, 3},
+		{11, 11, nil, 8},
+		{12, nil, 11, 6},
+		{10, nil, 9, 4},
+		{nil, nil, 10, 7}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage54",
-		"ElvenWoodsAmbienceSounds",
-		"ElvesHeroAlleria",
-		"ElvesGryphon",
-		"ElvesHyena",
-		"ElvesPlants",
-		"ElvesCreepHyena"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_stage54",
-		"go_stage54_bg",
-		"go_stages_elven_woods",
-		"go_hero_alleria"
-	}
+	required_sounds = {"music_stage54", "ElvenWoodsAmbienceSounds", "ElvesHeroAlleria", "ElvesGryphon", "ElvesHyena", "ElvesPlants", "ElvesCreepHyena"},
+	required_textures = {"go_enemies_elven_woods", "go_stage54", "go_stage54_bg", "go_stages_elven_woods", "go_hero_alleria"}
 }

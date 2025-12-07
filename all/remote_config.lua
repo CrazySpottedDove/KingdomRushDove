@@ -1,12 +1,9 @@
-﻿-- chunkname: @./all/remote_config.lua
-
+-- chunkname: @./all/remote_config.lua
 local log = require("lib.klua.log"):new("remote_config")
 local signal = require("hump.signal")
 local PS = require("platform_services")
-
 require("constants")
 require("version")
-
 rc = {}
 rc.signal_handlers = {
 	[SGN_PS_REMOTE_CONFIG_SYNC_FINISHED] = function(service_name, success)
@@ -20,7 +17,6 @@ function rc:init()
 	self.v = {}
 	self.v_defaults = {}
 	self._vmt = {}
-
 	setmetatable(rc.v, rc._vmt)
 	self:reload()
 
@@ -40,36 +36,29 @@ function rc:reload()
 
 	if not love.filesystem.getInfo(filename) then
 		log.info("error loading %s. File not found", filename)
-
-		return
+		return 
 	end
 
 	log.debug("loading from file %s", filename)
-
 	local str = love.filesystem.read(filename)
 	local chunk, err = loadstring(str)
 
 	if not chunk then
 		log.error("error loading %s. Error: %s", filename, err)
-
-		return
+		return 
 	end
 
 	local env = {}
-
 	env.bundle_id = version.bundle_id
 	env.pairs = pairs
 	env.type = type
 	env.string = string
-
 	setfenv(chunk, env)
-
 	local ok, result = pcall(chunk)
 
 	if not ok then
 		log.error("error calling %s. Error: %s", filename, tostring(result))
-
-		return
+		return 
 	end
 
 	self.v_defaults = result
@@ -79,8 +68,7 @@ end
 function rc:sync()
 	if not PS.services.remoteconfig then
 		log.debug("PS.services.remoteconfig not available")
-
-		return
+		return 
 	end
 
 	PS.services.remoteconfig:sync()
@@ -88,13 +76,11 @@ end
 
 function rc:apply_remote_config()
 	log.debug("applying remote config...")
-
 	local psrc = PS.services.remoteconfig
 
 	if not psrc then
 		log.debug("PS.services.remoteconfig not available")
-
-		return
+		return 
 	end
 
 	local lkeys = table.keys(self.v_defaults)
@@ -113,20 +99,16 @@ function rc:apply_remote_config()
 
 			if not fs then
 				log.error("error loading remote config string for key:%s value:%s. reactivating default", k, s_expr)
-
 				self.v[k] = nil
 			else
 				setfenv(fs, env)
-
 				local ok, s_val = pcall(fs)
 
 				if ok then
 					log.debug("  %s = %s", k, s_val)
-
 					self.v[k] = s_val
 				else
 					log.error("error evaluating remote config key:%s value:%s. reactivating default", k, rv)
-
 					self.v[k] = nil
 				end
 			end

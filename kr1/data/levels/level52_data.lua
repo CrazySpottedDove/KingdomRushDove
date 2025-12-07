@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr3/data/levels/level04_data.lua
-
+-- chunkname: @./kr3/data/levels/level04_data.lua
 return {
 	level_terrain_type = 1,
 	locked_hero = false,
@@ -11,64 +10,48 @@ return {
 	entities_list = {
 		{
 			template = "background_sounds",
-			sounds = {
-				"ElvenWoodsAmbienceSound"
-			}
+			sounds = {"ElvenWoodsAmbienceSound"}
 		},
 		{
 			template = "birds_controller",
-			destinations = {
-				{
-					x = 1047,
-					y = 298
-				},
-				{
-					x = 1054,
-					y = 275
-				},
-				{
-					x = 777,
-					y = 828
-				},
-				{
-					x = 743,
-					y = 823
-				},
-				{
-					x = 743,
-					y = 823
-				},
-				{
-					x = 184,
-					y = 825
-				}
-			},
-			origins = {
-				{
-					x = 507,
-					y = -54
-				},
-				{
-					x = 514,
-					y = -77
-				},
-				{
-					x = 1053,
-					y = 391
-				},
-				{
-					x = 1054,
-					y = 368
-				},
-				{
-					x = 1054,
-					y = 368
-				},
-				{
-					x = -26,
-					y = 309
-				}
-			}
+			destinations = {{
+				x = 1047,
+				y = 298
+			}, {
+				x = 1054,
+				y = 275
+			}, {
+				x = 777,
+				y = 828
+			}, {
+				x = 743,
+				y = 823
+			}, {
+				x = 743,
+				y = 823
+			}, {
+				x = 184,
+				y = 825
+			}},
+			origins = {{
+				x = 507,
+				y = -54
+			}, {
+				x = 514,
+				y = -77
+			}, {
+				x = 1053,
+				y = 391
+			}, {
+				x = 1054,
+				y = 368
+			}, {
+				x = 1054,
+				y = 368
+			}, {
+				x = -26,
+				y = 309
+			}}
 		},
 		{
 			["render.sprites[1].sort_y"] = 344,
@@ -1330,121 +1313,45 @@ return {
 			}
 		}
 	},
-	invalid_path_ranges = {
-		{
-			flags = 4294967295,
-			to = 122,
-			from = 95,
-			path_id = 1
-		},
-		{
-			flags = 4294967295,
-			to = 92,
-			from = 65,
-			path_id = 2
-		}
-	},
-	level_mode_overrides = {
-		{
-			max_upgrade_level = 6,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 3,
-			locked_towers = {
-			}
-		},
-		{
-			max_upgrade_level = 3,
-			locked_towers = {
-				"tower_build_barrack",
-				"tower_build_mage",
-			}
-		}
-	},
-    unlock_towers = {"tower_ewok", "tower_arcane"},
+	invalid_path_ranges = {{
+		flags = 4294967295,
+		to = 122,
+		from = 95,
+		path_id = 1
+	}, {
+		flags = 4294967295,
+		to = 92,
+		from = 65,
+		path_id = 2
+	}},
+	level_mode_overrides = {{
+		max_upgrade_level = 6,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 3,
+		locked_towers = {}
+	}, {
+		max_upgrade_level = 3,
+		locked_towers = {"tower_build_barrack", "tower_build_mage"}
+	}},
+	unlock_towers = {"tower_ewok", "tower_arcane"},
 	nav_mesh = {
-		[11] = {
-			12,
-			23,
-			22,
-			24
-		},
-		[12] = {
-			21,
-			16,
-			11,
-			24
-		},
-		[13] = {
-			23,
-			23,
-			nil,
-			14
-		},
-		[14] = {
-			11,
-			13,
-			nil,
-			22
-		},
-		[15] = {
-			nil,
-			nil,
-			16,
-			16
-		},
-		[16] = {
-			nil,
-			15,
-			12,
-			21
-		},
-		[17] = {
-			nil,
-			21,
-			24
-		},
-		[21] = {
-			nil,
-			16,
-			12,
-			17
-		},
-		[22] = {
-			11,
-			23,
-			14
-		},
-		[23] = {
-			11,
-			nil,
-			13,
-			22
-		},
-		[24] = {
-			12,
-			11,
-			22
-		}
+		[11] = {12, 23, 22, 24},
+		[12] = {21, 16, 11, 24},
+		[13] = {23, 23, nil, 14},
+		[14] = {11, 13, nil, 22},
+		[15] = {nil, nil, 16, 16},
+		[16] = {nil, 15, 12, 21},
+		[17] = {nil, 21, 24},
+		[21] = {nil, 16, 12, 17},
+		[22] = {11, 23, 14},
+		[23] = {11, nil, 13, 22},
+		[24] = {12, 11, 22}
 	},
 	pan_extension = {
 		bottom = -40,
 		top = 40
 	},
-	required_sounds = {
-		"music_stage52",
-		"ElvesLevelFourSounds",
-		"ElvenWoodsAmbienceSounds",
-		"ElvesSpecialEwoks",
-		"ElvesPlants",
-		"ElvesCreepHyena"
-	},
-	required_textures = {
-		"go_enemies_elven_woods",
-		"go_stage52",
-		"go_stage52_bg",
-		"go_stages_elven_woods"
-	}
+	required_sounds = {"music_stage52", "ElvesLevelFourSounds", "ElvenWoodsAmbienceSounds", "ElvesSpecialEwoks", "ElvesPlants", "ElvesCreepHyena"},
+	required_textures = {"go_enemies_elven_woods", "go_stage52", "go_stage52_bg", "go_stages_elven_woods"}
 }

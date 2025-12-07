@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/tower_hermit_toad.lua
-
+-- chunkname: @./kr5/data/animations/tower_hermit_toad.lua
 local a = {
 	hermit_toad_tower_bubbles_run = {
 		prefix = "hermit_toad_tower_bubbles",
@@ -452,5 +451,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr1/data/levels/level18_data.lua
-
+-- chunkname: @./kr1/data/levels/level18_data.lua
 return {
 	locked_hero = false,
 	level_terrain_type = 2,
@@ -66,10 +65,7 @@ return {
 				x = 954,
 				y = 229
 			},
-			track_names = {
-				"1",
-				"2"
-			}
+			track_names = {"1", "2"}
 		},
 		{
 			["editor.r"] = 0,
@@ -324,89 +320,26 @@ return {
 		[3] = {
 			locked_hero = false,
 			max_upgrade_level = 6,
-			locked_towers = {
-				"tower_build_archer",
-				"tower_build_mage"
-			}
+			locked_towers = {"tower_build_archer", "tower_build_mage"}
 		}
 	},
 	nav_mesh = {
-		{
-			nil,
-			4,
-			3
-		},
-		{
-			3,
-			6
-		},
-		{
-			1,
-			7,
-			2
-		},
-		{
-			nil,
-			9,
-			5,
-			1
-		},
-		{
-			4,
-			8,
-			7,
-			3
-		},
-		{
-			7,
-			10,
-			nil,
-			2
-		},
-		{
-			8,
-			10,
-			6,
-			3
-		},
-		{
-			9,
-			11,
-			7,
-			5
-		},
-		{
-			nil,
-			12,
-			8,
-			4
-		},
-		{
-			11,
-			nil,
-			6,
-			7
-		},
-		{
-			12,
-			nil,
-			10,
-			8
-		},
+		{nil, 4, 3},
+		{3, 6},
+		{1, 7, 2},
+		{nil, 9, 5, 1},
+		{4, 8, 7, 3},
+		{7, 10, nil, 2},
+		{8, 10, 6, 3},
+		{9, 11, 7, 5},
+		{nil, 12, 8, 4},
+		{11, nil, 6, 7},
+		{12, nil, 10, 8},
 		{
 			[3] = 11,
 			[4] = 9
 		}
 	},
-	required_sounds = {
-		"music_stage18",
-		"JtEffects"
-	},
-	required_textures = {
-		"go_enemies_ice",
-		"go_enemies_storm",
-		"go_stages_ice",
-		"go_stage18",
-		"go_stage18_bg"
-	}
+	required_sounds = {"music_stage18", "JtEffects"},
+	required_textures = {"go_enemies_ice", "go_enemies_storm", "go_stages_ice", "go_stage18", "go_stage18_bg"}
 }

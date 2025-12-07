@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/stage30_decos.lua
-
+-- chunkname: @./kr5/data/animations/stage30_decos.lua
 local a = {
 	export_easter_egg_lucas_idle = {
 		prefix = "export_easter_egg_lucas",
@@ -62,5 +61,4 @@ local a = {
 		from = 42
 	}
 }
-
 return a

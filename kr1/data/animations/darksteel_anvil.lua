@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/darksteel_anvil.lua
-
+-- chunkname: @./kr5/data/animations/darksteel_anvil.lua
 local a = {
 	darksteel_anvil_creep_idle = {
 		prefix = "darksteel_anvil_creep",
@@ -67,5 +66,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

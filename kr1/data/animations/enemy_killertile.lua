@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/enemy_killertile.lua
-
+-- chunkname: @./kr5/data/animations/enemy_killertile.lua
 local a = {
 	killertile_creep_idle = {
 		prefix = "killertile_creep",
@@ -32,5 +31,4 @@ local a = {
 		from = 128
 	}
 }
-
 return a

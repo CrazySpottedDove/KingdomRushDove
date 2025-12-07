@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/mindless_husk.lua
-
+-- chunkname: @./kr5/data/animations/mindless_husk.lua
 local a = {
 	mindless_husk_creep_idle = {
 		prefix = "mindless_husk_creep",
@@ -32,5 +31,4 @@ local a = {
 		from = 96
 	}
 }
-
 return a

@@ -1,5084 +1,1618 @@
 return {
 	hero_evil_dragon_area_damage_fx = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			293,
-			199
-		},
-		trim = {
-			17,
-			18,
-			33,
-			34
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1315,
-			5,
-			243,
-			147
-		},
+		size = {293, 199},
+		trim = {17, 18, 33, 34},
+		a_size = {4096, 4096},
+		f_quad = {1315, 5, 243, 147},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			22,
-			16,
-			20,
-			47
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1747,
-			5,
-			182,
-			164
-		},
+		size = {224, 227},
+		trim = {22, 16, 20, 47},
+		a_size = {4096, 4096},
+		f_quad = {1747, 5, 182, 164},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0002 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			39,
-			29,
-			33,
-			61
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			2721,
-			152,
-			137
-		},
+		size = {224, 227},
+		trim = {39, 29, 33, 61},
+		a_size = {4096, 4096},
+		f_quad = {558, 2721, 152, 137},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			39,
-			29,
-			33,
-			61
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			2861,
-			152,
-			137
-		},
+		size = {224, 227},
+		trim = {39, 29, 33, 61},
+		a_size = {4096, 4096},
+		f_quad = {558, 2861, 152, 137},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0004 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			33,
-			23,
-			27,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1543,
-			590,
-			164,
-			149
-		},
+		size = {224, 227},
+		trim = {33, 23, 27, 55},
+		a_size = {4096, 4096},
+		f_quad = {1543, 590, 164, 149},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			33,
-			23,
-			27,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1710,
-			590,
-			164,
-			149
-		},
+		size = {224, 227},
+		trim = {33, 23, 27, 55},
+		a_size = {4096, 4096},
+		f_quad = {1710, 590, 164, 149},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0006 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			33,
-			24,
-			28,
-			56
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2368,
-			590,
-			163,
-			147
-		},
+		size = {224, 227},
+		trim = {33, 24, 28, 56},
+		a_size = {4096, 4096},
+		f_quad = {2368, 590, 163, 147},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			33,
-			24,
-			28,
-			56
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2534,
-			590,
-			163,
-			147
-		},
+		size = {224, 227},
+		trim = {33, 24, 28, 56},
+		a_size = {4096, 4096},
+		f_quad = {2534, 590, 163, 147},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0008 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			64,
-			37,
-			62,
-			106
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1995,
-			1148,
-			98,
-			84
-		},
+		size = {224, 227},
+		trim = {64, 37, 62, 106},
+		a_size = {4096, 4096},
+		f_quad = {1995, 1148, 98, 84},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			64,
-			37,
-			62,
-			103
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1785,
-			1148,
-			98,
-			87
-		},
+		size = {224, 227},
+		trim = {64, 37, 62, 103},
+		a_size = {4096, 4096},
+		f_quad = {1785, 1148, 98, 87},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0010 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			62,
-			37,
-			60,
-			103
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			244,
-			1694,
-			102,
-			87
-		},
+		size = {224, 227},
+		trim = {62, 37, 60, 103},
+		a_size = {4096, 4096},
+		f_quad = {244, 1694, 102, 87},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			62,
-			37,
-			60,
-			97
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			243,
-			1456,
-			102,
-			93
-		},
+		size = {224, 227},
+		trim = {62, 37, 60, 97},
+		a_size = {4096, 4096},
+		f_quad = {243, 1456, 102, 93},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0012 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			60,
-			36,
-			58,
-			97
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3290,
-			106,
-			94
-		},
+		size = {224, 227},
+		trim = {60, 36, 58, 97},
+		a_size = {4096, 4096},
+		f_quad = {874, 3290, 106, 94},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			60,
-			36,
-			58,
-			96
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3192,
-			106,
-			95
-		},
+		size = {224, 227},
+		trim = {60, 36, 58, 96},
+		a_size = {4096, 4096},
+		f_quad = {874, 3192, 106, 95},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0014 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			58,
-			36,
-			56,
-			96
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3918,
-			1045,
-			110,
-			95
-		},
+		size = {224, 227},
+		trim = {58, 36, 56, 96},
+		a_size = {4096, 4096},
+		f_quad = {3918, 1045, 110, 95},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			58,
-			36,
-			56,
-			98
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2457,
-			110,
-			93
-		},
+		size = {224, 227},
+		trim = {58, 36, 56, 98},
+		a_size = {4096, 4096},
+		f_quad = {874, 2457, 110, 93},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0016 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			57,
-			35,
-			55,
-			98
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3803,
-			1045,
-			112,
-			94
-		},
+		size = {224, 227},
+		trim = {57, 35, 55, 98},
+		a_size = {4096, 4096},
+		f_quad = {3803, 1045, 112, 94},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			57,
-			35,
-			55,
-			100
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2362,
-			112,
-			92
-		},
+		size = {224, 227},
+		trim = {57, 35, 55, 100},
+		a_size = {4096, 4096},
+		f_quad = {874, 2362, 112, 92},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0018 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			74,
-			33,
-			70,
-			100
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2523,
-			1148,
-			80,
-			94
-		},
+		size = {224, 227},
+		trim = {74, 33, 70, 100},
+		a_size = {4096, 4096},
+		f_quad = {2523, 1148, 80, 94},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			74,
-			33,
-			70,
-			97
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2195,
-			1148,
-			80,
-			97
-		},
+		size = {224, 227},
+		trim = {74, 33, 70, 97},
+		a_size = {4096, 4096},
+		f_quad = {2195, 1148, 80, 97},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0020 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			75,
-			30,
-			73,
-			97
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2357,
-			1148,
-			76,
-			100
-		},
+		size = {224, 227},
+		trim = {75, 30, 73, 97},
+		a_size = {4096, 4096},
+		f_quad = {2357, 1148, 76, 100},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_0021 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			227
-		},
-		trim = {
-			75,
-			30,
-			73,
-			96
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2278,
-			1148,
-			76,
-			101
-		},
+		size = {224, 227},
+		trim = {75, 30, 73, 96},
+		a_size = {4096, 4096},
+		f_quad = {2278, 1148, 76, 101},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_air_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			29,
-			30,
-			22,
-			20
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1038,
-			752,
-			159,
-			143
-		},
+		size = {210, 193},
+		trim = {29, 30, 22, 20},
+		a_size = {4096, 4096},
+		f_quad = {1038, 752, 159, 143},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_air_0002 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			29,
-			30,
-			22,
-			20
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1200,
-			752,
-			159,
-			143
-		},
+		size = {210, 193},
+		trim = {29, 30, 22, 20},
+		a_size = {4096, 4096},
+		f_quad = {1200, 752, 159, 143},
 		alias = {}
 	},
 	hero_evil_dragon_attack_fx_air_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			36,
-			34,
-			27,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2436,
-			752,
-			147,
-			134
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0004"
-		}
+		size = {210, 193},
+		trim = {36, 34, 27, 25},
+		a_size = {4096, 4096},
+		f_quad = {2436, 752, 147, 134},
+		alias = {"hero_evil_dragon_attack_fx_air_0004"}
 	},
 	hero_evil_dragon_attack_fx_air_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			30,
-			28,
-			21,
-			20
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3816,
-			590,
-			159,
-			145
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0006"
-		}
+		size = {210, 193},
+		trim = {30, 28, 21, 20},
+		a_size = {4096, 4096},
+		f_quad = {3816, 590, 159, 145},
+		alias = {"hero_evil_dragon_attack_fx_air_0006"}
 	},
 	hero_evil_dragon_attack_fx_air_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			31,
-			29,
-			21,
-			21
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1362,
-			752,
-			158,
-			143
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0008"
-		}
+		size = {210, 193},
+		trim = {31, 29, 21, 21},
+		a_size = {4096, 4096},
+		f_quad = {1362, 752, 158, 143},
+		alias = {"hero_evil_dragon_attack_fx_air_0008"}
 	},
 	hero_evil_dragon_attack_fx_air_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			46,
-			40,
-			51,
-			48
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1365,
-			113,
-			105
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0010"
-		}
+		size = {210, 193},
+		trim = {46, 40, 51, 48},
+		a_size = {4096, 4096},
+		f_quad = {874, 1365, 113, 105},
+		alias = {"hero_evil_dragon_attack_fx_air_0010"}
 	},
 	hero_evil_dragon_attack_fx_air_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			46,
-			39,
-			50,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1257,
-			114,
-			105
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0012"
-		}
+		size = {210, 193},
+		trim = {46, 39, 50, 49},
+		a_size = {4096, 4096},
+		f_quad = {874, 1257, 114, 105},
+		alias = {"hero_evil_dragon_attack_fx_air_0012"}
 	},
 	hero_evil_dragon_attack_fx_air_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			47,
-			38,
-			49,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1148,
-			114,
-			106
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0014"
-		}
+		size = {210, 193},
+		trim = {47, 38, 49, 49},
+		a_size = {4096, 4096},
+		f_quad = {874, 1148, 114, 106},
+		alias = {"hero_evil_dragon_attack_fx_air_0014"}
 	},
 	hero_evil_dragon_attack_fx_air_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			61,
-			37,
-			61,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1694,
-			1148,
-			88,
-			97
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0016"
-		}
+		size = {210, 193},
+		trim = {61, 37, 61, 59},
+		a_size = {4096, 4096},
+		f_quad = {1694, 1148, 88, 97},
+		alias = {"hero_evil_dragon_attack_fx_air_0016"}
 	},
 	hero_evil_dragon_attack_fx_air_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			210,
-			193
-		},
-		trim = {
-			70,
-			34,
-			64,
-			75
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2711,
-			1148,
-			76,
-			84
-		},
-		alias = {
-			"hero_evil_dragon_attack_fx_air_0018"
-		}
+		size = {210, 193},
+		trim = {70, 34, 64, 75},
+		a_size = {4096, 4096},
+		f_quad = {2711, 1148, 76, 84},
+		alias = {"hero_evil_dragon_attack_fx_air_0018"}
 	},
 	hero_evil_dragon_attack_projectile_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			80,
-			77
-		},
-		trim = {
-			15,
-			14,
-			15,
-			15
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2233,
-			50,
-			48
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_0002"
-		}
+		size = {80, 77},
+		trim = {15, 14, 15, 15},
+		a_size = {4096, 4096},
+		f_quad = {991, 2233, 50, 48},
+		alias = {"hero_evil_dragon_attack_projectile_0002"}
 	},
 	hero_evil_dragon_attack_projectile_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			80,
-			77
-		},
-		trim = {
-			15,
-			14,
-			15,
-			15
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2284,
-			50,
-			48
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_0004"
-		}
+		size = {80, 77},
+		trim = {15, 14, 15, 15},
+		a_size = {4096, 4096},
+		f_quad = {991, 2284, 50, 48},
+		alias = {"hero_evil_dragon_attack_projectile_0004"}
 	},
 	hero_evil_dragon_attack_projectile_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			80,
-			77
-		},
-		trim = {
-			15,
-			14,
-			15,
-			15
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2335,
-			50,
-			48
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_0006"
-		}
+		size = {80, 77},
+		trim = {15, 14, 15, 15},
+		a_size = {4096, 4096},
+		f_quad = {991, 2335, 50, 48},
+		alias = {"hero_evil_dragon_attack_projectile_0006"}
 	},
 	hero_evil_dragon_attack_projectile_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			80,
-			77
-		},
-		trim = {
-			15,
-			14,
-			15,
-			15
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2386,
-			50,
-			48
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_0008"
-		}
+		size = {80, 77},
+		trim = {15, 14, 15, 15},
+		a_size = {4096, 4096},
+		f_quad = {991, 2386, 50, 48},
+		alias = {"hero_evil_dragon_attack_projectile_0008"}
 	},
 	hero_evil_dragon_attack_projectile_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			80,
-			77
-		},
-		trim = {
-			15,
-			14,
-			15,
-			15
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2437,
-			50,
-			48
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_0010"
-		}
+		size = {80, 77},
+		trim = {15, 14, 15, 15},
+		a_size = {4096, 4096},
+		f_quad = {991, 2437, 50, 48},
+		alias = {"hero_evil_dragon_attack_projectile_0010"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			21,
-			24,
-			27,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2666,
-			1316,
-			40,
-			39
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0002"
-		}
+		size = {88, 88},
+		trim = {21, 24, 27, 25},
+		a_size = {4096, 4096},
+		f_quad = {2666, 1316, 40, 39},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0002"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			20,
-			21,
-			24,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2503,
-			341,
-			44,
-			43
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0004"
-		}
+		size = {88, 88},
+		trim = {20, 21, 24, 24},
+		a_size = {4096, 4096},
+		f_quad = {2503, 341, 44, 43},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0004"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			20,
-			20,
-			23,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2634,
-			45,
-			45
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0006"
-		}
+		size = {88, 88},
+		trim = {20, 20, 23, 23},
+		a_size = {4096, 4096},
+		f_quad = {991, 2634, 45, 45},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0006"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			20,
-			19,
-			22,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2536,
-			46,
-			46
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0008"
-		}
+		size = {88, 88},
+		trim = {20, 19, 22, 23},
+		a_size = {4096, 4096},
+		f_quad = {991, 2536, 46, 46},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0008"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			20,
-			19,
-			22,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2585,
-			46,
-			46
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0010"
-		}
+		size = {88, 88},
+		trim = {20, 19, 22, 23},
+		a_size = {4096, 4096},
+		f_quad = {991, 2585, 46, 46},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0010"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			21,
-			20,
-			27,
-			29
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3956,
-			1317,
-			40,
-			39
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0012"
-		}
+		size = {88, 88},
+		trim = {21, 20, 27, 29},
+		a_size = {4096, 4096},
+		f_quad = {3956, 1317, 40, 39},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0012"}
 	},
 	hero_evil_dragon_attack_projectile_trail_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			88,
-			88
-		},
-		trim = {
-			25,
-			25,
-			39,
-			39
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3265,
-			1317,
-			24,
-			24
-		},
-		alias = {
-			"hero_evil_dragon_attack_projectile_trail_0014"
-		}
+		size = {88, 88},
+		trim = {25, 25, 39, 39},
+		a_size = {4096, 4096},
+		f_quad = {3265, 1317, 24, 24},
+		alias = {"hero_evil_dragon_attack_projectile_trail_0014"}
 	},
 	hero_evil_dragon_breath_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			287,
-			75,
-			218,
-			85
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			274,
-			989,
-			72,
-			62
-		},
-		alias = {
-			"hero_evil_dragon_breath_0002"
-		}
+		size = {577, 222},
+		trim = {287, 75, 218, 85},
+		a_size = {4096, 4096},
+		f_quad = {274, 989, 72, 62},
+		alias = {"hero_evil_dragon_breath_0002"}
 	},
 	hero_evil_dragon_breath_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			267,
-			71,
-			208,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2606,
-			1148,
-			102,
-			69
-		},
-		alias = {
-			"hero_evil_dragon_breath_0004"
-		}
+		size = {577, 222},
+		trim = {267, 71, 208, 82},
+		a_size = {4096, 4096},
+		f_quad = {2606, 1148, 102, 69},
+		alias = {"hero_evil_dragon_breath_0004"}
 	},
 	hero_evil_dragon_breath_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			264,
-			66,
-			183,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3795,
-			305,
-			130,
-			79
-		},
-		alias = {
-			"hero_evil_dragon_breath_0006"
-		}
+		size = {577, 222},
+		trim = {264, 66, 183, 77},
+		a_size = {4096, 4096},
+		f_quad = {3795, 305, 130, 79},
+		alias = {"hero_evil_dragon_breath_0006"}
 	},
 	hero_evil_dragon_breath_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			264,
-			62,
-			157,
-			74
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3090,
-			156,
-			86
-		},
-		alias = {
-			"hero_evil_dragon_breath_0008"
-		}
+		size = {577, 222},
+		trim = {264, 62, 157, 74},
+		a_size = {4096, 4096},
+		f_quad = {715, 3090, 156, 86},
+		alias = {"hero_evil_dragon_breath_0008"}
 	},
 	hero_evil_dragon_breath_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			264,
-			56,
-			132,
-			70
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1990,
-			898,
-			181,
-			96
-		},
-		alias = {
-			"hero_evil_dragon_breath_0010"
-		}
+		size = {577, 222},
+		trim = {264, 56, 132, 70},
+		a_size = {4096, 4096},
+		f_quad = {1990, 898, 181, 96},
+		alias = {"hero_evil_dragon_breath_0010"}
 	},
 	hero_evil_dragon_breath_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			264,
-			48,
-			107,
-			69
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1523,
-			752,
-			206,
-			105
-		},
-		alias = {
-			"hero_evil_dragon_breath_0012"
-		}
+		size = {577, 222},
+		trim = {264, 48, 107, 69},
+		a_size = {4096, 4096},
+		f_quad = {1523, 752, 206, 105},
+		alias = {"hero_evil_dragon_breath_0012"}
 	},
 	hero_evil_dragon_breath_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			264,
-			46,
-			90,
-			61
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3795,
-			187,
-			223,
-			115
-		},
-		alias = {
-			"hero_evil_dragon_breath_0014"
-		}
+		size = {577, 222},
+		trim = {264, 46, 90, 61},
+		a_size = {4096, 4096},
+		f_quad = {3795, 187, 223, 115},
+		alias = {"hero_evil_dragon_breath_0014"}
 	},
 	hero_evil_dragon_breath_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			272,
-			40,
-			81,
-			63
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3012,
-			187,
-			224,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_breath_0016"
-		}
+		size = {577, 222},
+		trim = {272, 40, 81, 63},
+		a_size = {4096, 4096},
+		f_quad = {3012, 187, 224, 119},
+		alias = {"hero_evil_dragon_breath_0016"}
 	},
 	hero_evil_dragon_breath_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			289,
-			38,
-			70,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3859,
-			5,
-			218,
-			125
-		},
-		alias = {
-			"hero_evil_dragon_breath_0018"
-		}
+		size = {577, 222},
+		trim = {289, 38, 70, 59},
+		a_size = {4096, 4096},
+		f_quad = {3859, 5, 218, 125},
+		alias = {"hero_evil_dragon_breath_0018"}
 	},
 	hero_evil_dragon_breath_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			308,
-			36,
-			61,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3239,
-			187,
-			208,
-			128
-		},
-		alias = {
-			"hero_evil_dragon_breath_0020"
-		}
+		size = {577, 222},
+		trim = {308, 36, 61, 58},
+		a_size = {4096, 4096},
+		f_quad = {3239, 187, 208, 128},
+		alias = {"hero_evil_dragon_breath_0020"}
 	},
 	hero_evil_dragon_breath_0021 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			325,
-			29,
-			53,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3329,
-			5,
-			199,
-			142
-		},
-		alias = {
-			"hero_evil_dragon_breath_0022"
-		}
+		size = {577, 222},
+		trim = {325, 29, 53, 51},
+		a_size = {4096, 4096},
+		f_quad = {3329, 5, 199, 142},
+		alias = {"hero_evil_dragon_breath_0022"}
 	},
 	hero_evil_dragon_breath_0023 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			342,
-			28,
-			40,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3131,
-			5,
-			195,
-			145
-		},
-		alias = {
-			"hero_evil_dragon_breath_0024"
-		}
+		size = {577, 222},
+		trim = {342, 28, 40, 49},
+		a_size = {4096, 4096},
+		f_quad = {3131, 5, 195, 145},
+		alias = {"hero_evil_dragon_breath_0024"}
 	},
 	hero_evil_dragon_breath_0025 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			361,
-			29,
-			31,
-			47
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2315,
-			187,
-			185,
-			146
-		},
-		alias = {
-			"hero_evil_dragon_breath_0026"
-		}
+		size = {577, 222},
+		trim = {361, 29, 31, 47},
+		a_size = {4096, 4096},
+		f_quad = {2315, 187, 185, 146},
+		alias = {"hero_evil_dragon_breath_0026"}
 	},
 	hero_evil_dragon_breath_0027 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			377,
-			29,
-			32,
-			46
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1044,
-			590,
-			168,
-			147
-		},
-		alias = {
-			"hero_evil_dragon_breath_0028"
-		}
+		size = {577, 222},
+		trim = {377, 29, 32, 46},
+		a_size = {4096, 4096},
+		f_quad = {1044, 590, 168, 147},
+		alias = {"hero_evil_dragon_breath_0028"}
 	},
 	hero_evil_dragon_breath_0029 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			387,
-			30,
-			33,
-			45
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3656,
-			590,
-			157,
-			147
-		},
-		alias = {
-			"hero_evil_dragon_breath_0030"
-		}
+		size = {577, 222},
+		trim = {387, 30, 33, 45},
+		a_size = {4096, 4096},
+		f_quad = {3656, 590, 157, 147},
+		alias = {"hero_evil_dragon_breath_0030"}
 	},
 	hero_evil_dragon_breath_0031 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			397,
-			26,
-			33,
-			45
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			2269,
-			147,
-			151
-		},
-		alias = {
-			"hero_evil_dragon_breath_0032"
-		}
+		size = {577, 222},
+		trim = {397, 26, 33, 45},
+		a_size = {4096, 4096},
+		f_quad = {558, 2269, 147, 151},
+		alias = {"hero_evil_dragon_breath_0032"}
 	},
 	hero_evil_dragon_breath_0033 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			406,
-			30,
-			33,
-			44
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3288,
-			138,
-			148
-		},
-		alias = {
-			"hero_evil_dragon_breath_0034"
-		}
+		size = {577, 222},
+		trim = {406, 30, 33, 44},
+		a_size = {4096, 4096},
+		f_quad = {558, 3288, 138, 148},
+		alias = {"hero_evil_dragon_breath_0034"}
 	},
 	hero_evil_dragon_breath_0035 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			416,
-			26,
-			33,
-			45
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			217,
-			2586,
-			128,
-			151
-		},
-		alias = {
-			"hero_evil_dragon_breath_0036"
-		}
+		size = {577, 222},
+		trim = {416, 26, 33, 45},
+		a_size = {4096, 4096},
+		f_quad = {217, 2586, 128, 151},
+		alias = {"hero_evil_dragon_breath_0036"}
 	},
 	hero_evil_dragon_breath_0037 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			425,
-			33,
-			34,
-			44
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1066,
-			118,
-			145
-		},
-		alias = {
-			"hero_evil_dragon_breath_0038"
-		}
+		size = {577, 222},
+		trim = {425, 33, 34, 44},
+		a_size = {4096, 4096},
+		f_quad = {715, 1066, 118, 145},
+		alias = {"hero_evil_dragon_breath_0038"}
 	},
 	hero_evil_dragon_breath_0039 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			437,
-			34,
-			59,
-			56
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			263,
-			3953,
-			81,
-			132
-		},
-		alias = {
-			"hero_evil_dragon_breath_0040"
-		}
+		size = {577, 222},
+		trim = {437, 34, 59, 56},
+		a_size = {4096, 4096},
+		f_quad = {263, 3953, 81, 132},
+		alias = {"hero_evil_dragon_breath_0040"}
 	},
 	hero_evil_dragon_breath_0041 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			577,
-			222
-		},
-		trim = {
-			444,
-			45,
-			60,
-			57
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			273,
-			1789,
-			73,
-			120
-		},
-		alias = {
-			"hero_evil_dragon_breath_0042"
-		}
+		size = {577, 222},
+		trim = {444, 45, 60, 57},
+		a_size = {4096, 4096},
+		f_quad = {273, 1789, 73, 120},
+		alias = {"hero_evil_dragon_breath_0042"}
 	},
 	hero_evil_dragon_breath_cloud_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			48,
-			45,
-			72,
-			60
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3129,
-			309,
-			102,
-			71
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0002"
-		}
+		size = {222, 176},
+		trim = {48, 45, 72, 60},
+		a_size = {4096, 4096},
+		f_quad = {3129, 309, 102, 71},
+		alias = {"hero_evil_dragon_breath_cloud_0002"}
 	},
 	hero_evil_dragon_breath_cloud_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			47,
-			35,
-			61,
-			57
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3595,
-			114,
-			84
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0004"
-		}
+		size = {222, 176},
+		trim = {47, 35, 61, 57},
+		a_size = {4096, 4096},
+		f_quad = {874, 3595, 114, 84},
+		alias = {"hero_evil_dragon_breath_cloud_0004"}
 	},
 	hero_evil_dragon_breath_cloud_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			49,
-			29,
-			56,
-			57
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3683,
-			1045,
-			117,
-			90
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0006"
-		}
+		size = {222, 176},
+		trim = {49, 29, 56, 57},
+		a_size = {4096, 4096},
+		f_quad = {3683, 1045, 117, 90},
+		alias = {"hero_evil_dragon_breath_cloud_0006"}
 	},
 	hero_evil_dragon_breath_cloud_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			51,
-			25,
-			51,
-			57
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2858,
-			1045,
-			120,
-			94
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0008"
-		}
+		size = {222, 176},
+		trim = {51, 25, 51, 57},
+		a_size = {4096, 4096},
+		f_quad = {2858, 1045, 120, 94},
+		alias = {"hero_evil_dragon_breath_cloud_0008"}
 	},
 	hero_evil_dragon_breath_cloud_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			52,
-			23,
-			49,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2495,
-			1045,
-			121,
-			95
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0010"
-		}
+		size = {222, 176},
+		trim = {52, 23, 49, 58},
+		a_size = {4096, 4096},
+		f_quad = {2495, 1045, 121, 95},
+		alias = {"hero_evil_dragon_breath_cloud_0010"}
 	},
 	hero_evil_dragon_breath_cloud_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			52,
-			21,
-			48,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1876,
-			1045,
-			122,
-			97
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0012"
-		}
+		size = {222, 176},
+		trim = {52, 21, 48, 58},
+		a_size = {4096, 4096},
+		f_quad = {1876, 1045, 122, 97},
+		alias = {"hero_evil_dragon_breath_cloud_0012"}
 	},
 	hero_evil_dragon_breath_cloud_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			53,
-			21,
-			46,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1626,
-			1045,
-			123,
-			97
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0014"
-		}
+		size = {222, 176},
+		trim = {53, 21, 46, 58},
+		a_size = {4096, 4096},
+		f_quad = {1626, 1045, 123, 97},
+		alias = {"hero_evil_dragon_breath_cloud_0014"}
 	},
 	hero_evil_dragon_breath_cloud_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			55,
-			20,
-			45,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1501,
-			1045,
-			122,
-			98
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0016"
-		}
+		size = {222, 176},
+		trim = {55, 20, 45, 58},
+		a_size = {4096, 4096},
+		f_quad = {1501, 1045, 122, 98},
+		alias = {"hero_evil_dragon_breath_cloud_0016"}
 	},
 	hero_evil_dragon_breath_cloud_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			56,
-			19,
-			43,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1125,
-			1045,
-			123,
-			99
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0018"
-		}
+		size = {222, 176},
+		trim = {56, 19, 43, 58},
+		a_size = {4096, 4096},
+		f_quad = {1125, 1045, 123, 99},
+		alias = {"hero_evil_dragon_breath_cloud_0018"}
 	},
 	hero_evil_dragon_breath_cloud_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			58,
-			19,
-			41,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1251,
-			1045,
-			123,
-			99
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0020"
-		}
+		size = {222, 176},
+		trim = {58, 19, 41, 58},
+		a_size = {4096, 4096},
+		f_quad = {1251, 1045, 123, 99},
+		alias = {"hero_evil_dragon_breath_cloud_0020"}
 	},
 	hero_evil_dragon_breath_cloud_0021 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			59,
-			18,
-			40,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3914,
-			123,
-			100
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0022"
-		}
+		size = {222, 176},
+		trim = {59, 18, 40, 58},
+		a_size = {4096, 4096},
+		f_quad = {715, 3914, 123, 100},
+		alias = {"hero_evil_dragon_breath_cloud_0022"}
 	},
 	hero_evil_dragon_breath_cloud_0023 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			61,
-			18,
-			38,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1045,
-			123,
-			100
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0024"
-		}
+		size = {222, 176},
+		trim = {61, 18, 38, 58},
+		a_size = {4096, 4096},
+		f_quad = {874, 1045, 123, 100},
+		alias = {"hero_evil_dragon_breath_cloud_0024"}
 	},
 	hero_evil_dragon_breath_cloud_0025 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			63,
-			18,
-			37,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1000,
-			1045,
-			122,
-			100
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0026"
-		}
+		size = {222, 176},
+		trim = {63, 18, 37, 58},
+		a_size = {4096, 4096},
+		f_quad = {1000, 1045, 122, 100},
+		alias = {"hero_evil_dragon_breath_cloud_0026"}
 	},
 	hero_evil_dragon_breath_cloud_0027 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			65,
-			18,
-			36,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1377,
-			1045,
-			121,
-			100
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0028"
-		}
+		size = {222, 176},
+		trim = {65, 18, 36, 58},
+		a_size = {4096, 4096},
+		f_quad = {1377, 1045, 121, 100},
+		alias = {"hero_evil_dragon_breath_cloud_0028"}
 	},
 	hero_evil_dragon_breath_cloud_0029 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			66,
-			20,
-			35,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1752,
-			1045,
-			121,
-			98
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0030"
-		}
+		size = {222, 176},
+		trim = {66, 20, 35, 58},
+		a_size = {4096, 4096},
+		f_quad = {1752, 1045, 121, 98},
+		alias = {"hero_evil_dragon_breath_cloud_0030"}
 	},
 	hero_evil_dragon_breath_cloud_0031 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			68,
-			20,
-			34,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2001,
-			1045,
-			120,
-			98
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0032"
-		}
+		size = {222, 176},
+		trim = {68, 20, 34, 58},
+		a_size = {4096, 4096},
+		f_quad = {2001, 1045, 120, 98},
+		alias = {"hero_evil_dragon_breath_cloud_0032"}
 	},
 	hero_evil_dragon_breath_cloud_0033 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			69,
-			21,
-			33,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2124,
-			1045,
-			120,
-			97
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0034"
-		}
+		size = {222, 176},
+		trim = {69, 21, 33, 58},
+		a_size = {4096, 4096},
+		f_quad = {2124, 1045, 120, 97},
+		alias = {"hero_evil_dragon_breath_cloud_0034"}
 	},
 	hero_evil_dragon_breath_cloud_0035 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			70,
-			21,
-			33,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2373,
-			1045,
-			119,
-			97
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0036"
-		}
+		size = {222, 176},
+		trim = {70, 21, 33, 58},
+		a_size = {4096, 4096},
+		f_quad = {2373, 1045, 119, 97},
+		alias = {"hero_evil_dragon_breath_cloud_0036"}
 	},
 	hero_evil_dragon_breath_cloud_0037 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			72,
-			22,
-			32,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2737,
-			1045,
-			118,
-			96
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0038"
-		}
+		size = {222, 176},
+		trim = {72, 22, 32, 58},
+		a_size = {4096, 4096},
+		f_quad = {2737, 1045, 118, 96},
+		alias = {"hero_evil_dragon_breath_cloud_0038"}
 	},
 	hero_evil_dragon_breath_cloud_0039 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			73,
-			23,
-			31,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3097,
-			1045,
-			118,
-			94
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0040"
-		}
+		size = {222, 176},
+		trim = {73, 23, 31, 59},
+		a_size = {4096, 4096},
+		f_quad = {3097, 1045, 118, 94},
+		alias = {"hero_evil_dragon_breath_cloud_0040"}
 	},
 	hero_evil_dragon_breath_cloud_0041 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			75,
-			24,
-			31,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			229,
-			3383,
-			116,
-			93
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0042"
-		}
+		size = {222, 176},
+		trim = {75, 24, 31, 59},
+		a_size = {4096, 4096},
+		f_quad = {229, 3383, 116, 93},
+		alias = {"hero_evil_dragon_breath_cloud_0042"}
 	},
 	hero_evil_dragon_breath_cloud_0043 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			76,
-			25,
-			30,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3450,
-			1045,
-			116,
-			92
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0044"
-		}
+		size = {222, 176},
+		trim = {76, 25, 30, 59},
+		a_size = {4096, 4096},
+		f_quad = {3450, 1045, 116, 92},
+		alias = {"hero_evil_dragon_breath_cloud_0044"}
 	},
 	hero_evil_dragon_breath_cloud_0045 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			78,
-			26,
-			29,
-			60
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1232,
-			1148,
-			115,
-			90
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0046"
-		}
+		size = {222, 176},
+		trim = {78, 26, 29, 60},
+		a_size = {4096, 4096},
+		f_quad = {1232, 1148, 115, 90},
+		alias = {"hero_evil_dragon_breath_cloud_0046"}
 	},
 	hero_evil_dragon_breath_cloud_0047 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			80,
-			28,
-			29,
-			60
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3387,
-			113,
-			88
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0048"
-		}
+		size = {222, 176},
+		trim = {80, 28, 29, 60},
+		a_size = {4096, 4096},
+		f_quad = {874, 3387, 113, 88},
+		alias = {"hero_evil_dragon_breath_cloud_0048"}
 	},
 	hero_evil_dragon_breath_cloud_0049 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			83,
-			30,
-			30,
-			62
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3682,
-			109,
-			84
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0050"
-		}
+		size = {222, 176},
+		trim = {83, 30, 30, 62},
+		a_size = {4096, 4096},
+		f_quad = {874, 3682, 109, 84},
+		alias = {"hero_evil_dragon_breath_cloud_0050"}
 	},
 	hero_evil_dragon_breath_cloud_0051 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			222,
-			176
-		},
-		trim = {
-			85,
-			33,
-			31,
-			63
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1886,
-			1148,
-			106,
-			80
-		},
-		alias = {
-			"hero_evil_dragon_breath_cloud_0052"
-		}
+		size = {222, 176},
+		trim = {85, 33, 31, 63},
+		a_size = {4096, 4096},
+		f_quad = {1886, 1148, 106, 80},
+		alias = {"hero_evil_dragon_breath_cloud_0052"}
 	},
 	hero_evil_dragon_breath_crystal_big_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			37,
-			86,
-			37,
-			17
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3427,
-			1314,
-			65,
-			42
-		},
+		size = {139, 145},
+		trim = {37, 86, 37, 17},
+		a_size = {4096, 4096},
+		f_quad = {3427, 1314, 65, 42},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0002 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			37,
-			86,
-			37,
-			17
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3450,
-			341,
-			65,
-			42
-		},
+		size = {139, 145},
+		trim = {37, 86, 37, 17},
+		a_size = {4096, 4096},
+		f_quad = {3450, 341, 65, 42},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			35,
-			70,
-			26,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2164,
-			1253,
-			78,
-			53
-		},
+		size = {139, 145},
+		trim = {35, 70, 26, 22},
+		a_size = {4096, 4096},
+		f_quad = {2164, 1253, 78, 53},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0004 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			35,
-			63,
-			26,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1552,
-			1253,
-			78,
-			58
-		},
+		size = {139, 145},
+		trim = {35, 63, 26, 24},
+		a_size = {4096, 4096},
+		f_quad = {1552, 1253, 78, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			63,
-			22,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3365,
-			1148,
-			87,
-			59
-		},
+		size = {139, 145},
+		trim = {30, 63, 22, 23},
+		a_size = {4096, 4096},
+		f_quad = {3365, 1148, 87, 59},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0006 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			22,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3823,
-			1148,
-			87,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 22, 23},
+		a_size = {4096, 4096},
+		f_quad = {3823, 1148, 87, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3362,
-			318,
-			85,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {3362, 318, 85, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0008 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1288,
-			1253,
-			85,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {1288, 1253, 85, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			23,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4003,
-			1148,
-			86,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 23, 23},
+		a_size = {4096, 4096},
+		f_quad = {4003, 1148, 86, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0010 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1376,
-			1253,
-			85,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {1376, 1253, 85, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			28,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3913,
-			1148,
-			87,
-			57
-		},
+		size = {139, 145},
+		trim = {28, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {3913, 1148, 87, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0012 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			27,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3641,
-			1148,
-			88,
-			57
-		},
+		size = {139, 145},
+		trim = {27, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {3641, 1148, 88, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			27,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3732,
-			1148,
-			88,
-			57
-		},
+		size = {139, 145},
+		trim = {27, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {3732, 1148, 88, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0014 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			25,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3455,
-			1148,
-			90,
-			57
-		},
+		size = {139, 145},
+		trim = {25, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {3455, 1148, 90, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			25,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3548,
-			1148,
-			90,
-			57
-		},
+		size = {139, 145},
+		trim = {25, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {3548, 1148, 90, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0016 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			25,
-			65,
-			23,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3178,
-			1148,
-			91,
-			58
-		},
+		size = {139, 145},
+		trim = {25, 65, 23, 22},
+		a_size = {4096, 4096},
+		f_quad = {3178, 1148, 91, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			25,
-			65,
-			24,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3272,
-			1148,
-			90,
-			58
-		},
+		size = {139, 145},
+		trim = {25, 65, 24, 22},
+		a_size = {4096, 4096},
+		f_quad = {3272, 1148, 90, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0018 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			23,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1110,
-			1253,
-			86,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 23, 23},
+		a_size = {4096, 4096},
+		f_quad = {1110, 1253, 86, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			24,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1464,
-			1253,
-			85,
-			57
-		},
+		size = {139, 145},
+		trim = {30, 65, 24, 23},
+		a_size = {4096, 4096},
+		f_quad = {1464, 1253, 85, 57},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_big_0020 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			65,
-			23,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1199,
-			1253,
-			86,
-			57
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_big_0021"
-		}
+		size = {139, 145},
+		trim = {30, 65, 23, 23},
+		a_size = {4096, 4096},
+		f_quad = {1199, 1253, 86, 57},
+		alias = {"hero_evil_dragon_breath_crystal_big_0021"}
 	},
 	hero_evil_dragon_breath_crystal_big_0022 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			30,
-			75,
-			27,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2531,
-			1253,
-			82,
-			47
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_big_0023"
-		}
+		size = {139, 145},
+		trim = {30, 75, 27, 23},
+		a_size = {4096, 4096},
+		f_quad = {2531, 1253, 82, 47},
+		alias = {"hero_evil_dragon_breath_crystal_big_0023"}
 	},
 	hero_evil_dragon_breath_crystal_big_0024 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			34,
-			86,
-			30,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3365,
-			1210,
-			75,
-			35
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_big_0025"
-		}
+		size = {139, 145},
+		trim = {34, 86, 30, 24},
+		a_size = {4096, 4096},
+		f_quad = {3365, 1210, 75, 35},
+		alias = {"hero_evil_dragon_breath_crystal_big_0025"}
 	},
 	hero_evil_dragon_breath_crystal_big_0026 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			44,
-			97,
-			38,
-			26
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1768,
-			1324,
-			57,
-			22
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_big_0027"
-		}
+		size = {139, 145},
+		trim = {44, 97, 38, 26},
+		a_size = {4096, 4096},
+		f_quad = {1768, 1324, 57, 22},
+		alias = {"hero_evil_dragon_breath_crystal_big_0027"}
 	},
 	hero_evil_dragon_breath_crystal_big_0028 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			139,
-			145
-		},
-		trim = {
-			48,
-			108,
-			41,
-			28
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4031,
-			1126,
-			50,
-			9
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_big_0029"
-		}
+		size = {139, 145},
+		trim = {48, 108, 41, 28},
+		a_size = {4096, 4096},
+		f_quad = {4031, 1126, 50, 9},
+		alias = {"hero_evil_dragon_breath_crystal_big_0029"}
 	},
 	hero_evil_dragon_breath_crystal_medium_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			36,
-			54,
-			32,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3910,
-			1312,
-			40,
-			40
-		},
+		size = {108, 116},
+		trim = {36, 54, 32, 22},
+		a_size = {4096, 4096},
+		f_quad = {3910, 1312, 40, 40},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0002 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			36,
-			54,
-			32,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3999,
-			1317,
-			40,
-			39
-		},
+		size = {108, 116},
+		trim = {36, 54, 32, 23},
+		a_size = {4096, 4096},
+		f_quad = {3999, 1317, 40, 39},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			27,
-			41,
-			25,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1531,
-			56,
-			53
-		},
+		size = {108, 116},
+		trim = {27, 41, 25, 22},
+		a_size = {4096, 4096},
+		f_quad = {991, 1531, 56, 53},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0004 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			27,
-			33,
-			25,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3956,
-			1253,
-			56,
-			61
-		},
+		size = {108, 116},
+		trim = {27, 33, 25, 22},
+		a_size = {4096, 4096},
+		f_quad = {3956, 1253, 56, 61},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			33,
-			20,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2245,
-			1253,
-			66,
-			61
-		},
+		size = {108, 116},
+		trim = {22, 33, 20, 22},
+		a_size = {4096, 4096},
+		f_quad = {2245, 1253, 66, 61},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0006 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			20,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2818,
-			1253,
-			66,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 20, 22},
+		a_size = {4096, 4096},
+		f_quad = {2818, 1253, 66, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			21,
-			36,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3427,
-			1253,
-			65,
-			58
-		},
+		size = {108, 116},
+		trim = {21, 36, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {3427, 1253, 65, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0008 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			21,
-			36,
-			22,
-			21
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2750,
-			1253,
-			65,
-			59
-		},
+		size = {108, 116},
+		trim = {21, 36, 22, 21},
+		a_size = {4096, 4096},
+		f_quad = {2750, 1253, 65, 59},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			35,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3293,
-			1253,
-			64,
-			59
-		},
+		size = {108, 116},
+		trim = {22, 35, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {3293, 1253, 64, 59},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0010 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			35,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3360,
-			1253,
-			64,
-			59
-		},
+		size = {108, 116},
+		trim = {22, 35, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {3360, 1253, 64, 59},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			34,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2616,
-			1253,
-			64,
-			60
-		},
+		size = {108, 116},
+		trim = {22, 34, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {2616, 1253, 64, 60},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0012 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			32,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2397,
-			1253,
-			64,
-			62
-		},
+		size = {108, 116},
+		trim = {22, 32, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {2397, 1253, 64, 62},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			34,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2683,
-			1253,
-			64,
-			60
-		},
+		size = {108, 116},
+		trim = {22, 34, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {2683, 1253, 64, 60},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0014 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			20,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2887,
-			1253,
-			66,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 20, 22},
+		a_size = {4096, 4096},
+		f_quad = {2887, 1253, 66, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			20,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2956,
-			1253,
-			66,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 20, 22},
+		a_size = {4096, 4096},
+		f_quad = {2956, 1253, 66, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0016 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			20,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3025,
-			1253,
-			66,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 20, 22},
+		a_size = {4096, 4096},
+		f_quad = {3025, 1253, 66, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			20,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3094,
-			1253,
-			66,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 20, 22},
+		a_size = {4096, 4096},
+		f_quad = {3094, 1253, 66, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0018 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3560,
-			1253,
-			64,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {3560, 1253, 64, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3627,
-			1253,
-			64,
-			58
-		},
+		size = {108, 116},
+		trim = {22, 36, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {3627, 1253, 64, 58},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_medium_0020 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			36,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3694,
-			1253,
-			64,
-			58
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_medium_0021"
-		}
+		size = {108, 116},
+		trim = {22, 36, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {3694, 1253, 64, 58},
+		alias = {"hero_evil_dragon_breath_crystal_medium_0021"}
 	},
 	hero_evil_dragon_breath_crystal_medium_0022 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			22,
-			46,
-			26,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1587,
-			60,
-			48
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_medium_0023"
-		}
+		size = {108, 116},
+		trim = {22, 46, 26, 22},
+		a_size = {4096, 4096},
+		f_quad = {991, 1587, 60, 48},
+		alias = {"hero_evil_dragon_breath_crystal_medium_0023"}
 	},
 	hero_evil_dragon_breath_crystal_medium_0024 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			30,
-			58,
-			29,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3213,
-			1317,
-			49,
-			36
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_medium_0025"
-		}
+		size = {108, 116},
+		trim = {30, 58, 29, 22},
+		a_size = {4096, 4096},
+		f_quad = {3213, 1317, 49, 36},
+		alias = {"hero_evil_dragon_breath_crystal_medium_0025"}
 	},
 	hero_evil_dragon_breath_crystal_medium_0026 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			37,
-			70,
-			37,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4056,
-			363,
-			34,
-			21
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_medium_0027"
-		}
+		size = {108, 116},
+		trim = {37, 70, 37, 25},
+		a_size = {4096, 4096},
+		f_quad = {4056, 363, 34, 21},
+		alias = {"hero_evil_dragon_breath_crystal_medium_0027"}
 	},
 	hero_evil_dragon_breath_crystal_medium_0028 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			108,
-			116
-		},
-		trim = {
-			41,
-			82,
-			41,
-			26
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2757,
-			1235,
-			26,
-			8
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_medium_0029"
-		}
+		size = {108, 116},
+		trim = {41, 82, 41, 26},
+		a_size = {4096, 4096},
+		f_quad = {2757, 1235, 26, 8},
+		alias = {"hero_evil_dragon_breath_crystal_medium_0029"}
 	},
 	hero_evil_dragon_breath_crystal_small_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			26,
-			51,
-			29,
-			18
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3293,
-			1315,
-			39,
-			36
-		},
+		size = {94, 105},
+		trim = {26, 51, 29, 18},
+		a_size = {4096, 4096},
+		f_quad = {3293, 1315, 39, 36},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0002 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			26,
-			51,
-			28,
-			18
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4042,
-			1317,
-			40,
-			36
-		},
+		size = {94, 105},
+		trim = {26, 51, 28, 18},
+		a_size = {4096, 4096},
+		f_quad = {4042, 1317, 40, 36},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			24,
-			47,
-			23,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2616,
-			1316,
-			47,
-			36
-		},
+		size = {94, 105},
+		trim = {24, 47, 23, 22},
+		a_size = {4096, 4096},
+		f_quad = {2616, 1316, 47, 36},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0004 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			24,
-			42,
-			23,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3163,
-			1317,
-			47,
-			38
-		},
+		size = {94, 105},
+		trim = {24, 42, 23, 25},
+		a_size = {4096, 4096},
+		f_quad = {3163, 1317, 47, 38},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			42,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			658,
-			2222,
-			52,
-			39
-		},
+		size = {94, 105},
+		trim = {20, 42, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {658, 2222, 52, 39},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0006 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			42,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2464,
-			1317,
-			52,
-			39
-		},
+		size = {94, 105},
+		trim = {20, 42, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {2464, 1317, 52, 39},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			36,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2114,
-			997,
-			52,
-			45
-		},
+		size = {94, 105},
+		trim = {20, 36, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {2114, 997, 52, 45},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0008 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			36,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2488,
-			52,
-			45
-		},
+		size = {94, 105},
+		trim = {20, 36, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {991, 2488, 52, 45},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			34,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2075,
-			52,
-			47
-		},
+		size = {94, 105},
+		trim = {20, 34, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {991, 2075, 52, 47},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0010 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			34,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2125,
-			52,
-			47
-		},
+		size = {94, 105},
+		trim = {20, 34, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {991, 2125, 52, 47},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			17,
-			32,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1972,
-			55,
-			49
-		},
+		size = {94, 105},
+		trim = {17, 32, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {991, 1972, 55, 49},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0012 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			17,
-			31,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1919,
-			55,
-			50
-		},
+		size = {94, 105},
+		trim = {17, 31, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {991, 1919, 55, 50},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			17,
-			33,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2024,
-			55,
-			48
-		},
+		size = {94, 105},
+		trim = {17, 33, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {991, 2024, 55, 48},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0014 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			15,
-			36,
-			20,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1990,
-			997,
-			59,
-			45
-		},
+		size = {94, 105},
+		trim = {15, 36, 20, 24},
+		a_size = {4096, 4096},
+		f_quad = {1990, 997, 59, 45},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			15,
-			36,
-			20,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2052,
-			997,
-			59,
-			45
-		},
+		size = {94, 105},
+		trim = {15, 36, 20, 24},
+		a_size = {4096, 4096},
+		f_quad = {2052, 997, 59, 45},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0016 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			15,
-			41,
-			20,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3761,
-			1315,
-			59,
-			40
-		},
+		size = {94, 105},
+		trim = {15, 41, 20, 24},
+		a_size = {4096, 4096},
+		f_quad = {3761, 1315, 59, 40},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			15,
-			41,
-			20,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3495,
-			1316,
-			59,
-			40
-		},
+		size = {94, 105},
+		trim = {15, 41, 20, 24},
+		a_size = {4096, 4096},
+		f_quad = {3495, 1316, 59, 40},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0018 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			44,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2750,
-			1315,
-			52,
-			37
-		},
+		size = {94, 105},
+		trim = {20, 44, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {2750, 1315, 52, 37},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			44,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3518,
-			341,
-			52,
-			37
-		},
+		size = {94, 105},
+		trim = {20, 44, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {3518, 341, 52, 37},
 		alias = {}
 	},
 	hero_evil_dragon_breath_crystal_small_0020 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			44,
-			22,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3573,
-			341,
-			52,
-			37
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_small_0021"
-		}
+		size = {94, 105},
+		trim = {20, 44, 22, 24},
+		a_size = {4096, 4096},
+		f_quad = {3573, 341, 52, 37},
+		alias = {"hero_evil_dragon_breath_crystal_small_0021"}
 	},
 	hero_evil_dragon_breath_crystal_small_0022 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			20,
-			50,
-			23,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1707,
-			1322,
-			51,
-			31
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_small_0023"
-		}
+		size = {94, 105},
+		trim = {20, 50, 23, 24},
+		a_size = {4096, 4096},
+		f_quad = {1707, 1322, 51, 31},
+		alias = {"hero_evil_dragon_breath_crystal_small_0023"}
 	},
 	hero_evil_dragon_breath_crystal_small_0024 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			23,
-			56,
-			23,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4026,
-			720,
-			48,
-			25
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_small_0025"
-		}
+		size = {94, 105},
+		trim = {23, 56, 23, 24},
+		a_size = {4096, 4096},
+		f_quad = {4026, 720, 48, 25},
+		alias = {"hero_evil_dragon_breath_crystal_small_0025"}
 	},
 	hero_evil_dragon_breath_crystal_small_0026 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			33,
-			64,
-			28,
-			27
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			277,
-			2565,
-			33,
-			14
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_small_0027"
-		}
+		size = {94, 105},
+		trim = {33, 64, 28, 27},
+		a_size = {4096, 4096},
+		f_quad = {277, 2565, 33, 14},
+		alias = {"hero_evil_dragon_breath_crystal_small_0027"}
 	},
 	hero_evil_dragon_breath_crystal_small_0028 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			94,
-			105
-		},
-		trim = {
-			37,
-			69,
-			34,
-			28
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2944,
-			1210,
-			23,
-			8
-		},
-		alias = {
-			"hero_evil_dragon_breath_crystal_small_0029"
-		}
+		size = {94, 105},
+		trim = {37, 69, 34, 28},
+		a_size = {4096, 4096},
+		f_quad = {2944, 1210, 23, 8},
+		alias = {"hero_evil_dragon_breath_crystal_small_0029"}
 	},
 	hero_evil_dragon_conduit_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			40,
-			44,
-			36,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2657,
-			100,
-			102
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0002"
-		}
+		size = {176, 222},
+		trim = {40, 44, 36, 76},
+		a_size = {4096, 4096},
+		f_quad = {874, 2657, 100, 102},
+		alias = {"hero_evil_dragon_conduit_0002"}
 	},
 	hero_evil_dragon_conduit_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			30,
-			29,
-			28,
-			74
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2850,
-			118,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0004"
-		}
+		size = {176, 222},
+		trim = {30, 29, 28, 74},
+		a_size = {4096, 4096},
+		f_quad = {715, 2850, 118, 119},
+		alias = {"hero_evil_dragon_conduit_0004"}
 	},
 	hero_evil_dragon_conduit_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			24,
-			24,
-			23,
-			73
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1214,
-			129,
-			125
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0006"
-		}
+		size = {176, 222},
+		trim = {24, 24, 23, 73},
+		a_size = {4096, 4096},
+		f_quad = {715, 1214, 129, 125},
+		alias = {"hero_evil_dragon_conduit_0006"}
 	},
 	hero_evil_dragon_conduit_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			21,
-			20,
-			20,
-			74
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2333,
-			898,
-			135,
-			128
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0008"
-		}
+		size = {176, 222},
+		trim = {21, 20, 20, 74},
+		a_size = {4096, 4096},
+		f_quad = {2333, 898, 135, 128},
+		alias = {"hero_evil_dragon_conduit_0008"}
 	},
 	hero_evil_dragon_conduit_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			18,
-			16,
-			17,
-			72
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3050,
-			752,
-			141,
-			134
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0010"
-		}
+		size = {176, 222},
+		trim = {18, 16, 17, 72},
+		a_size = {4096, 4096},
+		f_quad = {3050, 752, 141, 134},
+		alias = {"hero_evil_dragon_conduit_0010"}
 	},
 	hero_evil_dragon_conduit_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			16,
-			14,
-			14,
-			70
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3680,
-			146,
-			138
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0012"
-		}
+		size = {176, 222},
+		trim = {16, 14, 14, 70},
+		a_size = {4096, 4096},
+		f_quad = {558, 3680, 146, 138},
+		alias = {"hero_evil_dragon_conduit_0012"}
 	},
 	hero_evil_dragon_conduit_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			56,
-			48,
-			53,
-			93
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			273,
-			2077,
-			67,
-			81
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0014"
-		}
+		size = {176, 222},
+		trim = {56, 48, 53, 93},
+		a_size = {4096, 4096},
+		f_quad = {273, 2077, 67, 81},
+		alias = {"hero_evil_dragon_conduit_0014"}
 	},
 	hero_evil_dragon_conduit_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			64,
-			48,
-			63,
-			102
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			658,
-			2023,
-			49,
-			72
-		},
+		size = {176, 222},
+		trim = {64, 48, 63, 102},
+		a_size = {4096, 4096},
+		f_quad = {658, 2023, 49, 72},
 		alias = {}
 	},
 	hero_evil_dragon_conduit_0016 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			46,
-			38,
-			46,
-			94
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2436,
-			1148,
-			84,
-			90
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0017"
-		}
+		size = {176, 222},
+		trim = {46, 38, 46, 94},
+		a_size = {4096, 4096},
+		f_quad = {2436, 1148, 84, 90},
+		alias = {"hero_evil_dragon_conduit_0017"}
 	},
 	hero_evil_dragon_conduit_0018 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			30,
-			29,
-			28,
-			81
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3179,
-			118,
-			112
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0019"
-		}
+		size = {176, 222},
+		trim = {30, 29, 28, 81},
+		a_size = {4096, 4096},
+		f_quad = {715, 3179, 118, 112},
+		alias = {"hero_evil_dragon_conduit_0019"}
 	},
 	hero_evil_dragon_conduit_0020 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			24,
-			24,
-			23,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1342,
-			129,
-			122
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0021"
-		}
+		size = {176, 222},
+		trim = {24, 24, 23, 76},
+		a_size = {4096, 4096},
+		f_quad = {715, 1342, 129, 122},
+		alias = {"hero_evil_dragon_conduit_0021"}
 	},
 	hero_evil_dragon_conduit_0022 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			21,
-			20,
-			20,
-			74
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2471,
-			898,
-			135,
-			128
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0023"
-		}
+		size = {176, 222},
+		trim = {21, 20, 20, 74},
+		a_size = {4096, 4096},
+		f_quad = {2471, 898, 135, 128},
+		alias = {"hero_evil_dragon_conduit_0023"}
 	},
 	hero_evil_dragon_conduit_0024 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			18,
-			16,
-			17,
-			72
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3194,
-			752,
-			141,
-			134
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0025"
-		}
+		size = {176, 222},
+		trim = {18, 16, 17, 72},
+		a_size = {4096, 4096},
+		f_quad = {3194, 752, 141, 134},
+		alias = {"hero_evil_dragon_conduit_0025"}
 	},
 	hero_evil_dragon_conduit_0026 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			222
-		},
-		trim = {
-			16,
-			14,
-			14,
-			70
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3821,
-			146,
-			138
-		},
-		alias = {
-			"hero_evil_dragon_conduit_0027"
-		}
+		size = {176, 222},
+		trim = {16, 14, 14, 70},
+		a_size = {4096, 4096},
+		f_quad = {558, 3821, 146, 138},
+		alias = {"hero_evil_dragon_conduit_0027"}
 	},
 	hero_evil_dragon_conduit_floor_fx = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			267,
-			165
-		},
-		trim = {
-			37,
-			29,
-			32,
-			28
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1732,
-			752,
-			198,
-			108
-		},
+		size = {267, 165},
+		trim = {37, 29, 32, 28},
+		a_size = {4096, 4096},
+		f_quad = {1732, 752, 198, 108},
 		alias = {}
 	},
 	hero_evil_dragon_conduit_idle_fx_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			31,
-			59,
-			39,
-			84
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2245,
-			1317,
-			66,
-			36
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0002"
-		}
+		size = {136, 179},
+		trim = {31, 59, 39, 84},
+		a_size = {4096, 4096},
+		f_quad = {2245, 1317, 66, 36},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0002"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			29,
-			58,
-			31,
-			83
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1552,
-			1314,
-			76,
-			38
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0004"
-		}
+		size = {136, 179},
+		trim = {29, 58, 31, 83},
+		a_size = {4096, 4096},
+		f_quad = {1552, 1314, 76, 38},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0004"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			28,
-			45,
-			28,
-			84
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2314,
-			1253,
-			80,
-			50
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0006"
-		}
+		size = {136, 179},
+		trim = {28, 45, 28, 84},
+		a_size = {4096, 4096},
+		f_quad = {2314, 1253, 80, 50},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0006"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			28,
-			43,
-			25,
-			85
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3986,
-			133,
-			83,
-			51
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0008"
-		}
+		size = {136, 179},
+		trim = {28, 43, 25, 85},
+		a_size = {4096, 4096},
+		f_quad = {3986, 133, 83, 51},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0008"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			28,
-			21,
-			24,
-			85
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2979,
-			1148,
-			84,
-			73
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0010"
-		}
+		size = {136, 179},
+		trim = {28, 21, 24, 85},
+		a_size = {4096, 4096},
+		f_quad = {2979, 1148, 84, 73},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0010"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			33,
-			19,
-			24,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2790,
-			1148,
-			79,
-			78
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0012"
-		}
+		size = {136, 179},
+		trim = {33, 19, 24, 82},
+		a_size = {4096, 4096},
+		f_quad = {2790, 1148, 79, 78},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0012"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			41,
-			18,
-			24,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			273,
-			1912,
-			71,
-			79
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0014"
-		}
+		size = {136, 179},
+		trim = {41, 18, 24, 82},
+		a_size = {4096, 4096},
+		f_quad = {273, 1912, 71, 79},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0014"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			39,
-			17,
-			28,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			273,
-			1994,
-			69,
-			80
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0016"
-		}
+		size = {136, 179},
+		trim = {39, 17, 28, 82},
+		a_size = {4096, 4096},
+		f_quad = {273, 1994, 69, 80},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0016"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			38,
-			17,
-			36,
-			84
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4031,
-			1045,
-			62,
-			78
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0018"
-		}
+		size = {136, 179},
+		trim = {38, 17, 36, 84},
+		a_size = {4096, 4096},
+		f_quad = {4031, 1045, 62, 78},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0018"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			37,
-			18,
-			31,
-			84
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			277,
-			2191,
-			68,
-			77
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0020"
-		}
+		size = {136, 179},
+		trim = {37, 18, 31, 84},
+		a_size = {4096, 4096},
+		f_quad = {277, 2191, 68, 77},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0020"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0021 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			37,
-			24,
-			30,
-			84
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			277,
-			2271,
-			69,
-			71
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0022"
-		}
+		size = {136, 179},
+		trim = {37, 24, 30, 84},
+		a_size = {4096, 4096},
+		f_quad = {277, 2271, 69, 71},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0022"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0023 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			37,
-			67,
-			29,
-			85
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			273,
-			2161,
-			70,
-			27
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0024"
-		}
+		size = {136, 179},
+		trim = {37, 67, 29, 85},
+		a_size = {4096, 4096},
+		f_quad = {273, 2161, 70, 27},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0024"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0025 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			36,
-			64,
-			29,
-			85
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2606,
-			1220,
-			71,
-			30
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0026"
-		}
+		size = {136, 179},
+		trim = {36, 64, 29, 85},
+		a_size = {4096, 4096},
+		f_quad = {2606, 1220, 71, 30},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0026"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0027 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			36,
-			63,
-			29,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1633,
-			1322,
-			71,
-			34
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0028"
-		}
+		size = {136, 179},
+		trim = {36, 63, 29, 82},
+		a_size = {4096, 4096},
+		f_quad = {1633, 1322, 71, 34},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0028"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0029 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			45,
-			62,
-			28,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2397,
-			1318,
-			63,
-			35
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0030"
-		}
+		size = {136, 179},
+		trim = {45, 62, 28, 82},
+		a_size = {4096, 4096},
+		f_quad = {2397, 1318, 63, 35},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0030"}
 	},
 	hero_evil_dragon_conduit_idle_fx_0031 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			136,
-			179
-		},
-		trim = {
-			39,
-			60,
-			28,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2872,
-			1210,
-			69,
-			37
-		},
-		alias = {
-			"hero_evil_dragon_conduit_idle_fx_0032"
-		}
+		size = {136, 179},
+		trim = {39, 60, 28, 82},
+		a_size = {4096, 4096},
+		f_quad = {2872, 1210, 69, 37},
+		alias = {"hero_evil_dragon_conduit_idle_fx_0032"}
 	},
 	hero_evil_dragon_conduit_projectile_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			108
-		},
-		trim = {
-			23,
-			18,
-			18,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1833,
-			1253,
-			64,
-			65
-		},
-		alias = {
-			"hero_evil_dragon_conduit_projectile_0002"
-		}
+		size = {105, 108},
+		trim = {23, 18, 18, 25},
+		a_size = {4096, 4096},
+		f_quad = {1833, 1253, 64, 65},
+		alias = {"hero_evil_dragon_conduit_projectile_0002"}
 	},
 	hero_evil_dragon_conduit_projectile_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			108
-		},
-		trim = {
-			22,
-			17,
-			18,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			274,
-			1054,
-			65,
-			67
-		},
-		alias = {
-			"hero_evil_dragon_conduit_projectile_0004"
-		}
+		size = {105, 108},
+		trim = {22, 17, 18, 24},
+		a_size = {4096, 4096},
+		f_quad = {274, 1054, 65, 67},
+		alias = {"hero_evil_dragon_conduit_projectile_0004"}
 	},
 	hero_evil_dragon_conduit_projectile_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			108
-		},
-		trim = {
-			22,
-			24,
-			23,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3761,
-			1253,
-			60,
-			59
-		},
-		alias = {
-			"hero_evil_dragon_conduit_projectile_0006"
-		}
+		size = {105, 108},
+		trim = {22, 24, 23, 25},
+		a_size = {4096, 4096},
+		f_quad = {3761, 1253, 60, 59},
+		alias = {"hero_evil_dragon_conduit_projectile_0006"}
 	},
 	hero_evil_dragon_conduit_projectile_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			108
-		},
-		trim = {
-			22,
-			18,
-			18,
-			24
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1633,
-			1253,
-			65,
-			66
-		},
-		alias = {
-			"hero_evil_dragon_conduit_projectile_0008"
-		}
+		size = {105, 108},
+		trim = {22, 18, 18, 24},
+		a_size = {4096, 4096},
+		f_quad = {1633, 1253, 65, 66},
+		alias = {"hero_evil_dragon_conduit_projectile_0008"}
 	},
 	hero_evil_dragon_conduit_projectile_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			108
-		},
-		trim = {
-			23,
-			17,
-			18,
-			25
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1701,
-			1253,
-			64,
-			66
-		},
-		alias = {
-			"hero_evil_dragon_conduit_projectile_0010"
-		}
+		size = {105, 108},
+		trim = {23, 17, 18, 25},
+		a_size = {4096, 4096},
+		f_quad = {1701, 1253, 64, 66},
+		alias = {"hero_evil_dragon_conduit_projectile_0010"}
 	},
 	hero_evil_dragon_conduit_projectile_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			108
-		},
-		trim = {
-			19,
-			24,
-			22,
-			23
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2464,
-			1253,
-			64,
-			61
-		},
-		alias = {
-			"hero_evil_dragon_conduit_projectile_0012"
-		}
+		size = {105, 108},
+		trim = {19, 24, 22, 23},
+		a_size = {4096, 4096},
+		f_quad = {2464, 1253, 64, 61},
+		alias = {"hero_evil_dragon_conduit_projectile_0012"}
 	},
 	hero_evil_dragon_decal = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			102
-		},
-		trim = {
-			16,
-			15,
-			17,
-			19
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			4017,
-			135,
-			68
-		},
+		size = {168, 102},
+		trim = {16, 15, 17, 19},
+		a_size = {4096, 4096},
+		f_quad = {715, 4017, 135, 68},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			141,
-			95,
-			122
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			752,
-			161,
-			143
-		},
+		size = {341, 406},
+		trim = {85, 141, 95, 122},
+		a_size = {4096, 4096},
+		f_quad = {874, 752, 161, 143},
 		alias = {
 			"hero_evil_dragon_hero_0002",
 			"hero_evil_dragon_hero_0021",
@@ -5095,188 +1629,58 @@ return {
 	},
 	hero_evil_dragon_hero_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			137,
-			98,
-			118
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3176,
-			590,
-			155,
-			151
-		},
-		alias = {
-			"hero_evil_dragon_hero_0004"
-		}
+		size = {341, 406},
+		trim = {88, 137, 98, 118},
+		a_size = {4096, 4096},
+		f_quad = {3176, 590, 155, 151},
+		alias = {"hero_evil_dragon_hero_0004"}
 	},
 	hero_evil_dragon_hero_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			92,
-			142,
-			100,
-			149
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2765,
-			898,
-			149,
-			115
-		},
-		alias = {
-			"hero_evil_dragon_hero_0006"
-		}
+		size = {341, 406},
+		trim = {92, 142, 100, 149},
+		a_size = {4096, 4096},
+		f_quad = {2765, 898, 149, 115},
+		alias = {"hero_evil_dragon_hero_0006"}
 	},
 	hero_evil_dragon_hero_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			94,
-			140,
-			99,
-			182
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3723,
-			148,
-			84
-		},
-		alias = {
-			"hero_evil_dragon_hero_0008"
-		}
+		size = {341, 406},
+		trim = {94, 140, 99, 182},
+		a_size = {4096, 4096},
+		f_quad = {715, 3723, 148, 84},
+		alias = {"hero_evil_dragon_hero_0008"}
 	},
 	hero_evil_dragon_hero_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			117,
-			97,
-			177
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2609,
-			898,
-			153,
-			112
-		},
-		alias = {
-			"hero_evil_dragon_hero_0010"
-		}
+		size = {341, 406},
+		trim = {91, 117, 97, 177},
+		a_size = {4096, 4096},
+		f_quad = {2609, 898, 153, 112},
+		alias = {"hero_evil_dragon_hero_0010"}
 	},
 	hero_evil_dragon_hero_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			86,
-			80,
-			97,
-			172
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1877,
-			590,
-			158,
-			154
-		},
-		alias = {
-			"hero_evil_dragon_hero_0012"
-		}
+		size = {341, 406},
+		trim = {86, 80, 97, 172},
+		a_size = {4096, 4096},
+		f_quad = {1877, 590, 158, 154},
+		alias = {"hero_evil_dragon_hero_0012"}
 	},
 	hero_evil_dragon_hero_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			68,
-			97,
-			170
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1987,
-			187,
-			161,
-			168
-		},
-		alias = {
-			"hero_evil_dragon_hero_0014",
-			"hero_evil_dragon_hero_0047",
-			"hero_evil_dragon_hero_0048",
-			"hero_evil_dragon_hero_0087",
-			"hero_evil_dragon_hero_0088",
-			"hero_evil_dragon_hero_0139",
-			"hero_evil_dragon_hero_0140"
-		}
+		size = {341, 406},
+		trim = {83, 68, 97, 170},
+		a_size = {4096, 4096},
+		f_quad = {1987, 187, 161, 168},
+		alias = {"hero_evil_dragon_hero_0014", "hero_evil_dragon_hero_0047", "hero_evil_dragon_hero_0048", "hero_evil_dragon_hero_0087", "hero_evil_dragon_hero_0088", "hero_evil_dragon_hero_0139", "hero_evil_dragon_hero_0140"}
 	},
 	hero_evil_dragon_hero_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			84,
-			66,
-			97,
-			170
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1824,
-			187,
-			160,
-			170
-		},
+		size = {341, 406},
+		trim = {84, 66, 97, 170},
+		a_size = {4096, 4096},
+		f_quad = {1824, 187, 160, 170},
 		alias = {
 			"hero_evil_dragon_hero_0016",
 			"hero_evil_dragon_hero_0049",
@@ -5293,26 +1697,10 @@ return {
 	},
 	hero_evil_dragon_hero_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			79,
-			98,
-			173
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1215,
-			590,
-			160,
-			154
-		},
+		size = {341, 406},
+		trim = {83, 79, 98, 173},
+		a_size = {4096, 4096},
+		f_quad = {1215, 590, 160, 154},
 		alias = {
 			"hero_evil_dragon_hero_0018",
 			"hero_evil_dragon_hero_0051",
@@ -5329,26 +1717,10 @@ return {
 	},
 	hero_evil_dragon_hero_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			100,
-			98,
-			177
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2099,
-			752,
-			160,
-			129
-		},
+		size = {341, 406},
+		trim = {83, 100, 98, 177},
+		a_size = {4096, 4096},
+		f_quad = {2099, 752, 160, 129},
 		alias = {
 			"hero_evil_dragon_hero_0020",
 			"hero_evil_dragon_hero_0053",
@@ -5365,3099 +1737,970 @@ return {
 	},
 	hero_evil_dragon_hero_0023 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			130,
-			98,
-			123
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2700,
-			590,
-			155,
-			153
-		},
-		alias = {
-			"hero_evil_dragon_hero_0024",
-			"hero_evil_dragon_hero_0057",
-			"hero_evil_dragon_hero_0058",
-			"hero_evil_dragon_hero_0097",
-			"hero_evil_dragon_hero_0098"
-		}
+		size = {341, 406},
+		trim = {88, 130, 98, 123},
+		a_size = {4096, 4096},
+		f_quad = {2700, 590, 155, 153},
+		alias = {"hero_evil_dragon_hero_0024", "hero_evil_dragon_hero_0057", "hero_evil_dragon_hero_0058", "hero_evil_dragon_hero_0097", "hero_evil_dragon_hero_0098"}
 	},
 	hero_evil_dragon_hero_0025 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			96,
-			123,
-			96,
-			154
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3962,
-			149,
-			129
-		},
-		alias = {
-			"hero_evil_dragon_hero_0026",
-			"hero_evil_dragon_hero_0059",
-			"hero_evil_dragon_hero_0060"
-		}
+		size = {341, 406},
+		trim = {96, 123, 96, 154},
+		a_size = {4096, 4096},
+		f_quad = {558, 3962, 149, 129},
+		alias = {"hero_evil_dragon_hero_0026", "hero_evil_dragon_hero_0059", "hero_evil_dragon_hero_0060"}
 	},
 	hero_evil_dragon_hero_0027 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			120,
-			98,
-			185
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1719,
-			152,
-			101
-		},
+		size = {341, 406},
+		trim = {91, 120, 98, 185},
+		a_size = {4096, 4096},
+		f_quad = {715, 1719, 152, 101},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0028 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			120,
-			98,
-			185
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1823,
-			152,
-			101
-		},
+		size = {341, 406},
+		trim = {91, 120, 98, 185},
+		a_size = {4096, 4096},
+		f_quad = {715, 1823, 152, 101},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0029 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			103,
-			99,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1195,
-			898,
-			155,
-			116
-		},
+		size = {341, 406},
+		trim = {87, 103, 99, 187},
+		a_size = {4096, 4096},
+		f_quad = {1195, 898, 155, 116},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0030 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			103,
-			99,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1353,
-			898,
-			155,
-			116
-		},
+		size = {341, 406},
+		trim = {87, 103, 99, 187},
+		a_size = {4096, 4096},
+		f_quad = {1353, 898, 155, 116},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0031 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			84,
-			63,
-			96,
-			172
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3695,
-			5,
-			161,
-			171
-		},
+		size = {341, 406},
+		trim = {84, 63, 96, 172},
+		a_size = {4096, 4096},
+		f_quad = {3695, 5, 161, 171},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0032 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			84,
-			63,
-			96,
-			171
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3531,
-			5,
-			161,
-			172
-		},
+		size = {341, 406},
+		trim = {84, 63, 96, 171},
+		a_size = {4096, 4096},
+		f_quad = {3531, 5, 161, 172},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0033 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			64,
-			87,
-			151
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3903,
-			387,
-			169,
-			191
-		},
+		size = {341, 406},
+		trim = {85, 64, 87, 151},
+		a_size = {4096, 4096},
+		f_quad = {3903, 387, 169, 191},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0034 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			64,
-			87,
-			151
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			789,
-			187,
-			169,
-			191
-		},
+		size = {341, 406},
+		trim = {85, 64, 87, 151},
+		a_size = {4096, 4096},
+		f_quad = {789, 187, 169, 191},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0035 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			66,
-			83,
-			156
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1487,
-			187,
-			170,
-			184
-		},
-		alias = {
-			"hero_evil_dragon_hero_0036"
-		}
+		size = {341, 406},
+		trim = {88, 66, 83, 156},
+		a_size = {4096, 4096},
+		f_quad = {1487, 187, 170, 184},
+		alias = {"hero_evil_dragon_hero_0036"}
 	},
 	hero_evil_dragon_hero_0037 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			80,
-			73,
-			149
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2996,
-			387,
-			183,
-			177
-		},
-		alias = {
-			"hero_evil_dragon_hero_0038"
-		}
+		size = {341, 406},
+		trim = {85, 80, 73, 149},
+		a_size = {4096, 4096},
+		f_quad = {2996, 387, 183, 177},
+		alias = {"hero_evil_dragon_hero_0038"}
 	},
 	hero_evil_dragon_hero_0039 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			94,
-			143,
-			72,
-			112
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3450,
-			187,
-			175,
-			151
-		},
-		alias = {
-			"hero_evil_dragon_hero_0040"
-		}
+		size = {341, 406},
+		trim = {94, 143, 72, 112},
+		a_size = {4096, 4096},
+		f_quad = {3450, 187, 175, 151},
+		alias = {"hero_evil_dragon_hero_0040"}
 	},
 	hero_evil_dragon_hero_0041 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			100,
-			140,
-			71,
-			123
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2038,
-			590,
-			170,
-			143
-		},
-		alias = {
-			"hero_evil_dragon_hero_0042"
-		}
+		size = {341, 406},
+		trim = {100, 140, 71, 123},
+		a_size = {4096, 4096},
+		f_quad = {2038, 590, 170, 143},
+		alias = {"hero_evil_dragon_hero_0042"}
 	},
 	hero_evil_dragon_hero_0043 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			98,
-			141,
-			72,
-			146
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2262,
-			752,
-			171,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_hero_0044"
-		}
+		size = {341, 406},
+		trim = {98, 141, 72, 146},
+		a_size = {4096, 4096},
+		f_quad = {2262, 752, 171, 119},
+		alias = {"hero_evil_dragon_hero_0044"}
 	},
 	hero_evil_dragon_hero_0045 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			118,
-			93,
-			176
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1669,
-			898,
-			157,
-			112
-		},
-		alias = {
-			"hero_evil_dragon_hero_0046",
-			"hero_evil_dragon_hero_0085",
-			"hero_evil_dragon_hero_0086",
-			"hero_evil_dragon_hero_0137",
-			"hero_evil_dragon_hero_0138"
-		}
+		size = {341, 406},
+		trim = {91, 118, 93, 176},
+		a_size = {4096, 4096},
+		f_quad = {1669, 898, 157, 112},
+		alias = {"hero_evil_dragon_hero_0046", "hero_evil_dragon_hero_0085", "hero_evil_dragon_hero_0086", "hero_evil_dragon_hero_0137", "hero_evil_dragon_hero_0138"}
 	},
 	hero_evil_dragon_hero_0061 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			120,
-			98,
-			185
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1927,
-			152,
-			101
-		},
-		alias = {
-			"hero_evil_dragon_hero_0062"
-		}
+		size = {341, 406},
+		trim = {91, 120, 98, 185},
+		a_size = {4096, 4096},
+		f_quad = {715, 1927, 152, 101},
+		alias = {"hero_evil_dragon_hero_0062"}
 	},
 	hero_evil_dragon_hero_0063 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			103,
-			99,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1511,
-			898,
-			155,
-			116
-		},
-		alias = {
-			"hero_evil_dragon_hero_0064"
-		}
+		size = {341, 406},
+		trim = {87, 103, 99, 187},
+		a_size = {4096, 4096},
+		f_quad = {1511, 898, 155, 116},
+		alias = {"hero_evil_dragon_hero_0064"}
 	},
 	hero_evil_dragon_hero_0065 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			84,
-			63,
-			96,
-			184
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			590,
-			161,
-			159
-		},
-		alias = {
-			"hero_evil_dragon_hero_0066"
-		}
+		size = {341, 406},
+		trim = {84, 63, 96, 184},
+		a_size = {4096, 4096},
+		f_quad = {715, 590, 161, 159},
+		alias = {"hero_evil_dragon_hero_0066"}
 	},
 	hero_evil_dragon_hero_0067 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			64,
-			87,
-			170
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2101,
-			5,
-			169,
-			172
-		},
-		alias = {
-			"hero_evil_dragon_hero_0068"
-		}
+		size = {341, 406},
+		trim = {85, 64, 87, 170},
+		a_size = {4096, 4096},
+		f_quad = {2101, 5, 169, 172},
+		alias = {"hero_evil_dragon_hero_0068"}
 	},
 	hero_evil_dragon_hero_0069 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			66,
-			81,
-			155
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1137,
-			187,
-			172,
-			185
-		},
+		size = {341, 406},
+		trim = {88, 66, 81, 155},
+		a_size = {4096, 4096},
+		f_quad = {1137, 187, 172, 185},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0070 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			66,
-			81,
-			155
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1312,
-			187,
-			172,
-			185
-		},
+		size = {341, 406},
+		trim = {88, 66, 81, 155},
+		a_size = {4096, 4096},
+		f_quad = {1312, 187, 172, 185},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0071 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			68,
-			71,
-			147
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			3635,
-			183,
-			191
-		},
+		size = {341, 406},
+		trim = {87, 68, 71, 147},
+		a_size = {4096, 4096},
+		f_quad = {349, 3635, 183, 191},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0072 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			68,
-			71,
-			147
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			3829,
-			183,
-			191
-		},
+		size = {341, 406},
+		trim = {87, 68, 71, 147},
+		a_size = {4096, 4096},
+		f_quad = {349, 3829, 183, 191},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0073 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			89,
-			75,
-			70,
-			145
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1925,
-			387,
-			182,
-			186
-		},
+		size = {341, 406},
+		trim = {89, 75, 70, 145},
+		a_size = {4096, 4096},
+		f_quad = {1925, 387, 182, 186},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0074 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			89,
-			75,
-			70,
-			145
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2110,
-			387,
-			182,
-			186
-		},
+		size = {341, 406},
+		trim = {89, 75, 70, 145},
+		a_size = {4096, 4096},
+		f_quad = {2110, 387, 182, 186},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0075 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			77,
-			68,
-			145
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			975,
-			387,
-			188,
-			184
-		},
+		size = {341, 406},
+		trim = {85, 77, 68, 145},
+		a_size = {4096, 4096},
+		f_quad = {975, 387, 188, 184},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0076 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			77,
-			69,
-			145
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1166,
-			387,
-			187,
-			184
-		},
+		size = {341, 406},
+		trim = {85, 77, 69, 145},
+		a_size = {4096, 4096},
+		f_quad = {1166, 387, 187, 184},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0077 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			80,
-			68,
-			144
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1543,
-			387,
-			188,
-			182
-		},
+		size = {341, 406},
+		trim = {85, 80, 68, 144},
+		a_size = {4096, 4096},
+		f_quad = {1543, 387, 188, 182},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0078 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			80,
-			68,
-			144
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1734,
-			387,
-			188,
-			182
-		},
+		size = {341, 406},
+		trim = {85, 80, 68, 144},
+		a_size = {4096, 4096},
+		f_quad = {1734, 387, 188, 182},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0079 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			94,
-			143,
-			69,
-			112
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2503,
-			187,
-			178,
-			151
-		},
+		size = {341, 406},
+		trim = {94, 143, 69, 112},
+		a_size = {4096, 4096},
+		f_quad = {2503, 187, 178, 151},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0080 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			94,
-			143,
-			69,
-			112
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2684,
-			187,
-			178,
-			151
-		},
+		size = {341, 406},
+		trim = {94, 143, 69, 112},
+		a_size = {4096, 4096},
+		f_quad = {2684, 187, 178, 151},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0081 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			100,
-			139,
-			83,
-			123
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			898,
-			158,
-			144
-		},
+		size = {341, 406},
+		trim = {100, 139, 83, 123},
+		a_size = {4096, 4096},
+		f_quad = {874, 898, 158, 144},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0082 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			100,
-			139,
-			84,
-			123
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1035,
-			898,
-			157,
-			144
-		},
+		size = {341, 406},
+		trim = {100, 139, 84, 123},
+		a_size = {4096, 4096},
+		f_quad = {1035, 898, 157, 144},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0083 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			98,
-			141,
-			85,
-			154
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1829,
-			898,
-			158,
-			111
-		},
+		size = {341, 406},
+		trim = {98, 141, 85, 154},
+		a_size = {4096, 4096},
+		f_quad = {1829, 898, 158, 111},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0084 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			98,
-			141,
-			87,
-			154
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2174,
-			898,
-			156,
-			111
-		},
+		size = {341, 406},
+		trim = {98, 141, 87, 154},
+		a_size = {4096, 4096},
+		f_quad = {2174, 898, 156, 111},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0099 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			95,
-			122,
-			102,
-			153
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3338,
-			752,
-			144,
-			131
-		},
-		alias = {
-			"hero_evil_dragon_hero_0100"
-		}
+		size = {341, 406},
+		trim = {95, 122, 102, 153},
+		a_size = {4096, 4096},
+		f_quad = {3338, 752, 144, 131},
+		alias = {"hero_evil_dragon_hero_0100"}
 	},
 	hero_evil_dragon_hero_0101 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			118,
-			111,
-			168
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2917,
-			898,
-			142,
-			120
-		},
-		alias = {
-			"hero_evil_dragon_hero_0102"
-		}
+		size = {341, 406},
+		trim = {88, 118, 111, 168},
+		a_size = {4096, 4096},
+		f_quad = {2917, 898, 142, 120},
+		alias = {"hero_evil_dragon_hero_0102"}
 	},
 	hero_evil_dragon_hero_0103 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			68,
-			92,
-			118,
-			169
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			918,
-			155,
-			145
-		},
-		alias = {
-			"hero_evil_dragon_hero_0104"
-		}
+		size = {341, 406},
+		trim = {68, 92, 118, 169},
+		a_size = {4096, 4096},
+		f_quad = {715, 918, 155, 145},
+		alias = {"hero_evil_dragon_hero_0104"}
 	},
 	hero_evil_dragon_hero_0105 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			34,
-			71,
-			124,
-			169
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1561,
-			5,
-			183,
-			166
-		},
-		alias = {
-			"hero_evil_dragon_hero_0106"
-		}
+		size = {341, 406},
+		trim = {34, 71, 124, 169},
+		a_size = {4096, 4096},
+		f_quad = {1561, 5, 183, 166},
+		alias = {"hero_evil_dragon_hero_0106"}
 	},
 	hero_evil_dragon_hero_0107 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			41,
-			53,
-			115,
-			178
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3542,
-			387,
-			185,
-			175
-		},
-		alias = {
-			"hero_evil_dragon_hero_0108"
-		}
+		size = {341, 406},
+		trim = {41, 53, 115, 178},
+		a_size = {4096, 4096},
+		f_quad = {3542, 387, 185, 175},
+		alias = {"hero_evil_dragon_hero_0108"}
 	},
 	hero_evil_dragon_hero_0109 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			43,
-			66,
-			171
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			2260,
-			190,
-			192
-		},
-		alias = {
-			"hero_evil_dragon_hero_0110"
-		}
+		size = {341, 406},
+		trim = {85, 43, 66, 171},
+		a_size = {4096, 4096},
+		f_quad = {349, 2260, 190, 192},
+		alias = {"hero_evil_dragon_hero_0110"}
 	},
 	hero_evil_dragon_hero_0111 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			89,
-			44,
-			68,
-			175
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1356,
-			387,
-			184,
-			187
-		},
-		alias = {
-			"hero_evil_dragon_hero_0112"
-		}
+		size = {341, 406},
+		trim = {89, 44, 68, 175},
+		a_size = {4096, 4096},
+		f_quad = {1356, 387, 184, 187},
+		alias = {"hero_evil_dragon_hero_0112"}
 	},
 	hero_evil_dragon_hero_0113 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			99,
-			47,
-			65,
-			176
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3182,
-			387,
-			177,
-			183
-		},
-		alias = {
-			"hero_evil_dragon_hero_0114"
-		}
+		size = {341, 406},
+		trim = {99, 47, 65, 176},
+		a_size = {4096, 4096},
+		f_quad = {3182, 387, 177, 183},
+		alias = {"hero_evil_dragon_hero_0114"}
 	},
 	hero_evil_dragon_hero_0115 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			97,
-			44,
-			61,
-			167
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			2652,
-			183,
-			195
-		},
-		alias = {
-			"hero_evil_dragon_hero_0116"
-		}
+		size = {341, 406},
+		trim = {97, 44, 61, 167},
+		a_size = {4096, 4096},
+		f_quad = {349, 2652, 183, 195},
+		alias = {"hero_evil_dragon_hero_0116"}
 	},
 	hero_evil_dragon_hero_0117 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			99,
-			47,
-			69,
-			175
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			961,
-			187,
-			173,
-			184
-		},
-		alias = {
-			"hero_evil_dragon_hero_0118"
-		}
+		size = {341, 406},
+		trim = {99, 47, 69, 175},
+		a_size = {4096, 4096},
+		f_quad = {961, 187, 173, 184},
+		alias = {"hero_evil_dragon_hero_0118"}
 	},
 	hero_evil_dragon_hero_0119 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			97,
-			44,
-			69,
-			173
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2818,
-			387,
-			175,
-			189
-		},
-		alias = {
-			"hero_evil_dragon_hero_0120"
-		}
+		size = {341, 406},
+		trim = {97, 44, 69, 173},
+		a_size = {4096, 4096},
+		f_quad = {2818, 387, 175, 189},
+		alias = {"hero_evil_dragon_hero_0120"}
 	},
 	hero_evil_dragon_hero_0121 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			99,
-			47,
-			65,
-			176
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3362,
-			387,
-			177,
-			183
-		},
-		alias = {
-			"hero_evil_dragon_hero_0122"
-		}
+		size = {341, 406},
+		trim = {99, 47, 65, 176},
+		a_size = {4096, 4096},
+		f_quad = {3362, 387, 177, 183},
+		alias = {"hero_evil_dragon_hero_0122"}
 	},
 	hero_evil_dragon_hero_0123 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			97,
-			44,
-			61,
-			167
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			2850,
-			183,
-			195
-		},
-		alias = {
-			"hero_evil_dragon_hero_0124"
-		}
+		size = {341, 406},
+		trim = {97, 44, 61, 167},
+		a_size = {4096, 4096},
+		f_quad = {349, 2850, 183, 195},
+		alias = {"hero_evil_dragon_hero_0124"}
 	},
 	hero_evil_dragon_hero_0125 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			99,
-			40,
-			69,
-			171
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2295,
-			387,
-			173,
-			195
-		},
-		alias = {
-			"hero_evil_dragon_hero_0126"
-		}
+		size = {341, 406},
+		trim = {99, 40, 69, 171},
+		a_size = {4096, 4096},
+		f_quad = {2295, 387, 173, 195},
+		alias = {"hero_evil_dragon_hero_0126"}
 	},
 	hero_evil_dragon_hero_0127 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			93,
-			32,
-			69,
-			175
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			3048,
-			179,
-			199
-		},
-		alias = {
-			"hero_evil_dragon_hero_0128"
-		}
+		size = {341, 406},
+		trim = {93, 32, 69, 175},
+		a_size = {4096, 4096},
+		f_quad = {349, 3048, 179, 199},
+		alias = {"hero_evil_dragon_hero_0128"}
 	},
 	hero_evil_dragon_hero_0129 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			74,
-			95,
-			188
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3492,
-			590,
-			161,
-			144
-		},
-		alias = {
-			"hero_evil_dragon_hero_0130"
-		}
+		size = {341, 406},
+		trim = {85, 74, 95, 188},
+		a_size = {4096, 4096},
+		f_quad = {3492, 590, 161, 144},
+		alias = {"hero_evil_dragon_hero_0130"}
 	},
 	hero_evil_dragon_hero_0131 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			94,
-			142,
-			85,
-			112
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1378,
-			590,
-			162,
-			152
-		},
-		alias = {
-			"hero_evil_dragon_hero_0132"
-		}
+		size = {341, 406},
+		trim = {94, 142, 85, 112},
+		a_size = {4096, 4096},
+		f_quad = {1378, 590, 162, 152},
+		alias = {"hero_evil_dragon_hero_0132"}
 	},
 	hero_evil_dragon_hero_0133 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			100,
-			139,
-			91,
-			123
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			2574,
-			150,
-			144
-		},
-		alias = {
-			"hero_evil_dragon_hero_0134"
-		}
+		size = {341, 406},
+		trim = {100, 139, 91, 123},
+		a_size = {4096, 4096},
+		f_quad = {558, 2574, 150, 144},
+		alias = {"hero_evil_dragon_hero_0134"}
 	},
 	hero_evil_dragon_hero_0135 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			98,
-			141,
-			91,
-			154
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3062,
-			898,
-			152,
-			111
-		},
-		alias = {
-			"hero_evil_dragon_hero_0136"
-		}
+		size = {341, 406},
+		trim = {98, 141, 91, 154},
+		a_size = {4096, 4096},
+		f_quad = {3062, 898, 152, 111},
+		alias = {"hero_evil_dragon_hero_0136"}
 	},
 	hero_evil_dragon_hero_0149 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			132,
-			98,
-			123
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3334,
-			590,
-			155,
-			151
-		},
-		alias = {
-			"hero_evil_dragon_hero_0150"
-		}
+		size = {341, 406},
+		trim = {88, 132, 98, 123},
+		a_size = {4096, 4096},
+		f_quad = {3334, 590, 155, 151},
+		alias = {"hero_evil_dragon_hero_0150"}
 	},
 	hero_evil_dragon_hero_0151 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			96,
-			124,
-			96,
-			154
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2898,
-			752,
-			149,
-			128
-		},
-		alias = {
-			"hero_evil_dragon_hero_0152"
-		}
+		size = {341, 406},
+		trim = {96, 124, 96, 154},
+		a_size = {4096, 4096},
+		f_quad = {2898, 752, 149, 128},
+		alias = {"hero_evil_dragon_hero_0152"}
 	},
 	hero_evil_dragon_hero_0153 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			120,
-			99,
-			185
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2031,
-			151,
-			101
-		},
-		alias = {
-			"hero_evil_dragon_hero_0154"
-		}
+		size = {341, 406},
+		trim = {91, 120, 99, 185},
+		a_size = {4096, 4096},
+		f_quad = {715, 2031, 151, 101},
+		alias = {"hero_evil_dragon_hero_0154"}
 	},
 	hero_evil_dragon_hero_0155 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			100,
-			98,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3782,
-			752,
-			156,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_hero_0156"
-		}
+		size = {341, 406},
+		trim = {87, 100, 98, 187},
+		a_size = {4096, 4096},
+		f_quad = {3782, 752, 156, 119},
+		alias = {"hero_evil_dragon_hero_0156"}
 	},
 	hero_evil_dragon_hero_0157 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			70,
-			94,
-			178
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			879,
-			590,
-			162,
-			158
-		},
-		alias = {
-			"hero_evil_dragon_hero_0158"
-		}
+		size = {341, 406},
+		trim = {85, 70, 94, 178},
+		a_size = {4096, 4096},
+		f_quad = {879, 590, 162, 158},
+		alias = {"hero_evil_dragon_hero_0158"}
 	},
 	hero_evil_dragon_hero_0159 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			81,
-			58,
-			94,
-			172
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1932,
-			5,
-			166,
-			176
-		},
-		alias = {
-			"hero_evil_dragon_hero_0160"
-		}
+		size = {341, 406},
+		trim = {81, 58, 94, 172},
+		a_size = {4096, 4096},
+		f_quad = {1932, 5, 166, 176},
+		alias = {"hero_evil_dragon_hero_0160"}
 	},
 	hero_evil_dragon_hero_0161 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			61,
-			97,
-			161
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1660,
-			187,
-			161,
-			184
-		},
-		alias = {
-			"hero_evil_dragon_hero_0162"
-		}
+		size = {341, 406},
+		trim = {83, 61, 97, 161},
+		a_size = {4096, 4096},
+		f_quad = {1660, 187, 161, 184},
+		alias = {"hero_evil_dragon_hero_0162"}
 	},
 	hero_evil_dragon_hero_0163 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			84,
-			100,
-			165
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2211,
-			590,
-			154,
-			157
-		},
-		alias = {
-			"hero_evil_dragon_hero_0164"
-		}
+		size = {341, 406},
+		trim = {87, 84, 100, 165},
+		a_size = {4096, 4096},
+		f_quad = {2211, 590, 154, 157},
+		alias = {"hero_evil_dragon_hero_0164"}
 	},
 	hero_evil_dragon_hero_0165 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			103,
-			98,
-			94,
-			122
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2865,
-			187,
-			144,
-			186
-		},
-		alias = {
-			"hero_evil_dragon_hero_0166"
-		}
+		size = {341, 406},
+		trim = {103, 98, 94, 122},
+		a_size = {4096, 4096},
+		f_quad = {2865, 187, 144, 186},
+		alias = {"hero_evil_dragon_hero_0166"}
 	},
 	hero_evil_dragon_hero_0167 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			112,
-			66,
-			89,
-			137
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			1648,
-			140,
-			203
-		},
-		alias = {
-			"hero_evil_dragon_hero_0168"
-		}
+		size = {341, 406},
+		trim = {112, 66, 89, 137},
+		a_size = {4096, 4096},
+		f_quad = {558, 1648, 140, 203},
+		alias = {"hero_evil_dragon_hero_0168"}
 	},
 	hero_evil_dragon_hero_0169 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			108,
-			63,
-			87,
-			148
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			1450,
-			146,
-			195
-		},
-		alias = {
-			"hero_evil_dragon_hero_0170"
-		}
+		size = {341, 406},
+		trim = {108, 63, 87, 148},
+		a_size = {4096, 4096},
+		f_quad = {558, 1450, 146, 195},
+		alias = {"hero_evil_dragon_hero_0170"}
 	},
 	hero_evil_dragon_hero_0171 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			104,
-			62,
-			94,
-			144
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			1247,
-			143,
-			200
-		},
-		alias = {
-			"hero_evil_dragon_hero_0172"
-		}
+		size = {341, 406},
+		trim = {104, 62, 94, 144},
+		a_size = {4096, 4096},
+		f_quad = {558, 1247, 143, 200},
+		alias = {"hero_evil_dragon_hero_0172"}
 	},
 	hero_evil_dragon_hero_0173 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			98,
-			79,
-			93,
-			161
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			1854,
-			150,
-			166
-		},
-		alias = {
-			"hero_evil_dragon_hero_0174"
-		}
+		size = {341, 406},
+		trim = {98, 79, 93, 161},
+		a_size = {4096, 4096},
+		f_quad = {558, 1854, 150, 166},
+		alias = {"hero_evil_dragon_hero_0174"}
 	},
 	hero_evil_dragon_hero_0175 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			80,
-			93,
-			176
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3016,
-			590,
-			157,
-			150
-		},
-		alias = {
-			"hero_evil_dragon_hero_0176"
-		}
+		size = {341, 406},
+		trim = {91, 80, 93, 176},
+		a_size = {4096, 4096},
+		f_quad = {3016, 590, 157, 150},
+		alias = {"hero_evil_dragon_hero_0176"}
 	},
 	hero_evil_dragon_hero_0177 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			68,
-			97,
-			170
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2151,
-			187,
-			161,
-			168
-		},
-		alias = {
-			"hero_evil_dragon_hero_0178"
-		}
+		size = {341, 406},
+		trim = {83, 68, 97, 170},
+		a_size = {4096, 4096},
+		f_quad = {2151, 187, 161, 168},
+		alias = {"hero_evil_dragon_hero_0178"}
 	},
 	hero_evil_dragon_hero_0187 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			124,
-			98,
-			129
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2858,
-			590,
-			155,
-			153
-		},
-		alias = {
-			"hero_evil_dragon_hero_0188"
-		}
+		size = {341, 406},
+		trim = {88, 124, 98, 129},
+		a_size = {4096, 4096},
+		f_quad = {2858, 590, 155, 153},
+		alias = {"hero_evil_dragon_hero_0188"}
 	},
 	hero_evil_dragon_hero_0189 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			98,
-			104,
-			101,
-			158
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3141,
-			142,
-			144
-		},
-		alias = {
-			"hero_evil_dragon_hero_0190"
-		}
+		size = {341, 406},
+		trim = {98, 104, 101, 158},
+		a_size = {4096, 4096},
+		f_quad = {558, 3141, 142, 144},
+		alias = {"hero_evil_dragon_hero_0190"}
 	},
 	hero_evil_dragon_hero_0191 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			93,
-			94,
-			100,
-			183
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2747,
-			752,
-			148,
-			129
-		},
-		alias = {
-			"hero_evil_dragon_hero_0192"
-		}
+		size = {341, 406},
+		trim = {93, 94, 100, 183},
+		a_size = {4096, 4096},
+		f_quad = {2747, 752, 148, 129},
+		alias = {"hero_evil_dragon_hero_0192"}
 	},
 	hero_evil_dragon_hero_0193 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			92,
-			101,
-			210
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3938,
-			898,
-			155,
-			104
-		},
-		alias = {
-			"hero_evil_dragon_hero_0194"
-		}
+		size = {341, 406},
+		trim = {85, 92, 101, 210},
+		a_size = {4096, 4096},
+		f_quad = {3938, 898, 155, 104},
+		alias = {"hero_evil_dragon_hero_0194"}
 	},
 	hero_evil_dragon_hero_0195 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			77,
-			88,
-			107,
-			214
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3778,
-			898,
-			157,
-			104
-		},
-		alias = {
-			"hero_evil_dragon_hero_0196"
-		}
+		size = {341, 406},
+		trim = {77, 88, 107, 214},
+		a_size = {4096, 4096},
+		f_quad = {3778, 898, 157, 104},
+		alias = {"hero_evil_dragon_hero_0196"}
 	},
 	hero_evil_dragon_hero_0197 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			92,
-			67,
-			98,
-			202
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3001,
-			151,
-			137
-		},
-		alias = {
-			"hero_evil_dragon_hero_0198"
-		}
+		size = {341, 406},
+		trim = {92, 67, 98, 202},
+		a_size = {4096, 4096},
+		f_quad = {558, 3001, 151, 137},
+		alias = {"hero_evil_dragon_hero_0198"}
 	},
 	hero_evil_dragon_hero_0199 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			110,
-			53,
-			98,
-			133
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			202,
-			3479,
-			133,
-			220
-		},
-		alias = {
-			"hero_evil_dragon_hero_0200"
-		}
+		size = {341, 406},
+		trim = {110, 53, 98, 133},
+		a_size = {4096, 4096},
+		f_quad = {202, 3479, 133, 220},
+		alias = {"hero_evil_dragon_hero_0200"}
 	},
 	hero_evil_dragon_hero_0201 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			76,
-			136,
-			86,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			800,
-			179,
-			219
-		},
+		size = {341, 406},
+		trim = {76, 136, 86, 51},
+		a_size = {4096, 4096},
+		f_quad = {349, 800, 179, 219},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0202 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			76,
-			136,
-			86,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			1022,
-			179,
-			219
-		},
+		size = {341, 406},
+		trim = {76, 136, 86, 51},
+		a_size = {4096, 4096},
+		f_quad = {349, 1022, 179, 219},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0203 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			62,
-			158,
-			62,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			187,
-			217,
-			197
-		},
+		size = {341, 406},
+		trim = {62, 158, 62, 51},
+		a_size = {4096, 4096},
+		f_quad = {349, 187, 217, 197},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0204 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			62,
-			158,
-			62,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			569,
-			187,
-			217,
-			197
-		},
+		size = {341, 406},
+		trim = {62, 158, 62, 51},
+		a_size = {4096, 4096},
+		f_quad = {569, 187, 217, 197},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0205 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			54,
-			181,
-			54,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			843,
-			5,
-			233,
-			176
-		},
+		size = {341, 406},
+		trim = {54, 181, 54, 49},
+		a_size = {4096, 4096},
+		f_quad = {843, 5, 233, 176},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0206 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			54,
-			181,
-			54,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1079,
-			5,
-			233,
-			176
-		},
+		size = {341, 406},
+		trim = {54, 181, 54, 49},
+		a_size = {4096, 4096},
+		f_quad = {1079, 5, 233, 176},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0207 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			48,
-			184,
-			49,
-			43
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			5,
-			244,
-			179
-		},
+		size = {341, 406},
+		trim = {48, 184, 49, 43},
+		a_size = {4096, 4096},
+		f_quad = {349, 5, 244, 179},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0208 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			48,
-			184,
-			49,
-			43
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			596,
-			5,
-			244,
-			179
-		},
+		size = {341, 406},
+		trim = {48, 184, 49, 43},
+		a_size = {4096, 4096},
+		f_quad = {596, 5, 244, 179},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0209 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			41,
-			191,
-			45,
-			41
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			3715,
-			255,
-			174
-		},
+		size = {341, 406},
+		trim = {41, 191, 45, 41},
+		a_size = {4096, 4096},
+		f_quad = {5, 3715, 255, 174},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0210 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			41,
-			191,
-			45,
-			41
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			3892,
-			255,
-			174
-		},
+		size = {341, 406},
+		trim = {41, 191, 45, 41},
+		a_size = {4096, 4096},
+		f_quad = {5, 3892, 255, 174},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0211 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			37,
-			166,
-			39,
-			42
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			1789,
-			265,
-			198
-		},
+		size = {341, 406},
+		trim = {37, 166, 39, 42},
+		a_size = {4096, 4096},
+		f_quad = {5, 1789, 265, 198},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0212 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			37,
-			166,
-			39,
-			42
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			1990,
-			265,
-			198
-		},
+		size = {341, 406},
+		trim = {37, 166, 39, 42},
+		a_size = {4096, 4096},
+		f_quad = {5, 1990, 265, 198},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0213 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			35,
-			147,
-			37,
-			65
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			2389,
-			269,
-			194
-		},
+		size = {341, 406},
+		trim = {35, 147, 37, 65},
+		a_size = {4096, 4096},
+		f_quad = {5, 2389, 269, 194},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0214 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			35,
-			147,
-			37,
-			64
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			2191,
-			269,
-			195
-		},
+		size = {341, 406},
+		trim = {35, 147, 37, 64},
+		a_size = {4096, 4096},
+		f_quad = {5, 2191, 269, 195},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0215 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			35,
-			139,
-			40,
-			64
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			1121,
-			266,
-			203
-		},
+		size = {341, 406},
+		trim = {35, 139, 40, 64},
+		a_size = {4096, 4096},
+		f_quad = {5, 1121, 266, 203},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0216 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			35,
-			139,
-			40,
-			63
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			914,
-			266,
-			204
-		},
+		size = {341, 406},
+		trim = {35, 139, 40, 63},
+		a_size = {4096, 4096},
+		f_quad = {5, 914, 266, 204},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0217 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			61,
-			129,
-			55,
-			63
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			3045,
-			225,
-			214
-		},
+		size = {341, 406},
+		trim = {61, 129, 55, 63},
+		a_size = {4096, 4096},
+		f_quad = {5, 3045, 225, 214},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0218 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			65,
-			129,
-			55,
-			63
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			3262,
-			221,
-			214
-		},
+		size = {341, 406},
+		trim = {65, 129, 55, 63},
+		a_size = {4096, 4096},
+		f_quad = {5, 3262, 221, 214},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0219 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			71,
-			110,
-			76,
-			63
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			3479,
-			194,
-			233
-		},
+		size = {341, 406},
+		trim = {71, 110, 76, 63},
+		a_size = {4096, 4096},
+		f_quad = {5, 3479, 194, 233},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0220 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			71,
-			110,
-			76,
-			104
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			1439,
-			194,
-			192
-		},
+		size = {341, 406},
+		trim = {71, 110, 76, 104},
+		a_size = {4096, 4096},
+		f_quad = {349, 1439, 194, 192},
 		alias = {}
 	},
 	hero_evil_dragon_hero_0221 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			68,
-			89,
-			122
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			2041,
-			169,
-			216
-		},
-		alias = {
-			"hero_evil_dragon_hero_0222"
-		}
+		size = {341, 406},
+		trim = {83, 68, 89, 122},
+		a_size = {4096, 4096},
+		f_quad = {349, 2041, 169, 216},
+		alias = {"hero_evil_dragon_hero_0222"}
 	},
 	hero_evil_dragon_hero_0229 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			92,
-			128,
-			100,
-			130
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			2423,
-			149,
-			148
-		},
-		alias = {
-			"hero_evil_dragon_hero_0230"
-		}
+		size = {341, 406},
+		trim = {92, 128, 100, 130},
+		a_size = {4096, 4096},
+		f_quad = {558, 2423, 149, 148},
+		alias = {"hero_evil_dragon_hero_0230"}
 	},
 	hero_evil_dragon_hero_0231 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			100,
-			129,
-			95,
-			158
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3941,
-			752,
-			146,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_hero_0232",
-			"hero_evil_dragon_hero_0391"
-		}
+		size = {341, 406},
+		trim = {100, 129, 95, 158},
+		a_size = {4096, 4096},
+		f_quad = {3941, 752, 146, 119},
+		alias = {"hero_evil_dragon_hero_0232", "hero_evil_dragon_hero_0391"}
 	},
 	hero_evil_dragon_hero_0233 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			90,
-			105,
-			95,
-			181
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3623,
-			752,
-			156,
-			120
-		},
-		alias = {
-			"hero_evil_dragon_hero_0234",
-			"hero_evil_dragon_hero_0389",
-			"hero_evil_dragon_hero_0390"
-		}
+		size = {341, 406},
+		trim = {90, 105, 95, 181},
+		a_size = {4096, 4096},
+		f_quad = {3623, 752, 156, 120},
+		alias = {"hero_evil_dragon_hero_0234", "hero_evil_dragon_hero_0389", "hero_evil_dragon_hero_0390"}
 	},
 	hero_evil_dragon_hero_0235 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			94,
-			71,
-			91,
-			172
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			752,
-			156,
-			163
-		},
-		alias = {
-			"hero_evil_dragon_hero_0236",
-			"hero_evil_dragon_hero_0387",
-			"hero_evil_dragon_hero_0388"
-		}
+		size = {341, 406},
+		trim = {94, 71, 91, 172},
+		a_size = {4096, 4096},
+		f_quad = {715, 752, 156, 163},
+		alias = {"hero_evil_dragon_hero_0236", "hero_evil_dragon_hero_0387", "hero_evil_dragon_hero_0388"}
 	},
 	hero_evil_dragon_hero_0237 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			59,
-			90,
-			171
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2273,
-			5,
-			163,
-			176
-		},
-		alias = {
-			"hero_evil_dragon_hero_0238",
-			"hero_evil_dragon_hero_0385",
-			"hero_evil_dragon_hero_0386"
-		}
+		size = {341, 406},
+		trim = {88, 59, 90, 171},
+		a_size = {4096, 4096},
+		f_quad = {2273, 5, 163, 176},
+		alias = {"hero_evil_dragon_hero_0238", "hero_evil_dragon_hero_0385", "hero_evil_dragon_hero_0386"}
 	},
 	hero_evil_dragon_hero_0239 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			89,
-			57,
-			90,
-			173
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2786,
-			5,
-			162,
-			176
-		},
-		alias = {
-			"hero_evil_dragon_hero_0240",
-			"hero_evil_dragon_hero_0383",
-			"hero_evil_dragon_hero_0384"
-		}
+		size = {341, 406},
+		trim = {89, 57, 90, 173},
+		a_size = {4096, 4096},
+		f_quad = {2786, 5, 162, 176},
+		alias = {"hero_evil_dragon_hero_0240", "hero_evil_dragon_hero_0383", "hero_evil_dragon_hero_0384"}
 	},
 	hero_evil_dragon_hero_0241 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			88,
-			59,
-			90,
-			171
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2439,
-			5,
-			163,
-			176
-		},
-		alias = {
-			"hero_evil_dragon_hero_0242",
-			"hero_evil_dragon_hero_0381",
-			"hero_evil_dragon_hero_0382"
-		}
+		size = {341, 406},
+		trim = {88, 59, 90, 171},
+		a_size = {4096, 4096},
+		f_quad = {2439, 5, 163, 176},
+		alias = {"hero_evil_dragon_hero_0242", "hero_evil_dragon_hero_0381", "hero_evil_dragon_hero_0382"}
 	},
 	hero_evil_dragon_hero_0243 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			85,
-			48,
-			86,
-			168
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3730,
-			387,
-			170,
-			190
-		},
-		alias = {
-			"hero_evil_dragon_hero_0244",
-			"hero_evil_dragon_hero_0379",
-			"hero_evil_dragon_hero_0380"
-		}
+		size = {341, 406},
+		trim = {85, 48, 86, 168},
+		a_size = {4096, 4096},
+		f_quad = {3730, 387, 170, 190},
+		alias = {"hero_evil_dragon_hero_0244", "hero_evil_dragon_hero_0379", "hero_evil_dragon_hero_0380"}
 	},
 	hero_evil_dragon_hero_0245 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			84,
-			45,
-			86,
-			166
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2471,
-			387,
-			171,
-			195
-		},
-		alias = {
-			"hero_evil_dragon_hero_0246",
-			"hero_evil_dragon_hero_0377",
-			"hero_evil_dragon_hero_0378"
-		}
+		size = {341, 406},
+		trim = {84, 45, 86, 166},
+		a_size = {4096, 4096},
+		f_quad = {2471, 387, 171, 195},
+		alias = {"hero_evil_dragon_hero_0246", "hero_evil_dragon_hero_0377", "hero_evil_dragon_hero_0378"}
 	},
 	hero_evil_dragon_hero_0247 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			92,
-			43,
-			100,
-			161
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			795,
-			149,
-			202
-		},
-		alias = {
-			"hero_evil_dragon_hero_0376"
-		}
+		size = {341, 406},
+		trim = {92, 43, 100, 161},
+		a_size = {4096, 4096},
+		f_quad = {558, 795, 149, 202},
+		alias = {"hero_evil_dragon_hero_0376"}
 	},
 	hero_evil_dragon_hero_0248 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			91,
-			43,
-			96,
-			161
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			590,
-			154,
-			202
-		},
-		alias = {
-			"hero_evil_dragon_hero_0375"
-		}
+		size = {341, 406},
+		trim = {91, 43, 96, 161},
+		a_size = {4096, 4096},
+		f_quad = {558, 590, 154, 202},
+		alias = {"hero_evil_dragon_hero_0375"}
 	},
 	hero_evil_dragon_hero_0249 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			69,
-			42,
-			63,
-			128
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			2586,
-			209,
-			236
-		},
-		alias = {
-			"hero_evil_dragon_hero_0250",
-			"hero_evil_dragon_hero_0373",
-			"hero_evil_dragon_hero_0374"
-		}
+		size = {341, 406},
+		trim = {69, 42, 63, 128},
+		a_size = {4096, 4096},
+		f_quad = {5, 2586, 209, 236},
+		alias = {"hero_evil_dragon_hero_0250", "hero_evil_dragon_hero_0373", "hero_evil_dragon_hero_0374"}
 	},
 	hero_evil_dragon_hero_0251 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			60,
-			42,
-			55,
-			120
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			667,
-			226,
-			244
-		},
-		alias = {
-			"hero_evil_dragon_hero_0252",
-			"hero_evil_dragon_hero_0371",
-			"hero_evil_dragon_hero_0372"
-		}
+		size = {341, 406},
+		trim = {60, 42, 55, 120},
+		a_size = {4096, 4096},
+		f_quad = {5, 667, 226, 244},
+		alias = {"hero_evil_dragon_hero_0252", "hero_evil_dragon_hero_0371", "hero_evil_dragon_hero_0372"}
 	},
 	hero_evil_dragon_hero_0253 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			44,
-			40,
-			53,
-			116
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			414,
-			244,
-			250
-		},
-		alias = {
-			"hero_evil_dragon_hero_0254",
-			"hero_evil_dragon_hero_0369",
-			"hero_evil_dragon_hero_0370"
-		}
+		size = {341, 406},
+		trim = {44, 40, 53, 116},
+		a_size = {4096, 4096},
+		f_quad = {5, 414, 244, 250},
+		alias = {"hero_evil_dragon_hero_0254", "hero_evil_dragon_hero_0369", "hero_evil_dragon_hero_0370"}
 	},
 	hero_evil_dragon_hero_0255 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			79,
-			61,
-			74,
-			147
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			1634,
-			188,
-			198
-		},
-		alias = {
-			"hero_evil_dragon_hero_0256",
-			"hero_evil_dragon_hero_0367",
-			"hero_evil_dragon_hero_0368"
-		}
+		size = {341, 406},
+		trim = {79, 61, 74, 147},
+		a_size = {4096, 4096},
+		f_quad = {349, 1634, 188, 198},
+		alias = {"hero_evil_dragon_hero_0256", "hero_evil_dragon_hero_0367", "hero_evil_dragon_hero_0368"}
 	},
 	hero_evil_dragon_hero_0257 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			75,
-			71,
-			70,
-			143
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			1244,
-			196,
-			192
-		},
-		alias = {
-			"hero_evil_dragon_hero_0258",
-			"hero_evil_dragon_hero_0365",
-			"hero_evil_dragon_hero_0366"
-		}
+		size = {341, 406},
+		trim = {75, 71, 70, 143},
+		a_size = {4096, 4096},
+		f_quad = {349, 1244, 196, 192},
+		alias = {"hero_evil_dragon_hero_0258", "hero_evil_dragon_hero_0365", "hero_evil_dragon_hero_0366"}
 	},
 	hero_evil_dragon_hero_0259 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			71,
-			68,
-			68,
-			139
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			770,
-			387,
-			202,
-			199
-		},
-		alias = {
-			"hero_evil_dragon_hero_0260",
-			"hero_evil_dragon_hero_0363",
-			"hero_evil_dragon_hero_0364"
-		}
+		size = {341, 406},
+		trim = {71, 68, 68, 139},
+		a_size = {4096, 4096},
+		f_quad = {770, 387, 202, 199},
+		alias = {"hero_evil_dragon_hero_0260", "hero_evil_dragon_hero_0363", "hero_evil_dragon_hero_0364"}
 	},
 	hero_evil_dragon_hero_0261 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			69,
-			67,
-			67,
-			136
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			594,
-			205,
-			203
-		},
-		alias = {
-			"hero_evil_dragon_hero_0262",
-			"hero_evil_dragon_hero_0361",
-			"hero_evil_dragon_hero_0362"
-		}
+		size = {341, 406},
+		trim = {69, 67, 67, 136},
+		a_size = {4096, 4096},
+		f_quad = {349, 594, 205, 203},
+		alias = {"hero_evil_dragon_hero_0262", "hero_evil_dragon_hero_0361", "hero_evil_dragon_hero_0362"}
 	},
 	hero_evil_dragon_hero_0263 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			69,
-			66,
-			66,
-			136
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			387,
-			206,
-			204
-		},
-		alias = {
-			"hero_evil_dragon_hero_0360"
-		}
+		size = {341, 406},
+		trim = {69, 66, 66, 136},
+		a_size = {4096, 4096},
+		f_quad = {349, 387, 206, 204},
+		alias = {"hero_evil_dragon_hero_0360"}
 	},
 	hero_evil_dragon_hero_0264 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			144,
-			131,
-			126,
-			203
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			274,
-			914,
-			71,
-			72
-		},
-		alias = {
-			"hero_evil_dragon_hero_0359"
-		}
+		size = {341, 406},
+		trim = {144, 131, 126, 203},
+		a_size = {4096, 4096},
+		f_quad = {274, 914, 71, 72},
+		alias = {"hero_evil_dragon_hero_0359"}
 	},
 	hero_evil_dragon_hero_0265 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			146,
-			133,
-			128,
-			205
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			277,
-			2423,
-			67,
-			68
-		},
-		alias = {
-			"hero_evil_dragon_hero_0266",
-			"hero_evil_dragon_hero_0357",
-			"hero_evil_dragon_hero_0358"
-		}
+		size = {341, 406},
+		trim = {146, 133, 128, 205},
+		a_size = {4096, 4096},
+		f_quad = {277, 2423, 67, 68},
+		alias = {"hero_evil_dragon_hero_0266", "hero_evil_dragon_hero_0357", "hero_evil_dragon_hero_0358"}
 	},
 	hero_evil_dragon_hero_0267 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			148,
-			136,
-			131,
-			209
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3163,
-			1253,
-			62,
-			61
-		},
-		alias = {
-			"hero_evil_dragon_hero_0356"
-		}
+		size = {341, 406},
+		trim = {148, 136, 131, 209},
+		a_size = {4096, 4096},
+		f_quad = {3163, 1253, 62, 61},
+		alias = {"hero_evil_dragon_hero_0356"}
 	},
 	hero_evil_dragon_hero_0268 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			0,
-			0,
-			341,
-			406
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			5,
-			341,
-			406
-		},
+		size = {341, 406},
+		trim = {0, 0, 341, 406},
+		a_size = {4096, 4096},
+		f_quad = {5, 5, 341, 406},
 		alias = {
 			"hero_evil_dragon_hero_0269",
 			"hero_evil_dragon_hero_0270",
@@ -8533,3401 +2776,1058 @@ return {
 	},
 	hero_evil_dragon_hero_0308 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			149,
-			174,
-			181,
-			218
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			334,
-			2565,
-			11,
-			14
-		},
-		alias = {
-			"hero_evil_dragon_hero_0425"
-		}
+		size = {341, 406},
+		trim = {149, 174, 181, 218},
+		a_size = {4096, 4096},
+		f_quad = {334, 2565, 11, 14},
+		alias = {"hero_evil_dragon_hero_0425"}
 	},
 	hero_evil_dragon_hero_0309 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			147,
-			148,
-			165,
-			203
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4056,
-			305,
-			29,
-			55
-		},
-		alias = {
-			"hero_evil_dragon_hero_0310",
-			"hero_evil_dragon_hero_0423",
-			"hero_evil_dragon_hero_0424"
-		}
+		size = {341, 406},
+		trim = {147, 148, 165, 203},
+		a_size = {4096, 4096},
+		f_quad = {4056, 305, 29, 55},
+		alias = {"hero_evil_dragon_hero_0310", "hero_evil_dragon_hero_0423", "hero_evil_dragon_hero_0424"}
 	},
 	hero_evil_dragon_hero_0311 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			147,
-			177,
-			167,
-			200
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2680,
-			1220,
-			27,
-			29
-		},
-		alias = {
-			"hero_evil_dragon_hero_0312",
-			"hero_evil_dragon_hero_0421",
-			"hero_evil_dragon_hero_0422"
-		}
+		size = {341, 406},
+		trim = {147, 177, 167, 200},
+		a_size = {4096, 4096},
+		f_quad = {2680, 1220, 27, 29},
+		alias = {"hero_evil_dragon_hero_0312", "hero_evil_dragon_hero_0421", "hero_evil_dragon_hero_0422"}
 	},
 	hero_evil_dragon_hero_0313 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			146,
-			153,
-			151,
-			198
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			2175,
-			44,
-			55
-		},
-		alias = {
-			"hero_evil_dragon_hero_0314",
-			"hero_evil_dragon_hero_0419",
-			"hero_evil_dragon_hero_0420"
-		}
+		size = {341, 406},
+		trim = {146, 153, 151, 198},
+		a_size = {4096, 4096},
+		f_quad = {991, 2175, 44, 55},
+		alias = {"hero_evil_dragon_hero_0314", "hero_evil_dragon_hero_0419", "hero_evil_dragon_hero_0420"}
 	},
 	hero_evil_dragon_hero_0315 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			146,
-			156,
-			145,
-			193
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1638,
-			50,
-			57
-		},
-		alias = {
-			"hero_evil_dragon_hero_0418"
-		}
+		size = {341, 406},
+		trim = {146, 156, 145, 193},
+		a_size = {4096, 4096},
+		f_quad = {991, 1638, 50, 57},
+		alias = {"hero_evil_dragon_hero_0418"}
 	},
 	hero_evil_dragon_hero_0316 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			146,
-			156,
-			145,
-			193
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1698,
-			50,
-			57
-		},
-		alias = {
-			"hero_evil_dragon_hero_0417"
-		}
+		size = {341, 406},
+		trim = {146, 156, 145, 193},
+		a_size = {4096, 4096},
+		f_quad = {991, 1698, 50, 57},
+		alias = {"hero_evil_dragon_hero_0417"}
 	},
 	hero_evil_dragon_hero_0317 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			146,
-			160,
-			143,
-			193
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1807,
-			52,
-			53
-		},
-		alias = {
-			"hero_evil_dragon_hero_0416"
-		}
+		size = {341, 406},
+		trim = {146, 160, 143, 193},
+		a_size = {4096, 4096},
+		f_quad = {991, 1807, 52, 53},
+		alias = {"hero_evil_dragon_hero_0416"}
 	},
 	hero_evil_dragon_hero_0318 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			146,
-			160,
-			143,
-			193
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1863,
-			52,
-			53
-		},
-		alias = {
-			"hero_evil_dragon_hero_0415"
-		}
+		size = {341, 406},
+		trim = {146, 160, 143, 193},
+		a_size = {4096, 4096},
+		f_quad = {991, 1863, 52, 53},
+		alias = {"hero_evil_dragon_hero_0415"}
 	},
 	hero_evil_dragon_hero_0319 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			143,
-			160,
-			144,
-			190
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			658,
-			2163,
-			54,
-			56
-		},
-		alias = {
-			"hero_evil_dragon_hero_0414"
-		}
+		size = {341, 406},
+		trim = {143, 160, 144, 190},
+		a_size = {4096, 4096},
+		f_quad = {658, 2163, 54, 56},
+		alias = {"hero_evil_dragon_hero_0414"}
 	},
 	hero_evil_dragon_hero_0320 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			143,
-			160,
-			144,
-			190
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1472,
-			54,
-			56
-		},
-		alias = {
-			"hero_evil_dragon_hero_0413"
-		}
+		size = {341, 406},
+		trim = {143, 160, 144, 190},
+		a_size = {4096, 4096},
+		f_quad = {991, 1472, 54, 56},
+		alias = {"hero_evil_dragon_hero_0413"}
 	},
 	hero_evil_dragon_hero_0321 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			141,
-			171,
-			140,
-			189
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1758,
-			60,
-			46
-		},
-		alias = {
-			"hero_evil_dragon_hero_0412"
-		}
+		size = {341, 406},
+		trim = {141, 171, 140, 189},
+		a_size = {4096, 4096},
+		f_quad = {991, 1758, 60, 46},
+		alias = {"hero_evil_dragon_hero_0412"}
 	},
 	hero_evil_dragon_hero_0322 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			141,
-			165,
-			140,
-			189
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1417,
-			60,
-			52
-		},
-		alias = {
-			"hero_evil_dragon_hero_0411"
-		}
+		size = {341, 406},
+		trim = {141, 165, 140, 189},
+		a_size = {4096, 4096},
+		f_quad = {991, 1417, 60, 52},
+		alias = {"hero_evil_dragon_hero_0411"}
 	},
 	hero_evil_dragon_hero_0323 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			165,
-			140,
-			189
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2531,
-			1303,
-			61,
-			52
-		},
-		alias = {
-			"hero_evil_dragon_hero_0410"
-		}
+		size = {341, 406},
+		trim = {140, 165, 140, 189},
+		a_size = {4096, 4096},
+		f_quad = {2531, 1303, 61, 52},
+		alias = {"hero_evil_dragon_hero_0410"}
 	},
 	hero_evil_dragon_hero_0324 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			161,
-			138,
-			189
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3824,
-			1253,
-			63,
-			56
-		},
-		alias = {
-			"hero_evil_dragon_hero_0409"
-		}
+		size = {341, 406},
+		trim = {140, 161, 138, 189},
+		a_size = {4096, 4096},
+		f_quad = {3824, 1253, 63, 56},
+		alias = {"hero_evil_dragon_hero_0409"}
 	},
 	hero_evil_dragon_hero_0325 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			161,
-			138,
-			189
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3890,
-			1253,
-			63,
-			56
-		},
-		alias = {
-			"hero_evil_dragon_hero_0408"
-		}
+		size = {341, 406},
+		trim = {140, 161, 138, 189},
+		a_size = {4096, 4096},
+		f_quad = {3890, 1253, 63, 56},
+		alias = {"hero_evil_dragon_hero_0408"}
 	},
 	hero_evil_dragon_hero_0326 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			154,
-			137,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1900,
-			1253,
-			64,
-			65
-		},
-		alias = {
-			"hero_evil_dragon_hero_0407"
-		}
+		size = {341, 406},
+		trim = {140, 154, 137, 187},
+		a_size = {4096, 4096},
+		f_quad = {1900, 1253, 64, 65},
+		alias = {"hero_evil_dragon_hero_0407"}
 	},
 	hero_evil_dragon_hero_0327 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			154,
-			137,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1967,
-			1253,
-			64,
-			65
-		},
-		alias = {
-			"hero_evil_dragon_hero_0406"
-		}
+		size = {341, 406},
+		trim = {140, 154, 137, 187},
+		a_size = {4096, 4096},
+		f_quad = {1967, 1253, 64, 65},
+		alias = {"hero_evil_dragon_hero_0406"}
 	},
 	hero_evil_dragon_hero_0328 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			151,
-			137,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			274,
-			1124,
-			64,
-			68
-		},
-		alias = {
-			"hero_evil_dragon_hero_0405"
-		}
+		size = {341, 406},
+		trim = {140, 151, 137, 187},
+		a_size = {4096, 4096},
+		f_quad = {274, 1124, 64, 68},
+		alias = {"hero_evil_dragon_hero_0405"}
 	},
 	hero_evil_dragon_hero_0329 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			140,
-			151,
-			137,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			274,
-			1195,
-			64,
-			68
-		},
-		alias = {
-			"hero_evil_dragon_hero_0404"
-		}
+		size = {341, 406},
+		trim = {140, 151, 137, 187},
+		a_size = {4096, 4096},
+		f_quad = {274, 1195, 64, 68},
+		alias = {"hero_evil_dragon_hero_0404"}
 	},
 	hero_evil_dragon_hero_0330 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			139,
-			151,
-			136,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			277,
-			2494,
-			66,
-			68
-		},
-		alias = {
-			"hero_evil_dragon_hero_0331",
-			"hero_evil_dragon_hero_0402",
-			"hero_evil_dragon_hero_0403"
-		}
+		size = {341, 406},
+		trim = {139, 151, 136, 187},
+		a_size = {4096, 4096},
+		f_quad = {277, 2494, 66, 68},
+		alias = {"hero_evil_dragon_hero_0331", "hero_evil_dragon_hero_0402", "hero_evil_dragon_hero_0403"}
 	},
 	hero_evil_dragon_hero_0332 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			139,
-			151,
-			140,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1768,
-			1253,
-			62,
-			68
-		},
-		alias = {
-			"hero_evil_dragon_hero_0333",
-			"hero_evil_dragon_hero_0400",
-			"hero_evil_dragon_hero_0401"
-		}
+		size = {341, 406},
+		trim = {139, 151, 140, 187},
+		a_size = {4096, 4096},
+		f_quad = {1768, 1253, 62, 68},
+		alias = {"hero_evil_dragon_hero_0333", "hero_evil_dragon_hero_0400", "hero_evil_dragon_hero_0401"}
 	},
 	hero_evil_dragon_hero_0334 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			139,
-			152,
-			140,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2034,
-			1253,
-			62,
-			67
-		},
-		alias = {
-			"hero_evil_dragon_hero_0335",
-			"hero_evil_dragon_hero_0398",
-			"hero_evil_dragon_hero_0399"
-		}
+		size = {341, 406},
+		trim = {139, 152, 140, 187},
+		a_size = {4096, 4096},
+		f_quad = {2034, 1253, 62, 67},
+		alias = {"hero_evil_dragon_hero_0335", "hero_evil_dragon_hero_0398", "hero_evil_dragon_hero_0399"}
 	},
 	hero_evil_dragon_hero_0336 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			139,
-			152,
-			140,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2099,
-			1253,
-			62,
-			67
-		},
-		alias = {
-			"hero_evil_dragon_hero_0337",
-			"hero_evil_dragon_hero_0396",
-			"hero_evil_dragon_hero_0397"
-		}
+		size = {341, 406},
+		trim = {139, 152, 140, 187},
+		a_size = {4096, 4096},
+		f_quad = {2099, 1253, 62, 67},
+		alias = {"hero_evil_dragon_hero_0337", "hero_evil_dragon_hero_0396", "hero_evil_dragon_hero_0397"}
 	},
 	hero_evil_dragon_hero_0338 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			139,
-			158,
-			140,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3228,
-			1253,
-			62,
-			61
-		},
-		alias = {
-			"hero_evil_dragon_hero_0339",
-			"hero_evil_dragon_hero_0394",
-			"hero_evil_dragon_hero_0395"
-		}
+		size = {341, 406},
+		trim = {139, 158, 140, 187},
+		a_size = {4096, 4096},
+		f_quad = {3228, 1253, 62, 61},
+		alias = {"hero_evil_dragon_hero_0339", "hero_evil_dragon_hero_0394", "hero_evil_dragon_hero_0395"}
 	},
 	hero_evil_dragon_hero_0340 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			139,
-			170,
-			140,
-			187
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2314,
-			1306,
-			62,
-			49
-		},
-		alias = {
-			"hero_evil_dragon_hero_0392",
-			"hero_evil_dragon_hero_0393"
-		}
+		size = {341, 406},
+		trim = {139, 170, 140, 187},
+		a_size = {4096, 4096},
+		f_quad = {2314, 1306, 62, 49},
+		alias = {"hero_evil_dragon_hero_0392", "hero_evil_dragon_hero_0393"}
 	},
 	hero_evil_dragon_hero_0442 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			75,
-			55,
-			31,
-			122
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			1327,
-			235,
-			229
-		},
-		alias = {
-			"hero_evil_dragon_hero_0443"
-		}
+		size = {341, 406},
+		trim = {75, 55, 31, 122},
+		a_size = {4096, 4096},
+		f_quad = {5, 1327, 235, 229},
+		alias = {"hero_evil_dragon_hero_0443"}
 	},
 	hero_evil_dragon_hero_0444 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			75,
-			55,
-			30,
-			124
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			1559,
-			236,
-			227
-		},
-		alias = {
-			"hero_evil_dragon_hero_0445"
-		}
+		size = {341, 406},
+		trim = {75, 55, 30, 124},
+		a_size = {4096, 4096},
+		f_quad = {5, 1559, 236, 227},
+		alias = {"hero_evil_dragon_hero_0445"}
 	},
 	hero_evil_dragon_hero_0446 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			78,
-			58,
-			38,
-			131
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			5,
-			2825,
-			225,
-			217
-		},
-		alias = {
-			"hero_evil_dragon_hero_0447"
-		}
+		size = {341, 406},
+		trim = {78, 58, 38, 131},
+		a_size = {4096, 4096},
+		f_quad = {5, 2825, 225, 217},
+		alias = {"hero_evil_dragon_hero_0447"}
 	},
 	hero_evil_dragon_hero_0448 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			86,
-			66,
-			46,
-			140
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			387,
-			209,
-			200
-		},
-		alias = {
-			"hero_evil_dragon_hero_0449"
-		}
+		size = {341, 406},
+		trim = {86, 66, 46, 140},
+		a_size = {4096, 4096},
+		f_quad = {558, 387, 209, 200},
+		alias = {"hero_evil_dragon_hero_0449"}
 	},
 	hero_evil_dragon_hero_0450 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			87,
-			61,
-			84,
-			150
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2645,
-			387,
-			170,
-			195
-		},
-		alias = {
-			"hero_evil_dragon_hero_0451"
-		}
+		size = {341, 406},
+		trim = {87, 61, 84, 150},
+		a_size = {4096, 4096},
+		f_quad = {2645, 387, 170, 195},
+		alias = {"hero_evil_dragon_hero_0451"}
 	},
 	hero_evil_dragon_hero_0452 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			86,
-			58,
-			80,
-			147
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			3431,
-			175,
-			201
-		},
-		alias = {
-			"hero_evil_dragon_hero_0453"
-		}
+		size = {341, 406},
+		trim = {86, 58, 80, 147},
+		a_size = {4096, 4096},
+		f_quad = {349, 3431, 175, 201},
+		alias = {"hero_evil_dragon_hero_0453"}
 	},
 	hero_evil_dragon_hero_0454 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			82,
-			61,
-			76,
-			142
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			1835,
-			183,
-			203
-		},
-		alias = {
-			"hero_evil_dragon_hero_0455"
-		}
+		size = {341, 406},
+		trim = {82, 61, 76, 142},
+		a_size = {4096, 4096},
+		f_quad = {349, 1835, 183, 203},
+		alias = {"hero_evil_dragon_hero_0455"}
 	},
 	hero_evil_dragon_hero_0456 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			79,
-			73,
-			74,
-			139
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			2455,
-			188,
-			194
-		},
-		alias = {
-			"hero_evil_dragon_hero_0457"
-		}
+		size = {341, 406},
+		trim = {79, 73, 74, 139},
+		a_size = {4096, 4096},
+		f_quad = {349, 2455, 188, 194},
+		alias = {"hero_evil_dragon_hero_0457"}
 	},
 	hero_evil_dragon_hero_0458 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			105,
-			95,
-			173
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1933,
-			752,
-			163,
-			128
-		},
-		alias = {
-			"hero_evil_dragon_hero_0459"
-		}
+		size = {341, 406},
+		trim = {83, 105, 95, 173},
+		a_size = {4096, 4096},
+		f_quad = {1933, 752, 163, 128},
+		alias = {"hero_evil_dragon_hero_0459"}
 	},
 	hero_evil_dragon_hero_0460 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			341,
-			406
-		},
-		trim = {
-			83,
-			135,
-			100,
-			149
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2586,
-			752,
-			158,
-			122
-		},
-		alias = {
-			"hero_evil_dragon_hero_0461"
-		}
+		size = {341, 406},
+		trim = {83, 135, 100, 149},
+		a_size = {4096, 4096},
+		f_quad = {2586, 752, 158, 122},
+		alias = {"hero_evil_dragon_hero_0461"}
 	},
 	hero_evil_dragon_passive_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			24,
-			61,
-			32,
-			68
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			233,
-			3200,
-			112,
-			56
-		},
-		alias = {
-			"hero_evil_dragon_passive_0002"
-		}
+		size = {168, 185},
+		trim = {24, 61, 32, 68},
+		a_size = {4096, 4096},
+		f_quad = {233, 3200, 112, 56},
+		alias = {"hero_evil_dragon_passive_0002"}
 	},
 	hero_evil_dragon_passive_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			26,
-			49,
-			17,
-			69
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3928,
-			305,
-			125,
-			67
-		},
-		alias = {
-			"hero_evil_dragon_passive_0004"
-		}
+		size = {168, 185},
+		trim = {26, 49, 17, 69},
+		a_size = {4096, 4096},
+		f_quad = {3928, 305, 125, 67},
+		alias = {"hero_evil_dragon_passive_0004"}
 	},
 	hero_evil_dragon_passive_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			34,
-			44,
-			20,
-			69
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3012,
-			309,
-			114,
-			72
-		},
+		size = {168, 185},
+		trim = {34, 44, 20, 69},
+		a_size = {4096, 4096},
+		f_quad = {3012, 309, 114, 72},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0006 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			34,
-			44,
-			20,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			217,
-			2740,
-			114,
-			82
-		},
+		size = {168, 185},
+		trim = {34, 44, 20, 59},
+		a_size = {4096, 4096},
+		f_quad = {217, 2740, 114, 82},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			86,
-			22,
-			22,
-			59
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			646,
-			3439,
-			60,
-			104
-		},
+		size = {168, 185},
+		trim = {86, 22, 22, 59},
+		a_size = {4096, 4096},
+		f_quad = {646, 3439, 60, 104},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0008 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			88,
-			22,
-			22,
-			54
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4021,
-			187,
-			58,
-			109
-		},
+		size = {168, 185},
+		trim = {88, 22, 22, 54},
+		a_size = {4096, 4096},
+		f_quad = {4021, 187, 58, 109},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			59,
-			13,
-			22,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2762,
-			87,
-			117
-		},
+		size = {168, 185},
+		trim = {59, 13, 22, 55},
+		a_size = {4096, 4096},
+		f_quad = {874, 2762, 87, 117},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0010 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			59,
-			13,
-			22,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3478,
-			87,
-			114
-		},
+		size = {168, 185},
+		trim = {59, 13, 22, 58},
+		a_size = {4096, 4096},
+		f_quad = {874, 3478, 87, 114},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			33,
-			21,
-			30,
-			58
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1705,
-			105,
-			106
-		},
+		size = {168, 185},
+		trim = {33, 21, 30, 58},
+		a_size = {4096, 4096},
+		f_quad = {874, 1705, 105, 106},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0012 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			33,
-			21,
-			30,
-			61
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2145,
-			105,
-			103
-		},
+		size = {168, 185},
+		trim = {33, 21, 30, 61},
+		a_size = {4096, 4096},
+		f_quad = {874, 2145, 105, 103},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			27,
-			29,
-			34,
-			61
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2882,
-			107,
-			95
-		},
+		size = {168, 185},
+		trim = {27, 29, 34, 61},
+		a_size = {4096, 4096},
+		f_quad = {874, 2882, 107, 95},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0014 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			27,
-			29,
-			34,
-			61
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2980,
-			107,
-			95
-		},
+		size = {168, 185},
+		trim = {27, 29, 34, 61},
+		a_size = {4096, 4096},
+		f_quad = {874, 2980, 107, 95},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			29,
-			29,
-			35,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1814,
-			104,
-			107
-		},
+		size = {168, 185},
+		trim = {29, 29, 35, 49},
+		a_size = {4096, 4096},
+		f_quad = {874, 1814, 104, 107},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0016 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			29,
-			22,
-			35,
-			49
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1473,
-			104,
-			114
-		},
+		size = {168, 185},
+		trim = {29, 22, 35, 49},
+		a_size = {4096, 4096},
+		f_quad = {874, 1473, 104, 114},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			37,
-			22,
-			40,
-			52
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3078,
-			91,
-			111
-		},
+		size = {168, 185},
+		trim = {37, 22, 40, 52},
+		a_size = {4096, 4096},
+		f_quad = {874, 3078, 91, 111},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0018 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			37,
-			20,
-			50,
-			52
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3769,
-			81,
-			113
-		},
+		size = {168, 185},
+		trim = {37, 20, 50, 52},
+		a_size = {4096, 4096},
+		f_quad = {874, 3769, 81, 113},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			32,
-			20,
-			38,
-			53
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2030,
-			98,
-			112
-		},
+		size = {168, 185},
+		trim = {32, 20, 38, 53},
+		a_size = {4096, 4096},
+		f_quad = {874, 2030, 98, 112},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0020 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			32,
-			24,
-			38,
-			53
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2251,
-			98,
-			108
-		},
+		size = {168, 185},
+		trim = {32, 24, 38, 53},
+		a_size = {4096, 4096},
+		f_quad = {874, 2251, 98, 108},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0021 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			26,
-			24,
-			25,
-			67
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3218,
-			1045,
-			117,
-			94
-		},
+		size = {168, 185},
+		trim = {26, 24, 25, 67},
+		a_size = {4096, 4096},
+		f_quad = {3218, 1045, 117, 94},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0022 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			26,
-			29,
-			25,
-			67
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1112,
-			1148,
-			117,
-			89
-		},
+		size = {168, 185},
+		trim = {26, 29, 25, 67},
+		a_size = {4096, 4096},
+		f_quad = {1112, 1148, 117, 89},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0023 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			30,
-			29,
-			29,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1582,
-			1148,
-			109,
-			80
-		},
+		size = {168, 185},
+		trim = {30, 29, 29, 76},
+		a_size = {4096, 4096},
+		f_quad = {1582, 1148, 109, 80},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0024 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			30,
-			54,
-			29,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3066,
-			1148,
-			109,
-			55
-		},
+		size = {168, 185},
+		trim = {30, 54, 29, 76},
+		a_size = {4096, 4096},
+		f_quad = {3066, 1148, 109, 55},
 		alias = {}
 	},
 	hero_evil_dragon_passive_0025 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			34,
-			47,
-			30,
-			79
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2872,
-			1148,
-			104,
-			59
-		},
-		alias = {
-			"hero_evil_dragon_passive_0026"
-		}
+		size = {168, 185},
+		trim = {34, 47, 30, 79},
+		a_size = {4096, 4096},
+		f_quad = {2872, 1148, 104, 59},
+		alias = {"hero_evil_dragon_passive_0026"}
 	},
 	hero_evil_dragon_passive_0027 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			53,
-			44,
-			32,
-			99
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3824,
-			1312,
-			83,
-			42
-		},
-		alias = {
-			"hero_evil_dragon_passive_0028"
-		}
+		size = {168, 185},
+		trim = {53, 44, 32, 99},
+		a_size = {4096, 4096},
+		f_quad = {3824, 1312, 83, 42},
+		alias = {"hero_evil_dragon_passive_0028"}
 	},
 	hero_evil_dragon_passive_0029 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			168,
-			185
-		},
-		trim = {
-			29,
-			52,
-			50,
-			89
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3066,
-			1206,
-			89,
-			44
-		},
-		alias = {
-			"hero_evil_dragon_passive_0030"
-		}
+		size = {168, 185},
+		trim = {29, 52, 50, 89},
+		a_size = {4096, 4096},
+		f_quad = {3066, 1206, 89, 44},
+		alias = {"hero_evil_dragon_passive_0030"}
 	},
 	hero_evil_dragon_red_death_crystal_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			72,
-			76,
-			71,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1469,
-			1148,
-			110,
-			80
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0002"
-		}
+		size = {253, 233},
+		trim = {72, 76, 71, 77},
+		a_size = {4096, 4096},
+		f_quad = {1469, 1148, 110, 80},
+		alias = {"hero_evil_dragon_red_death_crystal_0002"}
 	},
 	hero_evil_dragon_red_death_crystal_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			69,
-			76,
-			68,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			1350,
-			1148,
-			116,
-			80
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0004"
-		}
+		size = {253, 233},
+		trim = {69, 76, 68, 77},
+		a_size = {4096, 4096},
+		f_quad = {1350, 1148, 116, 80},
+		alias = {"hero_evil_dragon_red_death_crystal_0004"}
 	},
 	hero_evil_dragon_red_death_crystal_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			64,
-			54,
-			63,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3294,
-			126,
-			102
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0006"
-		}
+		size = {253, 233},
+		trim = {64, 54, 63, 77},
+		a_size = {4096, 4096},
+		f_quad = {715, 3294, 126, 102},
+		alias = {"hero_evil_dragon_red_death_crystal_0006"}
 	},
 	hero_evil_dragon_red_death_crystal_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			57,
-			40,
-			55,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3634,
-			898,
-			141,
-			116
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0008"
-		}
+		size = {253, 233},
+		trim = {57, 40, 55, 77},
+		a_size = {4096, 4096},
+		f_quad = {3634, 898, 141, 116},
+		alias = {"hero_evil_dragon_red_death_crystal_0008"}
 	},
 	hero_evil_dragon_red_death_crystal_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			59,
-			38,
-			62,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1467,
-			132,
-			118
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0010"
-		}
+		size = {253, 233},
+		trim = {59, 38, 62, 77},
+		a_size = {4096, 4096},
+		f_quad = {715, 1467, 132, 118},
+		alias = {"hero_evil_dragon_red_death_crystal_0010"}
 	},
 	hero_evil_dragon_red_death_crystal_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			57,
-			37,
-			56,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3350,
-			898,
-			140,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0012"
-		}
+		size = {253, 233},
+		trim = {57, 37, 56, 77},
+		a_size = {4096, 4096},
+		f_quad = {3350, 898, 140, 119},
+		alias = {"hero_evil_dragon_red_death_crystal_0012"}
 	},
 	hero_evil_dragon_red_death_crystal_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			58,
-			37,
-			57,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3493,
-			898,
-			138,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0014"
-		}
+		size = {253, 233},
+		trim = {58, 37, 57, 77},
+		a_size = {4096, 4096},
+		f_quad = {3493, 898, 138, 119},
+		alias = {"hero_evil_dragon_red_death_crystal_0014"}
 	},
 	hero_evil_dragon_red_death_crystal_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			58,
-			37,
-			71,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2262,
-			124,
-			119
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0016"
-		}
+		size = {253, 233},
+		trim = {58, 37, 71, 77},
+		a_size = {4096, 4096},
+		f_quad = {715, 2262, 124, 119},
+		alias = {"hero_evil_dragon_red_death_crystal_0016"}
 	},
 	hero_evil_dragon_red_death_crystal_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			63,
-			38,
-			81,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			229,
-			3262,
-			109,
-			118
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0018"
-		}
+		size = {253, 233},
+		trim = {63, 38, 81, 77},
+		a_size = {4096, 4096},
+		f_quad = {229, 3262, 109, 118},
+		alias = {"hero_evil_dragon_red_death_crystal_0018"}
 	},
 	hero_evil_dragon_red_death_crystal_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			71,
-			44,
-			82,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1590,
-			100,
-			112
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0020"
-		}
+		size = {253, 233},
+		trim = {71, 44, 82, 77},
+		a_size = {4096, 4096},
+		f_quad = {874, 1590, 100, 112},
+		alias = {"hero_evil_dragon_red_death_crystal_0020"}
 	},
 	hero_evil_dragon_red_death_crystal_0021 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			79,
-			57,
-			82,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3885,
-			92,
-			99
-		},
+		size = {253, 233},
+		trim = {79, 57, 82, 77},
+		a_size = {4096, 4096},
+		f_quad = {874, 3885, 92, 99},
 		alias = {}
 	},
 	hero_evil_dragon_red_death_crystal_0022 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			79,
-			57,
-			65,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3338,
-			1045,
-			109,
-			99
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0023"
-		}
+		size = {253, 233},
+		trim = {79, 57, 65, 77},
+		a_size = {4096, 4096},
+		f_quad = {3338, 1045, 109, 99},
+		alias = {"hero_evil_dragon_red_death_crystal_0023"}
 	},
 	hero_evil_dragon_red_death_crystal_0024 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			79,
-			57,
-			61,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2981,
-			1045,
-			113,
-			99
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0025"
-		}
+		size = {253, 233},
+		trim = {79, 57, 61, 77},
+		a_size = {4096, 4096},
+		f_quad = {2981, 1045, 113, 99},
+		alias = {"hero_evil_dragon_red_death_crystal_0025"}
 	},
 	hero_evil_dragon_red_death_crystal_0026 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			79,
-			57,
-			59,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2619,
-			1045,
-			115,
-			99
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0027"
-		}
+		size = {253, 233},
+		trim = {79, 57, 59, 77},
+		a_size = {4096, 4096},
+		f_quad = {2619, 1045, 115, 99},
+		alias = {"hero_evil_dragon_red_death_crystal_0027"}
 	},
 	hero_evil_dragon_red_death_crystal_0028 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			75,
-			54,
-			60,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1148,
-			118,
-			102
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0029"
-		}
+		size = {253, 233},
+		trim = {75, 54, 60, 77},
+		a_size = {4096, 4096},
+		f_quad = {991, 1148, 118, 102},
+		alias = {"hero_evil_dragon_red_death_crystal_0029"}
 	},
 	hero_evil_dragon_red_death_crystal_0030 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			73,
-			51,
-			60,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3508,
-			120,
-			106
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0031"
-		}
+		size = {253, 233},
+		trim = {73, 51, 60, 76},
+		a_size = {4096, 4096},
+		f_quad = {715, 3508, 120, 106},
+		alias = {"hero_evil_dragon_red_death_crystal_0031"}
 	},
 	hero_evil_dragon_red_death_crystal_0032 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			61,
-			48,
-			66,
-			73
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2735,
-			126,
-			112
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0033"
-		}
+		size = {253, 233},
+		trim = {61, 48, 66, 73},
+		a_size = {4096, 4096},
+		f_quad = {715, 2735, 126, 112},
+		alias = {"hero_evil_dragon_red_death_crystal_0033"}
 	},
 	hero_evil_dragon_red_death_crystal_0034 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			58,
-			47,
-			72,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2617,
-			123,
-			115
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0035"
-		}
+		size = {253, 233},
+		trim = {58, 47, 72, 71},
+		a_size = {4096, 4096},
+		f_quad = {715, 2617, 123, 115},
+		alias = {"hero_evil_dragon_red_death_crystal_0035"}
 	},
 	hero_evil_dragon_red_death_crystal_0036 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			57,
-			47,
-			74,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2972,
-			122,
-			115
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0037"
-		}
+		size = {253, 233},
+		trim = {57, 47, 74, 71},
+		a_size = {4096, 4096},
+		f_quad = {715, 2972, 122, 115},
+		alias = {"hero_evil_dragon_red_death_crystal_0037"}
 	},
 	hero_evil_dragon_red_death_crystal_0038 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			56,
-			47,
-			70,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2384,
-			127,
-			115
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0039"
-		}
+		size = {253, 233},
+		trim = {56, 47, 70, 71},
+		a_size = {4096, 4096},
+		f_quad = {715, 2384, 127, 115},
+		alias = {"hero_evil_dragon_red_death_crystal_0039"}
 	},
 	hero_evil_dragon_red_death_crystal_0040 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			56,
-			38,
-			74,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2135,
-			123,
-			124
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0041"
-		}
+		size = {253, 233},
+		trim = {56, 38, 74, 71},
+		a_size = {4096, 4096},
+		f_quad = {715, 2135, 123, 124},
+		alias = {"hero_evil_dragon_red_death_crystal_0041"}
 	},
 	hero_evil_dragon_red_death_crystal_0042 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			62,
-			34,
-			70,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			1588,
-			121,
-			128
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0043"
-		}
+		size = {253, 233},
+		trim = {62, 34, 70, 71},
+		a_size = {4096, 4096},
+		f_quad = {715, 1588, 121, 128},
+		alias = {"hero_evil_dragon_red_death_crystal_0043"}
 	},
 	hero_evil_dragon_red_death_crystal_0044 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			69,
-			34,
-			77,
-			72
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3978,
-			590,
-			107,
-			127
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0045"
-		}
+		size = {253, 233},
+		trim = {69, 34, 77, 72},
+		a_size = {4096, 4096},
+		f_quad = {3978, 590, 107, 127},
+		alias = {"hero_evil_dragon_red_death_crystal_0045"}
 	},
 	hero_evil_dragon_red_death_crystal_0046 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			75,
-			29,
-			78,
-			72
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			244,
-			1559,
-			100,
-			132
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0047"
-		}
+		size = {253, 233},
+		trim = {75, 29, 78, 72},
+		a_size = {4096, 4096},
+		f_quad = {244, 1559, 100, 132},
+		alias = {"hero_evil_dragon_red_death_crystal_0047"}
 	},
 	hero_evil_dragon_red_death_crystal_0048 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			60,
-			33,
-			63,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3217,
-			898,
-			130,
-			129
-		},
+		size = {253, 233},
+		trim = {60, 33, 63, 71},
+		a_size = {4096, 4096},
+		f_quad = {3217, 898, 130, 129},
 		alias = {}
 	},
 	hero_evil_dragon_red_death_crystal_0049 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			33,
-			33,
-			22,
-			22
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			3250,
-			198,
-			178
-		},
+		size = {253, 233},
+		trim = {33, 33, 22, 22},
+		a_size = {4096, 4096},
+		f_quad = {349, 3250, 198, 178},
 		alias = {}
 	},
 	hero_evil_dragon_red_death_crystal_0050 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			52,
-			36,
-			37,
-			37
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3628,
-			187,
-			164,
-			160
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0051"
-		}
+		size = {253, 233},
+		trim = {52, 36, 37, 37},
+		a_size = {4096, 4096},
+		f_quad = {3628, 187, 164, 160},
+		alias = {"hero_evil_dragon_red_death_crystal_0051"}
 	},
 	hero_evil_dragon_red_death_crystal_0052 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			45,
-			41,
-			30,
-			31
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2605,
-			5,
-			178,
-			161
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0053"
-		}
+		size = {253, 233},
+		trim = {45, 41, 30, 31},
+		a_size = {4096, 4096},
+		f_quad = {2605, 5, 178, 161},
+		alias = {"hero_evil_dragon_red_death_crystal_0053"}
 	},
 	hero_evil_dragon_red_death_crystal_0054 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			45,
-			42,
-			31,
-			31
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2951,
-			5,
-			177,
-			160
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0055"
-		}
+		size = {253, 233},
+		trim = {45, 42, 31, 31},
+		a_size = {4096, 4096},
+		f_quad = {2951, 5, 177, 160},
+		alias = {"hero_evil_dragon_red_death_crystal_0055"}
 	},
 	hero_evil_dragon_red_death_crystal_0056 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			58,
-			54,
-			67,
-			67
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			2502,
-			128,
-			112
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0057"
-		}
+		size = {253, 233},
+		trim = {58, 54, 67, 67},
+		a_size = {4096, 4096},
+		f_quad = {715, 2502, 128, 112},
+		alias = {"hero_evil_dragon_red_death_crystal_0057"}
 	},
 	hero_evil_dragon_red_death_crystal_0058 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			76,
-			55,
-			66,
-			82
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3569,
-			1045,
-			111,
-			96
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0059"
-		}
+		size = {253, 233},
+		trim = {76, 55, 66, 82},
+		a_size = {4096, 4096},
+		f_quad = {3569, 1045, 111, 96},
+		alias = {"hero_evil_dragon_red_death_crystal_0059"}
 	},
 	hero_evil_dragon_red_death_crystal_0060 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			74,
-			54,
-			63,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1253,
-			116,
-			103
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0061"
-		}
+		size = {253, 233},
+		trim = {74, 54, 63, 76},
+		a_size = {4096, 4096},
+		f_quad = {991, 1253, 116, 103},
+		alias = {"hero_evil_dragon_red_death_crystal_0061"}
 	},
 	hero_evil_dragon_red_death_crystal_0062 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			71,
-			53,
-			61,
-			74
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3399,
-			121,
-			106
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0063"
-		}
+		size = {253, 233},
+		trim = {71, 53, 61, 74},
+		a_size = {4096, 4096},
+		f_quad = {715, 3399, 121, 106},
+		alias = {"hero_evil_dragon_red_death_crystal_0063"}
 	},
 	hero_evil_dragon_red_death_crystal_0064 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			70,
-			62,
-			60,
-			77
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2247,
-			1045,
-			123,
-			94
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0065"
-		}
+		size = {253, 233},
+		trim = {70, 62, 60, 77},
+		a_size = {4096, 4096},
+		f_quad = {2247, 1045, 123, 94},
+		alias = {"hero_evil_dragon_red_death_crystal_0065"}
 	},
 	hero_evil_dragon_red_death_crystal_0066 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			96,
-			80,
-			95,
-			79
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			646,
-			3546,
-			62,
-			74
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0067"
-		}
+		size = {253, 233},
+		trim = {96, 80, 95, 79},
+		a_size = {4096, 4096},
+		f_quad = {646, 3546, 62, 74},
+		alias = {"hero_evil_dragon_red_death_crystal_0067"}
 	},
 	hero_evil_dragon_red_death_crystal_0068 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			98,
-			82,
-			94,
-			76
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			277,
-			2345,
-			61,
-			75
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0069"
-		}
+		size = {253, 233},
+		trim = {98, 82, 94, 76},
+		a_size = {4096, 4096},
+		f_quad = {277, 2345, 61, 75},
+		alias = {"hero_evil_dragon_red_death_crystal_0069"}
 	},
 	hero_evil_dragon_red_death_crystal_0070 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			253,
-			233
-		},
-		trim = {
-			111,
-			132,
-			97,
-			74
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3978,
-			720,
-			45,
-			27
-		},
-		alias = {
-			"hero_evil_dragon_red_death_crystal_0071"
-		}
+		size = {253, 233},
+		trim = {111, 132, 97, 74},
+		a_size = {4096, 4096},
+		f_quad = {3978, 720, 45, 27},
+		alias = {"hero_evil_dragon_red_death_crystal_0071"}
 	},
 	hero_evil_dragon_shards_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			51,
-			105,
-			56,
-			104
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2164,
-			1309,
-			69,
-			41
-		},
-		alias = {
-			"hero_evil_dragon_shards_0002",
-			"hero_evil_dragon_shards_0019",
-			"hero_evil_dragon_shards_0020"
-		}
+		size = {176, 250},
+		trim = {51, 105, 56, 104},
+		a_size = {4096, 4096},
+		f_quad = {2164, 1309, 69, 41},
+		alias = {"hero_evil_dragon_shards_0002", "hero_evil_dragon_shards_0019", "hero_evil_dragon_shards_0020"}
 	},
 	hero_evil_dragon_shards_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			42,
-			67,
-			38,
-			102
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2096,
-			1148,
-			96,
-			81
-		},
-		alias = {
-			"hero_evil_dragon_shards_0004"
-		}
+		size = {176, 250},
+		trim = {42, 67, 38, 102},
+		a_size = {4096, 4096},
+		f_quad = {2096, 1148, 96, 81},
+		alias = {"hero_evil_dragon_shards_0004"}
 	},
 	hero_evil_dragon_shards_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			35,
-			21,
-			36,
-			103
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			233,
-			3071,
-			105,
-			126
-		},
-		alias = {
-			"hero_evil_dragon_shards_0006"
-		}
+		size = {176, 250},
+		trim = {35, 21, 36, 103},
+		a_size = {4096, 4096},
+		f_quad = {233, 3071, 105, 126},
+		alias = {"hero_evil_dragon_shards_0006"}
 	},
 	hero_evil_dragon_shards_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			28,
-			42,
-			25,
-			105
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3617,
-			123,
-			103
-		},
-		alias = {
-			"hero_evil_dragon_shards_0008"
-		}
+		size = {176, 250},
+		trim = {28, 42, 25, 105},
+		a_size = {4096, 4096},
+		f_quad = {715, 3617, 123, 103},
+		alias = {"hero_evil_dragon_shards_0008"}
 	},
 	hero_evil_dragon_shards_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			22,
-			44,
-			32,
-			105
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			715,
-			3810,
-			122,
-			101
-		},
-		alias = {
-			"hero_evil_dragon_shards_0010"
-		}
+		size = {176, 250},
+		trim = {22, 44, 32, 105},
+		a_size = {4096, 4096},
+		f_quad = {715, 3810, 122, 101},
+		alias = {"hero_evil_dragon_shards_0010"}
 	},
 	hero_evil_dragon_shards_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			43,
-			44,
-			32,
-			105
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			2553,
-			101,
-			101
-		},
-		alias = {
-			"hero_evil_dragon_shards_0012"
-		}
+		size = {176, 250},
+		trim = {43, 44, 32, 105},
+		a_size = {4096, 4096},
+		f_quad = {874, 2553, 101, 101},
+		alias = {"hero_evil_dragon_shards_0012"}
 	},
 	hero_evil_dragon_shards_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			44,
-			42,
-			25,
-			105
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			1924,
-			107,
-			103
-		},
-		alias = {
-			"hero_evil_dragon_shards_0014"
-		}
+		size = {176, 250},
+		trim = {44, 42, 25, 105},
+		a_size = {4096, 4096},
+		f_quad = {874, 1924, 107, 103},
+		alias = {"hero_evil_dragon_shards_0014"}
 	},
 	hero_evil_dragon_shards_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			44,
-			21,
-			41,
-			103
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			243,
-			1327,
-			91,
-			126
-		},
-		alias = {
-			"hero_evil_dragon_shards_0016"
-		}
+		size = {176, 250},
+		trim = {44, 21, 41, 103},
+		a_size = {4096, 4096},
+		f_quad = {243, 1327, 91, 126},
+		alias = {"hero_evil_dragon_shards_0016"}
 	},
 	hero_evil_dragon_shards_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			176,
-			250
-		},
-		trim = {
-			44,
-			85,
-			45,
-			102
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			460,
-			4023,
-			87,
-			63
-		},
-		alias = {
-			"hero_evil_dragon_shards_0018"
-		}
+		size = {176, 250},
+		trim = {44, 85, 45, 102},
+		a_size = {4096, 4096},
+		f_quad = {460, 4023, 87, 63},
+		alias = {"hero_evil_dragon_shards_0018"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			28,
-			17,
-			28,
-			46
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			658,
-			2098,
-			49,
-			62
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0002"
-		}
+		size = {105, 125},
+		trim = {28, 17, 28, 46},
+		a_size = {4096, 4096},
+		f_quad = {658, 2098, 49, 62},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0002"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			23,
-			14,
-			26,
-			50
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			4015,
-			1253,
-			56,
-			61
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0004"
-		}
+		size = {105, 125},
+		trim = {23, 14, 26, 50},
+		a_size = {4096, 4096},
+		f_quad = {4015, 1253, 56, 61},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0004"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			18,
-			14,
-			25,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3495,
-			1253,
-			62,
-			60
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0006"
-		}
+		size = {105, 125},
+		trim = {18, 14, 25, 51},
+		a_size = {4096, 4096},
+		f_quad = {3495, 1253, 62, 60},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0006"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			14,
-			16,
-			22,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			274,
-			1266,
-			69,
-			58
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0008"
-		}
+		size = {105, 125},
+		trim = {14, 16, 22, 51},
+		a_size = {4096, 4096},
+		f_quad = {274, 1266, 69, 58},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0008"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			21,
-			18,
-			23,
-			52
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			991,
-			1359,
-			61,
-			55
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0010"
-		}
+		size = {105, 125},
+		trim = {21, 18, 23, 52},
+		a_size = {4096, 4096},
+		f_quad = {991, 1359, 61, 55},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0010"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			21,
-			21,
-			23,
-			51
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			646,
-			3623,
-			61,
-			53
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0012"
-		}
+		size = {105, 125},
+		trim = {21, 21, 23, 51},
+		a_size = {4096, 4096},
+		f_quad = {646, 3623, 61, 53},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0012"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			29,
-			23,
-			30,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2453,
-			336,
-			46,
-			47
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0014"
-		}
+		size = {105, 125},
+		trim = {29, 23, 30, 55},
+		a_size = {4096, 4096},
+		f_quad = {2453, 336, 46, 47},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0014"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			37,
-			23,
-			39,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			841,
-			3914,
-			29,
-			47
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0016"
-		}
+		size = {105, 125},
+		trim = {37, 23, 39, 55},
+		a_size = {4096, 4096},
+		f_quad = {841, 3914, 29, 47},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0016"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0017 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			39,
-			23,
-			42,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			841,
-			3964,
-			24,
-			47
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0018"
-		}
+		size = {105, 125},
+		trim = {39, 23, 42, 55},
+		a_size = {4096, 4096},
+		f_quad = {841, 3964, 24, 47},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0018"}
 	},
 	hero_evil_dragon_ultimate_crystal_a_0019 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			105,
-			125
-		},
-		trim = {
-			39,
-			23,
-			42,
-			55
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			844,
-			3294,
-			24,
-			47
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_crystal_a_0020"
-		}
+		size = {105, 125},
+		trim = {39, 23, 42, 55},
+		a_size = {4096, 4096},
+		f_quad = {844, 3294, 24, 47},
+		alias = {"hero_evil_dragon_ultimate_crystal_a_0020"}
 	},
 	hero_evil_dragon_ultimate_crystal_b = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			45,
-			43
-		},
-		trim = {
-			13,
-			14,
-			14,
-			17
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			313,
-			2565,
-			18,
-			12
-		},
+		size = {45, 43},
+		trim = {13, 14, 14, 17},
+		a_size = {4096, 4096},
+		f_quad = {313, 2565, 18, 12},
 		alias = {}
 	},
 	hero_evil_dragon_ultimate_fx_a_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			182,
-			204
-		},
-		trim = {
-			46,
-			43,
-			38,
-			71
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			874,
-			3987,
-			98,
-			90
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_a_0002"
-		}
+		size = {182, 204},
+		trim = {46, 43, 38, 71},
+		a_size = {4096, 4096},
+		f_quad = {874, 3987, 98, 90},
+		alias = {"hero_evil_dragon_ultimate_fx_a_0002"}
 	},
 	hero_evil_dragon_ultimate_fx_a_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			182,
-			204
-		},
-		trim = {
-			39,
-			37,
-			35,
-			101
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			349,
-			4023,
-			108,
-			66
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_a_0004"
-		}
+		size = {182, 204},
+		trim = {39, 37, 35, 101},
+		a_size = {4096, 4096},
+		f_quad = {349, 4023, 108, 66},
+		alias = {"hero_evil_dragon_ultimate_fx_a_0004"}
 	},
 	hero_evil_dragon_ultimate_fx_a_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			182,
-			204
-		},
-		trim = {
-			32,
-			30,
-			30,
-			112
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3239,
-			318,
-			120,
-			62
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_a_0006"
-		}
+		size = {182, 204},
+		trim = {32, 30, 30, 112},
+		a_size = {4096, 4096},
+		f_quad = {3239, 318, 120, 62},
+		alias = {"hero_evil_dragon_ultimate_fx_a_0006"}
 	},
 	hero_evil_dragon_ultimate_fx_a_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			182,
-			204
-		},
-		trim = {
-			28,
-			25,
-			30,
-			128
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3859,
-			133,
-			124,
-			51
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_a_0008"
-		}
+		size = {182, 204},
+		trim = {28, 25, 30, 128},
+		a_size = {4096, 4096},
+		f_quad = {3859, 133, 124, 51},
+		alias = {"hero_evil_dragon_ultimate_fx_a_0008"}
 	},
 	hero_evil_dragon_ultimate_fx_a_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			182,
-			204
-		},
-		trim = {
-			23,
-			25,
-			24,
-			132
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2315,
-			336,
-			135,
-			47
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_a_0010"
-		}
+		size = {182, 204},
+		trim = {23, 25, 24, 132},
+		a_size = {4096, 4096},
+		f_quad = {2315, 336, 135, 47},
+		alias = {"hero_evil_dragon_ultimate_fx_a_0010"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0001 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			45,
-			203,
-			44,
-			286
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			3485,
-			752,
-			135,
-			139
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0002"
-		}
+		size = {224, 628},
+		trim = {45, 203, 44, 286},
+		a_size = {4096, 4096},
+		f_quad = {3485, 752, 135, 139},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0002"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0003 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			53,
-			98,
-			53,
-			286
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			1000,
-			118,
-			244
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0004"
-		}
+		size = {224, 628},
+		trim = {53, 98, 53, 286},
+		a_size = {4096, 4096},
+		f_quad = {558, 1000, 118, 244},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0004"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0005 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			57,
-			98,
-			57,
-			286
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			234,
-			667,
-			110,
-			244
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0006"
-		}
+		size = {224, 628},
+		trim = {57, 98, 57, 286},
+		a_size = {4096, 4096},
+		f_quad = {234, 667, 110, 244},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0006"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0007 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			61,
-			99,
-			60,
-			286
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			233,
-			2825,
-			103,
-			243
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0008"
-		}
+		size = {224, 628},
+		trim = {61, 99, 60, 286},
+		a_size = {4096, 4096},
+		f_quad = {233, 2825, 103, 243},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0008"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0009 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			64,
-			99,
-			63,
-			286
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			2023,
-			97,
-			243
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0010"
-		}
+		size = {224, 628},
+		trim = {64, 99, 63, 286},
+		a_size = {4096, 4096},
+		f_quad = {558, 2023, 97, 243},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0010"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0011 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			67,
-			101,
-			67,
-			287
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			252,
-			414,
-			90,
-			240
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0012"
-		}
+		size = {224, 628},
+		trim = {67, 101, 67, 287},
+		a_size = {4096, 4096},
+		f_quad = {252, 414, 90, 240},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0012"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0013 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			70,
-			103,
-			69,
-			287
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			558,
-			3439,
-			85,
-			238
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0014"
-		}
+		size = {224, 628},
+		trim = {70, 103, 69, 287},
+		a_size = {4096, 4096},
+		f_quad = {558, 3439, 85, 238},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0014"}
 	},
 	hero_evil_dragon_ultimate_fx_b_0015 = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			224,
-			628
-		},
-		trim = {
-			73,
-			105,
-			72,
-			288
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			263,
-			3715,
-			79,
-			235
-		},
-		alias = {
-			"hero_evil_dragon_ultimate_fx_b_0016"
-		}
+		size = {224, 628},
+		trim = {73, 105, 72, 288},
+		a_size = {4096, 4096},
+		f_quad = {263, 3715, 79, 235},
+		alias = {"hero_evil_dragon_ultimate_fx_b_0016"}
 	},
 	hero_evil_dragon_ultimate_projectile = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			43,
-			298
-		},
-		trim = {
-			14,
-			15,
-			14,
-			137
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			540,
-			2455,
-			15,
-			146
-		},
+		size = {43, 298},
+		trim = {14, 15, 14, 137},
+		a_size = {4096, 4096},
+		f_quad = {540, 2455, 15, 146},
 		alias = {}
 	},
 	hero_lumenir_hero_shadow = {
 		a_name = "go_hero_dragon_gem-1.dds",
-		size = {
-			71,
-			43
-		},
-		trim = {
-			14,
-			14,
-			14,
-			14
-		},
-		a_size = {
-			4096,
-			4096
-		},
-		f_quad = {
-			2711,
-			1235,
-			43,
-			15
-		},
+		size = {71, 43},
+		trim = {14, 14, 14, 14},
+		a_size = {4096, 4096},
+		f_quad = {2711, 1235, 43, 15},
 		alias = {}
 	}
 }

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/unblinded_priest.lua
-
+-- chunkname: @./kr5/data/animations/unblinded_priest.lua
 local a = {
 	unblinded_priest_idle = {
 		prefix = "unblinded_priest",
@@ -122,5 +121,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

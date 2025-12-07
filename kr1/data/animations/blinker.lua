@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/blinker.lua
-
+-- chunkname: @./kr5/data/animations/blinker.lua
 local a = {
 	blinker_creep_idle = {
 		prefix = "blinker_creep",
@@ -62,5 +61,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

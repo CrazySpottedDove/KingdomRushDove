@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/darksteel_fist.lua
-
+-- chunkname: @./kr5/data/animations/darksteel_fist.lua
 local a = {
 	darksteel_fist_stun_explosion = {
 		prefix = "darksteel_fist_stun_explosion",
@@ -72,5 +71,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

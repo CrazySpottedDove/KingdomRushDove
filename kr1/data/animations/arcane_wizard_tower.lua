@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/arcane_wizard_tower.lua
-
+-- chunkname: @./kr5/data/animations/arcane_wizard_tower.lua
 local a = {
 	arcane_wizard_tower_empowerment_indicator = {
 		prefix = "arcane_wizard_tower_empowerment_indicator",
@@ -207,5 +206,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a

@@ -1,5 +1,4 @@
-﻿-- chunkname: @./kr5/data/animations/paladin_soldiers_lvl4.lua
-
+-- chunkname: @./kr5/data/animations/paladin_soldiers_lvl4.lua
 local a = {
 	paladin_soldier_lvl4_idle = {
 		prefix = "paladin_soldiers_lvl4",
@@ -52,5 +51,4 @@ local a = {
 		from = 1
 	}
 }
-
 return a
