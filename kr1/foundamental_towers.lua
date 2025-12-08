@@ -539,7 +539,7 @@ tt.tower.can_be_sold = false
 tt.tower.type = "holder_baby_ashbite"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.info.fn = scripts.tower_holder_blocked_elemental_holder.get_info
-tt.info.portrait = "kr5_info_portraits_towers_0019"
+tt.info.portrait = "kr5_portraits_towers_0019"
 tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER"
 tt.info.damage_icon = "fireball"
 tt.render.sprites[1].animated = false
@@ -618,6 +618,9 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
+tt = E:register_t("tower_holder_blocked_elemental_wood_enhance", "tower_holder_blocked_elemental_wood_b")
+tt.tower.type = "holder_blocked_elemental_wood_enhance"
+tt.tower_holder.unblock_price = 50
 ---龙魂宝壶 水
 tt = E:register_t("tower_holder_blocked_elemental_water_b", "tower_holder_blocked_elemental")
 E:add_comps(tt, "main_script")

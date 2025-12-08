@@ -1,15 +1,19 @@
-#!/bin/bash
 #!/usr/bin/env bash
 set -euo pipefail
+
 VERSION_FILE="./version.lua"
 # 可通过 VERSION_FILE 环境变量指定版本文件（可选）
 # VERSION_FILE=${VERSION_FILE:-}
-if [ -n "$VERSION_FILE" ] && [ -f "$VERSION_FILE" ]; then
-    current_id=$(awk -F'"' '/version\.id[ ]*=/ {print $2; exit}' "$VERSION_FILE")
+
+if [ -n "${VERSION_FILE:-}" ] && [ -f "$VERSION_FILE" ]; then
+    # 仅匹配行首的 `id = "..."`，避免匹配到 bundle_id
+    current_id=$(awk -F'"' '/^[[:space:]]*id[[:space:]]*=/ {print $2; exit}' "$VERSION_FILE")
     current_id=${current_id:-$(date +%s)}
 else
     current_id=$(date +%s)
 fi
+
+echo "Current version id: $current_id"
 
 mkdir -p ".versions"
 ARCHIVE_DIR=".versions/KingdomRushDove-Windows-v${current_id}.zip"
@@ -20,9 +24,82 @@ if ! command -v zip >/dev/null 2>&1; then
     exit 1
 fi
 
-echo "Creating archive-> $ARCHIVE_DIR"
-# 先打包项目中除 png 和 .versions 的文件（避免把 archive 自己打进去）
-zip -r "$ARCHIVE_DIR" . -x ".versions/*" -x "tmp/*" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "update.lua" -q
+# 临时打包目录（舞台目录）
+STAGE_DIR=".versions/_pack_tmp_${current_id}"
+rm -rf "$STAGE_DIR"
+mkdir -p "$STAGE_DIR"
 
-# echo "Packed -> $ARCHIVE_DIR"
-# echo "Also copied to -> $LOVE_FILE"
+# 复制 love_env 到舞台根目录
+if [ ! -d "./love_env" ]; then
+    echo "ERROR: ./love_env not found" >&2
+    exit 1
+fi
+
+# 将 love_env 复制并改名为 TOPDIR
+if cp -a ./love_env "$STAGE_DIR/$TOPDIR" 2>/dev/null; then
+    :
+else
+    cp -r ./love_env "$STAGE_DIR/$TOPDIR"
+fi
+
+# 将项目内容复制到 love_env/KingdomRushDove 目录
+DEST_DIR="$STAGE_DIR/love_env/KingdomRushDove"
+mkdir -p "$DEST_DIR"
+
+# 需要排除的顶层路径/文件
+EXCLUDES=(
+    ".versions"
+    ".git"
+    "tmp"
+    "love_env"
+    "KingdomRushDoveUpdater"
+    "client.log"
+    "update.lua"
+    "dlfmt"
+)
+
+should_exclude() {
+    local name="$1"
+    for ex in "${EXCLUDES[@]}"; do
+        if [ "$name" = "$ex" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+# 复制项目根目录下的文件与文件夹到 DEST_DIR（应用排除）
+shopt -s dotglob nullglob
+for entry in * .*; do
+    # 跳过当前/父目录伪项
+    [ "$entry" = "." ] && continue
+    [ "$entry" = ".." ] && continue
+    # 确保存在
+    [ -e "$entry" ] || continue
+    # 应用排除规则
+    if should_exclude "$entry"; then
+        continue
+    fi
+    # 复制
+    if cp -a "$entry" "$DEST_DIR/" 2>/dev/null; then
+        :
+    else
+        cp -r "$entry" "$DEST_DIR/"
+    fi
+done
+shopt -u dotglob nullglob
+
+echo "Creating archive -> $ARCHIVE_DIR"
+# 进入舞台目录打包其内容，这样 zip 根目录就是 love_env/...
+(
+    cd "$STAGE_DIR"
+    # 压缩舞台目录全部内容为最终归档
+    zip -r "../$(basename "$ARCHIVE_DIR")" . -q
+)
+
+# 移回到 .versions 下的最终 zip（cd 子shell里已写到 .versions）
+# 确保归档位于 ARCHIVE_DIR（相对路径已经正确）
+# 清理临时目录
+rm -rf "$STAGE_DIR"
+
+echo "Packed -> $ARCHIVE_DIR"

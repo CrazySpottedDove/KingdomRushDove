@@ -2480,7 +2480,7 @@ tt.main_script.update = scripts.mod_mark_flags.update
 -- 圣骑兵 START
 tt = RT("tower_paladin_rider", "tower_barrack_1")
 AC(tt, "powers")
-tt.info.portrait = "info_portraits_towers_0105"
+tt.info.portrait = "info_portraits_towers_0105" -- to be added
 tt.info.enc_icon = 114
 tt.info.i18n_key = "TOWER_PALADIN_RIDER"
 tt.tower.type = "imperial_patrol"
@@ -2514,7 +2514,7 @@ tt.health_bar.offset = v(0, 50)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.nav_path.dir = -1
 tt.main_script.update = scripts.soldier_paladin_rider.update
-tt.info.portrait = "info_portraits_sc_0004"
+tt.info.portrait = "info_portraits_sc_0004" -- to be added
 tt.info.random_name_count = 20
 tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
 tt.melee.attacks[1].damage_max = 50

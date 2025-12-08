@@ -73,3 +73,11 @@ android:
 
 windows:
 	bash $(MAKE_FILE_DIR)/pack_windows.sh
+
+compress:
+	./dlfmt --compress-directory ./_assets/kr1-desktop/images/fullhd
+	./dlfmt --compress-directory ./kr1/data/animations
+	./dlfmt --compress-directory ./kr1/data/exoskeletons
+	./dlfmt --compress-directory ./kr1/data/waves
+	./dlfmt --compress-directory ./kr1/data/levels
+	./dlfmt --compress-file ./_assets/assets_index.lua

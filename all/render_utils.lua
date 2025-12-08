@@ -339,4 +339,12 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 	return last_idx
 end
 
+function RU.add_batches(count)
+	local temp_canvas = G.newCanvas(2, 2)
+
+	for i = 1, count do
+		table.insert(RU.batches, G.newSpriteBatch(temp_canvas, RU.BATCH_SIZE, "stream"))
+	end
+end
+
 return RU

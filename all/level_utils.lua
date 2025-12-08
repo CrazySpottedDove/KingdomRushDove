@@ -79,6 +79,7 @@ function LU.load_level(store, name)
 		for _, n in pairs({
 			"required_textures",
 			"required_sounds",
+            "required_exoskeletons",
 			"locked_hero",
 			"locked_powers",
 			"locked_towers",
@@ -259,7 +260,7 @@ end
 function LU.insert_defend_points(store, points, style)
 	if not points then
 		log.info("store.level.locations.exits does not exist")
-		return 
+		return
 	end
 
 	for _, p in pairs(points) do
@@ -278,7 +279,7 @@ end
 function LU.insert_holders(store, holders, templates)
 	if not holders then
 		log.info("store.level.locations.holders does not exist")
-		return 
+		return
 	end
 
 	for _, hp in pairs(holders) do
@@ -341,7 +342,7 @@ end
 function LU.insert_hero(store, name, pos, force_full_level)
 	if store.level.locked_hero then
 		log.debug("hero locked for level. will not insert")
-		return 
+		return
 	end
 
 	if name and pos then
@@ -365,7 +366,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 		hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
 		LU.queue_insert(store, hero)
 		signal.emit("hero-added-no-panel", hero)
-		return 
+		return
 	end
 
 	local template_names
@@ -373,7 +374,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 
 	if not template_names then
 		store.level.locked_hero = true
-		return 
+		return
 	end
 
 	for _, template_name in ipairs(template_names) do
@@ -382,7 +383,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 
 		if not hero then
 			log.error("Could not create hero named %s", template_name)
-			return 
+			return
 		end
 
 		if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then

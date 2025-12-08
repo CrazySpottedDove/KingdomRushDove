@@ -126,7 +126,7 @@ GS.level3_count = GS.level3_from + GS.last_level3
 GS.extra_level1_from = 70
 GS.extra_level1 = 2
 GS.extra_level2_from = 89
-GS.extra_level2 = 3
+GS.extra_level2 = 4
 GS.extra_level3_from = 109
 GS.extra_level3 = 1
 GS.custom_level1_from = 999
@@ -150,7 +150,7 @@ GS.level_ranges1 = {
 	{72},
 	{1000}
 }
-GS.level_ranges2 = {{27, 41}, {42, 44}, {45, 47}, {48}, {90}, {91}, {93}}
+GS.level_ranges2 = {{27, 41}, {42, 44}, {45, 47}, {48}, {90}, {91}, {92}, {93}}
 GS.level_ranges3 = {{49, 63}, {64, 66}, {67, 68}, {69, 70}, {110}}
 GS.max_stars = 0
 

@@ -46,3 +46,4 @@ update.lua
 client.log
 *:Zone.Identifier
 dlfmt
+love_env/

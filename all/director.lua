@@ -309,10 +309,6 @@ function director:unload_item(item)
 		self:unload_texture_groups(scaled_groups, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, "game")
 		I:unload_atlas("temp_game_texts", game.store.screen_scale)
 
-		if game.store.level.required_exoskeletons then
-			EXO:unload_group(game.store.level_idx)
-		end
-
 		if item.required_sounds then
 			for _, group in pairs(item.required_sounds) do
 				S:unload_group(group)
@@ -484,7 +480,7 @@ function director:queue_load_item_named(name, force_reload)
 		self:load_sound_groups(game.store.level.required_sounds)
 
 		if game.store.level.required_exoskeletons then
-			EXO:load(game.store.required_exoskeletons, game.store.level_idx)
+			EXO:queue_load(game.store.level.required_exoskeletons)
 		end
 
 		if game.store.config.enable_hero_menu then

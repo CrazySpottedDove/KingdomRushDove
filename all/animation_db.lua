@@ -21,6 +21,7 @@ animation_db.db = {}
 animation_db.fps = FPS
 animation_db.tick_length = TICK_LENGTH
 animation_db.missing_animations = {}
+animation_db.loaded = false
 local number_format_cache = {}
 
 for i = 0, 9999 do
@@ -28,6 +29,9 @@ for i = 0, 9999 do
 end
 
 function animation_db:load()
+    if self.loaded then
+        return
+    end
 	local function load_ani_file(f)
 		local ok, achunk = pcall(FS.load, f)
 
@@ -105,6 +109,8 @@ function animation_db:load()
 	for k, v in pairs(expanded_keys) do
 		self.db[k] = v
 	end
+
+    self.loaded = true
 
 	self:prebuild_frames()
 end

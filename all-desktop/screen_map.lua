@@ -710,7 +710,7 @@ end
 
 function screen_map:update_gems()
 	if not self.is_premium then
-		return 
+		return
 	end
 
 	local user_data = storage:load_slot()
@@ -859,7 +859,7 @@ function screen_map:keypressed(key, isrepeat)
 		end
 
 		if isrepeat then
-			return 
+			return
 		end
 
 		if self.map_view.show_flags_in_progress then
@@ -922,7 +922,7 @@ function screen_map:keypressed(key, isrepeat)
 end
 
 function screen_map:keyreleased(key)
-	return 
+	return
 end
 
 function screen_map:mousepressed(x, y, button)
@@ -1546,25 +1546,6 @@ function MapView:show_flags(num)
 					wing.anchor = v(wing.size.x / 2, wing.size.y / 2)
 					wing.hidden = ud.heroic_level == i + jnum
 				end
-			-- if screen_map.is_premium then
-			--     for lid, f in pairs(screen_map.map_points.endless_flags) do
-			--         if f.unlocks_at_level == i then
-			--             local flag = EndlessLevelFlagView:new(lid)
-			--             flag.pos = V.vclone(f.pos)
-			--             self.flags[lid] = flag
-			--             self.flags_layer:add_child(flag)
-			--             if f.show_balloon and (DBG_SHOW_BALLOONS or not screen_map.user_data.seen[f.show_balloon]) then
-			--                 local t = KImageView:new_from_table(
-			--                     kui_db:get_table("screen_map_balloon_endless", {
-			--                         CJK = CJK
-			--                     }))
-			--                 t.pos = V.v(flag.pos.x, flag.pos.y - 40)
-			--                 self:add_child(t)
-			--                 screen_map.endlessTip = t
-			--             end
-			--         end
-			--     end
-			-- end
 			end
 		end
 
@@ -1757,7 +1738,7 @@ function MapView:update(dt)
 	end
 
 	if self.scrolling_dir == 0 then
-		return 
+		return
 	end
 
 	self.pos = v(self.pos.x + self.scrolling_dir * self.max_scroll_speed * dt, self.pos.y)
@@ -1879,7 +1860,7 @@ function LevelFlagView:update(dt)
 	LevelFlagView.super.update(self, dt)
 
 	if self.randomWait < 0 then
-		return 
+		return
 	end
 
 	self.randomWait = self.randomWait - dt
@@ -2713,7 +2694,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 		S:queue("GUIButtonCommon")
 
 		if not ps_ld then
-			return 
+			return
 		end
 
 		if ps_ld:get_status() then
@@ -2867,7 +2848,7 @@ end
 
 function UpgradesView:set_tip_panel(title, desc, price)
 	if self.im_disabled then
-		return 
+		return
 	end
 
 	self.tip_panel.title.text = title
@@ -4557,7 +4538,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
 	local hd = screen_map.hero_data[get_hero_index(name)]
 
 	if not hd then
-		return 
+		return
 	end
 
 	local thumbs = self:get_child_by_id("hero_thumbs")
@@ -4600,7 +4581,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
 				self.check_image_1.pos = th.pos
 			end
 
-			return 
+			return
 		end
 	else
 		for i, hero in pairs(screen_map.user_data.heroes.selected) do
@@ -4615,7 +4596,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
 					end
 				end
 
-				return 
+				return
 			end
 		end
 

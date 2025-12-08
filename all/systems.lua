@@ -76,6 +76,7 @@ function sys.level:init(store)
 	end
 
 	A:load()
+	EXO:load()
 	store.selected_hero = slot.heroes.selected
 
 	if store.selected_hero and #store.selected_hero > 0 then
@@ -931,7 +932,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 				queue_insert(store, dust)
 			end
 
-			if e.tower_upgrade_persistent_data then
+			if e.tower_upgrade_persistent_data and ne.tower_upgrade_persistent_data then
 				for k, v in pairs(e.tower_upgrade_persistent_data) do
 					if not ne.tower_upgrade_persistent_data[k] then
 						ne.tower_upgrade_persistent_data[k] = v
@@ -2449,9 +2450,8 @@ function sys.render:on_update(dt, ts, store)
 				end
 			else
 				s.sync_flag = last_runs ~= s.runs
+				s.ss = I:s(fn)
 			end
-
-			s.ss = I:s(fn)
 
 			if s._track_e then
 				s.pos.x, s.pos.y = e.pos.x, e.pos.y

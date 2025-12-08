@@ -5789,7 +5789,7 @@ local towers = {
 			range = 5,
 			damage = 5
 		},
-		price = {130, 190, 270, 400},
+		price = {130, 190, 270, 360},
 		burning = {
 			cycle_time = 0.25,
 			duration = 3,
@@ -5800,7 +5800,7 @@ local towers = {
 			cooldown = 2,
 			cycle_time = 0.1,
 			damage_min = {2, 5, 12, 8},
-			damage_max = {3, 10, 16, 10},
+			damage_max = {3, 10, 16, 9},
 			range = {180, 180, 180, 200},
 			damage_type = DAMAGE_TRUE
 		},
