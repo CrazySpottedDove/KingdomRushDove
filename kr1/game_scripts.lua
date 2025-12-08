@@ -29961,6 +29961,12 @@ function scripts.controller_s93.update(this, store)
 			end
 		end
 
+		S:queue("TerrainWukongElementalHolderUnlock")
+		local shake = E:create_entity("aura_screen_shake")
+		shake.aura.amplitude = 0.35
+		shake.aura.duration = 0.5
+		shake.aura.freq_factor = 2
+		queue_insert(store, shake)
 		queue_remove(store, this)
 	else
 		queue_remove(store, this)
