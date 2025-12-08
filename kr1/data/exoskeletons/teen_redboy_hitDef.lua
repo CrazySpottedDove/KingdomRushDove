@@ -1,0 +1,26 @@
+return {
+version=3,
+partScaleCompensation=1,
+fps=30,
+parts={
+{'teen_redboy_hit_asst_hit_redboy01',18.75,0},
+{'teen_redboy_hit_asst_hit_redboy02',21.75,0},
+{'teen_redboy_hit_asst_hit_redboy03',22.75,0},
+{'teen_redboy_hit_asst_hit_redboy04',19.2,0},
+{'teen_redboy_hit_asst_hit_redboy05',6.5,0},
+},
+attach_points={
+},
+animations={
+{name='in',frames={
+{{1,1,1,-20.15,-0.1,1,1,0,0,0}},
+{{1,2,1,-23.1,-0.1,1,1,0,0,0}},
+{{1,3,1,-17.95,2.2,1,1,0,0,0}},
+{{1,3,1,-17.95,2.2,1,1,0,0,0}},
+{{1,4,1,-13,5.1,1,1,0,0,0}},
+{{1,4,1,-13,5.1,1,1,0,0,0}},
+{{1,5,1,13.45,4.45,1,1,0,0,0}},
+{{1,5,1,13.45,4.45,1,1,0,0,0}},
+}},
+},
+}

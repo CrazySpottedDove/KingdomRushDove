@@ -73,7 +73,7 @@ function GGLabel:_fit_text()
 	local step = self.fit_step
 
 	if not fit_lines and not fit_size then
-		return 
+		return
 	end
 
 	if fit_lines and fit_lines > 1 and self.text and not table.contains({"ja", "zh-Hans", "zh-Hant"}, i18n.current_locale) then
@@ -412,7 +412,7 @@ function GGImageButton:on_enter(drag_view)
 	log.paranoid("GGImageButton:on_enter %s", self.id)
 
 	if self.image_name == self.click_image_name then
-		return 
+		return
 	end
 
 	self:set_image(self.hover_image_name)
@@ -765,7 +765,7 @@ function GGEllipseText:redraw()
 	self._drawn = true
 
 	if not self.text or self.text == "" then
-		return 
+		return
 	end
 
 	local cv = {}
@@ -809,4 +809,227 @@ function GGEllipseText:_draw_self()
 	end
 
 	GGEllipseText.super._draw_self(self)
+end
+
+
+GGExoPlaceholder = class("GGExoPlaceholder", KView)
+
+function GGExoPlaceholder:_draw_self()
+	self.parent:_draw_self_deferred()
+end
+
+GGExo = class("GGExo", KView)
+
+GGExo:append_serialize_keys("exo_name", "exo_animation", "exo_scale_factor")
+
+GGExo.static.init_arg_names = {
+	"size",
+	"exo_name",
+	"exo_animation",
+	"exo_scale_factor"
+}
+
+function GGExo:initialize(size, exo_name, exo_animation, exo_scale_factor)
+	KView.initialize(self, size)
+
+	self.exo_name = exo_name
+	self.exo_animation = exo_animation
+	self.exo_scale_factor = exo_scale_factor
+	self.runs = 0
+
+	if not self.ts then
+		self.ts = 0
+	end
+
+	self:load_exo()
+
+	for _, c in pairs(self.children) do
+		if c:isInstanceOf(GGExoPlaceholder) then
+			self._defer_draw_to_placeholder = true
+
+			break
+		end
+	end
+
+	if #self.children > 0 and not self._defer_draw_to_placeholder then
+		local ep = GGExoPlaceholder:new()
+
+		self:add_child(ep, 1)
+	end
+end
+
+function GGExo:load_exo()
+	local anis, max_parts = EXO:load_kui(self.exo_name, true)
+
+	self.animations = anis
+
+	local temp_canvas = G.newCanvas(2, 2)
+
+	self.batch = G.newSpriteBatch(temp_canvas, max_parts, "stream")
+end
+
+function GGExo:update(dt)
+	if self.ts <= 0 then
+		self.runs = 0
+	end
+
+	self.ts = self.ts + dt
+
+	local aa_name = self.exo_name .. "_" .. self.exo_animation
+	local aa = self.animations[aa_name]
+
+	if not aa then
+		log.error("Exo animation named %s could not be found in GGExo animations list %s", aa_name, getdump(self.animations))
+	end
+
+	local fn, runs = self:animation_frame(aa, self.ts, self.loop, self.fps)
+	local exo_frame = EXO:f(fn)
+
+	self._exo_frame = exo_frame
+
+	for _, c in pairs(self.children) do
+		local x, y = self:get_attach_pos(c.exo_attach_point)
+
+		if x and y then
+			c.pos.x, c.pos.y = x, y
+		end
+	end
+
+	if not self.loop and self.runs ~= runs and runs > 0 and self.on_exo_finished then
+		self:on_exo_finished(runs)
+	end
+
+	self.runs = runs
+end
+
+function GGExo:get_attach_pos(name)
+	if not self._exo_frame then
+		return
+	end
+
+	local exo_frame = self._exo_frame
+	local ap = exo_frame.attachPoints and exo_frame.attachPoints[name]
+
+	if not ap then
+		return
+	end
+
+	local xf = ap.xform
+	local x, y, r, sx, sy, kx, ky = xf.x, xf.y, xf.r, xf.sx, xf.sy, xf.kx, xf.ky
+
+	r = -self.r + r
+
+	if self.exo_scale_factor then
+		local f = self.exo_scale_factor
+
+		x = x * f
+		y = y * f
+	end
+
+	return x, y
+end
+
+function GGExo:_draw_self()
+	if self._defer_draw_to_placeholder then
+		return
+	else
+		self:_draw_self_deferred()
+	end
+end
+
+function GGExo:_draw_self_deferred()
+	local exo_frame = self._exo_frame
+	local current_atlas
+	local batch = self.batch
+	local batch_count = 0
+	local r, g, b, a = 255, 255, 255, 255
+	local lr, lg, lb, la
+	local texture_swap_count = 0
+
+	batch:clear()
+
+	for part_idx, part in ipairs(exo_frame.parts) do
+		local ss = I:s(part.name)
+
+		if ss.atlas and ss.atlas ~= current_atlas then
+			if batch_count > 0 then
+				G.draw(batch)
+
+				batch_count = 0
+				texture_swap_count = texture_swap_count + 1
+			end
+
+			batch:clear()
+
+			lr, lg, lb, la = nil
+
+			if ss.atlas then
+				current_atlas = ss.atlas
+
+				local im = I:i(ss.atlas)
+
+				batch:setTexture(im)
+			end
+		end
+
+		if self.colors.exo then
+			local c = self.colors.exo
+
+			r, g, b = c[1], c[2], c[3]
+		else
+			r, g, b = 255, 255, 255
+		end
+
+		a = self.alpha * (part.alpha or 1)
+
+		if a ~= la or r ~= lr or g ~= lg or b ~= lb then
+			batch:setColor(r, g, b, a * 255)
+
+			lr, lg, lb, la = r, g, b, a
+		end
+
+		local exo_part = exo_frame.exo.parts[part.name]
+		local pox, poy = exo_part.offsetX, exo_part.offsetY
+		local quad = ss.quad
+		local ref_scale = ss.ref_scale or 1
+		local xf = part.xform
+		local x, y, r, sx, sy, kx, ky = xf.x, xf.y, xf.r, xf.sx, xf.sy, xf.kx, xf.ky
+
+		r = -self.r + r
+		sx = sx * ref_scale
+		sy = sy * ref_scale
+
+		if self.exo_scale_factor then
+			local f = self.exo_scale_factor
+
+			x = x * f
+			y = y * f
+			pox = pox * f
+			poy = poy * f
+		end
+
+		local ox = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
+		local oy = 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale
+		if ss.textureRotated then
+			r = r - math.pi / 2
+			ox = 0.5 * ss.size[2] - ss.trim[4] + poy / ref_scale
+			oy = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
+			sy = xf.sx * ref_scale
+			sx = xf.sy * ref_scale
+		end
+
+		batch:add(quad, x, y, r, sx, sy, ox, oy, kx, ky)
+
+		batch_count = batch_count + 1
+	end
+
+	if batch_count > 0 then
+		G.draw(batch)
+	end
+
+	if texture_swap_count > 5 and not self._warning_shown then
+		log.warning("GGExo: texture swapping count was %s for exo:%s. Try making texture group atlas size larger or do not use _MERGE fpr the exo subdirectory to improve fps", texture_swap_count, self.exo_name .. "_" .. self.exo_animation)
+
+		self._warning_shown = true
+	end
 end

@@ -175,7 +175,15 @@ return {
 				x = 1120,
 				y = 748
 			}
-		}
+		},
+        -- from fl level 87
+        [93] ={
+            number = "93",
+            pos = {
+                x = 1595,
+                y = 132
+            }
+        },
 	},
 	endless_flags = {
 		[83] = {

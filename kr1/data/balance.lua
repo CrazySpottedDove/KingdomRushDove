@@ -6361,6 +6361,159 @@ local specials = {
 			price = 150
 		}
 	},
+    	terrain_8 = {
+		flaming_ground = {
+			dps = {
+				duration = 0.25,
+				damage_min = 2,
+				damage_every = 0.25,
+				damage_max = 2,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			sprint = {
+				sprint_factor = 1.7,
+				duration = 1
+			},
+			healing = {
+				heal_every = 0.25,
+				heal_duration = 1,
+				heal_max = 30,
+				heal_min = 10
+			}
+		},
+		elemental_holders = {
+			wooden_holder = {
+				range_factor = 1.25,
+				first_cooldown = 2,
+				duration = 8,
+				slow_factor = 0.5,
+				cooldown = 50,
+				default_max_range = 200,
+				damage_max = 5,
+				skill_detection_range_factor = 0.8,
+				rally_range_factor = 1.25,
+				damage_min = 3,
+				damage_every = 0.25,
+				price = 150,
+				damage_type = DAMAGE_TRUE
+			},
+			wooden_holder_enhance = {
+				range_factor = 2,
+				first_cooldown = 999999,
+				duration = 8,
+				slow_factor = 0.5,
+				cooldown = 999999,
+				default_max_range = 200,
+				damage_max = 5,
+				skill_detection_range_factor = 0.8,
+				rally_range_factor = 2,
+				damage_min = 3,
+				damage_every = 0.25,
+				price = 150,
+				damage_type = DAMAGE_TRUE
+			},
+			fire_holder = {
+				price = 150,
+				first_cooldown = 2,
+				cooldown = 52,
+				default_max_range = 200,
+				damage_factor = 1.25
+			},
+			water_holder = {
+				default_max_range = 200,
+				price = 150,
+				healing = {
+					min_health_factor = 0.8,
+					heal_min = 5,
+					heal_every = 1,
+					duration = 1,
+					heal_max = 6
+				},
+				teleport = {
+					tp_distance_nodes_max = 55,
+					first_cooldown = 2,
+					tp_distance_nodes_min = 20,
+					tp_radius = 50,
+					cooldown = 20,
+					delay_between_tps = 2,
+					chase_speed = 40,
+					tp_max_targets = 5,
+					duration = 9,
+					wander_interval = 1.5
+				}
+			},
+			earth_holder = {
+				max_spawns = 3,
+				first_cooldown = 2,
+				extra_health_multiplier = 1.25,
+				cooldown = 30,
+				price = 150,
+				spawn_amount = 1,
+				soldier = {
+					armor = 0.3,
+					max_speed = 24,
+					hp_max = 68,
+					melee_attack = {
+						cooldown = 3,
+						range = 50,
+						damage_min = 18,
+						damage_max = 30
+					}
+				},
+				holder_spawn_pos = {
+					["22"] = {
+						{
+							x = 282,
+							y = 361
+						}
+					},
+					["23"] = {
+						{
+							x = 85,
+							y = 361
+						}
+					},
+					["25"] = {
+						{
+							x = 109,
+							y = 433
+						}
+					},
+					["26"] = {
+						{
+							x = 367,
+							y = 515
+						}
+					},
+					["29"] = {
+						{
+							x = 770,
+							y = 515
+						}
+					}
+				}
+			},
+			metal_holder = {
+				first_cooldown = 0,
+				cooldown = 15,
+				default_max_range = 200,
+				price = 150,
+				upgrade_price_multiplier = 0.75,
+				steal_gold = {
+					delay_between_steals = 2,
+					first_cooldown = 2,
+					gold_steal_group_max_size = 3,
+					cooldown = 18,
+					steal_radius = 50,
+					chase_speed = 40,
+					gold_steal_amount_boss = 50,
+					gold_steal_amount = 1,
+					duration = 9,
+					wander_interval = 1.5
+				}
+			}
+		}
+	},
 	stage07_temple = {
 		activation_wave = 10
 	},

@@ -37,6 +37,7 @@ local cos = math.cos
 local PI = math.pi
 require("constants")
 local ffi = require("ffi")
+local EXO = require("exoskeleton")
 
 local function queue_insert(store, e)
 	simulation:queue_insert_entity(e)
@@ -324,7 +325,7 @@ function sys.level:on_update(dt, ts, store)
 				}
 				signal.emit("game-victory", store)
 				signal.emit("game-victory-after", store)
-				return 
+				return
 			end
 
 			log.info("++++ VICTORY ++++")
@@ -1502,7 +1503,7 @@ end
 local function lerp_number_quad_multiply(a, b, t, s, key)
 	if a == b then
 		s[key] = a[2] * s[key]
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1512,7 +1513,7 @@ end
 local function lerp_number_quad(a, b, t, s, key)
 	if a == b then
 		s[key] = a[2]
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1541,7 +1542,7 @@ local function lerp_table_linear(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x
 		s[key].y = a[2].y
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1555,7 +1556,7 @@ local function lerp_table_linear_multiply(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1569,7 +1570,7 @@ local function lerp_table_quad(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x
 		s[key].y = a[2].y
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1583,7 +1584,7 @@ local function lerp_table_quad_multiply(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1597,7 +1598,7 @@ local function lerp_table_sine_multiply(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
-		return 
+		return
 	end
 
 	local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
@@ -1611,7 +1612,7 @@ local function lerp_table_sine(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x
 		s[key].y = a[2].y
-		return 
+		return
 	end
 
 	local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
@@ -2422,7 +2423,34 @@ function sys.render:on_update(dt, ts, store)
 				fn = s.name
 			end
 
-			s.sync_flag = last_runs ~= s.runs
+			if s.exo then
+				local exo_frame = EXO:f(fn)
+
+				if exo_frame then
+					s.exo_frame = exo_frame
+					local exo = exo_frame.exo
+					s.exo = exo
+
+					if s.exo_hide_prefix then
+						for _, p in ipairs(exo_frame) do
+							if p[1] == 1 then
+								local pname = exo.parts[p[2]][1]
+								p.hidden = false
+
+								for _, prefix in ipairs(s.exo_hide_prefix) do
+									if string.find(pname, prefix, 1, true) then
+										p.hidden = true
+										break
+									end
+								end
+							end
+						end
+					end
+				end
+			else
+				s.sync_flag = last_runs ~= s.runs
+			end
+
 			s.ss = I:s(fn)
 
 			if s._track_e then

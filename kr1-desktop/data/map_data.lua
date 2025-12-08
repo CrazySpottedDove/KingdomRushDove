@@ -1120,7 +1120,7 @@ return {
 			icon = 13,
 			stats = {6, 5, 0, 8}
 		},
-		-- 
+		--
 		-- 			二代
 		-- 		--
 		-- 沙王
@@ -1304,7 +1304,7 @@ return {
 			icon = 18,
 			stats = {7, 6, 0, 6}
 		},
-		-- 
+		--
 		-- 			三代
 		-- 		--
 		-- 艾莉丹
@@ -1478,7 +1478,7 @@ return {
 			icon = 19,
 			stats = {5, 5, 0, 6}
 		},
-		-- 
+		--
 		-- 			五代
 		-- 		--
 		-- 安雅
@@ -2094,6 +2094,14 @@ return {
 			iron = {"mages", "barracks"}
 		},
 		[92] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {"archers", "mages"}
+		},
+		-- from fl level 87
+		[93] = {
 			upgrades = {
 				heroe = true,
 				level = 5

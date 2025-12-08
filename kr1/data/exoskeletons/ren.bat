@@ -1,0 +1,1 @@
+ren *.exo3 *.lua

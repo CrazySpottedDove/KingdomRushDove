@@ -781,7 +781,7 @@ tt.main_script.update = function(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -963,7 +963,7 @@ tt.main_script.update = function(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1206,7 +1206,7 @@ tt.main_script.update = function(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1402,7 +1402,7 @@ tt.main_script.update = function(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1706,7 +1706,7 @@ tt.main_script.update = function(this, store)
 			end
 
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -2057,3 +2057,47 @@ tt.main_script.update = function(this, store)
 end
 tt = RT("mod_eb_10yr_stun", "mod_10yr_stun")
 tt.modifier.vis_bans = F_FLYING
+tt = RT("eb_gerald_strong", "eb_gerald")
+tt.health.hp_max = 2000
+tt.enemy.gold = 100
+tt.enemy.lives_cost = 3
+tt = RT("eb_alleria_strong", "eb_alleria")
+tt.health.hp_max = 2000
+tt.enemy.gold = 100
+tt.enemy.lives_cost = 3
+a = tt.melee.attacks[1]
+a.damage_max = 102
+a.damage_min = 63
+a = tt.ranged.attacks[1]
+a.bullet = "arrow_eb_alleria_strong"
+a = tt.ranged.attacks[2]
+a.bullet = "arrow_multishot_eb_alleria_strong"
+tt = RT("arrow_eb_alleria_strong", "arrow_eb_alleria")
+tt.bullet.flight_time = fts(15)
+tt.bullet.damage_max = 165
+tt.bullet.damage_min = 39
+tt = RT("arrow_multishot_eb_alleria_strong", "arrow_multishot_eb_alleria")
+tt.bullet.damage_min = 150
+tt.bullet.damage_max = 500
+tt = RT("enemy_blade_strong", "enemy_blade")
+tt.health.hp_max = 960
+a = tt.melee.attacks[1]
+a.cooldown = 0.8
+a.damage_max = 95
+a.damage_min = 75
+tt.enemy.gold = 50
+tt = RT("enemy_forest_strong", "enemy_forest")
+tt.health.hp_max = 1400
+a = tt.melee.attacks[1]
+a.cooldown = 0.8
+a.damage_max = 95
+a.damage_min = 75
+tt.ranged.attacks[2].bullet = "spear_enemy_forest_oak_strong"
+tt = RT("spear_enemy_forest_oak_strong", "spear_enemy_forest_oak")
+tt.bullet.damage_max = 640
+tt.bullet.damage_min = 640
+tt.bullet.damage_inc = 0
+tt = RT("eb_10yr_strong", "eb_10yr")
+tt.health.hp_max = 2000
+tt.enemy.gold = 150
+tt.enemy.lives_cost = 5

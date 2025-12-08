@@ -1438,7 +1438,7 @@ return {
 			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_DESCRIPTION_3")
 		}}
 	}), templates.rally, templates.sell}},
-	-- 
+	--
 	--         三代
 	--     --
 	blade = {{merge(templates.upgrade_power, {
@@ -1960,7 +1960,7 @@ return {
 			tt_desc = _("ELVES_TOWER_BASTION_RAZOR_EDGE_SMALL_DESCRIPTION_2")
 		}}
 	})}},
-	-- 
+	--
 	--         五代
 	--     --
 	-- 三管加农炮
@@ -2470,5 +2470,65 @@ return {
 			tt_title = _("TOWER_BARREL_4_SKILL_BARREL_3_NAME"),
 			tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_3_DESCRIPTION")
 		}}
-	}), templates.rally, templates.sell}}
+	}), templates.rally, templates.sell}},
+	holder_blocked_elemental_wood = {{{
+		check = "main_icons_0019",
+		action_arg = "tower_holder_elemental_wood",
+		action = "tw_unblock",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0045",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
+	}}},
+	holder_blocked_elemental_wood_enhance = {{{
+		check = "main_icons_0019",
+		action_arg = "tower_holder_elemental_wood_enhance",
+		action = "tw_unblock",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0045",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
+	}}},
+	holder_blocked_elemental_fire = {{{
+		check = "main_icons_0019",
+		action_arg = "tower_holder_elemental_fire",
+		action = "tw_unblock",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0044",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_DESCRIPTION")
+	}}},
+	holder_blocked_elemental_water = {{{
+		check = "main_icons_0019",
+		action_arg = "tower_holder_elemental_water",
+		action = "tw_unblock",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0046",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER_DESCRIPTION")
+	}}},
+	holder_blocked_elemental_earth = {{{
+		check = "main_icons_0019",
+		action_arg = "tower_holder_elemental_earth",
+		action = "tw_unblock",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0050",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH_DESCRIPTION")
+	}}},
+	holder_blocked_elemental_metal = {{{
+		check = "main_icons_0019",
+		action_arg = "tower_holder_elemental_metal",
+		action = "tw_unblock",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0047",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_DESCRIPTION")
+	}}}
 }
