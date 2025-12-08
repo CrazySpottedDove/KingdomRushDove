@@ -9355,3 +9355,6 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
+tt = E:register_t("controller_s93")
+AC(tt, "main_script")
+tt.main_script.update = scripts.controller_s93.update

@@ -1670,7 +1670,7 @@ tt.main_script.update = function(this, store)
 	end
 
 	local function ba_ready()
-		return this.enemy.can_do_magic and ready_to_attack(ba, store) and not this.is_buffed and this.health.hp / this.health.hp_max < ba.transform_health_factor
+		return this.enemy.can_do_magic and ready_to_attack(ba, store) and not this.is_buffed and this.health.hp / this.health.hp_max < 0.6
 	end
 
 	local function bma_ready()

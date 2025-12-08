@@ -27742,9 +27742,6 @@ function scripts.tower_holder_blocked_elemental_holder.insert(this, store)
 	this.render.sprites[2].ts = store.tick_ts - math.random() * 3
 	this.render.sprites[3].ts = store.tick_ts - math.random() * 3
 
-	-- if store.level_idx == 32 then
-	-- 	this.render.sprites[this.render.sid_parche].name = "stage_32"
-	-- end
 	if this.should_flip then
 		for _, s in pairs(this.render.sprites) do
 			s.flip_x = true
@@ -28123,7 +28120,6 @@ function scripts.hero_muyrn_root_defender_root_decal.update(this, store)
 	queue_remove(store, this)
 end
 
-
 scripts.decal_elemental_wood_holder_root_dragon = {}
 
 function scripts.decal_elemental_wood_holder_root_dragon.update(this, store)
@@ -28155,7 +28151,6 @@ function scripts.decal_elemental_wood_holder_root_dragon_kill.update(this, store
 	U.y_animation_play(this, "in", nil, store.tick_ts)
 	queue_remove(store, this)
 end
-
 
 scripts.multi_sprite_fx = {}
 
@@ -28189,9 +28184,7 @@ function scripts.multi_sprite_fx.update(this, store)
 		if delayed_sprites[index] then
 			if store.tick_ts > delayed_sprites[index] then
 				this_sprites[index].hidden = false
-
 				U.animation_start(this, this_sprites[index].name, nil, store.tick_ts, false, index, true)
-
 				delayed_sprites[index] = nil
 			end
 
@@ -28230,6 +28223,1748 @@ function scripts.multi_sprite_fx.update(this, store)
 		end
 
 		coroutine.yield()
+	end
+end
+
+scripts.controller_elemental_fire = {}
+
+function scripts.controller_elemental_fire.update(this, store)
+	local underground_pos, last_underground_pos
+	local last_movement_ts = store.tick_ts
+	local instakill_target
+
+	local function y_find_tower()
+		local found_tower = false
+
+		while true do
+			for _, e in pairs(store.entities) do
+				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
+					found_tower = true
+
+					if e.build_name then
+						break
+					else
+						return e
+					end
+				end
+			end
+
+			if not found_tower then
+				return nil
+			end
+
+			if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
+				U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon, true)
+			end
+
+			coroutine.yield()
+		end
+
+		return nil
+	end
+
+	local function find_target_strongest()
+		local max_health = -1
+		local enemy
+
+		for _, e in pairs(store.entities) do
+			if e.pending_removal or not e.enemy or not e.nav_path or not U.is_inside_ellipse(e.pos, this.pos, this.max_range) or e.health and e.health.dead or band(e.vis.flags, this.vis_bans) ~= 0 or band(e.vis.bans, this.vis_flags) ~= 0 then
+			-- block empty
+			elseif max_health < e.health.hp then
+				max_health = e.health.hp
+				enemy = e
+			end
+		end
+
+		return enemy
+	end
+
+	local function get_new_fx_points()
+		local points = {}
+		local inner_fx_radius = this.max_range * 0.4
+		local middle_fx_radius = this.max_range * 0.6
+		local outer_fx_radius = this.max_range * 0.8
+		local aspect = 0.7
+		local roots_count = this.max_range / 6
+
+		for i = 1, roots_count do
+			local r = outer_fx_radius
+
+			if i % 3 == 0 then
+				r = middle_fx_radius
+			elseif i % 2 == 0 then
+				r = inner_fx_radius
+			end
+
+			local p = {}
+			p.pos = U.point_on_ellipse(this.pos, r, 2 * math.pi * i / roots_count)
+			p.terrain = GR:cell_type(p.pos.x, p.pos.y)
+
+			if P:valid_node_nearby(p.pos.x, p.pos.y, 1) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_CLIFF) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_WATER) and band(p.terrain, bor(TERRAIN_LAND, TERRAIN_ICE)) ~= 0 then
+				table.insert(points, p)
+			end
+		end
+
+		return points
+	end
+
+	local function update_fx_points()
+		this.dragon_fx_points = get_new_fx_points()
+	end
+
+	local function spawn_dragon_underground_fx(kill, loops)
+		local fx = E:create_entity(kill and this.root_decal_dragon_kill or this.root_decal_dragon)
+
+		if not last_underground_pos then
+			fx.render.sprites[1].flip_x = math.random() < 0.5
+		else
+			fx.render.sprites[1].flip_x = last_underground_pos.x > underground_pos.x
+		end
+
+		fx.loop_times = loops and loops or 1
+		fx.delay = 0
+		fx.pos = V.vclone(underground_pos)
+		queue_insert(store, fx)
+	end
+
+	local function set_underground_pos(new_pos)
+		if not new_pos then
+			last_underground_pos = nil
+			underground_pos = nil
+		else
+			last_underground_pos = V.vclone(underground_pos)
+			underground_pos = V.vclone(new_pos)
+		end
+	end
+
+	local function move_underground()
+		if not underground_pos then
+			return false
+		end
+
+		local underground_chase_distance = 40
+		local underground_chase_distance_kill = underground_chase_distance * 2
+		local underground_chase_interval = fts(8)
+		local underground_passive_interval = 4
+		instakill_target = find_target_strongest()
+		local time_since_last_movement = store.tick_ts - last_movement_ts
+
+		if instakill_target then
+			if underground_chase_interval < time_since_last_movement then
+				local distance = V.dist(underground_pos.x, underground_pos.y, instakill_target.pos.x, instakill_target.pos.y)
+
+				if distance < underground_chase_distance_kill then
+					local tpos = V.vclone(instakill_target.pos)
+					U.y_wait(store, fts(10))
+					set_underground_pos(tpos)
+					spawn_dragon_underground_fx(true)
+					return true
+				end
+
+				local normalized_x, normalized_y = V.normalize(instakill_target.pos.x - underground_pos.x, instakill_target.pos.y - underground_pos.y)
+				set_underground_pos(V.v(underground_pos.x + normalized_x * underground_chase_distance, underground_pos.y + normalized_y * underground_chase_distance))
+				last_movement_ts = store.tick_ts
+				spawn_dragon_underground_fx(nil, 5)
+			end
+		elseif underground_passive_interval < time_since_last_movement then
+			local p = table.random(this.dragon_fx_points)
+			last_movement_ts = store.tick_ts
+			set_underground_pos(p.pos)
+			spawn_dragon_underground_fx(nil, 5)
+		end
+
+		return false
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_gradiente)
+
+	if this.buy_anim_dragon_ts then
+		U.animation_start(this, "buy", nil, this.buy_anim_dragon_ts, false, this.render.sid_dragon, true)
+	else
+		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
+	end
+
+	this.target = y_find_tower()
+
+	if not this.target then
+		queue_remove(store, this)
+		return
+	end
+
+	S:queue("TerrainWukongElementalHolderEvolve")
+	U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_gradiente)
+
+	if this.render.sprites[this.render.sid_dragon].name ~= "buy" or U.animation_finished(this, this.render.sid_dragon, 1) then
+		U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+		this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+	end
+
+	this.target.cannot_be_swapped = true
+	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+
+	if this.target.attacks and this.target.attacks.range then
+		this.max_range = this.target.attacks.range
+	elseif this.target.barrack and this.target.barrack.rally_range then
+		this.max_range = this.target.barrack.rally_range
+	else
+		this.max_range = this.default_max_range
+	end
+
+	update_fx_points()
+
+	if this.damage_factor then
+		this.target.tower.damage_factor = this.target.tower.damage_factor * this.damage_factor
+	end
+
+	this.ability_cooldown = this.first_cooldown
+
+	if store.elemental_holders_cd and store.elemental_holders_cd[this.target.tower.holder_id] then
+		this.ability_cooldown = store.elemental_holders_cd[this.target.tower.holder_id]
+	end
+
+	local show_wings_ts = store.tick_ts + fts(104)
+	local hide_wings_ts
+	local start_ts = store.tick_ts
+
+	if this.ability_cooldown < 1.5 then
+		this.ability_cooldown = 1.5
+	end
+
+	while true do
+		local tower = store.entities[this.target.id]
+
+		if not tower then
+			local new_tower = y_find_tower()
+
+			if not new_tower then
+				if this.damage_factor then
+					this.target.tower.damage_factor = this.target.tower.damage_factor / this.damage_factor
+				end
+
+				queue_remove(store, this)
+				return
+			end
+
+			this.target = new_tower
+			this.target.cannot_be_swapped = true
+			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+			U.y_wait(store, 0.1)
+
+			if this.damage_factor then
+				this.target.tower.damage_factor = this.target.tower.damage_factor * this.damage_factor
+			end
+
+			if this.target.attacks and this.target.attacks.range then
+				this.max_range = this.target.attacks.range
+			elseif this.target.barrack and this.target.barrack.rally_range then
+				this.max_range = this.target.barrack.rally_range
+			else
+				this.max_range = this.default_max_range
+			end
+
+			update_fx_points()
+		end
+
+		if this.render.sprites[this.render.sid_dragon].name == "buy" and U.animation_finished(this, this.render.sid_dragon, 1) then
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+		end
+
+		if this.target.change_range then
+			this.max_range = this.target.attacks.range
+			this.target.change_range = false
+		end
+
+		if this.update_on_path_active then
+			for i = #this.update_on_path_active, 1, -1 do
+				if P:is_path_active(this.update_on_path_active[i]) then
+					update_fx_points()
+					table.remove(this.update_on_path_active, i)
+				end
+			end
+		end
+
+		if move_underground() then
+			start_ts = store.tick_ts
+			S:queue("TerrainWukongElementalHolderFireActiveKill")
+			local d = E:create_entity("damage")
+			d.damage_type = this.damage_type
+			d.value = 1
+			d.source_id = this.id
+			d.target_id = instakill_target.id
+			queue_damage(store, d)
+			instakill_target = nil
+			set_underground_pos(nil)
+			this.ability_cooldown = this.cooldown
+			U.y_wait(store, fts(30))
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "back_to_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+			show_wings_ts = store.tick_ts + fts(101)
+			goto label_2112_0
+		end
+
+		if show_wings_ts and show_wings_ts < store.tick_ts then
+			show_wings_ts = nil
+			this.tween.reverse = false
+			this.tween.disabled = false
+			this.tween.ts = store.tick_ts
+		end
+
+		if hide_wings_ts and hide_wings_ts < store.tick_ts then
+			hide_wings_ts = nil
+			this.tween.reverse = true
+			this.tween.disabled = false
+			this.tween.ts = store.tick_ts
+		end
+
+		if not underground_pos and store.tick_ts - start_ts > this.ability_cooldown then
+			instakill_target = find_target_strongest()
+
+			if instakill_target then
+				U.sprites_show(this, this.render.sid_dragon_ability, this.render.sid_dragon_ability, true)
+				this.render.sprites[this.render.sid_dragon_ability].hide_after_runs = 1
+				U.animation_start(this, "start_hability", nil, store.tick_ts, false, this.render.sid_dragon_ability, true)
+				S:queue("TerrainWukongElementalHolderFireActiveIn")
+				this.render.sprites[this.render.sid_dragon_ability].pos = V.vclone(tower.tower.default_rally_pos)
+				hide_wings_ts = store.tick_ts + fts(3)
+				last_movement_ts = store.tick_ts + 1.5
+				underground_pos = V.vclone(this.target.tower.default_rally_pos)
+			end
+		end
+
+		::label_2112_0::
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.controller_elemental_water = {}
+
+function scripts.controller_elemental_water.update(this, store)
+	local aura_controller, underground_pos, last_underground_pos
+	local last_movement_ts = store.tick_ts
+	local next_tp_ts = store.tick_ts
+	local tp_target
+	local affected_target_ids = {}
+
+	local function find_target_for_tp(tower)
+		return U.find_foremost_enemy(store.entities, tpos(tower), 0, this.max_range, 0, this.vis_flags, this.vis_bans, function(e)
+			return e.health and not e.health.dead and not table.contains(affected_target_ids, e.id)
+		end)
+	end
+
+	local function spawn_dragon_underground_fx(kill, loops)
+		local fx = E:create_entity(kill and this.root_decal_dragon_kill or this.root_decal_dragon)
+
+		if not last_underground_pos then
+			fx.render.sprites[1].flip_x = math.random() < 0.5
+		else
+			fx.render.sprites[1].flip_x = last_underground_pos.x > underground_pos.x
+		end
+
+		fx.loop_times = loops and loops or 1
+		fx.delay = 0
+		fx.pos = V.vclone(underground_pos)
+		queue_insert(store, fx)
+	end
+
+	local function set_underground_pos(new_pos)
+		if not new_pos then
+			last_underground_pos = nil
+			underground_pos = nil
+		else
+			last_underground_pos = V.vclone(underground_pos)
+			underground_pos = V.vclone(new_pos)
+		end
+	end
+
+	local function move_underground(tower)
+		if not underground_pos then
+			return false
+		end
+
+		local underground_chase_distance = this.chase_speed
+		local underground_chase_distance_kill = underground_chase_distance * 2
+		local underground_chase_interval = fts(8)
+		local underground_passive_interval = this.wander_interval
+		tp_target = next_tp_ts < store.tick_ts and find_target_for_tp(tower) or nil
+		local time_since_last_movement = store.tick_ts - last_movement_ts
+
+		if tp_target then
+			if underground_chase_interval < time_since_last_movement then
+				local distance = V.dist(underground_pos.x, underground_pos.y, tp_target.pos.x, tp_target.pos.y)
+
+				if distance < underground_chase_distance_kill then
+					local tpos = V.vclone(tp_target.pos)
+					U.y_wait(store, fts(10))
+					set_underground_pos(tpos)
+					spawn_dragon_underground_fx(true)
+					return true
+				end
+
+				local normalized_x, normalized_y = V.normalize(tp_target.pos.x - underground_pos.x, tp_target.pos.y - underground_pos.y)
+				set_underground_pos(V.v(underground_pos.x + normalized_x * underground_chase_distance, underground_pos.y + normalized_y * underground_chase_distance))
+				last_movement_ts = store.tick_ts
+				spawn_dragon_underground_fx(nil, 5)
+			end
+		elseif underground_passive_interval < time_since_last_movement then
+			local p = table.random(this.fx_points)
+			last_movement_ts = store.tick_ts
+			set_underground_pos(p.pos)
+			spawn_dragon_underground_fx(nil, 5)
+		end
+
+		return false
+	end
+
+	local function get_rally_pos(t)
+		if t.barrack and t.barrack.rally_pos then
+			return V.vclone(t.barrack.rally_pos)
+		end
+
+		return V.vclone(t.tower.default_rally_pos)
+	end
+
+	local function get_new_fx_points()
+		local points = {}
+		local inner_fx_radius = this.max_range * 0.4
+		local middle_fx_radius = this.max_range * 0.6
+		local outer_fx_radius = this.max_range * 0.8
+		local aspect = 0.7
+		local roots_count = this.max_range / 6
+
+		for i = 1, roots_count do
+			local r = outer_fx_radius
+
+			if i % 3 == 0 then
+				r = middle_fx_radius
+			elseif i % 2 == 0 then
+				r = inner_fx_radius
+			end
+
+			local p = {}
+			p.pos = U.point_on_ellipse(this.pos, r, 2 * math.pi * i / roots_count)
+			p.terrain = GR:cell_type(p.pos.x, p.pos.y)
+
+			if P:valid_node_nearby(p.pos.x, p.pos.y, 1) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_CLIFF) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_WATER) and band(p.terrain, bor(TERRAIN_LAND, TERRAIN_ICE)) ~= 0 then
+				table.insert(points, p)
+			end
+		end
+
+		return points
+	end
+
+	local function update_fx_points()
+		this.fx_points = get_new_fx_points()
+		aura_controller.fx_points = get_new_fx_points()
+	end
+
+	this.mist_decals = {}
+
+	local function remove_mist()
+		for _, mist in pairs(this.mist_decals) do
+			mist.tween.reverse = true
+			mist.tween.ts = store.tick_ts
+			mist.tween.remove = true
+		end
+	end
+
+	local function add_mist()
+		this.fx_points = table.random_order(this.fx_points)
+
+		for i = 1, #this.fx_points do
+			local p = this.fx_points[i]
+			local mist = E:create_entity(this.decal_mist)
+			mist.render.sprites[1].ts = store.tick_ts - 2 * math.random()
+			mist.render.sprites[1].flip_x = math.random() < 0.5
+			mist.pos = p.pos
+			mist.tween.ts = store.tick_ts
+			queue_insert(store, mist)
+			table.insert(this.mist_decals, mist)
+		end
+	end
+
+	local function y_find_tower()
+		local found_tower = false
+
+		while true do
+			for _, e in pairs(store.entities) do
+				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
+					found_tower = true
+
+					if e.build_name then
+						break
+					else
+						return e
+					end
+				end
+			end
+
+			if not found_tower then
+				return nil
+			end
+
+			if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
+				U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon, true)
+			end
+
+			coroutine.yield()
+		end
+
+		return nil
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_gradiente)
+
+	if this.buy_anim_dragon_ts then
+		U.animation_start(this, "buy", nil, this.buy_anim_dragon_ts, false, this.render.sid_dragon, true)
+	else
+		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
+	end
+
+	this.target = y_find_tower()
+
+	if not this.target then
+		queue_remove(store, this)
+		return
+	end
+
+	S:queue("TerrainWukongElementalHolderEvolve")
+	U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_gradiente)
+
+	if this.render.sprites[this.render.sid_dragon].name ~= "buy" or U.animation_finished(this, this.render.sid_dragon, 1) then
+		U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+		this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+	end
+
+	this.target.cannot_be_swapped = true
+	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+
+	if this.target.attacks and this.target.attacks.range then
+		this.max_range = this.target.attacks.range
+	elseif this.target.barrack and this.target.barrack.rally_range then
+		this.max_range = this.target.barrack.rally_range
+	else
+		this.max_range = this.default_max_range
+	end
+
+	this.ability_cooldown = this.first_cooldown
+
+	if store.elemental_holders_cd and store.elemental_holders_cd[this.target.tower.holder_id] then
+		this.ability_cooldown = store.elemental_holders_cd[this.target.tower.holder_id]
+	end
+
+	if this.ability_cooldown < 1.5 then
+		this.ability_cooldown = 1.5
+	end
+
+	local start_ts = store.tick_ts
+	local start_ts_reduce_armor = store.tick_ts
+	aura_controller = E:create_entity(this.controller_aura_healing)
+	aura_controller.pos = this.pos
+	aura_controller.aura.radius = this.max_range
+	queue_insert(store, aura_controller)
+	update_fx_points()
+	add_mist()
+	local show_wings_ts = store.tick_ts + fts(120)
+	local hide_wings_ts
+	local show_cooldown_ts = show_wings_ts + 1
+	local cast_ts, end_ts
+	local start_ts = store.tick_ts
+	local dragon_decals_end_ts, next_dragon_decal_ts, did_cooldown_fx_ts
+
+	while true do
+		local tower = store.entities[this.target.id]
+
+		if not tower then
+			tower = y_find_tower()
+
+			if not tower then
+				remove_mist()
+				queue_remove(store, aura_controller)
+				queue_remove(store, this)
+				return
+			end
+
+			this.target = tower
+			this.target.cannot_be_swapped = true
+			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+			U.y_wait(store, 0.1)
+
+			if this.target.attacks and this.target.attacks.range then
+				this.max_range = this.target.attacks.range
+			elseif this.target.barrack and this.target.barrack.rally_range then
+				this.max_range = this.target.barrack.rally_range
+			else
+				this.max_range = this.default_max_range
+			end
+
+			aura_controller.aura.radius = this.max_range
+			update_fx_points()
+			remove_mist()
+			add_mist()
+		end
+
+		if this.render.sprites[this.render.sid_dragon].name == "buy" and U.animation_finished(this, this.render.sid_dragon, 1) then
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+		end
+
+		if this.target.change_range then
+			this.max_range = this.target.attacks.range
+			this.target.change_range = false
+			aura_controller.aura.radius = this.max_range
+		end
+
+		if this.update_on_path_active then
+			for i = #this.update_on_path_active, 1, -1 do
+				if P:is_path_active(this.update_on_path_active[i]) then
+					update_fx_points()
+					table.remove(this.update_on_path_active, i)
+				end
+			end
+		end
+
+		if not did_cooldown_fx_ts and tower and store.tick_ts - start_ts > this.ability_cooldown - 3 and show_cooldown_ts and show_cooldown_ts < store.tick_ts then
+			show_cooldown_ts = nil
+			did_cooldown_fx_ts = store.tick_ts
+			U.y_wait(store, fts(6))
+			this.tween.props[this.tween.sid_hide_hojas].disabled = false
+			this.tween.props[this.tween.sid_hide_hojas].ts = store.tick_ts
+			this.tween.props[this.tween.sid_show_hojas].disabled = true
+		end
+
+		if move_underground(tower) then
+			start_ts = store.tick_ts
+			local enemies = U.find_enemies_in_range(store.entities, tp_target.pos, 0, this.teleport_affect_radius, this.vis_flags, this.vis_bans, function(e)
+				return e.health and not e.health.dead and not table.contains(affected_target_ids, e.id)
+			end)
+			enemies = table.random_order(enemies or {})
+
+			for i, e in ipairs(enemies or {}) do
+				if i > this.tp_max_targets then
+					break
+				end
+
+				local mod_teleport = E:create_entity(this.mod_teleport)
+				mod_teleport.modifier.target_id = e.id
+				mod_teleport.modifier.source_id = this.id
+				mod_teleport.nodes_offset = math.random(-this.tp_distance_nodes_max, -this.tp_distance_nodes_min)
+				queue_insert(store, mod_teleport)
+				table.insert(affected_target_ids, e.id)
+			end
+
+			tp_target = nil
+			next_tp_ts = store.tick_ts + this.delay_between_tps
+
+			if end_ts and end_ts < store.tick_ts then
+				end_ts = nil
+				set_underground_pos(nil)
+				this.ability_cooldown = this.cooldown
+				U.y_wait(store, fts(30))
+				U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+				this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+				U.animation_start(this, "back_to_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+				show_wings_ts = store.tick_ts + fts(36)
+			end
+
+			goto label_2120_0
+		end
+
+		if did_cooldown_fx_ts and did_cooldown_fx_ts + 0.5 < store.tick_ts and tower and not underground_pos and store.tick_ts - start_ts > this.ability_cooldown then
+			tp_target = find_target_for_tp(tower)
+
+			if tp_target then
+				U.sprites_show(this, this.render.sid_dragon_ability, this.render.sid_dragon_ability, true)
+				this.render.sprites[this.render.sid_dragon_ability].hide_after_runs = 1
+				U.animation_start(this, "start_hability", nil, store.tick_ts, false, this.render.sid_dragon_ability, true)
+				S:queue("TerrainWukongElementalHolderFireActiveIn")
+				this.render.sprites[this.render.sid_dragon_ability].pos = V.vclone(tower.tower.default_rally_pos)
+				hide_wings_ts = store.tick_ts + fts(3)
+				last_movement_ts = store.tick_ts + 1.5
+				underground_pos = V.vclone(this.target.tower.default_rally_pos)
+				affected_target_ids = {}
+				end_ts = store.tick_ts + this.duration
+			end
+		elseif end_ts and end_ts < store.tick_ts and not tp_target then
+			end_ts = nil
+			tp_target = nil
+			set_underground_pos(nil)
+			this.ability_cooldown = this.cooldown
+			U.y_wait(store, fts(30))
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "back_to_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+			show_wings_ts = store.tick_ts + fts(106)
+		elseif show_wings_ts and show_wings_ts < store.tick_ts then
+			show_cooldown_ts = store.tick_ts + 1
+			show_wings_ts = nil
+			this.tween.reverse = false
+			this.tween.props[this.tween.sid_wings].disabled = false
+			this.tween.props[this.tween.sid_wings].ts = store.tick_ts
+		elseif hide_wings_ts and hide_wings_ts < store.tick_ts then
+			hide_wings_ts = nil
+			this.tween.reverse = true
+			this.tween.props[this.tween.sid_wings].disabled = false
+			this.tween.props[this.tween.sid_wings].ts = store.tick_ts
+		end
+
+		::label_2120_0::
+		coroutine.yield()
+	end
+
+	queue_remove(store, aura_controller)
+	queue_remove(store, this)
+end
+
+scripts.aura_elemental_water_healing = {}
+
+function scripts.aura_elemental_water_healing.update(this, store, script)
+	local first_hit_ts
+	local last_hit_ts = 0
+	local cycles_count = 0
+	local victims_count = 0
+
+	if this.aura.track_source and this.aura.source_id then
+		local te = store.entities[this.aura.source_id]
+
+		if te and te.pos then
+			this.pos = te.pos
+		end
+	end
+
+	last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+	if this.aura.apply_delay then
+		last_hit_ts = last_hit_ts + this.aura.apply_delay
+	end
+
+	while true do
+		if this.interrupt then
+			last_hit_ts = 1e+99
+		end
+
+		if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
+			break
+		end
+
+		if this.aura.stop_on_max_count and this.aura.max_count and victims_count >= this.aura.max_count then
+			break
+		end
+
+		if this.aura.track_source and this.aura.source_id then
+			local te = store.entities[this.aura.source_id]
+
+			if not te or te.health and te.health.dead and not this.aura.track_dead then
+				break
+			end
+		end
+
+		if this.aura.requires_magic then
+			local te = store.entities[this.aura.source_id]
+
+			if not te or not te.enemy then
+				goto label_2133_0
+			end
+
+			if this.render then
+				this.render.sprites[1].hidden = not te.enemy.can_do_magic
+			end
+
+			if not te.enemy.can_do_magic then
+				goto label_2133_0
+			end
+		end
+
+		if this.aura.source_vis_flags and this.aura.source_id then
+			local te = store.entities[this.aura.source_id]
+
+			if te and te.vis and band(te.vis.bans, this.aura.source_vis_flags) ~= 0 then
+				goto label_2133_0
+			end
+		end
+
+		if this.aura.requires_alive_source and this.aura.source_id then
+			local te = store.entities[this.aura.source_id]
+
+			if te and te.health and te.health.dead then
+				goto label_2133_0
+			end
+		end
+
+		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+		-- block empty
+		else
+			if this.render and this.aura.cast_resets_sprite_id then
+				this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
+			end
+
+			first_hit_ts = first_hit_ts or store.tick_ts
+			last_hit_ts = store.tick_ts
+			cycles_count = cycles_count + 1
+			local targets = table.filter(store.entities, function(k, v)
+				return v.unit and v.vis and v.health and not v.health.dead and v.health.hp / v.health.hp_max < this.min_health_factor and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
+			end)
+			local old_victims_count = victims_count
+
+			for i, target in ipairs(targets) do
+				if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
+					break
+				end
+
+				if this.aura.max_count and victims_count >= this.aura.max_count then
+					break
+				end
+
+				local mods = this.aura.mods or {this.aura.mod}
+
+				for _, mod_name in pairs(mods) do
+					local new_mod = E:create_entity(mod_name)
+					new_mod.modifier.level = this.aura.level
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
+
+					if this.aura.hide_source_fx and target.id == this.aura.source_id then
+						new_mod.render = nil
+					end
+
+					queue_insert(store, new_mod)
+					victims_count = victims_count + 1
+				end
+			end
+
+			if old_victims_count < victims_count then
+				local heal_fx_times = math.max(math.floor(#this.fx_points / 10), 1)
+
+				for i = 1, heal_fx_times do
+					local fx = E:create_entity(this.heal_fx)
+					fx.pos = table.random(this.fx_points).pos
+					fx.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, fx)
+				end
+			end
+		end
+
+		::label_2133_0::
+		coroutine.yield()
+	end
+
+	signal.emit("aura-apply-mod-victims", this, victims_count)
+	queue_remove(store, this)
+end
+
+scripts.controller_elemental_earth = {}
+
+function scripts.controller_elemental_earth.update(this, store)
+	this.spawns_ref = {}
+
+	local function y_find_tower()
+		local found_tower = false
+
+		while true do
+			for _, e in pairs(store.entities) do
+				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
+					found_tower = true
+
+					if e.build_name then
+						break
+					else
+						return e
+					end
+				end
+			end
+
+			if not found_tower then
+				return nil
+			end
+
+			coroutine.yield()
+		end
+
+		return nil
+	end
+
+	local function find_target()
+		return U.find_foremost_enemy(store.entities, this.pos, 0, this.max_range, false, this.vis_flags, this.vis_bans)
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_gradiente)
+
+	if this.buy_anim_dragon_ts then
+		U.animation_start(this, "buy", nil, this.buy_anim_dragon_ts, false, this.render.sid_dragon, true)
+	else
+		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
+	end
+
+	this.target = y_find_tower()
+
+	if not this.target then
+		queue_remove(store, this)
+		return
+	end
+
+	S:queue("TerrainWukongElementalHolderEvolve")
+	U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_gradiente)
+
+	if this.render.sprites[this.render.sid_dragon].name ~= "buy" or U.animation_finished(this, this.render.sid_dragon, 1) then
+		U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+		this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+	end
+
+	this.target.cannot_be_swapped = true
+	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+
+	if this.target.attacks and this.target.attacks.range then
+		this.max_range = this.target.attacks.range
+	elseif this.target.barrack and this.target.barrack.rally_range then
+		this.max_range = this.target.barrack.rally_range
+	else
+		this.max_range = this.default_max_range
+	end
+
+	local controller = E:create_entity(this.controller_aura_increase_health)
+	controller.pos = this.pos
+	controller.aura.radius = this.max_range
+	controller.aura.source_id = this.id
+	controller.aura.track_source = true
+	queue_insert(store, controller)
+	this.ability_cooldown = this.first_cooldown
+
+	if store.elemental_holders_cd and store.elemental_holders_cd[this.target.tower.holder_id] then
+		this.ability_cooldown = store.elemental_holders_cd[this.target.tower.holder_id]
+	end
+
+	if this.ability_cooldown < 1.5 then
+		this.ability_cooldown = 1.5
+	end
+
+	local show_wings_ts = store.tick_ts + fts(120)
+	local hide_wings_ts
+	local show_cooldown_ts = show_wings_ts + 1
+	local cast_ts, end_ts
+	local start_ts = store.tick_ts
+	local next_spawn_ts, did_cooldown_fx_ts
+
+	while true do
+		local tower = store.entities[this.target.id]
+
+		if not tower then
+			local new_tower = y_find_tower()
+
+			if not new_tower then
+				for _, spawn in pairs(this.spawns_ref) do
+					queue_remove(store, spawn)
+				end
+
+				queue_remove(store, this)
+				return
+			end
+
+			this.target = new_tower
+			this.target.cannot_be_swapped = true
+			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+			U.y_wait(store, 0.1)
+
+			if this.target.attacks and this.target.attacks.range then
+				this.max_range = this.target.attacks.range
+			elseif this.target.barrack and this.target.barrack.rally_range then
+				this.max_range = this.target.barrack.rally_range
+			else
+				this.max_range = this.default_max_range
+			end
+
+			controller.aura.radius = this.max_range
+		end
+
+		if this.render.sprites[this.render.sid_dragon].name == "buy" and U.animation_finished(this, this.render.sid_dragon, 1) then
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+		end
+
+		if this.target.change_range then
+			this.max_range = this.target.attacks.range
+			this.target.change_range = false
+			controller.aura.radius = this.max_range
+		end
+
+		if not did_cooldown_fx_ts and tower and store.tick_ts - start_ts > this.ability_cooldown - 3 and show_cooldown_ts and show_cooldown_ts < store.tick_ts then
+			show_cooldown_ts = nil
+			did_cooldown_fx_ts = store.tick_ts
+			U.y_wait(store, fts(6))
+			this.tween.props[this.tween.sid_hide_hojas].disabled = false
+			this.tween.props[this.tween.sid_hide_hojas].ts = store.tick_ts
+			this.tween.props[this.tween.sid_show_hojas].disabled = true
+		end
+
+		if did_cooldown_fx_ts and did_cooldown_fx_ts + 0.5 < store.tick_ts and tower and store.tick_ts - start_ts > this.ability_cooldown and #this.spawns_ref < this.max_spawns then
+			if store.wave_group_number < 1 then
+				goto label_2135_0
+			elseif not this.rand_cooldown_done then
+				this.rand_cooldown_done = true
+				start_ts = store.tick_ts - this.ability_cooldown + math.random() * 3
+				goto label_2135_0
+			end
+
+			start_ts = store.tick_ts
+			this.ability_cooldown = this.cooldown
+			local spawn_pos_list = {}
+
+			if this.holder_spawn_pos[this.target_holder_id] then
+				for i = 1, #this.holder_spawn_pos[this.target_holder_id] do
+					table.insert(spawn_pos_list, this.holder_spawn_pos[this.target_holder_id][i])
+				end
+			end
+
+			table.insert(spawn_pos_list, this.target.tower.default_rally_pos)
+			local selected_spawn_pos = spawn_pos_list[math.random(#spawn_pos_list)]
+			this._pending_spawn_position = V.vclone(selected_spawn_pos)
+			U.sprites_show(this, this.render.sid_dragon_ability, this.render.sid_dragon_ability, true)
+			this.render.sprites[this.render.sid_dragon_ability].hide_after_runs = 1
+			U.animation_start(this, "start_hability", nil, store.tick_ts, false, this.render.sid_dragon_ability, true)
+			S:queue("TerrainWukongElementalHolderFireActiveIn")
+			S:queue(this.spawn_sound)
+			this.render.sprites[this.render.sid_dragon_ability].pos = V.vclone(this._pending_spawn_position)
+			hide_wings_ts = store.tick_ts + fts(3)
+			next_spawn_ts = {}
+
+			for i = 1, this.spawns_amount do
+				table.insert(next_spawn_ts, store.tick_ts + 0.3 * i + 1.6)
+			end
+
+			end_ts = store.tick_ts + this.spawns_amount * 0.3 + 2.6
+		end
+
+		if next_spawn_ts and #next_spawn_ts > 0 and store.tick_ts > next_spawn_ts[1] then
+			table.remove(next_spawn_ts, 1)
+			local nearest_node = P:nearest_nodes(this._pending_spawn_position.x, this._pending_spawn_position.y)[1]
+			local pi, spi, ni = unpack(nearest_node)
+			local npos
+			local left_right = true
+			local spawn_cycle = this.spawns_amount < 2 and 1 or 2
+
+			for i = 1, spawn_cycle do
+				for k = 1, this.spawns_amount * 25, 2 do
+					local spi = km.zmod(#this.spawns_ref + 1, 4)
+
+					if spi == 1 then
+					-- block empty
+					elseif spi == 2 then
+						spi = 2
+					elseif spi == 3 then
+						spi = 1
+					elseif spi == 4 then
+						spi = 3
+					end
+
+					npos = P:node_pos(pi, spi, ni + k * (left_right and 1 or -1))
+					left_right = not left_right
+					local near_other_spawn = false
+
+					for _, spawn in pairs(this.spawns_ref) do
+						if V.dist(npos.x, npos.y, spawn._original_pos.x, spawn._original_pos.y) < 40 then
+							near_other_spawn = true
+							break
+						end
+					end
+
+					if not near_other_spawn then
+						break
+					end
+				end
+
+				local spawn = E:create_entity(this.unit_spawn)
+				spawn.pos = npos
+				spawn._original_pos = V.vclone(spawn.pos)
+				spawn.source_holder = this
+				queue_insert(store, spawn)
+				table.insert(this.spawns_ref, spawn)
+
+				if #this.spawns_ref > this.max_spawns then
+					goto label_2135_0
+				end
+			end
+
+			if #this.spawns_ref > this.max_spawns then
+				goto label_2135_0
+			end
+		end
+
+		if end_ts and end_ts < store.tick_ts then
+			end_ts = nil
+			this.ability_cooldown = this.cooldown
+			U.y_wait(store, fts(30))
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "back_to_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+			show_wings_ts = store.tick_ts + fts(106)
+		elseif show_wings_ts and show_wings_ts < store.tick_ts then
+			show_cooldown_ts = store.tick_ts + 1
+			show_wings_ts = nil
+			this.tween.reverse = false
+			this.tween.props[this.tween.sid_wings].disabled = false
+			this.tween.props[this.tween.sid_wings].ts = store.tick_ts
+		elseif hide_wings_ts and hide_wings_ts < store.tick_ts then
+			hide_wings_ts = nil
+			this.tween.reverse = true
+			this.tween.props[this.tween.sid_wings].disabled = false
+			this.tween.props[this.tween.sid_wings].ts = store.tick_ts
+		end
+
+		::label_2135_0::
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.soldier_earth_elemental = {}
+
+function scripts.soldier_earth_elemental.update(this, store, script)
+	local brk, stam, star
+	local source = this.source
+	this.reinforcement.ts = store.tick_ts
+	this.nav_rally.pos = V.vclone(this.pos)
+	this.nav_rally.center = V.vclone(this.pos)
+	local starting_pos = V.vclone(this.pos)
+	this.nav_rally.pos = starting_pos
+
+	if this.reinforcement.fade or this.reinforcement.fade_in then
+		SU.y_reinforcement_fade_in(store, this)
+	elseif this.render.sprites[1].name == "raise" then
+		if this.sound_events and this.sound_events.raise then
+			S:queue(this.sound_events.raise)
+		end
+
+		this.health_bar.hidden = true
+		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	local patrol_pos = V.vclone(this.pos)
+	patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
+	local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
+	local pi, spi, ni = unpack(nearest_node)
+	local npos = P:node_pos(pi, spi, ni)
+	local patrol_pos_2 = V.vclone(this.pos)
+	patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
+	local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
+	local pi, spi, ni = unpack(nearest_node)
+	local npos_2 = P:node_pos(pi, spi, ni)
+
+	if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
+		patrol_pos = V.vclone(patrol_pos_2)
+	end
+
+	local idle_ts = store.tick_ts
+	local patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+
+	while true do
+		if this.health.dead then
+			SU.y_soldier_death(store, this)
+			table.removeobject(this.source_holder.spawns_ref, this)
+			queue_remove(store, this)
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+			idle_ts = store.tick_ts
+			patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+		else
+			SU.soldier_courage_upgrade(store, this)
+
+			if this.melee then
+				brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+				if brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+					idle_ts = store.tick_ts
+					patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+					goto label_2138_0
+				end
+			end
+
+			if this.melee.continue_in_cooldown and stam == A_IN_COOLDOWN then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+
+				if patrol_cd < store.tick_ts - idle_ts then
+					if this.nav_rally.pos == starting_pos then
+						this.nav_rally.pos = patrol_pos
+					else
+						this.nav_rally.pos = starting_pos
+					end
+
+					idle_ts = store.tick_ts
+					patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+				end
+			end
+		end
+
+		::label_2138_0::
+		coroutine.yield()
+	end
+end
+
+scripts.mod_elemental_earth_increase_health = {}
+
+function scripts.mod_elemental_earth_increase_health.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
+		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
+		return false
+	end
+
+	local health_percentage = target.health.hp / target.health.hp_max
+	target.health.hp_max = target.health.hp_max * this.extra_health_multiplier
+	target.health.hp = target.health.hp_max * health_percentage
+	return true
+end
+
+function scripts.mod_elemental_earth_increase_health.update(this, store, script)
+	local m = this.modifier
+	local fx_ts = 0
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+		return
+	end
+
+	this.pos = target.pos
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead then
+			break
+		end
+
+		if store.tick_ts - m.ts >= m.duration then
+			break
+		end
+
+		if this.render and m.use_mod_offset and target.unit.mod_offset then
+			local so = this.render.sprites[1].offset
+			so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+function scripts.mod_elemental_earth_increase_health.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		local health_percentage = target.health.hp / target.health.hp_max
+		target.health.hp_max = target.health.hp_max / this.extra_health_multiplier
+		target.health.hp = target.health.hp_max * health_percentage
+	end
+
+	return true
+end
+
+scripts.controller_elemental_metal = {}
+
+function scripts.controller_elemental_metal.update(this, store)
+	local underground_pos, last_underground_pos
+	local last_movement_ts = store.tick_ts
+	local next_steal_ts = store.tick_ts
+	local steal_target
+	local affected_target_ids = {}
+
+	local function find_target_for_steal(tower)
+		return U.find_foremost_enemy(store.entities, tpos(tower), 0, this.max_range, 0, this.vis_flags, this.vis_bans, function(e)
+			return e.health and not e.health.dead and not table.contains(affected_target_ids, e.id)
+		end)
+	end
+
+	local function spawn_dragon_underground_fx(kill, loops)
+		local fx = E:create_entity(kill and this.root_decal_dragon_kill or this.root_decal_dragon)
+
+		if not last_underground_pos then
+			fx.render.sprites[1].flip_x = math.random() < 0.5
+		else
+			fx.render.sprites[1].flip_x = last_underground_pos.x > underground_pos.x
+		end
+
+		fx.loop_times = loops and loops or 1
+		fx.delay = 0
+		fx.pos = V.vclone(underground_pos)
+		queue_insert(store, fx)
+	end
+
+	local function set_underground_pos(new_pos)
+		if not new_pos then
+			last_underground_pos = nil
+			underground_pos = nil
+		else
+			last_underground_pos = V.vclone(underground_pos)
+			underground_pos = V.vclone(new_pos)
+		end
+	end
+
+	local function move_underground(tower)
+		if not underground_pos then
+			return false
+		end
+
+		local underground_chase_distance = this.chase_speed
+		local underground_chase_distance_kill = underground_chase_distance * 2
+		local underground_chase_interval = fts(8)
+		local underground_passive_interval = this.wander_interval
+		steal_target = next_steal_ts < store.tick_ts and find_target_for_steal(tower) or nil
+		local time_since_last_movement = store.tick_ts - last_movement_ts
+
+		if steal_target then
+			if underground_chase_interval < time_since_last_movement then
+				local distance = V.dist(underground_pos.x, underground_pos.y, steal_target.pos.x, steal_target.pos.y)
+
+				if distance < underground_chase_distance_kill then
+					local tpos = V.vclone(steal_target.pos)
+					local tid = steal_target.id
+					U.y_wait(store, fts(10))
+					set_underground_pos(tpos)
+					spawn_dragon_underground_fx(true)
+					return true
+				end
+
+				local normalized_x, normalized_y = V.normalize(steal_target.pos.x - underground_pos.x, steal_target.pos.y - underground_pos.y)
+				set_underground_pos(V.v(underground_pos.x + normalized_x * underground_chase_distance, underground_pos.y + normalized_y * underground_chase_distance))
+				last_movement_ts = store.tick_ts
+				spawn_dragon_underground_fx(nil, 5)
+			end
+		elseif underground_passive_interval < time_since_last_movement then
+			local p = table.random(this.fx_points)
+			last_movement_ts = store.tick_ts
+			set_underground_pos(p.pos)
+			spawn_dragon_underground_fx(nil, 5)
+		end
+
+		return false
+	end
+
+	local function get_rally_pos(t)
+		if t.barrack and t.barrack.rally_pos then
+			return V.vclone(t.barrack.rally_pos)
+		end
+
+		return V.vclone(t.tower.default_rally_pos)
+	end
+
+	local function get_new_fx_points()
+		local points = {}
+		local inner_fx_radius = this.max_range * 0.4
+		local middle_fx_radius = this.max_range * 0.6
+		local outer_fx_radius = this.max_range * 0.8
+		local aspect = 0.7
+		local roots_count = this.max_range / 6
+
+		for i = 1, roots_count do
+			local r = outer_fx_radius
+
+			if i % 3 == 0 then
+				r = middle_fx_radius
+			elseif i % 2 == 0 then
+				r = inner_fx_radius
+			end
+
+			local p = {}
+			p.pos = U.point_on_ellipse(this.pos, r, 2 * math.pi * i / roots_count)
+			p.terrain = GR:cell_type(p.pos.x, p.pos.y)
+
+			if P:valid_node_nearby(p.pos.x, p.pos.y, 1) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_CLIFF) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_WATER) and band(p.terrain, bor(TERRAIN_LAND, TERRAIN_ICE)) ~= 0 then
+				table.insert(points, p)
+			end
+		end
+
+		return points
+	end
+
+	local function update_fx_points()
+		this.fx_points = get_new_fx_points()
+	end
+
+	local function y_find_tower()
+		local found_tower = false
+
+		while true do
+			for _, e in pairs(store.entities) do
+				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
+					found_tower = true
+
+					if e.build_name then
+						break
+					else
+						return e
+					end
+				end
+			end
+
+			if not found_tower then
+				return nil
+			end
+
+			coroutine.yield()
+		end
+
+		return nil
+	end
+
+	local function find_target()
+		return U.find_foremost_enemy(store.entities, this.pos, 0, this.max_range, false, this.vis_flags, this.vis_bans)
+	end
+
+	local function add_price_multiplier()
+		if not this.target.tower.upgrade_price_multiplier then
+			this.target.tower.upgrade_price_multiplier = 1
+		end
+
+		this.target.tower.upgrade_price_multiplier = this.target.tower.upgrade_price_multiplier * this.upgrade_price_multiplier
+	end
+
+	local function remove_price_multiplier()
+		if not this.target.tower.upgrade_price_multiplier then
+			return
+		end
+
+		this.target.tower.upgrade_price_multiplier = this.target.tower.upgrade_price_multiplier / this.upgrade_price_multiplier
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_gradiente)
+
+	if this.buy_anim_dragon_ts then
+		U.animation_start(this, "buy", nil, this.buy_anim_dragon_ts, false, this.render.sid_dragon, true)
+	else
+		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
+	end
+
+	this.target = y_find_tower()
+
+	if not this.target then
+		queue_remove(store, this)
+		return
+	end
+
+	S:queue("TerrainWukongElementalHolderEvolve")
+	U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_gradiente)
+
+	if this.render.sprites[this.render.sid_dragon].name ~= "buy" or U.animation_finished(this, this.render.sid_dragon, 1) then
+		U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+		this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+	end
+
+	this.target.cannot_be_swapped = true
+	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+
+	if this.target.attacks and this.target.attacks.range then
+		this.max_range = this.target.attacks.range
+	elseif this.target.barrack and this.target.barrack.rally_range then
+		this.max_range = this.target.barrack.rally_range
+	else
+		this.max_range = this.default_max_range
+	end
+
+	add_price_multiplier()
+	this.ability_cooldown = this.first_cooldown
+
+	if store.elemental_holders_cd and store.elemental_holders_cd[this.target.tower.holder_id] then
+		this.ability_cooldown = store.elemental_holders_cd[this.target.tower.holder_id]
+	end
+
+	if this.ability_cooldown < 1.5 then
+		this.ability_cooldown = 1.5
+	end
+
+	update_fx_points()
+	local show_wings_ts = store.tick_ts + fts(120)
+	local hide_wings_ts
+	local show_cooldown_ts = show_wings_ts + 1
+	local cast_ts, end_ts
+	local start_ts = store.tick_ts
+	local dragon_decals_end_ts, next_dragon_decal_ts, did_cooldown_fx_ts
+
+	while true do
+		local tower = store.entities[this.target.id]
+
+		if not tower then
+			local new_tower = y_find_tower()
+
+			if not new_tower then
+				remove_price_multiplier()
+				queue_remove(store, this)
+				return
+			end
+
+			tower = new_tower
+			this.target = new_tower
+			this.target.cannot_be_swapped = true
+			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+			U.y_wait(store, 0.1)
+
+			if this.target.attacks and this.target.attacks.range then
+				this.max_range = this.target.attacks.range
+			elseif this.target.barrack and this.target.barrack.rally_range then
+				this.max_range = this.target.barrack.rally_range
+			else
+				this.max_range = this.default_max_range
+			end
+
+			update_fx_points()
+			add_price_multiplier()
+		end
+
+		if this.render.sprites[this.render.sid_dragon].name == "buy" and U.animation_finished(this, this.render.sid_dragon, 1) then
+			U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+			U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+		end
+
+		if this.target.change_range then
+			this.max_range = this.target.attacks.range
+			this.target.change_range = false
+		end
+
+		if this.update_on_path_active then
+			for i = #this.update_on_path_active, 1, -1 do
+				if P:is_path_active(this.update_on_path_active[i]) then
+					update_fx_points()
+					table.remove(this.update_on_path_active, i)
+				end
+			end
+		end
+
+		if not did_cooldown_fx_ts and tower and store.tick_ts - start_ts > this.ability_cooldown - 3 and show_cooldown_ts and show_cooldown_ts < store.tick_ts then
+			show_cooldown_ts = nil
+			did_cooldown_fx_ts = store.tick_ts
+			U.y_wait(store, fts(6))
+			this.tween.props[this.tween.sid_hide_hojas].disabled = false
+			this.tween.props[this.tween.sid_hide_hojas].ts = store.tick_ts
+			this.tween.props[this.tween.sid_show_hojas].disabled = true
+		else
+			if move_underground(tower) then
+				start_ts = store.tick_ts
+				local enemies = U.find_enemies_in_range(store.entities, steal_target.pos, 0, this.steal_affect_radius, this.vis_flags, this.vis_bans, function(e)
+					return e.health and not e.health.dead and not table.contains(affected_target_ids, e.id)
+				end)
+				enemies = table.random_order(enemies or {})
+
+				for i, e in ipairs(enemies or {}) do
+					if i > this.gold_steal_group_max_size then
+						break
+					end
+
+					local fx = E:create_entity(this.gold_fx)
+					fx.pos = V.vclone(e.pos)
+
+					if e.unit.hit_offset then
+						fx.pos.x, fx.pos.y = fx.pos.x + e.unit.hit_offset.x, fx.pos.y + e.unit.hit_offset.y
+
+						if e.unit.head_offset then
+							fx.pos.x, fx.pos.y = fx.pos.x + e.unit.head_offset.x, fx.pos.y + e.unit.head_offset.y
+						end
+					end
+
+					fx.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, fx)
+					S:queue("TerrainWukongElementalHolderMetalActive")
+
+					if band(F_BOSS, e.vis.flags) ~= 0 then
+						store.player_gold = store.player_gold + this.gold_steal_amount_boss
+					else
+						store.player_gold = store.player_gold + this.gold_steal_amount
+					end
+
+					table.insert(affected_target_ids, e.id)
+				end
+
+				steal_target = nil
+				next_steal_ts = store.tick_ts + this.delay_between_steals
+
+				if end_ts and end_ts < store.tick_ts then
+					end_ts = nil
+					set_underground_pos(nil)
+					this.ability_cooldown = this.cooldown
+					U.y_wait(store, fts(30))
+					U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+					this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+					U.animation_start(this, "back_to_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+					show_wings_ts = store.tick_ts + fts(106)
+				end
+
+				goto label_2142_0
+			end
+
+			if did_cooldown_fx_ts and did_cooldown_fx_ts + 0.5 < store.tick_ts and tower and not underground_pos and store.tick_ts - start_ts > this.ability_cooldown then
+				steal_target = find_target_for_steal(tower)
+
+				if steal_target then
+					U.sprites_show(this, this.render.sid_dragon_ability, this.render.sid_dragon_ability, true)
+					this.render.sprites[this.render.sid_dragon_ability].hide_after_runs = 1
+					U.animation_start(this, "start_hability", nil, store.tick_ts, false, this.render.sid_dragon_ability, true)
+					S:queue("TerrainWukongElementalHolderFireActiveIn")
+					this.render.sprites[this.render.sid_dragon_ability].pos = V.vclone(tower.tower.default_rally_pos)
+					hide_wings_ts = store.tick_ts + fts(3)
+					last_movement_ts = store.tick_ts + 1.5
+					underground_pos = V.vclone(this.target.tower.default_rally_pos)
+					affected_target_ids = {}
+					end_ts = store.tick_ts + this.duration
+				end
+			elseif end_ts and end_ts < store.tick_ts and not steal_target then
+				end_ts = nil
+				steal_target = nil
+				set_underground_pos(nil)
+				this.ability_cooldown = this.cooldown
+				U.y_wait(store, fts(30))
+				U.sprites_show(this, this.render.sid_dragon, this.render.sid_dragon, true)
+				this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
+				U.animation_start(this, "back_to_tower", nil, store.tick_ts, false, this.render.sid_dragon)
+				show_wings_ts = store.tick_ts + fts(36)
+			elseif show_wings_ts and show_wings_ts < store.tick_ts then
+				show_cooldown_ts = store.tick_ts + 1
+				show_wings_ts = nil
+				this.tween.reverse = false
+				this.tween.props[this.tween.sid_wings].disabled = false
+				this.tween.props[this.tween.sid_wings].ts = store.tick_ts
+			elseif hide_wings_ts and hide_wings_ts < store.tick_ts then
+				hide_wings_ts = nil
+				this.tween.reverse = true
+				this.tween.props[this.tween.sid_wings].disabled = false
+				this.tween.props[this.tween.sid_wings].ts = store.tick_ts
+			end
+		end
+
+		::label_2142_0::
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.mod_elemental_metal_gold_per_damage = {}
+
+function scripts.mod_elemental_metal_gold_per_damage.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
+		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
+		return false
+	end
+
+	return true
+end
+
+function scripts.mod_elemental_metal_gold_per_damage.update(this, store, script)
+	local m = this.modifier
+	local fx_ts = 0
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+		return
+	end
+
+	this.pos = target.pos
+	local acumulated_damage = 0
+	local prev_health = target.health.hp
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target then
+			break
+		end
+
+		if store.tick_ts - m.ts >= m.duration then
+			break
+		end
+
+		if prev_health > target.health.hp then
+			acumulated_damage = acumulated_damage + (prev_health - target.health.hp)
+
+			while acumulated_damage >= this.damage_gold_ratio do
+				store.player_gold = store.player_gold + 1
+				acumulated_damage = acumulated_damage - this.damage_gold_ratio
+			end
+		end
+
+		prev_health = target.health.hp
+
+		if target.health.dead then
+			break
+		end
+
+		if this.render and m.use_mod_offset and target.unit.mod_offset then
+			local so = this.render.sprites[1].offset
+			so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.controller_s93 = {}
+
+function scripts.controller_s93.update(this, store)
+	if store.level_mode == GAME_MODE_CAMPAIGN then
+		while store.wave_group_number < 10 do
+			coroutine.yield()
+		end
+
+		for i = 1, 22 do
+			if i == 19 or i == 20 then
+			else
+				local tower
+
+				for _, t in pairs(store.towers) do
+					if tonumber(t.tower.holder_id) == i then
+						tower = t
+						break
+					end
+				end
+
+				if tower and tower.tower.type ~= "holder" then
+					local c = E:create_entity("controller_elemental_fire")
+					c.pos = V.vclone(tower.pos)
+					c.target_holder_id = tower.tower.holder_id
+					queue_insert(store, c)
+				end
+			end
+		end
+
+		queue_remove(store, this)
+	else
+		queue_remove(store, this)
+		return
 	end
 end
 

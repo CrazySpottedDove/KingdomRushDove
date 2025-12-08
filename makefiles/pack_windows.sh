@@ -17,7 +17,7 @@ echo "Current version id: $current_id"
 
 mkdir -p ".versions"
 ARCHIVE_DIR=".versions/KingdomRushDove-Windows-v${current_id}.zip"
-
+TOPDIR="$(basename "$ARCHIVE_DIR" .zip)"  # love_env 改名为这个
 # 依赖检查
 if ! command -v zip >/dev/null 2>&1; then
     echo "ERROR: zip not found" >&2
@@ -43,7 +43,7 @@ else
 fi
 
 # 将项目内容复制到 love_env/KingdomRushDove 目录
-DEST_DIR="$STAGE_DIR/love_env/KingdomRushDove"
+DEST_DIR="$STAGE_DIR/$TOPDIR/KingdomRushDove"
 mkdir -p "$DEST_DIR"
 
 # 需要排除的顶层路径/文件
@@ -90,11 +90,10 @@ done
 shopt -u dotglob nullglob
 
 echo "Creating archive -> $ARCHIVE_DIR"
-# 进入舞台目录打包其内容，这样 zip 根目录就是 love_env/...
 (
     cd "$STAGE_DIR"
-    # 压缩舞台目录全部内容为最终归档
-    zip -r "../$(basename "$ARCHIVE_DIR")" . -q
+    # 打包改名后的目录 TOPDIR，这样解压后顶层就是 KingdomRushDove-Windows-v9.1.6
+    zip -r "../$(basename "$ARCHIVE_DIR")" "$TOPDIR" -q
 )
 
 # 移回到 .versions 下的最终 zip（cd 子shell里已写到 .versions）

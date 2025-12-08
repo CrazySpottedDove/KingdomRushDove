@@ -12531,5 +12531,62 @@ return {
 		gain = 0.7,
 		source_group = "SFX",
 		files = {"kra_sfx_wukong_hero_zhu_smash_v1.ogg"}
-	}
+	},
+    TerrainWukongElementalHolderEvolve = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kra_sfx_wukong_mechanic_stage1_holder_evolve_v1.ogg"
+		}
+	},
+	TerrainWukongElementalHolderUnlock = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kra_sfx_wukong_mechanic_stage1_holder_unlock.ogg"
+		}
+	},
+	TerrainWukongElementalHolderWoodActive = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kra_sfx_wukong_mechanic_stage1_holder_active_vines_v1.ogg"
+		}
+	},
+	TerrainWukongElementalHolderFireActiveIn = {
+		loop = false,
+		gain = 0.3,
+		source_group = "SFX",
+		files = {
+			"kra_sfx_wukong_mechanic_stage2_holder_active_instakill_v1_in.ogg"
+		}
+	},
+	TerrainWukongElementalHolderFireActiveKill = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		files = {
+			"kra_sfx_wukong_mechanic_stage2_holder_active_instakill_v1_kill.ogg"
+		}
+	},
+	TerrainWukongElementalHolderEarthActive = {
+		loop = false,
+		gain = 0.7,
+		source_group = "SFX",
+		delay = 2,
+		files = {
+			"kra_sfx_wukong_mechanic_stage34_holder_active_summon_v1.ogg"
+		}
+	},
+	TerrainWukongElementalHolderMetalActive = {
+		loop = false,
+		gain = 0.9,
+		source_group = "SFX",
+		files = {
+			"kra_sfx_wukong_mechanic_stage35_holder_active_steal_op2_v1.ogg"
+		}
+	},
 }
