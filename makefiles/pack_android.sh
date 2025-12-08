@@ -3,8 +3,9 @@ set -euo pipefail
 VERSION_FILE="./version.lua"
 # 可通过 VERSION_FILE 环境变量指定版本文件（可选）
 # VERSION_FILE=${VERSION_FILE:-}
-if [ -n "$VERSION_FILE" ] && [ -f "$VERSION_FILE" ]; then
-    current_id=$(awk -F'"' '/version\.id[ ]*=/ {print $2; exit}' "$VERSION_FILE")
+if [ -n "${VERSION_FILE:-}" ] && [ -f "$VERSION_FILE" ]; then
+    # 仅匹配行首的 `id = "..."`，避免匹配到 bundle_id
+    current_id=$(awk -F'"' '/^[[:space:]]*id[[:space:]]*=/ {print $2; exit}' "$VERSION_FILE")
     current_id=${current_id:-$(date +%s)}
 else
     current_id=$(date +%s)
