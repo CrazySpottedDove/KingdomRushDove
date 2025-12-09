@@ -4010,6 +4010,7 @@ scripts.tower_tesla = {
 							b.pos.x, b.pos.y = this.pos.x + ao.bullet_start_offset.x, this.pos.y + ao.bullet_start_offset.y
 							b.aura.source_id = this.id
 							b.aura.level = pow_o.level
+							b.scale_factor = a.range / b.aura.radius
 							queue_insert(store, b)
 						end
 

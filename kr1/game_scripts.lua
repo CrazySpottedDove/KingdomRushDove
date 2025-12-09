@@ -4534,10 +4534,12 @@ function scripts.aura_tesla_overcharge.update(this, store)
 	local a = this.aura
 	local ps = E:create_entity(this.particles_name)
 	ps.pos = V.vclone(this.pos)
+    ps.particle_system.emit_speed[1] = ps.particle_system.emit_speed[1] * this.scale_factor
+    ps.particle_system.emit_speed[2] = ps.particle_system.emit_speed[2] * this.scale_factor
+    ps.particle_system.emit_duration = ps.particle_system.emit_duration * this.scale_factor
 	queue_insert(store, ps)
 	U.y_wait(store, a.duration)
-	local targets = U.find_enemies_in_range(store, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
-
+    local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius * this.scale_factor, a.vis_flags, a.vis_bans)
 	if targets then
 		for _, e in pairs(targets) do
 			local d = SU.create_attack_damage(a, e.id, this)

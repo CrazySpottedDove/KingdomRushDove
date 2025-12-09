@@ -257,6 +257,7 @@ tt.aura.damage_type = DAMAGE_ELECTRICAL
 tt.aura.excluded_templates = {"enemy_spectral_knight"}
 tt.main_script.update = scripts.aura_tesla_overcharge.update
 tt.particles_name = "ps_tesla_overcharge"
+tt.scale_factor = 1
 tt = RT("mod_tesla_overcharge", "modifier")
 AC(tt, "render")
 tt.modifier.duration = fts(20)
