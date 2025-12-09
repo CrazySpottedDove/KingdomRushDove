@@ -149,6 +149,7 @@ tt.main_script.insert = scripts.missile.insert
 tt.main_script.update = scripts.missile.update
 tt.sound_events.insert = "RocketLaunchSound"
 tt.sound_events.hit = "BombExplosionSound"
+-- 特斯拉
 tt = RT("tower_tesla", "tower")
 AC(tt, "attacks", "powers")
 image_y = 96
@@ -191,7 +192,6 @@ tt.attacks.list[1].bullet = "ray_tesla"
 tt.attacks.list[1].bullet_start_offset = vec_2(7, 79)
 tt.attacks.list[1].cooldown = 2.2
 tt.attacks.list[1].node_prediction = fts(18)
-tt.attacks.list[1].range = 175
 tt.attacks.list[1].shoot_time = fts(48)
 tt.attacks.list[1].sound_shoot = "TeslaAttack"
 tt.attacks.list[2] = CC("aura_attack")

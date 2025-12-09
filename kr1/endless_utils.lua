@@ -841,7 +841,6 @@ function patch_upgrade_map.engineer_seek(level, endless)
 	clear_flying_bans(t.attacks.list[1])
 	t = E:get_template("tower_tesla")
 	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
-	t.attacks.list[1].range = t.attacks.list[1].range * (1 + level * friend_buff.engineer_seek)
 	t = E:get_template("tower_frankenstein")
 	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
 	t = E:get_template("tower_dwaarp")
@@ -1314,7 +1313,6 @@ function patch_upgrade_in_game_map.engineer_seek(level, store, endless)
 			t.attacks.list[2].vis_bans = U.flag_clear(t.attacks.list[2].vis_bans, F_FLYING)
 		elseif t.template_name == "tower_tesla" then
 			t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-			t.attacks.list[1].range = t.attacks.list[1].range * (1 + friend_buff.engineer_seek)
 		elseif t.template_name == "tower_frankenstein" then
 			t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
 		elseif t.template_name == "tower_dwaarp" then
@@ -1351,7 +1349,7 @@ end
 
 function EU.patch_upgrade_in_game(key, store, endless)
 	if not key then
-		return 
+		return
 	end
 
 	endless.upgrade_levels[key] = endless.upgrade_levels[key] + 1

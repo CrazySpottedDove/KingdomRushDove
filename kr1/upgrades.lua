@@ -783,7 +783,6 @@ function upgrades:patch_templates(max_level)
 		end
 
 		T("tower_bfg").attacks.list[2].range_base = math.ceil(T("tower_bfg").attacks.list[2].range_base * u.range_factor)
-		T("tower_tesla").attacks.list[1].range = math.ceil(T("tower_tesla").attacks.list[1].range * u.range_factor)
 		T("tower_tricannon_lvl4").attacks.list[1].range = math.ceil(T("tower_tricannon_lvl4").attacks.list[1].range * u.range_factor)
 		T("tower_tricannon_lvl4").attacks.list[2].range = math.ceil(T("tower_tricannon_lvl4").attacks.list[2].range * u.range_factor)
 		T("tower_dwaarp").origin_range = math.ceil(T("tower_dwaarp").origin_range * u.range_factor)
@@ -814,7 +813,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_gnomish_tinkering")
 
 	if u then
-		for _, a in pairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2]}, T("tower_dwaarp").attacks.list[3]) do
+		for _, a in pairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2], T("tower_dwaarp").attacks.list[3]}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
 
