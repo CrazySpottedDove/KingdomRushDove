@@ -28237,8 +28237,8 @@ function scripts.controller_elemental_fire.update(this, store)
 		local found_tower = false
 
 		while true do
-			for _, e in pairs(store.entities) do
-				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
+			for _, e in pairs(store.towers) do
+				if e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
 					found_tower = true
 
 					if e.build_name then
@@ -28264,19 +28264,7 @@ function scripts.controller_elemental_fire.update(this, store)
 	end
 
 	local function find_target_strongest()
-		local max_health = -1
-		local enemy
-
-		for _, e in pairs(store.entities) do
-			if e.pending_removal or not e.enemy or not e.nav_path or not U.is_inside_ellipse(e.pos, this.pos, this.max_range) or e.health and e.health.dead or band(e.vis.flags, this.vis_bans) ~= 0 or band(e.vis.bans, this.vis_flags) ~= 0 then
-			-- block empty
-			elseif max_health < e.health.hp then
-				max_health = e.health.hp
-				enemy = e
-			end
-		end
-
-		return enemy
+		return U.find_biggest_enemy_in_range_filter_off(this.pos, this.max_range, this.vis_flags, this.vis_bans)
 	end
 
 	local function get_new_fx_points()
