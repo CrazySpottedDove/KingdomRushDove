@@ -2323,13 +2323,13 @@ return {
 		},
 		{
 			name = "tower_dark_elf_lvl4",
-			icon = 15,
+			icon = 16,
 			detail_icon = 16,
 			from_kr = 5
 		},
 		{
 			name = "tower_pandas_lvl4",
-			icon = 20,
+			icon = 21,
 			detail_icon = 21,
 			from_kr = 5
 		},

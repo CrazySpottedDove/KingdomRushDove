@@ -194,83 +194,74 @@ function EXO:load_lua(exo_name, exo_path)
 
 	local fn = (exo_path or EXO.base_path) .. "/" .. exo_name
 
-    if FS.getInfo(fn .. ".lua") then
+	if FS.getInfo(fn .. ".lua") then
 		local f = FS.load(fn .. ".lua")
 		local exo = f()
 		exo.name = exo_name
+		-- if exo.animations[1].frames[1].parts then
+		-- 	-- v1 format, need to convert to v3
+		-- 	local ev3 = {}
+		-- 	ev3.name = exo_name
+		-- 	ev3.fps = exo.fps
+		-- 	ev3.partScaleCompensation = exo.partScaleCompensation
+		-- 	ev3.parts = {}
+		-- 	ev3.parts_idx = {}
+		-- 	local pt_idx = 1
+		-- 	for k, p in pairs(exo.parts) do
+		-- 		local pt = {p.name, p.offsetX, p.offsetY}
+		-- 		ev3.parts[k] = pt
+		-- 		ev3.parts[pt_idx] = pt
+		-- 		ev3.parts_idx[k] = pt_idx
+		-- 		pt_idx = pt_idx + 1
+		-- 	end
+		-- 	ev3.attach_points = {}
+		-- 	ev3.attach_idx = {}
+		-- 	ev3.animations = {}
+		-- 	for _, a in pairs(exo.animations) do
+		-- 		local ta = {}
+		-- 		table.insert(ev3.animations, ta)
+		-- 		ta.name = a.name
+		-- 		ta.frames = {}
+		-- 		for _, af in pairs(a.frames) do
+		-- 			local tf = {}
+		-- 			for _, ap in pairs(af.parts) do
+		-- 				local part_idx = ev3.parts_idx[ap.name]
+		-- 				local xf = ap.xform
+		-- 				table.insert(tf, {1, part_idx, ap.alpha, xf.x, xf.y, xf.sx, xf.sy, xf.r, xf.kx, xf.ky})
+		-- 			end
+		-- 			if af.attachPoints then
+		-- 				for _, aa in pairs(af.attachPoints) do
+		-- 					if not ev3.attach_points[aa.name] then
+		-- 						local ape = {aa.name}
+		-- 						table.insert(ev3.attach_points, ape)
+		-- 						ev3.attach_points[aa.name] = ape
+		-- 						ev3.attach_idx[aa.name] = #ev3.attach_points
+		-- 					end
+		-- 					local attach_idx = ev3.attach_idx[aa.name]
+		-- 					local xf = aa.xform
+		-- 					table.insert(tf, {8, attach_idx, aa.alpha or 1, xf.x, xf.y, xf.sx, xf.sy, xf.r, xf.kx, xf.ky})
+		-- 				end
+		-- 			end
+		-- 			table.insert(ta.frames, tf)
+		-- 		end
+		-- 	end
+		-- 	return ev3
+		-- else
+		-- already v3 format
+		-- 我们已经有了 v1 -> v3 的转换代码，因此在这里取消了检查 v1 格式的代码
+		exo.attach_idx = {}
 
-		if exo.animations[1].frames[1].parts then
-			-- v1 format, need to convert to v3
-			local ev3 = {}
-			ev3.name = exo_name
-			ev3.fps = exo.fps
-			ev3.partScaleCompensation = exo.partScaleCompensation
-			ev3.parts = {}
-			ev3.parts_idx = {}
-			local pt_idx = 1
-
-			for k, p in pairs(exo.parts) do
-				local pt = {p.name, p.offsetX, p.offsetY}
-				ev3.parts[k] = pt
-				ev3.parts[pt_idx] = pt
-				ev3.parts_idx[k] = pt_idx
-				pt_idx = pt_idx + 1
-			end
-
-			ev3.attach_points = {}
-			ev3.attach_idx = {}
-			ev3.animations = {}
-
-			for _, a in pairs(exo.animations) do
-				local ta = {}
-				table.insert(ev3.animations, ta)
-				ta.name = a.name
-				ta.frames = {}
-
-				for _, af in pairs(a.frames) do
-					local tf = {}
-
-					for _, ap in pairs(af.parts) do
-						local part_idx = ev3.parts_idx[ap.name]
-						local xf = ap.xform
-						table.insert(tf, {1, part_idx, ap.alpha, xf.x, xf.y, xf.sx, xf.sy, xf.r, xf.kx, xf.ky})
-					end
-
-					if af.attachPoints then
-						for _, aa in pairs(af.attachPoints) do
-							if not ev3.attach_points[aa.name] then
-								local ape = {aa.name}
-								table.insert(ev3.attach_points, ape)
-								ev3.attach_points[aa.name] = ape
-								ev3.attach_idx[aa.name] = #ev3.attach_points
-							end
-
-							local attach_idx = ev3.attach_idx[aa.name]
-							local xf = aa.xform
-							table.insert(tf, {8, attach_idx, aa.alpha or 1, xf.x, xf.y, xf.sx, xf.sy, xf.r, xf.kx, xf.ky})
-						end
-					end
-
-					table.insert(ta.frames, tf)
-				end
-			end
-
-			return ev3
-		else
-			-- already v3 format
-			exo.attach_idx = {}
-
-			for _, v in pairs(exo.parts) do
-				exo.parts[v[1]] = v
-			end
-
-			for i, v in ipairs(exo.attach_points) do
-				exo.attach_points[v[1]] = v
-				exo.attach_idx[v[1]] = i
-			end
-
-			return exo
+		for _, v in pairs(exo.parts) do
+			exo.parts[v[1]] = v
 		end
+
+		for i, v in ipairs(exo.attach_points) do
+			exo.attach_points[v[1]] = v
+			exo.attach_idx[v[1]] = i
+		end
+
+		return exo
+	-- end
 	elseif FS.getInfo(fn .. ".exo") then
 		local exo = {}
 		exo.parts = {}
