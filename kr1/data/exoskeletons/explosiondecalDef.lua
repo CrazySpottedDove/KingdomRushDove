@@ -1,1 +1,1 @@
-return {fps=30,partScaleCompensation=1,animations={{name="idle",frames={{parts={{name="explosiondecal_asst_heart_decal",xform={kx=0,sx=1,r=0,ky=0,sy=1,y=-20.45,x=-64.75}}}}}}},parts={explosiondecal_asst_heart_decal={offsetY=21.8,name="explosiondecal_asst_heart_decal",offsetX=58.85}}}
+return {parts={{"explosiondecal_asst_heart_decal",58.85,21.8}};animations={{frames={{{1,1,1,-64.75,-20.45,1,1,0,0,0}}};name="idle"}};attach_points={};fps=30;partScaleCompensation=1}

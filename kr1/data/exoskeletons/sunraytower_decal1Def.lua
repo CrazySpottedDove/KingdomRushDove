@@ -1,1 +1,1 @@
-return {fps=30,partScaleCompensation=1,animations={{name="decal",frames={{parts={{name="sunraytower_decal1_Asst_SunrayTower_Decal1",xform={kx=0,sx=1,r=0,ky=0,sy=1,y=16.85,x=-5}}}}}}},parts={sunraytower_decal1_Asst_SunrayTower_Decal1={offsetY=-17.55,name="sunraytower_decal1_Asst_SunrayTower_Decal1",offsetX=0}}}
+return {parts={{"sunraytower_decal1_Asst_SunrayTower_Decal1",0,-17.55}};animations={{name="decal";frames={{{1,1,1,-5,16.85,1,1,0,0,0}}}}};attach_points={};partScaleCompensation=1;fps=30}

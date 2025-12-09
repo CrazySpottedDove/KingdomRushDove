@@ -1,1 +1,1 @@
-return {fps=30,partScaleCompensation=1,animations={{name="idle",frames={{parts={{name="tower_tree_projectile_asst_projectile",xform={kx=0,sx=1,r=0,ky=0,sy=1,y=-2.95,x=0.15}}}}}}},parts={tower_tree_projectile_asst_projectile={offsetY=2.95,name="tower_tree_projectile_asst_projectile",offsetX=-0.15}}}
+return {fps=30;partScaleCompensation=1;parts={{"tower_tree_projectile_asst_projectile",-0.15,2.95}};animations={{name="idle";frames={{{1,1,1,0.15,-2.95,1,1,0,0,0}}}}};attach_points={}}
