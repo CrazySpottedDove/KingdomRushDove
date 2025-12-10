@@ -8038,5 +8038,5 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
     ENEMY_FALLEN_KNIGHT_STRONG_NAME = "狂化堕落骑士",
     ENEMY_ABOMINATION_STRONG_NAME = "狂化憎恶",
     ENEMY_WITCH_STRONG_NAME = "狂化女巫",
-
+    ENEMY_BLADE_STRONG_NAME = "狂化咏剑士"
 }
