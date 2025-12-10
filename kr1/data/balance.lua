@@ -6399,6 +6399,7 @@ local specials = {
 			},
 			wooden_holder_enhance = {
 				range_factor = 2.5,
+                damage_factor = 1.2,
 				first_cooldown = 999999,
 				duration = 8,
 				slow_factor = 0.5,

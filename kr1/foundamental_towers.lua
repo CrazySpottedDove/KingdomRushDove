@@ -925,6 +925,7 @@ tt.default_max_range = b.default_max_range
 tt.skill_detection_range_factor = b.skill_detection_range_factor
 tt.rally_range_factor = b.rally_range_factor
 tt.range_factor = b.range_factor
+tt.damage_factor = b.damage_factor
 tt.controller_aura_name = "aura_elemental_wood"
 tt.render.sid_gradiente = 1
 tt.render.sid_wings = 2

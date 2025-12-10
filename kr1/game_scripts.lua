@@ -27964,6 +27964,8 @@ function scripts.controller_elemental_wood.update(this, store)
 		this.max_range = this.default_max_range
 	end
 
+    SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
+
 	update_fx_points()
 	this.ability_cooldown = this.first_cooldown
 
