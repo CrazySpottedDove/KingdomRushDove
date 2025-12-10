@@ -6398,7 +6398,7 @@ local specials = {
 				damage_type = DAMAGE_TRUE
 			},
 			wooden_holder_enhance = {
-				range_factor = 2,
+				range_factor = 2.5,
 				first_cooldown = 999999,
 				duration = 8,
 				slow_factor = 0.5,
@@ -6406,7 +6406,7 @@ local specials = {
 				default_max_range = 200,
 				damage_max = 5,
 				skill_detection_range_factor = 0.8,
-				rally_range_factor = 2,
+				rally_range_factor = 2.5,
 				damage_min = 3,
 				damage_every = 0.25,
 				price = 150,
