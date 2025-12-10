@@ -1089,10 +1089,34 @@ local amount_7 = e.gain.armor
 map["杀戮生长"] = str("卢克蕾齐娅在杀戮中成长，每杀死一名敌人，就恢复", heal, "点生命值，并提升：", amount_2, "点最大生命值，", amount, "点普攻伤害，", amount_7 * 100, "点物抗，", amount_3 * 100, "点法抗，", amount_6, "点移速，", amount_5, "点绛红之舞的伤害范围，并永久减少", amount_4, "秒生命汲取和绛红之舞的冷却时间。上述属性提升最多", count, "次。")
 map["鲜血后裔"] = str("卢克蕾齐娅免疫毒素，每次普攻恢复3点生命值，且被视为亡灵单位。远距离移动时，卢克蕾齐娅变身蝙蝠飞行，提升自身", h.motion.max_speed_bat - h.motion.max_speed, "点移速。")
 set_hero("hero_elves_archer")
-map["迅闪"] = str()
-map["双刃"] = str()
-map["箭猪"] = str()
-map["箭雨"] = str()
+set_skill(h.hero.skills.nimble_fencer)
+chance = ss("chance")
+get_damage(h.dodge.counter_attack)
+map["迅闪"] = str("受到攻击时，艾莉丹有",rate_str(chance),"闪避并反击，造成",damage_str(),"，并使双刃的冷却减少0.8秒。")
+set_skill(h.hero.skills.double_strike)
+get_damage(h.melee.attacks[2])
+cooldown = h.melee.attacks[2].cooldown
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+map["双刃"] = str(cooldown_str(),"艾莉丹挥动双刃斩击敌人，造成无法闪避的",damage_str(),"。发动技能期间若触发迅闪，则保持无敌状态，继续释放该技能。")
+set_skill(h.hero.skills.porcupine)
+amount = ss("damage_inc")
+map["箭猪"] = str("每射击命中同一敌人，便使艾莉丹对该敌人的射击伤害提升",amount,"点。")
+set_skill(h.hero.skills.multishot)
+count = ss("loops")
+cooldown = h.ranged.attacks[2].cooldown
+map["连射"] = str(cooldown_str(),"艾莉丹连续射出",count,"发箭矢，每发都造成面板伤害。")
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+e = E:get_template("hero_elves_archer_ultimate")
+set_damage_value(e.damage[#e.damage])
+count = e.spread[#e.spread] * 4
+e = E:get_template("arrow_hero_elves_archer_ultimate")
+radius = e.bullet.damage_radius
+e = E:get_template("mod_hero_elves_archer_slow")
+factor = 1 - e.slow.factor
+duration = e.modifier.duration
+map["箭雨"] = str(cooldown_str(),"艾莉丹在大范围内发射共",count,"支箭矢，每支箭矢对",radius,"范围内敌人造成",damage_str(),"，并使其受到",factor * 100,"%的减速效果，持续",duration,"秒。")
 set_hero("hero_regson")
 map["刃舞"] = str()
 map["死战之志"] = str()

@@ -6385,8 +6385,8 @@ tt.render.sprites[1].scale = vec_1(1)
 tt = RT("mod_dwarf_champion_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
---         三代
---     --
+--  三代
+-- 艾莉丹
 tt = RT("hero_elves_archer", "hero")
 AC(tt, "melee", "ranged", "dodge")
 image_y = 68
@@ -6547,7 +6547,7 @@ tt.spread = {6, 8, 10, 12}
 tt.damage = {20, 31, 42, 60}
 tt.main_script.update = scripts.hero_elves_archer_ultimate.update
 tt = RT("mod_hero_elves_archer_slow", "mod_slow")
-tt.modifier.duration = 0.1
+tt.modifier.duration = 1
 tt.slow.factor = 0.5
 tt = RT("arrow_hero_elves_archer_ultimate", "bullet")
 tt.main_script.update = scripts.arrow_hero_elves_archer_ultimate.update
