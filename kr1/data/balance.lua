@@ -5658,7 +5658,7 @@ local towers = {
 					[3] = 20
 				},
 				damage_factor = {1, 1, 1},
-				damage_type = DAMAGE_AGAINST_ARMOR + DAMAGE_SHOT
+				damage_type = DAMAGE_AGAINST_ARMOR
 			},
 			sting_missiles = {
 				price = {250, 100, 100},
