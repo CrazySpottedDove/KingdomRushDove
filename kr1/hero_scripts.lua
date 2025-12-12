@@ -9038,6 +9038,7 @@ scripts.hero_regson = {
 		a.aura.ts = store.tick_ts
 		a.pos = this.pos
 		queue_insert(store, a)
+		this.aura_blade = a
 		local a = E:create_entity("aura_regson_heal")
 		a.aura.source_id = this.id
 		a.aura.ts = store.tick_ts
@@ -9053,6 +9054,7 @@ scripts.hero_regson = {
 		this.health_bar.hidden = false
 		local fade_start_time
 		local origin_pos
+		local aura_blade = this.aura_blade
 
 		local function exit_whirlwind_mirage()
 			this.pos.x = origin_pos.x
@@ -9151,7 +9153,7 @@ scripts.hero_regson = {
 												m.modifier.target_id = target.id
 												m.modifier.source_id = this.id
 												m.render.sprites[1].ts = store.tick_ts
-												m.modifier.damage_factor = this.unit.damage_factor * 0.5
+												m.modifier.damage_factor = this.unit.damage_factor
 												queue_insert(store, m)
 											end
 										end
@@ -9178,15 +9180,17 @@ scripts.hero_regson = {
 						end
 
 						exit_whirlwind_mirage()
+						aura_blade.blade_ts = store.tick_ts - aura_blade.blade_cooldown
+						aura_blade.blade_active_ts = store.tick_ts
 					else
 						a.ts = a.ts + 1
 					end
 				end
 
 				if ready_to_use_skill(this.ultimate, store) then
-					local enemy = find_target_at_critical_moment(this, store, 200)
+					local enemy = U.find_biggest_enemy_in_range_filter_off(this.pos, 200, F_RANGED, F_NONE)
 
-					if enemy and enemy.pos and enemy.health.hp > 750 then
+					if enemy and enemy.pos and enemy.health.hp > BIG_ENEMY_HP then
 						U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 						S:queue(this.sound_events.change_rally_point)
 						local ultimate_entity = E:create_entity(this.hero.skills.ultimate.controller_name)
@@ -9286,7 +9290,6 @@ function scripts.aura_regson_heal.update(this, store)
 	local last_ts = store.tick_ts
 
 	if not hero then
-		log.error("hero not found for aura_regson_heal")
 		queue_remove(store, this)
 		return
 	end
@@ -18558,9 +18561,9 @@ function scripts.hero_venom.update(this, store)
 		S:queue(a.sound_in, {
 			delay = fts(10)
 		})
-        SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.5)
+		SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.5)
 		U.y_animation_play(this, a.animation_in, nil, store.tick_ts)
-        SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.5)
+		SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.5)
 		a.ts = start_ts
 		last_ts = start_ts
 		SU.hero_gain_xp_from_skill(this, skill)
@@ -18592,9 +18595,9 @@ function scripts.hero_venom.update(this, store)
 		S:queue(a.sound_out, {
 			delay = fts(10)
 		})
-        SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.5)
+		SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.5)
 		U.y_animation_play(this, a.animation_out, nil, store.tick_ts)
-        SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.5)
+		SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.5)
 		this.melee.attacks[1].disabled = false
 		this.melee.attacks[2].disabled = false
 		this.melee.attacks[3].disabled = true
