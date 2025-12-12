@@ -1300,6 +1300,7 @@ tt = RT("mod_faerie_dragon_l1", "mod_faerie_dragon")
 tt.modifier.duration = 1.25
 tt = RT("mod_faerie_dragon_l2", "mod_faerie_dragon")
 tt.modifier.duration = 1.5
+-- 侏儒花园
 tt = RT("tower_pixie", "tower")
 AC(tt, "powers", "attacks")
 tt.pixies = {}
@@ -1337,8 +1338,6 @@ tt.attacks.list[5].mods = {"mod_pixie_polymorph"}
 tt.attacks.list[5].vis_bans = bor(F_FLYING, F_BOSS)
 tt.attacks.list[5].vis_flags = bor(F_RANGED, F_POLYMORPH, F_INSTAKILL)
 tt.attacks.list[5].chance = 0.1
--- tt.attacks.list[1].check_gold_bag = true
--- tt.attacks.hide_range = true
 tt.attacks.range = 190
 tt.attacks.cooldown = fts(10)
 tt.attacks.enemy_cooldown = 3
@@ -1373,6 +1372,19 @@ tt.sound_events.insert = "ElvesGnomeNew"
 tt.tower.menu_offset = vec_2(0, 6)
 tt.tower.price = 250
 tt.tower.type = "pixie"
+tt = E:register_t("decal_pixie", "decal_scripted")
+E:add_comps(tt, "idle_flip")
+tt.idle_flip.animations = {"idle", "scratch"}
+tt.idle_flip.cooldown = fts(90)
+tt.idle_flip.loop = false
+tt.main_script.update = scripts.decal_pixie.update
+tt.render.sprites[1].prefix = "decal_pixie"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor.y = 0.09090909090909091
+tt.attack_ts = 0
+tt.target_id = nil
+tt.attack = nil
+tt.attack_level = nil
 tt = RT("bullet_pixie_instakill", "arrow")
 tt.bullet.flight_time = fts(12)
 tt.bullet.rotation_speed = 45 * FPS * math.pi / 180
@@ -1421,8 +1433,7 @@ tt.pickpocket.steal_max = {
 }
 tt.pickpocket.fx = "fx_coin_jump"
 tt.pickpocket.pop = {"pop_faerie_steal"}
---         五代
---     --
+-- 五代
 local balance = require("kr1.data.balance")
 local b
 -- 死灵法师_START

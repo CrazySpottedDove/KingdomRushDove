@@ -3121,7 +3121,10 @@ scripts.decal_pixie = {}
 
 function scripts.decal_pixie.update(this, store)
 	local iflip = this.idle_flip
-	local a, o, e, slot_pos, slot_flip, enemy_flip
+	local a, e, slot_flip
+	local o = this.idle_pos
+	local slot_flip = -1
+	local this_pos = this.pos
 	U.y_animation_play(this, "teleportIn", slot_flip, store.tick_ts)
 
 	while true do
@@ -3133,14 +3136,12 @@ function scripts.decal_pixie.update(this, store)
 			else
 				a = this.attack
 				U.y_animation_play(this, "teleportOut", nil, store.tick_ts)
-				-- y_wait(store, 0.5)
 				SU.stun_inc(target)
-				slot_pos, slot_flip, enemy_flip = U.melee_slot_position(this, target, 1)
-				this.pos.x, this.pos.y = slot_pos.x, slot_pos.y
+				slot_flip = math.abs(km.signed_unroll(target.heading.angle)) < math.pi * 0.5
+				this_pos.x, this_pos.y = target.pos.x + target.enemy.melee_slot.x * (slot_flip and 1 or -1), target.pos.y + target.enemy.melee_slot.y
 				U.y_animation_play(this, "teleportIn", slot_flip, store.tick_ts)
 				animation_start(this, a.animation, nil, store.tick_ts, false)
 
-				-- y_wait(store, 0.3)
 				if a.type == "mod" then
 					for _, m in pairs(a.mods) do
 						e = E:create_entity(m)
@@ -3154,7 +3155,7 @@ function scripts.decal_pixie.update(this, store)
 					e = E:create_entity(a.bullet)
 					e.bullet.source_id = this.id
 					e.bullet.target_id = target.id
-					e.bullet.from = v(this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y)
+					e.bullet.from = v(this_pos.x + a.bullet_start_offset.x, this_pos.y + a.bullet_start_offset.y)
 					e.bullet.to = v(target.pos.x, target.pos.y)
 					e.bullet.hit_fx = e.bullet.hit_fx .. (target.unit.size >= UNIT_SIZE_MEDIUM and "big" or "small")
 					e.bullet.damage_factor = this.owner.tower.damage_factor
@@ -3165,8 +3166,7 @@ function scripts.decal_pixie.update(this, store)
 				y_animation_wait(this)
 				U.y_animation_play(this, "teleportOut", nil, store.tick_ts)
 				SU.stun_dec(target)
-				o = this.idle_pos
-				this.pos.x, this.pos.y = this.owner.pos.x + o.x, this.owner.pos.y + o.y
+				this_pos.x, this_pos.y = this.owner.pos.x + o.x, this.owner.pos.y + o.y
 				U.y_animation_play(this, "teleportIn", slot_flip, store.tick_ts)
 			end
 

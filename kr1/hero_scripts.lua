@@ -9013,7 +9013,6 @@ scripts.hero_regson = {
 		upgrade_skill(this, "slash", function(this, s)
 			local a = this.melee.attacks[6]
 			a.disabled = nil
-			a.count = s.targets[s.level]
 			local m = E:get_template(a.mod)
 			m.damage_max = s.damage_max[s.level]
 			m.damage_min = s.damage_min[s.level]

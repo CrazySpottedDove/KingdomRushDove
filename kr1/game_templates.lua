@@ -7647,20 +7647,6 @@ tt.render.sprites[1].name = "simon_gnome_fx"
 tt = E:register_t("simon_gnome_sign", "fx")
 tt.render.sprites[1].name = "simon_gnome_sign"
 tt.render.sprites[1].offset = vec_2(30, 15)
-tt = E:register_t("decal_pixie", "decal_scripted")
-E:add_comps(tt, "idle_flip", "soldier", "unit")
-tt.idle_flip.animations = {"idle", "scratch"}
-tt.idle_flip.cooldown = fts(90)
-tt.idle_flip.loop = false
-tt.main_script.update = scripts.decal_pixie.update
-tt.render.sprites[1].prefix = "decal_pixie"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].anchor.y = 0.09090909090909091
-tt.soldier.melee_slot_offset = vec_2(0, 0)
-tt.attack_ts = 0
-tt.target_id = nil
-tt.attack = nil
-tt.attack_level = nil
 tt = E:register_t("decal_drow_queen_portal", "decal_scripted")
 E:add_comps(tt, "editor", "tween")
 tt.render.sprites[1].animated = false
