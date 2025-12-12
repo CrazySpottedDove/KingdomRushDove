@@ -1607,7 +1607,7 @@ return {
 	}), templates.sell}},
 	arcane = {{merge(templates.upgrade_power, {
 		action_arg = "burst",
-		image = "kr3_special_icons_0001",
+		image = "kr3_special_icons_0002",
 		place = 1,
 		sounds = {"ElvesArcherArcaneBurstTaunt"},
 		tt_phrase = _("TOWER_ARCANE_ARCHER_BURST_NOTE"),
@@ -1623,7 +1623,7 @@ return {
 		}}
 	}), merge(templates.upgrade_power, {
 		action_arg = "slumber",
-		image = "kr3_special_icons_0002",
+		image = "kr3_special_icons_0001",
 		place = 2,
 		sounds = {"ElvesArcherArcaneSleepTaunt"},
 		tt_phrase = _("TOWER_ARCANE_ARCHER_SLUMBER_NOTE"),

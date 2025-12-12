@@ -3306,16 +3306,6 @@ function EncyclopediaView:load_towers(index)
 	end
 
 	if self.towers then
-		-- self.towers.hidden = false
-		-- self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
-		-- self.over_sprite.hidden = true
-		-- self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
-		-- self.over_sprite.propagate_on_click = true
-		-- self.towers:add_child(self.over_sprite)
-		-- self:detail_tower(1)
-		-- self.select_sprite.pos = v(50, 120)
-		-- self.select_sprite.hidden = false
-		-- return
 		self.back:remove_child(self.towers)
 	end
 
