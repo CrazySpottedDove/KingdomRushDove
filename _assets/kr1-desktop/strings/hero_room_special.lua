@@ -1129,7 +1129,7 @@ d[1].damage_min = ss("damage_min")
 map["刃舞"] = str(cooldown_str(), "雷格森挥舞双刃，对", radius, "范围内敌人造成", damage_str(), "。")
 count = ss("loops")
 cooldown = h.timed_attacks.list[1].cooldown
-map["影袭"] = str(cooldown_str(),"雷格森跃入暗影，短时间内", count,"次突袭敌人，施展刃舞，并在归来时激活异能魔刃。")
+map["影袭"] = str(cooldown_str(), "雷格森跃入暗影，短时间内", count, "次突袭敌人，施展刃舞，并在归来时激活异能魔刃。")
 set_skill(h.hero.skills.heal)
 factor = ss("heal_factor")
 map["死战之志"] = str("每当身边有敌人死亡，雷格森就会吸收他们的灵魂，为自己恢复敌人最大生命值", factor * 100, "%的生命。")
@@ -1140,18 +1140,52 @@ e = E:get_template("aura_regson_blade")
 duration = e.blade_duration
 cooldown = e.blade_cooldown
 chance = ss("instakill_chance")
-map["异能魔刃"] = str(cooldown_str(),"雷格森强化双刃，持续",duration,"秒。强化期间，雷格森的普攻无法闪避，每次造成", damage_str(), "，且有", rate_str(chance), "秒杀非BOSS敌人。")
+map["异能魔刃"] = str(cooldown_str(), "雷格森强化双刃，持续", duration, "秒。强化期间，雷格森的普攻无法闪避，每次造成", damage_str(), "，且有", rate_str(chance), "秒杀非BOSS敌人。")
 set_skill(h.hero.skills.ultimate)
 cooldown = ss("cooldown")
 set_damage_value(ss("damage_boss"))
 d[1].damage_type = DAMAGE_TRUE
-map["死吻"] = str(cooldown_str(),"雷格森锁定身边生命值高于750的最大单位并秒杀之。若目标为BOSS，则改为造成", damage_str(), "。")
+map["死吻"] = str(cooldown_str(), "雷格森锁定身边生命值高于750的最大单位并秒杀之。若目标为BOSS，则改为造成", damage_str(), "。")
 set_hero("hero_lynn")
-map["妖咒连斩"] = str()
-map["绝望诅咒"] = str()
-map["虚弱诅咒"] = str()
-map["厄运符印"] = str()
-map["命运封印"] = str()
+set_skill(h.hero.skills.hexfury)
+count = ss("loops")
+amount = s.extra_damage
+get_damage(h.melee.attacks[3])
+cooldown = h.melee.attacks[3].cooldown
+count = count * #h.melee.attacks[3].hit_times
+map["妖咒连斩"] = str(cooldown_str(), "莉恩连续斩击", count, "次，每次造成", damage_str(), "。敌人身上每有厄运诅咒、绝望诅咒、虚弱诅咒、命运封印的一种，斩击伤害便提升", amount, "点。该技能经验获取量与造成总伤相关。")
+set_skill(h.hero.skills.despair)
+duration = ss("duration")
+factor = ss("damage_factor")
+factor_2 = 1 - ss("speed_factor")
+count = ss("max_count")
+a = h.timed_attacks.list[1]
+cooldown = a.cooldown
+map["绝望诅咒"] = str(cooldown_str(), "莉恩诅咒身边最多", count, "名敌人，使他们移速降低", factor_2 * 100, "%，伤害降低至", factor * 100, "%，持续", duration, "秒。绝望诅咒会反向作用于莉恩。")
+set_skill(h.hero.skills.weakening)
+duration = ss("duration")
+factor = ss("armor_reduction")
+factor_2 = ss("magic_armor_reduction")
+count = ss("max_count")
+a = h.timed_attacks.list[2]
+cooldown = a.cooldown
+map["虚弱诅咒"] = str(cooldown_str(), "若目前拦截的敌人护甲或法抗高于10，莉恩会诅咒身边最多", count, "名敌人，降低他们", factor * 100, "%护甲与", factor_2 * 100, "%法抗，并根据实际削减法抗值额外削减一半数值的物抗，持续", duration, "秒。虚弱诅咒会削弱一半并反向作用于莉恩。")
+set_skill(h.hero.skills.charm_of_unluck)
+chance = ss("chance")
+e = E:get_template("mod_lynn_curse")
+local chance_2 = e.modifier.chance
+duration = e.modifier.duration
+map["厄运符印"] = str("莉恩受到任何伤害时，有", rate_str(chance), "逃脱。莉恩的普攻与妖咒连斩均有", rate_str(chance_2), "对目标施加厄运诅咒，使目标沉默，持续", duration, "秒。")
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+e = E:get_template("mod_lynn_ultimate")
+get_damage(e.dps)
+set_damage_value(ss("damage"))
+d[2].damage_type = e.explode_damage_type
+set_damage_value(ss("explode_damage"), 2)
+cycle_time = e.dps.damage_every
+duration = e.modifier.duration
+map["命运封印"] = str(cooldown_str(), "莉恩封印一名敌人的命运，使其在", duration, "秒内每", cycle_time, "秒受到", damage_str(), "。若敌人在封印期间死亡，则产生爆炸，对周围敌人造成", damage_str(2), "，并传播给他们削弱40%的命运封印效果。")
 set_hero("hero_wilbur")
 map["迷雾"] = str()
 map["导弹"] = str()

@@ -9519,10 +9519,13 @@ function scripts.hero_lynn.fn_damage_melee(this, store, attack, target)
 	local value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max + this.damage_buff))
 	local mods = {"mod_lynn_curse", "mod_lynn_despair", "mod_lynn_ultimate", "mod_lynn_weakening"}
 
-	if skill.level > 0 and U.has_modifier_in_list(store, target, mods) then
-		value = value + this.unit.damage_factor * skill.extra_damage
-		log.debug(" fn_damage_melee LYNN: +++ adding extra damage %s", skill.extra_damage)
-	end
+    if skill.level > 0 then
+        for _, mod in ipairs(mods) do
+            if U.has_modifier(store, target, mod) then
+                value = value + this.unit.damage_factor * skill.extra_damage
+            end
+        end
+    end
 
 	return value
 end
@@ -9900,12 +9903,7 @@ function scripts.mod_lynn_despair.insert(this, store)
 
 	this.modifier.ts = store.tick_ts
 	this.render.sprites[1].ts = store.tick_ts
-	-- local mods = U.get_modifiers(store, target, {"mod_lynn_ultimate", "mod_lynn_weakening"})
-	-- for _, m in pairs(mods) do
-	--     if m ~= this then
-	--         U.sprites_hide(m, nil, nil, true)
-	--     end
-	-- end
+
 	signal.emit("mod-applied", this, target)
 	return true
 end
@@ -9930,11 +9928,9 @@ function scripts.mod_lynn_curse.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or math.random() >= this.modifier.chance or not U.flags_pass(target.vis, this.modifier) then
-		log.debug("mod_lynn_curse chance miss")
 		return false
 	end
 
-	log.debug("mod_lynn_curse chance hit")
 	scripts.cast_silence(target, store)
 	return true
 end
