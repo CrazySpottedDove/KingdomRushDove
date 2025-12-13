@@ -2783,7 +2783,7 @@ tt = RT("hero_beastmaster", "hero")
 AC(tt, "melee", "timed_attacks")
 anchor_y = 0.175
 image_y = 80
-tt.hero.level_stats.hp_max = {310, 340, 370, 400, 430, 460, 490, 520, 550, 580}
+tt.hero.level_stats.hp_max = {330, 360, 390, 420, 450, 480, 510, 540, 570, 600}
 tt.hero.level_stats.armor = {0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18}
 tt.hero.level_stats.melee_damage_min = {8, 9, 10, 11, 12, 13, 14, 15, 16, 17}
 tt.hero.level_stats.melee_damage_max = {12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
