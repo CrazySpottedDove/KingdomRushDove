@@ -1537,7 +1537,7 @@ tt.custom_suffixes = {
 tt.custom_animations = {"start", "end"}
 tt = RT("mod_elora_bolt_slow", "mod_slow")
 tt.modifier.duration = 2
-tt.slow.factor = 0.5
+tt.slow.factor = 0.45
 tt = RT("aura_chill_elora", "aura")
 AC(tt, "render", "tween")
 tt.aura.cycle_time = fts(10)
