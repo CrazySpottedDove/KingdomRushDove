@@ -5601,7 +5601,7 @@ tt.hero.skills.boulderthrow.xp_level_steps = {
 }
 tt.hero.skills.boulderthrow.xp_gain_factor = 60
 tt.hero.skills.stomp = CC("hero_skill")
-tt.hero.skills.stomp.damage = {10, 11, 12}
+tt.hero.skills.stomp.damage = {10, 15, 20}
 tt.hero.skills.stomp.loops = {2, 3, 4}
 tt.hero.skills.stomp.stun_duration = {2, 3, 4}
 tt.hero.skills.stomp.xp_gain_factor = 80
