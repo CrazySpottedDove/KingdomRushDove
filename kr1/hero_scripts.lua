@@ -8644,7 +8644,7 @@ scripts.hero_elves_archer = {
 				if this.dodge and this.dodge.active then
 					this.dodge.active = false
 					this.dodge.counter_attack_pending = true
-					this.melee.attacks[2].ts = this.melee.attacks[2].ts - 0.8
+					this.melee.attacks[2].ts = this.melee.attacks[2].ts - 1
 				end
 
 				while this.nav_rally.new do
@@ -8770,7 +8770,6 @@ scripts.hero_elves_archer = {
 						update_porcupine(attack, target)
 						d.value = (b.bullet.damage_min + b.bullet.damage_max + 2 * attack.level * (b.bullet.damage_inc or 0)) * 0.5
 						pred_shots = math.ceil(target.health.hp / U.predict_damage(target, d))
-						log.paranoid("+++ pred_shots:%s d.value:%s target.hp:%s", pred_shots, d.value, target.health.hp)
 						loops = math.min(attack.max_loops - loops_done, pred_shots)
 
 						for i = 1, loops do

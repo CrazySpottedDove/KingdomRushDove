@@ -1092,7 +1092,7 @@ set_hero("hero_elves_archer")
 set_skill(h.hero.skills.nimble_fencer)
 chance = ss("chance")
 get_damage(h.dodge.counter_attack)
-map["迅闪"] = str("受到攻击时，艾莉丹有", rate_str(chance), "闪避并反击，造成", damage_str(), "，并使双刃的冷却减少0.8秒。")
+map["迅闪"] = str("受到攻击时，艾莉丹有", rate_str(chance), "闪避并反击，造成", damage_str(), "，并使双刃的冷却减少1秒。")
 set_skill(h.hero.skills.double_strike)
 get_damage(h.melee.attacks[2])
 cooldown = h.melee.attacks[2].cooldown
