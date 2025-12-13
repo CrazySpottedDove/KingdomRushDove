@@ -2224,12 +2224,12 @@ tt.hero.skills.swiftness.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.shadowdance = CC("hero_skill")
-tt.hero.skills.shadowdance.copies = {3, 4, 5}
+tt.hero.skills.shadowdance.copies = {4, 5, 6}
 tt.hero.skills.shadowdance.xp_gain_factor = 20
 tt.hero.skills.shadowdance.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
-	[8] = 3
+	[8] = 3,
 }
 tt.hero.skills.lethalstrike = CC("hero_skill")
 tt.hero.skills.lethalstrike.instakill_chance = {0.1, 0.17, 0.25}
