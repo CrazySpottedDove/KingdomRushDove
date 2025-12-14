@@ -37,7 +37,7 @@ gen_waves: _examine_dir_map sync
 
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
 package:
-# 	@bash $(MAKE_FILE_DIR)/package.sh
+	@bash $(MAKE_FILE_DIR)/package.sh
 # 	git add .
 # 	git commit -m "LAST VERSION: $(CURRENT_ID)"
 	git checkout master
