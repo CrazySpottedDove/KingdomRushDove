@@ -11416,6 +11416,9 @@ function scripts.hero_arivan.level_up(this, store)
 		tal[3].chance = s.freeze_chance[s.level]
 		tal[4].cooldown = s.lightning_cooldown[s.level]
 		tal[4].chance = s.lightning_chance[s.level]
+        local thunder = E:get_template("lightning_arivan_ultimate")
+        thunder.bullet.damage_min = s.damage[s.level]
+        thunder.bullet.damage_max = s.damage[s.level]
 	end)
 	this.melee.attacks[1].damage_min = this.melee_raw_min + this.stone_extra
 	this.melee.attacks[1].damage_max = this.melee_raw_max + this.stone_extra
@@ -11427,7 +11430,6 @@ function scripts.hero_arivan.on_damage(this, store, damage)
 		a.ts = a.ts - 1
 	end
 
-	log.debug(" ARIVAN DAMAGE: %s", damage.value)
 	local at = this.timed_attacks.list[2]
 	local a = at.aura
 
@@ -11670,15 +11672,8 @@ function scripts.hero_arivan.update(this, store)
 				goto label_90_0
 			end
 
-			-- brk, sta = SU.y_soldier_ranged_attacks(store, this)
-			-- if brk then
-			--     -- block empty
-			-- elseif SU.soldier_go_back_step(store, this) then
-			--     -- block empty
-			-- else
 			SU.soldier_idle(store, this)
 			SU.soldier_regen(store, this)
-		-- end
 		end
 
 		::label_90_0::

@@ -1210,11 +1210,59 @@ map["近卫骑士"] = str()
 map["零花钱"] = str()
 map["大鸡腿"] = str()
 set_hero("hero_arivan")
-map["闪电箭"] = str()
-map["石盾"] = str()
-map["火球术"] = str()
-map["寒冰箭"] = str()
-map["元素之怒"] = str()
+set_skill(h.hero.skills.lightning_rod)
+a = h.ranged.attacks[2]
+cooldown = a.cooldown
+e = E:get_template("lightning_arivan")
+get_damage(e.bullet)
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+map["闪电箭"] = str(cooldown_str(), "艾里矾发射闪电箭，对敌人造成", damage_str(), "。")
+set_skill(h.hero.skills.stone_dance)
+a = h.timed_attacks.list[2]
+cooldown = a.cooldown
+count = ss("count")
+amount = ss("stone_extra")
+local hp = E:get_template("arivan_stone").hp
+map["石盾"] = str("元素法师善用岩石之力守护自己。", cooldown_str(), "艾里矾召唤最多", count, "枚石盾，每枚石盾能够吸收", hp, "点伤害。艾里矾每拥有一枚石盾，近战攻击伤害便提升", amount, "点。石盾碎裂时，会释放元素能量，使闪电箭、火球术、寒冰箭的冷却减少1秒。艾里矾每次普攻都有20%概率生成一枚石盾。若目标为BOSS，则概率降低为10%。拦截时，艾里矾依旧可以使用技能。")
+set_skill(h.hero.skills.seal_of_fire)
+a = h.timed_attacks.list[1]
+count = ss("count") * #a.shoot_times
+e = E:get_template("fireball_arivan")
+radius = e.bullet.damage_radius
+cooldown = a.cooldown
+get_damage(e.bullet)
+map["火球术"] = str(cooldown_str(), "艾里矾使用火球术，连续发射", count, "发火球，每发火球对", radius, "范围内敌人造成", damage_str(), "。")
+set_skill(h.hero.skills.icy_prison)
+a = h.ranged.attacks[3]
+cooldown = a.cooldown
+e = E:get_template("bolt_freeze_arivan")
+get_damage(e.bullet)
+set_damage_value(ss("damage"))
+duration = ss("duration")
+map["寒冰箭"] = str(cooldown_str(), "艾里矾发射寒冰箭，对敌人造成", damage_str(), "并将其冰冻，持续", duration, "秒。")
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+duration = ss("duration")
+chance = ss("freeze_chance")
+duration_2 = ss("freeze_duration")
+chance_2 = ss("lightning_chance")
+cycle_time = ss("lightning_cooldown")
+e = E:get_template("hero_arivan_ultimate")
+local cycle_time_2 = e.timed_attacks.list[2].cooldown
+local cycle_time_3 = e.timed_attacks.list[3].cooldown
+radius = e.timed_attacks.list[1].max_range
+radius_2 = e.timed_attacks.list[2].max_range
+get_damage(e.timed_attacks.list[2])
+set_damage_value(ss("damage"))
+radius_3 = e.timed_attacks.list[3].max_range
+local radius_4 = e.timed_attacks.list[4].max_range
+e = E:get_template("mod_slow")
+factor = 1 - e.slow.factor
+e = E:get_template("lightning_arivan_ultimate")
+get_damage(e.bullet, 2)
+set_damage_value(ss("damage"), 2)
+map["元素之怒"] = str(cooldown_str(), "艾里矾解放元素之力，召唤风暴持续前进，持续", duration, "秒。风暴对", radius, "范围内敌人造成", factor * 100, "%减速效果，每", cycle_time_2, "秒对", radius_2, "范围内敌人造成", damage_str(), "，对", radius_3, "范围内敌人每", cycle_time_3, "秒有", rate_str(chance), "冰冻其", duration_2, "秒，对", radius_4, "范围内敌人每", cycle_time, "秒有", rate_str(chance_2), "造成", damage_str(2), "。")
 set_hero("hero_phoenix")
 map["净化"] = str()
 map["焚祭"] = str()
