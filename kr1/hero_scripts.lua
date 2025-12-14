@@ -7898,7 +7898,7 @@ scripts.mod_minotaur_daedalus = {
 		end
 
 		SU.stun_dec(target)
-		U.flags_remove(target.vis, F_ALL)
+		U.bans_remove(target.vis, F_ALL)
 		return true
 	end,
 	update = function(this, store)
@@ -9518,13 +9518,13 @@ function scripts.hero_lynn.fn_damage_melee(this, store, attack, target)
 	local value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max + this.damage_buff))
 	local mods = {"mod_lynn_curse", "mod_lynn_despair", "mod_lynn_ultimate", "mod_lynn_weakening"}
 
-    if skill.level > 0 then
-        for _, mod in ipairs(mods) do
-            if U.has_modifier(store, target, mod) then
-                value = value + this.unit.damage_factor * skill.extra_damage
-            end
-        end
-    end
+	if skill.level > 0 then
+		for _, mod in ipairs(mods) do
+			if U.has_modifier(store, target, mod) then
+				value = value + this.unit.damage_factor * skill.extra_damage
+			end
+		end
+	end
 
 	return value
 end
@@ -9902,7 +9902,6 @@ function scripts.mod_lynn_despair.insert(this, store)
 
 	this.modifier.ts = store.tick_ts
 	this.render.sprites[1].ts = store.tick_ts
-
 	signal.emit("mod-applied", this, target)
 	return true
 end
