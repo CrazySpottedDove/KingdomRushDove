@@ -2580,4 +2580,27 @@ function U.find_first_target(entities, origin, min_range, max_range, flags, bans
 	return nil
 end
 
+--- 找到实体身上带有 bans 中任意标签的 mod
+---@param this table
+---@param bans number
+---@return table mod列表
+function U.find_modifiers_with_flags(this, bans)
+	local mods = this._applied_mods
+	local result = {}
+
+	if not mods then
+		return result
+	end
+
+	for i = 1, #mods do
+		local m = mods[i]
+
+		if band(m.modifier.vis_flags, bans) ~= 0 then
+			result[#result + 1] = m
+		end
+	end
+
+	return result
+end
+
 return U

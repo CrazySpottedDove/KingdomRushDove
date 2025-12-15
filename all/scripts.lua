@@ -186,7 +186,7 @@ function scripts.delayed_play.update(this, store)
 
 				if d.play_once then
 					queue_remove(store, this)
-					return 
+					return
 				end
 
 				if not d.idle_animation then
@@ -298,7 +298,7 @@ function scripts.click_play.update(this, store)
 
 			if c.play_once then
 				queue_remove(store, this)
-				return 
+				return
 			end
 		end
 
@@ -599,7 +599,7 @@ function scripts.enemy_passive.update(this, store)
 
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -633,7 +633,7 @@ function scripts.enemy_mixed.update(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -693,7 +693,7 @@ function scripts.enemy_mixed_water.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 			water_trail.particle_system.emit = false
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -748,7 +748,7 @@ function scripts.enemy_mixed_cliff.update(this, store)
 
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -806,7 +806,7 @@ function scripts.enemies_spawner.update(this, store)
 		if #nodes < 1 then
 			log.error("could not find nodes near spawner:%s at %s,%s", this.pos.x, this.pos.y)
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		sp.pi, sp.spi, sp.ni = unpack(nodes[1])
@@ -1019,7 +1019,7 @@ function scripts.soldier_reinforcement.update(this, store)
 
 			this.health.hp = 0
 			SU.y_soldier_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1307,7 +1307,7 @@ function scripts.soldier_barrack.update(this, store)
 		-- block empty
 		else
 			SU.y_soldier_death(store, this)
-			return 
+			return
 		end
 
 		scripts.soldier_revive_resist(this, store)
@@ -3986,7 +3986,7 @@ function scripts.ray_enemy.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	local ho = V.v(0, 0)
@@ -4505,7 +4505,7 @@ function scripts.aura_apply_damage.update(this, store)
 
 			if not te or te.health and te.health.dead or (te.enemy and (not te.enemy.can_do_magic)) then
 				queue_remove(store, this)
-				return 
+				return
 			end
 
 			if te and te.pos then
@@ -4583,7 +4583,7 @@ function scripts.aura_unit_regen.update(this, store)
 
 	if not target or target.health.dead then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	local regen_cooldown = target.regen and target.regen.cooldown or this.regen.cooldown
@@ -4594,7 +4594,7 @@ function scripts.aura_unit_regen.update(this, store)
 
 		if not target or target.health.dead then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if target.enemy and (not target.enemy.can_do_magic) then
@@ -4769,7 +4769,7 @@ function scripts.loop_sound_aura.update(this, store)
 
 		if not target or target.health.dead or not target.motion then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		S:queue(this.sound_name)
@@ -4805,7 +4805,7 @@ function scripts.mod_mark_flags.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	local mf = this.mark_flags
@@ -4822,7 +4822,7 @@ function scripts.mod_mark_flags.dequeue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	local mf = this.mark_flags
@@ -4841,7 +4841,7 @@ function scripts.mod_mark_flags.update(this, store)
 
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -4885,7 +4885,7 @@ function scripts.mod_track_target.update(this, store)
 
 	if not target or not target.pos then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -4895,7 +4895,7 @@ function scripts.mod_track_target.update(this, store)
 
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if this.render and target.unit then
@@ -4977,7 +4977,7 @@ function scripts.mod_freeze.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -5131,7 +5131,7 @@ function scripts.mod_stun.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -5144,7 +5144,7 @@ function scripts.mod_stun.update(this, store)
 			if this.abort then
 				-- goto abort
 				this.aborted = true
-				return 
+				return
 			end
 
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
@@ -5170,7 +5170,7 @@ function scripts.mod_stun.update(this, store)
 	if this.abort then
 		-- goto abort
 		this.aborted = true
-		return 
+		return
 	end
 
 	U.animation_start(this, "loop", nil, store.tick_ts, true)
@@ -5179,7 +5179,7 @@ function scripts.mod_stun.update(this, store)
 		if this.abort then
 			-- goto abort
 			this.aborted = true
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
@@ -5294,7 +5294,7 @@ function scripts.mod_dps.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -5402,7 +5402,7 @@ function scripts.mod_blood.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -5541,7 +5541,7 @@ function scripts.mod_hps.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -5551,7 +5551,7 @@ function scripts.mod_hps.update(this, store)
 
 		if not target or target.health.dead or duration < store.tick_ts - m.ts then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -5657,7 +5657,7 @@ function scripts.mod_armor_buff.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -5667,7 +5667,7 @@ function scripts.mod_armor_buff.update(this, store)
 
 		if not target or target.health.dead or store.tick_ts - m.ts >= m.duration then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -5940,7 +5940,7 @@ function scripts.mod_tower_block.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -5976,7 +5976,7 @@ function scripts.mod_tower_silence.update(this, store)
 
 	if not target or not target.tower then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -6068,7 +6068,7 @@ function scripts.mod_heal_on_damage.update(this, store)
 
 		if not target or target.health.dead then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -6096,7 +6096,7 @@ function scripts.mod_heal_on_damage.update(this, store)
 			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
 
 			if this.heal_bans then
-				local mods = scripts.find_modifiers_with_flags(this, store, this.heal_bans)
+				local mods = U.find_modifiers_with_flags(this, this.heal_bans)
 
 				if mods and #mods > 0 then
 					for _, mod in pairs(mods) do
@@ -6144,7 +6144,7 @@ function scripts.mod_heal_on_kill.update(this, store)
 
 		if not target or target.health.dead then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if target.track_kills.mod ~= this.template_name then
@@ -6154,7 +6154,7 @@ function scripts.mod_heal_on_kill.update(this, store)
 			m.modifier.source_id = target.id
 			m.pos = V.vclone(target.pos)
 			queue_insert(store, m)
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -6220,7 +6220,7 @@ function scripts.mod_gain_on_kill.update(this, store)
 
 		if not target or target.health.dead then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -6355,7 +6355,7 @@ function scripts.mod_teleport.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -6378,7 +6378,7 @@ function scripts.mod_teleport.dequeue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -6426,7 +6426,7 @@ function scripts.mod_teleport.update(this, store)
 
 	if not target or not target.health or target.health.dead then
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	if this.max_times_applied then
@@ -6828,7 +6828,7 @@ function scripts.mega_spawner.update(this, store)
 	if not this.spawner_points or not this.spawner_groups or not this.spawner_waves then
 		log.error("points_spawner not initialized. points, grops or waves missing")
 		queue_remove(store, this)
-		return 
+		return
 	end
 
 	local spawners = E:filter(store.entities, "spawner")
@@ -7420,7 +7420,7 @@ function scripts.werewolf_regen_aura.update(this, store)
 
 		if not target or target.health.dead then
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		if target.unit.is_stunned and U.has_modifier_types(store, target, MOD_TYPE_FREEZE) then
@@ -7467,7 +7467,7 @@ function scripts.mod_lycanthropy.update(this, store)
 
 			if not target or target.health.dead then
 				queue_remove(store, this)
-				return 
+				return
 			end
 
 			S:queue(this.sound_events.transform)
@@ -7486,7 +7486,7 @@ function scripts.mod_lycanthropy.update(this, store)
 				else
 					log.error("Could not find path to transform creature: %s (%s,%s)", target.id, e.pos.x, e.pos.y)
 					queue_remove(store, this)
-					return 
+					return
 				end
 			end
 
@@ -7506,7 +7506,7 @@ function scripts.mod_lycanthropy.update(this, store)
 			end
 
 			queue_remove(store, this)
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -7810,40 +7810,22 @@ scripts.heal = function(this, amount)
 	end
 end
 
-scripts.find_modifiers_with_flags = function(this, store, bans)
-	local mods = this._applied_mods
-	local result = {}
-
-	if not mods then
-		return result
-	end
-
-	for i = 1, #mods do
-		local m = mods[i]
-
-		if band(m.modifier.vis_flags, bans) ~= 0 then
-			result[#result + 1] = m
-		end
-	end
-
-	return result
-end
 -- 通过复生特性来抵抗异常状态
 scripts.soldier_revive_resist = function(this, store)
 	if not this.revive or not this.revive.resist then
-		return 
+		return
 	end
 
 	local r = this.revive.resist
 
 	if this.revive.protect < r.cost then
-		return 
+		return
 	end
 
-	local mods = scripts.find_modifiers_with_flags(this, store, r.bans)
+	local mods = U.find_modifiers_with_flags(this, r.bans)
 
 	if not mods or #mods == 0 then
-		return 
+		return
 	end
 
 	this.revive.protect = this.revive.protect - r.cost
@@ -7949,7 +7931,7 @@ scripts.mod_ban.update = function(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or target.health.dead then
-		return 
+		return
 	end
 
 	this.modifier.ts = store.tick_ts
@@ -8204,7 +8186,7 @@ scripts.mod_soldier_cooldown = {
 		end
 
 		queue_remove(store, this)
-		return 
+		return
 	end,
 	remove = function(this, store)
 		local target = store.entities[this.modifier.target_id]
@@ -8278,7 +8260,7 @@ function scripts.multi_sprite_fx.update(this, store)
 					queue_remove(store, this)
 				end
 
-				return 
+				return
 			end
 		end
 
@@ -8310,7 +8292,7 @@ scripts.enemy_attracted.update = function(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then

@@ -752,6 +752,7 @@ scripts.hero_mirage = {
 		upgrade_skill(this, "swiftness", function(this, s)
 			U.speed_mul_self(this, s.max_speed_factor[s.level])
 			this.melee.range = this.melee.range * s.max_speed_factor[s.level]
+			SU.change_fps(store.tick_ts, this, s.fps_factor[s.level])
 		end)
 		upgrade_skill(this, "shadowdance", function(this, s)
 			this.timed_attacks.list[1].disabled = nil
@@ -844,6 +845,14 @@ scripts.hero_mirage = {
 						if a_l.ts then
 							a_l.ts = a_l.ts - a_l.cooldown * this.reward_lethalstrike
 						end
+					end
+
+					local mods = U.find_modifiers_with_flags(this, bor(F_BLOOD, F_BURN, F_POISON))
+
+					for i = 1, #mods do
+						local mod = mods[i]
+						mod.modifier.removed_by_ban = true
+						queue_remove(store, mod)
 					end
 
 					scripts.heal(this, this.health.hp_max * 0.1)
@@ -11416,9 +11425,9 @@ function scripts.hero_arivan.level_up(this, store)
 		tal[3].chance = s.freeze_chance[s.level]
 		tal[4].cooldown = s.lightning_cooldown[s.level]
 		tal[4].chance = s.lightning_chance[s.level]
-        local thunder = E:get_template("lightning_arivan_ultimate")
-        thunder.bullet.damage_min = s.damage[s.level]
-        thunder.bullet.damage_max = s.damage[s.level]
+		local thunder = E:get_template("lightning_arivan_ultimate")
+		thunder.bullet.damage_min = s.damage[s.level]
+		thunder.bullet.damage_max = s.damage[s.level]
 	end)
 	this.melee.attacks[1].damage_min = this.melee_raw_min + this.stone_extra
 	this.melee.attacks[1].damage_max = this.melee_raw_max + this.stone_extra

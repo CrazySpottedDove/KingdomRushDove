@@ -5903,7 +5903,7 @@ return {
 		source_group = "TAUNTS"
 	},
 	HeroMirageDeath = {
-		files = {"assassinHero_taunt_death"},
+		files = {"assassinHero_taunt_death.ogg"},
 		gain = 0.6,
 		loop = false,
 		source_group = "TAUNTS"

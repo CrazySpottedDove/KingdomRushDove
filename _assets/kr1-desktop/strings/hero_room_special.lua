@@ -554,7 +554,7 @@ duration = s.lifespan[max_lvl]
 e = E:get_template("soldier_mirage_illusion")
 get_damage(e.melee.attacks[1])
 radius = e.melee.attacks[1].damage_radius
-map["移形换影"] = str("幻影每次遭遇近战攻击时，有", rate_str(chance), "恢复10%最大生命值，进入无敌状态并闪离，在原地留下一个存在", duration, "秒的影子。影子消失时，对", radius, "范围内敌人造成", damage_str(), "。若幻影成功闪避近战攻击，将立刻缩减影舞", reward_shadowdance * 100, "%冷却与背刺", reward_lethalstrike * 100, "%冷却。面对范围攻击或远程攻击时，移形换影触发概率×60%。")
+map["移形换影"] = str("幻影每次遭遇近战攻击时，有", rate_str(chance), "恢复10%最大生命值，消除自身异常状态，进入无敌状态并闪离，在原地留下一个存在", duration, "秒的影子。影子消失时，对", radius, "范围内敌人造成", damage_str(), "。若幻影成功闪避近战攻击，将立刻缩减影舞", reward_shadowdance * 100, "%冷却与背刺", reward_lethalstrike * 100, "%冷却。面对范围攻击或远程攻击时，移形换影触发概率×60%。")
 set_skill(h.hero.skills.shadowdance)
 count = s.copies[max_lvl]
 set_bullet("mirage_shadow")

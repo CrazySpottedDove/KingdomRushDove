@@ -2218,6 +2218,7 @@ tt.hero.skills.shadowdodge.xp_level_steps = {
 tt.hero.skills.shadowdodge.lifespan = {1.2, 1.4, 1.6}
 tt.hero.skills.swiftness = CC("hero_skill")
 tt.hero.skills.swiftness.max_speed_factor = {1.3, 1.3, 1.3}
+tt.hero.skills.swiftness.fps_factor = {1.1, 1.09, 1.08}
 tt.hero.skills.swiftness.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,

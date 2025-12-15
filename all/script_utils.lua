@@ -58,7 +58,7 @@ end
 local function ui_click_proxy_add(proxy, dest)
 	if not proxy.ui then
 		log.error("cannot proxy. entity has no ui component: (%s)%s", proxy.id, proxy.template_name)
-		return 
+		return
 	end
 
 	proxy.ui.click_proxies = proxy.ui.click_proxies or {}
@@ -83,7 +83,7 @@ end
 ---@return nil
 local function remove_modifiers(store, entity, mod_name, exclude_name)
 	if not entity._applied_mods then
-		return 
+		return
 	end
 
 	local mods = entity._applied_mods
@@ -105,7 +105,7 @@ end
 ---@return nil
 local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
 	if not entity._applied_mods then
-		return 
+		return
 	end
 
 	local mods = entity._applied_mods
@@ -143,7 +143,7 @@ local function hide_modifiers(store, entity, keep, exclude_mod)
 	local mods = entity._applied_mods
 
 	if not mods then
-		return 
+		return
 	end
 
 	for i = 1, #mods do
@@ -165,7 +165,7 @@ local function show_modifiers(store, entity, restore, exclude_mod)
 	local mods = entity._applied_mods
 
 	if not mods then
-		return 
+		return
 	end
 
 	for i = 1, #mods do
@@ -440,7 +440,7 @@ local function do_death_spawns(store, this)
 	end
 
 	if this.enemy and not this.enemy.can_do_magic then
-		return 
+		return
 	end
 
 	for i = 1, this.death_spawns.quantity do
@@ -520,7 +520,7 @@ local function fade_out_entity(store, entity, delay, duration)
 
 	if entity.tween then
 		log.error("entity %s already has tween. cannot be faded out", entity.id)
-		return 
+		return
 	end
 
 	entity.tween = E:clone_c("tween")
@@ -1307,7 +1307,7 @@ local function y_soldier_death(store, this)
 		end
 	elseif this.reinforcement and (this.reinforcement.fade or this.reinforcement.fade_out) then
 		y_reinforcement_fade_out(store, this)
-		return 
+		return
 	else
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		U.y_animation_play(this, "death", nil, store.tick_ts, 1)
@@ -2529,7 +2529,7 @@ local function soldier_idle(store, this, force_ts)
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, force_ts)
 
 	if this.unit.is_stunned then
-		return 
+		return
 	end
 
 	if store.tick_ts - this.idle_flip.ts > 2 * store.tick_length then
@@ -2558,7 +2558,7 @@ end
 ---@return nil
 local function soldier_regen(store, this)
 	if not this.regen then
-		return 
+		return
 	end
 
 	if not this.regen.health then
@@ -2819,7 +2819,7 @@ local function enemy_water_change(store, this)
 		if w.ignore_pi == this.nav_path.pi then
 			log.debug("Enemy %s ignored path %s for water change", this.id, w.ignore_pi)
 			w.last_terrain_type = terrain_type
-			return 
+			return
 		end
 
 		if w.last_terrain_type and bor(w.last_terrain_type, terrain_type) == bor(TERRAIN_WATER, TERRAIN_LAND) then
@@ -3860,7 +3860,7 @@ end
 ---@param allow_barrack boolean 是否允许兵营范围加成
 local function insert_tower_range_buff(target, range_factor, allow_barrack)
 	if not target then
-		return 
+		return
 	end
 
 	if target.attacks and target.attacks.range then
@@ -3890,7 +3890,7 @@ local function scale_fps_based_keys(tbl, factor, visited)
 	visited = visited or {}
 
 	if visited[tbl] then
-		return 
+		return
 	end
 
 	visited[tbl] = true
@@ -3938,7 +3938,7 @@ end
 ---@param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
@@ -3956,7 +3956,7 @@ end
 
 local function insert_unit_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	if target.cooldown_factor then
@@ -3971,7 +3971,7 @@ end
 ---@param allow_barrack boolean 是否允许兵营范围加成
 local function remove_tower_range_buff(target, range_factor, allow_barrack)
 	if not target then
-		return 
+		return
 	end
 
 	if target.attacks and target.attacks.range then
@@ -3996,7 +3996,7 @@ end
 ---@param cooldown_factor number 冷却系数
 local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.cooldown_factor = target.tower.cooldown_factor / cooldown_factor
@@ -4014,7 +4014,7 @@ end
 
 local function remove_unit_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	if target.cooldown_factor then
@@ -4028,7 +4028,7 @@ end
 ---@param damage_factor number 伤害加成值
 local function insert_tower_damage_factor_buff(target, damage_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.damage_factor = target.tower.damage_factor + damage_factor
@@ -4047,7 +4047,7 @@ end
 ---@param damage_factor number 伤害加成值
 local function remove_tower_damage_factor_buff(target, damage_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.damage_factor = target.tower.damage_factor - damage_factor
@@ -4264,6 +4264,7 @@ local SU = {
 	insert_tower_cooldown_buff = insert_tower_cooldown_buff,
 	remove_tower_range_buff = remove_tower_range_buff,
 	remove_tower_cooldown_buff = remove_tower_cooldown_buff,
+    change_fps = change_fps,
 	insert_tower_damage_factor_buff = insert_tower_damage_factor_buff,
 	remove_tower_damage_factor_buff = remove_tower_damage_factor_buff,
 	y_controable_new_rally = y_controable_new_rally,
