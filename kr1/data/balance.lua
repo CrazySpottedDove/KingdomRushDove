@@ -5625,7 +5625,7 @@ local towers = {
 			speed_flight = 250,
 			dead_lifetime = 10,
 			speed_ground = 75,
-			armor = {0.1, 0.15, 0.2, 0.45},
+			armor = {0.1, 0.15, 0.2, 0.5},
 			hp = {30, 50, 70, 100},
 			regen_hp = {5, 8, 11, 15},
 			melee_attack = {
@@ -5642,7 +5642,7 @@ local towers = {
 				damage_min = {5, 12, 22, 40}
 			},
 			phosphoric = {
-				damage_radius = 50,
+				damage_radius = 55,
 				price = {250, 100, 100},
 				armor_reduction = {0.01, 0.02, 0.03},
 				damage_area_max = {
@@ -5653,9 +5653,9 @@ local towers = {
 				},
 				damage_area_min = {
 					[0] = 12,
-					[1] = 12,
-					[2] = 16,
-					[3] = 20
+					[1] = 14,
+					[2] = 19,
+					[3] = 24
 				},
 				damage_factor = {1, 1, 1},
 				damage_type = DAMAGE_AGAINST_ARMOR
