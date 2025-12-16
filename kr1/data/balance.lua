@@ -5413,9 +5413,9 @@ local towers = {
 		},
 		price = {70, 100, 160, 230},
 		basic_attack = {
-			cooldown = 0.8,
-			damage_min = {3, 8, 15, 13},
-			damage_max = {5, 11, 23, 19},
+			cooldown = 0.7,
+			damage_min = {3, 8, 15, 11},
+			damage_max = {5, 11, 23, 17},
 			range = {160, 170, 185, 200},
 			damage_type = DAMAGE_PHYSICAL
 		},
@@ -5437,8 +5437,8 @@ local towers = {
 			max_distance_from_tower = 240,
 			attack_cooldown = 2,
 			price = {200, 100, 100},
-			damage_min = {18, 34, 52},
-			damage_max = {26, 52, 78},
+			damage_min = {20, 40, 60},
+			damage_max = {30, 55, 80},
 			damage_type = DAMAGE_PHYSICAL
 		}
 	},
