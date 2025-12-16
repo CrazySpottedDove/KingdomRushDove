@@ -19,7 +19,7 @@ function entity_db:load()
 	require("components")
 	require("templates")
 	require("game_templates")
-	self:test_tween()
+	-- self:test_tween()
 end
 
 function entity_db:test_tween()
@@ -29,6 +29,10 @@ function entity_db:test_tween()
 				for _, key in pairs(prop.keys) do
 					if key[3] then
 						log.error("template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()", name)
+					end
+
+					if key[2] == nil then
+						log.error("template %s has tween with key missing value", name)
 					end
 				end
 
@@ -98,7 +102,7 @@ end
 function entity_db:register_t(name, base)
 	if self.entities[name] then
 		log.error("template %s already exists", name)
-		return 
+		return
 	end
 
 	local t
@@ -117,7 +121,7 @@ end
 function entity_db:register_c(name, base)
 	if self.components[name] then
 		log.error("component %s already exists", name)
-		return 
+		return
 	end
 
 	local c = {}
@@ -133,7 +137,7 @@ end
 function entity_db:clone_c(name)
 	if not self.components[name] then
 		log.error("component %s does not exist", name)
-		return 
+		return
 	end
 
 	return copy(self.components[name])
@@ -142,13 +146,13 @@ end
 function entity_db:add_comps(entity, ...)
 	if entity == nil then
 		log.error("entity is nil")
-		return 
+		return
 	end
 
 	for _, v in pairs({...}) do
 		if not self.components[v] then
 			log.error("component %s does not exist", v)
-			return 
+			return
 		end
 
 		entity[v] = copy(self.components[v])
@@ -186,7 +190,7 @@ end
 function entity_db:append_templates(entity, ...)
 	if entity == nil then
 		log.error("entity is nil")
-		return 
+		return
 	end
 
 	for _, tn in pairs({...}) do
@@ -194,7 +198,7 @@ function entity_db:append_templates(entity, ...)
 
 		if not tpl then
 			log.error("template %s not found", tn)
-			return 
+			return
 		end
 
 		for k, v in pairs(tpl) do
@@ -367,7 +371,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 		end
 
 		if not ok then
-			return 
+			return
 		end
 	end
 

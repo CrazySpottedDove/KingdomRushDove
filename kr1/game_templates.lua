@@ -7043,7 +7043,7 @@ tt.tween.props[1].name = "r"
 tt.tween.props[1].keys = {{0, 50 * math.pi / 180}, {0.3, 0}}
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "offset"
-tt.tween.props[2].keys = {{0}, {0.3}}
+tt.tween.props[2].keys = {{0, v(0, 0)}, {0.3, v(0, 0)}}
 tt.achievement = "GEORGE_FALL"
 tt = E:register_t("decal_tree_ewok", "decal_scripted")
 E:add_comps(tt, "motion", "nav_path", "ranged", "unit")
