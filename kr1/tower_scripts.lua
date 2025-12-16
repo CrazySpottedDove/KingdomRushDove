@@ -3903,7 +3903,7 @@ scripts.tower_tesla = {
 		local m = E:get_template(b.bullet.mod)
 		d_type = m.dps.damage_type
 		local bounce_factor = UP:get_upgrade("engineer_efficiency") and 1 or b.bounce_damage_factor
-		min, max = b.bounce_damage_min, b.bounce_damage_max
+		min, max = b.bounce_damage_min + b.bounce_damage_inc * this.powers.bolt.level, b.bounce_damage_max + b.bounce_damage_inc * this.powers.bolt.level
 		min, max = math.ceil(min * bounce_factor * this.tower.damage_factor), math.ceil(max * bounce_factor * this.tower.damage_factor)
 		return {
 			type = STATS_TYPE_TOWER,

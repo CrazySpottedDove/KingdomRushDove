@@ -4268,7 +4268,7 @@ function scripts.ray_tesla.update(this, store)
 				else
 					local mod = E:create_entity(b.mod)
 					local bounce_factor = UP:get_upgrade("engineer_efficiency") and 1 or this.bounce_damage_factor
-					local total_damage = math.random(this.bounce_damage_min, this.bounce_damage_max) * bounce_factor
+					local total_damage = (math.random(this.bounce_damage_min, this.bounce_damage_max) + b.level * this.bounce_damage_inc)  * bounce_factor
 					local actual_damage = math.min(total_damage, target.health.hp)
 					local last_damage = total_damage - actual_damage
 					local frame_damage = actual_damage / mod.dps.cocos_frames

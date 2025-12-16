@@ -162,9 +162,9 @@ tt.info.fn = scripts.tower_tesla.get_info
 tt.info.i18n_key = "TOWER_TESLA"
 tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0011" or "info_portraits_towers_0009"
 tt.powers.bolt = CC("power")
-tt.powers.bolt.price_base = 175
-tt.powers.bolt.price_inc = 175
-tt.powers.bolt.max_level = 2
+tt.powers.bolt.price_base = 170
+tt.powers.bolt.price_inc = 170
+tt.powers.bolt.max_level = 3
 tt.powers.bolt.jumps_base = 3
 tt.powers.bolt.jumps_inc = 1
 tt.powers.bolt.enc_icon = 11
@@ -203,17 +203,20 @@ tt.bounces = nil
 tt.bounces_lvl = {
 	[0] = 2,
 	3,
-	4
+	4,
+	5
 }
 tt.bounce_range = 95
 tt.bounce_range_inc = 5
 tt.bounce_vis_flags = F_RANGED
 tt.bounce_vis_bans = 0
 tt.bounce_damage_min = 57
+-- dps = 105 / 2.2 = 47.727 per second
 tt.bounce_damage_max = 105
 tt.bounce_damage_factor = 0.5
 tt.bounce_damage_factor_min = 0.5
 tt.bounce_damage_factor_inc = 0
+tt.bounce_damage_inc = 10
 tt.bounce_delay = fts(2)
 tt.bounce_scale_y = 1
 tt.bounce_scale_y_factor = 0.88
@@ -549,12 +552,12 @@ tt = RT("tower_frankenstein", "tower")
 AC(tt, "barrack", "attacks", "powers")
 tt.tower.type = "frankenstein"
 tt.tower.level = 1
-tt.tower.price = 325
+tt.tower.price = 350
 tt.info.fn = scripts.tower_frankenstein.get_info
 tt.info.portrait = "kr2_info_portraits_towers_0022"
 tt.powers.lightning = CC("power")
-tt.powers.lightning.price_base = 150
-tt.powers.lightning.price_inc = 150
+tt.powers.lightning.price_base = 160
+tt.powers.lightning.price_inc = 160
 tt.powers.lightning.enc_icon = 27
 tt.powers.frankie = CC("power")
 tt.powers.frankie.price_base = 200
@@ -646,8 +649,9 @@ tt.main_script.update = scripts.ray_frankenstein.update
 tt = RT("mod_ray_frankenstein", "modifier")
 AC(tt, "render", "dps")
 tt.modifier.duration = fts(18)
-tt.dps.damage_min = 50
-tt.dps.damage_max = 70
+-- dps = 110 / 2.5 = 44 damage per second
+tt.dps.damage_min = 80
+tt.dps.damage_max = 110
 tt.dps.damage_inc = 10
 tt.dps.damage_type = DAMAGE_ELECTRICAL
 tt.dps.damage_every = 1
