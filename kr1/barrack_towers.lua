@@ -1308,6 +1308,7 @@ tt.dps.damage_every = fts(5)
 tt.modifier.duration = 0.5
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+-- 变节者
 tt = RT("tower_drow", "tower_barrack_1")
 AC(tt, "powers")
 tt.barrack.soldier_type = "soldier_drow"
@@ -1315,10 +1316,10 @@ tt.info.i18n_key = "ELVES_TOWER_SPECIAL_DROW"
 tt.info.portrait = "kr3_info_portraits_towers_0016"
 tt.powers.life_drain = CC("power")
 tt.powers.life_drain.price_base = 225
-tt.powers.life_drain.price_inc = 225
+tt.powers.life_drain.price_inc = 200
 tt.powers.double_dagger = CC("power")
-tt.powers.double_dagger.price_base = 175
-tt.powers.double_dagger.price_inc = 175
+tt.powers.double_dagger.price_base = 170
+tt.powers.double_dagger.price_inc = 170
 tt.powers.double_dagger.max_level = 1
 tt.powers.blade_mail = CC("power")
 tt.powers.blade_mail.price_base = 125
@@ -1338,7 +1339,7 @@ tt = RT("soldier_drow", "soldier_barrack_1")
 AC(tt, "powers", "ranged", "track_damage")
 tt.health.armor = 0.6
 tt.health.dead_lifetime = 15
-tt.health.hp_max = 180
+tt.health.hp_max = 200
 tt.health.spiked_armor = 0
 tt.info.portrait = "kr3_info_portraits_soldiers_0007"
 tt.info.random_name_format = "ELVES_SOLDIER_DROW_%i_NAME"
