@@ -1258,26 +1258,26 @@ return {
 			tt_desc = _("SPECIAL_SUNRAY_UPGRADE_DESCRIPTION_1")
 		}}
 	}), merge(templates.upgrade_power, {
-		image = "main_icons_0019",
-		action_arg = "manual",
+		image = "special_icons_0022",
+		action_arg = "gold",
 		place = 6,
 		sounds = {"MageSorcererAshesToAshesTaunt"},
-		tt_phrase = _("TOWER_SUNRAY_MANUAL_NOTE"),
+		tt_phrase = _("TOWER_SUNRAY_GOLD_NOTE"),
 		tt_list = {{
-			tt_title = _("TOWER_SUNRAY_MANUAL_NAME"),
-			tt_desc = _("TOWER_SUNRAY_MANUAL_DESCRIPTION")
+			tt_title = _("TOWER_SUNRAY_GOLD_NAME"),
+			tt_desc = _("TOWER_SUNRAY_GOLD_DESCRIPTION")
 		}}
 	}), merge(templates.upgrade_power, {
-		image = "main_icons_0020",
-		action_arg = "auto",
+		image = "special_icons_0015",
+		action_arg = "charge",
 		place = 7,
 		sounds = {"MageSorcererAshesToAshesTaunt"},
-		tt_phrase = _("TOWER_SUNRAY_AUTO_NOTE"),
+		tt_phrase = _("TOWER_SUNRAY_CHARGE_NOTE"),
 		tt_list = {{
-			tt_title = _("TOWER_SUNRAY_AUTO_NAME"),
-			tt_desc = _("TOWER_SUNRAY_AUTO_DESCRIPTION")
+			tt_title = _("TOWER_SUNRAY_CHARGE_NAME"),
+			tt_desc = _("TOWER_SUNRAY_CHARGE_DESCRIPTION")
 		}}
-	}), templates.point, templates.sell}},
+	}), templates.sell}},
 	mercenaries_desert = {{merge(templates.buy_soldier, {
 		action_arg = "soldier_djinn",
 		image = "main_icons_0030",

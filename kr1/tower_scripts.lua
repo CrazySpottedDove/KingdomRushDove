@@ -2752,247 +2752,173 @@ scripts.tower_faerie_dragon = {
 scripts.tower_sunray = {
 	get_info = function(this)
 		local pow = this.powers.ray
-		local manual = this.powers.manual
-		local auto = this.powers.auto
-
-		if pow.level == 0 then
-			return {
-				type = STATS_TYPE_TEXT,
-				desc = _((this.info.i18n_key or string.upper(this.template_name)) .. "_DESCRIPTION")
-			}
-		else
-			local a = this.attacks.list[1]
-			local b = E:get_template(a.bullet).bullet
-			local p = this.powers.ray
-			local max = b.damage_max + b.damage_inc * p.level
-			local min = b.damage_min + b.damage_inc * p.level
-			local d_type = b.damage_type
-			local cooldown = a.cooldown_base + a.cooldown_inc * pow.level
-
-			if auto.level == 1 then
-				min = min * 0.75
-				max = max * 0.75
-				cooldown = cooldown * 0.6
-			end
-
-			return {
-				type = STATS_TYPE_TOWER_MAGE,
-				damage_min = min * this.tower.damage_factor,
-				damage_max = max * this.tower.damage_factor,
-				damage_type = d_type,
-				range = this.attacks.range,
-				cooldown = cooldown
-			}
-		end
+		local a = this.attacks.list[1]
+		local b = E:get_template(a.bullet).bullet
+		local p = this.powers.ray
+		local max = b.damage_max + b.damage_inc * p.level
+		local min = b.damage_min + b.damage_inc * p.level
+		local d_type = b.damage_type
+		local cooldown = pow.cooldown_base + pow.cooldown_inc * pow.level
+		return {
+			type = STATS_TYPE_TOWER_MAGE,
+			damage_min = min * this.tower.damage_factor,
+			damage_max = max * this.tower.damage_factor,
+			damage_type = d_type,
+			range = this.attacks.range,
+			cooldown = cooldown
+		}
 	end,
-	can_select_point = function(this, x, y, store)
-		return U.find_entity_at_pos(store.enemies, x, y, function(e)
-			return not e.health.dead and not U.flag_has(e.vis.bans, F_RANGED)
-		end)
+	damage_factor_fun = function(count)
+		-- count = 1 时，伤害系数为 1
+		-- count 越大，伤害系数越小
+		-- count * 伤害系数收敛于 4
+		return 4 / (3 + count)
+	end,
+	charge_factor_fun = function(count)
+		local c = E:get_template("tower_sunray").powers.charge
+		-- count = 1 时，为 min_charge_factor
+		-- count 越大，充能系数越大
+		-- count -> +∞ 时，充能系数收敛于 max_charge_factor
+		return c.min_charge_factor + (c.max_charge_factor - c.min_charge_factor) * (1 - math.exp(-0.3 * (count - 1)))
 	end,
 	update = function(this, store)
-		local pow = this.powers.ray
-		local auto = this.powers.auto
-		local manual = this.powers.manual
+		local pow_r = this.powers.ray
+		local pow_g = this.powers.gold
+		local pow_c = this.powers.charge
 		local a = this.attacks.list[1]
 		local charging = false
 		local sid_shooters = {7, 8, 9, 10}
 		local group_tower = "tower"
-		local splash_radius = 45
-		local kill_extra_gold_factor = 0.6
-		local not_kill_extra_gold_factor = 0.2
-		local max_kill_extra_gold = 60
-		local max_not_kill_extra_gold = 1
-		local accelerate_base = 0.35
-		local accelerate_inc = 0.1
-		local max_accelerate = 0.6
-		local min_damage_factor = 0.35
-		local damage_dec = 0.2
 		local range = this.attacks.range
-		local mode_damage_factor = 1
-		local mode_cooldown_factor = 1
+		local tw = this.tower
+		local sprites = this.render.sprites
+		local tpos = tpos(this)
+		local bullet = E:get_template(a.bullet).bullet -- const&
 
 		while true do
 			do
-				-- 升级
-				if auto.changed then
-					manual.level = 0
-					auto.changed = nil
-					mode_damage_factor = 0.75
-					mode_cooldown_factor = 0.6
-					a.cooldown = (a.cooldown_base + a.cooldown_inc * pow.level) * mode_cooldown_factor
-				end
-
-				if manual.changed then
-					auto.level = 0
-					manual.changed = nil
-					mode_damage_factor = 1
-					mode_cooldown_factor = 1
-					a.cooldown = (a.cooldown_base + a.cooldown_inc * pow.level) * mode_cooldown_factor
-				end
-
-				if pow.changed then
-					pow.changed = nil
-					a.cooldown = (a.cooldown_base + a.cooldown_inc * pow.level) * mode_cooldown_factor
+				if pow_r.changed then
+					pow_r.changed = nil
+					a.cooldown = pow_r.cooldown_base + pow_r.cooldown_inc * pow_r.level
+					a.radius = pow_r.radius_base + pow_r.radius_inc * pow_r.level
 					get_attack_ready(a, store)
 
-					for i = 1, pow.level do
-						this.render.sprites[sid_shooters[i]].hidden = false
+					for i = 1, pow_r.level do
+						sprites[sid_shooters[i]].hidden = false
 					end
 
 					charging = true
 				end
 
-				if this.tower.blocked then
+				if pow_g.changed then
+					pow_g.changed = nil
+				end
+
+				if pow_c.changed then
+					pow_c.changed = nil
+				end
+
+				if tw.blocked then
 					goto continue
 				end
 
 				-- 冷却
-				if not ready_to_attack(a, store, this.tower.cooldown_factor) then
-					if not charging then
-						charging = true
+				if ready_to_attack(a, store, tw.cooldown_factor) then
+					if charging then
+						U.y_animation_play_group(this, "ready_start", nil, store.tick_ts, 1, group_tower)
+						U.animation_start_group(this, "ready_idle", nil, store.tick_ts, true, group_tower)
 					end
 
-					this.user_selection.allowed = false
+					charging = false
+				else
+					charging = true
 					U.animation_start_group(this, "charging", nil, store.tick_ts, true, group_tower)
 
-					for i = 1, pow.level do
-						this.render.sprites[sid_shooters[i]].name = "charge"
+					for i = 1, pow_r.level do
+						sprites[sid_shooters[i]].name = "charge"
 					end
 
 					goto continue
 				end
 
 				-- 冷却完毕
-				if charging then
-					charging = false
-
-					for i = 1, pow.level do
-						this.render.sprites[sid_shooters[i]].name = "idle"
-					end
-
-					U.y_animation_play_group(this, "ready_start", nil, store.tick_ts, 1, group_tower)
-					U.animation_start_group(this, "ready_idle", nil, store.tick_ts, true, group_tower)
-
-					if manual.level == 1 then
-						this.user_selection.allowed = true
-					end
+				for i = 1, pow_r.level do
+					sprites[sid_shooters[i]].name = "idle"
 				end
 
-				-- 索敌
-				local target
-
-				if manual.level == 1 then
-					if this.user_selection.new_pos then
-						local pos = this.user_selection.new_pos
-						target = U.find_entity_at_pos(store.enemies, pos.x, pos.y)
-						this.user_selection.new_pos = nil
-					end
-				else
-					target = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, range, nil, a.vis_flags, a.vis_bans, nil, nil, splash_radius)
-				end
+				local target = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, range, nil, a.vis_flags, a.vis_bans, a.radius)
 
 				-- 攻击
 				if not target then
 					goto continue
 				end
 
-				a.ts = store.tick_ts
 				U.animation_start_group(this, "shoot", nil, store.tick_ts, false, group_tower)
 				y_wait(store, a.shoot_time)
-				local enemies = U.find_enemies_in_range_filter_off(target.pos, splash_radius, a.vis_flags, a.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(target.pos, a.radius, a.vis_flags, a.vis_bans)
 
 				if not enemies then
-					y_wait(store, this.tower.guard_time)
+					U.y_animation_wait_group(this, group_tower)
 					goto continue
 				end
 
+				-- 确定打出攻击，此时刷新cd
+				a.ts = store.tick_ts
+				local damage_factor = tw.damage_factor * scripts.tower_sunray.damage_factor_fun(#enemies)
+				local damage_min = bullet.damage_min + bullet.damage_inc * pow_r.level
+				local damage_max = bullet.damage_max + bullet.damage_inc * pow_r.level
 				local kill_count = 0
-				local damage_decrease_rate = damage_dec * (#enemies - 1)
 
-				if damage_decrease_rate > 1 - min_damage_factor then
-					damage_decrease_rate = 1 - min_damage_factor
-				end
-
-				local total_extra_gold = 0
-
-				for _, enemy in pairs(enemies) do
+				for _, enemy in ipairs(enemies) do
 					local b = E:create_entity(a.bullet)
 					b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
-					b.bullet.from = vclone(b.pos)
-					b.bullet.to = vclone(enemy.pos)
+					b.bullet.from.x, b.bullet.from.y = b.pos.x, b.pos.y
+					b.bullet.to.x, b.bullet.to.y = enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y
 					b.bullet.target_id = enemy.id
 					b.bullet.level = 0
-					b.render.sprites[1].scale = v(1, b.ray_y_scales[pow.level])
-
-					if manual.level == 1 then
-						local deadline = (enemy.health.hp_max - enemy.health.hp) * 0.1
-
-						if deadline > 200 then
-							deadline = 200
-						end
-
-						b.bullet.damage_max = b.bullet.damage_max + deadline
-						b.bullet.damage_min = b.bullet.damage_min + deadline
-					end
-
-					b.bullet.damage_factor = this.tower.damage_factor
-					local damage = (b.bullet.damage_max + b.bullet.damage_inc * pow.level) * mode_damage_factor * this.tower.damage_factor
-					local decrease_damage = damage * damage_decrease_rate
+					b.render.sprites[1].scale = v(1, b.ray_y_scales[pow_r.level])
+					b.bullet.damage_factor = damage_factor
 					local pure_damage = {}
 					pure_damage.damage_type = b.bullet.damage_type
-					pure_damage.value = damage - decrease_damage
+					pure_damage.value = damage_min * damage_factor
 					pure_damage.reduce_armor = 0
 					pure_damage.reduce_magic_armor = b.bullet.reduce_magic_armor
 					local exact_damage = U.predict_damage(enemy, pure_damage)
-					b.bullet.damage_max = pure_damage.value
-					b.bullet.damage_min = pure_damage.value
+					b.bullet.damage_max = damage_max
+					b.bullet.damage_min = damage_min
 
-					if exact_damage >= enemy.health.hp then
-						kill_count = kill_count + 1
-						local kill_extra_gold = enemy.enemy.gold * kill_extra_gold_factor
+					if pow_g.level > 0 then
+						if exact_damage >= enemy.health.hp then
+							if enemy.enemy.gold ~= 0 then
+								local fx = E:create_entity("fx_coin_jump")
+								fx.pos.x, fx.pos.y = enemy.pos.x, enemy.pos.y
+								fx.render.sprites[1].ts = store.tick_ts
 
-						if kill_extra_gold > max_kill_extra_gold then
-							kill_extra_gold = max_kill_extra_gold
-						end
+								if enemy.health_bar then
+									fx.render.sprites[1].offset.y = enemy.health_bar.offset.y
+								end
 
-						total_extra_gold = total_extra_gold + kill_extra_gold
-
-						if enemy.enemy.gold ~= 0 then
-							local fx = E:create_entity("fx_coin_jump")
-							fx.pos.x, fx.pos.y = enemy.pos.x, enemy.pos.y
-							fx.render.sprites[1].ts = store.tick_ts
-
-							if enemy.health_bar then
-								fx.render.sprites[1].offset.y = enemy.health_bar.offset.y
+								enemy.enemy.gold = enemy.enemy.gold * (1 + pow_g.gold_factor)
+								queue_insert(store, fx)
 							end
-
-							queue_insert(store, fx)
+						elseif enemy.enemy.gold ~= 0 then
+							store.player_gold = store.player_gold + 1
 						end
-					elseif enemy.enemy.gold ~= 0 then
-						local not_kill_extra_gold = enemy.enemy.gold * not_kill_extra_gold_factor
+					end
 
-						if not_kill_extra_gold > max_not_kill_extra_gold then
-							not_kill_extra_gold = max_not_kill_extra_gold
+					if pow_c.level > 0 then
+						if exact_damage >= enemy.health.hp then
+							kill_count = kill_count + 1
 						end
-
-						total_extra_gold = total_extra_gold + not_kill_extra_gold
 					end
 
 					queue_insert(store, b)
 				end
 
 				if kill_count > 0 then
-					local accelerate = accelerate_base + accelerate_inc * kill_count
-
-					if accelerate > max_accelerate then
-						accelerate = max_accelerate
-					end
-
-					a.ts = a.ts - a.cooldown * accelerate
+					a.ts = a.ts - a.cooldown * scripts.tower_sunray.charge_factor_fun(kill_count) * tw.cooldown_factor
 				end
 
-				store.player_gold = store.player_gold + math.floor(total_extra_gold)
 				U.y_animation_wait_group(this, group_tower)
 				AC:inc_check("SUN_BURNER")
 			end
