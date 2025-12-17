@@ -77,15 +77,13 @@ local function apply_ultimate(this, store, target, animation_name)
 end
 
 local function soldiers_around_need_heal(this, store, trigger_hp_factor, range)
-	local targets = table.filter(store.soldiers, function(k, v)
-		return (not v.reinforcement) and (not v.health.dead and v.health.hp < trigger_hp_factor * v.health.hp_max) and U.is_inside_ellipse(v.pos, this.pos, range)
-	end)
-
-	if not targets or #targets == 0 then
-		return false
-	else
-		return true
+	for _, v in pairs(store.soldiers) do
+		if (not v.reinforcement) and (not v.health.dead and v.health.hp < trigger_hp_factor * v.health.hp_max) and U.is_inside_ellipse(v.pos, this.pos, range) then
+			return true
+		end
 	end
+
+	return false
 end
 
 -- require("game_scripts_utils")
