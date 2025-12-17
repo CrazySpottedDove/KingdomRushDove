@@ -8,5 +8,5 @@ version = {
 	vc = "kr1-desktop-5.6.12",
 	build = v,
 	bundle_keywords = "-standalone",
-	id = "9.2.4"
+	id = "9.2.5"
 }
