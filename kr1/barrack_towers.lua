@@ -2235,7 +2235,7 @@ tt.sound_events.insert = "TowerPandasRangedBolt"
 -- 牢大 BEGIN
 tt = E:register_t("tower_rocket_gunners_lvl4", "tower")
 b = balance.towers.rocket_gunners
-E:add_comps(tt, "barrack", "powers")
+E:add_comps(tt, "barrack", "powers", "tower_upgrade_persistent_data")
 tt.tower.type = "rocket_gunners"
 tt.tower.kind = TOWER_KIND_ARCHER
 tt.tower.team = TEAM_DARK_ARMY
