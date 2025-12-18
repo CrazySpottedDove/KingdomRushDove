@@ -1,6 +1,6 @@
 return {
     -- 总控，关闭后禁用模组管理器
-    enabled = true,
+    enabled = false,
     not_mod_path = {
         "mod_template",
         "all"
