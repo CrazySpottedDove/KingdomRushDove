@@ -5425,9 +5425,11 @@ local towers = {
 			range_effect = 200,
 			price = {125, 120, 120},
 			cooldown = {15, 15, 15},
-			damage_min = {20, 40, 60},
-			damage_max = {30, 60, 90},
-			damage_type = DAMAGE_PHYSICAL,
+			damage_min = {40, 80, 120},
+			damage_max = {60, 120, 180},
+            s_damage_min = {20, 40, 60},
+            s_damage_max = {30, 60, 90},
+			damage_type = DAMAGE_STAB,
 			armor_penetration = {0.1, 0.25, 0.4}
 		},
 		rapacious_hunter = {
