@@ -2153,7 +2153,7 @@ return {
 		check = "kr5_special_icons_0020",
 		action_arg = "pandas_retreat",
 		action = "tw_free_action",
-		halo = "glow_ico_main",
+		halo = "quickmenu_action_icons_0001_hover",
 		image = "kr5_quickmenu_action_icons_0006",
 		place = 3,
 		tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
