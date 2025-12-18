@@ -8,6 +8,7 @@ local band = bit.band
 local bnot = bit.bnot
 local V = require("lib.klua.vector")
 local P = require("path_db")
+local GR = require("grid_db")
 require("constants")
 local random = math.random
 local min = math.min
@@ -2605,6 +2606,10 @@ function U.find_modifiers_with_flags(this, bans)
 	end
 
 	return result
+end
+
+function U.valid_rally_node_nearby(pos)
+    return GR:cell_is_only(pos.x, pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and P:valid_node_nearby(pos.x, pos.y, nil, NF_RALLY)
 end
 
 return U

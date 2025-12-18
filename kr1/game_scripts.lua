@@ -4268,7 +4268,7 @@ function scripts.ray_tesla.update(this, store)
 				else
 					local mod = E:create_entity(b.mod)
 					local bounce_factor = UP:get_upgrade("engineer_efficiency") and 1 or this.bounce_damage_factor
-					local total_damage = (math.random(this.bounce_damage_min, this.bounce_damage_max) + b.level * this.bounce_damage_inc)  * bounce_factor
+					local total_damage = (math.random(this.bounce_damage_min, this.bounce_damage_max) + b.level * this.bounce_damage_inc) * bounce_factor
 					local actual_damage = math.min(total_damage, target.health.hp)
 					local last_damage = total_damage - actual_damage
 					local frame_damage = actual_damage / mod.dps.cocos_frames
@@ -4534,12 +4534,13 @@ function scripts.aura_tesla_overcharge.update(this, store)
 	local a = this.aura
 	local ps = E:create_entity(this.particles_name)
 	ps.pos = V.vclone(this.pos)
-    ps.particle_system.emit_speed[1] = ps.particle_system.emit_speed[1] * this.scale_factor
-    ps.particle_system.emit_speed[2] = ps.particle_system.emit_speed[2] * this.scale_factor
-    ps.particle_system.emit_duration = ps.particle_system.emit_duration * this.scale_factor
+	ps.particle_system.emit_speed[1] = ps.particle_system.emit_speed[1] * this.scale_factor
+	ps.particle_system.emit_speed[2] = ps.particle_system.emit_speed[2] * this.scale_factor
+	ps.particle_system.emit_duration = ps.particle_system.emit_duration * this.scale_factor
 	queue_insert(store, ps)
 	U.y_wait(store, a.duration)
-    local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius * this.scale_factor, a.vis_flags, a.vis_bans)
+	local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius * this.scale_factor, a.vis_flags, a.vis_bans)
+
 	if targets then
 		for _, e in pairs(targets) do
 			local d = SU.create_attack_damage(a, e.id, this)
@@ -6920,6 +6921,10 @@ function scripts.enemy_shaman_necro.update(this, store)
 		return enemy_ready_to_magic_attack(this, store, na)
 	end
 
+	local function necro_filter(e)
+		return e.health.dead and e.unit and not e.unit.hide_after_death and band(e.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EXPLOSION, DAMAGE_FX_EXPLODE)) == 0 and table.contains(na.allowed_templates, e.template_name) and band(e.vis.bans, F_UNDEAD) == 0
+	end
+
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
@@ -6931,9 +6936,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 		else
 			if ready_to_cast() then
 				na.ts = store.tick_ts
-				local dead_enemies = U.find_enemies_in_range_filter_on(this.pos, na.max_range, F_UNDEAD, F_NONE, function(e)
-					return e.health.dead and e.unit and not e.unit.hide_after_death and band(e.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EXPLOSION, DAMAGE_FX_EXPLODE)) == 0 and table.contains(na.allowed_templates, e.template_name)
-				end)
+				local dead_enemies = U.find_enemies_in_range_filter_override(this.pos, na.max_range, necro_filter)
 
 				if dead_enemies then
 					for _, dead in pairs(dead_enemies) do
@@ -27964,8 +27967,7 @@ function scripts.controller_elemental_wood.update(this, store)
 		this.max_range = this.default_max_range
 	end
 
-    SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
-
+	SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
 	update_fx_points()
 	this.ability_cooldown = this.first_cooldown
 

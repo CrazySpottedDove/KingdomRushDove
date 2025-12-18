@@ -6391,7 +6391,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 	end
 
 	while true do
-		if this.health.dead or (this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration) or ni < -20 then
+		if this.health.dead or (this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration) or ni < -20 or (not U.valid_rally_node_nearby(this.pos)) then
 			if this.health.hp > 0 then
 				this.reinforcement.hp_before_timeout = this.health.hp
 			end
