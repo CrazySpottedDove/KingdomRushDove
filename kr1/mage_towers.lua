@@ -1166,8 +1166,8 @@ tt.bullet.hit_fx = "fx_ray_wild_magus_hit"
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.hit_time = fts(2)
 tt.track_target = true
-tt = E:register_t("mod_eldritch", "modifier")
-E:add_comps(tt, "render")
+tt = RT("mod_eldritch", "modifier")
+AC(tt, "render")
 tt.render.sprites[1].name = "mod_eldritch"
 tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].z = Z_OBJECTS
@@ -1391,8 +1391,8 @@ tt.sound_events.insert = "ElvesGnomeNew"
 tt.tower.menu_offset = vec_2(0, 6)
 tt.tower.price = 250
 tt.tower.type = "pixie"
-tt = E:register_t("decal_pixie", "decal_scripted")
-E:add_comps(tt, "idle_flip")
+tt = RT("decal_pixie", "decal_scripted")
+AC(tt, "idle_flip")
 tt.idle_flip.animations = {"idle", "scratch"}
 tt.idle_flip.cooldown = fts(90)
 tt.idle_flip.loop = false
@@ -1830,9 +1830,9 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.main_script.remove = scripts.mod_track_target.remove
 -- 死灵法师_END
 -- 红法 BEGIN
-tt = E:register_t("tower_ray_lvl4", "tower")
+tt = RT("tower_ray_lvl4", "tower")
 local b = balance.towers.ray
-E:add_comps(tt, "attacks", "vis", "tween", "powers")
+AC(tt, "attacks", "vis", "tween", "powers")
 tt.tower.type = "ray"
 tt.info.enc_icon = 15
 tt.info.i18n_key = "TOWER_RAY_4"
@@ -2090,7 +2090,7 @@ tt.tween.props[prop_id].keys = {{0, V.vv(1)}, {frec / 2, V.vv(0.9)}, {frec, V.vv
 tt.tween.props[prop_id].sprite_id = tt.render.sid_core_rock_shadow
 tt.tween.props[prop_id].loop = true
 tt.tween.props[prop_id].interp = "sine"
-tt = E:register_t("enemy_tower_ray_sheep", "enemy")
+tt = RT("enemy_tower_ray_sheep", "enemy")
 local b = balance.towers.ray.skill_sheep.sheep
 tt.enemy.gold = b.gold
 tt.health.armor = b.armor
@@ -2111,7 +2111,7 @@ tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-17, 0, 34, 20)
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
 tt.clicks_to_destroy = b.clicks_to_destroy
-tt = E:register_t("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
+tt = RT("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
 local b = balance.towers.ray.skill_sheep.sheep
 tt.info.portrait = "kr5_info_portraits_enemies_0041"
 tt.flight_height = 47
@@ -2133,7 +2133,7 @@ tt.unit.show_blood_pool = false
 tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-18, tt.flight_height - 2, 36, 23)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
-tt = E:register_t("bullet_tower_ray_lvl1", "bullet")
+tt = RT("bullet_tower_ray_lvl1", "bullet")
 local b = balance.towers.ray.basic_attack
 tt.explosion_radius = b.explosion_radius
 tt.explosion_factor = b.explosion_factor
@@ -2157,16 +2157,16 @@ tt.track_target = true
 tt.ray_duration = b.duration
 tt.damage_mult = 1
 tt.vis_flags = F_RANGED
-tt = E:register_t("bullet_tower_ray_lvl2", "bullet_tower_ray_lvl1")
+tt = RT("bullet_tower_ray_lvl2", "bullet_tower_ray_lvl1")
 tt.bullet.damage_min = b.damage_min[2]
 tt.bullet.damage_max = b.damage_max[2]
-tt = E:register_t("bullet_tower_ray_lvl3", "bullet_tower_ray_lvl1")
+tt = RT("bullet_tower_ray_lvl3", "bullet_tower_ray_lvl1")
 tt.bullet.damage_min = b.damage_min[3]
 tt.bullet.damage_max = b.damage_max[3]
-tt = E:register_t("bullet_tower_ray_lvl4", "bullet_tower_ray_lvl1")
+tt = RT("bullet_tower_ray_lvl4", "bullet_tower_ray_lvl1")
 tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.damage_max = b.damage_max[4]
-tt = E:register_t("bullet_tower_ray_chain", "bullet_tower_ray_lvl4")
+tt = RT("bullet_tower_ray_chain", "bullet_tower_ray_lvl4")
 local b = balance.towers.ray
 tt.damage_mult = nil
 tt.max_enemies = b.skill_chain.max_enemies
@@ -2175,9 +2175,9 @@ tt.chain_delay = b.skill_chain.chain_delay
 tt.chain_range = b.skill_chain.chain_range
 tt.chain_range_to_stay = tt.chain_range + b.basic_attack.extra_range_to_stay
 tt.vis_bans = bor(F_NIGHTMARE)
-tt = E:register_t("bullet_tower_ray_sheep", "bolt")
+tt = RT("bullet_tower_ray_sheep", "bolt")
 b = balance.towers.ray.skill_sheep
-E:add_comps(tt, "force_motion")
+AC(tt, "force_motion")
 tt.render.sprites[1].hidden = true
 tt.height_attack = 70
 tt.initial_vel_y = 50
@@ -2209,7 +2209,7 @@ tt.hit_sound = nil
 tt.sheep_t = "enemy_tower_ray_sheep"
 tt.sheep_flying_t = "enemy_tower_ray_sheep_flying"
 tt.sheep_hp_mult = b.sheep.hp_mult
-tt = E:register_t("mod_tower_ray_damage", "modifier")
+tt = RT("mod_tower_ray_damage", "modifier")
 AC(tt, "render", "dps", "tween")
 b = balance.towers.ray.basic_attack
 tt.dps.damage_min = b.damage_min[4]
@@ -2232,7 +2232,7 @@ tt.tween.props[1].keys = {{0, 255}, {fts(2), 0}}
 tt.tween.remove = true
 tt.tween.disabled = true
 tt.modifier.allows_duplicates = true
-tt = E:register_t("mod_tower_ray_slow", "mod_slow")
+tt = RT("mod_tower_ray_slow", "mod_slow")
 b = balance.towers.ray.basic_attack
 tt.slow.factor = b.slow.factor
 tt.modifier.duration = b.duration
@@ -2240,8 +2240,8 @@ tt.modifier.duration = b.duration
 -- tt.main_script.remove = scripts.mod_tower_ray_slow.remove
 -- 红法 END
 -- 观星 BEGIN
-tt = E:register_t("ps_stargazers_death_star_trail")
-E:add_comps(tt, "pos", "particle_system")
+tt = RT("ps_stargazers_death_star_trail")
+AC(tt, "pos", "particle_system")
 tt.particle_system.name = "elven_stargazers_tower_rising_star_particle_trail_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2250,8 +2250,8 @@ tt.particle_system.animation_fps = 30
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 tt.particle_system.z = Z_BULLET_PARTICLES
-tt = E:register_t("fx_tower_elven_stargazers_ray_hit_start", "fx")
-E:add_comps(tt, "tween")
+tt = RT("fx_tower_elven_stargazers_ray_hit_start", "fx")
+AC(tt, "tween")
 tt.render.sprites[1].name = "elven_stargazers_tower_rising_star_hit_fx_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
@@ -2261,36 +2261,36 @@ tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(5), 255}, {fts(10), 0}}
 tt.tween.remove = false
-tt = E:register_t("fx_tower_stargazers_teleport_middle", "fx")
+tt = RT("fx_tower_stargazers_teleport_middle", "fx")
 tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
 tt.timed.runs = 1e+99
-tt = E:register_t("fx_tower_stargazers_teleport_enemy_small", "fx")
+tt = RT("fx_tower_stargazers_teleport_enemy_small", "fx")
 tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
 tt.timed.runs = 1e+99
-tt = E:register_t("fx_tower_stargazers_teleport_enemy_big", "fx")
+tt = RT("fx_tower_stargazers_teleport_enemy_big", "fx")
 tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_big_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
 tt.timed.runs = 1e+99
-tt = E:register_t("fx_tower_elven_stargazers_ray_hit", "fx")
-E:add_comps(tt)
+tt = RT("fx_tower_elven_stargazers_ray_hit", "fx")
+AC(tt)
 tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(10)
 tt.timed.runs = 1e+99
-tt = E:register_t("fx_tower_stargazers_death_star_hit", "fx")
+tt = RT("fx_tower_stargazers_death_star_hit", "fx")
 tt.render.sprites[1].prefix = "elven_stargazers_tower_rising_star_hit_fx"
-tt = E:register_t("tower_elven_stargazers_lvl4", "tower")
+tt = RT("tower_elven_stargazers_lvl4", "tower")
 local b = balance.towers.elven_stargazers
-E:add_comps(tt, "powers", "attacks")
+AC(tt, "powers", "attacks")
 tt.sound_events.insert = "TowerElvenStargazersTaunt"
 tt.info.i18n_key = "TOWER_STARGAZER_4"
 tt.info.stat_damage = b.stats.damage
@@ -2389,7 +2389,7 @@ tt.attacks.list[3] = CC("custom_attack")
 tt.attacks.list[3].animation = "skill2"
 tt.attacks.list[3].mod = "mod_tower_elven_stargazers_star_death"
 tt.ui.click_rect = r(-40, 0, 85, 93)
-tt = E:register_t("tower_elven_stargazers_ray", "bullet")
+tt = RT("tower_elven_stargazers_ray", "bullet")
 local b = balance.towers.elven_stargazers
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
@@ -2407,7 +2407,7 @@ tt.render.sprites[1].loop = false
 tt.track_target = true
 tt.ray_duration = fts(5)
 tt.sound_events.insert = "TowerElvenStargazersBasicAttack"
-tt = E:register_t("arrow_tower_stargazers_death_star", "arrow")
+tt = RT("arrow_tower_stargazers_death_star", "arrow")
 b = balance.towers.elven_stargazers
 tt.main_script.insert = scripts.arrow.insert
 tt.main_script.update = scripts.arrow.update
@@ -2429,7 +2429,7 @@ tt.bullet.g = -1.5 / (fts(1) * fts(1))
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 15
 tt.sound_events.hit = "TowerElvenStargazersRisingStarImpact"
-tt = E:register_t("mod_tower_elven_stargazers_ray_hit", "modifier")
+tt = RT("mod_tower_elven_stargazers_ray_hit", "modifier")
 AC(tt, "render")
 -- tt.modifier.damage_min = nil
 -- tt.modifier.damage_max = nil
@@ -2442,7 +2442,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 -- tt.damage_from_bullet = true
-tt = E:register_t("mod_tower_elven_stargazers_star_death", "modifier")
+tt = RT("mod_tower_elven_stargazers_star_death", "modifier")
 b = balance.towers.elven_stargazers
 tt.main_script.update = scripts.mod_stargazers_stars_death.update
 tt.modifier.duration = 0.8
@@ -2453,12 +2453,12 @@ tt.modifier.stars_death_min_range = b.stars_death.min_range
 tt.modifier.stars_death_max_range = b.stars_death.max_range
 tt.modifier.stars_death_chance = b.stars_death.chance
 tt.modifier.stars_death_stars = b.stars_death.stars
-tt = E:register_t("mod_tower_stargazers_teleport_stun", "mod_stun")
+tt = RT("mod_tower_stargazers_teleport_stun", "mod_stun")
 tt.modifier.duration = 5
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.render.sprites[1] = nil
-tt = E:register_t("mod_tower_stargazers_death_star_stun", "mod_stun")
+tt = RT("mod_tower_stargazers_death_star_stun", "mod_stun")
 b = balance.towers.elven_stargazers.stars_death
 tt.modifier.duration = b.stun
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
@@ -2466,8 +2466,8 @@ tt.modifier.vis_bans = bor(F_BOSS)
 tt.render.sprites[1] = nil
 -- 观星 END
 -- 五代奥术 BEGIN
-tt = E:register_t("tower_arcane_wizard_lvl4", "tower")
-E:add_comps(tt, "attacks", "powers", "vis")
+tt = RT("tower_arcane_wizard_lvl4", "tower")
+AC(tt, "attacks", "powers", "vis")
 b = balance.towers.arcane_wizard
 image_y = 90
 tt.tower.type = "arcane_wizard_five"
@@ -2557,7 +2557,7 @@ tt.attacks.list[3].min_range = b.empowerment.min_range
 tt.attacks.list[3].vis_flags = bor(F_MOD, F_CUSTOM)
 tt.attacks.list[3].vis_bans = bor(F_CUSTOM)
 tt.ui.click_rect = r(-40, 0, 80, 86)
-tt = E:register_t("tower_arcane_wizard_ray_disintegrate_mod", "modifier")
+tt = RT("tower_arcane_wizard_ray_disintegrate_mod", "modifier")
 local b = balance.towers.arcane_wizard
 tt.main_script.update = scripts.tower_arcane_wizard_ray_disintegrate_mod.update
 tt.modifier.pop = {"pop_zap_arcane"}
@@ -2567,7 +2567,7 @@ tt.modifier.damage = 1
 tt.modifier.duration = fts(5)
 tt.boss_damage_config = b.disintegrate.boss_damage
 tt.modifier.allows_duplicates = true
-tt = E:register_t("mod_tower_arcane_wizard_power_empowerment", "modifier")
+tt = RT("mod_tower_arcane_wizard_power_empowerment", "modifier")
 tt.main_script.insert = scripts.mod_tower_factors.insert
 tt.main_script.remove = scripts.mod_tower_arcane_wizard_power_empowerment.remove
 tt.main_script.update = scripts.mod_tower_arcane_wizard_power_empowerment.update
@@ -2575,8 +2575,8 @@ tt.range_factor = 1
 tt.damage_factor = nil
 tt.modifier.duration = 1e+99
 tt.modifier.use_mod_offset = false
-tt = E:register_t("mod_tower_arcane_wizard_power_empowerment_fx", "modifier")
-E:add_comps(tt, "render", "tween")
+tt = RT("mod_tower_arcane_wizard_power_empowerment_fx", "modifier")
+AC(tt, "render", "tween")
 tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
 tt.modifier.duration = 1e+99
 tt.modifier.use_mod_offset = false
@@ -2595,13 +2595,13 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 tt.sound_events.insert = "TowerArcaneWizardEmpowerment"
-tt = E:register_t("tower_arcane_wizard_power_empowerment_mark_mod", "modifier")
-E:add_comps(tt, "mark_flags")
+tt = RT("tower_arcane_wizard_power_empowerment_mark_mod", "modifier")
+AC(tt, "mark_flags")
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
 tt.modifier.allows_duplicates = true
 tt.modifier.duration = 1e+99
-tt = E:register_t("mod_tower_arcane_wizard_ray_hit", "modifier")
+tt = RT("mod_tower_arcane_wizard_ray_hit", "modifier")
 AC(tt, "render", "dps")
 b = balance.towers.arcane_wizard
 tt.damage_min = b.basic_attack.damage_min
@@ -2620,7 +2620,7 @@ tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.damage_from_bullet = true
-tt = E:register_t("tower_arcane_wizard5_ray", "bullet")
+tt = RT("tower_arcane_wizard5_ray", "bullet")
 local b = balance.towers.arcane_wizard
 tt.bullet.damage_type = DAMAGE_NONE
 -- tt.bullet.damage_min_config = b.basic_attack.damage_min
@@ -2640,7 +2640,7 @@ tt.render.sprites[1].loop = false
 tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
 tt.track_target = true
 tt.ray_duration = fts(24)
-tt = E:register_t("tower_arcane_wizard5_ray_disintegrate", "tower_arcane_wizard5_ray")
+tt = RT("tower_arcane_wizard5_ray_disintegrate", "tower_arcane_wizard5_ray")
 tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
 tt.bullet.mod = "tower_arcane_wizard_ray_disintegrate_mod"
@@ -2651,3 +2651,476 @@ tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_ray_idle"
 tt.render.sprites[1].loop = false
 tt.bullet.hit_time = fts(1)
 tt.hit_fx_only_no_target = false
+-- 五代奥术 END
+
+-- 青蛙 START
+tt = RT("ps_bullet_tower_hermit_toad_mage_basic_trail")
+
+AC(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hermit_toad_tower_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 12
+tt.particle_system.track_rotation = true
+tt.particle_system.particle_lifetime = {
+	fts(18),
+	fts(18)
+}
+tt = RT("ps_bullet_tower_hermit_toad_engineer_basic_trail")
+
+AC(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hermit_toad_tower_trail2_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.track_rotation = true
+tt.particle_system.emission_rate = 10
+tt.particle_system.particle_lifetime = {
+	fts(19),
+	fts(19)
+}
+tt = RT("ps_tower_hermit_toad_engineer_bubbles")
+
+AC(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hermit_toad_tower_bubbles_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 2
+tt.particle_system.emit_direction = math.pi / 2
+tt.particle_system.emit_spread = math.pi / 4
+tt.particle_system.emit_speed = {
+	3,
+	11
+}
+tt.particle_system.scale_var = {
+	0.5,
+	1.1
+}
+tt.particle_system.emit_rotation_spread = math.pi
+tt.particle_system.particle_lifetime = {
+	fts(26),
+	fts(26)
+}
+tt.particle_system.emit_area_spread = v(3, 3)
+tt = RT("ps_tower_hermit_toad_mage_bubbles", "ps_tower_hermit_toad_engineer_bubbles")
+tt.particle_system.name = "hermit_toad_tower_bubbles2_run"
+tt.particle_system.emission_rate = 2
+tt.particle_system.emit_rotation = 0
+tt.particle_system.emit_rotation_spread = 0
+tt.particle_system.emit_area_spread = v(10, 10)
+tt = RT("ps_tower_hermit_toad_mage_bubbles_area", "ps_tower_hermit_toad_mage_bubbles")
+tt.particle_system.emission_rate = 1
+tt.particle_system.emit_area_spread = v(70, 30)
+tt.particle_system.scale_var = {
+	0.5,
+	1.4
+}
+tt = RT("fx_tower_hermit_toad_splash", "fx")
+tt.render.sprites[1].name = "hermit_toad_tower_splash_run"
+tt.render.sprites[1].anchor = v(0.712, 0.15)
+tt.render.sprites[1].scale = vv(1.4)
+tt = RT("fx_tower_hermit_toad_decal", "decal")
+
+AC(tt, "tween")
+
+tt.render.sprites[1].name = "hermit_toad_tower_jumpdecal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].anchor = v(0.7017543859649122, 0.31363636363636366)
+tt.tween.props[1].keys = {
+	{
+		fts(0),
+		255
+	},
+	{
+		fts(46),
+		255
+	},
+	{
+		fts(63),
+		0
+	}
+}
+tt.tween.props[1].loop = false
+tt.tween.props[1].sprite_id = 1
+tt = RT("fx_bullet_tower_hermit_toad_mage_basic_hit", "fx")
+tt.render.sprites[1].name = "hermit_toad_tower_hitfx_run"
+tt = RT("fx_bullet_tower_hermit_toad_engineer_basic_hit", "fx")
+tt.render.sprites[1].name = "hermit_toad_tower_hit2_run"
+tt = RT("fx_bullet_tower_arborean_honey_hit", "fx")
+tt.render.sprites[1].prefix = "arborean_honey_tower_projectil_splash"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt = RT("hermit_toad_tower_shadow", "decal")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "hermit_toad_tower_shadow"
+tt.render.sprites[1].z = Z_DECALS
+tt = RT("tower_build_hermit_toad", "tower_build")
+tt.build_name = "tower_hermit_toad_lvl1"
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 0)
+tt.render.sprites[1].hidden = true
+tt.render.sprites[2].name = "hermit_toad_tower_construction"
+tt.render.sprites[2].offset = v(0, 5)
+tt.render.sprites[3].offset.y = 75
+tt.render.sprites[4].offset.y = 75
+
+tt = RT("tower_hermit_toad_lvl4", "tower")
+b = balance.towers.hermit_toad
+AC(tt, "attacks", "vis", "idle_flip", "powers", "tower_upgrade_persistent_data")
+tt.tower_upgrade_persistent_data.current_mode = 0
+tt.tower_upgrade_persistent_data.max_current_mode = 1
+tt.tower.type = "hermit_toad"
+tt.tower.kind = TOWER_KIND_MAGE
+tt.tower.team = TEAM_DARK_ARMY
+tt.tower.level = 1
+tt.tower.price = b.price[4]
+tt.powers.instakill = E:clone_c("power")
+tt.powers.instakill.enc_icon = 33
+tt.powers.instakill.max_level = 1
+tt.powers.instakill.price_base = b.power_instakill.price[1]
+tt.powers.instakill.price_inc = b.power_instakill.price[1]
+tt.powers.instakill.cooldown = b.power_instakill.cooldown
+tt.powers.instakill.attack_idx = 3
+tt.powers.jump = E:clone_c("power")
+tt.powers.jump.enc_icon = 34
+tt.powers.jump.max_level = 3
+tt.powers.jump.price_base = b.power_jump.price[1]
+tt.powers.jump.price_inc = b.power_jump.price[2]
+tt.powers.jump.cooldown = b.power_jump.cooldown
+tt.powers.jump.damage_min = b.power_jump.damage_min
+tt.powers.jump.damage_max = b.power_jump.damage_max
+tt.powers.jump.attack_idx = 4
+tt.attacks.range = b.engineer_basic_attack.range[4]
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_tower_hermit_toad_engineer_basic_lvl4"
+tt.attacks.list[1].bullet_start_offset = v(33, 65)
+tt.attacks.list[1].cooldown = b.engineer_basic_attack.cooldown
+tt.attacks.list[1].shoot_time = fts(18)
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE, F_FLYING)
+tt.attacks.list[1].node_prediction = fts(30)
+tt.attacks.list[1].first_cooldown = 2
+tt.attacks.list[1].range = b.engineer_basic_attack.range
+tt.attacks.list[1].animation = "shoot2"
+tt.attacks.list[1].sound = "TowerHermitToadShootEngineer"
+tt.attacks.list[2] = E:clone_c("bullet_attack")
+tt.attacks.list[2].bullet = "bullet_tower_hermit_toad_mage_basic_lvl4"
+tt.attacks.list[2].bullet_start_offset = v(13, 60)
+tt.attacks.list[2].cooldown = b.mage_basic_attack.cooldown
+tt.attacks.list[2].shoot_time = fts(18)
+tt.attacks.list[2].vis_flags = bor(F_RANGED)
+tt.attacks.list[2].vis_bans = bor(F_NIGHTMARE)
+tt.attacks.list[2].node_prediction = fts(30)
+tt.attacks.list[2].first_cooldown = 2
+tt.attacks.list[2].range = b.mage_basic_attack.range
+tt.attacks.list[2].animation = "shoot"
+tt.attacks.list[2].sound = "TowerHermitToadShootMagic"
+tt.attacks.list[3] = E:clone_c("bullet_attack")
+tt.attacks.list[3].animation = {
+	"eat2",
+	"eat"
+}
+tt.attacks.list[3].bullet = "bullet_tower_hermit_toad_instakill_tongue"
+tt.attacks.list[3].cooldown = nil
+tt.attacks.list[3].range = b.power_instakill.range
+tt.attacks.list[3].shoot_time = fts(8)
+tt.attacks.list[3].node_prediction = fts(8)
+tt.attacks.list[3].bullet_start_offset = {
+	v(0, 27),
+	v(0, 27)
+}
+tt.attacks.list[3].sound = "TowerHermitToadTongue"
+tt.attacks.list[3].mark_mod = "mod_tower_hermit_toad_instakill_mark"
+tt.attacks.list[3].vis_flags = bor(tt.attacks.list[3].vis_flags, F_EAT)
+tt.attacks.list[3].vis_bans = bor(F_FRIEND, F_NIGHTMARE, F_MINIBOSS, F_BOSS)
+tt.attacks.list[4] = E:clone_c("area_attack")
+tt.attacks.list[4].cooldown = nil
+tt.attacks.list[4].damage_min = nil
+tt.attacks.list[4].damage_max = nil
+tt.attacks.list[4].damage_type = b.power_jump.damage_type
+tt.attacks.list[4].bullet_start_offset = {
+	v(0, 37),
+	v(0, 37)
+}
+tt.attacks.list[4].vis_bans = bor(F_FRIEND, F_FLYING)
+tt.attacks.list[4].radius = b.power_jump.radius
+tt.attacks.list[4].range = b.power_jump.range
+tt.attacks.list[4].mod = "mod_tower_hermit_toad_jump"
+tt.attacks.list[4].min_targets = b.power_jump.min_targets
+tt.attacks.list[4].animation_start = {
+	"pathjumpbgin2",
+	"pathjumpbgin"
+}
+tt.attacks.list[4].animation_disappear = {
+	"pathjumpbgidle2",
+	"pathjumpbgidle"
+}
+tt.attacks.list[4].animation_end = {
+	"pathjumpbgout2",
+	"pathjumpbgout"
+}
+tt.attacks.list[4].animation_path_landing = {
+	"pathjump2",
+	"pathjump"
+}
+tt.attacks.list[4].animation_back_up = {
+	"pathjumpup2",
+	"pathjumpup"
+}
+tt.attacks.list[4].animation_back_down = {
+	"pathjumpdown2",
+	"pathjumpdown"
+}
+tt.attacks.list[4].jump_decal = "fx_tower_hermit_toad_decal"
+tt.attacks.list[4].jump_in_delay = 0.3
+tt.attacks.list[4].path_landing_action_time = fts(3)
+tt.attacks.list[4].jump_back_delay = 0.3
+tt.attacks.list[4].jump_back_duration = fts(12)
+tt.attacks.list[4].jump_back_height = -120
+tt.attacks.list[4].node_prediction = fts(11) + tt.attacks.list[4].jump_in_delay +
+	tt.attacks.list[4].path_landing_action_time
+tt.attacks.list[4].sound_back_to_pond = "TowerHermitToadBackToPond"
+tt.attacks.list[4].sound_jump = "TowerHermitToadJump"
+tt.attacks.list[4].sound_fall = "TowerHermitToadFall"
+tt.attacks.list[4].jump_back_shadow = "hermit_toad_tower_shadow"
+tt.info.i18n_key = "TOWER_HERMIT_TOAD_4"
+tt.info.portrait = "kr5_portraits_towers_0025"
+tt.info.enc_icon = 68
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_cooldown = b.stats.cooldown
+tt.info.stat_range = b.stats.range
+tt.info.fn = scripts.tower_hermit_toad.get_info
+tt.ui.click_rect = r(-35, 0, 70, 75)
+tt.ui.click_rect_offset_y = -10
+tt.main_script.update = scripts.tower_hermit_toad.update
+tt.main_script.remove = scripts.tower_hermit_toad.remove
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[1].hidden = true
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].prefix = "hermit_toad_tower_pond"
+tt.render.sprites[2].offset.y = 5
+tt.idle_modes = {
+	"idle2",
+	"idle"
+}
+tt.render.sprites[2].name = tt.idle_modes[1]
+tt.render.sprites[2].z = Z_TOWER_BASES + 2
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "hermit_toad_tower_frog4"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].offset = tt.render.sprites[2].offset
+tt.render.bubbles_anims = {
+	"pruple",
+	"blue"
+}
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "hermit_toad_tower_bubbles_frog"
+tt.render.sprites[4].name = tt.render.bubbles_anims[1]
+tt.render.sprites[4].offset = tt.render.sprites[2].offset
+tt.render.sprites[4].animated = true
+tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5].prefix = "hermit_toad_tower_leaves"
+tt.render.sprites[5].name = "idle"
+tt.render.sprites[5].z = tt.render.sprites[3].z
+tt.render.sprites[5].offset = tt.render.sprites[3].offset
+tt.render.sprites[5].sort_y_offset = 2
+tt.render.sprites[6] = table.deepclone(tt.render.sprites[3])
+tt.render.sprites[6].hidden = true
+tt.ps_bubbles_mage_offset = v(37, 52)
+tt.ps_bubbles_mage_emit_speed = {
+	8,
+	16
+}
+tt.ps_bubbles_mage_scale_var = {
+	1,
+	1.7
+}
+tt.ps_bubbles_mage_emission_rate = 3
+tt.ps_bubbles_engineer_offset = v(37, 51)
+tt.ps_bubbles_engineer_emit_speed = {
+	8,
+	16
+}
+tt.ps_bubbles_engineer_scale_var = {
+	1,
+	1.7
+}
+tt.ps_bubbles_engineer_emission_rate = 3
+tt.fx_splash = "fx_tower_hermit_toad_splash"
+tt.fx_splash_offset = v(2, 10)
+tt.idle_flip.cooldown = 3
+tt.idle_flip.chance = 0.7
+tt.toad_flip_duration = fts(11)
+tt.toad_flip_anims = {
+	"turn2",
+	"turn"
+}
+tt.toad_idle_anims = {
+	"idleanim2",
+	"idleanim"
+}
+tt.toad_blink_anims = {
+	"idleblink2",
+	"idleblink"
+}
+tt.ps_bubbles_mage = "ps_tower_hermit_toad_mage_bubbles"
+tt.ps_bubbles_mage_area = "ps_tower_hermit_toad_mage_bubbles_area"
+tt.ps_bubbles_engineer = "ps_tower_hermit_toad_engineer_bubbles"
+tt.ps_bubbles_mage_area_offset = v(0, 15)
+tt.ps_bubbles_mage_area_emit_speed = {
+	3,
+	11
+}
+tt.ps_bubbles_mage_area_scale_var = {
+	0.5,
+	1.4
+}
+tt.ps_bubbles_mage_area_emission_rate = 1
+tt.ps_bubbles_mage_offset = v(31, 32)
+tt.ps_bubbles_mage_emit_speed = {
+	3,
+	11
+}
+tt.ps_bubbles_mage_scale_var = {
+	0.5,
+	1.1
+}
+tt.ps_bubbles_mage_emission_rate = 2
+tt.ps_bubbles_engineer_offset = v(31, 32)
+tt.ps_bubbles_engineer_emit_speed = {
+	3,
+	11
+}
+tt.ps_bubbles_engineer_scale_var = {
+	0.5,
+	1.1
+}
+tt.ps_bubbles_engineer_emission_rate = 2
+tt.sound_events.insert = "TowerHermitToadTaunt"
+tt.sound_events.tower_room_select = "TowerHermitToadTauntSelect"
+tt = RT("bullet_tower_hermit_toad_instakill_tongue", "bullet")
+b = balance.towers.hermit_toad.instakill
+tt.bullet.hit_fx = nil
+tt.bullet.flight_time = fts(23)
+tt.bullet.hit_time = fts(1)
+tt.bullet.damage_type = bor(DAMAGE_EAT, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
+tt.bullet.level = 1
+tt.main_script.update = scripts.bullet_tower_hermit_toad_instakill_tongue.update
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "hermit_toad_tower_tongue_run"
+tt.render.sprites[1].loop = false
+tt.image_width = 137.5
+tt.ray_duration = fts(11)
+tt.hit_delay = fts(1)
+tt = RT("bullet_tower_hermit_toad_mage_basic_lvl4", "bolt")
+b = balance.towers.hermit_toad.mage_basic_attack
+
+AC(tt, "force_motion")
+
+tt.render.sprites[1].prefix = "hermit_toad_tower_projectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].anchor = v(0.48, 0.51)
+tt.bullet.level = 4
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = b.damage_max[4]
+tt.bullet.damage_min = b.damage_min[4]
+tt.bullet.align_with_trajectory = true
+tt.main_script.update = scripts.bolt_force_motion_kr5.update
+tt.main_script.insert = scripts.bolt_force_motion_kr5.insert
+tt.bullet.hit_fx = "fx_bullet_tower_hermit_toad_mage_basic_hit"
+tt.bullet.particles_name = "ps_bullet_tower_hermit_toad_mage_basic_trail"
+tt.bullet.max_track_distance = tt.bullet.max_track_distance * 1.5
+tt.initial_impulse = 6000
+tt.initial_impulse_duration = 0.08
+tt.initial_impulse_angle_abs = math.pi / 2
+tt.force_motion.a_step = 10
+tt.force_motion.max_a = 6000
+tt.force_motion.max_v = 450
+tt.sound_events.insert = nil
+b = balance.towers.hermit_toad.mage_basic_attack
+
+tt = RT("bullet_tower_hermit_toad_engineer_basic_lvl4", "bomb")
+b = balance.towers.hermit_toad.engineer_basic_attack
+tt.main_script.update = scripts.bullet_tower_hermit_toad_engineer_basic.update
+tt.bullet.level = 4
+tt.bullet.flight_time = fts(25)
+tt.sound_events.hit = "TowerHermitToadShootEngineerImpact"
+tt.bullet.hit_fx = "fx_bullet_tower_hermit_toad_engineer_basic_hit"
+tt.bullet.pop = nil
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.pop_chance = 0.5
+tt.bullet.rotation_speed = nil
+tt.bullet.hit_payload = "aura_bullet_tower_hermit_toad_engineer_basic"
+tt.bullet.damage_max = b.damage_max[4]
+tt.bullet.damage_min = b.damage_min[4]
+tt.bullet.damage_radius = b.damage_radius
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].name = "hermit_toad_tower_projectile2_run"
+tt.render.sprites[1].anchor = v(0.4, 0.5)
+tt.bullet.particles_name = "ps_bullet_tower_hermit_toad_engineer_basic_trail"
+tt.aura_duration = b.slow_decal_duration
+b = balance.towers.hermit_toad.engineer_basic_attack
+tt = RT("aura_bullet_tower_hermit_toad_engineer_basic", "aura")
+b = balance.towers.hermit_toad.engineer_basic_attack
+
+AC(tt, "render", "tween")
+
+tt.aura.mod = "mod_tower_hermit_toad_engineer_basic_slow"
+tt.aura.radius = 60
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.cycle_time = fts(5)
+tt.render.sprites[1].name = "hermit_toad_tower_decal2_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[1].keys = {
+	{
+		0,
+		255
+	},
+	{
+		tt.aura.duration - 0.5,
+		255
+	},
+	{
+		tt.aura.duration,
+		0
+	}
+}
+tt = RT("mod_tower_hermit_toad_engineer_basic_slow", "mod_slow")
+b = balance.towers.hermit_toad.engineer_basic_attack
+tt.balance_slow_factor = b.slow_factor
+tt.balance_duration = b.slow_mod_duration
+tt.slow.factor = nil
+tt.modifier.duration = nil
+tt.main_script.insert = scripts.mod_tower_hermit_toad_engineer_basic_slow.insert
+
+tt = RT("mod_tower_hermit_toad_jump", "mod_stun")
+b = balance.towers.hermit_toad
+tt.balance_duration = b.power_jump.stun_duration
+tt.modifier.duration = nil
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.main_script.insert = scripts.mod_tower_hermit_toad_jump.insert
+
+tt = RT("mod_tower_hermit_toad_instakill_mark", "modifier")
+AC(tt, "mark_flags")
+tt.modifier.duration = fts(120)
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+-- 青蛙 END

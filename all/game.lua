@@ -39,7 +39,8 @@ game.required_textures = {
 	"go_towers_rocket_gunners",
 	"go_towers_flamespitter",
 	"go_towers_ballista",
-	"go_towers_barrel"
+	"go_towers_barrel",
+	"go_towers_hermit_toad"
 }
 game.scale_required_textures = {}
 game.ref_h = REF_H
