@@ -461,7 +461,7 @@ function scripts.necromancer_aura.update(this, store)
 			else
 				local dead_enemies = U.find_enemies_in_range_filter_override(this.pos, source.attacks.range, filter_fn)
 
-				if dead_enemies then
+				if #dead_enemies > 0 then
 					dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 
 					for _, dead in pairs(dead_enemies) do
@@ -6938,7 +6938,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 				na.ts = store.tick_ts
 				local dead_enemies = U.find_enemies_in_range_filter_override(this.pos, na.max_range, necro_filter)
 
-				if dead_enemies then
+				if #dead_enemies > 0 then
 					for _, dead in pairs(dead_enemies) do
 						dead.vis.bans = bor(dead.vis.bans, F_UNDEAD)
 					end
