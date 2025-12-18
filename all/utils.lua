@@ -1608,6 +1608,10 @@ function U.predict_damage(entity, damage)
 	protection = km.clamp(0, 1, protection)
 	local rounded_damage = damage.value
 
+	if band(damage.damage_type, DAMAGE_STAB) ~= 0 then
+		rounded_damage = rounded_damage * 2
+	end
+
 	if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
 		rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
 	end

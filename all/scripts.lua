@@ -1165,20 +1165,6 @@ function scripts.soldier_barrack.get_info(this)
 		end
 	end
 
-	if damage_type == DAMAGE_STAB then
-		if min and max then
-			min = math.ceil(min * 0.5)
-			max = math.ceil(max * 0.5)
-		end
-	end
-
-	if ranged_damage_type == DAMAGE_STAB then
-		if ranged_max and ranged_min then
-			ranged_max = math.ceil(ranged_max * 0.5)
-			ranged_min = math.ceil(ranged_min * 0.5)
-		end
-	end
-
 	return {
 		type = STATS_TYPE_SOLDIER,
 		hp = this.health.hp,
@@ -1448,11 +1434,6 @@ function scripts.tower_common.get_info(this)
 	end
 
 	min, max = min * this.tower.damage_factor, max * this.tower.damage_factor
-
-	if d_type == DAMAGE_STAB then
-		min = math.ceil(min * 0.5)
-		max = math.ceil(max * 0.5)
-	end
 
 	local cooldown
 
