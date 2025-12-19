@@ -1,48 +1,19 @@
 -- chunkname: @./main.lua
-local apply_upgrade = love.system.getOS() ~= "Android"
-local ok, update_cfg = pcall(dofile, "update.lua")
-
-if ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false then
-	apply_upgrade = false
-end
-
-local binary_path = "client"
-
-if package.config:sub(1, 1) == "\\" then -- Windows
-	binary_path = "client.exe"
-end
-
-if apply_upgrade then
-	-- 如果主目录有 $binary_path.new，就用这个文件替换掉 $binary_path
-	local client_updated = false
-	local new_path = binary_path .. ".new"
-	local f = io.open(new_path, "r")
-
-	if f then
-		f:close()
-		-- 存在 .new 文件，进行替换
-		os.remove(binary_path)
-		os.rename(new_path, binary_path)
-		client_updated = true
-	end
-
-	-- 运行 $binary_path --quiz，强等待。
-	local cmd = client_updated and string.format('"%s" --quiz-force', binary_path) or string.format('"%s" --quiz', binary_path)
-	local ret = os.execute(cmd)
-end
+local M = require("update_manager")
+M.update_client()
 
 local function check_update_async()
 	local hash_file = io.open("current_version_commit_hash.txt", "r")
 
 	if not hash_file then
-		return 
+		return
 	end
 
 	local commit_hash = hash_file:read("*l")
 	hash_file:close()
 
 	if not commit_hash then
-		return 
+		return
 	end
 
 	local cmd = string.format('"%s" --check-new-version', binary_path)
@@ -149,7 +120,7 @@ if KR_TARGET == "universal" then
 		print("UNIVERSAL TARGET SOLVED:", KR_TARGET)
 	else
 		print("ERROR: KR_TARGET==universal and not solved in this platform")
-		return 
+		return
 	end
 end
 
@@ -466,7 +437,7 @@ function love.load(arg)
 
 		if not love.filesystem.mount(base_dir, "/", true) then
 			log.error("error mounting assets base_dir: %s", base_dir)
-			return 
+			return
 		end
 
 		for _, n in pairs({KR_PATH_ALL_TARGET, KR_PATH_GAME_TARGET}) do
@@ -476,7 +447,7 @@ function love.load(arg)
 
 			if not love.filesystem.mount(fn, dn, true) then
 				log.error("error mounting assets file: %s", fn)
-				return 
+				return
 			end
 		end
 	end
@@ -578,12 +549,11 @@ function love.load(arg)
 		ffi.C.kr_init_ios()
 	end
 
-	if apply_upgrade then
-		check_update_async()
-	end
+	-- 启动更新检查
+	M.check_update()
 end
 
-local update_result_json = nil
+
 
 local function love_update_master(dt)
 	storage:update(dt)
@@ -606,128 +576,161 @@ local function love_draw_master()
 	end
 end
 
-function love.update(dt)
-	if DEBUG and not main.params.debug and main.params.repl then
-		repl_t()
-	end
+M.hack_love_update(love_update_master, love_draw_master)
 
-	storage:update(dt)
-	main.handler:update(dt)
+-- function love.update(dt)
+-- 	if DEBUG and not main.params.debug and main.params.repl then
+-- 		repl_t()
+-- 	end
 
-	if DEBUG and main.params.localuser and localuser_update then
-		localuser_update(dt)
-	end
+-- 	storage:update(dt)
+-- 	main.handler:update(dt)
 
-	if custom_script and custom_script.update then
-		custom_script:update(dt)
-	end
+-- 	if DEBUG and main.params.localuser and localuser_update then
+-- 		localuser_update(dt)
+-- 	end
 
-	do
-		if (apply_upgrade) and (not update_popup_shown) then
-			local ch = love.thread.getChannel("update_result")
-			local result = ch:pop()
+-- 	if custom_script and custom_script.update then
+-- 		custom_script:update(dt)
+-- 	end
 
-			-- 轮询到了结果
-			if result ~= nil and result ~= false then
-				-- 结果有效
-				if result ~= false then
-					local ok, resp = pcall(require("json").decode, result)
+-- 	do
+-- 		if (apply_upgrade) and (not update_popup_shown) then
+-- 			local ch = love.thread.getChannel("update_result")
+-- 			local result = ch:pop()
 
-					-- 需要更新
-					if ok and type(resp) == "table" and resp.has_update then
-						update_result_json = result
-						-- 收集所有 commit message
-						local messages = {}
-						local max_messages_to_show = 20
+-- 			-- 轮询到了结果
+-- 			if result ~= nil and result ~= false then
+-- 				-- 结果有效
+-- 				if result ~= false then
+-- 					local ok, resp = pcall(require("json").decode, result)
 
-						if resp.commits then
-							for i, commit in ipairs(resp.commits) do
-								if i > max_messages_to_show then
-									table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
-									break
-								end
+-- 					-- 需要更新
+-- 					if ok and type(resp) == "table" and resp.has_update then
+-- 						update_result_json = result
+-- 						-- 收集所有 commit message
+-- 						local messages = {}
+-- 						local max_messages_to_show = 20
 
-								table.insert(messages, commit.message)
-							end
-						end
+-- 						if resp.commits then
+-- 							for i, commit in ipairs(resp.commits) do
+-- 								if i > max_messages_to_show then
+-- 									table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
+-- 									break
+-- 								end
 
-						local msg_text = table.concat(messages, "\n\n")
-						msg_text = msg_text .. "\n\n请耐心等待升级完成..."
-						local cmd = string.format('"%s" --upgrade-new-version', binary_path)
-						-- 弹窗有“升级”按钮
-						local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
+-- 								table.insert(messages, commit.message)
+-- 							end
+-- 						end
 
-						if pressed == 1 then
-							local upgrade_thread = love.thread.newThread([[
-        local cmd, update_result_json = ...
-        local pipe = io.popen(cmd, "w")
-        if pipe then
-            pipe:write(update_result_json)
-            pipe:close()
-        end
-        love.thread.getChannel("upgrade_result"):push("done")
-    ]])
-							upgrade_thread:start(cmd, update_result_json)
-							love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
-							-- 3. 在 love.update 里轮询升级状态
-							love.update = function(dt)
-								local ch = love.thread.getChannel("upgrade_result")
-								local result = ch:pop()
+-- 						local msg_text = table.concat(messages, "\n\n")
+-- 						msg_text = msg_text .. "\n\n请耐心等待升级完成..."
+-- 						local cmd = string.format('"%s" --upgrade-new-version', binary_path)
+-- 						-- 弹窗有“升级”按钮
+-- 						local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
 
-								if result == "done" then
-									love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
-									love.event.quit() -- 升级完成后退出程序
-								elseif result == "error" then
-									love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
-									-- 恢复正常的 love.update
-									love.update = love_update_master
-									love.draw = love_draw_master
-								end
-							end
+-- 						if pressed == 1 then
+-- 							-- 新建升级线程，实时读取输出
+-- 							local upgrade_thread = love.thread.newThread([[
+--         local cmd, update_result_json = ...
+--         local pipe = io.popen(cmd, "w")
+--         if pipe then
+--             pipe:write(update_result_json)
+--             pipe:flush()
+--             -- 读取输出并实时推送
+--             while true do
+--                 local line = pipe:read("*l")
+--                 if not line then break end
+--                 love.thread.getChannel("upgrade_log"):push(line)
+--             end
+--             pipe:close()
+--         end
+--         love.thread.getChannel("upgrade_result"):push("done")
+--     ]])
+-- 							upgrade_thread:start(cmd, update_result_json)
+-- 							love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
+-- 							-- 用于显示升级日志
+-- 							local upgrade_log = {}
+-- 							love.update = function(dt)
+-- 								local ch = love.thread.getChannel("upgrade_result")
+-- 								local result = ch:pop()
+-- 								-- 轮询日志
+-- 								local log_ch = love.thread.getChannel("upgrade_log")
 
-							-- 也直接改变 love.draw()，显示正在升级的信息
-							love.draw = function()
-								G.clear(0, 0, 0)
-								G.origin()
-								local font = F:f("JIMOJW", 20)
-								G.setFont(font)
-								G.setColor(1, 1, 1, 1)
-								local w, h = G.getDimensions()
-								local text = "正在升级资源，请勿关闭游戏..."
-								local tw = font:getWidth(text)
-								local th = font:getHeight()
-								G.print(text, (w - tw) / 2, (h - th) / 2)
-								-- 来一点点动画效果
-								G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
-								G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
-							end
-						end
-					else
-						-- 不需要更新，那么恢复原 update
-						love.update = love_update_master
-					end
-				else
-					-- 结果无效，恢复 love.update
-					-- 这里应该提示更新失败
-					love.window.showMessageBox("更新失败", "可检查client.log。只影响更新，不影响游戏。", {"确定"})
-					love.update = love_update_master
-				end
-			end
-		end
-	end
-end
+-- 								while true do
+-- 									local line = log_ch:pop()
 
-function love.draw()
-	main.handler:draw()
+-- 									if not line then
+-- 										break
+-- 									end
 
-	if main.profiler and main.profiler_displayed then
-		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
-	end
+-- 									table.insert(upgrade_log, line)
 
-	if main.draw_stats and main.draw_stats_displayed then
-		main.draw_stats:draw(main.params.width, main.params.height)
-	end
-end
+-- 									-- 限制最大行数
+-- 									if #upgrade_log > 30 then
+-- 										table.remove(upgrade_log, 1)
+-- 									end
+-- 								end
+
+-- 								if result == "done" then
+-- 									love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
+-- 									love.event.quit()
+-- 								elseif result == "error" then
+-- 									love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
+-- 									love.update = love_update_master
+-- 									love.draw = love_draw_master
+-- 								end
+-- 							end
+
+-- 							love.draw = function()
+-- 								G.clear(0, 0, 0)
+-- 								G.origin()
+-- 								local font = F:f("JIMOJW", 20)
+-- 								G.setFont(font)
+-- 								G.setColor(1, 1, 1, 1)
+-- 								local w, h = G.getDimensions()
+-- 								local text = "正在升级资源，请勿关闭游戏..."
+-- 								local tw = font:getWidth(text)
+-- 								local th = font:getHeight()
+-- 								G.print(text, (w - tw) / 2, (h - th) / 2)
+-- 								-- 动画
+-- 								G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
+-- 								G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
+-- 								-- 显示升级日志
+-- 								G.setColor(1, 1, 1, 1)
+-- 								local log_y = (h - th) / 2 + 60
+
+-- 								for i, line in ipairs(upgrade_log) do
+-- 									G.print(line, 40, log_y + (i - 1) * 22)
+-- 								end
+-- 							end
+-- 						end
+-- 					else
+-- 						-- 不需要更新，那么恢复原 update
+-- 						love.update = love_update_master
+-- 					end
+-- 				else
+-- 					-- 结果无效，恢复 love.update
+-- 					-- 这里应该提示更新失败
+-- 					love.window.showMessageBox("更新失败", "可检查client.log。只影响更新，不影响游戏。", {"确定"})
+-- 					love.update = love_update_master
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- end
+
+-- function love.draw()
+-- 	main.handler:draw()
+
+-- 	if main.profiler and main.profiler_displayed then
+-- 		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
+-- 	end
+
+-- 	if main.draw_stats and main.draw_stats_displayed then
+-- 		main.draw_stats:draw(main.params.width, main.params.height)
+-- 	end
+-- end
 
 function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
@@ -892,7 +895,7 @@ function love.run()
 
 				for e, a, b, c, d in love.event.poll() do
 					if e == "quit" and (not love.quit or not love.quit()) then
-						return 
+						return
 					end
 
 					love.handlers[e](a, b, c, d)
@@ -974,7 +977,7 @@ function love.run()
 
 				for e, a, b, c, d in love.event.poll() do
 					if e == "quit" and (not love.quit or not love.quit()) then
-						return 
+						return
 					end
 
 					love.handlers[e](a, b, c, d)
@@ -1075,14 +1078,14 @@ function love.errorhandler(msg)
 	pcall(crash_report, stack_msg)
 
 	if not love.window or not G or not love.event then
-		return 
+		return
 	end
 
 	if not G.isCreated() or not love.window.isOpen() then
 		local success, status = pcall(love.window.setMode, 800, 600)
 
 		if not success or not status then
-			return 
+			return
 		end
 	end
 
@@ -1213,15 +1216,15 @@ function love.errorhandler(msg)
 			if e == "quit" then
 				quiterr = true
 				love.event.quit()
-				return 
+				return
 			elseif e == "keypressed" then
 				if a == "escape" and error_type == "coro" then
 					quiterr = true
-					return 
+					return
 				elseif a == "-" then
 					show_last = not show_last
 				else
-					return 
+					return
 				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()
@@ -1234,7 +1237,7 @@ function love.errorhandler(msg)
 				local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
 				if pressed == 1 then
-					return 
+					return
 				end
 			end
 		end
