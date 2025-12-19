@@ -15056,7 +15056,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store, script)
 
 				if r._first_time then
 					r._first_time = false
-					local target = U.find_foremost_enemy(store.entities, r.center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+					local target = U.find_foremost_enemy(store, r.center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
 						return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
 					end)
 
@@ -15761,7 +15761,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 	local function find_target(a, range, skip_flip)
 		local flip_duration = skip_flip and 0 or this.toad_flip_duration
-		local target, targets, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, range,
+		local target, targets, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, range,
 			a.node_prediction + flip_duration / 2, a.vis_flags, a.vis_bans)
 
 		return target, targets, pred_pos
@@ -16073,6 +16073,7 @@ function scripts.tower_hermit_toad.update(this, store)
 						this.render.sprites[6].flip_x = this.render.sprites
 						[3].flip_x
 						this.render.sprites[6].pos = V.vclone(pred_pos)
+						this.render.sprites[6]._track_e = false
 
 						U.animation_start(this, get_mode_anim(attack.animation_path_landing), nil, store.tick_ts, false,
 							6)
@@ -16168,6 +16169,8 @@ function scripts.tower_hermit_toad.update(this, store)
 
 							coroutine.yield()
 						end
+
+						this.render.sprites[6]._track_e = true
 
 						queue_remove(store, decal_shadow)
 
