@@ -1325,11 +1325,45 @@ map["神圣混沌"] = str()
 map["噬魂"] = str()
 map["复生"] = str()
 set_hero("hero_xin")
-map["激励怒吼"] = str()
-map["英勇打击"] = str()
-map["熊猫乱舞"] = str()
-map["驭体于灵"] = str()
-map["熊猫流氓"] = str()
+set_skill(h.hero.skills.inspire)
+duration = ss("duration")
+a = h.timed_attacks.list[2]
+cooldown = a.cooldown
+e = E:get_template("mod_xin_inspire")
+factor = e.inflicted_damage_factor
+map["激励怒吼"] = str(cooldown_str(), "鑫短暂无敌，怒喝一声，使周围友军的伤害x", factor, "，持续", duration, "秒。")
+a = h.timed_attacks.list[1]
+cooldown = a.cooldown
+get_damage(a)
+set_skill(h.hero.skills.daring_strike)
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+map["英勇打击"] = str(cooldown_str(), "鑫进入无敌状态，闪现至生命值最高的敌人身前并英勇地打击他，造成", damage_str(), "。鑫可瞬移至任何位置，并在原地留下分身短暂代为拦截敌人。")
+set_skill(h.hero.skills.ultimate)
+count = ss("count")
+cooldown = h.ultimate.cooldown
+e = E:get_template("soldier_xin_ultimate")
+get_damage(e.melee.attacks[1])
+set_damage_value(ss("damage"))
+count_2 = e.max_attack_count
+map["熊猫乱舞"] = str(cooldown_str(), "鑫召唤", count, "名弟子支援，每名弟子肘敌人", count_2, "下后退场，每肘造成", damage_str(), "。")
+set_skill(h.hero.skills.mind_over_body)
+duration = ss("duration")
+cycle_time = ss("heal_every")
+heal = ss("heal_hp")
+amount = ss("damage_buff")
+a = h.timed_attacks.list[3]
+cooldown = a.cooldown
+factor = a.min_health_factor
+map["驭体于灵"] = str(cooldown_str(), "当鑫的剩余生命值低于", factor * 100, "%时，鑫会喝下熊猫特酿，进入驭体于灵状态，持续", duration, "秒。驭体于灵状态下，鑫的伤害提升", amount, "点，并每", cycle_time, "秒恢复", heal, "点生命，且会快速驱散中毒、晕眩、流血等异常效果。退出驭体于灵状态时，熊猫流派、英勇打击、激励怒吼的冷却时间均会减少10%。驭体于灵状态下时，每次普攻有50%概率加快熊猫流派、英勇打击、激励怒吼冷却10%。任何时候，鑫普攻均有50%概率加快驭体于灵冷却10%。")
+set_skill(h.hero.skills.panda_style)
+a = h.melee.attacks[3]
+cooldown = a.cooldown
+radius = a.damage_radius
+get_damage(a)
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+map["熊猫流派"] = str(cooldown_str(), " 鑫施展熊猫流派（屁股墩），对", radius, "范围内敌人造成", damage_str(), "。")
 set_hero("hero_faustus")
 map["传送符文"] = str()
 map["龙怒"] = str()

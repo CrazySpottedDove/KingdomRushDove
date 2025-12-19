@@ -9124,8 +9124,8 @@ tt.hero.level_stats.hp_max = {330, 360, 390, 420, 450, 480, 510, 540, 570, 600}
 tt.hero.level_stats.melee_damage_max = {14, 17, 20, 23, 25, 28, 31, 33, 36, 40}
 tt.hero.level_stats.melee_damage_min = {10, 11, 13, 15, 17, 19, 20, 22, 24, 25}
 tt.hero.skills.daring_strike = CC("hero_skill")
-tt.hero.skills.daring_strike.damage_max = {70, 125, 175}
-tt.hero.skills.daring_strike.damage_min = {50, 80, 115}
+tt.hero.skills.daring_strike.damage_max = {70, 140, 210}
+tt.hero.skills.daring_strike.damage_min = {50, 100, 150}
 tt.hero.skills.daring_strike.xp_gain_factor = 66
 tt.hero.skills.daring_strike.xp_level_steps = {
 	[3] = 1,
@@ -9133,7 +9133,7 @@ tt.hero.skills.daring_strike.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.inspire = CC("hero_skill")
-tt.hero.skills.inspire.duration = {3, 5, 7}
+tt.hero.skills.inspire.duration = {4, 6, 8}
 tt.hero.skills.inspire.xp_gain_factor = 55
 tt.hero.skills.inspire.xp_level_steps = {
 	[2] = 1,
@@ -9214,7 +9214,7 @@ end
 
 tt.melee.attacks[3] = CC("area_attack")
 tt.melee.attacks[3].animation = "buttStrike"
-tt.melee.attacks[3].cooldown = 26
+tt.melee.attacks[3].cooldown = 25
 tt.melee.attacks[3].count = 999
 tt.melee.attacks[3].damage_max = nil
 tt.melee.attacks[3].damage_min = nil
@@ -9246,9 +9246,7 @@ tt.timed_attacks.list[2].animation = "inspire"
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].cast_time = fts(15)
 tt.timed_attacks.list[2].cooldown = 16
-tt.timed_attacks.list[2].max_count = 7
 tt.timed_attacks.list[2].max_range = 90
-tt.timed_attacks.list[2].min_count = 3
 tt.timed_attacks.list[2].mod = "mod_xin_inspire"
 tt.timed_attacks.list[2].sound = "ElvesHeroXinInspire"
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
@@ -9283,6 +9281,63 @@ tt.sound_events.insert = "ElvesHeroXinPandamonium"
 tt.vis_flags = bor(F_RANGED)
 tt.vis_bans = bor(F_FLYING)
 tt.entity = "soldier_xin_ultimate"
+tt = E:register_t("soldier_xin_shadow", "soldier")
+E:add_comps(tt, "melee")
+image_y = 64
+anchor_y = 12 / image_y
+tt.health.armor = 0
+tt.health.hp_max = 50
+tt.health.ignore_damage = true
+tt.health_bar.hidden = true
+tt.info.random_name_format = nil
+tt.min_wait = 0.1
+tt.max_wait = 0.4
+tt.main_script.insert = scripts.soldier_xin_shadow.insert
+tt.main_script.update = scripts.soldier_xin_shadow.update
+tt.motion.max_speed = 90
+tt.regen.cooldown = 1
+tt.regen.health = 0
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "xin_shadow"
+tt.render.sprites[1].name = "raise"
+tt.render.sprites[1].sort_y_offset = -2
+tt.soldier.melee_slot_offset = vec_2(5, 0)
+tt.sound_events.insert = nil
+tt.sound_events.death = nil
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.unit.level = 0
+tt.unit.mod_offset = vec_2(0, 15)
+tt.vis.flags = bor(F_FRIEND)
+tt.vis.bans = bor(F_ALL)
+tt.melee.attacks[1].damage_max = 12
+tt.melee.attacks[1].damage_min = 4
+tt.melee.attacks[1].hit_time = fts(4)
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.attacks[1].xp_gain_factor = 0
+tt.melee.attacks[1].chance = 1
+
+for i = 2, 4 do
+	local a = table.deepclone(tt.melee.attacks[1])
+	a.animation = "attack" .. i
+	a.chance = 1 / i
+	tt.melee.attacks[i] = a
+end
+
+tt.melee.cooldown = fts(15)
+tt.melee.range = 60
+tt = E:register_t("soldier_xin_ultimate", "soldier_xin_shadow")
+tt.max_attack_count = 2
+tt.min_wait = 0.1
+tt.max_wait = 0.4
+
+for i = 1, 4 do
+	tt.melee.attacks[i].damage_type = DAMAGE_TRUE
+	tt.melee.attacks[i].sound = "ElvesHeroXinPandamoniumHit"
+end
+
+tt.sound_events.insert = "ElvesHeroXinAfterTeleportIn"
+tt.sound_events.death = "ElvesHeroXinAfterTeleportOut"
 tt = RT("mod_xin_stun", "mod_shock_and_awe")
 tt.modifier.duration = 1.3
 tt = RT("mod_xin_inspire", "modifier")

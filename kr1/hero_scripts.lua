@@ -13196,6 +13196,7 @@ function scripts.hero_xin.update(this, store)
 	local a, skill, brk, sta
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 	this.health_bar.hidden = false
+	local mod_clear_ts = store.tick_ts
 
 	while true do
 		if this.mind_over_body_active and store.tick_ts - this.mind_over_body_last_ts >= this.mind_over_body_duration then
@@ -13259,6 +13260,16 @@ function scripts.hero_xin.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
+			if this.mind_over_body_active and store.tick_ts - mod_clear_ts > fts(10) then
+				local mods = U.find_modifiers_with_flags(this, bor(F_POISON, F_STUN, F_BLOOD))
+				mod_clear_ts = store.tick_ts
+
+				for _, mod in ipairs(mods) do
+					mod.modifier.removed_by_ban = true
+					queue_remove(store, mod)
+				end
+			end
+
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.mind_over_body
 
@@ -13286,19 +13297,19 @@ function scripts.hero_xin.update(this, store)
 			skill = this.hero.skills.inspire
 
 			if ready_to_use_skill(a, store) then
-				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
-				if not soldiers or #soldiers < a.min_count or not enemies then
+				if not enemies then
 					SU.delay_attack(store, a, 0.3333333333333333)
 				else
+					local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 					this.health.ignore_damage = true
 					U.animation_start(this, a.animation, nil, store.tick_ts)
 					U.y_wait(store, a.cast_time)
 					S:queue(a.sound)
 					SU.insert_sprite(store, "decal_xin_inspire", this.pos)
 
-					for i = 1, math.min(#soldiers, a.max_count) do
+					for i = 1, #soldiers do
 						local soldier = soldiers[i]
 						local m = E:create_entity(a.mod)
 						m.modifier.target_id = soldier.id

@@ -715,7 +715,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_sorcerer_polymorph"
 tt.sound_events.insert = "PolymorphSound"
 tt.track_target = true
-
 tt = RT("ray_hero_thor", "ray_tesla")
 tt.bullet.mod = "mod_ray_hero_thor"
 tt.render.sprites[1].name = "ray_hero_thor"
@@ -4019,63 +4018,6 @@ for i = 2, 4 do
 	tt.tween.props[i].keys[1][2] = 0
 end
 
-tt = E:register_t("soldier_xin_shadow", "soldier")
-E:add_comps(tt, "melee")
-image_y = 64
-anchor_y = 12 / image_y
-tt.health.armor = 0
-tt.health.hp_max = 50
-tt.health.ignore_damage = true
-tt.health_bar.hidden = true
-tt.info.random_name_format = nil
-tt.min_wait = 0.1
-tt.max_wait = 0.4
-tt.main_script.insert = scripts.soldier_xin_shadow.insert
-tt.main_script.update = scripts.soldier_xin_shadow.update
-tt.motion.max_speed = 90
-tt.regen.cooldown = 1
-tt.regen.health = 0
-tt.render.sprites[1].anchor.y = anchor_y
-tt.render.sprites[1].prefix = "xin_shadow"
-tt.render.sprites[1].name = "raise"
-tt.render.sprites[1].sort_y_offset = -2
-tt.soldier.melee_slot_offset = vec_2(5, 0)
-tt.sound_events.insert = nil
-tt.sound_events.death = nil
-tt.ui.can_click = false
-tt.ui.can_select = false
-tt.unit.level = 0
-tt.unit.mod_offset = vec_2(0, 15)
-tt.vis.flags = bor(F_FRIEND)
-tt.vis.bans = bor(F_ALL)
-tt.melee.attacks[1].damage_max = 12
-tt.melee.attacks[1].damage_min = 4
-tt.melee.attacks[1].hit_time = fts(4)
-tt.melee.attacks[1].shared_cooldown = true
-tt.melee.attacks[1].xp_gain_factor = 0
-tt.melee.attacks[1].chance = 1
-
-for i = 2, 4 do
-	local a = table.deepclone(tt.melee.attacks[1])
-	a.animation = "attack" .. i
-	a.chance = 1 / i
-	tt.melee.attacks[i] = a
-end
-
-tt.melee.cooldown = fts(15)
-tt.melee.range = 60
-tt = E:register_t("soldier_xin_ultimate", "soldier_xin_shadow")
-tt.max_attack_count = 2
-tt.min_wait = 0.1
-tt.max_wait = 0.4
-
-for i = 1, 4 do
-	tt.melee.attacks[i].damage_type = DAMAGE_TRUE
-	tt.melee.attacks[i].sound = "ElvesHeroXinPandamoniumHit"
-end
-
-tt.sound_events.insert = "ElvesHeroXinAfterTeleportIn"
-tt.sound_events.death = "ElvesHeroXinAfterTeleportOut"
 tt = RT("rabbit_kamihare", "decal_scripted")
 AC(tt, "nav_path", "motion", "custom_attack")
 tt.render.sprites[1].prefix = "rabbit"
@@ -5099,7 +5041,6 @@ tt.aura.radius = 100
 tt.aura.vis_flags = bor(F_RANGED, F_SPELLCASTER)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
 tt.aura.targets_per_cycle = nil
-
 tt = RT("aura_baby_malik_fissure", "aura")
 tt.aura.fx = "decal_baby_malik_earthquake"
 tt.aura.damage_radius = nil
@@ -5544,7 +5485,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].anchor.y = 0.22727272727272727
-
 tt = RT("mod_catha_curse", "mod_stun")
 tt.main_script.insert = scripts.mod_catha_curse.insert
 tt.modifier.vis_bans = bor(F_BOSS)
