@@ -157,14 +157,14 @@ return {
 			tt_title = _("TOWER_HERMIT_TOAD_NAME"),
 			tt_desc = _("TOWER_HERMIT_TOAD_4_DESCRIPTION")
 		}),
-		M(tpl.upgrade, {
-			action_arg = "tower_elder_portal_lvl4",
-			image = "kr5_main_icons_0006",
-			type = "arborean_emissary"
-			place = 21,
-			tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
-			tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
-		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_arborean_emissary_lvl4",
+		-- 	image = "kr5_main_icons_0006",
+		-- 	type = "arborean_emissary",
+		-- 	place = 21,
+		-- 	tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
+		-- 	tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
+		-- }),
 		tpl.sell
 	}},
 	-- 炮塔
@@ -257,14 +257,14 @@ return {
 			tt_title = _("TOWER_BARREL_NAME"),
 			tt_desc = _("TOWER_BARREL_1_DESCRIPTION")
 		}),
-		M(tpl.upgrade, {
-			action_arg = "tower_sparking_geode_lvl4",
-			image = "kr5_main_icons_0042",
-			type = "sparking_geode",
-			place = 18,
-			tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
-			tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
-		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_sparking_geode_lvl4",
+		-- 	image = "kr5_main_icons_0042",
+		-- 	type = "sparking_geode",
+		-- 	place = 18,
+		-- 	tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
+		-- 	tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
+		-- }),
 		tpl.sell
 	}},
 	-- 箭塔
@@ -492,30 +492,30 @@ return {
 			tt_title = _("TOWER_ROCKET_GUNNERS_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_1_DESCRIPTION")
 		}),
-		M(tpl.upgrade, {
-			action_arg = "tower_dwarf_lvl4",
-			type = "dwarf",
-			image = "kr5_main_icons_0042",
-			place = 23,
-			tt_title = _("TOWER_DWARF_1_NAME"),
-			tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
-		}),
-		M(tpl.upgrade, {
-			action_arg = "tower_ghost_lvl4",
-			type = "ghost",
-			image = "kr5_main_icons_0016",
-			place = 24,
-			tt_title = _("TOWER_GHOST_1_NAME"),
-			tt_desc = _("TOWER_GHOST_1_DESCRIPTION")
-		}),
-		M(tpl.upgrade, {
-			action_arg = "tower_paladin_covenant_lvl4",
-			type = "paladin_covenant",
-			image = "kr5_main_icons_0001",
-			place = 25,
-			tt_title = _("TOWER_PALADIN_COVENANT_1_NAME"),
-			tt_desc = _("TOWER_PALADIN_COVENANT_1_DESCRIPTION")
-		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_dwarf_lvl4",
+		-- 	type = "dwarf",
+		-- 	image = "kr5_main_icons_0042",
+		-- 	place = 23,
+		-- 	tt_title = _("TOWER_DWARF_1_NAME"),
+		-- 	tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
+		-- }),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_ghost_lvl4",
+		-- 	type = "ghost",
+		-- 	image = "kr5_main_icons_0016",
+		-- 	place = 24,
+		-- 	tt_title = _("TOWER_GHOST_1_NAME"),
+		-- 	tt_desc = _("TOWER_GHOST_1_DESCRIPTION")
+		-- }),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_paladin_covenant_lvl4",
+		-- 	type = "paladin_covenant",
+		-- 	image = "kr5_main_icons_0001",
+		-- 	place = 25,
+		-- 	tt_title = _("TOWER_PALADIN_COVENANT_1_NAME"),
+		-- 	tt_desc = _("TOWER_PALADIN_COVENANT_1_DESCRIPTION")
+		-- }),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -2713,7 +2713,7 @@ return {
 					}
 				}
 			}),
-			tpl.rally
+			tpl.rally,
 			tpl.sell
 		}
 	},
