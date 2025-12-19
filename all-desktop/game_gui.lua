@@ -6073,13 +6073,15 @@ function TowerMenu:show()
 		game_gui:show_tower_range(ux, uy, range)
 	end
 
-	if not tower_menus[entity.tower.type] or not tower_menus[entity.tower.type][entity.tower.level] then
+	local current_tms = tower_menus[entity.tower.type]
+
+	if not current_tms or not current_tms[entity.tower.level] then
 		log.debug("tower_menus[%s][%s] not found", entity.tower.type, entity.tower.level)
 		self.hidden = true
 		return
 	end
 
-	local tm = tower_menus[entity.tower.type][entity.tower.level]
+	local tm = current_tms[entity.tower.level]
 	self:remove_children()
 
 	for _, item in pairs(tm) do

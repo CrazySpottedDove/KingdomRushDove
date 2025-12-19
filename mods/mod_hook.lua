@@ -57,7 +57,7 @@ function hook.I.load_atlas(load_atlas, self, ref_scale, path, name, yielding)
                     self.atlas_uses[name_scale] = nil
                 end
 
-                self:preload_atlas(ref_scale, images_path, name)
+                load_atlas(self, ref_scale, images_path, name, yielding)
 
                 log.info("Found atlas override %s in mod %s", lua_file, mod_data.name)
             end

@@ -17,8 +17,8 @@ function hook.E.load(load, self)
 	package.loaded.mod_template_templates = nil
 	package.loaded.mod_template_scripts = nil
 	
-	local mod_template_templates = require("mod_template_templates")
-	local mod_template_scripts = require("mod_template_scripts")
+	require("mod_template_templates")
+	require("mod_template_scripts")
 end
 
 return hook
