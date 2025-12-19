@@ -2,47 +2,6 @@
 local M = require("update_manager")
 M.update_client()
 
-local function check_update_async()
-	local hash_file = io.open("current_version_commit_hash.txt", "r")
-
-	if not hash_file then
-		return
-	end
-
-	local commit_hash = hash_file:read("*l")
-	hash_file:close()
-
-	if not commit_hash then
-		return
-	end
-
-	local cmd = string.format('"%s" --check-new-version', binary_path)
-	print("cmd:", cmd)
-	-- 4. 启动线程调用
-	local thread = love.thread.newThread([[
-        local cmd, commit_hash = ...
-        -- 写入临时文件
-        local tmpfile = os.tmpname()
-        local f = io.open(tmpfile, "w")
-        if f then f:write(commit_hash) f:close() end
-        -- 设置环境变量或切换目录（如有需要）
-        -- 调用外部程序
-        local full_cmd = cmd
-        -- Windows下防止弹黑框
-        if package.config:sub(1,1) == "\\" then
-            full_cmd = 'cmd /C ' .. full_cmd
-        end
-        local pipe = io.popen(full_cmd, "r")
-        local resp = pipe and pipe:read("*a") or nil
-        if pipe then pipe:close() end
-        os.remove(tmpfile)
-        love.thread.getChannel("update_result"):push(resp or false)
-    ]])
-	thread:start(cmd, commit_hash)
-end
-
-local update_popup_shown = false
-
 do
 	love.graphics.setColor_old = function(r, g, b, a)
 		if type(r) == "table" then
@@ -124,10 +83,6 @@ if KR_TARGET == "universal" then
 	end
 end
 
--- local base_dir = love.filesystem.getSourceBaseDirectory()
--- ...existing code...
--- local base_dir = love.filesystem.getSourceBaseDirectory()
--- local work_dir = love.filesystem.getWorkingDirectory()
 local base_dir = love.filesystem.getSourceBaseDirectory()
 local work_dir = love.filesystem.getWorkingDirectory()
 
@@ -332,6 +287,8 @@ log.use_print = KR_PLATFORM == "android"
 local features = require("features")
 local storage = require("storage")
 local F = require("lib.klove.font_db")
+F:init("_assets/all-desktop/fonts")
+F:load()
 local MU = require("main_utils")
 local i18n = require("i18n")
 main = {}
@@ -490,19 +447,9 @@ function love.load(arg)
 		path = KR_PATH_ASSETS_ALL_TARGET
 	}}
 
-	for _, v in pairs(font_paths) do
-		local p = v.path .. "/fonts"
-
-		if love.filesystem.getInfo(p .. "/ObelixPro.ttf") then
-			F:init(p)
-			F:load()
-		end
-	end
-
 	main:set_locale(main.params.locale)
-	-- love.window.setTitle(_("GAME_TITLE_" .. string.upper(KR_GAME)))
 	love.window.setTitle(version.title .. version.id)
-	-- icon switched
+	-- icon switched to krdove
 	local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"
 
 	if is_file(icon) then
@@ -552,8 +499,6 @@ function love.load(arg)
 	-- 启动更新检查
 	M.check_update()
 end
-
-
 
 local function love_update_master(dt)
 	storage:update(dt)

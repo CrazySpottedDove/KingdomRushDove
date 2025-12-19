@@ -1,6 +1,5 @@
 local M = {}
 local G = love.graphics
-local F = require("lib.klove.font_db")
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
 local ok, update_cfg = pcall(dofile, "update.lua")
@@ -61,21 +60,50 @@ local check_update_thread_code = [[
     os.remove(tmpfile)
     love.thread.getChannel("check_update_result"):push(resp or false)
 ]]
+-- local update_thread_code = [[
+--     local cmd, update_result_json = ...
+--     local pipe = io.popen(cmd, "w")
+--     if pipe then
+--         pipe:write(update_result_json)
+--         -- pipe:flush()
+--         -- -- 读取输出并实时推送
+--         -- while true do
+--         --     local line = pipe:read("*l")
+--         --     if not line then break end
+--         --     love.thread.getChannel("update_std_out"):push(line)
+--         -- end
+--         pipe:close()
+--     end
+--     love.thread.getChannel("update_result"):push("done")
+-- ]]
 local update_thread_code = [[
     local cmd, update_result_json = ...
-    local pipe = io.popen(cmd, "w")
+    -- 写入临时文件作为 stdin 传递
+    local tmpfile = os.tmpname()
+    local f = io.open(tmpfile, "w")
+    if f then
+        f:write(update_result_json)
+        f:close()
+    end
+
+    -- 构建带重定向的命令，读取 stdout/stderr
+    local full_cmd = cmd .. ' < "' .. tmpfile .. '" 2>&1'
+    if package.config:sub(1,1) == "\\" then
+        full_cmd = 'cmd /C ' .. full_cmd
+    end
+
+    local pipe = io.popen(full_cmd, "r")
     if pipe then
-        pipe:write(update_result_json)
-        pipe:flush()
-        -- 读取输出并实时推送
-        while true do
-            local line = pipe:read("*l")
-            if not line then break end
+        for line in pipe:lines() do
             love.thread.getChannel("update_std_out"):push(line)
         end
         pipe:close()
+        love.thread.getChannel("update_result"):push("done")
+    else
+        love.thread.getChannel("update_result"):push("error")
     end
-    love.thread.getChannel("update_result"):push("done")
+
+    os.remove(tmpfile)
 ]]
 
 function M.check_update()
@@ -93,7 +121,7 @@ function M.check_update()
 	end
 
 	local cmd = string.format('"%s" --check-new-version', binary_path)
-	print("cmd:", cmd)
+	print("cmd: ", cmd)
 	-- 4. 启动线程调用
 	local thread = love.thread.newThread(check_update_thread_code)
 	thread:start(cmd, commit_hash)
@@ -176,6 +204,35 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
 
 		if pressed == 1 then
+			-- 保存原窗口模式并把窗口调大到接近桌面尺寸（95%）
+			local old_w, old_h, old_flags = nil, nil, nil
+
+			if love.window and love.window.getMode then
+				old_w, old_h, old_flags = love.window.getMode()
+			end
+
+			local dw, dh = nil, nil
+
+			if love.window and love.window.getDesktopDimensions then
+				dw, dh = love.window.getDesktopDimensions()
+			end
+
+			if not dw or not dh or dw == 0 or dh == 0 then
+				dw, dh = G.getDimensions()
+			end
+
+			local target_w = math.max(200, math.floor((dw or 800) * 0.95))
+			local target_h = math.max(200, math.floor((dh or 600) * 0.95))
+			pcall(function()
+				if love.window and love.window.setMode then
+					love.window.setMode(target_w, target_h, {
+						resizable = false,
+						fullscreen = false,
+						highdpi = true
+					})
+				end
+			end)
+
 			-- 新建升级线程，实时读取输出
 			local update_thread = love.thread.newThread(update_thread_code)
 			update_thread:start(cmd, update_result_json)
@@ -192,7 +249,7 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 					table.insert(update_std_out, line)
 
 					-- 限制最大行数
-					if #update_std_out > 30 then
+					if #update_std_out > 10 then
 						table.remove(update_std_out, 1)
 					end
 				end
@@ -210,7 +267,7 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 			love.draw = function()
 				G.clear(0, 0, 0)
 				G.origin()
-				local font = F:f("JIMOJW", 20)
+				local font = require("lib.klove.font_db"):f("JIMOJW", 20)
 				G.setFont(font)
 				G.setColor(1, 1, 1, 1)
 				local w, h = G.getDimensions()
