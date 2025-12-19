@@ -10,6 +10,7 @@ local v = V.v
 local i18n = require("i18n")
 local timer = require("hump.timer").new()
 local timer_comic = require("hump.timer").new()
+
 require("klove.kui")
 require("gg_views_custom")
 
@@ -39,15 +40,20 @@ function screen_comics:init(w, h, done_callback)
 	self.playing = true
 	self.skipping = nil
 	self.finishing = nil
+
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
+
 	self.sw, self.sh = sw, sh
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
+
 	local window = KWindow:new(V.v(sw, sh))
+
 	window.scale = v(scale, scale)
 	window.origin = origin
 	window.colors.background = {0, 0, 0, 255}
 	self.window = window
+
 	local current_page = 1
 	local page_views = {}
 	local page_end_frames = {}
@@ -57,28 +63,34 @@ function screen_comics:init(w, h, done_callback)
 
 	local function new_page_view(hidden)
 		local page_view = KView:new(V.v(self.ref_h, self.ref_w))
+
 		page_view.anchor = v(self.ref_w * 0.5, 0)
 		page_view.pos = v(sw * 0.5, 0)
 		page_view.hidden = hidden
 		page_view.propagate_on_down = true
 		page_view.propagate_on_up = true
 		page_view.propagate_on_click = true
+
 		self.window:add_child(page_view)
+
 		return page_view
 	end
 
 	for __, line in pairs(string.split(self.comic_data, "\n")) do
 		line = string.gsub(line, "\"", "")
 		line = string.gsub(line, ".png", "")
+
 		local row = string.split(line, ",")
 
 		if row[1] == "PAGE_END" then
 			table.insert(page_views, new_page_view())
 			table.insert(page_end_frames, tonumber(row[2]))
+
 			current_page = current_page + 1
 		elseif row[1] == "ORDER" then
 			for i = 2, #row do
 				table.insert(sprites_order, row[i])
+
 				sprites_order[row[i]] = i
 			end
 		elseif row[1] == "TEXT" then
@@ -90,6 +102,7 @@ function screen_comics:init(w, h, done_callback)
 
 			if not labels[text_key .. sid] then
 				labels[text_key .. sid] = true
+
 				local s = sprites[sid]
 				local l = GGLabel:new(V.v(size_x, size_y))
 
@@ -112,6 +125,7 @@ function screen_comics:init(w, h, done_callback)
 				l.font_name = "body"
 				l.font_size = 22
 				l.vertical_align = "middle"
+
 				s:add_child(l)
 
 				if DEBUG_COMIC_TEXT then
@@ -153,10 +167,13 @@ function screen_comics:init(w, h, done_callback)
 
 				if cmd == "wait" then
 					local t = fts(frame - last_frame)
+
 					wait(t)
+
 					last_frame = frame
 				else
 					local t = fts(frame - last_frame)
+
 					timer_comic:tween(t, s, {
 						pos = {
 							x = x,
@@ -169,6 +186,7 @@ function screen_comics:init(w, h, done_callback)
 						alpha = alpha
 					}, ease > 0 and "out-expo" or "in-expo")
 					wait(t)
+
 					last_frame = frame
 				end
 			end
@@ -178,6 +196,7 @@ function screen_comics:init(w, h, done_callback)
 	for i = 1, #sprites_order do
 		local sid = sprites_order[i]
 		local s = sprites[sid]
+
 		page_views[s.current_page]:add_child(s)
 	end
 
@@ -192,9 +211,12 @@ function screen_comics:init(w, h, done_callback)
 
 	if self.fade_in then
 		self.playing = false
+
 		local end_color = window.colors.background
 		local time, start_color = unpack(self.fade_in)
+
 		window.colors.background = start_color
+
 		timer:tween(time, self.window.colors, {
 			background = end_color
 		}, "out-linear", function()
@@ -212,7 +234,9 @@ function screen_comics:destroy()
 	timer:clear()
 	timer_comic:clear()
 	self.window:destroy()
+
 	self.window = nil
+
 	SU.remove_references(self, KView)
 end
 
@@ -238,6 +262,7 @@ end
 function screen_comics:do_last_frame()
 	while self.t < self.current_page.end_time do
 		timer_comic:update(0.03333333333333333)
+
 		self.t = self.t + 0.03333333333333333
 	end
 
@@ -256,15 +281,17 @@ function screen_comics:do_next_page()
 		self.skipping = false
 	else
 		self.finishing = true
+
 		self.done_callback()
 	end
 end
 
 function screen_comics:skip()
 	if self.skipping or self.finishing then
-		return
+		return 
 	elseif not self.playing then
 		self.skipping = true
+
 		S:queue("GUINotificationPaperOver")
 		timer:tween(0.25, self.current_page, {
 			alpha = 0
@@ -281,7 +308,7 @@ function screen_comics:keypressed(key, isrepeat)
 end
 
 function screen_comics:keyreleased(key)
-	return
+	return 
 end
 
 function screen_comics:mousepressed(x, y, button)
@@ -289,7 +316,7 @@ function screen_comics:mousepressed(x, y, button)
 end
 
 function screen_comics:mousereleased(x, y, button)
-	return
+	return 
 end
 
 function screen_comics:gamepadpressed(joystick, button)

@@ -4,6 +4,7 @@ local FS = love.filesystem
 local A = require("animation_db")
 local KRN = KR_NATIVE and require("krn")
 local EXO = {}
+
 EXO.exos = {}
 EXO.exos_count = {}
 EXO.db = {}
@@ -16,19 +17,24 @@ function EXO:load_kui(name)
 
 	if KRN then
 		local anis, max_parts = KRN.exo_db_load_kui(name, EXO.base_path, "kui")
+
 		return anis, max_parts
 	end
 
 	local exo = self:load_lua(name)
+
 	exo.is_kui = true
 	self.exos[name] = exo
 	self.exos_count[name] = (self.exos_count[name] or 0) + 1
+
 	self:load_fake_sprites_to_db(exo)
+
 	local anis = {}
 	local max_parts = 0
 
 	for _, animation in ipairs(exo.animations) do
 		local lname = exo.name .. "_" .. animation.name
+
 		anis[lname] = {
 			from = 1,
 			to = #animation.frames,
@@ -54,8 +60,10 @@ function EXO:load()
 	for _, exo_list in pairs(self.exo_lists_to_load) do
 		for _, exo_name in ipairs(exo_list) do
 			local exo = self:load_lua(exo_name, EXO.exo_path)
+
 			self:load_fake_sprites_to_db(exo)
 			self:load_animations_to_animation_db(exo)
+
 			self.exos[exo_name] = exo
 			self.exos_count[exo_name] = (self.exos_count[exo_name] or 0) + 1
 		end
@@ -66,7 +74,7 @@ end
 
 function EXO:load_groups(groups)
 	if not groups then
-		return
+		return 
 	end
 
 	for _, g in pairs(groups) do
@@ -84,7 +92,9 @@ function EXO:load_groups(groups)
 
 					if string.match(item, ext_s) then
 						local name = string.gsub(item, ext_s, "")
+
 						table.insert(exo_names, name)
+
 						break
 					end
 				end
@@ -106,26 +116,30 @@ function EXO:unload(exo_name)
 
 	if KRN then
 		KRN.exo_db_unload(exo_name)
-		return
+
+		return 
 	end
 
 	local exo = self.exos[exo_name]
 
 	if not exo then
 		log.error("EXO:unload - could not find %s to unload", exo_name)
-		return
+
+		return 
 	end
 
 	self.exos_count[exo_name] = self.exos_count[exo_name] - 1
 
 	if self.exos_count[exo_name] > 0 then
 		log.debug("exo %s is still in use with count %s. keep loaded...", exo_name, self.exos_count[exo_name])
-		return
+
+		return 
 	end
 
 	if exo.is_kui and A.db then
 		for _, animation in ipairs(exo.animations) do
 			local name = exo.name .. "_" .. animation.name
+
 			A.db[name] = nil
 		end
 	end
@@ -135,6 +149,7 @@ function EXO:unload(exo_name)
 
 		for idx, frame in ipairs(animation.frames) do
 			local sprite_name = string.format("%s_%s_%04d", exo.name, ani_name, idx)
+
 			self.db[sprite_name] = nil
 		end
 	end
@@ -159,7 +174,7 @@ function EXO:unload_all()
 end
 
 function EXO:destroy()
-	return
+	return 
 end
 
 function EXO:load_lua(exo_name, exo_path)
@@ -173,6 +188,7 @@ function EXO:load_lua(exo_name, exo_path)
 
 	local function lines(str)
 		local ci = 0
+
 		return function()
 			local l = ""
 			local c = 0
@@ -197,6 +213,7 @@ function EXO:load_lua(exo_name, exo_path)
 	if FS.getInfo(fn .. ".lua") then
 		local f = FS.load(fn .. ".lua")
 		local exo = f()
+
 		exo.name = exo_name
 		-- if exo.animations[1].frames[1].parts then
 		-- 	-- v1 format, need to convert to v3
@@ -264,11 +281,13 @@ function EXO:load_lua(exo_name, exo_path)
 	-- end
 	elseif FS.getInfo(fn .. ".exo") then
 		local exo = {}
+
 		exo.parts = {}
 		exo.parts_idx = {}
 		exo.animations = {}
 		exo.attach_idx = {}
 		exo.attach_points = {}
+
 		local has_deltas = false
 		local c_ani, c_f
 		local c_p_idx = 0
@@ -286,14 +305,20 @@ function EXO:load_lua(exo_name, exo_path)
 				has_deltas = sp[2] == "1"
 			elseif sp[1] == "pa" then
 				local _, name, offsetX, offsetY = unpack(sp)
+
 				exo.parts[name] = {name, N(offsetX), N(offsetY)}
+
 				table.insert(exo.parts, exo.parts[name])
+
 				c_p_idx = c_p_idx + 1
 				exo.parts_idx[c_p_idx] = exo.parts[name]
 			elseif sp[1] == "ta" then
 				local _, name = unpack(sp)
+
 				exo.attach_points[name] = {name}
+
 				table.insert(exo.attach_points, exo.attach_points[name])
+
 				c_t_idx = c_t_idx + 1
 				exo.attach_points[c_t_idx] = exo.attach_points[name]
 				exo.attach_idx[name] = c_t_idx
@@ -303,19 +328,23 @@ function EXO:load_lua(exo_name, exo_path)
 					name = sp[2],
 					frames = {}
 				}
+
 				table.insert(exo.animations, c_ani)
 			elseif sp[1] == "f" then
 				c_f = {}
 				pinst_idx = 0
+
 				table.insert(c_ani.frames, c_f)
 			elseif sp[1] == "P" or sp[1] == "p" then
 				pinst_idx = pinst_idx + 1
+
 				local c_p
 				local alpha, x, y, sx, sy, r, kx, ky = N(sp[3]), N(sp[4]), N(sp[5]), N(sp[6]), N(sp[7]), N(sp[8]), N(sp[9]), N(sp[10])
 
 				if has_deltas and sp[1] == "p" then
 					local k = keyframes[pinst_idx]
 					local px, py, psx, psy, pr, pkx, pky = k.x, k.y, k.sx, k.sy, k.r, k.kx, k.ky
+
 					c_p = {2, N(sp[2]), k.alpha + alpha, px + x, py + y, psx + sx, psy + sy, pr + r, pkx + kx, pky + ky}
 				else
 					c_p = {1, N(sp[2]), N(sp[3]), x, y, sx, sy, r, kx, ky}
@@ -324,6 +353,7 @@ function EXO:load_lua(exo_name, exo_path)
 				table.insert(c_f, c_p)
 			elseif sp[1] == "T" then
 				local c_a = {8, N(sp[2]), N(sp[3]), N(sp[4]), N(sp[5]), N(sp[6]), N(sp[7]), N(sp[8]), N(sp[9]), N(sp[10])}
+
 				table.insert(c_f, c_a)
 			elseif sp[1] == "t" then
 				log.error("deltas for attach points not implemented yet")
@@ -333,11 +363,14 @@ function EXO:load_lua(exo_name, exo_path)
 		end
 
 		log.debug("EXO -- << finished v2 - time:%f ms - file: %s - ", (love.timer.getTime() - ts_start) * 1000, fn)
+
 		exo.name = exo_name
+
 		return exo
 	else
 		log.error("exoskeleton file not found for %s", fn)
-		return
+
+		return 
 	end
 end
 
@@ -346,11 +379,13 @@ function EXO:load_animations_to_animation_db(exo)
 
 	for _, animation in ipairs(exo.animations) do
 		local name = exo.name .. "_" .. animation.name
+
 		db[name] = {
 			from = 1,
 			to = #animation.frames,
 			prefix = name
 		}
+
 		A:generate_frames(db[name])
 	end
 end
@@ -361,6 +396,7 @@ function EXO:load_fake_sprites_to_db(exo)
 
 		for idx, frame in ipairs(animation.frames) do
 			local sprite_name = string.format("%s_%s_%04d", exo.name, ani_name, idx)
+
 			self.db[sprite_name] = frame
 			frame.exo = exo
 		end
@@ -375,6 +411,7 @@ function EXO:f(fn)
 
 		if not exo_frame then
 			log.error("Could not find exo_frame called: %s", fn)
+
 			return nil
 		end
 
@@ -391,21 +428,24 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 
 	if not f then
 		log.error("Could not find frame for sprite_id:%s in entity:%s (%s)", sprite_id, entity.id, entity.template_name)
-		return
+
+		return 
 	end
 
 	local exo = f.exo
 
 	if not exo then
 		log.error("Could not find exo for sprite_id:%s in entity:%s (%s)", sprite_id, entity.id, entity.template_name)
-		return
+
+		return 
 	end
 
 	local idx = exo.attach_idx[name]
 
 	if not idx then
 		log.error("Could not find attach point named %s in sprite_id:%s in entity:%s (%s)", name, sprite_id, entity.id, entity.template_name)
-		return
+
+		return 
 	end
 
 	return f and f.last_attach_point_xform and f.last_attach_point_xform[idx]
@@ -426,13 +466,15 @@ end
 function EXO:hide_parts_with_string(sprite, s)
 	if not sprite then
 		log.error("sprite missing")
-		return
+
+		return 
 	end
 
 	if sprite.exo_hide_prefix then
 		if #sprite.exo_hide_prefix >= 8 then
 			log.error("only a max of 8 exo hide patterns can be set")
-			return
+
+			return 
 		end
 
 		table.insert_mt(sprite.exo_hide_prefix, s)
@@ -444,13 +486,14 @@ end
 function EXO:show_parts_with_string(sprite, s)
 	if not sprite then
 		log.error("sprite missing")
-		return
+
+		return 
 	end
 
 	local t = sprite.exo_hide_prefix
 
 	if not t then
-		return
+		return 
 	end
 
 	local mt = getmetatable(t)
@@ -473,7 +516,8 @@ end
 function EXO:show_all_parts(sprite)
 	if not sprite then
 		log.error("sprite missing")
-		return
+
+		return 
 	end
 
 	if sprite.exo_hide_prefix then
@@ -484,7 +528,8 @@ end
 function EXO:is_hiding_parts_with_string(sprite, s)
 	if not sprite then
 		log.error("sprite missing")
-		return
+
+		return 
 	end
 
 	local t = sprite.exo_hide_prefix

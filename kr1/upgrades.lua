@@ -3,6 +3,7 @@ local log = require("lib.klua.log"):new("upgrades")
 local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
+
 require("constants")
 
 local function T(name)
@@ -15,6 +16,7 @@ end
 
 local epsilon = 1e-09
 local upgrades = {}
+
 upgrades.max_level = nil
 upgrades.levels = {}
 upgrades.levels.archers = 0
@@ -317,6 +319,7 @@ end
 
 function upgrades:has_upgrade(name)
 	local u = self.list[name]
+
 	return u and u.level <= self.levels[u.class] and (not self.max_level or u.level <= self.max_level)
 end
 
@@ -500,6 +503,7 @@ function upgrades:bolts()
 		"bullet_tower_pandas_air_lvl4",
 		"tower_arcane_wizard5_ray_disintegrate"
 	}
+
 	return table.append(other_bolts, self:mage_tower_bolts())
 end
 
@@ -548,6 +552,7 @@ function upgrades:patch_templates(max_level)
 
 	local u
 	local archer_towers = self:archer_towers()
+
 	u = self:get_upgrade("archer_salvage")
 
 	if u then
@@ -618,6 +623,7 @@ function upgrades:patch_templates(max_level)
 
 	local barrack_soldiers = self:barrack_soldiers()
 	local barrack_towers = self:towers_with_barrack()
+
 	u = self:get_upgrade("barrack_survival")
 
 	if u then
@@ -676,6 +682,7 @@ function upgrades:patch_templates(max_level)
 	end
 
 	local mage_towers = self:mage_towers()
+
 	u = self:get_upgrade("mage_spell_reach")
 
 	if u then
@@ -736,6 +743,7 @@ function upgrades:patch_templates(max_level)
 		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
 		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
 		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+
 		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
 
 		for k, v in pairs(d) do
@@ -749,6 +757,7 @@ function upgrades:patch_templates(max_level)
 		for _, n in pairs(self:bolts()) do
 			local mods = {u.mod}
 			local b = T(n).bullet
+
 			add_mods(b, mods)
 		end
 
@@ -757,6 +766,7 @@ function upgrades:patch_templates(max_level)
 
 	local engineer_towers = self:engineer_towers()
 	local engineer_bombs = self:engineer_bombs()
+
 	u = self:get_upgrade("engineer_concentrated_fire")
 
 	if u then
@@ -818,6 +828,7 @@ function upgrades:patch_templates(max_level)
 		end
 
 		local at
+
 		at = T("tower_entwood").attacks.list[2]
 		at.cooldown_factor = at.cooldown_factor * u.cooldown_factor
 		at.cooldown = at.cooldown * u.cooldown_factor
@@ -923,6 +934,7 @@ function upgrades:patch_templates(max_level)
 		end
 
 		u = self:get_upgrade("reinforcement_level_" .. rl)
+
 		local v = self:get_upgrade("reinforcement_level_6")
 
 		if v then

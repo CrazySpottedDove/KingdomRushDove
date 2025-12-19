@@ -8,17 +8,10 @@ local data = {
 	-- 初始每大波持续时间
 	final_interval = 7200,
 	-- 最终每大波持续时间
-	paths = { -- 允许的路径
-		-- 2,
-		3,
-		4,
-		-- 6,
-		7,
-		8,
-		9,
-		10,
-		11
-	},
+	paths = {3, 4, 7, 8, 9, 10, 11},
+	-- 允许的路径
+	-- 2,
+	-- 6,
 	path_active_map = {
 		[1] = {
 			1,
@@ -49,11 +42,11 @@ local data = {
 	}, -- 每一个路径分配出怪权重时的权重。每次出怪时，取活跃路径的权重相加，然后再根据各路径权重分配出怪权重
 	path_enemy_map = {
 		[1] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_gorilla", "enemy_cannibal_zombie"},
-		[2] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro",  "enemy_shaman_shield"},
+		[2] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_shaman_shield"},
 		[3] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_gorilla", "enemy_cannibal_zombie"},
-		[4] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro",  "enemy_shaman_shield"},
+		[4] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_shaman_shield"},
 		[5] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_gorilla", "enemy_cannibal_zombie"},
-		[6] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro",  "enemy_shaman_shield"},
+		[6] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_shaman_shield"},
 		[7] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_gorilla", "enemy_cannibal_zombie"},
 		[8] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro"},
 		[9] = {"enemy_cannibal", "enemy_hunter"},
@@ -113,7 +106,8 @@ local data = {
 	-- fixed_sub_path 始终赋 0
 	-- delay 始终赋 0
 	-- 如果怪物的 vis.flags 中含有 F_FLYING，就要为 wave 添加 some_flying = true
-	gap_count_range = {3,5,7}, -- 每个 wave 中可接受 gap 数量的值，随机选取
+	gap_count_range = {3, 5, 7}, -- 每个 wave 中可接受 gap 数量的值，随机选取
 	wave_max_types = 100 -- 每个 wave 最多不同种类敌人数量
 }
+
 return data

@@ -2,14 +2,19 @@
 local log = require("lib.klua.log"):new("grid_db")
 local FS = love.filesystem
 local km = require("lib.klua.macros")
+
 require("lib.klua.table")
+
 local GA = require("grid_a_star")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
+
 require("constants")
+
 local grid_db = {}
+
 grid_db.grid = {}
 grid_db.ox = 0
 grid_db.oy = 0
@@ -111,19 +116,23 @@ end
 
 function grid_db:load(name)
 	self.waypoints_cache = {}
+
 	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_grid.lua"
 	local f, err = love.filesystem.load(fn)
 
 	if not err then
 		local file_data = f()
+
 		self.grid = file_data.grid
 		self.ox = file_data.ox or 0
 		self.oy = file_data.oy or 0
 		self.grid_w = #self.grid
 		self.grid_h = #self.grid[1]
+
 		return true
 	else
 		log.error("Failed to load %s - error: %s", fn, err)
+
 		return false
 	end
 end
@@ -132,6 +141,7 @@ if DEBUG then
 	function grid_db:save(name)
 		local filename = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_grid.lua"
 		local f = io.open(filename, "w")
+
 		f:write("return {\n")
 		f:write(string.format("ox=%s, oy=%s,\n", self.ox, self.oy))
 		f:write("grid={\n")
@@ -166,24 +176,29 @@ end
 
 function grid_db:cell_type(x, y)
 	local i, j = self:get_coords(x, y)
+
 	return self.grid[i][j], i, j
 end
 
 function grid_db:cell_is(x, y, is_type)
 	local type = self:cell_type(x, y)
+
 	return band(type, is_type) ~= 0
 end
 
 function grid_db:cell_is_only(x, y, mask)
 	local type = self:cell_type(x, y)
+
 	return band(type, bnot(mask)) == 0
 end
 
 function grid_db:get_coords(x, y)
 	local i = math.ceil((x - self.ox) / self.cell_size)
 	local j = math.ceil((y - self.oy) / self.cell_size)
+
 	i = km.clamp(1, self.grid_w, i)
 	j = km.clamp(1, self.grid_h, j)
+
 	return i, j
 end
 
@@ -198,8 +213,10 @@ end
 function grid_db:cell_pos(i, j)
 	local x = i * self.cell_size + self.ox
 	local y = j * self.cell_size + self.oy
+
 	x = x - self.cell_size * 0.5
 	y = y - self.cell_size * 0.5
+
 	return x, y
 end
 
@@ -236,6 +253,7 @@ function grid_db:print_cell(type)
 
 		if band(type, v) ~= 0 then
 			st = names[v]
+
 			break
 		end
 	end
@@ -267,6 +285,7 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 
 	if from_fallback and not valid_cell_fn(fi, fj, self.grid[fi][fj]) then
 		log.debug("find_waypoints: getting from from_fallback: %s,%s", from_fallback.x, from_fallback.y)
+
 		fi, fj = self:get_coords(from_fallback.x, from_fallback.y)
 	end
 
@@ -280,6 +299,7 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 
 	if not valid_cell_fn(fi, fj, self.grid[fi][fj]) then
 		log.warning("find_waypoints: starting coords %s,%s are in invalid terrain. searching nearby...", fi, fj)
+
 		from_c = GA.find_nearest_valid(from_c, self.grid, valid_cell_fn, 5)
 
 		if not from_c then
@@ -314,8 +334,10 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 		else
 			local x = p.x * self.cell_size + self.ox
 			local y = p.y * self.cell_size + self.oy
+
 			x = x - self.cell_size * 0.5
 			y = y - self.cell_size * 0.5
+
 			table.insert(result, {
 				x = x,
 				y = y
@@ -327,7 +349,9 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 	self.waypoints_cache.to_c = to_c
 	self.waypoints_cache.path_c = path_c
 	self.waypoints_cache.path = result
+
 	log.debug("a_star path: f:%s,%s t:%s,%s p:%s", from.x, from.y, to.x, to.y, GA.dump_path(result))
+
 	return result
 end
 
@@ -390,6 +414,7 @@ function grid_db:find_line_waypoints(from, to, valid_terrains)
 		end
 
 		local x, y = self:cell_pos(p.x, p.y)
+
 		table.insert(points, {
 			x = x,
 			y = y

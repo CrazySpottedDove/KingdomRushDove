@@ -1,7 +1,10 @@
 -- chunkname: @./all/game_editor.lua
 local log = require("lib.klua.log"):new("game")
+
 log.level = log.DEBUG_LEVEL
+
 require("lib.klua.dump")
+
 local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local V = require("hump.vector-light")
@@ -19,8 +22,10 @@ local GR = require("grid_db")
 local LU = require("level_utils")
 local sys = require("systems")
 local IS_KR5 = KR_GAME == "kr5"
+
 simulation = require("simulation")
 A = require("animation_db")
+
 local EXO
 
 if IS_KR5 then
@@ -34,7 +39,9 @@ end
 local game_editor_gui = require("game_editor_gui")
 local G = love.graphics
 local bit = require("bit")
+
 require("constants")
+
 BATCH_SIZE = 1000
 DEFAULT_PATH_WIDTH = 40
 editor = {}
@@ -99,6 +106,7 @@ function editor:save_data(data, name)
 	})
 	local out = "return " .. str .. "\n"
 	local f = io.open(fn, "w")
+
 	f:write(out)
 	f:flush()
 	f:close()
@@ -128,6 +136,7 @@ function editor:save_curves(name)
 	end
 
 	local f = io.open(fn, "w")
+
 	f:write(out)
 	f:flush()
 	f:close()
@@ -141,8 +150,11 @@ function editor:init(screen_w, screen_h, done_callback)
 	self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS["ipad"]
 	self.game_scale = self.game_scale / (tsf and tsf.game_editor or 1)
 	self.game_ref_origin = V.v((screen_w - self.ref_w * self.game_scale) / 2, (screen_h - self.ref_h * self.game_scale) / 2)
+
 	RU.init()
+
 	self.store = {}
+
 	local systems
 
 	if IS_KR5 then
@@ -152,10 +164,13 @@ function editor:init(screen_w, screen_h, done_callback)
 	end
 
 	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
+
 	self.simulation = simulation
 	self.undo_stack = {}
 	self.undo_active = false
+
 	game_editor_gui:init(screen_w, screen_h, self)
+
 	self.gui = game_editor_gui
 	self.paths_visible = false
 	self.grid_visible = false
@@ -169,14 +184,18 @@ end
 
 function editor:destroy()
 	self.gui:destroy()
+
 	self.gui = nil
+
 	RU.destroy()
 end
 
 function editor:update(dt)
 	if self.args and self.args.custom then
 		local level_idx = self.args.custom
+
 		self:level_load(level_idx, 1)
+
 		self.args = nil
 	end
 
@@ -210,6 +229,7 @@ end
 
 function editor:draw()
 	love.graphics.print("Memory: " .. collectgarbage("count") .. " KB", 10, 10)
+
 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
 	local gs = self.game_scale
 	local last_idx
@@ -227,10 +247,13 @@ function editor:draw()
 
 	if self.paths_visible and (not self.paths_canvas or self.paths_dirty) then
 		self.paths_dirty = nil
+
 		G.push()
 		G.translate(rox, self.screen_h - roy)
 		G.scale(gs, -gs)
+
 		self.paths_canvas = G.newCanvas()
+
 		G.setCanvas(self.paths_canvas)
 
 		for pi, path in ipairs(self.path_curves) do
@@ -240,6 +263,7 @@ function editor:draw()
 				G.setLineWidth(pi == self.path_selected and curve_selected_w or curve_w)
 				G.setColor_old(self.path_selected == pi and color_curve_sel or color_curve)
 				G.line(bezier:render())
+
 				local p1x, p1y = bezier:getControlPoint(1)
 				local p2x, p2y = bezier:getControlPoint(2)
 				local p3x, p3y = bezier:getControlPoint(3)
@@ -252,11 +276,13 @@ function editor:draw()
 
 					if i == 1 then
 						local n1x, n1y = V.mul(w1 / 2, V.rotate(km.pi_2, V.normalize(p2x - p1x, p2y - p1y)))
+
 						G.line(p1x, p1y, p1x + n1x, p1y + n1y)
 						G.line(p1x, p1y, p1x - n1x, p1y - n1y)
 					end
 
 					local n4x, n4y = V.mul(w4 / 2, V.rotate(km.pi_2, V.normalize(p4x - p3x, p4y - p3y)))
+
 					G.line(p4x, p4y, p4x + n4x, p4y + n4y)
 					G.line(p4x, p4y, p4x + -n4x, p4y - n4y)
 					G.setLineWidth(1)
@@ -269,11 +295,13 @@ function editor:draw()
 			end
 
 			local fnt = G.getFont()
+
 			G.setFont(F:f("DroidSansMono", 10))
 
 			for i, bezier in ipairs(path.beziers) do
 				local p1x, p1y = bezier:getControlPoint(1)
 				local p4x, p4y = bezier:getControlPoint(4)
+
 				G.setColor_old(color_node)
 
 				if i == 1 then
@@ -293,6 +321,7 @@ function editor:draw()
 
 		if self.path_points then
 			local fnt = G.getFont()
+
 			G.setFont(F:f("DroidSansMono", 10))
 			G.setColor(1, 1, 1, 1)
 
@@ -312,6 +341,7 @@ function editor:draw()
 			end
 
 			self.path_points = nil
+
 			G.setFont(fnt)
 		end
 
@@ -322,16 +352,20 @@ function editor:draw()
 
 	if self.grid_visible and (not self.grid_canvas or self.grid_dirty) then
 		self.grid_dirty = nil
+
 		G.push()
 		G.translate(rox, self.screen_h - roy)
 		G.scale(gs, -gs)
 		G.translate(GR.ox, GR.oy)
+
 		self.grid_canvas = G.newCanvas()
+
 		G.setCanvas(self.grid_canvas)
 
 		for i = 1, #GR.grid do
 			for j = 1, #GR.grid[i] do
 				local t = GR.grid[i][j]
+
 				G.setColor_old(GR.grid_colors[t] or {100, 100, 100})
 				G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
 			end
@@ -344,10 +378,13 @@ function editor:draw()
 
 	if self.entities_visible and (not self.entities_canvas or self.entities_dirty) then
 		self.entities_dirty = nil
+
 		G.push()
 		G.translate(rox, self.screen_h - roy)
 		G.scale(gs, -gs)
+
 		self.entities_canvas = G.newCanvas()
+
 		G.setCanvas(self.entities_canvas)
 
 		for _, e in pairs(self.store.entities) do
@@ -366,6 +403,7 @@ function editor:draw()
 
 					if f.ss then
 						local w, h = f.ss.size[1] * f.ss.ref_scale, f.ss.size[2] * f.ss.ref_scale
+
 						G.rectangle("line", e.pos.x + f.anchor.x * -1 * w, e.pos.y + f.anchor.y * -1 * h, w, h)
 					end
 				end
@@ -379,21 +417,27 @@ function editor:draw()
 
 	if self.nav_visible and (not self.nav_canvas or self.nav_dirty) then
 		self.nav_dirty = nil
+
 		G.push()
 		G.translate(rox, self.screen_h - roy)
 		G.scale(gs, -gs)
+
 		self.nav_canvas = G.newCanvas()
+
 		G.setCanvas(self.nav_canvas)
 
 		if self.store.level.nav_mesh then
 			local sel_h_id = self.nav_entity_selected and tonumber(self.nav_entity_selected.ui.nav_mesh_id)
 			local fnt = G.getFont()
+
 			G.setFont(F:f("DroidSansMono", 24))
+
 			local towers = {}
 
 			for _, e in pairs(self.store.entities) do
 				if e.ui and e.ui.nav_mesh_id then
 					towers[tonumber(e.ui.nav_mesh_id)] = e
+
 					local has_edges = false
 
 					for _, v in pairs(self.store.level.nav_mesh[tonumber(e.ui.nav_mesh_id)] or {}) do
@@ -420,6 +464,7 @@ function editor:draw()
 			G.setFont(fnt)
 			G.setColor_old(0, 100, 255, 255)
 			G.translate(0, 10)
+
 			local ox, oy = 40, 15
 			local ax, ay = 40, 15
 
@@ -461,6 +506,7 @@ function editor:draw()
 
 			local s2 = 10
 			local s3 = 15
+
 			G.setColor_old(0, 0, 200, 255)
 
 			for h_id, row in pairs(self.store.level.nav_mesh) do
@@ -515,7 +561,9 @@ function editor:draw()
 	G.push()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
+
 	last_idx = RU.draw_frames_range(self.store.render_frames, 1, Z_GUI - 1)
+
 	G.pop()
 
 	if self.paths_visible then
@@ -555,9 +603,11 @@ function editor:draw()
 			G.push()
 			G.translate(rox, self.screen_h - roy)
 			G.scale(gs, -gs)
+
 			local bx, by = self.tool_pointer.x, self.tool_pointer.y
 			local bsize = self.tool_pointer.size
 			local bw = bsize / 2 * GR.cell_size
+
 			G.setColor(1, 1, 1, 0.784)
 			G.setLineWidth(1)
 			G.line(bx - bw, by - bw, bx + bw, by - bw)
@@ -597,25 +647,31 @@ end
 
 function editor:level_save(idx, mode)
 	if not idx then
-		return
+		return 
 	end
 
 	local s = self.store
 	local ss
+
 	s.level_idx = idx
 	s.level_name = "level" .. string.format("%02i", idx)
+
 	log.debug("saving level %s", idx)
 	self:save_curves(s.level_name)
 	GR:save(s.level_name)
 	self:serialize_level(s)
+
 	ss = table.deepclone(s.level.data)
+
 	self:save_data(ss, s.level_name)
 end
 
 function editor:level_load(idx, mode)
 	log.debug("loading level %s", idx)
+
 	self.undo_active = false
 	self.store = {}
+
 	local systems
 
 	if IS_KR5 then
@@ -625,22 +681,28 @@ function editor:level_load(idx, mode)
 	end
 
 	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
+
 	self.simulation = simulation
+
 	A:load()
 	E:load()
+
 	local s = self.store
+
 	s.level_idx = idx
 	s.level_name = "level" .. string.format("%02i", idx)
 	s.level_mode = mode
 	s.level_difficulty = DIFFICULTY_EASY
 	s.level = LU.load_level(s, s.level_name, true)
+
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
 
 	if s.level.data then
 		LU.insert_entities(self.store, s.level.data.entities_list, true)
-        if s.level.data.required_exoskeletons then
-            EXO:load(s.level.data.required_exoskeletons)
-        end
+
+		if s.level.data.required_exoskeletons then
+			EXO:load(s.level.data.required_exoskeletons)
+		end
 	end
 
 	self.entities_dirty = true
@@ -649,17 +711,24 @@ function editor:level_load(idx, mode)
 		local gox, goy = -192, 0
 		local bgw, bgh = 1408, 768
 		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
+
 		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
 	end
 
 	self.grid_dirty = true
+
 	P:load_curves(s.level_name)
+
 	self.path_curves = P.path_curves
 	self.path_connections = P.path_connections
 	self.active_paths = P.active_paths
+
 	self:update_curves()
+
 	self.paths_dirty = true
+
 	self.simulation:update(0.03333333333333333)
+
 	self.nav_entity_selected = nil
 
 	if not s.level.nav_mesh then
@@ -673,6 +742,7 @@ function editor:level_load(idx, mode)
 	end
 
 	self:sanitize_nav_mesh(s.level.nav_mesh)
+
 	self.nav_dirty = true
 	self.undo_stack = {}
 	self.undo_active = true
@@ -680,6 +750,7 @@ function editor:level_load(idx, mode)
 	if s.level.load then
 		P.add_invalid_range = function()
 		end
+
 		s.level:load(s)
 	end
 
@@ -702,6 +773,7 @@ end
 
 function editor:serialize_entity(e)
 	local t = {}
+
 	t.template = e.template_name
 
 	if e.pos then
@@ -713,6 +785,7 @@ function editor:serialize_entity(e)
 	if e.editor and e.editor.props then
 		for _, prop in pairs(e.editor.props) do
 			local prop_name, prop_type = unpack(prop)
+
 			t[prop_name] = LU.eval_get_prop(e, prop_name)
 		end
 	end
@@ -734,6 +807,7 @@ function editor:serialize_level(store)
 				table.deepmerge(de, se)
 			else
 				table.insert(list, se)
+
 				list._idx[e.id] = se
 			end
 		end
@@ -754,7 +828,7 @@ end
 
 function editor:undo_push_entity(from_drag, eid, ...)
 	if not self.undo_active then
-		return
+		return 
 	end
 
 	local args = {...}
@@ -783,6 +857,7 @@ function editor:undo_push_entity(from_drag, eid, ...)
 			id = eid,
 			props = props
 		}
+
 		log.debug("undo: new entry: %s", getdump(item))
 		table.insert(self.undo_stack, item)
 	end
@@ -800,7 +875,8 @@ function editor:undo_pop()
 
 		if not e then
 			log.error("Undo could not find entity with id:%s", item.id)
-			return
+
+			return 
 		end
 
 		for k, v in pairs(item.props) do
@@ -814,6 +890,7 @@ function editor:update_curves(pi, touched)
 		local path = self.path_curves[pi]
 		local nodes = path.nodes
 		local beziers = path.beziers
+
 		table.sort(touched)
 
 		for _, ni in pairs(touched) do
@@ -845,6 +922,7 @@ function editor:update_curves(pi, touched)
 			for i = 1, scount do
 				local j = 3 * (i - 1) + 1
 				local p1, p2, p3, p4 = n[j], n[j + 1], n[j + 2], n[j + 3]
+
 				table.insert(beziers, love.math.newBezierCurve({p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y}))
 			end
 
@@ -858,6 +936,7 @@ end
 function editor:set_node_width(pi, ni, w)
 	local wi = (ni - 1) / 3 + 1
 	local path = self.path_curves[pi]
+
 	path.widths[wi] = w
 	self.paths_dirty = true
 end
@@ -869,7 +948,9 @@ function editor:set_node_pos(pi, ni, x, y)
 	local beziers = path.beziers
 	local node = nodes[ni]
 	local dx, dy = x - node.x, y - node.y
+
 	node.x, node.y = x, y
+
 	table.insert(touched, ni)
 
 	if (ni - 1) % 3 == 0 then
@@ -879,6 +960,7 @@ function editor:set_node_pos(pi, ni, x, y)
 
 			if nn then
 				nn.x, nn.y = nn.x + dx, nn.y + dy
+
 				table.insert(touched, i)
 			end
 		end
@@ -892,7 +974,9 @@ function editor:set_node_pos(pi, ni, x, y)
 		if nn and on and cn then
 			local ol = V.len(on.x - cn.x, on.y - cn.y)
 			local donx, dony = V.mul(ol, V.rotate(km.pi, V.normalize(nn.x - cn.x, nn.y - cn.y)))
+
 			on.x, on.y = cn.x + donx, cn.y + dony
+
 			table.insert(touched, oni)
 		end
 	end
@@ -906,7 +990,7 @@ function editor:extend_path(pi, ni, x, y)
 	local nodes = path.nodes
 
 	if ni ~= 1 and ni ~= #nodes then
-		return
+		return 
 	end
 
 	if ni == #nodes then
@@ -920,10 +1004,13 @@ function editor:extend_path(pi, ni, x, y)
 
 		local n2 = V.v(x, y)
 		local h2 = V.v(V.add(n2.x, n2.y, V.mul(0.25, n1.x - n2.x, n1.y - n2.y)))
+
 		table.insert(nodes, h1)
 		table.insert(nodes, h2)
 		table.insert(nodes, n2)
+
 		local wi = (ni - 1) / 3 + 1
+
 		table.insert(widths, widths[wi])
 	elseif ni == 1 then
 		local ph1 = nodes[2]
@@ -936,6 +1023,7 @@ function editor:extend_path(pi, ni, x, y)
 
 		local n1 = V.v(x, y)
 		local h1 = V.v(V.add(n1.x, n1.y, V.mul(0.25, n2.x - n1.x, n2.y - n1.y)))
+
 		table.insert(nodes, 1, h2)
 		table.insert(nodes, 1, h1)
 		table.insert(nodes, 1, n1)
@@ -951,7 +1039,7 @@ function editor:subdivide_path(pi, ni, x, y)
 	local nodes = path.nodes
 
 	if (ni - 1) % 3 ~= 0 or ni == 1 or ni == #nodes then
-		return
+		return 
 	end
 
 	local n = nodes[ni]
@@ -964,7 +1052,9 @@ function editor:subdivide_path(pi, ni, x, y)
 		local xya = V.angleTo(x - n.x, y - n.y)
 		local pa = math.abs(km.short_angle(xya, V.angleTo(ph.x - n.x, ph.y - n.y)))
 		local na = math.abs(km.short_angle(xya, V.angleTo(nh.x - n.x, nh.y - n.y)))
+
 		log.error("pa=%s na=%s", pa, na)
+
 		ii = pa < na and ni - 1 or ni + 2
 		wi = pa < na and wi or wi + 1
 	else
@@ -976,6 +1066,7 @@ function editor:subdivide_path(pi, ni, x, y)
 	local nn1 = V.v(x, y)
 	local nh1 = V.v(V.add(nn1.x, nn1.y, V.mul(0.2, nn2.x - pn1.x, nn2.y - pn1.y)))
 	local ph2 = V.v(V.add(nn1.x, nn1.y, V.rotate(km.pi, nh1.x - nn1.x, nh1.y - nn1.y)))
+
 	table.insert(nodes, ii, nh1)
 	table.insert(nodes, ii, nn1)
 	table.insert(nodes, ii, ph2)
@@ -995,12 +1086,14 @@ function editor:create_path()
 	local d = 50
 	local nodes = {V.v(x, y), V.v(x + d, y), V.v(x + 2 * d, y + d), V.v(x + 3 * d, y + d)}
 	local widths = {DEFAULT_PATH_WIDTH, DEFAULT_PATH_WIDTH}
+
 	table.insert(self.path_curves, {
 		nodes = nodes,
 		widths = widths
 	})
 	table.insert(self.active_paths, true)
 	self:update_curves()
+
 	return #self.path_curves
 end
 
@@ -1010,14 +1103,15 @@ function editor:remove_path_node(pi, ni)
 	local nodes = path.nodes
 
 	if (ni - 1) % 3 ~= 0 then
-		return
+		return 
 	end
 
 	if #nodes <= 4 then
-		return
+		return 
 	end
 
 	local wi = (ni - 1) / 3 + 1
+
 	table.remove(widths, wi)
 
 	if ni == #nodes then
@@ -1036,16 +1130,20 @@ end
 function editor:duplicate_path(pi)
 	local path = self.path_curves[pi]
 	local new_path = table.deepclone(path)
+
 	table.insert(self.path_curves, new_path)
 	table.insert(self.active_paths, true)
 	self:update_curves()
+
 	return #self.path_curves
 end
 
 function editor:flip_path(pi)
 	local path = self.path_curves[pi]
+
 	path.nodes = table.reverse(path.nodes)
 	path.widths = table.reverse(path.widths)
+
 	self:update_curves()
 end
 
@@ -1058,13 +1156,14 @@ function editor:change_path_idx(pi, npi)
 	local curves = self.path_curves
 
 	if pi == npi or not curves[pi] or npi > #curves then
-		return
+		return 
 	end
 
 	local conn_idx = {}
 
 	for i = 1, #self.path_connections do
 		local ci = self.path_connections[i]
+
 		conn_idx[i] = ci and curves[ci] or nil
 	end
 
@@ -1093,6 +1192,7 @@ function editor:change_path_idx(pi, npi)
 				for ci = 1, #curves do
 					if curves[ci] == c then
 						self.path_connections[i] = ci
+
 						goto label_29_0
 					end
 				end

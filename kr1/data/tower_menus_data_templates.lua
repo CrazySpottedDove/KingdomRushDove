@@ -1,6 +1,7 @@
 local scripts = require("kr1.data.tower_menus_data_scripts")
 local merge = scripts.merge
 local templates = {}
+
 -- 常见升级按钮（上箭头）
 templates.common_upgrade = {
 	action_arg = nil,
@@ -83,7 +84,6 @@ templates.point = {
 	image = "sub_icons_0002",
 	place = 8
 }
-
 -- 切换模式按钮
 templates.mode = {
 	halo = "quickmenu_action_icons_0001_hover",
@@ -100,7 +100,6 @@ templates.mode = {
 	tt_phrase_mode1 = nil,
 	sounds = nil
 }
-
 templates.unblock = {
 	check = "main_icons_0019",
 	action_arg = nil,

@@ -1,8 +1,11 @@
 -- chunkname: @./all/entity_db.lua
 local log = require("lib.klua.log"):new("entity_db")
+
 require("lib.klua.table")
+
 local copy = table.deepclone
 local entity_db = {}
+
 entity_db.last_id = 1
 
 function entity_db:load()
@@ -16,10 +19,11 @@ function entity_db:load()
 	package.loaded.scripts = nil
 	package.loaded.script_utils = nil
 	package.loaded["kr1.data.balance"] = nil
+
 	require("components")
 	require("templates")
 	require("game_templates")
-	-- self:test_tween()
+-- self:test_tween()
 end
 
 function entity_db:test_tween()
@@ -48,9 +52,12 @@ end
 function entity_db:test()
 	-- 记录初始内存
 	collectgarbage("collect")
+
 	local mem_before = collectgarbage("count") -- 单位：KB
 	local t0 = os.clock()
+
 	self:load()
+
 	local t1 = os.clock()
 	-- 统计模板数量
 	local template_count = 0
@@ -71,13 +78,16 @@ function entity_db:test()
 
 	-- 记录load后内存
 	collectgarbage("collect")
+
 	local mem_after = collectgarbage("count") -- 单位：KB
+
 	print("entity_db:load() 用时: " .. string.format("%.4f", t1 - t0) .. " 秒")
 	print("entity_db:load() 前内存: " .. string.format("%.2f", mem_before) .. " KB")
 	print("entity_db:load() 后内存: " .. string.format("%.2f", mem_after) .. " KB")
 	print("entity_db:load() 增加内存: " .. string.format("%.2f", mem_after - mem_before) .. " KB")
 	print("模板数量: " .. template_count)
 	print("组件数量: " .. component_count)
+
 	-- 可选：测试批量创建实体的性能和内存
 	local create_count = 1000
 	local t2 = os.clock()
@@ -92,8 +102,11 @@ function entity_db:test()
 	end
 
 	local t3 = os.clock()
+
 	collectgarbage("collect")
+
 	local mem_entities = collectgarbage("count")
+
 	print("批量创建 " .. create_count .. " 个实体用时: " .. string.format("%.4f", t3 - t2) .. " 秒")
 	print("批量创建后内存: " .. string.format("%.2f", mem_entities) .. " KB")
 	print("批量创建增加内存: " .. string.format("%.2f", mem_entities - mem_after) .. " KB")
@@ -102,7 +115,8 @@ end
 function entity_db:register_t(name, base)
 	if self.entities[name] then
 		log.error("template %s already exists", name)
-		return
+
+		return 
 	end
 
 	local t
@@ -115,13 +129,15 @@ function entity_db:register_t(name, base)
 
 	t.template_name = name
 	self.entities[name] = t
+
 	return t
 end
 
 function entity_db:register_c(name, base)
 	if self.components[name] then
 		log.error("component %s already exists", name)
-		return
+
+		return 
 	end
 
 	local c = {}
@@ -131,13 +147,15 @@ function entity_db:register_c(name, base)
 	end
 
 	self.components[name] = c
+
 	return c
 end
 
 function entity_db:clone_c(name)
 	if not self.components[name] then
 		log.error("component %s does not exist", name)
-		return
+
+		return 
 	end
 
 	return copy(self.components[name])
@@ -146,13 +164,15 @@ end
 function entity_db:add_comps(entity, ...)
 	if entity == nil then
 		log.error("entity is nil")
-		return
+
+		return 
 	end
 
 	for _, v in pairs({...}) do
 		if not self.components[v] then
 			log.error("component %s does not exist", v)
-			return
+
+			return 
 		end
 
 		entity[v] = copy(self.components[v])
@@ -171,26 +191,32 @@ function entity_db:create_entity(t)
 	-- end
 	if not tpl then
 		log.error("template %s not found", t)
+
 		return nil
 	end
 
 	local out = copy(tpl)
+
 	out.id = self.last_id
 	self.last_id = self.last_id + 1
+
 	return out
 end
 
 function entity_db:clone_entity(e)
 	local out = copy(e)
+
 	out.id = self.last_id
 	self.last_id = self.last_id + 1
+
 	return out
 end
 
 function entity_db:append_templates(entity, ...)
 	if entity == nil then
 		log.error("entity is nil")
-		return
+
+		return 
 	end
 
 	for _, tn in pairs({...}) do
@@ -198,7 +224,8 @@ function entity_db:append_templates(entity, ...)
 
 		if not tpl then
 			log.error("template %s not found", tn)
-			return
+
+			return 
 		end
 
 		for k, v in pairs(tpl) do
@@ -218,6 +245,7 @@ function entity_db:get_component(c)
 
 	if not cmp then
 		log.error("component %s not found", c)
+
 		return nil
 	end
 
@@ -236,6 +264,7 @@ function entity_db:get_template(t)
 	-- end
 	if not tpl then
 		log.error("template %s not found", t)
+
 		return nil
 	end
 
@@ -257,6 +286,7 @@ function entity_db:filter(entities, ...)
 		end
 
 		table.insert(result, e)
+
 		::label_12_0::
 	end
 
@@ -269,6 +299,7 @@ function entity_db:filter_iter(entities, c1, c2, c3)
 
 		while true do
 			::label_14_0::
+
 			k, v = next(t, k)
 
 			if not k then
@@ -317,7 +348,9 @@ function entity_db:gen_wave(level_idx, game_mode)
 		[GAME_MODE_IRON] = "iron"
 	}
 	local file_name = string.format("data.waveconfigs.level%02d_waves_%s_config", level_idx, game_mode_str_map[game_mode])
+
 	package.loaded[file_name] = nil
+
 	local cfg = require(file_name)
 
 	-- 让小权重的敌人更容易得到机会
@@ -344,6 +377,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 	local function shuffle(tbl)
 		for i = #tbl, 2, -1 do
 			local j = math.random(1, i)
+
 			tbl[i], tbl[j] = tbl[j], tbl[i]
 		end
 	end
@@ -367,19 +401,22 @@ function entity_db:gen_wave(level_idx, game_mode)
 
 		if not self.entities[enemy] then
 			log.error("entity %s not found in entity_db", enemy)
+
 			ok = false
 		end
 
 		if not ok then
-			return
+			return 
 		end
 	end
 
 	-- 遍历每一波
 	for wave_i = 1, cfg.max_waves do
 		local group = {}
+
 		group.interval = lerp(cfg.initial_inverval, cfg.final_interval, cfg.max_waves > 1 and (wave_i - 1) / (cfg.max_waves - 1) or 0)
 		group.waves = {}
+
 		-- 本波总权重预算 = wave_weight_function
 		local total_weight = cfg.wave_weight_function(wave_i, total_cash)
 		-- 计算在本波激活的路径，并根据 cfg.path_weight_map 计算相对权重
@@ -405,6 +442,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 
 				if i < path_count then
 					local fluctuation = base_share * (math.random() * 2 - 1) * fluctuation_factor
+
 					path_weights[path] = math.max(0, base_share + fluctuation)
 					remaining_weight = remaining_weight - path_weights[path]
 				else
@@ -443,6 +481,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 							if wave_i >= wid then
 								if table.contains(enemy_list, enemy) then
 									skip = true
+
 									break
 								end
 							end
@@ -464,8 +503,11 @@ function entity_db:gen_wave(level_idx, game_mode)
 				end
 
 				local remain_weight = path_weights[path]
+
 				shuffle(enemy_pool)
+
 				local remain_count = math.max(#enemy_pool - #guaranteed_enemies, 1)
+
 				enemy_pool = table.slice(enemy_pool, 1, math.min(remain_count, cfg.wave_max_types))
 
 				-- 先处理 guaranteed_enemies，确保它们一定会出现在当前波次
@@ -484,7 +526,9 @@ function entity_db:gen_wave(level_idx, game_mode)
 						max_same = 0,
 						max = count
 					}
+
 					remain_weight = remain_weight - count * weight
+
 					table.insert(subwave.spawns, spawn)
 				end
 
@@ -494,7 +538,9 @@ function entity_db:gen_wave(level_idx, game_mode)
 					local enemy = weighted_random(enemy_pool, cfg.enemy_weight_map, wave_i)
 					local weight = cfg.enemy_weight_map[enemy] or 1
 					local spawn_weight = math.random(cfg.min_spawn_weight, cfg.max_spawn_weight)
+
 					spawn_weight = math.min(spawn_weight, remain_weight)
+
 					local count = math.max(1, math.floor(spawn_weight / weight))
 					local interval = cfg.interval_function(weight, self.entities[enemy], wave_i)
 					local spawn = {
@@ -506,11 +552,14 @@ function entity_db:gen_wave(level_idx, game_mode)
 						max_same = 0,
 						max = count
 					}
+
 					remain_weight = remain_weight - count * weight
+
 					table.insert(subwave.spawns, spawn)
 				end
 
 				table.insert(group.waves, subwave)
+
 				::continue_path::
 			end
 
@@ -581,6 +630,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 
 						for i = 1, gap_count do
 							factor = factor + (i ^ 1.5) / gap_weight_sum
+
 							local insert_index = math.floor(spawn_count * factor)
 
 							if insert_index < 1 or insert_index >= spawn_count then
@@ -593,6 +643,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 						for i = 1, #insert_indices do
 							local true_insert_index = insert_indices[i] + (i - 1) -- 插入后索引会变动
 							local gap_time = total_gap_time * (i ^ 1.5) / gap_weight_sum
+
 							table.insert(sw.spawns, true_insert_index, {
 								interval = 0,
 								interval_next = gap_time,

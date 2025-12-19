@@ -3,6 +3,7 @@ local SW = ctx.sw
 local BW = ctx.premium and 408 or 312
 local PSI = ctx.premium and 180 or 60
 local PSL = ctx.premium and 235 or 115
+
 return {
 	class = "GG9View",
 	id = "map_counters_view",

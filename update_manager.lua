@@ -26,6 +26,7 @@ function M.update_client()
 			-- 存在 .new 文件，进行替换
 			os.remove(binary_path)
 			os.rename(new_path, binary_path)
+
 			client_updated = true
 		end
 
@@ -110,20 +111,24 @@ function M.check_update()
 	local hash_file = io.open("current_version_commit_hash.txt", "r")
 
 	if not hash_file then
-		return
+		return 
 	end
 
 	local commit_hash = hash_file:read("*l")
+
 	hash_file:close()
 
 	if not commit_hash then
-		return
+		return 
 	end
 
 	local cmd = string.format('"%s" --check-new-version', binary_path)
+
 	print("cmd: ", cmd)
+
 	-- 4. 启动线程调用
 	local thread = love.thread.newThread(check_update_thread_code)
+
 	thread:start(cmd, commit_hash)
 end
 
@@ -141,7 +146,8 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		-- 不需要更新，离线工作。
 		if not apply_upgrade then
 			love.update = original_love_update_function
-			return
+
+			return 
 		end
 
 		-- 查询 check_update 线程结果
@@ -151,12 +157,13 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 
 		-- 如果 check_update 线程还没结果，直接返回
 		if result == nil then
-			return
+			return 
 		end
 
 		-- 如果 check_update 线程返回 false，表示检查不了更新，直接离线游玩。
 		if result == false then
 			print("Cannot check for updates.")
+
 			love.update = original_love_update_function -- 恢复原 love.update
 		end
 
@@ -165,23 +172,30 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 
 		if not ok then
 			print("Failed to decode update check response.")
+
 			love.update = original_love_update_function -- 恢复原 love.update
-			return
+
+			return 
 		end
 
 		if type(resp) ~= "table" then
 			print("Invalid update check response format.")
+
 			love.update = original_love_update_function -- 恢复原 love.update
-			return
+
+			return 
 		end
 
 		if not resp.has_update then
 			print("No updates available.")
+
 			love.update = original_love_update_function -- 恢复原 love.update
-			return
+
+			return 
 		end
 
 		update_result_json = result
+
 		-- 收集所有 commit message
 		local messages = {}
 		local max_messages_to_show = 20
@@ -190,6 +204,7 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 			for i, commit in ipairs(resp.commits) do
 				if i > max_messages_to_show then
 					table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
+
 					break
 				end
 
@@ -198,7 +213,9 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		end
 
 		local msg_text = table.concat(messages, "\n\n")
+
 		msg_text = msg_text .. "\n\n请耐心等待升级完成..."
+
 		local cmd = string.format('"%s" --upgrade-new-version', binary_path)
 		-- 弹窗有“升级”按钮
 		local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
@@ -223,6 +240,7 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 
 			local target_w = math.max(200, math.floor((dw or 800) * 0.95))
 			local target_h = math.max(200, math.floor((dh or 600) * 0.95))
+
 			pcall(function()
 				if love.window and love.window.setMode then
 					love.window.setMode(target_w, target_h, {
@@ -235,8 +253,10 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 
 			-- 新建升级线程，实时读取输出
 			local update_thread = love.thread.newThread(update_thread_code)
+
 			update_thread:start(cmd, update_result_json)
 			love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
+
 			-- 用于显示升级日志
 			love.update = function(dt)
 				local ch = love.thread.getChannel("update_result")
@@ -259,27 +279,32 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 					love.event.quit()
 				elseif result == "error" then
 					love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
+
 					love.update = original_love_update_function
 					love.draw = original_love_draw_function
 				end
 			end
-
 			love.draw = function()
 				G.clear(0, 0, 0)
 				G.origin()
+
 				local font = require("lib.klove.font_db"):f("JIMOJW", 20)
+
 				G.setFont(font)
 				G.setColor(1, 1, 1, 1)
+
 				local w, h = G.getDimensions()
 				local text = "正在升级资源，请勿关闭游戏..."
 				local tw = font:getWidth(text)
 				local th = font:getHeight()
+
 				G.print(text, (w - tw) / 2, (h - th) / 2)
 				-- 动画
 				G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
 				G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
 				-- 显示升级日志
 				G.setColor(1, 1, 1, 1)
+
 				local log_y = (h - th) / 2 + 60
 
 				for i, line in ipairs(update_std_out) do

@@ -9,6 +9,7 @@ end
 
 local TOWER_MENU_BUTTON_X_UNIT = 62
 local TOWER_MENU_BUTTON_Y_UNIT = 64
+
 return {
 	notifications = {
 		enemy_goblin = {

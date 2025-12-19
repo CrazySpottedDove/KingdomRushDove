@@ -1,5 +1,6 @@
 -- chunkname: @./kr1-desktop/data/kui_templates/screen_map_balloon_endless.lua
 local CJK = ctx.CJK
+
 return {
 	class = "KImageView",
 	image_name = "mapBaloon_buyUpgrade_notxt",

@@ -43,14 +43,110 @@ local data = {
 		[11] = 3
 	}, -- 每一个路径分配出怪权重时的权重。每次出怪时，取活跃路径的权重相加，然后再根据各路径权重分配出怪权重
 	path_enemy_map = {
-		[1] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[2] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[3] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[4] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[5] ={"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[6] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[7] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
-		[8] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_necro", "enemy_gorilla", "enemy_shaman_gravity", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_cannibal_zombie"},
+		[1] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[2] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[3] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[4] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[5] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[6] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[7] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
+		[8] = {
+			"enemy_cannibal",
+			"enemy_cannibal_volcano_normal",
+			"enemy_hunter",
+			"enemy_shaman_priest",
+			"enemy_shaman_magic",
+			"enemy_shaman_necro",
+			"enemy_gorilla",
+			"enemy_shaman_gravity",
+			"enemy_shaman_rage",
+			"enemy_shaman_shield",
+			"enemy_cannibal_zombie"
+		},
 		[9] = {"enemy_cannibal", "enemy_hunter"},
 		[10] = {"enemy_cannibal", "enemy_hunter"},
 		[11] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_shaman_necro", "enemy_shaman_gravity"}
@@ -85,28 +181,28 @@ local data = {
 	}, -- 敌人首次出现的波次
 	enemy_delete_wave_map = {
 		[1] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[2] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[3] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[4] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[5] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[6] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[7] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[8] = {
-			[4] = {"enemy_cannibal"},
+			[4] = {"enemy_cannibal"}
 		},
 		[9] = {},
 		[10] = {},
@@ -127,4 +223,5 @@ local data = {
 	gap_count_range = {1, 2, 3}, -- 每个 wave 中可接受 gap 数量的值，随机选取
 	wave_max_types = 6 -- 每个 wave 最多不同种类敌人数量
 }
+
 return data

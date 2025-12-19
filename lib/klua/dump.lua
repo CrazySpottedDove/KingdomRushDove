@@ -5,7 +5,9 @@ function rawtostring(v)
 
 	if mt and mt ~= nil then
 		setmetatable(v, nil)
+
 		ret = tostring(v)
+
 		setmetatable(v, mt)
 	else
 		ret = tostring(v)
@@ -17,6 +19,7 @@ end
 local function keycomp(k1, k2)
 	k1 = tostring(k1)
 	k2 = tostring(k2)
+
 	return k1 < k2
 end
 
@@ -32,11 +35,13 @@ function getfulldump(t, level, i)
 	i = i or ""
 	level = level or 99999999
 	currLevel = 1
+
 	local seen = {}
 	local retstr
 
 	local function _dump(t, i)
 		seen[t] = true
+
 		local keys = {}
 		local keyStrs = {}
 		local maxKeyLen = 0
@@ -44,7 +49,9 @@ function getfulldump(t, level, i)
 		for k, _ in pairs(t) do
 			keys[#keys + 1] = k
 			keyStrs[k] = {type(k) == "string" and "'" .. tostring(k) .. "'" or tostring(k)}
+
 			local klen = #keyStrs[k][1]
+
 			keyStrs[k][2] = klen
 			maxKeyLen = maxKeyLen <= klen and klen or maxKeyLen
 		end
@@ -53,6 +60,7 @@ function getfulldump(t, level, i)
 
 		for _, k in ipairs(keys) do
 			local arrowIndent = string.rep(" ", maxKeyLen - keyStrs[k][2]) .. "  "
+
 			retstr = retstr .. string.format("%s    [%s]", i, keyStrs[k][1])
 			retstr = retstr .. arrowIndent
 			retstr = retstr .. string.format("->  %s\t%s\n", tostring(t[k]), seen[t[k]] and "(seen)" or "")
@@ -60,7 +68,9 @@ function getfulldump(t, level, i)
 
 			if type(k) == "table" and k ~= nil and not seen[k] and currLevel < level then
 				currLevel = currLevel + 1
+
 				_dump(k, i .. arrowIndent .. "    ")
+
 				currLevel = currLevel - 1
 			end
 		end
@@ -81,6 +91,7 @@ end
 
 function getdumplocals(dumplevel)
 	dumplevel = dumplevel or 1
+
 	local locals = {}
 
 	for i = 1, 256 do
@@ -110,8 +121,10 @@ function proxywatch(t, keys, mode, use_print)
 	end
 
 	local anyKey = keys == nil
+
 	keys = type(keys) == "table" and keys or {}
 	mode = type(mode) == "string" and mode or "rw"
+
 	local keyDict = table.map(keys, function(k, v)
 		return v, true
 	end)
@@ -132,6 +145,7 @@ function proxywatch(t, keys, mode, use_print)
 	end
 
 	local tmt = getmetatable(t)
+
 	setmetatable(t, proxy)
 	setmetatable(proxy, tmt)
 

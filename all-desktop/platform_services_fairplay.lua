@@ -3,11 +3,14 @@ local log = require("lib.klua.log"):new("platform_services_fairplay")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local srv = {}
+
 srv.can_be_paused = false
 srv.update_interval = 1
 srv.lib = nil
 srv.inited = false
+
 local ffi = require("ffi")
+
 ffi.cdef("bool kfairplay_initialize();\n")
 
 function srv:init(name, params)
@@ -21,6 +24,7 @@ function srv:init(name, params)
 
 		if not self.lib then
 			log.error("FairPlay library could not be loaded from %s", lib_name)
+
 			return 
 		end
 

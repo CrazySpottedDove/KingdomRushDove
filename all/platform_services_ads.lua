@@ -1,23 +1,32 @@
 -- chunkname: @./all/platform_services_ads.lua
 local log = require("lib.klua.log"):new("platform_services_ads")
+
 require("lib.klua.table")
+
 local signal = require("hump.signal")
 local storage = require("storage")
 local PSU = require("platform_services_utils")
 local RC = require("remote_config")
 local S = require("sound_db")
+
 require("constants")
+
 local ads = {}
+
 ads.can_be_paused = true
 ads.update_interval = 3
 ads.TIMEOUT = -1
 ads.signal_handlers = {}
+
 local proxy
 
 if KR_PLATFORM == "ios" then
 	proxy = {}
+
 	local ffi = require("ffi")
+
 	ffi.cdef("void kadmob_set_service_param(const char* key, const char* value);\nbool kadmob_init_service(void);\nvoid kadmob_cache_video_ad(const char* type);\nint kadmob_create_request_show_video_ad(const char* type);\nvoid kadmob_delete_request(int rid);\nint kadmob_get_request_status(int rid);\nbool kadmob_has_video_ad(const char* type);\n")
+
 	local C = ffi.C
 
 	function proxy.set_service_param(key, value)
@@ -57,11 +66,13 @@ function ads:init(name, params)
 	else
 		if not require("jni") then
 			log.error("%s requires jni.lua. not initialized", name)
+
 			return nil
 		end
 
 		if not params or not params.providers then
 			log.error("%s requires params.providers", name)
+
 			return nil
 		end
 
@@ -79,11 +90,13 @@ function ads:init(name, params)
 				if v.srvparams then
 					for sk, sv in pairs(v.srvparams) do
 						local param_name = k .. "_" .. sk
+
 						proxy.set_service_param(param_name, sv)
 					end
 				end
 
 				result = proxy.init_service(v.srvid)
+
 				log.debug("%s-%s java init result:%s", name, k, result)
 
 				if result ~= 1 then
@@ -120,7 +133,9 @@ end
 
 function ads:get_request_status(rid)
 	local result = proxy.get_request_status(rid)
+
 	log.paranoid("get_request_status service:%s rid:%s jni_result:%s", self.name, rid, result)
+
 	return result
 end
 
@@ -129,6 +144,7 @@ function ads:cancel_request(rid)
 
 	if not rid then
 		log.paranoid("cancel_request service:%s rid:%s not found", self.name, rid)
+
 		return 
 	end
 
@@ -153,6 +169,7 @@ function ads:get_provider_with_video_ad()
 		for k, v in pairs(self.providers) do
 			if proxy.has_video_ad(v.srvid, "rewarded") then
 				log.debug("selected provider:%s with a video ad ready", k)
+
 				return k
 			end
 		end
@@ -162,15 +179,18 @@ function ads:get_provider_with_video_ad()
 
 			if type(tier) == "string" then
 				log.paranoid("  string")
+
 				local k = tier
 				local v = self.providers[k]
 
 				if v and proxy.has_video_ad(v.srvid, "rewarded") then
 					log.debug("selected tier:%s provider:%s with a video ad ready", i, k)
+
 					return k
 				end
 			elseif type(tier) == "table" then
 				log.paranoid("  table")
+
 				local pool = {}
 
 				for _, k in pairs(tier) do
@@ -185,7 +205,9 @@ function ads:get_provider_with_video_ad()
 
 				if #pool > 0 then
 					local rk = table.random(pool)
+
 					log.debug("selected tier:%s random provider:%s with a video ad ready", i, rk)
+
 					return rk
 				end
 			end
@@ -212,12 +234,14 @@ function ads:show_video_ad(provider, data, style)
 
 	if rid < 0 then
 		log.error("error creating request to show video ad from:%s error:%s", provider, rid)
+
 		return nil
 	end
 
 	self.prq:add(rid, "show_ad", cb_show_video_ad, self.TIMEOUT)
 	S:pause()
 	signal.emit(SGN_PS_AD_SHOW_VIDEO_STARTED, "ads")
+
 	return rid
 end
 

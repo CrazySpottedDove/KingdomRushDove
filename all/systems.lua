@@ -4,8 +4,10 @@ local log_xp = log.xp or log:new("xp")
 local log_hp = log.hp or log:new("hp")
 local km = require("lib.klua.macros")
 local signal = require("hump.signal")
+
 require("lib.klua.table")
 require("lib.klua.dump")
+
 local EU = require("endless_utils")
 local A = require("animation_db")
 local AC = require("achievements")
@@ -35,7 +37,9 @@ local floor = math.floor
 local sin = math.sin
 local cos = math.cos
 local PI = math.pi
+
 require("constants")
+
 local ffi = require("ffi")
 local EXO = require("exoskeleton")
 
@@ -52,11 +56,13 @@ local function fts(v)
 end
 
 local sys = {}
+
 sys.level = {}
 sys.level.name = "level"
 
 function sys.level:init(store)
 	local slot = storage:load_slot(nil, true)
+
 	UP:set_levels(slot.upgrades)
 	DI:set_level(store.level_difficulty)
 	GR:load(store.level_name)
@@ -77,6 +83,7 @@ function sys.level:init(store)
 
 	A:load()
 	EXO:load()
+
 	store.selected_hero = slot.heroes.selected
 
 	if store.selected_hero and #store.selected_hero > 0 then
@@ -91,6 +98,7 @@ function sys.level:init(store)
 
 	if store.level.data then
 		store.level.locations = {}
+
 		LU.insert_entities(store, store.level.data.entities_list)
 		LU.insert_invalid_path_ranges(store, store.level.data.invalid_path_ranges)
 	end
@@ -133,6 +141,7 @@ function sys.level:init(store)
 		store.lives = 20
 		store.player_gold = store.player_gold + W.endless.extra_cash
 		store.endless = W.endless
+
 		local endless_data = store.endless
 
 		if endless_data.upgrade_levels then
@@ -154,6 +163,7 @@ function sys.level:init(store)
 		if endless_data.towers then
 			for _, tower_data in ipairs(endless_data.towers) do
 				local tower = E:create_entity(tower_data.template_name)
+
 				tower.pos = V.v(tower_data.pos.x, tower_data.pos.y)
 				tower.tower.level = tower_data.tower_level
 				tower.tower.spent = tower_data.spent
@@ -207,6 +217,7 @@ function sys.level:init(store)
 				end
 
 				queue_insert(store, tower)
+
 				::continue::
 			end
 		end
@@ -216,6 +227,7 @@ function sys.level:init(store)
 	store.player_score = 0
 	store.game_outcome = nil
 	store.main_hero = nil
+
 	log.info("level_idx:%02d, level_mode:%d, level_difficulty:%d", store.level_idx, store.level_mode, store.level_difficulty)
 end
 
@@ -255,6 +267,7 @@ function sys.level:on_update(dt, ts, store)
 
 	if not store._common_notifications then
 		local slot = storage:load_slot()
+
 		store._common_notifications = true
 
 		if store.level_mode == GAME_MODE_IRON or store.level_mode == GAME_MODE_HEROIC then
@@ -275,6 +288,7 @@ function sys.level:on_update(dt, ts, store)
 	if not store.game_outcome then
 		if store.lives < 1 and (not store.criket or not store.criket.on) then
 			log.info("++++ DEFEAT ++++")
+
 			store.game_outcome = {
 				victory = false,
 				level_idx = store.level_idx,
@@ -283,10 +297,15 @@ function sys.level:on_update(dt, ts, store)
 			}
 			store.paused = true
 			store.defeat_count = (store.defeat_count or 0) + 1
+
 			local slot = storage:load_slot()
+
 			slot.last_victory = nil
+
 			store_hero_xp(slot)
+
 			slot.gems = (slot.gems or 0) + store.gems_collected
+
 			-- if store.level_mode_override == GAME_MODE_ENDLESS then
 			--     local slot_level = slot.levels[store.level_idx]
 			--     slot_level = slot_level or {}
@@ -324,12 +343,15 @@ function sys.level:on_update(dt, ts, store)
 					level_mode = store.level_mode,
 					level_difficulty = store.level_difficulty
 				}
+
 				signal.emit("game-victory", store)
 				signal.emit("game-victory-after", store)
-				return
+
+				return 
 			end
 
 			log.info("++++ VICTORY ++++")
+
 			local stars = 1
 
 			if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -348,7 +370,9 @@ function sys.level:on_update(dt, ts, store)
 				level_mode = store.level_mode,
 				level_difficulty = store.level_difficulty
 			}
+
 			local slot = storage:load_slot()
+
 			slot.last_victory = {
 				level_idx = store.level_idx,
 				level_difficulty = store.level_difficulty,
@@ -356,8 +380,11 @@ function sys.level:on_update(dt, ts, store)
 				stars = stars,
 				unlock_towers = store.level.unlock_towers
 			}
+
 			store_hero_xp(slot)
+
 			slot.gems = (slot.gems or 0) + store.gems_collected
+
 			signal.emit("game-victory", store)
 			signal.emit("game-victory-after", store)
 			storage:save_slot(slot, nil, true)
@@ -370,6 +397,7 @@ sys.wave_spawn.name = "wave_spawn"
 
 local function spawner(store, wave, group_id)
 	log.debug("spawner thread(%s) for wave(%s) starting", coroutine.running(), tostring(wave))
+
 	local spawns = wave.spawns
 	local pi = wave.path_index
 	local last_spawn_ts = 0
@@ -408,7 +436,9 @@ local function spawner(store, wave, group_id)
 					e.nav_path.spi = s.fixed_sub_path == 1 and s.path or random(#path)
 					e.nav_path.ni = P:get_start_node(pi)
 					e.spawn_data = s.spawn_data
+
 					queue_insert(store, e)
+
 					current_count = current_count + 1
 				else
 					log.error("Entity template not found for %s.", s.crep)
@@ -423,6 +453,7 @@ local function spawner(store, wave, group_id)
 
 			if oes then
 				log.info("Sending spawner on_end_signal: %s", oes)
+
 				store.wave_signals[oes] = {}
 			end
 
@@ -448,6 +479,7 @@ local function spawner(store, wave, group_id)
 	end
 
 	log.debug("spawner thread(%s) for wave(%s) about to finish", coroutine.running(), tostring(wave))
+
 	return true
 end
 
@@ -472,6 +504,7 @@ function sys.wave_spawn:init(store)
 
 	local function run(store)
 		log.info("Wave group spawn thread STARTING")
+
 		local i = 1
 		local start = true
 
@@ -481,8 +514,10 @@ function sys.wave_spawn:init(store)
 
 		while W:has_group(i) do
 			local group = W:get_group(i)
+
 			group.group_idx = i
 			store.next_wave_group_ready = group
+
 			signal.emit("next-wave-ready", group)
 
 			if start then
@@ -500,6 +535,7 @@ function sys.wave_spawn:init(store)
 				end
 
 				start = false
+
 				log.debug("Sending first WAVE. (Started by player)")
 			else
 				while not store.send_next_wave and not (store.tick_ts - store.last_wave_ts >= fts(group.interval)) and not store.force_next_wave do
@@ -508,6 +544,7 @@ function sys.wave_spawn:init(store)
 			end
 
 			log.info("sending WAVE group %02d (%02d waves)", i, #group.waves)
+
 			store.next_wave_group_ready = nil
 			store.wave_group_number = i
 
@@ -518,16 +555,20 @@ function sys.wave_spawn:init(store)
 				if store.level_mode == -1 then
 					-- if store.level_mode == GAME_MODE_ENDLESS then
 					store.early_wave_reward = ceil(remaining_secs * GS.early_wave_reward_per_second * W:get_endless_early_wave_reward_factor())
+
 					local conf = W:get_endless_score_config()
 					local time_factor = km.clamp(0, 1, remaining_secs / fts(group.interval))
+
 					score_reward = km.round((i - 1) * conf.scorePerWave * conf.scoreNextWaveMultiplier * time_factor * #group.waves)
 					store.player_score = store.player_score + score_reward
+
 					log.debug("ENDLESS: early wave %s reward %s (time_factor:%s scorePerWave:%s scoreNextWaveMultiplier:%s flags:%s", i, score_reward, time_factor, conf.scorePerWave, conf.scoreNextWaveMultiplier, #group.waves)
 				else
 					store.early_wave_reward = ceil(remaining_secs * GS.early_wave_reward_per_second)
 				end
 
 				store.player_gold = store.player_gold + store.early_wave_reward
+
 				signal.emit("early-wave-called", group, store.early_wave_reward, remaining_secs, score_reward)
 			else
 				store.early_wave_reward = 0
@@ -547,6 +588,7 @@ function sys.wave_spawn:init(store)
 			-- end
 			store.send_next_wave = false
 			store.current_wave_group = group
+
 			signal.emit("next-wave-sent", group)
 
 			-- log.debug("GEMS:_wave_idx:%s", gems_wave_idx)
@@ -570,6 +612,7 @@ function sys.wave_spawn:init(store)
 
 					return spawner(store, wave, i)
 				end)
+
 				store.waves_active[sco] = sco
 			end
 
@@ -585,6 +628,7 @@ function sys.wave_spawn:init(store)
 		end
 
 		log.info("WAVE spawn thread FINISHED")
+
 		return true
 	end
 
@@ -594,6 +638,7 @@ end
 function sys.wave_spawn:force_next_wave(store)
 	if store.force_next_wave then
 		store.waves_active = {}
+
 		LU.kill_all_enemies(store, nil, true)
 	end
 end
@@ -607,11 +652,13 @@ function sys.wave_spawn:on_update(dt, ts, store)
 		if ok and done then
 			store.wave_spawn_thread = nil
 			store.waves_finished = true
+
 			log.debug("++++ WAVES FINISHED")
 		end
 
 		if not ok then
 			log.error("Error resuming wave_spawn_thread co: %s", debug.traceback(store.wave_spawn_thread, done))
+
 			store.wave_spawn_thread = nil
 		end
 	end
@@ -623,12 +670,14 @@ function sys.wave_spawn:on_update(dt, ts, store)
 
 		if ok and done then
 			log.debug("thread (%s) finished after resume()", tostring(co))
+
 			to_cleanup = to_cleanup or {}
 			to_cleanup[#to_cleanup + 1] = co
 		end
 
 		if not ok then
 			local err = done
+
 			log.error("Error resuming spawner thread (%s): %s", tostring(co), debug.traceback(co, err))
 		end
 	end
@@ -636,6 +685,7 @@ function sys.wave_spawn:on_update(dt, ts, store)
 	if to_cleanup then
 		for _, co in pairs(to_cleanup) do
 			log.debug("removing spawner thread (%s)", co)
+
 			store.waves_active[co] = nil
 		end
 
@@ -684,11 +734,13 @@ function sys.mod_lifecycle:on_insert(entity, store)
 
 			if mdf.bans and table.contains(mdf.bans, m.template_name) then
 				mm.removed_by_ban = true
+
 				queue_remove(store, m)
 			end
 
 			if mdf.ban_types and table.contains(mdf.ban_types, mm.type) then
 				mm.removed_by_ban = true
+
 				queue_remove(store, m)
 			end
 		end
@@ -768,6 +820,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 
 			if e.tower.sell then
 				local refund = store.wave_group_number == 0 and e.tower.spent or km.round(e.tower.refund_factor * e.tower.spent)
+
 				store.player_gold = store.player_gold + refund
 			end
 
@@ -780,6 +833,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 			end
 
 			local th = E:create_entity("tower_holder")
+
 			th.pos = V.vclone(e.pos)
 			th.tower.holder_id = e.tower.holder_id
 			th.tower.flip_x = e.tower.flip_x
@@ -803,8 +857,10 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 
 			if e.tower.sell then
 				local dust = E:create_entity("fx_tower_sell_dust")
+
 				dust.pos.x, dust.pos.y = th.pos.x, th.pos.y + 35
 				dust.render.sprites[1].ts = store.tick_ts
+
 				queue_insert(store, dust)
 
 				if e.sound_events and e.sound_events.sell then
@@ -821,6 +877,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 			end
 
 			local ne = E:create_entity(e.tower.upgrade_to)
+
 			ne.pos = V.vclone(e.pos)
 			ne.tower.holder_id = e.tower.holder_id
 			ne.tower.flip_x = e.tower.flip_x
@@ -841,10 +898,12 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 			queue_insert(store, ne)
 			queue_remove(store, e)
 			signal.emit("tower-upgraded", ne, e)
+
 			local price = ne.tower.price
 
 			if ne.tower.type == "build_animation" then
 				local bt = E:get_template(ne.build_name)
+
 				price = bt.tower.price
 			elseif e.tower.type == "build_animation" then
 				price = 0
@@ -881,6 +940,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 							end
 
 							local ns = E:create_entity(soldier_type)
+
 							ns.info.i18n_key = s.info.i18n_key
 							ns.soldier.tower_id = ne.id
 							ns.pos = V.vclone(s.pos)
@@ -914,10 +974,12 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 
 							ns.soldier.tower_soldier_idx = i
 							ne.barrack.soldiers[i] = ns
+
 							queue_insert(store, ns)
 						end
 
 						s.health.dead = true
+
 						queue_remove(store, s)
 					end
 				end
@@ -927,8 +989,10 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 
 			if ne.tower.type ~= "build_animation" and not ne.tower.hide_dust then
 				local dust = E:create_entity("fx_tower_buy_dust")
+
 				dust.pos.x, dust.pos.y = ne.pos.x, ne.pos.y + 10
 				dust.render.sprites[1].ts = store.tick_ts
+
 				queue_insert(store, dust)
 			end
 
@@ -1004,6 +1068,7 @@ function sys.game_upgrades:on_insert(entity, store)
 
 		modifier_pixie.damage_min = ceil(modifier_pixie._orig_damage_min * f)
 		modifier_pixie.damage_max = ceil(modifier_pixie._orig_damage_max * f)
+
 		local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
 
 		if not arcane5_disintegrate._origin_damage_config then
@@ -1037,6 +1102,7 @@ function sys.game_upgrades:on_remove(entity, store)
 
 		for _, bn in pairs(mage_bullet_names) do
 			local b = E:get_template(bn).bullet
+
 			b.damage_min = ceil(b._orig_damage_min * f)
 			b.damage_max = ceil(b._orig_damage_max * f)
 		end
@@ -1047,6 +1113,7 @@ function sys.game_upgrades:on_remove(entity, store)
 		bullet_ray_high_elven.damage_max = ceil(bullet_ray_high_elven._orig_damage_max * f)
 		modifier_pixie.damage_min = ceil(modifier_pixie._orig_damage_min * f)
 		modifier_pixie.damage_max = ceil(modifier_pixie._orig_damage_max * f)
+
 		local arcane5_disintegrate = E:get_template("tower_arcane_wizard_ray_disintegrate_mod")
 
 		for i = 1, 3 do
@@ -1120,11 +1187,13 @@ if PERFORMANCE_MONITOR_ENABLED and false then
 
 	function sys.main_script:on_update(dt, ts, store)
 		local print_enabled = false
+
 		self.print_counter = self.print_counter + 1
 
 		if self.print_counter >= self.print_cycle then
 			self.print_counter = 0
 			print_enabled = true
+
 			print("----------------")
 		end
 
@@ -1145,6 +1214,7 @@ if PERFORMANCE_MONITOR_ENABLED and false then
 				if print_enabled then
 					local t2 = love.timer.getTime()
 					local delta_t = (t2 - t1) * 1000000
+
 					print(string.format("%s: %d", e.template_name, delta_t))
 				end
 
@@ -1207,6 +1277,7 @@ function sys.health:on_update(dt, ts, store)
 			-- block empty
 			else
 				local starting_hp = h.hp
+
 				h.last_damage_types = bor(h.last_damage_types, d.damage_type)
 
 				-- 吞噬即死
@@ -1219,14 +1290,17 @@ function sys.health:on_update(dt, ts, store)
 				-- 减护甲
 				elseif band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
 					SU.armor_dec(e, d.value)
+
 					d.damage_result = bor(d.damage_result, DR_ARMOR)
 				-- 减法抗
 				elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
 					SU.magic_armor_dec(e, d.value)
+
 					d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
 				-- 造成伤害
 				else
 					local actual_damage = U.predict_damage(e, d)
+
 					h.hp = h.hp - actual_damage
 					d.damage_applied = actual_damage
 
@@ -1243,6 +1317,7 @@ function sys.health:on_update(dt, ts, store)
 
 						if d.track_damage then
 							signal.emit("entity-damaged", e, d)
+
 							local source = entities[d.source_id]
 
 							if source and source.track_damage then
@@ -1256,6 +1331,7 @@ function sys.health:on_update(dt, ts, store)
 
 						if t and t.health and not t.health.dead then
 							local sad = E:create_entity("damage")
+
 							sad.damage_type = DAMAGE_TRUE
 							sad.value = h.spiked_armor * d.value
 							sad.source_id = e.id
@@ -1300,6 +1376,7 @@ function sys.health:on_update(dt, ts, store)
 			end
 
 			store.player_gold = store.player_gold + e.enemy.gold
+
 			signal.emit("got-enemy-gold", e, e.enemy.gold)
 		end
 
@@ -1350,6 +1427,7 @@ function sys.count_groups:on_queue(entity, store, insertion)
 
 		if c.in_limbo then
 			c.in_limbo = nil
+
 			return true
 		end
 
@@ -1360,6 +1438,7 @@ function sys.count_groups:on_queue(entity, store, insertion)
 		end
 
 		g[c.type][c.name] = g[c.type][c.name] + 1
+
 		signal.emit("count-group-changed", entity, g[c.type][c.name], 1)
 	end
 end
@@ -1374,7 +1453,9 @@ function sys.count_groups:on_remove(entity, store)
 	if entity.count_group and not entity.count_group.in_limbo and entity.count_group.type == COUNT_GROUP_CONCURRENT then
 		local c = entity.count_group
 		local g = store.count_groups
+
 		g[c.type][c.name] = km.clamp(0, 1000000000, g[c.type][c.name] - 1)
+
 		signal.emit("count-group-changed", entity, g[c.type][c.name], -1)
 	end
 
@@ -1396,6 +1477,7 @@ function sys.hero_xp_tracking:on_update(dt, ts, store)
 			-- block empty
 			else
 				local amount = d.damage_applied * d.xp_gain_factor
+
 				e.hero.xp_queued = e.hero.xp_queued + amount
 			end
 		end
@@ -1446,6 +1528,7 @@ function sys.pops:on_update(dt, ts, store)
 				e.pos = V.v(pos_x, pos_y)
 				e.render.sprites[1].r = random(-21, 21) * PI / 180
 				e.render.sprites[1].ts = store.tick_ts
+
 				queue_insert(store, e)
 			end
 		end
@@ -1504,20 +1587,24 @@ end
 local function lerp_number_quad_multiply(a, b, t, s, key)
 	if a == b then
 		s[key] = a[2] * s[key]
-		return
+
+		return 
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
+
 	s[key] = (a[2] + (b[2] - a[2]) * tt * tt) * s[key]
 end
 
 local function lerp_number_quad(a, b, t, s, key)
 	if a == b then
 		s[key] = a[2]
-		return
+
+		return 
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
+
 	s[key] = a[2] + (b[2] - a[2]) * tt * tt
 end
 
@@ -1543,12 +1630,14 @@ local function lerp_table_linear(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x
 		s[key].y = a[2].y
-		return
+
+		return 
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
 	local av = a[2]
 	local bv = b[2]
+
 	s[key].x = av.x + (bv.x - av.x) * tt
 	s[key].y = av.y + (bv.y - av.y) * tt
 end
@@ -1557,12 +1646,14 @@ local function lerp_table_linear_multiply(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
-		return
+
+		return 
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
 	local av = a[2]
 	local bv = b[2]
+
 	s[key].x = (av.x + (bv.x - av.x) * tt) * s[key].x
 	s[key].y = (av.y + (bv.y - av.y) * tt) * s[key].y
 end
@@ -1571,12 +1662,14 @@ local function lerp_table_quad(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x
 		s[key].y = a[2].y
-		return
+
+		return 
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
 	local av = a[2]
 	local bv = b[2]
+
 	s[key].x = av.x + (bv.x - av.x) * tt * tt
 	s[key].y = av.y + (bv.y - av.y) * tt * tt
 end
@@ -1585,12 +1678,14 @@ local function lerp_table_quad_multiply(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
-		return
+
+		return 
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
 	local av = a[2]
 	local bv = b[2]
+
 	s[key].x = (av.x + (bv.x - av.x) * tt * tt) * s[key].x
 	s[key].y = (av.y + (bv.y - av.y) * tt * tt) * s[key].y
 end
@@ -1599,12 +1694,14 @@ local function lerp_table_sine_multiply(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
-		return
+
+		return 
 	end
 
 	local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
 	local av = a[2]
 	local bv = b[2]
+
 	s[key].x = (av.x + (bv.x - av.x) * ft) * s[key].x
 	s[key].y = (av.y + (bv.y - av.y) * ft) * s[key].y
 end
@@ -1613,12 +1710,14 @@ local function lerp_table_sine(a, b, t, s, key)
 	if a == b then
 		s[key].x = a[2].x
 		s[key].y = a[2].y
-		return
+
+		return 
 	end
 
 	local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
 	local av = a[2]
 	local bv = b[2]
+
 	s[key].x = av.x + (bv.x - av.x) * ft
 	s[key].y = av.y + (bv.y - av.y) * ft
 end
@@ -1632,12 +1731,15 @@ function sys.tween:on_insert(entity, store)
 					if type(n[i]) == "string" then
 						local nf = loadstring("return " .. n[i])
 						local env = {}
+
 						env.this = entity
 						env.store = store
 						env.math = math
 						env.U = U
 						env.V = V
+
 						setfenv(nf, env)
+
 						n[i] = nf()
 					end
 				end
@@ -1673,6 +1775,7 @@ function sys.tween:on_insert(entity, store)
 				-- 选择插值函数
 				if key_type == "boolean" then
 					p.interp_fn = multiply and lerp_boolean_multiply or lerp_boolean
+
 					goto continue
 				end
 
@@ -1754,12 +1857,14 @@ function sys.tween:on_update(dt, ts, store)
 						if time <= ki[1] then
 							kb = ki
 							ka = time == ki[1] and ki or keys[i - 1]
+
 							break
 						end
 					end
 
 					-- 直接通过 interp_fn 来进行插值计算和赋值，避免创建中间变量与小表的频繁创建，降低 gc 压力
 					tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
+
 					finished = finished and tween_prop.loop or ka == kb
 				end
 			end
@@ -1790,8 +1895,10 @@ function sys.goal_line:on_update(dt, ts, store)
 		if end_node <= node_index and not P.path_connections[e.nav_path.pi] and e.enemy.remove_at_goal_line then
 			-- log.debug("enemy %s reached goal", e.id)
 			signal.emit("enemy-reached-goal", e)
+
 			store.lives = km.clamp(-10000, 10000, store.lives - e.enemy.lives_cost)
 			store.player_gold = store.player_gold + e.enemy.gold
+
 			queue_remove(store, e)
 		end
 	end
@@ -1806,7 +1913,9 @@ function sys.texts:on_insert(entity, store)
 			local sprite_id = t.sprite_id
 			local image_name = string.format("text_%s_%s_%s", entity.id, sprite_id, store.tick)
 			local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
+
 			I:add_image(image_name, image, "temp_game_texts", store.screen_scale)
+
 			t.image_name = image_name
 			t.image_group = "texts"
 			entity.render.sprites[sprite_id].name = image_name
@@ -1831,6 +1940,7 @@ end
 
 sys.particle_system = {}
 sys.particle_system.name = "particle_system"
+
 ffi.cdef[[
     typedef struct {
         float pos_x;
@@ -1886,6 +1996,7 @@ end
 function sys.particle_system:on_insert(entity, store)
 	if entity.particle_system then
 		local ps = entity.particle_system
+
 		ps.emit_ts = (ps.emit_ts and ps.emit_ts or store.tick_ts) + ps.ts_offset
 		ps.ts = store.tick_ts
 		ps.last_pos = {
@@ -1961,11 +2072,15 @@ function sys.particle_system:on_update(dt, ts, store)
 			for i = 1, count do
 				local pts = ps.emit_ts + i / ps.emission_rate
 				local draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100)
+
 				ps.particle_count = ps.particle_count + 1
+
 				-- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
 				-- 改用 particle_t 结构体
 				local p = ffi.new("particle_t", 0, 0, ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, particle_lifetime, 0)
+
 				particles[ps.particle_count] = p
+
 				local f = {
 					ss = nil,
 					flip_x = false,
@@ -1994,11 +2109,13 @@ function sys.particle_system:on_update(dt, ts, store)
 					alpha = 255,
 					hidden = nil
 				}
+
 				frames[ps.particle_count] = f
 				store.render_frames[#store.render_frames + 1] = f
 
 				if ps.track_id then
 					local factor = (i - 1) / count
+
 					p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor, ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
 				else
 					p.pos_x, p.pos_y = e_pos.x, e_pos.y
@@ -2006,6 +2123,7 @@ function sys.particle_system:on_update(dt, ts, store)
 
 				if ps.emit_area_spread then
 					local sp = ps.emit_area_spread
+
 					p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
 					p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
 				end
@@ -2018,12 +2136,14 @@ function sys.particle_system:on_update(dt, ts, store)
 				if ps.emit_speed then
 					local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
 					local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
+
 					p.speed_x = cos(angle) * len
 					p.speed_y = sin(angle) * len
 				end
 
 				if ps.scale_var then
 					local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
+
 					p.scale_x = factor
 					p.scale_y = factor
 				-- p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
@@ -2057,18 +2177,21 @@ function sys.particle_system:on_update(dt, ts, store)
 				if phase >= 1 then
 					-- 不再延迟删除，就地 swap
 					local last_count = ps.particle_count
+
 					particles[i] = particles[last_count]
 					frames[i] = frames[last_count]
 					particles[last_count] = nil
 					frames[last_count] = nil
 					ps.particle_count = last_count - 1
 					f.marked_to_remove = true
+
 					goto label_51_0
 				elseif phase < 0 then
 					phase = 0
 				end
 
 				local tp = ts - p.last_ts
+
 				p.last_ts = ts
 				p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
 				f.pos.x, f.pos.y = p.pos_x, p.pos_y
@@ -2123,6 +2246,7 @@ end
 
 sys.render = {}
 sys.render.name = "render"
+
 ffi.cdef[[
 typedef struct {
     double sort_y;
@@ -2133,6 +2257,7 @@ typedef struct {
 } RenderFrameFFI;
 void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
+
 local lib_render_sort
 local libname
 
@@ -2203,6 +2328,7 @@ else
 	local function merge_sort(arr, tmp, left, right)
 		if left < right then
 			local mid = math.floor((left + right) / 2)
+
 			merge_sort(arr, tmp, left, mid)
 			merge_sort(arr, tmp, mid + 1, right)
 			merge(arr, tmp, left, mid, right)
@@ -2220,7 +2346,9 @@ function sys.render:init(store)
 	store.render_frames = {}
 	store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
 	store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
+
 	local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
+
 	self._hb_ss = {
 		ref_scale = 1,
 		quad = hb_quad,
@@ -2237,6 +2365,7 @@ function sys.render:on_insert(entity, store)
 	if entity.render then
 		for i = 1, #entity.render.sprites do
 			local s = entity.render.sprites[i]
+
 			s.marked_to_remove = false
 			s._draw_order = 100000 * (s.draw_order or i) + entity.id
 
@@ -2294,7 +2423,9 @@ function sys.render:on_insert(entity, store)
 				y = hbsize.y
 			}
 		}
+
 		fb.offset.x = fb.offset.x - hbsize.x * fb.ss.ref_scale * 0.5
+
 		local ff = {
 			flip_x = false,
 			pos = {
@@ -2322,6 +2453,7 @@ function sys.render:on_insert(entity, store)
 				y = hbsize.y
 			}
 		}
+
 		ff.offset.x = ff.offset.x - hbsize.x * ff.ss.ref_scale * 0.5
 
 		for i = #hb.frames, 1, -1 do
@@ -2361,6 +2493,7 @@ function sys.render:on_insert(entity, store)
 					y = hbsize.y
 				}
 			}
+
 			hb.frames[3] = fk
 			render_frames[#render_frames + 1] = fk
 		end
@@ -2373,6 +2506,7 @@ function sys.render:on_remove(entity, store)
 	if entity.render then
 		for i = #entity.render.sprites, 1, -1 do
 			local s = entity.render.sprites[i]
+
 			s.marked_to_remove = true
 		-- 这里不可以置 nil，以防其它地方使用 sprite 时发生错误
 		-- entity.render.sprites[i] = nil
@@ -2382,6 +2516,7 @@ function sys.render:on_remove(entity, store)
 	if store.config and store.config.show_health_bar and entity.health_bar then
 		for i = #entity.health_bar.frames, 1, -1 do
 			local f = entity.health_bar.frames[i]
+
 			f.marked_to_remove = true
 			entity.health_bar.frames[i] = nil
 		end
@@ -2414,6 +2549,7 @@ function sys.render:on_update(dt, ts, store)
 
 			if s.animation then
 				A:generate_frames(s.animation)
+
 				fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
 			elseif s.animated then
 				fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
@@ -2429,18 +2565,22 @@ function sys.render:on_update(dt, ts, store)
 
 				if exo_frame then
 					s.exo_frame = exo_frame
+
 					local exo = exo_frame.exo
+
 					s.exo = exo
 
 					if s.exo_hide_prefix then
 						for _, p in ipairs(exo_frame) do
 							if p[1] == 1 then
 								local pname = exo.parts[p[2]][1]
+
 								p.hidden = false
 
 								for _, prefix in ipairs(s.exo_hide_prefix) do
 									if string.find(pname, prefix, 1, true) then
 										p.hidden = true
+
 										break
 									end
 								end
@@ -2517,6 +2657,7 @@ function sys.render:on_update(dt, ts, store)
 
 		if not f.marked_to_remove then
 			local ffi_f = render_frames_ffi[n]
+
 			ffi_f.z = f.z
 			ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
 			ffi_f.draw_order = f._draw_order
@@ -2527,11 +2668,13 @@ function sys.render:on_update(dt, ts, store)
 	end
 
 	lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+
 	local new_frames = {}
 
 	for i = 0, n - 1 do
 		local ffi_f = render_frames_ffi[i]
 		local f = render_frames[ffi_f.lua_index]
+
 		new_frames[i + 1] = f
 	end
 
@@ -2596,6 +2739,7 @@ sys.seen_tracker.name = "seen_tracker"
 
 function sys.seen_tracker:init(store)
 	local slot = storage:load_slot()
+
 	store.seen = slot.seen and slot.seen or {}
 	store.seen_dirty = nil
 end
@@ -2611,8 +2755,11 @@ end
 function sys.seen_tracker:on_update(dt, ts, store)
 	if store.seen_dirty then
 		local slot = storage:load_slot()
+
 		slot.seen = store.seen
+
 		storage:save_slot(slot)
+
 		store.seen_dirty = false
 	end
 end
@@ -2622,6 +2769,7 @@ sys.dbg_enemy_tracker.name = "dbg_enemy_tracker"
 
 local function format_stats(det)
 	local diff = det.c_removed - (det.c_killed + det.c_end_node_reached)
+
 	return string.format("enemy tracker - ins:%s | rem:%s (kill:%s + reach:%s = %s) %s", det.c_inserted, det.c_removed, det.c_killed, det.c_end_node_reached, diff, diff ~= 0 and "ERROR" or "")
 end
 
@@ -2636,6 +2784,7 @@ end
 function sys.dbg_enemy_tracker:on_insert(entity, store)
 	if entity.enemy then
 		store.det.c_inserted = store.det.c_inserted + 1
+
 		log.debug(format_stats(store.det))
 	end
 
@@ -2748,6 +2897,7 @@ function sys.endless_patch:on_insert(entity, store)
 	if store.level_mode_override == GAME_MODE_ENDLESS then
 		if not entity._endless_strengthened then
 			local endless = store.endless
+
 			entity._endless_strengthened = true
 
 			if entity.enemy then
@@ -2783,7 +2933,9 @@ function sys.endless_patch:on_insert(entity, store)
 
 				if entity.hero then
 					entity.unit.damage_factor = entity.unit.damage_factor * store.endless.hero_damage_factor
+
 					SU.insert_unit_cooldown_buff(store.tick_ts, entity, endless.hero_cooldown_factor)
+
 					entity.health.hp_max = ceil(entity.health.hp_max * store.endless.hero_health_factor)
 					entity.health.hp = entity.health.hp_max
 				end
@@ -2803,9 +2955,12 @@ sys.spatial_index.name = "spatial_index"
 function sys.spatial_index:init(store)
 	package.loaded["spatial_index"] = nil
 	store.enemy_spatial_index = require("spatial_index")
+
 	store.enemy_spatial_index.set_entities(store.enemies)
 	store.enemy_spatial_index.gc_locked(store)
+
 	local seek = require("seek")
+
 	seek.set_id_arrays(store.enemy_spatial_index.get_id_arrays())
 	seek.set_entities(store.enemies)
 end
@@ -2864,15 +3019,18 @@ function sys.last_hook:on_insert(e, d)
 		d.soldiers[e.id] = e
 	elseif e.modifier then
 		d.modifiers[e.id] = e
+
 		local target = d.entities[e.modifier.target_id]
 
 		if target then
 			if not target._applied_mods then
 				target._applied_mods = {}
+
 				log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name, e.template_name))
 			end
 
 			local mods = target._applied_mods
+
 			mods[#mods + 1] = e
 		end
 	elseif e.tower then
@@ -2927,6 +3085,7 @@ function sys.last_hook:on_remove(e, d)
 		d.dead_soldier_count = d.dead_soldier_count + 1
 	elseif e.modifier then
 		d.modifiers[e.id] = nil
+
 		local target = d.entities[e.modifier.target_id]
 
 		if target then
@@ -2935,6 +3094,7 @@ function sys.last_hook:on_remove(e, d)
 			for i = 1, #mods do
 				if mods[i] == e then
 					table.remove(mods, i)
+
 					break
 				end
 			end
@@ -2992,6 +3152,7 @@ function sys.lights:on_insert(entity, store)
 	if entity.lights then
 		for i = 1, #entity.lights do
 			local l = entity.lights[i]
+
 			l.pos = {
 				x = entity.pos.x,
 				y = entity.pos.y
@@ -3038,6 +3199,7 @@ end
 -- 性能检测模块，在加 monitor 参数时启动
 if PERFORMANCE_MONITOR_ENABLED then
 	local perf = {}
+
 	perf.timers = {}
 	perf.frame_times = {}
 	perf.system_times = {}
@@ -3052,7 +3214,9 @@ if PERFORMANCE_MONITOR_ENABLED then
 	function perf.end_timer(name)
 		if perf.timers[name] then
 			local elapsed = love.timer.getTime() - perf.timers[name]
+
 			perf.system_times[name] = perf.system_times[name] or {}
+
 			table.insert(perf.system_times[name], elapsed)
 
 			-- 保持样本数量在限制内
@@ -3061,6 +3225,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 			end
 
 			perf.timers[name] = nil
+
 			return elapsed
 		end
 
@@ -3080,6 +3245,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 			end
 
 			local fps = #perf.frame_times / total_time
+
 			table.insert(report, string.format("平均FPS: %.1f", fps))
 		end
 
@@ -3119,6 +3285,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 		end)
 		-- 输出排序后的结果
 		table.insert(report, "\n系统开销排行 (总耗时ms/调用次数):")
+
 		-- 先打印开销总和
 		local grand_total = 0
 
@@ -3135,6 +3302,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 			-- 只显示前15个最耗时的
 			if i >= 15 then
 				table.insert(report, "    ...")
+
 				break
 			end
 		end
@@ -3160,12 +3328,15 @@ if PERFORMANCE_MONITOR_ENABLED then
 
 		local filename = string.format("perf_entities_%d.txt", os.time())
 		local file = love.filesystem.newFile(filename, "w")
+
 		file:open("w")
 		file:write("=== 当前实体统计 ===\n")
+
 		local total_count = 0
 
 		for name, count in pairs(entities) do
 			file:write(string.format("%s: %d\n", name, count))
+
 			total_count = total_count + count
 		end
 
@@ -3176,6 +3347,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 
 	function perf.save_report(store)
 		local report = perf.generate_report(store)
+
 		print(report)
 	end
 
@@ -3195,10 +3367,14 @@ if PERFORMANCE_MONITOR_ENABLED then
 			if original_sys[method_name] then
 				local original_method = original_sys[method_name]
 				local timer_name = (original_sys.name or "unknown") .. "." .. method_name
+
 				monitored[method_name] = function(self, ...)
 					perf.start_timer(timer_name)
+
 					local result = original_method(self, ...)
+
 					perf.end_timer(timer_name)
+
 					return result
 				end
 			end
@@ -3219,6 +3395,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 	function sys.performance_monitor:on_update(dt, ts, store)
 		local current_time = love.timer.getTime()
 		local frame_time = current_time - self.last_frame_time
+
 		-- 记录帧时间
 		table.insert(perf.frame_times, frame_time)
 
@@ -3229,6 +3406,7 @@ if PERFORMANCE_MONITOR_ENABLED then
 		-- 定期输出报告
 		if current_time - self.last_report_time > perf.report_interval then
 			perf.save_report(store)
+
 			-- perf.save_store_entities(store)
 			self.last_report_time = current_time
 		end

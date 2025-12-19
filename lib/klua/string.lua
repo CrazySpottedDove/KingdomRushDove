@@ -23,5 +23,6 @@ function string.starts(s, a)
 	end
 
 	local sa = string.sub(s, 1, string.len(a))
+
 	return sa == a
 end

@@ -24,12 +24,17 @@ local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
 local tower_menus_data = require("data.tower_menus_data")
+
 require("klove.kui")
+
 local kui_db = require("klove.kui_db")
+
 require("gg_views_custom")
 require("shop_views")
+
 local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
+
 screen_map = {}
 screen_map.required_sounds = {"common", "music_screen_map"}
 screen_map.required_textures = {
@@ -76,6 +81,7 @@ local function get_hero_index(hero_name)
 	end
 
 	log.error("Hero named %s not found in hero_data", hero_name)
+
 	return nil
 end
 
@@ -90,20 +96,27 @@ local function get_hero_stats(p)
 	end
 
 	local data = screen_map.hero_data[index]
+
 	hero_name = data.name
+
 	local user_data = storage:load_slot()
 	local status = user_data.heroes.status[hero_name]
 
 	if not status then
 		log.debug("hero status for %s not found in slot. overwritting from template", hero_name)
+
 		local template = require("data.slot_template")
+
 		user_data.heroes.status[hero_name] = template.heroes.status[hero_name]
 		status = template.heroes.status[hero_name]
 	end
 
 	local h = E:create_entity(hero_name)
+
 	h.hero.xp = status.xp
+
 	local level, level_progress = U.get_hero_level(h.hero.xp, GS.hero_xp_thresholds)
+
 	h.hero.level = level
 
 	if h.hero.level < data.starting_level then
@@ -113,11 +126,14 @@ local function get_hero_stats(p)
 
 	out.skill_names = {}
 	out.skill_names_i18n = {}
+
 	local used_points = 0
 
 	for k, v in pairs(status.skills) do
 		h.hero.skills[k].level = v
+
 		local i = h.hero.skills[k].hr_order
+
 		out.skill_names[i] = k
 		out.skill_names_i18n[i] = h.hero.skills[k].key
 
@@ -127,7 +143,9 @@ local function get_hero_stats(p)
 	end
 
 	h.hero.fn_level_up(h, {}, true)
+
 	local info = h.info.fn(h)
+
 	out.index = index
 	out.name = hero_name
 	out.name_i18n = h.info.i18n_key or hero_name
@@ -146,6 +164,7 @@ local function get_hero_stats(p)
 	out.damage_icon = h.info.damage_icon or 1
 	out.skills = h.hero.skills
 	out.remaining_points = GS.skill_points_for_hero_level[h.hero.level] - used_points
+
 	return out, h
 end
 
@@ -157,6 +176,7 @@ local function is_extra_level(level, num)
 	local c = "custom_level" .. num
 	local cfrom = GS[c .. "_from"]
 	local cto = cfrom + GS[c]
+
 	return level > efrom and level <= eto or level > cfrom and level <= cto
 end
 
@@ -172,9 +192,13 @@ end
 
 function screen_map:init(w, h, done_callback)
 	self.done_callback = done_callback
+
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
+
 	self.sw, self.sh = sw, sh
+
 	local window = KWindow:new(V.v(sw, sh))
+
 	window.scale = v(scale, scale)
 	window.origin = origin
 	window.timer = timer
@@ -194,7 +218,9 @@ function screen_map:init(w, h, done_callback)
 	screen_map.hero_data = map_data.hero_data
 	screen_map.tower_data = map_data.tower_data
 	screen_map.level_data = map_data.level_data
+
 	E:load()
+
 	local points_data = require("data.map_points")
 	local generation = 1
 
@@ -241,6 +267,7 @@ function screen_map:init(w, h, done_callback)
 	self.user_data = storage:load_slot()
 	self.unlock_data = {}
 	self.unlock_data.unlocked_levels = {}
+
 	local levels = self.user_data.levels
 	local victory = self.user_data.last_victory
 
@@ -260,6 +287,7 @@ function screen_map:init(w, h, done_callback)
 						levels[victory.level_idx + 1] = {}
 						self.unlock_data.new_level = victory.level_idx + 1
 						self.unlock_data.last_finished_level = victory.level_idx
+
 						table.insert(self.unlock_data.unlocked_levels, self.unlock_data.new_level)
 					end
 				elseif victory.stars > level.stars then
@@ -283,10 +311,12 @@ function screen_map:init(w, h, done_callback)
 		end
 
 		self.user_data.last_victory = nil
+
 		storage:save_slot(self.user_data)
 	elseif #self.user_data.levels == 0 then
 		self.unlock_data.unlocked_levels = {1}
 		levels[1] = {}
+
 		storage:save_slot(self.user_data)
 	end
 
@@ -295,17 +325,25 @@ function screen_map:init(w, h, done_callback)
 	end
 
 	self.total_stars = U.count_stars(self.user_data)
+
 	local map = MapView:new(sw, sh)
+
 	self.window:add_child(map)
+
 	self.map_view = map
+
 	local vign = KImageView:new("map_vignette_small")
+
 	vign.scale = V.v(1.02 * sw / vign.size.x, 1.02 * sh / vign.size.y)
 	vign.pos.x, vign.pos.y = -2, -2
 	vign.propagate_on_click = true
 	vign.propagate_on_down = true
 	vign.propagate_on_up = true
+
 	self.window:add_child(vign)
+
 	local map_scroll_hotspots_l = KView:new(V.v(100, sh))
+
 	map_scroll_hotspots_l.propagate_on_click = true
 	map_scroll_hotspots_l.anchor = v(0, sh / 2)
 	map_scroll_hotspots_l.pos = v(0, sh / 2)
@@ -320,7 +358,9 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(map_scroll_hotspots_l)
 	map_scroll_hotspots_l:order_below(self.map_view)
+
 	local map_scroll_hotspots_r = KView:new(V.v(100, sh - 184))
+
 	map_scroll_hotspots_r.propagate_on_click = true
 	map_scroll_hotspots_r.anchor = v(100, sh / 2)
 	map_scroll_hotspots_r.pos = v(sw, sh / 2)
@@ -335,7 +375,9 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(map_scroll_hotspots_r)
 	map_scroll_hotspots_r:order_below(self.map_view)
+
 	local o_button = KImageButton:new("map_configBtn_0001", "map_configBtn_0002", "map_configBtn_0003")
+
 	o_button.anchor = v(o_button.size.x / 2, o_button.size.y / 2)
 	o_button.pos = v(80, 70)
 
@@ -345,7 +387,9 @@ function screen_map:init(w, h, done_callback)
 	end
 
 	self.window:add_child(o_button)
+
 	local a_button = GGButton:new("mapButtons_notxt_0004", "mapButtons_notxt_0005")
+
 	a_button.anchor = v(a_button.size.x / 2, a_button.size.y / 2)
 	a_button.pos = v(sw - 100, sh - 90)
 
@@ -361,9 +405,13 @@ function screen_map:init(w, h, done_callback)
 	a_button.label.vertical_align = CJK("middle", "top", nil, "top")
 	a_button.label.text = _("Achievements")
 	a_button.label.fit_lines = 1
+
 	self.window:add_child(a_button)
+
 	self.TTT = a_button
+
 	local e_button = GGButton:new("mapButtons_notxt_0007", "mapButtons_notxt_0008")
+
 	e_button.anchor = v(e_button.size.x / 2, e_button.size.y / 2)
 	e_button.pos = v(a_button.pos.x - 170, sh - 90)
 
@@ -379,30 +427,39 @@ function screen_map:init(w, h, done_callback)
 	e_button.label.vertical_align = CJK("middle", "top", nil, "top")
 	e_button.label.text = _("Encyclopedia")
 	e_button.label.fit_lines = 1
+
 	self.window:add_child(e_button)
+
 	local change_button = GGButton:new("mapButtons_notxt_0011", "mapButtons_notxt_0012")
+
 	change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
 	change_button.pos = v(a_button.pos.x - 900, sh - 90)
 
 	function change_button.on_click(this, button, x, y)
 		if self.kr2_map then
 			S:queue("GUIButtonCommon")
+
 			self.kr1_map = false
 			self.kr2_map = false
 			self.kr3_map = true
+
 			-- timer.clear()
 			screen_map:init(w, h, done_callback)
 		elseif self.kr3_map then
 			S:queue("GUIButtonCommon")
+
 			self.kr2_map = false
 			self.kr1_map = true
 			self.kr3_map = false
+
 			screen_map:init(w, h, done_callback)
 		else
 			S:queue("GUIButtonCommon")
+
 			self.kr2_map = true
 			self.kr1_map = false
 			self.kr3_map = false
+
 			-- timer.clear()
 			screen_map:init(w, h, done_callback)
 		end
@@ -415,8 +472,11 @@ function screen_map:init(w, h, done_callback)
 	change_button.label.vertical_align = CJK("middle", "top", nil, "top")
 	change_button.label.text = "切换地图"
 	change_button.label.fit_lines = 1
+
 	self.window:add_child(change_button)
+
 	local u_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
+
 	u_button.anchor = v(u_button.size.x / 2, u_button.size.y / 2)
 	u_button.pos = v(e_button.pos.x - 170, sh - 90)
 
@@ -436,14 +496,18 @@ function screen_map:init(w, h, done_callback)
 	u_button.label.vertical_align = CJK("middle", "top", nil, "top")
 	u_button.label.text = _("UPGRADES")
 	u_button.label.fit_lines = 1
+
 	self.window:add_child(u_button)
 
 	if DBG_SHOW_BALLOONS or self.unlock_data.new_level == 2 then
 		self.upgradeTip = KImageView:new("mapBaloon_buyUpgrade_notxt")
 		self.upgradeTip.anchor = v(self.upgradeTip.size.x / 2, self.upgradeTip.size.y)
 		self.upgradeTip.pos = v(e_button.pos.x - 120, sh - 160)
+
 		self.window:add_child(self.upgradeTip)
+
 		local l = GGLabel:new(V.v(228, 34))
+
 		l.pos = v(15, CJK(19, nil, 24, 26))
 		l.font_name = "body"
 		l.font_size = 28
@@ -453,8 +517,11 @@ function screen_map:init(w, h, done_callback)
 		l.colors.text = {0, 102, 158, 255}
 		l.line_height = CJK(0.7, nil, 1.1, nil)
 		l.fit_lines = 2
+
 		self.upgradeTip:add_child(l)
+
 		local l = GGLabel:new(V.v(228, 72))
+
 		l.pos = v(15, CJK(62, nil, 80, 74))
 		l.font_name = "body"
 		l.font_size = 18
@@ -462,6 +529,7 @@ function screen_map:init(w, h, done_callback)
 		l.colors.text = {46, 41, 39, 255}
 		l.line_height = CJK(0.9, nil, 1.25, nil)
 		l.fit_lines = 3
+
 		self.upgradeTip:add_child(l)
 	end
 
@@ -470,17 +538,24 @@ function screen_map:init(w, h, done_callback)
 	self.upgrade_star.pos = v(u_button.pos.x + 20, u_button.pos.y - 50)
 	self.upgrade_star.scale = v(0.85, 0.85)
 	self.upgrade_star.propagate_on_click = true
+
 	self.window:add_child(self.upgrade_star)
+
 	local points_label = KLabel:new(V.v(self.upgrade_star.size.x, 24))
+
 	points_label.pos = v(0, 19)
 	points_label.font = F:f("Comic Book Italic", "22")
 	points_label.colors.text = {78, 43, 7}
 	points_label.text = "1"
 	points_label.text_align = "center"
 	points_label.propagate_on_click = true
+
 	self.upgrade_star:add_child(points_label)
+
 	self.upgrade_points = points_label
+
 	local h_button = GGButton:new("mapButtons_notxt_0001", "mapButtons_notxt_0002")
+
 	h_button.anchor = v(h_button.size.x / 2, u_button.size.y / 2)
 	h_button.pos = v(u_button.pos.x - 170, sh - 90)
 
@@ -500,8 +575,11 @@ function screen_map:init(w, h, done_callback)
 	h_button.label.vertical_align = CJK("middle", "top", nil, "top")
 	h_button.label.text = _("HERO ROOM")
 	h_button.label.fit_lines = 1
+
 	self.window:add_child(h_button)
+
 	self.hero_but = h_button
+
 	local hero_unlock_levels = table.map(screen_map.hero_data, function(k, v)
 		return v.available_level
 	end)
@@ -510,8 +588,11 @@ function screen_map:init(w, h, done_callback)
 		self.heroTip = KImageView:new("mapBalloon_heroUnlocked_notxt")
 		self.heroTip.anchor = v(self.heroTip.size.x / 2, self.heroTip.size.y)
 		self.heroTip.pos = v(h_button.pos.x, sh - 165)
+
 		self.window:add_child(self.heroTip)
+
 		local l = GGLabel:new(V.v(160, 46))
+
 		l.pos = v(10, 10)
 		l.font_name = "body"
 		l.font_size = 22
@@ -521,6 +602,7 @@ function screen_map:init(w, h, done_callback)
 		l.vertical_align = "middle"
 		l.colors.text = {0, 102, 158, 255}
 		l.fit_lines = 2
+
 		self.heroTip:add_child(l)
 	end
 
@@ -535,23 +617,30 @@ function screen_map:init(w, h, done_callback)
 	end
 
 	h_button:add_child(self.hero_icon_portrait)
+
 	self.skill_star = KImageView:new("mapButtons_portrait_hero_points")
 	self.skill_star.anchor = v(self.skill_star.size.x / 2, self.skill_star.size.y / 2)
 	self.skill_star.pos = v(h_button.pos.x + 40, h_button.pos.y - 45)
 	self.skill_star.propagate_on_click = true
 	self.skill_star.hidden = true
+
 	self.window:add_child(self.skill_star)
+
 	local points_label = KLabel:new(V.v(self.skill_star.size.x, 24))
+
 	points_label.pos = v(-1, 11)
 	points_label.font = F:f("Comic Book Italic", "22")
 	points_label.colors.text = {78, 43, 7}
 	points_label.text_align = "center"
 	points_label.propagate_on_click = true
+
 	self.skill_star:add_child(points_label)
+
 	self.skill_label = points_label
 
 	if self.is_premium then
 		local s_button = GGButton:new("mapButtons_notxt_0013", "mapButtons_notxt_0014")
+
 		s_button.anchor = v(s_button.size.x / 2, s_button.size.y / 2)
 		s_button.pos = v(h_button.pos.x - 170, sh - 90)
 
@@ -567,13 +656,18 @@ function screen_map:init(w, h, done_callback)
 		s_button.label.vertical_align = CJK("middle", "top", nil, "top")
 		s_button.label.text = _("MAP_BUTTON_SHOP")
 		s_button.label.fit_lines = 1
+
 		self.window:add_child(s_button)
+
 		local g = KImageView:new("mapGem")
+
 		g.id = "gems_to_spend_view"
 		g.pos = v(160, 50)
 		g.anchor = v(26, 23)
 		g.hidden = false
+
 		s_button:add_child(g)
+
 		self.gems_to_spend_view = g
 	end
 
@@ -582,22 +676,34 @@ function screen_map:init(w, h, done_callback)
 		sw = self.sw,
 		premium = self.is_premium
 	}))
+
 	self.window:add_child(map_counters)
+
 	wid("map_counters_stars").text = string.format("%s/%s", screen_map.total_stars, GS.max_stars)
+
 	local upgrades_view_scale = 1
 	local upgrades = UpgradesView:new(sw, sh)
+
 	upgrades.scale = vec_1(upgrades_view_scale)
 	upgrades.pos = v((1 - upgrades_view_scale) * 0.5 * sw, (1 - upgrades_view_scale) * 0.5 * sh)
+
 	self.window:add_child(upgrades)
+
 	self.upgrades = upgrades
+
 	self.upgrades:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades)
+
 	local encyclopedia = EncyclopediaView:new(sw, sh)
+
 	-- encyclopedia.pos = v(0, 0)
 	encyclopedia.pos = v(-sw * 0.1, -sh * 0.1)
 	self.encyclopedia = encyclopedia
+
 	self.window:add_child(encyclopedia)
+
 	local hero_room
 	local ctx = {}
+
 	ctx.ref_h = self.ref_h
 
 	function ctx.cjk(default, zh, ja, kr)
@@ -605,35 +711,52 @@ function screen_map:init(w, h, done_callback)
 	end
 
 	local tt = kui_db:get_table("hero_room_view", ctx)
+
 	hero_room = HeroRoomViewKR1:new_from_table(tt)
 	hero_room.pos = v((sw - hero_room.size.x) / 2, 0)
 	self.hero_room = hero_room
+
 	self.window:add_child(hero_room)
+
 	self.difficulty_view = DifficultyView:new(sw, sh)
 	self.difficulty_view.pos = v(0, 0)
+
 	self.window:add_child(self.difficulty_view)
+
 	self.option_panel = OptionsView:new(sw, sh)
 	self.option_panel.pos = v(0, 0)
+
 	self.window:add_child(self.option_panel)
+
 	self.achievements = AchievementsView:new(sw, sh)
 	self.achievements.pos = v(0, 0)
+
 	self.window:add_child(self.achievements)
+
 	self.config_panel_view = ConfigPanelView:new(sw, sh)
 	self.config_panel_view.pos = v(0, 0)
+
 	self.window:add_child(self.config_panel_view)
+
 	self.criket_panel_view = CriketPanelView:new(sw, sh)
 	self.criket_panel_view.pos = v(0, 0)
+
 	self.window:add_child(self.criket_panel_view)
 
 	if self.is_premium then
 		local sv = KView:new(V.v(sw, sh))
+
 		sv.id = "modal_bg_shaded_view"
 		sv.colors.background = {0, 0, 0, 160}
 		sv.hidden = true
 		sv.propagate_on_enter = false
+
 		self.window:add_child(sv)
+
 		local shop_view = ShopView:new_from_table(kui_db:get_table("shop_view", {}))
+
 		self.window:add_child(shop_view)
+
 		shop_view.pos.x = sw / 2
 		self.shop_view = shop_view
 	end
@@ -672,15 +795,20 @@ function screen_map:destroy()
 	end
 
 	timer:clear()
+
 	self.window.timer = nil
+
 	self.window:destroy()
+
 	self.window = nil
+
 	SU.remove_references(self, KView)
 end
 
 function screen_map:update(dt)
 	self.window:update(dt)
 	timer:update(dt)
+
 	self.stime = self.stime + dt * 10
 
 	if not self.upgrade_star.hidden then
@@ -710,11 +838,12 @@ end
 
 function screen_map:update_gems()
 	if not self.is_premium then
-		return
+		return 
 	end
 
 	local user_data = storage:load_slot()
 	local amount = user_data.gems
+
 	wid("map_counters_gems").text = amount
 
 	if wid("shop_gems") then
@@ -722,6 +851,7 @@ function screen_map:update_gems()
 	end
 
 	local iap_data = require("data.iap_data")
+
 	self.gems_to_spend_view.hidden = user_data.gems < iap_data.cheapest_item_cost
 end
 
@@ -733,27 +863,34 @@ function screen_map:keypressed(key, isrepeat)
 	local function hide_others()
 		if self.level_select and not self.level_select.hidden then
 			self.level_select:hide()
+
 			return true
 		elseif not self.hero_room.hidden then
 			self.hero_room:hide()
+
 			return true
 		elseif not self.upgrades.hidden then
 			self.upgrades:hide()
+
 			return true
 		elseif not self.encyclopedia.hidden then
 			self.encyclopedia:hide()
+
 			return true
 		elseif not self.achievements.hidden then
 			self.achievements:hide()
+
 			return true
 		elseif not self.difficulty_view.hidden then
 			-- block empty
 			return true
 		elseif not self.option_panel.hidden then
 			self.option_panel:hide()
+
 			return true
 		elseif self.shop_view and not self.shop_view.hidden then
 			self.shop_view:hide()
+
 			return true
 		end
 
@@ -837,6 +974,7 @@ function screen_map:keypressed(key, isrepeat)
 				pos = av.pos,
 				scale = av.scale
 			}
+
 			local out = "---------------------------\n"
 
 			for iid, iv in pairs(self.SEL_LIST) do
@@ -844,6 +982,7 @@ function screen_map:keypressed(key, isrepeat)
 			end
 
 			out = out .. "---------------------------\n"
+
 			log.debug("\n%s\n", out)
 		end
 	end
@@ -859,7 +998,7 @@ function screen_map:keypressed(key, isrepeat)
 		end
 
 		if isrepeat then
-			return
+			return 
 		end
 
 		if self.map_view.show_flags_in_progress then
@@ -868,9 +1007,13 @@ function screen_map:keypressed(key, isrepeat)
 
 		if key == "r" then
 			self.map_view:clear_flags()
+
 			self.user_data.levels = {{}}
+
 			reset_unlock_data()
+
 			self._test_unlocked_level = 1
+
 			self.map_view:show_flags()
 		-- elseif key == "n" then
 		--     local cur = self._test_unlocked_level
@@ -893,24 +1036,33 @@ function screen_map:keypressed(key, isrepeat)
 			if key == "s" then
 				self.map_view:clear_flags()
 				reset_unlock_data()
+
 				local lvl = self._test_unlocked_level - 1
+
 				self.unlock_data.show_stars_level = lvl
 				self.unlock_data.star_count_before = screen_map.user_data.levels[lvl].stars
 				self.user_data.levels[lvl].stars = km.clamp(1, 3, screen_map.user_data.levels[lvl].stars + 1)
+
 				self.map_view:show_flags()
 			elseif key == "h" then
 				self.map_view:clear_flags()
 				reset_unlock_data()
+
 				local lvl = self._test_unlocked_level - 1
+
 				self.user_data.levels[lvl][2] = 2
 				self.unlock_data.heroic_level = lvl
+
 				self.map_view:show_flags()
 			elseif key == "i" then
 				self.map_view:clear_flags()
 				reset_unlock_data()
+
 				local lvl = self._test_unlocked_level - 1
+
 				self.unlock_data.iron_level = lvl
 				self.user_data.levels[lvl][3] = 2
+
 				self.map_view:show_flags()
 			end
 		end
@@ -922,7 +1074,7 @@ function screen_map:keypressed(key, isrepeat)
 end
 
 function screen_map:keyreleased(key)
-	return
+	return 
 end
 
 function screen_map:mousepressed(x, y, button)
@@ -935,6 +1087,7 @@ end
 
 function screen_map:start_level(level_idx, level_mode)
 	local user_data = storage:load_slot()
+
 	storage:save_slot(user_data, nil, true)
 	self.done_callback({
 		next_item_name = "game",
@@ -949,6 +1102,7 @@ MapView = class("MapView", KImageView)
 function MapView:initialize(screen_w, screen_h)
 	if screen_map.kr2_map then
 		KImageView.initialize(self, "map_background_kr2")
+
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
@@ -958,32 +1112,43 @@ function MapView:initialize(screen_w, screen_h)
 		self.ma_under_layer.propagate_on_click = true
 		self.ma_under_layer.propagate_on_down = true
 		self.ma_under_layer.propagate_on_up = true
+
 		self:add_child(self.ma_under_layer)
+
 		self.points_layer = KView:new(V.v(screen_w, screen_h))
 		self.points_layer.propagate_on_click = true
 		self.points_layer.propagate_on_down = true
 		self.points_layer.propagate_on_up = true
+
 		self:add_child(self.points_layer)
+
 		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_mid_layer.propagate_on_click = true
 		self.ma_mid_layer.propagate_on_down = true
 		self.ma_mid_layer.propagate_on_up = true
+
 		self:add_child(self.ma_mid_layer)
+
 		self.flags_layer = KView:new(V.v(screen_w, screen_h))
 		self.flags_layer.propagate_on_click = true
 		self.flags_layer.propagate_on_down = true
 		self.flags_layer.propagate_on_up = true
+
 		self:add_child(self.flags_layer)
+
 		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_over_layer.propagate_on_click = true
 		self.ma_over_layer.propagate_on_down = true
 		self.ma_over_layer.propagate_on_up = true
+
 		self:add_child(self.ma_over_layer)
+
 		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
 		local last_flag = screen_map.map_points.flags[last_flag_idx]
 
 		if last_flag and last_flag.pos then
 			log.debug("scroll to show level idx:%s", last_flag_idx)
+
 			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
 
 			if vl > last_flag.pos.x or vr < last_flag.pos.x then
@@ -996,6 +1161,7 @@ function MapView:initialize(screen_w, screen_h)
 		self:show_flags(2)
 	elseif screen_map.kr3_map then
 		KImageView.initialize(self, "map_background_kr3")
+
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
@@ -1005,32 +1171,43 @@ function MapView:initialize(screen_w, screen_h)
 		self.ma_under_layer.propagate_on_click = true
 		self.ma_under_layer.propagate_on_down = true
 		self.ma_under_layer.propagate_on_up = true
+
 		self:add_child(self.ma_under_layer)
+
 		self.points_layer = KView:new(V.v(screen_w, screen_h))
 		self.points_layer.propagate_on_click = true
 		self.points_layer.propagate_on_down = true
 		self.points_layer.propagate_on_up = true
+
 		self:add_child(self.points_layer)
+
 		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_mid_layer.propagate_on_click = true
 		self.ma_mid_layer.propagate_on_down = true
 		self.ma_mid_layer.propagate_on_up = true
+
 		self:add_child(self.ma_mid_layer)
+
 		self.flags_layer = KView:new(V.v(screen_w, screen_h))
 		self.flags_layer.propagate_on_click = true
 		self.flags_layer.propagate_on_down = true
 		self.flags_layer.propagate_on_up = true
+
 		self:add_child(self.flags_layer)
+
 		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_over_layer.propagate_on_click = true
 		self.ma_over_layer.propagate_on_down = true
 		self.ma_over_layer.propagate_on_up = true
+
 		self:add_child(self.ma_over_layer)
+
 		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
 		local last_flag = screen_map.map_points.flags[last_flag_idx]
 
 		if last_flag and last_flag.pos then
 			log.debug("scroll to show level idx:%s", last_flag_idx)
+
 			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
 
 			if vl > last_flag.pos.x or vr < last_flag.pos.x then
@@ -1043,6 +1220,7 @@ function MapView:initialize(screen_w, screen_h)
 		self:show_flags(3)
 	else
 		KImageView.initialize(self, "map_background")
+
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
@@ -1052,32 +1230,43 @@ function MapView:initialize(screen_w, screen_h)
 		self.ma_under_layer.propagate_on_click = true
 		self.ma_under_layer.propagate_on_down = true
 		self.ma_under_layer.propagate_on_up = true
+
 		self:add_child(self.ma_under_layer)
+
 		self.points_layer = KView:new(V.v(screen_w, screen_h))
 		self.points_layer.propagate_on_click = true
 		self.points_layer.propagate_on_down = true
 		self.points_layer.propagate_on_up = true
+
 		self:add_child(self.points_layer)
+
 		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_mid_layer.propagate_on_click = true
 		self.ma_mid_layer.propagate_on_down = true
 		self.ma_mid_layer.propagate_on_up = true
+
 		self:add_child(self.ma_mid_layer)
+
 		self.flags_layer = KView:new(V.v(screen_w, screen_h))
 		self.flags_layer.propagate_on_click = true
 		self.flags_layer.propagate_on_down = true
 		self.flags_layer.propagate_on_up = true
+
 		self:add_child(self.flags_layer)
+
 		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_over_layer.propagate_on_click = true
 		self.ma_over_layer.propagate_on_down = true
 		self.ma_over_layer.propagate_on_up = true
+
 		self:add_child(self.ma_over_layer)
+
 		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
 		local last_flag = screen_map.map_points.flags[last_flag_idx]
 
 		if last_flag and last_flag.pos then
 			log.debug("scroll to show level idx:%s", last_flag_idx)
+
 			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
 
 			if vl > last_flag.pos.x or vr < last_flag.pos.x then
@@ -1117,6 +1306,7 @@ function MapView:load_map_animations(num)
 		end
 
 		ani.animation = ani.animation or ani.idle_animation
+
 		local av
 
 		if ani.fns then
@@ -1125,6 +1315,7 @@ function MapView:load_map_animations(num)
 
 			if animation and animation.prefix and animation.from then
 				local f1 = string.format("%s_%04d", animation.prefix, animation.from)
+
 				v = KImageView:new(f1)
 			end
 
@@ -1147,6 +1338,7 @@ function MapView:load_map_animations(num)
 			av = v
 		elseif ani.pos or ani.path or ani.move then
 			local f1 = string.format("%s_%04d", ani.animation.prefix, ani.animation.from)
+
 			av = KImageView:new(f1)
 			av.anchor = v(av.size.x / 2, av.size.y / 2)
 
@@ -1192,10 +1384,12 @@ function MapView:load_map_animations(num)
 					av.hidden = true
 					av.path_idx = 1
 					av.ts = 0
+
 					timer:after(av.every_min and math.random(av.every_min, av.every_max) or 0.03333333333333333, func)
 				else
 					av.pos = av.path[av.path_idx]
 					av.path_idx = av.path_idx + 1
+
 					timer:after(0.03333333333333333, func)
 				end
 			end)
@@ -1224,13 +1418,16 @@ function MapView:load_map_animations(num)
 
 					local m = av.move
 					local move_time = m.time
+
 					av.pos.x, av.pos.y = m.from.x, m.from.y
+
 					local params = {
 						pos = {
 							x = m.to.x,
 							y = m.to.y
 						}
 					}
+
 					log.paranoid(" MOVING (%s): %s,%s to %s,%s in %s", av.id, av.pos.x, av.pos.y, m.to.x, m.to.y, move_time)
 					timer:tween(move_time, av, params, m.interp, function(func2)
 						if not av.move.permanent then
@@ -1239,6 +1436,7 @@ function MapView:load_map_animations(num)
 
 						if av.move.pingpong then
 							local v = av.move.to
+
 							av.move.to = av.move.from
 							av.move.from = v
 						end
@@ -1250,8 +1448,11 @@ function MapView:load_map_animations(num)
 
 			if av.random_start then
 				av.ts = 0
+
 				local m = av.move
+
 				av.pos.x, av.pos.y = math.random(m.from.x, m.to.x), math.random(m.from.y, m.to.y)
+
 				local move_time = m.time * math.abs(m.to.x - av.pos.x) / math.abs(m.to.x - m.from.x)
 
 				if not av.move.permanent then
@@ -1272,8 +1473,10 @@ function MapView:load_map_animations(num)
 			av.every_min = ani.every_min or ani.wait[1]
 			av.every_max = ani.every_max or ani.wait[2]
 			av.hidden = math.random() > 0.5
+
 			timer:after(math.random(av.every_min, av.every_max), function(func)
 				av.hidden = not av.hidden
+
 				timer:after(math.random(av.every_min, av.every_max), func)
 			end)
 		elseif ani.loop then
@@ -1293,12 +1496,14 @@ function MapView:load_map_animations(num)
 			if ani.idle_animation then
 				local a = ani.idle_animation
 				local a_len = (a.to - a.from + 1) / 30
+
 				w = math.ceil(w / a_len) * a_len
 			end
 
 			timer:after(w, function(func)
 				if ani.pos_list then
 					local idx = math.random(1, #ani.pos_list)
+
 					av.pos = ani.pos_list[idx]
 
 					if ani.scale_list then
@@ -1312,6 +1517,7 @@ function MapView:load_map_animations(num)
 
 				av.ts = 0
 				av.loop = false
+
 				local dur = (av.animation.to - av.animation.from + 1) / 30
 				local w2 = math.random(av.every_min, av.every_max)
 
@@ -1321,8 +1527,10 @@ function MapView:load_map_animations(num)
 						av.ts = 0
 						av.loop = true
 					end)
+
 					local a = ani.idle_animation
 					local a_len = (a.to - a.from + 1) / 30
+
 					w2 = math.ceil(w2 / a_len) * a_len
 				end
 
@@ -1343,6 +1551,7 @@ function MapView:load_map_animations(num)
 		if DEBUG_MAP_ANI_EDITOR then
 			function av.on_click(this)
 				screen_map.SEL_ANI = this
+
 				log.debug("sel ani: %s", this.id)
 			end
 		else
@@ -1384,6 +1593,7 @@ function MapView:load_level_decos(i)
 
 	for _, d in pairs(map_data.map_decos[i]) do
 		local v = KImageView:new(d.image)
+
 		v.id = d.id
 		v.pos = V.vclone(d.pos)
 		v.anchor = d.anchor and V.vclone(d.anchor) or V.v(v.size.x / 2, v.size.y / 2)
@@ -1399,6 +1609,7 @@ function MapView:load_level_decos(i)
 		end
 
 		layers[d.layer]:add_child(v)
+
 		v.ctx = {
 			screen_map = screen_map,
 			timer = timer
@@ -1417,6 +1628,7 @@ function MapView:load_level_decos(i)
 		if DEBUG_MAP_ANI_EDITOR then
 			function v.on_click(this)
 				screen_map.SEL_ANI = this
+
 				log.debug("sel deco: %s", this.id)
 			end
 		end
@@ -1430,6 +1642,7 @@ function MapView:show_flags(num)
 	self.wings = {}
 	self.point_groups = {}
 	self.level_decos = self:load_level_decos(num)
+
 	local max_level = GS["last_level" .. num]
 	local jnum = 0
 
@@ -1442,8 +1655,10 @@ function MapView:show_flags(num)
 	end
 
 	local levels = screen_map.user_data.levels
+
 	timer:script(function(wait)
 		self.show_flags_in_progress = true
+
 		local ud = screen_map.unlock_data
 
 		local function show_flag1(i, jnum, extra, custom)
@@ -1463,6 +1678,7 @@ function MapView:show_flags(num)
 
 				if self.level_decos[i] and not table.contains(ud.unlocked_levels, i + jnum) then
 					local v = self.level_decos[i].view
+
 					v:unlock()
 				end
 
@@ -1472,10 +1688,13 @@ function MapView:show_flags(num)
 					for _, point_data in ipairs(points_data) do
 						local texture_name = point_data.water and "flag_bullet_water_0010" or "flag_bullet_0010"
 						local pointt = KImageView:new(texture_name)
+
 						pointt.is_in_water = point_data.water
 						pointt.pos = point_data.pos
+
 						self.points_layer:add_child(pointt)
 						table.insert(self.point_groups[i], pointt)
+
 						pointt.anchor = v(pointt.size.x / 2, pointt.size.y - 4)
 						pointt.propagate_on_click = true
 
@@ -1503,6 +1722,7 @@ function MapView:show_flags(num)
 				end
 
 				flag.pos = flag_pos
+
 				flag:set_mode("nostar")
 
 				if table.contains(ud.unlocked_levels, i + jnum) then
@@ -1516,9 +1736,12 @@ function MapView:show_flags(num)
 
 					for j = 1, level.stars do
 						local star = KImageView:new("mapFlag_star_0017")
+
 						star.propagate_on_click = true
+
 						flag:add_child(star)
 						table.insert(flag.star_views, star)
+
 						star.pos = flag.star_pos[j]
 
 						if ud.show_stars_level == i + jnum and j > ud.star_count_before then
@@ -1533,6 +1756,7 @@ function MapView:show_flags(num)
 
 				if level[GAME_MODE_HEROIC] then
 					local wing = KImageView:new("map_flag_heroic_0015")
+
 					self.flags_layer:add_child(wing)
 
 					if extra or custom then
@@ -1542,6 +1766,7 @@ function MapView:show_flags(num)
 					end
 
 					wing:order_below(flag)
+
 					wing.pos = v(flag_pos.x - 3, flag_pos.y)
 					wing.anchor = v(wing.size.x / 2, wing.size.y / 2)
 					wing.hidden = ud.heroic_level == i + jnum
@@ -1591,6 +1816,7 @@ function MapView:show_flags(num)
 
 				if flag and ud.show_stars_level == i + jnum then
 					flag:disable(false)
+
 					local first_star = ud.star_count_before + 1
 
 					for j = first_star, level.stars do
@@ -1607,6 +1833,7 @@ function MapView:show_flags(num)
 
 					for j = first_star, level.stars do
 						local star = flag.star_views[j]
+
 						star.hidden = false
 						star.animation = {
 							to = 17,
@@ -1614,6 +1841,7 @@ function MapView:show_flags(num)
 							from = 1
 						}
 						star.ts = 0
+
 						S:queue("GUIWinStars")
 						wait(0.5)
 					end
@@ -1633,9 +1861,12 @@ function MapView:show_flags(num)
 
 				if wing and ud.heroic_level == i + jnum then
 					flag:disable(false)
+
 					wing.hidden = true
+
 					wait(0.5)
 					S:queue("GUIWinStars")
+
 					wing.animation = {
 						to = 15,
 						prefix = "map_flag_heroic",
@@ -1643,12 +1874,14 @@ function MapView:show_flags(num)
 					}
 					wing.ts = 0
 					wing.hidden = false
+
 					wait(2)
 					flag:enable()
 				end
 
 				if self.level_decos[i] and table.contains(ud.unlocked_levels, i + jnum) then
 					local v = self.level_decos[i].view
+
 					v:unlock(wait)
 				end
 
@@ -1663,12 +1896,14 @@ function MapView:show_flags(num)
 							prefix = pointt.is_in_water and "flag_bullet_water" or "flag_bullet"
 						}
 						pointt.ts = 0
+
 						wait(0.4)
 					end
 				end
 
 				if table.contains(ud.unlocked_levels, i + jnum) then
 					flag.hidden = false
+
 					flag:disable(false)
 					flag:set_mode("newFlag", true)
 					S:queue("GUIMapNewFlah")
@@ -1699,6 +1934,7 @@ function MapView:show_flags(num)
 
 		if DBG_SHOW_BALLOONS or #screen_map.user_data.levels == 1 then
 			local start_here = KImageView:new("mapBalloon_starthere_notxt")
+
 			start_here.anchor = v(start_here.size.x / 2, start_here.size.y)
 
 			if KR_GAME == "kr1" then
@@ -1710,8 +1946,11 @@ function MapView:show_flags(num)
 			end
 
 			screen_map.map_view:add_child(start_here)
+
 			screen_map.map_view.start_here = start_here
+
 			local l = GGLabel:new(V.v(164, 32))
+
 			l.pos = v(8, 8)
 			l.font_name = "body"
 			l.font_size = 18
@@ -1720,8 +1959,11 @@ function MapView:show_flags(num)
 			l.vertical_align = "middle"
 			l.colors.text = {46, 41, 39, 255}
 			l.fit_lines = 1
+
 			start_here:add_child(l)
+
 			start_here.alpha = 0
+
 			timer:tween(0.5, start_here, {
 				alpha = 1
 			}, "in-quad")
@@ -1731,6 +1973,7 @@ end
 
 function MapView:update(dt)
 	MapView.super.update(self, dt)
+
 	self.stime = self.stime + dt * 10
 
 	if self.start_here then
@@ -1738,7 +1981,7 @@ function MapView:update(dt)
 	end
 
 	if self.scrolling_dir == 0 then
-		return
+		return 
 	end
 
 	self.pos = v(self.pos.x + self.scrolling_dir * self.max_scroll_speed * dt, self.pos.y)
@@ -1758,6 +2001,7 @@ LevelFlagView = class("LevelFlagView", KImageView)
 
 function LevelFlagView:initialize(level_num)
 	KImageView.initialize(self, "map_flag_0181")
+
 	self.star_pos = {v(12, 12), v(28, 12), v(43, 12)}
 	self.star_views = {}
 	self.anchor = v(self.size.x / 2, self.size.y / 2)
@@ -1765,12 +2009,16 @@ function LevelFlagView:initialize(level_num)
 	self.animations = {}
 	self.level_num = level_num
 	self.button = KButton:new(V.v(self.size.x, self.size.y))
+
 	self:add_child(self.button)
+
 	self.button.hit_rect = V.r(20, 34, 44, 74)
 
 	function self.button.on_click()
 		S:queue("GUIButtonCommon")
+
 		screen_map.level_select = LevelSelectView:new(screen_map.sw, screen_map.sh, self.level_num, self.stars, self.heroic, self.iron, self.slot_data)
+
 		screen_map.window:add_child(screen_map.level_select)
 		screen_map.level_select:show()
 		self:disable(false)
@@ -1781,6 +2029,7 @@ function LevelFlagView:initialize(level_num)
 
 	function self.button.on_enter()
 		S:queue("GUIQuickMenuOver")
+
 		self.animation = nil
 
 		if self.mode == "campaign" then
@@ -1830,6 +2079,7 @@ function LevelFlagView:initialize(level_num)
 			from = 135
 		}
 	}
+
 	self:set_mode("campaign", false)
 end
 
@@ -1860,7 +2110,7 @@ function LevelFlagView:update(dt)
 	LevelFlagView.super.update(self, dt)
 
 	if self.randomWait < 0 then
-		return
+		return 
 	end
 
 	self.randomWait = self.randomWait - dt
@@ -1875,6 +2125,7 @@ EndlessLevelFlagView = class("EndlessLevelFlagView", KImageButton)
 
 function EndlessLevelFlagView:initialize(level_num)
 	KImageButton.initialize(self, "mapFlag_endless_desktop_0001", "mapFlag_endless_desktop_0002", "mapFlag_endless_desktop_0002")
+
 	self.anchor = v(self.size.x / 2, self.size.y / 2)
 	self.level_num = level_num
 end
@@ -1885,10 +2136,12 @@ function EndlessLevelFlagView:on_click()
 	if screen_map.endlessTip then
 		screen_map.endlessTip.hidden = true
 		screen_map.user_data.seen.map_balloon_endless_view = true
+
 		storage:save_slot(screen_map.user_data)
 	end
 
 	screen_map.level_select = EndlessLevelSelectView:new(screen_map.sw, screen_map.sh, self.level_num, self.slot_data)
+
 	screen_map.window:add_child(screen_map.level_select)
 	screen_map.level_select:show()
 	self:on_exit()
@@ -1902,7 +2155,9 @@ StarsBanner = class("StarsBanner", KImageView)
 
 function StarsBanner:initialize()
 	KImageView.initialize(self, "mapStarsContainer")
+
 	self.anchor = v(self.size.x / 2, 0)
+
 	self:set_value(screen_map.total_stars, GS.max_stars)
 end
 
@@ -1922,15 +2177,21 @@ function StarsBanner:set_value(got_value, of_value)
 
 		digit_image.pos = v(posx - 20, self.size.y / 2)
 		digit_image.anchor = v(digit_image.size.x / 2, digit_image.size.y / 2)
+
 		self:add_child(digit_image)
+
 		posx = posx - 20
 	end
 
 	local slash_image = KImageView:new("mapStarsContainer_numbers_0011")
+
 	slash_image.anchor = v(slash_image.size.x / 2, slash_image.size.y / 2)
 	slash_image.pos = v(half_moved, self.size.y / 2)
+
 	self:add_child(slash_image)
+
 	aux = tostring(of_value)
+
 	local posx = half_moved + 5
 
 	for digit in aux.gmatch(aux, "%d") do
@@ -1944,7 +2205,9 @@ function StarsBanner:set_value(got_value, of_value)
 
 		digit_image.pos = v(posx + 20, self.size.y / 2)
 		digit_image.anchor = v(digit_image.size.x / 2, digit_image.size.y / 2)
+
 		self:add_child(digit_image)
+
 		posx = posx + 20
 	end
 end
@@ -1958,6 +2221,7 @@ local ls_page_r_m = ls_page_r_x + ls_page_w / 2
 
 local function add_level_title(parent, text, style, y)
 	local px, pm, py, fs, lines
+
 	py = y or ls_page_y
 
 	if style == "left" then
@@ -1965,6 +2229,7 @@ local function add_level_title(parent, text, style, y)
 		pm = ls_page_l_m
 		fs = CJK(36, nil, 34)
 		lines = 2
+
 		local words = string.split(text, " ")
 
 		if #words == 1 then
@@ -1985,6 +2250,7 @@ local function add_level_title(parent, text, style, y)
 	end
 
 	local title = GGLabel:new(V.v(ls_page_w - 120, lines * 40))
+
 	title.pos = v(px + 60, py)
 	title.anchor.y = title.size.y / 2
 	title.font_name = "h_book"
@@ -1995,8 +2261,10 @@ local function add_level_title(parent, text, style, y)
 	title.text = text
 	title.line_height = CJK(0.9, 0.9, 1, 0.9)
 	title.fit_lines = lines
+
 	title:do_fit_lines()
 	parent:add_child(title)
+
 	local tw, wrn, wr = title:get_wrap_lines()
 	local title_w = 0
 
@@ -2007,16 +2275,20 @@ local function add_level_title(parent, text, style, y)
 	local deco_y = py + 3
 	local d
 	local dn = "levelSelect_volutas_0001"
+
 	d = KImageView:new(dn)
 	d.pos = v(pm - title_w / 2 - 8, deco_y)
 	d.anchor = v(0, d.size.y / 2)
 	d.scale.x = -1
 	d.alpha = style == "sub" and 0.5 or 1
+
 	parent:add_child(d)
+
 	d = KImageView:new(dn)
 	d.pos = v(pm + title_w / 2 + 10, deco_y)
 	d.anchor = v(0, d.size.y / 2)
 	d.alpha = style == "sub" and 0.5 or 1
+
 	parent:add_child(d)
 end
 
@@ -2029,11 +2301,15 @@ local function add_level_description(parent, text)
 	local font_size = 17.5
 	local line_height = CJK(0.85, 0.85, 1.1, 0.9)
 	local bg = KImageView:new("levelSelect_capitular_bg")
+
 	bg.pos = v(LEFT_MARGIN - 10, TEXT_TOP_POS - 30)
+
 	parent:add_child(bg)
+
 	local FIRST_PARAGRAPH_WIDTH = ls_page_w - bg.size.x
 	local p = string.sub(text, utf8.offset(text, 2))
 	local first_letter_label = GGLabel:new(V.v(bg.size.x, bg.size.y))
+
 	first_letter_label.pos = v(bg.pos.x + CJK(-4, 0, 0, 0), bg.pos.y + CJK(0, -4, -6, -6))
 	first_letter_label.font_name = "capitals"
 	first_letter_label.font_size = CJK(64, 56, 56, 56)
@@ -2041,8 +2317,11 @@ local function add_level_description(parent, text)
 	first_letter_label.text_align = "center"
 	first_letter_label.vertical_align = "bottom"
 	first_letter_label.text = string.sub(text, 1, utf8.offset(text, 2) - 1)
+
 	parent:add_child(first_letter_label)
+
 	local first_paragraph_1_label = GGLabel:new(V.v(FIRST_PARAGRAPH_WIDTH, 100))
+
 	first_paragraph_1_label.pos = v(bg.pos.x + bg.size.x - 2, TEXT_TOP_POS)
 	first_paragraph_1_label.font_name = font_name
 	first_paragraph_1_label.font_size = font_size
@@ -2050,7 +2329,9 @@ local function add_level_description(parent, text)
 	first_paragraph_1_label.colors.text = {64, 57, 36}
 	first_paragraph_1_label.text_align = "left"
 	first_paragraph_1_label.text = p
+
 	parent:add_child(first_paragraph_1_label)
+
 	local w, p_nlines, p_lines = first_paragraph_1_label:get_wrap_lines()
 	local p_max_lines = math.ceil((bg.pos.y + bg.size.y - TEXT_TOP_POS - 3) / (first_paragraph_1_label:get_font_height() * line_height))
 	local p_1_nlines = math.min(p_max_lines, #p_lines)
@@ -2061,11 +2342,15 @@ local function add_level_description(parent, text)
 
 	local p_1 = table.concat(p_lines, "\n", 1, p_1_nlines)
 	local p_2 = table.concat(p_lines, CJK(" ", "", "", nil), p_1_nlines + 1)
+
 	first_paragraph_1_label.text = p_1
+
 	log.debug("Lines:\n%s", getdump(p_lines))
 	log.debug("p_1_nlines:%i", p_1_nlines)
+
 	local p2_pos = v(LEFT_MARGIN, first_paragraph_1_label.pos.y + first_paragraph_1_label:get_font_height() * p_1_nlines * line_height)
 	local first_paragraph_2_label = GGLabel:new(V.v(FULL_PARAGRAPH_WIDTH, RIGHT_PAGE_MAX_Y - p2_pos.y))
+
 	first_paragraph_2_label.pos = p2_pos
 	first_paragraph_2_label.fit_size = true
 	first_paragraph_2_label.font_name = font_name
@@ -2073,14 +2358,18 @@ local function add_level_description(parent, text)
 	first_paragraph_2_label.line_height = line_height
 	first_paragraph_2_label.colors.text = {64, 57, 36}
 	first_paragraph_2_label.text_align = "left"
+
 	parent:add_child(first_paragraph_2_label)
+
 	first_paragraph_2_label.text = p_2
 end
 
 local function add_difficulty_stamp(parent, mode, diff, x, y)
 	if diff then
 		local im = KImageView:new("levelSelect_difficultyCompleted_000" .. diff)
+
 		im.pos = v(x, y)
+
 		parent:add_child(im)
 	end
 end
@@ -2125,7 +2414,9 @@ local function add_level_battle_button(parent, mode, level_num)
 	local nu = string.format(prefix, 2 * mode - 1)
 	local nh = string.format(prefix, 2 * mode)
 	local b = KImageButton:new(nu, nh, nh)
+
 	b.pos = v(805, 470)
+
 	parent:add_child(b)
 
 	function b.on_click()
@@ -2135,21 +2426,26 @@ local function add_level_battle_button(parent, mode, level_num)
 
 	function b.on_enter(this)
 		this.class.on_enter(this)
+
 		this.t1.shader_args = sha_hover
 		this.t2.shader_args = sha_hover
+
 		this.t1:redraw()
 		this.t2:redraw()
 	end
 
 	function b.on_exit(this)
 		this.class.on_exit(this)
+
 		this.t1.shader_args = sha
 		this.t2.shader_args = sha
+
 		this.t1:redraw()
 		this.t2:redraw()
 	end
 
 	local t = GGShaderLabel:new(V.v(b.size.x, 20))
+
 	t.pos.y = 70
 	t.font_size = 15
 	t.font_name = "h_noti"
@@ -2159,7 +2455,9 @@ local function add_level_battle_button(parent, mode, level_num)
 	t.shaders = sh
 	t.shader_args = sha
 	t.propagate_on_click = true
+
 	b:add_child(t)
+
 	b.t1 = t
 	t = GGShaderLabel:new(V.v(b.size.x, 30))
 	t.pos.y = 86
@@ -2171,7 +2469,9 @@ local function add_level_battle_button(parent, mode, level_num)
 	t.shaders = sh
 	t.shader_args = sha
 	t.propagate_on_click = true
+
 	b:add_child(t)
+
 	b.t2 = t
 end
 
@@ -2180,9 +2480,13 @@ local function add_level_rules(parent, level_num, y)
 	local has_hero = level_data.upgrades.heroe
 	local upg_desc = _("UPGRADE_LEVEL") .. "\n" .. tostring(level_data.upgrades.level)
 	local upg_icon = KImageView:new("levelSelect_modeRules_0010")
+
 	upg_icon.pos = v(ls_page_r_x + 20, y)
+
 	parent:add_child(upg_icon)
+
 	local upg_label = GGLabel:new(V.v(90, upg_icon.size.y))
+
 	upg_label.pos = v(upg_icon.pos.x + upg_icon.size.x, upg_icon.pos.y + upg_icon.size.y / 2)
 	upg_label.anchor.y = upg_label.size.y / 2
 	upg_label.font_name = "body"
@@ -2191,11 +2495,17 @@ local function add_level_rules(parent, level_num, y)
 	upg_label.vertical_align = "middle"
 	upg_label.text = upg_desc
 	upg_label.colors.text = {64, 57, 36}
+
 	parent:add_child(upg_label)
+
 	local hero_icon = KImageView:new(has_hero and "levelSelect_modeRules_0011" or "levelSelect_modeRules_0009")
+
 	hero_icon.pos = v(ls_page_r_x + ls_page_w / 2 + 20, y)
+
 	parent:add_child(hero_icon)
+
 	local hero_label = GGLabel:new(V.v(90, hero_icon.size.y))
+
 	hero_label.pos = v(hero_icon.pos.x + hero_icon.size.x, hero_icon.pos.y + hero_icon.size.y / 2)
 	hero_label.anchor.y = hero_label.size.y / 2
 	hero_label.font_name = "body"
@@ -2204,6 +2514,7 @@ local function add_level_rules(parent, level_num, y)
 	hero_label.vertical_align = "middle"
 	hero_label.text = has_hero and _("HEROES") or _("NO HEROES")
 	hero_label.colors.text = {64, 57, 36}
+
 	parent:add_child(hero_label)
 end
 
@@ -2238,10 +2549,12 @@ local function add_level_tab(parent, mode, y, stars)
 
 	if i_l and stars < 3 then
 		local t = KImageView:new(string.format(fmt, i_l))
+
 		t.pos = v(x, y)
 
 		function t.on_enter()
 			local msg = mode == GAME_MODE_HEROIC and _("Heroic challenge") or _("Iron challenge")
+
 			parent:show_tooltip(msg)
 		end
 
@@ -2250,8 +2563,11 @@ local function add_level_tab(parent, mode, y, stars)
 		end
 
 		parent.back:add_child(t)
+
 		parent.tabs_locked[mode] = t
+
 		local l = GGLabel:new(V.v(68, 10))
+
 		l.anchor = v(l.size.x / 2, l.size.y / 2)
 		l.font_name = CJK("body", nil, nil, "h_noti")
 		l.font_size = 13
@@ -2261,10 +2577,12 @@ local function add_level_tab(parent, mode, y, stars)
 		l.text = texts[mode]
 		l.propagate_on_click = true
 		l.fit_lines = 1
+
 		t:add_child(l)
 	else
 		if i_n then
 			local l = GGLabel:new(V.v(68, 10))
+
 			l.anchor = v(l.size.x / 2, l.size.y / 2)
 			l.font_name = CJK("body", nil, nil, "h_noti")
 			l.font_size = 13
@@ -2274,7 +2592,9 @@ local function add_level_tab(parent, mode, y, stars)
 			l.text = texts[mode]
 			l.propagate_on_click = true
 			l.fit_lines = 1
+
 			local t = KImageButton:new(string.format(fmt, i_n), string.format(fmt, i_h))
+
 			t.pos = v(x, y)
 
 			function t.on_click(this)
@@ -2284,22 +2604,27 @@ local function add_level_tab(parent, mode, y, stars)
 
 			function t.on_enter(this)
 				S:queue("GUIQuickMenuOver")
+
 				l.colors.text = {95, 59, 38, 255}
+
 				this.class.on_enter(this)
 			end
 
 			function t.on_exit(this)
 				l.colors.text = {198, 134, 95, 255}
+
 				this.class.on_exit(this)
 			end
 
 			t:add_child(l)
 			parent.back:add_child(t)
+
 			parent.tabs[mode] = t
 		end
 
 		if i_s then
 			local l = GGLabel:new(V.v(68, 10))
+
 			l.anchor = v(l.size.x / 2, l.size.y / 2)
 			l.font_name = CJK("body", nil, nil, "h_noti")
 			l.font_size = 13
@@ -2309,10 +2634,14 @@ local function add_level_tab(parent, mode, y, stars)
 			l.text = texts[mode]
 			l.propagate_on_click = true
 			l.fit_lines = 1
+
 			local t = KImageView:new(string.format(fmt, i_s))
+
 			t.pos = v(x, y)
+
 			t:add_child(l)
 			parent.back:add_child(t)
+
 			parent.tabs_selected[mode] = t
 		end
 	end
@@ -2322,17 +2651,22 @@ LevelSelectDifficultyButton = class("LevelSelectDifficultyButton", KImageButton)
 
 function LevelSelectDifficultyButton:initialize()
 	KImageButton.initialize(self, "levelSelect_difficulty_0001")
+
 	local diff = screen_map.user_data.difficulty or DIFFICULTY_NORMAL
+
 	self:set_difficulty(diff)
 end
 
 function LevelSelectDifficultyButton:on_click()
 	S:queue("GUIButtonCommon")
+
 	-- local campaign_done = #screen_map.user_data.levels > GS.main_campaign_levels
 	local diff = screen_map.user_data.difficulty
+
 	-- diff = km.zmod(diff + 1, campaign_done and GS.max_difficulty or 3)
 	diff = km.zmod(diff + 1, GS.max_difficulty)
 	screen_map.user_data.difficulty = diff
+
 	storage:save_slot(screen_map.user_data)
 	self:set_difficulty(diff)
 	self:set_image(self.hover_image_name)
@@ -2342,10 +2676,13 @@ function LevelSelectDifficultyButton:set_difficulty(diff)
 	local fmt = "levelSelect_difficulty_000%i"
 	local img_n = string.format(fmt, 2 * diff - 1)
 	local img_h = string.format(fmt, 2 * diff)
+
 	self.default_image_name = img_n
 	self.hover_image_name = img_h
 	self.click_image_name = img_h
+
 	self:set_image(self.default_image_name)
+
 	self.difficulty = diff
 end
 
@@ -2372,14 +2709,20 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 	local level_string = string.format("%02i", level_num)
 	local level_data = screen_map.level_data[level_num]
+
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2 - 15, sh / 2 - 50)
+
 	self:add_child(self.back)
+
 	self.back.alpha = 0
+
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+
 	close_button.pos = v(self.back.size.x - 50, 20)
 	self.close_button = close_button
+
 	self.back:add_child(close_button)
 
 	function close_button.on_click()
@@ -2388,12 +2731,19 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	end
 
 	add_level_title(self.back, level_num .. " " .. _(string.format("LEVEL_%d_TITLE", level_num)), "left", ls_page_y + 22)
+
 	local stage_thumb = KImageView:new(string.format("stage_thumbs_%04i", level_string))
+
 	stage_thumb.pos = v(215, 190)
+
 	self.back:add_child(stage_thumb)
+
 	local thumb_frame = KImageView:new("levelSelect_thumbFrame")
+
 	thumb_frame.pos = v(202, 175)
+
 	self.back:add_child(thumb_frame)
+
 	local badge_x = 310
 	local badge_x_off = 35
 	local badge_y = 490
@@ -2412,53 +2762,86 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 		local bn = string.format(badge_fmt, n)
 		local b = KImageView:new(bn)
+
 		b.scale = v(0.8, 0.8)
 		b.pos = v(badge_x, badge_y)
 		badge_x = badge_x + badge_x_off
+
 		self.back:add_child(b)
 	end
 
 	self.campaign = KView:new()
+
 	self.back:add_child(self.campaign)
 	add_level_title(self.campaign, _("Campaign"), "right")
+
 	local desc_h = add_level_description(self.campaign, _("LEVEL_" .. tostring(level_num) .. "_HISTORY"))
+
 	add_difficulty_stamp(self.campaign, GAME_MODE_CAMPAIGN, slot_data[GAME_MODE_CAMPAIGN], 690, 520)
+
 	local b = LevelSelectDifficultyButton:new()
+
 	b.pos = v(982, 522)
+
 	self.campaign:add_child(b)
 	add_level_battle_button(self.campaign, GAME_MODE_CAMPAIGN, level_num)
 	add_level_tab(self, GAME_MODE_CAMPAIGN, 175, stars)
+
 	local rules_y = 290
+
 	self.heroic = KView:new()
+
 	self.back:add_child(self.heroic)
+
 	self.heroic.hidden = true
+
 	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
+
 	rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
+
 	self.heroic:add_child(rbg)
 	add_level_title(self.heroic, _("Heroic"), "right")
+
 	local desc_h = add_level_description(self.heroic, _("LEVEL_MODE_HEROIC_DESCRIPTION"))
+
 	add_level_title(self.heroic, _("Challenge Rules"), "sub", rules_y)
 	add_level_rules(self.heroic, level_num, rules_y + 38)
 	add_difficulty_stamp(self.heroic, GAME_MODE_HEROIC, slot_data[GAME_MODE_HEROIC], 690, 520)
+
 	local b = LevelSelectDifficultyButton:new()
+
 	b.pos = v(982, 522)
+
 	self.heroic:add_child(b)
 	add_level_battle_button(self.heroic, GAME_MODE_HEROIC, level_num)
 	add_level_tab(self, GAME_MODE_HEROIC, 260, stars)
+
 	local rules_y = 290
+
 	self.iron = KView:new()
+
 	self.back:add_child(self.iron)
+
 	self.iron.hidden = true
+
 	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
+
 	rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
+
 	self.iron:add_child(rbg)
+
 	local rbbg = KImageView:new("levelSelect_modebg_notxt_0002")
+
 	rbbg.pos = v(ls_page_r_x + (ls_page_w - rbbg.size.x) / 2, rules_y + 90)
+
 	self.iron:add_child(rbbg)
 	add_level_title(self.iron, _("Iron"), "right")
+
 	local desc_h = add_level_description(self.iron, _("LEVEL_MODE_IRON_DESCRIPTION"))
+
 	add_level_title(self.iron, _("Challenge Rules"), "sub", rules_y)
 	add_level_rules(self.iron, level_num, rules_y + 38)
+
 	local b_x = 770
 	local b_y = rbbg.pos.y + 10
 	local b_o = 50
@@ -2468,26 +2851,35 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	for i, v in ipairs(opts) do
 		local n = table.contains(locked_towers, v) and 2 * i or 2 * i - 1
 		local b = KImageView:new(string.format("levelSelect_modeRules_000%i", n))
+
 		b.pos = V.v(b_x, b_y)
 		b_x = b_x + b_o
+
 		self.iron:add_child(b)
 	end
 
 	add_difficulty_stamp(self.iron, GAME_MODE_IRON, slot_data[GAME_MODE_IRON], 690, 520)
+
 	local b = LevelSelectDifficultyButton:new()
+
 	b.pos = v(982, 522)
+
 	self.iron:add_child(b)
 	add_level_battle_button(self.iron, GAME_MODE_IRON, level_num)
 	add_level_tab(self, GAME_MODE_IRON, 345, stars)
 	self:show_page(GAME_MODE_CAMPAIGN, stars)
+
 	local name_label = GGLabel:new(V.v(280, 18))
+
 	name_label.pos = v(10, 10)
 	name_label.font_name = "body"
 	name_label.font_size = 18
 	name_label.colors.text = {255, 255, 255}
 	name_label.text = _("Heroic")
 	name_label.text_align = "left"
+
 	local desc_label = GGLabel:new(V.v(280, 18))
+
 	desc_label.pos = v(10, name_label.pos.y + name_label.size.y + 5)
 	desc_label.font_name = "body"
 	desc_label.font_size = 18
@@ -2495,21 +2887,32 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	desc_label.text_align = "left"
 	desc_label.text = _("LEVEL_MODE_LOCKED_DESCRIPTION")
 	desc_label.line_height = 0.9
+
 	local w, lines = desc_label:get_wrap_lines()
 	local panel_h = desc_label.pos.y + lines * desc_label:get_font_height() * desc_label.line_height + 10
+
 	self.tip_panel = KView:new(V.v(300, panel_h))
 	self.tip_panel.colors.background = {21, 17, 13, 255}
 	self.tip_panel.alpha = 0.9
+
 	self:add_child(self.tip_panel)
+
 	self.tip_panel.title = name_label
+
 	self.tip_panel:add_child(name_label)
+
 	self.tip_panel.desc = desc_label
+
 	self.tip_panel:add_child(desc_label)
+
 	local tip_panel_tip = KImageView:new("Upgrades_Tips_tip")
+
 	tip_panel_tip.pos = v(self.tip_panel.size.x + 10, self.tip_panel.size.y - 20)
 	tip_panel_tip.scale = v(-1, 1)
 	tip_panel_tip.propagate_on_click = true
+
 	self.tip_panel:add_child(tip_panel_tip)
+
 	self.tip_panel.tip = tip_panel_tip
 	self.tip_panel.anchor = v(self.tip_panel.size.x + 15, self.tip_panel.size.y + 20)
 	self.tip_panel.hidden = true
@@ -2518,6 +2921,7 @@ end
 function LevelSelectView:show_tooltip(title)
 	self.tip_panel.hidden = false
 	self.tip_panel.title.text = title
+
 	self:update_tooltip_position()
 end
 
@@ -2528,6 +2932,7 @@ end
 function LevelSelectView:update_tooltip_position()
 	if not self.tip_panel.hidden then
 		local mx, my = screen_map.window:get_mouse_position()
+
 		self.tip_panel.pos = v(mx / screen_map.window.scale.x, my / screen_map.window.scale.y)
 	end
 end
@@ -2557,17 +2962,25 @@ EndlessLevelSelectView = class("EndlessLevelSelectView", PopUpView)
 
 function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.level_idx = level_num
+
 	local level_string = string.format("%02i", level_num)
 	local level_data = screen_map.level_data[level_num]
+
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2 - 15, sh / 2 - 50)
+
 	self:add_child(self.back)
+
 	self.back.alpha = 0
+
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+
 	close_button.pos = v(self.back.size.x - 50, 20)
 	self.close_button = close_button
+
 	self.back:add_child(close_button)
 
 	function close_button.on_click()
@@ -2576,21 +2989,35 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	end
 
 	add_level_title(self.back, _(string.format("ENDLESS_LEVEL_%d_TITLE", level_num - 80)), "left", ls_page_y + 22)
+
 	local stage_thumb = KImageView:new("stage_thumbs_endless_00" .. level_string)
+
 	stage_thumb.pos = v(215, 190)
+
 	self.back:add_child(stage_thumb)
+
 	local thumb_frame = KImageView:new("levelSelect_thumbFrame")
+
 	thumb_frame.pos = v(202, 175)
+
 	self.back:add_child(thumb_frame)
+
 	local bp = KImageView:new("levelSelect_bg_patch")
+
 	bp.scale = v(21, 6)
 	bp.pos = v(290, 475)
+
 	self.back:add_child(bp)
+
 	local w = KImageView:new("levelSelect_waves")
+
 	w.anchor = v(w.size.x / 2, w.size.y / 2)
 	w.pos = v(290, 485)
+
 	self.back:add_child(w)
+
 	local wl = GGLabel:new(v(30, 24))
+
 	wl.pos = v(29, 29)
 	wl.vertical_align = "middle"
 	wl.font_name = "body"
@@ -2599,9 +3026,13 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	wl.colors.text = {64, 57, 36}
 	wl.colors.background = {0, 0, 0, 0}
 	wl.text = "99"
+
 	w:add_child(wl)
+
 	self.waves_label = wl
+
 	local wd = GGLabel:new(V.v(100, 40))
+
 	wd.text = _("ENDLESS_LEVEL_SELECT_SURVIVED")
 	wd.pos = v(w.pos.x, w.pos.y + 55)
 	wd.anchor = v(wd.size.x / 2, wd.size.y / 2)
@@ -2610,12 +3041,18 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	wd.text_align = "center"
 	wd.vertical_align = "top"
 	wd.colors.text = {64, 57, 36}
+
 	self.back:add_child(wd)
+
 	local s = KImageView:new("levelSelect_maxScore")
+
 	s.anchor = v(s.size.x / 2, s.size.y / 2)
 	s.pos = v(480, 487)
+
 	self.back:add_child(s)
+
 	local sl = GGLabel:new(v(84, 24))
+
 	sl.pos = v(32, 25)
 	sl.vertical_align = "middle"
 	sl.font_name = "body"
@@ -2625,9 +3062,13 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	sl.colors.text = {64, 57, 36}
 	sl.colors.background = {0, 0, 0, 0}
 	sl.text = "999999"
+
 	s:add_child(sl)
+
 	self.score_label = sl
+
 	local sd = GGLabel:new(V.v(100, 40))
+
 	sd.text = _("ENDLESS_LEVEL_SELECT_MAX_SCORE")
 	sd.pos = v(s.pos.x, s.pos.y + 55)
 	sd.anchor = v(sd.size.x / 2, sd.size.y / 2)
@@ -2636,25 +3077,40 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	sd.text_align = "center"
 	sd.vertical_align = "top"
 	sd.colors.text = {64, 57, 36}
+
 	self.back:add_child(sd)
 	self:load_score()
+
 	local right_page = KView:new()
+
 	self.back:add_child(right_page)
 	add_level_title(right_page, _("ENDLESS_LEVEL_SELECT_HEADER"), "right")
+
 	local desc_h = add_level_description(right_page, _("ENDLESS_LEVEL_" .. tostring(level_num - 80) .. "_HISTORY"))
 	local rules_y = 320
 	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
+
 	rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
+
 	right_page:add_child(rbg)
 	add_level_title(right_page, _("Challenge Rules"), "sub", rules_y)
+
 	rules_y = rules_y + 38
+
 	local heart_icon = KImageView:new("levelSelect_modeRules_endless_0001")
+
 	heart_icon.pos = v(ls_page_r_x + 20, rules_y)
+
 	right_page:add_child(heart_icon)
+
 	local skull_icon = KImageView:new("levelSelect_modeRules_endless_0002")
+
 	skull_icon.pos = v(ls_page_r_x + ls_page_w / 2 + 20, rules_y)
+
 	right_page:add_child(skull_icon)
+
 	local heart_label = GGLabel:new(V.v(90, heart_icon.size.y))
+
 	heart_label.text = _("ENDLESS_LEVEL_SELECT_LIVES_INFO")
 	heart_label.pos = v(heart_icon.pos.x + heart_icon.size.x, heart_icon.pos.y + heart_icon.size.y / 2)
 	heart_label.anchor.y = heart_label.size.y / 2
@@ -2663,8 +3119,11 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	heart_label.text_align = "center"
 	heart_label.vertical_align = "middle"
 	heart_label.colors.text = {64, 57, 36}
+
 	right_page:add_child(heart_label)
+
 	local skull_label = GGLabel:new(V.v(90, skull_icon.size.y))
+
 	skull_label.text = _("ENDLESS_LEVEL_SELECT_WAVES_INFO")
 	skull_label.pos = v(skull_icon.pos.x + skull_icon.size.x, skull_icon.pos.y + skull_icon.size.y / 2)
 	skull_label.anchor.y = skull_label.size.y / 2
@@ -2673,8 +3132,11 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	skull_label.text_align = "center"
 	skull_label.vertical_align = "middle"
 	skull_label.colors.text = {64, 57, 36}
+
 	right_page:add_child(skull_label)
+
 	local b = LevelSelectDifficultyButton:new()
+
 	b.pos = v(982, 522)
 	b.parent_on_click = b.on_click
 
@@ -2684,8 +3146,10 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	end
 
 	right_page:add_child(b)
+
 	local ps_ld = PS and PS.services.leaderboards or nil
 	local r = KImageButton("levelSelect_rankings_0001", "levelSelect_rankings_0002", "levelSelect_rankings_0002")
+
 	r.pos = v(720, 550)
 	r.anchor = v(r.size.x / 2, r.size.y / 2)
 	r.alpha = ps_ld and ps_ld:get_status() and 1 or 0.5
@@ -2694,11 +3158,12 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 		S:queue("GUIButtonCommon")
 
 		if not ps_ld then
-			return
+			return 
 		end
 
 		if ps_ld:get_status() then
 			local user_data = storage:load_slot()
+
 			ps_ld:show_leaderboard(level_num, user_data.difficulty)
 		else
 			ps_ld:do_signin()
@@ -2729,52 +3194,80 @@ UpgradesView = class("UpgradesView", PopUpView)
 
 function UpgradesView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.back = KImageView:new("Upgrades_BG_notxt")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2 - 15, sh / 2 - 50)
+
 	self:add_child(self.back)
+
 	self.back.alpha = 1
+
 	local header = GGPanelHeader:new(_("UPGRADES"), 274)
+
 	header.pos = V.v(308, CJK(27, 25, nil, 25) + (IS_KR3 and -36 or 0))
+
 	self.back:add_child(header)
+
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+
 	close_button.pos = v(self.back.size.x - 55, 20)
 	self.close_button = close_button
+
 	self.back:add_child(close_button)
+
 	self.reset_button = GGUpgradesButton:new(_("BUTTON_RESET"))
 	self.reset_button.pos = v(240, 630)
+
 	self.back:add_child(self.reset_button)
+
 	self.undo_button = GGUpgradesButton:new(_("BUTTON_UNDO"))
 	self.undo_button.pos = v(550, 630)
+
 	self.undo_button:disable()
 	self.back:add_child(self.undo_button)
+
 	self.done_button = GGUpgradesButton:new(_("BUTTON_DONE"))
 	self.done_button.pos = v(680, 630)
+
 	self.back:add_child(self.done_button)
+
 	self.star_container = KImageView:new("Upgrades_StarContainer")
 	self.star_container.pos = v(100, 637)
+
 	self.back:add_child(self.star_container)
+
 	self.stars_label = KLabel:new(V.v(self.star_container.size.x, self.star_container.size.y))
 	self.stars_label.pos = v(85 + self.star_container.size.x / 3.2, 648)
 	self.stars_label.font = F:f("Comic Book Italic", "32")
 	self.stars_label.colors.text = {231, 222, 175}
 	self.stars_label.text = "0"
+
 	self.back:add_child(self.stars_label)
+
 	self.disabled_icon = {}
+
 	local bar_positions = {v(152, 538), v(274, 538), v(394, 538), v(514, 538), v(636, 538), v(755, 538)}
+
 	self.upgrade_bars = {}
 
 	for i, k in ipairs(UPGR.display_order) do
 		local b = KImageView:new("YellowBar")
+
 		b.anchor = v(6, 376)
 		b.pos = bar_positions[i]
+
 		self.back:add_child(b)
+
 		self.upgrade_bars[k] = b
 	end
 
 	self.upgrade_buttons = {}
+
 	local init_bought_list = screen_map.user_data.upgrades
+
 	self.spent_stars = 0
+
 	local start_y = 520
 	local separation_y = 80
 	-- local x_offsets = {115, 237, 355, 477, 598, 718}
@@ -2784,9 +3277,13 @@ function UpgradesView:initialize(sw, sh)
 		local class_ind = table.keyforobject(UPGR.display_order, value.class)
 		local icon_index = value.icon
 		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
+
 		self.upgrade_buttons[key] = UpgradeButtons:new(icon_name, value, key, 0.83)
+
 		local _button = self.upgrade_buttons[key]
+
 		_button.pos = v(x_offsets[class_ind], start_y - value.level * separation_y * 0.83)
+
 		-- _button.size.x = _button.size.x * 0.5
 		-- _button.size.y = _button.size.y * 0.5
 		self.back:add_child(_button)
@@ -2794,17 +3291,25 @@ function UpgradesView:initialize(sw, sh)
 
 	self:set_bought_levels(init_bought_list)
 	self:set_stars_and_check()
+
 	self.tip_panel = KView:new(V.v(320, 100))
 	self.tip_panel.colors.background = {21, 17, 13, 255}
 	self.tip_panel.anchor = v(0, 105)
 	self.tip_panel.alpha = 0.9
+
 	self:add_child(self.tip_panel)
+
 	local tip_panel_tip = KImageView:new("Upgrades_Tips_tip")
+
 	tip_panel_tip.pos = v(6, 72)
 	tip_panel_tip.propagate_on_click = true
+
 	self.tip_panel:add_child(tip_panel_tip)
+
 	self.tip_panel.tip = tip_panel_tip
+
 	local name_label = GGLabel:new(V.v(240, 18))
+
 	name_label.pos = v(20, 8)
 	name_label.font_name = "body"
 	name_label.font_size = 18
@@ -2813,8 +3318,11 @@ function UpgradesView:initialize(sw, sh)
 	name_label.text_align = "left"
 	name_label.fit_lines = 1
 	self.tip_panel.title = name_label
+
 	self.tip_panel:add_child(name_label)
+
 	local desc_label = GGLabel:new(V.v(280, 18))
+
 	desc_label.pos = v(20, 33)
 	desc_label.font_name = "body"
 	desc_label.font_size = 18
@@ -2823,8 +3331,11 @@ function UpgradesView:initialize(sw, sh)
 	desc_label.text = "desc_name"
 	desc_label.line_height = CJK(0.85, nil, 1, 0.9)
 	self.tip_panel.desc = desc_label
+
 	self.tip_panel:add_child(desc_label)
+
 	local price_label = GGLabel:new(V.v(50, 18))
+
 	price_label.pos = v(295, 8)
 	price_label.font_name = "numbers"
 	price_label.font_size = 18
@@ -2832,15 +3343,22 @@ function UpgradesView:initialize(sw, sh)
 	price_label.text = "2"
 	price_label.text_align = "left"
 	self.tip_panel.price = price_label
+
 	self.tip_panel:add_child(price_label)
+
 	self.tip_panel.propagate_on_click = true
 	self.tip_panel.hidden = true
+
 	local tip_star = KImageView:new("Upgrades_Tips_Star")
+
 	tip_star.pos = v(270, 10)
 	self.tip_panel.star = tip_star
+
 	self.tip_panel:add_child(tip_star)
+
 	local max_upgrade_stars = UPGR:get_total_stars()
 	local l_stars_num = math.min(screen_map.total_stars, max_upgrade_stars) - self.spent_stars
+
 	screen_map.upgrade_star.hidden = l_stars_num == 0
 	screen_map.upgrade_points.text = l_stars_num
 	screen_map.upgrade_points.hidden = l_stars_num == 0
@@ -2848,18 +3366,23 @@ end
 
 function UpgradesView:set_tip_panel(title, desc, price)
 	if self.im_disabled then
-		return
+		return 
 	end
 
 	self.tip_panel.title.text = title
 	self.tip_panel.price.text = price
+
 	local d = self.tip_panel.desc
+
 	d.text = desc
+
 	local _w, lines = d:get_wrap_lines()
+
 	self.tip_panel.size.y = d.pos.y + (lines + 1) * d.line_height * d:get_font_height()
 	self.tip_panel.tip.pos = v(-14, self.tip_panel.size.y - 20)
 	self.tip_panel.anchor = v(-15, self.tip_panel.size.y + 10)
 	self.tip_panel.hidden = false
+
 	self:update_tooltip_position()
 end
 
@@ -2879,6 +3402,7 @@ end
 function UpgradesView:update_tooltip_position()
 	if not self.tip_panel.hidden then
 		local mx, my = screen_map.window:get_mouse_position()
+
 		self.tip_panel.pos = v(mx / screen_map.window.scale.x, my / screen_map.window.scale.y)
 	end
 end
@@ -2938,7 +3462,9 @@ function UpgradesView:set_bought_levels(new_bought_list)
 	end
 
 	self:set_stars_and_check()
+
 	screen_map.user_data.upgrades = new_bought_list
+
 	storage:save_slot(screen_map.user_data)
 end
 
@@ -2961,12 +3487,15 @@ function UpgradesView:has_enough_star_to_upgrade_to(class, level)
 	end
 
 	local l_stars_num = screen_map.total_stars - self.spent_stars
+
 	return l_stars_num >= price_sum
 end
 
 function UpgradesView:upgrade_bought(class, level, stars_num)
 	self.undo_button:enable()
+
 	self.bought_list[class] = level
+
 	self:set_bought_levels(self.bought_list)
 	self:set_stars_and_check()
 end
@@ -2978,11 +3507,13 @@ end
 
 function UpgradesView:hide()
 	UpgradesView.super.hide(self)
+
 	self.tip_panel.hidden = true
 end
 
 function UpgradesView:enable()
 	UpgradesView.super.enable(self)
+
 	self.im_disabled = false
 
 	function self.close_button.on_click()
@@ -3005,6 +3536,7 @@ function UpgradesView:enable()
 
 	function self.reset_button.on_click(button, x, y)
 		S:queue("GUIButtonCommon")
+
 		none_bought = {}
 
 		for _, k in pairs(UPGR.display_order) do
@@ -3028,13 +3560,16 @@ end
 
 function UpgradesView:disable()
 	UpgradesView.super.disable(self, false)
+
 	self.im_disabled = true
 	self.close_button.on_click = nil
 	self.undo_button.on_click = nil
 	self.done_button.on_click = nil
 	self.reset_button.onclick = nil
+
 	local max_upgrade_stars = UPGR:get_total_stars()
 	local l_stars_num = math.min(screen_map.total_stars, max_upgrade_stars) - self.spent_stars
+
 	screen_map.upgrade_star.hidden = l_stars_num == 0
 	screen_map.upgrade_points.text = l_stars_num
 	screen_map.upgrade_points.hidden = l_stars_num == 0
@@ -3044,7 +3579,9 @@ UpgradeButtons = class("UpgradeButtons", KImageView)
 
 function UpgradeButtons:initialize(sprite, data_values, my_id, scale)
 	scale = scale or 1
+
 	KImageView.initialize(self, sprite, nil, scale)
+
 	self.size.x = self.size.x * scale
 	self.size.y = self.size.y * scale
 	self._scale = scale
@@ -3060,35 +3597,49 @@ function UpgradeButtons:initialize(sprite, data_values, my_id, scale)
 	self.over_circle.anchor = v(self.over_circle.size.x / 2, self.over_circle.size.y / 2)
 	self.over_circle.pos = v(self.size.x / 2, self.size.y / 2)
 	self.over_circle.propagate_on_click = true
+
 	self:add_child(self.over_circle)
+
 	self.bought_circle = KImageView:new("Upgrades_Icons_Bought", nil, scale)
 	self.bought_circle.size.x = self.bought_circle.size.x * scale
 	self.bought_circle.size.y = self.bought_circle.size.y * scale
 	self.bought_circle.anchor = v(self.bought_circle.size.x / 2, self.bought_circle.size.y / 2)
 	self.bought_circle.pos = v(self.size.x / 2, self.size.y / 2)
+
 	self:add_child(self.bought_circle)
+
 	self.cost_panel = KImageView:new("Upgrades_Icons_PriceTag", nil, scale)
 	self.cost_panel.size.x = self.cost_panel.size.x * scale
 	self.cost_panel.size.y = self.cost_panel.size.y * scale
 	self.cost_panel.pos = v(35 * scale, 55 * scale)
+
 	self:add_child(self.cost_panel)
+
 	local price_value = KImageView:new("Upgrades_Icons_PriceTag_Nm_000" .. data_values.price, nil, scale)
+
 	price_value.size.x = price_value.size.x * scale
 	price_value.size.y = price_value.size.y * scale
 	price_value.anchor = v(price_value.size.x / 2, price_value.size.y / 2)
 	price_value.pos = v(self.cost_panel.size.x / 2 + 4 * scale, self.cost_panel.size.y / 2)
+
 	self.cost_panel:add_child(price_value)
+
 	self.disabled_cost_panel = KImageView:new("Disabled_Upgrades_Icons_PriceTag", nil, scale)
 	self.disabled_cost_panel.size.x = self.disabled_cost_panel.size.x * scale
 	self.disabled_cost_panel.size.y = self.disabled_cost_panel.size.y * scale
 	self.disabled_cost_panel.pos = v(35 * scale, 55 * scale)
+
 	self:add_child(self.disabled_cost_panel)
+
 	local disabled_price_value = KImageView:new("Disabled_Upgrades_Icons_PriceTag_Nm_000" .. data_values.price, nil, scale)
+
 	disabled_price_value.size.x = disabled_price_value.size.x * scale
 	disabled_price_value.size.y = disabled_price_value.size.y * scale
 	disabled_price_value.anchor = v(disabled_price_value.size.x / 2, disabled_price_value.size.y / 2)
 	disabled_price_value.pos = v(self.cost_panel.size.x / 2 + 4 * scale, self.cost_panel.size.y / 2)
+
 	self.disabled_cost_panel:add_child(disabled_price_value)
+
 	self.cost_panel.propagate_on_click = true
 	self.disabled_cost_panel.propagate_on_click = true
 	self.over_circle.hidden = true
@@ -3108,12 +3659,15 @@ end
 
 function UpgradeButtons:on_exit()
 	self.over_circle.hidden = true
+
 	screen_map.upgrades:hide_tip_panel()
 end
 
 function UpgradeButtons:grey_me()
 	self.grey_out = true
+
 	self:disable()
+
 	-- self.disabled_image.hidden = false
 	self.cost_panel.hidden = true
 	self.disabled_cost_panel.hidden = false
@@ -3124,7 +3678,9 @@ end
 
 function UpgradeButtons:ungrey_me()
 	self.grey_out = false
+
 	self:enable()
+
 	-- self.disabled_image.hidden = true
 	self.cost_panel.hidden = false
 	self.disabled_cost_panel.hidden = true
@@ -3139,6 +3695,7 @@ function UpgradeButtons:on_click(button, x, y)
 		screen_map.upgrades:hide_tip_panel()
 		self:set_bought()
 		screen_map.upgrades:upgrade_bought(self.data_values.class, self.data_values.level, self.data_values.price)
+
 		self.explotion = KImageView:new()
 		-- -17.5
 		self.explotion.pos = v(-22, -22)
@@ -3148,9 +3705,11 @@ function UpgradeButtons:on_click(button, x, y)
 			from = 1
 		}
 		self.explotion.ts = 0
+
 		self:add_child(self.explotion)
 		timer:tween(0.6, nil, {}, "linear", function()
 			self:remove_child(self.explotion)
+
 			self.explotion = nil
 		end)
 	elseif self.bought then
@@ -3167,8 +3726,10 @@ function UpgradeButtons:set_bought()
 	self.bought = true
 	self.bought_circle.hidden = false
 	self.over_circle.hidden = true
+
 	-- self.disabled_image.hidden = true
 	self:enable()
+
 	return self.data_values.price
 end
 
@@ -3176,6 +3737,7 @@ EncyclopediaTabLabel = class("EncyclopediaTabLabel", GGShaderLabel)
 
 function EncyclopediaTabLabel:initialize(text, selected, rotation)
 	GGShaderLabel.initialize(self, V.v(62, 18))
+
 	self.font_name = CJK("body", nil, nil, "h_noti")
 	self.font_size = 16
 	self.font_align = "center"
@@ -3204,53 +3766,74 @@ EncyclopediaView = class("EncyclopediaView", PopUpView)
 
 function EncyclopediaView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.scale = vec_1(1.2)
 	self.back = KView:new(V.v(sw, sh))
 	self.back.pos = v(0, 0)
 	self.back.anchor = v(sw / 2, sh / 2)
+
 	self:add_child(self.back)
+
 	self.back.alpha = 0
+
 	local hf = sw / 2 - 700
+
 	self.hf = hf
 	self.tower_button = KImageButton:new("encyclopedia_buttons_notxt_0002", "encyclopedia_buttons_notxt_0003", "encyclopedia_buttons_notxt_0003")
 	self.tower_button.pos = v(hf + 300, 100)
+
 	self.back:add_child(self.tower_button)
+
 	self.tower_button.hidden = true
 
 	function self.tower_button.on_click()
 		S:queue("GUIButtonCommon")
+
 		self.enemies_button.hidden = false
 		self.enemies_selected.hidden = true
 		self.tower_selected.hidden = false
 		self.tower_button.hidden = true
+
 		self:load_towers(1)
 	end
 
 	-- 防御塔书签：未选中状态
 	local tl = EncyclopediaTabLabel:new(_("Towers"), false)
+
 	tl.pos.x, tl.pos.y = 56, 86
+
 	self.tower_button:add_child(tl)
+
 	self.tower_selected = KImageView:new("encyclopedia_buttons_notxt_0001")
 	self.tower_selected.pos = v(hf + 300, 100)
+
 	self.back:add_child(self.tower_selected)
+
 	-- 防御塔书签：已选中状态
 	local tl = EncyclopediaTabLabel:new(_("Towers"), true)
+
 	tl.pos.x, tl.pos.y = 56, ISW(81, "zh-Hans", 81)
+
 	self.tower_selected:add_child(tl)
+
 	self.enemies_button = KImageButton:new("encyclopedia_buttons_notxt_0005", "encyclopedia_buttons_notxt_0006", "encyclopedia_buttons_notxt_0006")
 	self.enemies_button.pos = v(hf + 400, 90)
+
 	self.back:add_child(self.enemies_button)
 
 	function self.enemies_button.on_click()
 		S:queue("GUIButtonCommon")
+
 		self.enemies_button.hidden = true
 		self.enemies_selected.hidden = false
 		self.tower_selected.hidden = true
 		self.tower_button.hidden = false
+
 		self:load_creeps(1)
 
 		if self.right_panel then
 			self.back:remove_child(self.right_panel)
+
 			self.right_panel = nil
 		end
 
@@ -3259,23 +3842,36 @@ function EncyclopediaView:initialize(sw, sh)
 
 	-- 敌人书签：未选中状态
 	local tl = EncyclopediaTabLabel:new(_("Enemies"), false, 2 * math.pi / 180)
+
 	tl.pos.x, tl.pos.y = 56, ISW(88, "zh-Hans", 90)
+
 	self.enemies_button:add_child(tl)
+
 	self.enemies_selected = KImageView:new("encyclopedia_buttons_notxt_0004")
 	self.enemies_selected.pos = v(hf + 400, 90)
+
 	self.back:add_child(self.enemies_selected)
+
 	self.enemies_selected.hidden = true
+
 	-- 敌人书签：已选中状态
 	local tl = EncyclopediaTabLabel:new(_("Enemies"), true, 2 * math.pi / 180)
+
 	tl.pos.x, tl.pos.y = 56, 81
+
 	self.enemies_selected:add_child(tl)
+
 	self.backback = KImageView:new("encyclopedia_bg")
 	self.backback.anchor = v(self.backback.size.x / 2, self.backback.size.y / 2)
 	self.backback.pos = v(sw / 2, sh / 2)
+
 	self.back:add_child(self.backback)
+
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+
 	close_button.pos = v(self.backback.size.x - 52, 16)
 	self.close_button = close_button
+
 	self.backback:add_child(close_button)
 
 	function self.close_button.on_click()
@@ -3286,7 +3882,9 @@ end
 
 function EncyclopediaView:show()
 	EncyclopediaView.super.show(self)
+
 	local user_data = storage:load_slot()
+
 	E:load()
 	UPGR:set_levels(user_data.upgrades)
 	DI:set_level(screen_map.user_data.difficulty)
@@ -3294,6 +3892,7 @@ function EncyclopediaView:show()
 	DI:patch_templates()
 	E:patch_config(storage:load_config())
 	self:load_towers(1)
+
 	self.enemies_button.hidden = false
 	self.enemies_selected.hidden = true
 	self.tower_selected.hidden = false
@@ -3311,30 +3910,42 @@ function EncyclopediaView:load_towers(index)
 
 	self.towers = KView:new(V.v(366, 444))
 	self.towers.pos = v(self.hf + 310, 200)
+
 	self.back:add_child(self.towers)
+
 	local title = GGLabel:new(V.v(self.towers.size.x, 70))
+
 	title.pos.y = 32
 	title.font_name = "h_book"
 	title.font_size = 40
 	title.font_align = "center"
 	title.colors.text = {100, 89, 51, 255}
 	title.text = _("Towers")
+
 	self.towers:add_child(title)
+
 	local title_w = title:get_text_width(title.text)
 	local deco_y = 60
 	local left_deco = KImageView:new("encyclopedia_rightArt")
+
 	left_deco.pos = v(self.towers.size.x / 2 - title_w / 2 - 10, deco_y)
 	left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
+
 	self.towers:add_child(left_deco)
+
 	local right_deco = KImageView:new("encyclopedia_rightArt")
+
 	right_deco.pos = v(self.towers.size.x / 2 + title_w / 2 + 13, deco_y)
 	right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
 	right_deco.scale.x = -1
+
 	self.towers:add_child(right_deco)
+
 	self.over_sprite = KImageView:new("encyclopedia_tower_thumbs_over")
 	self.select_sprite = KImageView:new("encyclopedia_tower_thumbs_select")
 	self.select_sprite.pos = v(50, 120)
 	self.select_sprite.hidden = false
+
 	local tower_count = #screen_map.tower_data
 	local towers_per_page = 20
 
@@ -3346,19 +3957,24 @@ function EncyclopediaView:load_towers(index)
 			local f = string.format("encyclopedia_tower_thumbs_%04i", t.icon)
 			local icon = U.splicing_from_kr(t.from_kr, f)
 			local off_y = 120
+
 			self:create_tower(icon, v(math.fmod(d - 1, 4) * 88 + 50, math.floor((d - 1) / 4) * 85 + off_y), i, true)
 		end
 	end
 
 	self.towers:add_child(self.over_sprite)
+
 	self.over_sprite.hidden = true
 	self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
 	self.over_sprite.propagate_on_click = true
+
 	self.towers:add_child(self.select_sprite)
+
 	self.select_sprite.pos = v(50, 120)
 	self.select_sprite.anchor = v(self.select_sprite.size.x / 2, self.select_sprite.size.y / 2)
 	self.select_sprite.hidden = false
 	self.page_buttons = {}
+
 	local total_pages = math.ceil(tower_count / towers_per_page)
 	local boffset = 40
 	local bx, by = 192 - 40 * (total_pages - 1) / 2, 530
@@ -3366,17 +3982,21 @@ function EncyclopediaView:load_towers(index)
 	for i = 1, total_pages do
 		if i == index then
 			local b = KImageView:new("encyclopedia_pageNbrSelected_000" .. i)
+
 			b.anchor = v(b.size.x / 2, b.size.y / 2)
 			b.pos = v(bx + boffset * (i - 1), by)
+
 			self.towers:add_child(b)
 			table.insert(self.page_buttons, b)
 		else
 			local b = KImageButton:new("encyclopedia_pageNbr_000" .. i, "encyclopedia_pageNbrOver_000" .. i, "encyclopedia_pageNbrSelected_000" .. i)
+
 			b.anchor = v(b.size.x / 2, b.size.y / 2)
 			b.pos = v(bx + boffset * (i - 1), by)
 
 			function b.on_click(this, button, x, y)
 				local this_idx = i
+
 				S:queue("GUIButtonCommon")
 				self:load_towers(this_idx)
 			end
@@ -3396,9 +4016,12 @@ end
 function EncyclopediaView:create_tower(icon, pos, information, enabled)
 	if screen_map.user_data.seen[screen_map.tower_data[information].name] then
 		local tower = KButton:new()
+
 		tower:set_image(icon)
+
 		tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
 		tower.pos = pos
+
 		self.towers:add_child(tower)
 
 		function tower.on_enter()
@@ -3415,8 +4038,10 @@ function EncyclopediaView:create_tower(icon, pos, information, enabled)
 		end
 	else
 		local tower = KImageView:new("encyclopedia_tower_thumbs_lock")
+
 		tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
 		tower.pos = pos
+
 		self.towers:add_child(tower)
 	end
 end
@@ -3443,21 +4068,26 @@ end
 
 function EncyclopediaView:detail_tower(index)
 	self.detail_tower_level = 1
+
 	local t = screen_map.tower_data[index]
 
 	if self.right_panel then
 		self.back:remove_child(self.right_panel)
+
 		self.right_panel = nil
 	end
 
 	self.right_panel = KView:new(V.v(600, 700))
 	self.right_panel.pos = v(self.sw / 2 - 30, 200)
 	self.right_panel.propagate_on_click = true
+
 	self.back:add_child(self.right_panel)
+
 	local tower_name = t.name
 	local dt = E:create_entity(tower_name)
 	local di = dt.info.fn(dt)
 	local title_label = GGLabel:new(V.v(280, 50))
+
 	title_label.pos = v(300, 44)
 	title_label.anchor.x = title_label.size.x / 2
 	title_label.font_name = "h_book"
@@ -3466,30 +4096,46 @@ function EncyclopediaView:detail_tower(index)
 	title_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_NAME")
 	title_label.text_align = "center"
 	title_label.fit_lines = 1
+
 	local title_width, _w = title_label:get_wrap_lines()
+
 	self.right_panel:add_child(title_label)
+
 	local left_decoration = KImageView:new("encyclopedia_rightArt")
+
 	left_decoration.pos = v(300 - title_width / 2 - 10, 60)
 	left_decoration.anchor = v(left_decoration.size.x, left_decoration.size.y / 2)
 	left_decoration.scale.x = 0.7
+
 	self.right_panel:add_child(left_decoration)
+
 	local right_decoration = KImageView:new("encyclopedia_rightArt")
+
 	right_decoration.pos = v(300 + title_width / 2 + 10, 60)
 	right_decoration.anchor = v(left_decoration.size.x, right_decoration.size.y / 2)
 	right_decoration.scale.x = -0.7
+
 	self.right_panel:add_child(right_decoration)
+
 	local f = string.format("encyclopedia_towers_%04i", t.detail_icon)
 	local tower_fmt = U.splicing_from_kr(t.from_kr, f)
 	local portrait = KImageView:new(tower_fmt)
+
 	portrait.anchor = v(portrait.size.x / 2, portrait.size.y / 2)
 	portrait.pos = v(300, 175)
 	portrait.scale = v(0.7, 0.708)
+
 	self.right_panel:add_child(portrait)
+
 	local over_portrait = KImageView:new("encyclopedia_frame")
+
 	over_portrait.anchor = v(over_portrait.size.x / 2, over_portrait.size.y / 2)
 	over_portrait.pos = v(300, 175)
+
 	self.right_panel:add_child(over_portrait)
+
 	local desc_label = GGLabel:new(V.v(330, 50))
+
 	desc_label.pos = v(300, 280)
 	desc_label.anchor = v(165, 0)
 	desc_label.font_name = "body"
@@ -3499,11 +4145,16 @@ function EncyclopediaView:detail_tower(index)
 	desc_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_DESCRIPTION")
 	desc_label.text_align = "center"
 	desc_label.fit_lines = 4
+
 	self.right_panel:add_child(desc_label)
+
 	local frame = KImageView:new("encyclopedia_rightPages_0001")
+
 	frame.anchor = v(frame.size.x / 2, 0)
 	frame.pos = v(305, 352)
+
 	self.right_panel:add_child(frame)
+
 	local icons_list = {
 		reload = 5,
 		armor = 2,
@@ -3528,11 +4179,15 @@ function EncyclopediaView:detail_tower(index)
 
 	for i, v in pairs(stats_list) do
 		local icon = KImageView:new("encyclopedia_icons_00" .. string.format("%02i", icons_list[v]))
+
 		icon.pos = V.v(mx, my)
 		icon.anchor = V.v(icon.size.x / 2, icon.size.y / 2)
+
 		self.right_panel:add_child(icon)
+
 		local lwidth = #stats_list == 3 and i == 3 and 180 or 85
 		local label = GGLabel:new(V.v(lwidth, 25))
+
 		label.pos = V.v(mx + 20, my - 10)
 		label.font_name = "body"
 		label.font_size = 15
@@ -3558,7 +4213,9 @@ function EncyclopediaView:detail_tower(index)
 		end
 
 		label.fit_lines = 2
+
 		self.right_panel:add_child(label)
+
 		mx = mx + 125
 
 		if mx > 400 then
@@ -3571,6 +4228,7 @@ function EncyclopediaView:detail_tower(index)
 
 	if dt.powers then
 		local specials = GGLabel:new(V.v(190, 26))
+
 		specials.pos = v(300, 462)
 		specials.anchor.x = specials.size.x / 2
 		specials.text = _("Specials")
@@ -3579,20 +4237,28 @@ function EncyclopediaView:detail_tower(index)
 		specials.text_align = "center"
 		specials.colors.text = {116, 105, 66, 255}
 		specials.fit_lines = 1
+
 		self.right_panel:add_child(specials)
+
 		local title_w = specials:get_text_width(specials.text)
 		local left_deco = KImageView:new("encyclopedia_rightArt")
+
 		left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
 		left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
 		left_deco.alpha = 0.6
 		left_deco.scale.x = 0.7
+
 		self.right_panel:add_child(left_deco)
+
 		local right_deco = KImageView:new("encyclopedia_rightArt")
+
 		right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
 		right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
 		right_deco.alpha = 0.6
 		right_deco.scale.x = -0.7
+
 		self.right_panel:add_child(right_deco)
+
 		local power_names = {}
 
 		for k, v in pairs(dt.powers) do
@@ -3600,6 +4266,7 @@ function EncyclopediaView:detail_tower(index)
 		end
 
 		table.sort(power_names)
+
 		local tw = 360
 		local iw = math.ceil(tw / #power_names)
 
@@ -3613,18 +4280,23 @@ function EncyclopediaView:detail_tower(index)
 			for _, item in pairs(tower_data_in_menu[1]) do
 				if item.action_arg == k then
 					tower_specials_fmt = item.image
+
 					break
 				end
 			end
 
 			local icon = KImageView:new(tower_specials_fmt)
+
 			icon.image_scale = 0.65
 			icon.size.x = icon.size.x * 0.65
 			icon.size.y = icon.size.y * 0.65
 			icon.pos = v(px, 515)
 			icon.anchor = v(icon.size.x / 2, icon.size.y / 2)
+
 			self.right_panel:add_child(icon)
+
 			local label = GGLabel:new(V.v(tw / #power_names, 50))
+
 			label.pos = v(px, 535)
 			label.anchor = v(label.size.x / 2, 0)
 			label.font_name = "body"
@@ -3640,12 +4312,15 @@ function EncyclopediaView:detail_tower(index)
 
 			label.text_align = "center"
 			label.fit_lines = 2
+
 			self.right_panel:add_child(label)
 		end
 	end
 
 	local detail_btn = GGOptionsButton:new("细节")
+
 	detail_btn.pos = v(520, 650)
+
 	self.right_panel:add_child(detail_btn)
 
 	function detail_btn.on_click()
@@ -3656,17 +4331,21 @@ end
 
 function EncyclopediaView:detail_tower_second(index)
 	self.detail_tower_level = 2
+
 	local t = screen_map.tower_data[index]
 
 	if self.right_panel then
 		self.back:remove_child(self.right_panel)
+
 		self.right_panel = nil
 	end
 
 	self.right_panel = KView:new(V.v(600, 700))
 	self.right_panel.pos = v(self.sw / 2 - 30, 200)
 	self.right_panel.propagate_on_click = true
+
 	self.back:add_child(self.right_panel)
+
 	local tower_name = t.name
 	local dt = E:create_entity(tower_name)
 	local prefix = string.upper(dt.info.i18n_key or t.name)
@@ -3674,6 +4353,7 @@ function EncyclopediaView:detail_tower_second(index)
 
 	if dt.powers then
 		local specials = GGLabel:new(V.v(190, 26))
+
 		specials.pos = v(300, 44)
 		specials.anchor.x = specials.size.x / 2
 		specials.text = _("Specials")
@@ -3682,20 +4362,28 @@ function EncyclopediaView:detail_tower_second(index)
 		specials.text_align = "center"
 		specials.colors.text = {116, 105, 66, 255}
 		specials.fit_lines = 1
+
 		self.right_panel:add_child(specials)
+
 		local title_w = specials:get_text_width(specials.text)
 		local left_deco = KImageView:new("encyclopedia_rightArt")
+
 		left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
 		left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
 		left_deco.alpha = 0.6
 		left_deco.scale.x = 0.7
+
 		self.right_panel:add_child(left_deco)
+
 		local right_deco = KImageView:new("encyclopedia_rightArt")
+
 		right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
 		right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
 		right_deco.alpha = 0.6
 		right_deco.scale.x = -0.7
+
 		self.right_panel:add_child(right_deco)
+
 		local power_names = {}
 
 		for k, v in pairs(dt.powers) do
@@ -3703,8 +4391,10 @@ function EncyclopediaView:detail_tower_second(index)
 		end
 
 		table.sort(power_names)
+
 		local tw = 360
 		local iw = math.ceil(tw / #power_names)
+
 		self.right_panel.power_buttons = {}
 
 		for i, k in pairs(power_names) do
@@ -3717,11 +4407,13 @@ function EncyclopediaView:detail_tower_second(index)
 			for _, item in pairs(tower_data_in_menu[1]) do
 				if item.action_arg == k then
 					tower_specials_fmt = item.image
+
 					break
 				end
 			end
 
 			local power_button = KImageButton:new(tower_specials_fmt)
+
 			power_button.image_scale = 0.65
 			power_button.size.x = power_button.size.x * 0.65
 			power_button.size.y = power_button.size.y * 0.65
@@ -3730,22 +4422,27 @@ function EncyclopediaView:detail_tower_second(index)
 
 			if i == 1 then
 				self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
+
 				power_button._selected = true
 			else
 				-- power_button:disable()
 				power_button:apply_disabled_tint()
+
 				power_button._selected = false
 			end
 
 			function power_button.on_click()
 				S:queue("GUIButtonCommon")
 				power_button:remove_disabled_tint()
+
 				power_button._selected = true
+
 				self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
 
 				for _, btn in pairs(self.right_panel.power_buttons) do
 					if btn ~= power_button then
 						btn:apply_disabled_tint()
+
 						btn._selected = false
 					end
 				end
@@ -3765,7 +4462,9 @@ function EncyclopediaView:detail_tower_second(index)
 
 			table.insert(self.right_panel.power_buttons, power_button)
 			self.right_panel:add_child(power_button)
+
 			local label = GGLabel:new(V.v(tw / #power_names, 50))
+
 			label.pos = v(px, 110)
 			label.anchor = v(label.size.x / 2, 0)
 			label.font_name = "body"
@@ -3781,12 +4480,15 @@ function EncyclopediaView:detail_tower_second(index)
 
 			label.text_align = "center"
 			label.fit_lines = 2
+
 			self.right_panel:add_child(label)
 		end
 	end
 
 	local back_btn = GGOptionsButton:new("返回")
+
 	back_btn.pos = v(520, 650)
+
 	self.right_panel:add_child(back_btn)
 
 	function back_btn.on_click()
@@ -3798,13 +4500,17 @@ end
 function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 	if self.right_panel.detail_skill_panel then
 		self.right_panel:remove_child(self.right_panel.detail_skill_panel)
+
 		self.right_panel.detail_skill_panel = nil
 	end
 
 	self.right_panel.detail_skill_panel = KView:new(V.v(500, 300))
+
 	local panel = self.right_panel.detail_skill_panel
+
 	panel.pos = v(50, 100)
 	panel.anchor = v(0, 0)
+
 	local i_map = {"一级: ", "二级: ", "三级: ", "四级: "}
 
 	for i = 1, power.max_level do
@@ -3822,7 +4528,9 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 		name_label.font_size = 24
 		name_label.text_align = "left"
 		name_label.pos = v(50, 40 + offset_y)
+
 		panel:add_child(name_label)
+
 		-- 技能描述
 		local desc_label = GGLabel:new(V.v(400, 140))
 
@@ -3837,6 +4545,7 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 		desc_label.pos = v(50, 65 + offset_y)
 		desc_label.line_height = 0.8
 		desc_label.text_align = "left"
+
 		panel:add_child(desc_label)
 	end
 
@@ -3856,28 +4565,40 @@ function EncyclopediaView:load_creeps(index)
 
 	self.creep = KView:new(V.v(372, 444))
 	self.creep.pos = v(self.hf + 310, 200)
+
 	self.back:add_child(self.creep)
+
 	self.over_sprite = KImageView:new("encyclopedia_creep_thumbs_over")
 	self.select_sprite2 = KImageView:new("encyclopedia_creep_thumbs_selected")
+
 	local title = GGLabel:new(V.v(self.creep.size.x, 70))
+
 	title.pos.y = 32
 	title.font_name = "h_book"
 	title.font_size = 40
 	title.font_align = "center"
 	title.colors.text = {100, 89, 51, 255}
 	title.text = _("Enemies")
+
 	self.creep:add_child(title)
+
 	local title_w = title:get_text_width(title.text)
 	local deco_y = 60
 	local left_deco = KImageView:new("encyclopedia_rightArt")
+
 	left_deco.pos = v(self.creep.size.x / 2 - title_w / 2 - 10, deco_y)
 	left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
+
 	self.creep:add_child(left_deco)
+
 	local right_deco = KImageView:new("encyclopedia_rightArt")
+
 	right_deco.pos = v(self.creep.size.x / 2 + title_w / 2 + 13, deco_y)
 	right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
 	right_deco.scale.x = -1
+
 	self.creep:add_child(right_deco)
+
 	local creeps_per_page = 64
 	local creeps_data = GS.encyclopedia_enemies
 	local max_creeps = #creeps_data
@@ -3904,21 +4625,26 @@ function EncyclopediaView:load_creeps(index)
 
 			local f = string.format("encyclopedia_creep_thumbs_%04i", t.info.enc_icon)
 			local enemy_thumb_fmt = U.splicing_from_kr(from_kr, f)
+
 			self:create_creep(enemy_thumb_fmt, v(math.fmod(d - 1, 8) * 47.25 + 35, math.floor((d - 1) / 8) * 47.25 + 140), i, true)
 		end
 	end
 
 	self.creep:add_child(self.over_sprite)
+
 	self.over_sprite.hidden = true
 	self.over_sprite.anchor = v(self.over_sprite.size.x / 2, self.over_sprite.size.y / 2)
 	self.over_sprite.propagate_on_click = true
 	self.over_sprite.scale = v(0.75, 0.75)
+
 	self.creep:add_child(self.select_sprite2)
+
 	self.select_sprite2.anchor = v(self.select_sprite2.size.x / 2, self.select_sprite2.size.y / 2)
 	self.select_sprite2.hidden = false
 	self.select_sprite2.pos = v(35, 140)
 	self.select_sprite2.scale = v(0.75, 0.75)
 	self.page_buttons = {}
+
 	local total_pages = math.ceil(max_creeps / creeps_per_page)
 	local boffset = 40
 	local bx, by = 192 - 40 * (total_pages - 1) / 2, 530
@@ -3926,17 +4652,21 @@ function EncyclopediaView:load_creeps(index)
 	for i = 1, total_pages do
 		if i == index then
 			local b = KImageView:new("encyclopedia_pageNbrSelected_000" .. i)
+
 			b.anchor = v(b.size.x / 2, b.size.y / 2)
 			b.pos = v(bx + boffset * (i - 1), by)
+
 			self.creep:add_child(b)
 			table.insert(self.page_buttons, b)
 		else
 			local b = KImageButton:new("encyclopedia_pageNbr_000" .. i, "encyclopedia_pageNbrOver_000" .. i, "encyclopedia_pageNbrSelected_000" .. i)
+
 			b.anchor = v(b.size.x / 2, b.size.y / 2)
 			b.pos = v(bx + boffset * (i - 1), by)
 
 			function b.on_click(this, button, x, y)
 				local this_idx = i
+
 				S:queue("GUIButtonCommon")
 				self:load_creeps(this_idx)
 			end
@@ -3965,10 +4695,13 @@ function EncyclopediaView:create_creep(icon, pos, information, enabled)
 
 	if creep_data.always_shown or screen_map.user_data.seen[creep_data.name] then
 		local b = KButton:new()
+
 		b:set_image(icon)
+
 		b.anchor = v(b.size.x / 2, b.size.y / 2)
 		b.pos = pos
 		b.scale = V.v(0.75, 0.75)
+
 		self.creep:add_child(b)
 
 		function b.on_enter()
@@ -3985,9 +4718,11 @@ function EncyclopediaView:create_creep(icon, pos, information, enabled)
 		end
 	else
 		local b = KImageView:new("encyclopedia_creep_thumbs_lock")
+
 		b.scale = V.v(0.75, 0.75)
 		b.anchor = v(b.size.x / 2, b.size.y / 2)
 		b.pos = pos
+
 		self.creep:add_child(b)
 	end
 end
@@ -3995,23 +4730,28 @@ end
 function EncyclopediaView:creep_clicked(information, pos)
 	self.select_sprite2.hidden = false
 	self.select_sprite2.pos = pos
+
 	self:detail_creep(information)
 end
 
 function EncyclopediaView:detail_creep(index)
 	if self.right_panel then
 		self.back:remove_child(self.right_panel)
+
 		self.right_panel = nil
 	end
 
 	self.right_panel = KView:new(V.v(600, 700))
 	self.right_panel.propagate_on_click = true
 	self.right_panel.pos = v(self.sw / 2 - 30, 200)
+
 	self.back:add_child(self.right_panel)
+
 	local creep_data = GS.encyclopedia_enemies[index]
 	local ce = E:create_entity(creep_data.name)
 	local name_prefix = ce.info.i18n_key or string.upper(creep_data.name)
 	local title_label = GGLabel:new(V.v(280, 50))
+
 	title_label.pos = v(300, 44)
 	title_label.anchor.x = title_label.size.x / 2
 	title_label.font_name = "h_book"
@@ -4020,18 +4760,27 @@ function EncyclopediaView:detail_creep(index)
 	title_label.text = _(name_prefix .. "_NAME")
 	title_label.text_align = "center"
 	title_label.fit_lines = 1
+
 	local title_width, _w = title_label:get_wrap_lines()
+
 	self.right_panel:add_child(title_label)
+
 	local left_decoration = KImageView:new("encyclopedia_rightArt")
+
 	left_decoration.pos = v(300 - title_width / 2 - 10, 60)
 	left_decoration.anchor = v(left_decoration.size.x, left_decoration.size.y / 2)
 	left_decoration.scale.x = 0.7
+
 	self.right_panel:add_child(left_decoration)
+
 	local right_decoration = KImageView:new("encyclopedia_rightArt")
+
 	right_decoration.pos = v(300 + title_width / 2 + 10, 60)
 	right_decoration.anchor = v(left_decoration.size.x, right_decoration.size.y / 2)
 	right_decoration.scale.x = -0.7
+
 	self.right_panel:add_child(right_decoration)
+
 	local from_kr
 
 	if index <= 68 then
@@ -4049,15 +4798,22 @@ function EncyclopediaView:detail_creep(index)
 	local f = string.format("encyclopedia_creeps_%04i", ce.info.enc_icon)
 	local enemy_fmt = U.splicing_from_kr(from_kr, f)
 	local portrait = KImageView:new(enemy_fmt)
+
 	portrait.anchor = v(portrait.size.x / 2, portrait.size.y / 2)
 	portrait.pos = v(300, 175)
 	portrait.scale = v(0.7, 0.708)
+
 	self.right_panel:add_child(portrait)
+
 	local over_portrait = KImageView:new("encyclopedia_frame")
+
 	over_portrait.anchor = v(over_portrait.size.x / 2, over_portrait.size.y / 2)
 	over_portrait.pos = v(300, 175)
+
 	self.right_panel:add_child(over_portrait)
+
 	local desc_label = GGLabel:new(V.v(330, 50))
+
 	desc_label.pos = v(300, 280)
 	desc_label.anchor = v(165, 0)
 	desc_label.font_name = "body"
@@ -4067,11 +4823,16 @@ function EncyclopediaView:detail_creep(index)
 	desc_label.text = _(name_prefix .. "_DESCRIPTION")
 	desc_label.text_align = "center"
 	desc_label.fit_lines = 4
+
 	self.right_panel:add_child(desc_label)
+
 	local frame = KImageView:new("encyclopedia_rightPages_0002")
+
 	frame.anchor = v(frame.size.x / 2, 0)
 	frame.pos = v(305, 360)
+
 	self.right_panel:add_child(frame)
+
 	local mx = 205
 	local my = 380
 	local ci = ce.info.fn(ce)
@@ -4082,6 +4843,7 @@ function EncyclopediaView:detail_creep(index)
 
 	for i = 1, 6 do
 		local desc_label = GGLabel:new(V.v(90, 50))
+
 		desc_label.pos = v(mx + 20, my - 5)
 		desc_label.anchor = v(0, 2)
 		desc_label.font_name = "body"
@@ -4090,7 +4852,9 @@ function EncyclopediaView:detail_creep(index)
 		desc_label.text = skill_table[i]
 		desc_label.text_align = "left"
 		desc_label.fit_lines = 1
+
 		self.right_panel:add_child(desc_label)
+
 		mx = mx + 130
 
 		if mx > 400 then
@@ -4107,9 +4871,11 @@ function EncyclopediaView:detail_creep(index)
 	end
 
 	local special_frame = KImageView:new("encyclopedia_rightPages_0004")
+
 	special_frame.anchor.x = special_frame.size.x / 2
 	special_frame.pos = v(300, 390)
 	special_frame.scale = v(0.75, 0.75)
+
 	self.right_panel:add_child(special_frame)
 
 	if string.len(special) == 0 then
@@ -4117,6 +4883,7 @@ function EncyclopediaView:detail_creep(index)
 	end
 
 	local desc_label = GGLabel:new(V.v(400, 22))
+
 	desc_label.pos = v(300, 506)
 	desc_label.anchor = v(desc_label.size.x / 2, 0)
 	desc_label.font_name = "body"
@@ -4126,6 +4893,7 @@ function EncyclopediaView:detail_creep(index)
 	desc_label.colors.text = {148, 94, 58}
 	desc_label.vertical_align = "middle"
 	desc_label.fit_lines = 1
+
 	self.right_panel:add_child(desc_label)
 end
 
@@ -4133,6 +4901,7 @@ HeroNameLabel = class("HeroNameLabel", KView)
 
 function HeroNameLabel:initialize(size)
 	HeroNameLabel.super.initialize(self, size or self.size)
+
 	self.labels = {}
 	self.hero_name_config = map_data.hero_names_config
 end
@@ -4152,7 +4921,9 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 	if #labels < #parts then
 		for i = #labels + 1, #parts do
 			local l = GGShaderLabel:new(self.size)
+
 			self:add_child(l)
+
 			labels[i] = l
 			l.font_name = IS_KR1 and "hero_name_label_kr1" or "hero_name_label"
 			l.shaders = {"p_bands", "p_outline", "p_glow", "p_drop_shadow"}
@@ -4166,6 +4937,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 
 	for i = 1, #labels do
 		local l = labels[i]
+
 		l.hidden = true
 	end
 
@@ -4178,9 +4950,13 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 	end
 
 	local longest_l = labels[longest_idx]
+
 	longest_l.text = parts[longest_idx]
+
 	longest_l:do_fit_lines(1, fs)
+
 	longest_l.size.y = longest_l:get_font_height()
+
 	local bl = longest_l:get_font_baseline()
 
 	for i = 1, #parts do
@@ -4196,6 +4972,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 		l.hidden = nil
 		l.pos.y = self.size.y - bl - (#parts - i) * longest_l.size.y
 		l.shader_args = conf.shader_args
+
 		l:redraw()
 	end
 end
@@ -4204,11 +4981,14 @@ HeroStatDots = class("HeroStatDots", KView)
 
 function HeroStatDots:initialize()
 	HeroStatDots.super.initialize(self, size)
+
 	self.dots_per_second = 20
 
 	for i = 1, 8 do
 		local d = KImageView:new("heroroom_buttons")
+
 		d.pos.x = (i - 1) * 20
+
 		self:add_child(d)
 	end
 end
@@ -4237,6 +5017,7 @@ function HeroStatDots:update(dt)
 
 	if self.value and self.dest_value and self.value < self.dest_value then
 		local on_count = km.clamp(0, self.dest_value, math.floor(self.ts * self.dots_per_second))
+
 		self.value = on_count
 
 		for i, c in ipairs(self.children) do
@@ -4250,6 +5031,7 @@ HPAni.static.init_arg_names = {"image_name"}
 
 function HPAni:initialize(image_name)
 	HPAni.super.initialize(self, nil, image_name)
+
 	self.propagate_on_click = true
 	self.propagate_on_down = true
 	self.propagate_on_up = true
@@ -4290,10 +5072,13 @@ function HPAni:update(dt)
 
 			if t < t1 then
 				self.alpha = v1
+
 				break
 			elseif t1 <= t and t < t2 then
 				local phase = (t - t1) / (t2 - t1)
+
 				self.alpha = U.ease_value(v1, v2, phase)
+
 				break
 			else
 				self.alpha = v2
@@ -4322,6 +5107,7 @@ end
 
 function HeroRoomViewKR1:initialize(size)
 	HeroRoomViewKR1.super.initialize(self, size)
+
 	local ht = self:get_child_by_id("hero_thumbs")
 	local finished_levels = self:get_finished_levels()
 	local single_hero_thumb_x_size
@@ -4331,18 +5117,25 @@ function HeroRoomViewKR1:initialize(size)
 		local tpos = V.v((i - 1) % 10 * 37.5, math.floor((i - 1) / 10) * 38.5)
 		local v2_name = U.splicing_from_kr(d.from_kr, string.format("hero_room_thumbs_%04d", d.thumb))
 		local v2 = KImageView:new(v2_name)
+
 		v2.pos = tpos
 		v2.scale = scale
+
 		ht:add_child(v2)
+
 		local bo = KImageView:new("hero_room_thumbs_0000")
+
 		bo.pos = tpos
 		bo.scale = scale
+
 		ht:add_child(bo)
 
 		if not table.find(finished_levels, d.available_level) then
 			local v1 = KImageView:new("hero_room_portraits_lock")
+
 			v1.scale = scale
 			v1.pos = tpos
+
 			ht:add_child(v1)
 		end
 
@@ -4366,10 +5159,13 @@ function HeroRoomViewKR1:initialize(size)
 
 	local function create_select_view(name)
 		local view = KImageView(name)
+
 		view.scale = scale
 		view.hidden = true
 		view.not_thumb = true
+
 		ht:add_child(view)
+
 		return view
 	end
 
@@ -4378,6 +5174,7 @@ function HeroRoomViewKR1:initialize(size)
 	self.border_image = create_select_view("hero_room_thumbs_select_0000")
 	self.hover_image = create_select_view("hero_room_thumbs_select_0003")
 	self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size * scale.x - self.check_image_1.size.x * 0.06
+
 	local bs = self:get_child_by_id("hero_room_sel_select")
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
 
@@ -4395,7 +5192,9 @@ function HeroRoomViewKR1:initialize(size)
 		S:queue("GUIButtonCommon")
 		self:hide()
 	end
+
 	local special_description_toggle_button = self:get_child_by_id("special_description_toggle_button")
+
 	self.showing_special_description = false
 
 	function special_description_toggle_button.on_click()
@@ -4426,6 +5225,7 @@ function HeroRoomViewKR1:initialize(size)
 		if selected_name and get_hero_index(selected_name) then
 			local hd = screen_map.hero_data[get_hero_index(selected_name)]
 			local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+
 			screen_map.hero_icon_portrait:set_image(img_name)
 		else
 			screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0000")
@@ -4435,11 +5235,14 @@ end
 
 function HeroRoomViewKR1:show_hero(name)
 	self.hero_shown = name
+
 	local hd = screen_map.hero_data[get_hero_index(name)]
 	local ht = E:get_template(hd.name)
 	local th = self:get_child_by_id(name)
+
 	self.border_image.pos = th.pos
 	self.border_image.hidden = false
+
 	local hp = self:get_child_by_id("hero_portraits")
 
 	for _, c in pairs(hp.children) do
@@ -4452,8 +5255,11 @@ function HeroRoomViewKR1:show_hero(name)
 	end
 
 	local lt = self:get_child_by_id("portrait_hero_name_label")
+
 	lt:set_hero(name, ht.info.i18n_key)
+
 	lt.hidden = i18n.current_locale == "en"
+
 	local ll = self:get_child_by_id("hero_room_sel_locked")
 	local bs = self:get_child_by_id("hero_room_sel_select")
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
@@ -4473,6 +5279,7 @@ function HeroRoomViewKR1:show_hero(name)
 			if hero == name then
 				bs.hidden = true
 				bd.hidden = false
+
 				break
 			end
 		end
@@ -4486,18 +5293,22 @@ function HeroRoomViewKR1:show_hero(name)
 	end
 
 	self.showing_special_description = not self.showing_special_description
+
 	self:toggle_special_description()
 end
 
 function HeroRoomViewKR1:deselect_hero(name)
 	local bs = self:get_child_by_id("hero_room_sel_select")
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
+
 	bs.hidden = false
 	bd.hidden = true
 	screen_map.hero_icon_portrait.image_scale = 1
 	screen_map.hero_icon_portrait.pos.x = 0
 	screen_map.hero_icon_portrait.pos.y = 0
+
 	screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0010")
+
 	local last_hero_num = #screen_map.user_data.heroes.selected
 
 	for i, hero in pairs(screen_map.user_data.heroes.selected) do
@@ -4528,15 +5339,17 @@ function HeroRoomViewKR1:select_hero(name, silent)
 	local hd = screen_map.hero_data[get_hero_index(name)]
 
 	if not hd then
-		return
+		return 
 	end
 
 	local thumbs = self:get_child_by_id("hero_thumbs")
 	local th = thumbs:get_child_by_id(name)
 	local bs = self:get_child_by_id("hero_room_sel_select")
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
+
 	bs.hidden = true
 	bd.hidden = false
+
 	local ht = E:get_template(hd.name)
 
 	if not silent then
@@ -4546,8 +5359,11 @@ function HeroRoomViewKR1:select_hero(name, silent)
 	screen_map.hero_icon_portrait.pos.x = 0
 	screen_map.hero_icon_portrait.pos.y = 0
 	screen_map.hero_icon_portrait.image_scale = 1
+
 	local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+
 	screen_map.hero_icon_portrait:set_image(img_name)
+
 	screen_map.hero_icon_portrait.hidden = false
 
 	if not screen_map.user_data.heroes.selected then
@@ -4571,7 +5387,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
 				self.check_image_1.pos = th.pos
 			end
 
-			return
+			return 
 		end
 	else
 		for i, hero in pairs(screen_map.user_data.heroes.selected) do
@@ -4586,11 +5402,12 @@ function HeroRoomViewKR1:select_hero(name, silent)
 					end
 				end
 
-				return
+				return 
 			end
 		end
 
 		self.check_image_2.pos = th.pos
+
 		table.remove(screen_map.user_data.heroes.selected, 2)
 		table.insert(screen_map.user_data.heroes.selected, name)
 	end
@@ -4601,6 +5418,7 @@ end
 function HeroRoomViewKR1:toggle_special_description()
 	if self.special_list then
 		self.back:remove_child(self.special_list)
+
 		self.special_list = nil
 	end
 
@@ -4610,16 +5428,21 @@ function HeroRoomViewKR1:toggle_special_description()
 	else
 		self:get_child_by_id("hero_room_stats").hidden = true
 		self:get_child_by_id("hero_room_description_box").hidden = true
+
 		local special_list = KView:new(V.v(600, 400))
+
 		special_list.propagate_on_click = true
 		special_list.pos = v(-50, 420)
 		self.special_list = special_list
+
 		self.back:add_child(special_list)
+
 		-- 首先，做一个 special 列表，每一个项的字符串取 skills_spec_desc 的内容按，拆分
 		local hero_room_special = require("strings.hero_room_special")
 		local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
 		-- 添加一个用于显示描述的区域
 		local desc_area = GGLabel:new(V.v(700, 180))
+
 		desc_area.pos = v(500, 170)
 		desc_area.anchor = v(desc_area.size.x / 2, desc_area.size.y / 2)
 		desc_area.font_name = "body"
@@ -4629,8 +5452,11 @@ function HeroRoomViewKR1:toggle_special_description()
 		desc_area.colors.background = {255, 255, 255, 0}
 		desc_area.text_align = "left"
 		desc_area.fit_size = true
+
 		special_list:add_child(desc_area)
+
 		self.special_description_area = desc_area
+
 		-- 对于每一项竖向显示，做成按钮
 		local y_end = 260
 		local y_offset = 80
@@ -4645,6 +5471,7 @@ function HeroRoomViewKR1:toggle_special_description()
 
 		for name, text in pairs(special_map) do
 			local spec_button = GGOptionsButton:new(name)
+
 			spec_button.pos = v(-20, y_end - i * y_offset)
 			spec_button.anchor.x = spec_button.size.x / 2
 			spec_button.fit_size = true
@@ -4653,12 +5480,15 @@ function HeroRoomViewKR1:toggle_special_description()
 			function spec_button.on_click()
 				S:queue("GUIButtonCommon")
 				self:show_special_description(name)
+
 				spec_button.selected = true
+
 				spec_button:set_image(spec_button.click_image_name)
 
 				for _, b in pairs(special_list.buttons) do
 					if b ~= spec_button and b.selected then
 						b.selected = false
+
 						b:set_image(b.default_image_name)
 					end
 				end
@@ -4677,11 +5507,14 @@ function HeroRoomViewKR1:toggle_special_description()
 			end
 
 			special_list:add_child(spec_button)
+
 			special_list.buttons[#special_list.buttons + 1] = spec_button
 
 			if i == count then
 				self:show_special_description(name)
+
 				spec_button.selected = true
+
 				spec_button:set_image(spec_button.click_image_name)
 			end
 		end
@@ -4694,6 +5527,7 @@ function HeroRoomViewKR1:show_special_description(special_name)
 	local hero_room_special = require("strings.hero_room_special")
 	local special_map = hero_room_special[self.hero_shown] or hero_room_special["default"]
 	local special_text = special_map[special_name]
+
 	self.special_description_area.text = special_text
 end
 
@@ -4701,27 +5535,39 @@ OptionsView = class("OptionsView", PopUpView)
 
 function OptionsView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.back = KImageView:new("options_bg_notxt")
 	self.pos = v(0, 0)
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2, sh / 2 - 50)
+
 	self:add_child(self.back)
+
 	self.back.alpha = 1
+
 	local mx = 100
 	local y = 130
 	local header = GGPanelHeader:new(_("OPTIONS"), 242)
+
 	header.pos = V.v(240, CJK(41, 39, nil, 39) - (IS_KR3 and 19 or 0))
+
 	self.back:add_child(header)
+
 	local title = GGOptionsLabel:new(V.v(240, 30))
+
 	title.text = _("SFX")
 	title.text_align = "center"
 	title.fit_lines = 1
 	title.anchor.x = title.size.x / 2
 	title.pos = V.v(self.back.size.x / 2, y)
 	title.vertical_align = "middle"
+
 	self.back:add_child(title)
+
 	y = y + title.size.y + 7
+
 	local s_sfx = VolumeSlider:new("options_sounds_0004", "options_sounds_0005", "options_sounds_0006")
+
 	s_sfx.pos = V.v(self.back.size.x / 2, y)
 	s_sfx.anchor.x = s_sfx.size.x / 2
 
@@ -4730,7 +5576,9 @@ function OptionsView:initialize(sw, sh)
 	end
 
 	s_sfx.id = "s_sfx"
+
 	self.back:add_child(s_sfx)
+
 	y = y + 50
 	title = GGOptionsLabel:new(V.v(200, 30))
 	title.text = _("Music")
@@ -4739,8 +5587,11 @@ function OptionsView:initialize(sw, sh)
 	title.pos = V.v(self.back.size.x / 2, y)
 	title.anchor.x = title.size.x / 2
 	title.vertical_align = "middle"
+
 	self.back:add_child(title)
+
 	y = y + title.size.y + 7
+
 	local s_music = VolumeSlider:new("options_sounds_0001", "options_sounds_0002", "options_sounds_0003")
 
 	function s_music:on_change(value)
@@ -4750,7 +5601,9 @@ function OptionsView:initialize(sw, sh)
 	s_music.pos = V.v(self.back.size.x / 2, y)
 	s_music.anchor.x = s_music.size.x / 2
 	s_music.id = "s_music"
+
 	self.back:add_child(s_music)
+
 	y = y + 85 - 30
 	title = GGOptionsLabel:new(V.v(200, 38))
 	title.text = _("Difficulty")
@@ -4760,7 +5613,9 @@ function OptionsView:initialize(sw, sh)
 	title.anchor.x = title.size.x / 2
 	title.propagate_on_click = true
 	title.fit_size = true
+
 	self.back:add_child(title)
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then
@@ -4769,10 +5624,14 @@ function OptionsView:initialize(sw, sh)
 
 	self.difficulty_labels = {"LEVEL_SELECT_DIFFICULTY_CASUAL", "LEVEL_SELECT_DIFFICULTY_NORMAL", "LEVEL_SELECT_DIFFICULTY_VETERAN", "LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"}
 	y = y + 38
+
 	local diff_bg = KImageView:new("difficulty_select_bg")
+
 	diff_bg.anchor.x = diff_bg.size.x / 2
 	diff_bg.pos = v(self.back.size.x / 2, y)
+
 	self.back:add_child(diff_bg)
+
 	self.difficulty = GGLabel:new(V.v(220, 46))
 	self.difficulty.pos = v(self.back.size.x / 2, y)
 	self.difficulty.anchor.x = self.difficulty.size.x / 2
@@ -4785,6 +5644,7 @@ function OptionsView:initialize(sw, sh)
 	self.difficulty.colors.text_default = {214, 189, 131}
 	self.difficulty.colors.text_hover = {255, 223, 0}
 	self.difficulty.fit_size = true
+
 	self.back:add_child(self.difficulty)
 
 	function self.difficulty.on_enter(this)
@@ -4802,7 +5662,9 @@ function OptionsView:initialize(sw, sh)
 
 	mx = 150
 	y = y + 120 - 10
+
 	local b
+
 	b = GGOptionsButton:new(_("BUTTON_QUIT"))
 	b.anchor.x = 0
 	b.pos = V.v(mx, y)
@@ -4815,7 +5677,9 @@ function OptionsView:initialize(sw, sh)
 	end
 
 	self.quit = b
+
 	self.back:add_child(b)
+
 	b = GGOptionsButton:new(_("BUTTON_RESUME"))
 	b.anchor.x = b.size.x
 	b.pos = V.v(self.back.size.x - mx, y)
@@ -4826,7 +5690,9 @@ function OptionsView:initialize(sw, sh)
 	end
 
 	self.resume = b
+
 	self.back:add_child(b)
+
 	local settings = storage:load_settings()
 
 	if settings then
@@ -4842,6 +5708,7 @@ end
 
 function OptionsView:show()
 	OptionsView.super.show(self)
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then
@@ -4855,13 +5722,16 @@ end
 
 function OptionsView:hide()
 	OptionsView.super.hide(self)
+
 	local s_sfx = self:get_child_by_id("s_sfx")
 	local s_music = self:get_child_by_id("s_music")
 
 	if self._last_volume_fx ~= s_sfx.value or self._last_volume_music ~= s_music.value then
 		local settings = storage:load_settings()
+
 		settings.volume_fx = km.clamp(0, 1, s_sfx.value)
 		settings.volume_music = km.clamp(0, 1, s_music.value)
+
 		storage:save_settings(settings)
 	end
 end
@@ -4870,18 +5740,28 @@ DifficultyButton = class("DifficultyButton", KImageButton)
 
 function DifficultyButton:initialize(label_text, desc_text, difficulty)
 	KImageButton.initialize(self, "difficulty_btns_notxt_marco_0001", "difficulty_btns_notxt_marco_0002", "difficulty_btns_notxt_marco_0001")
+
 	self.scale = V.v(1, 1)
 	self.on_down_scale = 0.98
 	self.anchor.x, self.anchor.y = self.size.x / 2, self.size.y / 2
+
 	local illus = KImageView:new("difficulty_btns_ilustraciones_000" .. difficulty)
+
 	illus.anchor.x, illus.anchor.y = illus.size.x / 2, illus.size.y / 2
 	illus.pos.x, illus.pos.y = self.size.x / 2, self.size.y / 2
+
 	self:add_child(illus)
+
 	local glow = KImageView:new("difficulty_btns_notxt_marco_0003")
+
 	glow.hidden = true
+
 	self:add_child(glow)
+
 	self.glow = glow
+
 	local label = GGShaderLabel:new(V.v(268, 50))
+
 	label.font_name = "h"
 	label.font_size = 46
 	label.text_align = "center"
@@ -4909,9 +5789,13 @@ function DifficultyButton:initialize(label_text, desc_text, difficulty)
 	}}
 	label.anchor = v(label.size.x / 2, label.size.y)
 	label.pos = v(self.size.x / 2, 272)
+
 	self:add_child(label)
+
 	self.label = label
+
 	local desc = GGLabel:new(V.v(260, 92))
+
 	desc.font_name = "body"
 	desc.font_size = 20
 	desc.line_height = CJK(1, nil, nil, 0.8)
@@ -4925,7 +5809,9 @@ function DifficultyButton:initialize(label_text, desc_text, difficulty)
 	desc.fit_lines = 3
 	desc.anchor = v(desc.size.x / 2, 0)
 	desc.pos = v(self.size.x / 2, 280)
+
 	self:add_child(desc)
+
 	self.desc = desc
 end
 
@@ -4964,7 +5850,9 @@ end
 
 function DifficultyButton:disable(tint, color)
 	DifficultyButton.super.disable(self, tint, color)
+
 	local args = self.label.shader_args[1]
+
 	args.c1 = {0.6078431372549019, 0.49411764705882355, 0, 1}
 	args.c2 = {0.6078431372549019, 0.49411764705882355, 0, 1}
 	args.c3 = {0.4588235294117647, 0.12156862745098039, 0, 1}
@@ -4972,7 +5860,9 @@ end
 
 function DifficultyButton:enable(untint)
 	DifficultyButton.super.disable(self, untint)
+
 	local args = self.label.shader_args[1]
+
 	args.c1 = {1, 0.8862745098039215, 0.38823529411764707, 1}
 	args.c2 = {1, 0.8862745098039215, 0.38823529411764707, 1}
 	args.c3 = {0.8509803921568627, 0.5137254901960784, 0.10588235294117647, 1}
@@ -4982,23 +5872,33 @@ DifficultyView = class("DifficultyView", PopUpView)
 
 function DifficultyView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.back = KImageView:new("difficulty_bg_notxt")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2, sh / 2)
+
 	self:add_child(self.back)
+
 	sw = self.back.size.x
 	sh = self.back.size.y
+
 	local header = GGPanelHeader:new(_("DIFFICULTY LEVEL"), 260)
+
 	header.pos = V.v(sw / 2, 29 + (IS_KR3 and -34 or 0))
 	header.anchor.x = 130
+
 	self.back:add_child(header)
+
 	local campaign_done = #screen_map.user_data.levels > GS.main_campaign_levels
 	local b_y = sh / 2 - 20
 	local offset = 90
 	local aw = self.back.size.x - 2 * offset
 	local sep = -60
+
 	b_xs = {sw / 2 - 400, sw / 2 - 133.33333333333334, sw / 2 + 133.33333333333334, sw / 2 + 400}
+
 	local b_texts = {{_("LEVEL_SELECT_DIFFICULTY_CASUAL"), _("For beginners to strategy games!")}, {_("LEVEL_SELECT_DIFFICULTY_NORMAL"), _("A good challenge!")}, {_("LEVEL_SELECT_DIFFICULTY_VETERAN"), _("Hardcore! play at your own risk!")}}
+
 	-- if impo then
 	--     table.insert(b_texts,
 	--         {_("LEVEL_SELECT_DIFFICULTY_IMPOSSIBLE"),
@@ -5012,6 +5912,7 @@ function DifficultyView:initialize(sw, sh)
 		local b = DifficultyButton:new(title, desc, i)
 		local bw = b.size.x
 		local x = sw / 2 + (2 * i - 5) * (bw / 2 + sep / 2)
+
 		b.pos = V.v(x, b_y)
 		b.scale = V.v(0.75, 0.75)
 
@@ -5020,7 +5921,9 @@ function DifficultyView:initialize(sw, sh)
 		-- end
 		function b.on_click(this, b, x, y)
 			S:queue("GUIButtonCommon")
+
 			screen_map.user_data.difficulty = i
+
 			storage:save_slot(screen_map.user_data)
 			self:hide()
 		end
@@ -5029,6 +5932,7 @@ function DifficultyView:initialize(sw, sh)
 	end
 
 	local tip = GGLabel:new(V.v(550, 40))
+
 	tip.font_name = "body"
 	tip.font_size = 20
 	tip.text_align = "left"
@@ -5041,6 +5945,7 @@ function DifficultyView:initialize(sw, sh)
 	tip.fit_lines = 1
 	tip.anchor = v(0, 0)
 	tip.pos = v(354 + (impo and 82 or 0), 584)
+
 	self.back:add_child(tip)
 end
 
@@ -5048,19 +5953,28 @@ AchievementsView = class("AchievementsView", PopUpView)
 
 function AchievementsView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.disabled_tint_color = {200, 200, 200, 255}
 	self.back = KImageView:new("Achievements_BG_notxt")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2 - 15, sh / 2)
+
 	self:add_child(self.back)
+
 	sw = self.back.size.x
 	sh = self.back.size.y
+
 	local header = GGPanelHeader:new(_("ACHIEVEMENTS"), 274)
+
 	header.pos = V.v(364, CJK(39, 35, nil, 36) + (IS_KR3 and -36 or 0))
+
 	self.back:add_child(header)
+
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+
 	close_button.pos = v(self.back.size.x - 55, 31)
 	self.close_button = close_button
+
 	self.back:add_child(close_button)
 
 	function close_button.on_click(this, x, y)
@@ -5074,6 +5988,7 @@ function AchievementsView:initialize(sw, sh)
 
 	for i = 1, self.items_per_page do
 		local ach = KImageView:new("Achievements_Box_Large")
+
 		ach.anchor = v(math.floor(ach.size.x / 2), math.floor(ach.size.y / 2))
 		ach.pos = v(self.back.size.x / 2, 173 + math.floor((i - 1) / 2) * 108)
 
@@ -5086,7 +6001,9 @@ function AchievementsView:initialize(sw, sh)
 		ach.img = KImageView:new("achievement_icons_0001")
 		ach.img.anchor = v(math.floor(ach.img.size.x / 2), math.floor(ach.img.size.y / 2))
 		ach.img.pos = v(57, 49)
+
 		ach:add_child(ach.img)
+
 		ach.title = GGLabel:new(V.v(260, 32))
 		ach.title.pos = v(118, 2 + (IS_KR3 and 4 or 0))
 		ach.title.font_name = "h"
@@ -5095,7 +6012,9 @@ function AchievementsView:initialize(sw, sh)
 		ach.title.text_align = "left"
 		ach.title.vertical_align = "bottom"
 		ach.title.fit_lines = 1
+
 		ach:add_child(ach.title)
+
 		ach.desc = GGLabel:new(V.v(260, 40))
 		ach.desc.pos = v(118, CJK(33, nil, 36, 36) + (IS_KR3 and 6 or 0))
 		ach.desc.font_name = "body"
@@ -5104,8 +6023,10 @@ function AchievementsView:initialize(sw, sh)
 		ach.desc.line_height = CJK(0.75, nil, 1.1, 0.9)
 		ach.desc.text_align = "left"
 		ach.desc.fit_lines = CJK(4, nil, nil, 2)
+
 		ach:add_child(ach.desc)
 		self.back:add_child(ach)
+
 		self.boxes[i] = ach
 	end
 
@@ -5115,9 +6036,12 @@ function AchievementsView:initialize(sw, sh)
 
 	for i = 1, self.max_pages do
 		local o_button = AchievementsPageButton:new(i)
+
 		o_button.pos = v(ox, 696)
 		o_button.page_idx = i
+
 		self.back:add_child(o_button)
+
 		ox = ox + button_w
 	end
 
@@ -5136,6 +6060,7 @@ function AchievementsView:createPage(pagenum)
 		if init + i <= #achievements_data then
 			local ach = achievements_data[init + i]
 			local box = self.boxes[i]
+
 			box.hidden = false
 
 			if not screen_map.user_data.achievements then
@@ -5143,6 +6068,7 @@ function AchievementsView:createPage(pagenum)
 			end
 
 			local isActive = screen_map.user_data.achievements[ach.name]
+
 			-- if isActive then
 			box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
 
@@ -5156,6 +6082,7 @@ function AchievementsView:createPage(pagenum)
 			local prefix = IS_KR3 and "ELVES_" or ""
 			local title = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")
 			local desc = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_DESCRIPTION")
+
 			box.title.text = title
 			box.desc.text = desc
 
@@ -5175,6 +6102,7 @@ function AchievementsView:createPage(pagenum)
 			end
 		else
 			local box = self.boxes[i]
+
 			box.hidden = true
 		end
 	end
@@ -5197,7 +6125,9 @@ AchievementsPageButton.static.init_arg_names = {"label_text"}
 
 function AchievementsPageButton:initialize(label_text)
 	local rs = GGLabel.static.ref_h / REF_H
+
 	GGButton.initialize(self, "Achievements_page_0001", "Achievements_page_0002", "Achievements_page_0002")
+
 	self.deselected_image_name = "Achievements_page_0001"
 	self.selected_image_name = "Achievements_page_0003"
 	self.label.pos.x, self.label.pos.y = rs * 1, 0
@@ -5220,12 +6150,14 @@ end
 
 function AchievementsPageButton:select()
 	self.default_image_name = self.selected_image_name
+
 	self:disable()
 	self:set_image(self.selected_image_name)
 end
 
 function AchievementsPageButton:deselect()
 	self.default_image_name = self.deselected_image_name
+
 	self:enable()
 
 	if not self:is_disabled() then
@@ -5237,7 +6169,9 @@ BooleanToggleItem = class("BooleanToggleItem", KButton)
 
 function BooleanToggleItem:initialize(key_text, initial_value, size)
 	size = size or V.v(300, 40)
+
 	KButton.initialize(self, size) -- 改为 KButton.initialize
+
 	self.key = key_text
 	self.value = initial_value or false
 	self.on_change_callback = nil
@@ -5257,7 +6191,9 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
 	self.key_label.colors.text_default = {200, 200, 200, 255}
 	self.key_label.colors.text_hover = {255, 255, 255, 255}
 	self.key_label.propagate_on_click = true
+
 	self:add_child(self.key_label)
+
 	-- 值标签
 	self.value_label = GGLabel:new(V.v(60, self.size.y))
 	self.value_label.pos = V.v(self.size.x - 70, 0)
@@ -5272,8 +6208,11 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
 	self.value_label.colors.text_no_hover = {255, 150, 150, 255}
 	self.value_label.colors.text_default = {200, 200, 200, 255}
 	self.value_label.propagate_on_click = true
+
 	self:add_child(self.value_label)
+
 	self._type = type(initial_value)
+
 	-- 设置初始状态
 	self:update_display()
 end
@@ -5323,6 +6262,7 @@ function BooleanToggleItem:on_exit()
 	-- 取消高亮效果
 	self.colors.background = {0, 0, 0, 0}
 	self.key_label.colors.text = self.key_label.colors.text_default
+
 	self:update_display()
 end
 
@@ -5348,6 +6288,7 @@ end
 function BooleanToggleItem:on_textinput(t)
 	if self._type == "number" then
 		self.value_label.text = tostring(self.value_label.text .. t)
+
 		local num = tonumber(self.value_label.text)
 
 		if num then
@@ -5400,7 +6341,9 @@ BooleanToggleGroup = class("BooleanToggleGroup", KView)
 
 function BooleanToggleGroup:initialize(size)
 	size = size or V.v(400, 300)
+
 	KView.initialize(self, size)
+
 	self.key_label_map = {}
 	self.items = {}
 	self.item_height = 45
@@ -5436,6 +6379,7 @@ function BooleanToggleGroup:add_items(data)
 		if type(value) == "boolean" or type(value) == "number" then
 			-- 添加新 item
 			local item = BooleanToggleItem:new(self.key_label_map[key] or key, value, V.v(column_width, 40))
+
 			item.pos = V.v((start_x + math.floor(index / max_rows) * (column_width + self.padding.x)), start_y + (index % max_rows) * row_height)
 			item.on_change_callback = function(label, value)
 				self.data[table.keyforobject(self.key_label_map, label) or label] = value
@@ -5443,6 +6387,7 @@ function BooleanToggleGroup:add_items(data)
 			self.items[key] = item
 			self.data[key] = value
 			index = index + 1
+
 			self:add_child(item)
 		end
 	end
@@ -5470,6 +6415,7 @@ function BooleanToggleGroup:set_all_data(data)
 	end
 
 	self.items = {}
+
 	self:add_items(data)
 end
 
@@ -5481,30 +6427,40 @@ BooleanPanelView = class("BooleanPanelView", PopUpView)
 
 function BooleanPanelView:initialize(sw, sh, title)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.back = KImageView:new("options_bg_notxt")
 	self.pos = v(0, 0)
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2, sh / 2 - 50)
 	self.back.scale = v(1.45, 1.45)
 	self.header = title
+
 	self:add_child(self.back)
+
 	self.back.alpha = 1
+
 	-- 添加标题
 	local header = GGPanelHeader:new(self.header, 242)
+
 	header.pos = V.v(240, CJK(41, 39, nil, 39) - (IS_KR3 and 19 or 0))
+
 	self.back:add_child(header)
+
 	-- 创建配置组
 	self.data_group = BooleanToggleGroup:new(V.v(self.back.size.x, self.back.size.y))
 	self.data_group.pos = V.v(100, 100)
 	self.data_group.scale = v(1 / 1.45, 1 / 1.45)
+
 	-- 设置数据改变回调
 	self.data_group:set_on_data_change_callback(function(key, value, all_data)
 	end)
 	self.back:add_child(self.data_group)
+
 	-- 添加底部按钮
 	local mx = 150
 	local y = 450
 	local b = GGOptionsButton:new(_("BUTTON_DONE"))
+
 	b.anchor.x = b.size.x / 2
 	b.pos = V.v(self.back.size.x / 2, y)
 
@@ -5516,6 +6472,7 @@ function BooleanPanelView:initialize(sw, sh, title)
 	end
 
 	self.done_button = b
+
 	self.back:add_child(b)
 end
 
@@ -5566,6 +6523,7 @@ end
 
 function ConfigPanelView:load()
 	local config = storage:load_config()
+
 	self.data_group:set_all_data(config)
 end
 
@@ -5594,6 +6552,7 @@ end
 
 function CriketPanelView:load()
 	local criket = storage:load_criket()
+
 	self.data_group:set_all_data(criket)
 end
 

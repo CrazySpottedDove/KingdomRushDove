@@ -1,5 +1,6 @@
 -- chunkname: @./lib/klua/crypto.lua
 local success, ffi = pcall(require, "ffi")
+
 ffi = success and ffi or nil
 
 if ffi then
@@ -16,6 +17,7 @@ if ffi then
 			local octet = str:byte(i)
 			local xored = bit.bxor(hash, octet)
 			local timesprime = oneLong * xored * FNV_prime
+
 			hash = tonumber(timesprime % two32)
 		end
 

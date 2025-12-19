@@ -1,11 +1,14 @@
 local i18n = require("i18n")
+
 require("constants")
+
 local anchor_x = 0
 local anchor_y = 0
 local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
+
 require("templates")
 
 local function adx(v)
@@ -18,9 +21,13 @@ end
 
 local v = require("lib.klua.vector").v
 local vv = require("lib.klua.vector").vv
+
 require("game_templates_utils")
+
 tt = RT("tower_holder")
+
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "editor", "editor_script")
+
 tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.ui.has_nav_mesh = true
 tt.tower.level = 1
@@ -83,7 +90,9 @@ tt.build_name = "tower_engineer_1"
 tt.render.sprites[2].name = "tower_constructing_0001"
 tt.render.sprites[2].offset = vec_2(0, 41)
 tt = RT("tower_mage_1", "tower")
+
 AC(tt, "attacks")
+
 tt.tower.type = "mage"
 tt.tower.level = 1
 tt.tower.price = 100
@@ -145,7 +154,9 @@ tt = RT("bolt_3", "bolt")
 tt.bullet.damage_min = 44
 tt.bullet.damage_max = 81
 tt = RT("tower_engineer_1", "tower")
+
 AC(tt, "attacks")
+
 tt.tower.type = "engineer"
 tt.tower.level = 1
 tt.tower.price = 125
@@ -207,7 +218,9 @@ for i = 2, 8 do
 end
 
 tt = RT("tower_archer_1", "tower")
+
 AC(tt, "attacks")
+
 tt.tower.type = "archer"
 tt.tower.level = 1
 tt.tower.price = 70
@@ -282,7 +295,9 @@ tt.bullet.damage_min = 11
 tt.bullet.damage_max = 18
 tt.bullet.flight_time = fts(20)
 tt = RT("tower_barrack_1", "tower")
+
 AC(tt, "barrack")
+
 tt.tower.type = "barrack"
 tt.tower.level = 1
 tt.tower.price = 70
@@ -326,7 +341,9 @@ tt.render.sprites[3].prefix = "towerbarracklvl3_door"
 tt.barrack.soldier_type = "soldier_knight"
 tt.barrack.rally_range = 155
 tt = RT("tower_neptune_holder")
+
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info")
+
 tt.tower.level = 1
 tt.tower.type = "holder_neptune"
 tt.tower.can_be_mod = false
@@ -343,7 +360,9 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 39)
 tt.ui.click_rect = r(-40, -10, 80, 90)
 tt = RT("tower_neptune", "tower")
+
 AC(tt, "powers", "user_selection", "attacks")
+
 tt.tower.level = 1
 tt.tower.type = "neptune"
 tt.tower.price = 500
@@ -452,7 +471,9 @@ tt.bullet.damage_min = 30
 tt = RT("mod_rock_slow", "mod_slow")
 tt.modifier.duration = 0.75
 tt = RT("soldier_barrack_1", "soldier_militia")
+
 AC(tt, "revive")
+
 image_y = 46
 anchor_y = 11 / image_y
 tt.health.armor = 0.3
@@ -495,7 +516,9 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 10)
 tt = RT("soldier_barrack_2", "soldier_barrack_1")
+
 AC(tt, "ranged")
+
 image_y = 46
 anchor_y = 11 / image_y
 tt.health.armor = 0.4
@@ -527,11 +550,15 @@ tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].min_range = 25
 tt.render.sprites[1].prefix = "soldier_barrack_3"
 tt.unit.mod_offset = vec_2(0, 12)
+
 local b
 local balance = require("kr1.data.balance")
+
 ---龙魂宝壶
 tt = E:register_t("tower_holder_blocked_elemental", "tower")
+
 E:add_comps(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "tween", "sound_events", "editor")
+
 tt.tower.level = 1
 tt.tower.can_be_mod = false
 tt.tower_holder.blocked = true
@@ -549,7 +576,9 @@ tt.render.sprites[1].z = Z_DECALS
 tt.ui.click_rect = r(-40, -12, 80, 46)
 ---龙魂宝壶 金
 tt = E:register_t("tower_holder_blocked_elemental_metal_b", "tower_holder_blocked_elemental")
+
 E:add_comps(tt, "main_script")
+
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -586,7 +615,9 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 ---龙魂宝壶 木
 tt = E:register_t("tower_holder_blocked_elemental_wood_b", "tower_holder_blocked_elemental")
+
 E:add_comps(tt, "main_script")
+
 b = balance.specials.terrain_8.elemental_holders.wooden_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -623,7 +654,9 @@ tt.tower.type = "holder_blocked_elemental_wood_enhance"
 tt.tower_holder.unblock_price = 50
 ---龙魂宝壶 水
 tt = E:register_t("tower_holder_blocked_elemental_water_b", "tower_holder_blocked_elemental")
+
 E:add_comps(tt, "main_script")
+
 b = balance.specials.terrain_8.elemental_holders.water_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -657,7 +690,9 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 ---龙魂宝壶 火
 tt = E:register_t("tower_holder_blocked_elemental_fire_b", "tower_holder_blocked_elemental")
+
 E:add_comps(tt, "main_script")
+
 b = balance.specials.terrain_8.elemental_holders.fire_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -691,7 +726,9 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 ---龙魂宝壶 土
 tt = E:register_t("tower_holder_blocked_elemental_earth_b", "tower_holder_blocked_elemental")
+
 E:add_comps(tt, "main_script")
+
 b = balance.specials.terrain_8.elemental_holders.earth_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -725,7 +762,9 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 -- 龙魂宝壶-防御塔
 tt = E:register_t("tower_holder_elemental", "tower_holder")
+
 E:add_comps(tt, "main_script")
+
 tt.main_script.update = scripts.tower_holder_elemental.update
 tt.main_script.remove = scripts.tower_holder_elemental.remove
 tt.tower.terrain_style = nil
@@ -836,7 +875,9 @@ tt.controller_name = "controller_elemental_metal"
 tt.cannot_be_swapped = true
 -- 龙魂宝壶 控制器
 tt = RT("controller_elemental_wood")
+
 E:add_comps(tt, "main_script", "pos", "render", "tween")
+
 b = balance.specials.terrain_8.elemental_holders.wooden_holder
 tt.main_script.update = scripts.controller_elemental_wood.update
 tt.main_script.remove = scripts.controller_elemental_generic.remove
@@ -1033,7 +1074,9 @@ tt = E:register_t("mod_elemental_wood_slow", "mod_slow")
 tt.modifier.duration = 1
 tt.slow.factor = b.slow_factor
 tt = E:register_t("mod_elemental_wood_damage", "modifier")
+
 E:add_comps(tt, "dps")
+
 tt.modifier.duration = 1
 tt.dps.damage_min = b.damage_min
 tt.dps.damage_max = b.damage_max
@@ -1042,7 +1085,9 @@ tt.dps.damage_every = b.damage_every
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt = RT("controller_elemental_fire")
+
 E:add_comps(tt, "main_script", "pos", "render", "tween")
+
 b = balance.specials.terrain_8.elemental_holders.fire_holder
 tt.main_script.update = scripts.controller_elemental_fire.update
 tt.main_script.remove = scripts.controller_elemental_generic.remove
@@ -1157,452 +1202,3 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
--- tt = RT("controller_elemental_water")
--- E:add_comps(tt, "main_script", "pos", "render", "tween")
--- b = balance.specials.terrain_8.elemental_holders.water_holder
--- tt.main_script.update = scripts.controller_elemental_water.update
--- tt.main_script.remove = scripts.controller_elemental_generic.remove
--- tt.first_cooldown = b.teleport.first_cooldown
--- tt.cooldown = b.teleport.cooldown
--- tt.vis_bans = bor(F_FLYING, F_BOSS)
--- tt.vis_flags = bor(F_MOD)
--- tt.mod_teleport = "mod_eleemntal_water_holder_teleport"
--- tt.teleport_affect_radius = b.teleport.tp_radius
--- tt.decal_mist = "decal_elemental_water_holder_passive_mist"
--- tt.root_decal_dragon = "decal_elemental_water_holder_root_dragon"
--- tt.root_decal_dragon_kill = "decal_elemental_water_holder_root_dragon_kill"
--- tt.tp_max_targets = b.teleport.tp_max_targets
--- tt.delay_between_tps = b.teleport.delay_between_tps
--- tt.duration = b.teleport.duration
--- tt.chase_speed = b.teleport.chase_speed
--- tt.wander_interval = b.teleport.wander_interval
--- tt.tp_distance_nodes_min = b.teleport.tp_distance_nodes_min
--- tt.tp_distance_nodes_max = b.teleport.tp_distance_nodes_max
--- tt.controller_aura_healing = "aura_elemental_water_healing"
--- tt.render.sid_gradiente = 1
--- tt.render.sid_wings = 2
--- tt.render.sid_hojas = 3
--- tt.render.sid_dragon = 4
--- tt.render.sid_dragon_ability = 5
--- tt.render.sprites[tt.render.sid_gradiente].prefix = "stage33_water_holder_gradienteDef"
--- tt.render.sprites[tt.render.sid_gradiente].exo = true
--- tt.render.sprites[tt.render.sid_gradiente].name = "idle"
--- tt.render.sprites[tt.render.sid_gradiente].animated = true
--- tt.render.sprites[tt.render.sid_gradiente].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_gradiente].offset = v(-60, 85)
--- tt.render.sprites[tt.render.sid_wings] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_wings].prefix = "stage33_water_holder_cuernosDef"
--- tt.render.sprites[tt.render.sid_wings].name = "run"
--- tt.render.sprites[tt.render.sid_wings].exo = true
--- tt.render.sprites[tt.render.sid_wings].animated = true
--- tt.render.sprites[tt.render.sid_wings].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_wings].sort_y_offset = -10
--- tt.render.sprites[tt.render.sid_wings].anchor = v(0.5, 0.5)
--- tt.render.sprites[tt.render.sid_wings].alpha = 0
--- tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_hojas].prefix = "stage33_water_holder_jarrahojasDef"
--- tt.render.sprites[tt.render.sid_hojas].exo = true
--- tt.render.sprites[tt.render.sid_hojas].name = "run"
--- tt.render.sprites[tt.render.sid_hojas].animated = true
--- tt.render.sprites[tt.render.sid_hojas].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_hojas].offset = v(0, -10)
--- tt.render.sprites[tt.render.sid_hojas].sort_y_offset = -10
--- tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon].prefix = "stage33_water_holder_dragonDef"
--- tt.render.sprites[tt.render.sid_dragon].exo = true
--- tt.render.sprites[tt.render.sid_dragon].name = "idle"
--- tt.render.sprites[tt.render.sid_dragon].animated = true
--- tt.render.sprites[tt.render.sid_dragon].z = Z_EFFECTS
--- tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
--- tt.render.sprites[tt.render.sid_dragon].anchor = vv(0.5)
--- tt.render.sprites[tt.render.sid_dragon_ability] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon_ability].prefix = "stage33_water_holder_habilidad_1Def"
--- tt.render.sprites[tt.render.sid_dragon_ability].exo = true
--- tt.render.sprites[tt.render.sid_dragon_ability].name = "start_hability"
--- tt.render.sprites[tt.render.sid_dragon_ability].animated = true
--- tt.render.sprites[tt.render.sid_dragon_ability].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_dragon_ability].hidden = true
--- tt.render.sprites[tt.render.sid_dragon_ability].anchor = vv(0.5)
--- tt.update_on_path_active = {2, 3, 6}
--- tt.tween.sid_wings = 1
--- tt.tween.sid_show_hojas = 2
--- tt.tween.sid_hide_hojas = 3
--- tt.tween.props[tt.tween.sid_wings].name = "alpha"
--- tt.tween.props[tt.tween.sid_wings].keys = {{0, 0}, {0.5, 255}}
--- tt.tween.props[tt.tween.sid_wings].sprite_id = tt.render.sid_wings
--- tt.tween.props[tt.tween.sid_wings].loop = false
--- tt.tween.props[tt.tween.sid_wings].disabled = true
--- tt.tween.props[tt.tween.sid_show_hojas] = E:clone_c("tween_prop")
--- tt.tween.props[tt.tween.sid_show_hojas].name = "alpha"
--- tt.tween.props[tt.tween.sid_show_hojas].loop = false
--- tt.tween.props[tt.tween.sid_show_hojas].keys = {{0, 0}, {0.5, 255}}
--- tt.tween.props[tt.tween.sid_show_hojas].sprite_id = tt.render.sid_hojas
--- tt.tween.props[tt.tween.sid_show_hojas].disabled = true
--- tt.tween.props[tt.tween.sid_show_hojas].ignore_reverse = true
--- tt.tween.props[tt.tween.sid_hide_hojas] = E:clone_c("tween_prop")
--- tt.tween.props[tt.tween.sid_hide_hojas].name = "alpha"
--- tt.tween.props[tt.tween.sid_hide_hojas].loop = false
--- tt.tween.props[tt.tween.sid_hide_hojas].keys = {{0, 255}, {0.5, 0}}
--- tt.tween.props[tt.tween.sid_hide_hojas].sprite_id = tt.render.sid_hojas
--- tt.tween.props[tt.tween.sid_hide_hojas].disabled = true
--- tt.tween.props[tt.tween.sid_hide_hojas].ignore_reverse = true
--- tt.tween.reverse = true
--- tt.tween.remove = false
--- tt = E:register_t("mod_eleemntal_water_holder_teleport", "mod_teleport")
--- tt.modifier.vis_flags = bor(F_MOD)
--- tt.modifier.vis_bans = bor(F_BOSS)
--- tt.modifier.duration = 1
--- tt.nodes_offset = nil
--- tt.max_times_applied = 3
--- tt.dest_valid_node = true
--- tt.delay_start = fts(3)
--- tt.hold_time = 0.34
--- tt.delay_end = fts(3)
--- tt.fx_start = "fx_eleemntal_water_holder_teleport"
--- tt.fx_end = "fx_eleemntal_water_holder_teleport"
--- tt = E:register_t("fx_eleemntal_water_holder_teleport", "fx")
--- tt.render.sprites[1].prefix = "holder_elemental_33_teleport_teleport_fx"
--- tt.render.sprites[1].name = "idle"
--- tt.render.sprites[1].size_names = {"idle", "big_idle", "big_idle"}
--- tt.render.sprites[1].animated = true
--- tt = E:register_t("fx_elemental_water_holder_broken_jarra", "decal_scripted")
--- tt.main_script.update = scripts.multi_sprite_fx.update
--- tt.render.sprites[1].prefix = "stage33_water_holder_jarraDef"
--- tt.render.sprites[1].name = "broken"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].offset = v(0, 5)
--- tt.render.sprites[1].z = Z_OBJECTS
--- tt.render.sprites[2] = E:clone_c("sprite")
--- tt.render.sprites[2].prefix = "stage33_water_holder_rayoDef"
--- tt.render.sprites[2].name = "ray_down"
--- tt.render.sprites[2].exo = true
--- tt.render.sprites[2].offset = v(0, 5)
--- tt.render.sprites[2].z = Z_OBJECTS
--- tt.render.sprites[3] = E:clone_c("sprite")
--- tt.render.sprites[3].prefix = "stage33_water_holder_rayo_explosionDef"
--- tt.render.sprites[3].name = "in"
--- tt.render.sprites[3].exo = true
--- tt.render.sprites[3].offset = v(0, 5)
--- tt.render.sprites[3].z = Z_OBJECTS
--- tt = E:register_t("fx_elemental_water_holder_healing", "fx")
--- tt.render.sprites[1].prefix = "stage33_water_holder_healDef"
--- tt.render.sprites[1].name = "run"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].z = Z_EFFECTS
--- tt = E:register_t("decal_elemental_water_holder_passive_mist", "decal_tween")
--- tt.render.sprites[1].prefix = "stage33_water_mistDef"
--- tt.render.sprites[1].name = "run"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].z = Z_OBJECTS
--- tt.render.sprites[1].sort_y_offset = -20
--- tt.tween.props[1].name = "alpha"
--- tt.tween.props[1].keys = {{0, 0}, {1, 255}}
--- tt.tween.props[1].loop = false
--- tt.tween.disabled = false
--- tt.tween.remove = false
--- tt = E:register_t("decal_elemental_water_holder_root_dragon", "decal_scripted")
--- tt.render.sprites[1].prefix = "stage33_water_dragonrootDef"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].name = "in"
--- tt.loop_times = 2
--- tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
--- tt = E:register_t("decal_elemental_water_holder_root_dragon_kill", "decal_elemental_water_holder_root_dragon")
--- tt.render.sprites[1].prefix = "stage33_water_dragonflyDef"
--- tt.only_in = true
--- tt = E:register_t("aura_elemental_water_healing", "aura")
--- b = balance.specials.terrain_8.elemental_holders.water_holder
--- tt.aura.duration = 1e+99
--- tt.aura.cycle_time = 0.3
--- tt.aura.vis_bans = bor(F_ENEMY)
--- tt.aura.vis_flags = F_AREA
--- tt.aura.mod = "mod_elemental_water_heal"
--- tt.main_script.insert = scripts.aura_apply_mod.insert
--- tt.main_script.update = scripts.aura_elemental_water_healing.update
--- tt.main_script.remove = scripts.aura_apply_mod.remove
--- tt.heal_fx = "fx_elemental_water_holder_healing"
--- tt.min_health_factor = b.healing.min_health_factor
--- tt = E:register_t("mod_elemental_water_heal", "modifier")
--- b = balance.specials.terrain_8.elemental_holders.water_holder
--- E:add_comps(tt, "hps", "render")
--- tt.modifier.duration = b.healing.duration
--- tt.modifier.resets_same = true
--- tt.hps.heal_min = b.healing.heal_min
--- tt.hps.heal_max = b.healing.heal_max
--- tt.hps.heal_every = b.healing.heal_every
--- tt.main_script.insert = scripts.mod_hps.insert
--- tt.main_script.update = scripts.mod_hps.update
--- tt.render.sprites[1].name = "instant_heal_mod_fx"
--- tt.render.sprites[1].sort_y_offset = -3
--- tt = RT("controller_elemental_earth")
--- E:add_comps(tt, "main_script", "pos", "render", "tween")
--- b = balance.specials.terrain_8.elemental_holders.earth_holder
--- tt.main_script.update = scripts.controller_elemental_earth.update
--- tt.main_script.remove = scripts.controller_elemental_generic.remove
--- tt.first_cooldown = b.first_cooldown
--- tt.cooldown = b.cooldown
--- tt.vis_bans = bor(F_FRIEND)
--- tt.vis_flags = 0
--- tt.unit_spawn = "soldier_earth_elemental"
--- tt.spawn_sound = "TerrainWukongElementalHolderEarthActive"
--- tt.spawns_amount = b.spawn_amount
--- tt.max_spawns = b.max_spawns
--- tt.holder_spawn_pos = b.holder_spawn_pos
--- tt.controller_aura_increase_health = "aura_elemental_earth_increase_health"
--- tt.render.sid_gradiente = 1
--- tt.render.sid_wings = 2
--- tt.render.sid_hojas = 3
--- tt.render.sid_dragon = 4
--- tt.render.sid_dragon_ability = 5
--- tt.render.sprites[tt.render.sid_gradiente].prefix = "dirtholder_gradienteDef"
--- tt.render.sprites[tt.render.sid_gradiente].exo = true
--- tt.render.sprites[tt.render.sid_gradiente].name = "idle"
--- tt.render.sprites[tt.render.sid_gradiente].animated = true
--- tt.render.sprites[tt.render.sid_gradiente].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_gradiente].offset = v(-60, 85)
--- tt.render.sprites[tt.render.sid_wings] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_wings].prefix = "dirtholder_cuernosDef"
--- tt.render.sprites[tt.render.sid_wings].name = "run"
--- tt.render.sprites[tt.render.sid_wings].exo = true
--- tt.render.sprites[tt.render.sid_wings].animated = true
--- tt.render.sprites[tt.render.sid_wings].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_wings].sort_y_offset = -10
--- tt.render.sprites[tt.render.sid_wings].anchor = v(0.5, 0.5)
--- tt.render.sprites[tt.render.sid_wings].alpha = 0
--- tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_hojas].prefix = "dirtholder_jarrahojasDef"
--- tt.render.sprites[tt.render.sid_hojas].exo = true
--- tt.render.sprites[tt.render.sid_hojas].name = "run"
--- tt.render.sprites[tt.render.sid_hojas].animated = true
--- tt.render.sprites[tt.render.sid_hojas].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_hojas].offset = v(0, -10)
--- tt.render.sprites[tt.render.sid_hojas].sort_y_offset = -10
--- tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon].prefix = "dirtholder_dragonDef"
--- tt.render.sprites[tt.render.sid_dragon].exo = true
--- tt.render.sprites[tt.render.sid_dragon].name = "idle"
--- tt.render.sprites[tt.render.sid_dragon].animated = true
--- tt.render.sprites[tt.render.sid_dragon].z = Z_EFFECTS
--- tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
--- tt.render.sprites[tt.render.sid_dragon].anchor = vv(0.5)
--- tt.render.sprites[tt.render.sid_dragon_ability] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon_ability].prefix = "dirtholder_habilidad_1Def"
--- tt.render.sprites[tt.render.sid_dragon_ability].exo = true
--- tt.render.sprites[tt.render.sid_dragon_ability].name = "start_hability"
--- tt.render.sprites[tt.render.sid_dragon_ability].animated = true
--- tt.render.sprites[tt.render.sid_dragon_ability].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_dragon_ability].hidden = true
--- tt.render.sprites[tt.render.sid_dragon_ability].anchor = vv(0.5)
--- tt.tween.sid_wings = 1
--- tt.tween.sid_show_hojas = 2
--- tt.tween.sid_hide_hojas = 3
--- tt.tween.props[tt.tween.sid_wings].name = "alpha"
--- tt.tween.props[tt.tween.sid_wings].keys = {{0, 0}, {0.5, 255}}
--- tt.tween.props[tt.tween.sid_wings].sprite_id = tt.render.sid_wings
--- tt.tween.props[tt.tween.sid_wings].loop = false
--- tt.tween.props[tt.tween.sid_wings].disabled = true
--- tt.tween.props[tt.tween.sid_show_hojas] = E:clone_c("tween_prop")
--- tt.tween.props[tt.tween.sid_show_hojas].name = "alpha"
--- tt.tween.props[tt.tween.sid_show_hojas].loop = false
--- tt.tween.props[tt.tween.sid_show_hojas].keys = {{0, 0}, {0.5, 255}}
--- tt.tween.props[tt.tween.sid_show_hojas].sprite_id = tt.render.sid_hojas
--- tt.tween.props[tt.tween.sid_show_hojas].disabled = true
--- tt.tween.props[tt.tween.sid_show_hojas].ignore_reverse = true
--- tt.tween.props[tt.tween.sid_hide_hojas] = E:clone_c("tween_prop")
--- tt.tween.props[tt.tween.sid_hide_hojas].name = "alpha"
--- tt.tween.props[tt.tween.sid_hide_hojas].loop = false
--- tt.tween.props[tt.tween.sid_hide_hojas].keys = {{0, 255}, {0.5, 0}}
--- tt.tween.props[tt.tween.sid_hide_hojas].sprite_id = tt.render.sid_hojas
--- tt.tween.props[tt.tween.sid_hide_hojas].disabled = true
--- tt.tween.props[tt.tween.sid_hide_hojas].ignore_reverse = true
--- tt.tween.reverse = true
--- tt.tween.remove = false
--- tt = E:register_t("fx_elemental_earth_holder_broken_jarra", "decal_scripted")
--- tt.main_script.update = scripts.multi_sprite_fx.update
--- tt.render.sprites[1].prefix = "dirtholder_jarraDef"
--- tt.render.sprites[1].name = "broken"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].offset = v(0, 5)
--- tt.render.sprites[1].z = Z_OBJECTS
--- tt.render.sprites[2] = E:clone_c("sprite")
--- tt.render.sprites[2].prefix = "dirtholder_rayoDef"
--- tt.render.sprites[2].name = "ray_down"
--- tt.render.sprites[2].exo = true
--- tt.render.sprites[2].offset = v(0, 5)
--- tt.render.sprites[2].z = Z_OBJECTS
--- tt.render.sprites[3] = E:clone_c("sprite")
--- tt.render.sprites[3].prefix = "dirtholder_rayo_explosionDef"
--- tt.render.sprites[3].name = "in"
--- tt.render.sprites[3].exo = true
--- tt.render.sprites[3].offset = v(0, 5)
--- tt.render.sprites[3].z = Z_OBJECTS
--- tt = E:register_t("aura_elemental_earth_increase_health", "aura")
--- tt.aura.duration = 1e+99
--- tt.aura.cycle_time = 0.3
--- tt.aura.vis_bans = bor(F_ENEMY)
--- tt.aura.vis_flags = F_AREA
--- tt.aura.mod = "mod_elemental_earth_increase_health"
--- tt.main_script.insert = scripts.aura_apply_mod.insert
--- tt.main_script.update = scripts.aura_apply_mod.update
--- tt.main_script.remove = scripts.aura_apply_mod.remove
--- tt = E:register_t("mod_elemental_earth_increase_health", "modifier")
--- b = balance.specials.terrain_8.elemental_holders.earth_holder
--- tt.extra_health_multiplier = b.extra_health_multiplier
--- tt.main_script.insert = scripts.mod_elemental_earth_increase_health.insert
--- tt.main_script.update = scripts.mod_elemental_earth_increase_health.update
--- tt.main_script.remove = scripts.mod_elemental_earth_increase_health.remove
--- tt.modifier.bans = {}
--- tt.modifier.duration = 0.5
--- tt.modifier.use_mod_offset = false
--- tt = E:register_t("soldier_earth_elemental", "soldier_militia")
--- b = balance.specials.terrain_8.elemental_holders.earth_holder.soldier
--- E:add_comps(tt, "reinforcement")
--- tt.info.portrait = "gui_bottom_info_image_soldiers_0075"
--- tt.health.armor = b.armor
--- tt.health.hp_max = b.hp_max
--- tt.health_bar.offset = v(0, ady(40))
--- tt.info.fn = scripts.soldier_charge.get_info
--- tt.info.i18n_key = "SOLDIER_EARTH_HOLDER"
--- tt.info.random_name_count = nil
--- tt.info.random_name_format = nil
--- tt.main_script.insert = scripts.soldier_reinforcement.insert
--- tt.main_script.update = scripts.soldier_earth_elemental.update
--- tt.reinforcement.fade = nil
--- tt.reinforcement.fade_in = nil
--- tt.reinforcement.fade_out = nil
--- tt.melee.attacks[1].cooldown = 1
--- tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
--- tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
--- tt.melee.attacks[1].hit_time = fts(12)
--- tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
--- tt.melee.attacks[1].vis_flags = F_BLOCK
--- tt.melee.attacks[1].hit_fx = "fx_elemental_earth_holder_melee_hit"
--- tt.melee.attacks[1].hit_offset = v(28, 8)
--- tt.melee.attacks[1].animation = "hit1"
--- tt.melee.range = 64
--- tt.motion.max_speed = b.max_speed
--- tt.render.sprites[1].name = "raise"
--- tt.render.sprites[1].prefix = "golem_holder_creep"
--- tt.render.sprites[1].angles.walk = {"walk", "walk", "walk"}
--- tt.render.sprites[1].anchor = v(0.5, 0.5)
--- tt.render.sprites[1].scale = v(0.9, 0.9)
--- tt.soldier.melee_slot_offset.x = 12
--- tt.unit.hit_offset = v(0, 18)
--- tt.unit.mod_offset = v(0, ady(22))
--- tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_LYCAN)
--- tt.vis.flags = F_FRIEND
--- tt.patrol_pos_offset = v(15, 10)
--- tt.patrol_min_cd = 5
--- tt.patrol_max_cd = 10
--- tt = RT("controller_elemental_metal")
--- E:add_comps(tt, "main_script", "pos", "render", "tween")
--- b = balance.specials.terrain_8.elemental_holders.metal_holder
--- tt.main_script.update = scripts.controller_elemental_metal.update
--- tt.main_script.remove = scripts.controller_elemental_generic.remove
--- tt.first_cooldown = b.first_cooldown
--- tt.cooldown = b.cooldown
--- tt.vis_bans = bor(F_FRIEND, F_BOSS)
--- tt.vis_flags = 0
--- tt.upgrade_price_multiplier = b.upgrade_price_multiplier
--- tt.default_max_range = b.default_max_range
--- tt.gold_fx = "fx_elemental_metal_holder_coins"
--- tt.root_decal_dragon = "decal_elemental_metal_holder_root_dragon"
--- tt.root_decal_dragon_kill = "decal_elemental_metal_holder_root_dragon"
--- tt.gold_steal_group_max_size = b.steal_gold.gold_steal_group_max_size
--- tt.gold_steal_amount = b.steal_gold.gold_steal_amount
--- tt.gold_steal_amount_boss = b.steal_gold.gold_steal_amount_boss
--- tt.steal_affect_radius = b.steal_gold.steal_radius
--- tt.delay_between_steals = b.steal_gold.delay_between_steals
--- tt.duration = b.steal_gold.delay_between_steals
--- tt.chase_speed = b.steal_gold.chase_speed
--- tt.wander_interval = b.steal_gold.wander_interval
--- tt.render.sid_gradiente = 1
--- tt.render.sid_wings = 2
--- tt.render.sid_hojas = 3
--- tt.render.sid_dragon = 4
--- tt.render.sid_dragon_ability = 5
--- tt.render.sprites[tt.render.sid_gradiente].prefix = "goldholder_gradienteDef"
--- tt.render.sprites[tt.render.sid_gradiente].exo = true
--- tt.render.sprites[tt.render.sid_gradiente].name = "idle"
--- tt.render.sprites[tt.render.sid_gradiente].animated = true
--- tt.render.sprites[tt.render.sid_gradiente].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_gradiente].offset = v(0, 0)
--- tt.render.sprites[tt.render.sid_wings] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_wings].prefix = "goldholder_cuernosDef"
--- tt.render.sprites[tt.render.sid_wings].name = "run"
--- tt.render.sprites[tt.render.sid_wings].exo = true
--- tt.render.sprites[tt.render.sid_wings].animated = true
--- tt.render.sprites[tt.render.sid_wings].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_wings].sort_y_offset = -10
--- tt.render.sprites[tt.render.sid_wings].anchor = v(0.5, 0.5)
--- tt.render.sprites[tt.render.sid_wings].alpha = 0
--- tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_hojas].prefix = "goldholder_jarrahojasDef"
--- tt.render.sprites[tt.render.sid_hojas].exo = true
--- tt.render.sprites[tt.render.sid_hojas].name = "run"
--- tt.render.sprites[tt.render.sid_hojas].animated = true
--- tt.render.sprites[tt.render.sid_hojas].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_hojas].offset = v(0, -10)
--- tt.render.sprites[tt.render.sid_hojas].sort_y_offset = -10
--- tt.render.sprites[tt.render.sid_hojas] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon].prefix = "goldholder_dragonDef"
--- tt.render.sprites[tt.render.sid_dragon].exo = true
--- tt.render.sprites[tt.render.sid_dragon].name = "idle"
--- tt.render.sprites[tt.render.sid_dragon].animated = true
--- tt.render.sprites[tt.render.sid_dragon].z = Z_EFFECTS
--- tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
--- tt.render.sprites[tt.render.sid_dragon].anchor = vv(0.5)
--- tt.render.sprites[tt.render.sid_dragon_ability] = E:clone_c("sprite")
--- tt.render.sprites[tt.render.sid_dragon_ability].prefix = "goldholder_habilidad_1Def"
--- tt.render.sprites[tt.render.sid_dragon_ability].exo = true
--- tt.render.sprites[tt.render.sid_dragon_ability].name = "start_hability"
--- tt.render.sprites[tt.render.sid_dragon_ability].animated = true
--- tt.render.sprites[tt.render.sid_dragon_ability].z = Z_OBJECTS
--- tt.render.sprites[tt.render.sid_dragon_ability].hidden = true
--- tt.render.sprites[tt.render.sid_dragon_ability].anchor = vv(0.5)
--- tt.update_on_path_active = {2, 3, 6}
--- tt.tween.sid_wings = 1
--- tt.tween.sid_show_hojas = 2
--- tt.tween.sid_hide_hojas = 3
--- tt.tween.props[tt.tween.sid_wings].name = "alpha"
--- tt.tween.props[tt.tween.sid_wings].keys = {{0, 0}, {0.5, 255}}
--- tt.tween.props[tt.tween.sid_wings].sprite_id = tt.render.sid_wings
--- tt.tween.props[tt.tween.sid_wings].loop = false
--- tt.tween.props[tt.tween.sid_wings].disabled = true
--- tt.tween.props[tt.tween.sid_show_hojas] = E:clone_c("tween_prop")
--- tt.tween.props[tt.tween.sid_show_hojas].name = "alpha"
--- tt.tween.props[tt.tween.sid_show_hojas].loop = false
--- tt.tween.props[tt.tween.sid_show_hojas].keys = {{0, 0}, {0.5, 255}}
--- tt.tween.props[tt.tween.sid_show_hojas].sprite_id = tt.render.sid_hojas
--- tt.tween.props[tt.tween.sid_show_hojas].disabled = true
--- tt.tween.props[tt.tween.sid_show_hojas].ignore_reverse = true
--- tt.tween.props[tt.tween.sid_hide_hojas] = E:clone_c("tween_prop")
--- tt.tween.props[tt.tween.sid_hide_hojas].name = "alpha"
--- tt.tween.props[tt.tween.sid_hide_hojas].loop = false
--- tt.tween.props[tt.tween.sid_hide_hojas].keys = {{0, 255}, {0.5, 0}}
--- tt.tween.props[tt.tween.sid_hide_hojas].sprite_id = tt.render.sid_hojas
--- tt.tween.props[tt.tween.sid_hide_hojas].disabled = true
--- tt.tween.props[tt.tween.sid_hide_hojas].ignore_reverse = true
--- tt.tween.reverse = true
--- tt.tween.remove = false
--- tt = E:register_t("decal_elemental_metal_holder_root_dragon", "decal_scripted")
--- tt.render.sprites[1].prefix = "goldholder_dragon_rootDef"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].name = "in"
--- tt.loop_times = 2
--- tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
--- tt = E:register_t("fx_elemental_metal_holder_coins", "fx")
--- tt.render.sprites[1].prefix = "goldholder_coin_splashDef"
--- tt.render.sprites[1].name = "run"
--- tt.render.sprites[1].exo = true
--- tt.render.sprites[1].z = Z_EFFECTS
--- tt = E:register_t("mod_elemental_metal_gold_per_damage", "modifier")
--- b = balance.specials.terrain_8.elemental_holders.metal_holder
--- tt.damage_gold_ratio = b.damage_gold_ratio
--- tt.main_script.insert = scripts.mod_elemental_metal_gold_per_damage.insert
--- tt.main_script.update = scripts.mod_elemental_metal_gold_per_damage.update
--- tt.modifier.bans = {}
--- tt.modifier.duration = 0.5
--- tt.modifier.use_mod_offset = false

@@ -17,10 +17,13 @@ local km = require("lib.klua.macros")
 local GS = require("game_settings")
 local i18n = require("i18n")
 local features = require("features")
+
 require("gg_views_custom")
 require("klove.kui")
+
 local kui_db = require("klove.kui_db")
 local screen = {}
+
 screen.required_sounds = {"common", "music_screen_slots"}
 screen.required_textures = {"screen_slots", "view_options"}
 screen.ref_w = 1920
@@ -43,6 +46,7 @@ end
 
 function CSinkButton:on_enter(drag_view)
 	CSinkButton.super.on_enter(self, drag_view)
+
 	local c = self.children[1]
 
 	if c then
@@ -58,6 +62,7 @@ end
 
 function CSinkButton:on_exit(drag_view)
 	CSinkButton.super.on_exit(self, drag_view)
+
 	local c = self.children[1]
 
 	if c then
@@ -88,11 +93,14 @@ function CSinkButton:on_up(button, x, y)
 end
 
 CHoverImage = class("CHoverImage", KImageView)
+
 CHoverImage:append_serialize_keys("default_image_name", "hover_image_name")
+
 CHoverImage.static.init_arg_names = {"default_image_name", "hover_image_name"}
 
 function CHoverImage:initialize(default_image_name, hover_image_name)
 	self.hover_image_name = hover_image_name or default_image_name
+
 	CHoverImage.super.initialize(self, default_image_name)
 end
 
@@ -114,7 +122,9 @@ SlotView.static.instance_keys = {"id", "template_name", "pos", "slot_idx"}
 
 function SlotView:initialize(slot_idx)
 	self.slot_idx = slot_idx
+
 	SlotView.super.initialize(self)
+
 	local b_slot = self:get_child_by_id("button_slot")
 
 	function b_slot.on_click()
@@ -133,8 +143,11 @@ function SlotView:initialize(slot_idx)
 
 	function b_delete.on_click()
 		S:queue("GUIButtonCommon")
+
 		local delete_view = screen.window:get_child_by_id("delete_view")
+
 		delete_view.slot_view = self
+
 		delete_view:show()
 	end
 
@@ -148,6 +161,7 @@ function SlotView:initialize(slot_idx)
 		end
 
 		button_slot:on_exit()
+
 		local button_slot_new = self:get_child_by_id("button_slot_new")
 
 		for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
@@ -178,6 +192,7 @@ function SlotView:initialize(slot_idx)
 		end
 
 		button_slot:on_exit()
+
 		local button_slot_new = self:get_child_by_id("button_slot_new")
 
 		for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
@@ -199,10 +214,12 @@ function SlotView:show()
 	else
 		self:get_child_by_id("slot_used").hidden = false
 		self:get_child_by_id("slot_empty").hidden = true
+
 		local l_stars = self:get_child_by_id("l_stars")
 		local l_heroic = self:get_child_by_id("l_heroic")
 		local l_iron = self:get_child_by_id("l_iron")
 		local num_stars, num_heroic, num_iron = U.count_stars(slot)
+
 		l_stars.text = tostring(num_stars) .. "/" .. tostring(GS.max_stars)
 		l_heroic.text = tostring(num_heroic)
 		l_iron.text = tostring(num_iron)
@@ -211,6 +228,7 @@ end
 
 function SlotView:delete_slot()
 	storage:delete_slot(self.slot_idx)
+
 	self:get_child_by_id("slot_used").hidden = true
 	self:get_child_by_id("slot_empty").hidden = false
 end
@@ -237,18 +255,22 @@ screen.signal_handlers = {
 
 function screen:init(w, h, done_callback)
 	self.done_callback = done_callback
+
 	local sw = self.ref_h * (w / h)
 	local sh = self.ref_h
 	local scale = h / self.ref_h
+
 	self.sw = sw
 	self.sh = sh
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
+
 	local ctx = {
 		left_margin = (self.ref_w - sw) * 0.5
 	}
 	local tt = kui_db:get_table("screen_slots", ctx)
 	local window = KWindow:new_from_table(tt)
+
 	window.scale = {
 		x = scale,
 		y = scale
@@ -259,7 +281,9 @@ function screen:init(w, h, done_callback)
 	}
 	window.timer = timer
 	self.window = window
+
 	local backImage = window:get_child_by_id("bg_view")
+
 	backImage.pos.x = sw * 0.5
 
 	if i18n.current_locale == "zh-Hans" and KR_GAME == "kr2" then
@@ -268,6 +292,7 @@ function screen:init(w, h, done_callback)
 
 	if features.gov_approval_id then
 		local v = window:get_child_by_id("gov_approval_view")
+
 		v.hidden = false
 		v.text = string.format(v.text, features.gov_approval_id)
 	end
@@ -277,14 +302,18 @@ function screen:init(w, h, done_callback)
 	end
 
 	local banner = window:get_child_by_id("banner")
+
 	banner.propagate_on_click = true
 	self.banner = banner
+
 	local slot_panel = window:get_child_by_id("slot_panel")
+
 	self.slot_panel = slot_panel
 	self.slot_panel.hidden = true
 
 	function slot_panel.hide(this)
 		local banner_pos_left = 0
+
 		timer:tween(0.1, this, {
 			pos = {
 				x = banner_pos_left
@@ -302,7 +331,9 @@ function screen:init(w, h, done_callback)
 		end
 
 		local banner_pos_right = 160
+
 		this.hidden = false
+
 		timer:tween(0.1, this, {
 			pos = {
 				x = banner_pos_right
@@ -319,6 +350,7 @@ function screen:init(w, h, done_callback)
 	end
 
 	local show_slots = window:get_child_by_id("banner_button_start")
+
 	self.show_slots = show_slots
 
 	function show_slots.on_click()
@@ -330,7 +362,8 @@ function screen:init(w, h, done_callback)
 			if pscloud then
 				if self.cloudsave_req_id then
 					self:show_cloudsave_progress()
-					return
+
+					return 
 				elseif pscloud and pscloud:get_status() then
 					local status = pscloud:get_sync_status()
 
@@ -339,8 +372,10 @@ function screen:init(w, h, done_callback)
 
 						if rid then
 							self:show_cloudsave_progress()
+
 							self.cloudsave_req_id = rid
-							return
+
+							return 
 						end
 					end
 				end
@@ -431,11 +466,14 @@ function screen:init(w, h, done_callback)
 
 	function options_done.on_click(this)
 		S:queue("GUIButtonCommon")
+
 		local s_sfx = window:get_child_by_id("s_sfx")
 		local s_music = window:get_child_by_id("s_music")
 		local settings = storage:load_settings()
+
 		settings.volume_fx = km.clamp(0, 1, s_sfx.value)
 		settings.volume_music = km.clamp(0, 1, s_music.value)
+
 		storage:save_settings(settings, true)
 		options_view:hide()
 	end
@@ -473,6 +511,7 @@ function screen:init(w, h, done_callback)
 
 	wid("cloudsave_cancel_button").on_click = function(this)
 		S:queue("GUIButtonCommon")
+
 		local rid = screen.cloudsave_req_id
 
 		if rid and PS and PS.services.cloudsave then
@@ -480,6 +519,7 @@ function screen:init(w, h, done_callback)
 		end
 
 		screen.cloudsave_req_id = nil
+
 		screen:hide_cloudsave_progress()
 		screen.slot_panel:show()
 	end
@@ -501,6 +541,7 @@ function screen:init(w, h, done_callback)
 
 	if not global.first_launch_time then
 		global.first_launch_time = os.time()
+
 		storage:save_global(global)
 	end
 end
@@ -512,7 +553,9 @@ function screen:destroy()
 
 	timer:clear()
 	self.window:destroy()
+
 	self.window = nil
+
 	SU.remove_references(self, KView)
 end
 
@@ -530,7 +573,8 @@ function screen:keypressed(key, isrepeat)
 		for _, id in pairs({"quit_view", "options_view", "delete_view", "slot_panel"}) do
 			if not wid(id).hidden then
 				wid(id):hide()
-				return
+
+				return 
 			end
 		end
 

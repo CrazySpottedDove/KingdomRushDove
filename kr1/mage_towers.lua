@@ -1,11 +1,14 @@
 local i18n = require("i18n")
+
 require("constants")
+
 local anchor_x = 0
 local anchor_y = 0
 local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
+
 require("templates")
 
 local function adx(v)
@@ -20,9 +23,13 @@ local GS = require("game_settings")
 local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv
+
 require("game_templates_utils")
+
 tt = RT("tower_arcane_wizard", "tower_mage_1")
+
 AC(tt, "attacks", "powers")
+
 image_y = 90
 tt.tower.type = "arcane_wizard"
 tt.tower.level = 1
@@ -97,7 +104,9 @@ tt.attacks.list[3].node_prediction = fts(4)
 tt.attacks.list[3].vis_flags = bor(F_RANGED, F_MOD, F_TELEPORT)
 tt.attacks.list[3].vis_bans = bor(F_BOSS, F_FREEZE)
 tt = RT("mod_ray_arcane", "modifier")
+
 AC(tt, "render", "dps")
+
 -- standard dps: 248 / 2 / 2 = 62, with price = 290
 tt.dps.damage_min = 92
 tt.dps.damage_max = 156
@@ -112,7 +121,9 @@ tt.render.sprites[1].name = "mod_ray_arcane"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS
 tt = RT("mod_ray_arcane_disintegrate", "modifier")
+
 AC(tt, "render")
+
 tt.main_script.update = scripts.mod_ray_arcane_disintegrate.update
 tt.modifier.pop = {"pop_zap_arcane"}
 tt.modifier.pop_conds = DR_KILL
@@ -137,7 +148,9 @@ tt.nodes_offset_inc = -5
 tt.damage_inc = 25
 tt.damage_base = 25
 tt = RT("decalmod_arcane_wizard_disintegrate_ready", "modifier")
+
 AC(tt, "render", "tween")
+
 tt.main_script.insert = scripts.mod_tower_decal.insert
 tt.main_script.remove = scripts.mod_tower_decal.remove
 tt.tween.remove = false
@@ -162,7 +175,9 @@ for _, sprite in ipairs(tt.render.sprites) do
 end
 
 tt = RT("tower_sorcerer", "tower_mage_1")
+
 AC(tt, "attacks", "powers", "barrack")
+
 image_y = 74
 tt.tower.type = "sorcerer"
 tt.tower.level = 1
@@ -242,7 +257,9 @@ tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].prefix = "bolt_sorcerer"
 tt.sound_events.insert = "BoltSorcererSound"
 tt = RT("mod_sorcerer_curse_armor", "modifier")
+
 AC(tt, "armor_buff")
+
 tt.modifier.duration = 9
 tt.modifier.vis_flags = F_MOD
 tt.armor_buff.magic = false
@@ -252,7 +269,9 @@ tt.main_script.insert = scripts.mod_armor_buff.insert
 tt.main_script.remove = scripts.mod_armor_buff.remove
 tt.main_script.update = scripts.mod_armor_buff.update
 tt = RT("mod_sorcerer_curse_dps", "modifier")
+
 AC(tt, "render", "dps")
+
 tt.modifier.duration = 9
 tt.modifier.vis_flags = F_MOD
 tt.dps.damage_min = 12
@@ -279,7 +298,9 @@ tt.polymorph.transfer_health_factor = 0.5
 tt.polymorph.transfer_lives_cost_factor = 1
 tt.polymorph.transfer_speed_factor = 1.25
 tt = RT("soldier_elemental", "soldier_militia")
+
 AC(tt, "melee")
+
 image_y = 64
 anchor_y = 0.15384615384615385
 tt.health.armor = 0.3
@@ -327,8 +348,11 @@ tt.unit.marker_offset = vec_2(0, -2)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.vis.bans = bor(F_LYCAN, F_BLOOD, F_POISON)
 tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
+
 local tower_archmage = RT("tower_archmage", "tower")
+
 AC(tower_archmage, "attacks", "powers")
+
 tower_archmage.tower.type = "archmage"
 tower_archmage.tower.level = 1
 tower_archmage.tower.price = 300
@@ -387,7 +411,9 @@ tower_archmage.attacks.list[2].cooldown = 20
 tower_archmage.attacks.list[2].shoot_time = fts(17)
 tower_archmage.attacks.list[2].nodes_limit = 30
 tower_archmage.sound_events.insert = "ArchmageTauntReady"
+
 local fx_bolt_archmage_hit = RT("fx_bolt_archmage_hit", "fx")
+
 fx_bolt_archmage_hit.render.sprites[1].name = "bolt_archmage_hit"
 tt = RT("bolt_archmage", "bolt")
 tt.render.sprites[1].prefix = "bolt_archmage"
@@ -416,8 +442,11 @@ tt.bullet.damage_radius = 40
 tt.bullet.damage_radius_inc = 4
 tt.bullet.damage_flags = F_AREA
 tt.sound_events.insert = "ArchmageCriticalExplosion"
+
 local twister = RT("twister", "aura")
+
 AC(twister, "nav_path", "motion", "render")
+
 twister.main_script.insert = scripts.twister.insert
 twister.main_script.update = scripts.twister.update
 twister.after_mod = "mod_twister"
@@ -439,22 +468,32 @@ twister.render.sprites[1].prefix = "twister"
 twister.render.sprites[1].anchor.y = 0.14
 twister.aura.vis_flags = bor(F_RANGED, F_TWISTER)
 twister.aura.vis_bans = bor(F_CLIFF, F_BOSS, F_WATER)
+
 local mod_twister = RT("mod_twister", "mod_slow")
+
 mod_twister.modifier.duration = 1
+
 local ps_bolt_archmage_trail = RT("ps_bolt_archmage_trail")
+
 AC(ps_bolt_archmage_trail, "pos", "particle_system")
+
 ps_bolt_archmage_trail.particle_system.name = "proy_archbolt_particle"
 ps_bolt_archmage_trail.particle_system.animated = false
 ps_bolt_archmage_trail.particle_system.particle_lifetime = {0.2, 0.2}
 ps_bolt_archmage_trail.particle_system.alphas = {255, 12}
 ps_bolt_archmage_trail.particle_system.scales_y = {0.8, 0.05}
 ps_bolt_archmage_trail.particle_system.emission_rate = 30
+
 local archmage_shatter = RT("mod_archmage_shatter", "mod_damage")
+
 archmage_shatter.damage_min = 0.035
 archmage_shatter.damage_max = 0.035
 archmage_shatter.damage_type = bor(DAMAGE_MAGICAL_ARMOR, DAMAGE_NO_SHIELD_HIT)
+
 local tower_necromancer = RT("tower_necromancer", "tower")
+
 AC(tower_necromancer, "barrack", "attacks", "powers", "auras", "tween")
+
 tower_necromancer.tower.type = "necromancer"
 tower_necromancer.tower.level = 1
 tower_necromancer.tower.price = 275
@@ -531,7 +570,9 @@ tt.bullet.hit_fx = "fx_bolt_necromancer_hit"
 tt.bullet.particles_name = "ps_bolt_necromancer_trail"
 tt.bullet.pop = {"pop_sishh"}
 tt.sound_events.insert = "NecromancerBolt"
+
 local pestilence = RT("pestilence", "aura")
+
 pestilence.aura.mod = "mod_pestilence"
 pestilence.aura.duration = 3
 pestilence.aura.duration_inc = 1
@@ -542,8 +583,11 @@ pestilence.aura.vis_flags = bor(F_MOD, F_POISON)
 pestilence.main_script.insert = scripts.pestilence.insert
 pestilence.main_script.update = scripts.aura_apply_mod.update
 pestilence.sound_events.insert = "NecromancerPestilence"
+
 local ps_bolt_necromancer_trail = RT("ps_bolt_necromancer_trail")
+
 AC(ps_bolt_necromancer_trail, "pos", "particle_system")
+
 ps_bolt_necromancer_trail.particle_system.name = "proy_Necromancer_particle"
 ps_bolt_necromancer_trail.particle_system.animated = false
 ps_bolt_necromancer_trail.particle_system.particle_lifetime = {0.4, 1}
@@ -596,7 +640,9 @@ tt.render.sprites[1].anchor.y = 0.18
 tt.render.sprites[1].prefix = "soldier_skeleton_knight"
 tt.sound_events.insert = "NecromancerSummon"
 tt = RT("soldier_death_rider", "soldier")
+
 AC(tt, "melee", "auras")
+
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].cooldown = 0
 tt.auras.list[1].name = "death_rider_aura"
@@ -640,14 +686,19 @@ tt.aura.cycle_time = 0.5
 tt.aura.duration = -1
 tt.min_health_for_knight = 416
 tt.max_skeletons_tower = 8
+
 local death_rider_aura = RT("death_rider_aura", "aura")
+
 AC(death_rider_aura, "render")
+
 death_rider_aura.aura.mod = "mod_death_rider"
 death_rider_aura.aura.cycle_time = 1
 death_rider_aura.aura.duration = -1
 death_rider_aura.aura.radius = 128
 death_rider_aura.aura.track_source = true
+
 local allowed_templates = table.keys(GS.wraith)
+
 death_rider_aura.aura.allowed_templates = allowed_templates
 death_rider_aura.aura.vis_bans = F_ENEMY
 death_rider_aura.aura.vis_flags = F_MOD
@@ -656,8 +707,11 @@ death_rider_aura.main_script.update = scripts.aura_apply_mod.update
 death_rider_aura.render.sprites[1].name = "soldier_death_rider_aura"
 death_rider_aura.render.sprites[1].loop = true
 death_rider_aura.render.sprites[1].z = Z_DECALS
+
 local mod_death_rider = RT("mod_death_rider", "modifier")
+
 AC(mod_death_rider, "render")
+
 mod_death_rider.inflicted_damage_factor = 1.1
 mod_death_rider.inflicted_damage_factor_inc = 0.2
 mod_death_rider.extra_armor = 0.2
@@ -671,7 +725,9 @@ mod_death_rider.main_script.insert = scripts.mod_death_rider.insert
 mod_death_rider.main_script.remove = scripts.mod_death_rider.remove
 mod_death_rider.main_script.update = scripts.mod_track_target.update
 tt = RT("tower_sunray", "tower_mage_1")
+
 AC(tt, "powers", "attacks")
+
 tt.tower.level = 1
 tt.tower.type = "sunray"
 tt.tower.price = 290
@@ -760,7 +816,9 @@ tt.track_target = true
 tt.ray_duration = fts(11)
 tt.ray_y_scales = {0.4, 0.6, 0.8, 1}
 tt = RT("bolt_elves", "bullet")
+
 AC(tt, "force_motion")
+
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.hit_fx = "fx_bolt_elves_hit"
 tt.bullet.max_speed = 300
@@ -784,7 +842,9 @@ tt.render.sprites[2].offset.y = -20
 tt.render.sprites[2].animated = false
 tt.sound_events.insert = "TowerWizardBasicBolt"
 tt = RT("tower_high_elven", "tower")
+
 AC(tt, "attacks", "powers", "tween")
+
 tt.info.enc_icon = 15
 tt.info.fn = scripts.tower_high_elven.get_info
 tt.info.i18n_key = "TOWER_MAGE_HIGH_ELVEN"
@@ -858,7 +918,9 @@ tt.sound_events.insert = "ElvesMageHighElvenTaunt"
 tt.sentinels = {}
 tt.max_sentinels = 1
 tt = RT("mod_high_elven", "modifier")
+
 AC(tt, "render", "tween")
+
 tt.damage_factor = 0.09
 tt.damage_factor_inc = 0.045
 tt.cooldown_factor = 0.955
@@ -876,7 +938,9 @@ tt.tween.reverse = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 150}}
 tt.tween.run_once = true
 tt.render.sprites[1].color = {0, 255, 255}
+
 local decal_high_elven_sentinel_preview = RT("decal_high_elven_sentinel_preview", "decal_tween")
+
 decal_high_elven_sentinel_preview.render.sprites[1].name = "CrossbowHunterDecalDotted"
 decal_high_elven_sentinel_preview.render.sprites[1].animated = false
 decal_high_elven_sentinel_preview.render.sprites[1].anchor = vec_2(0.5, 0.32)
@@ -887,7 +951,9 @@ decal_high_elven_sentinel_preview.tween.props[1].name = "scale"
 decal_high_elven_sentinel_preview.tween.props[1].loop = true
 decal_high_elven_sentinel_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)}, {0.5, vec_2(1, 1)}}
 tt = RT("high_elven_sentinel", "decal_scripted")
+
 AC(tt, "force_motion", "ranged", "tween")
+
 tt.charge_time = 4
 tt.flight_height = 50
 tt.force_motion.max_a = 135000
@@ -972,7 +1038,9 @@ tt.bullet.reduce_magic_armor = 0.2
 tt.bullet.hit_time = fts(4)
 tt.sound_events.insert = "TowerHighMageSentinelShot"
 tt = RT("mod_timelapse", "modifier")
+
 AC(tt, "render", "tween")
+
 tt.modifier.remove_banned = true
 tt.modifier.bans = {"mod_faerie_dragon_l0", "mod_faerie_dragon_l1", "mod_faerie_dragon_l2", "mod_arivan_freeze", "mod_arivan_ultimate_freeze", "mod_crystal_arcane_freeze", "mod_blood_elves", "mod_bruce_sharp_claws", "mod_lynn_ultimate", "mod_ogre_magi_shield"}
 tt.modifier.type = MOD_TYPE_TIMELAPSE
@@ -1008,7 +1076,9 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].hide_after_runs = 1
 tt.modifier.duration = fts(11)
 tt = RT("tower_wild_magus", "tower")
+
 AC(tt, "attacks", "powers", "tween")
+
 tt.info.enc_icon = 16
 tt.info.i18n_key = "TOWER_MAGE_WILD_MAGUS"
 tt.info.portrait = "kr3_info_portraits_towers_0007"
@@ -1093,6 +1163,7 @@ tt.render.sprites[7].hidden = true
 
 for i = 1, 10 do
 	local s = CC("sprite")
+
 	s.name = string.format("mage_wild_stones_%04i", i)
 	s.animated = false
 	s.offset.y = 36
@@ -1130,6 +1201,7 @@ tt.tween.props[7].sprite_id = 6
 
 for i = 1, 10 do
 	local t = CC("tween_prop")
+
 	t.sprite_id = tt.render.sid_rune + i
 	t.name = "offset"
 	t.keys = {{0, vec_2(0, 35)}, {1, vec_2(0, 37)}, {2, vec_2(0, 35)}}
@@ -1139,7 +1211,9 @@ for i = 1, 10 do
 end
 
 tt = RT("bolt_wild_magus", "bolt")
+
 AC(tt, "tween")
+
 tt.alter_reality_chance = 0.01
 tt.alter_reality_mod = "mod_teleport_wild_magus"
 tt.render.sprites[1].prefix = "bolt_wild_magus"
@@ -1167,7 +1241,9 @@ tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.hit_time = fts(2)
 tt.track_target = true
 tt = RT("mod_eldritch", "modifier")
+
 AC(tt, "render")
+
 tt.render.sprites[1].name = "mod_eldritch"
 tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].z = Z_OBJECTS
@@ -1201,7 +1277,9 @@ tt.damage_bans = 0
 tt.damage_type = DAMAGE_MAGICAL
 tt.sound_events.loop = "TowerWildMagusDoomLoop"
 tt = RT("tower_faerie_dragon", "tower")
+
 AC(tt, "powers", "attacks")
+
 tt.attacks.list[1] = CC("custom_attack")
 tt.attacks.list[1].cooldown = 3
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
@@ -1258,7 +1336,9 @@ tt.aura.mod = "mod_faerie_dragon_l0"
 tt.aura.damage_type = DAMAGE_MAGICAL_EXPLOSION
 tt.aura.damage = 11
 tt = RT("faerie_dragon", "decal_scripted")
+
 AC(tt, "force_motion", "custom_attack")
+
 anchor_y = 0.5
 image_y = 30
 tt.flight_height = 80
@@ -1300,7 +1380,9 @@ tt.render.sprites[1].name = "faerie_dragon_proy_hit"
 tt = RT("fx_faerie_dragon_shoot", "fx")
 tt.render.sprites[1].name = "faerie_dragon_shoot_fx"
 tt = RT("mod_faerie_dragon", "mod_freeze")
+
 AC(tt, "render")
+
 tt.modifier.duration = 0.9
 tt.modifier.vis_bans = F_BOSS
 tt.modifier.vis_flags = bor(F_STUN, F_MOD)
@@ -1321,7 +1403,9 @@ tt = RT("mod_faerie_dragon_l2", "mod_faerie_dragon")
 tt.modifier.duration = 1.5
 -- 侏儒花园
 tt = RT("tower_pixie", "tower")
+
 AC(tt, "powers", "attacks")
+
 tt.pixies = {}
 -- 偷钱
 tt.attacks.list[1] = CC("mod_attack")
@@ -1392,7 +1476,9 @@ tt.tower.menu_offset = vec_2(0, 6)
 tt.tower.price = 250
 tt.tower.type = "pixie"
 tt = RT("decal_pixie", "decal_scripted")
+
 AC(tt, "idle_flip")
+
 tt.idle_flip.animations = {"idle", "scratch"}
 tt.idle_flip.cooldown = fts(90)
 tt.idle_flip.loop = false
@@ -1432,7 +1518,9 @@ tt = RT("mod_pixie_polymorph", "mod_polymorph")
 tt.polymorph.custom_entity_names.default = "enemy_rabbit"
 tt.polymorph.hit_fx_sizes = {"fx_mod_pixie_polymorph_small", "fx_mod_pixie_polymorph_big", "fx_mod_pixie_polymorph_big"}
 tt = RT("mod_pixie_pickpocket", "modifier")
+
 AC(tt, "pickpocket")
+
 tt.modifier.damage_max = 100
 tt.modifier.damage_min = 80
 tt.modifier.level = 0
@@ -1452,13 +1540,17 @@ tt.pickpocket.steal_max = {
 }
 tt.pickpocket.fx = "fx_coin_jump"
 tt.pickpocket.pop = {"pop_faerie_steal"}
+
 -- 五代
 local balance = require("kr1.data.balance")
 local b
+
 -- 死灵法师_START
 b = balance.towers.necromancer
 tt = RT("ps_tower_necromancer_skull_trail")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.name = "necromancer_tower_skull_projectile_particle_trail_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -1473,7 +1565,9 @@ tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {fts(11), fts(11)}
 tt.emit_offset_relative = vec_2(-15, 0)
 tt = RT("ps_tower_necromancer_rider_trail_A")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.name = "necromancer_tower_death_rider_trial_particle_A_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -1485,7 +1579,9 @@ tt.particle_system.particle_lifetime = {fts(13), fts(13)}
 tt.particle_system.emit_offset = vec_2(0, 0)
 tt.emit_offset_relative = vec_2(-10, 0)
 tt = RT("ps_tower_necromancer_rider_trail_B")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.name = "necromancer_tower_death_rider_trial_particle_B_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -1509,7 +1605,9 @@ tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_front_i
 tt = RT("fx_tower_necromancer_rider_spawn_back", "fx")
 tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_back_idle"
 tt = RT("tower_necromancer_lvl4", "tower")
+
 AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
+
 tt.tower.type = "necromancer_lvl4"
 tt.tower.level = 1
 tt.tower.price = b.price[4]
@@ -1625,7 +1723,9 @@ tt.max_golems = b.curse.max_golems
 tt.ui.click_rect = r(-40, 0, 80, 90)
 tt.ui.click_rect_offset_y = -10
 tt = RT("soldier_tower_necromancer_skeleton_lvl4", "soldier_militia")
+
 AC(tt, "reinforcement")
+
 tt.health_bar.offset = vec_2(0, 29)
 tt.health.armor = b.skeleton.armor[4]
 tt.health.hp_max = b.skeleton.hp_max[4]
@@ -1692,7 +1792,9 @@ tt.spawn_delay = 3
 tt.is_golem = true
 tt.unit.level = 4
 tt = RT("bullet_tower_necromancer_lvl4", "bolt")
+
 AC(tt, "force_motion")
+
 tt.render.sprites[1].prefix = "necromancer_tower_skull_projectile"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_TOWER_BASES
@@ -1735,7 +1837,9 @@ tt.bullet.search_range = 120
 tt.main_script.insert = scripts.bullet_tower_necromancer_deathspawn.insert
 tt.main_script.update = scripts.bullet_tower_necromancer_deathspawn.update
 tt = RT("aura_tower_necromancer_skill_debuff", "aura")
+
 AC(tt, "render", "tween")
+
 tt.aura.enemy_mods = {"mod_tower_necromancer_curse", "mod_tower_necromancer_skill_debuff"}
 tt.aura.soldier_mods = {"mod_tower_necromancer_skill_debuff_skeleton_improve"}
 tt.aura.radius = b.skill_debuff.radius
@@ -1760,7 +1864,9 @@ tt.sound_events.insert = "TowerNecromancerSigilOfSilence"
 tt.modifier_inflicted_damage_factor = b.skill_debuff.damage_factor
 tt.modifier_duration_config = b.skill_debuff.mod_duration
 tt = RT("aura_tower_necromancer_skill_rider", "aura")
+
 AC(tt, "render", "tween", "motion")
+
 tt.aura.mod = "mod_tower_necromancer_skill_rider"
 tt.aura.radius = b.skill_rider.radius
 tt.aura.vis_flags = bor(F_AREA)
@@ -1791,7 +1897,9 @@ tt.particles_name_A = "ps_tower_necromancer_rider_trail_A"
 tt.particles_name_B = "ps_tower_necromancer_rider_trail_B"
 tt.sound_events.insert = "TowerNecromancerDeathRider"
 tt = RT("mod_tower_necromancer_curse", "modifier")
+
 AC(tt, "render")
+
 tt.modifier.duration = b.curse.duration
 tt.main_script.insert = scripts.mod_tower_necromancer_curse.insert
 tt.main_script.remove = scripts.mod_tower_necromancer_curse.remove
@@ -1831,8 +1939,11 @@ tt.main_script.remove = scripts.mod_track_target.remove
 -- 死灵法师_END
 -- 红法 BEGIN
 tt = RT("tower_ray_lvl4", "tower")
+
 local b = balance.towers.ray
+
 AC(tt, "attacks", "vis", "tween", "powers")
+
 tt.tower.type = "ray"
 tt.info.enc_icon = 15
 tt.info.i18n_key = "TOWER_RAY_4"
@@ -1930,6 +2041,7 @@ tt.render.sprites[tt.render.sid_crystal_union].offset = tt.attacks.list[1].bulle
 
 for i = 1, #tt.crystals_ids do
 	local crystal_sid = tt.render.sid_crystals + i - 1
+
 	tt.render.sprites[crystal_sid] = E:clone_c("sprite")
 	tt.render.sprites[crystal_sid].prefix = "channeler_tower_lvl4_crystal_" .. tt.crystals_ids[i]
 	tt.render.sprites[crystal_sid].name = "idle"
@@ -1956,6 +2068,7 @@ tt.stones_ids = {
 
 for i = 1, #tt.stones_ids do
 	local stone_sid = tt.render.sid_stones + i - 1
+
 	tt.render.sprites[stone_sid] = E:clone_c("sprite")
 	tt.render.sprites[stone_sid].name = "channeler_tower_lvl4_stone_" .. tt.stones_ids[i]
 	tt.render.sprites[stone_sid].animated = false
@@ -1974,6 +2087,7 @@ tt.rocks_ids = {"a", "b", "c"}
 
 for i = 1, #tt.rocks_ids do
 	local rock_sid = tt.render.sid_rocks + i - 1
+
 	tt.render.sprites[rock_sid] = E:clone_c("sprite")
 	tt.render.sprites[rock_sid].prefix = "channeler_tower_lvl4_rock_" .. tt.rocks_ids[i]
 	tt.render.sprites[rock_sid].name = "idle"
@@ -1988,6 +2102,7 @@ tt.back_rocks_ids = {"d", "e"}
 
 for i = 1, #tt.back_rocks_ids do
 	local rock_sid = tt.render.sid_back_rocks + i - 1
+
 	tt.render.sprites[rock_sid] = E:clone_c("sprite")
 	tt.render.sprites[rock_sid].name = "channeler_tower_lvl4_rock_" .. tt.back_rocks_ids[i]
 	tt.render.sprites[rock_sid].animated = false
@@ -2004,6 +2119,7 @@ for i = 1, #tt.crystals_ids do
 	local start_offset = tt.render.sprites[crystal_sid].offset
 	local end_offset = V.v(start_offset.x, start_offset.y + 2.5)
 	local frec = 3
+
 	tt.tween.props[i] = E:clone_c("tween_prop")
 	tt.tween.props[i].name = "offset"
 
@@ -2028,6 +2144,7 @@ if tt.stones_ids then
 		local start_offset = V.vclone(tt.render.sprites[2].offset)
 		local end_offset = V.vclone(tt.render.sprites[2].offset)
 		local frec = 3
+
 		tt.tween.props[prop_id] = E:clone_c("tween_prop")
 		tt.tween.props[prop_id].name = "offset"
 
@@ -2064,6 +2181,7 @@ for i = 1, #tt.rocks_ids + #tt.back_rocks_ids do
 	local start_offset = V.vclone(tt.render.sprites[2].offset)
 	local end_offset = V.v(start_offset.x, start_offset.y + 5)
 	local frec = 4
+
 	tt.tween.props[prop_id] = E:clone_c("tween_prop")
 	tt.tween.props[prop_id].name = "offset"
 	tt.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
@@ -2077,6 +2195,7 @@ local prop_id = #tt.crystals_ids + #tt.stones_ids + #tt.rocks_ids + #tt.back_roc
 local start_offset = V.vclone(tt.render.sprites[2].offset)
 local end_offset = V.v(start_offset.x, start_offset.y + 4)
 local frec = 5
+
 tt.tween.props[prop_id] = E:clone_c("tween_prop")
 tt.tween.props[prop_id].name = "offset"
 tt.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
@@ -2091,7 +2210,9 @@ tt.tween.props[prop_id].sprite_id = tt.render.sid_core_rock_shadow
 tt.tween.props[prop_id].loop = true
 tt.tween.props[prop_id].interp = "sine"
 tt = RT("enemy_tower_ray_sheep", "enemy")
+
 local b = balance.towers.ray.skill_sheep.sheep
+
 tt.enemy.gold = b.gold
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
@@ -2112,7 +2233,9 @@ tt.ui.click_rect = r(-17, 0, 34, 20)
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
 tt.clicks_to_destroy = b.clicks_to_destroy
 tt = RT("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
+
 local b = balance.towers.ray.skill_sheep.sheep
+
 tt.info.portrait = "kr5_info_portraits_enemies_0041"
 tt.flight_height = 47
 tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
@@ -2134,7 +2257,9 @@ tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-18, tt.flight_height - 2, 36, 23)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt = RT("bullet_tower_ray_lvl1", "bullet")
+
 local b = balance.towers.ray.basic_attack
+
 tt.explosion_radius = b.explosion_radius
 tt.explosion_factor = b.explosion_factor
 tt.bullet.damage_type = DAMAGE_MAGICAL
@@ -2167,7 +2292,9 @@ tt = RT("bullet_tower_ray_lvl4", "bullet_tower_ray_lvl1")
 tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.damage_max = b.damage_max[4]
 tt = RT("bullet_tower_ray_chain", "bullet_tower_ray_lvl4")
+
 local b = balance.towers.ray
+
 tt.damage_mult = nil
 tt.max_enemies = b.skill_chain.max_enemies
 tt.chain_pos = 1
@@ -2177,7 +2304,9 @@ tt.chain_range_to_stay = tt.chain_range + b.basic_attack.extra_range_to_stay
 tt.vis_bans = bor(F_NIGHTMARE)
 tt = RT("bullet_tower_ray_sheep", "bolt")
 b = balance.towers.ray.skill_sheep
+
 AC(tt, "force_motion")
+
 tt.render.sprites[1].hidden = true
 tt.height_attack = 70
 tt.initial_vel_y = 50
@@ -2210,7 +2339,9 @@ tt.sheep_t = "enemy_tower_ray_sheep"
 tt.sheep_flying_t = "enemy_tower_ray_sheep_flying"
 tt.sheep_hp_mult = b.sheep.hp_mult
 tt = RT("mod_tower_ray_damage", "modifier")
+
 AC(tt, "render", "dps", "tween")
+
 b = balance.towers.ray.basic_attack
 tt.dps.damage_min = b.damage_min[4]
 tt.dps.damage_max = b.damage_max[4]
@@ -2241,7 +2372,9 @@ tt.modifier.duration = b.duration
 -- 红法 END
 -- 观星 BEGIN
 tt = RT("ps_stargazers_death_star_trail")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.name = "elven_stargazers_tower_rising_star_particle_trail_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2251,7 +2384,9 @@ tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt = RT("fx_tower_elven_stargazers_ray_hit_start", "fx")
+
 AC(tt, "tween")
+
 tt.render.sprites[1].name = "elven_stargazers_tower_rising_star_hit_fx_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
@@ -2280,7 +2415,9 @@ tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
 tt.timed.runs = 1e+99
 tt = RT("fx_tower_elven_stargazers_ray_hit", "fx")
+
 AC(tt)
+
 tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
@@ -2289,8 +2426,11 @@ tt.timed.runs = 1e+99
 tt = RT("fx_tower_stargazers_death_star_hit", "fx")
 tt.render.sprites[1].prefix = "elven_stargazers_tower_rising_star_hit_fx"
 tt = RT("tower_elven_stargazers_lvl4", "tower")
+
 local b = balance.towers.elven_stargazers
+
 AC(tt, "powers", "attacks")
+
 tt.sound_events.insert = "TowerElvenStargazersTaunt"
 tt.info.i18n_key = "TOWER_STARGAZER_4"
 tt.info.stat_damage = b.stats.damage
@@ -2390,7 +2530,9 @@ tt.attacks.list[3].animation = "skill2"
 tt.attacks.list[3].mod = "mod_tower_elven_stargazers_star_death"
 tt.ui.click_rect = r(-40, 0, 85, 93)
 tt = RT("tower_elven_stargazers_ray", "bullet")
+
 local b = balance.towers.elven_stargazers
+
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
 tt.bullet.damage_max = b.basic_attack.damage_max[4]
@@ -2430,7 +2572,9 @@ tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 15
 tt.sound_events.hit = "TowerElvenStargazersRisingStarImpact"
 tt = RT("mod_tower_elven_stargazers_ray_hit", "modifier")
+
 AC(tt, "render")
+
 -- tt.modifier.damage_min = nil
 -- tt.modifier.damage_max = nil
 -- tt.damage_type = DAMAGE_MAGICAL
@@ -2467,7 +2611,9 @@ tt.render.sprites[1] = nil
 -- 观星 END
 -- 五代奥术 BEGIN
 tt = RT("tower_arcane_wizard_lvl4", "tower")
+
 AC(tt, "attacks", "powers", "vis")
+
 b = balance.towers.arcane_wizard
 image_y = 90
 tt.tower.type = "arcane_wizard_five"
@@ -2558,7 +2704,9 @@ tt.attacks.list[3].vis_flags = bor(F_MOD, F_CUSTOM)
 tt.attacks.list[3].vis_bans = bor(F_CUSTOM)
 tt.ui.click_rect = r(-40, 0, 80, 86)
 tt = RT("tower_arcane_wizard_ray_disintegrate_mod", "modifier")
+
 local b = balance.towers.arcane_wizard
+
 tt.main_script.update = scripts.tower_arcane_wizard_ray_disintegrate_mod.update
 tt.modifier.pop = {"pop_zap_arcane"}
 tt.modifier.pop_conds = DR_KILL
@@ -2576,7 +2724,9 @@ tt.damage_factor = nil
 tt.modifier.duration = 1e+99
 tt.modifier.use_mod_offset = false
 tt = RT("mod_tower_arcane_wizard_power_empowerment_fx", "modifier")
+
 AC(tt, "render", "tween")
+
 tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
 tt.modifier.duration = 1e+99
 tt.modifier.use_mod_offset = false
@@ -2596,13 +2746,17 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 tt.sound_events.insert = "TowerArcaneWizardEmpowerment"
 tt = RT("tower_arcane_wizard_power_empowerment_mark_mod", "modifier")
+
 AC(tt, "mark_flags")
+
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.main_script.update = scripts.tower_arcane_wizard_power_empowerment_mark_mod.update
 tt.modifier.allows_duplicates = true
 tt.modifier.duration = 1e+99
 tt = RT("mod_tower_arcane_wizard_ray_hit", "modifier")
+
 AC(tt, "render", "dps")
+
 b = balance.towers.arcane_wizard
 tt.damage_min = b.basic_attack.damage_min
 tt.damage_max = b.basic_attack.damage_max
@@ -2621,7 +2775,9 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.damage_from_bullet = true
 tt = RT("tower_arcane_wizard5_ray", "bullet")
+
 local b = balance.towers.arcane_wizard
+
 tt.bullet.damage_type = DAMAGE_NONE
 -- tt.bullet.damage_min_config = b.basic_attack.damage_min
 -- tt.bullet.damage_max_config = b.basic_attack.damage_max
@@ -2652,7 +2808,6 @@ tt.render.sprites[1].loop = false
 tt.bullet.hit_time = fts(1)
 tt.hit_fx_only_no_target = false
 -- 五代奥术 END
-
 -- 青蛙 START
 tt = RT("ps_bullet_tower_hermit_toad_mage_basic_trail")
 
@@ -2663,10 +2818,7 @@ tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.emission_rate = 12
 tt.particle_system.track_rotation = true
-tt.particle_system.particle_lifetime = {
-	fts(18),
-	fts(18)
-}
+tt.particle_system.particle_lifetime = {fts(18), fts(18)}
 tt = RT("ps_bullet_tower_hermit_toad_engineer_basic_trail")
 
 AC(tt, "pos", "particle_system")
@@ -2676,10 +2828,7 @@ tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.track_rotation = true
 tt.particle_system.emission_rate = 10
-tt.particle_system.particle_lifetime = {
-	fts(19),
-	fts(19)
-}
+tt.particle_system.particle_lifetime = {fts(19), fts(19)}
 tt = RT("ps_tower_hermit_toad_engineer_bubbles")
 
 AC(tt, "pos", "particle_system")
@@ -2690,19 +2839,10 @@ tt.particle_system.loop = false
 tt.particle_system.emission_rate = 2
 tt.particle_system.emit_direction = math.pi / 2
 tt.particle_system.emit_spread = math.pi / 4
-tt.particle_system.emit_speed = {
-	3,
-	11
-}
-tt.particle_system.scale_var = {
-	0.5,
-	1.1
-}
+tt.particle_system.emit_speed = {3, 11}
+tt.particle_system.scale_var = {0.5, 1.1}
 tt.particle_system.emit_rotation_spread = math.pi
-tt.particle_system.particle_lifetime = {
-	fts(26),
-	fts(26)
-}
+tt.particle_system.particle_lifetime = {fts(26), fts(26)}
 tt.particle_system.emit_area_spread = v(3, 3)
 tt = RT("ps_tower_hermit_toad_mage_bubbles", "ps_tower_hermit_toad_engineer_bubbles")
 tt.particle_system.name = "hermit_toad_tower_bubbles2_run"
@@ -2713,10 +2853,7 @@ tt.particle_system.emit_area_spread = v(10, 10)
 tt = RT("ps_tower_hermit_toad_mage_bubbles_area", "ps_tower_hermit_toad_mage_bubbles")
 tt.particle_system.emission_rate = 1
 tt.particle_system.emit_area_spread = v(70, 30)
-tt.particle_system.scale_var = {
-	0.5,
-	1.4
-}
+tt.particle_system.scale_var = {0.5, 1.4}
 tt = RT("fx_tower_hermit_toad_splash", "fx")
 tt.render.sprites[1].name = "hermit_toad_tower_splash_run"
 tt.render.sprites[1].anchor = v(0.712, 0.15)
@@ -2729,20 +2866,7 @@ tt.render.sprites[1].name = "hermit_toad_tower_jumpdecal"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor = v(0.7017543859649122, 0.31363636363636366)
-tt.tween.props[1].keys = {
-	{
-		fts(0),
-		255
-	},
-	{
-		fts(46),
-		255
-	},
-	{
-		fts(63),
-		0
-	}
-}
+tt.tween.props[1].keys = {{fts(0), 255}, {fts(46), 255}, {fts(63), 0}}
 tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 1
 tt = RT("fx_bullet_tower_hermit_toad_mage_basic_hit", "fx")
@@ -2766,10 +2890,11 @@ tt.render.sprites[2].name = "hermit_toad_tower_construction"
 tt.render.sprites[2].offset = v(0, 5)
 tt.render.sprites[3].offset.y = 75
 tt.render.sprites[4].offset.y = 75
-
 tt = RT("tower_hermit_toad_lvl4", "tower")
 b = balance.towers.hermit_toad
+
 AC(tt, "attacks", "vis", "idle_flip", "powers", "tower_upgrade_persistent_data")
+
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 1
 tt.tower.type = "hermit_toad"
@@ -2819,19 +2944,13 @@ tt.attacks.list[2].range = b.mage_basic_attack.range
 tt.attacks.list[2].animation = "shoot"
 tt.attacks.list[2].sound = "TowerHermitToadShootMagic"
 tt.attacks.list[3] = E:clone_c("bullet_attack")
-tt.attacks.list[3].animation = {
-	"eat",
-	"eat2"
-}
+tt.attacks.list[3].animation = {"eat", "eat2"}
 tt.attacks.list[3].bullet = "bullet_tower_hermit_toad_instakill_tongue"
 tt.attacks.list[3].cooldown = nil
 tt.attacks.list[3].range = b.power_instakill.range
 tt.attacks.list[3].shoot_time = fts(8)
 tt.attacks.list[3].node_prediction = fts(8)
-tt.attacks.list[3].bullet_start_offset = {
-	v(0, 27),
-	v(0, 27)
-}
+tt.attacks.list[3].bullet_start_offset = {v(0, 27), v(0, 27)}
 tt.attacks.list[3].sound = "TowerHermitToadTongue"
 tt.attacks.list[3].mark_mod = "mod_tower_hermit_toad_instakill_mark"
 tt.attacks.list[3].vis_flags = bor(tt.attacks.list[3].vis_flags, F_EAT)
@@ -2841,47 +2960,25 @@ tt.attacks.list[4].cooldown = nil
 tt.attacks.list[4].damage_min = nil
 tt.attacks.list[4].damage_max = nil
 tt.attacks.list[4].damage_type = b.power_jump.damage_type
-tt.attacks.list[4].bullet_start_offset = {
-	v(0, 37),
-	v(0, 37)
-}
+tt.attacks.list[4].bullet_start_offset = {v(0, 37), v(0, 37)}
 tt.attacks.list[4].vis_bans = bor(F_FRIEND, F_FLYING)
 tt.attacks.list[4].radius = b.power_jump.radius
 tt.attacks.list[4].range = b.power_jump.range
 tt.attacks.list[4].mod = "mod_tower_hermit_toad_jump"
 tt.attacks.list[4].min_targets = b.power_jump.min_targets
-tt.attacks.list[4].animation_start = {
-	"pathjumpbgin",
-	"pathjumpbgin2"
-}
-tt.attacks.list[4].animation_disappear = {
-	"pathjumpbgidle",
-	"pathjumpbgidle2"
-}
-tt.attacks.list[4].animation_end = {
-	"pathjumpbgout",
-	"pathjumpbgout2"
-}
-tt.attacks.list[4].animation_path_landing = {
-	"pathjump",
-	"pathjump2"
-}
-tt.attacks.list[4].animation_back_up = {
-	"pathjumpup",
-	"pathjumpup2"
-}
-tt.attacks.list[4].animation_back_down = {
-	"pathjumpdown",
-	"pathjumpdown2"
-}
+tt.attacks.list[4].animation_start = {"pathjumpbgin", "pathjumpbgin2"}
+tt.attacks.list[4].animation_disappear = {"pathjumpbgidle", "pathjumpbgidle2"}
+tt.attacks.list[4].animation_end = {"pathjumpbgout", "pathjumpbgout2"}
+tt.attacks.list[4].animation_path_landing = {"pathjump", "pathjump2"}
+tt.attacks.list[4].animation_back_up = {"pathjumpup", "pathjumpup2"}
+tt.attacks.list[4].animation_back_down = {"pathjumpdown", "pathjumpdown2"}
 tt.attacks.list[4].jump_decal = "fx_tower_hermit_toad_decal"
 tt.attacks.list[4].jump_in_delay = 0.3
 tt.attacks.list[4].path_landing_action_time = fts(3)
 tt.attacks.list[4].jump_back_delay = 0.3
 tt.attacks.list[4].jump_back_duration = fts(12)
 tt.attacks.list[4].jump_back_height = -120
-tt.attacks.list[4].node_prediction = fts(11) + tt.attacks.list[4].jump_in_delay +
-tt.attacks.list[4].path_landing_action_time
+tt.attacks.list[4].node_prediction = fts(11) + tt.attacks.list[4].jump_in_delay + tt.attacks.list[4].path_landing_action_time
 tt.attacks.list[4].sound_back_to_pond = "TowerHermitToadBackToPond"
 tt.attacks.list[4].sound_jump = "TowerHermitToadJump"
 tt.attacks.list[4].sound_fall = "TowerHermitToadFall"
@@ -2905,20 +3002,14 @@ tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = true
 tt.render.sprites[2].prefix = "hermit_toad_tower_pond"
 tt.render.sprites[2].offset.y = 5
-tt.idle_modes = {
-	"idle",
-	"idle2",
-}
+tt.idle_modes = {"idle", "idle2"}
 tt.render.sprites[2].name = tt.idle_modes[1]
 tt.render.sprites[2].z = Z_TOWER_BASES + 2
 tt.render.sprites[3] = E:clone_c("sprite")
 tt.render.sprites[3].prefix = "hermit_toad_tower_frog4"
 tt.render.sprites[3].name = "idle"
 tt.render.sprites[3].offset = tt.render.sprites[2].offset
-tt.render.bubbles_anims = {
-	"blue",
-	"pruple"
-}
+tt.render.bubbles_anims = {"blue", "pruple"}
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "hermit_toad_tower_bubbles_frog"
 tt.render.sprites[4].name = tt.render.bubbles_anims[1]
@@ -2933,74 +3024,35 @@ tt.render.sprites[5].sort_y_offset = 2
 tt.render.sprites[6] = table.deepclone(tt.render.sprites[3])
 tt.render.sprites[6].hidden = true
 tt.ps_bubbles_mage_offset = v(37, 52)
-tt.ps_bubbles_mage_emit_speed = {
-	8,
-	16
-}
-tt.ps_bubbles_mage_scale_var = {
-	1,
-	1.7
-}
+tt.ps_bubbles_mage_emit_speed = {8, 16}
+tt.ps_bubbles_mage_scale_var = {1, 1.7}
 tt.ps_bubbles_mage_emission_rate = 3
 tt.ps_bubbles_engineer_offset = v(37, 51)
-tt.ps_bubbles_engineer_emit_speed = {
-	8,
-	16
-}
-tt.ps_bubbles_engineer_scale_var = {
-	1,
-	1.7
-}
+tt.ps_bubbles_engineer_emit_speed = {8, 16}
+tt.ps_bubbles_engineer_scale_var = {1, 1.7}
 tt.ps_bubbles_engineer_emission_rate = 3
 tt.fx_splash = "fx_tower_hermit_toad_splash"
 tt.fx_splash_offset = v(2, 10)
 tt.idle_flip.cooldown = 3
 tt.idle_flip.chance = 0.7
 tt.toad_flip_duration = fts(11)
-tt.toad_flip_anims = {
-	"turn",
-	"turn2"
-}
-tt.toad_idle_anims = {
-	"idleanim",
-	"idleanim2"
-}
-tt.toad_blink_anims = {
-	"idleblink",
-	"idleblink2"
-}
+tt.toad_flip_anims = {"turn", "turn2"}
+tt.toad_idle_anims = {"idleanim", "idleanim2"}
+tt.toad_blink_anims = {"idleblink", "idleblink2"}
 tt.ps_bubbles_mage = "ps_tower_hermit_toad_mage_bubbles"
 tt.ps_bubbles_mage_area = "ps_tower_hermit_toad_mage_bubbles_area"
 tt.ps_bubbles_engineer = "ps_tower_hermit_toad_engineer_bubbles"
 tt.ps_bubbles_mage_area_offset = v(0, 15)
-tt.ps_bubbles_mage_area_emit_speed = {
-	3,
-	11
-}
-tt.ps_bubbles_mage_area_scale_var = {
-	0.5,
-	1.4
-}
+tt.ps_bubbles_mage_area_emit_speed = {3, 11}
+tt.ps_bubbles_mage_area_scale_var = {0.5, 1.4}
 tt.ps_bubbles_mage_area_emission_rate = 1
 tt.ps_bubbles_mage_offset = v(38, 52)
-tt.ps_bubbles_mage_emit_speed = {
-	3,
-	11
-}
-tt.ps_bubbles_mage_scale_var = {
-	0.5,
-	1.1
-}
+tt.ps_bubbles_mage_emit_speed = {3, 11}
+tt.ps_bubbles_mage_scale_var = {0.5, 1.1}
 tt.ps_bubbles_mage_emission_rate = 2
 tt.ps_bubbles_engineer_offset = v(38, 52)
-tt.ps_bubbles_engineer_emit_speed = {
-	3,
-	11
-}
-tt.ps_bubbles_engineer_scale_var = {
-	0.5,
-	1.1
-}
+tt.ps_bubbles_engineer_emit_speed = {3, 11}
+tt.ps_bubbles_engineer_scale_var = {0.5, 1.1}
 tt.ps_bubbles_engineer_emission_rate = 2
 tt.sound_events.insert = "TowerHermitToadTaunt"
 tt.sound_events.tower_room_select = "TowerHermitToadTauntSelect"
@@ -3046,7 +3098,6 @@ tt.force_motion.max_a = 6000
 tt.force_motion.max_v = 450
 tt.sound_events.insert = nil
 b = balance.towers.hermit_toad.mage_basic_attack
-
 tt = RT("bullet_tower_hermit_toad_engineer_basic_lvl4", "bomb")
 b = balance.towers.hermit_toad.engineer_basic_attack
 tt.main_script.update = scripts.bullet_tower_hermit_toad_engineer_basic.update
@@ -3087,20 +3138,7 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
-tt.tween.props[1].keys = {
-	{
-		0,
-		255
-	},
-	{
-		tt.aura.duration - 0.5,
-		255
-	},
-	{
-		tt.aura.duration,
-		0
-	}
-}
+tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
 tt = RT("mod_tower_hermit_toad_engineer_basic_slow", "mod_slow")
 b = balance.towers.hermit_toad.engineer_basic_attack
 tt.balance_slow_factor = b.slow_factor
@@ -3108,7 +3146,6 @@ tt.balance_duration = b.slow_mod_duration
 tt.slow.factor = nil
 tt.modifier.duration = nil
 tt.main_script.insert = scripts.mod_tower_hermit_toad_engineer_basic_slow.insert
-
 tt = RT("mod_tower_hermit_toad_jump", "mod_stun")
 b = balance.towers.hermit_toad
 tt.balance_duration = b.power_jump.stun_duration
@@ -3116,11 +3153,11 @@ tt.modifier.duration = nil
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.main_script.insert = scripts.mod_tower_hermit_toad_jump.insert
-
 tt = RT("mod_tower_hermit_toad_instakill_mark", "modifier")
+
 AC(tt, "mark_flags")
+
 tt.modifier.duration = fts(120)
 tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.mod_mark_flags.update
--- 青蛙 END

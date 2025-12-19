@@ -9,9 +9,11 @@ else
 end
 
 local log = require("lib.klua.log"):new("dotnet_slot_parser")
+
 require("lib.klua.string")
 require("lib.klua.table")
 require("lib.klua.dump")
+
 local bit = require("bit")
 local bf = require("lib.klua.dotnet_bfds")
 local sm = {}
@@ -22,6 +24,7 @@ function sm.map_difficulty(input, output, args)
 		1,
 		3
 	}
+
 	return m[input]
 end
 
@@ -274,6 +277,7 @@ function sm:do_row(src_o, dst_o, row)
 
 	if not d_parts or #d_parts == 0 then
 		log.error("error splitting dest key %s", dst_k)
+
 		return 
 	end
 
@@ -282,6 +286,7 @@ function sm:do_row(src_o, dst_o, row)
 	for i = 1, #d_parts - 1 do
 		local v = d_parts[i]
 		local vn = tonumber(v)
+
 		log.paranoid("  creating table tree key %s", v)
 
 		if vn then
@@ -306,12 +311,15 @@ function sm:do_row(src_o, dst_o, row)
 		for _, item in pairs(vmap) do
 			if item[1] == sv then
 				dv = item[2]
+
 				log.paranoid("   mapped %s=%s to %s=%s", src_k, sv, dst_k, dv)
+
 				break
 			end
 		end
 	elseif vmap and type(vmap) == "function" then
 		dv = vmap(sv, t[last_k], vmap_args)
+
 		log.paranoid("   function mapped %s=%s to %s=%s", src_k, sv, dst_k, dv)
 	end
 
@@ -336,6 +344,7 @@ function sm:parse(buf)
 
 	if not rsg then
 		log.error("Could not find SaveGame object")
+
 		return nil, "SaveGame object not found"
 	end
 
@@ -343,6 +352,7 @@ function sm:parse(buf)
 
 	if not sg.slotUsed then
 		log.info("SaveGame is empty. Skipping import")
+
 		return nil, "empty slot"
 	end
 
@@ -377,18 +387,25 @@ function sm:parse(buf)
 	end
 
 	o.levels = levels
+
 	return o
 end
 
 if _TESTING then
 	log.level = log.DEBUG_LEVEL
+
 	local args = {...}
 	local fn = args[1]
+
 	print(fn)
+
 	local f = io.open(fn, "r")
 	local fs = f:read("*a")
+
 	f:close()
+
 	local o = sm:parse(fs)
+
 	require("lib.klua.dump")
 	log.error("table: %s", getfulldump(o))
 else

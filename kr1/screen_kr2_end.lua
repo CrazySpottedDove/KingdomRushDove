@@ -1,9 +1,11 @@
 -- chunkname: @/var/folders/r9/xbxmw8n51957gv9ggzrytvf80000gp/T/com.ironhidegames.frontiers.windows.steam.ep3S4swo/kr2/screen_kr2_end.lua
 require("klove.kui")
+
 local S = require("sound_db")
 local screen_comics = require("screen_comics")
 local screen_credits = require("screen_credits")
 local screen = {}
+
 screen.required_sounds = {"common", "music_screen_kr2_end"}
 screen.required_textures = {"loading_common", "screen_credits", "kr2_comic"}
 screen.ref_h = GUI_REF_H
@@ -23,6 +25,7 @@ function screen:init(sw, sh, done_callback)
 	self.sh = sh
 	self.done_callback = done_callback
 	self.phase = "comic5"
+
 	self:next_item()
 end
 
@@ -76,10 +79,13 @@ function screen:next_item()
 		S:queue("MusicEndVictory", {
 			loop = false
 		})
+
 		screen_comics.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. "/data/comics/07.csv")
 		screen_comics.fade_in = {1, {255, 255, 255, 255}}
 		screen_comics.level_idx = nil
+
 		screen_comics:init(self.sw, self.sh, cb)
+
 		self.active_screen = screen_comics
 		self.phase = "credits"
 	elseif self.phase == "credits" then
@@ -87,17 +93,23 @@ function screen:next_item()
 			loop = false
 		})
 		screen_credits:init(self.sw, self.sh, cb, true)
+
 		self.active_screen = screen_credits
 		self.phase = "comic6"
 	elseif self.phase == "comic6" then
 		S:queue("MusicSuspense")
+
 		screen_comics.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. "/data/comics/08.csv")
+
 		screen_comics:init(self.sw, self.sh, cb)
+
 		self.active_screen = screen_comics
 		self.phase = "done"
 	else
 		S:stop_all()
+
 		self.active_screen = nil
+
 		self.done_callback({
 			level_idx = 37,
 			next_item_name = "map"

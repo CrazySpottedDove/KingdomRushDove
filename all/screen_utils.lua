@@ -5,6 +5,7 @@ local SU = {}
 function SU.clamp_window_aspect(w, h, ref_w, ref_h, min_aspect, max_aspect)
 	min_aspect = min_aspect or MIN_SCREEN_ASPECT
 	max_aspect = max_aspect or MAX_SCREEN_ASPECT
+
 	local sw, sh, scale
 	local origin = V.v(0, 0)
 

@@ -1,4 +1,5 @@
 local v = (arg[2] == "debug" or arg[2] == "release") and "DEBUG" or "RELEASE"
+
 version = {
 	identity = "kingdom_rush",
 	title = "王国保卫战 dove 版",

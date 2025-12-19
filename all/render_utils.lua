@@ -4,6 +4,7 @@ local I = require("klove.image_db")
 local EXO = require("exoskeleton")
 local G = love.graphics
 local RU = {}
+
 RU.BATCHES_COUNT = 30
 RU.BATCH_SIZE = 30
 RU.batches = {}
@@ -57,6 +58,7 @@ function RU.frame_draw_params(f)
 
 	local ox = f.anchor.x * ss.size[1] - ss.trim[1]
 	local oy = (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
+
 	return ss.quad, x, y, r, sx, sy, ox, oy
 end
 
@@ -74,6 +76,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 	local batch = batches[bi]
 	local last_texture = RU.last_texture
 	local current_shader
+
 	batch:clear()
 
 	if last_texture then
@@ -103,8 +106,10 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 					else
 						if part_type == 8 then
 							local flipf = (f.flip_x and -1 or 1) * (f.flip_y and -1 or 1)
+
 							sy = sy * (f.flip_y and -1 or 1)
 							sx = sx * (f.flip_x and -1 or 1)
+
 							local f_sx = f.flip_x and -1 or 1
 							local f_sy = f.flip_y and -1 or 1
 
@@ -117,6 +122,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 							local p_x_s = x * f_sx
 							local p_y_s = y * f_sy
+
 							r = -f.r * flipf + r
 
 							if f.r ~= 0 then
@@ -124,6 +130,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 								local sr = math.sin(-f.r)
 								local p_x = p_x_s * cr - p_y_s * sr
 								local p_y = p_x_s * sr + p_y_s * cr
+
 								x = p_x + f.pos.x + f.offset.x
 								y = -p_y + f.pos.y + f.offset.y
 							else
@@ -140,9 +147,11 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 							end
 
 							local l = f.last_attach_point_xform[part_name_idx]
+
 							l.x, l.y = x, y
 							l.r = r * flipf
 							l.sx, l.sy = sx, sy
+
 							goto label_6_0
 						end
 
@@ -152,10 +161,12 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 						if batch_count == BATCH_SIZE or f.shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 							if batch_count > 0 then
 								G.draw(batch)
+
 								bi = bi + 1
 
 								if bi_count < bi then
 									RU.add_batches(10)
+
 									bi_count = #RU.batches
 								end
 
@@ -167,12 +178,15 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 							end
 
 							batch:clear()
+
 							lr, lg, lb, la = nil, nil, nil, nil
 
 							if ss.atlas then
 								local im, w, h = I:i(ss.atlas)
+
 								current_atlas = ss.atlas
 								last_texture = im
+
 								batch:setTexture(im)
 							end
 
@@ -191,7 +205,9 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 								current_shader = f.shader
 							end
 						end
-                        local cr, cg, cb = 1, 1, 1
+
+						local cr, cg, cb = 1, 1, 1
+
 						if f.color then
 							cr, cg, cb = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
 						end
@@ -200,14 +216,17 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 						if ca ~= la or cr ~= lr or cg ~= lg or cb ~= lb then
 							batch:setColor(cr, cg, cb, ca / 255)
+
 							lr, lg, lb, la = cr, cg, cb, ca
 						end
 
 						local quad = ss.quad
 						local ref_scale = ss.ref_scale or 1
 						local flipf = (f.flip_x and -1 or 1) * (f.flip_y and -1 or 1)
+
 						sy = sy * (f.flip_y and -1 or 1) * ref_scale
 						sx = sx * (f.flip_x and -1 or 1) * ref_scale
+
 						local f_sx = f.flip_x and -1 or 1
 						local f_sy = f.flip_y and -1 or 1
 
@@ -229,6 +248,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 							-- sx = xf.sy * (f.flip_x and -1 or 1) * ref_scale
 							sy = sx * (f.flip_y and -1 or 1) * ref_scale
 							sx = sy * (f.flip_x and -1 or 1) * ref_scale
+
 							if f.scale then
 								sy = sy * f.scale.x
 								sx = sx * f.scale.y
@@ -237,6 +257,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 						local p_x_s = x * f_sx
 						local p_y_s = y * f_sy
+
 						r = -f.r * flipf + r
 
 						if f.r ~= 0 then
@@ -244,6 +265,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 							local sr = math.sin(-f.r)
 							local p_x = p_x_s * cr - p_y_s * sr
 							local p_y = p_x_s * sr + p_y_s * cr
+
 							x = p_x + f.pos.x + f.offset.x
 							y = REF_H - (-p_y + f.pos.y + f.offset.y)
 						else
@@ -252,6 +274,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 						end
 
 						batch:add(quad, x, y, r * flipf, sx, sy, ox, oy, kx, ky)
+
 						batch_count = batch_count + 1
 					end
 				end
@@ -266,6 +289,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 			if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 				if batch_count > 0 then
 					G.draw(batch)
+
 					bi = bi_count < bi + 1 and 1 or bi + 1
 					batch = batches[bi]
 
@@ -275,6 +299,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 				end
 
 				batch:clear()
+
 				lr = nil
 				lg = nil
 				lb = nil
@@ -282,8 +307,10 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 				if ss.atlas then
 					local im, w, h = I:i(ss.atlas)
+
 					current_atlas = ss.atlas
 					last_texture = im
+
 					batch:setTexture(im)
 				end
 
@@ -313,16 +340,19 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 			if a ~= la or r ~= lr or g ~= lg or b ~= lb then
 				batch:setColor(r, g, b, a / 255)
+
 				lr, lg, lb, la = r, g, b, a
 			end
 
 			batch:add(frame_draw_params(f))
+
 			batch_count = batch_count + 1
 		end
 	end
 
 	if batch_count > 0 then
 		G.draw(batch)
+
 		bi = bi_count < bi + 1 and 1 or bi + 1
 		batch = batches[bi]
 		batches_count = batches_count + 1
@@ -336,6 +366,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 	RU.bi = bi
 	RU.last_texture = last_texture
+
 	return last_idx
 end
 

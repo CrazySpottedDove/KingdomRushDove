@@ -4,17 +4,23 @@ local km = require("lib.klua.macros")
 local FS = love.filesystem
 local persistence = require("lib.klua.persistence")
 local signal = require("hump.signal")
+
 require("lib.klua.string")
+
 local GS = require("game_settings")
 local features = require("features")
+
 require("version")
+
 local sio = require(features.storage_io or "storage_io_generic")
 local storage = {}
+
 storage.active_slot_idx = nil
 storage.slot = nil
 storage.SETTINGS_FILE = "settings.lua"
 storage.GLOBAL_FILE = "global.lua"
 storage.SLOT_FILE_FMT = "slot_%d.lua"
+
 local SETTINGS_PARAMS = {
 	"fps",
 	"fullscreen",
@@ -66,6 +72,7 @@ local SLOT_MANDATORY_KEYS = {"levels", "upgrades", "heroes"}
 function storage:deserialize_lua(data)
 	if not data then
 		log.error("Error deserializing. data is nil")
+
 		return nil
 	end
 
@@ -73,15 +80,19 @@ function storage:deserialize_lua(data)
 
 	if not chunk then
 		log.error("Error loading chunk. %s", err)
+
 		return nil
 	end
 
 	local env = {}
+
 	setfenv(chunk, env)
+
 	local ok, result = pcall(chunk)
 
 	if not ok then
 		log.error("Error parsing chunk. %s", tostring(result))
+
 		return nil
 	end
 
@@ -108,10 +119,13 @@ function storage:load_config()
 
 	if not config then
 		log.error("config.lua not found, using default.lua instead")
+
 		config = default_patch
+
 		self:save_config(config)
 	elseif not config.custom_config_enabled then
 		log.error("config.custom_config_enable is false, using default.lua instead")
+
 		config = default_patch
 	else
 		for k, v in pairs(default_patch) do
@@ -129,7 +143,9 @@ function storage:load_criket()
 
 	if not criket then
 		local criket_template = require("patches.criket_template")
+
 		criket = criket_template
+
 		self:save_criket(criket)
 	end
 
@@ -209,6 +225,7 @@ function storage:load_keyset()
 
 	if not key_shortcuts then
 		key_shortcuts = default_key_shortcuts
+
 		self:save_keyset(key_shortcuts)
 	else
 		for k, v in pairs(default_key_shortcuts) do
@@ -326,6 +343,7 @@ end
 
 function storage:save_global(data_table, should_sync)
 	local result = self:write_lua(self.GLOBAL_FILE, data_table, should_sync)
+
 	return result
 end
 
@@ -334,6 +352,7 @@ function storage:load_slot(idx, force)
 
 	if not idx then
 		log.error("slot idx is nil")
+
 		return nil
 	end
 
@@ -347,6 +366,7 @@ function storage:load_slot(idx, force)
 		if not input[v] then
 			log.error("loaded slot %s has invalid data for %s. removing.", idx, v)
 			self:delete_slot(idx)
+
 			return nil
 		end
 	end
@@ -363,6 +383,7 @@ function storage:load_slot(idx, force)
 		for k, v in pairs(tpl.heroes.status) do
 			if not input.heroes.status[k] then
 				log.debug("adding missing hero %s to savegame", k)
+
 				input.heroes.status[k] = table.deepclone(v)
 			end
 		end
@@ -374,6 +395,7 @@ function storage:load_slot(idx, force)
 				for ks, vs in pairs(vh.skills) do
 					if type(vs) ~= "number" or vs < 0 or vs > 3 then
 						log.error("hero %s skill %s outside valid range... patching to 0", kh, ks)
+
 						vh.skills[ks] = 0
 					end
 				end
@@ -389,6 +411,7 @@ function storage:save_slot(data_table, idx, should_sync)
 
 	if not idx then
 		log.error("slot idx is nil")
+
 		return nil
 	end
 
@@ -397,6 +420,7 @@ function storage:save_slot(data_table, idx, should_sync)
 	end
 
 	log.debug("saving slot:%s should sync:%s", idx, should_sync)
+
 	local fn = string.format(self.SLOT_FILE_FMT, idx)
 	local success = self:write_lua(fn, data_table, should_sync)
 
@@ -412,6 +436,7 @@ end
 function storage:delete_slot(idx)
 	if not idx then
 		log.error("slot idx is nil")
+
 		return nil
 	end
 
@@ -434,27 +459,33 @@ function storage:new_slot(idx)
 	end
 
 	template = table.deepclone(template)
+
 	return template
 end
 
 function storage:create_slot(idx)
 	local template = storage:new_slot(idx)
+
 	storage:save_slot(template, idx, true)
+
 	return storage:load_slot(idx)
 end
 
 function storage:set_active_slot(idx)
 	if not idx then
 		log.error("slot idx is nil")
+
 		return 
 	end
 
 	if not self:load_slot(idx) then
 		log.error("slot %s must exist before setting it as active", idx)
+
 		return 
 	end
 
 	self.active_slot_idx = idx
+
 	signal.emit("slot-changed", idx)
 end
 
@@ -465,6 +496,7 @@ end
 function storage:get_slot_progress(slot)
 	if not slot then
 		log.paranoid("slot is nil")
+
 		return -1
 	end
 
@@ -495,7 +527,9 @@ function storage:get_slot_progress(slot)
 	end
 
 	total = km.clamp(0, GS.max_stars, total)
+
 	log.paranoid("slot progress %s\nlevels:%s\nlast_victory:%s", total, getfulldump(slot.levels), getfulldump(slot.last_victory or {}))
+
 	return total
 end
 
@@ -547,10 +581,13 @@ function storage:import_plist(filename)
 
 	if filename and self:patch_applied(global, filename) then
 		global.plist_imported = version.string
+
 		storage:save_global(global)
+
 		return 
 	elseif global.plist_imported then
 		log.debug("plist was already imported. skipping")
+
 		return 
 	end
 
@@ -561,7 +598,9 @@ function storage:import_plist(filename)
 
 		local function get_nsuserdefaults_data()
 			local ffi = require("ffi")
+
 			ffi.cdef(" const char* kr_get_nsuserdefaults_data(); ")
+
 			return ffi.string(ffi.C.kr_get_nsuserdefaults_data())
 		end
 
@@ -569,20 +608,24 @@ function storage:import_plist(filename)
 
 		if not ok then
 			log.error("error loading plist from ns_userdefaults: %s", tostring(result))
+
 			return 
 		end
 
 		fs = result
 	else
 		log.info("importing plist from %s", filename)
+
 		local f = io.open(filename, "r")
 
 		if not f then
 			log.debug("plist file could not be found at %s", filename)
+
 			return 
 		end
 
 		fs = f:read("*a")
+
 		f:close()
 	end
 
@@ -590,6 +633,7 @@ function storage:import_plist(filename)
 
 	if not p then
 		log.error("error parsing plist file %s", filename)
+
 		return 
 	end
 
@@ -611,6 +655,7 @@ function storage:import_plist(filename)
 			log.error("Slot %s could not be found", src_slot_name)
 		else
 			local dst_slot = self:load_slot(i) or self:create_slot(i)
+
 			storage_mappings:append_slot(src_slot, dst_slot)
 			self:save_slot(dst_slot, i)
 		end
@@ -633,6 +678,7 @@ function storage:import_plist(filename)
 	end
 
 	global.plist_imported = version.string
+
 	storage:save_global(global)
 	log.info("plist import finished")
 end
@@ -648,12 +694,14 @@ function storage:patch_applied(global, filename)
 
 					if s.hero_voodoowitch and s.hero_voodoo_witch then
 						log.info("patching hero_voodoowitch xp")
+
 						s.hero_voodoo_witch.xp = math.max(s.hero_voodoowitch.xp, s.hero_voodoo_witch.xp)
 						s.hero_voodoowitch = nil
 					end
 
 					if s.hero_vanhelsing and s.hero_van_helsing then
 						log.info("patching hero_vanhelsing xp")
+
 						s.hero_van_helsing.xp = math.max(s.hero_vanhelsing.xp, s.hero_van_helsing.xp)
 						s.hero_vanhelsing = nil
 					end
@@ -667,6 +715,7 @@ function storage:patch_applied(global, filename)
 
 				if slot and slot.heroes and slot.heroes.selected and slot.heroes.selected == "hero_gyro" then
 					log.info("patching hero_gyro as hero_wilbur")
+
 					slot.heroes.selected = "hero_wilbur"
 				end
 
@@ -679,6 +728,7 @@ end
 function storage:import_dotnet(dirname)
 	if KR_GAME ~= "kr1" and KR_PLATFORM ~= "desktop" then
 		log.debug("only for legacy kr1-desktop. skipping")
+
 		return 
 	end
 
@@ -686,30 +736,39 @@ function storage:import_dotnet(dirname)
 
 	if global.dotnet_imported then
 		log.debug("dotnet was already imported. skipping")
+
 		return 
 	end
 
 	log.info("importing dotnet from dir %s", dirname)
+
 	local parser = require("dotnet_slot_parser")
 
 	for i = 1, 3 do
 		local src_name = string.format("%s/slot%i.data", dirname, i)
+
 		log.debug("importing %s", src_name)
+
 		local f = io.open(src_name, "rb")
 
 		if not f then
 			log.debug("dotnet slot could not be found at %s", src_name)
 		else
 			local fs = f:read("*a")
+
 			f:close()
+
 			local p, err = parser:parse(fs)
 
 			if not p then
 				log.error("error parsing dotnet slot file %s. %s", src_name, err)
 			else
 				local slot = self:load_slot(i, true) or self:create_slot(i)
+
 				slot = table.deepmerge(slot, p)
+
 				self:save_slot(slot, i, true)
+
 				global.dotnet_imported = version.string
 			end
 		end

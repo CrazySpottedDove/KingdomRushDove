@@ -253,4 +253,5 @@ local data = {
 	gap_count_range = {0, 1, 2}, -- 每个 wave 中可接受 gap 数量的值，随机选取
 	wave_max_types = 8 -- 每个 wave 最多不同种类敌人数量
 }
+
 return data

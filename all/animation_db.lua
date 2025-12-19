@@ -1,8 +1,10 @@
 -- chunkname: @./all/animation_db.lua
 local log = require("lib.klua.log"):new("animation_db")
 local km = require("lib.klua.macros")
+
 require("lib.klua.table")
 require("lib.klua.dump")
+
 local G = love.graphics
 local FS = love.filesystem
 local ceil = math.ceil
@@ -12,16 +14,20 @@ local min = math.min
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
+
 	return info and info.type == "file"
 end
 
 require("constants")
+
 local animation_db = {}
+
 animation_db.db = {}
 animation_db.fps = FPS
 animation_db.tick_length = TICK_LENGTH
 animation_db.missing_animations = {}
 animation_db.loaded = false
+
 local number_format_cache = {}
 
 for i = 0, 9999 do
@@ -29,9 +35,10 @@ for i = 0, 9999 do
 end
 
 function animation_db:load()
-    if self.loaded then
-        return
-    end
+	if self.loaded then
+		return 
+	end
+
 	local function load_ani_file(f)
 		local ok, achunk = pcall(FS.load, f)
 
@@ -64,8 +71,11 @@ function animation_db:load()
 	end
 
 	self.db = {}
+
 	local f = string.format("%s/data/game_animations.lua", KR_PATH_GAME)
+
 	load_ani_file(f)
+
 	local path = string.format("%s/data/animations", KR_PATH_GAME)
 	local files = FS.getDirectoryItems(path)
 
@@ -95,6 +105,7 @@ function animation_db:load()
 					frames = v.frames,
 					prefix = string.format(v.layer_prefix, i)
 				}
+
 				expanded_keys[nk] = nv
 				deleted_keys[next_deleted_index] = k
 				next_deleted_index = next_deleted_index + 1
@@ -110,7 +121,7 @@ function animation_db:load()
 		self.db[k] = v
 	end
 
-    self.loaded = true
+	self.loaded = true
 
 	self:prebuild_frames()
 end
@@ -138,7 +149,9 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 		end
 
 		log.error("animation %s not found", animation_name)
+
 		self.missing_animations[animation_name or "nil"] = true
+
 		return nil
 	end
 
@@ -208,6 +221,7 @@ function animation_db:generate_frames(a)
 		end
 
 		local prefix_ = self.prefix_s[a.prefix]
+
 		a.frame_names = {}
 
 		for i = 1, #frames do
@@ -218,7 +232,9 @@ end
 
 function animation_db:fni(animation, time_offset, loop, fps)
 	local a = animation
+
 	fps = fps or self.fps
+
 	local frames = a.frames
 	local eps = 1e-09
 	local len = #frames
@@ -228,10 +244,12 @@ function animation_db:fni(animation, time_offset, loop, fps)
 
 	if loop then
 		local idx = floor(time_in_frames_plus_eps) % len + 1
+
 		return a.frame_names[idx], runs, idx
 	else
 		local elapsed_frames = ceil(time_in_frames_plus_eps)
 		local idx = max(1, min(len, elapsed_frames))
+
 		return a.frame_names[idx], runs, idx
 	end
 end
@@ -245,7 +263,9 @@ function animation_db:duration(animation_name)
 		end
 
 		log.error("animation %s not found", animation_name)
+
 		self.missing_animations[animation_name or "nil"] = true
+
 		return nil
 	end
 

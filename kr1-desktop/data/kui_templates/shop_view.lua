@@ -2,6 +2,7 @@
 local BG_W = 1024
 local BG_H = 768
 local OY = 130
+
 return {
 	id = "shop_view",
 	hidden = true,

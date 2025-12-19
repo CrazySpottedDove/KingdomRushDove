@@ -4,12 +4,16 @@ local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
 local i18n = require("i18n")
+
 require("constants")
+
 local anchor_y = 0
 local image_x = 0
 local image_y, tt
 local scripts = require("game_scripts")
+
 require("templates")
+
 local IS_PHONE = KR_TARGET == "phone"
 local IS_PHONE_OR_TABLET = KR_TARGET == "phone" or KR_TARGET == "tablet"
 local IS_CONSOLE = KR_TARGET == "console"
@@ -74,7 +78,9 @@ end
 
 -------------------------------------------
 tt = RT("tower_holder")
+
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "editor", "editor_script")
+
 tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.ui.has_nav_mesh = true
 tt.tower.level = 1
@@ -137,7 +143,9 @@ tt.build_name = "tower_engineer_1"
 tt.render.sprites[2].name = "tower_constructing_0001"
 tt.render.sprites[2].offset = v(0, 41)
 tt = RT("tower_mage_1", "tower")
+
 AC(tt, "attacks")
+
 tt.tower.type = "mage"
 tt.tower.level = 1
 tt.tower.price = 100
@@ -190,7 +198,9 @@ tt.attacks.list[1].bullet_start_offset = {v(8, 70), v(-5, 69)}
 tt.render.sprites[2].prefix = "towermagelvl3"
 tt.render.sprites[3].offset = v(1, 62)
 tt = RT("tower_engineer_1", "tower")
+
 AC(tt, "attacks")
+
 tt.tower.type = "engineer"
 tt.tower.level = 1
 tt.tower.price = 125
@@ -252,7 +262,9 @@ for i = 2, 8 do
 end
 
 tt = RT("tower_archer_1", "tower")
+
 AC(tt, "attacks")
+
 tt.tower.type = "archer"
 tt.tower.level = 1
 tt.tower.price = 70
@@ -316,7 +328,9 @@ tt.attacks.range = 180
 tt.attacks.list[1].bullet = "arrow_3"
 tt.attacks.list[1].cooldown = 0.5
 tt = RT("tower_barrack_1", "tower")
+
 AC(tt, "barrack")
+
 tt.tower.type = "barrack"
 tt.tower.level = 1
 tt.tower.price = 70

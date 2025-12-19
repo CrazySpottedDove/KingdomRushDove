@@ -4,6 +4,7 @@ local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local GS = require("game_settings")
 local rail = {}
+
 rail.can_be_paused = false
 rail.update_interval = 1
 rail.sync_times = {}
@@ -26,6 +27,7 @@ rail.signal_handlers = {
 }
 
 local ffi = require("ffi")
+
 ffi.cdef("    typedef struct RailW RailW;\n\n    RailW* railw_new(const char* lib_path);\n    void railw_delete(RailW* r);\n    \n    bool railw_must_restart_app(RailW* r, uint64_t game_id);\n\n    bool railw_initialize(RailW* r);\n    void railw_shutdown(RailW* r);\n    void railw_update(RailW* r);\n    int  railw_get_system_status(RailW* r);\n\n    // async requests management\n    void railw_delete_request(RailW* r, int rid);\n    int  railw_get_request_status(RailW* r, int rid);\n    int  railw_create_test_request(RailW* r);\n\n    // achievements\n    bool railw_ach_set(RailW* r,const char* name);\n    bool railw_ach_get(RailW* r,const char* name, bool* unlocked);\n    bool railw_ach_reset(RailW* r,const char* name);\n    int  railw_ach_async_request(RailW* r);\n    int  railw_ach_async_store(RailW* r);\n\n    int  railw_lb_async_request(RailW* r, const char* board_name);\n    bool railw_lb_update_score(RailW* r, const char* board_name, double score);\n")
 
 function rail:init(name, params)
@@ -36,6 +38,7 @@ function rail:init(name, params)
 	else
 		if not params or not params.game_id or type(params.game_id) ~= "number" then
 			log.error("platform_services_rail requires game_id param of type number")
+
 			return 
 		end
 
@@ -49,10 +52,12 @@ function rail:init(name, params)
 		end
 
 		self:restart_app_if_necessary(self.game_id)
+
 		self.inited = self.lib.railw_initialize(self.R)
 
 		if not self.inited then
 			log.error("railw_initialize() failed")
+
 			return 
 		end
 
@@ -76,11 +81,13 @@ function rail:init(name, params)
 
 	self:sync_achievements()
 	self:sync_leaderboards()
+
 	return true
 end
 
 function rail:shutdown()
 	log.debug("Shutting down rail lib")
+
 	local lib, R = self.lib, self.R
 
 	if self.inited then
@@ -95,6 +102,7 @@ end
 function rail:get_status()
 	if self.inited then
 		local status = self.lib.railw_get_system_status(self.R)
+
 		return status == 1
 	end
 
@@ -106,6 +114,7 @@ function rail:update(dt)
 
 	if self.inited then
 		lib.railw_update(R)
+
 		local status = lib.railw_get_system_status(R)
 
 		if status ~= 0 and status ~= 1 then
@@ -125,7 +134,9 @@ end
 function rail:get_request_status(rid)
 	if self.inited then
 		local result = self.lib.railw_get_request_status(rid)
+
 		log.paranoid("get_request_status(%s) = %s", rid, result)
+
 		return result
 	end
 
@@ -163,6 +174,7 @@ function rail:unlock_achievement(ach_id, defer_store)
 		end
 	else
 		log.error("Rail API not initialized. Ignoring achievement unlock: %s", tostring(ach_id))
+
 		return false
 	end
 end
@@ -190,10 +202,12 @@ function rail:sync_achievements()
 
 	if rid < 0 then
 		log.error("error creating request to sync achievements")
+
 		return nil
 	end
 
 	self.prq:add(rid, "sync_achievements", cb_sync_achievements)
+
 	return rid
 end
 
@@ -238,6 +252,7 @@ function rail:sync_leaderboards()
 
 			if rid < 0 then
 				log.error("error creating request to sync leaderboards")
+
 				return nil
 			end
 

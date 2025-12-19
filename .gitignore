@@ -47,3 +47,4 @@ client.log
 *:Zone.Identifier
 dlfmt
 love_env/
+.dlfmt_cache.json

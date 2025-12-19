@@ -1032,4 +1032,5 @@ local hero_room_view = {
 		}}
 	}}
 }
+
 return hero_room_view

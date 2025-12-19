@@ -81,6 +81,7 @@ end
 
 local function rotate(phi, x, y)
 	local c, s = cos(phi), sin(phi)
+
 	return c * x - s * y, s * x + c * y
 end
 
@@ -90,17 +91,21 @@ end
 
 local function project(x, y, u, v)
 	local s = (x * u + y * v) / (u * u + v * v)
+
 	return s * u, s * v
 end
 
 local function mirror(x, y, u, v)
 	local s = 2 * (x * u + y * v) / (u * u + v * v)
+
 	return s * u - x, s * v - y
 end
 
 local function trim(maxLen, x, y)
 	local s = maxLen * maxLen / len2(x, y)
+
 	s = s > 1 and 1 or math.sqrt(s)
+
 	return x * s, y * s
 end
 

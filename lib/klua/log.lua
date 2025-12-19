@@ -26,6 +26,7 @@ local klog = {
 	OFF_LEVEL = 0,
 	PARANOID_LEVEL = 5
 }
+
 klog.__index = klog
 klog.level = klog.ERROR_LEVEL
 klog.default_level_by_name = {}
@@ -60,6 +61,7 @@ end
 
 function klog.new(parentlog, name, newlevel)
 	local newlog = setmetatable({}, parentlog)
+
 	parentlog.__index = parentlog
 
 	if parentlog then
@@ -76,6 +78,7 @@ function klog.new(parentlog, name, newlevel)
 
 	if type(name) == "string" then
 		assert(not noNames[name], "Can't use name " .. name .. " for a klogger. It's reserved!")
+
 		newlog.name = name
 		klog[name] = newlog
 	end
@@ -124,6 +127,7 @@ function klog.new(parentlog, name, newlevel)
 
 	function newlog.traceall(msg)
 		msg = msg or ""
+
 		log(newlog.use_print, newlog.name, "TRACEBACK  ", "\n%s", debug.traceback(msg, 2))
 	end
 

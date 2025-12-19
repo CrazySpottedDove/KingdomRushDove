@@ -1,4 +1,5 @@
 local Pool = {}
+
 Pool.__index = Pool
 
 function Pool:new(create_fn, reset_fn, initial_size)
@@ -15,14 +16,18 @@ function Pool:new(create_fn, reset_fn, initial_size)
 	end
 
 	setmetatable(o, self)
+
 	return o
 end
 
 function Pool:get(...)
 	if #self.pool > 0 then
 		local obj = self.pool[#self.pool]
+
 		self.reset_fn(obj, ...)
+
 		self.pool[#self.pool] = nil
+
 		return obj
 	else
 		return self.create_fn(...)

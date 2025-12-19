@@ -31,6 +31,7 @@ end
 
 local function new(class)
 	class = class or {}
+
 	local inc = class.__includes or {}
 
 	if getmetatable(inc) then
@@ -51,10 +52,13 @@ local function new(class)
 	end
 	class.include = class.include or include
 	class.clone = class.clone or clone
+
 	return setmetatable(class, {
 		__call = function(c, ...)
 			local o = setmetatable({}, c)
+
 			o:init(...)
+
 			return o
 		end
 	})

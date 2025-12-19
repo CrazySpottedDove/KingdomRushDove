@@ -2,6 +2,7 @@
 NULL = setmetatable({}, {
 	__index = function(t, k)
 		error("Error: trying to access member " .. tostring(k) .. " of NULL value")
+
 		return nil
 	end,
 	__newindex = function(t, k, v)
@@ -18,8 +19,10 @@ function enum(enumTable)
 
 	for i = 1, #enumTable do
 		local it = enumTable[i]
+
 		assert(type(it) == "string", "Error: enum itmes must be strings (" .. type(it) .. " found at position " .. i .. ")")
 		assert(not _G[it], "Error: enum redefines symbol '" .. it .. "'")
+
 		enumTable[it] = i
 		_G[it] = i
 	end

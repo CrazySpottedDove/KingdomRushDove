@@ -86,13 +86,16 @@ local script_utils = {
 	merge_tables = merge_tables,
 	merge_conflict_tables = merge_conflict_tables
 }
+
 package.loaded["script_utils"] = script_utils
 
 -- 加载数据表
 local function load_table_from_file(filename)
 	local f = assert(io.open(filename, "r"))
 	local content = f:read("*a")
+
 	f:close()
+
 	-- 加载为函数
 	local chunk, err = load(content, "@" .. filename, "t", _ENV)
 
@@ -130,7 +133,9 @@ end
 
 local function serialize(tbl, indent)
 	indent = indent or ""
+
 	local lines = {}
+
 	table.insert(lines, "{")
 
 	if is_array(tbl) then
@@ -143,6 +148,7 @@ local function serialize(tbl, indent)
 			elseif type(v) == "string" then
 				-- 先把换行替换成 \n
 				local s = v:gsub("\n", "\\n")
+
 				-- 再用 %q 转义
 				val_str = string.format("%q", s)
 				-- 再把 \\n 还原成 \n（去掉多余的转义）
@@ -184,6 +190,7 @@ local function serialize(tbl, indent)
 			elseif type(v) == "string" then
 				-- 先把换行替换成 \n
 				local s = v:gsub("\n", "\\n")
+
 				-- 再用 %q 转义
 				val_str = string.format("%q", s)
 				-- 再把 \\n 还原成 \n（去掉多余的转义）
@@ -197,11 +204,13 @@ local function serialize(tbl, indent)
 	end
 
 	table.insert(lines, indent .. "}")
+
 	return table.concat(lines, "\n")
 end
 
 -- 输出到文件
 local f = assert(io.open(output_file, "w"))
+
 f:write("return ")
 f:write(serialize(tbl, ""))
 f:write("\n")

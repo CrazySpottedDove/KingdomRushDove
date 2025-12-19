@@ -18,6 +18,7 @@ end
 local p11, p12 = 0, CJK(0.48, 0.5, 0.5, 0.5)
 local p21, p22 = CJK(0.3, 0.35, 0.35, 0.35), CJK(0.5, 0.55, 0.55, 0.55)
 local rs = GGLabel.static.ref_h / REF_H
+
 return {
 	hero_names_config = {
 		default = {

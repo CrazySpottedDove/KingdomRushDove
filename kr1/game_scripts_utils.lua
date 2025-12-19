@@ -1,5 +1,7 @@
 log = require("lib.klua.log"):new("game_scripts")
+
 require("lib.klua.table")
+
 km = require("lib.klua.macros")
 signal = require("hump.signal")
 E = require("entity_db")
@@ -13,7 +15,9 @@ LU = require("level_utils")
 UP = require("upgrades")
 V = require("lib.klua.vector")
 W = require("wave_db")
+
 local bit = require("bit")
+
 band = bit.band
 bor = bit.bor
 bnot = bit.bnot

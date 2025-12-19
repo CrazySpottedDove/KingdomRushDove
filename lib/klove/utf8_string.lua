@@ -11,6 +11,7 @@ function upper(s)
 
 	for p, c in utf8.codes(s) do
 		local mc = mappings.upper[c]
+
 		out = out .. utf8.char(mc or c)
 	end
 

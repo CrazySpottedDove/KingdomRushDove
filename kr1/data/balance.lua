@@ -5427,8 +5427,8 @@ local towers = {
 			cooldown = {15, 15, 15},
 			damage_min = {20, 40, 60},
 			damage_max = {30, 60, 90},
-            s_damage_min = {20, 40, 60},
-            s_damage_max = {30, 60, 90},
+			s_damage_min = {20, 40, 60},
+			s_damage_max = {30, 60, 90},
 			damage_type = DAMAGE_STAB,
 			armor_penetration = {0.1, 0.25, 0.4}
 		},
@@ -6363,7 +6363,7 @@ local specials = {
 			price = 150
 		}
 	},
-    	terrain_8 = {
+	terrain_8 = {
 		flaming_ground = {
 			dps = {
 				duration = 0.25,
@@ -6401,7 +6401,7 @@ local specials = {
 			},
 			wooden_holder_enhance = {
 				range_factor = 2.5,
-                damage_factor = 1.2,
+				damage_factor = 1.2,
 				first_cooldown = 999999,
 				duration = 8,
 				slow_factor = 0.5,
@@ -6464,36 +6464,26 @@ local specials = {
 					}
 				},
 				holder_spawn_pos = {
-					["22"] = {
-						{
-							x = 282,
-							y = 361
-						}
-					},
-					["23"] = {
-						{
-							x = 85,
-							y = 361
-						}
-					},
-					["25"] = {
-						{
-							x = 109,
-							y = 433
-						}
-					},
-					["26"] = {
-						{
-							x = 367,
-							y = 515
-						}
-					},
-					["29"] = {
-						{
-							x = 770,
-							y = 515
-						}
-					}
+					["22"] = {{
+						x = 282,
+						y = 361
+					}},
+					["23"] = {{
+						x = 85,
+						y = 361
+					}},
+					["25"] = {{
+						x = 109,
+						y = 433
+					}},
+					["26"] = {{
+						x = 367,
+						y = 515
+					}},
+					["29"] = {{
+						x = 770,
+						y = 515
+					}}
 				}
 			},
 			metal_holder = {

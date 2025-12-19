@@ -1,5 +1,6 @@
 -- chunkname: @./kr1-desktop/data/director_data.lua
 local d = {}
+
 d.item_props = {
 	splash = {
 		src = "screen_splash",
@@ -50,4 +51,5 @@ d.loading_image_name = {
 	{"loading_blackburn", {23, 24, 25, 26}},
 	default = "loading_grass"
 }
+
 return d

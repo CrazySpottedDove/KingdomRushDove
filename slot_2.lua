@@ -942,4 +942,5 @@ local obj1 = {
 	["locked_towers"] = {};
 	["version_string"] = "kr1-desktop-5.6.12"
 }
+
 return obj1

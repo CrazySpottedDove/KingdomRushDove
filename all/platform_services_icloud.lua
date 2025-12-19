@@ -1,11 +1,15 @@
 -- chunkname: @./all/platform_services_icloud.lua
 require("lib.klua.string")
+
 local log = require("lib.klua.log"):new("platform_services_icloud")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local storage = require("storage")
+
 require("version")
+
 local ic = {}
+
 ic.can_be_paused = false
 ic.update_interval = 2
 ic.sync_times = {}
@@ -23,7 +27,9 @@ ic.signal_handlers = {
 		end
 	}
 }
+
 local ffi = require("ffi")
+
 ffi.cdef("bool kcloud_initialize(void);\nvoid kcloud_shutdown(void);\nint kcloud_get_status(void);\nvoid kcloud_do_signin(void);\nvoid kcloud_do_signout(void);\nconst char* kcloud_get_cached_file(const char* name);\nint kcloud_create_request_delete_file(const char* name);\nint kcloud_create_request_push_slot(const char* name, int progress, const char* slot_data, bool overwrite);\nint kcloud_create_request_sync_slots(const char* names_list, const char* legacy_names_list);\nint kcloud_get_request_status(int rid);\nvoid kcloud_delete_request(int rid);\ndouble kcloud_get_last_sync(void);\n")
 
 function ic:init(name, params)
@@ -38,6 +44,7 @@ function ic:init(name, params)
 
 		if not self.lib then
 			log.error("Error loading kcloud library")
+
 			return false
 		end
 
@@ -45,6 +52,7 @@ function ic:init(name, params)
 
 		if not self.inited then
 			log.error("Error initializing kcloud")
+
 			return false
 		end
 
@@ -110,7 +118,9 @@ function ic:get_request_status(rid)
 	end
 
 	local result = self.lib.kcloud_get_request_status(rid)
+
 	log.paranoid("get_request_status result: %s", result)
+
 	return result
 end
 
@@ -158,29 +168,36 @@ function ic:sync_slots()
 			success = true
 			self.last_sync = self.lib.kcloud_get_last_sync()
 			self.sync_times.slots = os.time()
+
 			local imported = false
 			local global = storage:load_global()
 
 			for i = 1, 3 do
 				local lslot = storage:load_slot(i)
 				local rndata = ffi.string(ic.lib.kcloud_get_cached_file(storage:get_slot_name(i)))
+
 				log.paranoid("  rndata for slot %s:%s", i, rndata)
+
 				local rnslot = rndata and storage:deserialize_lua(rndata)
 				local rslot = rnslot
 
 				if self.sync_legacy and not global.cloud_imported then
 					imported = true
+
 					local rodata = ffi.string(ic.lib.kcloud_get_cached_file(string.format("slot_%i", i - 1)))
 
 					if rodata then
 						log.debug("comparing legacy cloud save...")
+
 						local plist = require("lib.klua.plist")
 						local storage_mappings = require("storage_mappings")
 						local roparsed = plist:parse(rodata)
 
 						if roparsed ~= nil then
 							local roslot = storage:new_slot()
+
 							storage_mappings:append_slot(roparsed, roslot)
+
 							rslot = storage:get_best_slot(rnslot, roslot)
 
 							if rslot == roslot then
@@ -206,6 +223,7 @@ function ic:sync_slots()
 			if imported then
 				global = storage:load_global()
 				global.cloud_imported = version.string
+
 				storage:save_global(global)
 			end
 		else
@@ -217,6 +235,7 @@ function ic:sync_slots()
 	end
 
 	log.debug("synchronizing all slots")
+
 	local names_list = {storage:get_slot_name(1), storage:get_slot_name(2), storage:get_slot_name(3)}
 	local legacy_names_list = {}
 
@@ -232,9 +251,11 @@ function ic:sync_slots()
 
 	if rid < 0 then
 		log.error("error creating request to sync slots")
+
 		return nil
 	else
 		self.prq:add(rid, "sync_slots", cb_sync_slots)
+
 		return rid
 	end
 end
@@ -243,6 +264,7 @@ function ic:push_slot(idx, overwrite)
 	local function cb_push_slot(status, req)
 		if self.prq:contains(req.id) then
 			local success = status == 0
+
 			signal.emit(SGN_PS_PUSH_SLOT_FINISHED, "cloudsave", success, req.id, req.slot_idx)
 		end
 	end
@@ -255,15 +277,20 @@ function ic:push_slot(idx, overwrite)
 
 	local progress = storage:get_slot_progress(slot)
 	local slot_data = storage:serialize_lua(slot)
+
 	log.debug("pushing slot:%s progress:%s", idx, progress)
+
 	local rid = self.lib.kcloud_create_request_push_slot(storage:get_slot_name(idx), progress, slot_data, overwrite == true)
 
 	if rid < 0 then
 		log.error("error creating request to push slot %s", idx)
+
 		return nil
 	else
 		local req = self.prq:add(rid, "push_slot", cb_push_slot)
+
 		req.slot_idx = idx
+
 		return rid
 	end
 end
@@ -272,19 +299,24 @@ function ic:delete_slot(idx)
 	local function cb_delete_slot(status, req)
 		if self.prq:contains(req.id) then
 			local success = status == 0
+
 			signal.emit(SGN_PS_DELETE_SLOT_FINISHED, "cloudsave", success, req.id, req.slot_idx)
 		end
 	end
 
 	log.debug("deleting slot:%s", idx)
+
 	local rid = self.lib.kcloud_create_request_delete_file(storage:get_slot_name(idx))
 
 	if rid < 0 then
 		log.error("error creating request to delete slot %s", idx)
+
 		return nil
 	else
 		local req = self.prq:add(rid, "delete_slot", cb_delete_slot)
+
 		req.slot_idx = idx
+
 		return rid
 	end
 end

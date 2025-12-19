@@ -38,7 +38,9 @@ end
 
 function A:load()
 	log.debug("loading achievements data from slot")
+
 	local slot = storage:load_slot()
+
 	self.ach = slot.achievements or {}
 	self.counters[P_LIFETIME] = slot.achievement_counters or {}
 	self.dirty = false
@@ -49,9 +51,12 @@ function A:save()
 
 	if self.dirty then
 		local slot = storage:load_slot()
+
 		slot.achievements = self.ach
 		slot.achievement_counters = self.counters[P_LIFETIME]
+
 		storage:save_slot(slot)
+
 		self.dirty = false
 	end
 end
@@ -75,6 +80,7 @@ function A:get_count(id)
 
 	local period = ad.period or P_LIFETIME
 	local counter = self.counters[period]
+
 	return counter[id] or 0
 end
 
@@ -85,12 +91,15 @@ function A:got(id)
 
 	if self.ach[id] then
 		log.debug("already got achievement %s", id)
+
 		return 
 	end
 
 	log.debug("got achievement %s", id)
+
 	self.ach[id] = true
 	self.dirty = true
+
 	self:save()
 	signal.emit("got-achievement", id)
 end
@@ -102,6 +111,7 @@ end
 function A:flag(id, flag)
 	if not flag then
 		log.error("flag value missing for %s", id)
+
 		return 
 	end
 
@@ -114,16 +124,20 @@ function A:flag(id, flag)
 	local period = ad.period or P_LIFETIME
 	local counter = self.counters[period]
 	local c = counter[id] or 0
+
 	c = bit.bor(c, flag)
 	counter[id] = c
 	self.dirty = true
+
 	log.paranoid("A:flag id:%s flag:%s -> %04X", id, flag, c)
+
 	return c, ad
 end
 
 function A:flag_check(id, flag)
 	if not flag then
 		log.error("flag value missing for %s", id)
+
 		return 
 	end
 
@@ -138,6 +152,7 @@ end
 
 function A:inc(id, value)
 	value = value or 1
+
 	local ad = self:get_data(id)
 
 	if not ad then
@@ -147,15 +162,19 @@ function A:inc(id, value)
 	local period = ad.period or P_LIFETIME
 	local counter = self.counters[period]
 	local c = counter[id] or 0
+
 	c = c + value
 	counter[id] = c
 	self.dirty = true
+
 	log.paranoid("A:inc id:%s value:%s -> %s", id, value, c)
+
 	return c, ad
 end
 
 function A:inc_check(id, value)
 	value = value or 1
+
 	local c, ad = self:inc(id, value)
 
 	if c and ad and ad.goal and c >= ad.goal and c - value < ad.goal then
@@ -168,6 +187,7 @@ end
 function A:ge_check(id, value)
 	if not value then
 		log.error("value missing for %s", id)
+
 		return 
 	end
 
@@ -182,9 +202,11 @@ function A:ge_check(id, value)
 	if g <= value then
 		log.paranoid("A:ge_check id:%s value:%s >= goal:%s", id, value, g)
 		self:got(ad.name)
+
 		return value, ad
 	else
 		log.paranoid("A:ge_check id:%s value:%s < goal:%s", id, value, g)
+
 		return nil
 	end
 end
@@ -192,6 +214,7 @@ end
 function A:high(id, value)
 	if not value then
 		log.error("value missing for %s", id)
+
 		return 
 	end
 
@@ -208,10 +231,13 @@ function A:high(id, value)
 	if c < value then
 		counter[id] = value
 		self.dirty = true
+
 		log.paranoid("A:high id:%s value:%s > %s", id, value, c)
+
 		return value, ad
 	else
 		log.paranoid("A:high id:%s value:%s <= %s", id, value, c)
+
 		return nil
 	end
 end
@@ -219,6 +245,7 @@ end
 function A:high_check(id, value)
 	if not value then
 		log.error("value missing for %s", id)
+
 		return 
 	end
 
@@ -233,6 +260,7 @@ end
 
 function A:lap_start(id, ts)
 	ts = ts or game.store.tick_ts
+
 	local ad = self:get_data(id)
 
 	if not ad then
@@ -241,14 +269,18 @@ function A:lap_start(id, ts)
 
 	local period = ad.period or P_LIFETIME
 	local counter = self.counters[period]
+
 	counter[id] = ts
 	self.dirty = true
+
 	log.paranoid("A:lap_start id:%s ts:%s -> %s", id, value, ts)
+
 	return ts, ad
 end
 
 function A:lap_check(id, ts)
 	ts = ts or game.store.tick_ts
+
 	local ad = self:get_data(id)
 
 	if not ad then
@@ -261,6 +293,7 @@ function A:lap_check(id, ts)
 
 	if not start_ts then
 		log.debug("no start_ts value for %s", id)
+
 		return 
 	end
 
@@ -292,6 +325,7 @@ end
 function A:h_slot_changed(slot_idx)
 	self.counters = {}
 	self.counters[P_SESSION] = {}
+
 	self:load()
 end
 

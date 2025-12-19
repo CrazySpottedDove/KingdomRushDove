@@ -1,6 +1,7 @@
 -- chunkname: @./kr1-desktop/data/kui_templates/game_gui_gems_view.lua
 local OX = 170
 local PX = ctx.level_mode == 2 and 240 or 220
+
 return {
 	image_name = "win_Gnome",
 	class = "KImageView",

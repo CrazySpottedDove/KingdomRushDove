@@ -170,6 +170,7 @@ function GU.incoming_wave_report(group, path_index, game_mode)
 		if v > 0 then
 			local tpl = E:get_template(k)
 			local i18n_key = (tpl.info.i18n_key or string.upper(k)) .. "_NAME"
+
 			count[i18n_key] = (count[i18n_key] or 0) + v
 		end
 	end

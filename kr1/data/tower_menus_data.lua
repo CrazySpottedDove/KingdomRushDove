@@ -3,6 +3,7 @@ local tpl = require("data.tower_menus_data_templates")
 local scripts = require("kr1.data.tower_menus_data_scripts")
 local M = scripts.merge
 local i18n = require("i18n")
+
 return {
 	-- 塔位
 	holder = {{M(tpl.upgrade, {

@@ -89,3 +89,7 @@ lua ./scripts/gen_assets_index.lua
 server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (fetch)
 server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 ```
+
+### 格式化
+
+本项目使用专有 vscode 插件 `dlfmt` 格式化。在提交更改前，请右键 `dlfmt_task.json`，选择使用 `dlfmt: 运行 JSON 任务`，以保证整个项目格式一致，且压缩了必要的数据资源。

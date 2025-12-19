@@ -2,8 +2,10 @@
 local log = require("lib.klua.log"):new("font_db")
 local G = love.graphics
 local FS = love.filesystem
+
 require("lib.klua.dump")
 require("lib.klua.string")
+
 local font_db = {}
 
 function font_db:init(path)
@@ -12,6 +14,7 @@ end
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
+
 	return info and info.type == "file"
 end
 
@@ -21,6 +24,7 @@ function font_db:load(font_sizes)
 	self.font_files = {}
 	self.font_subst = {}
 	self.font_adj = {}
+
 	local path = self.path or "fonts"
 	local settings_f = path .. "/" .. "font_settings.lua"
 	local settings
@@ -34,6 +38,7 @@ function font_db:load(font_sizes)
 		elseif f then
 			settings = f()
 			self.settings = settings
+
 			log.paranoid("font settings: %s", getfulldump(settings))
 		end
 	else
@@ -41,11 +46,13 @@ function font_db:load(font_sizes)
 	end
 
 	font_sizes = font_sizes or {12}
+
 	local font_chars = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?-+/():;%&`'*#=[]\\\"ÁÉÍÓÚÑáéíóúñ¿¡_<>$"
 	local font_files = FS.getDirectoryItems(path)
 
 	for i = 1, #font_files do
 		local f = font_files[i]
+
 		font_files[i] = path .. "/" .. f
 	end
 
@@ -54,10 +61,14 @@ function font_db:load(font_sizes)
 		-- block empty
 		elseif string.match(f, ".PNG$") or string.match(f, ".png$") then
 			local key = string.gsub(f, ".PNG$", "")
+
 			key = string.gsub(key, ".png$", "")
 			key = string.gsub(key, "^" .. string.gsub(path, "%-", "%%-") .. "/", "")
+
 			local font = G.newImageFont(f, font_chars)
+
 			self.fonts[key] = font
+
 			local image = G.newImage(f)
 			local w, h = image:getDimensions()
 			local data = image:getData()
@@ -70,11 +81,13 @@ function font_db:load(font_sizes)
 					sr, sg, sb, sa = r, g, b, a
 				elseif sr ~= r or sg ~= g or sb ~= b or sa ~= a then
 					self.ascents[key] = y
+
 					break
 				end
 			end
 		elseif string.match(f, ".TTF$") or string.match(f, ".ttf$") or string.match(f, ".otf$") or string.match(f, ".ttc$") or string.match(f, ".TTC$") then
 			local key = string.gsub(f, ".TTF$", "")
+
 			key = string.gsub(key, ".ttf$", "")
 			key = string.gsub(key, ".otf$", "")
 			key = string.gsub(key, ".ttc$", "")
@@ -82,6 +95,7 @@ function font_db:load(font_sizes)
 
 			if settings and settings.cache and table.contains(settings.cache, key) then
 				log.debug("preloading font file data %s", f)
+
 				self.font_files[key] = FS.newFileData(f)
 			else
 				self.font_files[key] = f
@@ -107,6 +121,7 @@ function font_db:f(alias, size)
 	if tf then
 		local fa = self:get_ascent(name_size)
 		local fh = tf:getHeight()
+
 		return tf, fh, fa
 	else
 		local font_file = self.font_files[name]
@@ -114,15 +129,20 @@ function font_db:f(alias, size)
 		if font_file then
 			if self.settings and self.settings.cache_missing and type(font_file) == "string" then
 				log.debug("caching font file data for %s", font_file)
+
 				font_file = FS.newFileData(font_file)
 				self.font_files[name] = font_file
 			end
 
 			log.debug("creating font %s-%s (orig size:%s) from file %s ", name, real_size, size, font_file)
+
 			local font = G.newFont(font_file, tonumber(real_size), "light")
+
 			self.fonts[name_size] = font
+
 			local fa = self:get_ascent(name_size)
 			local fh = font:getHeight()
+
 			return font, fh, fa
 		else
 			log.error("Font %s not found", name)
@@ -146,6 +166,7 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 	end
 
 	line_height = line_height or 1
+
 	local font, w, lines, h
 	local step = 0.5
 
@@ -162,8 +183,10 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 	end
 
 	font:setLineHeight(line_height)
+
 	local padding = 8
 	local c = G.newCanvas(w + padding, h + padding)
+
 	G.setCanvas(c)
 
 	if debug_bg then
@@ -173,21 +196,26 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 
 	local fadj = self:f_adj(font_name, font_size)
 	local vadj = fadj["middle-caps"] or 0
+
 	G.setFont(font)
 	G.setColor_old(color)
 	G.printf(text, padding * 0.5, vadj + padding * 0.5, w, alignment)
 	G.setCanvas()
+
 	local image_data = c:newImageData()
 	local image = G.newImage(image_data)
+
 	return image
 end
 
 function font_db:set_font_subst(orig, subst, adj)
 	log.paranoid("------------------------- orig:%s subst:%s %s", orig, subst, getfulldump(adj))
+
 	self.font_subst[orig] = subst
 	self.font_adj[orig] = adj or {
 		size = 1
 	}
+
 	local to_clean = {}
 
 	for k, v in pairs(self.fonts) do
@@ -218,11 +246,13 @@ function font_db:f_adj(alias, size)
 				local font = self:f(alias, size)
 				local des = font and font:getDescent() or 0.3
 				local h = font and font:getHeight() or 1
+
 				fm[k] = (-des / h * (f_size - 1) + v) * size
 			elseif k == "bottom-caps" then
 				local font = self:f(alias, size)
 				local des = font and font:getDescent() or 0.3
 				local h = font and font:getHeight() or 1
+
 				fm[k] = (-des / h * (f_size - 1) + v * f_size) * size
 			elseif k == "base" then
 				fm[k] = v * size * f_size

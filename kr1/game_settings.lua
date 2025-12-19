@@ -1,5 +1,6 @@
 -- chunkname: @./kr1/game_settings.lua
 local GS = {}
+
 GS.archer_towers = {
 	"tower_archer_1",
 	"tower_archer_2",
@@ -811,4 +812,5 @@ GS.wraith = {
 	soldier_tower_necromancer_skeleton_golem_lvl4 = true,
 	soldier_dragon_bone_ultimate_dog = true
 }
+
 return GS

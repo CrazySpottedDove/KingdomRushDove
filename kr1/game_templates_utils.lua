@@ -1,9 +1,12 @@
 local bit = require("bit")
+
 bor = bit.bor
 band = bit.band
 bnot = bit.bnot
 E = require("entity_db")
+
 require("constants")
+
 IS_PHONE = KR_TARGET == "phone"
 IS_PHONE_OR_TABLET = KR_TARGET == "phone" or KR_TARGET == "tablet"
 IS_CONSOLE = KR_TARGET == "console"

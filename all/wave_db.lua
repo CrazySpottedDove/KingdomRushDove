@@ -5,10 +5,14 @@ local FS = love.filesystem
 local E = require("entity_db")
 local EL = require("kr1.data.endless")
 local EU = require("endless_utils")
+
 require("constants")
+
 local wave_db = {}
+
 wave_db.db = nil
 wave_db.game_mode = nil
+
 local gms = {
 	[GAME_MODE_CAMPAIGN] = "campaign",
 	[GAME_MODE_HEROIC] = "heroic",
@@ -19,11 +23,13 @@ local gms = {
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
+
 	return info and info.type == "file"
 end
 
 function wave_db:patch_waves(criket)
 	self.db.groups = {}
+
 	local criket_groups = criket.groups
 
 	if not criket.fps_transformed then
@@ -55,14 +61,18 @@ end
 function wave_db:load(level_name, game_mode, endless)
 	self.game_mode = game_mode
 	self.is_endless = endless
+
 	local suffix = gms[game_mode]
 	local wn = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
 	local wf = string.format("%s.lua", wn)
+
 	log.debug("Loading %s", wn)
+
 	local ok, wchunk = pcall(FS.load, wf)
 
 	if not ok then
 		log.error("Failed to load %s: error: %s", wf, wchunk)
+
 		return 
 	end
 
@@ -70,19 +80,23 @@ function wave_db:load(level_name, game_mode, endless)
 
 	if not ok then
 		log.error("Failed to eval chunk for %s: error: %s", wf, wtable)
+
 		return 
 	end
 
 	wave_db.db = wtable
+
 	local wen = string.format("%s_extra", wn)
 	local wef = string.format("%s.lua", wen)
 
 	if is_file(wef) then
 		log.info("Found extra waves: %s", wef)
+
 		local ok, wchunk = pcall(FS.load, wef)
 
 		if not ok then
 			log.error("Failed to load %s: error: %s", wef, wchunk)
+
 			return 
 		end
 
@@ -90,6 +104,7 @@ function wave_db:load(level_name, game_mode, endless)
 
 		if not ok then
 			log.error("Failed to eval extra waves chunk for %s: error: %s", wef, extraw)
+
 			return 
 		end
 
@@ -108,6 +123,7 @@ function wave_db:add_waves_to_groups(gwaves)
 
 			if not self.db.groups[g] then
 				log.warning("Adding waves to inexistent group %d")
+
 				self.db.groups[g] = {
 					waves = {}
 				}
@@ -200,6 +216,7 @@ function wave_db:get_endless_boss_config(i)
 	local dif_idx = km.clamp(1, dif_max, dif_level)
 	local dif = db.difficulties[dif_idx]
 	local dbc = dif.bossConfig
+
 	out.chance = dbc.powerChance + dbc.powerChanceIncrement * dif_level
 	out.cooldown = math.random(dbc.powerCooldownMin, dbc.powerCooldownMax)
 	out.multiple_attacks_chance = dbc.powerMultiChance
@@ -207,6 +224,7 @@ function wave_db:get_endless_boss_config(i)
 	out.powers_config_dif = dbc.powerConfig
 	out.boss_config_dif = dbc
 	out.powers_config = db.bossConfig.powerConfig
+
 	return out
 end
 

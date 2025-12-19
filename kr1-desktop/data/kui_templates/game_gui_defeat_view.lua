@@ -1,6 +1,7 @@
 -- chunkname: @./kr1-desktop/data/kui_templates/game_gui_defeat_view.lua
 local WW = ctx.SW
 local WH = ctx.SH
+
 return {
 	hidden = false,
 	class = "KView",

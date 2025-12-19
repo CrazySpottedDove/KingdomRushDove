@@ -5,13 +5,3 @@ local P = require("path_db")
 local UP = require("upgrades")
 local scripts = require("scripts")
 local mod_utils = require("mod_utils")
-
--- 这里可以覆盖函数，示例：
---[[
-function scripts.hero_alleria.insert(this, store)
-	函数体
-end
---]]
--- 注修改后需要在模板内重新引用该函数
--- T("hero_alleria").main_scripts.insert = scripts.hero_alleria.insert
-
