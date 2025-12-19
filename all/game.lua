@@ -64,7 +64,8 @@ game.required_sounds = {
 	"tower_rocket_gunners",
 	"tower_flamespitter",
 	"tower_ballista",
-	"tower_barrel"
+	"tower_barrel",
+	"tower_hermit_toad"
 }
 game.simulation_systems = {
 	"level",
