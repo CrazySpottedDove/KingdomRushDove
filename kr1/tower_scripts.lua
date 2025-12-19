@@ -8284,9 +8284,9 @@ function scripts.tower_pandas.update(this, store)
 		update_checks()
 
 		if check_pandas_alive(b.soldiers) then
-			this.user_selection.actions.tw_free_action.allowed = true
+			this.user_selection.allowed = true
 		else
-			this.user_selection.actions.tw_free_action.allowed = false
+			this.user_selection.allowed = false
 		end
 
 		local enemy

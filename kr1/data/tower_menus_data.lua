@@ -2036,16 +2036,16 @@ return {
 		}}
 	}), tpl.sell}},
 	-- 暮光长弓
-	dark_elf = {{M(tpl.mode, {
+	dark_elf = {{M(tpl.change_mode, {
 		image = "kr5_quickmenu_action_icons_0005",
 		image_mode0 = "kr5_quickmenu_action_icons_0005",
 		image_mode1 = "kr5_quickmenu_action_icons_0004",
-		tt_title_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NAME"),
-		tt_desc_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_DESCRIPTION"),
-		tt_phrase_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NOTE"),
 		tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
 		tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
-		tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE")
+		tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
+		tt_title_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NAME"),
+		tt_desc_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NOTE")
 	}), M(tpl.upgrade_power, {
 		action_arg = "skill_soldiers",
 		image = "kr5_special_icons_0032",
@@ -2187,16 +2187,13 @@ return {
 			tt_title = _("TOWER_PANDAS_4_FIERY_2_NAME"),
 			tt_desc = _("TOWER_PANDAS_4_FIERY_2_DESCRIPTION")
 		}}
-	}), {
+	}), M(tpl.change_mode, {
 		check = "kr5_special_icons_0020",
 		action_arg = "pandas_retreat",
-		action = "tw_free_action",
-		halo = "quickmenu_action_icons_0001_hover",
 		image = "kr5_quickmenu_action_icons_0006",
-		place = 3,
 		tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
 		tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")
-	}, tpl.rally, tpl.sell}},
+	}), tpl.rally, tpl.sell}},
 	-- 红法
 	ray = {{M(tpl.upgrade_power, {
 		action_arg = "chain",
@@ -2395,7 +2392,7 @@ return {
 			tt_title = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_3_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_3_DESCRIPTION")
 		}}
-	}), tpl.rally, tpl.sell, M(tpl.mode, {
+	}), tpl.rally, tpl.sell, M(tpl.change_mode, {
 		image = "kr5_quickmenu_action_icons_0002",
 		image_mode0 = "kr5_quickmenu_action_icons_0002",
 		image_mode1 = "kr5_quickmenu_action_icons_0001",
@@ -2532,16 +2529,16 @@ return {
 			tt_title = _("TOWER_HERMIT_TOAD_4_SKILL_INSTAKILL_1_NAME"),
 			tt_desc = _("TOWER_HERMIT_TOAD_4_SKILL_INSTAKILL_1_DESCRIPTION")
 		}}
-	}), M(tpl.mode, {
+	}), M(tpl.change_mode, {
 		image = "kr5_quickmenu_action_icons_0008",
 		image_mode0 = "kr5_quickmenu_action_icons_0008",
 		image_mode1 = "kr5_quickmenu_action_icons_0007",
-		tt_title_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NAME"),
-		tt_desc_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_DESCRIPTION"),
-		tt_phrase_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NOTE"),
 		tt_title_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_NAME"),
 		tt_desc_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_DESCRIPTION"),
 		tt_phrase_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_NOTE"),
+		tt_title_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NAME"),
+		tt_desc_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NOTE"),
 		sounds = {"TowerHermitToadSwitchToArtillery", "TowerHermitToadSwitchToMage"}
 	}), tpl.sell}},
 	sparking_geode = {

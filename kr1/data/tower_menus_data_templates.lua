@@ -85,7 +85,7 @@ templates.point = {
 }
 
 -- 切换模式按钮
-templates.mode = {
+templates.change_mode = {
 	halo = "quickmenu_action_icons_0001_hover",
 	action = "tw_change_mode",
 	image = nil,
