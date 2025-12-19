@@ -34,24 +34,18 @@ return {
 		tt_title = _("TOWER_ENGINEER_1_NAME"),
 		tt_desc = _("TOWER_ENGINEER_1_DESCRIPTION")
 	})}},
-	holder_blocked_jungle = {{{
+	holder_blocked_jungle = {{merge(templates.unblock, {
 		action_arg = "tower_holder",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "main_icons_0037",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_JUNGLE_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_JUNGLE_DESCRIPTION")
-	}}},
-	holder_blocked_underground = {{{
+	})}},
+	holder_blocked_underground = {{merge(templates.unblock, {
 		action_arg = "tower_holder",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "main_icons_0037",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_UNDERGROUND_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_UNDERGROUND_DESCRIPTION")
-	}}},
+	})}},
 	-- 法师塔
 	mage = {{merge(templates.common_upgrade, {
 		-- 二级法师塔
@@ -2517,64 +2511,40 @@ return {
 		tt_phrase_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_NOTE"),
 		sounds = {"TowerHermitToadSwitchToArtillery", "TowerHermitToadSwitchToMage"}
 	}), templates.sell}},
-	holder_blocked_elemental_wood = {{{
-		check = "main_icons_0019",
+	holder_blocked_elemental_wood = {{merge(templates.unblock, {
 		action_arg = "tower_holder_elemental_wood",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "kr5_main_icons_0045",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
-	}}},
-	holder_blocked_elemental_wood_enhance = {{{
-		check = "main_icons_0019",
+	})}},
+	holder_blocked_elemental_wood_enhance = {{merge(templates.unblock, {
 		action_arg = "tower_holder_elemental_wood_enhance",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "kr5_main_icons_0045",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
-	}}},
-	holder_blocked_elemental_fire = {{{
-		check = "main_icons_0019",
+	})}},
+	holder_blocked_elemental_fire = {{merge(templates.unblock, {
 		action_arg = "tower_holder_elemental_fire",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "kr5_main_icons_0044",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_DESCRIPTION")
-	}}},
-	holder_blocked_elemental_water = {{{
-		check = "main_icons_0019",
+	})}},
+	holder_blocked_elemental_water = {{merge(templates.unblock, {
 		action_arg = "tower_holder_elemental_water",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "kr5_main_icons_0046",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER_DESCRIPTION")
-	}}},
-	holder_blocked_elemental_earth = {{{
-		check = "main_icons_0019",
+	})}},
+	holder_blocked_elemental_earth = {{merge(templates.unblock, {
 		action_arg = "tower_holder_elemental_earth",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "kr5_main_icons_0050",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH_DESCRIPTION")
-	}}},
-	holder_blocked_elemental_metal = {{{
-		check = "main_icons_0019",
+	})}},
+	holder_blocked_elemental_metal = {{merge(templates.unblock, {
 		action_arg = "tower_holder_elemental_metal",
-		action = "tw_unblock",
-		halo = "glow_ico_main",
 		image = "kr5_main_icons_0047",
-		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_DESCRIPTION")
-	}}}
+	})}}
 }

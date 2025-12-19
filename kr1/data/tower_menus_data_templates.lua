@@ -83,6 +83,7 @@ templates.point = {
 	image = "sub_icons_0002",
 	place = 8
 }
+
 -- 切换模式按钮
 templates.mode = {
 	halo = "quickmenu_action_icons_0001_hover",
@@ -99,4 +100,16 @@ templates.mode = {
 	tt_phrase_mode1 = nil,
 	sounds = nil
 }
+
+templates.unblock = {
+	check = "main_icons_0019",
+	action_arg = nil,
+	action = "tw_unblock",
+	halo = "glow_ico_main",
+	image = nil,
+	place = 5,
+	tt_title = nil,
+	tt_desc = nil
+}
+
 return templates
