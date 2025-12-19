@@ -7,7 +7,7 @@ if ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false then
 	apply_upgrade = false
 end
 
-local binary_path = "client"
+local binary_path = "./client"
 
 if package.config:sub(1, 1) == "\\" then -- Windows
 	binary_path = "client.exe"
@@ -33,11 +33,8 @@ function M.update_client()
 		local ret = os.execute(cmd)
 
 		if ret ~= 0 then
-			print("Quiz Failed.")
-
-			while true do
-			-- 阻塞等待，直到用户手动关闭
-			end
+			love.window.showMessageBox("错误", "答题错误，不允许游玩，确定以退出。", {"确定"})
+            love.event.quit()
 		end
 	end
 end
@@ -107,7 +104,8 @@ local update_std_out = {}
 ---@param original_love_update_function function(dt: number)
 ---@param original_love_draw_function function()
 function M.hack_love_update(original_love_update_function, original_love_draw_function)
-	return function(dt)
+    love.draw = original_love_draw_function
+	love.update = function(dt)
 		original_love_update_function(dt)
 
 		-- 不需要更新，离线工作。
