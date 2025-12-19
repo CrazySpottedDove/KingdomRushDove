@@ -1,7 +1,7 @@
 -- chunkname: @./all/screen_credits.lua
 local log = require("lib.klua.log"):new("screen_slots")
 local class = require("middleclass")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local V = require("lib.klua.vector")
 local v = V.v
 local km = require("lib.klua.macros")
@@ -438,7 +438,7 @@ end
 
 function screen:on_end_credits()
 	if self.end_credits_done then
-		return 
+		return
 	end
 
 	self.end_credits_done = true

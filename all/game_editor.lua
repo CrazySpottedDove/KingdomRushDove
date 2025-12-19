@@ -5,7 +5,7 @@ require("lib.klua.dump")
 local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local V = require("hump.vector-light")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local simulation, A
 local serpent = require("serpent")
 local I = require("klove.image_db")

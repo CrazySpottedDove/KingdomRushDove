@@ -331,7 +331,7 @@ end
 log.use_print = KR_PLATFORM == "android"
 local features = require("features")
 local storage = require("storage")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local MU = require("main_utils")
 local i18n = require("i18n")
 main = {}

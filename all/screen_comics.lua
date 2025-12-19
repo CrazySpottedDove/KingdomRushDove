@@ -2,7 +2,7 @@
 local log = require("lib.klua.log"):new("screen_comics")
 local V = require("lib.klua.vector")
 local I = require("klove.image_db")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local G = love.graphics
 local S = require("sound_db")
 local SU = require("screen_utils")
@@ -262,7 +262,7 @@ end
 
 function screen_comics:skip()
 	if self.skipping or self.finishing then
-		return 
+		return
 	elseif not self.playing then
 		self.skipping = true
 		S:queue("GUINotificationPaperOver")
@@ -281,7 +281,7 @@ function screen_comics:keypressed(key, isrepeat)
 end
 
 function screen_comics:keyreleased(key)
-	return 
+	return
 end
 
 function screen_comics:mousepressed(x, y, button)
@@ -289,7 +289,7 @@ function screen_comics:mousepressed(x, y, button)
 end
 
 function screen_comics:mousereleased(x, y, button)
-	return 
+	return
 end
 
 function screen_comics:gamepadpressed(joystick, button)

@@ -1,7 +1,7 @@
 -- chunkname: @./all/screen_splash.lua
 local log = require("lib.klua.log"):new("screen_splash")
 local V = require("lib.klua.vector")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local FS = love.filesystem
 local SU = require("screen_utils")
 local PS = require("platform_services")
@@ -101,11 +101,11 @@ end
 function screen:skip()
 	if self.first_launch then
 		log.debug("cannot skip in first launch")
-		return 
+		return
 	end
 
 	if self.skipped then
-		return 
+		return
 	end
 
 	log.debug("skipping...")
@@ -140,7 +140,7 @@ end
 
 function screen:start_animation()
 	if self.skipped then
-		return 
+		return
 	end
 
 	local window = self.window
@@ -283,7 +283,7 @@ function screen:play_video_hw()
 
 	if not video_name then
 		log.error("could not find video")
-		return 
+		return
 	else
 		log.debug("found video_name: %s", video_name)
 	end

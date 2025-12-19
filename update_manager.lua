@@ -1,4 +1,6 @@
 local M = {}
+local G = love.graphics
+local F = require("lib.klove.font_db")
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
 local ok, update_cfg = pcall(dofile, "update.lua")
@@ -34,7 +36,7 @@ function M.update_client()
 
 		if ret ~= 0 then
 			love.window.showMessageBox("错误", "答题错误，不允许游玩，确定以退出。", {"确定"})
-            love.event.quit()
+			love.event.quit()
 		end
 	end
 end
@@ -104,7 +106,7 @@ local update_std_out = {}
 ---@param original_love_update_function function(dt: number)
 ---@param original_love_draw_function function()
 function M.hack_love_update(original_love_update_function, original_love_draw_function)
-    love.draw = original_love_draw_function
+	love.draw = original_love_draw_function
 	love.update = function(dt)
 		original_love_update_function(dt)
 
@@ -133,88 +135,100 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		-- 轮询到了结果，此时触发下一步逻辑
 		local ok, resp = pcall(require("json").decode, result)
 
-		-- 需要更新
-		if ok and type(resp) == "table" and resp.has_update then
-			update_result_json = result
-			-- 收集所有 commit message
-			local messages = {}
-			local max_messages_to_show = 20
+		if not ok then
+			print("Failed to decode update check response.")
+			love.update = original_love_update_function -- 恢复原 love.update
+			return
+		end
 
-			if resp.commits then
-				for i, commit in ipairs(resp.commits) do
-					if i > max_messages_to_show then
-						table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
-						break
+		if type(resp) ~= "table" then
+			print("Invalid update check response format.")
+			love.update = original_love_update_function -- 恢复原 love.update
+			return
+		end
+
+		if not resp.has_update then
+			print("No updates available.")
+			love.update = original_love_update_function -- 恢复原 love.update
+			return
+		end
+
+		update_result_json = result
+		-- 收集所有 commit message
+		local messages = {}
+		local max_messages_to_show = 20
+
+		if resp.commits then
+			for i, commit in ipairs(resp.commits) do
+				if i > max_messages_to_show then
+					table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
+					break
+				end
+
+				table.insert(messages, commit.message)
+			end
+		end
+
+		local msg_text = table.concat(messages, "\n\n")
+		msg_text = msg_text .. "\n\n请耐心等待升级完成..."
+		local cmd = string.format('"%s" --upgrade-new-version', binary_path)
+		-- 弹窗有“升级”按钮
+		local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
+
+		if pressed == 1 then
+			-- 新建升级线程，实时读取输出
+			local update_thread = love.thread.newThread(update_thread_code)
+			update_thread:start(cmd, update_result_json)
+			love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
+			-- 用于显示升级日志
+			love.update = function(dt)
+				local ch = love.thread.getChannel("update_result")
+				local result = ch:pop()
+				-- 轮询日志
+				local log_ch = love.thread.getChannel("update_std_out")
+				local line = log_ch:pop()
+
+				if line then
+					table.insert(update_std_out, line)
+
+					-- 限制最大行数
+					if #update_std_out > 30 then
+						table.remove(update_std_out, 1)
 					end
+				end
 
-					table.insert(messages, commit.message)
+				if result == "done" then
+					love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
+					love.event.quit()
+				elseif result == "error" then
+					love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
+					love.update = original_love_update_function
+					love.draw = original_love_draw_function
 				end
 			end
 
-			local msg_text = table.concat(messages, "\n\n")
-			msg_text = msg_text .. "\n\n请耐心等待升级完成..."
-			local cmd = string.format('"%s" --upgrade-new-version', binary_path)
-			-- 弹窗有“升级”按钮
-			local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
+			love.draw = function()
+				G.clear(0, 0, 0)
+				G.origin()
+				local font = F:f("JIMOJW", 20)
+				G.setFont(font)
+				G.setColor(1, 1, 1, 1)
+				local w, h = G.getDimensions()
+				local text = "正在升级资源，请勿关闭游戏..."
+				local tw = font:getWidth(text)
+				local th = font:getHeight()
+				G.print(text, (w - tw) / 2, (h - th) / 2)
+				-- 动画
+				G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
+				G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
+				-- 显示升级日志
+				G.setColor(1, 1, 1, 1)
+				local log_y = (h - th) / 2 + 60
 
-			if pressed == 1 then
-				-- 新建升级线程，实时读取输出
-				local update_thread = love.thread.newThread(update_thread_code)
-				update_thread:start(cmd, update_result_json)
-				love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
-				-- 用于显示升级日志
-				love.update = function(dt)
-					local ch = love.thread.getChannel("update_result")
-					local result = ch:pop()
-					-- 轮询日志
-					local log_ch = love.thread.getChannel("update_std_out")
-					local line = log_ch:pop()
-
-					if line then
-						table.insert(update_std_out, line)
-
-						-- 限制最大行数
-						if #update_std_out > 30 then
-							table.remove(update_std_out, 1)
-						end
-					end
-
-					if result == "done" then
-						love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
-						love.event.quit()
-					elseif result == "error" then
-						love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
-						love.update = original_love_update_function
-						love.draw = original_love_draw_function
-					end
-				end
-
-				love.draw = function()
-					G.clear(0, 0, 0)
-					G.origin()
-					local font = F:f("JIMOJW", 20)
-					G.setFont(font)
-					G.setColor(1, 1, 1, 1)
-					local w, h = G.getDimensions()
-					local text = "正在升级资源，请勿关闭游戏..."
-					local tw = font:getWidth(text)
-					local th = font:getHeight()
-					G.print(text, (w - tw) / 2, (h - th) / 2)
-					-- 动画
-					G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
-					G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
-					-- 显示升级日志
-					G.setColor(1, 1, 1, 1)
-					local log_y = (h - th) / 2 + 60
-
-					for i, line in ipairs(update_std_out) do
-						G.print(line, 40, log_y + (i - 1) * 22)
-					end
+				for i, line in ipairs(update_std_out) do
+					G.print(line, 40, log_y + (i - 1) * 22)
 				end
 			end
-		else
-			-- 不需要更新，那么恢复原 update
-			love.update = original_love_update_function
 		end
 	end
 end

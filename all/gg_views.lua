@@ -4,7 +4,7 @@ require("klove.kui")
 local V = require("lib.klua.vector")
 local class = require("middleclass")
 local km = require("lib.klua.macros")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local G = love.graphics
 local I = require("klove.image_db")
 local utf8 = require("utf8")

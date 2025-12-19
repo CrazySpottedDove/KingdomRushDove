@@ -1,7 +1,7 @@
 -- chunkname: @./all-desktop/screen_slots.lua
 local log = require("lib.klua.log"):new("screen_slots")
 local class = require("middleclass")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local I = require("klove.image_db")
 local V = require("lib.klua.vector")
 local v = V.v
@@ -330,7 +330,7 @@ function screen:init(w, h, done_callback)
 			if pscloud then
 				if self.cloudsave_req_id then
 					self:show_cloudsave_progress()
-					return 
+					return
 				elseif pscloud and pscloud:get_status() then
 					local status = pscloud:get_sync_status()
 
@@ -340,7 +340,7 @@ function screen:init(w, h, done_callback)
 						if rid then
 							self:show_cloudsave_progress()
 							self.cloudsave_req_id = rid
-							return 
+							return
 						end
 					end
 				end
@@ -530,7 +530,7 @@ function screen:keypressed(key, isrepeat)
 		for _, id in pairs({"quit_view", "options_view", "delete_view", "slot_panel"}) do
 			if not wid(id).hidden then
 				wid(id):hide()
-				return 
+				return
 			end
 		end
 

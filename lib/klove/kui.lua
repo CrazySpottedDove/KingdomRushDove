@@ -4,7 +4,7 @@ require("lib.klua.table")
 local km = require("lib.klua.macros")
 local V = require("lib.klua.vector")
 local I = require("klove.image_db")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local SH = require("klove.shader_db")
 local class = require("middleclass")
 local G = love.graphics
@@ -65,7 +65,7 @@ function KMDragInertia:kmdi_update(dt)
 	end
 
 	if self.hidden then
-		return 
+		return
 	end
 
 	if love.mouse.isDown(1) then
@@ -76,7 +76,7 @@ function KMDragInertia:kmdi_update(dt)
 		self._inertia_last_pos.y = self.pos.y
 	else
 		if self._inertia_done then
-			return 
+			return
 		end
 
 		local lx, ly = self.pos.x, self.pos.y
@@ -154,7 +154,7 @@ function KMOverrides:apply_override(o_key)
 	end
 
 	if not self.overrides or not self.overrides[o_key] then
-		return 
+		return
 	end
 
 	local ov = self.overrides[key]
@@ -331,7 +331,7 @@ function KObject:deserialize()
 	local t = self._deserialize_table
 
 	if not t then
-		return 
+		return
 	end
 
 	for k, v in pairs(t) do
@@ -416,7 +416,7 @@ end
 function KObject:remove_child(c)
 	if not c then
 		log.error("Removing nil child from %s", self)
-		return 
+		return
 	end
 
 	table.removeobject(self.children, c)
@@ -477,7 +477,7 @@ function KObject:order_above(c)
 	local p = self.parent
 
 	if not p or c.parent ~= p then
-		return 
+		return
 	end
 
 	p:remove_child(self)
@@ -492,7 +492,7 @@ function KObject:order_below(c)
 	local p = self.parent
 
 	if not p or c.parent ~= p then
-		return 
+		return
 	end
 
 	p:remove_child(self)
@@ -582,7 +582,7 @@ function KView:deserialize()
 	local t = self._deserialize_table
 
 	if not t then
-		return 
+		return
 	end
 
 	t.image_name = nil
@@ -661,7 +661,7 @@ end
 
 function KView:draw()
 	if self.hidden then
-		return 
+		return
 	end
 
 	local pr, pg, pb, pa = G.getColor()
@@ -1142,7 +1142,7 @@ function KWindow:mousepressed(x, y, button, istouch)
 		event_name = "on_scroll"
 	else
 		log.paranoid("button press not handled: %s", button)
-		return 
+		return
 	end
 
 	local hl = self:hit_all(wx, wy)
@@ -1192,7 +1192,7 @@ function KWindow:mousereleased(x, y, button, istouch)
 	log.paranoid("x:%s, y:%s, button:%s istouch:%s", x, y, button, istouch)
 
 	if not self._mouse_down_pos then
-		return 
+		return
 	end
 
 	local mth = self.drag_threshold * self.scale.x
@@ -1456,7 +1456,7 @@ function KWindow:find_next_focus(root, focused, key, reverse)
 
 	if #all < 1 then
 		log.paranoid("sorted list of views is empty")
-		return 
+		return
 	end
 
 	local root_pos_list = {}
@@ -1980,7 +1980,7 @@ function KTable:update(dt)
 	local sy = self.scroll_origin_y
 
 	if not self.data or not self.cell_view then
-		return 
+		return
 	end
 
 	if self.start_view then
@@ -2043,7 +2043,7 @@ function KVideoView:initialize(video_name)
 
 	if not self.video then
 		log.error("video not found: %s", video_name)
-		return 
+		return
 	end
 
 	local size = V.v(self.video:getWidth(), self.video:getHeight())

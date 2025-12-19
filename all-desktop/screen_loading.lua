@@ -2,7 +2,7 @@
 local log = require("lib.klua.log"):new("screen_loading")
 local km = require("lib.klua.macros")
 local V = require("lib.klua.vector")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local I = require("klove.image_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
@@ -127,15 +127,15 @@ function screen:draw()
 end
 
 function screen:keypressed(key, isrepeat)
-	return 
+	return
 end
 
 function screen:mousepressed(x, y, button)
-	return 
+	return
 end
 
 function screen:close()
-	return 
+	return
 end
 
 return screen

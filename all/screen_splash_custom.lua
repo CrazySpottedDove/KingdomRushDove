@@ -1,7 +1,7 @@
 -- chunkname: @./all/screen_splash_custom.lua
 local log = require("lib.klua.log"):new("screen_splash_custom")
 local V = require("lib.klua.vector")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local FS = love.filesystem
 local G = love.graphics
 local SU = require("screen_utils")
@@ -81,15 +81,15 @@ end
 function screen:skip()
 	if self.first_launch then
 		log.debug("cannot skip in first launch")
-		return 
+		return
 	end
 
 	if self.prevent_skip then
-		return 
+		return
 	end
 
 	if self.skipped then
-		return 
+		return
 	end
 
 	log.debug("skipping...")
@@ -121,11 +121,11 @@ function screen:start_animation()
 
 	if not data then
 		log.error("features.show_splash_custom missing!")
-		return 
+		return
 	end
 
 	if self.skipped then
-		return 
+		return
 	end
 
 	local window = self.window

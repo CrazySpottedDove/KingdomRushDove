@@ -7,7 +7,7 @@ local U = require("utils")
 local RU = require("render_utils")
 local I = require("klove.image_db")
 local E = require("entity_db")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local P = require("path_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
@@ -242,7 +242,7 @@ end
 
 function game:init_debug()
 	if not DEBUG then
-		return 
+		return
 	end
 
 	DEBUG_KEYS_ON = true

@@ -4,7 +4,7 @@ require("klove.kui")
 local V = require("lib.klua.vector")
 local class = require("middleclass")
 local km = require("lib.klua.macros")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local G = love.graphics
 local i18n = require("i18n")
 require("gg_views")
@@ -29,7 +29,7 @@ end
 
 function PopUpView:show()
 	if not self.hidden then
-		return 
+		return
 	end
 
 	self:cancel_timers()
@@ -138,7 +138,7 @@ function VolumeSlider:update(dt)
 
 	if not is_button_down then
 		self._sliding = nil
-		return 
+		return
 	end
 
 	if self._sliding then
