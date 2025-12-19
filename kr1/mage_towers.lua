@@ -2820,8 +2820,8 @@ tt.attacks.list[2].animation = "shoot"
 tt.attacks.list[2].sound = "TowerHermitToadShootMagic"
 tt.attacks.list[3] = E:clone_c("bullet_attack")
 tt.attacks.list[3].animation = {
-	"eat2",
-	"eat"
+	"eat",
+	"eat2"
 }
 tt.attacks.list[3].bullet = "bullet_tower_hermit_toad_instakill_tongue"
 tt.attacks.list[3].cooldown = nil
@@ -2851,28 +2851,28 @@ tt.attacks.list[4].range = b.power_jump.range
 tt.attacks.list[4].mod = "mod_tower_hermit_toad_jump"
 tt.attacks.list[4].min_targets = b.power_jump.min_targets
 tt.attacks.list[4].animation_start = {
-	"pathjumpbgin2",
-	"pathjumpbgin"
+	"pathjumpbgin",
+	"pathjumpbgin2"
 }
 tt.attacks.list[4].animation_disappear = {
-	"pathjumpbgidle2",
-	"pathjumpbgidle"
+	"pathjumpbgidle",
+	"pathjumpbgidle2"
 }
 tt.attacks.list[4].animation_end = {
-	"pathjumpbgout2",
-	"pathjumpbgout"
+	"pathjumpbgout",
+	"pathjumpbgout2"
 }
 tt.attacks.list[4].animation_path_landing = {
-	"pathjump2",
-	"pathjump"
+	"pathjump",
+	"pathjump2"
 }
 tt.attacks.list[4].animation_back_up = {
-	"pathjumpup2",
-	"pathjumpup"
+	"pathjumpup",
+	"pathjumpup2"
 }
 tt.attacks.list[4].animation_back_down = {
-	"pathjumpdown2",
-	"pathjumpdown"
+	"pathjumpdown",
+	"pathjumpdown2"
 }
 tt.attacks.list[4].jump_decal = "fx_tower_hermit_toad_decal"
 tt.attacks.list[4].jump_in_delay = 0.3
@@ -2881,7 +2881,7 @@ tt.attacks.list[4].jump_back_delay = 0.3
 tt.attacks.list[4].jump_back_duration = fts(12)
 tt.attacks.list[4].jump_back_height = -120
 tt.attacks.list[4].node_prediction = fts(11) + tt.attacks.list[4].jump_in_delay +
-	tt.attacks.list[4].path_landing_action_time
+tt.attacks.list[4].path_landing_action_time
 tt.attacks.list[4].sound_back_to_pond = "TowerHermitToadBackToPond"
 tt.attacks.list[4].sound_jump = "TowerHermitToadJump"
 tt.attacks.list[4].sound_fall = "TowerHermitToadFall"
@@ -2906,8 +2906,8 @@ tt.render.sprites[2].animated = true
 tt.render.sprites[2].prefix = "hermit_toad_tower_pond"
 tt.render.sprites[2].offset.y = 5
 tt.idle_modes = {
+	"idle",
 	"idle2",
-	"idle"
 }
 tt.render.sprites[2].name = tt.idle_modes[1]
 tt.render.sprites[2].z = Z_TOWER_BASES + 2
@@ -2916,8 +2916,8 @@ tt.render.sprites[3].prefix = "hermit_toad_tower_frog4"
 tt.render.sprites[3].name = "idle"
 tt.render.sprites[3].offset = tt.render.sprites[2].offset
 tt.render.bubbles_anims = {
-	"pruple",
-	"blue"
+	"blue",
+	"pruple"
 }
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "hermit_toad_tower_bubbles_frog"
@@ -2958,16 +2958,16 @@ tt.idle_flip.cooldown = 3
 tt.idle_flip.chance = 0.7
 tt.toad_flip_duration = fts(11)
 tt.toad_flip_anims = {
-	"turn2",
-	"turn"
+	"turn",
+	"turn2"
 }
 tt.toad_idle_anims = {
-	"idleanim2",
-	"idleanim"
+	"idleanim",
+	"idleanim2"
 }
 tt.toad_blink_anims = {
-	"idleblink2",
-	"idleblink"
+	"idleblink",
+	"idleblink2"
 }
 tt.ps_bubbles_mage = "ps_tower_hermit_toad_mage_bubbles"
 tt.ps_bubbles_mage_area = "ps_tower_hermit_toad_mage_bubbles_area"
@@ -2982,7 +2982,7 @@ tt.ps_bubbles_mage_area_scale_var = {
 	1.4
 }
 tt.ps_bubbles_mage_area_emission_rate = 1
-tt.ps_bubbles_mage_offset = v(31, 32)
+tt.ps_bubbles_mage_offset = v(38, 52)
 tt.ps_bubbles_mage_emit_speed = {
 	3,
 	11
@@ -2992,7 +2992,7 @@ tt.ps_bubbles_mage_scale_var = {
 	1.1
 }
 tt.ps_bubbles_mage_emission_rate = 2
-tt.ps_bubbles_engineer_offset = v(31, 32)
+tt.ps_bubbles_engineer_offset = v(38, 52)
 tt.ps_bubbles_engineer_emit_speed = {
 	3,
 	11
