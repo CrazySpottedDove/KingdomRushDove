@@ -18,6 +18,9 @@ function hook.E.load(load, self)
 
 	local mod_template_templates = require("mod_template_templates")
 	local mod_template_scripts = require("mod_template_scripts")
+
+	require("mod_template_templates")
+	require("mod_template_scripts")
 end
 
 return hook

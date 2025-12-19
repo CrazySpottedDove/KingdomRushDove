@@ -158,6 +158,14 @@ return {
 			tt_title = _("TOWER_HERMIT_TOAD_NAME"),
 			tt_desc = _("TOWER_HERMIT_TOAD_4_DESCRIPTION")
 		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_arborean_emissary_lvl4",
+		-- 	image = "kr5_main_icons_0006",
+		-- 	type = "arborean_emissary",
+		-- 	place = 21,
+		-- 	tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
+		-- 	tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
+		-- }),
 		tpl.sell
 	}},
 	-- 炮塔
@@ -249,6 +257,14 @@ return {
 			place = 17,
 			tt_title = _("TOWER_BARREL_NAME"),
 			tt_desc = _("TOWER_BARREL_1_DESCRIPTION")
+		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_sparking_geode_lvl4",
+			image = "kr5_main_icons_0042",
+			type = "sparking_geode",
+			place = 18,
+			tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
 		}),
 		tpl.sell
 	}},
@@ -477,6 +493,30 @@ return {
 			tt_title = _("TOWER_ROCKET_GUNNERS_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_1_DESCRIPTION")
 		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_dwarf_lvl4",
+		-- 	type = "dwarf",
+		-- 	image = "kr5_main_icons_0042",
+		-- 	place = 23,
+		-- 	tt_title = _("TOWER_DWARF_1_NAME"),
+		-- 	tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
+		-- }),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_ghost_lvl4",
+		-- 	type = "ghost",
+		-- 	image = "kr5_main_icons_0016",
+		-- 	place = 24,
+		-- 	tt_title = _("TOWER_GHOST_1_NAME"),
+		-- 	tt_desc = _("TOWER_GHOST_1_DESCRIPTION")
+		-- }),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_paladin_covenant_lvl4",
+		-- 	type = "paladin_covenant",
+		-- 	image = "kr5_main_icons_0001",
+		-- 	place = 25,
+		-- 	tt_title = _("TOWER_PALADIN_COVENANT_1_NAME"),
+		-- 	tt_desc = _("TOWER_PALADIN_COVENANT_1_DESCRIPTION")
+		-- }),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -1997,16 +2037,16 @@ return {
 		}}
 	}), tpl.sell}},
 	-- 暮光长弓
-	dark_elf = {{M(tpl.mode, {
+	dark_elf = {{M(tpl.change_mode, {
 		image = "kr5_quickmenu_action_icons_0005",
 		image_mode0 = "kr5_quickmenu_action_icons_0005",
 		image_mode1 = "kr5_quickmenu_action_icons_0004",
-		tt_title_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NAME"),
-		tt_desc_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_DESCRIPTION"),
-		tt_phrase_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NOTE"),
 		tt_title_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NAME"),
 		tt_desc_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_DESCRIPTION"),
-		tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE")
+		tt_phrase_mode0 = _("TOWER_DARK_ELF_CHANGE_MODE_FOREMOST_NOTE"),
+		tt_title_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NAME"),
+		tt_desc_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_DARK_ELF_CHANGE_MODE_MAXHP_NOTE")
 	}), M(tpl.upgrade_power, {
 		action_arg = "skill_soldiers",
 		image = "kr5_special_icons_0032",
@@ -2148,16 +2188,13 @@ return {
 			tt_title = _("TOWER_PANDAS_4_FIERY_2_NAME"),
 			tt_desc = _("TOWER_PANDAS_4_FIERY_2_DESCRIPTION")
 		}}
-	}), {
+	}), M(tpl.change_mode, {
 		check = "kr5_special_icons_0020",
 		action_arg = "pandas_retreat",
-		action = "tw_free_action",
-		halo = "quickmenu_action_icons_0001_hover",
 		image = "kr5_quickmenu_action_icons_0006",
-		place = 3,
 		tt_title = _("TOWER_PANDAS_RETREAT_NAME"),
 		tt_desc = _("TOWER_PANDAS_RETREAT_DESCRIPTION")
-	}, tpl.rally, tpl.sell}},
+	}), tpl.rally, tpl.sell}},
 	-- 红法
 	ray = {{M(tpl.upgrade_power, {
 		action_arg = "chain",
@@ -2356,7 +2393,7 @@ return {
 			tt_title = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_3_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_4_PHOSPHORIC_3_DESCRIPTION")
 		}}
-	}), tpl.rally, tpl.sell, M(tpl.mode, {
+	}), tpl.rally, tpl.sell, M(tpl.change_mode, {
 		image = "kr5_quickmenu_action_icons_0002",
 		image_mode0 = "kr5_quickmenu_action_icons_0002",
 		image_mode1 = "kr5_quickmenu_action_icons_0001",
@@ -2493,17 +2530,199 @@ return {
 			tt_title = _("TOWER_HERMIT_TOAD_4_SKILL_INSTAKILL_1_NAME"),
 			tt_desc = _("TOWER_HERMIT_TOAD_4_SKILL_INSTAKILL_1_DESCRIPTION")
 		}}
-	}), M(tpl.mode, {
+	}), M(tpl.change_mode, {
 		image = "kr5_quickmenu_action_icons_0008",
 		image_mode0 = "kr5_quickmenu_action_icons_0008",
 		image_mode1 = "kr5_quickmenu_action_icons_0007",
-		tt_title_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NAME"),
-		tt_desc_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_DESCRIPTION"),
-		tt_phrase_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NOTE"),
 		tt_title_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_NAME"),
 		tt_desc_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_DESCRIPTION"),
 		tt_phrase_mode0 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_ENGINEER_NOTE"),
+		tt_title_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NAME"),
+		tt_desc_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_HERMIT_TOAD_CHANGE_MODE_MAGE_NOTE"),
 		sounds = {"TowerHermitToadSwitchToArtillery", "TowerHermitToadSwitchToMage"}
+	}), tpl.sell}},
+	sparking_geode = {{M(tpl.upgrade_power, {
+		check = "special_icons_0020",
+		action_arg = "crystalize",
+		image = "kr5_special_icons_0038",
+		place = 6,
+		sounds = {"TowerSparkingGeodeSkillATaunt"},
+		tt_phrase = _("TOWER_SPARKING_GEODE_4_CRISTALIZE"),
+		tt_list = {{
+			tt_title = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_1_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_2_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_3_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		check = "special_icons_0020",
+		action_arg = "spike_burst",
+		image = "kr5_special_icons_0039",
+		place = 7,
+		sounds = {"TowerSparkingGeodeSkillBTaunt"},
+		tt_phrase = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST"),
+		tt_list = {{
+			tt_title = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST_1_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST_2_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST_3_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_SPIKE_BURST_3_DESCRIPTION")
+		}}
+	}), tpl.sell}},
+	dwarf = {{M(tpl.upgrade_power, {
+		check = "special_icons_0020",
+		action_arg = "formation",
+		image = "kr5_special_icons_0036",
+		place = 6,
+		sounds = {"TowerDwarfSkillATaunt"},
+		tt_phrase = _("TOWER_DWARF_4_FORMATION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DWARF_4_FORMATION_1_NAME"),
+			tt_desc = _("TOWER_DWARF_4_FORMATION_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DWARF_4_FORMATION_2_NAME"),
+			tt_desc = _("TOWER_DWARF_4_FORMATION_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DWARF_4_FORMATION_3_NAME"),
+			tt_desc = _("TOWER_DWARF_4_FORMATION_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		check = "special_icons_0020",
+		action_arg = "incendiary_ammo",
+		image = "kr5_special_icons_0037",
+		place = 7,
+		sounds = {"TowerDwarfSkillBTaunt"},
+		tt_phrase = _("TOWER_DWARF_4_INCENDIARY_AMMO_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DWARF_4_INCENDIARY_AMMO_1_NAME"),
+			tt_desc = _("TOWER_DWARF_4_INCENDIARY_AMMO_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DWARF_4_INCENDIARY_AMMO_2_NAME"),
+			tt_desc = _("TOWER_DWARF_4_INCENDIARY_AMMO_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DWARF_4_INCENDIARY_AMMO_3_NAME"),
+			tt_desc = _("TOWER_DWARF_4_INCENDIARY_AMMO_3_DESCRIPTION")
+		}}
+	}), tpl.rally, tpl.sell}},
+	ghost = {{{
+		action = "tw_swap_mode",
+		image = "kr5_quickmenu_action_icons_0003",
+		place = 13,
+		halo = "quickmenu_action_icons_0001_hover",
+		tt_title_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NAME"),
+		tt_desc_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_DESCRIPTION"),
+		tt_phrase_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NOTE"),
+		tt_title_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NAME"),
+		tt_desc_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_DESCRIPTION"),
+		tt_phrase_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NOTE")
+	}, M(tpl.upgrade_power, {
+		check = "special_icons_0020",
+		action_arg = "extra_damage",
+		image = "kr5_special_icons_0024",
+		place = 6,
+		sounds = {"TowerGhostSkillATaunt"},
+		tt_phrase = _("TOWER_GHOST_4_EXTRA_DAMAGE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GHOST_4_EXTRA_DAMAGE_1_NAME"),
+			tt_desc = _("TOWER_GHOST_4_EXTRA_DAMAGE_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_GHOST_4_EXTRA_DAMAGE_2_NAME"),
+			tt_desc = _("TOWER_GHOST_4_EXTRA_DAMAGE_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_GHOST_4_EXTRA_DAMAGE_3_NAME"),
+			tt_desc = _("TOWER_GHOST_4_EXTRA_DAMAGE_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		check = "special_icons_0020",
+		action_arg = "soul_attack",
+		image = "kr5_special_icons_0025",
+		place = 7,
+		sounds = {"TowerGhostSkillBTaunt"},
+		tt_phrase = _("TOWER_GHOST_4_SOUL_ATTACK_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GHOST_4_SOUL_ATTACK_1_NAME"),
+			tt_desc = _("TOWER_GHOST_4_SOUL_ATTACK_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_GHOST_4_SOUL_ATTACK_2_NAME"),
+			tt_desc = _("TOWER_GHOST_4_SOUL_ATTACK_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_GHOST_4_SOUL_ATTACK_3_NAME"),
+			tt_desc = _("TOWER_GHOST_4_SOUL_ATTACK_3_DESCRIPTION")
+		}}
+	}), tpl.rally, tpl.sell}},
+	paladin_covenant = {{M(tpl.upgrade_power, {
+		action_arg = "lead",
+		image = "kr5_special_icons_0002",
+		place = 6,
+		sounds = {"TowerPaladinCovenantSkillATaunt"},
+		tt_phrase = _("TOWER_PALADIN_COVENANT_4_LEAD_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_PALADIN_COVENANT_4_LEAD_1_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_4_LEAD_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_PALADIN_COVENANT_4_LEAD_2_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_4_LEAD_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_PALADIN_COVENANT_4_LEAD_3_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_4_LEAD_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "healing_prayer",
+		image = "kr5_special_icons_0001",
+		place = 7,
+		sounds = {"TowerPaladinCovenantSkillBTaunt"},
+		tt_phrase = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_1_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_2_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_3_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_4_HEALING_PRAYER_3_DESCRIPTION")
+		}}
+	}), tpl.rally, tpl.sell}},
+	arborean_emissary = {{M(tpl.upgrade_power, {
+		action_arg = "gift_of_nature",
+		image = "kr5_special_icons_0010",
+		place = 6,
+		sounds = {"TowerArboreanEmissarySkillATaunt"},
+		tt_phrase = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_1_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_2_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_3_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_GIFT_OF_NATURE_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "wave_of_roots",
+		image = "kr5_special_icons_0009",
+		place = 7,
+		sounds = {"TowerArboreanEmissarySkillBTaunt"},
+		tt_phrase = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_1_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_2_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_3_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_WAVE_OF_ROOTS_3_DESCRIPTION")
+		}}
 	}), tpl.sell}},
 	holder_blocked_elemental_wood = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_wood",

@@ -6844,7 +6844,9 @@ function TowerMenu:show()
 		game_gui:show_tower_range(ux, uy, range)
 	end
 
-	if not tower_menus[entity.tower.type] or not tower_menus[entity.tower.type][entity.tower.level] then
+	local current_tms = tower_menus[entity.tower.type]
+
+	if not current_tms or not current_tms[entity.tower.level] then
 		log.debug("tower_menus[%s][%s] not found", entity.tower.type, entity.tower.level)
 
 		self.hidden = true
@@ -6852,7 +6854,7 @@ function TowerMenu:show()
 		return 
 	end
 
-	local tm = tower_menus[entity.tower.type][entity.tower.level]
+	local tm = current_tms[entity.tower.level]
 
 	self:remove_children()
 
@@ -7080,26 +7082,33 @@ function TowerMenu:update(dt)
 			elseif e and c.item_props.action == "tw_change_mode" then
 				local current_mode = e.tower_upgrade_persistent_data.current_mode
 
-				c.button:set_image(c.item["image_mode" .. current_mode])
+				if e.tower_upgrade_persistent_data.max_current_mode == 0 then
+					if not e.user_selection.allowed then
+						c:disable()
+					else
+						c:enable()
+					end
+				else
+					c.button:set_image(c.item["image_mode" .. current_mode])
+				end
 			-- if current_mode ~= 0 then
 			--     c.button:set_image(U.str_reset_leading_zero(c.item_image, current_mode))
 			-- else
 			--     c.button:set_image(c.item_image)
 			-- end
-			elseif e and c.item_props.action == "tw_free_action" then
-				local usa = e.user_selection and e.user_selection.actions
-
-				if usa and usa.tw_free_action then
-					if not usa.tw_free_action.allowed then
-						c:disable()
-					else
-						c:enable()
-					end
-				elseif not e.user_selection.allowed then
-					c:disable()
-				else
-					c:enable()
-				end
+			-- elseif e and c.item_props.action == "tw_free_action" then
+			-- 	local usa = e.user_selection and e.user_selection.actions
+			-- 	if usa and usa.tw_free_action then
+			-- 		if not usa.tw_free_action.allowed then
+			-- 			c:disable()
+			-- 		else
+			-- 			c:enable()
+			-- 		end
+			-- 	elseif not e.user_selection.allowed then
+			-- 		c:disable()
+			-- 	else
+			-- 		c:enable()
+			-- 	end
 			end
 		end
 	end
@@ -7345,14 +7354,20 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 				e.tower_upgrade_persistent_data.current_mode = current_mode + 1
 			end
 		end
-	elseif item.action == "tw_free_action" then
+
 		if e.user_selection then
 			e.user_selection.in_progress = true
 			e.user_selection.arg = item.action_arg
 			e.user_selection.new_pos = nil
 		end
-
-		self:hide()
+	-- self:hide()
+	-- elseif item.action == "tw_free_action" then
+	-- 	if e.user_selection then
+	-- 		e.user_selection.in_progress = true
+	-- 		e.user_selection.arg = item.action_arg
+	-- 		e.user_selection.new_pos = nil
+	-- 	end
+	-- 	self:hide()
 	end
 
 	if item.sounds and not inhibit_sounds then
@@ -7537,7 +7552,7 @@ function TowerMenuTooltip:show(entity, item)
 	-- if power.level == power.max_level then
 	-- self.hidden = true
 	-- end
-	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" then
+	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" then
 		if item.tt_title then
 			self.title.text = item.tt_title
 		end
@@ -7554,8 +7569,13 @@ function TowerMenuTooltip:show(entity, item)
 	elseif item.action == "tw_change_mode" then
 		local current_mode = entity.tower_upgrade_persistent_data.current_mode
 
-		self.title.text = item["tt_title_mode" .. current_mode]
-		self.desc.text = item["tt_desc_mode" .. current_mode]
+		if entity.tower_upgrade_persistent_data.max_current_mode == 0 then
+			self.title.text = item.tt_title
+			self.desc.text = U.balance_format(item.tt_desc)
+		else
+			self.title.text = item["tt_title_mode" .. current_mode]
+			self.desc.text = item["tt_desc_mode" .. current_mode]
+		end
 	else
 		self.hidden = true
 	end

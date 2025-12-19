@@ -4,7 +4,7 @@ local G = love.graphics
 local apply_upgrade = love.system.getOS() ~= "Android"
 local ok, update_cfg = pcall(dofile, "update.lua")
 
-if ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false then
+if (ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false) or (arg[2] == "debug" or arg[2] == "release") then
 	apply_upgrade = false
 end
 

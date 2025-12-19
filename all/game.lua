@@ -42,7 +42,12 @@ game.required_textures = {
 	"go_towers_flamespitter",
 	"go_towers_ballista",
 	"go_towers_barrel",
-	"go_towers_hermit_toad"
+	"go_towers_hermit_toad",
+	"go_towers_sparking_geode",
+	"go_towers_dwarf",
+	"go_towers_ghost",
+	"go_towers_paladin_covenant",
+	"go_towers_arborean_emissary"
 }
 game.scale_required_textures = {}
 game.ref_h = REF_H
@@ -67,7 +72,12 @@ game.required_sounds = {
 	"tower_flamespitter",
 	"tower_ballista",
 	"tower_barrel",
-	"tower_hermit_toad"
+	"tower_hermit_toad",
+	"tower_sparking_geode",
+	"tower_dwarf",
+	"tower_ghost",
+	"tower_paladin_covenant",
+	"tower_arborean_emissary"
 }
 game.simulation_systems = {
 	"level",

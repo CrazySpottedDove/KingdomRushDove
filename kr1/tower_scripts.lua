@@ -9148,9 +9148,9 @@ function scripts.tower_pandas.update(this, store)
 		update_checks()
 
 		if check_pandas_alive(b.soldiers) then
-			this.user_selection.actions.tw_free_action.allowed = true
+			this.user_selection.allowed = true
 		else
-			this.user_selection.actions.tw_free_action.allowed = false
+			this.user_selection.allowed = false
 		end
 
 		local enemy
@@ -18373,4 +18373,1026 @@ function scripts.mod_tower_hermit_toad_jump.insert(this, store, script)
 end
 
 -- 青蛙 END
+-- 电涌 START
+scripts.tower_sparking_geode = {}
+
+function scripts.tower_sparking_geode.get_info(this)
+	local b = E:get_template(this.attacks.list[1].bullet)
+	local o = scripts.tower_common.get_info(this)
+
+	o.type = STATS_TYPE_TOWER_MAGE
+	o.damage_min = math.ceil(b.bullet.damage_min * this.tower.damage_factor)
+	o.damage_max = math.ceil(b.bullet.damage_max * this.tower.damage_factor)
+	o.cooldown = (this.attacks.list[1].ray_timing_min + this.attacks.list[1].ray_timing_max) / 2
+
+	return o
+end
+
+function scripts.tower_sparking_geode.update(this, store, script)
+	local last_target_pos
+	local a = this.attacks
+	local a_basic = this.attacks.list[1]
+	local a_crystalize = this.attacks.list[2]
+	local a_burst = this.attacks.list[3]
+	local shots = 5
+	local pow_crystalize = this.powers and this.powers.crystalize or nil
+	local pow_burst = this.powers and this.powers.spike_burst or nil
+	local last_ts = store.tick_ts - a_basic.cooldown
+
+	a._last_target_pos = a._last_target_pos or v(REF_W, 0)
+	a_basic.ts = store.tick_ts - a_basic.cooldown + a.attack_delay_on_spawn
+
+	local function update_powers()
+		if this.powers then
+			for k, pow in pairs(this.powers) do
+				if pow.changed then
+					pow.changed = nil
+
+					if pow == pow_crystalize then
+						a_crystalize.cooldown = pow.cooldown[pow.level]
+
+						if pow.level == 1 then
+							a_crystalize.ts = store.tick_ts - a_crystalize.cooldown
+						end
+					end
+
+					if pow == pow_burst then
+						a_burst.cooldown = pow.cooldown[pow.level]
+
+						if pow.level == 1 then
+							a_burst.ts = store.tick_ts - a_burst.cooldown
+						end
+					end
+				end
+			end
+		end
+	end
+
+	local function create_evolve_fx()
+		local fx = E:create_entity(this.fx_evolve)
+
+		fx.pos = V.v(this.pos.x + this.fx_evolve_offset.x, this.pos.y + this.fx_evolve_offset.y)
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+	end
+
+	local function can_crystalize()
+		if not a_crystalize then
+			return false
+		end
+
+		if not pow_crystalize then
+			return false
+		end
+
+		if pow_crystalize.level < 1 then
+			return false
+		end
+
+		if not (store.tick_ts - a_crystalize.ts > a_crystalize.cooldown) then
+			return false
+		end
+
+		if not (store.tick_ts - last_ts > a.min_cooldown) then
+			return false
+		end
+
+		local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
+
+		if not enemies then
+			SU.delay_attack(store, a_crystalize, fts(10))
+
+			return false
+		end
+
+		return true
+	end
+
+	local function can_spike_burst()
+		if not a_burst then
+			return false
+		end
+
+		if not pow_burst then
+			return false
+		end
+
+		if pow_burst.level < 1 then
+			return false
+		end
+
+		if not (store.tick_ts - a_burst.ts > a_burst.cooldown) then
+			return false
+		end
+
+		if not (store.tick_ts - last_ts > a.min_cooldown) then
+			return false
+		end
+
+		local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_burst.range, a_burst.vis_flags, a_burst.vis_bans)
+
+		if not enemies then
+			SU.delay_attack(store, a_burst, fts(10))
+
+			return false
+		end
+
+		return true
+	end
+
+	local function a_basic_break()
+		update_powers()
+
+		if this.tower.blocked then
+			return true
+		end
+
+		if this.tower_upgrade_persistent_data.swaped then
+			return true
+		end
+
+		if can_crystalize() then
+			return true
+		end
+
+		if can_spike_burst() then
+			return true
+		end
+
+		return false
+	end
+
+	if this.tower.level > 1 then
+		create_evolve_fx()
+	end
+
+	U.animation_start(this, "idleup", nil, store.tick_ts, true, 5, true)
+	U.animation_start(this, "on_loop", nil, store.tick_ts, true, 3, true)
+
+	while true do
+		update_powers()
+		SU.towers_swaped(store, this, this.attacks.list)
+
+		if this.tower.blocked then
+		-- block empty
+		else
+			if can_crystalize() then
+				local start_ts = store.tick_ts
+
+				S:queue(a_crystalize.sound_cast)
+				U.animation_start(this, a_crystalize.animation, nil, store.tick_ts, false, 5)
+				U.y_wait(store, a_crystalize.cast_time)
+
+				local fx = E:create_entity(a_crystalize.up_ray_fx)
+
+				fx.pos = V.v(this.pos.x, this.pos.y + 70)
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[2].ts = store.tick_ts
+
+				queue_insert(store, fx)
+				U.y_wait(store, fts(11))
+
+				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
+
+				if not enemies then
+					a_crystalize.ts = store.tick_ts + a_crystalize.cooldown * 0.2
+				else
+					enemies = table.random_order(enemies)
+					enemies = table.slice(enemies, 1, a_crystalize.max_targets[pow_crystalize.level])
+
+					for _, enemy in pairs(enemies) do
+						local mod = E:create_entity(a_crystalize.mod)
+
+						mod.modifier.source_id = this.id
+						mod.modifier.target_id = enemy.id
+						mod.modifier.duration = a_crystalize.duration[pow_crystalize.level]
+						mod.received_damage_factor = a_crystalize.received_damage_factor[pow_crystalize.level]
+
+						queue_insert(store, mod)
+						U.y_wait(store, fts(2))
+					end
+
+					a_crystalize.ts = start_ts
+				end
+
+				U.y_animation_wait(this, 5)
+				U.animation_start(this, "idleup", nil, store.tick_ts, true, 5)
+
+				goto label_1211_0
+			end
+
+			if can_spike_burst() then
+				local start_ts = store.tick_ts
+
+				S:queue(a_burst.sound_cast)
+				U.animation_start(this, a_burst.animation, nil, store.tick_ts, false, 5)
+				U.y_wait(store, a_burst.cast_time)
+				S:queue(a_burst.sound_loop)
+
+				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_burst.range, a_burst.vis_flags, a_burst.vis_bans)
+
+				if not enemies then
+					a_burst.ts = store.tick_ts + a_burst.cooldown * 0.2
+				else
+					do
+						local spike_burst_aura = E:create_entity(a_burst.aura)
+
+						spike_burst_aura.pos = V.vclone(this.pos)
+						spike_burst_aura.aura.source_id = this.id
+						spike_burst_aura.aura.ts = store.tick_ts
+						spike_burst_aura.aura.duration = a_burst.duration[pow_burst.level]
+						spike_burst_aura.aura.level = pow_burst.level
+
+						queue_insert(store, spike_burst_aura)
+					end
+
+					a_burst.ts = start_ts
+				end
+
+				U.y_animation_wait(this, 5)
+				S:stop(a_burst.sound_loop)
+				U.animation_start(this, "idleup", nil, store.tick_ts, true, 5)
+
+				goto label_1211_0
+			end
+
+			if store.tick_ts - a_basic.ts > a_basic.cooldown and store.tick_ts - last_ts > a.min_cooldown and not a_basic_break() then
+				local ignore_out_of_range_check = true
+				local target_pred_pos
+				local enemy, enemies, _ = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, a_basic.prediction_time, a_basic.vis_flags, a_basic.vis_bans)
+
+				if not enemies or not enemy then
+					SU.delay_attack(store, a_basic, fts(10))
+				else
+					local start_ts = store.tick_ts
+
+					this.render.sprites[6].hidden = false
+
+					U.animation_start(this, a_basic.animation_start, nil, store.tick_ts, false, 5)
+					U.y_animation_play(this, "in", nil, store.tick_ts, false, 6)
+					U.animation_start(this, a_basic.animation_loop, nil, store.tick_ts, true, 5)
+					U.animation_start(this, "loop", nil, store.tick_ts, true, 6)
+
+					local _, new_enemies = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, fts(9), a_basic.vis_flags, a_basic.vis_bans)
+
+					if new_enemies then
+						enemies = new_enemies
+					end
+
+					local shot_i = 1
+					local zmod_target = 1
+
+					while not a_basic_break() do
+						if a_basic.targeting_style == 1 then
+							enemy = table.random(enemies)
+						else
+							enemy = enemies[km.zmod(zmod_target, #enemies)]
+
+							if zmod_target > #enemies then
+								zmod_target = 1
+							end
+						end
+
+						local in_range = ignore_out_of_range_check or U.is_inside_ellipse(tpos(this), enemy.pos, a.range * 1.1)
+						local bullet = E:create_entity(a_basic.bullet)
+
+						bullet.bullet.shot_index = shot_i
+						bullet.bullet.damage_factor = this.tower.damage_factor
+						bullet.bullet.source_id = this.id
+
+						local node_offset = P:predict_enemy_node_advance(enemy, bullet.bullet.hit_time)
+						local e_ni = enemy.nav_path.ni + node_offset
+
+						target_pred_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, e_ni)
+
+						if in_range then
+							if enemy.health and not enemy.health.dead then
+								bullet.bullet.to = V.v(target_pred_pos.x + enemy.unit.hit_offset.x, target_pred_pos.y + enemy.unit.hit_offset.y)
+								bullet.bullet.target_id = enemy.id
+							else
+								bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x + math.random(-20, 20), enemy.pos.y + enemy.unit.hit_offset.y + math.random(-20, 20))
+								bullet.bullet.target_id = nil
+							end
+						else
+							bullet.bullet.to = V.v(last_target_pos.x + math.random(-20, 20), last_target_pos.y + math.random(-20, 20))
+							bullet.bullet.target_id = nil
+						end
+
+						local start_offset = table.random(a_basic.bullet_start_offset)
+
+						bullet.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+
+						local min_distance = 4900
+						local curr_distance = V.dist2(bullet.bullet.from.x, bullet.bullet.from.y, bullet.bullet.to.x, bullet.bullet.to.y)
+
+						if curr_distance < min_distance then
+							for _, new_offset in pairs(a_basic.bullet_start_offset_safe) do
+								local new_from = V.v(this.pos.x + new_offset.x, this.pos.y + new_offset.y)
+								local new_distance = V.dist2(new_from.x, new_from.y, bullet.bullet.to.x, bullet.bullet.to.y)
+
+								if curr_distance < new_distance then
+									bullet.bullet.from = V.vclone(new_from)
+									curr_distance = new_distance
+
+									if min_distance <= curr_distance then
+										break
+									end
+								end
+							end
+						end
+
+						bullet.pos = V.vclone(bullet.bullet.from)
+
+						queue_insert(store, bullet)
+
+						this.tower_upgrade_persistent_data.last_fight_ts = store.tick_ts
+
+						local ray_timing = a_basic.ray_timing_min + (a_basic.ray_timing_max - a_basic.ray_timing_min) * math.random()
+
+						U.y_wait(store, ray_timing)
+
+						enemy, enemies = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, bullet.bullet.hit_time, a_basic.vis_flags, a_basic.vis_bans)
+
+						if not enemy then
+							break
+						end
+
+						shot_i = shot_i + 1
+						zmod_target = zmod_target + 1
+					end
+
+					U.animation_start(this, "out", nil, store.tick_ts, false, 6)
+					U.y_animation_play(this, a_basic.animation_end, nil, store.tick_ts, false, 5)
+
+					this.render.sprites[6].hidden = true
+
+					U.animation_start(this, "idleup", nil, store.tick_ts, true, 5)
+
+					a_basic.ts = start_ts
+				end
+			end
+		end
+
+		::label_1211_0::
+
+		coroutine.yield()
+	end
+end
+
+scripts.tower_sparking_geode_ray = {}
+
+function scripts.tower_sparking_geode_ray.update(this, store)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local target = store.entities[b.target_id]
+	local dest = V.vclone(b.to)
+	local tower = this.tower_ref
+
+	if this.bounces == nil then
+		this.bounces = math.random(this.bounces_min, this.bounces_max)
+	end
+
+	local function update_sprite()
+		if this.track_target and target and target.motion then
+			local tpx, tpy = target.pos.x, target.pos.y
+
+			if not b.ignore_hit_offset then
+				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+			end
+
+			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+			if d > b.max_track_distance then
+				log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
+
+				target = nil
+			else
+				dest.x, dest.y = target.pos.x, target.pos.y
+
+				if target.unit and target.unit.hit_offset then
+					dest.x, dest.y = dest.x + target.unit.hit_offset.x, dest.y + target.unit.hit_offset.y
+				end
+			end
+		end
+
+		local angle = V.angleTo(dest.x - this.pos.x, dest.y - this.pos.y)
+
+		s.r = angle
+
+		local dist_offset = 0
+
+		if this.dist_offset then
+			dist_offset = this.dist_offset
+		end
+
+		s.scale.x = (V.dist(dest.x, dest.y, this.pos.x, this.pos.y) + dist_offset) / this.image_width
+		s.scale.y = s.scale.y * this.bounce_scale_y
+
+		if this.bounce_scale_y < 1 and s.scale.x < 1 then
+			s.scale.y = s.scale.y * (s.scale.x + 1) / 2
+		end
+	end
+
+	if not b.ignore_hit_offset and this.track_target and target and target.motion then
+		b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+	end
+
+	s.scale = s.scale or V.v(1, 1)
+	s.ts = store.tick_ts
+
+	update_sprite()
+
+	if b.hit_time > fts(1) then
+		while store.tick_ts - s.ts < b.hit_time do
+			coroutine.yield()
+
+			if target and U.flag_has(target.vis.bans, F_RANGED) then
+				target = nil
+			end
+
+			if this.track_target then
+				update_sprite()
+			end
+		end
+	end
+
+	if target and b.damage_type ~= DAMAGE_NONE then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		queue_damage(store, d)
+	end
+
+	local mods_added = {}
+
+	if target then
+		if b.mod or b.mods then
+			local mods = b.mods or {b.mod}
+
+			for _, mod_name in pairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.target_id = b.target_id
+
+				if m.damage_from_bullet then
+					if m.dps then
+						m.dps.damage_min = b.damage_min * b.damage_factor
+						m.dps.damage_max = b.damage_max * b.damage_factor
+					else
+						m.modifier.damage_min = b.damage_min * b.damage_factor
+						m.modifier.damage_max = b.damage_max * b.damage_factor
+					end
+				else
+					local level
+
+					if not tower then
+						level = this.bullet.level
+					else
+						level = tower.level
+						level = level or this.bullet.level
+					end
+
+					m.modifier.level = level
+				end
+
+				table.insert(mods_added, m)
+				queue_insert(store, m)
+			end
+		end
+
+		table.insert(this.seen_targets, target.id)
+
+		if this.bounces > 0 then
+			U.y_wait(store, this.bounce_delay)
+
+			local bounce_target = U.find_nearest_enemy(store.entities, dest, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
+				return not table.contains(this.seen_targets, v.id)
+			end)
+
+			if bounce_target then
+				log.paranoid("ray_tesla bounce from %s to %s dist:%s", target.id, bounce_target.id, V.dist(dest.x, dest.y, bounce_target.pos.x, bounce_target.pos.y))
+
+				local r = E:create_entity(this.template_name)
+
+				r.sound_events.insert = ""
+
+				local node_offset = P:predict_enemy_node_advance(bounce_target, fts(5))
+				local e_ni = bounce_target.nav_path.ni + node_offset
+				local pred_pos = P:node_pos(bounce_target.nav_path.pi, bounce_target.nav_path.spi, e_ni)
+				local dir_nx, dir_ny = V.normalize(pred_pos.x - dest.x, pred_pos.y - dest.y)
+				local offset_dir = 10
+
+				r.pos = V.v(dest.x - dir_nx * offset_dir, dest.y - dir_ny * offset_dir)
+				r.bullet.to = V.v(pred_pos.x + bounce_target.unit.hit_offset.x + dir_nx * offset_dir, pred_pos.y + bounce_target.unit.hit_offset.y + dir_ny * offset_dir)
+				r.bullet.target_id = bounce_target.id
+				r.bullet.source_id = target.id
+				r.bounces = this.bounces - 1
+				r.bounce_scale_y = r.bounce_scale_y * r.bounce_scale_y_factor
+				r.seen_targets = this.seen_targets
+				r.bullet.damage_min = this.bullet.damage_min * this.bounce_damage_factor
+				r.bullet.damage_max = this.bullet.damage_max * this.bounce_damage_factor
+				r.render.sprites[1].name = this.bounce_sprite_name
+				r.ray_duration = this.bounce_ray_duration
+				r.image_width = this.bounce_image_width
+				r.bullet.hit_fx = nil
+
+				queue_insert(store, r)
+			end
+		end
+	end
+
+	if b.hit_payload then
+		local hp
+
+		if type(b.hit_payload) == "string" then
+			hp = E:create_entity(b.hit_payload)
+		else
+			hp = b.hit_payload
+		end
+
+		if hp.aura then
+			hp.aura.level = this.bullet.level
+			hp.aura.source_id = this.id
+
+			if target then
+				hp.pos.x, hp.pos.y = target.pos.x, target.pos.y
+			else
+				hp.pos.x, hp.pos.y = dest.x, dest.y
+			end
+		else
+			hp.pos.x, hp.pos.y = dest.x, dest.y
+		end
+
+		queue_insert(store, hp)
+	end
+
+	local disable_hit = false
+
+	if this.hit_fx_only_no_target then
+		disable_hit = target ~= nil and not target.health.dead
+	end
+
+	local fx
+
+	if b.hit_fx and not disable_hit then
+		local is_air = target and band(target.vis.flags, F_FLYING) ~= 0
+
+		fx = E:create_entity(b.hit_fx)
+
+		if b.hit_fx_ignore_hit_offset and target and not is_air then
+			fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
+		else
+			fx.pos.x, fx.pos.y = dest.x, dest.y
+		end
+
+		fx.render.sprites[1].ts = store.tick_ts
+		fx.render.sprites[1].r = s.r + math.rad(90)
+		fx.render.sprites[1].sort_y_offset = this.pos.y - fx.pos.y - 10
+
+		queue_insert(store, fx)
+	end
+
+	if this.ray_duration then
+		while store.tick_ts - s.ts < this.ray_duration do
+			if this.track_target then
+				update_sprite()
+			end
+
+			if tower and not store.entities[tower.id] then
+				queue_remove(store, this)
+
+				if fx then
+					queue_remove(store, fx)
+				end
+
+				for key, value in pairs(mods_added) do
+					queue_remove(store, value)
+				end
+
+				break
+			end
+
+			coroutine.yield()
+
+			s.hidden = false
+		end
+	else
+		while not U.animation_finished(this, 1) do
+			if tower and not store.entities[tower.id] then
+				queue_remove(store, this)
+
+				break
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.mod_tower_sparking_geode_stun = {}
+
+function scripts.mod_tower_sparking_geode_stun.insert(this, store, script)
+	local m = this.modifier
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead or not target.unit then
+		return false
+	end
+
+	if IS_KR5 and (band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0) then
+		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
+
+		return false
+	end
+
+	if this.received_damage_factor then
+		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+	end
+
+	if this.inflicted_damage_factor then
+		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+	end
+
+	if this.health_bar_offset then
+		this._target_health_bar_offset = V.vclone(target.health_bar.offset)
+		target.health_bar.offset = V.vclone(this.health_bar_offset[target.unit.size])
+	end
+
+	U.sprites_hide(target, nil, nil, true)
+	SU.hide_modifiers(store, target, true, this)
+	SU.hide_auras(store, target, true)
+
+	if this.render then
+		for _, s in pairs(this.render.sprites) do
+			s.ts = store.tick_ts
+
+			if s.size_names then
+				s.name = s.size_names[target.unit.size]
+			end
+
+			if s.size_prefixes then
+				s.prefix = s.prefix .. s.size_prefixes[target.unit.size]
+			end
+
+			if s.size_scales then
+				s.scale = s.size_scales[target.unit.size]
+			end
+
+			if not s.keep_flip_x then
+				s.flip_x = target.render.sprites[1].flip_x
+			end
+
+			if s.size_anchors then
+				s.anchor = s.size_anchors[target.unit.size]
+			end
+
+			if m.custom_scales then
+				s.scale = V.vclone(m.custom_scales[target.template_name] or m.custom_scales.default)
+			end
+
+			if m.custom_offsets then
+				s.offset = V.vclone(m.custom_offsets[target.template_name] or m.custom_offsets.default)
+				s.offset.x = s.offset.x * (s.flip_x and -1 or 1)
+			elseif m.health_bar_offset then
+				local hb = target.health_bar.offset
+				local hbo = m.health_bar_offset
+
+				s.offset.x, s.offset.y = hb.x + hbo.x, hb.y + hbo.y
+			elseif m.use_mod_offset and target.unit.mod_offset then
+				s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+			end
+		end
+	end
+
+	m.ts = store.tick_ts
+	this._pushed_bans = U.push_bans(target.vis, F_CUSTOM)
+
+	SU.stun_inc(target)
+	log.paranoid("mod_stun.insert (%s)-%s for target (%s)-%s", this.id, this.template_name, target.id, target.template_name)
+	signal.emit("mod-applied", this, target)
+
+	return true
+end
+
+function scripts.mod_tower_sparking_geode_stun.update(this, store, script)
+	local start_ts, target_hidden
+	local m = this.modifier
+	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return 
+	end
+
+	this.pos = target.pos
+
+	S:queue(this.mod_sound)
+	U.animation_start(this, "down", nil, store.tick_ts, false, this.render.sid_ray)
+	U.animation_start(this, "run", nil, store.tick_ts, false, this.render.sid_decal)
+
+	start_ts = store.tick_ts
+
+	if m.animation_phases then
+		U.animation_start(this, "in", nil, store.tick_ts, false, this.render.sid_crystal)
+		U.animation_start(this, "in", nil, store.tick_ts, false, this.render.sid_fx)
+
+		while not U.animation_finished(this, this.render.sid_crystal) do
+			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
+				target_hidden = true
+
+				if target.ui then
+					target.ui.can_click = false
+				end
+
+				if target.health_bar then
+					target.health_bar.hidden = true
+				end
+
+				U.sprites_hide(target, nil, nil, true)
+				SU.hide_modifiers(store, target, true, this)
+				SU.hide_auras(store, target, true)
+			end
+
+			if U.animation_finished(this, this.render.sid_ray) then
+				U.sprites_hide(this, this.render.sid_ray, this.render.sid_ray, false)
+			end
+
+			if U.animation_finished(this, this.render.sid_decal) then
+				U.sprites_hide(this, this.render.sid_decal, this.render.sid_decal, false)
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_crystal)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_fx)
+
+	while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
+		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
+			for i = 1, #this.render.sprites do
+				local s = this.render.sprites[i]
+
+				s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+			end
+		end
+
+		if U.animation_finished(this, this.render.sid_ray) then
+			U.sprites_hide(this, this.render.sid_ray, this.render.sid_ray, false)
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+function scripts.mod_tower_sparking_geode_stun.remove(this, store, script)
+	local fx = E:create_entity(this.out_fx)
+
+	fx.pos = V.vclone(this.pos)
+	fx.render.sprites[1].ts = store.tick_ts
+
+	queue_insert(store, fx)
+
+	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		return true
+	end
+
+	local fx_scales = {V.vv(0.8), V.vv(0.9), V.vv(1)}
+
+	fx.render.sprites[1].scale = fx_scales[target.unit.size]
+
+	if target.health and target.unit then
+		if this.received_damage_factor then
+			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+		end
+
+		if this.inflicted_damage_factor then
+			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		end
+	end
+
+	if this._target_health_bar_offset then
+		target.health_bar.offset = V.vclone(this._target_health_bar_offset)
+	end
+
+	U.sprites_show(target, nil, nil, true)
+	SU.show_modifiers(store, target, true, this)
+	SU.show_auras(store, target, true)
+
+	if this._pushed_bans then
+		U.pop_bans(target.vis, this._pushed_bans)
+
+		this._pushed_bans = nil
+	end
+
+	SU.stun_dec(target)
+	log.paranoid("mod_stun.remove (%s)-%s for target (%s)-%s", this.id, this.template_name, target.id, target.template_name)
+
+	return true
+end
+
+scripts.aura_tower_sparking_geode_spike_burst = {}
+
+function scripts.aura_tower_sparking_geode_spike_burst.insert(this, store, script)
+	this.aura.ts = store.tick_ts
+
+	if this.render then
+		for _, s in pairs(this.render.sprites) do
+			s.ts = store.tick_ts
+		end
+	end
+
+	if this.aura.source_id then
+		local target = store.entities[this.aura.source_id]
+
+		if target and this.render and this.aura.use_mod_offset and target.unit and target.unit.mod_offset then
+			this.render.sprites[1].offset.x, this.render.sprites[1].offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+		end
+	end
+
+	this.actual_duration = this.aura.duration
+
+	if this.aura.duration_inc then
+		this.actual_duration = this.actual_duration + this.aura.level * this.aura.duration_inc
+	end
+
+	return true
+end
+
+function scripts.aura_tower_sparking_geode_spike_burst.update(this, store, script)
+	local first_hit_ts
+	local last_hit_ts = 0
+	local cycles_count = 0
+	local victims_count = 0
+
+	for _, ps_n in pairs(this.ps_names) do
+		local ps = E:create_entity(ps_n)
+
+		ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	if this.aura.track_source and this.aura.source_id then
+		local te = store.entities[this.aura.source_id]
+
+		if te and te.pos then
+			this.pos = te.pos
+		end
+	end
+
+	last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+	if this.aura.apply_delay then
+		last_hit_ts = last_hit_ts + this.aura.apply_delay
+	end
+
+	while true do
+		if this.interrupt then
+			last_hit_ts = 1e+99
+		end
+
+		if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
+			break
+		end
+
+		if this.aura.stop_on_max_count and this.aura.max_count and victims_count >= this.aura.max_count then
+			break
+		end
+
+		if this.aura.track_source and this.aura.source_id then
+			local te = store.entities[this.aura.source_id]
+
+			if not te or te.health and te.health.dead and not this.aura.track_dead then
+				break
+			end
+		end
+
+		if this.aura.requires_magic then
+			local te = store.entities[this.aura.source_id]
+
+			if not te or not te.enemy then
+				goto label_1224_0
+			end
+
+			if this.render then
+				this.render.sprites[1].hidden = not te.enemy.can_do_magic
+			end
+
+			if not te.enemy.can_do_magic then
+				goto label_1224_0
+			end
+		end
+
+		if this.aura.source_vis_flags and this.aura.source_id then
+			local te = store.entities[this.aura.source_id]
+
+			if te and te.vis and band(te.vis.bans, this.aura.source_vis_flags) ~= 0 then
+				goto label_1224_0
+			end
+		end
+
+		if this.aura.requires_alive_source and this.aura.source_id then
+			local te = store.entities[this.aura.source_id]
+
+			if te and te.health and te.health.dead then
+				goto label_1224_0
+			end
+		end
+
+		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+		-- block empty
+		else
+			if this.render and this.aura.cast_resets_sprite_id then
+				this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
+			end
+
+			first_hit_ts = first_hit_ts or store.tick_ts
+			last_hit_ts = store.tick_ts
+			cycles_count = cycles_count + 1
+
+			local targets = table.filter(store.entities, function(k, v)
+				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
+			end)
+
+			for i, target in ipairs(targets) do
+				if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
+					break
+				end
+
+				if this.aura.max_count and victims_count >= this.aura.max_count then
+					break
+				end
+
+				local mods = this.aura.mods or {this.aura.mod}
+
+				for _, mod_name in pairs(mods) do
+					local new_mod = E:create_entity(mod_name)
+
+					new_mod.modifier.level = this.aura.level
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
+
+					if this.aura.hide_source_fx and target.id == this.aura.source_id then
+						new_mod.render = nil
+					end
+
+					queue_insert(store, new_mod)
+
+					victims_count = victims_count + 1
+				end
+			end
+		end
+
+		::label_1224_0::
+
+		coroutine.yield()
+	end
+
+	signal.emit("aura-apply-mod-victims", this, victims_count)
+	queue_remove(store, this)
+end
+
+scripts.decal_tower_sparking_geode_burst_crystal = {}
+
+function scripts.decal_tower_sparking_geode_burst_crystal.update(this, store)
+	local start_ts = store.tick_ts
+
+	U.y_animation_play(this, "in", nil, store.tick_ts)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	while not this.finish do
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "death", nil, store.tick_ts)
+	queue_remove(store, this)
+end
+
+scripts.mod_tower_sparking_geode_burst_damage = {}
+
+function scripts.mod_tower_sparking_geode_burst_damage.insert(this, store, script)
+	this.dps.damage_min = this.dps.damage_min[this.modifier.level]
+	this.dps.damage_max = this.dps.damage_max[this.modifier.level]
+
+	return scripts.mod_dps.insert(this, store, script)
+end
+
+scripts.mod_tower_sparking_geode_burst_slow = {}
+
+function scripts.mod_tower_sparking_geode_burst_slow.insert(this, store, script)
+	this.slow.factor = this.slow.factor[this.modifier.level]
+
+	return scripts.mod_slow.insert(this, store, script)
+end
+
+-- 电涌 END
 return scripts
