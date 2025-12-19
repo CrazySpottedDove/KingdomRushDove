@@ -257,14 +257,14 @@ return {
 			tt_title = _("TOWER_BARREL_NAME"),
 			tt_desc = _("TOWER_BARREL_1_DESCRIPTION")
 		}),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_sparking_geode_lvl4",
-		-- 	image = "kr5_main_icons_0042",
-		-- 	type = "sparking_geode",
-		-- 	place = 18,
-		-- 	tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
-		-- 	tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
-		-- }),
+		M(tpl.upgrade, {
+			action_arg = "tower_sparking_geode_lvl4",
+			image = "kr5_main_icons_0042",
+			type = "sparking_geode",
+			place = 18,
+			tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	-- 箭塔
