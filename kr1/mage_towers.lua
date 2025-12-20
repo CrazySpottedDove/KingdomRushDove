@@ -2909,6 +2909,7 @@ tt.powers.instakill.price_base = b.power_instakill.price[1]
 tt.powers.instakill.price_inc = b.power_instakill.price[1]
 tt.powers.instakill.cooldown = b.power_instakill.cooldown
 tt.powers.instakill.attack_idx = 3
+tt.powers.instakill.key = "SKILL_INSTAKILL"
 tt.powers.jump = E:clone_c("power")
 tt.powers.jump.enc_icon = 34
 tt.powers.jump.max_level = 3
@@ -2918,7 +2919,8 @@ tt.powers.jump.cooldown = b.power_jump.cooldown
 tt.powers.jump.damage_min = b.power_jump.damage_min
 tt.powers.jump.damage_max = b.power_jump.damage_max
 tt.powers.jump.attack_idx = 4
-tt.attacks.range = b.engineer_basic_attack.range[4]
+tt.powers.jump.key = "SKILL_JUMP"
+tt.attacks.range = b.mage_basic_attack.range[4]
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_tower_hermit_toad_engineer_basic_lvl4"
 tt.attacks.list[1].bullet_start_offset = v(33, 65)
@@ -3162,7 +3164,6 @@ tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.mod_mark_flags.update
 -- 蛤蟆 END
-
 -- 树灵 START
 tt = RT("ps_tower_arborean_emissary_bolt_trail")
 
@@ -3171,21 +3172,12 @@ AC(tt, "pos", "particle_system")
 tt.particle_system.name = "arborean_emissary_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {
-	fts(15),
-	fts(15)
-}
+tt.particle_system.particle_lifetime = {fts(15), fts(15)}
 tt.particle_system.emission_rate = 45
 tt.particle_system.emit_area_spread = v(8, 8)
 tt.particle_system.emit_rotation_spread = math.pi * 2
-tt.particle_system.scales_y = {
-	1,
-	1.5
-}
-tt.particle_system.scales_x = {
-	1,
-	1.5
-}
+tt.particle_system.scales_y = {1, 1.5}
+tt.particle_system.scales_x = {1, 1.5}
 tt = RT("ps_tower_arborean_emissary_gift_of_nature_wisps")
 
 AC(tt, "pos", "particle_system")
@@ -3213,16 +3205,8 @@ tt.main_script.update = scripts.decal_tower_arborean_emissary_gift_of_nature_wis
 tt.standing_duration = fts(33)
 tt.initial_impulse = 900
 tt.initial_impulse_duration = fts(10)
-tt.initial_impulse_angle = {
-	math.pi,
-	math.pi / 2,
-	-math.pi
-}
-tt.initial_destination = {
-	v(-20, 30),
-	v(20, 30),
-	v(0, 50)
-}
+tt.initial_impulse_angle = {math.pi, math.pi / 2, -math.pi}
+tt.initial_destination = {v(-20, 30), v(20, 30), v(0, 50)}
 
 local fly_strenght = 10
 local fly_frequency = 30
@@ -3230,125 +3214,16 @@ local fly_frequency = 30
 tt.tween.disabled = true
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].interp = "sine"
-tt.tween.props[1].keys = {
-	{
-		0,
-		v(0, 0)
-	},
-	{
-		fts(fly_frequency),
-		v(0, fly_strenght)
-	},
-	{
-		fts(fly_frequency * 2),
-		v(0, 0)
-	},
-	{
-		fts(fly_frequency * 3),
-		v(0, -fly_strenght)
-	},
-	{
-		fts(fly_frequency * 4),
-		v(0, 0)
-	}
-}
+tt.tween.props[1].keys = {{0, v(0, 0)}, {fts(fly_frequency), v(0, fly_strenght)}, {fts(fly_frequency * 2), v(0, 0)}, {fts(fly_frequency * 3), v(0, -fly_strenght)}, {fts(fly_frequency * 4), v(0, 0)}}
 tt.tween.props[1].loop = true
 tt.tween.props[1].disabled = true
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "alpha"
-tt.tween.props[2].keys = {
-	{
-		0,
-		255
-	},
-	{
-		fts(10),
-		0
-	}
-}
+tt.tween.props[2].keys = {{0, 255}, {fts(10), 0}}
 tt.tween.props[2].disabled = true
 tt.tween.remove = false
 tt.particles_name = "ps_tower_arborean_emissary_gift_of_nature_wisps"
-tt.positions = {
-	{
-		{
-			0,
-			v(100, 0)
-		},
-		{
-			0.3,
-			v(100, 50)
-		},
-		{
-			0.5,
-			v(50, 0)
-		},
-		{
-			0.7,
-			v(0, 20)
-		},
-		{
-			0.8,
-			v(10, -10)
-		},
-		{
-			1,
-			v(0, 0)
-		}
-	},
-	{
-		{
-			0,
-			v(0, 0)
-		},
-		{
-			0.3,
-			v(20, -20)
-		},
-		{
-			0.7,
-			v(-20, -20)
-		},
-		{
-			1,
-			v(0, 0)
-		}
-	},
-	{
-		{
-			0,
-			v(0, 0)
-		},
-		{
-			0.1,
-			v(-100, 0)
-		},
-		{
-			0.2,
-			v(-100, -50)
-		},
-		{
-			0.5,
-			v(-50, 0)
-		},
-		{
-			0.6,
-			v(-50, 0)
-		},
-		{
-			0.7,
-			v(0, 0)
-		},
-		{
-			0.8,
-			v(-20, -10)
-		},
-		{
-			1,
-			v(0, 0)
-		}
-	}
-}
+tt.positions = {{{0, v(100, 0)}, {0.3, v(100, 50)}, {0.5, v(50, 0)}, {0.7, v(0, 20)}, {0.8, v(10, -10)}, {1, v(0, 0)}}, {{0, v(0, 0)}, {0.3, v(20, -20)}, {0.7, v(-20, -20)}, {1, v(0, 0)}}, {{0, v(0, 0)}, {0.1, v(-100, 0)}, {0.2, v(-100, -50)}, {0.5, v(-50, 0)}, {0.6, v(-50, 0)}, {0.7, v(0, 0)}, {0.8, v(-20, -10)}, {1, v(0, 0)}}}
 tt = RT("tower_build_arborean_emissary", "tower_build")
 tt.build_name = "tower_arborean_emissary_lvl1"
 tt.render.sprites[1].name = "terrains_%04i"
@@ -3402,9 +3277,7 @@ for i = 2, 4 do
 end
 
 tt.sound_events.insert = "TowerArboreanEmissaryTaunt"
-tt.animation_idles = {
-	"idle_2"
-}
+tt.animation_idles = {"idle_2"}
 tt.tower.long_idle_cooldown_min = 4
 tt.tower.long_idle_cooldown_max = 8
 tt.ui.click_rect = r(-35, 0, 70, 60)
@@ -3509,10 +3382,7 @@ tt.attacks.list[3].wave_of_roots_balance = b.wave_of_roots
 tt.attacks.list[3].vis_flags = bor(F_STUN, F_ENEMY)
 tt.attacks.list[3].vis_bans = bor(F_FLYING, F_BOSS, F_CLIFF, F_NIGHTMARE, F_WATER)
 tt.attacks.list[3].sound = "TowerArboreanEmissaryThornyGarden"
-tt.animation_idles = {
-	"idle_2",
-	"idle_3"
-}
+tt.animation_idles = {"idle_2", "idle_3"}
 tt.tower.long_idle_cooldown_min = 4
 tt.tower.long_idle_cooldown_max = 8
 tt = RT("tower_arborean_emissary_root_stun_mod", "mod_stun")
@@ -3527,11 +3397,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].sort_y_offset = -5
-tt.render.sprites[1].size_names = {
-	"small",
-	"big",
-	"big"
-}
+tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.out_before = fts(18)
 tt.animation_start = "run"
 tt.animation_idle = "idle"
@@ -3579,10 +3445,7 @@ tt = RT("aura_tower_arborean_emissary_gift_of_nature", "aura")
 b = balance.towers.arborean_emissary
 tt.aura.cycle_time = 0.3
 tt.aura.duration = nil
-tt.aura.mods = {
-	"mod_tower_arborean_emissary_gift_of_nature_heal",
-	"mod_tower_arborean_emissary_gift_of_nature_heal_decal"
-}
+tt.aura.mods = {"mod_tower_arborean_emissary_gift_of_nature_heal", "mod_tower_arborean_emissary_gift_of_nature_heal_decal"}
 tt.aura.radius = b.gift_of_nature.radius
 tt.aura.track_source = false
 tt.aura.vis_flags = F_MOD
@@ -3650,11 +3513,7 @@ tt.inflicted_damage_factor = nil
 tt.received_damage_factor = nil
 tt.render.sprites[1].name = "arborean_emissary_basic_attack_modifier"
 tt.render.sprites[1].draw_order = DO_MOD_FX
-tt.render.sprites[1].size_names = {
-	"arborean_emissary_basic_attack_modifier",
-	"arborean_emissary_basic_attack_modifier",
-	"arborean_emissary_basic_attack_modifier_big"
-}
+tt.render.sprites[1].size_names = {"arborean_emissary_basic_attack_modifier", "arborean_emissary_basic_attack_modifier", "arborean_emissary_basic_attack_modifier_big"}
 tt = RT("controller_tower_arborean_emissary_gift_of_nature")
 
 AC(tt, "pos", "main_script")
@@ -3662,14 +3521,5 @@ AC(tt, "pos", "main_script")
 tt.main_script.update = scripts.controller_tower_arborean_emissary_gift_of_nature.update
 tt.entity = "decal_tower_arborean_emissary_gift_of_nature_wisp"
 tt.aura = "aura_tower_arborean_emissary_gift_of_nature"
-tt.start_offset = {
-	v(-35, 67),
-	v(35, 68),
-	v(0, 50)
-}
-tt.end_offset = {
-	v(-50, 60),
-	v(0, 80),
-	v(50, 60)
-}
--- 树灵 END
+tt.start_offset = {v(-35, 67), v(35, 68), v(0, 50)}
+tt.end_offset = {v(-50, 60), v(0, 80), v(50, 60)}

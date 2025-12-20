@@ -2696,6 +2696,10 @@ function sys.sound_events:on_insert(entity, store)
 
 		for _, s in pairs(sounds) do
 			S:queue(s, se.insert_args)
+
+			if s == "" then
+				print(entity.template_name)
+			end
 		end
 	end
 

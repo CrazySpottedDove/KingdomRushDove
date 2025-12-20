@@ -527,7 +527,8 @@ function upgrades:engineer_bombs()
 		"bullet_tower_demon_pit_basic_attack_lvl4",
 		"bullet_tower_demon_pit_big_guy_lvl4",
 		"bullet_tower_barrel_lvl4",
-		"bullet_tower_hermit_toad_engineer_basic_lvl4"
+		"bullet_tower_hermit_toad_engineer_basic_lvl4",
+		"tower_sparking_geode_ray_lvl4"
 	}
 end
 
@@ -543,7 +544,8 @@ function upgrades:engineer_advanced_towers()
 		"tower_tricannon_lvl4",
 		"tower_demon_pit_lvl4",
 		"tower_flamespitter_lvl4",
-		"tower_barrel_lvl4"
+		"tower_barrel_lvl4",
+		"tower_sparking_geode_lvl4"
 	}
 end
 

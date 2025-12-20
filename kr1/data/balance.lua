@@ -6184,7 +6184,7 @@ local towers = {
 	},
 	sparking_geode = {
 		shared_min_cooldown = 2,
-		price = {110, 130, 210, 290},
+		price = {110, 130, 210, 350},
 		stats = {
 			cooldown = 7,
 			range = 8,
@@ -6194,9 +6194,9 @@ local towers = {
 			cooldown = 2,
 			bounce_range = 140,
 			targeting_style = 1,
-			damage_min = {3, 5, 7, 9},
+			damage_min = {3, 5, 7, 11},
 			damage_max = {4, 6, 9, 12},
-			range = {130, 140, 150, 160},
+			range = {130, 140, 150, 190},
 			ray_timing_min = {1.05, 0.95, 0.75, 0.55},
 			ray_timing_max = {1.15, 1.05, 0.85, 0.65},
 			damage_type = DAMAGE_TRUE,
@@ -6217,11 +6217,11 @@ local towers = {
 			radius = 200,
 			price = {200, 200, 200},
 			cooldown = {40, 35, 30},
-			duration = {6, 8, 10},
+			duration = {6, 9, 12},
 			damage_min = {3, 4, 5},
 			damage_max = {3, 4, 5},
 			damage_type = DAMAGE_TRUE,
-			speed_factor = {0.7, 0.6, 0.5}
+			speed_factor = {0.7, 0.65, 0.6}
 		}
 	},
 	pandas = {

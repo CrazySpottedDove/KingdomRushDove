@@ -51,7 +51,8 @@ GS.engineer_towers = {
 	"tower_tricannon_lvl4",
 	"tower_demon_pit_lvl4",
 	"tower_flamespitter_lvl4",
-	"tower_barrel_lvl4"
+	"tower_barrel_lvl4",
+	"tower_sparking_geode_lvl4"
 }
 GS.barrack_towers = {
 	"tower_barrack_1",

@@ -9217,7 +9217,7 @@ function scripts.mod_track_fx.update(this, store, script)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos = target.pos
@@ -9252,7 +9252,7 @@ function scripts.mod_track_fx.update(this, store, script)
 
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if this.render and target.unit then

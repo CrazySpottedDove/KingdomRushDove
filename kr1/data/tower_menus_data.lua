@@ -2548,16 +2548,16 @@ return {
 		image = "kr5_special_icons_0038",
 		place = 6,
 		sounds = {"TowerSparkingGeodeSkillATaunt"},
-		tt_phrase = _("TOWER_SPARKING_GEODE_4_CRISTALIZE"),
+		tt_phrase = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE"),
 		tt_list = {{
-			tt_title = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_1_NAME"),
-			tt_desc = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_1_DESCRIPTION")
+			tt_title = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE_1_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE_1_DESCRIPTION")
 		}, {
-			tt_title = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_2_NAME"),
-			tt_desc = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_2_DESCRIPTION")
+			tt_title = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE_2_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE_2_DESCRIPTION")
 		}, {
-			tt_title = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_3_NAME"),
-			tt_desc = _("TOWER_SPARKING_GEODE_4_CRISTALIZE_3_DESCRIPTION")
+			tt_title = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE_3_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_CRYSTALIZE_3_DESCRIPTION")
 		}}
 	}), M(tpl.upgrade_power, {
 		check = "special_icons_0020",

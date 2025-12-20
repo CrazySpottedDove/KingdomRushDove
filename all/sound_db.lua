@@ -448,6 +448,8 @@ function sound_db:queue(id, options)
 
 	if not self.sounds[id] then
 		log.error("SOUND WITH ID %s NOT FOUND", tostring(id))
+		-- 打印调用栈
+		log.error(debug.traceback())
 
 		return 
 	end

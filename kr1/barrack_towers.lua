@@ -2648,9 +2648,7 @@ tt.unit.marker_offset = v(0, ady(10))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)
 -- 圣骑兵 END
-
 -- 炮兵 START
-
 tt = E:register_t("ps_bullet_incendiary_soldier_dwarf_tower")
 
 E:add_comps(tt, "pos", "particle_system")
@@ -2658,10 +2656,7 @@ E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "tower_dwarf_skill_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {
-	fts(15),
-	fts(15)
-}
+tt.particle_system.particle_lifetime = {fts(15), fts(15)}
 tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_BULLET_PARTICLES
@@ -2695,11 +2690,7 @@ tt.modifier.duration = b.duration
 tt.dps.damage_config = b.damage
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.damage_every = b.damage_every
-tt.render.sprites[1].size_names = {
-	"small",
-	"large",
-	"large"
-}
+tt.render.sprites[1].size_names = {"small", "large", "large"}
 tt.render.sprites[1].prefix = "tower_dwarf_fire_modifier"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 2
@@ -2784,7 +2775,9 @@ tt.sound_events.change_rally_point = "TowerDwarfTaunt"
 tt.ui.click_rect = r(-42, 0, 84, 90)
 tt = E:register_t("soldier_tower_dwarf_lvl1", "soldier_militia")
 b = balance.towers.dwarf.soldier
+
 E:add_comps(tt, "nav_grid", "ranged")
+
 tt.info.portrait = "kr5_info_portraits_soldiers_0024"
 tt.info.random_name_format = "SOLDIER_TOWER_DWARF_%i_NAME"
 tt.info.random_name_count = 10
@@ -2794,14 +2787,8 @@ tt.render.sprites[1].prefix = "tower_dwarf_dwarf_lvl1"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].scale = vv(1.1)
-tt.render.sprites[1].angles.walk = {
-	"walk"
-}
-tt.render.sprites[1].angles.attack = {
-	"attack_1_front",
-	"attack_1_up",
-	"attack_1_down"
-}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].angles.attack = {"attack_1_front", "attack_1_up", "attack_1_down"}
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "decal_flying_shadow_hard"
@@ -2866,9 +2853,7 @@ tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
 tt.ranged.attacks[2].animation = "skill"
 tt.ranged.attacks[2].bullet = "bullet_incendiary_soldier_tower_dwarf"
 tt.ranged.attacks[2].disabled = true
-tt.ranged.attacks[2].bullet_start_offset = {
-	v(0, 0)
-}
+tt.ranged.attacks[2].bullet_start_offset = {v(0, 0)}
 tt.ranged.attacks[2].bullet_start_offset_relative = v(15, 14)
 tt.ranged.attacks[2].shoot_time = fts(35)
 tt.ranged.attacks[2].node_prediction = fts(55)
@@ -2926,7 +2911,6 @@ tt.aura.vis_flags = bor(F_MOD)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 -- 炮兵 END
-
 -- 幽冥 START
 tt = E:register_t("ps_soldier_tower_ghost")
 
@@ -2936,10 +2920,7 @@ tt.particle_system.name = "ghost_tower_spawn_trail_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.emission_rate = 50
-tt.particle_system.particle_lifetime = {
-	0.2,
-	0.4
-}
+tt.particle_system.particle_lifetime = {0.2, 0.4}
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = v(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
@@ -3109,10 +3090,7 @@ tt.bullet.acceleration_factor = 0.1
 tt.bullet.min_speed = 30
 tt.bullet.max_speed = 300
 tt.bullet.align_with_trajectory = true
-tt.bullet.mods = {
-	"mod_tower_ghost_soul_slow",
-	"mod_tower_ghost_soul_damage_factor"
-}
+tt.bullet.mods = {"mod_tower_ghost_soul_slow", "mod_tower_ghost_soul_damage_factor"}
 tt.bullet.hit_fx = "fx_soul_soldier_tower_ghost"
 tt.bullet.use_unit_damage_factor = true
 tt.sound_events.hit = "TowerGhostSoulAttackImpact"
@@ -3133,11 +3111,7 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.inflicted_damage_factor = b.damage_factor
 tt.modifier.duration = b.damage_factor_duration
 tt.modifier.use_mod_offset = false
-tt.render.sprites[1].size_names = {
-	"small",
-	"medium",
-	"large"
-}
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "ghost_tower_soul_skill_enemy_fx"
 tt.render.sprites[1].name = "small"
 tt = E:register_t("mod_tower_ghost_increase_damage_factor", "modifier")
@@ -3214,7 +3188,6 @@ tt.template_hover = "tower_ghost_hover"
 tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
 -- 幽冥 END
-
 -- 圣殿 START
 tt = E:register_t("tower_build_paladin_covenant", "tower_build")
 tt.build_name = "tower_paladin_covenant_lvl1"
@@ -3260,12 +3233,8 @@ E:add_comps(tt, "powers", "timed_attacks")
 b = balance.towers.paladin_covenant
 tt.info.portrait = "gui_bottom_info_image_soldiers_0004"
 tt.render.sprites[1].prefix = "paladin_soldier_lvl4"
-tt.render.sprites[1].angles.walk = {
-	"walk"
-}
-tt.idle_flip.animations = {
-	"idle"
-}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.idle_flip.animations = {"idle"}
 tt.health.hp_max = b.soldier.hp[4]
 tt.health.armor = b.soldier.armor[4]
 tt.health_bar.offset = v(0, 35)
@@ -3298,16 +3267,10 @@ tt.timed_attacks.list[1] = E:clone_c("mod_attack")
 tt.timed_attacks.list[1].animation = "healing"
 tt.timed_attacks.list[1].cooldown = nil
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].hit_time = {
-	fts(10),
-	fts(9)
-}
+tt.timed_attacks.list[1].hit_time = {fts(10), fts(9)}
 tt.timed_attacks.list[1].lost_health = nil
 tt.timed_attacks.list[1].duration = b.healing_prayer.duration
-tt.timed_attacks.list[1].mods = {
-	"tower_paladin_covenant_soldier_lvl4_healing_mod",
-	"tower_paladin_covenant_soldier_lvl4_healing_mod_fx"
-}
+tt.timed_attacks.list[1].mods = {"tower_paladin_covenant_soldier_lvl4_healing_mod", "tower_paladin_covenant_soldier_lvl4_healing_mod_fx"}
 tt.timed_attacks.list[1].sound = "TowerPaladinCovenantHealingPrayer"
 tt.timed_attacks.list[2] = E:clone_c("aura_attack")
 tt.timed_attacks.list[2].animation = "armor"
@@ -3353,42 +3316,15 @@ tt.render.sprites[3].name = "paladin_soldiers_lvl4_healing_plusSymbol"
 tt.render.sprites[3].loop = true
 tt.render.sprites[3].animated = true
 tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {
-	{
-		0,
-		0
-	},
-	{
-		fts(4),
-		255
-	}
-}
+tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "alpha"
-tt.tween.props[2].keys = {
-	{
-		0,
-		0
-	},
-	{
-		fts(4),
-		255
-	}
-}
+tt.tween.props[2].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[3] = E:clone_c("tween_prop")
 tt.tween.props[3].name = "alpha"
-tt.tween.props[3].keys = {
-	{
-		0,
-		0
-	},
-	{
-		fts(4),
-		255
-	}
-}
+tt.tween.props[3].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[3].sprite_id = 3
 tt.tween.remove = false
 tt.main_script.update = scripts.mod_track_fx.update
@@ -3396,10 +3332,7 @@ tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura", "aura")
 
 E:add_comps(tt)
 
-tt.aura.mods = {
-	"tower_paladin_covenant_soldier_lvl4_lead_aura_mod",
-	"tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx"
-}
+tt.aura.mods = {"tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx"}
 tt.aura.cycles = 1
 tt.aura.radius = b.lead.soldier_veteran.aura_range
 tt.aura.track_source = true
@@ -3428,16 +3361,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {
-	{
-		0,
-		0
-	},
-	{
-		1,
-		255
-	}
-}
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.tween.remove = false
 tt.main_script.update = scripts.mod_track_fx.update
 tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_fx", "fx")
@@ -3520,4 +3444,3 @@ tt.render.sprites[4].offset = v(0, 9)
 tt.sound_events.insert = "TowerPaladinCovenantTaunt"
 tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
 tt.ui.click_rect = r(-42, 0, 84, 90)
--- 圣殿 END

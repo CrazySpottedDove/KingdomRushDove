@@ -2339,6 +2339,18 @@ return {
 			icon = 11,
 			detail_icon = 11,
 			from_kr = 5
+		},
+		{
+			name = "tower_hermit_toad_lvl4",
+			icon = 18,
+			detail_icon = 18,
+			from_kr = 5
+		},
+		{
+			name = "tower_sparking_geode_lvl4",
+			icon = 19,
+			detail_icon = 19,
+			from_kr = 5
 		} -- 16, 17: 蛤蟆
 	-- 18: 巨像
 	},

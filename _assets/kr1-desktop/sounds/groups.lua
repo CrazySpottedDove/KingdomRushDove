@@ -2752,7 +2752,7 @@ return {
 			"kr_voice_surgecolossus_04c.ogg",
 			"kr_voice_surgecolossus_05c.ogg",
 			"kr_voice_surgecolossus_taunt-select_c.ogg",
-			"kra_sfx_spiders_tower_heode_cristalize_ONESHOT_v1.ogg",
+			-- "kra_sfx_spiders_tower_heode_cristalize_ONESHOT_v1.ogg",
 			"kra_sfx_spiders_tower_heode_cristalize_bolt_var1_v1.ogg",
 			"kra_sfx_spiders_tower_heode_cristalize_bolt_var2_v1.ogg",
 			"kra_sfx_spiders_tower_heode_cristalize_bolt_var3_v1.ogg",
