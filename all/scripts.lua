@@ -9205,4 +9205,77 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.mod_track_fx = {}
+
+function scripts.mod_track_fx.update(this, store, script)
+	local m = this.modifier
+
+	this.modifier.ts = store.tick_ts
+
+	local target = store.entities[m.target_id]
+
+	if not target or not target.pos then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	if this.tween then
+		this.tween.ts = store.tick_ts
+		this.tween.disabled = false
+
+		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
+		U.y_wait(store, this.tween.props[1].keys[2][1])
+	else
+		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
+	end
+
+	if this.sound_events.insert then
+		S:queue(this.sound_events.insert)
+	end
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+			if this.tween then
+				this.tween.ts = store.tick_ts
+				this.tween.reverse = true
+				this.tween.disabled = false
+
+				U.y_wait(store, this.tween.props[1].keys[2][1])
+			else
+				U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
+			end
+
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.render and target.unit then
+			local s = this.render.sprites[1]
+			local flip_sign = 1
+
+			if target.render then
+				flip_sign = target.render.sprites[1].flip_x and -1 or 1
+			end
+
+			if m.health_bar_offset and target.health_bar then
+				local hb = target.health_bar.offset
+				local hbo = m.health_bar_offset
+
+				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+			elseif m.use_mod_offset and target.unit.mod_offset then
+				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+			end
+		end
+
+		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
+		coroutine.yield()
+	end
+end
+
 return scripts

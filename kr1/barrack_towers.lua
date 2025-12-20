@@ -2647,3 +2647,877 @@ tt.unit.hit_offset = v(0, 14)
 tt.unit.marker_offset = v(0, ady(10))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)
+-- 圣骑兵 END
+
+-- 炮兵 START
+
+tt = E:register_t("ps_bullet_incendiary_soldier_dwarf_tower")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "tower_dwarf_skill_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {
+	fts(15),
+	fts(15)
+}
+tt.particle_system.emission_rate = 20
+tt.particle_system.emit_rotation_spread = math.pi / 2
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("fx_soldier_tower_dwarf_melee_hit", "fx")
+tt.render.sprites[1].name = "tower_dwarf_attack_2_hit"
+tt = E:register_t("fx_bullet_soldier_tower_dwarf_hit", "fx")
+tt.render.sprites[1].name = "tower_dwarf_attack_1_hit_hit"
+tt = E:register_t("fx_explosion_tower_dwarf", "fx")
+tt.render.sprites[1].name = "tower_dwarf_skill_main_explosion_idle"
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].anchor = v(0.43, 0.5)
+tt = E:register_t("decal_tower_dwarf_jump_explosion", "decal_timed")
+tt.render.sprites[1].prefix = "tower_dwarf_jump_explosion_lvl4_jump_in"
+tt.render.sprites[1].name = "fx"
+tt.render.sprites[1].animated = true
+tt.timed.duration = fts(20)
+tt = E:register_t("tower_build_dwarf", "tower_build")
+tt.build_name = "tower_dwarf_lvl1"
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2].name = "tower_dwarf_build"
+tt.render.sprites[2].offset = v(0, 10)
+tt.render.sprites[3].offset.y = 62
+tt.render.sprites[4].offset.y = 62
+tt = E:register_t("mod_aura_bullet_soldier_tower_dwarf", "modifier")
+b = balance.towers.dwarf.incendiary_ammo.burn
+
+E:add_comps(tt, "dps", "render")
+
+tt.modifier.duration = b.duration
+tt.dps.damage_config = b.damage
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = b.damage_every
+tt.render.sprites[1].size_names = {
+	"small",
+	"large",
+	"large"
+}
+tt.render.sprites[1].prefix = "tower_dwarf_fire_modifier"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.mod_tricannon_overheat_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt = E:register_t("tower_dwarf_lvl1", "tower")
+b = balance.towers.dwarf
+
+E:add_comps(tt, "barrack", "vis")
+
+tt.tower.type = "dwarf"
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.team = TEAM_LINIREA
+tt.tower.level = 1
+tt.tower.price = b.price[1]
+tt.tower.menu_offset = v(0, 28)
+tt.info.i18n_key = "TOWER_DWARF_1"
+tt.info.portrait = "kr5_portraits_towers_0024"
+tt.info.enc_icon = 77
+tt.info.tower_portrait = "towerselect_portraits_big_" .. "0001"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "tower_dwarf_lvl1"
+tt.render.sprites[2].offset = v(0, 9)
+tt.render.sprites[2].sort_y_offset = 5
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "tower_dwarf_lvl123_door"
+tt.render.sprites[3].name = "close"
+tt.render.sprites[3].loop = false
+tt.render.sprites[3].offset = v(0, 7)
+tt.render.sprites[3].sort_y_offset = 5
+tt.barrack.soldier_type = "soldier_tower_dwarf_lvl1"
+tt.barrack.rally_range = b.rally_range
+tt.barrack.respawn_offset = v(10, 12)
+tt.barrack.max_soldiers = b.max_soldiers
+tt.info.fn = scripts.tower_paladin_covenant.get_info
+tt.main_script.insert = scripts.tower_barrack.insert
+tt.main_script.update = scripts.tower_dwarf.update
+tt.main_script.remove = scripts.tower_barrack.remove
+tt.sound_events.insert = "TowerDwarfTaunt"
+tt.sound_events.change_rally_point = "TowerDwarfTaunt"
+tt.sound_events.tower_room_select = "TowerDwarfTauntSelect"
+tt.ui.click_rect = r(-35, 0, 70, 65)
+tt = E:register_t("tower_dwarf_lvl4", "tower_dwarf_lvl1")
+
+E:add_comps(tt, "powers")
+
+b = balance.towers.dwarf
+tt.info.room_portrait = "quickmenu_main_icons_main_icons_0023_0001"
+tt.info.enc_icon = 80
+tt.info.i18n_key = "TOWER_DWARF_4"
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_hp = b.stats.hp
+tt.info.stat_armor = b.stats.armor
+tt.tower.price = b.price[4]
+tt.tower.level = 1
+tt.tower.menu_offset = v(0, 35)
+tt.powers.formation = E:clone_c("power")
+tt.powers.formation.price_base = b.formation.price[2]
+tt.powers.formation.price_inc = b.formation.price[3]
+tt.powers.formation.enc_icon = 35
+tt.powers.incendiary_ammo = E:clone_c("power")
+tt.powers.incendiary_ammo.price_base = b.incendiary_ammo.price[2]
+tt.powers.incendiary_ammo.price_inc = b.incendiary_ammo.price[3]
+tt.powers.incendiary_ammo.damage_min = b.damage_min
+tt.powers.incendiary_ammo.damage_max = b.damage_max
+tt.powers.incendiary_ammo.burn_damage_min = b.incendiary_ammo.burn.damage_min
+tt.powers.incendiary_ammo.burn_damage_max = b.incendiary_ammo.burn.damage_max
+tt.powers.incendiary_ammo.enc_icon = 36
+tt.barrack.soldier_type = "soldier_tower_dwarf_lvl4"
+tt.barrack.rally_range = b.rally_range
+tt.barrack.respawn_offset = v(0, 12)
+tt.render.sprites[2].name = "tower_dwarf_lvl4"
+tt.render.sprites[3].prefix = "tower_dwarf_lvl4_door"
+tt.render.sprites[3].offset = v(0, 10)
+tt.sound_events.insert = "TowerDwarfTaunt"
+tt.sound_events.change_rally_point = "TowerDwarfTaunt"
+tt.ui.click_rect = r(-42, 0, 84, 90)
+tt = E:register_t("soldier_tower_dwarf_lvl1", "soldier_militia")
+b = balance.towers.dwarf.soldier
+E:add_comps(tt, "nav_grid", "ranged")
+tt.info.portrait = "kr5_info_portraits_soldiers_0024"
+tt.info.random_name_format = "SOLDIER_TOWER_DWARF_%i_NAME"
+tt.info.random_name_count = 10
+tt.main_script.insert = scripts.soldier_tower_dwarf.insert
+tt.main_script.update = scripts.soldier_tower_dwarf.update
+tt.render.sprites[1].prefix = "tower_dwarf_dwarf_lvl1"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].scale = vv(1.1)
+tt.render.sprites[1].angles.walk = {
+	"walk"
+}
+tt.render.sprites[1].angles.attack = {
+	"attack_1_front",
+	"attack_1_up",
+	"attack_1_down"
+}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "decal_flying_shadow_hard"
+tt.render.sprites[2].offset = v(-1, 0)
+tt.render.sprites[2].z = Z_DECAL
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].scale = vv(1)
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 13)
+tt._jump_explosion = "decal_tower_dwarf_jump_explosion"
+tt._jump_asset_name = "tower_dwarf_dwarf_jump"
+tt.unit.level = 1
+tt.soldier.melee_slot_spread = v(-10, -10)
+tt.soldier.melee_slot_offset = v(10, 0)
+tt.vis.bans = 0
+tt.health.hp_max = b.hp[1]
+tt.health.armor = b.armor[1]
+tt.health_bar.offset = v(0, 30)
+tt.health.dead_lifetime = b.dead_lifetime
+tt.regen.health = b.regen_hp[1]
+tt.motion.max_speed = b.speed
+tt.melee.range = b.melee_attack.range
+tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
+tt.melee.attacks[1].hit_time = fts(18)
+tt.melee.attacks[1].animation = "attack_2"
+tt.melee.attacks[1].hit_fx = "fx_soldier_tower_dwarf_melee_hit"
+tt.melee.attacks[1].hit_offset = v(34, 10)
+tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[1]
+tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[1]
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].level = 1
+tt.ranged.attacks[1].bullet = "bullet_soldier_tower_dwarf"
+tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_attack.max_range[1]
+tt.ranged.attacks[1].min_range = b.ranged_attack.min_range[1]
+tt.ranged.attacks[1].shoot_time = fts(20)
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ui.click_rect = r(-13, 0, 25, 25)
+tt.ui.click_rect_offset_y = 0
+tt.max_dist_walk = 140
+tt.sound_jump = "TowerDwarfIncendiaryJump"
+tt.sound_events.death = "TowerDwarfUnitDeath"
+tt = E:register_t("soldier_tower_dwarf_lvl4", "soldier_tower_dwarf_lvl1")
+
+E:add_comps(tt, "powers")
+
+b = balance.towers.dwarf.soldier
+tt.info.portrait = "kr5_info_portraits_soldiers_0024"
+tt.unit.level = 4
+tt.render.sprites[1].prefix = "tower_dwarf_dwarf_lvl4"
+tt.health.hp_max = b.hp[4]
+tt.health.armor = b.armor[4]
+tt.health_bar.offset = v(0, 33)
+tt.regen.health = b.regen_hp[4]
+tt.ranged.attacks[1].level = 4
+tt.ranged.attacks[1].max_range = b.ranged_attack.max_range[4]
+tt.ranged.attacks[1].min_range = b.ranged_attack.min_range[4]
+tt.melee.attacks[1].damage_min = b.melee_attack.damage_min[4]
+tt.melee.attacks[1].damage_max = b.melee_attack.damage_max[4]
+tt.ranged.attacks[2] = table.deepclone(tt.ranged.attacks[1])
+tt.ranged.attacks[2].animation = "skill"
+tt.ranged.attacks[2].bullet = "bullet_incendiary_soldier_tower_dwarf"
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].bullet_start_offset = {
+	v(0, 0)
+}
+tt.ranged.attacks[2].bullet_start_offset_relative = v(15, 14)
+tt.ranged.attacks[2].shoot_time = fts(35)
+tt.ranged.attacks[2].node_prediction = fts(55)
+tt.ranged.attacks[2].ignore_hit_offset = true
+tt._jump_asset_name = "tower_dwarf_dwarf_jump_lvl_4"
+b = balance.towers.dwarf
+tt.powers.incendiary_ammo = E:clone_c("power")
+tt.powers.incendiary_ammo.cooldown = b.incendiary_ammo.cooldown
+tt = E:register_t("bullet_soldier_tower_dwarf", "bullet")
+b = balance.towers.dwarf.soldier.ranged_attack
+tt.bullet.hit_fx = "fx_bullet_soldier_tower_dwarf_hit"
+tt.bullet.flight_time = fts(2)
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_max = b.damage_max[1]
+tt.bullet.damage_min = b.damage_min[1]
+tt.bullet.damage_max_config = b.damage_max
+tt.bullet.damage_min_config = b.damage_min
+tt.bullet.level = 1
+tt.main_script.update = scripts.bullet_soldier_tower_dwarf.update
+tt.render = nil
+tt.sound_events.insert = "TowerDwarfBasicAttack"
+tt = E:register_t("bullet_incendiary_soldier_tower_dwarf", "bomb")
+
+local b = balance.towers.dwarf.incendiary_ammo
+
+tt.bullet.hit_fx = "fx_explosion_tower_dwarf"
+tt.bullet.hit_decal = nil
+tt.bullet.miss_decal = nil
+tt.bullet.hit_decal = "decal_bullet_soldier_tower_dwarf"
+tt.bullet.particles_name = "ps_bullet_incendiary_soldier_dwarf_tower"
+tt.bullet.pop_chance = 0
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.hit_payload = "aura_bullet_soldier_tower_dwarf"
+tt.bullet.damages_min = b.damages_min
+tt.bullet.damages_max = b.damages_max
+tt.main_script.update = scripts.bomb.update
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerDwarfIncendiaryAmmo"
+tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = false
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.from_tower = true
+tt = E:register_t("aura_bullet_soldier_tower_dwarf", "aura")
+b = balance.towers.dwarf.incendiary_ammo.burn.aura
+tt.aura.mod = "mod_aura_bullet_soldier_tower_dwarf"
+tt.aura.duration = b.duration
+tt.aura.cycle_time = b.cycle_time
+tt.aura.radius = b.radius
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+-- 炮兵 END
+
+-- 幽冥 START
+tt = E:register_t("ps_soldier_tower_ghost")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "ghost_tower_spawn_trail_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 50
+tt.particle_system.particle_lifetime = {
+	0.2,
+	0.4
+}
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("fx_soul_soldier_tower_ghost", "fx")
+tt.render.sprites[1].name = "ghost_tower_soul_skill_hit_fx_idle"
+tt = E:register_t("decal_soldier_tower_ghost_hit", "fx")
+tt.render.sprites[1].name = "ghost_tower_hit_fx_idle"
+tt = E:register_t("tower_build_ghost", "tower_build")
+tt.build_name = "tower_ghost_lvl1"
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2].name = "ghost_tower_build"
+tt.render.sprites[2].offset = v(0, 15)
+tt.render.sprites[3].offset.y = 60
+tt.render.sprites[4].offset.y = 60
+tt = E:register_t("soldier_tower_ghost_lvl1", "soldier_militia")
+
+E:add_comps(tt, "nav_grid")
+
+b = balance.towers.ghost
+tt.info.portrait = "kr5_info_portraits_soldiers_0015"
+tt.info.random_name_count = 18
+tt.info.random_name_format = "SOLDIER_GHOST_TOWER"
+tt.unit.blood_color = BLOOD_RED
+tt.main_script.update = scripts.tower_ghost.soldier_update
+tt.main_script.insert = scripts.tower_ghost.soldier_insert
+tt.render.sprites[1].prefix = "ghost_tower_lvl1_unit"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 13)
+tt.health.hp_max = b.soldier.hp[1]
+tt.health.armor = b.soldier.armor[1]
+tt.health_bar.offset = v(0, 33)
+tt.health.dead_lifetime = b.soldier.dead_lifetime
+tt.regen.health = b.soldier.regen_hp[1]
+tt.motion.max_speed = b.soldier.speed
+tt.particle = "ps_soldier_tower_ghost"
+tt.melee.range = b.soldier.basic_attack.range
+tt.melee.attacks[1].cooldown = b.soldier.basic_attack.cooldown
+tt.melee.attacks[1].damage_min = b.soldier.basic_attack.damage_min[1]
+tt.melee.attacks[1].damage_max = b.soldier.basic_attack.damage_max[1]
+tt.melee.attacks[1].hit_time = fts(16)
+tt.melee.attacks[1].damage_type = b.soldier.basic_attack.damage_type
+tt.melee.attacks[1].hit_decal = "decal_soldier_tower_ghost_hit"
+tt.melee.attacks[1].hit_offset = v(30, 20)
+tt.soldier.melee_slot_spread = v(-8, -8)
+tt.sound_events.death = "TowerGhostSoulAttackTravel"
+tt.ui.click_rect = r(-10, 2, 20, 27)
+tt = E:register_t("soldier_tower_ghost_lvl4", "soldier_tower_ghost_lvl1")
+
+E:add_comps(tt, "powers")
+
+b = balance.towers.ghost
+tt.info.portrait = "kr5_info_portraits_soldiers_0015"
+tt.render.sprites[1].prefix = "ghost_tower_lvl4_unit"
+tt.health.hp_max = b.soldier.hp[4]
+tt.health_bar.offset = v(0, 40)
+tt.health.armor = b.soldier.armor[4]
+tt.regen.health = b.soldier.regen_hp[4]
+tt.melee.attacks[1].damage_min = b.soldier.basic_attack.damage_min[4]
+tt.melee.attacks[1].damage_max = b.soldier.basic_attack.damage_max[4]
+tt.ui.click_rect = r(-12, 2, 24, 30)
+tt.powers.soul_attack = E:clone_c("power")
+tt.powers.extra_damage = E:clone_c("power")
+tt.powers.extra_damage.damages = b.extra_damage.damage_factor
+tt.soul = "soul_soldier_tower_ghost_lvl4"
+tt.mod_extra_damage = "mod_tower_ghost_increase_damage_factor"
+tt.extra_damage_cooldown = b.extra_damage.cooldown_start
+tt = E:register_t("soul_soldier_tower_ghost_lvl4", "decal_scripted")
+tt.main_script.update = scripts.tower_ghost.soul_update
+b = balance.towers.ghost.soul_attack
+tt.render.sprites[1].prefix = "ghost_tower_soul_skill"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hidden = true
+tt.damage_min = b.damage_min
+tt.damage_max = b.damage_max
+tt.delay = fts(16)
+tt.radius = b.range
+tt.bullet = "bolt_soul_soldier_tower_ghost"
+tt = E:register_t("tower_ghost_lvl1", "tower")
+b = balance.towers.ghost
+
+E:add_comps(tt, "barrack", "vis", "tower_upgrade_persistent_data")
+
+tt.tower.type = "ghost"
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.team = TEAM_DARK_ARMY
+tt.tower.level = 1
+tt.tower.price = b.price[1]
+tt.tower.menu_offset = v(0, 20)
+tt.info.fn = scripts.tower_ghost.get_info
+tt.info.i18n_key = "TOWER_GHOST_1"
+tt.info.portrait = "kr5_portraits_towers_0016"
+tt.info.enc_icon = 57
+tt.info.room_portrait = "quickmenu_main_icons_main_icons_0015_0001"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "ghost_tower_lvl1_tower"
+tt.render.sprites[2].offset = v(0, 15)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "ghost_tower_lvl1_tower_shadow_fx"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].loop = true
+tt.render.sprites[3].offset = v(0, 15)
+tt.render.sprites[3].fps = 20
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "ghost_tower_lvl1_tower_spawn_fx"
+tt.render.sprites[4].name = "idle"
+tt.render.sprites[4].loop = false
+tt.render.sprites[4].hidden = true
+tt.render.sprites[4].offset = v(2, 15)
+tt.barrack.soldier_type = "soldier_tower_ghost_lvl1"
+tt.barrack.rally_range = b.rally_range
+tt.barrack.respawn_offset = v(0, 15)
+tt.barrack.max_soldiers = b.max_soldiers
+tt.main_script.insert = scripts.tower_barrack.insert
+tt.main_script.update = scripts.tower_ghost.update
+tt.main_script.remove = scripts.tower_barrack.remove
+tt.sound_events.insert = "TowerGhostTaunt"
+tt.sound_events.change_rally_point = "TowerGhostTaunt"
+tt.sound_events.tower_room_select = "TowerGhostTauntSelect"
+tt.sound_events.spawn_unit = "TowerGhostSpawnUnit"
+tt.ui.click_rect = r(-35, 0, 70, 65)
+tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
+
+E:add_comps(tt, "powers")
+
+b = balance.towers.ghost
+tt.tower.level = 4
+tt.tower.price = b.price[4]
+tt.info.i18n_key = "TOWER_GHOST_4"
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_hp = b.stats.hp
+tt.info.stat_armor = b.stats.armor
+tt.info.enc_icon = 60
+tt.barrack.respawn_offset = v(0, 40)
+tt.tower.menu_offset = v(0, 30)
+tt.barrack.soldier_type = "soldier_tower_ghost_lvl4"
+tt.render.sprites[2].name = "ghost_tower_lvl4_tower"
+tt.render.sprites[2].offset = v(0, 18)
+tt.render.sprites[3].prefix = "ghost_tower_lvl4_tower_shadow_fx"
+tt.render.sprites[3].offset = v(0, 16)
+tt.render.sprites[4].prefix = "ghost_tower_lvl4_tower_spawn_fx"
+tt.render.sprites[4].offset = v(0, 18)
+tt.ui.click_rect = r(-35, 0, 70, 90)
+tt.powers.extra_damage = E:clone_c("power")
+tt.powers.extra_damage.price_base = b.extra_damage.price[2]
+tt.powers.extra_damage.price_inc = b.extra_damage.price[3]
+tt.powers.extra_damage.enc_icon = 25
+tt.powers.soul_attack = E:clone_c("power")
+tt.powers.soul_attack.price_base = b.soul_attack.price[2]
+tt.powers.soul_attack.price_inc = b.soul_attack.price[3]
+tt.powers.soul_attack.enc_icon = 26
+tt = E:register_t("bolt_soul_soldier_tower_ghost", "bolt")
+b = balance.towers.ghost.soul_attack
+tt.render.sprites[1].name = "ghost_tower_soul_skill_projectile"
+tt.render.sprites[1].animated = false
+tt.bullet.damage_max = nil
+tt.bullet.damage_min = nil
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.mods = {
+	"mod_tower_ghost_soul_slow",
+	"mod_tower_ghost_soul_damage_factor"
+}
+tt.bullet.hit_fx = "fx_soul_soldier_tower_ghost"
+tt.bullet.use_unit_damage_factor = true
+tt.sound_events.hit = "TowerGhostSoulAttackImpact"
+tt.bullet.damage_type = b.damage_type
+tt.bullet.particles_name = "ps_soul_soldier_tower_ghost"
+tt = E:register_t("mod_tower_ghost_soul_slow", "mod_slow")
+b = balance.towers.ghost.soul_attack
+tt.slow.factor = b.slow_factor
+tt.modifier.duration = b.slow_duration
+tt = E:register_t("mod_tower_ghost_soul_damage_factor", "modifier")
+b = balance.towers.ghost.soul_attack
+
+E:add_comps(tt, "render")
+
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.inflicted_damage_factor = b.damage_factor
+tt.modifier.duration = b.damage_factor_duration
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].size_names = {
+	"small",
+	"medium",
+	"large"
+}
+tt.render.sprites[1].prefix = "ghost_tower_soul_skill_enemy_fx"
+tt.render.sprites[1].name = "small"
+tt = E:register_t("mod_tower_ghost_increase_damage_factor", "modifier")
+b = balance.towers.ghost.extra_damage
+
+E:add_comps(tt, "render")
+
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.inflicted_damage_factor = nil
+tt.modifier.duration = b.duration
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].prefix = "ghost_tower_buff_skill_back"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].z = Z_OBJECTS - 1
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "ghost_tower_buff_skill_front"
+tt.render.sprites[2].name = "loop"
+tt.render.sprites[1].draw_order = 1
+tt.sound_events.insert = "TowerGhostExtraDamageCast"
+tt = E:register_t("tower_ghost_hover", "decal")
+tt.render.sprites[1].name = "ghost_tower_swap_indicator_back"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_TOWER_BASES + 1
+tt.render.sprites[1].offset.y = 14
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].draw_order = 11
+tt.render.sprites[2].prefix = "ghost_tower_swap_indicator_particles"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].offset.y = 14
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[2].draw_order = 11
+tt.render.sprites[3].name = "ghost_tower_swap_indicator_front"
+tt.render.sprites[3].animated = false
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[3].offset.y = 14
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "ghost_tower_swap_indicator_fx"
+tt.render.sprites[4].name = "idle"
+tt.render.sprites[4].loop = true
+tt.render.sprites[4].z = Z_TOWER_BASES + 1
+tt.render.sprites[4].alpha = 155
+tt.render.sprites[4].offset.y = 14
+tt.render.sprites[4].draw_order = 11
+tt = E:register_t("tower_ghost_teleport_out", "decal_timed")
+tt.render.sprites[1].name = "ghost_tower_teleport_fx_out_idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt.render.sprites[1].offset = v(0, 10)
+tt.timed.duration = fts(20)
+tt = E:register_t("tower_ghost_teleport_in", "decal_timed")
+tt.render.sprites[1].name = "ghost_tower_teleport_fx_in_idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt.render.sprites[1].offset = v(0, 10)
+tt.timed.duration = fts(20)
+tt = E:register_t("decal_soldier_tower_ghost_spawn", "decal_timed")
+tt.render.sprites[1].name = "ghost_tower_unit_spawn_fx_idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt.render.sprites[1].offset = v(0, 0)
+tt.timed.duration = fts(24)
+tt = E:register_t("tower_ghost_hover_controller")
+
+E:add_comps(tt, "main_script")
+
+tt.template_hover = "tower_ghost_hover"
+tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
+tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
+-- 幽冥 END
+
+-- 圣殿 START
+tt = E:register_t("tower_build_paladin_covenant", "tower_build")
+tt.build_name = "tower_paladin_covenant_lvl1"
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2].name = "paladin_covenant_build"
+tt.render.sprites[2].offset = v(0, 9)
+tt.render.sprites[3].offset.y = 62
+tt.render.sprites[4].offset.y = 62
+tt = E:register_t("tower_paladin_covenant_soldier_lvl1", "soldier_militia")
+
+E:add_comps(tt, "nav_grid")
+
+b = balance.towers.paladin_covenant
+tt.info.portrait = "gui_bottom_info_image_soldiers_0001"
+tt.info.random_name_count = 18
+tt.info.random_name_format = "SOLDIER_PALADINS_%i_NAME"
+tt.main_script.update = scripts.tower_paladin_covenant.soldier_update
+tt.main_script.insert = scripts.tower_paladin_covenant.soldier_insert
+tt.render.sprites[1].prefix = "paladin_soldiers_lvl1"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 13)
+tt.health.hp_max = b.soldier.hp[1]
+tt.health.armor = b.soldier.armor[1]
+tt.health_bar.offset = v(0, 30)
+tt.health.dead_lifetime = b.soldier.dead_lifetime
+tt.regen.health = b.soldier.regen_hp[1]
+tt.motion.max_speed = b.soldier.speed
+tt.melee.range = b.soldier.basic_attack.range
+tt.melee.attacks[1].cooldown = b.soldier.basic_attack.cooldown
+tt.melee.attacks[1].damage_min = b.soldier.basic_attack.damage_min[1]
+tt.melee.attacks[1].damage_max = b.soldier.basic_attack.damage_max[1]
+tt.melee.attacks[1].hit_time = fts(10)
+tt.soldier.melee_slot_spread = v(-8, -8)
+tt.sound_events.death = "TowerPaladinCovenantUnitDeath"
+tt.ui.click_rect = r(-10, -2, 20, 25)
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4", "tower_paladin_covenant_soldier_lvl1")
+
+E:add_comps(tt, "powers", "timed_attacks")
+
+b = balance.towers.paladin_covenant
+tt.info.portrait = "gui_bottom_info_image_soldiers_0004"
+tt.render.sprites[1].prefix = "paladin_soldier_lvl4"
+tt.render.sprites[1].angles.walk = {
+	"walk"
+}
+tt.idle_flip.animations = {
+	"idle"
+}
+tt.health.hp_max = b.soldier.hp[4]
+tt.health.armor = b.soldier.armor[4]
+tt.health_bar.offset = v(0, 35)
+tt.regen.health = b.soldier.regen_hp[4]
+tt.motion.max_speed = b.soldier.speed
+tt.ui.click_rect = r(-15, -2, 30, 35)
+tt.powers.lead = E:clone_c("power")
+tt.powers.lead.b = b.lead.soldier_veteran
+tt.powers.lead.sprite_prefix = "paladin_soldiers_lvl4_captain_soldier"
+tt.powers.lead.health_bar_size = HEALTH_BAR_SIZE_MEDIUM
+tt.powers.lead.cooldown = b.lead.soldier_veteran.aura_cooldown
+tt.powers.lead.animation_upgrade = "raise"
+tt.powers.lead.hit_time = fts(12)
+tt.powers.lead.portrait = "gui_bottom_info_image_soldiers_0005"
+tt.powers.healing_prayer = E:clone_c("power")
+tt.powers.healing_prayer.health_trigger_factor = b.healing_prayer.health_trigger_factor
+tt.powers.healing_prayer.cooldown = b.healing_prayer.cooldown
+tt.melee.range = b.soldier.basic_attack.range
+tt.melee.attacks[1].animation = "attack01"
+tt.melee.attacks[1].cooldown = b.soldier.basic_attack.cooldown
+tt.melee.attacks[1].damage_min = b.soldier.basic_attack.damage_min[4]
+tt.melee.attacks[1].damage_max = b.soldier.basic_attack.damage_max[4]
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].animation = "attack02"
+tt.melee.attacks[2].chance = 0.5
+tt.melee.attacks[2].hit_time = fts(8)
+tt.timed_attacks.list[1] = E:clone_c("mod_attack")
+tt.timed_attacks.list[1].animation = "healing"
+tt.timed_attacks.list[1].cooldown = nil
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].hit_time = {
+	fts(10),
+	fts(9)
+}
+tt.timed_attacks.list[1].lost_health = nil
+tt.timed_attacks.list[1].duration = b.healing_prayer.duration
+tt.timed_attacks.list[1].mods = {
+	"tower_paladin_covenant_soldier_lvl4_healing_mod",
+	"tower_paladin_covenant_soldier_lvl4_healing_mod_fx"
+}
+tt.timed_attacks.list[1].sound = "TowerPaladinCovenantHealingPrayer"
+tt.timed_attacks.list[2] = E:clone_c("aura_attack")
+tt.timed_attacks.list[2].animation = "armor"
+tt.timed_attacks.list[2].cooldown = nil
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].hit_time = fts(8)
+tt.timed_attacks.list[2].enemies_trigger_range = 90
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[2].aura_name = "tower_paladin_covenant_soldier_lvl4_lead_aura"
+tt.timed_attacks.list[2].fx = "tower_paladin_covenant_soldier_lvl4_lead_aura_fx"
+tt.soldier.melee_slot_offset = v(8, 0)
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4_healing_mod", "modifier")
+
+E:add_comps(tt, "hps", "render")
+
+b = balance.towers.paladin_covenant
+tt.modifier.duration = b.healing_prayer.duration
+tt.modifier.resets_same = false
+tt.hps.heal_min = b.healing_prayer.heal
+tt.hps.heal_max = b.healing_prayer.heal
+tt.hps.heal_every = b.healing_prayer.heal_every
+tt.main_script.insert = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.main_script.remove = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4_healing_mod_fx", "modifier")
+
+E:add_comps(tt, "render", "tween")
+
+b = balance.towers.paladin_covenant
+tt.modifier.duration = b.healing_prayer.duration
+tt.modifier.resets_same = false
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].name = "paladin_soldier_lvl4_healing_halo"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].animated = false
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].name = "paladin_soldier_lvl4_healing_glow_0010"
+tt.render.sprites[2].sort_y_offset = 1
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "paladin_soldiers_lvl4_healing_plusSymbol"
+tt.render.sprites[3].loop = true
+tt.render.sprites[3].animated = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {
+	{
+		0,
+		0
+	},
+	{
+		fts(4),
+		255
+	}
+}
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {
+	{
+		0,
+		0
+	},
+	{
+		fts(4),
+		255
+	}
+}
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[3] = E:clone_c("tween_prop")
+tt.tween.props[3].name = "alpha"
+tt.tween.props[3].keys = {
+	{
+		0,
+		0
+	},
+	{
+		fts(4),
+		255
+	}
+}
+tt.tween.props[3].sprite_id = 3
+tt.tween.remove = false
+tt.main_script.update = scripts.mod_track_fx.update
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura", "aura")
+
+E:add_comps(tt)
+
+tt.aura.mods = {
+	"tower_paladin_covenant_soldier_lvl4_lead_aura_mod",
+	"tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx"
+}
+tt.aura.cycles = 1
+tt.aura.radius = b.lead.soldier_veteran.aura_range
+tt.aura.track_source = true
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.vis_flags = F_MOD
+tt.aura.use_mod_offset = false
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.sound_events.insert = "TowerPaladinCovenantLeadByExample"
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "modifier")
+b = balance.towers.paladin_covenant
+tt.modifier.duration = b.lead.soldier_veteran.aura_duration
+tt.modifier.use_mod_offset = false
+tt.inflicted_damage_factor = b.lead.soldier_veteran.aura_damage_buff_factor
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx", "modifier")
+
+E:add_comps(tt, "render", "tween")
+
+tt.modifier.duration = b.lead.soldier_veteran.aura_duration
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].name = "paladin_soldiers_lvl4_captain_armor_mod_decal"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {
+	{
+		0,
+		0
+	},
+	{
+		1,
+		255
+	}
+}
+tt.tween.remove = false
+tt.main_script.update = scripts.mod_track_fx.update
+tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_fx", "fx")
+tt.render.sprites[1].name = "paladin_soldiers_lvl4_captain_armor_decal_start"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "paladin_soldiers_lvl4_captain_armor_buff"
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].hide_after_runs = 1
+tt = E:register_t("tower_paladin_covenant_lvl1", "tower")
+
+E:add_comps(tt, "barrack", "vis")
+
+tt.tower.type = "paladin_covenant"
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.team = TEAM_LINIREA
+tt.tower.level = 1
+tt.tower.price = b.price[1]
+tt.tower.menu_offset = v(0, 20)
+tt.info.i18n_key = "TOWER_PALADIN_COVENANT_1"
+tt.info.portrait = "portraits_towers_0001"
+tt.info.enc_icon = 5
+tt.info.tower_portrait = "towerselect_portraits_big_" .. "0001"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "paladin_covenant_lvl1"
+tt.render.sprites[2].offset = v(0, 9)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "paladin_covenant_lvl123_door"
+tt.render.sprites[3].name = "close"
+tt.render.sprites[3].loop = false
+tt.render.sprites[3].offset = v(0, 7)
+tt.barrack.soldier_type = "tower_paladin_covenant_soldier_lvl1"
+tt.barrack.rally_range = b.rally_range
+tt.barrack.respawn_offset = v(0, 9)
+tt.barrack.max_soldiers = b.max_soldiers
+tt.info.fn = scripts.tower_paladin_covenant.get_info
+tt.main_script.insert = scripts.tower_barrack.insert
+tt.main_script.update = scripts.tower_barrack.update
+tt.main_script.remove = scripts.tower_barrack.remove
+tt.sound_events.insert = "TowerPaladinCovenantTaunt"
+tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
+tt.sound_events.tower_room_select = "TowerPaladinCovenantTauntSelect"
+tt.ui.click_rect = r(-40, 0, 80, 70)
+tt = E:register_t("tower_paladin_covenant_lvl4", "tower_paladin_covenant_lvl1")
+
+E:add_comps(tt, "powers")
+
+tt.info.portrait = "portraits_towers_0001"
+tt.info.room_portrait = "quickmenu_main_icons_main_icons_0001_0001"
+tt.info.enc_icon = 8
+tt.info.i18n_key = "TOWER_PALADIN_COVENANT_4"
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_hp = b.stats.hp
+tt.info.stat_armor = b.stats.armor
+tt.tower.price = b.price[4]
+tt.tower.level = 4
+tt.tower.menu_offset = v(0, 25)
+tt.powers.lead = E:clone_c("power")
+tt.powers.lead.price_base = b.lead.price[1]
+tt.powers.lead.price_inc = b.lead.price[1]
+tt.powers.lead.enc_icon = 2
+tt.powers.lead.max_level = 1
+tt.powers.healing_prayer = E:clone_c("power")
+tt.powers.healing_prayer.price_base = b.healing_prayer.price[2]
+tt.powers.healing_prayer.price_inc = b.healing_prayer.price[3]
+tt.powers.healing_prayer.enc_icon = 1
+tt.barrack.soldier_type = "tower_paladin_covenant_soldier_lvl4"
+tt.barrack.rally_range = b.rally_range
+tt.render.sprites[2].name = "paladin_covenant_lvl4"
+tt.render.sprites[3].prefix = "paladin_covenant_lvl4_door"
+tt.render.sprites[3].offset = v(0, 10)
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].name = "paladin_covenant_lvl4_flag"
+tt.render.sprites[4].offset = v(0, 9)
+tt.sound_events.insert = "TowerPaladinCovenantTaunt"
+tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
+tt.ui.click_rect = r(-42, 0, 84, 90)
+-- 圣殿 END

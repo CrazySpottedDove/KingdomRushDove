@@ -116,7 +116,7 @@ function entity_db:register_t(name, base)
 	if self.entities[name] then
 		log.error("template %s already exists", name)
 
-		return 
+		return
 	end
 
 	local t
