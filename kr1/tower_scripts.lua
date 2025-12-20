@@ -16958,201 +16958,6 @@ end
 
 -- 酒桶 END
 -- 青蛙 START
-scripts.bolt_force_motion_kr5 = {}
-
-function scripts.bolt_force_motion_kr5.insert(this, store, script)
-	local b = this.bullet
-
-	if this.impulse_per_distance then
-		local dx, dy = V.sub(b.to.x, b.to.y, b.from.x, b.from.y)
-		local dist = V.len(dx, dy)
-
-		this.initial_impulse = this.impulse_per_distance * dist
-	end
-
-	if b.target_id then
-		local target = store.entities[b.target_id]
-
-		if not target or band(target.vis.bans, F_RANGED) ~= 0 then
-			return false
-		end
-	end
-
-	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
-
-	local s = this.render.sprites[1]
-
-	if not b.ignore_rotation then
-		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
-	end
-
-	return true
-end
-
-function scripts.bolt_force_motion_kr5.update(this, store)
-	local b = this.bullet
-	local fm = this.force_motion
-	local target = store.entities[b.target_id]
-	local ps
-
-	local function move_step(dest)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
-		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
-		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
-
-		if dist <= 4 * fm.max_v * store.tick_length then
-			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
-		end
-
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
-		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = 0, 0
-
-		return dist <= fm.max_v * store.tick_length
-	end
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.emit = true
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	local pred_pos
-
-	if target and target.enemy and target.nav_path then
-		pred_pos = P:predict_enemy_pos(target, fts(5))
-	else
-		pred_pos = b.to
-	end
-
-	local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
-	local last_pos = V.vclone(this.pos)
-
-	b.ts = store.tick_ts
-
-	while true do
-		target = store.entities[b.target_id]
-
-		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
-			local hit_offset = V.v(0, 0)
-
-			if not b.ignore_hit_offset then
-				hit_offset.x = target.unit.hit_offset.x
-				hit_offset.y = target.unit.hit_offset.y
-			end
-
-			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
-
-			if d > b.max_track_distance then
-				log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
-
-				target = nil
-				b.target_id = nil
-			else
-				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
-			end
-		end
-
-		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
-			local t = store.tick_ts - b.ts
-
-			if this.initial_impulse_angle_abs then
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
-			else
-				local angle = this.initial_impulse_angle
-
-				if iix < 0 then
-					angle = angle * -1
-				end
-
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
-			end
-
-			if this.initial_impulse_reduction then
-				this.initial_impulse = this.initial_impulse * this.initial_impulse_reduction
-			end
-		end
-
-		last_pos.x, last_pos.y = this.pos.x, this.pos.y
-
-		if move_step(b.to) then
-			break
-		end
-
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
-		end
-
-		if ps and b.force_align_particles_trajectory then
-			ps.particle_system.emit_rotation = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y) + (b.force_align_particles_trajectory_offset or 0)
-		end
-
-		coroutine.yield()
-	end
-
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		queue_damage(store, d)
-
-		if b.mod or b.mods then
-			local mods = b.mods or {b.mod}
-
-			for _, mod_name in pairs(mods) do
-				local m = E:create_entity(mod_name)
-
-				m.modifier.target_id = b.target_id
-				m.modifier.level = b.level
-
-				queue_insert(store, m)
-			end
-		end
-	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
-
-		if targets then
-			for _, target in pairs(targets) do
-				local d = SU.create_bullet_damage(b, target.id, this.id)
-
-				queue_damage(store, d)
-			end
-		end
-	end
-
-	this.render.sprites[1].hidden = true
-
-	if b.hit_fx then
-		local fx = E:create_entity(b.hit_fx)
-
-		fx.pos.x, fx.pos.y = b.to.x, b.to.y
-		fx.render.sprites[1].ts = store.tick_ts
-		fx.render.sprites[1].runs = 0
-
-		queue_insert(store, fx)
-	end
-
-	if b.hit_decal then
-		local decal = E:create_entity(b.hit_decal)
-
-		decal.pos = V.vclone(b.to)
-		decal.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, decal)
-	end
-
-	if ps and ps.particle_system.emit then
-		ps.particle_system.emit = false
-
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
-	end
-
-	queue_remove(store, this)
-end
-
 scripts.tower_hermit_toad = {}
 
 function scripts.tower_hermit_toad.get_info(this)
@@ -17211,11 +17016,12 @@ function scripts.tower_hermit_toad.update(this, store)
 	local attack_instakill = this.attacks.list[3]
 	local attack_jump = this.attacks.list[4]
 	local attack
-	local pow_instakill = this.powers and this.powers.instakill or nil
-	local pow_jump = this.powers and this.powers.jump or nil
+	local pow_instakill = this.powers.instakill
+	local pow_jump = this.powers.jump
 	local last_idle_ts = store.tick_ts
 	local MODE_ENGINEER = 1
 	local MODE_MAGE = 0
+	local tw = this.tower
 
 	if this.tower_upgrade_persistent_data.bubbles_mage_area_id and not store.entities[this.tower_upgrade_persistent_data.bubbles_mage_area_id] then
 		this.tower_upgrade_persistent_data.bubbles_mage_area_id = nil
@@ -17379,9 +17185,9 @@ function scripts.tower_hermit_toad.update(this, store)
 
 			U.animation_start(this, anim_name, nil, store.tick_ts, false, 3)
 			U.animation_start(this, "changetower", nil, store.tick_ts, false, 5)
-			U.y_wait(store, fts(9))
+			U.y_wait(store, fts(9 * tw.cooldown_factor))
 			create_splash_fx()
-			U.y_wait(store, fts(24))
+			U.y_wait(store, fts(24 * tw.cooldown_factor))
 		else
 			U.animation_start(this, get_mode_anim(this.render.bubbles_anims, new_mode), nil, this.render.sprites[4].ts, true, 4)
 		end
@@ -17390,23 +17196,11 @@ function scripts.tower_hermit_toad.update(this, store)
 		this.render.sprites[2].name = this.idle_modes[new_mode + 1]
 
 		if new_mode == MODE_ENGINEER then
-			this.tower.kind = TOWER_KIND_ENGINEER
-			this.attacks.range = attack_engineer.range
+			tw.kind = TOWER_KIND_ENGINEER
+			this.attacks.range = this.attacks.range / attack_mage.range * attack_engineer.range
 		else
-			this.tower.kind = TOWER_KIND_MAGE
-			this.attacks.range = attack_mage.range
-		end
-
-		local mods_list = table.filter(store.entities, function(k, v)
-			return v.modifier and v.modifier.target_id == this.id
-		end)
-
-		if mods_list and #mods_list > 0 then
-			for _, v in pairs(mods_list) do
-				if v.range_factor then
-					this.attacks.range = this.attacks.range * v.range_factor
-				end
-			end
+			tw.kind = TOWER_KIND_MAGE
+			this.attacks.range = this.attacks.range / attack_engineer.range * attack_mage.range
 		end
 
 		if with_animation == nil or with_animation then
@@ -17422,10 +17216,7 @@ function scripts.tower_hermit_toad.update(this, store)
 	end
 
 	change_mode(this.tower_upgrade_persistent_data.current_mode, false)
-
-	if this.tower.level > 1 then
-		create_splash_fx()
-	end
+	create_splash_fx()
 
 	local function check_change_mode()
 		if this.change_mode then
@@ -17497,13 +17288,6 @@ function scripts.tower_hermit_toad.update(this, store)
 		U.animation_start(this, get_mode_anim(this.idle_modes), af, store.tick_ts, true, 3)
 	end
 
-	local function find_target(a, range, skip_flip)
-		local flip_duration = skip_flip and 0 or this.toad_flip_duration
-		local target, targets, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, range, a.node_prediction + flip_duration / 2, a.vis_flags, a.vis_bans)
-
-		return target, targets, pred_pos
-	end
-
 	local function y_toad_animation_finished_check_change_mode()
 		while not U.animation_finished(this, 3, 1) do
 			coroutine.yield()
@@ -17519,26 +17303,24 @@ function scripts.tower_hermit_toad.update(this, store)
 	end
 
 	local function check_upgrades_purchase()
-		if this.powers then
-			for _, pow in pairs(this.powers) do
-				if pow.changed then
-					pow.changed = nil
+		for _, pow in pairs(this.powers) do
+			if pow.changed then
+				pow.changed = nil
 
-					local pa = this.attacks.list[pow.attack_idx]
+				local pa = this.attacks.list[pow.attack_idx]
 
-					pa.cooldown = pow.cooldown[pow.level]
+				pa.cooldown = pow.cooldown[pow.level]
 
-					if pow.level == 1 then
-						pa.ts = store.tick_ts - pa.cooldown
-					end
+				if pow.level == 1 then
+					pa.ts = store.tick_ts - pa.cooldown
+				end
 
-					if pow.damage_min then
-						pa.damage_min = pow.damage_min[pow.level]
-					end
+				if pow.damage_min then
+					pa.damage_min = pow.damage_min[pow.level]
+				end
 
-					if pow.damage_max then
-						pa.damage_max = pow.damage_max[pow.level]
-					end
+				if pow.damage_max then
+					pa.damage_max = pow.damage_max[pow.level]
 				end
 			end
 		end
@@ -17563,345 +17345,328 @@ function scripts.tower_hermit_toad.update(this, store)
 	end
 
 	while true do
-		if this.tower.blocked then
+		if tw.blocked then
 			coroutine.yield()
 		else
 			check_change_mode()
 			SU.towers_swaped(store, this, this.attacks.list)
 			check_upgrades_purchase()
 
-			if pow_instakill and pow_instakill.level > 0 then
+			if ready_to_use_power(pow_instakill, attack_instakill, store, tw.cooldown_factor) then
 				attack = attack_instakill
+				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attack.range, attack.vis_flags, attack.vis_bans)
 
-				if store.tick_ts - attack.ts > attack.cooldown then
-					target, targets, pred_pos = find_target(attack, attack.range)
+				if (not target) or (U.has_modifiers(store, target, attack.mark_mod)) then
+					attack.ts = attack.ts + fts(10)
+				else
+					pred_pos = U.calculate_enemy_ffe_pos(target, attack.node_prediction)
 
-					if not target then
-						SU.delay_attack(store, attack, fts(10))
-					elseif U.has_modifiers(store, target, attack.mark_mod) then
-						SU.delay_attack(store, attack, fts(10))
-					else
-						local mark_mod = E:create_entity(attack.mark_mod)
+					local mark_mod = E:create_entity(attack.mark_mod)
 
-						mark_mod.modifier.level = attack.level
-						mark_mod.modifier.target_id = target.id
-						mark_mod.modifier.source_id = this.id
+					mark_mod.modifier.level = attack.level
+					mark_mod.modifier.target_id = target.id
+					mark_mod.modifier.source_id = this.id
 
-						queue_insert(store, mark_mod)
+					queue_insert(store, mark_mod)
 
-						local pushed_bans = U.push_bans(target.vis, F_EAT)
-						local a_name, a_flip, angle_idx
-						local start_ts = store.tick_ts
+					local pushed_bans = U.push_bans(target.vis, F_EAT)
+					local a_name, a_flip, angle_idx
+					local start_ts = store.tick_ts
 
-						this.attacks._last_target_pos = pred_pos
+					this.attacks._last_target_pos = pred_pos
 
-						local an, af, angle_idx = U.animation_name_facing_point(this, get_mode_anim(attack.animation), pred_pos, 3)
+					local an, af, angle_idx = U.animation_name_facing_point(this, get_mode_anim(attack.animation), pred_pos, 3)
 
-						y_toad_flip(af)
-						pause_pipe_ps()
-						U.animation_start(this, an, af, store.tick_ts, false, 3)
-						coroutine.yield()
-						U.pop_bans(target.vis, pushed_bans)
-						coroutine.yield()
-						y_toad_wait_time_check_change_mode(attack.shoot_time)
-						S:queue(attack.sound)
+					y_toad_flip(af)
+					pause_pipe_ps()
+					U.animation_start(this, an, af, store.tick_ts, false, 3)
+					coroutine.yield()
+					U.pop_bans(target.vis, pushed_bans)
+					coroutine.yield()
+					y_toad_wait_time_check_change_mode(attack.shoot_time)
+					S:queue(attack.sound)
 
-						local retarget, targets, new_pos = find_target(attack, attack.range)
-						local target_pos
+					local retarget = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attack.range, attack.vis_flags, attack.vis_bans)
 
-						if retarget then
-							target_pos = V.vclone(target.pos)
-							pred_pos = new_pos
-							target = retarget
-							this.attacks._last_target_pos = pred_pos
-						else
-							target = nil
-							target_pos = pred_pos
-						end
-
-						local bullet = E:create_entity(attack.bullet)
-
-						bullet.pos = V.vclone(this.pos)
-
-						local offset_x = af and -attack.bullet_start_offset[angle_idx].x or attack.bullet_start_offset[angle_idx].x
-						local offset_y = attack.bullet_start_offset[angle_idx].y
-
-						bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
-						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = target and V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y) or pred_pos
-						bullet.bullet.target_id = target and target.id or nil
-						bullet.bullet.source_id = this.id
-
-						queue_insert(store, bullet)
-
-						local bullet_from = V.vclone(bullet.bullet.from)
-						local bullet_to = V.vclone(bullet.bullet.to)
-
-						U.y_wait(store, fts(1))
-
-						if target then
-							local is_exo = false
-
-							for k, v in pairs(target.render.sprites) do
-								if v.exo then
-									is_exo = true
-
-									break
-								end
-							end
-
-							local es = E:create_entity("decal")
-
-							es.pos = V.vclone(bullet_to)
-
-							local diff = V.v(bullet_from.x - bullet_to.x, bullet_from.y - bullet_to.y)
-							local length = V.len(diff.x, diff.y)
-							local normal_x, normal_y = V.normalize(diff.x, diff.y)
-							local angle = V.angleTo(normal_x, normal_y)
-							local entity_frame_names = {}
-
-							for _, es in pairs(target.render.sprites) do
-								if es.animated then
-									table.insert(entity_frame_names, es.frame_name)
-								else
-									table.insert(entity_frame_names, es.name)
-								end
-							end
-
-							local sprites_offset = {}
-
-							sprites_offset.x, sprites_offset.y = V.sub(target.pos.x, target.pos.y, es.pos.x, es.pos.y)
-
-							if not is_exo then
-								es.render = table.deepclone(target.render)
-
-								for i, s in ipairs(es.render.sprites) do
-									s.shader = es.shader
-									s.shader_args = es.shader_args
-									s.animated = false
-									s.prefix = nil
-									s.name = entity_frame_names[i]
-
-									if not s.offset then
-										s.offset = V.vv(0)
-									end
-
-									s.offset.x, s.offset.y = V.add(s.offset.x, s.offset.y, sprites_offset.x, sprites_offset.y)
-								end
-
-								queue_insert(store, es)
-								coroutine.yield()
-								U.sprites_hide(target, nil, nil, true)
-							end
-
-							es.render.sprites[1].z = Z_BULLETS + 1
-							es.r = angle
-
-							if not es.render.sprites[1].scale then
-								es.render.sprites[1].scale = V.vv(1)
-							end
-
-							local orig_scale = V.vclone(es.render.sprites[1].scale)
-							local eaten = false
-
-							while not eaten do
-								if bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0001" or bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0002" then
-								-- block empty
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0003" then
-									es.pos = V.v(bullet_to.x + normal_x * length * -0.01, bullet_to.y + normal_y * length * -0.01)
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0004" then
-									es.pos = V.v(bullet_to.x + normal_x * length * -0.005, bullet_to.y + normal_y * length * -0.005)
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0005" then
-									es.pos = V.v(bullet_to.x + normal_x * length * -0, bullet_to.y + normal_y * length * -0)
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0006" then
-									es.pos = V.v(bullet_to.x + normal_x * length * 0.005, bullet_to.y + normal_y * length * 0.005)
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0007" then
-									es.pos = V.v(bullet_to.x + normal_x * length * 0.05, bullet_to.y + normal_y * length * 0.05)
-									es.render.sprites[1].scale = V.v(orig_scale.x * 0.95, orig_scale.y * 0.95)
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0008" then
-									es.pos = V.v(bullet_to.x + normal_x * length * 0.08, bullet_to.y + normal_y * length * 0.08)
-									es.render.sprites[1].scale = V.v(orig_scale.x * 0.93, orig_scale.y * 0.93)
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0009" then
-									es.pos = V.v(bullet_to.x + normal_x * length * 0.45, bullet_to.y + normal_y * length * 0.45)
-									es.render.sprites[1].scale = V.v(orig_scale.x * 0.9, orig_scale.y * 0.9)
-									es.render.sprites[1].alpha = 225
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0010" then
-									es.pos = V.v(bullet_to.x + normal_x * length * 0.49, bullet_to.y + normal_y * length * 0.49)
-									es.render.sprites[1].scale = V.v(orig_scale.x * 0.88, orig_scale.y * 0.88)
-									es.render.sprites[1].alpha = 200
-								elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0011" or bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0012" then
-									es.pos = V.v(bullet_to.x + normal_x * length * 0.8, bullet_to.y + normal_y * length * 0.8)
-									es.render.sprites[1].scale = V.v(orig_scale.x * 0.65, orig_scale.y * 0.65)
-									es.render.sprites[1].alpha = 150
-
-									coroutine.yield()
-									queue_remove(store, es)
-
-									eaten = true
-								end
-
-								coroutine.yield()
-							end
-						end
-
-						y_toad_animation_finished_check_change_mode()
-						resume_pipe_ps()
-
-						attack.ts = start_ts
-						last_ts = start_ts
-						last_idle_ts = store.tick_ts
-
-						goto label_1177_0
+					if retarget then
+						pred_pos = U.calculate_enemy_ffe_pos(retarget, attack.node_prediction)
+						target = retarget
 					end
+
+					local bullet = E:create_entity(attack.bullet)
+
+					bullet.pos = V.vclone(this.pos)
+
+					local offset_x = af and -attack.bullet_start_offset[angle_idx].x or attack.bullet_start_offset[angle_idx].x
+					local offset_y = attack.bullet_start_offset[angle_idx].y
+
+					bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
+					bullet.bullet.from = V.vclone(bullet.pos)
+					bullet.bullet.to = target and V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y) or pred_pos
+					bullet.bullet.target_id = target and target.id or nil
+					bullet.bullet.source_id = this.id
+
+					queue_insert(store, bullet)
+
+					local bullet_from = V.vclone(bullet.bullet.from)
+					local bullet_to = V.vclone(bullet.bullet.to)
+
+					U.y_wait(store, fts(1 * tw.cooldown_factor))
+
+					if target then
+						local is_exo = false
+
+						for k, v in pairs(target.render.sprites) do
+							if v.exo then
+								is_exo = true
+
+								break
+							end
+						end
+
+						local es = E:create_entity("decal")
+
+						es.pos = V.vclone(bullet_to)
+
+						local diff = V.v(bullet_from.x - bullet_to.x, bullet_from.y - bullet_to.y)
+						local length = V.len(diff.x, diff.y)
+						local normal_x, normal_y = V.normalize(diff.x, diff.y)
+						local angle = V.angleTo(normal_x, normal_y)
+						local entity_frame_names = {}
+
+						for _, es in pairs(target.render.sprites) do
+							if es.animated then
+								table.insert(entity_frame_names, es.frame_name)
+							else
+								table.insert(entity_frame_names, es.name)
+							end
+						end
+
+						local sprites_offset = {}
+
+						sprites_offset.x, sprites_offset.y = V.sub(target.pos.x, target.pos.y, es.pos.x, es.pos.y)
+
+						if not is_exo then
+							es.render = table.deepclone(target.render)
+
+							for i, s in ipairs(es.render.sprites) do
+								s.shader = es.shader
+								s.shader_args = es.shader_args
+								s.animated = false
+								s.prefix = nil
+								s.name = entity_frame_names[i]
+
+								if not s.offset then
+									s.offset = V.vv(0)
+								end
+
+								s.offset.x, s.offset.y = V.add(s.offset.x, s.offset.y, sprites_offset.x, sprites_offset.y)
+							end
+
+							queue_insert(store, es)
+							coroutine.yield()
+							U.sprites_hide(target, nil, nil, true)
+						end
+
+						es.render.sprites[1].z = Z_BULLETS + 1
+						es.r = angle
+
+						if not es.render.sprites[1].scale then
+							es.render.sprites[1].scale = V.vv(1)
+						end
+
+						local orig_scale = V.vclone(es.render.sprites[1].scale)
+						local eaten = false
+
+						while not eaten do
+							if bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0001" or bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0002" then
+							-- block empty
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0003" then
+								es.pos = V.v(bullet_to.x + normal_x * length * -0.01, bullet_to.y + normal_y * length * -0.01)
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0004" then
+								es.pos = V.v(bullet_to.x + normal_x * length * -0.005, bullet_to.y + normal_y * length * -0.005)
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0005" then
+								es.pos = V.v(bullet_to.x + normal_x * length * -0, bullet_to.y + normal_y * length * -0)
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0006" then
+								es.pos = V.v(bullet_to.x + normal_x * length * 0.005, bullet_to.y + normal_y * length * 0.005)
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0007" then
+								es.pos = V.v(bullet_to.x + normal_x * length * 0.05, bullet_to.y + normal_y * length * 0.05)
+								es.render.sprites[1].scale = V.v(orig_scale.x * 0.95, orig_scale.y * 0.95)
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0008" then
+								es.pos = V.v(bullet_to.x + normal_x * length * 0.08, bullet_to.y + normal_y * length * 0.08)
+								es.render.sprites[1].scale = V.v(orig_scale.x * 0.93, orig_scale.y * 0.93)
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0009" then
+								es.pos = V.v(bullet_to.x + normal_x * length * 0.45, bullet_to.y + normal_y * length * 0.45)
+								es.render.sprites[1].scale = V.v(orig_scale.x * 0.9, orig_scale.y * 0.9)
+								es.render.sprites[1].alpha = 225
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0010" then
+								es.pos = V.v(bullet_to.x + normal_x * length * 0.49, bullet_to.y + normal_y * length * 0.49)
+								es.render.sprites[1].scale = V.v(orig_scale.x * 0.88, orig_scale.y * 0.88)
+								es.render.sprites[1].alpha = 200
+							elseif bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0011" or bullet.render.sprites[1].frame_name == "hermit_toad_tower_tongue_0012" then
+								es.pos = V.v(bullet_to.x + normal_x * length * 0.8, bullet_to.y + normal_y * length * 0.8)
+								es.render.sprites[1].scale = V.v(orig_scale.x * 0.65, orig_scale.y * 0.65)
+								es.render.sprites[1].alpha = 150
+
+								coroutine.yield()
+								queue_remove(store, es)
+
+								eaten = true
+							end
+
+							coroutine.yield()
+						end
+					end
+
+					y_toad_animation_finished_check_change_mode()
+					resume_pipe_ps()
+
+					attack.ts = start_ts
+					last_ts = start_ts
+					last_idle_ts = store.tick_ts
+
+					goto label_1177_0
 				end
 			end
 
-			if pow_jump and pow_jump.level > 0 then
+			if ready_to_use_power(pow_jump, attack_jump, store, tw.cooldown_factor) then
 				attack = attack_jump
+				targets = U.find_enemies_in_range_filter_off(tpos(this), attack.range, attack.vis_flags, attack.vis_bans)
 
-				if store.tick_ts - attack.ts > attack.cooldown then
-					target, targets, pred_pos = find_target(attack, attack.range)
+				if not targets or #targets < attack.min_targets then
+					attack.ts = attack.ts + fts(10)
+				else
+					pred_pos = U.calculate_enemy_ffe_pos(targets[1], attack.node_prediction)
 
-					if not targets or #targets < attack.min_targets or not pred_pos then
-						SU.delay_attack(store, attack, fts(10))
-					else
-						local a_name, a_flip, angle_idx
-						local start_ts = store.tick_ts
+					local a_name, a_flip, angle_idx
+					local start_ts = store.tick_ts
 
+					this.attacks._last_target_pos = pred_pos
+
+					local an, af, angle_idx = U.animation_name_facing_point(this, get_mode_anim(attack.animation_start), pred_pos, 3)
+
+					y_toad_flip(af)
+					pause_pipe_ps()
+					U.animation_start(this, an, af, store.tick_ts, false, 3)
+					U.animation_start(this, "pathjumpbgin", nil, store.tick_ts, false, 5)
+					y_toad_animation_finished_check_change_mode()
+					U.animation_start(this, get_mode_anim(attack.animation_disappear), af, store.tick_ts, true, 3)
+					y_toad_wait_time_check_change_mode(attack.jump_in_delay)
+
+					local retarget = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos(this), attack.range, attack.node_prediction, attack.vis_flags, attack.vis_bans, attack.radius)
+
+					if retarget then
+						pred_pos = U.calculate_enemy_ffe_pos(retarget, attack.node_prediction)
 						this.attacks._last_target_pos = pred_pos
-
-						local an, af, angle_idx = U.animation_name_facing_point(this, get_mode_anim(attack.animation_start), pred_pos, 3)
-
-						y_toad_flip(af)
-						pause_pipe_ps()
-						U.animation_start(this, an, af, store.tick_ts, false, 3)
-						U.animation_start(this, "pathjumpbgin", nil, store.tick_ts, false, 5)
-						y_toad_animation_finished_check_change_mode()
-						U.animation_start(this, get_mode_anim(attack.animation_disappear), af, store.tick_ts, true, 3)
-						y_toad_wait_time_check_change_mode(attack.jump_in_delay)
-
-						local retarget, targets, new_pos = find_target(attack, attack.range)
-
-						if retarget then
-							pred_pos = new_pos
-							target = retarget
-							this.attacks._last_target_pos = pred_pos
-						else
-							target = nil
-						end
-
-						this.render.sprites[6].hidden = false
-						this.render.sprites[6].flip_x = this.render.sprites[3].flip_x
-						this.render.sprites[6].pos = V.vclone(pred_pos)
-						this.render.sprites[6]._track_e = false
-
-						U.animation_start(this, get_mode_anim(attack.animation_path_landing), nil, store.tick_ts, false, 6)
-						y_toad_wait_time_check_change_mode(attack.path_landing_action_time)
-						S:queue(attack.sound_fall)
-
-						local t_mod = E:get_template(attack.mod)
-						local enemies = table.filter(store.entities, function(k, v)
-							return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, t_mod.modifier.vis_bans) == 0 and band(v.vis.flags, attack.vis_bans) == 0 and band(v.vis.bans, t_mod.modifier.vis_flags) == 0 and band(v.vis.bans, attack.vis_flags) == 0 and U.is_inside_ellipse(v.pos, pred_pos, attack.radius)
-						end)
-
-						for _, enemy in pairs(enemies) do
-							local mod = E:create_entity(attack.mod)
-
-							mod.modifier.level = attack.level
-							mod.modifier.target_id = enemy.id
-							mod.modifier.source_id = this.id
-
-							queue_insert(store, mod)
-						end
-
-						local targets = U.find_enemies_in_range(store, pred_pos, 0, attack.radius, attack.damage_flags, attack.damage_bans)
-
-						if targets then
-							for _, t in pairs(targets) do
-								local d = E:create_entity("damage")
-
-								d.damage_type = attack.damage_type
-
-								local dist_factor = U.dist_factor_inside_ellipse(t.pos, pred_pos, attack.radius)
-
-								d.value = math.floor(attack.damage_max - (attack.damage_max - attack.damage_min) * dist_factor)
-								d.value = math.ceil(this.tower.damage_factor * d.value)
-								d.source_id = this.id
-								d.target_id = t.id
-
-								queue_damage(store, d)
-							end
-						end
-
-						local decal = E:create_entity(attack.jump_decal)
-
-						decal.pos = V.vclone(pred_pos)
-						decal.render.sprites[1].ts = store.tick_ts
-
-						queue_insert(store, decal)
-
-						while not U.animation_finished(this, 6, 1) do
-							coroutine.yield()
-						end
-
-						y_toad_wait_time_check_change_mode(attack.jump_back_delay)
-
-						local toad_jump_o_z = this.render.sprites[6].z
-
-						this.render.sprites[6].z = Z_BULLETS
-
-						S:queue(attack.sound_jump)
-						U.animation_start(this, get_mode_anim(attack.animation_back_up), nil, store.tick_ts, false, 6)
-
-						local orig_jump_pos = V.vclone(this.render.sprites[6].pos)
-						local jump_back_ts = store.tick_ts
-						local elapsed_time = 0
-						local doing_down_anim = false
-						local decal_shadow = E:create_entity(attack.jump_back_shadow)
-
-						decal_shadow.render.sprites[1].pos = V.vclone(this.pos)
-						decal_shadow.render.sprites[1].ts = store.tick_ts
-
-						queue_insert(store, decal_shadow)
-
-						while elapsed_time < attack.jump_back_duration do
-							local elapsed_percentage = elapsed_time / attack.jump_back_duration
-
-							if elapsed_percentage > 0.5 and not doing_down_anim then
-								U.animation_start(this, get_mode_anim(attack.animation_back_down), af, store.tick_ts, true, 6)
-
-								doing_down_anim = true
-							end
-
-							this.render.sprites[6].pos = parabola_position(orig_jump_pos, this.pos, elapsed_percentage, attack.jump_back_height)
-							decal_shadow.render.sprites[1].pos = linear_position(orig_jump_pos, this.pos, elapsed_percentage)
-							elapsed_time = store.tick_ts - jump_back_ts
-
-							coroutine.yield()
-						end
-
-						this.render.sprites[6]._track_e = true
-
-						queue_remove(store, decal_shadow)
-
-						this.render.sprites[6].hidden = true
-
-						create_splash_fx()
-						S:queue(attack.sound_back_to_pond)
-						U.animation_start(this, "pathjumpbgout", nil, store.tick_ts, false, 5)
-						U.animation_start(this, get_mode_anim(attack.animation_end), nil, store.tick_ts, false, 3)
-
-						this.render.sprites[6].z = toad_jump_o_z
-
-						y_toad_animation_finished_check_change_mode()
-						resume_pipe_ps()
-
-						attack.ts = start_ts
-						last_ts = start_ts
-						last_idle_ts = store.tick_ts
-
-						goto label_1177_0
 					end
+
+					this.render.sprites[6].hidden = false
+					this.render.sprites[6].flip_x = this.render.sprites[3].flip_x
+					this.render.sprites[6].pos = V.vclone(pred_pos)
+					this.render.sprites[6]._track_e = false
+
+					U.animation_start(this, get_mode_anim(attack.animation_path_landing), nil, store.tick_ts, false, 6)
+					y_toad_wait_time_check_change_mode(attack.path_landing_action_time)
+					S:queue(attack.sound_fall)
+
+					local t_mod = E:get_template(attack.mod)
+					local targets = U.find_enemies_in_range_filter_off(pred_pos, attack.radius, attack.damage_flags, attack.damage_bans)
+
+					if targets then
+						for _, t in ipairs(targets) do
+							local d = E:create_entity("damage")
+
+							d.damage_type = attack.damage_type
+
+							local dist_factor = U.dist_factor_inside_ellipse(t.pos, pred_pos, attack.radius)
+
+							d.value = math.floor(attack.damage_max - (attack.damage_max - attack.damage_min) * dist_factor)
+							d.value = math.ceil(this.tower.damage_factor * d.value)
+							d.source_id = this.id
+							d.target_id = t.id
+
+							queue_damage(store, d)
+
+							if band(t.vis.flags, t_mod.modifier.vis_bans) == 0 and band(t.vis.bans, t_mod.modifier.vis_flags) == 0 then
+								local mod = E:create_entity(attack.mod)
+
+								mod.modifier.level = attack.level
+								mod.modifier.target_id = t.id
+								mod.modifier.source_id = this.id
+
+								queue_insert(store, mod)
+							end
+						end
+					end
+
+					local decal = E:create_entity(attack.jump_decal)
+
+					decal.pos = V.vclone(pred_pos)
+					decal.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, decal)
+
+					while not U.animation_finished(this, 6, 1) do
+						coroutine.yield()
+					end
+
+					y_toad_wait_time_check_change_mode(attack.jump_back_delay)
+
+					local toad_jump_o_z = this.render.sprites[6].z
+
+					this.render.sprites[6].z = Z_BULLETS
+
+					S:queue(attack.sound_jump)
+					U.animation_start(this, get_mode_anim(attack.animation_back_up), nil, store.tick_ts, false, 6)
+
+					local orig_jump_pos = V.vclone(this.render.sprites[6].pos)
+					local jump_back_ts = store.tick_ts
+					local elapsed_time = 0
+					local doing_down_anim = false
+					local decal_shadow = E:create_entity(attack.jump_back_shadow)
+
+					decal_shadow.render.sprites[1].pos = V.vclone(this.pos)
+					decal_shadow.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, decal_shadow)
+
+					while elapsed_time < attack.jump_back_duration do
+						local elapsed_percentage = elapsed_time / attack.jump_back_duration
+
+						if elapsed_percentage > 0.5 and not doing_down_anim then
+							U.animation_start(this, get_mode_anim(attack.animation_back_down), af, store.tick_ts, true, 6)
+
+							doing_down_anim = true
+						end
+
+						this.render.sprites[6].pos = parabola_position(orig_jump_pos, this.pos, elapsed_percentage, attack.jump_back_height)
+						decal_shadow.render.sprites[1].pos = linear_position(orig_jump_pos, this.pos, elapsed_percentage)
+						elapsed_time = store.tick_ts - jump_back_ts
+
+						coroutine.yield()
+					end
+
+					this.render.sprites[6]._track_e = true
+
+					queue_remove(store, decal_shadow)
+
+					this.render.sprites[6].hidden = true
+
+					create_splash_fx()
+					S:queue(attack.sound_back_to_pond)
+					U.animation_start(this, "pathjumpbgout", nil, store.tick_ts, false, 5)
+					U.animation_start(this, get_mode_anim(attack.animation_end), nil, store.tick_ts, false, 3)
+
+					this.render.sprites[6].z = toad_jump_o_z
+
+					y_toad_animation_finished_check_change_mode()
+					resume_pipe_ps()
+
+					attack.ts = start_ts
+					last_ts = start_ts
+					last_idle_ts = store.tick_ts
+
+					goto label_1177_0
 				end
 			end
 
@@ -17911,14 +17676,16 @@ function scripts.tower_hermit_toad.update(this, store)
 				attack = attack_mage
 			end
 
-			if store.tick_ts - attack.ts > attack.cooldown then
-				target, targets, pred_pos = find_target(attack, this.attacks.range)
+			if ready_to_attack(attack, store, tw.cooldown_factor) then
+				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags, attack.vis_bans)
 
 				if not target then
-					SU.delay_attack(store, attack, fts(10))
+					attack.ts = attack.ts + fts(10)
 
 					goto label_1177_0
 				end
+
+				pred_pos = U.calculate_enemy_ffe_pos(target, attack.node_prediction)
 
 				local a_name, a_flip
 				local start_ts = store.tick_ts
@@ -17933,10 +17700,10 @@ function scripts.tower_hermit_toad.update(this, store)
 				y_toad_wait_time_check_change_mode(attack.shoot_time)
 				S:queue(attack.sound)
 
-				local retarget, targets, new_pos = find_target(attack, this.attacks.range * 1.1, true)
+				local retarget = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags, attack.vis_bans)
 
 				if retarget then
-					pred_pos = new_pos
+					pred_pos = U.calculate_enemy_ffe_pos(retarget, attack.node_prediction)
 					target = retarget
 					this.attacks._last_target_pos = pred_pos
 				else
@@ -17955,7 +17722,7 @@ function scripts.tower_hermit_toad.update(this, store)
 				bullet.bullet.to = V.vclone(pred_pos)
 				bullet.bullet.target_id = target and target.id or nil
 				bullet.bullet.source_id = this.id
-				bullet.bullet.damage_factor = this.tower.damage_factor
+				bullet.bullet.damage_factor = tw.damage_factor
 
 				queue_insert(store, bullet)
 				y_toad_animation_finished_check_change_mode()
@@ -18030,170 +17797,6 @@ function scripts.tower_hermit_toad.remove(this, store)
 	end
 
 	return true
-end
-
-scripts.bullet_tower_hermit_toad_engineer_basic = {}
-
-function scripts.bullet_tower_hermit_toad_engineer_basic.update(this, store, script)
-	local b = this.bullet
-	local dmin, dmax = b.damage_min, b.damage_max
-	local dradius = b.damage_radius
-
-	if b.level and b.level > 0 then
-		if b.damage_radius_inc then
-			dradius = dradius + b.level * b.damage_radius_inc
-		end
-
-		if b.damage_min_inc then
-			dmin = dmin + b.level * b.damage_min_inc
-		end
-
-		if b.damage_max_inc then
-			dmax = dmax + b.level * b.damage_max_inc
-		end
-	end
-
-	local ps
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
-		coroutine.yield()
-
-		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
-
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-		elseif b.rotation_speed then
-			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
-		end
-
-		if b.hide_radius then
-			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
-		end
-	end
-
-	local enemies = table.filter(store.entities, function(k, v)
-		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
-	end)
-
-	for _, enemy in pairs(enemies) do
-		local d = E:create_entity("damage")
-
-		d.damage_type = b.damage_type
-		d.reduce_armor = b.reduce_armor
-		d.reduce_magic_armor = b.reduce_magic_armor
-
-		if b.damage_decay_random then
-			d.value = U.frandom(dmin, dmax)
-		else
-			local upg = UP:get_upgrade("towers_improved_formulas")
-			local source = store.entities[b.source_id]
-
-			if upg and source and source.tower then
-				d.value = dmax
-			else
-				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
-
-				d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
-			end
-		end
-
-		d.value = math.ceil(b.damage_factor * d.value)
-		d.source_id = this.id
-		d.target_id = enemy.id
-
-		if b.xp_gain_factor and b.xp_dest_id then
-			d.xp_gain_factor = b.xp_gain_factor
-			d.xp_dest_id = b.source_id
-		end
-
-		queue_damage(store, d)
-		log.paranoid("bomb id:%s, radius:%s, enemy id:%s, dist:%s, damage:%s damage_type:%x", this.id, dradius, enemy.id, V.dist(enemy.pos.x, enemy.pos.y, b.to.x, b.to.y), d.value, d.damage_type)
-
-		if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < this.up_shock_and_awe_chance then
-			local mod = E:create_entity("mod_shock_and_awe")
-
-			mod.modifier.target_id = enemy.id
-
-			queue_insert(store, mod)
-		end
-
-		if b.mod then
-			local mod = E:create_entity(b.mod)
-
-			mod.modifier.target_id = enemy.id
-			mod.modifier.source_id = this.id
-
-			queue_insert(store, mod)
-		end
-	end
-
-	local p = SU.create_bullet_pop(store, this)
-
-	queue_insert(store, p)
-
-	local cell_type = GR:cell_type(b.to.x, b.to.y)
-
-	if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then
-		S:queue(this.sound_events.hit_water)
-
-		local water_fx = E:create_entity(b.hit_fx_water)
-
-		water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
-		water_fx.render.sprites[1].ts = store.tick_ts
-		water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
-
-		queue_insert(store, water_fx)
-	elseif b.hit_fx then
-		S:queue(this.sound_events.hit)
-
-		local sfx = E:create_entity(b.hit_fx)
-
-		sfx.pos = V.vclone(b.to)
-		sfx.render.sprites[1].ts = store.tick_ts
-		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
-
-		queue_insert(store, sfx)
-	end
-
-	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
-		local decal = E:create_entity(b.hit_decal)
-
-		decal.pos = V.vclone(b.to)
-		decal.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, decal)
-	end
-
-	if b.hit_payload then
-		local hp
-
-		if type(b.hit_payload) == "string" then
-			hp = E:create_entity(b.hit_payload)
-		else
-			hp = b.hit_payload
-		end
-
-		hp.pos.x, hp.pos.y = b.to.x, b.to.y
-		hp.source_id = b.source_id
-
-		if hp.aura then
-			hp.aura.level = this.bullet.level
-			hp.aura.duration = this.aura_duration[this.bullet.level]
-			hp.tween.props[1].keys = {{0, 255}, {hp.aura.duration - 0.5, 255}, {hp.aura.duration, 0}}
-		end
-
-		queue_insert(store, hp)
-	end
-
-	queue_remove(store, this)
 end
 
 scripts.bullet_tower_hermit_toad_instakill_tongue = {}

@@ -8748,7 +8748,7 @@ function scripts.bomb_bouncing.update(this, store)
 	local target = U.find_first_enemy_in_range_filter_off(this_pos, dradius * 2, bor(F_AREA, F_RANGED), F_NONE)
 
 	while target and not target.health.dead and this.bounce_count > 0 do
-		b.damage_factor = b.damage_factor * 0.5
+		b.damage_factor = b.damage_factor * this.bounce_factor
 		b.to.x = target.pos.x
 		b.to.y = target.pos.y
 		b.from.x = this_pos.x
@@ -9005,6 +9005,201 @@ function scripts.mod_attract.update(this, store)
 
 	while store.tick_ts - start_ts < duration do
 		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.bolt_force_motion_kr5 = {}
+
+function scripts.bolt_force_motion_kr5.insert(this, store, script)
+	local b = this.bullet
+
+	if this.impulse_per_distance then
+		local dx, dy = V.sub(b.to.x, b.to.y, b.from.x, b.from.y)
+		local dist = V.len(dx, dy)
+
+		this.initial_impulse = this.impulse_per_distance * dist
+	end
+
+	if b.target_id then
+		local target = store.entities[b.target_id]
+
+		if not target or band(target.vis.bans, F_RANGED) ~= 0 then
+			return false
+		end
+	end
+
+	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
+
+	local s = this.render.sprites[1]
+
+	if not b.ignore_rotation then
+		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+	end
+
+	return true
+end
+
+function scripts.bolt_force_motion_kr5.update(this, store)
+	local b = this.bullet
+	local fm = this.force_motion
+	local target = store.entities[b.target_id]
+	local ps
+
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+
+		if dist <= 4 * fm.max_v * store.tick_length then
+			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+		end
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = 0, 0
+
+		return dist <= fm.max_v * store.tick_length
+	end
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.emit = true
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	local pred_pos
+
+	if target and target.enemy and target.nav_path then
+		pred_pos = P:predict_enemy_pos(target, fts(5))
+	else
+		pred_pos = b.to
+	end
+
+	local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
+	local last_pos = V.vclone(this.pos)
+
+	b.ts = store.tick_ts
+
+	while true do
+		target = store.entities[b.target_id]
+
+		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+			local hit_offset = V.v(0, 0)
+
+			if not b.ignore_hit_offset then
+				hit_offset.x = target.unit.hit_offset.x
+				hit_offset.y = target.unit.hit_offset.y
+			end
+
+			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
+
+			if d > b.max_track_distance then
+				log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
+
+				target = nil
+				b.target_id = nil
+			else
+				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
+			end
+		end
+
+		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
+			local t = store.tick_ts - b.ts
+
+			if this.initial_impulse_angle_abs then
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
+			else
+				local angle = this.initial_impulse_angle
+
+				if iix < 0 then
+					angle = angle * -1
+				end
+
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
+			end
+
+			if this.initial_impulse_reduction then
+				this.initial_impulse = this.initial_impulse * this.initial_impulse_reduction
+			end
+		end
+
+		last_pos.x, last_pos.y = this.pos.x, this.pos.y
+
+		if move_step(b.to) then
+			break
+		end
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+		end
+
+		if ps and b.force_align_particles_trajectory then
+			ps.particle_system.emit_rotation = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y) + (b.force_align_particles_trajectory_offset or 0)
+		end
+
+		coroutine.yield()
+	end
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		queue_damage(store, d)
+
+		if b.mod or b.mods then
+			local mods = b.mods or {b.mod}
+
+			for _, mod_name in pairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.target_id = b.target_id
+				m.modifier.level = b.level
+
+				queue_insert(store, m)
+			end
+		end
+	elseif b.damage_radius and b.damage_radius > 0 then
+		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+
+		if targets then
+			for _, target in pairs(targets) do
+				local d = SU.create_bullet_damage(b, target.id, this.id)
+
+				queue_damage(store, d)
+			end
+		end
+	end
+
+	this.render.sprites[1].hidden = true
+
+	if b.hit_fx then
+		local fx = E:create_entity(b.hit_fx)
+
+		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+		fx.render.sprites[1].ts = store.tick_ts
+		fx.render.sprites[1].runs = 0
+
+		queue_insert(store, fx)
+	end
+
+	if b.hit_decal then
+		local decal = E:create_entity(b.hit_decal)
+
+		decal.pos = V.vclone(b.to)
+		decal.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, decal)
+	end
+
+	if ps and ps.particle_system.emit then
+		ps.particle_system.emit = false
+
+		U.y_wait(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)

@@ -1089,6 +1089,7 @@ tt.sound_events.insert = "TowerEntwoodCocoThrow"
 tt.sound_events.hit = "TowerEntwoodCocoExplosion"
 tt.main_script.update = scripts.bomb_bouncing.update
 tt.bounce_count = 1
+tt.bounce_factor = 0.6
 tt = RT("rock_firey_nut", "rock_entwood")
 tt.bullet.damage_max = 77
 tt.bullet.damage_max_inc = 52

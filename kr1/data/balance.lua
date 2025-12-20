@@ -6098,7 +6098,7 @@ local towers = {
 			damage_radius = 60,
 			cooldown = 2.5,
 			damage_min = {7, 15, 29, 45},
-			damage_max = {9, 21, 39, 59},
+			damage_max = {9, 21, 39, 60},
 			range = {180, 200, 220, 240},
 			slow_factor = {0.8, 0.7, 0.6, 0.5},
 			slow_decal_duration = {1.75, 1.75, 1.75, 1.75},
@@ -6107,8 +6107,8 @@ local towers = {
 		},
 		mage_basic_attack = {
 			cooldown = 1.2,
-			damage_min = {7, 17, 29, 47},
-			damage_max = {10, 22, 38, 63},
+			damage_min = {7, 17, 29, 64},
+			damage_max = {10, 22, 38, 80},
 			range = {160, 175, 190, 200},
 			damage_type = DAMAGE_MAGICAL
 		},
