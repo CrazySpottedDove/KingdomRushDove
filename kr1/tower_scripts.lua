@@ -19276,22 +19276,6 @@ function scripts.aura_tower_sparking_geode_spike_burst.update(this, store, scrip
 			end
 		end
 
-		if this.aura.requires_magic then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or not te.enemy then
-				goto label_1224_0
-			end
-
-			if this.render then
-				this.render.sprites[1].hidden = not te.enemy.can_do_magic
-			end
-
-			if not te.enemy.can_do_magic then
-				goto label_1224_0
-			end
-		end
-
 		if this.aura.source_vis_flags and this.aura.source_id then
 			local te = store.entities[this.aura.source_id]
 
