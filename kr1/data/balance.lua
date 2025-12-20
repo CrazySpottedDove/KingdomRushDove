@@ -6202,21 +6202,21 @@ local towers = {
 			damage_type = DAMAGE_TRUE,
 			bounces_min = {1, 2, 3, 4},
 			bounces_max = {1, 2, 3, 4},
-			bounce_damage_factor = {1.05, 1.1, 1.15, 1.25}
+			bounce_damage_factor = {1.05, 1.1, 1.15, 1.3}
 		},
 		crystalize = {
 			price = {150, 150, 150},
-			cooldown = {31, 28, 25},
-			max_targets = {2, 3, 4},
+			cooldown = {30, 25, 20},
+			max_targets = {3, 4, 5},
 			duration = {5, 5, 5},
-			received_damage_factor = {1.3, 1.3, 1.3},
-			s_received_damage_factor = {0.3, 0.3, 0.3}
+			received_damage_factor = {1.25, 1.25, 1.25},
+			s_received_damage_factor = {0.25, 0.25, 0.25}
 		},
 		spike_burst = {
 			damage_every = 0.5,
 			radius = 200,
 			price = {200, 200, 200},
-			cooldown = {40, 35, 30},
+			cooldown = {35, 30, 25},
 			duration = {6, 9, 12},
 			damage_min = {3, 4, 5},
 			damage_max = {3, 4, 5},
