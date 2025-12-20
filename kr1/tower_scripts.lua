@@ -17112,7 +17112,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+		local targets = U.find_enemies_in_range(store, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
 			for _, target in pairs(targets) do
@@ -17391,10 +17391,10 @@ function scripts.tower_hermit_toad.update(this, store)
 
 		if new_mode == MODE_ENGINEER then
 			this.tower.kind = TOWER_KIND_ENGINEER
-			this.attacks.range = attack_engineer.range[this.tower.level]
+			this.attacks.range = attack_engineer.range
 		else
 			this.tower.kind = TOWER_KIND_MAGE
-			this.attacks.range = attack_mage.range[this.tower.level]
+			this.attacks.range = attack_mage.range
 		end
 
 		local mods_list = table.filter(store.entities, function(k, v)
@@ -17814,7 +17814,7 @@ function scripts.tower_hermit_toad.update(this, store)
 							queue_insert(store, mod)
 						end
 
-						local targets = U.find_enemies_in_range(store.entities, pred_pos, 0, attack.radius, attack.damage_flags, attack.damage_bans)
+						local targets = U.find_enemies_in_range(store, pred_pos, 0, attack.radius, attack.damage_flags, attack.damage_bans)
 
 						if targets then
 							for _, t in pairs(targets) do
@@ -18458,7 +18458,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 			return false
 		end
 
-		local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
+		local enemies = U.find_enemies_in_range(store, this.pos, 0, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
 
 		if not enemies then
 			SU.delay_attack(store, a_crystalize, fts(10))
@@ -18490,7 +18490,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 			return false
 		end
 
-		local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_burst.range, a_burst.vis_flags, a_burst.vis_bans)
+		local enemies = U.find_enemies_in_range(store, this.pos, 0, a_burst.range, a_burst.vis_flags, a_burst.vis_bans)
 
 		if not enemies then
 			SU.delay_attack(store, a_burst, fts(10))
@@ -18553,7 +18553,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				queue_insert(store, fx)
 				U.y_wait(store, fts(11))
 
-				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
+				local enemies = U.find_enemies_in_range(store, this.pos, 0, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
 
 				if not enemies then
 					a_crystalize.ts = store.tick_ts + a_crystalize.cooldown * 0.2
@@ -18590,7 +18590,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				U.y_wait(store, a_burst.cast_time)
 				S:queue(a_burst.sound_loop)
 
-				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a_burst.range, a_burst.vis_flags, a_burst.vis_bans)
+				local enemies = U.find_enemies_in_range(store, this.pos, 0, a_burst.range, a_burst.vis_flags, a_burst.vis_bans)
 
 				if not enemies then
 					a_burst.ts = store.tick_ts + a_burst.cooldown * 0.2
