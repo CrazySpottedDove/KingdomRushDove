@@ -2447,7 +2447,7 @@ scripts.tower_archmage = {
 
 		local function prepare_bullet(start_offset, i)
 			if #this._stored_bullets >= ba.max_stored_bullets then
-				return
+				return 
 			end
 
 			local b = E:create_entity(ba.bullet)
@@ -5129,7 +5129,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	if s.size_names then
@@ -5147,7 +5147,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 		if not target then
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if target.unit and target.unit.mod_offset then
@@ -5210,13 +5210,13 @@ function scripts.mod_druid_sylvan.update(this, store)
 
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		coroutine.yield()
@@ -6160,7 +6160,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos = target.pos
@@ -6182,7 +6182,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if this.render and target and target.unit then
@@ -6681,7 +6681,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 	if not tower then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos.x, this.pos.y = b.to.x, b.to.y
@@ -7096,7 +7096,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 			y_animation_wait(this, 1)
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -7291,13 +7291,13 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 			queue_remove(store, this)
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if path_ni < -20 then
 			SU.y_soldier_death(store, this)
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -7407,7 +7407,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 			if not enemy or #enemies < attack.min_targets then
 				attack.ts = attack.ts + fts(10)
 
-				return
+				return 
 			end
 
 			local start_ts = store.tick_ts
@@ -7440,7 +7440,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		local attack = a.list[3]
 
 		if power.level <= 0 or not ready_to_attack(attack, store, tw.cooldown_factor) or (attack.min_cooldown and store.tick_ts - last_ts_shared < attack.min_cooldown * tw.cooldown_factor) then
-			return
+			return 
 		end
 
 		local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans)
@@ -7448,7 +7448,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		if not enemy or #enemies < attack.min_targets then
 			attack.ts = attack.ts + fts(10)
 
-			return
+			return 
 		end
 
 		local start_ts = store.tick_ts
@@ -7696,7 +7696,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 	if not this.source then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	if this.source.tower.is_blocked then
@@ -8000,7 +8000,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 
 	queue_remove(store, this)
 
-	return
+	return 
 end
 
 scripts.mod_tower_necromancer_curse = {}
@@ -8177,7 +8177,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 	else
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	if kill_oldest_skeleton or kill_oldest_golem then
@@ -8209,7 +8209,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 	end
 
@@ -8267,7 +8267,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 			table.removeobject(this.source_necromancer.tower_upgrade_persistent_data.skeletons_ref, this)
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -8493,7 +8493,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 		if not targets then
-			return
+			return 
 		end
 
 		for i, target in ipairs(targets) do
@@ -8727,7 +8727,7 @@ function scripts.mod_tower_necromancer_skill_debuff.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos = target.pos
@@ -10086,7 +10086,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -10720,7 +10720,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 	if not target or target.health.dead then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	local source = store.entities[m.source_id]
@@ -11251,7 +11251,7 @@ function scripts.enemy_tower_ray_sheep.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return
+			return 
 		end
 
 		if this.ui.clicked then
@@ -11667,7 +11667,7 @@ function scripts.mod_ray_stargazers.update(this, store)
 	if not target or target.health.dead then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	-- local function apply_damage(value)
@@ -11721,7 +11721,7 @@ function scripts.mod_stargazers_stars_death.update(this, store)
 	if not target or target.health.dead then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos = target.pos
@@ -12880,7 +12880,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(
 	if not target then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	if not this.mocking_added then
@@ -12899,7 +12899,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update(
 
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		coroutine.yield()
@@ -13325,7 +13325,7 @@ function scripts.tower_arcane_wizard_power_empowerment_mark_mod.update(this, sto
 		if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration or not store.entities[this.modifier.source_id] or store.entities[this.modifier.source_id].pending_removal then
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		coroutine.yield()
@@ -13339,7 +13339,7 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target or target.health.dead then
-		return
+		return 
 	end
 
 	-- local is_boss = U.flag_has(target.vis.flags, bor(F_BOSS, F_MINIBOSS))
@@ -13536,7 +13536,7 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
 	local enemies = U.find_enemies_in_range_filter_off(target.pos, dradius, attack.vis_flags, attack.vis_bans)
 
 	if not enemies then
-		return
+		return 
 	end
 
 	for _, enemy in pairs(enemies) do
@@ -14095,7 +14095,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 				SU.y_soldier_death(store, this)
 			end
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -14332,7 +14332,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 	if not source then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	source.ranged.attacks[3].disabled = true
@@ -14572,7 +14572,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos = target.pos
@@ -14587,7 +14587,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if this.render and target.unit then
@@ -14781,7 +14781,7 @@ function scripts.tower_flamespitter.update(this, store)
 		local a = attack_bomb
 
 		if not ready_to_use_power(power, a, store, tw.cooldown_factor) then
-			return
+			return 
 		end
 
 		local enemy, pred_pos = U.find_random_enemy_with_pos(store, this.pos, a.min_range, a.max_range, a.node_prediction * tw.cooldown_factor, a.vis_flags, a.vis_bans)
@@ -14789,7 +14789,7 @@ function scripts.tower_flamespitter.update(this, store)
 		if not enemy then
 			a.ts = a.ts + fts(5)
 
-			return
+			return 
 		end
 
 		local available_paths = {enemy.nav_path.pi}
@@ -14823,7 +14823,7 @@ function scripts.tower_flamespitter.update(this, store)
 		local a = attack_columns
 
 		if not ready_to_use_power(power, a, store, tw.cooldown_factor) then
-			return
+			return 
 		end
 
 		local enemy = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
@@ -14831,7 +14831,7 @@ function scripts.tower_flamespitter.update(this, store)
 		if not enemy then
 			a.ts = a.ts + fts(5)
 
-			return
+			return 
 		end
 
 		local pred_pos = U.calculate_enemy_ffe_pos(enemy, a.node_prediction * tw.cooldown_factor)
@@ -14840,7 +14840,7 @@ function scripts.tower_flamespitter.update(this, store)
 		local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y, {path}, {1, 2, 3}, true)
 
 		if #nearest == 0 then
-			return
+			return 
 		end
 
 		local positions = {}
@@ -15421,13 +15421,13 @@ function scripts.tower_ballista.update(this, store)
 
 	local function check_skill_bomb()
 		if pow_b.level <= 0 or not ready_to_attack(ab, store, tw.cooldown_factor) then
-			return
+			return 
 		end
 
 		local enemy, enemies, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ab.max_range, ab.node_prediction, ab.vis_flags, ab.vis_bans, E:get_template("bullet_tower_ballista_skill_bomb").bullet.damage_radius)
 
 		if not enemy or #enemies < ab.min_targets then
-			return
+			return 
 		end
 
 		local available_paths = {enemy.nav_path.pi}
@@ -16292,7 +16292,7 @@ function scripts.soldier_paladin_rider.update(this, store, script)
 			U.y_wait(store, this.health.dead_lifetime)
 			queue_remove(store, this)
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -16734,7 +16734,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store, script)
 
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	local current_level = tower.powers.skill_warrior.level
@@ -16887,7 +16887,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store, script)
 			else
 				SU.y_reinforcement_fade_out(store, this)
 
-				return
+				return 
 			end
 
 			this.health.death_finished_ts = store.tick_ts
@@ -16918,7 +16918,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store, script)
 				SU.fade_out_entity(store, this, delay, duration)
 			end
 
-			return
+			return 
 		end
 
 		if this.unit.is_stunned then
@@ -16958,7 +16958,6 @@ end
 
 -- 酒桶 END
 -- 青蛙 START
-
 scripts.tower_hermit_toad = {}
 
 function scripts.tower_hermit_toad.get_info(this)
@@ -17198,10 +17197,10 @@ function scripts.tower_hermit_toad.update(this, store)
 
 		if new_mode == MODE_ENGINEER then
 			tw.kind = TOWER_KIND_ENGINEER
-			this.attacks.range = this.attacks.range / attack_mage.range[4] * attack_engineer.range[4]
+			this.attacks.range = this.attacks.range / attack_mage.range * attack_engineer.range
 		else
 			tw.kind = TOWER_KIND_MAGE
-			this.attacks.range = this.attacks.range / attack_engineer.range[4] * attack_mage.range[4]
+			this.attacks.range = this.attacks.range / attack_engineer.range * attack_mage.range
 		end
 
 		if with_animation == nil or with_animation then
@@ -17264,7 +17263,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 	local function y_toad_flip(af)
 		if this.render.sprites[3].flip_x == af or af == nil then
-			return
+			return 
 		end
 
 		pause_pipe_ps()
@@ -18688,7 +18687,7 @@ function scripts.mod_tower_sparking_geode_stun.update(this, store, script)
 	if not target then
 		queue_remove(store, this)
 
-		return
+		return 
 	end
 
 	this.pos = target.pos
