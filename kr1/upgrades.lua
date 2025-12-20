@@ -476,7 +476,8 @@ function upgrades:mage_tower_bolts()
 		"bullet_tower_ray_lvl4",
 		"bullet_tower_ray_chain",
 		"tower_elven_stargazers_ray",
-		"tower_arcane_wizard5_ray"
+		"tower_arcane_wizard5_ray",
+		"bullet_tower_hermit_toad_mage_basic_lvl4"
 	}
 end
 
@@ -525,7 +526,8 @@ function upgrades:engineer_bombs()
 		"tower_tricannon_bomb_overheated",
 		"bullet_tower_demon_pit_basic_attack_lvl4",
 		"bullet_tower_demon_pit_big_guy_lvl4",
-		"bullet_tower_barrel_lvl4"
+		"bullet_tower_barrel_lvl4",
+		"bullet_tower_hermit_toad_engineer_basic_lvl4"
 	}
 end
 
