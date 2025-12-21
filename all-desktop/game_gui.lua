@@ -894,7 +894,7 @@ function game_gui:update(dt)
 	local st = game_gui.swap_entity
 
 	if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
-		game_gui.c_deselect()
+		game_gui:hide_ghost_hover()
 
 		game_gui.swap_entity = nil
 	end
@@ -1611,6 +1611,10 @@ function game_gui:select_entity(e)
 		return 
 	end
 
+	if game_gui.mode == GUI_MODE_SWAP_TOWER then
+		game_gui.swap_tower()
+	end
+
 	if self.selected_entity and e ~= self.selected_entity then
 		self:deselect_entity()
 	end
@@ -1667,14 +1671,11 @@ function game_gui:deselect_entity()
 		self.selected_entity_marker.done = true
 	end
 
-	if game_gui.mode == GUI_MODE_SWAP_TOWER then
-		game_gui:hide_ghost_hover()
-	end
-
 	self.selected_entity = nil
 	self.selected_controables = {}
 
 	self:set_mode()
+	game_gui:hide_ghost_hover()
 end
 
 function game_gui:deselect_powers()
@@ -1999,22 +2000,70 @@ function game_gui:block_random_power(duration, style)
 	end
 end
 
-function game_gui.c_deselect(ctx, scope)
-	if game_gui.mode == GUI_MODE_SWAP_TOWER then
-		game_gui:hide_ghost_hover()
+function game_gui.swap_tower()
+	local e = game_gui.last_tower_hover
+
+	if not e or not e.ui then
+		return
 	end
 
-	-- if game_gui.selected_entity_markers then
-	-- 	for _, m in pairs(game_gui.selected_entity_markers) do
-	-- 		m.done = true
-	-- 	end
-	-- end
+	if not game_gui.game.store.entities[e.id] then
+		log.debug("tower %s is not in entities", e.id)
 
-	-- game_gui.touch_view:disable_drag_line()
+		return
+	end
 
-	-- game_gui.selected_entity = nil
+	if e.ui and e.ui.click_proxies then
+		for _, cp in pairs(e.ui.click_proxies) do
+			if cp and cp.ui and cp.ui.can_click then
+				log.debug("click proxied from (%s)%s to (%s)%s", e.id, e.template_name, cp.id, cp.template_name)
 
-	-- wid("infobar_view"):hide()
+				cp.ui.clicked = true
+			end
+		end
+	end
+
+	if not e.ui.can_click then
+		log.debug("cannot click tower %s: has ui.can_click == false", e.id)
+
+		return
+	end
+
+	e.ui.clicked = true
+
+	if not e.ui.can_select then
+		log.debug("cannot select tower %s: has ui.can_select == false", e.id)
+
+		return
+	end
+
+	if e == game_gui.selected_entity then
+		log.debug("cannot select tower %s: is already selected", e.id)
+
+		return
+	end
+
+	if e.cannot_be_swapped then
+		log.debug("cannot be swap this tower", e.id)
+
+		return
+	end
+
+	local tower_selected = game_gui.swap_entity
+
+	game_gui:deselect_entity()
+
+	local controller = E:create_entity("controller_tower_swap")
+
+	controller.tower_1 = game_gui.swap_entity
+	controller.tower_2 = e
+
+	game_gui.game.simulation:insert_entity(controller)
+
+	game_gui.swap_entity = nil
+
+	game_gui:set_mode(GUI_MODE_IDLE)
+	game_gui:hide_ghost_hover()
 end
 
 GemsRewardFx = class("GemsRewardFx", KView)
@@ -6401,7 +6450,9 @@ function PickView:on_down(button, x, y)
 				log.info("SELECTED ENTITY (%s) %s pos:(%s,%s)", e.id, e.template_name, e.pos.x, e.pos.y)
 			end
 
-			game_gui:deselect_all()
+			if game_gui.mode ~= GUI_MODE_SWAP_TOWER then
+				game_gui:deselect_all()
+			end
 
 			if e and e.ui and e.ui.can_click then
 				e.ui.clicked = true
