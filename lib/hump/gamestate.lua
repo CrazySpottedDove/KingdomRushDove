@@ -1,6 +1,6 @@
 -- chunkname: @./lib/hump/gamestate.lua
 local function __NULL__()
-	return 
+	return
 end
 
 local state_init = setmetatable({

@@ -40,7 +40,7 @@ function rc:reload()
 	if not love.filesystem.getInfo(filename) then
 		log.info("error loading %s. File not found", filename)
 
-		return 
+		return
 	end
 
 	log.debug("loading from file %s", filename)
@@ -51,7 +51,7 @@ function rc:reload()
 	if not chunk then
 		log.error("error loading %s. Error: %s", filename, err)
 
-		return 
+		return
 	end
 
 	local env = {}
@@ -68,7 +68,7 @@ function rc:reload()
 	if not ok then
 		log.error("error calling %s. Error: %s", filename, tostring(result))
 
-		return 
+		return
 	end
 
 	self.v_defaults = result
@@ -79,7 +79,7 @@ function rc:sync()
 	if not PS.services.remoteconfig then
 		log.debug("PS.services.remoteconfig not available")
 
-		return 
+		return
 	end
 
 	PS.services.remoteconfig:sync()
@@ -93,7 +93,7 @@ function rc:apply_remote_config()
 	if not psrc then
 		log.debug("PS.services.remoteconfig not available")
 
-		return 
+		return
 	end
 
 	local lkeys = table.keys(self.v_defaults)

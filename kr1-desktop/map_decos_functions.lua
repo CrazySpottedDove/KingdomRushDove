@@ -445,7 +445,7 @@ function deco_fn.ship:update(dt)
 			self.move_ship = false
 			self.animation = self.animations.side_stopped
 
-			return 
+			return
 		end
 
 		local next_pos = next_point.pos

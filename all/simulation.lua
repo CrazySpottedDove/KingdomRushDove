@@ -93,7 +93,7 @@ function simulation:update(dt)
 	local d = self.store
 
 	if d.paused and not d.step then
-		return 
+		return
 	end
 
 	simulation:do_tick()
@@ -143,7 +143,7 @@ end
 
 function simulation:queue_insert_entity(e)
 	if not e then
-		return 
+		return
 	end
 
 	local d = self.store
@@ -158,7 +158,7 @@ end
 
 function simulation:queue_remove_entity(e)
 	if not e or e.pending_removal then
-		return 
+		return
 	end
 
 	local d = self.store
@@ -180,7 +180,7 @@ function simulation:insert_entity(e)
 				self.systems_on_dequeue[j]:on_dequeue(e, d, true)
 			end
 
-			return 
+			return
 		end
 	end
 
@@ -200,7 +200,7 @@ function simulation:remove_entity(e)
 
 			print(string.format("remove %s aborted", e.template_name))
 
-			return 
+			return
 		end
 	end
 

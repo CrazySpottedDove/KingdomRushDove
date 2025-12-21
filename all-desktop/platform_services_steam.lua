@@ -51,7 +51,7 @@ function steam:init(name, params)
 		if not params or not params.app_id or type(params.app_id) ~= "number" then
 			log.error("platform_services_steam requires app_id param of type number")
 
-			return 
+			return
 		end
 
 		self.app_id = params.app_id
@@ -62,7 +62,7 @@ function steam:init(name, params)
 		if not lib then
 			log.error("Steam library %s could not be loaded", lib_name)
 
-			return 
+			return
 		end
 
 		self.inited = lib.SteamAPI_Init()
@@ -71,7 +71,7 @@ function steam:init(name, params)
 			log.error("SteamAPI_Init() failed")
 			self:restart_app_if_necessary(self.app_id)
 
-			return 
+			return
 		end
 
 		sclient = lib.SteamClient()
@@ -80,7 +80,7 @@ function steam:init(name, params)
 			log.error("SteamClient() returned NULL")
 			self:restart_app_if_necessary(self.app_id)
 
-			return 
+			return
 		end
 
 		self.pipe = lib.SteamAPI_GetHSteamPipe()
@@ -91,7 +91,7 @@ function steam:init(name, params)
 			log.error("GetISteamUserStats() returned NULL")
 			self:restart_app_if_necessary(self.app_id)
 
-			return 
+			return
 		end
 
 		astats = lib.SteamAPI_ISteamClient_GetISteamApps(sclient, self.user, self.pipe, self.STEAMAPPS_INTERFACE_VERSION)
@@ -100,7 +100,7 @@ function steam:init(name, params)
 			log.error("GetISteamApps() returned NULL")
 			self:restart_app_if_necessary(self.app_id)
 
-			return 
+			return
 		end
 
 		sutils = lib.SteamAPI_ISteamClient_GetISteamUtils(sclient, self.pipe, self.STEAMUTILS_INTERFACE_VERSION)
@@ -109,7 +109,7 @@ function steam:init(name, params)
 			log.error("GetISteamUtils() returned NULL")
 			self:restart_app_if_necessary(self.app_id)
 
-			return 
+			return
 		end
 
 		self:restart_app_if_necessary(self.app_id)
@@ -221,7 +221,7 @@ end
 
 function steam:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -245,11 +245,11 @@ function steam:get_install_dir()
 end
 
 function steam:do_signin()
-	return 
+	return
 end
 
 function steam:do_signout()
-	return 
+	return
 end
 
 function steam:unlock_achievement(ach_id, defer_store)
@@ -291,7 +291,7 @@ function steam:submit_score(level_idx, diff_idx, score)
 	if not board_id then
 		log.error("leaderboard id missing for level_idx:%s diff_idx:%s", level_idx, diff_idx)
 
-		return 
+		return
 	end
 
 	local function cb_upload_leaderboard_score(status, req)
@@ -330,7 +330,7 @@ function steam:submit_score(level_idx, diff_idx, score)
 
 				self.prq:add(nrid, "steam.UploadLeaderboardScore", cb_upload_leaderboard_score)
 
-				return 
+				return
 			else
 				log.error("rid:%s - cb_find_leaderboard - GetAPICallResult(%s,%s) error", req.id, n.iptr, n.hcall)
 			end

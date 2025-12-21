@@ -309,7 +309,7 @@ function KEProp:initialize(title, value, editable)
 end
 
 function KEProp:update(dt)
-	return 
+	return
 end
 
 function KEProp:set_value(value, silent)
@@ -325,7 +325,7 @@ end
 
 function KEProp:on_textinput(t)
 	if not self.editable then
-		return 
+		return
 	end
 
 	self:set_value(self.value .. t)
@@ -335,7 +335,7 @@ end
 
 function KEProp:on_keypressed(key)
 	if not self.editable then
-		return 
+		return
 	end
 
 	if key == "backspace" then

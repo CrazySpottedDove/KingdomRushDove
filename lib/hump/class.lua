@@ -48,7 +48,7 @@ local function new(class)
 
 	class.__index = class
 	class.init = class.init or class[1] or function()
-		return 
+		return
 	end
 	class.include = class.include or include
 	class.clone = class.clone or clone

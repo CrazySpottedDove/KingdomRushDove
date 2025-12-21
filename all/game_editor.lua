@@ -647,7 +647,7 @@ end
 
 function editor:level_save(idx, mode)
 	if not idx then
-		return 
+		return
 	end
 
 	local s = self.store
@@ -828,7 +828,7 @@ end
 
 function editor:undo_push_entity(from_drag, eid, ...)
 	if not self.undo_active then
-		return 
+		return
 	end
 
 	local args = {...}
@@ -876,7 +876,7 @@ function editor:undo_pop()
 		if not e then
 			log.error("Undo could not find entity with id:%s", item.id)
 
-			return 
+			return
 		end
 
 		for k, v in pairs(item.props) do
@@ -990,7 +990,7 @@ function editor:extend_path(pi, ni, x, y)
 	local nodes = path.nodes
 
 	if ni ~= 1 and ni ~= #nodes then
-		return 
+		return
 	end
 
 	if ni == #nodes then
@@ -1039,7 +1039,7 @@ function editor:subdivide_path(pi, ni, x, y)
 	local nodes = path.nodes
 
 	if (ni - 1) % 3 ~= 0 or ni == 1 or ni == #nodes then
-		return 
+		return
 	end
 
 	local n = nodes[ni]
@@ -1103,11 +1103,11 @@ function editor:remove_path_node(pi, ni)
 	local nodes = path.nodes
 
 	if (ni - 1) % 3 ~= 0 then
-		return 
+		return
 	end
 
 	if #nodes <= 4 then
-		return 
+		return
 	end
 
 	local wi = (ni - 1) / 3 + 1
@@ -1156,7 +1156,7 @@ function editor:change_path_idx(pi, npi)
 	local curves = self.path_curves
 
 	if pi == npi or not curves[pi] or npi > #curves then
-		return 
+		return
 	end
 
 	local conn_idx = {}

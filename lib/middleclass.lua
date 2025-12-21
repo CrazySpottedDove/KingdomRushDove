@@ -118,7 +118,7 @@ local DefaultMixin = {
 		return "instance of " .. tostring(self.class)
 	end,
 	initialize = function(self, ...)
-		return 
+		return
 	end,
 	isInstanceOf = function(self, aClass)
 		return type(aClass) == "table" and (aClass == self.class or self.class:isSubclassOf(aClass))
@@ -161,7 +161,7 @@ local DefaultMixin = {
 			return subclass
 		end,
 		subclassed = function(self, other)
-			return 
+			return
 		end,
 		isSubclassOf = function(self, other)
 			return type(other) == "table" and type(self.super) == "table" and (self.super == other or self.super:isSubclassOf(other))

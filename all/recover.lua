@@ -7,7 +7,7 @@ local function serialize(t, printed, out)
 
 	if tp == "table" then
 		if printed[t] then
-			return 
+			return
 		end
 
 		printed[t] = true

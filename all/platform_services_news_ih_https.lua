@@ -62,7 +62,7 @@ function news:cache_news()
 	if not url then
 		log.debug("news URL is nil. skipping...")
 
-		return 
+		return
 	end
 
 	local function cb_dl_news(status, req, url, code, header, data)
@@ -103,7 +103,7 @@ function news:cache_image(suffix)
 	if not url then
 		log.debug("image URL is nil. skipping...")
 
-		return 
+		return
 	end
 
 	local function cb_dl_image(status, req, url, code, header, data)

@@ -267,7 +267,7 @@ function persistence.serialize_compact(file, ...)
 		file:write("return ")
 		write_compact(file, select(1, ...))
 
-		return 
+		return
 	end
 
 	for i = 1, n do

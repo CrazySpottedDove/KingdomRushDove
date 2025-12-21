@@ -39,7 +39,7 @@ function rail:init(name, params)
 		if not params or not params.game_id or type(params.game_id) ~= "number" then
 			log.error("platform_services_rail requires game_id param of type number")
 
-			return 
+			return
 		end
 
 		self.game_id = params.game_id
@@ -58,7 +58,7 @@ function rail:init(name, params)
 		if not self.inited then
 			log.error("railw_initialize() failed")
 
-			return 
+			return
 		end
 
 		self.prq = PSU:new_prq()
@@ -145,7 +145,7 @@ end
 
 function rail:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -156,11 +156,11 @@ function rail:cancel_request(rid)
 end
 
 function rail:do_signin()
-	return 
+	return
 end
 
 function rail:do_signout()
-	return 
+	return
 end
 
 function rail:unlock_achievement(ach_id, defer_store)
@@ -182,7 +182,7 @@ end
 function rail:sync_achievements()
 	local function cb_sync_achievements(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		local success
@@ -212,25 +212,25 @@ function rail:sync_achievements()
 end
 
 function rail:get_sync_status()
-	return 
+	return
 end
 
 function rail:sync_slots()
-	return 
+	return
 end
 
 function rail:push_slot(idx, overwrite)
-	return 
+	return
 end
 
 function rail:delete_slot(idx)
-	return 
+	return
 end
 
 function rail:sync_leaderboards()
 	local function cb_sync_leaderboards(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		local success
@@ -272,7 +272,7 @@ function rail:submit_score(level_idx, difficulty_idx, score)
 end
 
 function rail:show_leaderboard(level_idx, difficulty_idx)
-	return 
+	return
 end
 
 function rail:restart_app_if_necessary(game_id)

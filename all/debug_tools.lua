@@ -400,7 +400,7 @@ function dd.wid(n)
 	local ai = director.active_item
 
 	if not ai then
-		return 
+		return
 	end
 
 	if ai.game_gui and ai.game_gui.window then

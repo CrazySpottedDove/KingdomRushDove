@@ -13,7 +13,7 @@ return v/FPS
 end
 local level={}
 function level:load(store)
-return 
+return
 end
 function level:update(store)
 coroutine.yield()

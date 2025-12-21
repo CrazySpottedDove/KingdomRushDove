@@ -86,7 +86,7 @@ end
 
 local function soldiers_around_need_heal(this, store, trigger_hp_factor, range)
 	for _, v in pairs(store.soldiers) do
-		if (not v.reinforcement) and (not v.health.dead and v.health.hp < trigger_hp_factor * v.health.hp_max) and U.is_inside_ellipse(v.pos, this.pos, range) then
+		if not v.reinforcement and (not v.health.dead and v.health.hp < trigger_hp_factor * v.health.hp_max) and U.is_inside_ellipse(v.pos, this.pos, range) then
 			return true
 		end
 	end
@@ -143,7 +143,7 @@ local function level_up_basic(this)
 
 	SU.update_armor(this)
 
-	if (ls.magic_armor) then
+	if ls.magic_armor then
 		this.health.raw_magic_armor = ls.magic_armor[hl]
 
 		SU.update_magic_armor(this)
@@ -419,7 +419,7 @@ scripts.soldier_alleria_wildcat = {
 
 				SU.y_soldier_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -716,7 +716,7 @@ scripts.mirage_shadow = {
 				U.y_animation_wait(this)
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			b.to.x, b.to.y = target.pos.x, target.pos.y
@@ -811,7 +811,7 @@ scripts.soldier_mirage_illusion = {
 				U.y_wait(store, fts(4))
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			SU.y_soldier_melee_block_and_attacks(store, this)
@@ -1311,7 +1311,7 @@ scripts.mod_ray_wizard = {
 		if not target then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		this.pos = target.pos
@@ -1322,7 +1322,7 @@ scripts.mod_ray_wizard = {
 			if not target or target.health.dead then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			tick_steps = math.floor((store.tick_ts - last_ts) / this.damage_every)
@@ -1354,7 +1354,7 @@ scripts.mod_ray_wizard = {
 				if steps <= step then
 					queue_remove(store, this)
 
-					return 
+					return
 				end
 			end
 
@@ -1674,7 +1674,7 @@ scripts.soldier_sand_warrior = {
 				SU.y_soldier_death(store, this)
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -2477,7 +2477,7 @@ scripts.hero_denas = {
 			U.animation_start(this, an, af, store.tick_ts, false)
 
 			if SU.y_hero_wait(store, this, a.shoot_time) then
-				return 
+				return
 			end
 
 			bullet = E:create_entity(bullet_name)
@@ -2504,7 +2504,7 @@ scripts.hero_denas = {
 			queue_insert(store, bullet)
 
 			if U.y_animation_wait(this) then
-				return 
+				return
 			end
 
 			return true
@@ -2675,7 +2675,7 @@ scripts.aura_beastmaster_regeneration = {
 		local hero = store.entities[this.aura.source_id]
 
 		if not hero then
-			return 
+			return
 		end
 
 		while true do
@@ -2712,7 +2712,7 @@ scripts.beastmaster_rhino = {
 				log.debug("  X not next for %s", this.id)
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or band(GR:cell_type(next.x, next.y), bor(TERRAIN_CLIFF, TERRAIN_WATER, TERRAIN_FAERIE)) ~= 0 then
@@ -2797,7 +2797,7 @@ scripts.beastmaster_falcon = {
 				U.y_animation_play(this, "death", nil, store.tick_ts)
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if store.tick_ts - ca.ts > ca.cooldown then
@@ -2918,7 +2918,7 @@ scripts.beastmaster_pet = {
 				table.removeobject(this.owner.boars, this)
 				SU.y_soldier_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -4081,7 +4081,7 @@ scripts.mod_priest_armor = {
 		if not target then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		this.pos = target.pos
@@ -4092,7 +4092,7 @@ scripts.mod_priest_armor = {
 			if not target or target.health.dead or store.tick_ts - m.ts >= m.duration then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -4112,7 +4112,7 @@ scripts.mod_priest_consecrate = {
 		if not target then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		this.pos = V.vclone(target.pos)
@@ -4595,7 +4595,7 @@ scripts.soldier_magnus_illusion = {
 
 				SU.y_soldier_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -5046,7 +5046,7 @@ scripts.hero_giant = {
 				return v.template_name == this.auras.list[1].name
 			end)
 
-			if (aura_baston_key) then
+			if aura_baston_key then
 				local aura_baston = store.entities[aura_baston_key]
 
 				aura_baston.damage_per_tick = s.damage_per_tick[s.level]
@@ -5095,7 +5095,7 @@ scripts.hero_giant = {
 
 		local function do_stomp(attack, targets)
 			if not targets then
-				return 
+				return
 			end
 
 			for _, t in pairs(targets) do
@@ -9091,7 +9091,7 @@ scripts.mod_minotaur_daedalus = {
 		if not target then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		local fx = E:create_entity("decal_minotaur_daedalus")
@@ -10674,7 +10674,7 @@ function scripts.aura_regson_blade.update(this, store)
 		log.error("hero not found for aura_regson_blade")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.blade_ts = store.tick_ts
@@ -10729,7 +10729,7 @@ function scripts.aura_regson_heal.update(this, store)
 	if not hero then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	while true do
@@ -10886,7 +10886,7 @@ function scripts.mod_regson_slash.update(this, store)
 	if not target or not target.pos or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	sp.hidden = true
@@ -12452,7 +12452,7 @@ function scripts.hero_durax.update(this, store)
 				this.tween.disabled = nil
 				this.tween.ts = store.tick_ts
 
-				return 
+				return
 			else
 				decal.render.sprites[1].hidden = true
 
@@ -13574,7 +13574,7 @@ function scripts.aura_arivan_stone_dance.update(this, store)
 		log.error("aura_arivan_stone_dance owner is missing.")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	while true do
@@ -14050,7 +14050,7 @@ function scripts.hero_phoenix_ultimate.update(this, store)
 		log.error("hero_phoenix_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local node = {
@@ -14403,7 +14403,7 @@ function scripts.hero_bravebark_ultimate.update(this, store)
 		log.error("hero_bravebark_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local node_f = {
@@ -15616,7 +15616,7 @@ function scripts.hero_xin_ultimate.update(this, store)
 		log.error("hero_xin_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local node = {
@@ -15966,7 +15966,7 @@ function scripts.hero_faustus_ultimate.update(this, store)
 		log.error("hero_faustus_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local node = {
@@ -17479,7 +17479,7 @@ function scripts.fierymist_dragon.update(this, store)
 		log.debug("cannot deploy fierymist_dragon: no destination node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	node.spi = 1
@@ -18736,7 +18736,7 @@ function scripts.mod_hero_hunter_ricochet_attack.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -18765,7 +18765,7 @@ function scripts.mod_hero_hunter_ricochet_attack.update(this, store)
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.render and target.unit then
@@ -18854,7 +18854,7 @@ function scripts.aura_hero_hunter_shoot_around.update(this, store)
 			if not te or te.health and te.health.dead then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if te and te.pos then
@@ -19262,7 +19262,7 @@ function scripts.soldier_hero_hunter_beast_mark.update(this, store)
 		if not target or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -19369,7 +19369,7 @@ function scripts.soldier_hero_hunter_ultimate.update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		while this.nav_rally.new do
@@ -20166,7 +20166,7 @@ function scripts.soldier_hero_space_elf_astral_reflection.update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -20271,7 +20271,7 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -20330,7 +20330,7 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 			U.y_animation_wait(this)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.render and target.unit then
@@ -20419,7 +20419,7 @@ function scripts.aura_hero_space_elf_void_rift.update(this, store)
 			if not te or te.health and te.health.dead then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if te and te.pos then
@@ -20523,7 +20523,7 @@ function scripts.mod_hero_space_elf_ultimate.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -20564,7 +20564,7 @@ function scripts.mod_hero_space_elf_ultimate.dequeue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -20606,7 +20606,7 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	if not target or not target.health or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -21151,7 +21151,7 @@ function scripts.hero_raelyn_unbreakable_mod.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -21165,7 +21165,7 @@ function scripts.hero_raelyn_unbreakable_mod.update(this, store)
 			U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.render and target.unit then
@@ -21298,7 +21298,7 @@ function scripts.hero_raelyn_command_orders_dark_knight.update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -22095,7 +22095,7 @@ function scripts.mod_hero_venom_eat_enemy_regen.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -22106,7 +22106,7 @@ function scripts.mod_hero_venom_eat_enemy_regen.update(this, store)
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.render and target.unit then
@@ -23080,7 +23080,7 @@ function scripts.bolt_hero_dragon_gem_attack.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local is_flying = U.flag_has(target.vis.flags, F_FLYING)
@@ -23455,7 +23455,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	if target.unit.size == UNIT_SIZE_SMALL then
@@ -23704,7 +23704,7 @@ function scripts.hero_dragon_gem_ultimate.update(this, store)
 		log.error("hero_dragon_gem_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local target_pos = {}
@@ -23926,7 +23926,7 @@ function scripts.mod_hero_dragon_gem_passive_charge.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -23939,7 +23939,7 @@ function scripts.mod_hero_dragon_gem_passive_charge.update(this, store)
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.render and target.unit then
@@ -25041,7 +25041,7 @@ function scripts.mod_hero_witch_skill_polymorph.update(this, store)
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -25275,7 +25275,7 @@ function scripts.soldier_hero_witch_decoy.update(this, store)
 		elseif this.reinforcement and (this.reinforcement.fade or this.reinforcement.fade_out) then
 			SU.y_reinforcement_fade_out(store, this)
 
-			return 
+			return
 		else
 			S:queue(this.sound_events.death, this.sound_events.death_args)
 			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
@@ -25325,7 +25325,7 @@ function scripts.soldier_hero_witch_decoy.update(this, store)
 			-- end
 			y_custom_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -25942,7 +25942,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local is_flying = U.flag_has(target.vis.flags, F_FLYING)
@@ -26566,7 +26566,7 @@ function scripts.hero_dragon_bone_ultimate.update(this, store)
 		log.error("hero_dragon_bone_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local x, y = this.pos.x, this.pos.y
@@ -27068,7 +27068,7 @@ function scripts.hero_lumenir_ultimate.update(this, store)
 		log.error("hero_lumenir_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local node = {
@@ -27274,7 +27274,7 @@ function scripts.mod_hero_lumenir_sword_hit.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -27287,7 +27287,7 @@ function scripts.mod_hero_lumenir_sword_hit.update(this, store)
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if not damaged and time_hit < store.tick_ts - m.ts then
@@ -27385,7 +27385,7 @@ function scripts.mod_hero_lumenir_shield.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -27401,7 +27401,7 @@ function scripts.mod_hero_lumenir_shield.update(this, store)
 			U.y_wait(store, 0.25)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		local s = this.render.sprites[1]
@@ -27983,7 +27983,7 @@ function scripts.hero_wukong.update(this, store)
 
 	local function rally_zhu_apprentice()
 		if not zhu_apprentice_soldier then
-			return 
+			return
 		end
 
 		zhu_apprentice_soldier.nav_rally.new = true
@@ -28639,13 +28639,13 @@ scripts.mod_hero_wukong_attacks_combos = {}
 
 function scripts.mod_hero_wukong_attacks_combos.queue(this, store, insertion)
 	if not insertion then
-		return 
+		return
 	end
 
 	local source = store.entities[this.modifier.source_id]
 
 	if not source then
-		return 
+		return
 	end
 
 	scripts.hero_wukong.choose_next_random_attack(source)
@@ -28862,7 +28862,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
 		log.error("controller_hero_wukong_ultimate: could not find valid node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local pi, spi, ni = unpack(nodes[1])

@@ -338,7 +338,7 @@ function image_db:unload_atlas(name, ref_scale)
 	if not self.atlas_uses[name_scale] then
 		log.info("atlas %s does not exist", name_scale)
 
-		return 
+		return
 	end
 
 	self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
@@ -346,7 +346,7 @@ function image_db:unload_atlas(name, ref_scale)
 	if self.atlas_uses[name_scale] > 0 then
 		log.debug("atlas %s still in use", name)
 
-		return 
+		return
 	end
 
 	log.debug("unloading atlas %s-%.6f", name, ref_scale)
@@ -412,7 +412,7 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 		log.debug("atlas %s already loaded", name)
 
-		return 
+		return
 	end
 
 	self.atlas_uses[name_scale] = 1
@@ -424,7 +424,7 @@ function image_db:preload_atlas(ref_scale, path, name)
 	if not is_file(group_file) then
 		log.error("atlas file %s not found for %s/%s", group_file, path, name)
 
-		return 
+		return
 	end
 
 	local frames = FS.load(group_file)()
@@ -480,7 +480,7 @@ function image_db:load_atlas(ref_scale, path, name, yielding)
 	local image_names = self:preload_atlas(ref_scale, path, name)
 
 	if not image_names then
-		return 
+		return
 	end
 
 	local i = 0
@@ -577,7 +577,7 @@ function image_db:load_image_file(fn, path)
 	if not is_file(f) then
 		log.error("not a valid file: %s", f)
 
-		return 
+		return
 	end
 
 	if string.match(f, ".png$") or string.match(f, ".jpg$") or string.match(f, ".pkm$") or string.match(f, ".astc$") or string.match(f, ".dds$") then
@@ -624,7 +624,7 @@ function image_db:load_image_file(fn, path)
 			if not imd then
 				log.error("Compressed image %s could not be loaded", f)
 
-				return 
+				return
 			end
 
 			im = G.newImage(imd)

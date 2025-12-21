@@ -842,7 +842,7 @@ tt.main_script.update = function(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1037,7 +1037,7 @@ tt.main_script.update = function(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1296,7 +1296,7 @@ tt.main_script.update = function(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1517,7 +1517,7 @@ tt.main_script.update = function(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1843,7 +1843,7 @@ tt.main_script.update = function(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then

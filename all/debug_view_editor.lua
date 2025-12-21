@@ -68,7 +68,7 @@ end
 
 function dbe:keypressed(selected_view, key, isrepeat)
 	if not selected_view then
-		return 
+		return
 	end
 
 	local av = selected_view

@@ -23,6 +23,9 @@ _examine_dir_map:
 sync:
 	@bash $(MAKE_FILE_DIR)/sync.sh "$(WINDOWS_DIR)"
 
+sync-full:
+	@bash $(MAKE_FILE_DIR)/sync-full.sh "$(WINDOWS_DIR)"
+
 debug: _examine_dir_map sync
 	$(LOVE) "$(WINDOWS_DIR_WIN)" debug
 

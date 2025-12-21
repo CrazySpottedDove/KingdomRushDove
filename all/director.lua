@@ -216,7 +216,7 @@ function director:item_done_callback(item_name, outcome)
 	if self.active_item and self.active_item.done_callback_called then
 		log.error("  Done callback already called... Ignoring!")
 
-		return 
+		return
 	end
 
 	self.active_item.done_callback_called = true
@@ -240,12 +240,12 @@ function director:item_done_callback(item_name, outcome)
 		if outcome.quit then
 			self:quit()
 
-			return 
+			return
 		elseif outcome.next_item_name then
 			self.next_item_name = outcome.next_item_name
 			self.next_item_args = outcome
 
-			return 
+			return
 		elseif outcome.prevent_loading then
 			self.next_item_prevent_loading = true
 		end
@@ -273,7 +273,7 @@ function director:item_done_callback(item_name, outcome)
 	if item_name == "comics" then
 		self.queued_item = self.active_item.game_item
 
-		return 
+		return
 	end
 
 	local props = self.item_props[item_name]
@@ -294,7 +294,7 @@ function director:item_done_callback(item_name, outcome)
 		self.next_item_name = props.next
 		self.next_item_args = {}
 
-		return 
+		return
 	end
 end
 
@@ -302,7 +302,7 @@ function director:unload_item(item)
 	if not item then
 		log.debug("item nil")
 
-		return 
+		return
 	end
 
 	if item.item_name == "game" then
@@ -609,7 +609,7 @@ end
 
 function director:load_texture_groups(groups, texture_size, ref_height, queue, item_name)
 	if not groups then
-		return 
+		return
 	end
 
 	local scale = 1
@@ -786,7 +786,7 @@ end
 
 function director:limit_fps()
 	if not (self.active_item and self.active_item.next_frame_ts) then
-		return 
+		return
 	end
 
 	local ai = self.active_item
@@ -797,7 +797,7 @@ function director:limit_fps()
 		-- 已经超时了，直接进入下一帧
 		ai.next_frame_ts = current_ts
 
-		return 
+		return
 	end
 
 	-- 在剩余时间内推进 GC
@@ -827,7 +827,7 @@ function director:keypressed(key, isrepeat)
 	if key == "tab" and love.window.getFullscreen() and love.system.getOS() == "OS X" and (love.keyboard.isDown("lgui") or love.keyboard.isDown("rgui")) then
 		love.window.minimize()
 
-		return 
+		return
 	end
 
 	if DEBUG and key == "r" and love.keyboard.isDown("lshift") and not isrepeat then
@@ -843,11 +843,11 @@ function director:keypressed(key, isrepeat)
 			self.next_item_name = self.last_item_name
 		end
 
-		return 
+		return
 	end
 
 	if self.active_item and self.active_item.keypressed and self.active_item:keypressed(key, isrepeat) then
-		return 
+		return
 	end
 
 	if ISM then

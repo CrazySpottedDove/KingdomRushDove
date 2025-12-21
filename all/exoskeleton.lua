@@ -74,7 +74,7 @@ end
 
 function EXO:load_groups(groups)
 	if not groups then
-		return 
+		return
 	end
 
 	for _, g in pairs(groups) do
@@ -117,7 +117,7 @@ function EXO:unload(exo_name)
 	if KRN then
 		KRN.exo_db_unload(exo_name)
 
-		return 
+		return
 	end
 
 	local exo = self.exos[exo_name]
@@ -125,7 +125,7 @@ function EXO:unload(exo_name)
 	if not exo then
 		log.error("EXO:unload - could not find %s to unload", exo_name)
 
-		return 
+		return
 	end
 
 	self.exos_count[exo_name] = self.exos_count[exo_name] - 1
@@ -133,7 +133,7 @@ function EXO:unload(exo_name)
 	if self.exos_count[exo_name] > 0 then
 		log.debug("exo %s is still in use with count %s. keep loaded...", exo_name, self.exos_count[exo_name])
 
-		return 
+		return
 	end
 
 	if exo.is_kui and A.db then
@@ -174,7 +174,7 @@ function EXO:unload_all()
 end
 
 function EXO:destroy()
-	return 
+	return
 end
 
 function EXO:load_lua(exo_name, exo_path)
@@ -370,7 +370,7 @@ function EXO:load_lua(exo_name, exo_path)
 	else
 		log.error("exoskeleton file not found for %s", fn)
 
-		return 
+		return
 	end
 end
 
@@ -429,7 +429,7 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 	if not f then
 		log.error("Could not find frame for sprite_id:%s in entity:%s (%s)", sprite_id, entity.id, entity.template_name)
 
-		return 
+		return
 	end
 
 	local exo = f.exo
@@ -437,7 +437,7 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 	if not exo then
 		log.error("Could not find exo for sprite_id:%s in entity:%s (%s)", sprite_id, entity.id, entity.template_name)
 
-		return 
+		return
 	end
 
 	local idx = exo.attach_idx[name]
@@ -445,7 +445,7 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 	if not idx then
 		log.error("Could not find attach point named %s in sprite_id:%s in entity:%s (%s)", name, sprite_id, entity.id, entity.template_name)
 
-		return 
+		return
 	end
 
 	return f and f.last_attach_point_xform and f.last_attach_point_xform[idx]
@@ -467,14 +467,14 @@ function EXO:hide_parts_with_string(sprite, s)
 	if not sprite then
 		log.error("sprite missing")
 
-		return 
+		return
 	end
 
 	if sprite.exo_hide_prefix then
 		if #sprite.exo_hide_prefix >= 8 then
 			log.error("only a max of 8 exo hide patterns can be set")
 
-			return 
+			return
 		end
 
 		table.insert_mt(sprite.exo_hide_prefix, s)
@@ -487,13 +487,13 @@ function EXO:show_parts_with_string(sprite, s)
 	if not sprite then
 		log.error("sprite missing")
 
-		return 
+		return
 	end
 
 	local t = sprite.exo_hide_prefix
 
 	if not t then
-		return 
+		return
 	end
 
 	local mt = getmetatable(t)
@@ -517,7 +517,7 @@ function EXO:show_all_parts(sprite)
 	if not sprite then
 		log.error("sprite missing")
 
-		return 
+		return
 	end
 
 	if sprite.exo_hide_prefix then
@@ -529,7 +529,7 @@ function EXO:is_hiding_parts_with_string(sprite, s)
 	if not sprite then
 		log.error("sprite missing")
 
-		return 
+		return
 	end
 
 	local t = sprite.exo_hide_prefix

@@ -524,7 +524,7 @@ function U.animation_start_group(entity, name, flip_x, ts, loop, group)
 	if not group then
 		U.animation_start(entity, name, flip_x, ts, loop)
 
-		return 
+		return
 	end
 
 	local sprites = entity.render.sprites
@@ -570,7 +570,7 @@ function U.y_animation_play_group(entity, name, flip_x, ts, times, group)
 	if not group then
 		U.y_animation_play(entity, name, flip_x, ts, times)
 
-		return 
+		return
 	end
 
 	-- local loop = times and times > 1
@@ -602,7 +602,7 @@ function U.y_animation_wait_group(entity, group, times)
 	if not group then
 		U.y_animation_wait(entity, nil, times)
 
-		return 
+		return
 	end
 
 	for i = 1, #entity.render.sprites do
@@ -643,7 +643,7 @@ end
 ---@param keep boolean? 是否保持隐藏计数（可选）
 function U.sprites_hide(entity, from, to, keep)
 	if not entity or not entity.render then
-		return 
+		return
 	end
 
 	from = from or 1
@@ -678,7 +678,7 @@ end
 ---@param restore boolean? 是否恢复隐藏状态（可选）
 function U.sprites_show(entity, from, to, restore)
 	if not entity or not entity.render then
-		return 
+		return
 	end
 
 	from = from or 1
@@ -1594,7 +1594,7 @@ function U.cleanup_blockers(store, blocked)
 	local blockers = blocked.enemy.blockers
 
 	if not blockers then
-		return 
+		return
 	end
 
 	for i = #blockers, 1, -1 do
@@ -1875,7 +1875,7 @@ function U.push_bans(t, value, op)
 		if DEBUG then
 			assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
 		else
-			return 
+			return
 		end
 	end
 
@@ -2399,7 +2399,7 @@ function U.push_bans(t, value, op)
 		if DEBUG then
 			assert(false, "error in push_ban: invalid bit op " .. tostring(op) .. " for vis table " .. tostring(t))
 		else
-			return 
+			return
 		end
 	end
 
@@ -2416,9 +2416,9 @@ function U.pop_bans(t, ref)
 		if DEBUG then
 			log.error("error in pop_ban: nil _bans_stack for vis table %s", t)
 
-			return 
+			return
 		else
-			return 
+			return
 		end
 	end
 
@@ -2426,7 +2426,7 @@ function U.pop_bans(t, ref)
 		if DEBUG then
 			assert(false, "error in pop_ban: popping with stack size <= 1 for vis " .. tostring(t))
 		else
-			return 
+			return
 		end
 	end
 
@@ -2562,7 +2562,7 @@ function U.flags_add(vis, mask)
 
 			vis.flags = gain_f(f_refs)
 
-			return 
+			return
 		end
 	end
 
@@ -2591,7 +2591,7 @@ function U.flags_remove(vis, mask)
 
 			vis.flags = gain_f(f_refs)
 
-			return 
+			return
 		end
 	end
 
@@ -2620,7 +2620,7 @@ function U.bans_add(vis, mask)
 
 			vis.bans = gain_f(f_refs)
 
-			return 
+			return
 		end
 	end
 
@@ -2649,7 +2649,7 @@ function U.bans_remove(vis, mask)
 
 			vis.bans = gain_f(f_refs)
 
-			return 
+			return
 		end
 	end
 

@@ -87,7 +87,7 @@ if KR_TARGET == "universal" then
 	else
 		print("ERROR: KR_TARGET==universal and not solved in this platform")
 
-		return 
+		return
 	end
 end
 
@@ -428,7 +428,7 @@ function love.load(arg)
 		if not love.filesystem.mount(base_dir, "/", true) then
 			log.error("error mounting assets base_dir: %s", base_dir)
 
-			return 
+			return
 		end
 
 		for _, n in pairs({KR_PATH_ALL_TARGET, KR_PATH_GAME_TARGET}) do
@@ -440,7 +440,7 @@ function love.load(arg)
 			if not love.filesystem.mount(fn, dn, true) then
 				log.error("error mounting assets file: %s", fn)
 
-				return 
+				return
 			end
 		end
 	end
@@ -861,7 +861,7 @@ function love.run()
 
 				for e, a, b, c, d in love.event.poll() do
 					if e == "quit" and (not love.quit or not love.quit()) then
-						return 
+						return
 					end
 
 					love.handlers[e](a, b, c, d)
@@ -947,7 +947,7 @@ function love.run()
 
 				for e, a, b, c, d in love.event.poll() do
 					if e == "quit" and (not love.quit or not love.quit()) then
-						return 
+						return
 					end
 
 					love.handlers[e](a, b, c, d)
@@ -1058,14 +1058,14 @@ function love.errorhandler(msg)
 	pcall(crash_report, stack_msg)
 
 	if not love.window or not G or not love.event then
-		return 
+		return
 	end
 
 	if not G.isCreated() or not love.window.isOpen() then
 		local success, status = pcall(love.window.setMode, 800, 600)
 
 		if not success or not status then
-			return 
+			return
 		end
 	end
 
@@ -1216,16 +1216,16 @@ function love.errorhandler(msg)
 
 				love.event.quit()
 
-				return 
+				return
 			elseif e == "keypressed" then
 				if a == "escape" and error_type == "coro" then
 					quiterr = true
 
-					return 
+					return
 				elseif a == "-" then
 					show_last = not show_last
 				else
-					return 
+					return
 				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()
@@ -1238,7 +1238,7 @@ function love.errorhandler(msg)
 				local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
 				if pressed == 1 then
-					return 
+					return
 				end
 			end
 		end

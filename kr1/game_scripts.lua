@@ -487,7 +487,7 @@ function scripts.necromancer_aura.update(this, store)
 		if not source then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if store.tick_ts - last_ts >= this.aura.cycle_time then
@@ -598,7 +598,7 @@ function scripts.drill.update(this, store)
 	if not target or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local no = P:predict_enemy_node_advance(target, b.flight_time)
@@ -663,7 +663,7 @@ function scripts.amazona_gain_mod.update(this, store)
 		if not target or target.health.dead then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.render and m.use_mod_offset and target.unit.mod_offset then
@@ -774,7 +774,7 @@ function scripts.soldier_dwarf.update(this, store)
 		if this.health.dead then
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.reinforcement then
@@ -787,7 +787,7 @@ function scripts.soldier_dwarf.update(this, store)
 
 				SU.y_soldier_death(store, this)
 
-				return 
+				return
 			end
 		end
 
@@ -862,7 +862,7 @@ function scripts.tower_sasquash_holder.update(this, store)
 					SU.insert_sprite(store, this.unfreeze_fx, this.pos)
 					queue_remove(store, this)
 
-					return 
+					return
 				end
 			end
 		end
@@ -1537,7 +1537,7 @@ scripts.enemy_sheep = {
 			if this.health.dead then
 				SU.y_enemy_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.ui.clicked then
@@ -1577,7 +1577,7 @@ scripts.enemy_shaman = {
 			if this.health.dead then
 				SU.y_enemy_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -1654,7 +1654,7 @@ scripts.enemy_spider_big = {
 			if this.health.dead then
 				SU.y_enemy_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -1757,7 +1757,7 @@ scripts.enemy_troll_chieftain = {
 			if this.health.dead then
 				SU.y_enemy_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -1817,7 +1817,7 @@ function scripts.enemy_demon_mage.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1913,7 +1913,7 @@ function scripts.enemy_demon_legion.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -1990,7 +1990,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -2125,7 +2125,7 @@ scripts.enemy_zombiemancer = {
 			if this.health.dead then
 				SU.y_enemy_death(store, this)
 
-				return 
+				return
 			end
 
 			if this.unit.is_stunned then
@@ -2296,7 +2296,7 @@ function scripts.enemy_necromancer.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -2414,7 +2414,7 @@ function scripts.enemy_troll_skater.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -2563,7 +2563,7 @@ function scripts.eb_juggernaut.update(this, store)
 			U.y_animation_play(this, "death", nil, store.tick_ts)
 			signal.emit("boss-killed", this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -2727,7 +2727,7 @@ function scripts.eb_jt.update(this, store)
 			LU.kill_all_enemies(store, true)
 			signal.emit("boss-killed", this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned and not this.dying then
@@ -2857,7 +2857,7 @@ function scripts.mod_jt_tower.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	SU.tower_block_inc(target)
@@ -2971,7 +2971,7 @@ function scripts.eb_veznan.update(this, store)
 		if not towers or #towers == 0 then
 			SU.delay_attack(store, ba, 0.5)
 
-			return 
+			return
 		end
 
 		local start_ts = store.tick_ts
@@ -3321,7 +3321,7 @@ function scripts.mod_veznan_tower.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos.x, this.pos.y = target.pos.x, target.pos.y
@@ -3491,7 +3491,7 @@ function scripts.eb_greenmuck.update(this, store)
 				spawner.interrupt = true
 			end
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -3598,7 +3598,7 @@ function scripts.eb_kingpin.update(this, store)
 			signal.emit("boss-killed", this)
 			SU.fade_out_entity(store, this, this.unit.fade_time_after_death)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -3686,7 +3686,7 @@ function scripts.eb_ulgukhai.update(this, store)
 			signal.emit("boss-killed", this)
 			SU.fade_out_entity(store, this, this.unit.fade_time_after_death)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -3783,7 +3783,7 @@ function scripts.eb_moloch.update(this, store)
 			-- LU.kill_all_enemies(store, true)
 			this.phase = "death-complete"
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -3920,7 +3920,7 @@ function scripts.eb_myconid.update(this, store)
 			signal.emit("boss-killed", this)
 			SU.fade_out_entity(store, this, this.unit.fade_time_after_death)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -4067,7 +4067,7 @@ function scripts.eb_blackburn.update(this, store)
 				LU.kill_all_enemies(store, true)
 			end
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -4180,7 +4180,7 @@ function scripts.mod_blackburn_tower.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -4219,7 +4219,7 @@ function scripts.blackburn_aura.update(this, store)
 		if not source or source.health.dead then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		this.pos = source.pos
@@ -5059,7 +5059,7 @@ function scripts.aura_chill_elora.update(this, store)
 			this.tween.disabled = false
 			this.tween.ts = store.tick_ts
 
-			return 
+			return
 		end
 
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
@@ -5104,7 +5104,7 @@ function scripts.aura_slow_bolin.update(this, store)
 			this.tween.disabled = false
 			this.tween.ts = store.tick_ts
 
-			return 
+			return
 		end
 
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
@@ -5137,7 +5137,7 @@ function scripts.aura_ignus_particles.update(this, store)
 	if not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = source.pos
@@ -5195,7 +5195,7 @@ function scripts.aura_ignus_surge_of_flame.update(this, store)
 	if not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = source.pos
@@ -5262,7 +5262,7 @@ function scripts.aura_ingvar_bear_regenerate.update(this, store)
 		log.error("hero not found for aura_ingvar_bear_regenerate")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.aura.ts = store.tick_ts
@@ -5288,7 +5288,7 @@ function scripts.aura_10yr_particles.update(this, store)
 	if not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = source.pos
@@ -5560,7 +5560,7 @@ function scripts.mod_thorn.update(this, store)
 	if not target or not target.health or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	-- if this.max_times_applied then
@@ -5622,7 +5622,7 @@ function scripts.mod_ray_arcane.update(this, store)
 	if not target or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local function apply_damage(value)
@@ -5689,7 +5689,7 @@ function scripts.mod_ray_arcane_disintegrate.update(this, store)
 	local target = store.entities[m.target_id]
 
 	if not target or target.health.dead then
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -6073,7 +6073,7 @@ function scripts.mod_hero_thor_thunderclap.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = V.vclone(target.pos)
@@ -6167,7 +6167,7 @@ function scripts.mod_witch_frog.update(this, store)
 	if not target or not target.health or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local damage_type = target.hero and m.hero_damage_type or m.damage_type
@@ -6175,7 +6175,7 @@ function scripts.mod_witch_frog.update(this, store)
 	if band(target.health.immune_to, damage_type) ~= 0 then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local d = E:create_entity("damage")
@@ -6190,7 +6190,7 @@ function scripts.mod_witch_frog.update(this, store)
 	if target.hero then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	U.y_wait(store, this.frog_delay)
@@ -6344,7 +6344,7 @@ function scripts.mod_gulaemon_fly.update(this, store)
 		if not target or target.health.dead or store.tick_ts - m.ts > m.duration or P:nodes_to_defend_point(target.nav_path) < this.nodes_limit then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -6405,7 +6405,7 @@ function scripts.graveyard_controller.update(this, store)
 		else
 			for _, t in ipairs(targets) do
 				if this.interrupt then
-					return 
+					return
 				end
 
 				t._in_graveyard = true
@@ -6464,7 +6464,7 @@ function scripts.graveyard_s110.update(this, store)
 		else
 			for _, t in ipairs(targets) do
 				if this.interrupt then
-					return 
+					return
 				end
 
 				t._in_graveyard = true
@@ -7010,7 +7010,7 @@ function scripts.enemy_tremor.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7109,7 +7109,7 @@ function scripts.enemy_munra.update(this, store)
 				AC:got("MUMMYATTHEGATES")
 			end
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7278,7 +7278,7 @@ function scripts.enemy_cannibal.update(this, store)
 
 			water_trail.particle_system.emit = false
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7393,7 +7393,7 @@ function scripts.alien_egg.update(this, store)
 			S:queue(this.sound_events.destroy)
 			U.y_animation_play(this, "destroy", nil, store.tick_ts)
 
-			return 
+			return
 		end
 
 		if this.do_spawn then
@@ -7504,7 +7504,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7611,7 +7611,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 							queue_insert(store, e)
 						end
 
-						return 
+						return
 					end
 
 					this.vis.bans = band(this.vis.bans, bnot(F_TWISTER))
@@ -7646,7 +7646,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7778,7 +7778,7 @@ function scripts.enemy_cannibal_volcano.update(this, store)
 
 			queue_insert(store, e)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7855,7 +7855,7 @@ function scripts.enemy_cannibal_volcano.update(this, store)
 
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			::label_24_0::
@@ -7904,7 +7904,7 @@ function scripts.enemy_nightscale.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -7995,7 +7995,7 @@ function scripts.enemy_darter.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8097,7 +8097,7 @@ function scripts.enemy_savant.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8264,7 +8264,7 @@ function scripts.enemy_quetzal.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8314,7 +8314,7 @@ function scripts.enemy_sniper.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8463,7 +8463,7 @@ function scripts.enemy_blacksurge.update(this, store)
 
 			water_trail.particle_system.emit = false
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8638,7 +8638,7 @@ function scripts.enemy_bluegale.update(this, store)
 
 			water_trail.particle_system.emit = false
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8751,7 +8751,7 @@ function scripts.enemy_deviltide_shark.update(this, store)
 
 			water_trail.particle_system.emit = false
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -8764,7 +8764,7 @@ function scripts.enemy_deviltide_shark.update(this, store)
 				log.warning("enemy %s ran out of nodes to walk", this.id)
 				coroutine.yield()
 
-				return 
+				return
 			end
 
 			U.set_destination(this, next)
@@ -8814,7 +8814,7 @@ function scripts.enemy_deviltide_shark.update(this, store)
 
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 		end
 	end
@@ -8833,7 +8833,7 @@ function scripts.phantom_warrior_aura.update(this, store)
 	if not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = source.pos
@@ -8844,7 +8844,7 @@ function scripts.phantom_warrior_aura.update(this, store)
 		if not source or source.health.dead then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if not source.enemy.can_do_magic then
@@ -8923,7 +8923,7 @@ function scripts.enemy_headless_horseman.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if store.tick_ts - this.lifespan.ts > this.lifespan.duration then
@@ -8936,7 +8936,7 @@ function scripts.enemy_headless_horseman.update(this, store)
 			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -9112,7 +9112,7 @@ function scripts.aura_damage_sprint.update(this, store)
 		if not target or target.health.dead or not target.motion then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.last_sprint_hp ~= target.health.hp then
@@ -9288,7 +9288,7 @@ function scripts.elvira_bat.update(this, store)
 		U.y_animation_play(this, "death", nil, store.tick_ts)
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	if this.payload then
@@ -10343,7 +10343,7 @@ function scripts.eb_efreeti.update(this, store)
 			queue_remove(store, this)
 			signal.emit("boss-killed", this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -10427,7 +10427,7 @@ function scripts.eb_efreeti.update(this, store)
 
 			if not U.get_blocker(store, this) then
 				if not SU.y_enemy_walk_step(store, this) then
-					return 
+					return
 				end
 			else
 				coroutine.yield()
@@ -10523,7 +10523,7 @@ function scripts.eb_gorilla.update(this, store)
 			U.y_animation_play(this, "death", nil, store.tick_ts)
 			signal.emit("boss-killed", this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -10732,7 +10732,7 @@ function scripts.eb_gorilla.update(this, store)
 
 				if not U.get_blocker(store, this) then
 					if not SU.y_enemy_walk_step(store, this) then
-						return 
+						return
 					end
 
 					goto label_249_0
@@ -11123,7 +11123,7 @@ function scripts.eb_umbra.update(this, store)
 					queue_remove(store, this)
 					signal.emit("boss-killed", this)
 
-					return 
+					return
 				else
 					S:queue("FrontiersFinalBossExplode")
 
@@ -11434,7 +11434,7 @@ function scripts.enemy_umbra_piece.update(this, store)
 			U.y_animation_play(this, "fuse", nil, store.tick_ts, 1)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.health.dead then
@@ -11446,7 +11446,7 @@ function scripts.enemy_umbra_piece.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -11537,7 +11537,7 @@ function scripts.umbra_guy.update(this, store)
 			U.y_animation_wait(this)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if last_lives ~= store.lives and store.tick_ts - taunt.ts > taunt.cooldown * 0.5 then
@@ -11768,7 +11768,7 @@ function scripts.eb_leviathan.update(this, store)
 			queue_remove(store, this)
 			signal.emit("boss-killed", this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -11811,7 +11811,7 @@ function scripts.eb_leviathan.update(this, store)
 			end
 
 			if not SU.y_enemy_walk_step(store, this) then
-				return 
+				return
 			end
 		end
 
@@ -12016,7 +12016,7 @@ function scripts.dracula_damage_aura.update(this, store)
 	if not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = source.pos
@@ -13229,7 +13229,7 @@ function scripts.enemy_gunboat.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -13716,7 +13716,7 @@ function scripts.steam_frigate_mine.update(this, store)
 
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 	end
 
@@ -14280,7 +14280,7 @@ function scripts.moon_enemy_aura.update(this, store)
 			log.paranoid("X removing moon_enemy_aura for source id:%s", this.aura.source_id)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if store.level.moon_controller.moon_active and not source.moon.active then
@@ -14338,7 +14338,7 @@ function scripts.points_spawner.update(this, store)
 		log.error("points_spawner not initialized. points, grops or waves missing")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	while true do
@@ -14494,7 +14494,7 @@ function scripts.decal_stage22_reptile.update(this, store)
 			-- AC:got("FOUND_ME")
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -15016,7 +15016,7 @@ function scripts.voodoo_witch_skull.update(this, store)
 		log.debug("no owner or spawner. removing skull")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	table.insert(owner.skulls, this)
@@ -15345,7 +15345,7 @@ function scripts.decal_arachnomancer_mini_spider.update(this, store)
 			U.y_animation_play(this, "death", nil, store.tick_ts)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		state = os.name
@@ -16150,7 +16150,7 @@ function scripts.soldier_blade.update(this, store)
 		else
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -16374,7 +16374,7 @@ function scripts.soldier_forest.update(this, store)
 		else
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -16576,7 +16576,7 @@ function scripts.soldier_druid_bear.update(this, store)
 
 			this.health_bar.hidden = true
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -16716,7 +16716,7 @@ function scripts.soldier_drow.update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17293,7 +17293,7 @@ function scripts.enemy_gnoll_blighter.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17370,7 +17370,7 @@ function scripts.enemy_hyena.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17422,7 +17422,7 @@ function scripts.enemy_ettin.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17529,7 +17529,7 @@ function scripts.enemy_perython_carrier.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17560,7 +17560,7 @@ function scripts.enemy_twilight_elf_harasser.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17707,7 +17707,7 @@ function scripts.enemy_catapult.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if phase == 2 then
@@ -17761,7 +17761,7 @@ function scripts.enemy_catapult.update(this, store)
 			if phase == 3 then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			this.health_bar.hidden = false
@@ -17826,7 +17826,7 @@ function scripts.enemy_bandersnatch.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17902,7 +17902,7 @@ function scripts.enemy_boomshrooms.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -17950,7 +17950,7 @@ function scripts.enemy_shroom_breeder.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18048,7 +18048,7 @@ function scripts.enemy_gloomy.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18108,7 +18108,7 @@ function scripts.enemy_satyr_hoplite.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18193,7 +18193,7 @@ function scripts.enemy_twilight_avenger.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18287,7 +18287,7 @@ function scripts.enemy_twilight_scourger.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18455,7 +18455,7 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store)
 			SU.y_enemy_death(store, this)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -18491,7 +18491,7 @@ function scripts.enemy_webspitting_spider.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18572,7 +18572,7 @@ function scripts.enemy_zealot.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18639,7 +18639,7 @@ function scripts.enemy_twilight_evoker.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18771,7 +18771,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -18986,7 +18986,7 @@ function scripts.enemy_mantaray.update(this, store)
 
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -19127,7 +19127,7 @@ function scripts.enemy_mantaray.update(this, store)
 						U.y_animation_wait(this)
 						queue_remove(store, this)
 
-						return 
+						return
 					end
 
 					this.unit.ignore_stun = nil
@@ -19182,7 +19182,7 @@ function scripts.enemy_razorboar.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -19311,7 +19311,7 @@ function scripts.enemy_arachnomancer.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -19671,7 +19671,7 @@ function scripts.enemy_bloodsydian_warlock.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -19745,7 +19745,7 @@ function scripts.enemy_ogre_magi.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -19886,7 +19886,7 @@ function scripts.mod_ogre_magi_shield.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -19932,7 +19932,7 @@ function scripts.enemy_screecher_bat.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -20001,7 +20001,7 @@ function scripts.enemy_grim_devourers.update(this, store)
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -20182,7 +20182,7 @@ function scripts.eb_gnoll.update(this, store)
 
 			this.phase = "death-complete"
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -20771,7 +20771,7 @@ function scripts.eb_drow_queen.update(this, store)
 
 			signal.emit("boss-killed", this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -20883,7 +20883,7 @@ function scripts.eb_spider.update(this, store)
 		if #nodes < 0 then
 			log.error("eb_spider: could not find node near %s,%s in paths:%s", round.pos.x, round.pos.y, getdump(pis))
 
-			return 
+			return
 		else
 			dest_node = {
 				spi = 1,
@@ -20978,7 +20978,7 @@ function scripts.eb_spider.update(this, store)
 		end)
 
 		if #towers < 1 then
-			return 
+			return
 		end
 
 		local tower = table.random(towers)
@@ -21075,7 +21075,7 @@ function scripts.eb_spider.update(this, store)
 
 			LU.kill_all_enemies(store, true)
 
-			return 
+			return
 		end
 
 		if ready_to_jump() then
@@ -21244,7 +21244,7 @@ function scripts.eb_bram.update(this, store)
 
 			this.phase = "death-complete"
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -21330,7 +21330,7 @@ function scripts.mod_bram_slap.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -21347,7 +21347,7 @@ function scripts.mod_bram_slap.update(this, store)
 	if not target or not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local af = source.pos.x > target.pos.x
@@ -21456,7 +21456,7 @@ function scripts.eb_bajnimen.update(this, store)
 
 			this.phase = "death-complete"
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -21630,7 +21630,7 @@ function scripts.eb_balrog.update(this, store)
 
 			this.phase = "death-complete"
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -22120,7 +22120,7 @@ function scripts.mod_block_tower_ainyl.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	SU.tower_block_inc(target)
@@ -23084,7 +23084,7 @@ function scripts.bullet_liquid_fire_faustus.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local nodes = P:nearest_nodes(b.to.x, b.to.y, {target.nav_path.pi}, {target.nav_path.spi}, true)
@@ -23101,7 +23101,7 @@ function scripts.bullet_liquid_fire_faustus.update(this, store)
 		log.debug("cannot deploy bullet_liquid_fire_faustus: no destination node")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local node_pos = P:node_pos(node)
@@ -23551,7 +23551,7 @@ function scripts.aura_lilith_soul_eater.update(this, store)
 		log.error("hero not found for aura_lilith_soul_eater")
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	while true do
@@ -23964,7 +23964,7 @@ function scripts.mod_timelapse.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -24000,7 +24000,7 @@ function scripts.mod_timelapse.queue(this, store, insertion)
 end
 
 function scripts.mod_timelapse.dequeue(this, store, insertion)
-	return 
+	return
 end
 
 function scripts.mod_timelapse.insert(this, store)
@@ -24034,7 +24034,7 @@ function scripts.mod_timelapse.update(this, store)
 	if not target or not target.health or target.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -24178,7 +24178,7 @@ function scripts.mod_arrow_silver_mark.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -24197,7 +24197,7 @@ function scripts.mod_arrow_silver_mark.update(this, store)
 			U.y_wait(store, this.tween.props[3].keys[2][1])
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -24223,7 +24223,7 @@ function scripts.mod_eldritch.update(this, store)
 	if not target or not target.health or target.health.dead or not U.flags_pass(target.vis, this.modifier) then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local es = E:create_entity("eldritch_enemy_decal")
@@ -24359,7 +24359,7 @@ function scripts.mod_bravebark_branchball.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion then
@@ -24376,7 +24376,7 @@ function scripts.mod_bravebark_branchball.update(this, store)
 	if not target or not source then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local af = source.pos.x > target.pos.x
@@ -24502,7 +24502,7 @@ function scripts.mod_rag_raggified.update(this, store)
 	if not target or target.health.dead or band(target.vis.bans, F_RAGGIFY) ~= 0 then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	target.vis.bans = U.flag_set(target.vis.bans, F_RAGGIFY)
@@ -24796,7 +24796,7 @@ function scripts.mod_gnoll_blighter.update(this, store)
 	if not target or not target.plant then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local p = target.plant
@@ -24964,7 +24964,7 @@ function scripts.mod_twilight_scourger_banshee.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	target._is_banshee_target = nil
@@ -25051,7 +25051,7 @@ function scripts.mod_twilight_heretic_consume.update(this, store)
 	if not target or not target.pos then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local st = target.render.sprites[1]
@@ -25065,7 +25065,7 @@ function scripts.mod_twilight_heretic_consume.update(this, store)
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or P:nodes_to_goal(target.nav_path) < this.nodes_limit then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		local oy, hoy = 0, 0
@@ -25093,7 +25093,7 @@ function scripts.mod_twilight_heretic_servant.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	m.ts = store.tick_ts
@@ -25223,7 +25223,7 @@ function scripts.decal_drider_cocoon.update(this, store)
 		log.error("(%s) decal_drider_cocoon: could not find valid node to spawn enemy. %s,%s", this.id, this.pos.x, this.pos.y)
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local e = E:create_entity("enemy_drider")
@@ -25284,7 +25284,7 @@ function scripts.mod_razorboar_rampage_speed.update(this, store)
 		if not target or target.health.dead or not target.enemy.can_do_magic or store.tick_ts - m.ts >= m.duration then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		coroutine.yield()
@@ -25300,7 +25300,7 @@ function scripts.mod_mactans_tower_block.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	SU.tower_block_inc(target)
@@ -25324,7 +25324,7 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
 	if not target or target.health.dead or not U.flags_pass(target.vis, this.modifier) then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	SU.stun_inc(target)
@@ -25949,7 +25949,7 @@ function scripts.mod_kill_elynia.queue(this, store, insertion)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return 
+		return
 	end
 
 	if insertion and not U.flag_has(target.vis.flags, F_BOSS) then
@@ -26216,7 +26216,7 @@ function scripts.decal_bambi.update(this, store)
 				queue_insert(store, blood)
 				queue_remove(store, this)
 
-				return 
+				return
 			else
 				U.y_animation_play(this, "touch", nil, store.tick_ts)
 			end
@@ -26328,7 +26328,7 @@ function scripts.decal_crane.update(this, store)
 				U.y_animation_play(this, this.final_click_animation, nil, store.tick_ts, 1, 1)
 				queue_remove(store, this)
 
-				return 
+				return
 			else
 				U.y_animation_play(this, this.click_animation, nil, store.tick_ts, 1, 1)
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
@@ -26416,7 +26416,7 @@ function scripts.decal_river_object.update(this, store)
 			-- AC:inc_check(this.achievement_inc)
 			end
 
-			return 
+			return
 		end
 	end
 
@@ -26661,7 +26661,7 @@ function scripts.soldier_ewok.update(this, store)
 		if this.health.dead then
 			SU.y_soldier_death(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -26828,7 +26828,7 @@ function scripts.aura_soldier_gryphon_guard_upper.update(this, store)
 		if not target then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		local attack = target.ranged.attacks[1]
@@ -26848,7 +26848,7 @@ function scripts.aura_soldier_gryphon_guard_lower.update(this, store)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local attack = target.ranged.attacks[1]
@@ -27552,7 +27552,7 @@ scripts.aura_tower_faerie_dragon = {
 			if not source then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if store.tick_ts - last_ts >= source.attacks.list[1].cooldown then
@@ -29080,7 +29080,7 @@ function scripts.decal_s15_mactans.update(this, store)
 			U.y_animation_play(this, "jumpToCrystal", nil, store.tick_ts, 1)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if attack_pending and cooldown < store.tick_ts - attack_ts then
@@ -29137,7 +29137,7 @@ function scripts.decal_s15_malicia.update(this, store)
 			U.y_animation_play(this, "jumpToCrystal", nil, store.tick_ts, 1, 1)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if attack_pending and cooldown < store.tick_ts - attack_ts then
@@ -29180,7 +29180,7 @@ function scripts.decal_s15_statue.update(this, store)
 			this.render.sprites[1].z = Z_DECALS
 			this.phase = "broken"
 
-			return 
+			return
 		elseif this.phase_signal == "hit" then
 			this.phase_signal = nil
 
@@ -29491,7 +29491,7 @@ function scripts.decal_s18_roadrunner_bush.update(this, store)
 				U.y_ease_key(store, coyo.render.sprites[1], "alpha", 255, 0, 0.5)
 				queue_remove(store, coyo)
 
-				return 
+				return
 			else
 				shake_ts = -99
 
@@ -30435,7 +30435,7 @@ function scripts.mod_endless_barrack_synergy.update(this, store)
 
 	queue_remove(store, this)
 
-	return 
+	return
 end
 
 function scripts.mod_endless_barrack_synergy.remove(this, store)
@@ -30792,7 +30792,7 @@ function scripts.decal_soldier_shadow.update(this, store)
 
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		local offset_y = this.entity.render.sprites[1].offset.y
@@ -31094,7 +31094,7 @@ function scripts.eb_jack.update(this, store)
 
 			store.boss_killed = true
 
-			return 
+			return
 		end
 
 		if last_quit_hp - this.health.hp >= quit_threshold then
@@ -31172,7 +31172,7 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 	if not source or source.health.dead then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	local a = this.aura
@@ -31185,7 +31185,7 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 		if not source or source.health.dead then
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		do
@@ -31230,7 +31230,7 @@ scripts.shaman_gravity_aura = {
 			if not source or source.health.dead then
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			if store.tick_ts - a.ts < a.cycle_time or (not source.enemy.can_do_magic) then
@@ -31473,7 +31473,7 @@ function scripts.controller_elemental_wood.update(this, store)
 	if not this.target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	S:queue("TerrainWukongElementalHolderEvolve")
@@ -31536,7 +31536,7 @@ function scripts.controller_elemental_wood.update(this, store)
 
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			this.target = new_tower
@@ -31782,7 +31782,7 @@ function scripts.multi_sprite_fx.update(this, store)
 					queue_remove(store, this)
 				end
 
-				return 
+				return
 			end
 		end
 
@@ -31952,7 +31952,7 @@ function scripts.controller_elemental_fire.update(this, store)
 	if not this.target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	S:queue("TerrainWukongElementalHolderEvolve")
@@ -32010,7 +32010,7 @@ function scripts.controller_elemental_fire.update(this, store)
 
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			this.target = new_tower
@@ -32330,7 +32330,7 @@ function scripts.controller_elemental_water.update(this, store)
 	if not this.target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	S:queue("TerrainWukongElementalHolderEvolve")
@@ -32394,7 +32394,7 @@ function scripts.controller_elemental_water.update(this, store)
 				queue_remove(store, aura_controller)
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			this.target = tower
@@ -32745,7 +32745,7 @@ function scripts.controller_elemental_earth.update(this, store)
 	if not this.target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	S:queue("TerrainWukongElementalHolderEvolve")
@@ -32809,7 +32809,7 @@ function scripts.controller_elemental_earth.update(this, store)
 
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			this.target = new_tower
@@ -33051,7 +33051,7 @@ function scripts.soldier_earth_elemental.update(this, store, script)
 			table.removeobject(this.source_holder.spawns_ref, this)
 			queue_remove(store, this)
 
-			return 
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -33131,7 +33131,7 @@ function scripts.mod_elemental_earth_increase_health.update(this, store, script)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -33344,7 +33344,7 @@ function scripts.controller_elemental_metal.update(this, store)
 
 	local function remove_price_multiplier()
 		if not this.target.tower.upgrade_price_multiplier then
-			return 
+			return
 		end
 
 		this.target.tower.upgrade_price_multiplier = this.target.tower.upgrade_price_multiplier / this.upgrade_price_multiplier
@@ -33363,7 +33363,7 @@ function scripts.controller_elemental_metal.update(this, store)
 	if not this.target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	S:queue("TerrainWukongElementalHolderEvolve")
@@ -33419,7 +33419,7 @@ function scripts.controller_elemental_metal.update(this, store)
 				remove_price_multiplier()
 				queue_remove(store, this)
 
-				return 
+				return
 			end
 
 			tower = new_tower
@@ -33618,7 +33618,7 @@ function scripts.mod_elemental_metal_gold_per_damage.update(this, store, script)
 	if not target then
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 
 	this.pos = target.pos
@@ -33709,7 +33709,7 @@ function scripts.controller_s93.update(this, store)
 	else
 		queue_remove(store, this)
 
-		return 
+		return
 	end
 end
 

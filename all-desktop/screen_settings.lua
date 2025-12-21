@@ -440,7 +440,7 @@ function screen_settings:keypressed(key, isrepeat)
 end
 
 function screen_settings:keyreleased(key, isrepeat)
-	return 
+	return
 end
 
 function screen_settings:mousepressed(x, y, button)
@@ -607,7 +607,7 @@ function CheckBox:on_keypressed(key)
 end
 
 function CheckBox:on_change(value)
-	return 
+	return
 end
 
 function CheckBox:draw_focus()
@@ -692,7 +692,7 @@ function SelectList:select_item(item)
 end
 
 function SelectList:on_focus()
-	return 
+	return
 end
 
 function SelectList:on_keypressed(key)
@@ -707,7 +707,7 @@ function SelectList:on_keypressed(key)
 	end
 
 	if #self.children < 1 then
-		return 
+		return
 	end
 
 	local i = get_item_index(self.selected_item)

@@ -207,7 +207,7 @@ function sound_db:load_group(name, yielding, filter)
 	if not self.groups[name] then
 		log.error("sound group %s not found", name)
 
-		return 
+		return
 	end
 
 	if self.sounds_uses[name] then
@@ -215,7 +215,7 @@ function sound_db:load_group(name, yielding, filter)
 
 		log.debug("sounds %s already loaded", name)
 
-		return 
+		return
 	end
 
 	self.sounds_uses[name] = 1
@@ -365,19 +365,19 @@ function sound_db:unload_group(name)
 	if not self.sounds_uses[name] then
 		log.error("sound group %s not loaded. cannot unload", name)
 
-		return 
+		return
 	end
 
 	self.sounds_uses[name] = self.sounds_uses[name] - 1
 
 	if self.sounds_uses[name] > 0 then
-		return 
+		return
 	end
 
 	local group = self.groups[name]
 
 	if group.keep then
-		return 
+		return
 	end
 
 	self.sounds_uses[name] = nil
@@ -443,7 +443,7 @@ sound_db.request_queue = {}
 
 function sound_db:queue(id, options)
 	if not id then
-		return 
+		return
 	end
 
 	if not self.sounds[id] then
@@ -451,7 +451,7 @@ function sound_db:queue(id, options)
 		-- 打印调用栈
 		log.error(debug.traceback())
 
-		return 
+		return
 	end
 
 	local opts
@@ -669,7 +669,7 @@ function sound_db:play(request)
 	local play_due = true
 
 	if options.chance and math.random() >= options.chance then
-		return 
+		return
 	end
 
 	if options.every then
@@ -718,7 +718,7 @@ function sound_db:play(request)
 	if not pools or #pools == 0 then
 		log.error("SOUND %s defined but sound sources missing. Missing file during load?", request.id)
 
-		return 
+		return
 	end
 
 	if play_due then
@@ -782,7 +782,7 @@ function sound_db:_play(request, source_pool)
 	if not active_sources[opts.source_group] then
 		log.error("SOUND %s group %s not found", request.id, opts.source_group)
 
-		return 
+		return
 	end
 
 	local active = #active_sources[opts.source_group]
@@ -792,7 +792,7 @@ function sound_db:_play(request, source_pool)
 	if max == 0 then
 		log.info("max_sources for %s is 0", opts.source_group)
 
-		return 
+		return
 	end
 
 	if active < max then

@@ -154,13 +154,13 @@ function pp:init()
 
 		self.should_ask_player = false
 
-		return 
+		return
 	end
 
 	if not PS.services.http then
 		log.error("privacy_policy_consent requires platform_services_http.")
 
-		return 
+		return
 	end
 
 	self:do_phase(PH_INIT)
@@ -215,7 +215,7 @@ function pp:give_consent_with_age(month, year)
 	if not features.requires_privacy_policy then
 		log.error("ignoring consent as features.requires_privacy_policy is disabled")
 
-		return 
+		return
 	end
 
 	if not self.token then
@@ -239,7 +239,7 @@ function pp:do_phase(phase)
 
 			self:get_remote_token()
 
-			return 
+			return
 		end
 
 		log.debug("phase:%s - valid token found. underage:%s dateOfConsent:%s ", phase, self:is_underage(), self.token.dateOfConsent)
@@ -256,7 +256,7 @@ function pp:do_phase(phase)
 			self.token = table.deepclone(self.token_template)
 			self.token.offline = true
 
-			return 
+			return
 		end
 	elseif phase == PH_REMOTE_TOKEN_SUCCESS then
 		if self:is_token_valid(self.token) and self:was_overage_with_updated_age(self.token, self.remote_token) then
@@ -273,7 +273,7 @@ function pp:do_phase(phase)
 			self.token = table.deepclone(self.remote_token)
 			self.should_ask_player = true
 
-			return 
+			return
 		end
 	elseif phase == PH_STORE_TOKEN then
 		self:save_token(self.token)

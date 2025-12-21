@@ -135,7 +135,7 @@ end
 
 function gamecenter:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -146,18 +146,18 @@ function gamecenter:cancel_request(rid)
 end
 
 function gamecenter:do_signin()
-	return 
+	return
 end
 
 function gamecenter:do_signout()
-	return 
+	return
 end
 
 function gamecenter:unlock_achievement(ach_id, defer_store)
 	if not self.inited then
 		log.error("kgamekit not initialized")
 
-		return 
+		return
 	end
 
 	local gkw_ach_id = self.ids.achievements[ach_id]
@@ -165,7 +165,7 @@ function gamecenter:unlock_achievement(ach_id, defer_store)
 	if not gkw_ach_id then
 		log.error("gkw achievement id missing for %s", ach_id)
 
-		return 
+		return
 	end
 
 	self.lib.gkw_ach_unlock(gkw_ach_id)
@@ -175,7 +175,7 @@ end
 function gamecenter:sync_achievements()
 	local function cb_sync_achievements(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		local success
@@ -223,7 +223,7 @@ function gamecenter:reset_achievements()
 	if not self.inited then
 		log.error("kgamekit not initialized")
 
-		return 
+		return
 	end
 
 	self.lib.gkw_ach_reset_all()
@@ -240,7 +240,7 @@ function gamecenter:show_leaderboard(level_idx, diff_idx)
 	if not board_id then
 		log.error("gps leaderboard id missing for level_idx: %s", level_idx)
 
-		return 
+		return
 	end
 
 	self.lib.gkw_lb_show_board(board_id)
@@ -252,7 +252,7 @@ function gamecenter:submit_score(level_idx, diff_idx, score)
 	if not board_id then
 		log.error("gps leaderboard id missing for level_idx: %s", level_idx)
 
-		return 
+		return
 	end
 
 	self.lib.gkw_lb_submit_score(board_id, score)

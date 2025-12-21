@@ -475,13 +475,13 @@ function storage:set_active_slot(idx)
 	if not idx then
 		log.error("slot idx is nil")
 
-		return 
+		return
 	end
 
 	if not self:load_slot(idx) then
 		log.error("slot %s must exist before setting it as active", idx)
 
-		return 
+		return
 	end
 
 	self.active_slot_idx = idx
@@ -584,11 +584,11 @@ function storage:import_plist(filename)
 
 		storage:save_global(global)
 
-		return 
+		return
 	elseif global.plist_imported then
 		log.debug("plist was already imported. skipping")
 
-		return 
+		return
 	end
 
 	local fs
@@ -609,7 +609,7 @@ function storage:import_plist(filename)
 		if not ok then
 			log.error("error loading plist from ns_userdefaults: %s", tostring(result))
 
-			return 
+			return
 		end
 
 		fs = result
@@ -621,7 +621,7 @@ function storage:import_plist(filename)
 		if not f then
 			log.debug("plist file could not be found at %s", filename)
 
-			return 
+			return
 		end
 
 		fs = f:read("*a")
@@ -634,7 +634,7 @@ function storage:import_plist(filename)
 	if not p then
 		log.error("error parsing plist file %s", filename)
 
-		return 
+		return
 	end
 
 	if KR_PLATFORM == "android" then
@@ -729,7 +729,7 @@ function storage:import_dotnet(dirname)
 	if KR_GAME ~= "kr1" and KR_PLATFORM ~= "desktop" then
 		log.debug("only for legacy kr1-desktop. skipping")
 
-		return 
+		return
 	end
 
 	local global = storage:load_global()
@@ -737,7 +737,7 @@ function storage:import_dotnet(dirname)
 	if global.dotnet_imported then
 		log.debug("dotnet was already imported. skipping")
 
-		return 
+		return
 	end
 
 	log.info("importing dotnet from dir %s", dirname)

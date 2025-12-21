@@ -97,7 +97,7 @@ function psu:deliver_rewards(rewards)
 	if not rewards then
 		log.debug("rewards empty. skipping")
 
-		return 
+		return
 	end
 
 	local slot = storage:load_slot()
@@ -105,7 +105,7 @@ function psu:deliver_rewards(rewards)
 	if not slot then
 		log.error("error giving ad reward. slot could not be loaded")
 
-		return 
+		return
 	end
 
 	if rewards.items then

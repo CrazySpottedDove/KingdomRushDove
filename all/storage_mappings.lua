@@ -39,7 +39,7 @@ function sm:do_row(row, src, dst)
 	if not src_k or not dst_k then
 		log.error("src_k or dst_k are nil")
 
-		return 
+		return
 	end
 
 	local s_expr = "return src." .. src_k
@@ -48,7 +48,7 @@ function sm:do_row(row, src, dst)
 	if not fs then
 		log.error("error: parsing src_k. err:%s src_k:%s", err, src_k)
 
-		return 
+		return
 	end
 
 	local env = {}
@@ -62,13 +62,13 @@ function sm:do_row(row, src, dst)
 	if not ok then
 		log.error("error evaluating source key %s expresion %s", src_k, s_expr)
 
-		return 
+		return
 	end
 
 	if not s_val then
 		log.debug("source key %s is nil, skipping.", src_k)
 
-		return 
+		return
 	end
 
 	local d_parts = string.split(string.gsub(string.gsub(dst_k, "]", ""), "%[", "."), ".")
@@ -76,7 +76,7 @@ function sm:do_row(row, src, dst)
 	if not d_parts or #d_parts == 0 then
 		log.error("error splitting dest key %s", dst_k)
 
-		return 
+		return
 	end
 
 	local t = dst

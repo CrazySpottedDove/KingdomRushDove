@@ -84,7 +84,7 @@ function ah:h_entity_killed(entity, damage)
 	if not entity then
 		log.debug("nil entity")
 
-		return 
+		return
 	end
 
 	if entity.enemy then

@@ -75,7 +75,7 @@ function A:get_count(id)
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local period = ad.period or P_LIFETIME
@@ -86,13 +86,13 @@ end
 
 function A:got(id)
 	if not self:get_data(id) then
-		return 
+		return
 	end
 
 	if self.ach[id] then
 		log.debug("already got achievement %s", id)
 
-		return 
+		return
 	end
 
 	log.debug("got achievement %s", id)
@@ -112,13 +112,13 @@ function A:flag(id, flag)
 	if not flag then
 		log.error("flag value missing for %s", id)
 
-		return 
+		return
 	end
 
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local period = ad.period or P_LIFETIME
@@ -138,7 +138,7 @@ function A:flag_check(id, flag)
 	if not flag then
 		log.error("flag value missing for %s", id)
 
-		return 
+		return
 	end
 
 	local c, ad = self:flag(id, flag)
@@ -156,7 +156,7 @@ function A:inc(id, value)
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local period = ad.period or P_LIFETIME
@@ -188,13 +188,13 @@ function A:ge_check(id, value)
 	if not value then
 		log.error("value missing for %s", id)
 
-		return 
+		return
 	end
 
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local g = ad.goal or 1
@@ -215,13 +215,13 @@ function A:high(id, value)
 	if not value then
 		log.error("value missing for %s", id)
 
-		return 
+		return
 	end
 
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local period = ad.period or P_LIFETIME
@@ -246,7 +246,7 @@ function A:high_check(id, value)
 	if not value then
 		log.error("value missing for %s", id)
 
-		return 
+		return
 	end
 
 	local c, ad = self:high(id, value)
@@ -264,7 +264,7 @@ function A:lap_start(id, ts)
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local period = ad.period or P_LIFETIME
@@ -284,7 +284,7 @@ function A:lap_check(id, ts)
 	local ad = self:get_data(id)
 
 	if not ad then
-		return 
+		return
 	end
 
 	local period = ad.period or P_LIFETIME
@@ -294,7 +294,7 @@ function A:lap_check(id, ts)
 	if not start_ts then
 		log.debug("no start_ts value for %s", id)
 
-		return 
+		return
 	end
 
 	if ad and ad.goal and ts - start_ts < ad.goal then

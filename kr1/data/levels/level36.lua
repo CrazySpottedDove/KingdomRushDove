@@ -174,7 +174,7 @@ while store.tick_ts-start_ts<30 do
 if U.y_wait(store,self.volcano_bomb_delay,function(store)
 return store.waves_finished and not LU.has_alive_enemies(store)
 end) then
-return 
+return
 end
 local targets=U.find_soldiers_in_range(store.soldiers,V.v(0,0),0,1000000000,F_RANGED,F_FLYING)
 if not targets or #targets<1 then

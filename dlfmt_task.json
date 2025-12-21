@@ -8,7 +8,8 @@
 				"kr1/data/animations",
 				"kr1/data/exoskeletons",
 				"kr1/data/waves",
-				"kr1/data/levels"
+				"kr1/data/levels",
+				".versions"
 			]
 		},
 		{

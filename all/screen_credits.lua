@@ -508,7 +508,7 @@ end
 
 function screen:on_end_credits()
 	if self.end_credits_done then
-		return 
+		return
 	end
 
 	self.end_credits_done = true

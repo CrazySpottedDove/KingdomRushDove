@@ -116,7 +116,7 @@ function entity_db:register_t(name, base)
 	if self.entities[name] then
 		log.error("template %s already exists", name)
 
-		return 
+		return
 	end
 
 	local t
@@ -137,7 +137,7 @@ function entity_db:register_c(name, base)
 	if self.components[name] then
 		log.error("component %s already exists", name)
 
-		return 
+		return
 	end
 
 	local c = {}
@@ -155,7 +155,7 @@ function entity_db:clone_c(name)
 	if not self.components[name] then
 		log.error("component %s does not exist", name)
 
-		return 
+		return
 	end
 
 	return copy(self.components[name])
@@ -165,14 +165,14 @@ function entity_db:add_comps(entity, ...)
 	if entity == nil then
 		log.error("entity is nil")
 
-		return 
+		return
 	end
 
 	for _, v in pairs({...}) do
 		if not self.components[v] then
 			log.error("component %s does not exist", v)
 
-			return 
+			return
 		end
 
 		entity[v] = copy(self.components[v])
@@ -216,7 +216,7 @@ function entity_db:append_templates(entity, ...)
 	if entity == nil then
 		log.error("entity is nil")
 
-		return 
+		return
 	end
 
 	for _, tn in pairs({...}) do
@@ -225,7 +225,7 @@ function entity_db:append_templates(entity, ...)
 		if not tpl then
 			log.error("template %s not found", tn)
 
-			return 
+			return
 		end
 
 		for k, v in pairs(tpl) do
@@ -406,7 +406,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 		end
 
 		if not ok then
-			return 
+			return
 		end
 	end
 

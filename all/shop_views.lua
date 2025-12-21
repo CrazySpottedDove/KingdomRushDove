@@ -377,7 +377,7 @@ function ShopItemView:buy()
 	if ud.gems < self.price then
 		log.debug("Price exceeds available gems")
 
-		return 
+		return
 	end
 
 	if not ud.bag[self.item_name] then
@@ -517,7 +517,7 @@ function GemsStoreItemView:play_ad()
 	if not product or not product.play_ad or not product.gems then
 		log.error("Item product for %s not found or not gems.", self.item_name)
 
-		return 
+		return
 	end
 
 	if not PS.services.ads then
@@ -536,7 +536,7 @@ function GemsStoreItemView:play_ad()
 		else
 			signal.emit(SGN_SHOP_SHOW_IAP_PROGRESS)
 
-			return 
+			return
 		end
 	end
 
@@ -549,7 +549,7 @@ function GemsStoreItemView:buy_iap()
 		signal.emit(SGN_SHOP_SHOW_MESSAGE, "iap_error")
 		log.error("Error trying to purchase product %s", self.item_name)
 
-		return 
+		return
 	end
 
 	signal.emit(SGN_SHOP_SHOW_IAP_PROGRESS)
@@ -607,7 +607,7 @@ function MessageView:show(kind, arg)
 	else
 		log.error("show_message called with unknown kind. skipping")
 
-		return 
+		return
 	end
 
 	self.hidden = false
@@ -659,7 +659,7 @@ function BuyFxParticlesView:update(dt)
 	if love.timer.getTime() - self.ts > 1 then
 		self.parent:remove_child(self)
 
-		return 
+		return
 	end
 
 	self.particle_system:update(dt)

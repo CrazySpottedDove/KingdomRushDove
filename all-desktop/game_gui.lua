@@ -244,7 +244,7 @@ end
 
 local function show_gems_reward_handler(entity, amount)
 	if not game_gui.is_premium then
-		return 
+		return
 	end
 
 	local v = GemsRewardFx:new(amount)
@@ -908,7 +908,7 @@ end
 
 function game_gui:add_mobile_shortcut_buttons()
 	if not IS_MOBILE then
-		return 
+		return
 	end
 
 	local ks = self.key_shortcuts
@@ -935,7 +935,7 @@ end
 
 function game_gui:keypressed(key, isrepeat)
 	if isrepeat then
-		return 
+		return
 	end
 
 	if DBG_SLIDE_EDITOR and game_gui.SEL_VIEW then
@@ -1041,7 +1041,7 @@ function game_gui:keypressed(key, isrepeat)
 	end
 
 	if self.keys_disabled then
-		return 
+		return
 	end
 
 	local ks = self.key_shortcuts
@@ -1183,12 +1183,12 @@ function game_gui:keypressed(key, isrepeat)
 end
 
 function game_gui:keyreleased(key, isrepeat)
-	return 
+	return
 end
 
 function game_gui:focus(focus)
 	if focus or self.game.store.paused or self.gui_hud_hidden or DEBUG_IGNORE_FOCUS then
-		return 
+		return
 	end
 
 	if self.pause_on_switch and self.pauseview then
@@ -1395,7 +1395,7 @@ function game_gui:show_wave_flags(group)
 	local flags_positions = store.level.locations.entrances
 
 	if not flags_positions then
-		return 
+		return
 	end
 
 	for _, w in pairs(group.waves) do
@@ -1504,7 +1504,7 @@ function game_gui:select_entity(e)
 	if e and e.ui and not e.ui.can_select then
 		log.debug("cannot select: entity %s has ui.can_select = false", e.id)
 
-		return 
+		return
 	end
 
 	if self.selected_entity and e ~= self.selected_entity then
@@ -1641,7 +1641,7 @@ end
 
 function game_gui:hide()
 	if self.manual_gui_hide then
-		return 
+		return
 	end
 
 	self.manual_gui_hide = true
@@ -1666,7 +1666,7 @@ end
 
 function game_gui:show()
 	if not self.manual_gui_hide then
-		return 
+		return
 	end
 
 	self.manual_gui_hide = nil
@@ -1850,13 +1850,13 @@ end
 
 function game_gui:show_achievement(id)
 	if self.manual_gui_hide then
-		return 
+		return
 	end
 
 	if features.hide_achievements_popup then
 		log.debug("features.hide_achievements_popup enabled: not showing achievement popup")
 
-		return 
+		return
 	end
 
 	if not self.achievement_banner then
@@ -2262,7 +2262,7 @@ function HeroPortrait:update(dt)
 	local e = force_hero or game_gui:entity_by_id(self.hero_id)
 
 	if not e or not e.hero then
-		return 
+		return
 	end
 
 	local new_level = self:update_xp(e)
@@ -3185,7 +3185,7 @@ function InfoBar:show()
 	if not e or not e.info then
 		self:hide()
 
-		return 
+		return
 	end
 
 	if e.info and e.info.i18n_key then
@@ -3206,7 +3206,7 @@ function InfoBar:show()
 	local pos_vis_y = self.pos_hidden.y - self.size.y
 
 	if self.pos.y == pos_vis_y then
-		return 
+		return
 	end
 
 	local to_y = pos_vis_y
@@ -3220,7 +3220,7 @@ end
 
 function InfoBar:hide()
 	if self.hidden then
-		return 
+		return
 	end
 
 	if self.tweening then
@@ -3245,7 +3245,7 @@ function InfoBar:update(dt)
 	if e and e.ui and not e.ui.can_select then
 		game_gui:deselect_all()
 
-		return 
+		return
 	end
 
 	self:update_portrait()
@@ -3256,7 +3256,7 @@ function InfoBar:update_portrait()
 	local e = game_gui.selected_entity
 
 	if not e or not e.info then
-		return 
+		return
 	end
 
 	if self.v_portrait_image_name ~= e.info.portrait then
@@ -3278,7 +3278,7 @@ function InfoBar:update_stats()
 	local e = game_gui.selected_entity
 
 	if not e or not e.info or not e.info.fn then
-		return 
+		return
 	end
 
 	local stats = e.info.fn(e)
@@ -3288,7 +3288,7 @@ function InfoBar:update_stats()
 		log.error("Entity %s has no infobar", entity)
 		self:hide()
 
-		return 
+		return
 	elseif sv ~= self.stats_view then
 		if self.stats_view then
 			self:remove_child(self.stats_view)
@@ -3793,7 +3793,7 @@ end
 
 function HudCountersView:show_bonus(reward)
 	if not reward or reward < 1 or not self.lbl_bonus then
-		return 
+		return
 	end
 
 	self.lbl_bonus.text = string.format("+%d", reward)
@@ -4457,7 +4457,7 @@ function VictoryView:show()
 end
 
 function VictoryView:hide()
-	return 
+	return
 end
 
 MousePointer = class("MousePointer", KView)
@@ -5150,11 +5150,11 @@ function NotificationView:show(id, no_transition, force_show)
 	if not n then
 		log.debug("Notification with id:%s not found", id)
 
-		return 
+		return
 	end
 
 	if not force_show and U.is_seen(game_gui.game.store, id) and not n.always then
-		return 
+		return
 	end
 
 	U.mark_seen(game_gui.game.store, id)
@@ -5392,7 +5392,7 @@ function NotificationView:show(id, no_transition, force_show)
 	else
 		log.error("Notification type %s unknown", n.layout)
 
-		return 
+		return
 	end
 
 	game_gui:deselect_all()
@@ -5443,7 +5443,7 @@ function NotificationView:hide(no_transition)
 
 		self.show_next = nil
 
-		return 
+		return
 	end
 
 	self.alpha = 1
@@ -5493,11 +5493,11 @@ function NotificationQueue:add(id, force)
 	if not n then
 		log.warning("Notification with id:%s not found", id)
 
-		return 
+		return
 	end
 
 	if U.is_seen(game_gui.game.store, id) and not n.always and not force then
-		return 
+		return
 	end
 
 	U.mark_seen(game_gui.game.store, id)
@@ -5656,7 +5656,7 @@ function TutorialBalloon:initialize(id)
 	if not bd then
 		log.error("Balloon with id:%s not found", id)
 
-		return 
+		return
 	end
 
 	TutorialBalloon.super.initialize(self, bd.image)
@@ -5812,7 +5812,7 @@ function TutorialBalloon:loop_tween()
 	end
 
 	if self.hidden then
-		return 
+		return
 	end
 
 	local s = self.scale.x > 1 and 0.985 or 1.015
@@ -5829,7 +5829,7 @@ function TutorialBalloon:hide()
 	log.debug("TutorialBalloon:hide %s", self.id)
 
 	if self.hidden or not self.parent then
-		return 
+		return
 	end
 
 	if self.tween_handle then
@@ -5887,7 +5887,7 @@ function TutorialBalloon:show()
 	log.debug("TutorialBalloon:show id:%s", self.id)
 
 	if not self.hidden then
-		return 
+		return
 	end
 
 	if self.tween_handle then
@@ -5985,7 +5985,7 @@ end
 
 function AchievementBanner:show()
 	if #self.queued_ids < 1 or not self.hidden then
-		return 
+		return
 	end
 
 	local id = table.remove(self.queued_ids, 1)
@@ -6050,7 +6050,7 @@ end
 function PickView:update(dt)
 	local function show_tower_hover(entity)
 		if game_gui.game.store.paused then
-			return 
+			return
 		end
 
 		local s = entity.render.sprites[1]
@@ -6098,7 +6098,7 @@ function PickView:update(dt)
 	if self:is_disabled() or game_gui.mode ~= GUI_MODE_IDLE then
 		hide_tower_hover()
 
-		return 
+		return
 	elseif not game_gui.towermenu.hidden then
 		local e = game_gui.selected_entity
 
@@ -6110,7 +6110,7 @@ function PickView:update(dt)
 			end
 		end
 
-		return 
+		return
 	end
 
 	local x, y = game_gui.window:get_mouse_position()
@@ -6217,7 +6217,7 @@ function PickView:on_down(button, x, y)
 			if e.user_selection.can_select_point_fn and not e.user_selection.can_select_point_fn(e, wx, wy, game_gui.game.store) then
 				game_gui:show_invalid_point_cross(x, y)
 
-				return 
+				return
 			end
 
 			e.user_selection.in_progress = false
@@ -6496,7 +6496,7 @@ function CriketMenu:update(dt)
 	CriketMenu.super.update(self, dt)
 
 	if self.hidden then
-		return 
+		return
 	end
 end
 
@@ -6785,7 +6785,7 @@ function HeroMenu:update(dt)
 	HeroMenu.super.update(self, dt)
 
 	if self.hidden then
-		return 
+		return
 	end
 end
 
@@ -6828,7 +6828,7 @@ function TowerMenu:show()
 	local entity = game_gui.selected_entity
 
 	if not entity or not entity.tower then
-		return 
+		return
 	end
 
 	if entity.user_selection then
@@ -6851,7 +6851,7 @@ function TowerMenu:show()
 
 		self.hidden = true
 
-		return 
+		return
 	end
 
 	local tm = current_tms[entity.tower.level]
@@ -6995,13 +6995,13 @@ function TowerMenu:update(dt)
 	TowerMenu.super.update(self, dt)
 
 	if self.hidden then
-		return 
+		return
 	end
 
 	local e = game_gui.selected_entity
 
 	if not e or not e.tower then
-		return 
+		return
 	end
 
 	local store = game_gui.game.store
@@ -7482,7 +7482,7 @@ function TowerMenuTooltip:initialize()
 end
 
 function TowerMenuTooltip:set_template(template)
-	return 
+	return
 end
 
 function TowerMenuTooltip:show(entity, item)

@@ -25,7 +25,7 @@ function srv:init(name, params)
 		if not self.lib then
 			log.error("FairPlay library could not be loaded from %s", lib_name)
 
-			return 
+			return
 		end
 
 		if self.lib.kfairplay_initialize() then

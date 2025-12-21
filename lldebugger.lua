@@ -45,7 +45,7 @@ ____modules = {
 				end
 			}) == 42
 		end)()
-		____exports.luaRawLen = rawlen or (function(v)
+		____exports.luaRawLen = rawlen or function(v)
 			if not ____exports.luaLenMetamethodSupported then
 				return #v
 			end
@@ -63,7 +63,7 @@ ____modules = {
 
 				return len - 1
 			end
-		end)
+		end
 
 		function ____exports.loadLuaString(str, env)
 			if setfenv ~= nil then
@@ -96,8 +96,8 @@ ____modules = {
 		function ____exports.luaGetEnv(level, thread)
 			local info = (thread and debug.getinfo(thread, level, "f")) or debug.getinfo(level + 1, "f")
 
-			if (not info) or (not info.func) then
-				return 
+			if (not info) or not info.func then
+				return
 			end
 
 			if getfenv ~= nil then
@@ -384,10 +384,10 @@ ____modules = {
 			end
 
 			local function build(data, mapDir, luaScript)
-				local sources = data:match("\"sources\"%s*:%s*(%b[])")
-				local mappings = data:match("\"mappings\"%s*:%s*\"([^\"]+)\"")
+				local sources = data:match('"sources"%s*:%s*(%b[])')
+				local mappings = data:match('"mappings"%s*:%s*"([^"]+)"')
 
-				if (not mappings) or (not sources) then
+				if (not mappings) or not sources then
 					return nil
 				end
 
@@ -398,13 +398,13 @@ ____modules = {
 					luaNames = {},
 					hasMappedNames = false
 				}
-				local sourceRoot = data:match("\"sourceRoot\"%s*:%s*\"([^\"]+)\"")
+				local sourceRoot = data:match('"sourceRoot"%s*:%s*"([^"]+)"')
 
 				if (sourceRoot == nil) or (#sourceRoot == 0) then
 					sourceRoot = "."
 				end
 
-				for source in sources:gmatch("\"([^\"]+)\"") do
+				for source in sources:gmatch('"([^"]+)"') do
 					if Path.isAbsolute(source) then
 						table.insert(sourceMap.sources, Path.format(source))
 					else
@@ -414,13 +414,13 @@ ____modules = {
 					end
 				end
 
-				local names = data:match("\"names\"%s*:%s*(%b[])")
+				local names = data:match('"names"%s*:%s*(%b[])')
 				local nameList
 
 				if names then
 					nameList = {}
 
-					for name in names:gmatch("\"([^\"]+)\"") do
+					for name in names:gmatch('"([^"]+)"') do
 						table.insert(nameList, name)
 					end
 				end
@@ -515,7 +515,7 @@ ____modules = {
 				file:close()
 
 				if not data then
-					return 
+					return
 				end
 
 				local encodedMap = data:match("--# sourceMappingURL=data:application/json;base64,([A-Za-z0-9+/=]+)%s*$")
@@ -535,7 +535,7 @@ ____modules = {
 					mapFile:close()
 
 					if not map then
-						return 
+						return
 					end
 
 					local fileDir = Path.dirName(filePath)
@@ -710,12 +710,12 @@ ____modules = {
 							if (breakpoint.sourceLine == line) and (breakpoint.sourceFile == file) then
 								removeBreakpoint(breakpointLine, lineBreakpoints, i)
 
-								return 
+								return
 							end
 						elseif (breakpointLine == line) and (breakpoint.file == file) then
 							removeBreakpoint(breakpointLine, lineBreakpoints, i)
 
-							return 
+							return
 						end
 					end
 				end
@@ -763,13 +763,13 @@ ____modules = {
 			local escapes = {
 				["\n"] = "\\n",
 				["\r"] = "\\r",
-				["\""] = "\\\"",
+				['"'] = '\\"',
 				["\\"] = "\\\\",
 				["\b"] = "\\b",
 				["\f"] = "\\f",
 				["\t"] = "\\t"
 			}
-			local escapesPattern = "[\n\r\"\\\b\f\t%z-]"
+			local escapesPattern = '[\n\r"\\\b\f\t%z-]'
 
 			local function replaceEscape(char)
 				local byte = luaAssert(string.byte(char))
@@ -812,11 +812,11 @@ ____modules = {
 					indent = 0
 				end
 
-				tables = tables or ({})
+				tables = tables or {}
 
 				local valType = type(val)
 
-				if (valType == "table") and (not tables[val]) then
+				if (valType == "table") and not tables[val] then
 					tables[val] = true
 
 					if isArray(val) then
@@ -835,7 +835,7 @@ ____modules = {
 						for k, v in pairs(val) do
 							local valStr = Format.asJson(v, indent + 1, tables)
 
-							table.insert(kvps, (((("\n" .. indentStr:rep(indent + 1)) .. "\"") .. escape(tostring(k))) .. "\": ") .. valStr)
+							table.insert(kvps, (((("\n" .. indentStr:rep(indent + 1)) .. '"') .. escape(tostring(k))) .. '": ') .. valStr)
 						end
 
 						return ((#kvps > 0) and (((("{" .. table.concat(kvps, ",")) .. "\n") .. indentStr:rep(indent)) .. "}")) or "{}"
@@ -843,7 +843,7 @@ ____modules = {
 				elseif (valType == "number") or (valType == "boolean") then
 					return tostring(val)
 				else
-					return ("\"" .. escape(tostring(val))) .. "\""
+					return ('"' .. escape(tostring(val))) .. '"'
 				end
 			end
 		end
@@ -895,7 +895,7 @@ ____modules = {
 				local file, err = io.open(outputFilePath, "w+")
 
 				if not file then
-					luaError(((("Failed to open output file \"" .. outputFilePath) .. "\": ") .. tostring(err)) .. "\n")
+					luaError(((('Failed to open output file "' .. outputFilePath) .. '": ') .. tostring(err)) .. "\n")
 				end
 
 				outputFile = file
@@ -909,7 +909,7 @@ ____modules = {
 				local valueType = type(value)
 
 				if valueType == "string" then
-					return ("\"" .. tostring(value)) .. "\""
+					return ('"' .. tostring(value)) .. '"'
 				elseif ((valueType == "number") or (valueType == "boolean")) or (valueType == "nil") then
 					return tostring(value)
 				else
@@ -1204,7 +1204,7 @@ ____modules = {
 				local file, err = io.open(inputFilePath, "r+")
 
 				if not file then
-					luaError(((("Failed to open input file \"" .. inputFilePath) .. "\": ") .. tostring(err)) .. "\n")
+					luaError(((('Failed to open input file "' .. inputFilePath) .. '": ') .. tostring(err)) .. "\n")
 				end
 
 				inputFile = file
@@ -1408,7 +1408,7 @@ ____modules = {
 					vars = {}
 				}
 
-				if (not info.nups) or (not info.func) then
+				if (not info.nups) or not info.func then
 					return ups
 				end
 
@@ -1464,7 +1464,7 @@ ____modules = {
 
 			local function mapVarNames(vars, sourceMap)
 				if not sourceMap then
-					return 
+					return
 				end
 
 				local addVars = {}
@@ -1490,14 +1490,14 @@ ____modules = {
 			end
 
 			local function mapExpressionNames(expression, sourceMap)
-				if (not sourceMap) or (not sourceMap.hasMappedNames) then
+				if (not sourceMap) or not sourceMap.hasMappedNames then
 					return expression
 				end
 
 				local function mapName(sourceName, isProperty)
 					if isProperty then
 						if not isValidIdentifier(sourceName) then
-							return ("[\"" .. sourceName) .. "\"]"
+							return ('["' .. sourceName) .. '"]'
 						else
 							return "." .. sourceName
 						end
@@ -1519,12 +1519,12 @@ ____modules = {
 					if inQuote then
 						if char == "\\" then
 							isEscaped = not isEscaped
-						elseif (char == inQuote) and (not isEscaped) then
+						elseif (char == inQuote) and not isEscaped then
 							inQuote = nil
 						else
 							isEscaped = false
 						end
-					elseif (char == "\"") or (char == "'") then
+					elseif (char == '"') or (char == "'") then
 						inQuote = char
 					else
 						local nameChar = char:match("[^\"'`~!@#%%^&*%(%)%-+=%[%]{}|\\/<>,%.:;%s]")
@@ -1930,7 +1930,7 @@ ____modules = {
 								if type(r) == "table" then
 									Send.props(r, kind, tonumber(first), tonumber(count))
 								else
-									Send.error(("Expression \"" .. mappedExpression) .. "\" is not a table")
+									Send.error(('Expression "' .. mappedExpression) .. '" is not a table')
 								end
 							else
 								Send.error(r)
@@ -1975,14 +1975,14 @@ ____modules = {
 							local match, err = pcall(string.match, "", ignorePattern)
 
 							if not match then
-								Send.error((("Bad ignore pattern \"" .. ignorePattern) .. "\": ") .. tostring(err))
+								Send.error((('Bad ignore pattern "' .. ignorePattern) .. '": ') .. tostring(err))
 							else
 								if not ignorePatterns then
 									ignorePatterns = {}
 								end
 
 								table.insert(ignorePatterns, ignorePattern)
-								Send.result(("Added ignore pattern \"" .. ignorePattern) .. "\"")
+								Send.result(('Added ignore pattern "' .. ignorePattern) .. '"')
 							end
 						end
 					else
@@ -2043,16 +2043,16 @@ ____modules = {
 					if stepBreak then
 						local topFrameSource = debug.getinfo(debugHookStackOffset, "S")
 
-						if (not topFrameSource) or (not topFrameSource.source) then
-							return 
+						if (not topFrameSource) or not topFrameSource.source then
+							return
 						end
 
 						if topFrameSource.source:sub(-#debuggerName) == debuggerName then
-							return 
+							return
 						end
 
 						if topFrameSource.short_src and (topFrameSource.short_src:sub(1, #builtinFunctionPrefix) == builtinFunctionPrefix) then
-							return 
+							return
 						end
 
 						local source
@@ -2064,7 +2064,7 @@ ____modules = {
 								local match = source:match(pattern)
 
 								if match then
-									return 
+									return
 								end
 							end
 						end
@@ -2076,15 +2076,15 @@ ____modules = {
 
 							local sourceMap = SourceMap.get(source)
 
-							if sourceMap and (not sourceMap.mappings[line]) then
-								return 
+							if sourceMap and not sourceMap.mappings[line] then
+								return
 							end
 						end
 
 						Send.debugBreak("step", "step", getThreadId(activeThread))
 
 						if debugBreak(activeThread, debugHookStackOffset, line) then
-							return 
+							return
 						end
 					end
 				end
@@ -2092,13 +2092,13 @@ ____modules = {
 				local lineBreakpoints = breakpointLookup[line]
 
 				if not lineBreakpoints then
-					return 
+					return
 				end
 
 				local topFrame = debug.getinfo(debugHookStackOffset, "S")
 
-				if (not topFrame) or (not topFrame.source) then
-					return 
+				if (not topFrame) or not topFrame.source then
+					return
 				end
 
 				local source = Path.format(topFrame.source)
@@ -2117,10 +2117,10 @@ ____modules = {
 
 							if success and result then
 								local activeThread = getActiveThread()
-								local conditionDisplay = ((("\"" .. breakpoint.condition) .. "\" = \"") .. tostring(result)) .. "\""
+								local conditionDisplay = ((('"' .. breakpoint.condition) .. '" = "') .. tostring(result)) .. '"'
 								local breakpointFile, breakpointLine = breakpoint.sourceFile or breakpoint.file, breakpoint.sourceLine or breakpoint.line
 
-								Send.debugBreak((((("breakpoint hit: \"" .. breakpointFile) .. ":") .. tostring(breakpointLine)) .. "\", ") .. conditionDisplay, "breakpoint", getThreadId(activeThread))
+								Send.debugBreak((((('breakpoint hit: "' .. breakpointFile) .. ":") .. tostring(breakpointLine)) .. '", ') .. conditionDisplay, "breakpoint", getThreadId(activeThread))
 								debugBreak(activeThread, debugHookStackOffset, line)
 
 								break
@@ -2129,7 +2129,7 @@ ____modules = {
 							local activeThread = getActiveThread()
 							local breakpointFile, breakpointLine = breakpoint.sourceFile or breakpoint.file, breakpoint.sourceLine or breakpoint.line
 
-							Send.debugBreak(((("breakpoint hit: \"" .. breakpointFile) .. ":") .. tostring(breakpointLine)) .. "\"", "breakpoint", getThreadId(activeThread))
+							Send.debugBreak(((('breakpoint hit: "' .. breakpointFile) .. ":") .. tostring(breakpointLine)) .. '"', "breakpoint", getThreadId(activeThread))
 							debugBreak(activeThread, debugHookStackOffset, line)
 
 							break
@@ -2396,7 +2396,7 @@ ____modules = {
 				setErrorHandler()
 
 				if #hookStack > 1 then
-					return 
+					return
 				end
 
 				coroutine.create = function(f)
@@ -2407,7 +2407,7 @@ ____modules = {
 
 				local currentThread = coroutine.running()
 
-				if currentThread and (not threadIds[currentThread]) then
+				if currentThread and not threadIds[currentThread] then
 					registerThread(currentThread)
 				end
 
@@ -2519,7 +2519,7 @@ ____modules = {
 			})
 			local func = luaAssert(loadLuaFile(filePath, env))
 
-			return Debugger.debugFunction(func, breakImmediately, arg or ({}))
+			return Debugger.debugFunction(func, breakImmediately, arg or {})
 		end
 
 		function ____exports.call(func, breakImmediately, ...)

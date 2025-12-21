@@ -5,7 +5,7 @@ local Timer = {}
 Timer.__index = Timer
 
 local function _nothing_()
-	return 
+	return
 end
 
 function Timer:update(dt)

@@ -347,7 +347,7 @@ function sys.level:on_update(dt, ts, store)
 				signal.emit("game-victory", store)
 				signal.emit("game-victory-after", store)
 
-				return 
+				return
 			end
 
 			log.info("++++ VICTORY ++++")
@@ -1588,7 +1588,7 @@ local function lerp_number_quad_multiply(a, b, t, s, key)
 	if a == b then
 		s[key] = a[2] * s[key]
 
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1600,7 +1600,7 @@ local function lerp_number_quad(a, b, t, s, key)
 	if a == b then
 		s[key] = a[2]
 
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1631,7 +1631,7 @@ local function lerp_table_linear(a, b, t, s, key)
 		s[key].x = a[2].x
 		s[key].y = a[2].y
 
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1647,7 +1647,7 @@ local function lerp_table_linear_multiply(a, b, t, s, key)
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
 
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1663,7 +1663,7 @@ local function lerp_table_quad(a, b, t, s, key)
 		s[key].x = a[2].x
 		s[key].y = a[2].y
 
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1679,7 +1679,7 @@ local function lerp_table_quad_multiply(a, b, t, s, key)
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
 
-		return 
+		return
 	end
 
 	local tt = (t - a[1]) / (b[1] - a[1])
@@ -1695,7 +1695,7 @@ local function lerp_table_sine_multiply(a, b, t, s, key)
 		s[key].x = a[2].x * s[key].x
 		s[key].y = a[2].y * s[key].y
 
-		return 
+		return
 	end
 
 	local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
@@ -1711,7 +1711,7 @@ local function lerp_table_sine(a, b, t, s, key)
 		s[key].x = a[2].x
 		s[key].y = a[2].y
 
-		return 
+		return
 	end
 
 	local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))

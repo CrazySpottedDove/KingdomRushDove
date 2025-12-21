@@ -137,7 +137,7 @@ end
 
 function path_db:reverse_all_paths()
 	if not self.paths then
-		return 
+		return
 	end
 
 	for _, path_group in ipairs(self.paths) do
@@ -724,7 +724,7 @@ function path_db:generate_paths(pi)
 		-- block empty
 		else
 			if not curve.beziers then
-				return 
+				return
 			end
 
 			local path_points = {{}, {}, {}}

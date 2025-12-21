@@ -35,7 +35,7 @@ end
 
 function PopUpView:show()
 	if not self.hidden then
-		return 
+		return
 	end
 
 	self:cancel_timers()
@@ -165,7 +165,7 @@ function VolumeSlider:update(dt)
 	if not is_button_down then
 		self._sliding = nil
 
-		return 
+		return
 	end
 
 	if self._sliding then

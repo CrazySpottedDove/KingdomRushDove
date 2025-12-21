@@ -152,15 +152,15 @@ function screen:draw()
 end
 
 function screen:keypressed(key, isrepeat)
-	return 
+	return
 end
 
 function screen:mousepressed(x, y, button)
-	return 
+	return
 end
 
 function screen:close()
-	return 
+	return
 end
 
 return screen

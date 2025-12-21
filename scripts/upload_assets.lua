@@ -87,7 +87,7 @@ local created_releases = {}
 
 local function ensure_release(name)
 	if created_releases[name] then
-		return 
+		return
 	end
 
 	local cmd = is_windows and string.format('gh release view %s >NUL 2>&1 || gh release create %s --title "%s" --notes "Auto created" 2>NUL', name, name, name) or string.format('gh release view %s >/dev/null 2>&1 || gh release create %s --title "%s" --notes "Auto created" 2>/dev/null', name, name, name)

@@ -107,7 +107,7 @@ function sio:commit()
 end
 
 function sio:update()
-	return 
+	return
 end
 
 function sio:is_busy()

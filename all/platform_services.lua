@@ -12,7 +12,7 @@ function ps:init(only_essential)
 	if not features.platform_services then
 		log.debug("Platform services not defined. Skipping init")
 
-		return 
+		return
 	end
 
 	for k, v in pairs(features.platform_services) do

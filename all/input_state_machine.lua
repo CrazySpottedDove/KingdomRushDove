@@ -127,7 +127,7 @@ function ism:joystickadded(joystick)
 end
 
 function ism:joystickremoved(joystick)
-	return 
+	return
 end
 
 function ism:update(dt, state)

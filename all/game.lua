@@ -277,7 +277,7 @@ end
 
 function game:init_debug()
 	if not DEBUG then
-		return 
+		return
 	end
 
 	DEBUG_KEYS_ON = true

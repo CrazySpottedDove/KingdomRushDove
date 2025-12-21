@@ -93,7 +93,7 @@ end
 function level:y_boss_wave(store,wave_number)
 local groups=self.boss_waves[wave_number]
 if not groups then
-return 
+return
 end
 local start_ts,last_ts=store.tick_ts,store.tick_ts
 for _,group in pairs(groups) do
@@ -104,7 +104,7 @@ log.debug("wave_number:%s waiting:%s type:%s",wave_number,t_actual,group[1])
 if U.y_wait(store,t_actual,function(store,time)
 return store.wave_group_number~=wave_number or self.boss.health.dead
 end) then
-return 
+return
 end
 if group[1]=="summoner" then
 local _,__,pack_idx,conf_idx,hp=unpack(group)
@@ -136,7 +136,7 @@ self.boss.phase_signal=group[1]
 self.boss.phase_params=group
 end
 if store.wave_group_number~=wave_number or self.boss.health.dead then
-return 
+return
 end
 end
 while store.wave_group_number==wave_number and not self.boss.health.dead do

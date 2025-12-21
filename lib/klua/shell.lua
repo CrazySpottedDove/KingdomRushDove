@@ -65,7 +65,7 @@ function shell.runget(...)
 	if shell.DRY_RUN then
 		klog.error("dry run cmd: %s", cmd)
 
-		return 
+		return
 	end
 
 	local h = io.popen(cmd)
@@ -147,7 +147,7 @@ function shell.echo(str, file, append)
 	if not h then
 		klog.error("echo error: could not open %s for writing", file)
 
-		return 
+		return
 	end
 
 	h:write(str)
@@ -160,7 +160,7 @@ function shell.read(file)
 	if not h then
 		klog.error("read error: could not open %s for reading", file)
 
-		return 
+		return
 	end
 
 	local out = h:read("*a")

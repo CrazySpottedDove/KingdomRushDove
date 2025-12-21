@@ -363,7 +363,7 @@ function screen:init(w, h, done_callback)
 				if self.cloudsave_req_id then
 					self:show_cloudsave_progress()
 
-					return 
+					return
 				elseif pscloud and pscloud:get_status() then
 					local status = pscloud:get_sync_status()
 
@@ -375,7 +375,7 @@ function screen:init(w, h, done_callback)
 
 							self.cloudsave_req_id = rid
 
-							return 
+							return
 						end
 					end
 				end
@@ -574,7 +574,7 @@ function screen:keypressed(key, isrepeat)
 			if not wid(id).hidden then
 				wid(id):hide()
 
-				return 
+				return
 			end
 		end
 

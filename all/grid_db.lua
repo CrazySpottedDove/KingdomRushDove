@@ -168,7 +168,7 @@ function grid_db:set_cell_type(x, y, type)
 	local j = math.ceil((y - self.oy) / self.cell_size)
 
 	if i <= 0 or i > self.grid_w or j <= 0 or j > self.grid_h then
-		return 
+		return
 	end
 
 	self.grid[i][j] = type

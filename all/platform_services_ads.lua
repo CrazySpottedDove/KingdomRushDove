@@ -145,7 +145,7 @@ function ads:cancel_request(rid)
 	if not rid then
 		log.paranoid("cancel_request service:%s rid:%s not found", self.name, rid)
 
-		return 
+		return
 	end
 
 	self.prq:remove(rid)

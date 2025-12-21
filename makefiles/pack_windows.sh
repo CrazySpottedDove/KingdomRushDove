@@ -56,6 +56,7 @@ EXCLUDES=(
     "client.log"
     "update.lua"
     "dlfmt"
+    ".dlfmt_cache.json"
 )
 
 should_exclude() {

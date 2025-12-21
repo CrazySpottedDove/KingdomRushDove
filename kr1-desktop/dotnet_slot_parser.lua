@@ -278,7 +278,7 @@ function sm:do_row(src_o, dst_o, row)
 	if not d_parts or #d_parts == 0 then
 		log.error("error splitting dest key %s", dst_k)
 
-		return 
+		return
 	end
 
 	local t = dst_o

@@ -91,7 +91,7 @@ function spatial_index.on_update(dt)
 	t = t + dt
 
 	if t < _check_interval then
-		return 
+		return
 	end
 
 	t = t - _check_interval

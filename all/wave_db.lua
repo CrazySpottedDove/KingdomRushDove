@@ -73,7 +73,7 @@ function wave_db:load(level_name, game_mode, endless)
 	if not ok then
 		log.error("Failed to load %s: error: %s", wf, wchunk)
 
-		return 
+		return
 	end
 
 	local ok, wtable = pcall(wchunk)
@@ -81,7 +81,7 @@ function wave_db:load(level_name, game_mode, endless)
 	if not ok then
 		log.error("Failed to eval chunk for %s: error: %s", wf, wtable)
 
-		return 
+		return
 	end
 
 	wave_db.db = wtable
@@ -97,7 +97,7 @@ function wave_db:load(level_name, game_mode, endless)
 		if not ok then
 			log.error("Failed to load %s: error: %s", wef, wchunk)
 
-			return 
+			return
 		end
 
 		local ok, extraw = pcall(wchunk)
@@ -105,7 +105,7 @@ function wave_db:load(level_name, game_mode, endless)
 		if not ok then
 			log.error("Failed to eval extra waves chunk for %s: error: %s", wef, extraw)
 
-			return 
+			return
 		end
 
 		self:add_waves_to_groups(extraw)

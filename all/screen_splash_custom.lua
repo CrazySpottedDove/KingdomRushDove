@@ -100,15 +100,15 @@ function screen:skip()
 	if self.first_launch then
 		log.debug("cannot skip in first launch")
 
-		return 
+		return
 	end
 
 	if self.prevent_skip then
-		return 
+		return
 	end
 
 	if self.skipped then
-		return 
+		return
 	end
 
 	log.debug("skipping...")
@@ -145,11 +145,11 @@ function screen:start_animation()
 	if not data then
 		log.error("features.show_splash_custom missing!")
 
-		return 
+		return
 	end
 
 	if self.skipped then
-		return 
+		return
 	end
 
 	local window = self.window

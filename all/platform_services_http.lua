@@ -165,7 +165,7 @@ end
 
 function http:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -256,7 +256,7 @@ end
 function http:get(url, header, callback, timeout)
 	local function cb_get(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		log.debug("cb_get(status:%s, req.id:%s)", status, req.id)

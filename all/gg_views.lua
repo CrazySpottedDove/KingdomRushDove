@@ -81,7 +81,7 @@ function GGLabel:_fit_text()
 	local step = self.fit_step
 
 	if not fit_lines and not fit_size then
-		return 
+		return
 	end
 
 	if fit_lines and fit_lines > 1 and self.text and not table.contains({"ja", "zh-Hans", "zh-Hant"}, i18n.current_locale) then
@@ -447,7 +447,7 @@ function GGImageButton:on_enter(drag_view)
 	log.paranoid("GGImageButton:on_enter %s", self.id)
 
 	if self.image_name == self.click_image_name then
-		return 
+		return
 	end
 
 	self:set_image(self.hover_image_name)
@@ -855,7 +855,7 @@ function GGEllipseText:redraw()
 	self._drawn = true
 
 	if not self.text or self.text == "" then
-		return 
+		return
 	end
 
 	local cv = {}
@@ -995,14 +995,14 @@ end
 
 function GGExo:get_attach_pos(name)
 	if not self._exo_frame then
-		return 
+		return
 	end
 
 	local exo_frame = self._exo_frame
 	local ap = exo_frame.attachPoints and exo_frame.attachPoints[name]
 
 	if not ap then
-		return 
+		return
 	end
 
 	local xf = ap.xform
@@ -1022,7 +1022,7 @@ end
 
 function GGExo:_draw_self()
 	if self._defer_draw_to_placeholder then
-		return 
+		return
 	else
 		self:_draw_self_deferred()
 	end

@@ -344,7 +344,7 @@ function gui:init(w, h, editor)
 	end
 	wid("nav_nearest_all").on_click = function(this)
 		if not gui.editor.nav_entity_selected then
-			return 
+			return
 		end
 
 		gui.assign_nearest_all()
@@ -385,7 +385,7 @@ end
 
 function gui:keyreleased(key)
 	if self.window:keyreleased(key, isrepeat) then
-		return 
+		return
 	elseif self.tool_shortcuts then
 		local shortcuts = self.tool_shortcuts[self.active_tool]
 
@@ -470,7 +470,7 @@ end
 
 function gui:show_tool(name)
 	if not self.editor.store.level then
-		return 
+		return
 	end
 
 	local v = self.window:get_child_by_id(name)
@@ -837,19 +837,19 @@ function gui:update_entity_prop(prop_view)
 	if not prop_name or not prop_type then
 		log.error("Property view %s has no prop_name or prop_type", prop_view)
 
-		return 
+		return
 	end
 
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return 
+		return
 	end
 
 	local e = self.editor.store.entities[eid]
 
 	if not e then
-		return 
+		return
 	end
 
 	local prop_value = prop_view.value
@@ -885,7 +885,7 @@ function gui:entities_move(wx, wy)
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return 
+		return
 	end
 
 	local p = wid("entities_pos")
@@ -897,7 +897,7 @@ function gui:move_entity(direction)
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return 
+		return
 	end
 
 	local step = love.keyboard.isDown("lshift", "rshift") and 10 or 1
@@ -912,7 +912,7 @@ function gui:hide_template()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		return 
+		return
 	end
 
 	for _, e in pairs(self.editor.store.entities) do
@@ -928,7 +928,7 @@ function gui:show_template()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		return 
+		return
 	end
 
 	for _, e in pairs(self.editor.store.entities) do
@@ -944,7 +944,7 @@ function gui:insert_entity()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
-		return 
+		return
 	end
 
 	local e = E:create_entity(template)
@@ -958,13 +958,13 @@ function gui:delete_entity()
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return 
+		return
 	end
 
 	local e = self.editor.store.entities[eid]
 
 	if not e then
-		return 
+		return
 	end
 
 	LU.queue_remove(self.editor.store, e)
@@ -983,13 +983,13 @@ function gui:duplicate_entity()
 	local eid = self.editor.entities_selected and self.editor.entities_selected[1]
 
 	if not eid then
-		return 
+		return
 	end
 
 	local e = self.editor.store.entities[eid]
 
 	if not e then
-		return 
+		return
 	end
 
 	local de = E:create_entity(e.template_name)
@@ -1059,7 +1059,7 @@ function gui:update_paths_list()
 	local paths = self.editor.path_curves
 
 	if not paths then
-		return 
+		return
 	end
 
 	for i, path in ipairs(paths) do
@@ -1153,7 +1153,7 @@ function gui:show_path_node(pi, ni)
 
 		wid("paths_props"):update_layout()
 
-		return 
+		return
 	end
 
 	local path = self.editor.path_curves[pi]
@@ -1161,7 +1161,7 @@ function gui:show_path_node(pi, ni)
 	if not pi then
 		log.error("Path id not found:%s", pi)
 
-		return 
+		return
 	end
 
 	local p = path.nodes[ni]
@@ -1169,7 +1169,7 @@ function gui:show_path_node(pi, ni)
 	if not p then
 		log.error("Path node id not found:%s", ni)
 
-		return 
+		return
 	end
 
 	local node_type = (ni - 1) % 3 == 0 and "node" or "handle"
@@ -1208,7 +1208,7 @@ function gui:path_connects_to_change(prop_view)
 	log.debug("prop_view:%s  value:%s", prop_view, prop_view.value)
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1220,7 +1220,7 @@ function gui:path_active_change(prop_view)
 	log.debug("prop_view:%s  value:%s", prop_view, prop_view.value)
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1232,7 +1232,7 @@ function gui:path_node_pos_change(prop_view)
 	log.debug("prop_view:%s  value:%s", prop_view, getdump(prop_view.value))
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1242,7 +1242,7 @@ end
 
 function gui:path_node_width_change(view)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1254,7 +1254,7 @@ function gui:path_nodes_move(x, y, delta)
 	log.debug()
 
 	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
-		return 
+		return
 	end
 
 	if delta then
@@ -1278,7 +1278,7 @@ end
 
 function gui:path_node_modify(view, x, y)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1307,7 +1307,7 @@ end
 
 function gui:path_node_remove(view)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1318,7 +1318,7 @@ end
 
 function gui:flip_path()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1332,13 +1332,13 @@ end
 
 function gui:move_path(inc)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
 
 	if pi + inc < 1 or pi + inc > #self.editor.path_curves then
-		return 
+		return
 	end
 
 	self.editor:change_path_idx(pi, pi + inc)
@@ -1355,7 +1355,7 @@ end
 
 function gui:duplicate_path()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1367,7 +1367,7 @@ end
 
 function gui:remove_path()
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1379,7 +1379,7 @@ end
 
 function gui:preview_path(view)
 	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
-		return 
+		return
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
@@ -1410,7 +1410,7 @@ end
 
 function gui:select_entity_nav(e, es)
 	if not e or not es then
-		return 
+		return
 	end
 
 	local v_dir_ids = {"nav_id_right", "nav_id_top", "nav_id_left", "nav_id_bottom"}
@@ -1471,7 +1471,7 @@ function gui.set_nav_mesh(view, edge_idx)
 	local e = gui.editor.nav_entity_selected
 
 	if not e or not e.ui then
-		return 
+		return
 	end
 
 	local nav_mesh = gui.editor.store.level.nav_mesh
@@ -1480,7 +1480,7 @@ function gui.set_nav_mesh(view, edge_idx)
 	if not nav_mesh_id then
 		log.error("invalid nav_mesh_id:%s for entity (%s)%s", nav_mesh_id, e.id, e.template_name)
 
-		return 
+		return
 	end
 
 	local edge_value = view:get_value()
@@ -1488,7 +1488,7 @@ function gui.set_nav_mesh(view, edge_idx)
 	if not edge_idx then
 		log.error("invalid edge_idx:%s", edge_idx)
 
-		return 
+		return
 	end
 
 	nav_mesh_id = tonumber(nav_mesh_id)
@@ -1501,7 +1501,7 @@ function gui.assign_nearest_selected(e)
 	if not e then
 		log.error("invalid entity")
 
-		return 
+		return
 	end
 
 	local nearby = {}

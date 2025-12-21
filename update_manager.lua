@@ -61,49 +61,38 @@ local check_update_thread_code = [[
     os.remove(tmpfile)
     love.thread.getChannel("check_update_result"):push(resp or false)
 ]]
--- local update_thread_code = [[
---     local cmd, update_result_json = ...
---     local pipe = io.popen(cmd, "w")
---     if pipe then
---         pipe:write(update_result_json)
---         -- pipe:flush()
---         -- -- 读取输出并实时推送
---         -- while true do
---         --     local line = pipe:read("*l")
---         --     if not line then break end
---         --     love.thread.getChannel("update_std_out"):push(line)
---         -- end
---         pipe:close()
---     end
---     love.thread.getChannel("update_result"):push("done")
--- ]]
+
 local update_thread_code = [[
     local cmd, update_result_json = ...
     -- 写入临时文件作为 stdin 传递
-    local tmpfile = os.tmpname()
+    -- 不使用不可靠的 os.tmpname()，而是自己指定
+    local tmpfile = "os_update_thread_input.tmp"
+    print(string.format("Update thread temp file: %s\n", tmpfile))
     local f = io.open(tmpfile, "w")
     if f then
         f:write(update_result_json)
         f:close()
     end
-
     -- 构建带重定向的命令，读取 stdout/stderr
     local full_cmd = cmd .. ' < "' .. tmpfile .. '" 2>&1'
     if package.config:sub(1,1) == "\\" then
         full_cmd = 'cmd /C ' .. full_cmd
     end
-
     local pipe = io.popen(full_cmd, "r")
     if pipe then
         for line in pipe:lines() do
             love.thread.getChannel("update_std_out"):push(line)
         end
-        pipe:close()
-        love.thread.getChannel("update_result"):push("done")
+        local ok = pipe:close()
+        if ok then
+            love.thread.getChannel("update_result"):push("done")
+        else
+            print("ok: ", ok)
+            love.thread.getChannel("update_result"):push("error")
+        end
     else
         love.thread.getChannel("update_result"):push("error")
     end
-
     os.remove(tmpfile)
 ]]
 
@@ -111,7 +100,7 @@ function M.check_update()
 	local hash_file = io.open("current_version_commit_hash.txt", "r")
 
 	if not hash_file then
-		return 
+		return
 	end
 
 	local commit_hash = hash_file:read("*l")
@@ -119,12 +108,12 @@ function M.check_update()
 	hash_file:close()
 
 	if not commit_hash then
-		return 
+		return
 	end
 
 	local cmd = string.format('"%s" --check-new-version', binary_path)
 
-	print("cmd: ", cmd)
+	print(string.format("cmd: %s\n", cmd))
 
 	-- 4. 启动线程调用
 	local thread = love.thread.newThread(check_update_thread_code)
@@ -147,22 +136,22 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		if not apply_upgrade then
 			love.update = original_love_update_function
 
-			return 
+			return
 		end
 
 		-- 查询 check_update 线程结果
 		local ch = love.thread.getChannel("check_update_result")
 		-- 尝试获取结果
-		local result = ch:pop()
+		-- local result = ch:pop()
+		local result = ch:demand() -- 改为阻塞等待，避免轮询延迟
 
-		-- 如果 check_update 线程还没结果，直接返回
-		if result == nil then
-			return 
-		end
-
+		-- -- 如果 check_update 线程还没结果，直接返回
+		-- if result == nil then
+		-- 	return
+		-- end
 		-- 如果 check_update 线程返回 false，表示检查不了更新，直接离线游玩。
 		if result == false then
-			print("Cannot check for updates.")
+			print("Cannot check for updates.\n")
 
 			love.update = original_love_update_function -- 恢复原 love.update
 		end
@@ -171,27 +160,27 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		local ok, resp = pcall(require("json").decode, result)
 
 		if not ok then
-			print("Failed to decode update check response.")
+			print("Failed to decode update check response.\n")
 
 			love.update = original_love_update_function -- 恢复原 love.update
 
-			return 
+			return
 		end
 
 		if type(resp) ~= "table" then
-			print("Invalid update check response format.")
+			print("Invalid update check response format.\n")
 
 			love.update = original_love_update_function -- 恢复原 love.update
 
-			return 
+			return
 		end
 
 		if not resp.has_update then
-			print("No updates available.")
+			print("No updates available.\n")
 
 			love.update = original_love_update_function -- 恢复原 love.update
 
-			return 
+			return
 		end
 
 		update_result_json = result
@@ -311,6 +300,9 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 					G.print(line, 40, log_y + (i - 1) * 22)
 				end
 			end
+		else
+			-- 用户取消升级，恢复原 love.update
+			love.update = original_love_update_function
 		end
 	end
 end

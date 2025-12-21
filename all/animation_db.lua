@@ -36,7 +36,7 @@ end
 
 function animation_db:load()
 	if self.loaded then
-		return 
+		return
 	end
 
 	local function load_ani_file(f)

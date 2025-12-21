@@ -30,7 +30,7 @@ function kart:init(name, params)
 		if not params or not params.game_id or type(params.game_id) ~= "number" then
 			log.error("platform_services_kart requires game_id param of type number")
 
-			return 
+			return
 		end
 
 		self.game_id = params.game_id
@@ -41,7 +41,7 @@ function kart:init(name, params)
 		if not lib then
 			log.error("Kart library %s could not be loaded", lib_name)
 
-			return 
+			return
 		end
 
 		self:restart_app_if_necessary(self.game_id)
@@ -51,7 +51,7 @@ function kart:init(name, params)
 		if not self.inited then
 			log.error("KongregateAPI_Initialize() failed")
 
-			return 
+			return
 		end
 
 		lib.KongregateAPI_Update()
@@ -131,11 +131,11 @@ function kart:get_install_dir()
 end
 
 function kart:do_signin()
-	return 
+	return
 end
 
 function kart:do_signout()
-	return 
+	return
 end
 
 function kart:unlock_achievement(ach_id, defer_store)
@@ -153,7 +153,7 @@ function kart:unlock_achievement(ach_id, defer_store)
 end
 
 function kart:show_achievements()
-	return 
+	return
 end
 
 function kart:restart_app_if_necessary(appid)

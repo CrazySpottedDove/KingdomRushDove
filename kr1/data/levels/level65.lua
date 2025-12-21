@@ -16,7 +16,7 @@ local controller=LU.list_entities(store.entities,"malik_slave_controller")[1]
 return controller and controller.fn_can_power(controller,store,power_id,pos) or false
 end
 function level:load(store)
-return 
+return
 end
 function level:update(store)
 if store.level_mode==GAME_MODE_IRON then

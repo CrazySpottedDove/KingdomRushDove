@@ -126,7 +126,7 @@ end
 
 function ic:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -141,11 +141,11 @@ function ic:no_signin()
 end
 
 function ic:do_signin()
-	return 
+	return
 end
 
 function ic:do_signout()
-	return 
+	return
 end
 
 function ic:get_sync_status()
@@ -159,7 +159,7 @@ end
 function ic:sync_slots()
 	local function cb_sync_slots(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		local success

@@ -98,7 +98,7 @@ end
 
 function sk:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -161,7 +161,7 @@ end
 function sk:restore_purchases()
 	local function cb_restore_purchases(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		log.info("restore_purchases complete for req.id:%s status:%s", req.id, status)
@@ -201,13 +201,13 @@ function sk:restore_purchases()
 end
 
 function sk:sync_purchase_history()
-	return 
+	return
 end
 
 function sk:purchase_product(id)
 	local function cb_purchase(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		log.info("purchase_product complete for req.id:%s status:%s", req.id, status)
@@ -263,7 +263,7 @@ end
 function sk:sync_products()
 	local function cb_sync_products(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		log.info("sync_products complete for req.id:%s status:%s", req.id, status)

@@ -23,7 +23,7 @@ marketing.signal_handlers = {
 				marketing:md_set("last_offer_purchase_time", os.time())
 				marketing:md_set("last_offer_purchase_session", marketing:md_get("session_count"))
 
-				return 
+				return
 			end
 		end
 	end,
@@ -211,7 +211,7 @@ function marketing:get_candidate_offers(persistent)
 	if not PS.services.iap then
 		log.error("IAP not available")
 
-		return 
+		return
 	end
 
 	local offers_available = PS.services.iap:get_offers()
@@ -219,7 +219,7 @@ function marketing:get_candidate_offers(persistent)
 	if not offers_available or #offers_available < 1 then
 		log.debug("offers not defined or empty")
 
-		return 
+		return
 	end
 
 	local candidate_offers = {}
@@ -303,7 +303,7 @@ function marketing:get_active_offer()
 	if not PS.services.iap then
 		log.error("IAP not available")
 
-		return 
+		return
 	end
 
 	local offers_available = PS.services.iap:get_offers()
@@ -311,7 +311,7 @@ function marketing:get_active_offer()
 	if not offers_available or #offers_available < 1 then
 		log.debug("offers not defined or empty")
 
-		return 
+		return
 	end
 
 	local id = self:md_get("active_offer")

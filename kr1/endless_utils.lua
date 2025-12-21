@@ -1452,7 +1452,7 @@ end
 
 function EU.patch_upgrade_in_game(key, store, endless)
 	if not key then
-		return 
+		return
 	end
 
 	endless.upgrade_levels[key] = endless.upgrade_levels[key] + 1
