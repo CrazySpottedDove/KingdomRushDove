@@ -1345,3 +1345,13 @@ tt.main_script.insert = scripts.mod_attract.insert
 tt.main_script.update = scripts.mod_attract.update
 tt.main_script.remove = scripts.mod_attract.remove
 tt.attract_radius = 50
+
+tt = E:register_t("clickable_hover_circle_controller")
+
+E:add_comps(tt, "main_script", "render")
+
+tt.main_script.insert = scripts.clickable_hover_controller.insert
+tt.main_script.update = scripts.clickable_hover_controller.update
+tt.main_script.remove = scripts.clickable_hover_controller.remove
+tt.target = nil
+tt.done = nil

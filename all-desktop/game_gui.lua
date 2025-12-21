@@ -891,6 +891,35 @@ function game_gui:update(dt)
 		end
 	end
 
+	local st = game_gui.swap_entity
+
+	if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
+		game_gui.c_deselect()
+
+		game_gui.swap_entity = nil
+	end
+
+	if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+		local x, y = game_gui.window:get_mouse_position()
+		local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
+
+		if x ~= lx or y ~= ly then
+			game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
+
+			local wx, wy = game_gui:s2g(V.v(x, y))
+			local ee = game_gui:entity_at_pos(wx, wy)
+			local lastt = game_gui.last_tower_hover
+
+			if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
+				game_gui:show_clickable_hover(ee)
+			elseif lastt and (not ee or ee ~= lastt) then
+				game_gui:hide_clickable_hover()
+
+				self.last_tower_hover = nil
+			end
+		end
+	end
+
 	self.window:update(dt)
 end
 
@@ -1246,6 +1275,26 @@ function game_gui:u2g_old(s)
 	return px, py
 end
 
+function game_gui:s2u(s)
+	local ux, uy = s.x / self.gui_scale, s.y / self.gui_scale
+
+	return ux, uy
+end
+
+function game_gui:u2w(s)
+	local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
+	local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
+
+	return px, py
+end
+
+function game_gui:s2g(s)
+	local px, py = self:s2u(s)
+	local wx, wy = self:u2w(V.v(px, py))
+
+	return wx, wy
+end
+
 function game_gui:entity_at_pos(x, y)
 	return U.find_entity_at_pos(self.game.simulation.store.entities, x, y)
 end
@@ -1435,6 +1484,61 @@ function game_gui:hide_wave_flags()
 	end
 end
 
+function game_gui:show_clickable_hover(entity)
+	if game_gui.game.store.paused then
+		return
+	end
+
+	if self.last_tower_hover then
+		if self.last_tower_hover ~= entity then
+			self:hide_clickable_hover()
+		elseif self.clickable_hover_controller and not self.clickable_hover_controller.done then
+			return
+		end
+	end
+
+	if not entity or not game_gui.game.store.entities[entity.id] then
+		log.debug("clickable not in store. skipping hover")
+
+		return
+	end
+
+	self.last_tower_hover = entity
+
+	local h = E:create_entity("clickable_hover_circle_controller")
+
+	h.target = entity
+
+	self.game.simulation:insert_entity(h)
+
+	self.clickable_hover_controller = h
+
+	S:queue("GUIQuickMenuOver")
+end
+
+function game_gui:hide_clickable_hover()
+	if self.clickable_hover_controller then
+		self.clickable_hover_controller.done = true
+		self.clickable_hover_controller = nil
+	end
+end
+
+function game_gui:show_ghost_hover()
+	local h = E:create_entity("tower_ghost_hover_controller")
+
+	self.game.simulation:insert_entity(h)
+
+	self.tower_ghost_hover_controller = h
+end
+
+function game_gui:hide_ghost_hover()
+	if self.tower_ghost_hover_controller then
+		self.game.simulation:remove_entity(self.tower_ghost_hover_controller)
+
+		self.tower_ghost_hover_controller = nil
+	end
+end
+
 function game_gui:find_flag_position(pf, vf, margin, len)
 	local function intersection(p1, v1, p2, v2)
 		local v1xv2 = V.cross(v1.x, v1.y, v2.x, v2.y)
@@ -1561,6 +1665,10 @@ function game_gui:deselect_entity()
 
 	if self.selected_entity_marker then
 		self.selected_entity_marker.done = true
+	end
+
+	if game_gui.mode == GUI_MODE_SWAP_TOWER then
+		game_gui:hide_ghost_hover()
 	end
 
 	self.selected_entity = nil
@@ -1889,6 +1997,24 @@ function game_gui:block_random_power(duration, style)
 		p:add_child(pbb)
 		pbb:block()
 	end
+end
+
+function game_gui.c_deselect(ctx, scope)
+	if game_gui.mode == GUI_MODE_SWAP_TOWER then
+		game_gui:hide_ghost_hover()
+	end
+
+	-- if game_gui.selected_entity_markers then
+	-- 	for _, m in pairs(game_gui.selected_entity_markers) do
+	-- 		m.done = true
+	-- 	end
+	-- end
+
+	-- game_gui.touch_view:disable_drag_line()
+
+	-- game_gui.selected_entity = nil
+
+	-- wid("infobar_view"):hide()
 end
 
 GemsRewardFx = class("GemsRewardFx", KView)
@@ -7083,7 +7209,7 @@ function TowerMenu:update(dt)
 				local current_mode = e.tower_upgrade_persistent_data.current_mode
 
 				if e.tower_upgrade_persistent_data.max_current_mode == 0 then
-					if not e.user_selection.allowed then
+					if e.user_selection and not e.user_selection.allowed then
 						c:disable()
 					else
 						c:enable()
@@ -7340,19 +7466,17 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 			game_gui:deselect_entity()
 		end
 	elseif item.action == "tw_change_mode" then
-		if e.tower then
-			local current_mode = e.tower_upgrade_persistent_data.current_mode
-			local max_current_mode = e.tower_upgrade_persistent_data.max_current_mode
+		local current_mode = e.tower_upgrade_persistent_data.current_mode
+		local max_current_mode = e.tower_upgrade_persistent_data.max_current_mode
 
-			e.change_mode = true
+		e.change_mode = true
 
-			game_gui:deselect_entity()
+		game_gui:deselect_entity()
 
-			if current_mode >= max_current_mode then
-				e.tower_upgrade_persistent_data.current_mode = 0
-			else
-				e.tower_upgrade_persistent_data.current_mode = current_mode + 1
-			end
+		if current_mode >= max_current_mode then
+			e.tower_upgrade_persistent_data.current_mode = 0
+		else
+			e.tower_upgrade_persistent_data.current_mode = current_mode + 1
 		end
 
 		if e.user_selection then
@@ -7531,13 +7655,6 @@ function TowerMenuTooltip:show(entity, item)
 			self.cooldown_label.hidden = false
 		end
 	elseif item.action == "upgrade_power" then
-		if item.tt_phrase then
-			self.phrase_label.text = item.tt_phrase
-			self.phrase_label.hidden = false
-
-			self.phrase_label:do_fit_lines(1, 10, 0.15)
-		end
-
 		local power = entity.powers[item.action_arg]
 		local show_level = km.clamp(1, power.max_level, power.level + 1)
 
@@ -7575,9 +7692,22 @@ function TowerMenuTooltip:show(entity, item)
 		else
 			self.title.text = item["tt_title_mode" .. current_mode]
 			self.desc.text = item["tt_desc_mode" .. current_mode]
+			if item["tt_phrase_mode" .. current_mode] then
+				self.phrase_label.text = item["tt_phrase_mode" .. current_mode]
+				self.phrase_label.hidden = false
+
+				self.phrase_label:do_fit_lines(1, 10, 0.15)
+			end
 		end
 	else
 		self.hidden = true
+	end
+
+	if item.tt_phrase then
+		self.phrase_label.text = item.tt_phrase
+		self.phrase_label.hidden = false
+
+		self.phrase_label:do_fit_lines(1, 10, 0.15)
 	end
 
 	if not self.hidden then
@@ -7636,7 +7766,7 @@ end
 function TowerMenuButton:disable()
 	self.click_disabled = true
 
-	if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
+	if self.item.action ~= "tw_change_mode" then
 		-- self.button:set_image(self.item_image .. "_disabled")
 		self.button:disable()
 

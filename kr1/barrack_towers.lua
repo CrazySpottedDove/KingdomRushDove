@@ -2940,14 +2940,6 @@ tt = E:register_t("fx_soul_soldier_tower_ghost", "fx")
 tt.render.sprites[1].name = "ghost_tower_soul_skill_hit_fx_idle"
 tt = E:register_t("decal_soldier_tower_ghost_hit", "fx")
 tt.render.sprites[1].name = "ghost_tower_hit_fx_idle"
-tt = E:register_t("tower_build_ghost", "tower_build")
-tt.build_name = "tower_ghost_lvl1"
-tt.render.sprites[1].name = "terrains_%04i"
-tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[2].name = "ghost_tower_build"
-tt.render.sprites[2].offset = v(0, 15)
-tt.render.sprites[3].offset.y = 60
-tt.render.sprites[4].offset.y = 60
 tt = E:register_t("soldier_tower_ghost_lvl1", "soldier_militia")
 
 E:add_comps(tt, "nav_grid")
@@ -3066,7 +3058,9 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
-tt.tower.level = 4
+tt.tower_upgrade_persistent_data.current_mode = 0
+tt.tower_upgrade_persistent_data.max_current_mode = 0
+tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.info.i18n_key = "TOWER_GHOST_4"
 tt.info.stat_damage = b.stats.damage

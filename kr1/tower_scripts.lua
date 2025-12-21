@@ -20,6 +20,7 @@ local LU = require("level_utils")
 local UP = require("upgrades")
 local V = require("lib.klua.vector")
 local W = require("wave_db")
+local game_gui = require("game_gui")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
@@ -19306,6 +19307,14 @@ function scripts.tower_ghost.update(this, store, script)
 	local spawn_id = 4
 
 	while true do
+		if this.change_mode then
+			this.change_mode = false
+			game_gui.swap_entity = e
+
+			game_gui:set_mode(GUI_MODE_SWAP_TOWER)
+			game_gui:show_ghost_hover()
+		end
+
 		local b = this.barrack
 
 		if this.powers then
