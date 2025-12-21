@@ -2888,16 +2888,14 @@ tt.bullet.pop_chance = 0
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
 tt.bullet.hit_payload = "aura_bullet_soldier_tower_dwarf"
-tt.bullet.damages_min = b.damages_min
-tt.bullet.damages_max = b.damages_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
 tt.main_script.update = scripts.bomb.update
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerDwarfIncendiaryAmmo"
 tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = false
-tt.bullet.damage_max = b.damage_max
-tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_radius = b.damage_radius
 tt.from_tower = true
 tt = E:register_t("aura_bullet_soldier_tower_dwarf", "aura")
@@ -2910,6 +2908,20 @@ tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
+tt = E:register_t("decal_bullet_soldier_tower_dwarf", "decal_tween")
+tt.tween.props[1].keys = {
+	{
+		1,
+		255
+	},
+	{
+		2.5,
+		0
+	}
+}
+tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = v(1.2, 1.2)
 -- 炮兵 END
 -- 幽冥 START
 tt = E:register_t("ps_soldier_tower_ghost")
@@ -2928,14 +2940,6 @@ tt = E:register_t("fx_soul_soldier_tower_ghost", "fx")
 tt.render.sprites[1].name = "ghost_tower_soul_skill_hit_fx_idle"
 tt = E:register_t("decal_soldier_tower_ghost_hit", "fx")
 tt.render.sprites[1].name = "ghost_tower_hit_fx_idle"
-tt = E:register_t("tower_build_ghost", "tower_build")
-tt.build_name = "tower_ghost_lvl1"
-tt.render.sprites[1].name = "terrains_%04i"
-tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[2].name = "ghost_tower_build"
-tt.render.sprites[2].offset = v(0, 15)
-tt.render.sprites[3].offset.y = 60
-tt.render.sprites[4].offset.y = 60
 tt = E:register_t("soldier_tower_ghost_lvl1", "soldier_militia")
 
 E:add_comps(tt, "nav_grid")
@@ -3054,7 +3058,9 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
-tt.tower.level = 4
+tt.tower_upgrade_persistent_data.current_mode = 0
+tt.tower_upgrade_persistent_data.max_current_mode = 0
+tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.info.i18n_key = "TOWER_GHOST_4"
 tt.info.stat_damage = b.stats.damage
@@ -3187,6 +3193,23 @@ E:add_comps(tt, "main_script")
 tt.template_hover = "tower_ghost_hover"
 tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
+
+tt = E:register_t("controller_tower_swap")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_tower_swap.update
+tt.path_marker_entity = "decal_path_hero_movement"
+tt.swap_sound = "TowerGhostTeleport"
+tt.tower_1 = nil
+tt.tower_2 = nil
+tt.delay = 0.25
+tt.delay_empty = 0.25
+tt.fx_out = "tower_ghost_teleport_out"
+tt.fx_in = "tower_ghost_teleport_in"
+tt.fx_spawn_delay = fts(14)
+tt.fx_in_delay = fts(14)
+tt.fx_delay_between = 0
 -- 幽冥 END
 -- 圣殿 START
 tt = E:register_t("tower_build_paladin_covenant", "tower_build")

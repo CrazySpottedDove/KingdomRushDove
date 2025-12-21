@@ -20,6 +20,7 @@ local LU = require("level_utils")
 local UP = require("upgrades")
 local V = require("lib.klua.vector")
 local W = require("wave_db")
+local game_gui = require("game_gui")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
@@ -19306,6 +19307,14 @@ function scripts.tower_ghost.update(this, store, script)
 	local spawn_id = 4
 
 	while true do
+		if this.change_mode then
+			this.change_mode = false
+			game_gui.swap_entity = this
+
+			game_gui:set_mode(GUI_MODE_SWAP_TOWER)
+			game_gui:show_ghost_hover()
+		end
+
 		local b = this.barrack
 
 		if this.powers then
@@ -19717,6 +19726,154 @@ function scripts.tower_ghost_hover_controller.remove(this, store)
 	return true
 end
 
+scripts.controller_tower_swap = {}
+
+function scripts.controller_tower_swap.update(this, store)
+	local function create_tower(from, to)
+		local ne = E:create_entity(from.tower_holder and to.tower.holder_template or from.template_name)
+
+		ne.pos = V.vclone(to.pos)
+		ne.tower.holder_id = to.tower.holder_id
+
+		if not from.tower_holder then
+			ne.tower.holder_template = to.tower_holder and to.template_name or to.tower.holder_template
+		end
+
+		ne.tower.flip_x = to.tower.flip_x
+		ne.tower.spent = from.tower.spent
+
+		if to.tower.default_rally_pos then
+			ne.tower.default_rally_pos = V.vclone(to.tower.default_rally_pos)
+		end
+
+		if to.tower.terrain_style then
+			ne.tower.terrain_style = to.tower.terrain_style
+
+			if from.tower.type ~= "holder" then
+				ne.render.sprites[1].name = string.format(ne.render.sprites[1].name, ne.tower.terrain_style)
+			else
+				ne.render.sprites[1].name = string.format("terrains_holders_%04i", ne.tower.terrain_style)
+				ne.render.sprites[2].name = string.format("terrains_holders_%04i_flag", ne.tower.terrain_style)
+			end
+		end
+
+		if ne.ui and to.ui then
+			ne.ui.nav_mesh_id = to.ui.nav_mesh_id
+		end
+
+		if from.powers then
+			for i, v in pairs(from.powers) do
+				if v.level > 0 then
+					ne.powers[i].level = v.level
+					ne.powers[i].changed = true
+				end
+			end
+		end
+
+		ne.tower_upgrade_persistent_data = from.tower_upgrade_persistent_data and table.clone(from.tower_upgrade_persistent_data) or E:clone_c("tower_upgrade_persistent_data")
+		ne.tower_upgrade_persistent_data.swaped = true
+
+		if ne.sound_events then
+			ne.sound_events.insert = nil
+		end
+
+		return ne
+	end
+
+	local function create_spawner_out(to)
+		local ne = E:create_entity(this.fx_out)
+
+		ne.render.sprites[1].ts = store.tick_ts
+		ne.pos = V.vclone(to.pos)
+
+		queue_insert(store, ne)
+	end
+
+	local function create_spawner_in(to)
+		local ne = E:create_entity(this.fx_in)
+
+		ne.render.sprites[1].ts = store.tick_ts
+		ne.pos = V.vclone(to.pos)
+
+		queue_insert(store, ne)
+	end
+
+	local function create_temp_holder(to)
+		local th = E:create_entity("tower_holder")
+
+		th.pos = V.vclone(to.pos)
+		th.ui.can_click = false
+		th.render.sprites[1].name = to.render.sprites[1].name
+
+		queue_insert(store, th)
+
+		return th
+	end
+
+	local t1 = this.tower_1
+	local t2 = this.tower_2
+
+	if t1 and t2 and t1.tower and t2.tower then
+		S:queue(this.swap_sound)
+
+		if t2.tower.type == "holder" then
+			local nt1 = create_tower(t1, t2)
+			local nt2 = create_tower(t2, t1)
+
+			t1.ui.can_click = false
+			t2.ui.can_click = false
+
+			if this.fx_out then
+				create_spawner_out(t1)
+				U.y_wait(store, fts(4))
+			end
+
+			queue_remove(store, t1)
+			queue_insert(store, nt2)
+			U.y_wait(store, this.delay_empty)
+			create_spawner_in(nt1)
+			U.y_wait(store, this.fx_in_delay)
+			queue_remove(store, t2)
+			queue_insert(store, nt1)
+		else
+			local nt1 = create_tower(t1, t2)
+			local nt2 = create_tower(t2, t1)
+
+			t1.ui.can_click = false
+			t2.ui.can_click = false
+
+			if this.fx_out then
+				create_spawner_out(t1)
+				U.y_wait(store, fts(4))
+			end
+
+			queue_remove(store, t1)
+
+			local th1 = create_temp_holder(t1)
+
+			U.y_wait(store, fts(10))
+			create_spawner_out(t2)
+			U.y_wait(store, fts(4))
+			queue_remove(store, t2)
+
+			local th2 = create_temp_holder(t2)
+
+			U.y_wait(store, this.delay)
+			S:queue(this.swap_sound)
+			create_spawner_in(nt2)
+			U.y_wait(store, this.fx_spawn_delay)
+			queue_insert(store, nt2)
+			queue_remove(store, th1)
+			U.y_wait(store, this.fx_delay_between)
+			create_spawner_in(nt1)
+			U.y_wait(store, this.fx_spawn_delay)
+			queue_insert(store, nt1)
+			queue_remove(store, th2)
+		end
+	end
+
+	queue_remove(store, this)
+end
 -- 幽冥 END
 -- 圣殿 START
 scripts.tower_paladin_covenant = {}

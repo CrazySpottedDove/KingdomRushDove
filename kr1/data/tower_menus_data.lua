@@ -493,22 +493,22 @@ return {
 			tt_title = _("TOWER_ROCKET_GUNNERS_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_1_DESCRIPTION")
 		}),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_dwarf_lvl4",
-		-- 	type = "dwarf",
-		-- 	image = "kr5_main_icons_0042",
-		-- 	place = 23,
-		-- 	tt_title = _("TOWER_DWARF_1_NAME"),
-		-- 	tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
-		-- }),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_ghost_lvl4",
-		-- 	type = "ghost",
-		-- 	image = "kr5_main_icons_0016",
-		-- 	place = 24,
-		-- 	tt_title = _("TOWER_GHOST_1_NAME"),
-		-- 	tt_desc = _("TOWER_GHOST_1_DESCRIPTION")
-		-- }),
+		M(tpl.upgrade, {
+			action_arg = "tower_dwarf_lvl4",
+			type = "dwarf",
+			image = "kr5_main_icons_0039",
+			place = 23,
+			tt_title = _("TOWER_DWARF_1_NAME"),
+			tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
+		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_ghost_lvl4",
+			type = "ghost",
+			image = "kr5_main_icons_0016",
+			place = 24,
+			tt_title = _("TOWER_GHOST_1_NAME"),
+			tt_desc = _("TOWER_GHOST_1_DESCRIPTION")
+		}),
 		-- M(tpl.upgrade, {
 		-- 	action_arg = "tower_paladin_covenant_lvl4",
 		-- 	type = "paladin_covenant",
@@ -2612,19 +2612,7 @@ return {
 			tt_desc = _("TOWER_DWARF_4_INCENDIARY_AMMO_3_DESCRIPTION")
 		}}
 	}), tpl.rally, tpl.sell}},
-	ghost = {{{
-		action = "tw_swap_mode",
-		image = "kr5_quickmenu_action_icons_0003",
-		place = 13,
-		halo = "quickmenu_action_icons_0001_hover",
-		tt_title_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NAME"),
-		tt_desc_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_DESCRIPTION"),
-		tt_phrase_mode1 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_GROUND_NOTE"),
-		tt_title_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NAME"),
-		tt_desc_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_DESCRIPTION"),
-		tt_phrase_mode0 = _("TOWER_ROCKET_GUNNERS_CHANGE_MODE_FLY_NOTE")
-	}, M(tpl.upgrade_power, {
-		check = "special_icons_0020",
+	ghost = {{M(tpl.upgrade_power, {
 		action_arg = "extra_damage",
 		image = "kr5_special_icons_0024",
 		place = 6,
@@ -2641,7 +2629,6 @@ return {
 			tt_desc = _("TOWER_GHOST_4_EXTRA_DAMAGE_3_DESCRIPTION")
 		}}
 	}), M(tpl.upgrade_power, {
-		check = "special_icons_0020",
 		action_arg = "soul_attack",
 		image = "kr5_special_icons_0025",
 		place = 7,
@@ -2657,7 +2644,12 @@ return {
 			tt_title = _("TOWER_GHOST_4_SOUL_ATTACK_3_NAME"),
 			tt_desc = _("TOWER_GHOST_4_SOUL_ATTACK_3_DESCRIPTION")
 		}}
-	}), tpl.rally, tpl.sell}},
+	}), tpl.rally, tpl.sell, M(tpl.change_mode, {
+		image = "kr5_quickmenu_action_icons_0003",
+		tt_title = _("TOWER_GHOST_SWAP_MODE_NAME"),
+		tt_desc = _("TOWER_GHOST_SWAP_MODE_DESCRIPTION"),
+		tt_phrase = _("TOWER_GHOST_SWAP_MODE_NODE")
+	})}},
 	paladin_covenant = {{M(tpl.upgrade_power, {
 		action_arg = "lead",
 		image = "kr5_special_icons_0002",

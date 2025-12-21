@@ -388,6 +388,19 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(o_button)
 
+	-- 配置设置
+	local config_button = KImageButton:new("map_configBtn_0001", "map_configBtn_0002", "map_configBtn_0003")
+
+	config_button.anchor = v(o_button.size.x / 2, o_button.size.y / 2)
+	config_button.pos = v(80, 180)
+
+	function config_button.on_click(this, button, x, y)
+		S:queue("GUIButtonCommon")
+		self.config_panel_view:show()
+	end
+
+	self.window:add_child(config_button)
+
 	local a_button = GGButton:new("mapButtons_notxt_0004", "mapButtons_notxt_0005")
 
 	a_button.anchor = v(a_button.size.x / 2, a_button.size.y / 2)

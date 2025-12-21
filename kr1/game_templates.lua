@@ -29,16 +29,6 @@ end
 require("game_templates_utils")
 
 ----------
-package.loaded.foundamental_towers = nil
-package.loaded.mage_towers = nil
-package.loaded.archer_towers = nil
-package.loaded.engineer_towers = nil
-package.loaded.heroes = nil
-package.loaded.barrack_towers = nil
-package.loaded.enemies = nil
-package.loaded.boss = nil
-package.loaded.hero_boss = nil
-
 require("foundamental_towers")
 require("mage_towers")
 require("archer_towers")
