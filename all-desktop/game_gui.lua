@@ -7743,6 +7743,7 @@ function TowerMenuTooltip:show(entity, item)
 		else
 			self.title.text = item["tt_title_mode" .. current_mode]
 			self.desc.text = item["tt_desc_mode" .. current_mode]
+
 			if item["tt_phrase_mode" .. current_mode] then
 				self.phrase_label.text = item["tt_phrase_mode" .. current_mode]
 				self.phrase_label.hidden = false

@@ -27,7 +27,6 @@ local function v(x, y)
 end
 
 require("game_templates_utils")
-
 ----------
 require("foundamental_towers")
 require("mage_towers")

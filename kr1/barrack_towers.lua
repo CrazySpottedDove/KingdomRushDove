@@ -2909,16 +2909,7 @@ tt.aura.vis_flags = bor(F_MOD)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt = E:register_t("decal_bullet_soldier_tower_dwarf", "decal_tween")
-tt.tween.props[1].keys = {
-	{
-		1,
-		255
-	},
-	{
-		2.5,
-		0
-	}
-}
+tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = v(1.2, 1.2)
@@ -3193,7 +3184,6 @@ E:add_comps(tt, "main_script")
 tt.template_hover = "tower_ghost_hover"
 tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
-
 tt = E:register_t("controller_tower_swap")
 
 E:add_comps(tt, "main_script")

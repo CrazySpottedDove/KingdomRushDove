@@ -61,7 +61,6 @@ local check_update_thread_code = [[
     os.remove(tmpfile)
     love.thread.getChannel("check_update_result"):push(resp or false)
 ]]
-
 local update_thread_code = [[
     local cmd, update_result_json = ...
     -- 写入临时文件作为 stdin 传递

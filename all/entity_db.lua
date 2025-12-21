@@ -13,7 +13,6 @@ function entity_db:load()
 	self.components = {}
 	self.entities = {}
 	package.loaded.components = nil
-
 	package.loaded.game_templates = nil
 	package.loaded.templates = nil
 	package.loaded.foundamental_towers = nil
@@ -25,13 +24,11 @@ function entity_db:load()
 	package.loaded.enemies = nil
 	package.loaded.boss = nil
 	package.loaded.hero_boss = nil
-
 	package.loaded.game_scripts = nil
 	package.loaded.scripts = nil
 	package.loaded.script_utils = nil
 	package.loaded.hero_scripts = nil
 	package.loaded.tower_scripts = nil
-
 	package.loaded["kr1.data.balance"] = nil
 
 	require("components")

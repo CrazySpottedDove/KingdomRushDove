@@ -19874,6 +19874,7 @@ function scripts.controller_tower_swap.update(this, store)
 
 	queue_remove(store, this)
 end
+
 -- 幽冥 END
 -- 圣殿 START
 scripts.tower_paladin_covenant = {}

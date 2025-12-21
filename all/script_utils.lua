@@ -1622,6 +1622,7 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 		bullet = E:create_entity(attack.bullet)
 
 		local b = bullet.bullet
+
 		bullet.pos = V.vclone(this.pos)
 
 		if attack.bullet_start_offset then
