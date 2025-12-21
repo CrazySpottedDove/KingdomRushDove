@@ -1620,6 +1620,8 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 		S:queue(attack.sound_shoot)
 
 		bullet = E:create_entity(attack.bullet)
+
+		local b = bullet.bullet
 		bullet.pos = V.vclone(this.pos)
 
 		if attack.bullet_start_offset then
@@ -1628,26 +1630,34 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 			bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 		end
 
-		bullet.bullet.damage_max = bullet.bullet.damage_max + this.damage_buff
-		bullet.bullet.damage_min = bullet.bullet.damage_min + this.damage_buff
-
-		if attack.mod then
-			bullet.bullet.mod = attack.mod
-		end
-
-		bullet.bullet.from = V.vclone(bullet.pos)
-		bullet.bullet.to = V.vclone(bullet_to)
+		b.from = V.vclone(bullet.pos)
+		b.to = V.vclone(bullet_to)
 
 		if not attack.ignore_hit_offset then
-			bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
-			bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
+			b.to.x = b.to.x + target.unit.hit_offset.x
+			b.to.y = b.to.y + target.unit.hit_offset.y
 		end
 
-		bullet.bullet.target_id = target.id
-		bullet.bullet.source_id = this.id
-		bullet.bullet.xp_dest_id = this.id
-		bullet.bullet.level = attack.level
-		bullet.bullet.damage_factor = this.unit.damage_factor
+		b.target_id = target.id
+		b.source_id = this.id
+		b.xp_dest_id = this.id
+		b.level = attack.level
+		b.damage_factor = this.unit.damage_factor
+
+		if type(b.damages_min) == "table" then
+			b.damage_min = b.damage_min[b.level]
+		end
+
+		if type(b.damage_max) == "table" then
+			b.damage_max = b.damage_max[b.level]
+		end
+
+		b.damage_max = b.damage_max + this.damage_buff
+		b.damage_min = b.damage_min + this.damage_buff
+
+		if attack.mod then
+			b.mod = attack.mod
+		end
 
 		queue_insert(store, bullet)
 

@@ -2888,16 +2888,14 @@ tt.bullet.pop_chance = 0
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
 tt.bullet.hit_payload = "aura_bullet_soldier_tower_dwarf"
-tt.bullet.damages_min = b.damages_min
-tt.bullet.damages_max = b.damages_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
 tt.main_script.update = scripts.bomb.update
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerDwarfIncendiaryAmmo"
 tt.render.sprites[1].name = "tower_dwarf_skill_projectile"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = false
-tt.bullet.damage_max = b.damage_max
-tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_radius = b.damage_radius
 tt.from_tower = true
 tt = E:register_t("aura_bullet_soldier_tower_dwarf", "aura")
@@ -2910,6 +2908,20 @@ tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
+tt = E:register_t("decal_bullet_soldier_tower_dwarf", "decal_tween")
+tt.tween.props[1].keys = {
+	{
+		1,
+		255
+	},
+	{
+		2.5,
+		0
+	}
+}
+tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = v(1.2, 1.2)
 -- 炮兵 END
 -- 幽冥 START
 tt = E:register_t("ps_soldier_tower_ghost")

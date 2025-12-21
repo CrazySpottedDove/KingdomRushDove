@@ -493,14 +493,14 @@ return {
 			tt_title = _("TOWER_ROCKET_GUNNERS_NAME"),
 			tt_desc = _("TOWER_ROCKET_GUNNERS_1_DESCRIPTION")
 		}),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_dwarf_lvl4",
-		-- 	type = "dwarf",
-		-- 	image = "kr5_main_icons_0042",
-		-- 	place = 23,
-		-- 	tt_title = _("TOWER_DWARF_1_NAME"),
-		-- 	tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
-		-- }),
+		M(tpl.upgrade, {
+			action_arg = "tower_dwarf_lvl4",
+			type = "dwarf",
+			image = "kr5_main_icons_0039",
+			place = 23,
+			tt_title = _("TOWER_DWARF_1_NAME"),
+			tt_desc = _("TOWER_DWARF_1_DESCRIPTION")
+		}),
 		-- M(tpl.upgrade, {
 		-- 	action_arg = "tower_ghost_lvl4",
 		-- 	type = "ghost",
