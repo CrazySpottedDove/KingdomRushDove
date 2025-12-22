@@ -36,6 +36,10 @@ local animation_finished = U.animation_finished
 local y_wait = U.y_wait
 local y_animation_wait = U.y_animation_wait
 
+local function T(name)
+	return E:get_template(name)
+end
+
 local function tpos(e)
 	return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
 end
@@ -18120,7 +18124,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				queue_insert(store, fx)
 				U.y_wait(store, fts(11) * tw.cooldown_factor)
 
-				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
 
 				if not enemies then
 					a_crystalize.ts = a_crystalize.ts + a_crystalize.cooldown * 0.2
@@ -18158,7 +18162,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				U.y_wait(store, a_burst.cast_time)
 				S:queue(a_burst.sound_loop)
 
-				local enemy = U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_burst.vis_flags, a_burst.vis_bans)
+				local enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_burst.vis_flags, a_burst.vis_bans)
 
 				if not enemy then
 					a_burst.ts = a_burst.ts + a_burst.cooldown * 0.2
@@ -19702,7 +19706,7 @@ function scripts.tower_ghost_hover_controller.insert(this, store, script)
 	this.hovers = {}
 
 	for _, v in pairs(store.entities) do
-		if v.tower and v.ui.can_click and v.tower.can_be_sold and not v.cannot_be_swapped then
+		if v.tower and v.ui.can_click and v.tower.can_be_sold and not table.contains(T("tower_ghost_lvl4").cannot_be_swappeds, v.template_name) then
 			local h = E:create_entity(this.template_hover)
 
 			h.pos = V.vclone(v.pos)

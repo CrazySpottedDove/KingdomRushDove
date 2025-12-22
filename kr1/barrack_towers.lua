@@ -8,6 +8,8 @@ local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
+local SU = require("script_utils")
+local V = require("klua.vector")
 
 require("templates")
 
@@ -19,19 +21,8 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local function vv(x)
-	return {
-		x = x,
-		y = x
-	}
-end
-
-local function v(x, y)
-	return {
-		x = x,
-		y = y
-	}
-end
+local v = V.v
+local vv = V.vv
 
 require("game_templates_utils")
 
@@ -2858,6 +2849,7 @@ tt.ranged.attacks[2].bullet_start_offset_relative = v(15, 14)
 tt.ranged.attacks[2].shoot_time = fts(35)
 tt.ranged.attacks[2].node_prediction = fts(55)
 tt.ranged.attacks[2].ignore_hit_offset = true
+tt.ranged.attacks[2].cooldown = balance.towers.dwarf.incendiary_ammo.cooldown
 tt._jump_asset_name = "tower_dwarf_dwarf_jump_lvl_4"
 b = balance.towers.dwarf
 tt.powers.incendiary_ammo = E:clone_c("power")
@@ -3049,6 +3041,9 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
+tt.cannot_be_swappeds = table.merge(SU.get_all_holder(), {
+	"tower_ghost_lvl4"
+})
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 0
 tt.tower.level = 1
