@@ -2849,6 +2849,7 @@ tt.ranged.attacks[2].bullet_start_offset_relative = v(15, 14)
 tt.ranged.attacks[2].shoot_time = fts(35)
 tt.ranged.attacks[2].node_prediction = fts(55)
 tt.ranged.attacks[2].ignore_hit_offset = true
+tt.ranged.attacks[2].cooldown = balance.towers.dwarf.incendiary_ammo.cooldown
 tt._jump_asset_name = "tower_dwarf_dwarf_jump_lvl_4"
 b = balance.towers.dwarf
 tt.powers.incendiary_ammo = E:clone_c("power")
