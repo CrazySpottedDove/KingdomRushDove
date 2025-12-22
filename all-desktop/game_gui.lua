@@ -2002,15 +2002,17 @@ end
 
 function game_gui.swap_tower()
 	local e = game_gui.last_tower_hover
+	
+	local tower_selected = game_gui.swap_entity
 
 	if not e or not e.ui then
-		return
+		goto lable_return
 	end
 
 	if not game_gui.game.store.entities[e.id] then
 		log.debug("tower %s is not in entities", e.id)
 
-		return
+		goto lable_return
 	end
 
 	if e.ui and e.ui.click_proxies then
@@ -2026,7 +2028,7 @@ function game_gui.swap_tower()
 	if not e.ui.can_click then
 		log.debug("cannot click tower %s: has ui.can_click == false", e.id)
 
-		return
+		goto lable_return
 	end
 
 	e.ui.clicked = true
@@ -2034,32 +2036,39 @@ function game_gui.swap_tower()
 	if not e.ui.can_select then
 		log.debug("cannot select tower %s: has ui.can_select == false", e.id)
 
-		return
+		goto lable_return
 	end
 
 	if e == game_gui.selected_entity then
 		log.debug("cannot select tower %s: is already selected", e.id)
 
-		return
+		goto lable_return
 	end
 
-	if e.cannot_be_swapped then
+	if table.contains(tower_selected.cannot_be_swappeds, e.template_name) then
 		log.debug("cannot be swap this tower", e.id)
 
-		return
+		goto lable_return
 	end
 
-	local tower_selected = game_gui.swap_entity
+	if tower_selected == e then
+		log.debug("cannot be swap self", e.id)
+
+		goto lable_return
+	end
 
 	game_gui:deselect_entity()
 
-	local controller = E:create_entity("controller_tower_swap")
+	do
+		local controller = E:create_entity("controller_tower_swap")
 
-	controller.tower_1 = game_gui.swap_entity
-	controller.tower_2 = e
+		controller.tower_1 = tower_selected
+		controller.tower_2 = e
 
-	game_gui.game.simulation:insert_entity(controller)
+		game_gui.game.simulation:insert_entity(controller)
+	end
 
+	::lable_return::
 	game_gui.swap_entity = nil
 
 	game_gui:set_mode(GUI_MODE_IDLE)

@@ -8,6 +8,8 @@ local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
+local SU = require("script_utils")
+local V = require("klua.vector")
 
 require("templates")
 
@@ -19,19 +21,8 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local function vv(x)
-	return {
-		x = x,
-		y = x
-	}
-end
-
-local function v(x, y)
-	return {
-		x = x,
-		y = y
-	}
-end
+local v = V.v
+local vv = V.vv
 
 require("game_templates_utils")
 
@@ -3049,6 +3040,9 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
+tt.cannot_be_swappeds = table.merge({
+	"tower_ghost_lvl4",
+}, SU.get_all_holder())
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 0
 tt.tower.level = 1
