@@ -2984,7 +2984,7 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
--- tt.cannot_be_swappeds = table.merge(SU.get_all_holder(), {
+-- tt.cannot_be_swappeds = table.merge(U.get_all_holder(), {
 -- 	"tower_ghost_lvl4"
 -- })
 tt.cannot_be_swappeds = {}

@@ -7598,7 +7598,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 					if #this.track_kills.killed > 0 and this.track_kills.killed[1] == blocker.id then
 						queue_remove(store, this)
 
-						if not SU.is_wraith(blocker.template_name) then
+						if not U.is_wraith(blocker.template_name) then
 							signal.emit("wave-notification", "icon", "enemy_alien_reaper")
 
 							local e = E:create_entity("enemy_alien_reaper")
@@ -8853,7 +8853,7 @@ function scripts.phantom_warrior_aura.update(this, store)
 			last_ts = store.tick_ts
 
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans, function(e)
-				return not SU.is_wraith(e.template_name)
+				return not U.is_wraith(e.template_name)
 			end)
 
 			if targets then
@@ -9311,7 +9311,7 @@ end
 scripts.enemy_elvira = {}
 
 function scripts.enemy_elvira.can_lifesteal(this, store, attack, target)
-	return not SU.is_wraith(target.template_name) and this.enemy.can_do_magic and this.health.hp / this.health.hp_max < attack.health_trigger_factor
+	return not U.is_wraith(target.template_name) and this.enemy.can_do_magic and this.health.hp / this.health.hp_max < attack.health_trigger_factor
 end
 
 scripts.mod_elvira_lifesteal = {}
@@ -11889,7 +11889,7 @@ function scripts.eb_dracula.insert(this, store)
 end
 
 function scripts.eb_dracula.can_lifesteal(this, store, attack, target)
-	return not SU.is_wraith(target.template_name)
+	return not U.is_wraith(target.template_name)
 end
 
 function scripts.eb_dracula.update(this, store)

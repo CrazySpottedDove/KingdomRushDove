@@ -4417,7 +4417,7 @@ local function get_entity_all_attacks(e)
 
 	for i = 1, #all_attacks_names do
 		local attack_name = all_attacks_names[i]
-		local as = e[attack_names]
+		local as = e[attack_name]
 
 		if not as then
 			goto continue
@@ -4451,7 +4451,7 @@ end
 
 ---降低实体单个攻击冷却时间
 ---@param a table 攻击
----@param store game.store
+---@param store table game.store
 ---@param cooldown_factor? number 冷却降低倍率，默认为1
 ---@return nil
 local function reset_attack_ts(a, store, cooldown_factor)
@@ -4464,7 +4464,7 @@ end
 
 ---降低实体所有攻击冷却时间
 ---@param e table 实体
----@param store game.store
+---@param store table game.store
 ---@param cooldown_factor? number 冷却降低倍率，默认为1
 ---@return nil
 local function reset_all_attacks_ts(e, store, cooldown_factor)
@@ -4493,33 +4493,6 @@ local function towers_swaped(store, this, attacks)
 
 		this.tower_upgrade_persistent_data.swaped = nil
 	end
-end
-
-local function is_wraith(template_name)
-	return GS.wraith[template_name]
-end
-
----获取所有塔位模板
----@return table
-local function get_all_holder()
-	return {
-		"tower_holder",
-		"tower_holder_grass",
-		"tower_holder_snow",
-		"tower_holder_wasteland",
-		"tower_holder_blackburn",
-		"tower_holder_desert",
-		"tower_holder_jungle",
-		"tower_holder_elven_woods",
-		"tower_holder_faerie_grove",
-		"tower_holder_ancient_metropolis",
-		"tower_holder_hulking_rage",
-		"tower_holder_bittering_rancor",
-		"tower_holder_forgotten_treasures",
-		"tower_holder_blocked",
-		"tower_holder_blocked_jungle",
-		"tower_holder_blocked_underground"
-	}
 end
 
 --- 清空一个表，并将表中全部实体移出游戏队列
@@ -4651,8 +4624,6 @@ local SU = {
 	towers_swaped = towers_swaped,
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
-	is_wraith = is_wraith,
-	get_all_holder = get_all_holder,
 	queue_remove_clean_table = queue_remove_clean_table
 }
 

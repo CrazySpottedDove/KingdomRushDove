@@ -11,6 +11,7 @@ local bnot = bit.bnot
 local V = require("lib.klua.vector")
 local P = require("path_db")
 local GR = require("grid_db")
+local GS = require("game_settings")
 
 require("constants")
 
@@ -2695,6 +2696,33 @@ end
 
 function U.valid_rally_node_nearby(pos)
 	return GR:cell_is_only(pos.x, pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and P:valid_node_nearby(pos.x, pos.y, nil, NF_RALLY)
+end
+
+function U.is_wraith(template_name)
+	return GS.wraith[template_name] == true
+end
+
+---获取所有塔位模板名
+---@return table
+function U.get_all_holder()
+	return {
+		"tower_holder",
+		"tower_holder_grass",
+		"tower_holder_snow",
+		"tower_holder_wasteland",
+		"tower_holder_blackburn",
+		"tower_holder_desert",
+		"tower_holder_jungle",
+		"tower_holder_elven_woods",
+		"tower_holder_faerie_grove",
+		"tower_holder_ancient_metropolis",
+		"tower_holder_hulking_rage",
+		"tower_holder_bittering_rancor",
+		"tower_holder_forgotten_treasures",
+		"tower_holder_blocked",
+		"tower_holder_blocked_jungle",
+		"tower_holder_blocked_underground"
+	}
 end
 
 return U

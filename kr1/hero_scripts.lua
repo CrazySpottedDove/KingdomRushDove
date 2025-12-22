@@ -4312,7 +4312,7 @@ scripts.hero_priest = {
 						local could_revive = false
 
 						for _, t in pairs(dead_targets) do
-							if not t.reinforcement and not SU.is_wraith(t.template_name) then
+							if not t.reinforcement and not U.is_wraith(t.template_name) then
 								could_revive = true
 
 								break
@@ -4350,7 +4350,7 @@ scripts.hero_priest = {
 
 							for _, s in pairs(targets) do
 								-- 复活
-								if s.health.dead and not s.unit.hide_during_death and (math.random() < a.revive_chance) and not s.reinforcement and not s.hero and not SU.is_wraith(s.template_name) then
+								if s.health.dead and not s.unit.hide_during_death and (math.random() < a.revive_chance) and not s.reinforcement and not s.hero and not U.is_wraith(s.template_name) then
 									s.health.dead = false
 									s.health.hp = s.health.hp_max
 									s.health_bar.hidden = nil

@@ -8403,7 +8403,7 @@ function scripts.aura_tower_necromancer_skill_debuff.update(this, store)
 			end
 
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, this.aura.soldier_vis_flags, this.aura.soldier_vis_bans, function(t)
-				return SU.is_wraith(t.template_name)
+				return U.is_wraith(t.template_name)
 			end) or {}
 
 			for i, target in ipairs(targets) do
