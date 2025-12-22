@@ -5043,23 +5043,31 @@ scripts.tower_druid = {}
 
 function scripts.tower_druid.remove(this, store)
 	if this.loaded_bullets then
-		for _, b in pairs(this.loaded_bullets) do
-			queue_remove(store, b)
+		for i = #this.loaded_bullets, 1, -1 do
+			queue_remove(store, this.loaded_bullets[i])
+
+			this.loaded_bullets[i] = nil
 		end
 	end
 
 	if this.shooters then
-		for _, s in pairs(this.shooters) do
-			queue_remove(store, s)
+		for i = #this.shooters, 1, -1 do
+			queue_remove(store, this.shooters[i])
+
+			this.shooters[i] = nil
 		end
 	end
 
-	for _, s in pairs(this.barrack.soldiers) do
+	for i = #this.barrack.soldiers, 1, -1 do
+		local s = this.barrack.soldiers[i]
+
 		if s.health then
 			s.health.dead = true
 		end
 
 		queue_remove(store, s)
+
+		this.barrack.soldiers[i] = nil
 	end
 
 	return true
@@ -19774,12 +19782,17 @@ function scripts.controller_tower_swap.update(this, store)
 	end
 
 	local function create_spawner_out(to)
+		if not this.fx_out then
+			return
+		end
+
 		local ne = E:create_entity(this.fx_out)
 
 		ne.render.sprites[1].ts = store.tick_ts
 		ne.pos = V.vclone(to.pos)
 
 		queue_insert(store, ne)
+		U.y_wait(store, fts(4))
 	end
 
 	local function create_spawner_in(to)
@@ -19803,65 +19816,122 @@ function scripts.controller_tower_swap.update(this, store)
 		return th
 	end
 
+	local function swap(a, b, key)
+		local tmp = a[key]
+
+		a[key] = b[key]
+		b[key] = tmp
+	end
+
 	local t1 = this.tower_1
 	local t2 = this.tower_2
 
 	if t1 and t2 and t1.tower and t2.tower then
 		S:queue(this.swap_sound)
 
-		if t2.tower.type == "holder" then
-			local nt1 = create_tower(t1, t2)
-			local nt2 = create_tower(t2, t1)
+		t1.ui.can_click = false
+		t2.ui.can_click = false
 
+		if t1 == t2 then
 			t1.ui.can_click = false
-			t2.ui.can_click = false
 
-			if this.fx_out then
-				create_spawner_out(t1)
-				U.y_wait(store, fts(4))
-			end
-
+			create_spawner_out(t1)
 			queue_remove(store, t1)
-			queue_insert(store, nt2)
-			U.y_wait(store, this.delay_empty)
-			create_spawner_in(nt1)
-			U.y_wait(store, this.fx_in_delay)
-			queue_remove(store, t2)
-			queue_insert(store, nt1)
-		else
-			local nt1 = create_tower(t1, t2)
-			local nt2 = create_tower(t2, t1)
-
-			t1.ui.can_click = false
-			t2.ui.can_click = false
-
-			if this.fx_out then
-				create_spawner_out(t1)
-				U.y_wait(store, fts(4))
-			end
-
-			queue_remove(store, t1)
-
-			local th1 = create_temp_holder(t1)
-
-			U.y_wait(store, fts(10))
-			create_spawner_out(t2)
-			U.y_wait(store, fts(4))
-			queue_remove(store, t2)
-
-			local th2 = create_temp_holder(t2)
-
 			U.y_wait(store, this.delay)
-			S:queue(this.swap_sound)
-			create_spawner_in(nt2)
+			create_spawner_in(t1)
 			U.y_wait(store, this.fx_spawn_delay)
-			queue_insert(store, nt2)
-			queue_remove(store, th1)
-			U.y_wait(store, this.fx_delay_between)
-			create_spawner_in(nt1)
+			queue_insert(store, t1)
+
+			t1.ui.can_click = true
+		else
+			t1.ui.can_click = false
+			t2.ui.can_click = false
+
+			create_spawner_out(t1)
+			create_spawner_out(t2)
+			queue_remove(store, t1)
+			queue_remove(store, t2)
+			U.y_wait(store, this.delay)
+			create_spawner_in(t1)
+			create_spawner_in(t2)
 			U.y_wait(store, this.fx_spawn_delay)
-			queue_insert(store, nt1)
-			queue_remove(store, th2)
+			-- exchange position data
+			swap(t1, t2, "pos")
+			swap(t1.tower, t2.tower, "holder_id")
+			swap(t1.tower, t2.tower, "flip_x")
+			swap(t1.tower, t2.tower, "default_rally_pos")
+			swap(t1.tower, t2.tower, "terrain_style")
+			swap(t1.ui, t2.ui, "nav_mesh_id")
+
+			if t1.barrack then
+				t1.barrack.rally_pos = V.vclone(t1.tower.default_rally_pos)
+			end
+
+			if t2.barrack then
+				t2.barrack.rally_pos = V.vclone(t2.tower.default_rally_pos)
+			end
+
+			if t1.powers then
+				for _, p in pairs(t1.powers) do
+					p.changed = true
+				end
+			end
+
+			if t2.powers then
+				for _, p in pairs(t2.powers) do
+					p.changed = true
+				end
+			end
+
+			queue_insert(store, t1)
+			queue_insert(store, t2)
+
+			t1.ui.can_click = true
+			t2.ui.can_click = true
+		-- if t2.tower.type == "holder" then
+		-- 	local nt1 = create_tower(t1, t2)
+		-- 	local nt2 = create_tower(t2, t1)
+		-- 	t1.ui.can_click = false
+		-- 	t2.ui.can_click = false
+		-- 	if this.fx_out then
+		-- 		create_spawner_out(t1)
+		-- 		U.y_wait(store, fts(4))
+		-- 	end
+		-- 	queue_remove(store, t1)
+		-- 	queue_insert(store, nt2)
+		-- 	U.y_wait(store, this.delay_empty)
+		-- 	create_spawner_in(nt1)
+		-- 	U.y_wait(store, this.fx_in_delay)
+		-- 	queue_remove(store, t2)
+		-- 	queue_insert(store, nt1)
+		-- else
+		-- 	local nt1 = create_tower(t1, t2)
+		-- 	local nt2 = create_tower(t2, t1)
+		-- 	t1.ui.can_click = false
+		-- 	t2.ui.can_click = false
+		-- 	if this.fx_out then
+		-- 		create_spawner_out(t1)
+		-- 		U.y_wait(store, fts(4))
+		-- 	end
+		-- 	queue_remove(store, t1)
+		-- 	local th1 = create_temp_holder(t1)
+		-- 	U.y_wait(store, fts(10))
+		-- 	create_spawner_out(t2)
+		-- 	U.y_wait(store, fts(4))
+		-- 	queue_remove(store, t2)
+		-- 	local th2 = create_temp_holder(t2)
+		-- 	U.y_wait(store, this.delay)
+		-- 	S:queue(this.swap_sound)
+		-- 	create_spawner_in(nt2)
+		-- 	U.y_wait(store, this.fx_spawn_delay)
+		-- 	queue_insert(store, nt2)
+		-- 	queue_remove(store, th1)
+		-- 	U.y_wait(store, this.fx_delay_between)
+		-- 	create_spawner_in(nt1)
+		-- 	U.y_wait(store, this.fx_spawn_delay)
+		-- 	queue_insert(store, nt1)
+		-- 	queue_remove(store, th2)
+		-- end
 		end
 	end
 

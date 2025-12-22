@@ -370,9 +370,9 @@ function scripts.clickable_hover_controller.insert(this, store)
 		return false
 	end
 
-	if t.render then
-		local st = t.render.sprites[1]
+	local st = t.render.sprites[1]
 
+	if t.render then
 		sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
 		sh.offset = st.offset
 		sh.scale = st.scale and V.vclone(st.scale)
