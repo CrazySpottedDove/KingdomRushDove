@@ -36,6 +36,10 @@ local animation_finished = U.animation_finished
 local y_wait = U.y_wait
 local y_animation_wait = U.y_animation_wait
 
+local function T(name)
+	return E:get_template(name)
+end
+
 local function tpos(e)
 	return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
 end
@@ -19699,7 +19703,7 @@ function scripts.tower_ghost_hover_controller.insert(this, store, script)
 	this.hovers = {}
 
 	for _, v in pairs(store.entities) do
-		if v.tower and v.ui.can_click and v.tower.can_be_sold and not v.cannot_be_swapped then
+		if v.tower and v.ui.can_click and v.tower.can_be_sold and not table.contains(T("tower_ghost_lvl4").cannot_be_swappeds, v.template_name) then
 			local h = E:create_entity(this.template_hover)
 
 			h.pos = V.vclone(v.pos)

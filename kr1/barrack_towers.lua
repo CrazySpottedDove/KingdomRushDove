@@ -3040,9 +3040,9 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
-tt.cannot_be_swappeds = table.merge({
-	"tower_ghost_lvl4",
-}, SU.get_all_holder())
+tt.cannot_be_swappeds = table.merge(SU.get_all_holder(), {
+	"tower_ghost_lvl4"
+})
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 0
 tt.tower.level = 1

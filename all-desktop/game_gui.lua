@@ -2051,12 +2051,6 @@ function game_gui.swap_tower()
 		goto lable_return
 	end
 
-	if tower_selected == e then
-		log.debug("cannot be swap self", e.id)
-
-		goto lable_return
-	end
-
 	game_gui:deselect_entity()
 
 	do
