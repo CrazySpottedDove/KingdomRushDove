@@ -2002,7 +2002,6 @@ end
 
 function game_gui.swap_tower()
 	local e = game_gui.last_tower_hover
-	
 	local tower_selected = game_gui.swap_entity
 
 	if not e or not e.ui then
@@ -2063,6 +2062,7 @@ function game_gui.swap_tower()
 	end
 
 	::lable_return::
+
 	game_gui.swap_entity = nil
 
 	game_gui:set_mode(GUI_MODE_IDLE)
@@ -7542,7 +7542,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		end
 
 		if not e.user_selection_func or e.user_selection_func(e, game_gui.game.store) then
-			-- block empty
+		-- block empty
 		end
 	-- self:hide()
 	-- elseif item.action == "tw_free_action" then

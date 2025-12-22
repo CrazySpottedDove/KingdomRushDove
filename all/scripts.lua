@@ -373,14 +373,14 @@ function scripts.clickable_hover_controller.insert(this, store)
 	local st = t.render.sprites[1]
 
 	if t.render then
-		-- sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
-        sh.name = t.ui and t.ui.hover_sprite_name or st.name
+		sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
+		sh.name = t.ui and t.ui.hover_sprite_name or st.name
 		sh.offset = st.offset
 		sh.scale = st.scale and V.vclone(st.scale)
 		sh.flip_x = st.flip_x
 	elseif t.ui and t.ui.hover_sprite_name then
-		-- sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
-        sh.name = t.ui and t.ui.hover_sprite_name or st.name
+		sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
+		sh.animated = st.animated
 	else
 		return false
 	end

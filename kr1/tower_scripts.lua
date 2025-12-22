@@ -19346,7 +19346,8 @@ function scripts.tower_ghost.update(this, store, script)
 						s.powers.soul_attack.level = this.powers.soul_attack.level
 						s.powers.extra_damage.level = this.powers.extra_damage.level
 					end
-                    U.soldier_inherit_tower_buff_factor(s, this)
+
+					U.soldier_inherit_tower_buff_factor(s, this)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -19587,7 +19588,6 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 					goto label_969_0
 				end
 			end
-
 
 			local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 

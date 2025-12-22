@@ -27965,7 +27965,6 @@ function scripts.hero_wukong.update(this, store)
 	local hair_clones_attack = this.timed_attacks.list[1]
 	local giant_staff_attack = this.timed_attacks.list[2]
 	local pole_ranged_attack = this.timed_attacks.list[3]
-
 	local ps_nube_trail = E:create_entity("ps_wukong_nube_trail")
 
 	ps_nube_trail.particle_system.track_id = this.id

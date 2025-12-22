@@ -4413,18 +4413,10 @@ end
 ---@return table 所有攻击
 local function get_entity_all_attacks(e)
 	local all_attacks = {}
-
-	local all_attacks_names = {
-		"attacks",
-		"melee",
-		"ranged",
-		"timed_attacks",
-		"timed_actions"
-	}
+	local all_attacks_names = {"attacks", "melee", "ranged", "timed_attacks", "timed_actions"}
 
 	for i = 1, #all_attacks_names do
 		local attack_name = all_attacks_names[i]
-
 		local as = e[attack_names]
 
 		if not as then
@@ -4534,14 +4526,17 @@ end
 ---@param store table
 ---@param tbl table array
 local function queue_remove_clean_table(store, tbl)
-    local keys = {}
-    for k, v in pairs(tbl) do
-        table.insert(keys, k)
-    end
-    for _, k in pairs(keys) do
-        queue_remove(store, tbl[k])
-        tbl[k] = nil
-    end
+	local keys = {}
+
+	for k, v in pairs(tbl) do
+		table.insert(keys, k)
+	end
+
+	for _, k in pairs(keys) do
+		queue_remove(store, tbl[k])
+
+		tbl[k] = nil
+	end
 end
 
 local SU = {
@@ -4658,7 +4653,7 @@ local SU = {
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
 	is_wraith = is_wraith,
 	get_all_holder = get_all_holder,
-    queue_remove_clean_table = queue_remove_clean_table
+	queue_remove_clean_table = queue_remove_clean_table
 }
 
 return SU
