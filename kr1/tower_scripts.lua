@@ -18046,7 +18046,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 		end
 
 		if U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans) == nil then
-			a_crystalize.ts = store.tick_ts + fts(10)
+			a_crystalize.ts = a_crystalize.ts + fts(10)
 
 			return false
 		end
