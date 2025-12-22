@@ -7530,10 +7530,16 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 			e.tower_upgrade_persistent_data.current_mode = current_mode + 1
 		end
 
-		if e.user_selection then
-			e.user_selection.in_progress = true
-			e.user_selection.arg = item.action_arg
-			e.user_selection.new_pos = nil
+		local us = e.user_selection
+
+		if us then
+			us.in_progress = true
+			us.arg = item.action_arg
+			us.new_pos = nil
+		end
+
+		if not e.user_selection_func or e.user_selection_func(e, game_gui.game.store) then
+			-- block empty
 		end
 	-- self:hide()
 	-- elseif item.action == "tw_free_action" then

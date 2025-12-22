@@ -3058,6 +3058,7 @@ tt.info.stat_damage = b.stats.damage
 tt.info.stat_hp = b.stats.hp
 tt.info.stat_armor = b.stats.armor
 tt.info.enc_icon = 60
+tt.user_selection_func = scripts.tower_ghost.user_selection_func
 tt.barrack.respawn_offset = v(0, 40)
 tt.tower.menu_offset = v(0, 30)
 tt.barrack.soldier_type = "soldier_tower_ghost_lvl4"

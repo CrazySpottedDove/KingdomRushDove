@@ -18064,7 +18064,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 		end
 
 		if U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_burst.vis_flags, a_burst.vis_bans) == nil then
-			a_burst.ts = store.tick_ts + fts(10)
+			a_burst.ts = a_burst.ts + fts(10)
 
 			return false
 		end
@@ -19307,14 +19307,6 @@ function scripts.tower_ghost.update(this, store, script)
 	local spawn_id = 4
 
 	while true do
-		if this.change_mode then
-			this.change_mode = false
-			game_gui.swap_entity = this
-
-			game_gui:set_mode(GUI_MODE_SWAP_TOWER)
-			game_gui:show_ghost_hover()
-		end
-
 		local b = this.barrack
 
 		if this.powers then
@@ -19398,6 +19390,16 @@ function scripts.tower_ghost.update(this, store, script)
 		end
 
 		coroutine.yield()
+	end
+end
+
+function scripts.tower_ghost.user_selection_func(this, store)
+	if this.change_mode then
+		this.change_mode = false
+		game_gui.swap_entity = this
+
+		game_gui:set_mode(GUI_MODE_SWAP_TOWER)
+		game_gui:show_ghost_hover()
 	end
 end
 
