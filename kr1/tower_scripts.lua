@@ -18001,7 +18001,6 @@ function scripts.tower_sparking_geode.update(this, store, script)
 	local shots = 5
 	local pow_crystalize = this.powers.crystalize
 	local pow_burst = this.powers.spike_burst
-	local last_ts = store.tick_ts - a_basic.cooldown
 	local tw = this.tower
 
 	a._last_target_pos = a._last_target_pos or v(REF_W, 0)
@@ -18041,12 +18040,8 @@ function scripts.tower_sparking_geode.update(this, store, script)
 			return false
 		end
 
-		if not (store.tick_ts - last_ts > a.min_cooldown) then
-			return false
-		end
-
 		if U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans) == nil then
-			a_crystalize.ts = store.tick_ts + fts(10)
+			a_crystalize.ts = a_crystalize.tick_ts + fts(10)
 
 			return false
 		end
@@ -18056,10 +18051,6 @@ function scripts.tower_sparking_geode.update(this, store, script)
 
 	local function can_spike_burst()
 		if not ready_to_use_power(pow_burst, a_burst, store, tw.cooldown_factor) then
-			return false
-		end
-
-		if not (store.tick_ts - last_ts > a.min_cooldown) then
 			return false
 		end
 
@@ -18188,7 +18179,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				goto label_1211_0
 			end
 
-			if ready_to_attack(a_basic, store, tw.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown * tw.cooldown_factor and not a_basic_break() then
+			if ready_to_attack(a_basic, store, tw.cooldown_factor) and not a_basic_break() then
 				local target_pred_pos
 				local enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
 

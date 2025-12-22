@@ -141,13 +141,14 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		-- 查询 check_update 线程结果
 		local ch = love.thread.getChannel("check_update_result")
 		-- 尝试获取结果
-		-- local result = ch:pop()
-		local result = ch:demand() -- 改为阻塞等待，避免轮询延迟
+		local result = ch:pop()
 
+		-- local result = ch:demand() -- 改为阻塞等待，避免轮询延迟
 		-- -- 如果 check_update 线程还没结果，直接返回
-		-- if result == nil then
-		-- 	return
-		-- end
+		if result == nil then
+			return
+		end
+
 		-- 如果 check_update 线程返回 false，表示检查不了更新，直接离线游玩。
 		if result == false then
 			print("Cannot check for updates.\n")

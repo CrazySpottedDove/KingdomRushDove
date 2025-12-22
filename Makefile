@@ -7,7 +7,7 @@ CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | 
 .PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check gen_waves android windows
 
 all: _examine_dir_map sync
-	$(LOVE) "$(WINDOWS_DIR_WIN)"
+	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
 
 _examine_dir_map:
 	@if [ ! -d "$(WINDOWS_DIR)" ]; then \
@@ -27,16 +27,16 @@ sync-full:
 	@bash $(MAKE_FILE_DIR)/sync-full.sh "$(WINDOWS_DIR)"
 
 debug: _examine_dir_map sync
-	$(LOVE) "$(WINDOWS_DIR_WIN)" debug
+	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" debug
 
 assets_check: _examine_dir_map sync
-	$(LOVE) "$(WINDOWS_DIR_WIN)" assets
+	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" assets
 
 monitor: _examine_dir_map sync
-	$(LOVE) "$(WINDOWS_DIR_WIN)" monitor
+	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" monitor
 
 gen_waves: _examine_dir_map sync
-	$(LOVE) "$(WINDOWS_DIR_WIN)" waves
+	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" waves
 
 # 用于发布小的版本更新，使得更新器端可以在 master 分支上检查到最新更新
 package:
@@ -76,11 +76,3 @@ android:
 
 windows:
 	bash $(MAKE_FILE_DIR)/pack_windows.sh
-
-compress:
-	./dlfmt --compress-directory ./_assets/kr1-desktop/images/fullhd
-	./dlfmt --compress-directory ./kr1/data/animations
-	./dlfmt --compress-directory ./kr1/data/exoskeletons
-	./dlfmt --compress-directory ./kr1/data/waves
-	./dlfmt --compress-directory ./kr1/data/levels
-	./dlfmt --compress-file ./_assets/assets_index.lua
