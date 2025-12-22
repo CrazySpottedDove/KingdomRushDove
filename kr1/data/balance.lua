@@ -5959,7 +5959,7 @@ local towers = {
 	ghost = {
 		max_soldiers = 2,
 		rally_range = 155,
-		price = {90, 150, 220, 300},
+		price = {90, 150, 220, 270},
 		stats = {
 			damage = 3,
 			armor = 6,
@@ -5969,13 +5969,13 @@ local towers = {
 			dead_lifetime = 8,
 			speed = 75,
 			armor = {0.2, 0.3, 0.45, 0.6},
-			hp = {30, 50, 75, 100},
+			hp = {30, 50, 75, 130},
 			regen_hp = {5, 8, 12, 18},
 			basic_attack = {
 				range = 70,
 				cooldown = 1,
-				damage_min = {4, 6, 10, 16},
-				damage_max = {6, 10, 16, 24},
+				damage_min = {4, 6, 10, 20},
+				damage_max = {6, 10, 16, 30},
 				damage_type = DAMAGE_TRUE
 			}
 		},

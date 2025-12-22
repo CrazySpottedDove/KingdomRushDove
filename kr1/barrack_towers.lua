@@ -995,11 +995,7 @@ tt.tower.level = 1
 tt.tower.price = 195
 tt.barrack.max_soldiers = 4
 tt.mercenary = true
-tt.info.fn = function()
-	local tpl = E:get_template("tower_barrack_pirates")
-
-	return scripts.tower_barrack.get_info(tpl)
-end
+tt.info.fn = scripts.tower_barrack.get_info
 tt.info.portrait = "kr2_info_portraits_towers_0014"
 tt.main_script.update = scripts.tower_barrack_mercenaries.update
 tt.main_script.remove = scripts.tower_barrack.remove
@@ -2108,7 +2104,6 @@ tt.health.armor = b.soldier.armor[4]
 tt.health_bar.offset = v(0, 44)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health.dead_lifetime = 3
--- tt.regen.health = b.soldier.regen_hp[4]
 tt.motion.max_speed = b.soldier.speed * 1.1
 tt.ui.click_rect = r(-13, 0, 25, 30)
 tt.ui.click_rect_offset_y = 0
@@ -2800,7 +2795,6 @@ tt.health.hp_max = b.hp[1]
 tt.health.armor = b.armor[1]
 tt.health_bar.offset = v(0, 30)
 tt.health.dead_lifetime = b.dead_lifetime
-tt.regen.health = b.regen_hp[1]
 tt.motion.max_speed = b.speed
 tt.melee.range = b.melee_attack.range
 tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
@@ -2834,7 +2828,6 @@ tt.render.sprites[1].prefix = "tower_dwarf_dwarf_lvl4"
 tt.health.hp_max = b.hp[4]
 tt.health.armor = b.armor[4]
 tt.health_bar.offset = v(0, 33)
-tt.regen.health = b.regen_hp[4]
 tt.ranged.attacks[1].level = 4
 tt.ranged.attacks[1].max_range = b.ranged_attack.max_range[4]
 tt.ranged.attacks[1].min_range = b.ranged_attack.min_range[4]
@@ -2943,7 +2936,6 @@ tt.health.hp_max = b.soldier.hp[1]
 tt.health.armor = b.soldier.armor[1]
 tt.health_bar.offset = v(0, 33)
 tt.health.dead_lifetime = b.soldier.dead_lifetime
-tt.regen.health = b.soldier.regen_hp[1]
 tt.motion.max_speed = b.soldier.speed
 tt.particle = "ps_soldier_tower_ghost"
 tt.melee.range = b.soldier.basic_attack.range
@@ -2967,7 +2959,6 @@ tt.render.sprites[1].prefix = "ghost_tower_lvl4_unit"
 tt.health.hp_max = b.soldier.hp[4]
 tt.health_bar.offset = v(0, 40)
 tt.health.armor = b.soldier.armor[4]
-tt.regen.health = b.soldier.regen_hp[4]
 tt.melee.attacks[1].damage_min = b.soldier.basic_attack.damage_min[4]
 tt.melee.attacks[1].damage_max = b.soldier.basic_attack.damage_max[4]
 tt.ui.click_rect = r(-12, 2, 24, 30)
@@ -3041,9 +3032,10 @@ tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
 E:add_comps(tt, "powers")
 
 b = balance.towers.ghost
-tt.cannot_be_swappeds = table.merge(SU.get_all_holder(), {
-	"tower_ghost_lvl4"
-})
+-- tt.cannot_be_swappeds = table.merge(SU.get_all_holder(), {
+-- 	"tower_ghost_lvl4"
+-- })
+tt.cannot_be_swappeds = {}
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 0
 tt.tower.level = 1
@@ -3225,7 +3217,6 @@ tt.health.hp_max = b.soldier.hp[1]
 tt.health.armor = b.soldier.armor[1]
 tt.health_bar.offset = v(0, 30)
 tt.health.dead_lifetime = b.soldier.dead_lifetime
-tt.regen.health = b.soldier.regen_hp[1]
 tt.motion.max_speed = b.soldier.speed
 tt.melee.range = b.soldier.basic_attack.range
 tt.melee.attacks[1].cooldown = b.soldier.basic_attack.cooldown
@@ -3247,7 +3238,6 @@ tt.idle_flip.animations = {"idle"}
 tt.health.hp_max = b.soldier.hp[4]
 tt.health.armor = b.soldier.armor[4]
 tt.health_bar.offset = v(0, 35)
-tt.regen.health = b.soldier.regen_hp[4]
 tt.motion.max_speed = b.soldier.speed
 tt.ui.click_rect = r(-15, -2, 30, 35)
 tt.powers.lead = E:clone_c("power")

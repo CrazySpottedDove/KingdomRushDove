@@ -416,7 +416,9 @@ function upgrades:barrack_soldiers()
 		"soldier_tower_pandas_green_lvl4",
 		"soldier_tower_pandas_red_lvl4",
 		"soldier_tower_pandas_blue_lvl4",
-		"soldier_tower_rocket_gunners_lvl4"
+		"soldier_tower_rocket_gunners_lvl4",
+		"soldier_tower_ghost_lvl4",
+		"soldier_tower_dwarf_lvl4"
 	}
 end
 
@@ -446,7 +448,10 @@ function upgrades:towers_with_barrack()
 		"tower_baby_ashbite",
 		"tower_dark_elf_lvl4",
 		"tower_pandas_lvl4",
-		"tower_rocket_gunners_lvl4"
+		"tower_rocket_gunners_lvl4",
+		"tower_ghost_lvl4",
+		"tower_dwarf_lvl4",
+		"tower_barrel_lvl4"
 	}
 end
 

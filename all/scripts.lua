@@ -373,12 +373,14 @@ function scripts.clickable_hover_controller.insert(this, store)
 	local st = t.render.sprites[1]
 
 	if t.render then
-		sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
+		-- sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
+        sh.name = t.ui and t.ui.hover_sprite_name or st.name
 		sh.offset = st.offset
 		sh.scale = st.scale and V.vclone(st.scale)
 		sh.flip_x = st.flip_x
 	elseif t.ui and t.ui.hover_sprite_name then
-		sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
+		-- sh.name = t.ui and t.ui.hover_sprite_name or st.name .. "_over_console"
+        sh.name = t.ui and t.ui.hover_sprite_name or st.name
 	else
 		return false
 	end
@@ -1854,9 +1856,9 @@ function scripts.tower_barrack.remove(this, store)
 		if s.health then
 			s.health.dead = true
 		end
-
-		queue_remove(store, s)
 	end
+
+	SU.queue_remove_clean_table(store, this.barrack.soldiers)
 
 	return true
 end
@@ -2050,8 +2052,6 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 			store.player_gold = store.player_gold - s.unit.price
 
 			table.insert(b.soldiers, s)
-
-			local i = #b.soldiers
 
 			s.soldier.tower_id = this.id
 			s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))

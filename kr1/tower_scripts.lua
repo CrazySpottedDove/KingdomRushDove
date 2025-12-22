@@ -591,7 +591,7 @@ scripts.tower_musketeer = {
 scripts.tower_crossbow = {
 	remove = function(this, store)
 		local mods = table.filter(store.modifiers, function(_, e)
-			return e.modifier and e.modifier.source_id == this.id
+			return e.modifier.source_id == this.id
 		end)
 
 		for _, m in pairs(mods) do
@@ -599,11 +599,7 @@ scripts.tower_crossbow = {
 		end
 
 		if this.eagle_previews then
-			for _, decal in pairs(this.eagle_previews) do
-				queue_remove(store, decal)
-			end
-
-			this.eagle_previews = nil
+			SU.queue_remove_clean_table(store, this.eagle_previews)
 		end
 
 		return true
@@ -640,6 +636,7 @@ scripts.tower_crossbow = {
 					this.eagle_previews = nil
 				end
 			else
+				-- 鼠标悬浮时的预览，显示未被加成，但在范围内的塔
 				if this.ui.hover_active and this.ui.args == "eagle" and (not this.eagle_previews or eagle_previews_level ~= pow_e.level) then
 					if this.eagle_previews then
 						for _, decal in pairs(this.eagle_previews) do
@@ -708,6 +705,14 @@ scripts.tower_crossbow = {
 						local existing_mods = table.filter(store.modifiers, function(_, e)
 							return e.template_name == ea.mod and e.modifier.level >= pow_e.level
 						end)
+
+						for _, m in pairs(existing_mods) do
+							local target_id = m.modifier.target_id
+							local target = store.entities[target_id]
+							local source_id = m.modifier.source_id
+							local source = store.entities[source_id]
+						end
+
 						local busy_ids = table.map(existing_mods, function(k, v)
 							return v.modifier.target_id
 						end)
@@ -1070,9 +1075,9 @@ scripts.tower_pirate_watchtower = {
 	remove = function(this, store)
 		for _, parrot in pairs(this.parrots) do
 			parrot.owner = nil
-
-			queue_remove(store, parrot)
 		end
+
+		SU.queue_remove_clean_table(store, this.parrots)
 
 		return true
 	end,
@@ -1988,14 +1993,10 @@ scripts.tower_arcane_wizard = {
 		return o
 	end,
 	remove = function(this, store)
-		local mods = table.filter(store.modifiers, function(_, e)
-			return e.modifier.source_id == this.id and e.template_name == "decalmod_arcane_wizard_disintegrate_ready"
-		end)
+		if this.decalmod_disintegrate then
+			queue_remove(store, this.decalmod_disintegrate)
 
-		if mods then
-			for _, m in pairs(mods) do
-				queue_remove(store, m)
-			end
+			this.decalmod_disintegrate = nil
 		end
 
 		return true
@@ -2934,9 +2935,7 @@ scripts.tower_faerie_dragon = {
 		return true
 	end,
 	remove = function(this, store)
-		for _, dragon in pairs(this.dragons) do
-			queue_remove(store, dragon)
-		end
+		SU.queue_remove_clean_table(store, this.dragons)
 
 		return true
 	end,
@@ -3253,9 +3252,7 @@ function scripts.tower_pixie.get_info(this)
 end
 
 function scripts.tower_pixie.remove(this, store)
-	for _, pixie in pairs(this.pixies) do
-		queue_remove(store, pixie)
-	end
+	SU.queue_remove_clean_table(store, this.pixies)
 
 	return true
 end
@@ -6155,6 +6152,8 @@ end
 function scripts.tower_dark_elf.remove(this, store)
 	if this.controller_soldiers then
 		queue_remove(store, this.controller_soldiers)
+
+		this.controller_soldiers = nil
 	end
 
 	return true
@@ -6520,13 +6519,7 @@ function scripts.controller_tower_dark_elf_soldiers.remove(this, store)
 	if this.tower_ref then
 		local b = this.tower_ref.barrack
 
-		for i = 1, b.max_soldiers do
-			local s = b.soldiers[i]
-
-			if s then
-				queue_remove(store, s)
-			end
-		end
+		SU.queue_remove_clean_table(store, b.soldiers)
 	end
 
 	return true
@@ -9044,6 +9037,15 @@ function scripts.tower_pandas.update(this, store)
 	end
 
 	for i = 1, 3 do
+		if not b.soldiers[i] then
+			local s = E:create_entity(a2.soldiers[i])
+
+			s.soldier.tower_id = this.id
+			s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+			s.pos = V.vclone(s.nav_rally.pos)
+			s.nav_rally.new = true
+		end
+
 		this.pandas[i] = {
 			status = "on_tower",
 			in_animation = false,
@@ -9455,29 +9457,29 @@ function scripts.tower_pandas.update(this, store)
 end
 
 function scripts.tower_pandas.remove(this, store)
-	if this.tower.sell then
-		for _, panda in pairs(this.pandas) do
-			if panda.status == "on_tower" then
-				local fx = E:create_entity("fx_tower_panda_disappear_wood")
+	for _, panda in pairs(this.pandas) do
+		if panda.status == "on_tower" then
+			local fx = E:create_entity("fx_tower_panda_disappear_wood")
 
-				fx.pos = vclone(this.pos)
-				fx.pos.x = fx.pos.x + this.render.sprites[panda.render].offset.x
+			fx.pos = vclone(this.pos)
+			fx.pos.x = fx.pos.x + this.render.sprites[panda.render].offset.x
 
-				if string.find(panda.soldier_type, "blue") then
-					fx.pos.y = fx.pos.y + 30
-				elseif string.find(panda.soldier_type, "red") then
-					fx.pos.y = fx.pos.y + 10
-				else
-					fx.pos.y = fx.pos.y + 0
-				end
-
-				fx.render.sprites[1].flip_x = random() > 0.5
-				fx.render.sprites[1].ts = store.tick_ts
-
-				queue_insert(store, fx)
+			if string.find(panda.soldier_type, "blue") then
+				fx.pos.y = fx.pos.y + 30
+			elseif string.find(panda.soldier_type, "red") then
+				fx.pos.y = fx.pos.y + 10
+			else
+				fx.pos.y = fx.pos.y + 0
 			end
+
+			fx.render.sprites[1].flip_x = random() > 0.5
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
 		end
 	end
+
+	this.pandas = {}
 
 	return scripts.tower_barrack.remove(this, store)
 end
@@ -9951,6 +9953,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 	end
 
 	U.sprites_show(this, nil, nil, true)
+	U.soldier_inherit_tower_buff_factor(this, tower)
 
 	if this.do_level_up_smoke then
 		local smoke = E:create_entity("fx_panda_smoke_level_up")
@@ -12522,6 +12525,8 @@ function scripts.tower_royal_archers.remove(this, store)
 		if eagle then
 			queue_remove(store, eagle)
 		end
+
+		this.rapacious_hunter_tamer = nil
 	end
 
 	return true
@@ -16970,7 +16975,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store, script)
 end
 
 -- 酒桶 END
--- 青蛙 START
+-- 蛤蟆 START
 scripts.tower_hermit_toad = {}
 
 function scripts.tower_hermit_toad.get_info(this)
@@ -17323,10 +17328,6 @@ function scripts.tower_hermit_toad.update(this, store)
 				local pa = this.attacks.list[pow.attack_idx]
 
 				pa.cooldown = pow.cooldown[pow.level]
-
-				if pow.level == 1 then
-					pa.ts = store.tick_ts - pa.cooldown
-				end
 
 				if pow.damage_min then
 					pa.damage_min = pow.damage_min[pow.level]
@@ -18022,19 +18023,11 @@ function scripts.tower_sparking_geode.update(this, store, script)
 		if pow_crystalize.changed then
 			pow_crystalize.changed = nil
 			a_crystalize.cooldown = pow_crystalize.cooldown[pow_crystalize.level]
-
-			if pow_crystalize.level == 1 then
-				a_crystalize.ts = store.tick_ts - a_crystalize.cooldown
-			end
 		end
 
 		if pow_burst.changed then
 			pow_burst.changed = nil
 			a_burst.cooldown = pow_burst.cooldown[pow_burst.level]
-
-			if pow_burst.level == 1 then
-				a_burst.ts = store.tick_ts - a_burst.cooldown
-			end
 		end
 	end
 
@@ -19152,10 +19145,6 @@ function scripts.soldier_tower_dwarf.update(this, store, script)
 						a_i.disabled = nil
 						a_i.cooldown = p.cooldown
 						a_i.level = p.level
-
-						if p.level == 1 then
-							a_i.ts = store.tick_ts - a_i.cooldown
-						end
 					end
 				end
 			end
@@ -19357,7 +19346,7 @@ function scripts.tower_ghost.update(this, store, script)
 						s.powers.soul_attack.level = this.powers.soul_attack.level
 						s.powers.extra_damage.level = this.powers.extra_damage.level
 					end
-
+                    U.soldier_inherit_tower_buff_factor(s, this)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -19435,7 +19424,7 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 
 	this.nav_rally._first_time = true
 
-	local function y_soldier_new_rally_break_attack(store, this, break_fn)
+	local function y_soldier_new_rally_break_attack(store, this)
 		local r = this.nav_rally
 		local out = false
 		local vis_bans = this.vis.bans
@@ -19485,12 +19474,6 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 					r.new = false
 				end
 
-				if break_fn() then
-					out = false
-
-					break
-				end
-
 				if r._first_time then
 					r._first_time = false
 
@@ -19518,27 +19501,6 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 		this.health.immune_to = prev_immune
 
 		return out
-	end
-
-	local function check_tower_damage_factor()
-		if store.entities[this.soldier.tower_id] then
-			for _, a in ipairs(this.melee.attacks) do
-				if not a._original_damage_min then
-					a._original_damage_min = a.damage_min
-				end
-
-				if not a._original_damage_max then
-					a._original_damage_max = a.damage_max
-				end
-
-				a.damage_min = a._original_damage_min * store.entities[this.soldier.tower_id].tower.damage_factor
-				a.damage_max = a._original_damage_max * store.entities[this.soldier.tower_id].tower.damage_factor
-			end
-		end
-	end
-
-	local function walk_break_fn()
-		return pow_l and pow_l.changed
 	end
 
 	local fpos = V.vclone(this.nav_rally.pos)
@@ -19604,8 +19566,6 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 			this.ui.can_click = false
 
 			if this.powers and this.powers.soul_attack.level > 0 then
-				log.info("soul attack")
-
 				local soul = E:create_entity(this.soul)
 
 				soul.level = this.powers.soul_attack.level
@@ -19623,16 +19583,15 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 			SU.soldier_idle(store, this)
 		else
 			while this.nav_rally.new do
-				if y_soldier_new_rally_break_attack(store, this, walk_break_fn) then
+				if y_soldier_new_rally_break_attack(store, this) then
 					goto label_969_0
 				end
 			end
 
-			check_tower_damage_factor()
 
-			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-			if this.powers and this.powers.extra_damage.level > 0 and sta ~= A_NO_TARGET and (mod_damage or store.tick_ts - extra_damage_ts > this.extra_damage_cooldown) then
+			if this.powers.extra_damage.level > 0 and sta ~= A_NO_TARGET and (mod_damage or store.tick_ts - extra_damage_ts > this.extra_damage_cooldown) then
 				if not mod_damage then
 					mod_damage = E:create_entity(this.mod_extra_damage)
 					mod_damage.modifier.target_id = this.id
@@ -19691,7 +19650,7 @@ function scripts.tower_ghost.soul_update(this, store, script)
 		queue_insert(store, b)
 	end
 
-	local enemy = U.find_random_enemy(store.entities, this.pos, 0, this.radius * 2, F_ENEMY, F_FLYING)
+	local enemy = U.find_random_enemy(store.entities, this.pos, 0, this.radius * 2, F_ENEMY, F_NONE)
 
 	if enemy then
 		shoot_bullet(enemy, this.level)
@@ -19734,57 +19693,6 @@ end
 scripts.controller_tower_swap = {}
 
 function scripts.controller_tower_swap.update(this, store)
-	local function create_tower(from, to)
-		local ne = E:create_entity(from.tower_holder and to.tower.holder_template or from.template_name)
-
-		ne.pos = V.vclone(to.pos)
-		ne.tower.holder_id = to.tower.holder_id
-
-		if not from.tower_holder then
-			ne.tower.holder_template = to.tower_holder and to.template_name or to.tower.holder_template
-		end
-
-		ne.tower.flip_x = to.tower.flip_x
-		ne.tower.spent = from.tower.spent
-
-		if to.tower.default_rally_pos then
-			ne.tower.default_rally_pos = V.vclone(to.tower.default_rally_pos)
-		end
-
-		if to.tower.terrain_style then
-			ne.tower.terrain_style = to.tower.terrain_style
-
-			if from.tower.type ~= "holder" then
-				ne.render.sprites[1].name = string.format(ne.render.sprites[1].name, ne.tower.terrain_style)
-			else
-				ne.render.sprites[1].name = string.format("terrains_holders_%04i", ne.tower.terrain_style)
-				ne.render.sprites[2].name = string.format("terrains_holders_%04i_flag", ne.tower.terrain_style)
-			end
-		end
-
-		if ne.ui and to.ui then
-			ne.ui.nav_mesh_id = to.ui.nav_mesh_id
-		end
-
-		if from.powers then
-			for i, v in pairs(from.powers) do
-				if v.level > 0 then
-					ne.powers[i].level = v.level
-					ne.powers[i].changed = true
-				end
-			end
-		end
-
-		ne.tower_upgrade_persistent_data = from.tower_upgrade_persistent_data and table.clone(from.tower_upgrade_persistent_data) or E:clone_c("tower_upgrade_persistent_data")
-		ne.tower_upgrade_persistent_data.swaped = true
-
-		if ne.sound_events then
-			ne.sound_events.insert = nil
-		end
-
-		return ne
-	end
-
 	local function create_spawner_out(to)
 		if not this.fx_out then
 			return
@@ -19840,6 +19748,17 @@ function scripts.controller_tower_swap.update(this, store)
 			t1.ui.can_click = false
 
 			create_spawner_out(t1)
+
+			if t1.mercenary then
+				local soldier_count = 0
+
+				for _, _ in pairs(t1.barrack.soldiers) do
+					soldier_count = soldier_count + 1
+				end
+
+				store.player_gold = store.player_gold + E:get_template(t1.barrack.soldier_type).unit.price * soldier_count
+			end
+
 			queue_remove(store, t1)
 			U.y_wait(store, this.delay)
 			create_spawner_in(t1)
@@ -19852,13 +19771,37 @@ function scripts.controller_tower_swap.update(this, store)
 			t2.ui.can_click = false
 
 			create_spawner_out(t1)
-			create_spawner_out(t2)
+
+			if t1.mercenary then
+				local soldier_count = 0
+
+				for _, _ in pairs(t1.barrack.soldiers) do
+					soldier_count = soldier_count + 1
+				end
+
+				store.player_gold = store.player_gold + E:get_template(t1.barrack.soldier_type).unit.price * soldier_count
+			end
+
 			queue_remove(store, t1)
+			U.y_wait(store, fts(1))
+			create_spawner_out(t2)
+
+			if t2.mercenary then
+				local soldier_count = 0
+
+				for _, _ in pairs(t2.barrack.soldiers) do
+					soldier_count = soldier_count + 1
+				end
+
+				store.player_gold = store.player_gold + E:get_template(t2.barrack.soldier_type).unit.price * soldier_count
+			end
+
 			queue_remove(store, t2)
 			U.y_wait(store, this.delay)
 			create_spawner_in(t1)
+			U.y_wait(store, fts(1))
 			create_spawner_in(t2)
-			U.y_wait(store, this.fx_spawn_delay)
+			U.y_wait(store, this.fx_spawn_delay - fts(1))
 			-- exchange position data
 			swap(t1, t2, "pos")
 			swap(t1.tower, t2.tower, "holder_id")
@@ -19877,65 +19820,31 @@ function scripts.controller_tower_swap.update(this, store)
 
 			if t1.powers then
 				for _, p in pairs(t1.powers) do
-					p.changed = true
+					if p.level > 0 then
+						p.changed = true
+					end
 				end
 			end
 
 			if t2.powers then
 				for _, p in pairs(t2.powers) do
-					p.changed = true
+					if p.level > 0 then
+						p.changed = true
+					end
 				end
 			end
 
+			t1.main_script.runs = 1
+			t1.main_script.co = nil
+			t2.main_script.runs = 1
+			t2.main_script.co = nil
+
 			queue_insert(store, t1)
+			U.y_wait(store, fts(1))
 			queue_insert(store, t2)
 
 			t1.ui.can_click = true
 			t2.ui.can_click = true
-		-- if t2.tower.type == "holder" then
-		-- 	local nt1 = create_tower(t1, t2)
-		-- 	local nt2 = create_tower(t2, t1)
-		-- 	t1.ui.can_click = false
-		-- 	t2.ui.can_click = false
-		-- 	if this.fx_out then
-		-- 		create_spawner_out(t1)
-		-- 		U.y_wait(store, fts(4))
-		-- 	end
-		-- 	queue_remove(store, t1)
-		-- 	queue_insert(store, nt2)
-		-- 	U.y_wait(store, this.delay_empty)
-		-- 	create_spawner_in(nt1)
-		-- 	U.y_wait(store, this.fx_in_delay)
-		-- 	queue_remove(store, t2)
-		-- 	queue_insert(store, nt1)
-		-- else
-		-- 	local nt1 = create_tower(t1, t2)
-		-- 	local nt2 = create_tower(t2, t1)
-		-- 	t1.ui.can_click = false
-		-- 	t2.ui.can_click = false
-		-- 	if this.fx_out then
-		-- 		create_spawner_out(t1)
-		-- 		U.y_wait(store, fts(4))
-		-- 	end
-		-- 	queue_remove(store, t1)
-		-- 	local th1 = create_temp_holder(t1)
-		-- 	U.y_wait(store, fts(10))
-		-- 	create_spawner_out(t2)
-		-- 	U.y_wait(store, fts(4))
-		-- 	queue_remove(store, t2)
-		-- 	local th2 = create_temp_holder(t2)
-		-- 	U.y_wait(store, this.delay)
-		-- 	S:queue(this.swap_sound)
-		-- 	create_spawner_in(nt2)
-		-- 	U.y_wait(store, this.fx_spawn_delay)
-		-- 	queue_insert(store, nt2)
-		-- 	queue_remove(store, th1)
-		-- 	U.y_wait(store, this.fx_delay_between)
-		-- 	create_spawner_in(nt1)
-		-- 	U.y_wait(store, this.fx_spawn_delay)
-		-- 	queue_insert(store, nt1)
-		-- 	queue_remove(store, th2)
-		-- end
 		end
 	end
 
@@ -20176,10 +20085,6 @@ function scripts.tower_paladin_covenant.soldier_update(this, store, script)
 						a_h.disabled = nil
 						a_h.cooldown = p.cooldown[p.level]
 						a_h.lost_health = p.health_trigger_factor[p.level]
-
-						if p.level == 1 then
-							a_h.ts = store.tick_ts - a_h.cooldown
-						end
 					elseif p == pow_l and this.soldier.tower_soldier_idx and this.soldier.tower_soldier_idx == 1 then
 						local b = p.b
 

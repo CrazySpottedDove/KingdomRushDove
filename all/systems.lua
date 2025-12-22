@@ -3139,6 +3139,10 @@ function sys.last_hook:on_remove(e, d)
 		hook(e, d)
 	end
 
+	if e._applied_mods then
+		e._applied_mods = nil
+	end
+
 	-- log.error(e.template_name)
 	return true
 end

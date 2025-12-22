@@ -4430,7 +4430,7 @@ local function get_entity_all_attacks(e)
 		if not as then
 			goto continue
 		end
-		
+
 		local attacks_list
 
 		if as.list then
@@ -4450,7 +4450,7 @@ local function get_entity_all_attacks(e)
 				table.insert(all_attacks, a)
 			end
 		end
-		
+
 		::continue::
 	end
 
@@ -4528,6 +4528,20 @@ local function get_all_holder()
 		"tower_holder_blocked_jungle",
 		"tower_holder_blocked_underground"
 	}
+end
+
+--- 清空一个表，并将表中全部实体移出游戏队列
+---@param store table
+---@param tbl table array
+local function queue_remove_clean_table(store, tbl)
+    local keys = {}
+    for k, v in pairs(tbl) do
+        table.insert(keys, k)
+    end
+    for _, k in pairs(keys) do
+        queue_remove(store, tbl[k])
+        tbl[k] = nil
+    end
 end
 
 local SU = {
@@ -4643,7 +4657,8 @@ local SU = {
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
 	is_wraith = is_wraith,
-	get_all_holder = get_all_holder
+	get_all_holder = get_all_holder,
+    queue_remove_clean_table = queue_remove_clean_table
 }
 
 return SU

@@ -15672,6 +15672,12 @@ function scripts.high_elven_sentinel.update(this, store)
 	queue_insert(store, ps)
 
 	while true do
+		if not this.owner then
+			queue_remove(store, this)
+
+			return
+		end
+
 		U.animation_start(this, "small", nil, store.tick_ts, true, sb_sid)
 
 		ss.hidden = true
@@ -15685,6 +15691,12 @@ function scripts.high_elven_sentinel.update(this, store)
 		charge_ts = store.tick_ts
 
 		while true do
+			if not this.owner then
+				queue_remove(store, this)
+
+				return
+			end
+
 			local p = v(this.tower_rotation_radius, 0)
 
 			p.x, p.y = V.rotate(store.tick_ts * this.tower_rotation_speed + (this.owner_idx - 1) * math.pi, p.x, p.y)
