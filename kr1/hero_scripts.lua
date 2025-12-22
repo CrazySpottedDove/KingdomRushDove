@@ -25463,8 +25463,6 @@ function scripts.hero_dragon_bone.update(this, store)
 	local burst_attack = this.ranged.attacks[5]
 	local upg_lf = UP:get_upgrade("heroes_lethal_focus")
 
-	SU.hero_spawning_set_skill_ts(this, store)
-
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 	this.health_bar.hidden = false
@@ -26698,8 +26696,6 @@ function scripts.hero_lumenir.update(this, store)
 	local mini_dragon_attack = this.ranged.attacks[4]
 	local fire_balls_attack = this.ranged.attacks[5]
 	local upg_lf = UP:get_upgrade("heroes_lethal_focus")
-
-	SU.hero_spawning_set_skill_ts(this, store)
 
 	local function find_hero()
 		for _, e in pairs(store.soldiers) do
@@ -27969,8 +27965,6 @@ function scripts.hero_wukong.update(this, store)
 	local hair_clones_attack = this.timed_attacks.list[1]
 	local giant_staff_attack = this.timed_attacks.list[2]
 	local pole_ranged_attack = this.timed_attacks.list[3]
-
-	SU.hero_spawning_set_skill_ts(this, store)
 
 	local ps_nube_trail = E:create_entity("ps_wukong_nube_trail")
 

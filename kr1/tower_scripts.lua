@@ -18045,9 +18045,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 			return false
 		end
 
-		if U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans) == nil then
-			a_crystalize.ts = a_crystalize.ts + fts(10)
-
+		if not U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_crystalize.vis_flags, a_crystalize.vis_bans) then
 			return false
 		end
 
@@ -18063,9 +18061,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 			return false
 		end
 
-		if U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_burst.vis_flags, a_burst.vis_bans) == nil then
-			a_burst.ts = a_burst.ts + fts(10)
-
+		if not U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_burst.vis_flags, a_burst.vis_bans) then
 			return false
 		end
 
@@ -18121,7 +18117,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				queue_insert(store, fx)
 				U.y_wait(store, fts(11) * tw.cooldown_factor)
 
-				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
 
 				if not enemies then
 					a_crystalize.ts = a_crystalize.ts + a_crystalize.cooldown * 0.2
@@ -18159,7 +18155,7 @@ function scripts.tower_sparking_geode.update(this, store, script)
 				U.y_wait(store, a_burst.cast_time)
 				S:queue(a_burst.sound_loop)
 
-				local enemy = U.find_first_enemy_in_range_filter_off(this.pos, a.range, a_burst.vis_flags, a_burst.vis_bans)
+				local enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_burst.vis_flags, a_burst.vis_bans)
 
 				if not enemy then
 					a_burst.ts = a_burst.ts + a_burst.cooldown * 0.2

@@ -4408,33 +4408,80 @@ local function update_on_damage(entity)
 	end
 end
 
----重置英雄的技能冷却时间
----@param this table 实体
+---获取实体所有可用攻击
+---@param e table 实体
+---@return table 所有攻击
+local function get_entity_all_attacks(e)
+	local all_attacks = {}
+
+	local all_attacks_names = {
+		"attacks",
+		"melee",
+		"ranged",
+		"timed_attacks",
+		"timed_actions"
+	}
+
+	for i = 1, #all_attacks_names do
+		local attack_name = all_attacks_names[i]
+
+		local as = e[attack_names]
+
+		if not as then
+			goto continue
+		end
+		
+		local attacks_list
+
+		if as.list then
+			attacks_list = as.list
+		elseif as.attacks then
+			attacks_list = as.attacks
+		end
+
+		if not attacks_list then
+			goto continue
+		end
+
+		for i = 1, #attacks_list do
+			local a = attacks_list[i]
+
+			if not a.disabled and not a.changed then
+				table.insert(all_attacks, a)
+			end
+		end
+		
+		::continue::
+	end
+
+	return all_attacks
+end
+
+---降低实体单个攻击冷却时间
+---@param a table 攻击
 ---@param store game.store
+---@param cooldown_factor? number 冷却降低倍率，默认为1
 ---@return nil
-local function hero_spawning_set_skill_ts(this, store)
-	local function reset_skill(v)
-		if not v.disabled and v.cooldown then
-			v.ts = store.tick_ts - v.cooldown
-		end
-	end
+local function reset_attack_ts(a, store, cooldown_factor)
+	cooldown_factor = cooldown_factor or 1
 
-	if this.melee then
-		for _, v in ipairs(this.melee.attacks) do
-			reset_skill(v)
-		end
+	if a.cooldown then
+		a.ts = store.tick_ts - a.cooldown * cooldown_factor
 	end
+end
 
-	if this.ranged then
-		for _, v in ipairs(this.ranged.attacks) do
-			reset_skill(v)
-		end
-	end
+---降低实体所有攻击冷却时间
+---@param e table 实体
+---@param store game.store
+---@param cooldown_factor? number 冷却降低倍率，默认为1
+---@return nil
+local function reset_all_attacks_ts(e, store, cooldown_factor)
+	local attacks = get_entity_all_attacks(e)
 
-	if this.timed_attacks then
-		for _, v in ipairs(this.timed_attacks.list) do
-			reset_skill(v)
-		end
+	for i = 1, #attacks do
+		local a = attacks[i]
+
+		reset_attack_ts(a, store, cooldown_factor)
 	end
 end
 
@@ -4567,7 +4614,8 @@ local SU = {
 	remove_tower_damage_factor_buff = remove_tower_damage_factor_buff,
 	y_controable_new_rally = y_controable_new_rally,
 	update_on_damage = update_on_damage,
-	hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
+	get_entity_all_attacks = get_entity_all_attacks,
+	reset_all_attacks_ts = reset_all_attacks_ts,
 	towers_swaped = towers_swaped,
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
