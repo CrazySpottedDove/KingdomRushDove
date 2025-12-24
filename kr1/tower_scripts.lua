@@ -19771,19 +19771,8 @@ function scripts.controller_tower_swap.update(this, store)
 			t2.ui.can_click = false
 
 			create_spawner_out(t1)
-
-			if t1.mercenary then
-				local soldier_count = 0
-
-				for _, _ in pairs(t1.barrack.soldiers) do
-					soldier_count = soldier_count + 1
-				end
-
-				store.player_gold = store.player_gold + E:get_template(t1.barrack.soldier_type).unit.price * soldier_count
-			end
-
 			queue_remove(store, t1)
-			U.y_wait(store, fts(1))
+			-- U.y_wait(store, fts(1))
 			create_spawner_out(t2)
 
 			if t2.mercenary then
@@ -19799,9 +19788,10 @@ function scripts.controller_tower_swap.update(this, store)
 			queue_remove(store, t2)
 			U.y_wait(store, this.delay)
 			create_spawner_in(t1)
-			U.y_wait(store, fts(1))
+			-- U.y_wait(store, fts(1))
 			create_spawner_in(t2)
-			U.y_wait(store, this.fx_spawn_delay - fts(1))
+			-- U.y_wait(store, this.fx_spawn_delay - fts(1))
+            U.y_wait(store, this.fx_spawn_delay)
 			-- exchange position data
 			swap(t1, t2, "pos")
 			swap(t1.tower, t2.tower, "holder_id")
@@ -19834,13 +19824,18 @@ function scripts.controller_tower_swap.update(this, store)
 				end
 			end
 
-			t1.main_script.runs = 1
-			t1.main_script.co = nil
-			t2.main_script.runs = 1
-			t2.main_script.co = nil
+			if t1.main_script then
+				t1.main_script.runs = 1
+				t1.main_script.co = nil
+			end
+
+			if t2.main_script then
+				t2.main_script.runs = 1
+				t2.main_script.co = nil
+			end
 
 			queue_insert(store, t1)
-			U.y_wait(store, fts(1))
+			-- U.y_wait(store, fts(1))
 			queue_insert(store, t2)
 
 			t1.ui.can_click = true

@@ -899,6 +899,22 @@ function game_gui:update(dt)
 		game_gui.swap_entity = nil
 	end
 
+	-- if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+	-- 	local x, y = game_gui.window:get_mouse_position()
+	-- 	local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
+	-- 	if x ~= lx or y ~= ly then
+	-- 		game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
+	-- 		local wx, wy = game_gui:s2g(V.v(x, y))
+	-- 		local ee = game_gui:entity_at_pos(wx, wy)
+	-- 		local lastt = game_gui.last_tower_hover
+	-- 		if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
+	-- 			game_gui:show_clickable_hover(ee)
+	-- 		elseif lastt and (not ee or ee ~= lastt) then
+	-- 			game_gui:hide_clickable_hover()
+	-- 			self.last_tower_hover = nil
+	-- 		end
+	-- 	end
+	-- end
 	if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
 		local x, y = game_gui.window:get_mouse_position()
 		local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
@@ -911,10 +927,10 @@ function game_gui:update(dt)
 			local lastt = game_gui.last_tower_hover
 
 			if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
-				game_gui:show_clickable_hover(ee)
+				-- game_gui:show_clickable_hover(ee)
+				self.last_tower_hover = ee
 			elseif lastt and (not ee or ee ~= lastt) then
-				game_gui:hide_clickable_hover()
-
+				-- game_gui:hide_clickable_hover()
 				self.last_tower_hover = nil
 			end
 		end
