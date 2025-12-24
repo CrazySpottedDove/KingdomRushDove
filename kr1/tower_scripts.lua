@@ -3680,24 +3680,33 @@ scripts.tower_dwaarp = {
 			-- 我们设置初始盲区为 r = 30，然后保证最外圈可以触及 r = attacks.range，然后求平均。
 			-- 70 * k + x - 70, 70 * k + x + 15 + 70 要尽量均匀分布在 [30, attacks.range] 中
 			-- k = 0, 1, ..., math.ceil(attacks.range - 30) / 70
-			local scope = this.attacks.range - 30
-			local fx_r = 45
-			local fx_rd = 1.6 * fx_r
-			local k = math.ceil(scope / fx_rd)
-			-- 起始 fx_point 中心的 x 坐标
-			local x = (30 - (k * fx_rd - scope) / 2) + fx_r
+			local void_radius = 30
+			local scope = this.attacks.range - void_radius
+			-- 特效生效半径
+			local fx_r = 70
+			-- 特效视觉直径
+			local fx_d = 1.2 * fx_r
+			-- 径向分布 k 个特效中心
+			local k = math.ceil(scope / fx_d)
+			-- 重新计算特效中心步长
+			local fx_d_real = fx_d
 
-			for i = 0, k do
-				local r_inner = fx_rd * i + x
-				local r_outer = r_inner + 10
-				local theta = fx_rd / r_inner
+			if k > 1 then
+				fx_d_real = (scope - fx_d) / (k - 1)
+			end
+
+			local r_start = void_radius + fx_r
+
+			-- 起始 fx_point 中心的 x 坐标
+			for i = 1, k do
+				local r = r_start + (i - 1) * fx_d_real
+				local theta = fx_d / r
 				-- 总共取这么多点，分内圈外圈
 				local n_points = math.ceil(2 * math.pi / theta)
 
 				theta = 2 * math.pi / n_points
 
 				for j = 1, n_points do
-					local r = j % 2 == 0 and r_inner or r_outer
 					local pos = U.point_on_ellipse(this.pos, r, theta * j)
 
 					if GR:cell_is(pos.x, pos.y, TERRAIN_WATER) or P:valid_node_nearby(pos.x, pos.y, 1) and not GR:cell_is(pos.x, pos.y, TERRAIN_CLIFF) then
@@ -3822,8 +3831,7 @@ scripts.tower_dwaarp = {
 						end
 					end
 
-					local trigger_range = (lava_ready and 0.8 or 1) * a.range
-					local trigger_enemy = U.find_first_enemy_in_range_filter_off(tpos(this), trigger_range, aa.vis_flags, aa.vis_bans)
+					local trigger_enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
 					if trigger_enemy then
 						aa.ts = store.tick_ts
@@ -3875,11 +3883,6 @@ scripts.tower_dwaarp = {
 										queue_insert(store, mod)
 									end
 								end
-							-- if shock_and_awe and band(enemy.vis.bans, F_STUN) == 0 and band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and random() < shock_and_awe.chance then
-							-- 	local mod = E:create_entity("mod_shock_and_awe")
-							-- 	mod.modifier.target_id = enemy.id
-							-- 	queue_insert(store, mod)
-							-- end
 							end
 						end
 

@@ -802,7 +802,6 @@ function upgrades:patch_templates(max_level)
 		end
 
 		T("tower_bfg").attacks.list[2].range_base = math.ceil(T("tower_bfg").attacks.list[2].range_base * u.range_factor)
-		T("tower_dwaarp").origin_range = math.ceil(T("tower_dwaarp").origin_range * u.range_factor)
 		T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[2].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[3].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor)
