@@ -19297,31 +19297,27 @@ function scripts.tower_ghost.update(this, store, script)
 	local spawn_time = 0.5
 	local spawn_ts = store.tick_ts
 	local spawn_id = 4
+	local sa = this.powers.soul_attack
+	local ed = this.powers.extra_damage
 
 	while true do
 		local b = this.barrack
 
-		if this.powers then
-			local sa = this.powers.soul_attack
+		if sa.changed or this.tower_upgrade_persistent_data.swaped then
+			sa.changed = nil
 
-			if sa.changed or this.tower_upgrade_persistent_data.swaped then
-				sa.changed = nil
-
-				for _, s in pairs(b.soldiers) do
-					s.powers.soul_attack.level = sa.level
-					s.powers.soul_attack.changed = true
-				end
+			for _, s in pairs(b.soldiers) do
+				s.powers.soul_attack.level = sa.level
+				s.powers.soul_attack.changed = true
 			end
+		end
 
-			local ed = this.powers.extra_damage
+		if ed.changed or this.tower_upgrade_persistent_data.swaped then
+			ed.changed = nil
 
-			if ed.changed or this.tower_upgrade_persistent_data.swaped then
-				ed.changed = nil
-
-				for _, s in pairs(b.soldiers) do
-					s.powers.extra_damage.level = ed.level
-					s.powers.extra_damage.changed = true
-				end
+			for _, s in pairs(b.soldiers) do
+				s.powers.extra_damage.level = ed.level
+				s.powers.extra_damage.changed = true
 			end
 		end
 
@@ -19344,7 +19340,9 @@ function scripts.tower_ghost.update(this, store, script)
 
 					if this.powers then
 						s.powers.soul_attack.level = this.powers.soul_attack.level
+						s.powers.soul_attack.changed = true
 						s.powers.extra_damage.level = this.powers.extra_damage.level
+						s.powers.extra_damage.changed = true
 					end
 
 					U.soldier_inherit_tower_buff_factor(s, this)
@@ -19396,34 +19394,15 @@ function scripts.tower_ghost.user_selection_func(this, store)
 	end
 end
 
-function scripts.tower_ghost.soldier_insert(this, store)
-	if scripts.soldier_barrack.insert(this, store) then
-		local pow_d = this.powers and this.powers.soul_attack or nil
-
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.level > 0 and p == pow_d then
-				-- block empty
-				end
-			end
-		end
-
-		return true
-	end
-
-	return false
-end
-
 function scripts.tower_ghost.soldier_update(this, store, script)
-	local damage_factor_prev = this.health.damage_factor
-	local mod_damage
-
 	if this.vis._bans then
 		this.vis.bans = this.vis._bans
 		this.vis._bans = nil
 	end
 
 	this.nav_rally._first_time = true
+
+	local _origin_dead_life_time = this.health.dead_lifetime
 
 	local function y_soldier_new_rally_break_attack(store, this)
 		local r = this.nav_rally
@@ -19560,13 +19539,14 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 
 	this.ui.can_click = true
 
-	local extra_damage_ts = store.tick_ts
+	local pow_e = this.powers.extra_damage
+	local pow_s = this.powers.soul_attack
 
 	while true do
 		if this.health.dead then
 			this.ui.can_click = false
 
-			if this.powers and this.powers.soul_attack.level > 0 then
+			if this.powers.soul_attack.level > 0 then
 				local soul = E:create_entity(this.soul)
 
 				soul.level = this.powers.soul_attack.level
@@ -19580,6 +19560,27 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 			return
 		end
 
+		if pow_e.changed then
+			pow_e.changed = nil
+
+			if this._aura_extra_damage == nil then
+				local e = E:create_entity("aura_tower_ghost_extra_damage")
+
+				e.aura.source_id = this.id
+				e.aura.level = pow_e.level
+				this._aura_extra_damage = e
+
+				queue_insert(store, e)
+			else
+				this._aura_extra_damage.aura.level = pow_e.level
+			end
+		end
+
+		if pow_s.changed then
+			pow_s.changed = nil
+			this.health.dead_lifetime = _origin_dead_life_time - pow_s.dead_lifetime_dec[pow_s.level]
+		end
+
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
@@ -19591,29 +19592,9 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 
 			local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-			if this.powers.extra_damage.level > 0 and sta ~= A_NO_TARGET and (mod_damage or store.tick_ts - extra_damage_ts > this.extra_damage_cooldown) then
-				if not mod_damage then
-					mod_damage = E:create_entity(this.mod_extra_damage)
-					mod_damage.modifier.target_id = this.id
-					mod_damage.modifier.source_id = this.id
-					mod_damage.modifier.ts = store.tick_ts
-					mod_damage.inflicted_damage_factor = this.powers.extra_damage.damages[this.powers.extra_damage.level]
-
-					queue_insert(store, mod_damage)
-				else
-					mod_damage.modifier.ts = store.tick_ts
-				end
-			end
-
 			if brk or sta ~= A_NO_TARGET then
 			-- block empty
 			else
-				extra_damage_ts = store.tick_ts
-
-				if mod_damage and store.tick_ts - mod_damage.modifier.ts > mod_damage.modifier.duration then
-					mod_damage = nil
-				end
-
 				if SU.soldier_go_back_step(store, this) then
 				-- block empty
 				else
@@ -19748,17 +19729,6 @@ function scripts.controller_tower_swap.update(this, store)
 			t1.ui.can_click = false
 
 			create_spawner_out(t1)
-
-			if t1.mercenary then
-				local soldier_count = 0
-
-				for _, _ in pairs(t1.barrack.soldiers) do
-					soldier_count = soldier_count + 1
-				end
-
-				store.player_gold = store.player_gold + E:get_template(t1.barrack.soldier_type).unit.price * soldier_count
-			end
-
 			queue_remove(store, t1)
 			U.y_wait(store, this.delay)
 			create_spawner_in(t1)
@@ -19772,8 +19742,17 @@ function scripts.controller_tower_swap.update(this, store)
 
 			create_spawner_out(t1)
 			queue_remove(store, t1)
-			-- U.y_wait(store, fts(1))
 			create_spawner_out(t2)
+
+			if t1.mercenary then
+				local soldier_count = 0
+
+				for _, _ in pairs(t1.barrack.soldiers) do
+					soldier_count = soldier_count + 1
+				end
+
+				store.player_gold = store.player_gold + E:get_template(t1.barrack.soldier_type).unit.price * soldier_count
+			end
 
 			if t2.mercenary then
 				local soldier_count = 0
@@ -19788,10 +19767,8 @@ function scripts.controller_tower_swap.update(this, store)
 			queue_remove(store, t2)
 			U.y_wait(store, this.delay)
 			create_spawner_in(t1)
-			-- U.y_wait(store, fts(1))
 			create_spawner_in(t2)
-			-- U.y_wait(store, this.fx_spawn_delay - fts(1))
-            U.y_wait(store, this.fx_spawn_delay)
+			U.y_wait(store, this.fx_spawn_delay)
 			-- exchange position data
 			swap(t1, t2, "pos")
 			swap(t1.tower, t2.tower, "holder_id")
@@ -19835,7 +19812,6 @@ function scripts.controller_tower_swap.update(this, store)
 			end
 
 			queue_insert(store, t1)
-			-- U.y_wait(store, fts(1))
 			queue_insert(store, t2)
 
 			t1.ui.can_click = true
