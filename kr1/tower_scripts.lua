@@ -19340,9 +19340,16 @@ function scripts.tower_ghost.update(this, store, script)
 
 					if this.powers then
 						s.powers.soul_attack.level = this.powers.soul_attack.level
-						s.powers.soul_attack.changed = true
+
+						if s.powers.soul_attack.level > 0 then
+							s.powers.soul_attack.changed = true
+						end
+
 						s.powers.extra_damage.level = this.powers.extra_damage.level
-						s.powers.extra_damage.changed = true
+
+						if s.powers.extra_damage.level > 0 then
+							s.powers.extra_damage.changed = true
+						end
 					end
 
 					U.soldier_inherit_tower_buff_factor(s, this)
@@ -19645,8 +19652,9 @@ scripts.tower_ghost_hover_controller = {}
 function scripts.tower_ghost_hover_controller.insert(this, store, script)
 	this.hovers = {}
 
-	for _, v in pairs(store.entities) do
-		if v.tower and v.ui.can_click and v.tower.can_be_sold and not (table.contains(T("tower_ghost_lvl4").cannot_be_swappeds, v.template_name) or v.cannot_be_swapped) then
+	for _, v in pairs(store.towers) do
+		-- if v.tower and v.ui.can_click and v.tower.can_be_sold and not (table.contains(T("tower_ghost_lvl4").cannot_be_swappeds, v.template_name) or v.cannot_be_swapped) then
+		if v.ui.can_click then
 			local h = E:create_entity(this.template_hover)
 
 			h.pos = V.vclone(v.pos)

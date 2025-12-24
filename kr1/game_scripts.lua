@@ -31365,39 +31365,72 @@ function scripts.controller_elemental_generic.remove(this, store)
 	return true
 end
 
+--- 龙魂找塔的公用辅助函数
+---@param this any
+---@param store any
+local function controller_elemental_generic_find_tower(this, store)
+	local found_tower = false
+
+	while true do
+		for _, e in pairs(store.towers) do
+			if e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
+				found_tower = true
+
+				if e.build_name then
+					break
+				else
+					return e
+				end
+			end
+		end
+
+		if not found_tower then
+			goto continue
+
+			return nil
+		end
+
+		if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
+			U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon, true)
+		end
+
+		::continue::
+
+		coroutine.yield()
+	end
+
+	return nil
+end
+
+local function controller_elemental_generic_insert_buff_to_target(this)
+	if this.target.attacks and this.target.attacks.range then
+		this.target.attacks.range = this.target.attacks.range * this.range_factor
+		this.max_range = this.target.attacks.range
+	elseif this.target.barrack and this.target.barrack.rally_range then
+		this.target.barrack.rally_range = this.target.barrack.rally_range * this.rally_range_factor
+		this.max_range = this.target.barrack.rally_range
+	else
+		this.max_range = this.default_max_range
+	end
+
+	if this.damage_factor then
+		SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
+	end
+end
+
+local function controller_elemental_generic_remove_buff_from_target(this)
+	if this.target.attacks and this.target.attacks.range then
+		this.target.attacks.range = this.target.attacks.range / this.range_factor
+	elseif this.target.barrack and this.target.barrack.rally_range then
+		this.target.barrack.rally_range = this.target.barrack.rally_range / this.rally_range_factor
+	end
+
+	SU.remove_tower_damage_factor_buff(this.target, this.damage_factor - 1)
+end
+
 scripts.controller_elemental_wood = {}
 
 function scripts.controller_elemental_wood.update(this, store)
-	local function y_find_tower()
-		local found_tower = false
-
-		while true do
-			for _, e in pairs(store.entities) do
-				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
-					found_tower = true
-
-					if e.build_name then
-						break
-					else
-						return e
-					end
-				end
-			end
-
-			if not found_tower then
-				return nil
-			end
-
-			if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
-				U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon, true)
-			end
-
-			coroutine.yield()
-		end
-
-		return nil
-	end
-
 	local function find_target()
 		return U.find_foremost_enemy(store.entities, this.pos, 0, this.max_range * this.skill_detection_range_factor, false, this.vis_flags, this.vis_bans)
 	end
@@ -31480,7 +31513,7 @@ function scripts.controller_elemental_wood.update(this, store)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
 	end
 
-	this.target = y_find_tower()
+	this.target = controller_elemental_generic_find_tower(this, store)
 
 	if not this.target then
 		queue_remove(store, this)
@@ -31499,26 +31532,24 @@ function scripts.controller_elemental_wood.update(this, store)
 		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
 	end
 
-	this.target.cannot_be_swapped = true
-	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
-	if this.target.attacks and this.target.attacks.range then
-		if this.target.tower.type == "tricannon" then
-			this.target.attacks.list[1].range = this.target.attacks.list[1].range * this.range_factor
-		end
-
-		this.target.attacks.range = this.target.attacks.range * this.range_factor
-		this.max_range = this.target.attacks.range
-	elseif this.target.barrack and this.target.barrack.rally_range then
-		this.target.barrack.rally_range = this.target.barrack.rally_range * this.rally_range_factor
-		this.max_range = this.target.barrack.rally_range
-	else
-		this.max_range = this.default_max_range
-	end
-
-	SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
+	controller_elemental_generic_insert_buff_to_target(this)
 	update_fx_points()
 
+	-- this.target.cannot_be_swapped = true
+	-- this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
+	-- if this.target.attacks and this.target.attacks.range then
+	-- 	if this.target.tower.type == "tricannon" then
+	-- 		this.target.attacks.list[1].range = this.target.attacks.list[1].range * this.range_factor
+	-- 	end
+	-- 	this.target.attacks.range = this.target.attacks.range * this.range_factor
+	-- 	this.max_range = this.target.attacks.range
+	-- elseif this.target.barrack and this.target.barrack.rally_range then
+	-- 	this.target.barrack.rally_range = this.target.barrack.rally_range * this.rally_range_factor
+	-- 	this.max_range = this.target.barrack.rally_range
+	-- else
+	-- 	this.max_range = this.default_max_range
+	-- end
+	-- SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
 	this.ability_cooldown = this.first_cooldown
 
 	if store.elemental_holders_cd and store.elemental_holders_cd[this.target.tower.holder_id] then
@@ -31533,44 +31564,20 @@ function scripts.controller_elemental_wood.update(this, store)
 		local tower = store.entities[this.target.id]
 
 		if not tower then
-			local new_tower = y_find_tower()
+			local new_tower = controller_elemental_generic_find_tower(this, store)
 
 			if not new_tower then
-				if this.target.attacks and this.target.attacks.range then
-					if this.target.tower.type == "tricannon" then
-						this.target.attacks.list[1].range = this.target.attacks.list[1].range / this.range_factor
-					end
-
-					this.target.attacks.range = this.target.attacks.range / this.range_factor
-				elseif this.target.barrack and this.target.barrack.rally_range then
-					this.target.barrack.rally_range = this.target.barrack.rally_range / this.rally_range_factor
-				end
-
 				queue_remove(store, this)
 
 				return
 			end
 
+			controller_elemental_generic_remove_buff_from_target(this)
+
 			this.target = new_tower
-			this.target.cannot_be_swapped = true
-			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
 
 			U.y_wait(store, 0.1)
-
-			if this.target.attacks and this.target.attacks.range then
-				if this.target.tower.type == "tricannon" then
-					this.target.attacks.list[1].range = this.target.attacks.list[1].range * this.range_factor
-				end
-
-				this.target.attacks.range = this.target.attacks.range * this.range_factor
-				this.max_range = this.target.attacks.range
-			elseif this.target.barrack and this.target.barrack.rally_range then
-				this.target.barrack.rally_range = this.target.barrack.rally_range * this.rally_range_factor
-				this.max_range = this.target.barrack.rally_range
-			else
-				this.max_range = this.default_max_range
-			end
-
+			controller_elemental_generic_insert_buff_to_target(this)
 			update_fx_points()
 		end
 
@@ -31580,16 +31587,6 @@ function scripts.controller_elemental_wood.update(this, store)
 			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
 
 			U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
-		end
-
-		if this.target.change_range then
-			if this.target.tower.type == "tricannon" then
-				this.target.attacks.list[1].range = this.target.attacks.list[1].range * this.range_factor
-			end
-
-			this.target.attacks.range = this.target.attacks.range * this.range_factor
-			this.max_range = this.target.attacks.range
-			this.target.change_range = false
 		end
 
 		for i = #this.update_on_path_active, 1, -1 do
@@ -31809,36 +31806,6 @@ function scripts.controller_elemental_fire.update(this, store)
 	local last_movement_ts = store.tick_ts
 	local instakill_target
 
-	local function y_find_tower()
-		local found_tower = false
-
-		while true do
-			for _, e in pairs(store.towers) do
-				if e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
-					found_tower = true
-
-					if e.build_name then
-						break
-					else
-						return e
-					end
-				end
-			end
-
-			if not found_tower then
-				return nil
-			end
-
-			if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
-				U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon, true)
-			end
-
-			coroutine.yield()
-		end
-
-		return nil
-	end
-
 	local function find_target_strongest()
 		return U.find_biggest_enemy_in_range_filter_off(this.pos, this.max_range, this.vis_flags, this.vis_bans)
 	end
@@ -31959,7 +31926,7 @@ function scripts.controller_elemental_fire.update(this, store)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
 	end
 
-	this.target = y_find_tower()
+	this.target = controller_elemental_generic_find_tower(this, store)
 
 	if not this.target then
 		queue_remove(store, this)
@@ -31978,22 +31945,8 @@ function scripts.controller_elemental_fire.update(this, store)
 		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
 	end
 
-	this.target.cannot_be_swapped = true
-	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
-	if this.target.attacks and this.target.attacks.range then
-		this.max_range = this.target.attacks.range
-	elseif this.target.barrack and this.target.barrack.rally_range then
-		this.max_range = this.target.barrack.rally_range
-	else
-		this.max_range = this.default_max_range
-	end
-
+	controller_elemental_generic_insert_buff_to_target(this)
 	update_fx_points()
-
-	if this.damage_factor then
-		this.target.tower.damage_factor = this.target.tower.damage_factor * this.damage_factor
-	end
 
 	this.ability_cooldown = this.first_cooldown
 
@@ -32013,36 +31966,20 @@ function scripts.controller_elemental_fire.update(this, store)
 		local tower = store.entities[this.target.id]
 
 		if not tower then
-			local new_tower = y_find_tower()
+			local new_tower = controller_elemental_generic_find_tower(this, store)
 
 			if not new_tower then
-				if this.damage_factor then
-					this.target.tower.damage_factor = this.target.tower.damage_factor / this.damage_factor
-				end
-
 				queue_remove(store, this)
 
 				return
 			end
 
+			controller_elemental_generic_remove_buff_from_target(this)
+
 			this.target = new_tower
-			this.target.cannot_be_swapped = true
-			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
 
 			U.y_wait(store, 0.1)
-
-			if this.damage_factor then
-				this.target.tower.damage_factor = this.target.tower.damage_factor * this.damage_factor
-			end
-
-			if this.target.attacks and this.target.attacks.range then
-				this.max_range = this.target.attacks.range
-			elseif this.target.barrack and this.target.barrack.rally_range then
-				this.max_range = this.target.barrack.rally_range
-			else
-				this.max_range = this.default_max_range
-			end
-
+			controller_elemental_generic_insert_buff_to_target(this)
 			update_fx_points()
 		end
 
@@ -32052,11 +31989,6 @@ function scripts.controller_elemental_fire.update(this, store)
 			this.render.sprites[this.render.sid_dragon].hide_after_runs = 1
 
 			U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
-		end
-
-		if this.target.change_range then
-			this.max_range = this.target.attacks.range
-			this.target.change_range = false
 		end
 
 		if this.update_on_path_active then
