@@ -3665,29 +3665,53 @@ scripts.lava_dwaarp = {
 scripts.tower_dwaarp = {
 	insert = function(this, store)
 		local function fx_points(this)
-			local points = {}
-			local factor = this.attacks.range / this.origin_range
-			local inner_fx_radius = 100 * factor
-			local outer_fx_radius = 115 * factor
-
-			for i = 1, 12 do
-				local r = outer_fx_radius
-
-				if i % 2 == 0 then
-					r = inner_fx_radius
+			if this.attacks.range == this._fx_point_range then
+				if this._fx_points_cache then
+					return this._fx_points_cache
 				end
+			else
+				this._fx_point_range = this.attacks.range
+			end
 
-				local p = {}
+			local points = {}
+			-- range = 180 时，是 100 内圈， 115 外圈来添加岩浆特效
+			-- 随着范围变大，不应该修改岩浆特效的贴图大小，而应该在更多的位置均匀地添加岩浆特效
+			-- lava 的范围为 70，我们直接保证灼烧点之间的弧长不要超过 140，即 r * theta < 140
+			-- 我们设置初始盲区为 r = 30，然后保证最外圈可以触及 r = attacks.range，然后求平均。
+			-- 70 * k + x - 70, 70 * k + x + 15 + 70 要尽量均匀分布在 [30, attacks.range] 中
+			-- k = 0, 1, ..., math.ceil(attacks.range - 30) / 70
+			local scope = this.attacks.range - 30
+			local fx_r = 45
+			local fx_rd = 1.6 * fx_r
+			local k = math.ceil(scope / fx_rd)
+			-- 起始 fx_point 中心的 x 坐标
+			local x = (30 - (k * fx_rd - scope) / 2) + fx_r
 
-				p.pos = U.point_on_ellipse(this.pos, r, 2 * math.pi * i / 12)
-				p.terrain = GR:cell_type(p.pos.x, p.pos.y)
+			for i = 0, k do
+				local r_inner = fx_rd * i + x
+				local r_outer = r_inner + 10
+				local theta = fx_rd / r_inner
+				-- 总共取这么多点，分内圈外圈
+				local n_points = math.ceil(2 * math.pi / theta)
 
-				log.debug("i:%i pos:%f,%f type:%i", i, p.pos.x, p.pos.y, p.terrain)
+				theta = 2 * math.pi / n_points
 
-				if GR:cell_is(p.pos.x, p.pos.y, TERRAIN_WATER) or P:valid_node_nearby(p.pos.x, p.pos.y, 1) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_CLIFF) then
-					table.insert(points, p)
+				for j = 1, n_points do
+					local r = j % 2 == 0 and r_inner or r_outer
+					local pos = U.point_on_ellipse(this.pos, r, theta * j)
+
+					if GR:cell_is(pos.x, pos.y, TERRAIN_WATER) or P:valid_node_nearby(pos.x, pos.y, 1) and not GR:cell_is(pos.x, pos.y, TERRAIN_CLIFF) then
+						local p = {}
+
+						p.pos = pos
+						p.terrain = GR:cell_type(pos.x, pos.y)
+
+						table.insert(points, p)
+					end
 				end
 			end
+
+			this._fx_points_cache = points
 
 			return points
 		end
@@ -3860,7 +3884,6 @@ scripts.tower_dwaarp = {
 						end
 
 						local fx_points = this.fx_points(this)
-						local radius_factor = a.range / this.origin_range
 
 						for i = 1, #fx_points do
 							local p = fx_points[i]
@@ -3872,7 +3895,7 @@ scripts.tower_dwaarp = {
 								lava.aura.ts = store.tick_ts
 								lava.aura.source_id = this.id
 								lava.aura.level = pow_l.level
-								lava.aura.radius = lava.aura.radius * radius_factor
+								lava.aura.radius = lava.aura.radius
 								lava.aura.damage_factor = this.tower.damage_factor
 
 								queue_insert(store, lava)
@@ -3914,7 +3937,6 @@ scripts.tower_dwaarp = {
 								decal.render.sprites[1].animated = false
 								decal.render.sprites[1].z = Z_DECALS
 								decal.render.sprites[1].ts = store.tick_ts
-								decal.render.sprites[1].scale = v(radius_factor, radius_factor)
 
 								queue_insert(store, decal)
 
@@ -3922,7 +3944,6 @@ scripts.tower_dwaarp = {
 
 								smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
 								smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
-								smoke.render.sprites[1].scale = v(radius_factor, radius_factor)
 
 								queue_insert(store, smoke)
 
@@ -3935,7 +3956,6 @@ scripts.tower_dwaarp = {
 
 									scorch.pos.x, scorch.pos.y = p.pos.x, p.pos.y
 									scorch.render.sprites[1].ts = store.tick_ts
-									scorch.render.sprites[1].scale = v(radius_factor, radius_factor)
 
 									queue_insert(store, scorch)
 								end
@@ -5543,31 +5563,21 @@ function scripts.tower_tricannon.update(this, store)
 	end
 
 	while true do
-		if this.tower.blocked then
+		if tw.blocked then
 			coroutine.yield()
 		else
-			for k, pow in pairs(this.powers) do
-				if pow.changed then
-					pow.changed = nil
-
-					if pow == pow_m then
-						am.cooldown = pow_m.cooldown[pow_m.level]
-
-						if pow.level == 1 then
-							am.ts = store.tick_ts - am.cooldown
-						end
-					elseif pow == pow_o then
-						ao.cooldown = pow_o.cooldown[pow_o.level]
-						ao.duration = pow_o.duration[pow_o.level]
-
-						if pow.level == 1 then
-							ao.ts = store.tick_ts - ao.cooldown
-						end
-					end
-				end
+			if pow_m.changed then
+				am.cooldown = pow_m.cooldown[pow_m.level]
+				pow_m.changed = nil
 			end
 
-			if ao and ao.active and store.tick_ts - ao.ts > ao.duration then
+			if pow_o.changed then
+				pow_o.changed = nil
+				ao.cooldown = pow_o.cooldown[pow_o.level]
+				ao.duration = pow_o.duration[pow_o.level]
+			end
+
+			if ao.active and store.tick_ts - ao.ts > ao.duration then
 				ao.active = nil
 
 				queue_remove(store, this.decal_mod)
@@ -5578,8 +5588,8 @@ function scripts.tower_tricannon.update(this, store)
 			for i, aa in pairs(attacks) do
 				pow = pows[i]
 
-				if aa and (not pow or pow.level > 0) and aa.cooldown and ready_to_attack(aa, store, this.tower.cooldown_factor) and (not a.min_cooldown or store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor) then
-					local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+				if aa and (not pow or pow.level > 0) and ready_to_attack(aa, store, this.tower.cooldown_factor) and (store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor) then
+					local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
 					if not trigger then
 						aa.ts = aa.ts + fts(5)
@@ -5607,7 +5617,7 @@ function scripts.tower_tricannon.update(this, store)
 							y_wait(store, aa.shoot_time)
 							S:queue(aa.sound)
 
-							local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+							local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 							local target_positions = {}
 
 							if enemies and #enemies > 0 then
@@ -5679,7 +5689,7 @@ function scripts.tower_tricannon.update(this, store)
 							U.animation_start_group(this, aa.animation_start, nil, store.tick_ts, false, "layers")
 							y_wait(store, aa.shoot_time)
 
-							local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), aa.range, aa.vis_flags, aa.vis_bans)
+							local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 							local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
 							local dest_path = enemy and enemy.nav_path.pi or trigger_path
 							local nearest_nodes = P:nearest_nodes(dest.x, dest.y, {dest_path})
