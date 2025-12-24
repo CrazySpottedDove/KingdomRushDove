@@ -31386,8 +31386,6 @@ local function controller_elemental_generic_find_tower(this, store)
 
 		if not found_tower then
 			goto continue
-
-			return nil
 		end
 
 		if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
@@ -31403,13 +31401,17 @@ local function controller_elemental_generic_find_tower(this, store)
 end
 
 local function controller_elemental_generic_insert_buff_to_target(this)
-	if this.target.attacks and this.target.attacks.range then
+	if this.range_factor and this.target.attacks and this.target.attacks.range then
 		this.target.attacks.range = this.target.attacks.range * this.range_factor
 		this.max_range = this.target.attacks.range
-	elseif this.target.barrack and this.target.barrack.rally_range then
+	end
+
+	if this.rally_range_factor and this.target.barrack and this.target.barrack.rally_range then
 		this.target.barrack.rally_range = this.target.barrack.rally_range * this.rally_range_factor
 		this.max_range = this.target.barrack.rally_range
-	else
+	end
+
+	if not this.max_range then
 		this.max_range = this.default_max_range
 	end
 
@@ -31419,13 +31421,17 @@ local function controller_elemental_generic_insert_buff_to_target(this)
 end
 
 local function controller_elemental_generic_remove_buff_from_target(this)
-	if this.target.attacks and this.target.attacks.range then
+	if this.range_factor and this.target.attacks and this.target.attacks.range then
 		this.target.attacks.range = this.target.attacks.range / this.range_factor
-	elseif this.target.barrack and this.target.barrack.rally_range then
+	end
+
+	if this.rally_range_factor and this.target.barrack and this.target.barrack.rally_range then
 		this.target.barrack.rally_range = this.target.barrack.rally_range / this.rally_range_factor
 	end
 
-	SU.remove_tower_damage_factor_buff(this.target, this.damage_factor - 1)
+	if this.damage_factor then
+		SU.remove_tower_damage_factor_buff(this.target, this.damage_factor - 1)
+	end
 end
 
 scripts.controller_elemental_wood = {}

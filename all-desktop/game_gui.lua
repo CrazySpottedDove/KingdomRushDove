@@ -2061,10 +2061,11 @@ function game_gui.swap_tower()
 	end
 
 	-- if table.contains(tower_selected.cannot_be_swappeds, e.template_name) or e.cannot_be_swapped then
-	-- 	log.debug("cannot be swap this tower", e.id)
+    if table.contains(tower_selected.cannot_be_swappeds, e.template_name) then
+		log.debug("cannot be swap this tower", e.id)
 
-	-- 	goto lable_return
-	-- end
+		goto lable_return
+	end
 
 	game_gui:deselect_entity()
 

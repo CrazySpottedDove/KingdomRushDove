@@ -19654,7 +19654,7 @@ function scripts.tower_ghost_hover_controller.insert(this, store, script)
 
 	for _, v in pairs(store.towers) do
 		-- if v.tower and v.ui.can_click and v.tower.can_be_sold and not (table.contains(T("tower_ghost_lvl4").cannot_be_swappeds, v.template_name) or v.cannot_be_swapped) then
-		if v.ui.can_click then
+		if v.ui.can_click and not table.contains(T("tower_ghost_lvl4").cannot_be_swappeds, v.template_name) then
 			local h = E:create_entity(this.template_hover)
 
 			h.pos = V.vclone(v.pos)

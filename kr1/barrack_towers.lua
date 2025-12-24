@@ -2986,7 +2986,7 @@ b = balance.towers.ghost
 -- tt.cannot_be_swappeds = table.merge(U.get_all_holder(), {
 -- 	"tower_ghost_lvl4"
 -- })
-tt.cannot_be_swappeds = {}
+tt.cannot_be_swappeds = {"tower_holder_elemental_wood", "tower_holder_elemental_wood_enhance","tower_holder_elemental_fire", "tower_holder_elemental_water", "tower_holder_elemental_earth", "tower_holder_elemental_metal"}
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 0
 tt.tower.level = 1
