@@ -4436,7 +4436,6 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- end
 tt = E:register_t("fx_elves_denas_flash", "fx")
 tt.render.sprites[1].name = "fx_elves_denas_flash"
-
 tt = E:register_t("fx_shield_elves_denas_hit", "fx")
 tt.render.sprites[1].name = "fx_shield_elves_denas_hit"
 tt.render.sprites[1].z = Z_EFFECTS - 1
