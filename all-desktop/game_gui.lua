@@ -2044,7 +2044,7 @@ function game_gui.swap_tower()
 		goto lable_return
 	end
 
-	if table.contains(tower_selected.cannot_be_swappeds, e.template_name) then
+	if table.contains(tower_selected.cannot_be_swappeds, e.template_name) or e.cannot_be_swapped then
 		log.debug("cannot be swap this tower", e.id)
 
 		goto lable_return
