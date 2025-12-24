@@ -4436,15 +4436,7 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 -- end
 tt = E:register_t("fx_elves_denas_flash", "fx")
 tt.render.sprites[1].name = "fx_elves_denas_flash"
-tt = E:register_t("shield_elves_denas", "bullet")
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.particles_name = "ps_shield_elves_denas"
-tt.bullet.max_speed = 10 * FPS
-tt.bullet.hit_blood_fx = "fx_blood_splat"
-tt.bullet.hit_fx = "fx_shield_elves_denas_hit"
-tt.main_script.update = scripts.shield_elves_denas.update
-tt.render.sprites[1].name = "shield_elves_denas_loop"
-tt.rebound_range = 125
+
 tt = E:register_t("fx_shield_elves_denas_hit", "fx")
 tt.render.sprites[1].name = "fx_shield_elves_denas_hit"
 tt.render.sprites[1].z = Z_EFFECTS - 1

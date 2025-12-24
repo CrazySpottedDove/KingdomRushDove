@@ -203,6 +203,10 @@ local function cooldown_str()
 	return str("每隔", cooldown, "秒，")
 end
 
+local function T(template_name)
+	return E:get_template(template_name)
+end
+
 set_hero("hero_alleria")
 set_skill(h.hero.skills.multishot)
 get_cooldown()
@@ -1652,13 +1656,56 @@ map["水晶分身"] = str()
 map["蓝水晶之牙"] = str()
 
 set_hero("hero_elves_denas")
+set_skill(h.hero.skills.shield_strike)
 
-map["弹射盾牌"] = str()
-map["英姿"] = str()
-map["巨势锤击"] = str()
-map["近卫骑士"] = str()
-map["零花钱"] = str()
-map["大鸡腿"] = str()
+a = h.ranged.attacks[1]
+cooldown = a.cooldown
+e = E:get_template("shield_elves_denas")
+
+get_damage(e.bullet)
+
+range = e.rebound_range
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+count = ss("rebounds")
+map["弹射盾牌"] = str(cooldown_str(), "迪纳斯王子掷出盾牌，攻击敌人。盾牌每次在", range, "范围内寻找敌人，最多", count, "次，每次造成", damage_str(), "。")
+
+set_skill(h.hero.skills.celebrity)
+
+count = ss("max_targets")
+duration = ss("stun_duration")
+cooldown = h.timed_attacks.list[1].cooldown
+map["英姿"] = str(cooldown_str(), "迪纳斯王子挥洒惊人魅力，使周围最多", count, "名敌人瞠目结舌，呆在原地，持续", duration, "秒。该技能被打断时，按比例返还冷却。")
+
+set_skill(h.hero.skills.mighty)
+a = h.melee.attacks[3]
+cooldown = a.cooldown
+get_damage(a)
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+map["巨势锤击"] = str(cooldown_str(),"迪纳斯王子奋力打击面前敌人，造成",damage_str(),"。")
+
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+e = T("soldier_elves_denas_guard")
+get_health(e)
+get_damage(e.melee.attacks[1])
+duration = e.reinforcement.duration
+e = T("hero_elves_denas_ultimate")
+count = e.guards_count[max_lvl]
+map["近卫骑士"] = str(cooldown_str(),"迪纳斯王子召集",count,"名可调集的近卫骑士，驻场",duration,"秒。近卫骑士拥有",health_str(),"，每次攻击造成",damage_str(),"，且免疫尸骸化和狼人化。")
+count = h.wealthy.gold
+map["零花钱"] = str("跳波时，迪纳斯王子会慷慨地把自己的", count, "块零花钱赞助给将军。")
+
+set_skill(h.hero.skills.sybarite)
+
+heal = ss("heal_hp")
+e = T("mod_elves_denas_sybarite")
+factor = e.inflicted_damage_factor
+duration = e.modifier.duration
+cooldown = h.timed_attacks.list[2].cooldown
+amount = h.timed_attacks.list[2].lost_health
+map["大鸡腿"] = str(cooldown_str(),"若迪纳斯王子损失的生命值超过",amount,"，王子将一口吃下豪大大鸡腿，恢复",heal,"点生命值，并且自身伤害x",factor,"，持续",duration,"秒。")
 
 set_hero("hero_arivan")
 set_skill(h.hero.skills.lightning_rod)
