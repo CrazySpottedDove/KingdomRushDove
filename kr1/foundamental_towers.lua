@@ -1094,6 +1094,7 @@ tt.main_script.remove = scripts.controller_elemental_generic.remove
 tt.first_cooldown = b.first_cooldown
 tt.cooldown = b.cooldown
 tt.damage_factor = b.damage_factor
+tt.default_max_range = b.default_max_range
 tt.vis_bans = bor(F_FLYING, F_FRIEND, F_BOSS, F_MINIBOSS)
 tt.vis_flags = bor(F_RANGED, F_INSTAKILL)
 tt.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS, DAMAGE_FX_NOT_EXPLODE)

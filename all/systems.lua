@@ -3095,11 +3095,13 @@ function sys.last_hook:on_remove(e, d)
 		if target then
 			local mods = target._applied_mods
 
-			for i = 1, #mods do
-				if mods[i] == e then
-					table.remove(mods, i)
+			if mods then
+				for i = 1, #mods do
+					if mods[i] == e then
+						table.remove(mods, i)
 
-					break
+						break
+					end
 				end
 			end
 		end
