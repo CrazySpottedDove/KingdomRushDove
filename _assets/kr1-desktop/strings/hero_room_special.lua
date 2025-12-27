@@ -1943,12 +1943,58 @@ map["液烟"] = str()
 map["弱能"] = str()
 
 set_hero("hero_rag")
+-- 兔子
+set_skill(h.hero.skills.kamihare)
 
-map["爆炸兔兔"] = str()
-map["敲敲敲"] = str()
-map["侏儒之怒"] = str()
-map["布偶变"] = str()
-map["超级变变变"] = str()
+a = h.timed_attacks.list[2]
+cooldown = a.cooldown
+e = T("aura_rabbit_kamihare")
+
+get_damage(e.aura)
+
+radius = e.aura.radius
+count = ss("count")
+map["爆炸兔兔"] = str(cooldown_str(), "瑞格召唤", count, "只兔子敢死队向前行进，每只兔子遇敌爆炸，对", radius, "范围内的敌人造成", damage_str(), "。")
+
+-- 锤子
+set_skill(h.hero.skills.hammer_time)
+
+a = h.timed_attacks.list[3]
+cooldown = a.cooldown
+
+get_damage(a)
+
+radius = a.damage_radius
+duration = ss("duration")
+cycle_time = a.damage_every
+map["敲敲敲"] = str(cooldown_str(), "瑞格抄起大锤胡乱敲打，持续", duration, "秒，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "和眩晕效果。该技能被手动打断时，按比例返还冷却。")
+
+-- 扔东西
+set_skill(h.hero.skills.angry_gnome)
+
+a = h.timed_attacks.list[1]
+cooldown = a.cooldown
+
+get_damage(T("bullet_rag_throw").bullet)
+
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+map["侏儒之怒"] = str(cooldown_str(), "瑞格扔出一个不明物体，造成", damage_str(), "。")
+
+set_skill(h.hero.skills.raggified)
+
+a = h.timed_attacks.list[4]
+cooldown = a.cooldown
+amount = ss("max_target_hp")
+duration = ss("doll_duration")
+factor = ss("break_factor")
+factor_2 = T("soldier_rag").health.damage_factor
+map["布偶变"] = str(cooldown_str(), "瑞格将一个生命值低于", amount, "的非BOSS陆军敌人变成布偶，为我军作战。布偶继承敌人的生命值与攻击力，且受到伤害x", factor_2, "。在", duration, "秒后，一旦布偶生命值降到", factor * 100, "%以下，布偶将变回敌人。")
+
+set_skill(h.hero.skills.ultimate)
+
+count = ss("max_count")
+map["超级变变变"] = str(cooldown_str(), "瑞格对最多", count, "名敌人施展无生命值限制的布偶变。")
 
 set_hero("hero_bruce")
 
