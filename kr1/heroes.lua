@@ -1978,7 +1978,7 @@ tt.ranged.attacks[1].shoot_time = fts(12)
 tt.ranged.attacks[1].sound_shoot = "HeroThorHammer"
 tt.ranged.attacks[1].xp_from_skill = "thunderclap"
 tt.lightning_heal = 20
-tt = E:register_t("hammer_hero_thor", "bolt")
+tt = RT("hammer_hero_thor", "bolt")
 tt.bullet.acceleration_factor = 0.05
 tt.bullet.min_speed = 300
 tt.bullet.max_speed = 900
@@ -1993,7 +1993,7 @@ tt.bullet.mod = "mod_hero_thor_thunderclap"
 tt.bullet.pop = nil
 tt.render.sprites[1].prefix = "hammer_hero_thor"
 tt.sound_events.insert = nil
-tt = E:register_t("mod_ray_hero_thor", "mod_ray_tesla")
+tt = RT("mod_ray_hero_thor", "mod_ray_tesla")
 tt.modifier.duration = fts(16)
 tt.dps.damage_every = fts(2)
 tt.dps.damage_min = 5
@@ -8039,7 +8039,7 @@ tt.guards_template = "soldier_elves_denas_guard"
 tt.main_script.update = scripts.hero_elves_denas_ultimate.update
 tt.sound_events.insert = "ElvesHeroDenasKingsguardTaunt"
 tt.can_fire_fn = scripts.hero_elves_denas_ultimate.can_fire_fn
-tt = E:register_t("shield_elves_denas", "bullet")
+tt = RT("shield_elves_denas", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.particles_name = "ps_shield_elves_denas"
 tt.bullet.max_speed = 10 * FPS
@@ -8923,9 +8923,9 @@ tt.ultimate = {
 	disabled = true,
 	range = 180
 }
-tt = E:register_t("soldier_bravebark", "soldier_militia")
+tt = RT("soldier_bravebark", "soldier_militia")
 
-E:add_comps(tt, "reinforcement")
+AC(tt, "reinforcement")
 
 image_y = 58
 anchor_y = 12 / image_y
@@ -8958,9 +8958,9 @@ tt.sound_events.insert = nil
 tt.unit.level = 0
 tt.unit.mod_offset = vec_2(0, 15)
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
-tt = E:register_t("aura_bravebark_springsap", "aura")
+tt = RT("aura_bravebark_springsap", "aura")
 
-E:add_comps(tt, "render", "tween")
+AC(tt, "render", "tween")
 
 tt.aura.cycle_time = fts(3)
 tt.aura.mod = "mod_bravebark_springsap"
@@ -8982,9 +8982,9 @@ tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(0.5)}, {0.85, vec_1(1.25)}}
 tt.tween.props[2].loop = true
-tt = E:register_t("mod_bravebark_springsap", "modifier")
+tt = RT("mod_bravebark_springsap", "modifier")
 
-E:add_comps(tt, "hps", "render", "tween")
+AC(tt, "hps", "render", "tween")
 
 tt.modifier.use_mod_offset = false
 tt.modifier.duration = 3 * fts(3)
@@ -9021,7 +9021,7 @@ tt.damage_type = DAMAGE_TRUE
 tt.vis_flags = bor(F_STUN)
 tt.vis_bans = bor(F_FLYING, F_BOSS)
 tt.mod = "mod_bravebark_ultimate"
-tt = E:register_t("mod_bravebark_ultimate", "mod_stun")
+tt = RT("mod_bravebark_ultimate", "mod_stun")
 tt.modifier.duration = 1
 tt = RT("hero_catha", "hero")
 
@@ -9612,9 +9612,9 @@ tt.sound_events.insert = "ElvesHeroXinPandamonium"
 tt.vis_flags = bor(F_RANGED)
 tt.vis_bans = bor(F_FLYING)
 tt.entity = "soldier_xin_ultimate"
-tt = E:register_t("soldier_xin_shadow", "soldier")
+tt = RT("soldier_xin_shadow", "soldier")
 
-E:add_comps(tt, "melee")
+AC(tt, "melee")
 
 image_y = 64
 anchor_y = 12 / image_y
@@ -9660,7 +9660,7 @@ end
 
 tt.melee.cooldown = fts(15)
 tt.melee.range = 60
-tt = E:register_t("soldier_xin_ultimate", "soldier_xin_shadow")
+tt = RT("soldier_xin_ultimate", "soldier_xin_shadow")
 tt.max_attack_count = 2
 tt.min_wait = 0.1
 tt.max_wait = 0.4
@@ -9913,9 +9913,9 @@ tt.initial_impulse = 2100
 tt.render.sprites[1].prefix = "bolt_faustus"
 tt.sound_events.insert = nil
 tt.upgrades_disabled = true
-tt = E:register_t("aura_teleport_faustus", "aura")
+tt = RT("aura_teleport_faustus", "aura")
 
-E:add_comps(tt, "render", "tween")
+AC(tt, "render", "tween")
 
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
@@ -9930,7 +9930,7 @@ tt.render.sprites[1].name = "aura_teleport_faustus"
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 55}, {fts(10), 255}, {fts(40), 255}, {fts(50), 0}}
 tt.render.sprites[1].scale = vec_1(1.45)
-tt = E:register_t("mod_teleport_faustus", "mod_teleport")
+tt = RT("mod_teleport_faustus", "mod_teleport")
 tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.max_times_applied = nil
@@ -12083,9 +12083,9 @@ tt.aura = "aura_hero_venom_ultimate"
 tt.main_script.update = scripts.hero_venom_ultimate.update
 tt.sound = "HeroVenomRenewCreepingDeathCast"
 -- 晶龙
-tt = E:register_t("ps_bolt_hero_dragon_gem_attack")
+tt = RT("ps_bolt_hero_dragon_gem_attack")
 
-E:add_comps(tt, "pos", "particle_system")
+AC(tt, "pos", "particle_system")
 
 tt.particle_system.name = "hero_evil_dragon_attack_projectile_trail_idle"
 tt.particle_system.animated = true
@@ -12094,43 +12094,43 @@ tt.particle_system.particle_lifetime = {fts(14), fts(14)}
 tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi * 0.5
 tt.particle_system.z = Z_FLYING_HEROES
-tt = E:register_t("fx_hero_dragon_gem_bolt_hit", "fx5")
+tt = RT("fx_hero_dragon_gem_bolt_hit", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_attack_fx_idle"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
-tt = E:register_t("fx_hero_dragon_gem_bolt_hit_flying", "fx5")
+tt = RT("fx_hero_dragon_gem_bolt_hit_flying", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_attack_fx_air_idle"
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
-tt = E:register_t("fx_hero_dragon_gem_skill_stun", "fx5")
+tt = RT("fx_hero_dragon_gem_skill_stun", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_breath_cloud_idle"
 tt.render.sprites[1].loop = true
-tt = E:register_t("fx_hero_dragon_gem_ultimate_shard_arrival_1", "fx5")
+tt = RT("fx_hero_dragon_gem_ultimate_shard_arrival_1", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_fx_a_idle"
 tt.render.sprites[1].loop = false
-tt = E:register_t("fx_hero_dragon_gem_ultimate_shard_arrival_2", "fx5")
+tt = RT("fx_hero_dragon_gem_ultimate_shard_arrival_2", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_fx_b_idle"
 tt.render.sprites[1].loop = false
-tt = E:register_t("decal_hero_dragon_gem_crystal_tomb", "decal_scripted")
+tt = RT("decal_hero_dragon_gem_crystal_tomb", "decal_scripted")
 tt.render.sprites[1].prefix = "hero_evil_dragon_hero"
 tt.render.sprites[1].name = "death_crystals"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.decal_hero_dragon_gem_crystal_tomb.update
-tt = E:register_t("decal_bullet_hero_dragon_gem_ultimate_shard", "decal_tween")
+tt = RT("decal_bullet_hero_dragon_gem_ultimate_shard", "decal_tween")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_a_idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {3, 0}}
-tt = E:register_t("decal_hero_dragon_gem_floor_decal", "decal_tween")
+tt = RT("decal_hero_dragon_gem_floor_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_evil_dragon_decal"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2, 0}}
-tt = E:register_t("decal_hero_dragon_gem_floor_circle", "decal")
+tt = RT("decal_hero_dragon_gem_floor_circle", "decal")
 
-E:add_comps(tt, "tween")
+AC(tt, "tween")
 
 tt.render.sprites[1].name = "hero_evil_dragon_area_damage_fx"
 tt.render.sprites[1].animated = false
@@ -12142,7 +12142,7 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_2(0.245, 0.245)}, {fts(6), vec_2(0.385, 0.385)}, {fts(13), vec_2(0.42, 0.42)}}
 tt.tween.props[2].sprite_id = 1
 tt.tween.remove = true
-tt = E:register_t("decal_hero_dragon_gem_floor_circle_totem", "decal_hero_dragon_gem_floor_circle")
+tt = RT("decal_hero_dragon_gem_floor_circle_totem", "decal_hero_dragon_gem_floor_circle")
 tt.tween.props[2].keys = {{0, vec_2(0.175, 0.175)}, {fts(6), vec_2(0.315, 0.315)}, {fts(13), vec_2(0.35, 0.35)}}
 tt = RT("decal_hero_dragon_gem_floor_impact_shard", "decal_scripted")
 
@@ -14208,9 +14208,9 @@ tt.modifier.allows_duplicates = true
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 -- 悟空_START
-tt = E:register_t("ps_wukong_nube_trail")
+tt = RT("ps_wukong_nube_trail")
 
-E:add_comps(tt, "pos", "particle_system")
+AC(tt, "pos", "particle_system")
 
 tt.particle_system.name = "hero_wukong_trail_nube_run"
 tt.particle_system.animated = true
@@ -14220,12 +14220,12 @@ tt.particle_system.animation_fps = 15
 tt.particle_system.track_rotation = false
 tt.particle_system.particle_lifetime = {fts(19), fts(19)}
 tt.particle_system.z = Z_OBJECTS
-tt = E:register_t("fx_hero_wukong_clones_spawn", "fx")
+tt = RT("fx_hero_wukong_clones_spawn", "fx")
 tt.render.sprites[1].name = "hero_wukong_smoke_in"
 tt.render.sprites[1].sort_y_offset = -5
 tt.render.sprites[1].z = Z_OBJECTS
-tt = E:register_t("fx_hero_wukong_giant_staff", "decal_scripted")
--- E:add_comps(tt, "tween")
+tt = RT("fx_hero_wukong_giant_staff", "decal_scripted")
+-- AC(tt, "tween")
 tt.main_script.update = scripts.fx_hero_wukong_giant_staff.update
 tt.render.sprites[1].prefix = "hero_wukong_weapon"
 tt.render.sprites[1].name = "in"
@@ -14252,16 +14252,16 @@ tt.render.sprites[1].scale = vv(2)
 -- tt.tween.props[1].sprite_id = 2
 -- tt.tween.disabled = true
 -- tt.tween.remove = true
-tt = E:register_t("fx_zhu_apprentice_respawn", "fx")
+tt = RT("fx_zhu_apprentice_respawn", "fx")
 tt.render.sprites[1].name = "hero_wukong_woolong_spawn_FX_spawn"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
-tt = E:register_t("fx_hero_wukong_giant_staff_dust_cloud_back", "fx")
+tt = RT("fx_hero_wukong_giant_staff_dust_cloud_back", "fx")
 tt.render.sprites[1].name = "hero_wukong_back_dust_in"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 10
 tt.render.sprites[1].scale = vv(3)
-tt = E:register_t("fx_hero_wukong_giant_staff_dust_cloud_front", "fx")
+tt = RT("fx_hero_wukong_giant_staff_dust_cloud_front", "fx")
 tt.render.sprites[1].name = "hero_wukong_smoke_in"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -30
@@ -14269,17 +14269,17 @@ tt.render.sprites[1].scale = vv(3)
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].name = "hero_wukong_dust_up_in"
 tt.render.sprites[2].sort_y_offset = -35
-tt = E:register_t("fx_hero_wukong_hit_2", "fx")
+tt = RT("fx_hero_wukong_hit_2", "fx")
 tt.render.sprites[1].name = "hero_wukong_hit_run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -35
-tt = E:register_t("fx_hero_wukong_hit", "fx")
+tt = RT("fx_hero_wukong_hit", "fx")
 tt.render.sprites[1].name = "hero_wukong_hit_wukong_run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -35
-tt = E:register_t("decal_zhu_apprentice_area_attack", "decal_scripted")
+tt = RT("decal_zhu_apprentice_area_attack", "decal_scripted")
 
-E:add_comps(tt, "tween")
+AC(tt, "tween")
 
 tt.main_script.update = scripts.decal_zhu_apprentice_area_attack.update
 tt.render.sprites[1].prefix = "hero_wukong_dust_up"
@@ -14300,9 +14300,9 @@ tt.tween.props[1].keys = {{0, 255}, {1, 255}, {1.5, 0}}
 tt.tween.props[1].sprite_id = 2
 tt.tween.disabled = false
 tt.tween.remove = true
-tt = E:register_t("decal_hero_wukong_ranged_attack_staff", "decal_scripted")
+tt = RT("decal_hero_wukong_ranged_attack_staff", "decal_scripted")
 
-E:add_comps(tt, "tween")
+AC(tt, "tween")
 
 tt.damage_factor = 1
 b = balance.heroes.hero_wukong.pole_ranged
@@ -14326,9 +14326,9 @@ tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 1
 tt.tween.disabled = true
 tt.tween.remove = true
-tt = E:register_t("decal_hero_wukong_ranged_attack_staff_decal", "decal_tween")
+tt = RT("decal_hero_wukong_ranged_attack_staff_decal", "decal_tween")
 
-E:add_comps(tt, "tween")
+AC(tt, "tween")
 
 tt.render.sprites[1].name = "hero_wukong_weapon_decal_decal"
 tt.render.sprites[1].animated = true
@@ -14339,10 +14339,10 @@ tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 1
 tt.tween.disabled = false
 tt.tween.remove = true
-tt = E:register_t("soldier_hero_wukong_clone", "soldier_militia")
+tt = RT("soldier_hero_wukong_clone", "soldier_militia")
 b = balance.heroes.hero_wukong
 
-E:add_comps(tt, "reinforcement")
+AC(tt, "reinforcement")
 
 tt.health.armor = b.hair_clones.soldier.armor
 tt.health.hp_max = nil
@@ -14378,15 +14378,15 @@ tt.unit.head_offset = v(0, 14)
 tt.unit.hit_offset = v(0, 14)
 tt.unit.mod_offset = v(0, 14)
 tt.unit.level = 0
-tt = E:register_t("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
+tt = RT("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
 tt.info.portrait = "kr5_info_portraits_soldiers_0034"
 tt.render.sprites[1].prefix = "hero_wukong_clone_2"
 tt.info.random_name_count = nil
 tt.info.random_name_format = nil
 tt.info.i18n_key = "SOLDIER_HERO_WUKONG_HAIR_CLONES_2"
-tt = E:register_t("soldier_hero_wukong_zhu_apprentice", "soldier_militia")
+tt = RT("soldier_hero_wukong_zhu_apprentice", "soldier_militia")
 
-E:add_comps(tt, "melee", "nav_grid")
+AC(tt, "melee", "nav_grid")
 
 b = balance.heroes.hero_wukong.zhu_apprentice
 tt.info.i18n_key = "SOLDIER_ZHU_APPRENTICE"
@@ -14437,9 +14437,9 @@ tt.health.ignore_delete_after = true
 tt.motion.max_speed = b.max_speed
 tt.soldier.melee_slot_offset = v(12, 0)
 tt.ignore_linirea_true_might_revive = true
-tt = E:register_t("fx_hero_wukong_ultimate", "decal_scripted")
+tt = RT("fx_hero_wukong_ultimate", "decal_scripted")
 
-E:add_comps(tt, "sound_events")
+AC(tt, "sound_events")
 
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].name = "hero_wukong_dragon_ultimate_dragon"
@@ -14447,7 +14447,7 @@ tt.render.sprites[1].scale = vv(1)
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.sound_events.insert = "HeroWukongUltimate"
-tt = E:register_t("fx_hero_wukong_ultimate_cracks", "decal_tween")
+tt = RT("fx_hero_wukong_ultimate_cracks", "decal_tween")
 tt.render.sprites[1].name = "hero_wukong_dragon_ultimate_cracks_floor"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
@@ -14466,16 +14466,16 @@ tt.tween.props[3] = table.deepclone(tt.tween.props[1])
 tt.tween.props[3].sprite_id = 3
 tt.tween.props[3].keys = {{fts(31) + fts(14), 0}, {fts(35) + fts(14), 255}, {2.5 + fts(14), 255}, {3 + fts(14), 0}, {4, 0}}
 tt.tween.remove = true
-tt = E:register_t("fx_hero_wukong_ultimate_explosion", "decal_scripted")
+tt = RT("fx_hero_wukong_ultimate_explosion", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].name = "hero_wukong_dragon_ultimate_fire_explosion"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].hidden = true
-tt = E:register_t("hero_wukong", "hero")
+tt = RT("hero_wukong", "hero")
 b = balance.heroes.hero_wukong
 
-E:add_comps(tt, "melee", "timed_attacks")
+AC(tt, "melee", "timed_attacks")
 
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
@@ -14726,10 +14726,10 @@ tt.flywalk.extra_speed_mult = b.flywalk_speed_mult
 tt.flywalk.animations = {"cloud_in", "cloud_loop", "cloud_out"}
 tt.flywalk.sound = nil
 tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
-tt = E:register_t("aura_hero_wukong_ultimate_slow", "aura")
+tt = RT("aura_hero_wukong_ultimate_slow", "aura")
 b = balance.heroes.hero_wukong.ultimate
 
-E:add_comps(tt, "render", "tween")
+AC(tt, "render", "tween")
 
 tt.aura.mod = "mod_hero_wukong_ultimate_slow"
 tt.aura.radius = 60
@@ -14747,19 +14747,19 @@ tt.main_script.update = scripts.aura_apply_mod_hero_wukong_ultimate.update
 tt = RT("mod_hero_wukong_attacks_combos", "modifier")
 tt.main_script.insert = scripts.mod_hero_wukong_attacks_combos.insert
 tt.main_script.queue = scripts.mod_hero_wukong_attacks_combos.queue
-tt = E:register_t("mod_hero_wukong_ranged_pole_stun", "mod_stun")
+tt = RT("mod_hero_wukong_ranged_pole_stun", "mod_stun")
 b = balance.heroes.hero_wukong.pole_ranged
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.modifier.duration = b.stun_duration
-tt = E:register_t("mod_hero_wukong_ultimate_slow", "mod_slow")
+tt = RT("mod_hero_wukong_ultimate_slow", "mod_slow")
 b = balance.heroes.hero_wukong.ultimate
 tt.slow.factor = nil
 tt.modifier.duration = 0.5
-tt = E:register_t("controller_hero_wukong_ultimate")
+tt = RT("controller_hero_wukong_ultimate")
 b = balance.heroes.hero_wukong.ultimate
 
-E:add_comps(tt, "pos", "main_script", "sound_events")
+AC(tt, "pos", "main_script", "sound_events")
 
 tt.can_fire_fn = scripts.controller_hero_wukong_ultimate.can_fire_fn
 tt.main_script.update = scripts.controller_hero_wukong_ultimate.update

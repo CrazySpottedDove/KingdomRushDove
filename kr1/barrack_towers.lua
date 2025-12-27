@@ -2233,7 +2233,7 @@ tt.modifier.use_mod_offset = false
 tt.fx_start = "fx_tower_panda_skill_red_tp_enemy_fire"
 tt.fx_end = "fx_tower_panda_skill_red_tp_enemy_fire"
 tt.max_times_applied = b.soldier.teleport.max_times_applied
-tt = E:register_t("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
+tt = RT("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
 tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
 tt.render.sprites[1].name = "scape_loop"
 tt.render.sprites[1].animated = true
@@ -2279,7 +2279,7 @@ tt.max_bounces = b.soldier.hat.max_bounces
 tt.bounce_range = b.soldier.hat.bounce_range
 tt.bounce_damage_mult = b.soldier.hat.bounce_damage_mult
 tt.bounce_speed_mult = b.soldier.hat.bounce_speed_mult
-tt = E:register_t("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
+tt = RT("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
 tt.bullet.damage_min = b.soldier.hat.damage_levels[2].min
 tt.bullet.damage_max = b.soldier.hat.damage_levels[2].max
 tt = RT("bullet_tower_pandas_fire_lvl4", "bolt")
@@ -2298,7 +2298,7 @@ tt.bullet.align_with_trajectory = true
 tt.bullet.hit_fx = "fx_tower_pandas_bullet_fire_hit"
 tt.bullet.particles_name = "ps_bullet_tower_panda_fire"
 tt.sound_events.insert = "TowerPandasRangedFire"
-tt = E:register_t("bullet_tower_pandas_ray_lvl4", "bullet")
+tt = RT("bullet_tower_pandas_ray_lvl4", "bullet")
 tt.bullet.level = 4
 tt.bullet.damage_min = b.ranged_attack.damage_min[4]
 tt.bullet.damage_max = b.ranged_attack.damage_max[4]
@@ -2315,10 +2315,10 @@ tt.ray_duration = fts(11)
 tt.sound_events.insert = "TowerPandasRangedBolt"
 -- 熊猫_END
 -- 牢大 BEGIN
-tt = E:register_t("tower_rocket_gunners_lvl4", "tower")
+tt = RT("tower_rocket_gunners_lvl4", "tower")
 b = balance.towers.rocket_gunners
 
-E:add_comps(tt, "barrack", "powers", "tower_upgrade_persistent_data")
+AC(tt, "barrack", "powers", "tower_upgrade_persistent_data")
 
 tt.tower.type = "rocket_gunners"
 tt.tower.kind = TOWER_KIND_ARCHER
@@ -2351,7 +2351,7 @@ tt.main_script.remove = scripts.tower_barrack.remove
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = vec_2(0, 15)
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = true
 tt.render.sprites[2].prefix = "rocket_gunners_tower_lvl4_tower"
 tt.render.sprites[2].name = "idle"
@@ -2365,18 +2365,18 @@ tt.sound_events.insert = "TowerRocketGunnersTaunt"
 tt.sound_events.change_rally_point = "TowerRocketGunnersTaunt"
 tt.sound_events.tower_room_select = "TowerRocketGunnersTauntSelect"
 tt.spawn_sound = "TowerRocketGunnersSpawn"
-tt.powers.phosphoric = E:clone_c("power")
+tt.powers.phosphoric = CC("power")
 tt.powers.phosphoric.price_base = b.soldier.phosphoric.price[1]
 tt.powers.phosphoric.price_inc = b.soldier.phosphoric.price[2]
 tt.powers.phosphoric.enc_icon = 16
-tt.powers.sting_missiles = E:clone_c("power")
+tt.powers.sting_missiles = CC("power")
 tt.powers.sting_missiles.price_base = b.soldier.sting_missiles.price[1]
 tt.powers.sting_missiles.price_inc = b.soldier.sting_missiles.price[2]
 tt.powers.sting_missiles.enc_icon = 15
 tt.powers.sting_missiles.cooldown = b.sting_missiles.cooldown
-tt = E:register_t("soldier_tower_rocket_gunners_lvl4", "soldier_militia")
+tt = RT("soldier_tower_rocket_gunners_lvl4", "soldier_militia")
 
-E:add_comps(tt, "nav_grid", "powers", "ranged", "tween")
+AC(tt, "nav_grid", "powers", "ranged", "tween")
 
 b = balance.towers.rocket_gunners
 tt.info.portrait = "kr5_info_portraits_soldiers_0007"
@@ -2455,7 +2455,7 @@ tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].bullet_start_offset = {vec_2(0, 0), vec_2(0, 0), vec_2(0, 0)}
 tt.ranged.attacks[2].bullet_start_offset_relative = vec_2(15, 14)
 tt.ranged.attacks[2].shoot_time = fts(7)
-tt.ranged.attacks[3] = E:clone_c("bullet_attack")
+tt.ranged.attacks[3] = CC("bullet_attack")
 tt.ranged.attacks[3].animation = "sting_missiles_air"
 tt.ranged.attacks[3].bullet = "bullet_soldier_tower_rocket_gunners_sting_missiles"
 tt.ranged.attacks[3].disabled = true
@@ -2468,10 +2468,10 @@ tt.ranged.attacks[3].shoot_time = fts(12)
 tt.ranged.attacks[3].vis_flags = bor(F_INSTAKILL, F_RANGED)
 tt.ranged.attacks[3].vis_bans = bor(F_BOSS, F_MINIBOSS, F_NIGHTMARE)
 tt.ranged.attacks[3].mark_mod = "mod_soldier_tower_rocket_gunners_sting_missiles_mark"
-tt.powers.phosphoric = E:clone_c("power")
+tt.powers.phosphoric = CC("power")
 tt.powers.phosphoric.damage_factor = b.soldier.phosphoric.damage_factor
 tt.powers.phosphoric.armor_reduction = b.soldier.phosphoric.armor_reduction
-tt.powers.sting_missiles = E:clone_c("power")
+tt.powers.sting_missiles = CC("power")
 tt.powers.sting_missiles.max_range = b.soldier.sting_missiles.max_range
 tt.powers.sting_missiles.min_range = b.soldier.sting_missiles.min_range
 tt.powers.sting_missiles.kill_hp_factor = b.soldier.sting_missiles.kill_hp_factor
@@ -2497,7 +2497,7 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].disabled = true
 tt.tween.props[1].remove = false
 tt.sound_take_off = "TowerRocketGunnersTakeoff"
-tt = E:register_t("bullet_soldier_tower_rocket_gunners", "bullet")
+tt = RT("bullet_soldier_tower_rocket_gunners", "bullet")
 b = balance.towers.rocket_gunners.soldier.ranged_attack
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_hit"
 tt.bullet.floor_fx = "fx_bullet_soldier_tower_rocket_gunners_floor"
@@ -2509,7 +2509,7 @@ tt.bullet.level = 1
 tt.main_script.update = scripts.bullet_soldier_tower_rocket_gunners.update
 tt.render = nil
 tt.sound_events.insert = "TowerRocketGunnersBasicAttack"
-tt = E:register_t("bullet_soldier_tower_rocket_gunners_phosphoric", "bullet")
+tt = RT("bullet_soldier_tower_rocket_gunners_phosphoric", "bullet")
 b = balance.towers.rocket_gunners.soldier
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_hit"
 tt.bullet.floor_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_floor"
@@ -2527,10 +2527,10 @@ tt.image_width = 70
 tt.track_target = true
 tt.ray_duration = fts(2)
 tt.sound_events.insert = "TowerRocketGunnersPhosphoricCoating"
-tt = E:register_t("bullet_soldier_tower_rocket_gunners_sting_missiles", "bullet")
+tt = RT("bullet_soldier_tower_rocket_gunners_sting_missiles", "bullet")
 b = balance.towers.rocket_gunners.soldier
 
-E:add_comps(tt, "force_motion")
+AC(tt, "force_motion")
 
 tt.bullet.flight_time = fts(31)
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_sting_missiles_hit"
@@ -2552,18 +2552,18 @@ tt.force_motion.max_v = 600
 tt.mod = "mod_soldier_tower_rocket_gunners_sting_missiles_target"
 tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
 tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
-tt = E:register_t("mod_soldier_tower_rocket_gunners_sting_missiles_target", "modifier")
+tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_target", "modifier")
 
-E:add_comps(tt, "render")
+AC(tt, "render")
 
 tt.main_script.update = scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update
 tt.modifier.use_mod_offset = true
 tt.modifier.duration = 1e+99
 tt.render.sprites[1].prefix = "rocket_gunners_tower_reticle"
 tt.render.sprites[1].draw_order = DO_MOD_FX
-tt = E:register_t("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
+tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
 
-E:add_comps(tt, "mark_flags")
+AC(tt, "mark_flags")
 
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.main_script.queue = scripts.mod_mark_flags.queue
@@ -2591,7 +2591,7 @@ tt.render.sprites[2].name = "tower_HolyKnight_1"
 tt.render.sprites[2].offset = v(0, 39)
 tt.render.sprites[3].prefix = "towerbarracklvl4_paladin_door"
 tt.render.sprites[3].offset = v(0, 39)
-tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].name = "tower_HolyFlag"
 tt.render.sprites[4].offset = v(7, 72)
 tt.sound_events.insert = {"BarrackPaladinTaunt", "GUITowerUpgrade"}
@@ -2622,9 +2622,9 @@ tt.melee.attacks[1].shared_cooldown = true
 tt.melee.cooldown = 0.5 + fts(13)
 tt.melee.range = 60
 tt.motion.max_speed = 75
-tt.powers.healing = E:clone_c("power")
-tt.powers.shield = E:clone_c("power")
-tt.powers.holystrike = E:clone_c("power")
+tt.powers.healing = CC("power")
+tt.powers.shield = CC("power")
+tt.powers.holystrike = CC("power")
 tt.regen.health = 25
 tt.render.sprites[1].prefix = "soldier_paladin_rider"
 tt.render.sprites[1].anchor.y = anchor_y
@@ -2635,9 +2635,9 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)
 -- 圣骑兵 END
 -- 炮兵 START
-tt = E:register_t("ps_bullet_incendiary_soldier_dwarf_tower")
+tt = RT("ps_bullet_incendiary_soldier_dwarf_tower")
 
-E:add_comps(tt, "pos", "particle_system")
+AC(tt, "pos", "particle_system")
 
 tt.particle_system.name = "tower_dwarf_skill_particle"
 tt.particle_system.animated = true
@@ -2646,20 +2646,20 @@ tt.particle_system.particle_lifetime = {fts(15), fts(15)}
 tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_BULLET_PARTICLES
-tt = E:register_t("fx_soldier_tower_dwarf_melee_hit", "fx")
+tt = RT("fx_soldier_tower_dwarf_melee_hit", "fx")
 tt.render.sprites[1].name = "tower_dwarf_attack_2_hit"
-tt = E:register_t("fx_bullet_soldier_tower_dwarf_hit", "fx")
+tt = RT("fx_bullet_soldier_tower_dwarf_hit", "fx")
 tt.render.sprites[1].name = "tower_dwarf_attack_1_hit_hit"
-tt = E:register_t("fx_explosion_tower_dwarf", "fx")
+tt = RT("fx_explosion_tower_dwarf", "fx")
 tt.render.sprites[1].name = "tower_dwarf_skill_main_explosion_idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].anchor = v(0.43, 0.5)
-tt = E:register_t("decal_tower_dwarf_jump_explosion", "decal_timed")
+tt = RT("decal_tower_dwarf_jump_explosion", "decal_timed")
 tt.render.sprites[1].prefix = "tower_dwarf_jump_explosion_lvl4_jump_in"
 tt.render.sprites[1].name = "fx"
 tt.render.sprites[1].animated = true
 tt.timed.duration = fts(20)
-tt = E:register_t("tower_build_dwarf", "tower_build")
+tt = RT("tower_build_dwarf", "tower_build")
 tt.build_name = "tower_dwarf_lvl1"
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = v(0, 15)
@@ -2667,10 +2667,10 @@ tt.render.sprites[2].name = "tower_dwarf_build"
 tt.render.sprites[2].offset = v(0, 10)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
-tt = E:register_t("mod_aura_bullet_soldier_tower_dwarf", "modifier")
+tt = RT("mod_aura_bullet_soldier_tower_dwarf", "modifier")
 b = balance.towers.dwarf.incendiary_ammo.burn
 
-E:add_comps(tt, "dps", "render")
+AC(tt, "dps", "render")
 
 tt.modifier.duration = b.duration
 tt.dps.damage_config = b.damage
@@ -2683,16 +2683,16 @@ tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_tricannon_overheat_dps.insert
 tt.main_script.update = scripts.mod_dps.update
-tt = E:register_t("tower_dwarf_lvl4", "tower")
+tt = RT("tower_dwarf_lvl4", "tower")
 b = balance.towers.dwarf
 
-E:add_comps(tt, "barrack", "vis", "powers")
+AC(tt, "barrack", "vis", "powers")
 
-tt.powers.formation = E:clone_c("power")
+tt.powers.formation = CC("power")
 tt.powers.formation.price_base = b.formation.price[2]
 tt.powers.formation.price_inc = b.formation.price[3]
 tt.powers.formation.enc_icon = 35
-tt.powers.incendiary_ammo = E:clone_c("power")
+tt.powers.incendiary_ammo = CC("power")
 tt.powers.incendiary_ammo.price_base = b.incendiary_ammo.price[2]
 tt.powers.incendiary_ammo.price_inc = b.incendiary_ammo.price[3]
 tt.powers.incendiary_ammo.damage_min = b.damage_min
@@ -2716,12 +2716,12 @@ tt.info.tower_portrait = "towerselect_portraits_big_" .. "0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "tower_dwarf_lvl4"
 tt.render.sprites[2].offset = v(0, 9)
 tt.render.sprites[2].sort_y_offset = 5
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "tower_dwarf_lvl4_door"
 tt.render.sprites[3].name = "close"
 tt.render.sprites[3].loop = false
@@ -2739,10 +2739,10 @@ tt.sound_events.insert = "TowerDwarfTaunt"
 tt.sound_events.change_rally_point = "TowerDwarfTaunt"
 tt.sound_events.tower_room_select = "TowerDwarfTauntSelect"
 tt.ui.click_rect = r(-42, 0, 84, 90)
-tt = E:register_t("soldier_tower_dwarf_lvl4", "soldier_militia")
+tt = RT("soldier_tower_dwarf_lvl4", "soldier_militia")
 b = balance.towers.dwarf.soldier
 
-E:add_comps(tt, "nav_grid", "ranged", "powers")
+AC(tt, "nav_grid", "ranged", "powers")
 
 tt.info.portrait = "kr5_info_portraits_soldiers_0024"
 tt.info.random_name_format = "SOLDIER_TOWER_DWARF_%i_NAME"
@@ -2755,7 +2755,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].scale = vv(1.1)
 tt.render.sprites[1].angles.walk = {"walk"}
 tt.render.sprites[1].angles.attack = {"attack_1_front", "attack_1_up", "attack_1_down"}
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "decal_flying_shadow_hard"
 tt.render.sprites[2].offset = v(-1, 0)
@@ -2810,9 +2810,9 @@ tt.max_dist_walk = 140
 tt.sound_jump = "TowerDwarfIncendiaryJump"
 tt.sound_events.death = "TowerDwarfUnitDeath"
 b = balance.towers.dwarf
-tt.powers.incendiary_ammo = E:clone_c("power")
+tt.powers.incendiary_ammo = CC("power")
 tt.powers.incendiary_ammo.cooldown = b.incendiary_ammo.cooldown
-tt = E:register_t("bullet_soldier_tower_dwarf", "bullet")
+tt = RT("bullet_soldier_tower_dwarf", "bullet")
 b = balance.towers.dwarf.soldier.ranged_attack
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_dwarf_hit"
 tt.bullet.flight_time = fts(2)
@@ -2825,7 +2825,7 @@ tt.bullet.level = 1
 tt.main_script.update = scripts.bullet_soldier_tower_dwarf.update
 tt.render = nil
 tt.sound_events.insert = "TowerDwarfBasicAttack"
-tt = E:register_t("bullet_incendiary_soldier_tower_dwarf", "bomb")
+tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
 
 local b = balance.towers.dwarf.incendiary_ammo
 
@@ -2848,7 +2848,7 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = false
 tt.bullet.damage_radius = b.damage_radius
 tt.from_tower = true
-tt = E:register_t("aura_bullet_soldier_tower_dwarf", "aura")
+tt = RT("aura_bullet_soldier_tower_dwarf", "aura")
 b = balance.towers.dwarf.incendiary_ammo.burn.aura
 tt.aura.mod = "mod_aura_bullet_soldier_tower_dwarf"
 tt.aura.duration = b.duration
@@ -2858,16 +2858,16 @@ tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
-tt = E:register_t("decal_bullet_soldier_tower_dwarf", "decal_tween")
+tt = RT("decal_bullet_soldier_tower_dwarf", "decal_tween")
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = v(1.2, 1.2)
 -- 炮兵 END
 -- 幽冥 START
-tt = E:register_t("ps_soldier_tower_ghost")
+tt = RT("ps_soldier_tower_ghost")
 
-E:add_comps(tt, "pos", "particle_system")
+AC(tt, "pos", "particle_system")
 
 tt.particle_system.name = "ghost_tower_spawn_trail_particle_idle"
 tt.particle_system.animated = true
@@ -2877,18 +2877,18 @@ tt.particle_system.particle_lifetime = {0.2, 0.4}
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = v(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
-tt = E:register_t("fx_soul_soldier_tower_ghost", "fx")
+tt = RT("fx_soul_soldier_tower_ghost", "fx")
 tt.render.sprites[1].name = "ghost_tower_soul_skill_hit_fx_idle"
-tt = E:register_t("decal_soldier_tower_ghost_hit", "fx")
+tt = RT("decal_soldier_tower_ghost_hit", "fx")
 tt.render.sprites[1].name = "ghost_tower_hit_fx_idle"
-tt = E:register_t("soldier_tower_ghost_lvl4", "soldier_militia")
+tt = RT("soldier_tower_ghost_lvl4", "soldier_militia")
 
-E:add_comps(tt, "nav_grid", "powers")
+AC(tt, "nav_grid", "powers")
 
 b = balance.towers.ghost
-tt.powers.soul_attack = E:clone_c("power")
+tt.powers.soul_attack = CC("power")
 tt.powers.soul_attack.dead_lifetime_dec = b.soul_attack.dead_lifetime_dec
-tt.powers.extra_damage = E:clone_c("power")
+tt.powers.extra_damage = CC("power")
 tt.powers.extra_damage.damages = b.extra_damage.damage_factor
 tt.info.portrait = "kr5_info_portraits_soldiers_0015"
 tt.info.random_name_count = 18
@@ -2919,7 +2919,7 @@ tt.sound_events.death = "TowerGhostSoulAttackTravel"
 tt.ui.click_rect = r(-12, 2, 24, 30)
 tt.soul = "soul_soldier_tower_ghost_lvl4"
 tt.extra_damage_cooldown = b.extra_damage.cooldown_start
-tt = E:register_t("soul_soldier_tower_ghost_lvl4", "decal_scripted")
+tt = RT("soul_soldier_tower_ghost_lvl4", "decal_scripted")
 tt.main_script.update = scripts.tower_ghost.soul_update
 b = balance.towers.ghost.soul_attack
 tt.render.sprites[1].prefix = "ghost_tower_soul_skill"
@@ -2931,10 +2931,10 @@ tt.damage_max = b.damage_max
 tt.delay = fts(16)
 tt.radius = b.range
 tt.bullet = "bolt_soul_soldier_tower_ghost"
-tt = E:register_t("tower_ghost_lvl1", "tower")
+tt = RT("tower_ghost_lvl1", "tower")
 b = balance.towers.ghost
 
-E:add_comps(tt, "barrack", "vis", "tower_upgrade_persistent_data")
+AC(tt, "barrack", "vis", "tower_upgrade_persistent_data")
 
 tt.tower.type = "ghost"
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -2950,17 +2950,17 @@ tt.info.room_portrait = "quickmenu_main_icons_main_icons_0015_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "ghost_tower_lvl1_tower"
 tt.render.sprites[2].offset = v(0, 15)
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "ghost_tower_lvl1_tower_shadow_fx"
 tt.render.sprites[3].name = "idle"
 tt.render.sprites[3].loop = true
 tt.render.sprites[3].offset = v(0, 15)
 tt.render.sprites[3].fps = 20
-tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].prefix = "ghost_tower_lvl1_tower_spawn_fx"
 tt.render.sprites[4].name = "idle"
 tt.render.sprites[4].loop = false
@@ -2978,9 +2978,9 @@ tt.sound_events.change_rally_point = "TowerGhostTaunt"
 tt.sound_events.tower_room_select = "TowerGhostTauntSelect"
 tt.sound_events.spawn_unit = "TowerGhostSpawnUnit"
 tt.ui.click_rect = r(-35, 0, 70, 65)
-tt = E:register_t("tower_ghost_lvl4", "tower_ghost_lvl1")
+tt = RT("tower_ghost_lvl4", "tower_ghost_lvl1")
 
-E:add_comps(tt, "powers")
+AC(tt, "powers")
 
 b = balance.towers.ghost
 -- tt.cannot_be_swappeds = table.merge(U.get_all_holder(), {
@@ -3007,15 +3007,15 @@ tt.render.sprites[3].offset = v(0, 16)
 tt.render.sprites[4].prefix = "ghost_tower_lvl4_tower_spawn_fx"
 tt.render.sprites[4].offset = v(0, 18)
 tt.ui.click_rect = r(-35, 0, 70, 90)
-tt.powers.extra_damage = E:clone_c("power")
+tt.powers.extra_damage = CC("power")
 tt.powers.extra_damage.price_base = b.extra_damage.price[2]
 tt.powers.extra_damage.price_inc = b.extra_damage.price[3]
 tt.powers.extra_damage.enc_icon = 25
-tt.powers.soul_attack = E:clone_c("power")
+tt.powers.soul_attack = CC("power")
 tt.powers.soul_attack.price_base = b.soul_attack.price[2]
 tt.powers.soul_attack.price_inc = b.soul_attack.price[3]
 tt.powers.soul_attack.enc_icon = 26
-tt = E:register_t("bolt_soul_soldier_tower_ghost", "bolt")
+tt = RT("bolt_soul_soldier_tower_ghost", "bolt")
 b = balance.towers.ghost.soul_attack
 tt.render.sprites[1].name = "ghost_tower_soul_skill_projectile"
 tt.render.sprites[1].animated = false
@@ -3032,14 +3032,14 @@ tt.bullet.use_unit_damage_factor = true
 tt.sound_events.hit = "TowerGhostSoulAttackImpact"
 tt.bullet.damage_type = b.damage_type
 tt.bullet.particles_name = "ps_soul_soldier_tower_ghost"
-tt = E:register_t("mod_tower_ghost_soul_slow", "mod_slow")
+tt = RT("mod_tower_ghost_soul_slow", "mod_slow")
 b = balance.towers.ghost.soul_attack
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
-tt = E:register_t("mod_tower_ghost_soul_damage_factor", "modifier")
+tt = RT("mod_tower_ghost_soul_damage_factor", "modifier")
 b = balance.towers.ghost.soul_attack
 
-E:add_comps(tt, "render")
+AC(tt, "render")
 
 tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
@@ -3050,10 +3050,10 @@ tt.modifier.use_mod_offset = false
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "ghost_tower_soul_skill_enemy_fx"
 tt.render.sprites[1].name = "small"
-tt = E:register_t("aura_tower_ghost_extra_damage", "aura")
+tt = RT("aura_tower_ghost_extra_damage", "aura")
 b = balance.towers.ghost.extra_damage
 
-E:add_comps(tt, "render")
+AC(tt, "render")
 
 tt.aura.cycle_time = b.cycle_time
 tt.aura.duration = -1
@@ -3069,30 +3069,30 @@ tt.main_script.update = scripts.aura_apply_damage.update
 tt.render.sprites[1].prefix = "ghost_tower_buff_skill_back"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].z = Z_OBJECTS - 1
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].prefix = "ghost_tower_buff_skill_front"
 tt.render.sprites[2].name = "loop"
 tt.render.sprites[1].draw_order = 1
 -- tt.sound_events.insert = "TowerGhostExtraDamageCast"
-tt = E:register_t("tower_ghost_hover", "decal")
+tt = RT("tower_ghost_hover", "decal")
 tt.render.sprites[1].name = "ghost_tower_swap_indicator_back"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_TOWER_BASES + 1
 tt.render.sprites[1].offset.y = 14
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].draw_order = 11
 tt.render.sprites[2].prefix = "ghost_tower_swap_indicator_particles"
 tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].loop = true
 tt.render.sprites[2].z = Z_OBJECTS
 tt.render.sprites[2].offset.y = 14
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[2].draw_order = 11
 tt.render.sprites[3].name = "ghost_tower_swap_indicator_front"
 tt.render.sprites[3].animated = false
 tt.render.sprites[3].z = Z_OBJECTS
 tt.render.sprites[3].offset.y = 14
-tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].prefix = "ghost_tower_swap_indicator_fx"
 tt.render.sprites[4].name = "idle"
 tt.render.sprites[4].loop = true
@@ -3100,37 +3100,37 @@ tt.render.sprites[4].z = Z_TOWER_BASES + 1
 tt.render.sprites[4].alpha = 155
 tt.render.sprites[4].offset.y = 14
 tt.render.sprites[4].draw_order = 11
-tt = E:register_t("tower_ghost_teleport_out", "decal_timed")
+tt = RT("tower_ghost_teleport_out", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_teleport_fx_out_idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].offset = v(0, 10)
 tt.timed.duration = fts(20)
-tt = E:register_t("tower_ghost_teleport_in", "decal_timed")
+tt = RT("tower_ghost_teleport_in", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_teleport_fx_in_idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].offset = v(0, 10)
 tt.timed.duration = fts(20)
-tt = E:register_t("decal_soldier_tower_ghost_spawn", "decal_timed")
+tt = RT("decal_soldier_tower_ghost_spawn", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_unit_spawn_fx_idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
 tt.render.sprites[1].offset = v(0, 0)
 tt.timed.duration = fts(24)
-tt = E:register_t("tower_ghost_hover_controller")
+tt = RT("tower_ghost_hover_controller")
 
-E:add_comps(tt, "main_script")
+AC(tt, "main_script")
 
 tt.template_hover = "tower_ghost_hover"
 tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
-tt = E:register_t("controller_tower_swap")
+tt = RT("controller_tower_swap")
 
-E:add_comps(tt, "main_script")
+AC(tt, "main_script")
 
 tt.main_script.update = scripts.controller_tower_swap.update
 tt.path_marker_entity = "decal_path_hero_movement"
@@ -3146,7 +3146,7 @@ tt.fx_in_delay = fts(14)
 tt.fx_delay_between = 0
 -- 幽冥 END
 -- 圣殿 START
-tt = E:register_t("tower_build_paladin_covenant", "tower_build")
+tt = RT("tower_build_paladin_covenant", "tower_build")
 tt.build_name = "tower_paladin_covenant_lvl1"
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = v(0, 15)
@@ -3154,9 +3154,9 @@ tt.render.sprites[2].name = "paladin_covenant_build"
 tt.render.sprites[2].offset = v(0, 9)
 tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
-tt = E:register_t("tower_paladin_covenant_soldier_lvl1", "soldier_militia")
+tt = RT("tower_paladin_covenant_soldier_lvl1", "soldier_militia")
 
-E:add_comps(tt, "nav_grid")
+AC(tt, "nav_grid")
 
 b = balance.towers.paladin_covenant
 tt.info.portrait = "gui_bottom_info_image_soldiers_0001"
@@ -3182,9 +3182,9 @@ tt.melee.attacks[1].hit_time = fts(10)
 tt.soldier.melee_slot_spread = v(-8, -8)
 tt.sound_events.death = "TowerPaladinCovenantUnitDeath"
 tt.ui.click_rect = r(-10, -2, 20, 25)
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4", "tower_paladin_covenant_soldier_lvl1")
+tt = RT("tower_paladin_covenant_soldier_lvl4", "tower_paladin_covenant_soldier_lvl1")
 
-E:add_comps(tt, "powers", "timed_attacks")
+AC(tt, "powers", "timed_attacks")
 
 b = balance.towers.paladin_covenant
 tt.info.portrait = "gui_bottom_info_image_soldiers_0004"
@@ -3196,7 +3196,7 @@ tt.health.armor = b.soldier.armor[4]
 tt.health_bar.offset = v(0, 35)
 tt.motion.max_speed = b.soldier.speed
 tt.ui.click_rect = r(-15, -2, 30, 35)
-tt.powers.lead = E:clone_c("power")
+tt.powers.lead = CC("power")
 tt.powers.lead.b = b.lead.soldier_veteran
 tt.powers.lead.sprite_prefix = "paladin_soldiers_lvl4_captain_soldier"
 tt.powers.lead.health_bar_size = HEALTH_BAR_SIZE_MEDIUM
@@ -3204,7 +3204,7 @@ tt.powers.lead.cooldown = b.lead.soldier_veteran.aura_cooldown
 tt.powers.lead.animation_upgrade = "raise"
 tt.powers.lead.hit_time = fts(12)
 tt.powers.lead.portrait = "gui_bottom_info_image_soldiers_0005"
-tt.powers.healing_prayer = E:clone_c("power")
+tt.powers.healing_prayer = CC("power")
 tt.powers.healing_prayer.health_trigger_factor = b.healing_prayer.health_trigger_factor
 tt.powers.healing_prayer.cooldown = b.healing_prayer.cooldown
 tt.melee.range = b.soldier.basic_attack.range
@@ -3218,7 +3218,7 @@ tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack02"
 tt.melee.attacks[2].chance = 0.5
 tt.melee.attacks[2].hit_time = fts(8)
-tt.timed_attacks.list[1] = E:clone_c("mod_attack")
+tt.timed_attacks.list[1] = CC("mod_attack")
 tt.timed_attacks.list[1].animation = "healing"
 tt.timed_attacks.list[1].cooldown = nil
 tt.timed_attacks.list[1].disabled = true
@@ -3227,7 +3227,7 @@ tt.timed_attacks.list[1].lost_health = nil
 tt.timed_attacks.list[1].duration = b.healing_prayer.duration
 tt.timed_attacks.list[1].mods = {"tower_paladin_covenant_soldier_lvl4_healing_mod", "tower_paladin_covenant_soldier_lvl4_healing_mod_fx"}
 tt.timed_attacks.list[1].sound = "TowerPaladinCovenantHealingPrayer"
-tt.timed_attacks.list[2] = E:clone_c("aura_attack")
+tt.timed_attacks.list[2] = CC("aura_attack")
 tt.timed_attacks.list[2].animation = "armor"
 tt.timed_attacks.list[2].cooldown = nil
 tt.timed_attacks.list[2].disabled = true
@@ -3237,9 +3237,9 @@ tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].aura_name = "tower_paladin_covenant_soldier_lvl4_lead_aura"
 tt.timed_attacks.list[2].fx = "tower_paladin_covenant_soldier_lvl4_lead_aura_fx"
 tt.soldier.melee_slot_offset = v(8, 0)
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4_healing_mod", "modifier")
+tt = RT("tower_paladin_covenant_soldier_lvl4_healing_mod", "modifier")
 
-E:add_comps(tt, "hps", "render")
+AC(tt, "hps", "render")
 
 b = balance.towers.paladin_covenant
 tt.modifier.duration = b.healing_prayer.duration
@@ -3250,9 +3250,9 @@ tt.hps.heal_every = b.healing_prayer.heal_every
 tt.main_script.insert = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.insert
 tt.main_script.update = scripts.mod_hps.update
 tt.main_script.remove = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4_healing_mod_fx", "modifier")
+tt = RT("tower_paladin_covenant_soldier_lvl4_healing_mod_fx", "modifier")
 
-E:add_comps(tt, "render", "tween")
+AC(tt, "render", "tween")
 
 b = balance.towers.paladin_covenant
 tt.modifier.duration = b.healing_prayer.duration
@@ -3261,32 +3261,29 @@ tt.modifier.use_mod_offset = false
 tt.render.sprites[1].name = "paladin_soldier_lvl4_healing_halo"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].animated = false
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].loop = false
 tt.render.sprites[2].name = "paladin_soldier_lvl4_healing_glow_0010"
 tt.render.sprites[2].sort_y_offset = 1
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].name = "paladin_soldiers_lvl4_healing_plusSymbol"
 tt.render.sprites[3].loop = true
 tt.render.sprites[3].animated = true
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[1].sprite_id = 1
-tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "alpha"
 tt.tween.props[2].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[2].sprite_id = 2
-tt.tween.props[3] = E:clone_c("tween_prop")
+tt.tween.props[3] = CC("tween_prop")
 tt.tween.props[3].name = "alpha"
 tt.tween.props[3].keys = {{0, 0}, {fts(4), 255}}
 tt.tween.props[3].sprite_id = 3
 tt.tween.remove = false
 tt.main_script.update = scripts.mod_track_fx.update
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura", "aura")
-
-E:add_comps(tt)
-
+tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura", "aura")
 tt.aura.mods = {"tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx"}
 tt.aura.cycles = 1
 tt.aura.radius = b.lead.soldier_veteran.aura_range
@@ -3297,7 +3294,7 @@ tt.aura.use_mod_offset = false
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.sound_events.insert = "TowerPaladinCovenantLeadByExample"
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "modifier")
+tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "modifier")
 b = balance.towers.paladin_covenant
 tt.modifier.duration = b.lead.soldier_veteran.aura_duration
 tt.modifier.use_mod_offset = false
@@ -3305,9 +3302,9 @@ tt.inflicted_damage_factor = b.lead.soldier_veteran.aura_damage_buff_factor
 tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx", "modifier")
+tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx", "modifier")
 
-E:add_comps(tt, "render", "tween")
+AC(tt, "render", "tween")
 
 tt.modifier.duration = b.lead.soldier_veteran.aura_duration
 tt.modifier.use_mod_offset = false
@@ -3319,17 +3316,17 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.tween.remove = false
 tt.main_script.update = scripts.mod_track_fx.update
-tt = E:register_t("tower_paladin_covenant_soldier_lvl4_lead_aura_fx", "fx")
+tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura_fx", "fx")
 tt.render.sprites[1].name = "paladin_soldiers_lvl4_captain_armor_decal_start"
 tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "paladin_soldiers_lvl4_captain_armor_buff"
 tt.render.sprites[2].loop = false
 tt.render.sprites[2].animated = true
 tt.render.sprites[2].hide_after_runs = 1
-tt = E:register_t("tower_paladin_covenant_lvl1", "tower")
+tt = RT("tower_paladin_covenant_lvl1", "tower")
 
-E:add_comps(tt, "barrack", "vis")
+AC(tt, "barrack", "vis")
 
 tt.tower.type = "paladin_covenant"
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -3344,11 +3341,11 @@ tt.info.tower_portrait = "towerselect_portraits_big_" .. "0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "paladin_covenant_lvl1"
 tt.render.sprites[2].offset = v(0, 9)
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "paladin_covenant_lvl123_door"
 tt.render.sprites[3].name = "close"
 tt.render.sprites[3].loop = false
@@ -3365,9 +3362,9 @@ tt.sound_events.insert = "TowerPaladinCovenantTaunt"
 tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
 tt.sound_events.tower_room_select = "TowerPaladinCovenantTauntSelect"
 tt.ui.click_rect = r(-40, 0, 80, 70)
-tt = E:register_t("tower_paladin_covenant_lvl4", "tower_paladin_covenant_lvl1")
+tt = RT("tower_paladin_covenant_lvl4", "tower_paladin_covenant_lvl1")
 
-E:add_comps(tt, "powers")
+AC(tt, "powers")
 
 tt.info.portrait = "portraits_towers_0001"
 tt.info.room_portrait = "quickmenu_main_icons_main_icons_0001_0001"
@@ -3379,12 +3376,12 @@ tt.info.stat_armor = b.stats.armor
 tt.tower.price = b.price[4]
 tt.tower.level = 4
 tt.tower.menu_offset = v(0, 25)
-tt.powers.lead = E:clone_c("power")
+tt.powers.lead = CC("power")
 tt.powers.lead.price_base = b.lead.price[1]
 tt.powers.lead.price_inc = b.lead.price[1]
 tt.powers.lead.enc_icon = 2
 tt.powers.lead.max_level = 1
-tt.powers.healing_prayer = E:clone_c("power")
+tt.powers.healing_prayer = CC("power")
 tt.powers.healing_prayer.price_base = b.healing_prayer.price[2]
 tt.powers.healing_prayer.price_inc = b.healing_prayer.price[3]
 tt.powers.healing_prayer.enc_icon = 1
@@ -3393,7 +3390,7 @@ tt.barrack.rally_range = b.rally_range
 tt.render.sprites[2].name = "paladin_covenant_lvl4"
 tt.render.sprites[3].prefix = "paladin_covenant_lvl4_door"
 tt.render.sprites[3].offset = v(0, 10)
-tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].name = "paladin_covenant_lvl4_flag"
 tt.render.sprites[4].offset = v(0, 9)
 tt.sound_events.insert = "TowerPaladinCovenantTaunt"
