@@ -26,7 +26,7 @@ local vv = V.vv
 
 require("game_templates_utils")
 
---#region
+--#region tower_paladin
 tt = RT("tower_paladin", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -65,7 +65,7 @@ tt.sound_events.insert = "BarrackPaladinTaunt"
 tt.sound_events.change_rally_point = "BarrackPaladinTaunt"
 --#endregion
 
---#region
+--#region soldier_paladin
 tt = RT("soldier_paladin", "soldier_militia")
 
 AC(tt, "powers", "timed_actions")
@@ -133,7 +133,7 @@ tt.timed_actions.list[1].power_name = "healing"
 tt.timed_actions.list[1].sound = "HealingSound"
 --#endregion
 
---#region
+--#region mod_healing_paladin
 tt = RT("mod_healing_paladin", "modifier")
 
 AC(tt, "hps")
@@ -150,7 +150,7 @@ tt.modifier.ban_types = {MOD_TYPE_POISON}
 tt.modifier.remove_banned = true
 --#endregion
 
---#region
+--#region mod_paladin_silence
 tt = RT("mod_paladin_silence", "modifier")
 
 AC(tt, "render")
@@ -168,7 +168,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].sort_y_offset = -2
 --#endregion
 
---#region
+--#region tower_barbarian
 tt = RT("tower_barbarian", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -205,7 +205,7 @@ tt.sound_events.insert = "BarrackBarbarianTaunt"
 tt.sound_events.change_rally_point = "BarrackBarbarianTaunt"
 --#endregion
 
---#region
+--#region soldier_barbarian
 tt = RT("soldier_barbarian", "soldier_militia")
 
 AC(tt, "powers", "ranged")
@@ -265,7 +265,7 @@ tt.ranged.attacks[1].range_inc = 13
 tt.ranged.attacks[1].shoot_time = fts(7)
 --#endregion
 
---#region
+--#region axe_barbarian
 tt = RT("axe_barbarian", "arrow")
 tt.bullet.damage_min = 24
 tt.bullet.damage_max = 32
@@ -281,7 +281,7 @@ tt.bullet.pop = nil
 tt.sound_events.insert = "AxeSound"
 --#endregion
 
---#region
+--#region axe_barbarian_rude
 tt = RT("axe_barbarian_rude", "axe_barbarian")
 tt.bullet.damage_type = DAMAGE_RUDE
 --#endregion
@@ -311,7 +311,7 @@ tt.editor_script.insert = scripts.editor_tower.insert
 tt.editor_script.remove = scripts.editor_tower.remove
 --#endregion
 
---#region
+--#region tower_elf
 tt = RT("tower_elf", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -361,7 +361,7 @@ tt.powers.cripple.enc_icon = 24
 tt.powers.cripple.name = "CRIPPLE"
 --#endregion
 
---#region
+--#region soldier_elf
 tt = RT("soldier_elf", "soldier_militia")
 
 AC(tt, "powers", "ranged")
@@ -412,7 +412,7 @@ tt.powers.bleed.on_power_upgrade = scripts.soldier_elf.on_power_upgrade
 tt.powers.cripple = CC("power")
 --#endregion
 
---#region
+--#region arrow_elf
 tt = RT("arrow_elf", "arrow")
 tt.bullet.damage_min = 25
 tt.bullet.damage_max = 50
@@ -421,7 +421,7 @@ tt.bullet.reset_to_target_pos = true
 tt.bullet.damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
 --#endregion
 
---#region
+--#region arrow_elf_cripple
 tt = RT("arrow_elf_cripple", "arrow_elf")
 tt.bullet.damage_type = bor(DAMAGE_TRUE, DAMAGE_NO_DODGE)
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
@@ -434,7 +434,7 @@ tt.bullet.damage_max = 55
 tt.bullet.damage_inc = 15
 --#endregion
 
---#region
+--#region mod_elf_bleed
 tt = RT("mod_elf_bleed", "mod_blood")
 tt.dps.damage_max = 5
 tt.dps.damage_min = 5
@@ -443,13 +443,13 @@ tt.dps.damage_inc = 5
 tt.modifier.allows_duplicate = true
 --#endregion
 
---#region
+--#region mod_elf_cripple
 tt = RT("mod_elf_cripple", "mod_slow")
 tt.slow.factor = 0.6
 tt.modifier.duration = 2.5
 --#endregion
 
---#region
+--#region tower_barrack_amazonas
 tt = RT("tower_barrack_amazonas", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -493,7 +493,7 @@ tt.powers.valkyrie.enc_icon = 19
 tt.powers.valkyrie.name = "VALKYRIE"
 --#endregion
 
---#region
+--#region soldier_amazona
 tt = RT("soldier_amazona", "soldier_militia")
 
 AC(tt, "track_kills", "auras", "powers")
@@ -549,7 +549,7 @@ tt.powers.valkyrie.on_power_upgrade = function(this, power_name, power)
 end
 --#endregion
 
---#region
+--#region amazona_heal_mod
 tt = RT("amazona_heal_mod", "modifier")
 
 AC(tt, "render", "heal_on_kill")
@@ -559,7 +559,7 @@ tt.main_script.update = scripts.mod_heal_on_kill.update
 tt.heal_on_kill.hp = 60
 --#endregion
 
---#region
+--#region amazona_gain_mod
 tt = RT("amazona_gain_mod", "modifier")
 tt.gain = {
 	damage = 2,
@@ -619,7 +619,7 @@ tower_templar.sound_events.insert = "TemplarTauntReady"
 tower_templar.sound_events.change_rally_point = "TemplarTaunt"
 --#endregion
 
---#region
+--#region soldier_templar
 tt = RT("soldier_templar", "soldier_militia")
 
 AC(tt, "revive", "powers")
@@ -699,13 +699,13 @@ tt.unit.marker_offset = vec_2(0, ady(7))
 tt.unit.mod_offset = vec_2(0, ady(23))
 --#endregion
 
---#region
+--#region mod_holygrail
 tt = RT("mod_holygrail", "mod_soldier_cooldown")
 tt.cooldown_factor = 0.7
 tt.modifier.duration = 8
 --#endregion
 
---#region
+--#region mod_blood_templar
 tt = RT("mod_blood_templar", "mod_blood")
 tt.modifier.level = 1
 tt.modifier.duration = 3
@@ -748,7 +748,7 @@ tower_assassin.sound_events.insert = "AssassinTauntReady"
 tower_assassin.sound_events.change_rally_point = "AssassinTaunt"
 --#endregion
 
---#region
+--#region soldier_assassin
 tt = RT("soldier_assassin", "soldier_militia")
 
 AC(tt, "powers", "dodge", "cloak", "pickpocket")
@@ -837,7 +837,7 @@ tt.unit.marker_offset = vec_2(0, ady(8))
 tt.unit.mod_offset = vec_2(0, ady(23))
 --#endregion
 
---#region
+--#region tower_barrack_dwarf
 tt = RT("tower_barrack_dwarf", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -872,7 +872,7 @@ tt.tower.price = 185
 tt.tower.type = "barrack_dwarf"
 --#endregion
 
---#region
+--#region soldier_dwarf
 tt = RT("soldier_dwarf", "soldier_militia")
 image_y = 42
 anchor_y = 0.21428571428571427
@@ -914,7 +914,7 @@ tt.render.sprites[1].prefix = "soldierdwarf"
 tt.unit.marker_offset = vec_2(0, ady(9))
 --#endregion
 
---#region
+--#region mod_dwarf_beer
 tt = RT("mod_dwarf_beer", "modifier")
 
 AC(tt, "hps", "render")
@@ -938,7 +938,7 @@ tt.main_script.update = scripts.mod_hps.update
 tt.main_script.remove = scripts.mod_dwarf_beer.remove
 --#endregion
 
---#region
+--#region tower_barrack_mercenaries
 tt = RT("tower_barrack_mercenaries", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -984,7 +984,7 @@ tt.powers.djshock.price_base = 150
 tt.powers.djshock.price_inc = 100
 --#endregion
 
---#region
+--#region soldier_djinn
 tt = RT("soldier_djinn", "soldier_militia")
 anchor_y = 0.14
 image_y = 54
@@ -1040,7 +1040,7 @@ tt.vis.bans = bor(tt.vis.bans, F_POISON, F_CANNIBALIZE, F_SKELETON, F_BLOOD, F_L
 tt.sound_events.change_rally_point = "GenieTaunt"
 --#endregion
 
---#region
+--#region spell_djinn
 tt = RT("spell_djinn", "spell")
 tt.main_script.insert = scripts.spell_djinn.insert
 tt.fx_options = {"fx_djinn_frog", "fx_djinn_chest", "fx_djinn_harp"}
@@ -1049,14 +1049,14 @@ tt.spell.damage_inc = 250
 tt.invalid_rate = 0.2
 --#endregion
 
---#region
+--#region fx_djinn_frog
 tt = RT("fx_djinn_frog", "fx")
 tt.render.sprites[1].name = "fx_djinn_frog"
 tt.render.sprites[1].anchor.y = 0.16
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
 
---#region
+--#region fx_djinn_chest
 tt = RT("fx_djinn_chest", "decal_timed")
 tt.render.sprites[1].name = "soldier_djinn_polyshapes_0001"
 tt.render.sprites[1].animated = false
@@ -1064,7 +1064,7 @@ tt.render.sprites[1].anchor.y = 0.16
 tt.timed.duration = 4
 --#endregion
 
---#region
+--#region fx_djinn_harp
 tt = RT("fx_djinn_harp", "decal_timed")
 tt.render.sprites[1].name = "soldier_djinn_polyshapes_0002"
 tt.render.sprites[1].animated = false
@@ -1072,7 +1072,7 @@ tt.render.sprites[1].anchor.y = 0.16
 tt.timed.duration = 4
 --#endregion
 
---#region
+--#region shock_djinn
 tt = RT("shock_djinn", "spell")
 tt.main_script.insert = scripts.shock_djinn.insert
 tt.spell.damage_base = 50
@@ -1080,7 +1080,7 @@ tt.spell.damage_inc = 25
 tt.mod = "mod_djinn_shock"
 --#endregion
 
---#region
+--#region mod_djinn_shock
 tt = RT("mod_djinn_shock", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
@@ -1088,7 +1088,7 @@ tt.duration_inc = 1
 tt.duration_base = 1
 --#endregion
 
---#region
+--#region tower_barrack_pirates
 tt = RT("tower_barrack_pirates", "tower")
 
 AC(tt, "barrack", "powers")
@@ -1123,7 +1123,7 @@ tt.barrack.respawn_offset = vec_2(0, 0)
 tt.sound_events.insert = "PiratesTaunt"
 --#endregion
 
---#region
+--#region soldier_pirate_flamer
 tt = RT("soldier_pirate_flamer", "soldier_militia")
 
 AC(tt, "ranged", "powers")
@@ -1172,7 +1172,7 @@ tt.powers.bigbomb = CC("power")
 tt.powers.quickup = CC("power")
 --#endregion
 
---#region
+--#region bomb_molotov
 tt = RT("bomb_molotov", "bomb")
 tt.render.sprites[1].name = "proy_molotov"
 tt.bullet.flight_time = fts(18)
@@ -1183,13 +1183,13 @@ tt.bullet.hit_fx = "fx_explosion_molotov"
 tt.sound_events.insert = "AxeSound"
 --#endregion
 
---#region
+--#region fx_explosion_molotov
 tt = RT("fx_explosion_molotov", "fx")
 tt.render.sprites[1].name = "explosion_molotov"
 tt.render.sprites[1].anchor.y = 0.18
 --#endregion
 
---#region
+--#region bomb_molotov_big
 tt = RT("bomb_molotov_big", "bomb_molotov")
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 tt.bullet.rotation_speed = 30 * FPS * math.pi / 180
@@ -1203,12 +1203,12 @@ tt.bullet.mod = "mod_molotov_big"
 tt.bullet.hit_fx = "fx_explosion_molotov_big"
 --#endregion
 
---#region
+--#region fx_explosion_molotov_big
 tt = RT("fx_explosion_molotov_big", "fx_explosion_molotov")
 tt.render.sprites[1].scale = vec_2(1.2, 1.2)
 --#endregion
 
---#region
+--#region mod_molotov_big
 tt = RT("mod_molotov_big", "mod_lava")
 tt.modifier.duration = 2
 tt.dps.damage_min = 6
@@ -1221,7 +1221,7 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 --#endregion
 
---#region
+--#region tower_blade
 tt = RT("tower_blade", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -1252,7 +1252,7 @@ tt.tower.price = 185
 tt.tower.type = "blade"
 --#endregion
 
---#region
+--#region tower_forest
 tt = RT("tower_forest", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -1286,7 +1286,7 @@ tt.tower.price = 185
 tt.tower.type = "forest"
 --#endregion
 
---#region
+--#region soldier_blade
 tt = RT("soldier_blade", "soldier_barrack_1")
 
 AC(tt, "powers", "dodge", "timed_attacks")
@@ -1359,7 +1359,7 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 14)
 --#endregion
 
---#region
+--#region soldier_forest
 tt = RT("soldier_forest", "soldier_barrack_1")
 
 AC(tt, "powers", "timed_attacks", "ranged")
@@ -1427,7 +1427,7 @@ tt.unit.mod_offset = vec_2(0, 25)
 tt.unit.hit_offset = vec_2(0, 25)
 --#endregion
 
---#region
+--#region spear_forest
 tt = RT("spear_forest", "arrow")
 tt.bullet.damage_max = 69
 tt.bullet.damage_min = 45
@@ -1441,7 +1441,7 @@ tt.render.sprites[1].anchor.x = 0.8260869565217391
 tt.sound_events.insert = "TowerForestKeeperNormalSpear"
 --#endregion
 
---#region
+--#region spear_forest_oak
 tt = RT("spear_forest_oak", "spear_forest")
 tt.bullet.damage_max = 55
 tt.bullet.damage_min = 55
@@ -1453,7 +1453,7 @@ tt.render.sprites[1].name = "forestKeeper_proySpecial_0001-f"
 tt.sound_events.insert = "TowerForestKeeperAncientSpear"
 --#endregion
 
---#region
+--#region aura_forest_eerie
 tt = RT("aura_forest_eerie", "aura")
 tt.aura.mods = {"mod_forest_eerie_slow", "mod_forest_eerie_dps"}
 tt.aura.radius = 60
@@ -1469,7 +1469,7 @@ tt.roots_count_inc = 3
 tt.sound_events.insert = "TowerForestKeeperEerieGarden"
 --#endregion
 
---#region
+--#region mod_forest_circle
 tt = RT("mod_forest_circle", "modifier")
 
 AC(tt, "hps", "render")
@@ -1493,13 +1493,13 @@ tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 --#endregion
 
---#region
+--#region mod_forest_eerie_slow
 tt = RT("mod_forest_eerie_slow", "mod_slow")
 tt.modifier.duration = 0.5
 tt.slow.factor = 0.5
 --#endregion
 
---#region
+--#region mod_forest_eerie_dps
 tt = RT("mod_forest_eerie_dps", "modifier")
 
 AC(tt, "dps")
@@ -1514,7 +1514,7 @@ tt.main_script.update = scripts.mod_dps.update
 -- 变节者
 --#endregion
 
---#region
+--#region tower_drow
 tt = RT("tower_drow", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -1545,7 +1545,7 @@ tt.barrack.rally_range = 160
 tt.tower.type = "drow"
 --#endregion
 
---#region
+--#region soldier_drow
 tt = RT("soldier_drow", "soldier_barrack_1")
 
 AC(tt, "powers", "ranged", "track_damage")
@@ -1605,7 +1605,7 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.vis.flags = bor(tt.vis.flags, F_DARK_ELF)
 --#endregion
 
---#region
+--#region dagger_drow
 tt = RT("dagger_drow", "bullet")
 tt.bullet.damage_max = 16
 tt.bullet.damage_min = 11
@@ -1622,7 +1622,7 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "mercenaryDraw_proy"
 --#endregion
 
---#region
+--#region mod_life_drain_drow
 tt = RT("mod_life_drain_drow", "modifier")
 
 AC(tt, "render")
@@ -1640,7 +1640,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].hide_after_runs = 1
 --#endregion
 
---#region
+--#region tower_ewok
 tt = RT("tower_ewok", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -1687,7 +1687,7 @@ tt.powers.shield.price_base = 150
 tt.powers.shield.price_inc = 150
 --#endregion
 
---#region
+--#region soldier_ewok
 tt = RT("soldier_ewok", "soldier_militia")
 
 AC(tt, "dodge", "ranged", "powers")
@@ -1768,7 +1768,7 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 10)
 --#endregion
 
---#region
+--#region bullet_soldier_ewok
 tt = RT("bullet_soldier_ewok", "arrow")
 tt.bullet.damage_max = 12
 tt.bullet.damage_min = 8
@@ -1781,7 +1781,7 @@ tt.render.sprites[1].name = "bullet_soldier_ewok"
 tt.render.sprites[1].animated = true
 --#endregion
 
---#region
+--#region mod_ewok_tear
 tt = RT("mod_ewok_tear", "mod_damage")
 tt.damage_min = 0.01
 tt.damage_max = 0.01
@@ -1789,7 +1789,7 @@ tt.damage_type = DAMAGE_ARMOR
 tt.damage_inc = 0.01
 --#endregion
 
---#region
+--#region tower_baby_ashbite
 tt = RT("tower_baby_ashbite", "tower")
 
 AC(tt, "barrack", "powers")
@@ -1837,7 +1837,7 @@ tt.powers.fiery_mist.enc_icon = 9
 tt.powers.fiery_mist.max_level = 1
 --#endregion
 
---#region
+--#region soldier_baby_ashbite
 tt = RT("soldier_baby_ashbite", "soldier")
 
 AC(tt, "ranged", "powers")
@@ -1920,7 +1920,7 @@ tt.ranged.attacks[3].vis_bans = F_FLYING
 tt.ranged.attacks[3].sound = "ElvesAshbiteSmoke"
 --#endregion
 
---#region
+--#region fireball_baby_ashbite
 tt = RT("fireball_baby_ashbite", "bullet")
 tt.render.sprites[1].name = "fireball_baby_ashbite"
 tt.render.sprites[1].z = Z_BULLETS
@@ -1939,19 +1939,19 @@ tt.main_script.update = scripts.fireball.update
 tt.sound_events.hit = "ElvesAshbiteFireball"
 --#endregion
 
---#region
+--#region fx_fireball_baby_ashbite_hit
 tt = RT("fx_fireball_baby_ashbite_hit", "fx")
 tt.render.sprites[1].name = "fx_fireball_baby_ashbite_hit"
 tt.render.sprites[1].anchor.y = 0.24
 --#endregion
 
---#region
+--#region fx_fireball_baby_ashbite_hit_air
 tt = RT("fx_fireball_baby_ashbite_hit_air", "fx")
 tt.render.sprites[1].name = "fx_fireball_baby_ashbite_hit_air"
 tt.render.sprites[1].anchor.y = 0.24
 --#endregion
 
---#region
+--#region breath_baby_ashbite
 tt = RT("breath_baby_ashbite", "bullet")
 tt.render = nil
 tt.bullet.damage_type = DAMAGE_NONE
@@ -1966,7 +1966,7 @@ tt.bullet.hit_decal = "aura_breath_baby_ashbite"
 tt.main_script.update = scripts.fireball.update
 --#endregion
 
---#region
+--#region decal_emit_breath_baby_ashbite
 tt = RT("decal_emit_breath_baby_ashbite", "decal_scripted")
 tt.duration = fts(18)
 tt.render.sprites[1].name = "babyAshbite_0158"
@@ -1978,13 +1978,13 @@ tt.main_script.update = scripts.decal_emit_breath_baby_ashbite.update
 tt.flight_time = nil
 --#endregion
 
---#region
+--#region fx_breath_baby_ashbite_hit
 tt = RT("fx_breath_baby_ashbite_hit", "fx")
 tt.render.sprites[1].name = "baby_ashbite_breath_fire"
 tt.render.sprites[1].anchor.y = 0.35714285714285715
 --#endregion
 
---#region
+--#region aura_breath_baby_ashbite
 tt = RT("aura_breath_baby_ashbite", "aura")
 
 AC(tt, "tween", "render")
@@ -2011,21 +2011,21 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].keys = {{0, 255}, {fts(20), 0}}
 --#endregion
 
---#region
+--#region fierymist_baby_ashbite
 tt = RT("fierymist_baby_ashbite", "breath_baby_ashbite")
 tt.bullet.emit_decal = "decal_emit_fiery_mist_baby_ashbite"
 tt.bullet.hit_decal = "aura_fiery_mist_baby_ashbite"
 tt.bullet.hit_fx = nil
 --#endregion
 
---#region
+--#region decal_emit_fiery_mist_baby_ashbite
 tt = RT("decal_emit_fiery_mist_baby_ashbite", "decal_emit_breath_baby_ashbite")
 tt.duration = fts(18)
 tt.render.sprites[1].hidden = true
 tt.emit_ps = "ps_emit_fiery_mist_baby_ashbite"
 --#endregion
 
---#region
+--#region aura_fiery_mist_baby_ashbite
 tt = RT("aura_fiery_mist_baby_ashbite", "aura")
 tt.main_script.update = scripts.aura_fiery_mist_baby_ashbite.update
 tt.fx = "decal_fiery_mist_baby_ashbite"
@@ -2040,13 +2040,13 @@ tt.aura.radius = 50
 tt.aura.vis_bans = bor(F_FRIEND)
 --#endregion
 
---#region
+--#region mod_slow_baby_ashbite
 tt = RT("mod_slow_baby_ashbite", "mod_slow")
 tt.slow.factor = 0.3
 tt.slow.factor_inc = 0.1
 --#endregion
 
---#region
+--#region decal_fiery_mist_baby_ashbite
 tt = RT("decal_fiery_mist_baby_ashbite", "decal_tween")
 tt.render.sprites[1].name = "baby_ashbite_fierymist_decal"
 tt.render.sprites[1].loop = true
@@ -2091,28 +2091,28 @@ tt.particle_system.particle_lifetime = {fts(15), fts(15)}
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region fx_tower_pandas_bullet_air_hit
 tt = RT("fx_tower_pandas_bullet_air_hit", "fx")
 tt.render.sprites[1].name = "tower_pandas_projectile_air_hit_run"
 tt.render.sprites[1].scale = vv(1.2)
 tt.render.sprites[1].fps = 15
 --#endregion
 
---#region
+--#region fx_tower_pandas_bullet_fire_hit
 tt = RT("fx_tower_pandas_bullet_fire_hit", "fx")
 tt.render.sprites[1].name = "tower_pandas_projectile_fire_hit_run"
 tt.render.sprites[1].scale = vv(1.2)
 tt.render.sprites[1].fps = 15
 --#endregion
 
---#region
+--#region fx_tower_pandas_bullet_fire_ray
 tt = RT("fx_tower_pandas_bullet_fire_ray", "fx")
 tt.render.sprites[1].name = "tower_pandas_projectile_ray_hit_run"
 tt.render.sprites[1].scale = vv(1.2)
 tt.render.sprites[1].fps = 15
 --#endregion
 
---#region
+--#region fx_tower_pandas_melee_air_hit
 tt = RT("fx_tower_pandas_melee_air_hit", "fx")
 tt.render.sprites[1].name = "tower_pandas_projectile_air_hit_run"
 tt.render.sprites[1].scale = vv(1)
@@ -2121,7 +2121,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -16
 --#endregion
 
---#region
+--#region fx_tower_pandas_melee_fire_hit
 tt = RT("fx_tower_pandas_melee_fire_hit", "fx")
 tt.render.sprites[1].name = "tower_pandas_projectile_fire_hit_run"
 tt.render.sprites[1].scale = vv(1)
@@ -2130,7 +2130,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -16
 --#endregion
 
---#region
+--#region fx_tower_pandas_melee_fire_ray
 tt = RT("fx_tower_pandas_melee_fire_ray", "fx")
 tt.render.sprites[1].name = "tower_pandas_projectile_ray_hit_run"
 tt.render.sprites[1].scale = vv(1)
@@ -2139,14 +2139,14 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -16
 --#endregion
 
---#region
+--#region fx_panda_smoke_level_up
 tt = RT("fx_panda_smoke_level_up", "fx")
 tt.render.sprites[1].name = "tower_pandas_level_up_fx_run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -5
 --#endregion
 
---#region
+--#region fx_tower_panda_skill_red_tp_enemy_fire
 tt = RT("fx_tower_panda_skill_red_tp_enemy_fire", "fx")
 tt.render.sprites[1].name = "la_red_lvl4_tp_fire_enemy_run"
 tt.render.sprites[1].anchor = v(0.52, 0.5)
@@ -2156,14 +2156,14 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 --#endregion
 
---#region
+--#region fx_tower_panda_disappear_wood
 tt = RT("fx_tower_panda_disappear_wood", "fx_fade")
 tt.render.sprites[1].name = "tower_pandas_disappear_wood"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.tween.props[1].keys = {{1.2, 255}, {1.5, 0}}
 --#endregion
 
---#region
+--#region decal_tower_panda_skill_red_tp_enemy_fire
 tt = RT("decal_tower_panda_skill_red_tp_enemy_fire", "fx")
 tt.render.sprites[1].name = "tower_pandas_red_lvl4_tp_decal_enemy_run"
 tt.render.sprites[1].scale = vv(2)
@@ -2171,14 +2171,14 @@ tt.render.sprites[1].size_scales = {vv(2), vv(2), vv(2.5)}
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
 
---#region
+--#region decal_tower_panda_skill_red_tp_soldier_fire
 tt = RT("decal_tower_panda_skill_red_tp_soldier_fire", "fx")
 tt.render.sprites[1].name = "tower_pandas_red_lvl4_tp_decal_run"
 tt.render.sprites[1].scale = vv(2)
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
 
---#region
+--#region tower_pandas_lvl4
 tt = RT("tower_pandas_lvl4", "tower")
 
 AC(tt, "attacks", "barrack", "user_selection", "powers")
@@ -2300,7 +2300,7 @@ tt.user_selection.actions = {
 }
 --#endregion
 
---#region
+--#region soldier_tower_pandas_green_lvl4
 tt = RT("soldier_tower_pandas_green_lvl4", "soldier_militia")
 
 AC(tt, "nav_grid", "powers", "ranged")
@@ -2374,7 +2374,7 @@ tt.ignore_linirea_true_might_revive = true
 tt.death_go_back_delay = fts(15)
 --#endregion
 
---#region
+--#region soldier_tower_pandas_blue_lvl4
 tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
 
 AC(tt, "attacks")
@@ -2422,7 +2422,7 @@ tt.nav_rally.delay_min = 0.12
 tt.nav_rally.delay_max = 0.2
 --#endregion
 
---#region
+--#region soldier_tower_pandas_red_lvl4
 tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
 
 AC(tt, "attacks")
@@ -2474,14 +2474,14 @@ tt.nav_rally.delay_min = 0.05
 tt.nav_rally.delay_max = 0.07
 --#endregion
 
---#region
+--#region mod_soldier_tower_pandas_blue_stun
 tt = RT("mod_soldier_tower_pandas_blue_stun", "mod_stun")
 tt.modifier.duration = b.soldier.thunder.stun_duration
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 --#endregion
 
---#region
+--#region fx_lightining_soldier_tower_pandas_blue
 tt = RT("fx_lightining_soldier_tower_pandas_blue", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].name = "tower_pandas_lighting_sky_run"
@@ -2495,7 +2495,7 @@ tt.render.sprites[2].z = Z_OBJECTS
 tt.render.sprites[2].delay_start = fts(6)
 --#endregion
 
---#region
+--#region mod_soldier_tower_pandas_red_teleport
 tt = RT("mod_soldier_tower_pandas_red_teleport", "mod_teleport")
 tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
 tt.modifier.vis_bans = bor(F_BOSS)
@@ -2512,7 +2512,7 @@ tt.fx_end = "fx_tower_panda_skill_red_tp_enemy_fire"
 tt.max_times_applied = b.soldier.teleport.max_times_applied
 --#endregion
 
---#region
+--#region bullet_tower_pandas_spawn_soldier_blue_lvl4
 tt = RT("bullet_tower_pandas_spawn_soldier_blue_lvl4", "bullet")
 tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
 tt.render.sprites[1].name = "scape_loop"
@@ -2533,17 +2533,17 @@ tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
 --#endregion
 
---#region
+--#region bullet_tower_pandas_spawn_soldier_red_lvl4
 tt = RT("bullet_tower_pandas_spawn_soldier_red_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
 tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
 --#endregion
 
---#region
+--#region bullet_tower_pandas_spawn_soldier_green_lvl4
 tt = RT("bullet_tower_pandas_spawn_soldier_green_lvl4", "bullet_tower_pandas_spawn_soldier_blue_lvl4")
 tt.render.sprites[1].prefix = "tower_pandas_panda_green_lvl4"
 --#endregion
 
---#region
+--#region bullet_tower_pandas_air_lvl4
 tt = RT("bullet_tower_pandas_air_lvl4", "bolt")
 tt.render.sprites[1].prefix = "tower_pandas_projectile_air"
 tt.render.sprites[1].name = "Run"
@@ -2562,7 +2562,7 @@ tt.bullet.particles_name = "ps_bullet_tower_panda_air"
 tt.sound_events.insert = "TowerPandasRangedHat"
 --#endregion
 
---#region
+--#region bullet_tower_pandas_air_soldier_special_lvl1
 tt = RT("bullet_tower_pandas_air_soldier_special_lvl1", "bullet_tower_pandas_air_lvl4")
 tt.main_script.update = scripts.bullet_tower_pandas_air.update
 tt.bullet.damage_min = b.soldier.hat.damage_levels[1].max
@@ -2573,13 +2573,13 @@ tt.bounce_damage_mult = b.soldier.hat.bounce_damage_mult
 tt.bounce_speed_mult = b.soldier.hat.bounce_speed_mult
 --#endregion
 
---#region
+--#region bullet_tower_pandas_air_soldier_special_lvl2
 tt = RT("bullet_tower_pandas_air_soldier_special_lvl2", "bullet_tower_pandas_air_soldier_special_lvl1")
 tt.bullet.damage_min = b.soldier.hat.damage_levels[2].min
 tt.bullet.damage_max = b.soldier.hat.damage_levels[2].max
 --#endregion
 
---#region
+--#region bullet_tower_pandas_fire_lvl4
 tt = RT("bullet_tower_pandas_fire_lvl4", "bolt")
 tt.render.sprites[1].prefix = "tower_pandas_projectile_fire"
 tt.render.sprites[1].name = "run"
@@ -2598,7 +2598,7 @@ tt.bullet.particles_name = "ps_bullet_tower_panda_fire"
 tt.sound_events.insert = "TowerPandasRangedFire"
 --#endregion
 
---#region
+--#region bullet_tower_pandas_ray_lvl4
 tt = RT("bullet_tower_pandas_ray_lvl4", "bullet")
 tt.bullet.level = 4
 tt.bullet.damage_min = b.ranged_attack.damage_min[4]
@@ -2618,7 +2618,7 @@ tt.sound_events.insert = "TowerPandasRangedBolt"
 -- 牢大 BEGIN
 --#endregion
 
---#region
+--#region tower_rocket_gunners_lvl4
 tt = RT("tower_rocket_gunners_lvl4", "tower")
 b = balance.towers.rocket_gunners
 
@@ -2680,7 +2680,7 @@ tt.powers.sting_missiles.enc_icon = 15
 tt.powers.sting_missiles.cooldown = b.sting_missiles.cooldown
 --#endregion
 
---#region
+--#region soldier_tower_rocket_gunners_lvl4
 tt = RT("soldier_tower_rocket_gunners_lvl4", "soldier_militia")
 
 AC(tt, "nav_grid", "powers", "ranged", "tween")
@@ -2806,7 +2806,7 @@ tt.tween.props[1].remove = false
 tt.sound_take_off = "TowerRocketGunnersTakeoff"
 --#endregion
 
---#region
+--#region bullet_soldier_tower_rocket_gunners
 tt = RT("bullet_soldier_tower_rocket_gunners", "bullet")
 b = balance.towers.rocket_gunners.soldier.ranged_attack
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_hit"
@@ -2821,7 +2821,7 @@ tt.render = nil
 tt.sound_events.insert = "TowerRocketGunnersBasicAttack"
 --#endregion
 
---#region
+--#region bullet_soldier_tower_rocket_gunners_phosphoric
 tt = RT("bullet_soldier_tower_rocket_gunners_phosphoric", "bullet")
 b = balance.towers.rocket_gunners.soldier
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_rocket_gunners_phosphoric_hit"
@@ -2842,7 +2842,7 @@ tt.ray_duration = fts(2)
 tt.sound_events.insert = "TowerRocketGunnersPhosphoricCoating"
 --#endregion
 
---#region
+--#region bullet_soldier_tower_rocket_gunners_sting_missiles
 tt = RT("bullet_soldier_tower_rocket_gunners_sting_missiles", "bullet")
 b = balance.towers.rocket_gunners.soldier
 
@@ -2870,7 +2870,7 @@ tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
 tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
 --#endregion
 
---#region
+--#region mod_soldier_tower_rocket_gunners_sting_missiles_target
 tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_target", "modifier")
 
 AC(tt, "render")
@@ -2882,7 +2882,7 @@ tt.render.sprites[1].prefix = "rocket_gunners_tower_reticle"
 tt.render.sprites[1].draw_order = DO_MOD_FX
 --#endregion
 
---#region
+--#region mod_soldier_tower_rocket_gunners_sting_missiles_mark
 tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
 
 AC(tt, "mark_flags")
@@ -2895,7 +2895,7 @@ tt.main_script.update = scripts.mod_mark_flags.update
 -- 圣骑兵 START
 --#endregion
 
---#region
+--#region tower_paladin_rider
 tt = RT("tower_paladin_rider", "tower_barrack_1")
 
 AC(tt, "powers")
@@ -2923,7 +2923,7 @@ tt.sound_events.insert = {"BarrackPaladinTaunt", "GUITowerUpgrade"}
 tt.sound_events.change_rally_point = "BarrackPaladinTaunt"
 --#endregion
 
---#region
+--#region soldier_paladin_rider
 tt = RT("soldier_paladin_rider", "soldier_militia")
 
 AC(tt, "editor", "powers", "pickpocket", "track_damage", "nav_path")
@@ -2979,24 +2979,24 @@ tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region fx_soldier_tower_dwarf_melee_hit
 tt = RT("fx_soldier_tower_dwarf_melee_hit", "fx")
 tt.render.sprites[1].name = "tower_dwarf_attack_2_hit"
 --#endregion
 
---#region
+--#region fx_bullet_soldier_tower_dwarf_hit
 tt = RT("fx_bullet_soldier_tower_dwarf_hit", "fx")
 tt.render.sprites[1].name = "tower_dwarf_attack_1_hit_hit"
 --#endregion
 
---#region
+--#region fx_explosion_tower_dwarf
 tt = RT("fx_explosion_tower_dwarf", "fx")
 tt.render.sprites[1].name = "tower_dwarf_skill_main_explosion_idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].anchor = v(0.43, 0.5)
 --#endregion
 
---#region
+--#region decal_tower_dwarf_jump_explosion
 tt = RT("decal_tower_dwarf_jump_explosion", "decal_timed")
 tt.render.sprites[1].prefix = "tower_dwarf_jump_explosion_lvl4_jump_in"
 tt.render.sprites[1].name = "fx"
@@ -3004,7 +3004,7 @@ tt.render.sprites[1].animated = true
 tt.timed.duration = fts(20)
 --#endregion
 
---#region
+--#region tower_build_dwarf
 tt = RT("tower_build_dwarf", "tower_build")
 tt.build_name = "tower_dwarf_lvl1"
 tt.render.sprites[1].name = "terrain_barrack_%04i"
@@ -3015,7 +3015,7 @@ tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 --#endregion
 
---#region
+--#region mod_aura_bullet_soldier_tower_dwarf
 tt = RT("mod_aura_bullet_soldier_tower_dwarf", "modifier")
 b = balance.towers.dwarf.incendiary_ammo.burn
 
@@ -3034,7 +3034,7 @@ tt.main_script.insert = scripts.mod_tricannon_overheat_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 --#endregion
 
---#region
+--#region tower_dwarf_lvl4
 tt = RT("tower_dwarf_lvl4", "tower")
 b = balance.towers.dwarf
 
@@ -3093,7 +3093,7 @@ tt.sound_events.tower_room_select = "TowerDwarfTauntSelect"
 tt.ui.click_rect = r(-42, 0, 84, 90)
 --#endregion
 
---#region
+--#region soldier_tower_dwarf_lvl4
 tt = RT("soldier_tower_dwarf_lvl4", "soldier_militia")
 b = balance.towers.dwarf.soldier
 
@@ -3169,7 +3169,7 @@ tt.powers.incendiary_ammo = CC("power")
 tt.powers.incendiary_ammo.cooldown = b.incendiary_ammo.cooldown
 --#endregion
 
---#region
+--#region bullet_soldier_tower_dwarf
 tt = RT("bullet_soldier_tower_dwarf", "bullet")
 b = balance.towers.dwarf.soldier.ranged_attack
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_dwarf_hit"
@@ -3185,7 +3185,7 @@ tt.render = nil
 tt.sound_events.insert = "TowerDwarfBasicAttack"
 --#endregion
 
---#region
+--#region bullet_incendiary_soldier_tower_dwarf
 tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
 
 local b = balance.towers.dwarf.incendiary_ammo
@@ -3211,7 +3211,7 @@ tt.bullet.damage_radius = b.damage_radius
 tt.from_tower = true
 --#endregion
 
---#region
+--#region aura_bullet_soldier_tower_dwarf
 tt = RT("aura_bullet_soldier_tower_dwarf", "aura")
 b = balance.towers.dwarf.incendiary_ammo.burn.aura
 tt.aura.mod = "mod_aura_bullet_soldier_tower_dwarf"
@@ -3224,7 +3224,7 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
 
---#region
+--#region decal_bullet_soldier_tower_dwarf
 tt = RT("decal_bullet_soldier_tower_dwarf", "decal_tween")
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 tt.render.sprites[1].name = "tower_dwarf_skill_explosion_decal"
@@ -3249,17 +3249,17 @@ tt.particle_system.emit_area_spread = v(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region fx_soul_soldier_tower_ghost
 tt = RT("fx_soul_soldier_tower_ghost", "fx")
 tt.render.sprites[1].name = "ghost_tower_soul_skill_hit_fx_idle"
 --#endregion
 
---#region
+--#region decal_soldier_tower_ghost_hit
 tt = RT("decal_soldier_tower_ghost_hit", "fx")
 tt.render.sprites[1].name = "ghost_tower_hit_fx_idle"
 --#endregion
 
---#region
+--#region soldier_tower_ghost_lvl4
 tt = RT("soldier_tower_ghost_lvl4", "soldier_militia")
 
 AC(tt, "nav_grid", "powers")
@@ -3300,7 +3300,7 @@ tt.soul = "soul_soldier_tower_ghost_lvl4"
 tt.extra_damage_cooldown = b.extra_damage.cooldown_start
 --#endregion
 
---#region
+--#region soul_soldier_tower_ghost_lvl4
 tt = RT("soul_soldier_tower_ghost_lvl4", "decal_scripted")
 tt.main_script.update = scripts.tower_ghost.soul_update
 b = balance.towers.ghost.soul_attack
@@ -3315,7 +3315,7 @@ tt.radius = b.range
 tt.bullet = "bolt_soul_soldier_tower_ghost"
 --#endregion
 
---#region
+--#region tower_ghost_lvl1
 tt = RT("tower_ghost_lvl1", "tower")
 b = balance.towers.ghost
 
@@ -3365,7 +3365,7 @@ tt.sound_events.spawn_unit = "TowerGhostSpawnUnit"
 tt.ui.click_rect = r(-35, 0, 70, 65)
 --#endregion
 
---#region
+--#region tower_ghost_lvl4
 tt = RT("tower_ghost_lvl4", "tower_ghost_lvl1")
 
 AC(tt, "powers")
@@ -3405,7 +3405,7 @@ tt.powers.soul_attack.price_inc = b.soul_attack.price[3]
 tt.powers.soul_attack.enc_icon = 26
 --#endregion
 
---#region
+--#region bolt_soul_soldier_tower_ghost
 tt = RT("bolt_soul_soldier_tower_ghost", "bolt")
 b = balance.towers.ghost.soul_attack
 tt.render.sprites[1].name = "ghost_tower_soul_skill_projectile"
@@ -3425,14 +3425,14 @@ tt.bullet.damage_type = b.damage_type
 tt.bullet.particles_name = "ps_soul_soldier_tower_ghost"
 --#endregion
 
---#region
+--#region mod_tower_ghost_soul_slow
 tt = RT("mod_tower_ghost_soul_slow", "mod_slow")
 b = balance.towers.ghost.soul_attack
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
 --#endregion
 
---#region
+--#region mod_tower_ghost_soul_damage_factor
 tt = RT("mod_tower_ghost_soul_damage_factor", "modifier")
 b = balance.towers.ghost.soul_attack
 
@@ -3449,7 +3449,7 @@ tt.render.sprites[1].prefix = "ghost_tower_soul_skill_enemy_fx"
 tt.render.sprites[1].name = "small"
 --#endregion
 
---#region
+--#region aura_tower_ghost_extra_damage
 tt = RT("aura_tower_ghost_extra_damage", "aura")
 b = balance.towers.ghost.extra_damage
 
@@ -3476,7 +3476,7 @@ tt.render.sprites[1].draw_order = 1
 -- tt.sound_events.insert = "TowerGhostExtraDamageCast"
 --#endregion
 
---#region
+--#region tower_ghost_hover
 tt = RT("tower_ghost_hover", "decal")
 tt.render.sprites[1].name = "ghost_tower_swap_indicator_back"
 tt.render.sprites[1].animated = false
@@ -3505,7 +3505,7 @@ tt.render.sprites[4].offset.y = 14
 tt.render.sprites[4].draw_order = 11
 --#endregion
 
---#region
+--#region tower_ghost_teleport_out
 tt = RT("tower_ghost_teleport_out", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_teleport_fx_out_idle"
 tt.render.sprites[1].animated = true
@@ -3515,7 +3515,7 @@ tt.render.sprites[1].offset = v(0, 10)
 tt.timed.duration = fts(20)
 --#endregion
 
---#region
+--#region tower_ghost_teleport_in
 tt = RT("tower_ghost_teleport_in", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_teleport_fx_in_idle"
 tt.render.sprites[1].animated = true
@@ -3525,7 +3525,7 @@ tt.render.sprites[1].offset = v(0, 10)
 tt.timed.duration = fts(20)
 --#endregion
 
---#region
+--#region decal_soldier_tower_ghost_spawn
 tt = RT("decal_soldier_tower_ghost_spawn", "decal_timed")
 tt.render.sprites[1].name = "ghost_tower_unit_spawn_fx_idle"
 tt.render.sprites[1].animated = true
@@ -3566,7 +3566,7 @@ tt.fx_delay_between = 0
 -- 圣殿 START
 --#endregion
 
---#region
+--#region tower_build_paladin_covenant
 tt = RT("tower_build_paladin_covenant", "tower_build")
 tt.build_name = "tower_paladin_covenant_lvl1"
 tt.render.sprites[1].name = "terrain_barrack_%04i"
@@ -3577,7 +3577,7 @@ tt.render.sprites[3].offset.y = 62
 tt.render.sprites[4].offset.y = 62
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl1
 tt = RT("tower_paladin_covenant_soldier_lvl1", "soldier_militia")
 
 AC(tt, "nav_grid")
@@ -3608,7 +3608,7 @@ tt.sound_events.death = "TowerPaladinCovenantUnitDeath"
 tt.ui.click_rect = r(-10, -2, 20, 25)
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4
 tt = RT("tower_paladin_covenant_soldier_lvl4", "tower_paladin_covenant_soldier_lvl1")
 
 AC(tt, "powers", "timed_attacks")
@@ -3666,7 +3666,7 @@ tt.timed_attacks.list[2].fx = "tower_paladin_covenant_soldier_lvl4_lead_aura_fx"
 tt.soldier.melee_slot_offset = v(8, 0)
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4_healing_mod
 tt = RT("tower_paladin_covenant_soldier_lvl4_healing_mod", "modifier")
 
 AC(tt, "hps", "render")
@@ -3682,7 +3682,7 @@ tt.main_script.update = scripts.mod_hps.update
 tt.main_script.remove = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4_healing_mod_fx
 tt = RT("tower_paladin_covenant_soldier_lvl4_healing_mod_fx", "modifier")
 
 AC(tt, "render", "tween")
@@ -3718,7 +3718,7 @@ tt.tween.remove = false
 tt.main_script.update = scripts.mod_track_fx.update
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4_lead_aura
 tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura", "aura")
 tt.aura.mods = {"tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx"}
 tt.aura.cycles = 1
@@ -3732,7 +3732,7 @@ tt.main_script.update = scripts.aura_apply_mod.update
 tt.sound_events.insert = "TowerPaladinCovenantLeadByExample"
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4_lead_aura_mod
 tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura_mod", "modifier")
 b = balance.towers.paladin_covenant
 tt.modifier.duration = b.lead.soldier_veteran.aura_duration
@@ -3743,7 +3743,7 @@ tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx
 tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura_mod_fx", "modifier")
 
 AC(tt, "render", "tween")
@@ -3760,7 +3760,7 @@ tt.tween.remove = false
 tt.main_script.update = scripts.mod_track_fx.update
 --#endregion
 
---#region
+--#region tower_paladin_covenant_soldier_lvl4_lead_aura_fx
 tt = RT("tower_paladin_covenant_soldier_lvl4_lead_aura_fx", "fx")
 tt.render.sprites[1].name = "paladin_soldiers_lvl4_captain_armor_decal_start"
 tt.render.sprites[1].z = Z_DECALS
@@ -3771,7 +3771,7 @@ tt.render.sprites[2].animated = true
 tt.render.sprites[2].hide_after_runs = 1
 --#endregion
 
---#region
+--#region tower_paladin_covenant_lvl1
 tt = RT("tower_paladin_covenant_lvl1", "tower")
 
 AC(tt, "barrack", "vis")
@@ -3812,7 +3812,7 @@ tt.sound_events.tower_room_select = "TowerPaladinCovenantTauntSelect"
 tt.ui.click_rect = r(-40, 0, 80, 70)
 --#endregion
 
---#region
+--#region tower_paladin_covenant_lvl4
 tt = RT("tower_paladin_covenant_lvl4", "tower_paladin_covenant_lvl1")
 
 AC(tt, "powers")
