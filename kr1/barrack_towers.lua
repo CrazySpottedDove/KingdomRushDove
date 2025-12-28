@@ -286,7 +286,7 @@ tt = RT("axe_barbarian_rude", "axe_barbarian")
 tt.bullet.damage_type = DAMAGE_RUDE
 --#endregion
 
---#region
+--#region tower_elf_holder
 tt = RT("tower_elf_holder")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor", "editor_script")
@@ -2062,7 +2062,7 @@ local b
 b = balance.towers.pandas
 --#endregion
 
---#region
+--#region ps_bullet_tower_panda_air
 tt = RT("ps_bullet_tower_panda_air")
 
 AC(tt, "pos", "particle_system")
@@ -2077,7 +2077,7 @@ tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.alphas = {255, 0}
 --#endregion
 
---#region
+--#region ps_bullet_tower_panda_fire
 tt = RT("ps_bullet_tower_panda_fire")
 
 AC(tt, "pos", "particle_system")
@@ -2965,7 +2965,7 @@ tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)
 -- 炮兵 START
 --#endregion
 
---#region
+--#region ps_bullet_incendiary_soldier_dwarf_tower
 tt = RT("ps_bullet_incendiary_soldier_dwarf_tower")
 
 AC(tt, "pos", "particle_system")
@@ -3234,7 +3234,7 @@ tt.render.sprites[1].scale = v(1.2, 1.2)
 -- 幽冥 START
 --#endregion
 
---#region
+--#region ps_soldier_tower_ghost
 tt = RT("ps_soldier_tower_ghost")
 
 AC(tt, "pos", "particle_system")
@@ -3535,7 +3535,7 @@ tt.render.sprites[1].offset = v(0, 0)
 tt.timed.duration = fts(24)
 --#endregion
 
---#region
+--#region tower_ghost_hover_controller
 tt = RT("tower_ghost_hover_controller")
 
 AC(tt, "main_script")
@@ -3545,7 +3545,7 @@ tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
 --#endregion
 
---#region
+--#region controller_tower_swap
 tt = RT("controller_tower_swap")
 
 AC(tt, "main_script")

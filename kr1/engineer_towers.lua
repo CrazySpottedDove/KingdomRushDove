@@ -505,7 +505,7 @@ tt.sound_events.change_rally_point = "MechTaunt"
 tt.ui.click_rect = r(-40, -10, 80, 50)
 --#endregion
 
---#region
+--#region soldier_mecha
 tt = RT("soldier_mecha")
 
 AC(tt, "pos", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "attacks", "powers")
@@ -1461,7 +1461,7 @@ local master_exploders = b.master_exploders
 
 --#endregion
 
---#region
+--#region tower_demon_pit_demon_trail
 tt = RT("tower_demon_pit_demon_trail")
 
 AC(tt, "pos", "particle_system")
@@ -1900,7 +1900,7 @@ tt.ui.click_rect = r(-35, 0, 70, 90)
 tt.ui.click_rect_offset_y = -10
 --#endregion
 
---#region
+--#region controller_tower_flamespitter_column
 tt = RT("controller_tower_flamespitter_column")
 b = balance.towers.flamespitter.skill_columns
 
@@ -1952,7 +1952,7 @@ tt.render.sprites[1].hidden = false
 tt.duration_config = b.duration
 --#endregion
 
---#region
+--#region bullet_tower_flamespitter_skill_bomb_payload
 tt = RT("bullet_tower_flamespitter_skill_bomb_payload")
 
 AC(tt, "pos", "main_script")
@@ -2109,7 +2109,7 @@ tt.barrack.max_soldiers = 1
 tt.barrack.respawn_offset = vec_2(0, 0)
 --#endregion
 
---#region
+--#region controller_soldier_tower_barrel_skill_warrior_spawn
 tt = RT("controller_soldier_tower_barrel_skill_warrior_spawn")
 
 AC(tt, "pos", "render", "main_script")
@@ -2329,7 +2329,7 @@ tt.modifier.duration = b.duration
 -- 电涌 START
 --#endregion
 
---#region
+--#region ps_tower_sparking_geode_sparks_1
 tt = RT("ps_tower_sparking_geode_sparks_1")
 
 AC(tt, "pos", "particle_system")

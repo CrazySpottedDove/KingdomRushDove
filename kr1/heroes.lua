@@ -378,7 +378,7 @@ tt.bullet.max_seek_angle = math.pi / 3
 tt.main_script.update = scripts.arrow_missile.update
 --#endregion
 
---#region
+--#region ps_arrow_multishot_hero_alleria
 tt = RT("ps_arrow_multishot_hero_alleria")
 
 AC(tt, "pos", "particle_system")
@@ -802,7 +802,7 @@ tt.tween.remove = false
 tt.tween.disabled = true
 --#endregion
 
---#region
+--#region magnus_arcane_rain
 tt = RT("magnus_arcane_rain")
 
 AC(tt, "render", "main_script", "pos")
@@ -2945,7 +2945,7 @@ tt.render.sprites[1].name = "missile_wizard_hit"
 tt.render.sprites[1].z = Z_BULLETS
 --#endregion
 
---#region
+--#region ps_missile_wizard
 tt = RT("ps_missile_wizard")
 
 AC(tt, "pos", "particle_system")
@@ -2958,7 +2958,7 @@ tt.particle_system.particle_lifetime = {0.3, 0.3}
 tt.particle_system.emission_rate = 50
 --#endregion
 
---#region
+--#region ps_missile_wizard_sparks
 tt = RT("ps_missile_wizard_sparks")
 
 AC(tt, "pos", "particle_system")
@@ -3886,7 +3886,7 @@ tt.render.sprites[1].anchor.y = 0.24
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 --#endregion
 
---#region
+--#region ps_fireball_dracolich
 tt = RT("ps_fireball_dracolich")
 
 AC(tt, "pos", "particle_system")
@@ -4373,7 +4373,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].anchor.x = 0.68
 --#endregion
 
---#region
+--#region ps_barrel_fragment
 tt = RT("ps_barrel_fragment")
 
 AC(tt, "pos", "particle_system")
@@ -4624,7 +4624,7 @@ tt.render.sprites[1].name = "fx_dragon_range_attack"
 tt.render.sprites[1].z = Z_BULLETS + 1
 --#endregion
 
---#region
+--#region ps_fireball_dragon
 tt = RT("ps_fireball_dragon")
 
 AC(tt, "pos", "particle_system")
@@ -4700,7 +4700,7 @@ tt.render.sprites[1].z = Z_OBJECTS + 1
 tt.timed.duration = fts(20)
 --#endregion
 
---#region
+--#region ps_breath_dragon
 tt = RT("ps_breath_dragon")
 
 AC(tt, "pos", "particle_system")
@@ -4739,7 +4739,7 @@ tt.bullet.hit_payload = "aura_fierymist_dragon"
 tt.main_script.update = scripts.fierymist_dragon.update
 --#endregion
 
---#region
+--#region ps_fierymist_dragon
 tt = RT("ps_fierymist_dragon")
 
 AC(tt, "pos", "particle_system")
@@ -4812,7 +4812,7 @@ tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].offset = vec_2(-28, -48)
 --#endregion
 
---#region
+--#region ps_wildbarrage_dragon
 tt = RT("ps_wildbarrage_dragon")
 
 AC(tt, "pos", "particle_system")
@@ -5559,7 +5559,7 @@ tt = RT("fx_alien_glaive_hit", "fx")
 tt.render.sprites[1].name = "alien_glaive_hit"
 --#endregion
 
---#region
+--#region ps_alien_glaive_trail
 tt = RT("ps_alien_glaive_trail")
 
 AC(tt, "pos", "particle_system")
@@ -6082,7 +6082,7 @@ tt = RT("fx_voodoo_witch_skull_explosion", "fx")
 tt.render.sprites[1].name = "fx_voodoo_witch_skull_explosion"
 --#endregion
 
---#region
+--#region ps_voodoo_witch_skull
 tt = RT("ps_voodoo_witch_skull")
 
 AC(tt, "pos", "particle_system")
@@ -6161,7 +6161,7 @@ tt.render.sprites[1].scale = vec_2(0.75, 0.75)
 tt.sound_events.insert = "HeroVoodooWitchSkullAttack"
 --#endregion
 
---#region
+--#region ps_bolt_voodoo_witch
 tt = RT("ps_bolt_voodoo_witch")
 
 AC(tt, "pos", "particle_system")
@@ -6889,7 +6889,7 @@ tt.render.sprites[1].name = "fx_minotaur_dust"
 tt.render.sprites[1].loop = true
 --#endregion
 
---#region
+--#region ps_minotaur_bullrush
 tt = RT("ps_minotaur_bullrush")
 
 AC(tt, "pos", "particle_system")
@@ -7195,7 +7195,7 @@ tt.custom_offsets.enemy_blacksurge = vec_2(0, 18)
 tt.custom_offsets.enemy_phantom_warrior = vec_2(0, 18)
 --#endregion
 
---#region
+--#region ps_monkey_god_trail
 tt = RT("ps_monkey_god_trail")
 
 AC(tt, "pos", "particle_system")
@@ -7521,7 +7521,7 @@ tt.bullet.hide_radius = 1
 tt.bullet.xp_gain_factor = 2.8
 --#endregion
 
---#region
+--#region hero_elves_archer_ultimate
 tt = RT("hero_elves_archer_ultimate")
 
 AC(tt, "pos", "main_script")
@@ -7761,7 +7761,7 @@ tt.render.sprites[1].loop = false
 tt.modifier.allows_duplicates = true
 --#endregion
 
---#region
+--#region hero_regson_ultimate
 tt = RT("hero_regson_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events", "render")
@@ -7926,7 +7926,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_lynn_ultimate
 tt = RT("hero_lynn_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -8204,7 +8204,7 @@ tt.ultimate = {
 tt.engine_factor = 1
 --#endregion
 
---#region
+--#region hero_wilbur_ultimate
 tt = RT("hero_wilbur_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -8478,7 +8478,7 @@ tt.bullet.pop = {"pop_mage"}
 tt.bullet.pop_conds = DR_KILL
 --#endregion
 
---#region
+--#region hero_veznan_ultimate
 tt = RT("hero_veznan_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -8687,7 +8687,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_durax_ultimate
 tt = RT("hero_durax_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -8875,7 +8875,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_elves_denas_ultimate
 tt = RT("hero_elves_denas_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -9958,7 +9958,7 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.15, 255}}
 --#endregion
 
---#region
+--#region hero_bravebark_ultimate
 tt = RT("hero_bravebark_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -10138,7 +10138,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_catha_ultimate
 tt = RT("hero_catha_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events", "render")
@@ -10394,7 +10394,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_lilith_ultimate
 tt = RT("hero_lilith_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -10586,7 +10586,7 @@ tt.mind_over_body_damage_buff = 0
 tt.mind_over_body_duration = 0
 --#endregion
 
---#region
+--#region hero_xin_ultimate
 tt = RT("hero_xin_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -10964,7 +10964,7 @@ tt.damage_base = 50
 tt.damage_inc = 25
 --#endregion
 
---#region
+--#region hero_faustus_ultimate
 tt = RT("hero_faustus_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -11202,7 +11202,7 @@ tt = RT("bullet_rag_throw_chair", "bullet_rag_throw")
 tt.render.sprites[1].name = "razzAndRaggs_hero_throw_proys_0005"
 --#endregion
 
---#region
+--#region hero_rag_ultimate
 tt = RT("hero_rag_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -11417,7 +11417,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_bruce_ultimate
 tt = RT("hero_bruce_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -12068,7 +12068,7 @@ tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
 --#endregion
 
---#region
+--#region controller_hero_hunter_ultimate
 tt = RT("controller_hero_hunter_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -12554,7 +12554,7 @@ tt.out_sfx = "HeroSpaceElfCosmicPrisonOut"
 tt.decal = "decal_hero_space_elf_ultimate_mod"
 --#endregion
 
---#region
+--#region controller_hero_space_elf_ultimate
 tt = RT("controller_hero_space_elf_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -12866,7 +12866,7 @@ end
 
 --#endregion
 
---#region
+--#region hero_raelyn_ultimate
 tt = RT("hero_raelyn_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -13313,7 +13313,7 @@ tt.slow.factor = b.slow_factor
 tt.modifier.duration = 0.5
 --#endregion
 
---#region
+--#region controller_hero_venom_ultimate
 tt = RT("controller_hero_venom_ultimate")
 
 AC(tt, "pos", "main_script", "sound_events")
@@ -13325,7 +13325,7 @@ tt.sound = "HeroVenomRenewCreepingDeathCast"
 -- 晶龙
 --#endregion
 
---#region
+--#region ps_bolt_hero_dragon_gem_attack
 tt = RT("ps_bolt_hero_dragon_gem_attack")
 
 AC(tt, "pos", "particle_system")
@@ -13678,7 +13678,7 @@ tt.ultimate = {
 }
 --#endregion
 
---#region
+--#region hero_dragon_gem_ultimate
 tt = RT("hero_dragon_gem_ultimate")
 b = balance.heroes.hero_dragon_gem.ultimate
 
@@ -13878,7 +13878,7 @@ tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].z = Z_FLYING_HEROES + 1
 --#endregion
 
---#region
+--#region controller_hero_dragon_gem_skill_floor_impact_spawner
 tt = RT("controller_hero_dragon_gem_skill_floor_impact_spawner")
 
 AC(tt, "main_script")
@@ -14434,7 +14434,7 @@ tt.render.sprites[2].draw_order = DO_MOD_FX
 tt.render.sprites[2].scale = vec_1(1)
 --#endregion
 
---#region
+--#region controller_hero_witch_ultimate
 tt = RT("controller_hero_witch_ultimate")
 b = balance.heroes.hero_witch.ultimate
 
@@ -14452,7 +14452,7 @@ tt.mod_teleport = "mod_hero_witch_ultimate_teleport"
 -- 五代骨龙
 --#endregion
 
---#region
+--#region ps_bolt_dragon_bone_basic_attack
 tt = RT("ps_bolt_dragon_bone_basic_attack")
 
 AC(tt, "pos", "particle_system")
@@ -14466,7 +14466,7 @@ tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_FLYING_HEROES
 --#endregion
 
---#region
+--#region ps_bolt_dragon_bone_burst
 tt = RT("ps_bolt_dragon_bone_burst")
 
 AC(tt, "pos", "particle_system")
@@ -14779,7 +14779,7 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
 
---#region
+--#region hero_dragon_bone_ultimate
 tt = RT("hero_dragon_bone_ultimate")
 b = balance.heroes.hero_dragon_bone.ultimate
 
@@ -15086,7 +15086,7 @@ tt.modifier.vis_bans = bor(F_BOSS)
 -- 光龙
 --#endregion
 
---#region
+--#region ps_bolt_lumenir
 tt = RT("ps_bolt_lumenir")
 
 AC(tt, "pos", "particle_system")
@@ -15100,7 +15100,7 @@ tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_FLYING_HEROES
 --#endregion
 
---#region
+--#region ps_bolt_lumenir_mini
 tt = RT("ps_bolt_lumenir_mini")
 
 AC(tt, "pos", "particle_system")
@@ -15113,7 +15113,7 @@ tt.particle_system.emission_rate = 15
 tt.particle_system.emit_rotation_spread = math.pi / 2
 --#endregion
 
---#region
+--#region ps_bolt_lumenir_wave
 tt = RT("ps_bolt_lumenir_wave")
 
 AC(tt, "pos", "particle_system")
@@ -15131,7 +15131,7 @@ tt.particle_system.z = Z_OBJECTS
 tt.particle_system.emit_rotation_spread = math.pi / 4
 --#endregion
 
---#region
+--#region ps_bolt_lance_lumenir
 tt = RT("ps_bolt_lance_lumenir")
 
 AC(tt, "pos", "particle_system")
@@ -15144,7 +15144,7 @@ tt.particle_system.emission_rate = 90
 tt.particle_system.emit_rotation_spread = math.pi
 --#endregion
 
---#region
+--#region ps_soul_soldier_tower_ghost
 tt = RT("ps_soul_soldier_tower_ghost")
 
 AC(tt, "pos", "particle_system")
@@ -15157,7 +15157,7 @@ tt.particle_system.emission_rate = 60
 tt.particle_system.emit_rotation_spread = math.pi
 --#endregion
 
---#region
+--#region ps_bullet_liquid_fire_lumenir
 tt = RT("ps_bullet_liquid_fire_lumenir")
 
 AC(tt, "pos", "particle_system")
@@ -15185,7 +15185,7 @@ tt.particle_system.emit_speed = {500, 500}
 tt.particle_system.emit_rotation_spread = math.pi / 8
 --#endregion
 
---#region
+--#region ps_hero_lumenir_fire_ball
 tt = RT("ps_hero_lumenir_fire_ball")
 
 AC(tt, "pos", "particle_system")
@@ -15509,7 +15509,7 @@ tt.ranged.attacks[1].cooldown = b.cooldown
 tt.ranged.attacks[1].bullet = "bolt_lumenir_mini_death"
 --#endregion
 
---#region
+--#region hero_lumenir_ultimate
 tt = RT("hero_lumenir_ultimate")
 b = balance.heroes.hero_lumenir.ultimate
 
@@ -15720,7 +15720,7 @@ tt.modifier.vis_bans = bor(F_BOSS)
 -- 悟空_START
 --#endregion
 
---#region
+--#region ps_wukong_nube_trail
 tt = RT("ps_wukong_nube_trail")
 
 AC(tt, "pos", "particle_system")
@@ -16334,7 +16334,7 @@ tt.slow.factor = nil
 tt.modifier.duration = 0.5
 --#endregion
 
---#region
+--#region controller_hero_wukong_ultimate
 tt = RT("controller_hero_wukong_ultimate")
 b = balance.heroes.hero_wukong.ultimate
 

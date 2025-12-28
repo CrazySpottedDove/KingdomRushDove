@@ -1703,7 +1703,7 @@ local b
 b = balance.towers.necromancer
 --#endregion
 
---#region
+--#region ps_tower_necromancer_skull_trail
 tt = RT("ps_tower_necromancer_skull_trail")
 
 AC(tt, "pos", "particle_system")
@@ -1723,7 +1723,7 @@ tt.particle_system.particle_lifetime = {fts(11), fts(11)}
 tt.emit_offset_relative = vec_2(-15, 0)
 --#endregion
 
---#region
+--#region ps_tower_necromancer_rider_trail_A
 tt = RT("ps_tower_necromancer_rider_trail_A")
 
 AC(tt, "pos", "particle_system")
@@ -1740,7 +1740,7 @@ tt.particle_system.emit_offset = vec_2(0, 0)
 tt.emit_offset_relative = vec_2(-10, 0)
 --#endregion
 
---#region
+--#region ps_tower_necromancer_rider_trail_B
 tt = RT("ps_tower_necromancer_rider_trail_B")
 
 AC(tt, "pos", "particle_system")
@@ -2620,7 +2620,7 @@ tt.modifier.duration = b.duration
 -- 观星 BEGIN
 --#endregion
 
---#region
+--#region ps_stargazers_death_star_trail
 tt = RT("ps_stargazers_death_star_trail")
 
 AC(tt, "pos", "particle_system")
@@ -3124,7 +3124,7 @@ tt.hit_fx_only_no_target = false
 -- 蛤蟆 START
 --#endregion
 
---#region
+--#region ps_bullet_tower_hermit_toad_mage_basic_trail
 tt = RT("ps_bullet_tower_hermit_toad_mage_basic_trail")
 
 AC(tt, "pos", "particle_system")
@@ -3137,7 +3137,7 @@ tt.particle_system.track_rotation = true
 tt.particle_system.particle_lifetime = {fts(18), fts(18)}
 --#endregion
 
---#region
+--#region ps_bullet_tower_hermit_toad_engineer_basic_trail
 tt = RT("ps_bullet_tower_hermit_toad_engineer_basic_trail")
 
 AC(tt, "pos", "particle_system")
@@ -3150,7 +3150,7 @@ tt.particle_system.emission_rate = 10
 tt.particle_system.particle_lifetime = {fts(19), fts(19)}
 --#endregion
 
---#region
+--#region ps_tower_hermit_toad_engineer_bubbles
 tt = RT("ps_tower_hermit_toad_engineer_bubbles")
 
 AC(tt, "pos", "particle_system")
@@ -3540,7 +3540,7 @@ tt.main_script.update = scripts.mod_mark_flags.update
 -- 树灵 START
 --#endregion
 
---#region
+--#region ps_tower_arborean_emissary_bolt_trail
 tt = RT("ps_tower_arborean_emissary_bolt_trail")
 
 AC(tt, "pos", "particle_system")
@@ -3556,7 +3556,7 @@ tt.particle_system.scales_y = {1, 1.5}
 tt.particle_system.scales_x = {1, 1.5}
 --#endregion
 
---#region
+--#region ps_tower_arborean_emissary_gift_of_nature_wisps
 tt = RT("ps_tower_arborean_emissary_gift_of_nature_wisps")
 
 AC(tt, "pos", "particle_system")
@@ -3937,7 +3937,7 @@ tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].size_names = {"arborean_emissary_basic_attack_modifier", "arborean_emissary_basic_attack_modifier", "arborean_emissary_basic_attack_modifier_big"}
 --#endregion
 
---#region
+--#region controller_tower_arborean_emissary_gift_of_nature
 tt = RT("controller_tower_arborean_emissary_gift_of_nature")
 
 AC(tt, "pos", "main_script")

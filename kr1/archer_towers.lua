@@ -1109,7 +1109,7 @@ tt.bullet.damage_max = 60
 tt.bullet.damage_min = 45
 --#endregion
 
---#region
+--#region ps_arrow_silver
 tt = RT("ps_arrow_silver")
 
 AC(tt, "pos", "particle_system")
@@ -1126,7 +1126,7 @@ tt.particle_system.emission_rate = 60
 tt.particle_system.color = {255, 100, 100}
 --#endregion
 
---#region
+--#region ps_arrow_silver_mark
 tt = RT("ps_arrow_silver_mark")
 
 AC(tt, "pos", "particle_system")
@@ -1397,7 +1397,7 @@ tt.render.sprites[1].prefix = "twilight_longbows_tower_mira"
 tt.render.sprites[1].draw_order = DO_MOD_FX
 --#endregion
 
---#region
+--#region controller_tower_dark_elf_soldiers
 tt = RT("controller_tower_dark_elf_soldiers")
 
 AC(tt, "render", "main_script", "pos")
@@ -1507,7 +1507,7 @@ tt.ui.click_rect = r(-35, 3, 73, 77)
 tt.tower_sid = 2
 --#endregion
 
---#region
+--#region controller_tower_sand_lvl4_skill_big_blade
 tt = RT("controller_tower_sand_lvl4_skill_big_blade")
 
 AC(tt, "main_script")

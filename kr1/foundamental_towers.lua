@@ -24,7 +24,7 @@ local vv = require("lib.klua.vector").vv
 
 require("game_templates_utils")
 
---#region
+--#region tower_holder
 tt = RT("tower_holder")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "editor", "editor_script")
@@ -421,7 +421,7 @@ tt.barrack.soldier_type = "soldier_knight"
 tt.barrack.rally_range = 155
 --#endregion
 
---#region
+--#region tower_neptune_holder
 tt = RT("tower_neptune_holder")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info")
@@ -1030,7 +1030,7 @@ tt.cannot_be_swapped = true
 -- 龙魂宝壶 控制器
 --#endregion
 
---#region
+--#region controller_elemental_wood
 tt = RT("controller_elemental_wood")
 
 E:add_comps(tt, "main_script", "pos", "render", "tween")
@@ -1273,7 +1273,7 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 --#endregion
 
---#region
+--#region controller_elemental_fire
 tt = RT("controller_elemental_fire")
 
 E:add_comps(tt, "main_script", "pos", "render", "tween")

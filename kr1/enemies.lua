@@ -6657,7 +6657,7 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
 --#endregion
 
---#region
+--#region satyr_hoplite_spawner
 tt = RT("satyr_hoplite_spawner")
 
 AC(tt, "pos", "spawner", "main_script")
@@ -7348,7 +7348,7 @@ tt.timed_attacks.list[1].nodes_limit = 40
 tt.timed_attacks.list[1].spawn_sets = {{4, "decal_webspawn_enemy_spider_arachnomancer"}, {3, "decal_webspawn_enemy_sword_spider"}, {2, "decal_webspawn_enemy_spider_son_of_mactans"}}
 --#endregion
 
---#region
+--#region arachnomancer_random_spawner
 tt = RT("arachnomancer_random_spawner")
 
 AC(tt, "pos", "spawner", "main_script", "sound_events")

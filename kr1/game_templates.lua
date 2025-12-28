@@ -115,7 +115,7 @@ tt.particle_system.scales_x = {1, 0.3}
 tt.particle_system.scales_y = {1, 0.3}
 --#endregion
 
---#region
+--#region ps_hacksaw_sawblade
 tt = RT("ps_hacksaw_sawblade")
 
 AC(tt, "pos", "particle_system")
@@ -131,7 +131,7 @@ tt.particle_system.scales_x = {1, 0.5}
 tt.particle_system.scales_y = {1.5, 0.5}
 --#endregion
 
---#region
+--#region ps_elora_run
 tt = RT("ps_elora_run")
 
 AC(tt, "pos", "particle_system")
@@ -160,7 +160,7 @@ tt.particle_system.source_lifetime = nil
 tt.particle_system.z = Z_OBJECTS
 --#endregion
 
---#region
+--#region ps_ignus_run
 tt = RT("ps_ignus_run")
 
 AC(tt, "pos", "particle_system")
@@ -201,7 +201,7 @@ tt.particle_system.source_lifetime = nil
 tt.particle_system.z = Z_OBJECTS
 --#endregion
 
---#region
+--#region ps_stage_snow
 tt = RT("ps_stage_snow")
 
 AC(tt, "pos", "particle_system")
@@ -506,7 +506,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
 --#endregion
 
---#region
+--#region tower_sasquash_holder
 tt = RT("tower_sasquash_holder")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor", "main_script")
@@ -1001,7 +1001,7 @@ tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
 --#endregion
 
---#region
+--#region myconid_spawner
 tt = RT("myconid_spawner")
 
 AC(tt, "pos", "spawner", "main_script")
@@ -1210,7 +1210,7 @@ tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 2
 --#endregion
 
---#region
+--#region burning_floor_controller
 tt = RT("burning_floor_controller")
 
 AC(tt, "main_script")
@@ -1234,7 +1234,7 @@ tt.regen.cooldown = fts(4)
 tt.regen.health = 1
 --#endregion
 
---#region
+--#region graveyard_controller
 tt = RT("graveyard_controller")
 
 AC(tt, "graveyard", "main_script")
@@ -1270,7 +1270,7 @@ tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_HERO
 --#endregion
 
---#region
+--#region s15_rotten_spawner
 tt = RT("s15_rotten_spawner")
 
 AC(tt, "main_script", "editor")
@@ -1288,7 +1288,7 @@ tt.spawn_timers = {
 }
 --#endregion
 
---#region
+--#region s11_lava_spawner
 tt = RT("s11_lava_spawner")
 
 AC(tt, "main_script")
@@ -2487,7 +2487,7 @@ local bat_paths = {{
 for i, b in ipairs(bat_paths) do
 	--#endregion
 
---#region
+--#region decal_bat_flying_" .. i, "decal_bat_flying
 tt = RT("decal_bat_flying_" .. i, "decal_bat_flying")
 
 	local keys = {}
@@ -2872,7 +2872,7 @@ tt.max_delay = 20
 tt.sounds = {"UndergroundAmbienceSound"}
 --#endregion
 
---#region
+--#region tower_holder_blocked
 tt = RT("tower_holder_blocked")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "sound_events")
@@ -3160,7 +3160,7 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}
 --#endregion
 
---#region
+--#region ps_black_dragon_flame
 tt = RT("ps_black_dragon_flame")
 
 AC(tt, "pos", "particle_system")
@@ -3178,7 +3178,7 @@ tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 tt.particle_system.scale_same_aspect = true
 --#endregion
 
---#region
+--#region ps_black_dragon_fire
 tt = RT("ps_black_dragon_fire")
 
 AC(tt, "pos", "particle_system")
@@ -3208,7 +3208,7 @@ tt.render.sprites[1].anchor.y = 0.19
 tt.render.sprites[1].sort_y_offset = -1
 --#endregion
 
---#region
+--#region button_steal_dragon_gold
 tt = RT("button_steal_dragon_gold")
 
 AC(tt, "pos", "main_script", "ui")
@@ -3261,7 +3261,7 @@ tt.render.sprites[1].prefix = "decal_water_barricade"
 tt.render.sprites[1].name = "idle"
 --#endregion
 
---#region
+--#region ps_bomb_volcano
 tt = RT("ps_bomb_volcano")
 
 AC(tt, "pos", "particle_system")
@@ -3381,7 +3381,7 @@ tt = RT("moon_enemy_aura", "aura")
 tt.main_script.update = scripts.moon_enemy_aura.update
 --#endregion
 
---#region
+--#region points_spawner
 tt = RT("points_spawner")
 
 AC(tt, "main_script")
@@ -3617,7 +3617,7 @@ tt.render.sprites[1].name = "mactans_pop"
 tt.render.sprites[1].z = Z_OBJECTS_SKY + 1
 --#endregion
 
---#region
+--#region ps_arrow_arcane_special
 tt = RT("ps_arrow_arcane_special")
 
 AC(tt, "pos", "particle_system")
@@ -3630,7 +3630,7 @@ tt.particle_system.scales_y = {1, 0}
 tt.particle_system.emission_rate = 30
 --#endregion
 
---#region
+--#region ps_bolt_elves_1
 tt = RT("ps_bolt_elves_1")
 
 AC(tt, "pos", "particle_system")
@@ -3663,7 +3663,7 @@ tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.scales_y = {1, 0.5}
 --#endregion
 
---#region
+--#region ps_bolt_wild_magus
 tt = RT("ps_bolt_wild_magus")
 
 AC(tt, "pos", "particle_system")
@@ -3677,7 +3677,7 @@ tt.particle_system.scales_x = {1, 0.5}
 tt.particle_system.emission_rate = 60
 --#endregion
 
---#region
+--#region ps_high_elven_sentinel
 tt = RT("ps_high_elven_sentinel")
 
 AC(tt, "pos", "particle_system")
@@ -3702,7 +3702,7 @@ tt.particle_system.scales_y = {1, 0.3}
 tt.particle_system.alphas = {190, 120, 0}
 --#endregion
 
---#region
+--#region ps_shield_elves_denas
 tt = RT("ps_shield_elves_denas")
 
 AC(tt, "pos", "particle_system")
@@ -3718,7 +3718,7 @@ tt.particle_system.track_rotation = true
 tt.particle_system.z = Z_BULLETS
 --#endregion
 
---#region
+--#region ps_freeze_arivan
 tt = RT("ps_freeze_arivan")
 
 AC(tt, "pos", "particle_system")
@@ -3731,7 +3731,7 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLETS
 --#endregion
 
---#region
+--#region ps_fireball_arivan
 tt = RT("ps_fireball_arivan")
 
 AC(tt, "pos", "particle_system")
@@ -3746,7 +3746,7 @@ tt.particle_system.track_rotation = true
 tt.particle_system.z = Z_BULLETS
 --#endregion
 
---#region
+--#region ps_twilight_scourger_banshee
 tt = RT("ps_twilight_scourger_banshee")
 
 AC(tt, "pos", "particle_system")
@@ -3763,7 +3763,7 @@ tt.particle_system.sort_y_offset = 2
 tt.particle_system.z = Z_OBJECTS
 --#endregion
 
---#region
+--#region ps_nav_faerie_red
 tt = RT("ps_nav_faerie_red")
 
 AC(tt, "pos", "particle_system")
@@ -3782,7 +3782,7 @@ tt = RT("ps_nav_faerie_yellow", "ps_nav_faerie_red")
 tt.particle_system.name = "nav_faerie_particle_yellow"
 --#endregion
 
---#region
+--#region ps_drow_queen_trail
 tt = RT("ps_drow_queen_trail")
 
 AC(tt, "pos", "particle_system")
@@ -3797,7 +3797,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_OBJECTS
 --#endregion
 
---#region
+--#region ps_bolt_faustus
 tt = RT("ps_bolt_faustus")
 
 AC(tt, "pos", "particle_system")
@@ -3810,7 +3810,7 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.emit_rotation_spread = math.pi
 --#endregion
 
---#region
+--#region ps_bolt_lance_faustus
 tt = RT("ps_bolt_lance_faustus")
 
 AC(tt, "pos", "particle_system")
@@ -3823,7 +3823,7 @@ tt.particle_system.emission_rate = 90
 tt.particle_system.emit_rotation_spread = math.pi
 --#endregion
 
---#region
+--#region ps_bullet_liquid_fire_faustus
 tt = RT("ps_bullet_liquid_fire_faustus")
 
 AC(tt, "pos", "particle_system")
@@ -3851,7 +3851,7 @@ tt.particle_system.emit_speed = {500, 500}
 tt.particle_system.emit_rotation_spread = math.pi / 8
 --#endregion
 
---#region
+--#region ps_bullet_twilight_evoker
 tt = RT("ps_bullet_twilight_evoker")
 
 AC(tt, "pos", "particle_system")
@@ -3865,7 +3865,7 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.track_rotation = true
 --#endregion
 
---#region
+--#region ps_bullet_twilight_heretic
 tt = RT("ps_bullet_twilight_heretic")
 
 AC(tt, "pos", "particle_system")
@@ -3879,7 +3879,7 @@ tt.particle_system.track_rotation = true
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 --#endregion
 
---#region
+--#region ps_twilight_heretic_consume_ball_particle
 tt = RT("ps_twilight_heretic_consume_ball_particle")
 
 AC(tt, "pos", "particle_system")
@@ -3892,7 +3892,7 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.track_rotation = true
 --#endregion
 
---#region
+--#region ps_razorboar_rampage
 tt = RT("ps_razorboar_rampage")
 
 AC(tt, "pos", "particle_system")
@@ -3906,7 +3906,7 @@ tt.particle_system.emit_area_spread = vec_2(16, 6)
 tt.particle_system.emit_offset = vec_2(0, 28)
 --#endregion
 
---#region
+--#region ps_emit_breath_baby_ashbite
 tt = RT("ps_emit_breath_baby_ashbite")
 
 AC(tt, "pos", "particle_system")
@@ -3920,7 +3920,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 --#endregion
 
---#region
+--#region ps_emit_fiery_mist_baby_ashbite
 tt = RT("ps_emit_fiery_mist_baby_ashbite")
 
 AC(tt, "pos", "particle_system")
@@ -3934,7 +3934,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 --#endregion
 
---#region
+--#region ps_dagger_drow
 tt = RT("ps_dagger_drow")
 
 AC(tt, "pos", "particle_system")
@@ -3947,7 +3947,7 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region ps_fireball_veznan_demon
 tt = RT("ps_fireball_veznan_demon")
 
 AC(tt, "pos", "particle_system")
@@ -3965,7 +3965,7 @@ tt.particle_system.scale_same_aspect = false
 tt.particle_system.scale_var = {0.35, 0.8}
 --#endregion
 
---#region
+--#region ps_veznan_soulburn
 tt = RT("ps_veznan_soulburn")
 
 AC(tt, "pos", "particle_system")
@@ -3981,7 +3981,7 @@ tt.particle_system.scale_var = {0.25, 1}
 tt.particle_system.alphas = {255, 0}
 --#endregion
 
---#region
+--#region ps_bullet_rag_trail
 tt = RT("ps_bullet_rag_trail")
 
 AC(tt, "pos", "particle_system")
@@ -3994,7 +3994,7 @@ tt.particle_system.scales_y = {0.8, 0.05}
 tt.particle_system.emission_rate = 30
 --#endregion
 
---#region
+--#region ps_durax_transfer
 tt = RT("ps_durax_transfer")
 
 AC(tt, "pos", "particle_system")
@@ -4015,7 +4015,7 @@ tt = RT("ps_durax_clone_transfer", "ps_durax_transfer")
 tt.particle_system.alphas = {150}
 --#endregion
 
---#region
+--#region ps_bullet_lilith_trail
 tt = RT("ps_bullet_lilith_trail")
 
 AC(tt, "pos", "particle_system")
@@ -4028,7 +4028,7 @@ tt.particle_system.scales_y = {0.8, 0.05}
 tt.particle_system.emission_rate = 30
 --#endregion
 
---#region
+--#region ps_missile_phoenix
 tt = RT("ps_missile_phoenix")
 
 AC(tt, "pos", "particle_system")
@@ -4050,7 +4050,7 @@ tt.particle_system.scale_var = {0.65, 0.65}
 tt.particle_system.emit_area_spread = vec_2(2, 2)
 --#endregion
 
---#region
+--#region ps_missile_wilbur
 tt = RT("ps_missile_wilbur")
 
 AC(tt, "pos", "particle_system")
@@ -4067,7 +4067,7 @@ tt.particle_system.emit_spread = math.pi
 tt.particle_system.emission_rate = 30
 --#endregion
 
---#region
+--#region ps_bomb_lava_fireball
 tt = RT("ps_bomb_lava_fireball")
 
 AC(tt, "pos", "particle_system")
@@ -4094,7 +4094,7 @@ tt.particle_system.emission_rate = 60
 tt.particle_system.track_rotation = true
 --#endregion
 
---#region
+--#region ps_bullet_rod_dragon_fire
 tt = RT("ps_bullet_rod_dragon_fire")
 
 AC(tt, "pos", "particle_system")
@@ -5608,7 +5608,7 @@ tt.tower.terrain_style = TERRAIN_STYLE_FORGOTTEN_TREASURES
 tt.render.sprites[1].name = "build_terrain_0006"
 --#endregion
 
---#region
+--#region tower_bastion_holder
 tt = RT("tower_bastion_holder")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor", "editor_script")
@@ -7370,7 +7370,7 @@ tt.slow.factor = 0.5
 for _, n in pairs({"barrack_1", "barrack_2", "barrack_3", "blade", "forest", "drow"}) do
 	--#endregion
 
---#region
+--#region mod_moon_forged_blades_" .. n, "mod_damage
 tt = RT("mod_moon_forged_blades_" .. n, "mod_damage")
 	tt.damage_max = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_min)
 	tt.damage_min = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_max)
@@ -8478,7 +8478,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "fx_heal_crystal_unstable"
 --#endregion
 
---#region
+--#region mactans_controller
 tt = RT("mactans_controller")
 
 AC(tt, "main_script")
@@ -8489,7 +8489,7 @@ tt.sequence = nil
 tt.sequence_groups = nil
 --#endregion
 
---#region
+--#region power_thunder_control
 tt = RT("power_thunder_control")
 
 AC(tt, "user_power", "pos", "main_script", "user_selection")
@@ -8631,7 +8631,7 @@ tt = RT("fx_power_thunder_rain_splash", "fx")
 tt.render.sprites[1].name = "fx_power_thunder_rain_splash"
 -- --#endregion
 
---#region
+--#region power_hero_control
 tt = RT("power_hero_control")
 -- AC(tt, "user_power", "pos", "main_script", "user_selection")
 -- tt.main_script.insert = scripts.power_hero_control.insert
@@ -9127,7 +9127,7 @@ tt = RT("decal_bird_2", "decal_bird_1")
 tt.render.sprites[1].prefix = "decal_bird_2"
 --#endregion
 
---#region
+--#region birds_controller
 tt = RT("birds_controller")
 
 AC(tt, "main_script")
@@ -9169,7 +9169,7 @@ tt.render.sprites[1].name = "decal_stage_02_bigwaves_idle"
 for i = 1, 6 do
 	--#endregion
 
---#region
+--#region decal_stage_02_stone_" .. i, "decal
 tt = RT("decal_stage_02_stone_" .. i, "decal")
 	tt.render.sprites[1].name = "stage2_stones_000" .. i
 	tt.render.sprites[1].animated = false
@@ -9257,7 +9257,7 @@ tt.play_time = {10, 45}
 tt.final_clicks = {3, 6}
 --#endregion
 
---#region
+--#region river_object_controller
 tt = RT("river_object_controller")
 
 AC(tt, "main_script")
@@ -9515,7 +9515,7 @@ tt.render.sprites[1].name = "ewok_2_proy_0001"
 tt.sound_events.insert = "AxeSound"
 --#endregion
 
---#region
+--#region tower_ewok_holder
 tt = RT("tower_ewok_holder")
 
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "editor")
@@ -9788,7 +9788,7 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_2(0.75, 0.75)}, {fts(4), vec_2(1.075, 1.075)}, {fts(7), vec_2(0.96, 0.96)}, {fts(9), vec_2(1, 1)}}
 --#endregion
 
---#region
+--#region gryphon_controller
 tt = RT("gryphon_controller")
 
 AC(tt, "main_script")
@@ -9811,7 +9811,7 @@ tt.delayed_play.required_clicks = 1
 for i = 1, 4 do
 	--#endregion
 
---#region
+--#region decal_wisp_" .. i, "decal
 tt = RT("decal_wisp_" .. i, "decal")
 	tt.render.sprites[1].name = string.format("decal_wisp_%i_l1", i)
 	tt.render.sprites[1].random_ts = 3
@@ -9835,7 +9835,7 @@ end
 for i = 5, 10 do
 	--#endregion
 
---#region
+--#region decal_wisp_" .. i, "decal_delayed_play
 tt = RT("decal_wisp_" .. i, "decal_delayed_play")
 	tt.render.sprites[1].prefix = "decal_wisp_" .. i
 	tt.render.sprites[1].name = "play"
@@ -10108,7 +10108,7 @@ tt.render.sprites[1].name = "start"
 tt.render.sprites[1].prefix = "crystal_serpent_block_tower"
 --#endregion
 
---#region
+--#region ps_bullet_crystal_serpent_fly
 tt = RT("ps_bullet_crystal_serpent_fly")
 
 AC(tt, "pos", "particle_system")
@@ -10125,7 +10125,7 @@ tt.particle_system.scales_y = {0.3, 1, 1.05}
 tt.particle_system.scale_same_aspect = true
 --#endregion
 
---#region
+--#region ps_bullet_crystal_serpent_hit
 tt = RT("ps_bullet_crystal_serpent_hit")
 
 AC(tt, "pos", "particle_system")
@@ -10222,7 +10222,7 @@ tt.tween.props[2].sprite_id = 2
 tt.main_script.update = scripts.decal_faerie_crystal.update
 --#endregion
 
---#region
+--#region faerie_trails
 tt = RT("faerie_trails")
 
 AC(tt, "main_script")
@@ -10236,7 +10236,7 @@ tt.path_speeds = {
 tt.path_speed_per_wave = nil
 --#endregion
 
---#region
+--#region nav_faerie
 tt = RT("nav_faerie")
 
 AC(tt, "pos", "render", "nav_path", "motion", "main_script", "tween")
@@ -10258,7 +10258,7 @@ tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 --#endregion
 
---#region
+--#region simon_controller
 tt = RT("simon_controller")
 
 AC(tt, "main_script")
@@ -10526,7 +10526,7 @@ tt.main_script.update = scripts.decal_s12_lemur.update
 tt.ui.click_rect = r(-15, 0, 30, 30)
 --#endregion
 
---#region
+--#region birds_formation_controller
 tt = RT("birds_formation_controller")
 
 AC(tt, "main_script")
@@ -10772,7 +10772,7 @@ tt.insert_damage = 150
 tt.main_script.insert = scripts.mod_black_baby_dragon.insert
 --#endregion
 
---#region
+--#region ps_baby_black_dragon_flame
 tt = RT("ps_baby_black_dragon_flame")
 
 AC(tt, "pos", "particle_system")
@@ -10999,7 +10999,7 @@ end
 
 --#endregion
 
---#region
+--#region taunts_s15_controller
 tt = RT("taunts_s15_controller")
 
 AC(tt, "main_script", "taunts", "editor")
@@ -11360,7 +11360,7 @@ tt.render.sprites[1].name = "stage_18_head"
 tt.render.sprites[1].animated = false
 --#endregion
 
---#region
+--#region taunts_s18_defeated_controller
 tt = RT("taunts_s18_defeated_controller")
 
 AC(tt, "main_script", "taunts", "editor")
@@ -11497,7 +11497,7 @@ tt.delayed_play.max_delay = 8
 tt.delayed_play.idle_animation = nil
 --#endregion
 
---#region
+--#region lava_fireball_controller
 tt = RT("lava_fireball_controller")
 
 AC(tt, "main_script")
@@ -11626,7 +11626,7 @@ tt.render.sprites[1].alpha = 200
 -- kr5
 --#endregion
 
---#region
+--#region ps_hero_hunter_walk_trail
 tt = RT("ps_hero_hunter_walk_trail")
 
 AC(tt, "pos", "particle_system")
@@ -11677,7 +11677,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 --#endregion
 
---#region
+--#region ps_hero_space_elf_basic_attack_trail
 tt = RT("ps_hero_space_elf_basic_attack_trail")
 
 AC(tt, "pos", "particle_system")
@@ -11808,7 +11808,7 @@ tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.tween.remove = false
 --#endregion
 
---#region
+--#region ps_hero_witch_ranged_basic_trail
 tt = RT("ps_hero_witch_ranged_basic_trail")
 
 AC(tt, "pos", "particle_system")
@@ -11821,7 +11821,7 @@ tt.particle_system.particle_lifetime = {fts(5), fts(8)}
 tt.particle_system.emit_rotation_spread = math.pi * 0.5
 --#endregion
 
---#region
+--#region ps_hero_witch_spark_1
 tt = RT("ps_hero_witch_spark_1")
 
 AC(tt, "pos", "particle_system", "main_script")
@@ -11844,7 +11844,7 @@ tt.main_script.update = scripts.ps_hero_mecha_smoke.update
 tt.emit_direction_sides = {2 * math.pi / 3, math.pi / 3}
 --#endregion
 
---#region
+--#region ps_bullet_hero_witch_skill_polymorph
 tt = RT("ps_bullet_hero_witch_skill_polymorph")
 
 AC(tt, "pos", "particle_system")
@@ -11902,7 +11902,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
 
---#region
+--#region tower_tricannon_bomb_4_trail
 tt = RT("tower_tricannon_bomb_4_trail")
 
 AC(tt, "pos", "particle_system")
@@ -11918,7 +11918,7 @@ tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {0.7, 0.85}
 --#endregion
 
---#region
+--#region tower_tricannon_bomb_4_bombardment_trail
 tt = RT("tower_tricannon_bomb_4_bombardment_trail")
 
 AC(tt, "pos", "particle_system")
@@ -11934,7 +11934,7 @@ tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.particle_lifetime = {0.7, 0.85}
 --#endregion
 
---#region
+--#region tower_tricannon_bomb_4_overheated_trail
 tt = RT("tower_tricannon_bomb_4_overheated_trail")
 
 AC(tt, "pos", "particle_system")
@@ -12071,7 +12071,7 @@ tt.main_script.update = scripts.aura_endless_engineer_aftermath_ray.update
 tt.particles_name = "ps_tesla_overcharge"
 --#endregion
 
---#region
+--#region endless_mage_thunder
 tt = RT("endless_mage_thunder")
 
 AC(tt, "user_power", "pos", "main_script")
@@ -12131,7 +12131,7 @@ tt.vis_bans = bor(F_FRIEND)
 tt.vis_flags = bor(F_RANGED)
 --#endregion
 
---#region
+--#region ps_bullet_tower_ray_sheep
 tt = RT("ps_bullet_tower_ray_sheep")
 
 AC(tt, "pos", "particle_system")
@@ -12215,7 +12215,7 @@ tt.enemy_health_factor = 0.8
 tt.spawn_creep = "enemy_deviltide_shark_ghost"
 --#endregion
 
---#region
+--#region ps_bullet_tower_sand
 tt = RT("ps_bullet_tower_sand")
 
 AC(tt, "pos", "particle_system")
@@ -12230,7 +12230,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region ps_bullet_tower_sand_skill_gold
 tt = RT("ps_bullet_tower_sand_skill_gold")
 
 AC(tt, "pos", "particle_system")
@@ -12245,7 +12245,7 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region ps_aura_tower_sand_skill_big_blade
 tt = RT("ps_aura_tower_sand_skill_big_blade")
 
 AC(tt, "pos", "particle_system")
@@ -12280,7 +12280,7 @@ tt = RT("fx_aura_tower_sand_skill_big_blade", "fx")
 tt.render.sprites[1].name = "tower_sand_lvl4_skill_2_hit_FX_loop"
 --#endregion
 
---#region
+--#region royal_archer_tower_lvl4_arrow_armor_breaker_trail_particle
 tt = RT("royal_archer_tower_lvl4_arrow_armor_breaker_trail_particle")
 
 AC(tt, "pos", "particle_system")
@@ -12293,7 +12293,7 @@ tt.particle_system.animation_fps = 20
 tt.particle_system.track_rotation = true
 --#endregion
 
---#region
+--#region ps_rapacious_hunter_eagle_royal_archers
 tt = RT("ps_rapacious_hunter_eagle_royal_archers")
 
 AC(tt, "pos", "particle_system")
@@ -12420,7 +12420,7 @@ tt.tween.props[1].keys = {{0, 0}, {0.1, 255}}
 tt.tween.remove = false
 --#endregion
 
---#region
+--#region ps_tower_rocket_gunners_sting_missiles_trail
 tt = RT("ps_tower_rocket_gunners_sting_missiles_trail")
 
 AC(tt, "pos", "particle_system")
@@ -12523,7 +12523,7 @@ tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
 tt.tween.remove = true
 --#endregion
 
---#region
+--#region ps_bullet_tower_flamespitter_skill_bomb
 tt = RT("ps_bullet_tower_flamespitter_skill_bomb")
 
 AC(tt, "pos", "particle_system")
@@ -12629,7 +12629,7 @@ end
 tt.spawn_gaps = 3
 --#endregion
 
---#region
+--#region s72_init
 tt = RT("s72_init")
 
 AC(tt, "main_script")
@@ -12637,7 +12637,7 @@ AC(tt, "main_script")
 tt.main_script.insert = scripts.s72_init.insert
 --#endregion
 
---#region
+--#region ps_bullet_tower_ballista_skill_bomb_trail_A
 tt = RT("ps_bullet_tower_ballista_skill_bomb_trail_A")
 
 AC(tt, "pos", "particle_system")
@@ -12651,7 +12651,7 @@ tt.particle_system.emit_area_spread = v(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 
---#region
+--#region ps_bullet_tower_ballista_skill_bomb_trail_B
 tt = RT("ps_bullet_tower_ballista_skill_bomb_trail_B")
 
 AC(tt, "pos", "particle_system")
@@ -12736,7 +12736,7 @@ tt = RT("fx_bullet_tower_ballista_bomb_explosion", "fx")
 tt.render.sprites[1].name = "ballista_tower_bomb_explotion_idle"
 --#endregion
 
---#region
+--#region ps_bullet_tower_barrel
 tt = RT("ps_bullet_tower_barrel")
 
 AC(tt, "pos", "particle_system")
@@ -12755,7 +12755,7 @@ tt.particle_system.scale_var = {0.3, 0.5}
 tt.particle_system.alphas = {255, 255, 255, 0}
 --#endregion
 
---#region
+--#region ps_bullet_tower_barrel_skill_barrel
 tt = RT("ps_bullet_tower_barrel_skill_barrel")
 
 AC(tt, "pos", "particle_system")
@@ -12837,7 +12837,7 @@ tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
 --#endregion
 
---#region
+--#region controller_s93
 tt = RT("controller_s93")
 
 AC(tt, "main_script")
