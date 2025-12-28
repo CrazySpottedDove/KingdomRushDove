@@ -27,6 +27,7 @@ local U = require("utils")
 
 require("game_templates_utils")
 
+--#region
 tt = RT("enemy_sheep_ground", "enemy")
 anchor_y = 0.2
 image_y = 38
@@ -51,6 +52,9 @@ tt.unit.mod_offset = vec_2(0, ady(15))
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY)
 tt.clicks_to_destroy = 8
+--#endregion
+
+--#region
 tt = RT("enemy_sheep_fly", "enemy_sheep_ground")
 anchor_y = 0.038461538461538464
 image_y = 78
@@ -72,6 +76,9 @@ tt.unit.hit_offset = vec_2(0, ady(56))
 tt.unit.mod_offset = vec_2(0, ady(48))
 tt.unit.show_blood_pool = false
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_goblin", "enemy")
 
 AC(tt, "melee")
@@ -97,6 +104,9 @@ tt.render.sprites[1].prefix = "goblin"
 tt.sound_events.death = "DeathGoblin"
 tt.unit.hit_offset = vec_2(0, 8)
 tt.unit.mod_offset = vec_2(adx(22), ady(15))
+--#endregion
+
+--#region
 tt = RT("enemy_fat_orc", "enemy")
 
 AC(tt, "melee")
@@ -123,6 +133,9 @@ tt.render.sprites[1].prefix = "enemy_fat_orc"
 tt.sound_events.death = "DeathOrc"
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.mod_offset = vec_2(adx(30), ady(20))
+--#endregion
+
+--#region
 tt = RT("enemy_wolf_small", "enemy")
 
 AC(tt, "dodge", "melee")
@@ -156,6 +169,9 @@ tt.unit.hide_after_death = true
 tt.unit.hit_offset = vec_2(0, 11)
 tt.unit.mod_offset = vec_2(adx(22), ady(14))
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_wolf", "enemy")
 
 AC(tt, "dodge", "melee")
@@ -191,6 +207,9 @@ tt.unit.hit_offset = vec_2(0, 13)
 tt.unit.marker_offset.y = 2
 tt.unit.mod_offset = vec_2(adx(29), ady(26))
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_shadow_archer", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -226,6 +245,9 @@ tt.sound_events.death = "DeathHuman"
 tt.unit.hit_offset = vec_2(0, 15)
 tt.unit.mod_offset = vec_2(adx(26), ady(20))
 tt.unit.marker_offset.y = 1
+--#endregion
+
+--#region
 tt = RT("enemy_shaman", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -264,6 +286,9 @@ tt.timed_attacks.list[1].vis_flags = bor(F_MOD)
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, -2)
 tt.unit.mod_offset = vec_2(adx(30), ady(20))
+--#endregion
+
+--#region
 tt = RT("enemy_gargoyle", "enemy")
 anchor_y = 0
 anchor_x = 0.5
@@ -295,6 +320,9 @@ tt.unit.mod_offset = vec_2(adx(31), ady(50))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_THORN, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_ogre", "enemy")
 
 AC(tt, "melee")
@@ -326,6 +354,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.mod_offset = vec_2(adx(42), ady(33))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_spider_tiny", "enemy")
 
 AC(tt, "melee")
@@ -356,6 +387,9 @@ tt.unit.hit_offset = vec_2(0, 8)
 tt.unit.marker_offset = vec_2(0, ady(5))
 tt.unit.mod_offset = vec_2(adx(18), ady(13))
 tt.vis.bans = bor(F_SKELETON, F_POISON)
+--#endregion
+
+--#region
 tt = RT("enemy_spider_small", "enemy")
 
 AC(tt, "melee")
@@ -387,9 +421,15 @@ tt.unit.hit_offset = vec_2(0, 8)
 tt.unit.marker_offset = vec_2(0, -1)
 tt.unit.mod_offset = vec_2(adx(20), ady(15))
 tt.vis.bans = bor(F_SKELETON, F_POISON)
+--#endregion
+
+--#region
 tt = RT("enemy_spider_small_derived", "enemy_spider_small")
 tt.enemy.gold = 0
 tt.motion.max_speed = 2 * FPS
+--#endregion
+
+--#region
 tt = RT("enemy_spider_small_big", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -428,6 +468,9 @@ tt.timed_attacks.list[1].bullet = "enemy_spider_bigger_egg"
 tt.timed_attacks.list[1].max_cooldown = 10
 tt.timed_attacks.list[1].max_count = 3
 tt.timed_attacks.list[1].min_cooldown = 5
+--#endregion
+
+--#region
 tt = RT("enemy_spider_bigger_egg", "decal_scripted")
 
 AC(tt, "render", "spawner", "tween")
@@ -448,6 +491,9 @@ tt.spawner.animation_start = "start"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("enemy_spider_big", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -490,6 +536,9 @@ tt.unit.marker_offset = vec_2(-0.4, -2.2)
 tt.unit.mod_offset = vec_2(adx(26), ady(18))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_SKELETON, F_POISON)
+--#endregion
+
+--#region
 tt = RT("enemy_spider_egg", "decal_scripted")
 
 AC(tt, "render", "spawner", "tween")
@@ -509,6 +558,9 @@ tt.spawner.animation_start = "start"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("enemy_brigand", "enemy")
 
 AC(tt, "melee")
@@ -535,6 +587,9 @@ tt.render.sprites[1].prefix = "enemy_brigand"
 tt.sound_events.death = "DeathHuman"
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.mod_offset = vec_2(adx(24), ady(19))
+--#endregion
+
+--#region
 tt = RT("enemy_dark_knight", "enemy")
 
 AC(tt, "melee")
@@ -562,6 +617,9 @@ tt.sound_events.death = "DeathHuman"
 tt.unit.hit_offset = vec_2(0, 16)
 tt.unit.mod_offset = vec_2(adx(32), ady(20))
 tt.unit.marker_offset.y = -2
+--#endregion
+
+--#region
 tt = RT("enemy_marauder", "enemy")
 
 AC(tt, "melee")
@@ -593,6 +651,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.mod_offset = vec_2(adx(39), ady(24))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_bandit", "enemy")
 
 AC(tt, "melee", "dodge")
@@ -621,6 +682,9 @@ tt.sound_events.death = "DeathHuman"
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, 2)
 tt.unit.mod_offset = vec_2(adx(24), ady(17))
+--#endregion
+
+--#region
 tt = RT("enemy_slayer", "enemy")
 
 AC(tt, "melee")
@@ -660,6 +724,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.mod_offset = vec_2(adx(37), ady(25))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_rocketeer", "enemy")
 anchor_y = 0
 anchor_x = 0.5
@@ -694,6 +761,9 @@ tt.unit.mod_offset = vec_2(adx(40), ady(56))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_THORN, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_troll", "enemy")
 
 AC(tt, "melee", "auras")
@@ -721,6 +791,9 @@ tt.render.sprites[1].prefix = "enemy_troll"
 tt.sound_events.death = "DeathTroll"
 tt.unit.hit_offset = vec_2(0, 13)
 tt.unit.mod_offset = vec_2(adx(28), ady(23))
+--#endregion
+
+--#region
 tt = RT("enemy_whitewolf", "enemy")
 
 AC(tt, "melee", "dodge")
@@ -757,6 +830,9 @@ tt.unit.hit_offset = vec_2(0, 13)
 tt.unit.mod_offset = vec_2(adx(32), ady(32))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_yeti", "enemy")
 
 AC(tt, "melee")
@@ -799,6 +875,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 24)
 tt.unit.mod_offset = vec_2(adx(47), ady(35))
 tt.unit.size = UNIT_SIZE_LARGE
+--#endregion
+
+--#region
 tt = RT("enemy_forest_troll", "enemy")
 
 AC(tt, "melee", "auras")
@@ -846,6 +925,9 @@ tt.unit.marker_offset = vec_2(1, 2)
 tt.unit.mod_offset = vec_2(adx(78), ady(45))
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_THORN, F_POISON, F_STUN, F_FREEZE)
+--#endregion
+
+--#region
 tt = RT("enemy_orc_armored", "enemy")
 
 AC(tt, "melee")
@@ -886,10 +968,16 @@ tt.health.on_damage = function(this, store, damage)
 
 	return true
 end
+--#endregion
+
+--#region
 tt = RT("mod_orc_blood", "mod_blood")
 tt.dps.damage_max = 5
 tt.dps.damage_min = 5
 tt.dps.damage_every = 0.5
+--#endregion
+
+--#region
 tt = RT("enemy_orc_armored_mad", "enemy_orc_armored")
 tt.motion.max_speed = 1.1 * FPS
 tt.melee.attacks[1].mod = "mod_orc_blood"
@@ -904,6 +992,9 @@ tt.health.on_damage = function(this, store, damage)
 
 	return true
 end
+--#endregion
+
+--#region
 tt = RT("enemy_orc_rider", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -941,6 +1032,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(31), ady(29))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_troll_axe_thrower", "enemy")
 
 AC(tt, "melee", "ranged", "auras")
@@ -983,6 +1077,9 @@ tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(29), ady(21))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_raider", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -1023,6 +1120,9 @@ tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(43), ady(34))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_pillager", "enemy")
 
 AC(tt, "melee")
@@ -1061,6 +1161,9 @@ tt.unit.hit_offset = vec_2(0, 30)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(75), ady(47))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_troll_brute", "enemy")
 
 AC(tt, "melee", "auras")
@@ -1105,6 +1208,9 @@ tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 14)
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_troll_chieftain", "enemy")
 
 AC(tt, "melee", "auras", "timed_attacks")
@@ -1153,6 +1259,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.mod_offset = vec_2(adx(37), ady(18))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_goblin_zapper", "enemy")
 
 AC(tt, "melee", "ranged", "death_spawns")
@@ -1193,6 +1302,9 @@ tt.unit.hit_offset = vec_2(0, 13)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(26), ady(22))
 tt.unit.show_blood_pool = false
+--#endregion
+
+--#region
 tt = RT("enemy_demon", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -1229,6 +1341,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.mod_offset = vec_2(adx(22), ady(19))
 tt.unit.show_blood_pool = false
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_demon_mage", "enemy")
 
 AC(tt, "melee", "death_spawns", "timed_attacks")
@@ -1280,6 +1395,9 @@ tt.unit.mod_offset = vec_2(adx(30), ady(20))
 tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_demon_wolf", "enemy")
 
 AC(tt, "melee", "death_spawns", "dodge")
@@ -1322,6 +1440,9 @@ tt.unit.mod_offset = vec_2(adx(30), ady(20))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_demon_imp", "enemy")
 anchor_y = 0
 anchor_x = 0.5
@@ -1355,6 +1476,9 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_THORN, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_lava_elemental", "enemy")
 
 AC(tt, "melee")
@@ -1399,6 +1523,9 @@ tt.unit.hit_offset = vec_2(0, 24)
 tt.unit.mod_offset = vec_2(adx(53), ady(38))
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_POISON, F_BURN)
+--#endregion
+
+--#region
 tt = RT("enemy_sarelgaz_small", "enemy")
 
 AC(tt, "melee")
@@ -1434,6 +1561,9 @@ tt.unit.hit_offset = vec_2(0, 23)
 tt.unit.mod_offset = vec_2(adx(45), ady(35))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POISON, F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_rotten_lesser", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -1467,6 +1597,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.show_blood_pool = false
+--#endregion
+
+--#region
 tt = RT("enemy_swamp_thing", "enemy")
 
 AC(tt, "melee", "ranged", "auras")
@@ -1517,6 +1650,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 30)
 tt.unit.mod_offset = vec_2(0, 24)
 tt.unit.size = UNIT_SIZE_LARGE
+--#endregion
+
+--#region
 tt = RT("enemy_spider_rotten", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -1561,8 +1697,14 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(40), ady(28))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POISON, F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("mod_spider_rotten_poison", "mod_poison")
 tt.dps.damage_every = 0.5
+--#endregion
+
+--#region
 tt = RT("enemy_spider_rotten_tiny", "enemy")
 
 AC(tt, "melee")
@@ -1595,8 +1737,14 @@ tt.unit.marker_offset = vec_2(0, ady(5))
 tt.unit.mod_offset = vec_2(adx(1), ady(14))
 tt.unit.mod_offset = vec_2(adx(18), ady(13))
 tt.vis.bans = bor(F_POISON, F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("mod_spider_rotten_tiny_poison", "mod_poison")
 tt.dps.damage_every = 1
+--#endregion
+
+--#region
 tt = RT("enemy_rotten_tree", "enemy")
 
 AC(tt, "melee")
@@ -1631,6 +1779,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.unit.show_blood_pool = false
+--#endregion
+
+--#region
 tt = RT("enemy_giant_rat", "enemy")
 
 AC(tt, "melee")
@@ -1663,6 +1814,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 13)
 tt.vis.bans = F_SKELETON
+--#endregion
+
+--#region
 tt = RT("enemy_wererat", "enemy")
 
 AC(tt, "melee")
@@ -1696,6 +1850,9 @@ tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.marker_offset = vec_2(0, 2)
 tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_skeleton", "enemy")
 
 AC(tt, "melee")
@@ -1725,6 +1882,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.mod_offset = vec_2(adx(25), ady(17))
 tt.vis.bans = bor(F_SKELETON, F_POISON, F_POLYMORPH, F_BLOOD)
 tt.unit.show_blood_pool = false
+--#endregion
+
+--#region
 tt = RT("enemy_skeleton_big", "enemy")
 
 AC(tt, "melee", "auras")
@@ -1758,6 +1918,9 @@ tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.mod_offset = vec_2(adx(30), ady(22))
 tt.vis.bans = bor(F_SKELETON, F_POISON, F_POLYMORPH, F_BLOOD)
 tt.unit.show_blood_pool = false
+--#endregion
+
+--#region
 tt = RT("aura_skeleton_big", "aura")
 
 AC(tt, "render", "tween")
@@ -1792,6 +1955,9 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
+--#endregion
+
+--#region
 tt = RT("mod_skeleton_big", "modifier")
 
 AC(tt, "render")
@@ -1808,6 +1974,9 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "CB_DeathKnight_buffed"
 tt.render.sprites[1].scale = vec_2(0.5, 0.5)
 tt.health_damage_factor_dec = 0.15
+--#endregion
+
+--#region
 tt = RT("enemy_zombie", "enemy")
 
 AC(tt, "melee")
@@ -1840,6 +2009,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(adx(23), ady(20))
 tt.vis.bans = bor(F_SKELETON, F_POISON, F_POLYMORPH)
 tt.unit.show_blood_pool = false
+--#endregion
+
+--#region
 tt = RT("enemy_demon_flareon", "enemy")
 
 AC(tt, "melee", "ranged", "death_spawns")
@@ -1881,6 +2053,9 @@ tt.unit.mod_offset = vec_2(0, 12)
 tt.unit.show_blood_pool = false
 tt.unit.disintegrate_when_silenced_death = true
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_demon_legion", "enemy")
 
 AC(tt, "melee", "timed_attacks", "death_spawns")
@@ -1931,6 +2106,9 @@ tt.unit.mod_offset = vec_2(0, 12)
 tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_demon_gulaemon", "enemy")
 
 AC(tt, "melee", "timed_actions", "death_spawns")
@@ -1992,6 +2170,9 @@ tt.unit.mod_offset = vec_2(0, 20)
 tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_necromancer", "enemy")
 
 AC(tt, "melee", "ranged", "timed_actions")
@@ -2044,6 +2225,9 @@ tt.timed_actions.list[1].summon_offsets = {{2, 0, 0}, {3, 0, 0}, {1, 3, 8}, {2, 
 tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 15)
 tt.unit.mod_offset = vec_2(adx(23), ady(17))
+--#endregion
+
+--#region
 tt = RT("enemy_zombiemancer", "enemy")
 
 AC(tt, "melee", "ranged", "timed_actions")
@@ -2097,7 +2281,13 @@ tt.timed_actions.list[2].cooldown = 16
 tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 15)
 tt.unit.mod_offset = vec_2(adx(23), ady(17))
+--#endregion
+
+--#region
 tt = RT("enemy_skeleton_blackburn", "enemy_skeleton")
+--#endregion
+
+--#region
 tt = RT("enemy_halloween_zombie", "enemy")
 
 AC(tt, "melee", "moon")
@@ -2138,8 +2328,17 @@ tt.unit.mod_offset = vec_2(0, 12)
 tt.sound_events.death = "DeathSkeleton"
 tt.sound_events.insert = "HWZombieAmbient"
 tt.vis.bans = bor(F_POISON)
+--#endregion
+
+--#region
 tt = RT("enemy_zombie_blackburn", "enemy_halloween_zombie")
+--#endregion
+
+--#region
 tt = RT("enemy_skeleton_warrior", "enemy_skeleton_big")
+--#endregion
+
+--#region
 tt = RT("enemy_demon_cerberus", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -2191,6 +2390,9 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_STUN, F_TELEPORT, F_THORN, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 tt.is_demon = true
+--#endregion
+
+--#region
 tt = RT("enemy_witch", "enemy")
 
 AC(tt, "ranged")
@@ -2234,6 +2436,9 @@ tt.unit.mod_offset = vec_2(0, 47)
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_THORN)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_spectral_knight", "enemy")
 
 AC(tt, "melee", "auras")
@@ -2280,6 +2485,9 @@ tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_THORN)
 tt.vis.flags = bor(F_ENEMY)
+--#endregion
+
+--#region
 tt = RT("aura_spectral_knight", "aura")
 
 AC(tt, "render", "tween")
@@ -2313,6 +2521,9 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
+--#endregion
+
+--#region
 tt = RT("mod_spectral_knight", "modifier")
 
 AC(tt, "render")
@@ -2332,8 +2543,14 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "CB_DeathKnight_buffed"
+--#endregion
+
+--#region
 tt = RT("enemy_spectral_knight_spawn", "enemy_spectral_knight")
 tt.enemy.gold = 0
+--#endregion
+
+--#region
 tt = RT("enemy_fallen_knight", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -2373,6 +2590,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 19)
 tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_troll_skater", "enemy")
 
 AC(tt, "melee", "auras")
@@ -2410,6 +2630,9 @@ tt.skate = {
 	prefix = "enemy_troll",
 	walk_angles = {"skateRightLeft", "skateUp", "skateDown"}
 }
+--#endregion
+
+--#region
 tt = RT("abomination_explosion_aura", "aura")
 tt.main_script.update = scripts.abomination_explosion_aura.update
 tt.sound_events.insert = "HWAbominationExplosion"
@@ -2418,8 +2641,14 @@ tt.aura.damage_max = 250
 tt.aura.damage_type = DAMAGE_EXPLOSION
 tt.aura.radius = 100
 tt.aura.hit_time = fts(10)
+--#endregion
+
+--#region
 tt = RT("werewolf_regen_aura", "aura")
 tt.main_script.update = scripts.werewolf_regen_aura.update
+--#endregion
+
+--#region
 tt = RT("mod_lycanthropy", "modifier")
 
 AC(tt, "moon")
@@ -2434,6 +2663,9 @@ tt.extra_health = 700
 tt.modifier.vis_flags = bor(F_MOD, F_LYCAN)
 tt.modifier.vis_bans = bor(F_HERO)
 tt.sound_events.transform = "HWWerewolfTransformation"
+--#endregion
+
+--#region
 tt = RT("enemy_abomination", "enemy")
 
 AC(tt, "melee", "moon", "death_spawns", "auras")
@@ -2482,6 +2714,9 @@ tt.unit.hide_after_death = true
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = F_POISON
 tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
+--#endregion
+
+--#region
 tt = RT("aura_abomination", "aura")
 
 AC(tt, "render", "tween")
@@ -2515,11 +2750,17 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
+--#endregion
+
+--#region
 tt = RT("mod_abomination", "mod_blood")
 tt.dps.damage_max = -2
 tt.dps.damage_min = -2
 tt.dps.damage_every = 1
 tt.max_times_applied = 1
+--#endregion
+
+--#region
 tt = RT("enemy_werewolf", "enemy")
 
 AC(tt, "melee", "moon", "auras", "regen")
@@ -2557,6 +2798,9 @@ tt.unit.blood_color = BLOOD_RED
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 14)
+--#endregion
+
+--#region
 tt = RT("enemy_lycan", "enemy")
 
 AC(tt, "melee", "moon", "auras")
@@ -2592,6 +2836,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 14)
 tt.sound_events.death = nil
 tt.lycan_trigger_factor = 0.25
+--#endregion
+
+--#region
 tt = RT("enemy_lycan_werewolf", "enemy")
 
 AC(tt, "melee", "moon", "auras", "regen")
@@ -2635,6 +2882,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.insert = "HWAlphaWolf"
+--#endregion
+
+--#region
 tt = RT("enemy_lycan_werewolf_phantom", "enemy")
 
 AC(tt, "melee", "moon", "auras", "regen")
@@ -2684,7 +2934,10 @@ tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.insert = "HWAlphaWolf"
 -- -- unknown
--- tt = RT("enemy_hobgoblin", "enemy")
+-- --#endregion
+
+--#region
+tt = RT("enemy_hobgoblin", "enemy")
 -- AC(tt, "melee", "death_spawns")
 -- anchor_y = 0.17532467532467533
 -- anchor_x = 0.5
@@ -2729,6 +2982,9 @@ tt.sound_events.insert = "HWAlphaWolf"
 -- tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
 -- tt.vis.flags = bor(F_ENEMY, F_BOSS)
 -- kr2
+--#endregion
+
+--#region
 tt = RT("enemy_bouncer", "enemy")
 
 AC(tt, "melee")
@@ -2755,6 +3011,9 @@ tt.render.sprites[1].prefix = "enemy_desertthug"
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(8))
 tt.unit.mod_offset = vec_2(0, ady(20))
+--#endregion
+
+--#region
 tt = RT("enemy_desert_raider", "enemy")
 
 AC(tt, "melee")
@@ -2781,6 +3040,9 @@ tt.render.sprites[1].prefix = "enemy_desertraider"
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(9))
 tt.unit.mod_offset = vec_2(0, ady(21))
+--#endregion
+
+--#region
 tt = RT("enemy_desert_wolf_small", "enemy")
 
 AC(tt, "melee", "dodge")
@@ -2816,6 +3078,9 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
 tt.sound_events.death = "DeathPuff"
 tt.sound_events.death_by_explosion = "DeathPuff"
+--#endregion
+
+--#region
 tt = RT("enemy_desert_wolf", "enemy")
 
 AC(tt, "melee", "dodge")
@@ -2850,6 +3115,9 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
 tt.sound_events.death = "DeathPuff"
 tt.sound_events.death_by_explosion = "DeathPuff"
+--#endregion
+
+--#region
 tt = RT("enemy_immortal", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -2884,6 +3152,9 @@ tt.unit.marker_offset = vec_2(0, ady(10))
 tt.unit.mod_offset = vec_2(0, ady(28))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_fallen", "enemy")
 
 AC(tt, "melee")
@@ -2917,6 +3188,9 @@ tt.unit.mod_offset = vec_2(0, ady(21))
 tt.unit.show_blood_pool = false
 tt.unit.blood_color = BLOOD_GRAY
 tt.vis.bans = bor(F_SKELETON, F_POLYMORPH)
+--#endregion
+
+--#region
 tt = RT("enemy_desert_archer", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -2952,6 +3226,9 @@ tt.ranged.attacks[1].max_range = 147.20000000000002
 tt.ranged.attacks[1].min_range = 25.6
 tt.ranged.attacks[1].animation = "rangedAttack"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(4, 12)}
+--#endregion
+
+--#region
 tt = RT("arrow_desert_archer", "arrow")
 
 AC(tt, "endless")
@@ -2961,6 +3238,9 @@ tt.bullet.damage_max = 30
 tt.bullet.pop = nil
 tt.bullet.predict_target_pos = false
 tt.endless.factor_map = {{"enemy_desert_archer.rangedDamage", "bullet.damage_min", true}, {"enemy_desert_archer.rangedDamage", "bullet.damage_max", true}}
+--#endregion
+
+--#region
 tt = RT("enemy_scorpion", "enemy")
 
 AC(tt, "melee")
@@ -3001,6 +3281,9 @@ tt.unit.marker_offset = vec_2(0, ady(8))
 tt.unit.mod_offset = vec_2(0, ady(20))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_tremor", "enemy")
 
 AC(tt, "melee")
@@ -3030,6 +3313,9 @@ tt.unit.mod_offset = vec_2(1, ady(30))
 tt.vis.bans_above_surface = bor(F_SKELETON)
 tt.vis.bans_below_surface = bor(F_RANGED, F_SKELETON, F_MOD, F_AREA, F_POLYMORPH)
 tt.vis.bans = tt.vis.bans_below_surface
+--#endregion
+
+--#region
 tt = RT("enemy_wasp", "enemy")
 anchor_y = 0
 image_y = 66
@@ -3061,6 +3347,9 @@ tt.unit.mod_offset = vec_2(0, ady(47))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_wasp_queen", "enemy")
 
 AC(tt, "death_spawns")
@@ -3101,6 +3390,9 @@ tt.unit.mod_offset = vec_2(0, ady(60))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_executioner", "enemy")
 
 AC(tt, "melee")
@@ -3144,6 +3436,9 @@ tt.unit.pop_offset = vec_2(0, 20)
 tt.unit.marker_offset = vec_2(0, ady(16))
 tt.unit.mod_offset = vec_2(0, ady(39))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_munra", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks", "count_group")
@@ -3205,6 +3500,9 @@ tt.unit.mod_offset = vec_2(0, ady(20))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("mod_munra_heal", "modifier")
 
 AC(tt, "hps", "render", "endless")
@@ -3219,6 +3517,9 @@ tt.render.sprites[1].name = "small"
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 tt.endless.factor_map = {{"enemy_munra.healPoints", "hps.heal_min", true}, {"enemy_munra.healPoints", "hps.heal_max", true}}
+--#endregion
+
+--#region
 tt = RT("bolt_munra", "bolt_enemy")
 
 AC(tt, "endless")
@@ -3231,8 +3532,14 @@ tt.bullet.max_speed = 390
 tt.bullet.hit_fx = "fx_bolt_munra_hit"
 tt.bullet.max_track_distance = 50
 tt.endless.factor_map = {{"enemy_munra.rangedDamage", "bullet.damage_min", true}, {"enemy_munra.rangedDamage", "bullet.damage_max", true}}
+--#endregion
+
+--#region
 tt = RT("fx_bolt_munra_hit", "fx")
 tt.render.sprites[1].name = "bolt_munra_hit"
+--#endregion
+
+--#region
 tt = RT("munra_sarcophagus", "decal_scripted")
 
 AC(tt, "render", "spawner")
@@ -3251,6 +3558,9 @@ tt.spawner.forced_waypoint_offset = vec_2(-25, 1)
 tt.spawner.node_offset = 5
 tt.spawner.pos_offset = vec_2(0, 1)
 tt.spawner.random_subpath = false
+--#endregion
+
+--#region
 tt = RT("enemy_efreeti_small", "enemy")
 
 AC(tt, "melee")
@@ -3285,6 +3595,9 @@ tt.unit.mod_offset = vec_2(0, ady(24))
 tt.unit.show_blood_pool = false
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.death = "DeathPuff"
+--#endregion
+
+--#region
 tt = RT("enemy_cannibal", "enemy")
 
 AC(tt, "melee", "water")
@@ -3320,6 +3633,9 @@ tt.unit.mod_offset = vec_2(0, ady(23))
 tt.water.hit_offset = vec_2(0, 5)
 tt.water.mod_offset = vec_2(0, 5)
 tt.water.health_bar_hidden = true
+--#endregion
+
+--#region
 tt = RT("enemy_cannibal_volcano_normal", "enemy")
 
 AC(tt, "melee", "tween")
@@ -3355,6 +3671,9 @@ tt.unit.marker_offset = vec_2(0, ady(16))
 tt.unit.mod_offset = vec_2(0, ady(36))
 tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MOCKING)
 tt.vis.bans = bor(F_SKELETON, F_UNDEAD)
+--#endregion
+
+--#region
 tt = RT("enemy_hunter", "enemy")
 
 AC(tt, "melee", "ranged", "water")
@@ -3392,6 +3711,9 @@ tt.unit.mod_offset = vec_2(0, ady(24))
 tt.water.hit_offset = vec_2(0, 5)
 tt.water.mod_offset = vec_2(0, 5)
 tt.water.health_bar_hidden = true
+--#endregion
+
+--#region
 tt = RT("dart", "arrow")
 tt.bullet.miss_decal = "DartDecal"
 tt.bullet.flight_time = fts(17)
@@ -3402,10 +3724,16 @@ tt.bullet.predict_target_pos = false
 tt.render.sprites[1].name = "Dart"
 tt.render.sprites[1].animated = false
 tt.pop = nil
+--#endregion
+
+--#region
 tt = RT("mod_dart_poison", "mod_poison")
 tt.modifier.duration = 4
 tt.dps.damage_min = 3
 tt.dps.damage_max = 3
+--#endregion
+
+--#region
 tt = RT("enemy_shaman_priest", "enemy")
 
 AC(tt, "melee", "auras")
@@ -3436,6 +3764,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(11))
 tt.unit.mod_offset = vec_2(0, ady(26))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("shaman_priest_aura", "aura")
 
 AC(tt, "render")
@@ -3454,6 +3785,9 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.render.sprites[1].name = "shaman_priest_healing"
 tt.render.sprites[1].loop = true
+--#endregion
+
+--#region
 tt = RT("mod_shaman_priest_heal", "modifier")
 
 AC(tt, "hps", "render")
@@ -3468,6 +3802,9 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
+--#endregion
+
+--#region
 tt = RT("enemy_shaman_magic", "enemy")
 
 AC(tt, "melee", "auras")
@@ -3498,6 +3835,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(11))
 tt.unit.mod_offset = vec_2(0, ady(26))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("shaman_magic_aura", "aura")
 
 AC(tt, "render")
@@ -3516,6 +3856,9 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].name = "shaman_magic_aura"
+--#endregion
+
+--#region
 tt = RT("mod_shaman_magic_armor", "modifier")
 
 AC(tt, "render", "armor_buff")
@@ -3529,6 +3872,9 @@ tt.main_script.remove = scripts.mod_armor_buff.remove
 tt.main_script.update = scripts.mod_armor_buff.update
 tt.modifier.duration = 1.5
 tt.render.sprites[1].name = "shaman_magic_mod"
+--#endregion
+
+--#region
 tt = RT("enemy_shaman_rage", "enemy")
 
 AC(tt, "melee", "auras")
@@ -3559,6 +3905,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(11))
 tt.unit.mod_offset = vec_2(0, ady(26))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("shaman_rage_aura", "aura")
 
 AC(tt, "render")
@@ -3578,6 +3927,9 @@ tt.main_script.update = scripts.aura_apply_mod.update
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].name = "shaman_magic_aura"
 tt.render.sprites[1].color = {255, 0, 255}
+--#endregion
+
+--#region
 tt = RT("mod_shaman_rage", "modifier")
 
 AC(tt, "render")
@@ -3595,6 +3947,9 @@ tt.modifier.vis_flags = bor(F_MOD)
 tt.modifier.use_mod_offset = false
 tt.render.sprites[1].name = "shaman_magic_mod"
 tt.render.sprites[1].color = {255, 0, 255}
+--#endregion
+
+--#region
 tt = RT("enemy_shaman_shield", "enemy")
 
 AC(tt, "melee", "auras")
@@ -3625,6 +3980,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(10))
 tt.unit.mod_offset = vec_2(0, ady(26))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("shaman_shield_aura", "aura")
 
 AC(tt, "render")
@@ -3643,6 +4001,9 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.render.sprites[1].name = "shaman_shield_aura"
 tt.render.sprites[1].loop = true
+--#endregion
+
+--#region
 tt = RT("mod_shaman_armor", "modifier")
 
 AC(tt, "render", "armor_buff")
@@ -3659,6 +4020,9 @@ tt.render.sprites[1].anchor.y = 0.15625
 tt.main_script.insert = scripts.mod_armor_buff.insert
 tt.main_script.remove = scripts.mod_armor_buff.remove
 tt.main_script.update = scripts.mod_armor_buff.update
+--#endregion
+
+--#region
 tt = RT("enemy_shaman_necro", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks")
@@ -3701,6 +4065,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(12))
 tt.unit.mod_offset = vec_2(0, ady(26))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("bolt_shaman_necro", "bolt_enemy")
 tt.render.sprites[1].prefix = "bolt_shaman_necro"
 tt.render.sprites[1].anchor = vec_2(0.625, 0.5)
@@ -3711,8 +4078,14 @@ tt.bullet.max_speed = 450
 tt.bullet.max_track_distance = 50
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.hit_fx = "fx_bolt_shaman_necro_hit"
+--#endregion
+
+--#region
 tt = RT("fx_bolt_shaman_necro_hit", "fx")
 tt.render.sprites[1].name = "bolt_shaman_necro_hit"
+--#endregion
+
+--#region
 tt = RT("enemy_cannibal_zombie", "enemy")
 
 AC(tt, "melee")
@@ -3742,6 +4115,9 @@ tt.unit.marker_offset = vec_2(0, ady(10))
 tt.unit.mod_offset = vec_2(0, ady(21))
 tt.sound_events.insert = "CanibalZombie"
 tt.vis.bans = F_POLYMORPH
+--#endregion
+
+--#region
 tt = RT("enemy_jungle_spider_tiny", "enemy")
 
 AC(tt, "melee")
@@ -3776,6 +4152,9 @@ tt.sound_events.death_args = {
 	gain = 0.2
 }
 tt.vis.bans = bor(F_SKELETON, F_POISON)
+--#endregion
+
+--#region
 tt = RT("enemy_jungle_spider_small", "enemy")
 
 AC(tt, "melee")
@@ -3811,6 +4190,9 @@ tt.sound_events.death_args = {
 	gain = 0.3
 }
 tt.vis.bans = bor(F_SKELETON, F_POISON)
+--#endregion
+
+--#region
 tt = RT("enemy_jungle_spider_big", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -3849,6 +4231,9 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.marker_offset = vec_2(0, ady(6))
 tt.unit.mod_offset = vec_2(0, ady(17))
 tt.vis.bans = bor(F_SKELETON, F_POISON)
+--#endregion
+
+--#region
 tt = RT("jungle_spider_egg", "decal_scripted")
 
 AC(tt, "render", "spawner", "tween")
@@ -3868,6 +4253,9 @@ tt.spawner.animation_start = "start"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("enemy_gorilla", "enemy")
 
 AC(tt, "melee")
@@ -3910,6 +4298,9 @@ tt.unit.mod_offset = vec_2(0, ady(36))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_EAT)
 tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
+--#endregion
+
+--#region
 tt = RT("alien_egg", "decal_scripted")
 
 AC(tt, "spawner", "sound_events")
@@ -3924,6 +4315,9 @@ tt.spawner.entity = "enemy_alien_breeder"
 tt.spawner.random_subpath = true
 tt.spawner.eternal = true
 tt.spawner.ni = 1
+--#endregion
+
+--#region
 tt = RT("enemy_alien_breeder", "enemy")
 
 AC(tt, "track_kills", "tween")
@@ -3973,6 +4367,9 @@ tt.facehug_offsets.hero_monk = vec_2(0, 2)
 tt.facehug_offsets.hero_monkey_god = vec_2(10, 5)
 tt.facehug_offsets.hero_vampiress = vec_2(0, 20)
 tt.facehug_offsets.hero_van_helsing = vec_2(1, 5)
+--#endregion
+
+--#region
 tt = RT("enemy_alien_reaper", "enemy")
 
 AC(tt, "melee")
@@ -4005,6 +4402,9 @@ tt.unit.mod_offset = vec_2(0, ady(18))
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.sound_events.death = "DeathEplosion"
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_savage_bird", "enemy")
 anchor_y = 0
 image_y = 112
@@ -4033,6 +4433,9 @@ tt.unit.mod_offset = vec_2(0, ady(60))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_savage_bird_rider", "enemy")
 
 AC(tt, "ranged", "death_spawns")
@@ -4078,6 +4481,9 @@ tt.unit.mod_offset = vec_2(0, ady(60))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("savage_bird_rider_drop_dead", "decal")
 
 AC(tt, "enemy", "health", "vis", "unit", "heading", "nav_path", "motion", "sound_events")
@@ -4090,6 +4496,9 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor.y = 0
 tt.enemy.necromancer_offset = vec_2(-25, 14)
 tt.sound_events.insert = "DeathHuman"
+--#endregion
+
+--#region
 tt = RT("savage_bird_spear", "arrow")
 tt.bullet.miss_decal = "decal_spear"
 tt.bullet.flight_time = fts(18)
@@ -4098,6 +4507,9 @@ tt.bullet.damage_min = 40
 tt.bullet.predict_target_pos = false
 tt.render.sprites[1].name = "spear"
 tt.render.sprites[1].animated = false
+--#endregion
+
+--#region
 tt = RT("enemy_broodguard", "enemy")
 
 AC(tt, "melee", "cliff", "auras")
@@ -4130,12 +4542,18 @@ tt.unit.marker_offset = vec_2(0, ady(9))
 tt.unit.mod_offset = vec_2(0, ady(20))
 tt.damage_sprint_factor = 0.78125
 tt.vis.bans = F_POLYMORPH
+--#endregion
+
+--#region
 tt = RT("aura_damage_sprint", "aura")
 tt.aura.duration = -1
 tt.aura.track_source = true
 tt.main_script.update = scripts.aura_damage_sprint.update
 tt.main_script.insert = scripts.aura_damage_sprint.insert
 tt.main_script.remove = scripts.aura_damage_sprint.remove
+--#endregion
+
+--#region
 tt = RT("enemy_blazefang", "enemy")
 
 AC(tt, "melee", "ranged", "death_spawns")
@@ -4192,6 +4610,9 @@ tt.unit.can_explode = false
 tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, ady(10))
 tt.unit.mod_offset = vec_2(0, ady(30))
+--#endregion
+
+--#region
 tt = RT("blazefang_explosion", "bullet")
 tt.render = nil
 tt.sound_events = nil
@@ -4199,6 +4620,9 @@ tt.main_script.update = scripts.blazefang_explosion.update
 tt.bullet.damage_min = 100
 tt.bullet.damage_max = 100
 tt.bullet.damage_radius = 76.8
+--#endregion
+
+--#region
 tt = RT("bolt_blazefang", "bolt_enemy")
 tt.render.sprites[1].prefix = "bolt_blazefang"
 tt.render.sprites[1].anchor = vec_2(0.53, 0.58)
@@ -4211,10 +4635,19 @@ tt.bullet.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_TRUE)
 tt.bullet.hit_fx = "fx_bolt_blazefang_hit"
 tt.bullet.max_track_distance = 50
 tt.sound_events.insert = "SaurianBlazefangAttack"
+--#endregion
+
+--#region
 tt = RT("bolt_blazefang_instakill", "bolt_blazefang")
 tt.bullet.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL)
+--#endregion
+
+--#region
 tt = RT("fx_bolt_blazefang_hit", "fx")
 tt.render.sprites[1].name = "bolt_blazefang_hit"
+--#endregion
+
+--#region
 tt = RT("enemy_brute", "enemy")
 
 AC(tt, "melee")
@@ -4261,6 +4694,9 @@ tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, ady(15))
 tt.unit.mod_offset = vec_2(0, ady(30))
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_myrmidon", "enemy")
 
 AC(tt, "melee")
@@ -4300,9 +4736,15 @@ tt.unit.blood_color = BLOOD_VIOLET
 tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, ady(12))
 tt.unit.mod_offset = vec_2(0, ady(30))
+--#endregion
+
+--#region
 tt = RT("mod_myrmidon_lifesteal", "modifier")
 tt.heal_hp = 125
 tt.main_script.insert = scripts.mod_simple_lifesteal.insert
+--#endregion
+
+--#region
 tt = RT("enemy_nightscale", "enemy")
 
 AC(tt, "melee", "cliff")
@@ -4338,6 +4780,9 @@ tt.hidden.duration = 8
 tt.hidden.max_times = 1
 tt.hidden.nodeslimit = 25
 tt.hidden.ts = 0
+--#endregion
+
+--#region
 tt = RT("enemy_darter", "enemy")
 
 AC(tt, "melee", "cliff")
@@ -4376,9 +4821,15 @@ tt.blink.nodes_offset_max = 25
 tt.blink.travel_time = fts(11)
 tt.blink.fx = "fx_darter_blink"
 tt.blink.ts = 0
+--#endregion
+
+--#region
 tt = RT("fx_darter_blink", "fx")
 tt.render.sprites[1].name = "darter_blink"
 tt.render.sprites[1].anchor.y = 0.22
+--#endregion
+
+--#region
 tt = RT("enemy_savant", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks")
@@ -4423,6 +4874,9 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(9))
 tt.unit.mod_offset = vec_2(0, ady(22))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("savant_portal", "decal_scripted")
 
 AC(tt, "render", "spawner", "sound_events")
@@ -4446,6 +4900,9 @@ tt.portal.finished = false
 tt.sound_events.insert = "SaurianSavantOpenPortal"
 tt.sound_events.spawn = "SaurianSavantTeleporth"
 tt.sound_events.loop = "SaurianSavantPortalLoop"
+--#endregion
+
+--#region
 tt = RT("savant_ray", "bullet")
 tt.image_width = 115
 tt.main_script.update = scripts.ray_enemy.update
@@ -4458,6 +4915,9 @@ tt.bullet.damage_max = 160
 tt.bullet.hit_time = fts(3)
 tt.bullet.max_track_distance = 50
 tt.sound_events.insert = "SaurianSavantAttack"
+--#endregion
+
+--#region
 tt = RT("enemy_sniper", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -4507,6 +4967,9 @@ tt.ranged.attacks[1].min_range = 51
 tt.ranged.attacks[1].range_var = 100
 tt.ranged.attacks[1].animations = {"ranged_start", "ranged_loop", "ranged_end"}
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(14, ady(21)), vec_2(10, ady(34)), vec_2(8, ady(10))}
+--#endregion
+
+--#region
 tt = RT("bolt_sniper", "bolt_enemy")
 tt.render.sprites[1].prefix = "bolt_sniper"
 tt.bullet.align_with_trajectory = true
@@ -4516,6 +4979,9 @@ tt.bullet.max_speed = 30 * FPS
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.max_track_distance = 50
 tt.sound_events.insert = "SaurianSniperBullet"
+--#endregion
+
+--#region
 tt = RT("enemy_razorwing", "enemy")
 
 AC(tt, "cliff")
@@ -4551,6 +5017,9 @@ tt.unit.mod_offset = vec_2(0, ady(56))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_quetzal", "enemy")
 
 AC(tt, "timed_attacks")
@@ -4589,6 +5058,9 @@ tt.unit.mod_offset = vec_2(0, ady(70))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("quetzal_egg", "decal_scripted")
 
 AC(tt, "render", "spawner", "tween")
@@ -4607,6 +5079,9 @@ tt.spawner.keep_gold = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("enemy_redspine", "enemy")
 
 AC(tt, "melee", "ranged", "water")
@@ -4650,6 +5125,9 @@ tt.water.health_bar_offset = vec_2(0, tt.health_bar.offset.y - 20)
 tt.water.hit_offset = vec_2(0, 5)
 tt.water.mod_offset = vec_2(0, 12)
 tt.water.speed_factor = 1.5
+--#endregion
+
+--#region
 tt = RT("harpoon_redspine", "arrow")
 tt.render.sprites[1].name = "Redspine_spear"
 tt.render.sprites[1].animated = false
@@ -4658,6 +5136,9 @@ tt.bullet.damage_max = 130
 tt.bullet.flight_time = fts(10)
 tt.bullet.miss_decal = "Redspine_spear_decal"
 tt.bullet.pop = nil
+--#endregion
+
+--#region
 tt = RT("enemy_bluegale", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks", "water")
@@ -4715,6 +5196,9 @@ tt.timed_attacks.list[1].node_random_max = 30
 tt.timed_attacks.list[1].node_random_min = 15
 tt.timed_attacks.list[1].nodes_limit = 40
 tt.timed_attacks.list[1].shoot_time = fts(14)
+--#endregion
+
+--#region
 tt = RT("ray_bluegale", "bullet")
 tt.image_width = 120
 tt.main_script.update = scripts.ray_enemy.update
@@ -4727,6 +5211,9 @@ tt.bullet.damage_max = 45
 tt.bullet.max_track_distance = 50
 tt.bullet.hit_time = fts(5)
 tt.sound_events.insert = "SaurianSavantAttack"
+--#endregion
+
+--#region
 tt = RT("bluegale_clouds_aura", "aura")
 
 AC(tt, "sound_events")
@@ -4738,6 +5225,9 @@ tt.clouds_min_radius = 35
 tt.clouds_max_radius = 55
 tt.clouds_count = 6
 tt.sound_events.insert = "RTBluegaleStormSummon"
+--#endregion
+
+--#region
 tt = RT("decal_bluegale_cloud_dark", "decal_tween")
 
 AC(tt, "ui")
@@ -4753,6 +5243,9 @@ tt.tween.props[2].loop = true
 tt.render.sprites[1].name = "Bluegale_stormCloud_0002"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+--#endregion
+
+--#region
 tt = RT("decal_bluegale_cloud_bright", "decal_tween")
 tt.tween.remove = true
 tt.tween.props[1].name = "alpha"
@@ -4766,12 +5259,18 @@ tt.tween.props[3].name = "hidden"
 tt.render.sprites[1].name = "Bluegale_stormCloud_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+--#endregion
+
+--#region
 tt = RT("decal_bluegale_cloud_shadow", "decal_tween")
 tt.tween.remove = true
 tt.tween.props[1].name = "alpha"
 tt.render.sprites[1].name = "atomicBomb_shadow"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_SKY
+--#endregion
+
+--#region
 tt = RT("bluegale_heal_aura", "aura")
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
@@ -4781,6 +5280,9 @@ tt.aura.vis_flags = F_MOD
 tt.aura.cycle_time = 1
 tt.aura.duration = 10
 tt.aura.radius = 50
+--#endregion
+
+--#region
 tt = RT("bluegale_damage_aura", "aura")
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
@@ -4813,6 +5315,9 @@ mod_bluegale_heal.hps.heal_max = 15
 mod_bluegale_heal.hps.heal_every = 1
 mod_bluegale_heal.main_script.insert = scripts.mod_hps.insert
 mod_bluegale_heal.main_script.update = scripts.mod_hps.update
+--#endregion
+
+--#region
 tt = RT("enemy_bloodshell", "enemy")
 
 AC(tt, "melee", "water")
@@ -4853,6 +5358,9 @@ tt.water.hit_offset = vec_2(0, 7)
 tt.water.mod_offset = vec_2(0, ady(33))
 tt.water.speed_factor = 1.43
 tt.water.vis_bans = bor(F_BLOCK, F_SKELETON, F_DRILL)
+--#endregion
+
+--#region
 tt = RT("enemy_greenfin", "enemy")
 
 AC(tt, "melee", "water")
@@ -4892,6 +5400,9 @@ tt.water.health_bar_offset = vec_2(0, tt.health_bar.offset.y - 15)
 tt.water.hit_offset = vec_2(0, 5)
 tt.water.mod_offset = vec_2(2, ady(20))
 tt.water.speed_factor = 1.2
+--#endregion
+
+--#region
 tt = RT("mod_greenfin_net", "modifier")
 
 AC(tt, "render")
@@ -4925,6 +5436,9 @@ tt.modifier.custom_offsets.hero_wizard = vec_2(0, 29)
 tt.modifier.custom_offsets.soldier_death_rider = vec_2(0, 38)
 tt.modifier.custom_offsets.soldier_pirate_anchor = vec_2(0, 34)
 tt.modifier.custom_offsets.soldier_frankenstein = vec_2(0, 41)
+--#endregion
+
+--#region
 tt = RT("enemy_deviltide", "enemy_greenfin")
 tt.enemy.gold = 20
 tt.health.armor = 0.5
@@ -4938,6 +5452,9 @@ tt.motion.max_speed = 41.6
 tt.render.sprites[1].prefix = "enemy_deviltide"
 tt.sound_events.water_splash = "SpecialMermaid"
 tt.water.speed_factor = 1.15
+--#endregion
+
+--#region
 tt = RT("enemy_deviltide_shark", "enemy")
 anchor_y = 0.19230769230769232
 image_y = 104
@@ -4965,6 +5482,9 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.vis.flags = bor(tt.vis.flags, F_WATER)
+--#endregion
+
+--#region
 tt = RT("enemy_blacksurge", "enemy")
 
 AC(tt, "melee", "timed_attacks", "water", "regen")
@@ -5033,6 +5553,9 @@ mod_blacksurge.render.sprites[1].prefix = "blacksurge_curse"
 mod_blacksurge.render.sprites[1].name = "start"
 mod_blacksurge.render.sprites[1].anchor.y = 0.24
 mod_blacksurge.render.sprites[1].draw_order = 10
+--#endregion
+
+--#region
 tt = RT("enemy_bat", "enemy")
 
 AC(tt, "moon", "auras")
@@ -5071,6 +5594,9 @@ tt.unit.mod_offset = vec_2(0, ady(68))
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_ghost", "enemy")
 
 AC(tt, "auras")
@@ -5105,10 +5631,16 @@ tt.sound_events.death = nil
 tt.sound_events.insert = "HWGhosts"
 tt.vis.flags = bor(tt.vis.flags, F_FLYING_FAKE)
 tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_DRILL, F_POISON, F_STUN, F_BLOCK, F_POLYMORPH)
+--#endregion
+
+--#region
 tt = RT("ghost_sound_aura", "aura")
 tt.loop_delay = fts(70)
 tt.sound_name = "HWGhosts"
 tt.main_script.update = scripts.loop_sound_aura.update
+--#endregion
+
+--#region
 tt = RT("enemy_ghoul", "enemy")
 
 AC(tt, "melee", "moon", "auras")
@@ -5147,6 +5679,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 15)
 tt.sound_events.insert = "HWZombieAmbient"
 tt.sound_events.cannibalize = "CanibalEating"
+--#endregion
+
+--#region
 tt = RT("enemy_phantom_warrior", "enemy")
 
 AC(tt, "melee", "auras")
@@ -5186,6 +5721,9 @@ tt.unit.mod_offset = vec_2(0, 21)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER, F_FLYING_FAKE)
 tt.vis.bans = bor(F_SKELETON, F_BLOOD, F_DRILL, F_POISON)
+--#endregion
+
+--#region
 tt = RT("phantom_warrior_aura", "aura")
 tt.aura.cycle_time = fts(3)
 tt.aura.duration = -1
@@ -5197,6 +5735,9 @@ tt.aura.damage_max = 3
 tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.hero_damage_factor = 0.3333333333333333
 tt.main_script.update = scripts.phantom_warrior_aura.update
+--#endregion
+
+--#region
 tt = RT("enemy_elvira", "enemy")
 
 AC(tt, "melee")
@@ -5236,6 +5777,9 @@ tt.unit.hit_offset = vec_2(0, 16)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.hide_after_death = true
+--#endregion
+
+--#region
 tt = RT("elvira_bat", "decal_scripted")
 
 AC(tt, "nav_path", "motion", "spawner")
@@ -5252,6 +5796,9 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = vec_2(0, 0)
 tt.payload = "enemy_elvira"
 tt.health_factor = 1
+--#endregion
+
+--#region
 tt = RT("mod_elvira_lifesteal", "modifier")
 
 AC(tt, "moon")
@@ -5261,6 +5808,9 @@ tt.damage = 150
 tt.main_script.insert = scripts.mod_elvira_lifesteal.insert
 tt.moon.heal_hp_factor = 2
 tt.moon.damage_factor = 1.5
+--#endregion
+
+--#region
 tt = RT("enemy_headless_horseman", "enemy")
 
 AC(tt, "melee", "ranged", "lifespan", "idle_flip", "auras")
@@ -5310,6 +5860,9 @@ tt.unit.mod_offset = vec_2(0, 35)
 tt.unit.hide_after_death = true
 tt.vis.flags = bor(F_ENEMY)
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("headless_horseman_pumpkin", "bomb")
 tt.bullet.damage_min = 50
 tt.bullet.damage_max = 70
@@ -5321,12 +5874,18 @@ tt.render.sprites[1].name = "HalloweenRider_bomb"
 tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
 tt.sound_events.insert = nil
+--#endregion
+
+--#region
 tt = RT("headless_horseman_spawner_aura", "aura")
 
 AC(tt, "spawner")
 
 tt.main_script.update = scripts.headless_horseman_spawner_aura.update
 tt.spawner.cycle_time = 10
+--#endregion
+
+--#region
 tt = RT("enemy_gunboat", "enemy")
 
 AC(tt, "attacks")
@@ -5373,6 +5932,9 @@ tt.unit.mod_offset = vec_2(0, 28)
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_STUN, F_BLOCK, F_DRILL, F_POISON, F_TWISTER, F_SKELETON, F_EAT)
 tt.sound_events.death_water = "RTGunboatDeath"
+--#endregion
+
+--#region
 tt = RT("bomb_gunboat", "bullet")
 tt.bullet.damage_max = 120
 tt.bullet.damage_min = 80
@@ -5394,6 +5956,9 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "waterCannon_proy"
 tt.sound_events.insert = "SpecialVolcanoLavaShoot"
 tt.sound_events.hit = "BombExplosionSound"
+--#endregion
+
+--#region
 tt = RT("enemy_gnoll_reaver", "enemy")
 
 AC(tt, "melee")
@@ -5420,6 +5985,9 @@ tt.render.sprites[1].prefix = "gnoll_reaver"
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(8))
 tt.unit.mod_offset = vec_2(0, ady(20))
+--#endregion
+
+--#region
 tt = RT("enemy_gnoll_burner", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -5452,6 +6020,9 @@ tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.size = UNIT_SIZE_SMALL
+--#endregion
+
+--#region
 tt = RT("enemy_gnoll_gnawer", "enemy")
 
 AC(tt, "melee", "auras")
@@ -5482,6 +6053,9 @@ tt.unit.hit_offset = vec_2(0, 22)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 19)
 tt.unit.size = UNIT_SIZE_MEDIUM
+--#endregion
+
+--#region
 tt = RT("enemy_gnoll_blighter", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks")
@@ -5524,6 +6098,9 @@ tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("enemy_hyena", "enemy")
 
 AC(tt, "melee")
@@ -5553,6 +6130,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 15)
 tt.coward_duration = 1.2
 tt.coward_speed_factor = 1.5
+--#endregion
+
+--#region
 tt = RT("enemy_ettin", "enemy")
 
 AC(tt, "melee", "auras", "endless")
@@ -5592,6 +6172,9 @@ tt.insane.damage_type = DAMAGE_TRUE
 tt.insane.stun_duration = 2
 tt.insane.hit_time = fts(28)
 tt.ui.click_rect = r(-25, -5, 50, 60)
+--#endregion
+
+--#region
 tt = RT("enemy_perython", "enemy")
 tt.info.enc_icon = 6
 tt.info.portrait = "kr3_info_portraits_enemies_0006"
@@ -5619,6 +6202,9 @@ tt.unit.size = UNIT_SIZE_SMALL
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_perython_gnoll_gnawer", "enemy_perython")
 
 AC(tt, "death_spawns")
@@ -5631,6 +6217,9 @@ tt.death_spawns.name = "enemy_gnoll_gnawer"
 tt.death_spawns.concurrent_with_death = false
 tt.main_script.update = scripts.enemy_perython_carrier.update
 tt.spawn_trigger_range = 100
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_elf_harasser", "enemy")
 
 AC(tt, "melee", "ranged", "dodge")
@@ -5681,6 +6270,9 @@ tt.shadow_shot.shoot_time = fts(14)
 tt.shadow_shot.bullet_start_offset = {vec_2(0, 27)}
 tt.shadow_shot.min_range = 0
 tt.shadow_shot.max_range = 200
+--#endregion
+
+--#region
 tt = RT("enemy_catapult", "enemy")
 
 AC(tt, "ranged")
@@ -5718,6 +6310,9 @@ tt.unit.marker_offset = vec_2(0, -5)
 tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_STUN, F_TELEPORT, F_DRILL, F_POISON, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
+--#endregion
+
+--#region
 tt = RT("rock_enemy_catapult", "bomb")
 tt.bullet.damage_bans = F_ENEMY
 tt.bullet.damage_flags = F_AREA
@@ -5733,6 +6328,9 @@ tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.enemy_bomb.update
 tt.render.sprites[1].name = "catapult_proy"
 tt.sound_events.insert = "TowerStoneDruidBoulderThrow"
+--#endregion
+
+--#region
 tt = RT("enemy_bandersnatch", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -5776,6 +6374,9 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans_rolling = bor(F_SKELETON, F_STUN, F_FREEZE)
 tt.vis.bans_standing = bor(F_SKELETON)
 tt.vis.bans = tt.vis.bans_standing
+--#endregion
+
+--#region
 tt = RT("enemy_boomshrooms", "enemy")
 
 AC(tt, "death_spawns")
@@ -5803,6 +6404,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_munchshrooms", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -5836,6 +6440,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_shroom_breeder", "enemy")
 
 AC(tt, "melee", "death_spawns", "timed_attacks")
@@ -5880,6 +6487,9 @@ tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_SKELETON)
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("enemy_gloomy", "enemy")
 
 AC(tt, "melee", "timed_attacks", "count_group")
@@ -5924,6 +6534,9 @@ tt.unit.mod_offset = vec_2(0, 37)
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
+--#endregion
+
+--#region
 tt = RT("enemy_redcap", "enemy")
 
 AC(tt, "melee")
@@ -5967,6 +6580,9 @@ tt.sound_events.death = "DeathHuman"
 tt.unit.hit_offset = vec_2(0, 10)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 12)
+--#endregion
+
+--#region
 tt = RT("enemy_satyr_cutthroat", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -5998,6 +6614,9 @@ tt.sound_events.death = "DeathHuman"
 tt.unit.hit_offset = vec_2(0, 15)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 14)
+--#endregion
+
+--#region
 tt = RT("enemy_satyr_hoplite", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -6036,6 +6655,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 20)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("satyr_hoplite_spawner")
 
 AC(tt, "pos", "spawner", "main_script")
@@ -6049,6 +6671,9 @@ tt.spawner.random_subpath = true
 tt.spawner.initial_spawn_animation = "raise"
 tt.spawner.check_node_valid = true
 tt.spawner.use_node_pos = true
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_avenger", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -6090,6 +6715,9 @@ tt.unit.hit_offset = vec_2(0, 22)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 23)
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("mod_twilight_avenger_last_service", "modifier")
 
 AC(tt, "render")
@@ -6108,6 +6736,9 @@ tt.explode_damage = 80
 tt.explode_vis_bans = bor(F_DARK_ELF, F_BOSS)
 tt.explode_vis_flags = F_RANGED
 tt.explode_excluded_templates = {"hero_regson"}
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_scourger", "enemy")
 
 AC(tt, "melee", "death_spawns", "timed_attacks")
@@ -6154,6 +6785,9 @@ tt.unit.hit_offset = vec_2(0, 20)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 18)
 tt.vis.flags = bor(tt.vis.flags, F_DARK_ELF, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_scourger_banshee", "enemy")
 
 AC(tt, "mod_attack", "tween")
@@ -6194,6 +6828,9 @@ tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {2, 0}}
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
+--#endregion
+
+--#region
 tt = RT("enemy_webspitting_spider", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -6230,6 +6867,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 12)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_sword_spider", "enemy")
 
 AC(tt, "melee")
@@ -6257,6 +6897,9 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 12)
 tt.vis.bans = bor(F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_rabbit", "enemy")
 tt.info.portrait = "kr3_info_portraits_enemies_0020"
 tt.enemy.gold = 7
@@ -6275,6 +6918,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 10)
 tt.unit.size = UNIT_SIZE_SMALL
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("enemy_zealot", "enemy")
 
 AC(tt, "melee", "tween")
@@ -6316,6 +6962,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.show_blood_pool = false
 tt.vis.flags = bor(tt.vis.flags, F_DARK_ELF)
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_evoker", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks")
@@ -6384,6 +7033,9 @@ tt.timed_attacks.list[2].mod = "mod_twilight_evoker_heal"
 tt.timed_attacks.list[2].range = 110
 tt.timed_attacks.list[2].sound = "ElvesCreepEvokerHeal"
 tt.timed_attacks.list[2].vis_flags = F_RANGED
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_golem", "enemy")
 
 AC(tt, "melee")
@@ -6426,6 +7078,9 @@ tt.melee.attacks[1].count = 5
 tt.melee.attacks[1].hit_time = fts(14)
 tt.melee.attacks[1].sound_hit = "ElvesCreepGolemAreaAttack"
 tt.melee.attacks[1].hit_fx = "decal_twilight_golem_attack"
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_heretic", "enemy")
 
 AC(tt, "melee", "ranged", "timed_attacks")
@@ -6485,6 +7140,9 @@ tt.timed_attacks.list[2].range = 175
 tt.timed_attacks.list[2].radius = 50
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_HERO, F_ENEMY, F_SERVANT)
 tt.timed_attacks.list[2].vis_flags = bor(F_RANGED, F_MOD)
+--#endregion
+
+--#region
 tt = RT("enemy_drider", "enemy")
 
 AC(tt, "melee")
@@ -6520,6 +7178,9 @@ tt.melee.attacks[2].cooldown_inc = 5
 tt.melee.attacks[2].hit_time = fts(15)
 tt.melee.attacks[2].mod = "mod_drider_poison"
 tt.generation = 0
+--#endregion
+
+--#region
 tt = RT("enemy_mantaray", "enemy")
 
 AC(tt, "tween", "track_kills")
@@ -6591,6 +7252,9 @@ tt.facehug_damage_soldier_max = 20
 tt.facehug_damage_hero_min = 10
 tt.facehug_damage_hero_max = 30
 tt.facehug_spawn_bans = {"soldier_druid_bear", "soldier_xin_ultimate", "soldier_xin_shadow", "soldier_bravebark", "hero_alleria", "soldier_veznan_demon", "hero_baby_malik"}
+--#endregion
+
+--#region
 tt = RT("enemy_razorboar", "enemy")
 
 AC(tt, "melee", "timed_attacks", "auras")
@@ -6640,6 +7304,9 @@ tt.timed_attacks.list[1].mod_enemy = "mod_razorboar_rampage_enemy"
 tt.timed_attacks.list[1].mod_soldier = "mod_razorboar_rampage_soldier"
 tt.timed_attacks.list[1].mod_self = "mod_razorboar_rampage_speed"
 tt.timed_attacks.list[1].particles_name = "ps_razorboar_rampage"
+--#endregion
+
+--#region
 tt = RT("enemy_arachnomancer", "enemy")
 
 AC(tt, "melee", "timed_attacks", "death_spawns")
@@ -6679,6 +7346,9 @@ tt.timed_attacks.list[1].spawn_time = fts(20)
 tt.timed_attacks.list[1].cooldown = {7, 7, 5}
 tt.timed_attacks.list[1].nodes_limit = 40
 tt.timed_attacks.list[1].spawn_sets = {{4, "decal_webspawn_enemy_spider_arachnomancer"}, {3, "decal_webspawn_enemy_sword_spider"}, {2, "decal_webspawn_enemy_spider_son_of_mactans"}}
+--#endregion
+
+--#region
 tt = RT("arachnomancer_random_spawner")
 
 AC(tt, "pos", "spawner", "main_script", "sound_events")
@@ -6693,6 +7363,9 @@ tt.spawner.initial_spawn_animation = "idle"
 tt.spawner.check_node_valid = true
 tt.spawner.use_node_pos = true
 tt.sound_events.insert = "ElvesCreepArachnomancerSpiderSpawn"
+--#endregion
+
+--#region
 tt = RT("enemy_spider_arachnomancer", "enemy")
 
 AC(tt, "melee")
@@ -6720,6 +7393,9 @@ tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 6
 tt.melee.attacks[1].damage_min = 4
 tt.melee.attacks[1].hit_time = fts(14)
+--#endregion
+
+--#region
 tt = RT("spider_arachnomancer_egg_spawner", "decal_scripted")
 
 AC(tt, "spawner", "sound_events", "tween", "editor")
@@ -6740,6 +7416,9 @@ tt.spawn_once = nil
 tt.spawn_data = nil
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {fts(10), 0}}
+--#endregion
+
+--#region
 tt = RT("enemy_spider_son_of_mactans", "enemy")
 
 AC(tt, "melee")
@@ -6769,6 +7448,9 @@ tt.melee.attacks[1].hit_time = fts(12)
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].mod = "mod_son_of_mactans_poison"
 tt.melee.attacks[2].cooldown = 6
+--#endregion
+
+--#region
 tt = RT("spider_son_of_mactans_drop_spawner", "decal_scripted")
 
 AC(tt, "nav_path", "motion", "spawner", "sound_events")
@@ -6793,6 +7475,9 @@ for i = 1, math.ceil(REF_H / 18) do
 	tt.render.sprites[i + 1] = s
 end
 
+--#endregion
+
+--#region
 tt = RT("enemy_mactans", "decal_scripted")
 
 AC(tt, "ui", "tween", "editor")
@@ -6819,6 +7504,9 @@ tt.tween.props[2].keys = {{0, 0}, {fts(2), d2r(-6)}, {fts(4), d2r(-1)}, {fts(6),
 tt.editor.overrides = {
 	["render.sprites[1].name"] = "retreat"
 }
+--#endregion
+
+--#region
 tt = RT("enemy_gnoll_bloodsydian", "enemy")
 
 AC(tt, "melee")
@@ -6843,6 +7531,9 @@ tt.sound_events.death = "ElvesDeathGnolls"
 tt.unit.hit_offset = vec_2(0, 16)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
+--#endregion
+
+--#region
 tt = RT("enemy_bloodsydian_warlock", "enemy")
 
 AC(tt, "melee", "timed_attacks")
@@ -6884,6 +7575,9 @@ tt.timed_attacks.list[1].min_count = 2
 tt.timed_attacks.list[1].nodes_min = 30
 tt.timed_attacks.list[1].nodes_limit = 20
 tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_MOD)
+--#endregion
+
+--#region
 tt = RT("enemy_perython_rock_thrower", "enemy_perython")
 
 AC(tt, "death_spawns")
@@ -6899,6 +7593,9 @@ tt.death_spawns.concurrent_with_death = true
 tt.main_script.update = scripts.enemy_perython_carrier.update
 tt.spawn_trigger_range = 50
 tt.drop_delay = {0.5, 0.9}
+--#endregion
+
+--#region
 tt = RT("enemy_ogre_magi", "enemy")
 
 AC(tt, "ranged", "auras")
@@ -6939,15 +7636,27 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 25)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("enemy_ogre_magi_custody_ettin", "enemy_ettin")
 tt.motion.max_speed = 0.83 * FPS
 tt.info.i18n_key = "ENEMY_ETTIN"
+--#endregion
+
+--#region
 tt = RT("enemy_ogre_magi_custody_gnoll_gnawer", "enemy_gnoll_gnawer")
 tt.motion.max_speed = 0.83 * FPS
 tt.info.i18n_key = "ENEMY_GNOLL_GNAWER"
+--#endregion
+
+--#region
 tt = RT("enemy_ogre_magi_custody_warlock", "enemy_bloodsydian_warlock")
 tt.motion.max_speed = 0.83 * FPS
 tt.info.i18n_key = "ENEMY_BLOODSYDIAN_WARLOCK"
+--#endregion
+
+--#region
 tt = RT("enemy_blood_servant", "enemy")
 
 AC(tt, "melee")
@@ -6972,6 +7681,9 @@ tt.sound_events.death = "ElvesCreepServantDeath"
 tt.unit.hit_offset = vec_2(0, 16)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 14)
+--#endregion
+
+--#region
 tt = RT("enemy_mounted_avenger", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -7008,6 +7720,9 @@ tt.sound_events.death = "ElvesCreepMountedAvengerDeath"
 tt.sound_events.death_args = {
 	delay = fts(15)
 }
+--#endregion
+
+--#region
 tt = RT("enemy_screecher_bat", "enemy")
 
 AC(tt, "timed_attacks")
@@ -7045,6 +7760,9 @@ tt.unit.mod_offset = vec_2(0, 50)
 tt.unit.show_blood_pool = false
 tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.vis.bans = bor(F_BLOCK)
+--#endregion
+
+--#region
 tt = RT("enemy_dark_spitters", "enemy")
 
 AC(tt, "melee", "ranged")
@@ -7079,6 +7797,9 @@ tt.unit.blood_color = BLOOD_ORANGE
 tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
+--#endregion
+
+--#region
 tt = RT("enemy_shadows_spawns", "enemy")
 
 AC(tt, "melee")
@@ -7107,6 +7828,9 @@ tt.unit.blood_color = BLOOD_ORANGE
 tt.unit.hit_offset = vec_2(0, 16)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
+--#endregion
+
+--#region
 tt = RT("enemy_grim_devourers", "enemy")
 
 AC(tt, "melee")
@@ -7137,6 +7861,9 @@ tt.unit.blood_color = BLOOD_ORANGE
 tt.unit.hit_offset = vec_2(0, 18)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
+--#endregion
+
+--#region
 tt = RT("enemy_shadow_champion", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -7176,6 +7903,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 27)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = F_INSTAKILL
+--#endregion
+
+--#region
 tt = RT("enemy_gnoll_warleader", "enemy")
 
 AC(tt, "melee", "death_spawns")
@@ -7213,6 +7943,9 @@ tt.unit.mod_offset = vec_2(0, 25)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_TELEPORT, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
+--#endregion
+
+--#region
 tt = RT("enemy_twilight_brute", "enemy")
 
 AC(tt, "melee", "auras", "death_spawns")
@@ -7254,6 +7987,9 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_TELEPORT, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 -- 萨雷格兹主母
+--#endregion
+
+--#region
 tt = RT("enemy_sarelgaz_big", "enemy")
 
 AC(tt, "melee", "timed_attacks", "auras")
@@ -7312,6 +8048,9 @@ tt.sound_events.death = "DeathEplosion"
 tt.vis.bans = F_POISON
 tt.vis.flags = F_ENEMY
 tt.health_judger = true
+--#endregion
+
+--#region
 tt = RT("enemy_sarelgaz_big_aura", "aura")
 tt.aura.duration = -1
 tt.aura.mod = "mod_enemy_sarelgaz_big"
@@ -7322,9 +8061,15 @@ tt.aura.excluded_templates = {"enemy_sarelgaz_big"}
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
+--#endregion
+
+--#region
 tt = RT("mod_enemy_sarelgaz_big", "mod_slow")
 tt.slow.factor = 1.2
 tt.modifier.duration = fts(12)
+--#endregion
+
+--#region
 tt = RT("enemy_sarelgaz_bigger_egg", "decal_scripted")
 
 AC(tt, "render", "spawner", "tween")
@@ -7346,10 +8091,19 @@ tt.spawner.animation_start = "start"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("enemy_jungle_spider_tiny_with_gold", "enemy_jungle_spider_tiny")
 tt.enemy.gold = 1
+--#endregion
+
+--#region
 tt = RT("enemy_spider_rotten_tiny_with_gold", "enemy_spider_rotten_tiny")
 tt.enemy.gold = 1
+--#endregion
+
+--#region
 tt = RT("enemy_redgale", "enemy_bluegale")
 tt.main_script.update = scripts.enemy_mixed_water.update
 tt.timed_attacks = nil
@@ -7359,10 +8113,16 @@ tt.ranged.attacks[1].max_range = 150
 tt.ranged.attacks[1].bullet = "ray_redgale"
 tt.render.sprites[1].color = {255, 100, 100}
 tt.render.sprites[2].color = {255, 100, 100}
+--#endregion
+
+--#region
 tt = RT("ray_redgale", "ray_bluegale")
 tt.render.sprites[1].color = {255, 100, 100}
 tt.bullet.damage_min = 50
 tt.bullet.damage_max = 90
+--#endregion
+
+--#region
 tt = RT("enemy_greenshell", "enemy_bloodshell")
 
 AC(tt, "auras")
@@ -7375,20 +8135,35 @@ tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "greenshell_shield_aura"
 tt.auras.list[1].cooldown = 0
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("greenshell_shield_aura", "shaman_shield_aura")
 tt.aura.mod = "mod_greenshell_shield"
 tt.aura.allowed_templates = {"enemy_greenfin", "enemy_deviltide", "enemy_redspine", "enemy_bluegale", "enemy_redgale", "enemy_deviltide_shark", "enemy_deviltide_shark_ghost", "enemy_deviltide_ghost"}
+--#endregion
+
+--#region
 tt = RT("mod_greenshell_shield", "mod_shaman_armor")
 tt.armor_buff.max_factor = 0.35
+--#endregion
+
+--#region
 tt = RT("enemy_deviltide_shark_ghost", "enemy_deviltide_shark")
 tt.payload = "enemy_deviltide_ghost"
 tt.motion.max_speed = 90
 tt.render.sprites[1].alpha = 180
 tt.enemy.gold = 0
+--#endregion
+
+--#region
 tt = RT("enemy_deviltide_ghost", "enemy_deviltide")
 tt.enemy.gold = 0
 tt.motion.max_speed = 50
 tt.render.sprites[1].alpha = 180
+--#endregion
+
+--#region
 tt = RT("enemy_phantom_death_rider", "enemy")
 
 AC(tt, "auras", "melee")
@@ -7426,6 +8201,9 @@ tt.render.sprites[1].color = {180, 180, 255}
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].cooldown = 0
 tt.auras.list[1].name = "phantom_death_rider_aura"
+--#endregion
+
+--#region
 tt = RT("phantom_death_rider_aura", "aura")
 
 AC(tt, "render")
@@ -7444,6 +8222,9 @@ tt.render.sprites[1].name = "soldier_death_rider_aura"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].color = {180, 180, 255}
+--#endregion
+
+--#region
 tt = RT("mod_phantom_death_rider", "modifier")
 
 AC(tt, "render", "armor_buff")
@@ -7461,6 +8242,9 @@ tt.render.sprites[1].color = {180, 180, 255}
 tt.main_script.insert = scripts.mod_armor_buff.insert
 tt.main_script.remove = scripts.mod_armor_buff.remove
 tt.main_script.update = scripts.mod_armor_buff.update
+--#endregion
+
+--#region
 tt = RT("enemy_shaman_gravity", "enemy")
 
 AC(tt, "melee", "auras")
@@ -7491,17 +8275,26 @@ tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.marker_offset = vec_2(0, ady(10))
 tt.unit.mod_offset = vec_2(0, ady(26))
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
+--#endregion
+
+--#region
 tt = RT("shaman_gravity_aura", "aura")
 tt.aura.cycle_time = 0.125
 tt.main_script.update = scripts.shaman_gravity_aura.update
 tt.aura.radius = 180
 tt.gravity_inc = 0.3 / (fts(1) * fts(1))
+--#endregion
+
+--#region
 tt = RT("enemy_witch_strong", "enemy_witch")
 tt.enemy.gold = 88
 tt.health.hp_max = 1250
 tt.info.i18n_key = "ENEMY_WITCH_STRONG"
 tt.vis.bans = bor(F_BLOCK, F_THORN, F_POISON)
 tt.render.sprites[1].scale = vec_1(1.2)
+--#endregion
+
+--#region
 tt = RT("enemy_spectral_knight_strong", "enemy_spectral_knight")
 tt.health.hp_max = 1233
 tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT_STRONG"
@@ -7509,6 +8302,9 @@ tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.gold = tt.enemy.gold * 1.2
 tt.health_bar.offset.y = tt.health_bar.offset.y * 1.2
 tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
+--#endregion
+
+--#region
 tt = RT("enemy_fallen_knight_strong", "enemy_fallen_knight")
 tt.death_spawns.name = "enemy_spectral_knight_strong_spawn"
 tt.health.hp_max = 2833
@@ -7517,10 +8313,16 @@ tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.gold = tt.enemy.gold * 1.2
 tt.health_bar.offset.y = tt.health_bar.offset.y * 1.2
 tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
+--#endregion
+
+--#region
 tt = RT("enemy_spectral_knight_strong_spawn", "enemy_spectral_knight_strong")
 tt.enemy.gold = 0
 tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
+--#endregion
+
+--#region
 tt = RT("enemy_abomination_strong", "enemy_abomination")
 tt.info.i18n_key = "ENEMY_ABOMINATION_STRONG"
 tt.motion.max_speed = 1.28 * 0.5 * FPS
@@ -7529,3 +8331,4 @@ tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.gold = tt.enemy.gold * 1.2
 tt.health_bar.offset.y = tt.health_bar.offset.y * 1.2
 tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
+--#endregion

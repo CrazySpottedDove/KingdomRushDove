@@ -24,6 +24,7 @@ local vv = V.vv
 
 require("game_templates_utils")
 
+--#region
 tt = RT("tower_bfg", "tower")
 
 AC(tt, "attacks", "powers")
@@ -91,6 +92,9 @@ tt.attacks.list[3].bullet = "bomb_bfg_cluster"
 tt.attacks.list[3].cooldown_base = 18.5
 tt.attacks.list[3].node_prediction = fts(40)
 tt.attacks.list[3].vis_bans = 0
+--#endregion
+
+--#region
 tt = RT("bomb_bfg", "bomb")
 -- dps = 131 / 3.65 = 35.89 per second
 tt.bullet.damage_max = 131
@@ -101,6 +105,9 @@ tt.bullet.hit_fx = "fx_explosion_big"
 tt.render.sprites[1].name = "bombs_0005"
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].scale = vec_1(1.1)
+--#endregion
+
+--#region
 tt = RT("bomb_bfg_cluster", "bullet")
 
 AC(tt, "sound_events")
@@ -123,6 +130,9 @@ tt.render.sprites[1].name = "bombs_0005"
 tt.render.sprites[1].scale = vec_1(1.1)
 tt.sound_events.hit = "BombExplosionSound"
 tt.sound_events.insert = "BombShootSound"
+--#endregion
+
+--#region
 tt = RT("bomb_bfg_fragment", "bomb")
 tt.bullet.damage_max = 84
 tt.bullet.damage_min = 63
@@ -134,10 +144,16 @@ tt.bullet.pop = nil
 tt.bullet.mod = "mod_bfg_stun"
 tt.render.sprites[1].name = "bombs_0006"
 tt.sound_events.hit_water = nil
+--#endregion
+
+--#region
 tt = RT("mod_bfg_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.modifier.duration = 0.25
+--#endregion
+
+--#region
 tt = RT("missile_bfg", "bullet")
 tt.render.sprites[1].prefix = "missile_bfg"
 tt.render.sprites[1].loop = true
@@ -161,6 +177,9 @@ tt.main_script.update = scripts.missile.update
 tt.sound_events.insert = "RocketLaunchSound"
 tt.sound_events.hit = "BombExplosionSound"
 -- 特斯拉
+--#endregion
+
+--#region
 tt = RT("tower_tesla", "tower")
 
 AC(tt, "attacks", "powers")
@@ -210,6 +229,9 @@ tt.attacks.list[1].sound_shoot = "TeslaAttack"
 tt.attacks.list[2] = CC("aura_attack")
 tt.attacks.list[2].aura = "aura_tesla_overcharge"
 tt.attacks.list[2].bullet_start_offset = vec_2(0, 15)
+--#endregion
+
+--#region
 tt = RT("ray_tesla", "bullet")
 tt.bullet.hit_time = fts(1)
 tt.bullet.mod = "mod_ray_tesla"
@@ -242,6 +264,9 @@ tt.render.sprites[1].name = "ray_tesla"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS
 tt.main_script.update = scripts.ray_tesla.update
+--#endregion
+
+--#region
 tt = RT("mod_ray_tesla", "modifier")
 
 AC(tt, "render", "dps")
@@ -264,6 +289,9 @@ tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+--#endregion
+
+--#region
 tt = RT("aura_tesla_overcharge", "aura")
 tt.aura.duration = fts(22)
 tt.aura.mod = "mod_tesla_overcharge"
@@ -276,6 +304,9 @@ tt.aura.excluded_templates = {"enemy_spectral_knight"}
 tt.main_script.update = scripts.aura_tesla_overcharge.update
 tt.particles_name = "ps_tesla_overcharge"
 tt.scale_factor = 1
+--#endregion
+
+--#region
 tt = RT("mod_tesla_overcharge", "modifier")
 
 AC(tt, "render")
@@ -416,6 +447,9 @@ decal_dwaarp_scorched_water.render.sprites[1].prefix = "towerdwaarp_sfx"
 decal_dwaarp_scorched_water.render.sprites[1].name = "vapor"
 decal_dwaarp_scorched_water.render.sprites[1].z = Z_OBJECTS
 decal_dwaarp_scorched_water.render.sprites[1].loop = true
+--#endregion
+
+--#region
 tt = RT("drill", "bullet")
 tt.bullet.pop = {"pop_splat"}
 tt.render.sprites[1].anchor = vec_2(0.5, 0.3)
@@ -425,6 +459,9 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.hit_time = fts(3)
 tt.main_script.update = scripts.drill.update
 tt.sound_events.insert = "EarthquakeDrillOut"
+--#endregion
+
+--#region
 tt = RT("tower_mech", "tower")
 
 AC(tt, "barrack", "powers")
@@ -466,6 +503,9 @@ tt.render.sprites[10].z = Z_OBJECTS
 tt.sound_events.insert = {"MechTauntReady", "MechSpawn"}
 tt.sound_events.change_rally_point = "MechTaunt"
 tt.ui.click_rect = r(-40, -10, 80, 50)
+--#endregion
+
+--#region
 tt = RT("soldier_mecha")
 
 AC(tt, "pos", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "attacks", "powers")
@@ -596,6 +636,9 @@ oil_mecha.tween.props[2].name = "scale"
 oil_mecha.tween.props[2].keys = {{0, vec_2(0.6, 0.6)}, {0.3, vec_2(1, 1)}}
 oil_mecha.tween.remove = false
 oil_mecha.sound_events.insert = "MechOil"
+--#endregion
+
+--#region
 tt = RT("tower_frankenstein", "tower")
 
 AC(tt, "barrack", "attacks", "powers")
@@ -670,6 +713,9 @@ end
 
 tt.sound_events.change_rally_point = "HWFrankensteinTaunt"
 tt.sound_events.insert = "HWFrankensteinUpgradeLightning"
+--#endregion
+
+--#region
 tt = RT("ray_frankenstein", "bullet")
 tt.bullet.hit_time = fts(1)
 tt.bullet.mod = "mod_ray_frankenstein"
@@ -696,6 +742,9 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS
 tt.main_script.insert = scripts.ray_frankenstein.insert
 tt.main_script.update = scripts.ray_frankenstein.update
+--#endregion
+
+--#region
 tt = RT("mod_ray_frankenstein", "modifier")
 
 AC(tt, "render", "dps")
@@ -716,6 +765,9 @@ tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.modifier.allows_duplicates = true
+--#endregion
+
+--#region
 tt = RT("soldier_frankenstein", "soldier")
 
 AC(tt, "melee")
@@ -768,6 +820,9 @@ tt.unit.hit_offset = vec_2(0, 17)
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_SKELETON)
+--#endregion
+
+--#region
 tt = RT("fx_frankenstein_pound", "decal_scripted")
 
 AC(tt, "tween")
@@ -793,6 +848,9 @@ for i = 1, 5 do
 end
 
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("tower_druid", "tower")
 
 AC(tt, "attacks", "powers", "barrack")
@@ -852,6 +910,9 @@ tt.render.sprites[3].anchor.y = 0.08333333333333333
 tt.render.sprites[3].offset = vec_2(0, 44)
 tt.sound_events.insert = "ElvesRockHengeTaunt"
 tt.sound_events.change_rally_point = "SoldierDruidBearRallyChange"
+--#endregion
+
+--#region
 tt = RT("mod_druid_sylvan", "modifier")
 
 AC(tt, "render", "tween")
@@ -876,6 +937,9 @@ tt.tween.remove = false
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.5, vec_2(0.9, 0.9)}, {1, vec_2(1, 1)}}
 tt.tween.props[1].loop = true
+--#endregion
+
+--#region
 tt = RT("druid_shooter_sylvan", "decal_scripted")
 
 AC(tt, "attacks")
@@ -895,6 +959,9 @@ tt.attacks.list[1].cast_time = fts(20)
 tt.attacks.list[1].sound = "TowerDruidHengeSylvanCurseCast"
 tt.attacks.list[1].vis_flags = bor(F_RANGED, F_MOD)
 tt.main_script.update = scripts.druid_shooter_sylvan.update
+--#endregion
+
+--#region
 tt = RT("druid_shooter_nature", "decal_scripted")
 
 AC(tt, "attacks")
@@ -911,6 +978,9 @@ tt.attacks.list[1].cooldown = 15
 tt.attacks.list[1].entity = "soldier_druid_bear"
 tt.attacks.list[1].spawn_time = fts(10)
 tt.main_script.update = scripts.druid_shooter_nature.update
+--#endregion
+
+--#region
 tt = RT("soldier_druid_bear", "soldier_militia")
 
 AC(tt, "melee", "count_group")
@@ -958,6 +1028,9 @@ tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POISON)
+--#endregion
+
+--#region
 tt = RT("tower_entwood", "tower")
 
 AC(tt, "attacks", "powers")
@@ -1032,6 +1105,9 @@ tt.render.sprites[11].name = "tower_entwood_blink"
 tt.render.sprites[11].loop = false
 tt.render.sprites[11].offset = vec_2(0, 42)
 tt.sound_events.insert = "ElvesRockEntwoodTaunt"
+--#endregion
+
+--#region
 tt = RT("mod_clobber", "modifier")
 
 AC(tt, "render")
@@ -1043,8 +1119,14 @@ tt.render.sprites[1].prefix = "stun"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 10
+--#endregion
+
+--#region
 tt = RT("mod_clobber_slow", "mod_slow")
 tt.slow.factor = 0.6
+--#endregion
+
+--#region
 tt = RT("rock_druid", "rock_1")
 
 AC(tt, "tween")
@@ -1069,6 +1151,9 @@ tt.tween.disabled = true
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {0.8, vec_2(0, 2)}, {1.6, vec_2(0, 0)}}
 tt.tween.props[1].loop = true
+--#endregion
+
+--#region
 tt = RT("ray_druid_sylvan", "bullet")
 tt.image_width = 42
 tt.main_script.update = scripts.ray_simple.update
@@ -1079,6 +1164,9 @@ tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.hit_time = fts(5)
 tt.bullet.mod = "mod_druid_sylvan_affected"
 tt.bullet.track_damage = true
+--#endregion
+
+--#region
 tt = RT("rock_entwood", "rock_1")
 tt.bullet.damage_max = 77
 tt.bullet.damage_min = 45
@@ -1090,6 +1178,9 @@ tt.sound_events.hit = "TowerEntwoodCocoExplosion"
 tt.main_script.update = scripts.bomb_bouncing.update
 tt.bounce_count = 1
 tt.bounce_factor = 0.6
+--#endregion
+
+--#region
 tt = RT("rock_firey_nut", "rock_entwood")
 tt.bullet.damage_max = 77
 tt.bullet.damage_max_inc = 52
@@ -1102,6 +1193,9 @@ tt.bullet.hit_decal = nil
 tt.bullet.reduce_armor = 0.1
 tt.render.sprites[1].name = "artillery_tree_proys_0002"
 tt.sound_events.hit = "TowerEntwoodFieryExplote"
+--#endregion
+
+--#region
 tt = RT("aura_fiery_nut", "aura")
 
 AC(tt, "render", "tween")
@@ -1119,6 +1213,9 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
+--#endregion
+
+--#region
 tt = RT("mod_fiery_nut", "modifier")
 
 AC(tt, "dps", "render")
@@ -1144,6 +1241,9 @@ local b
 
 -- 三管加农炮_START
 b = balance.towers.tricannon
+--#endregion
+
+--#region
 tt = RT("tower_tricannon_lvl4", "tower")
 
 AC(tt, "attacks", "powers")
@@ -1228,6 +1328,9 @@ for i = 2, 11 do
 end
 
 tt.ui.click_rect = r(-45, -3, 90, 78)
+--#endregion
+
+--#region
 tt = RT("decalmod_tricannon_overheat", "modifier")
 
 AC(tt, "render", "tween")
@@ -1255,6 +1358,9 @@ for _, sprite in ipairs(tt.render.sprites) do
 -- sprite.scale = vec_2(1.2, 1.2)  -- 放大 20%
 end
 
+--#endregion
+
+--#region
 tt = RT("tower_tricannon_overheat_scorch_aura", "aura")
 
 AC(tt, "render", "tween")
@@ -1282,6 +1388,9 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].loop = true
 tt.tween.props[2].keys = {{0, 0}, {0.5, 255}, {1, 0}}
+--#endregion
+
+--#region
 tt = RT("tower_tricannon_overheat_scorch_aura_mod", "modifier")
 
 AC(tt, "dps", "render")
@@ -1299,6 +1408,9 @@ tt.render.sprites[1].loop = true
 tt.modifier.max_duplicates = 5
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+--#endregion
+
+--#region
 tt = RT("tower_tricannon_bomb", "bomb")
 tt.bullet.damage_max = b.basic_attack.damage_max[4]
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
@@ -1312,12 +1424,18 @@ tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb"
 tt.render.sprites[1].animated = false
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
+--#endregion
+
+--#region
 tt = RT("tower_tricannon_bomb_overheated", "tower_tricannon_bomb")
 tt.bullet.hit_payload = "tower_tricannon_overheat_scorch_aura"
 tt.render.sprites[1].name = "tricannon_tower_lvl4_bomb_overheat"
 tt.bullet.particles_name = "tower_tricannon_bomb_4_overheated_trail"
 tt.bullet.flight_time = fts(28)
 tt.bullet.g = -1.5 / (fts(1) * fts(1))
+--#endregion
+
+--#region
 tt = RT("tower_tricannon_bomb_bombardment_bomb", "bomb")
 tt.bullet.damage_max = nil
 tt.bullet.damage_min = nil
@@ -1341,6 +1459,9 @@ local basic_attack = b.basic_attack
 local big_guy = b.big_guy
 local master_exploders = b.master_exploders
 
+--#endregion
+
+--#region
 tt = RT("tower_demon_pit_demon_trail")
 
 AC(tt, "pos", "particle_system")
@@ -1353,10 +1474,16 @@ tt.particle_system.particle_lifetime = {0.2, 0.4}
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
+--#endregion
+
+--#region
 tt = RT("decal_tower_demon_pit_reload", "decal_scripted")
 tt.render.sprites[1].name = nil
 tt.render.sprites[1].z = Z_TOWER_BASES + 1
 tt.main_script.update = scripts.decal_tower_demon_pit_reload.update
+--#endregion
+
+--#region
 tt = RT("decal_tower_demon_pit_demon_explosion_decal", "decal_tween")
 
 AC(tt, "render", "tween")
@@ -1366,6 +1493,9 @@ tt.render.sprites[1].animated = false
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 tt.tween.remove = true
+--#endregion
+
+--#region
 tt = RT("tower_demon_pit_lvl4", "tower")
 
 AC(tt, "attacks", "powers")
@@ -1446,6 +1576,9 @@ tt.render.sprites[4].offset = vec_2(0, 10)
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].prefix = "demon_pit_tower_lvl4_tower_front"
 tt.render.sprites[5].offset = vec_2(0, 10)
+--#endregion
+
+--#region
 tt = RT("soldier_tower_demon_pit_basic_attack_lvl4", "soldier_militia")
 
 AC(tt, "reinforcement", "tween")
@@ -1496,6 +1629,9 @@ tt.explosion_mod_stun_duration = b.demon_explosion.stun_duration
 tt.patrol_pos_offset = vec_2(15, 10)
 tt.patrol_min_cd = 3
 tt.patrol_max_cd = 6
+--#endregion
+
+--#region
 tt = RT("big_guy_tower_demon_pit_lvl4", "soldier_militia")
 
 AC(tt, "reinforcement", "tween")
@@ -1536,6 +1672,9 @@ tt.unit.hit_offset = vec_2(0, 5)
 tt.unit.mod_offset = vec_2(0, 14)
 tt.unit.level = 0
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
+--#endregion
+
+--#region
 tt = RT("bullet_tower_demon_pit_basic_attack_lvl4", "bomb")
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].animated = true
@@ -1550,6 +1689,9 @@ tt.bullet.particles_name = "tower_demon_pit_demon_trail"
 tt.bullet.damage_min = 30
 tt.bullet.damage_max = 50
 tt.sound_events.insert = "TowerDemonPitBasicAttack"
+--#endregion
+
+--#region
 tt = RT("bullet_tower_demon_pit_big_guy_lvl4", "bullet")
 
 AC(tt, "main_script")
@@ -1567,10 +1709,16 @@ tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
 tt.sound_events.insert = "TowerDemonPitBasicAttack"
 tt.main_script.update = scripts.projecticle_big_guy_tower_demon_pit.update
+--#endregion
+
+--#region
 tt = RT("mod_soldier_tower_demon_pit_explosion", "mod_stun")
 tt.modifier.duration = nil
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
+--#endregion
+
+--#region
 tt = RT("mod_tower_demon_pit_master_explosion_burning", "modifier")
 
 AC(tt, "dps", "render")
@@ -1589,6 +1737,9 @@ tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].loop = true
 -- 恶魔澡坑_END
 -- 喷火器 START
+--#endregion
+
+--#region
 tt = RT("tower_flamespitter_lvl4", "tower")
 
 local b = balance.towers.flamespitter
@@ -1747,6 +1898,9 @@ tt.sound_events.insert = "TowerFlamespitterTaunt"
 tt.sound_events.tower_room_select = "TowerFlamespitterTauntSelect"
 tt.ui.click_rect = r(-35, 0, 70, 90)
 tt.ui.click_rect_offset_y = -10
+--#endregion
+
+--#region
 tt = RT("controller_tower_flamespitter_column")
 b = balance.towers.flamespitter.skill_columns
 
@@ -1770,6 +1924,9 @@ tt.origin = nil
 tt.dest = nil
 tt.source_id = nil
 tt.sound = "TowerFlamespitterScorchingTorchesFlareUp"
+--#endregion
+
+--#region
 tt = RT("bullet_tower_flamespitter_skill_bomb", "bomb")
 
 local b = balance.towers.flamespitter.skill_bomb
@@ -1793,6 +1950,9 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].hidden = false
 tt.duration_config = b.duration
+--#endregion
+
+--#region
 tt = RT("bullet_tower_flamespitter_skill_bomb_payload")
 
 AC(tt, "pos", "main_script")
@@ -1805,6 +1965,9 @@ tt.burn_radius = 30
 tt.vis_flags = bor(F_BURN, F_AREA)
 tt.vis_bans = bor(F_FLYING)
 tt.mod_burn = "mod_burning_tower_flamespitter_skill_bomb"
+--#endregion
+
+--#region
 tt = RT("mod_burning_tower_flamespitter", "modifier")
 b = balance.towers.flamespitter.burning
 
@@ -1822,6 +1985,9 @@ tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+--#endregion
+
+--#region
 tt = RT("mod_burning_tower_flamespitter_skill_bomb", "mod_burning_tower_flamespitter")
 b = balance.towers.flamespitter.skill_bomb.burning
 tt.modifier.duration = b.duration
@@ -1829,6 +1995,9 @@ tt.dps.damage_min = b.damage
 tt.dps.damage_max = b.damage
 tt.dps.damage_every = b.cycle_time
 tt.damage = b.damage
+--#endregion
+
+--#region
 tt = RT("mod_tower_flamesplitter_skill_columns", "mod_stun")
 b = balance.towers.flamespitter.skill_columns
 tt.modifier.duration = fts(b.stun_time)
@@ -1836,6 +2005,9 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 -- 喷火器 END
 -- 酒桶 BEGIN
+--#endregion
+
+--#region
 tt = RT("tower_barrel_lvl4", "tower")
 
 AC(tt, "attacks", "vis", "powers", "barrack")
@@ -1935,6 +2107,9 @@ tt.barrack.rally_radius = 25
 tt.barrack.soldier_type = "soldier_tower_barrel_skill_warrior"
 tt.barrack.max_soldiers = 1
 tt.barrack.respawn_offset = vec_2(0, 0)
+--#endregion
+
+--#region
 tt = RT("controller_soldier_tower_barrel_skill_warrior_spawn")
 
 AC(tt, "pos", "render", "main_script")
@@ -1949,6 +2124,9 @@ tt.berzerker_spawn_offset = vec_2(-35, -17)
 tt.berzerker_spawn_delay = fts(58)
 tt.spawn_fx = "fx_soldier_tower_barrel_skill_warrior_spawn"
 tt.berzerker_entity = "soldier_tower_barrel_skill_warrior"
+--#endregion
+
+--#region
 tt = RT("soldier_tower_barrel_skill_warrior", "soldier_militia")
 
 AC(tt, "tween", "nav_grid")
@@ -2001,6 +2179,9 @@ tt.melee.range = b.range
 tt.melee.cooldown = b.cooldown
 tt.floor_decal = "decal_soldier_tower_barrel_skill_warrior"
 tt.ui.click_rect = r(-20, -5, 40, 50)
+--#endregion
+
+--#region
 tt = RT("bullet_tower_barrel_lvl4", "bomb")
 
 local b = balance.towers.barrel.basic_attack
@@ -2024,6 +2205,9 @@ tt.render.sprites[1].hidden = false
 tt.bullet.damage_max = b.damage_max[4]
 tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.mod = "mod_bullet_tower_barrel_lvl4"
+--#endregion
+
+--#region
 tt = RT("bullet_tower_barrel_skill_barrel", "bomb")
 
 local b = balance.towers.barrel.skill_barrel
@@ -2045,6 +2229,9 @@ tt.render.sprites[1].name = "barrel_tower_lvl4_bad_barrel_projectile"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = false
 tt.render.sprites[1].r = 0
+--#endregion
+
+--#region
 tt = RT("aura_bullet_tower_barrel_skill_barrel", "aura")
 
 AC(tt, "render", "tween")
@@ -2093,8 +2280,14 @@ tt.explosion_vis_bans = bor(F_FRIEND, F_FLYING)
 tt.explosion_vis_flags = bor(F_AREA)
 tt.explosion_sfx = "TowerBarrelBadBatchExplosion"
 tt.sid_barrel = 2
+--#endregion
+
+--#region
 tt = RT("mod_tower_barrel_skill_barrel_attract", "mod_attract")
 tt.attract_radius = 45
+--#endregion
+
+--#region
 tt = RT("mod_bullet_tower_barrel_lvl4", "modifier")
 b = balance.towers.barrel.basic_attack.debuff
 
@@ -2114,6 +2307,9 @@ tt.render.sprites[1].size_names = {"barrel_tower_projectile_mod", "barrel_tower_
 tt.modifier.level = 4
 tt.modifier.duration = b.duration[4]
 tt.damage_reduction = b.damage_reduction[4]
+--#endregion
+
+--#region
 tt = RT("mod_tower_barrel_skill_barrel_poison", "mod_poison")
 b = balance.towers.barrel.skill_barrel.poison
 tt.dps.damage_every = b.every
@@ -2122,12 +2318,18 @@ tt.dps.damage_max = b.damage_max
 tt.dps.kill = true
 tt.modifier.duration = b.duration
 tt.render.sprites[1].draw_order = DO_MOD_FX
+--#endregion
+
+--#region
 tt = RT("mod_tower_barrel_skill_barrel_slow", "mod_slow")
 b = balance.towers.barrel.skill_barrel.slow
 tt.slow.factor = b.factor
 tt.modifier.duration = b.duration
 -- 酒桶 END
 -- 电涌 START
+--#endregion
+
+--#region
 tt = RT("ps_tower_sparking_geode_sparks_1")
 
 AC(tt, "pos", "particle_system")
@@ -2145,17 +2347,29 @@ tt.particle_system.particle_lifetime = {fts(42), fts(42)}
 tt.particle_system.emit_area_spread = v(70, 70)
 tt.particle_system.emit_offset = v(0, 20)
 tt.particle_system.z = Z_OBJECTS
+--#endregion
+
+--#region
 tt = RT("ps_tower_sparking_geode_sparks_2", "ps_tower_sparking_geode_sparks_1")
 tt.particle_system.name = "sparking_geode_electric_decal_2_idle"
 tt.particle_system.particle_lifetime = {fts(34), fts(34)}
+--#endregion
+
+--#region
 tt = RT("fx_tower_sparking_geode_evolve", "fx")
 tt.render.sprites[1].name = "sparking_geode_evolve_run"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].scale = vv(1)
+--#endregion
+
+--#region
 tt = RT("fx_mod_tower_sparking_geode_stun_death", "fx")
 tt.render.sprites[1].prefix = "sparking_geode_cystal_fx"
 tt.render.sprites[1].name = "death"
 tt.render.sprites[1].z = Z_OBJECTS
+--#endregion
+
+--#region
 tt = RT("fx_tower_sparking_geode_up_ray", "fx")
 tt.render.sprites[1].prefix = "sparking_geode_longray_ray"
 tt.render.sprites[1].name = "up"
@@ -2167,17 +2381,26 @@ tt.render.sprites[2].prefix = "sparking_geode_longray_decal_up"
 tt.render.sprites[2].name = "run"
 tt.render.sprites[2].z = Z_OBJECTS
 tt.render.sprites[2].sort_y_offset = -80
+--#endregion
+
+--#region
 tt = RT("fx_tower_sparking_geode_hit", "fx")
 tt.render.sprites[1].prefix = "sparking_geode_ray_rebote"
 tt.render.sprites[1].name = "hit"
 tt.render.sprites[1].z = Z_BULLETS
 tt.render.sprites[1].scale = v(0.72, 1.08)
+--#endregion
+
+--#region
 tt = RT("decal_tower_sparking_geode_burst_crystal", "decal_scripted")
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].prefix = "sparking_geode_crystal_small"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.main_script.update = scripts.decal_tower_sparking_geode_burst_crystal.update
+--#endregion
+
+--#region
 tt = RT("tower_sparking_geode_lvl4", "tower")
 b = balance.towers.sparking_geode
 
@@ -2290,6 +2513,9 @@ tt.sound_events.tower_room_select = "TowerSparkingGeodeTauntSelect"
 tt.ui.click_rect = r(-40, 0, 85, 83)
 tt.fx_evolve = "fx_tower_sparking_geode_evolve"
 tt.fx_evolve_offset = v(0, 0)
+--#endregion
+
+--#region
 tt = RT("tower_sparking_geode_ray_lvl4", "bullet")
 b = balance.towers.sparking_geode
 tt.bullet.level = 4
@@ -2319,6 +2545,9 @@ tt.bounce_sprite_name = "sparking_geode_ray_rebote_run"
 tt.bounce_ray_duration = fts(12)
 tt.bounce_image_width = 76.56
 tt.sound_events.insert = "TowerSparkingGeodeRay"
+--#endregion
+
+--#region
 tt = RT("aura_tower_sparking_geode_spike_burst", "aura")
 b = balance.towers.sparking_geode.spike_burst
 tt.aura.mods = {"mod_tower_sparking_geode_burst_slow", "mod_tower_sparking_geode_burst_damage"}
@@ -2331,6 +2560,9 @@ tt.distance_between_crystals = {115, 110, 70}
 tt.main_script.insert = scripts.aura_tower_sparking_geode_spike_burst.insert
 tt.main_script.update = scripts.aura_tower_sparking_geode_spike_burst.update
 tt.ps_names = {"ps_tower_sparking_geode_sparks_1", "ps_tower_sparking_geode_sparks_2"}
+--#endregion
+
+--#region
 tt = RT("mod_tower_sparking_geode_stun", "mod_stun")
 tt.main_script.insert = scripts.mod_tower_sparking_geode_stun.insert
 tt.main_script.remove = scripts.mod_tower_sparking_geode_stun.remove
@@ -2361,11 +2593,17 @@ tt.modifier.use_mod_offset = false
 tt.health_bar_offset = {v(0, 40), v(0, 60), v(0, 78)}
 tt.out_fx = "fx_mod_tower_sparking_geode_stun_death"
 tt.mod_sound = "TowerSparkingGeodeCristalizeBolt"
+--#endregion
+
+--#region
 tt = RT("mod_tower_sparking_geode_burst_slow", "mod_slow")
 b = balance.towers.sparking_geode.spike_burst
 tt.modifier.duration = b.damage_every + fts(1)
 tt.slow.factor = b.speed_factor
 tt.main_script.insert = scripts.mod_tower_sparking_geode_burst_slow.insert
+--#endregion
+
+--#region
 tt = RT("mod_tower_sparking_geode_burst_damage", "modifier")
 b = balance.towers.sparking_geode.spike_burst
 
@@ -2380,3 +2618,4 @@ tt.dps.damage_max = b.damage_max
 tt.dps.damage_type = b.damage_type
 tt.main_script.insert = scripts.mod_tower_sparking_geode_burst_damage.insert
 tt.main_script.update = scripts.mod_dps.update
+--#endregion
