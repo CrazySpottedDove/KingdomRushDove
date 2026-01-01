@@ -1648,12 +1648,61 @@ map["奥术新星"] = str()
 map["恶魔契约"] = str()
 
 set_hero("hero_durax")
+set_skill(h.hero.skills.shardseed)
 
-map["水晶长矛"] = str()
-map["折射效应"] = str()
-map["致命晶刃"] = str()
-map["水晶分身"] = str()
-map["蓝水晶之牙"] = str()
+e = T("spear_durax")
+
+get_damage(e.bullet)
+set_damage_value(ss("damage"))
+
+a = h.ranged.attacks[1]
+cooldown = a.cooldown
+map["水晶长矛"] = str(cooldown_str(), "杜拉斯投出水晶长矛，造成", damage_str(), "。")
+
+set_skill(h.hero.skills.lethal_prism)
+
+a = h.timed_attacks.list[1]
+cooldown = a.cooldown
+
+get_damage(T("ray_durax").bullet)
+
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+count = ss("ray_count")
+map["折射效应"] = str(cooldown_str(), "杜拉斯变幻为水晶，短暂无敌并持续射出共", count, "发射线，每发射线造成", damage_str(), "。")
+
+set_skill(h.hero.skills.armsword)
+
+a = h.melee.attacks[3]
+cooldown = a.cooldown
+
+get_damage(a)
+set_damage_value(ss("damage"))
+
+map["致命晶刃"] = str(cooldown_str(), "杜拉斯使用晶刃打击敌人，造成", damage_str(), "。")
+
+set_skill(h.hero.skills.crystallites)
+
+factor = s.damage_factor
+duration = ss("duration")
+cooldown = h.timed_attacks.list[2].cooldown
+map["水晶分身"] = str(cooldown_str(), "杜拉斯分裂出分身，驻场", duration, "秒。分身可使用本体的一切攻击手段，且伤害为本体的", factor * 100, "%。牢杜温馨提示， 3,4,5号英雄快捷键分别为s,q,r。")
+
+set_skill(h.hero.skills.ultimate)
+
+e = T("hero_durax_ultimate")
+
+get_damage(e)
+set_damage_value(ss("damage"))
+
+radius = e.range
+cooldown = h.ultimate.cooldown
+e = T("mod_durax_slow")
+factor = 1 - e.slow.factor
+duration_2 = e.modifier.duration
+e = T("mod_durax_stun")
+duration = e.modifier.duration
+map["蓝水晶之牙"] = str(cooldown_str(), "杜拉斯召唤蓝水晶之牙攻击", radius, "范围内敌人，使他们分摊共", damage_str(), "，并使他们眩晕", duration, "秒。若为BOSS，则改为减速", factor * 100, "%，持续", duration_2, "秒。")
 
 set_hero("hero_elves_denas")
 set_skill(h.hero.skills.shield_strike)

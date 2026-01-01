@@ -154,7 +154,6 @@ tt.dodge.counter_attack.hit_decal = "decal_paladin_holystrike"
 tt.dodge.counter_attack.hit_offset = vec_2(0, 0)
 tt.dodge.counter_attack.sound = "HeroPaladinDeflect"
 --#endregion
-
 --#region mod_gerald_courage
 tt = RT("mod_gerald_courage", "modifier")
 
@@ -177,7 +176,6 @@ tt.render.sprites[1].name = "mod_gerald_courage"
 tt.render.sprites[1].anchor = vec_2(0.51, 0.17307692307692307)
 tt.render.sprites[1].draw_order = 2
 --#endregion
-
 --#region soldier_gerald_paladin
 tt = RT("soldier_gerald_paladin", "soldier_militia")
 
@@ -222,7 +220,6 @@ tt.tween.remove = false
 tt.tween.reverse = false
 -- 艾莉瑞亚
 --#endregion
-
 --#region hero_alleria
 tt = RT("hero_alleria", "hero")
 
@@ -346,13 +343,11 @@ tt.timed_attacks.list[1].spawn_time = fts(10)
 tt.timed_attacks.list[1].min_range = 30
 tt.timed_attacks.list[1].max_range = 50
 --#endregion
-
 --#region arrow_hero_alleria
 tt = RT("arrow_hero_alleria", "arrow")
 tt.bullet.xp_gain_factor = 2.9
 tt.bullet.flight_time = fts(15)
 --#endregion
-
 --#region arrow_multishot_hero_alleria
 tt = RT("arrow_multishot_hero_alleria", "arrow")
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
@@ -364,7 +359,6 @@ tt.extra_arrows = 2
 tt.main_script.insert = scripts.arrow_multishot_hero_alleria.insert
 tt.render.sprites[1].name = "hero_archer_arrow"
 --#endregion
-
 --#region arrow_hero_alleria_missile
 tt = RT("arrow_hero_alleria_missile", "arrow")
 tt.bullet.particles_name = "ps_arrow_hero_alleria_missile"
@@ -377,7 +371,6 @@ tt.bullet.target_num = 5
 tt.bullet.max_seek_angle = math.pi / 3
 tt.main_script.update = scripts.arrow_missile.update
 --#endregion
-
 --#region ps_arrow_multishot_hero_alleria
 tt = RT("ps_arrow_multishot_hero_alleria")
 
@@ -391,7 +384,6 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.track_rotation = true
 tt.particle_system.z = Z_BULLETS
 --#endregion
-
 --#region ps_arrow_hero_alleria_missile
 tt = RT("ps_arrow_hero_alleria_missile", "ps_arrow_multishot_hero_alleria")
 tt.particle_system.particle_lifetime = {0.3, 0.3}
@@ -399,7 +391,6 @@ tt.particle_system.scales_y = {0.6, 0.2}
 tt.particle_system.scales_x = {1.2, 0.3}
 tt.particle_system.emission_rate = 60
 --#endregion
-
 --#region soldier_alleria_wildcat
 tt = RT("soldier_alleria_wildcat", "soldier")
 
@@ -441,7 +432,6 @@ tt.unit.explode_fx = nil
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
 -- 博林
 --#endregion
-
 --#region hero_bolin
 tt = RT("hero_bolin", "hero")
 
@@ -556,7 +546,6 @@ tt.timed_attacks.list[5].shoot_times = {fts(10)}
 tt.timed_attacks.list[5].bullet = "bomb_shrapnel_bolin"
 tt.timed_attacks.list[5].count = 3
 --#endregion
-
 --#region bomb_shrapnel_bolin
 tt = RT("bomb_shrapnel_bolin", "bomb")
 tt.bullet.damage_max = 72
@@ -570,7 +559,6 @@ tt.sound_events.insert = "ShrapnelSound"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
 --#endregion
-
 --#region fx_explosion_shrapnel_bolin
 tt = RT("fx_explosion_shrapnel_bolin", "fx")
 tt.render.sprites[1].anchor.y = 0.2
@@ -579,7 +567,6 @@ tt.render.sprites[1].prefix = "explosion"
 tt.render.sprites[1].name = "shrapnel"
 tt.render.sprites[1].scale = vec_1(1.5)
 --#endregion
-
 --#region bomb_mine_bolin
 tt = RT("bomb_mine_bolin", "bomb")
 tt.bullet.damage_bans = F_ALL
@@ -602,7 +589,6 @@ tt.sound_events.insert = "HeroRiflemanMine"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
 --#endregion
-
 --#region decal_bolin_mine
 tt = RT("decal_bolin_mine", "decal_scripted")
 tt.check_interval = fts(3)
@@ -621,7 +607,6 @@ tt.sound = "BombExplosionSound"
 tt.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.vis_flags = bor(F_ENEMY)
 --#endregion
-
 --#region bomb_tar_bolin
 tt = RT("bomb_tar_bolin", "bomb")
 tt.bullet.damage_bans = F_ALL
@@ -644,7 +629,6 @@ tt.sound_events.insert = "HeroRiflemanBrea"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
 --#endregion
-
 --#region aura_bolin_tar
 tt = RT("aura_bolin_tar", "aura")
 
@@ -666,14 +650,12 @@ tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}
 --#endregion
-
 --#region mod_bolin_slow
 tt = RT("mod_bolin_slow", "mod_slow")
 tt.modifier.duration = 4
 tt.slow.factor = 0.6
 -- 马格努斯
 --#endregion
-
 --#region hero_magnus
 tt = RT("hero_magnus", "hero")
 
@@ -779,7 +761,6 @@ tt.timed_attacks.list[2].vis_bans = bor(F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = F_RANGED
 tt.timed_attacks.list[2].xp_from_skill = "arcane_rain"
 --#endregion
-
 --#region magnus_arcane_rain_controller
 tt = RT("magnus_arcane_rain_controller", "decal_scripted")
 
@@ -801,7 +782,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 tt.tween.disabled = true
 --#endregion
-
 --#region magnus_arcane_rain
 tt = RT("magnus_arcane_rain")
 
@@ -819,7 +799,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = vec_2(0.5, 0.07)
 tt.sound = "HeroMageRainDrop"
 --#endregion
-
 --#region soldier_magnus_illusion
 tt = RT("soldier_magnus_illusion", "soldier_militia")
 
@@ -868,7 +847,6 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.price = 0
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
 --#endregion
-
 --#region hero_ignus
 tt = RT("hero_ignus", "hero")
 
@@ -968,7 +946,6 @@ tt.timed_attacks.list[2].sound_end = "HeroRainOfFireFireball2"
 tt.timed_attacks.list[2].vis_bans = bor(F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = bor(F_ENEMY, F_BLOCK)
 --#endregion
-
 --#region aura_ignus_surge_of_flame
 tt = RT("aura_ignus_surge_of_flame", "aura")
 tt.aura.cycle_time = fts(1)
@@ -982,7 +959,6 @@ tt.damage_state = "surgeOfFlame"
 tt.main_script.update = scripts.aura_ignus_surge_of_flame.update
 tt.particles_name = "ps_hero_ignus_smoke"
 --#endregion
-
 --#region mod_ignus_burn_1
 tt = RT("mod_ignus_burn_1", "mod_lava")
 tt.dps.damage_min = 5
@@ -996,7 +972,6 @@ tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 --#endregion
-
 --#region mod_ignus_burn_2
 tt = RT("mod_ignus_burn_2", "mod_lava")
 tt.dps.damage_min = 8
@@ -1010,7 +985,6 @@ tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 --#endregion
-
 --#region mod_ignus_burn_3
 tt = RT("mod_ignus_burn_3", "mod_lava")
 tt.dps.damage_min = 10
@@ -1024,7 +998,6 @@ tt.render.sprites[1].prefix = "fx_burn"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 --#endregion
-
 --#region hero_malik
 tt = RT("hero_malik", "hero")
 
@@ -1127,7 +1100,6 @@ tt.melee.attacks[4].hit_time = fts(17)
 tt.melee.attacks[4].sound = "HeroReinforcementJump"
 tt.melee.attacks[4].xp_from_skill = "fissure"
 --#endregion
-
 --#region aura_malik_fissure
 tt = RT("aura_malik_fissure", "aura")
 tt.aura.fx = "decal_malik_earthquake"
@@ -1143,19 +1115,16 @@ tt.stun = {
 	mod = "mod_malik_stun"
 }
 --#endregion
-
 --#region mod_malik_stun
 tt = RT("mod_malik_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 --#endregion
-
 --#region decal_malik_ring
 tt = RT("decal_malik_ring", "decal_timed")
 tt.render.sprites[1].name = "decal_malik_ring"
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
-
 --#region decal_malik_earthquake
 tt = RT("decal_malik_earthquake", "decal_bomb_crater")
 tt.render.sprites[2] = CC("sprite")
@@ -1163,7 +1132,6 @@ tt.render.sprites[2].name = "decal_malik_earthquake"
 tt.render.sprites[2].hide_after_runs = 1
 tt.render.sprites[2].anchor.y = 0.24
 --#endregion
-
 --#region hero_denas
 tt = RT("hero_denas", "hero")
 
@@ -1266,7 +1234,6 @@ tt.timed_attacks.list[3].vis_bans = F_FRIEND
 tt.timed_attacks.list[3].vis_flags = F_RANGED
 tt.timed_attacks.list[3].xp_from_skill = "catapult"
 --#endregion
-
 --#region denas_cursing
 tt = RT("denas_cursing", "decal_scripted")
 tt.render.sprites[1].name = "hero_denas_cursing"
@@ -1276,7 +1243,6 @@ tt.duration = fts(36)
 tt.offset = vec_2(0, 25)
 tt.main_script.update = scripts.denas_cursing.update
 --#endregion
-
 --#region denas_catapult_controller
 tt = RT("denas_catapult_controller", "decal_scripted")
 
@@ -1299,7 +1265,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.2, 255}}
 tt.tween.remove = false
 tt.sound_events.shoot = "BombShootSound"
 --#endregion
-
 --#region denas_buffing_circle
 tt = RT("denas_buffing_circle", "decal_timed")
 
@@ -1317,7 +1282,6 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_2(0.7, 0.7)}, {1, vec_2(1.8, 1.8)}}
 tt.tween.remove = true
 --#endregion
-
 --#region mod_denas_tower
 tt = RT("mod_denas_tower", "modifier")
 
@@ -1339,7 +1303,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 --#endregion
-
 --#region projectile_denas
 tt = RT("projectile_denas", "arrow")
 
@@ -1358,42 +1321,34 @@ tt.render.sprites[1].name = "hero_king_projectiles_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = "AxeSound"
 --#endregion
-
 --#region projectile_denas_barrell
 tt = RT("projectile_denas_barrell", "projectile_denas")
 tt.render.sprites[1].name = "hero_king_projectiles_0002"
 --#endregion
-
 --#region projectile_denas_chicken
 tt = RT("projectile_denas_chicken", "projectile_denas")
 tt.render.sprites[1].name = "hero_king_projectiles_0003"
 --#endregion
-
 --#region projectile_denas_bottle
 tt = RT("projectile_denas_bottle", "projectile_denas")
 tt.render.sprites[1].name = "hero_king_projectiles_0004"
 --#endregion
-
 --#region projectile_denas_melee
 tt = RT("projectile_denas_melee", "projectile_denas")
 tt.bullet.flight_time = fts(13)
 --#endregion
-
 --#region projectile_denas_melee_barrell
 tt = RT("projectile_denas_melee_barrell", "projectile_denas_barrell")
 tt.bullet.flight_time = fts(13)
 --#endregion
-
 --#region projectile_denas_melee_chicken
 tt = RT("projectile_denas_melee_chicken", "projectile_denas_chicken")
 tt.bullet.flight_time = fts(13)
 --#endregion
-
 --#region projectile_denas_melee_bottle
 tt = RT("projectile_denas_melee_bottle", "projectile_denas_bottle")
 tt.bullet.flight_time = fts(13)
 --#endregion
-
 --#region denas_catapult_rock
 tt = RT("denas_catapult_rock", "bomb")
 tt.bullet.flight_time = fts(45)
@@ -1408,7 +1363,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 tt.sound_events.insert = nil
 --#endregion
-
 --#region denas_buff_aura
 tt = RT("denas_buff_aura", "aura")
 
@@ -1426,7 +1380,6 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.13, 255}, {1.63, 255}, {2.76, 0}}
 tt.tween.remove = true
 --#endregion
-
 --#region hero_ingvar
 tt = RT("hero_ingvar", "hero")
 
@@ -1547,7 +1500,6 @@ tt.timed_attacks.list[2].transform_health_factor = 0.5
 tt.timed_attacks.list[2].immune_to = DAMAGE_BASE_TYPES
 tt.timed_attacks.list[2].sound = "HeroVikingBearTransform"
 --#endregion
-
 --#region soldier_ingvar_ancestor
 tt = RT("soldier_ingvar_ancestor", "soldier_militia")
 
@@ -1584,7 +1536,6 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.price = 0
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
 --#endregion
-
 --#region aura_ingvar_bear_regenerate
 tt = RT("aura_ingvar_bear_regenerate", "aura")
 
@@ -1595,7 +1546,6 @@ tt.main_script.update = scripts.aura_ingvar_bear_regenerate.update
 tt.regen.cooldown = 1
 tt.regen.health = 5
 --#endregion
-
 --#region hero_elora
 tt = RT("hero_elora", "hero")
 
@@ -1714,7 +1664,6 @@ tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_FRIEND)
 tt.timed_attacks.list[2].vis_flags = F_RANGED
 tt.timed_attacks.list[2].xp_from_skill = "chill"
 --#endregion
-
 --#region bolt_elora_freeze
 tt = RT("bolt_elora_freeze", "bolt")
 tt.bullet.vis_flags = F_RANGED
@@ -1728,12 +1677,10 @@ tt.bullet.damage_min = 14
 tt.bullet.damage_max = 41
 tt.bullet.xp_gain_factor = 2
 --#endregion
-
 --#region bolt_elora_slow
 tt = RT("bolt_elora_slow", "bolt_elora_freeze")
 tt.bullet.mod = "mod_elora_bolt_slow"
 --#endregion
-
 --#region mod_elora_bolt_freeze
 tt = RT("mod_elora_bolt_freeze", "mod_freeze")
 
@@ -1751,13 +1698,11 @@ tt.custom_suffixes = {
 }
 tt.custom_animations = {"start", "end"}
 --#endregion
-
 --#region mod_elora_bolt_slow
 tt = RT("mod_elora_bolt_slow", "mod_slow")
 tt.modifier.duration = 2
 tt.slow.factor = 0.45
 --#endregion
-
 --#region aura_chill_elora
 tt = RT("aura_chill_elora", "aura")
 
@@ -1779,13 +1724,11 @@ tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
 --#endregion
-
 --#region mod_elora_chill
 tt = RT("mod_elora_chill", "mod_slow")
 tt.modifier.duration = fts(11)
 tt.slow.factor = 0.8
 --#endregion
-
 --#region elora_ice_spike
 tt = RT("elora_ice_spike", "bullet")
 tt.main_script.update = scripts.elora_ice_spike.update
@@ -1811,7 +1754,6 @@ tt.render.sprites[2].z = Z_DECALS
 tt.sound_events.delayed_insert = "HeroFrostIceRainDrop"
 tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 --#endregion
-
 --#region hero_oni
 tt = RT("hero_oni", "hero")
 
@@ -1929,7 +1871,6 @@ tt.rage_max = 0
 tt.unyield = 0
 tt.unyield_max = 0
 --#endregion
-
 --#region aura_oni_rage
 tt = RT("aura_oni_rage", "aura")
 
@@ -1948,7 +1889,6 @@ tt.render.sprites[1].color = {255, 100, 100}
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
-
 --#region hero_hacksaw
 tt = RT("hero_hacksaw", "hero")
 
@@ -2047,7 +1987,6 @@ tt.ranged.attacks[1].sound_shoot = "HeroRobotShoot"
 tt.ranged.attacks[1].cooldown = 6.5 + fts(32)
 tt.ranged.attacks[1].xp_from_skill = "sawblade"
 --#endregion
-
 --#region hacksaw_sawblade
 tt = RT("hacksaw_sawblade", "bullet")
 tt.main_script.update = scripts.hacksaw_sawblade.update
@@ -2069,7 +2008,6 @@ tt.render.sprites[1].prefix = "hacksaw_sawblade"
 tt.sound_events.insert = "HeroAlienDiscoThrow"
 tt.sound_events.bounce = "HeroAlienDiscoBounce"
 --#endregion
-
 --#region hero_thor
 tt = RT("hero_thor", "hero")
 
@@ -2166,7 +2104,6 @@ tt.ranged.attacks[1].sound_shoot = "HeroThorHammer"
 tt.ranged.attacks[1].xp_from_skill = "thunderclap"
 tt.lightning_heal = 20
 --#endregion
-
 --#region hammer_hero_thor
 tt = RT("hammer_hero_thor", "bolt")
 tt.bullet.acceleration_factor = 0.05
@@ -2184,7 +2121,6 @@ tt.bullet.pop = nil
 tt.render.sprites[1].prefix = "hammer_hero_thor"
 tt.sound_events.insert = nil
 --#endregion
-
 --#region mod_ray_hero_thor
 tt = RT("mod_ray_hero_thor", "mod_ray_tesla")
 tt.modifier.duration = fts(16)
@@ -2194,7 +2130,6 @@ tt.dps.damage_max = 5
 tt.dps.damage_type = DAMAGE_ELECTRICAL
 tt.modifier.allows_duplicates = true
 --#endregion
-
 --#region mod_hero_thor_chainlightning
 tt = RT("mod_hero_thor_chainlightning", "modifier")
 tt.chainlightning = {
@@ -2210,7 +2145,6 @@ tt.chainlightning = {
 }
 tt.main_script.update = scripts.mod_hero_thor_chainlightning.update
 --#endregion
-
 --#region mod_hero_thor_thunderclap
 tt = RT("mod_hero_thor_thunderclap", "modifier")
 
@@ -2240,13 +2174,11 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].name = "mod_hero_thor_thunderclap_explosion"
 --#endregion
-
 --#region mod_hero_thor_stun
 tt = RT("mod_hero_thor_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 --#endregion
-
 --#region hero_10yr
 tt = RT("hero_10yr", "hero")
 
@@ -2404,7 +2336,6 @@ tt.timed_attacks.list[3].sound_long = "TenShiBuffedBombAttackLong"
 tt.timed_attacks.list[3].sound = tt.timed_attacks.list[3].sound_short
 tt.timed_attacks.list[3].xp_from_skill = "buffed"
 --#endregion
-
 --#region aura_10yr_fireball
 tt = RT("aura_10yr_fireball", "aura")
 tt.main_script.update = scripts.aura_10yr_fireball.update
@@ -2416,7 +2347,6 @@ tt.aura.max_range = E:get_template("hero_10yr").timed_attacks.list[1].max_range
 tt.aura.vis_flags = E:get_template("hero_10yr").timed_attacks.list[1].vis_flags
 tt.aura.vis_bans = E:get_template("hero_10yr").timed_attacks.list[1].vis_bans
 --#endregion
-
 --#region fireball_10yr
 tt = RT("fireball_10yr", "bullet")
 tt.bullet.min_speed = 24 * FPS
@@ -2435,7 +2365,6 @@ tt.scorch_earth = false
 tt.sound_events.insert = "FireballRelease"
 tt.sound_events.hit = "FireballHit"
 --#endregion
-
 --#region aura_10yr_bomb
 tt = RT("aura_10yr_bomb", "aura")
 tt.aura.fx = "decal_10yr_spike"
@@ -2459,14 +2388,12 @@ tt.aura.min_nodes = 0
 tt.aura.max_nodes = 25
 tt.aura.min_count = 1
 --#endregion
-
 --#region mod_10yr_stun
 tt = RT("mod_10yr_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 tt.modifier.duration = 3
 --#endregion
-
 --#region decal_10yr_spike
 tt = RT("decal_10yr_spike", "decal_bomb_crater")
 tt.render.sprites[2] = CC("sprite")
@@ -2476,7 +2403,6 @@ tt.render.sprites[2].anchor.y = 0.24
 --         二代
 --     --
 --#endregion
-
 --#region hero_mirage
 tt = RT("hero_mirage", "hero")
 
@@ -2624,7 +2550,6 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.marker_offset = vec_2(0, -1)
 tt.unit.mod_offset = vec_2(0, 16)
 --#endregion
-
 --#region bullet_mirage
 tt = RT("bullet_mirage", "arrow")
 tt.bullet.hit_blood_fx = "fx_blood_splat"
@@ -2640,12 +2565,10 @@ tt.bullet.hide_radius = 4
 tt.bullet.pop = {"pop_shunt_violet"}
 tt.render.sprites[1].name = "proy_mirage_0001"
 --#endregion
-
 --#region fx_bullet_mirage_hit
 tt = RT("fx_bullet_mirage_hit", "fx")
 tt.render.sprites[1].name = "fx_bullet_mirage_hit"
 --#endregion
-
 --#region fx_mirage_smoke
 tt = RT("fx_mirage_smoke", "fx")
 tt.render.sprites[1].name = "fx_hero_mirage_smoke"
@@ -2653,14 +2576,12 @@ tt.render.sprites[1].anchor.y = 0.11
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -1
 --#endregion
-
 --#region fx_mirage_blood
 tt = RT("fx_mirage_blood", "fx")
 tt.render.sprites[1].prefix = "mirage_blood"
 tt.render.sprites[1].name = "red"
 tt.use_blood_color = true
 --#endregion
-
 --#region mirage_shadow
 tt = RT("mirage_shadow", "bullet")
 tt.bullet.damage_inc = 6
@@ -2679,7 +2600,6 @@ tt.render.sprites[1].anchor.y = 0.14
 tt.sound_events.death = "HeroMirageShadowDodgePuff"
 tt.sound_events.hit = "HeroMirageShadowDanceHit"
 --#endregion
-
 --#region soldier_mirage_illusion
 tt = RT("soldier_mirage_illusion", "unit")
 
@@ -2721,7 +2641,6 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_STUN, F_SKELETON, F_LYCAN)
 tt.vis.flags = F_FRIEND
 --#endregion
-
 --#region hero_wizard
 tt = RT("hero_wizard", "hero")
 
@@ -2866,13 +2785,11 @@ tt.arcanefocus_extra = 0
 tt.arcanetorrent_factor = 0
 tt.arcanetorrent_factor_base = 0.04
 --#endregion
-
 --#region fx_wizard_disintegrate
 tt = RT("fx_wizard_disintegrate", "fx")
 tt.render.sprites[1].name = "fx_wizard_disintegrate"
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
-
 --#region ray_wizard
 tt = RT("ray_wizard", "bullet")
 tt.bullet.xp_gain_factor = 2.5
@@ -2889,7 +2806,6 @@ tt.seen_targets = {}
 tt.main_script.insert = scripts.ray_wizard_chain.insert
 tt.main_script.update = scripts.ray_wizard_chain.update
 --#endregion
-
 --#region ray_wizard_chain
 tt = RT("ray_wizard_chain", "ray_wizard")
 tt.bounces = nil
@@ -2898,7 +2814,6 @@ tt.bounce_vis_flags = F_RANGED
 tt.bounce_vis_bans = 0
 tt.bullet.xp_gain_factor = nil
 --#endregion
-
 --#region mod_ray_wizard
 tt = RT("mod_ray_wizard", "modifier")
 tt.modifier.duration = fts(18)
@@ -2912,14 +2827,12 @@ tt.pop_conds = DR_KILL
 tt.main_script.insert = scripts.mod_ray_wizard.insert
 tt.main_script.update = scripts.mod_ray_wizard.update
 --#endregion
-
 --#region fx_ray_wizard
 tt = RT("fx_ray_wizard", "fx")
 tt.render.sprites[1].name = "ray_wizard_ball"
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].loop = false
 --#endregion
-
 --#region missile_wizard
 tt = RT("missile_wizard", "bullet")
 tt.render.sprites[1].prefix = "missile_wizard"
@@ -2938,13 +2851,11 @@ tt.main_script.update = scripts.missile.update
 tt.main_script.insert = scripts.missile_wizard.insert
 tt.sound_events.hit = "HeroWizardMissileHit"
 --#endregion
-
 --#region fx_missile_wizard_hit
 tt = RT("fx_missile_wizard_hit", "fx")
 tt.render.sprites[1].name = "missile_wizard_hit"
 tt.render.sprites[1].z = Z_BULLETS
 --#endregion
-
 --#region ps_missile_wizard
 tt = RT("ps_missile_wizard")
 
@@ -2957,7 +2868,6 @@ tt.particle_system.track_rotation = true
 tt.particle_system.particle_lifetime = {0.3, 0.3}
 tt.particle_system.emission_rate = 50
 --#endregion
-
 --#region ps_missile_wizard_sparks
 tt = RT("ps_missile_wizard_sparks")
 
@@ -2970,7 +2880,6 @@ tt.particle_system.track_rotation = true
 tt.particle_system.particle_lifetime = {0.35, 0.35}
 tt.particle_system.emission_rate = 20
 --#endregion
-
 --#region hero_alric
 tt = RT("hero_alric", "hero")
 
@@ -3104,7 +3013,6 @@ tt.swordsmanship_extra = 0
 tt.toughness_hp_extra = 0
 tt.toughness_regen_extra = 0
 --#endregion
-
 --#region soldier_sand_warrior
 tt = RT("soldier_sand_warrior", "unit")
 
@@ -3142,7 +3050,6 @@ tt.unit.mod_offset = vec_2(0, ady(22))
 tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_LYCAN, F_SKELETON)
 tt.vis.flags = F_FRIEND
 --#endregion
-
 --#region hero_beastmaster
 tt = RT("hero_beastmaster", "hero")
 
@@ -3269,7 +3176,6 @@ tt.timed_attacks.list[2].sound = "HeroBeastMasterSummonBoar"
 tt.timed_attacks.list[2].spawn_time = fts(35)
 tt.vis.bans = F_POISON
 --#endregion
-
 --#region aura_beastmaster_regeneration
 tt = RT("aura_beastmaster_regeneration", "aura")
 
@@ -3280,7 +3186,6 @@ tt.hps.heal_max = 5
 tt.hps.heal_every = 0.25
 tt.main_script.update = scripts.aura_beastmaster_regeneration.update
 --#endregion
-
 --#region mod_beastmaster_lash
 tt = RT("mod_beastmaster_lash", "modifier")
 
@@ -3294,7 +3199,6 @@ tt.dps.fx_tracks_target = true
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 --#endregion
-
 --#region beastmaster_boar
 tt = RT("beastmaster_boar", "soldier")
 
@@ -3333,7 +3237,6 @@ tt.unit.hide_after_death = true
 tt.unit.explode_fx = nil
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 --#endregion
-
 --#region beastmaster_wolf
 tt = RT("beastmaster_wolf", "soldier")
 
@@ -3384,7 +3287,6 @@ tt.unit.marker_offset.y = 2.4
 tt.unit.mod_offset = vec_2(adx(34.8), ady(31.2))
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 --#endregion
-
 --#region beastmaster_rhino
 tt = RT("beastmaster_rhino", "decal_scripted")
 
@@ -3425,7 +3327,6 @@ tt.sound_events.remove_stop = "HeroBeastMasterStampede"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}, {"this.duration", 255}, {"this.duration+0.5", 0}}
 tt.tween.remove = true
 --#endregion
-
 --#region mod_beastmaster_rhino
 tt = RT("mod_beastmaster_rhino", "modifier")
 
@@ -3440,7 +3341,6 @@ tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 2
 --#endregion
-
 --#region beastmaster_falcon
 tt = RT("beastmaster_falcon", "decal_scripted")
 
@@ -3477,12 +3377,10 @@ tt.render.sprites[2].offset = vec_2(0, 0)
 tt.ui.click_rect = r(-15, 65, 30, 30)
 tt.owner = nil
 --#endregion
-
 --#region mod_beastmaster_falcon
 tt = RT("mod_beastmaster_falcon", "mod_slow")
 tt.modifier.duration = 1.5
 --#endregion
-
 --#region hero_priest
 tt = RT("hero_priest", "hero")
 
@@ -3609,7 +3507,6 @@ tt.blessedarmor_extra = 0
 tt.divinehealth_extra_hp = 0
 tt.divinehealth_regen_factor = 0
 --#endregion
-
 --#region bolt_priest
 tt = RT("bolt_priest", "bolt")
 tt.bullet.xp_gain_factor = 4
@@ -3617,7 +3514,6 @@ tt.render.sprites[1].prefix = "bolt_priest"
 tt.bullet.damage_min = nil
 tt.bullet.damage_max = nil
 --#endregion
-
 --#region mod_priest_heal
 tt = RT("mod_priest_heal", "modifier")
 
@@ -3634,13 +3530,11 @@ tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 --#endregion
-
 --#region fx_priest_revive
 tt = RT("fx_priest_revive", "fx")
 tt.render.sprites[1].name = "fx_priest_revive"
 tt.render.sprites[1].anchor.y = 0.15
 --#endregion
-
 --#region fx_priest_wave_out
 tt = RT("fx_priest_wave_out", "decal_tween")
 tt.render.sprites[1].name = "hero_priest_healWave"
@@ -3650,12 +3544,10 @@ tt.tween.props[1].keys = {{0, vec_2(2.4, 2.4)}, {0.32, vec_2(1, 1)}}
 tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].keys = {{0, 255}, {0.32, 0}}
 --#endregion
-
 --#region fx_priest_wave_in
 tt = RT("fx_priest_wave_in", "fx_priest_wave_out")
 tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.32, vec_2(2.4, 2.4)}}
 --#endregion
-
 --#region mod_priest_armor
 tt = RT("mod_priest_armor", "modifier")
 
@@ -3677,7 +3569,6 @@ tt.render.sprites[2].anchor.x = 0.51
 tt.render.sprites[2].loop = false
 tt.render.sprites[2].hide_after_runs = 1
 --#endregion
-
 --#region mod_priest_consecrate
 tt = RT("mod_priest_consecrate", "modifier")
 
@@ -3694,7 +3585,6 @@ tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
-
 --#region hero_dracolich
 tt = RT("hero_dracolich", "hero")
 
@@ -3864,28 +3754,24 @@ tt.timed_attacks.list[4].range_nodes_min = 10
 tt.timed_attacks.list[4].sound = "HeroDracolichSoulsPlague"
 tt.timed_attacks.list[4].count = nil
 --#endregion
-
 --#region fx_fireball_dracolich_decal
 tt = RT("fx_fireball_dracolich_decal", "decal_tween")
 tt.render.sprites[1].name = "Halloween_hero_bones_proyExplosion_decal"
 tt.render.sprites[1].animated = false
 tt.tween.props[1].keys = {{fts(17), 255}, {fts(27), 0}}
 --#endregion
-
 --#region fx_fireball_dracolich_ground
 tt = RT("fx_fireball_dracolich_ground", "fx")
 tt.render.sprites[1].name = "fx_dracolich_fireball_explosion_ground"
 tt.render.sprites[1].anchor.y = 0.20512820512820512
 tt.render.sprites[1].sort_y_offset = -5
 --#endregion
-
 --#region fx_fireball_dracolich_air
 tt = RT("fx_fireball_dracolich_air", "fx")
 tt.render.sprites[1].name = "fx_dracolich_fireball_explosion_air"
 tt.render.sprites[1].anchor.y = 0.24
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 --#endregion
-
 --#region ps_fireball_dracolich
 tt = RT("ps_fireball_dracolich")
 
@@ -3902,7 +3788,6 @@ tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi
 tt.particle_system.alphas = {255, 0}
 --#endregion
-
 --#region fireball_dracolich
 tt = RT("fireball_dracolich", "bullet")
 tt.render.sprites[1].name = "Halloween_hero_bones_proy"
@@ -3925,7 +3810,6 @@ tt.bullet.mod = nil
 tt.main_script.update = scripts.fireball_dragon.update
 tt.sound_events.hit = "HeroDragonAttackHit"
 --#endregion
-
 --#region mod_dracolich_disease
 tt = RT("mod_dracolich_disease", "modifier")
 
@@ -3950,17 +3834,14 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.main_script.remove = scripts.mod_dracolich_disease.remove
 --#endregion
-
 --#region fx_dracolich_disease_explosion
 tt = RT("fx_dracolich_disease_explosion", "fx")
 tt.render.sprites[1].name = "dracolich_disease_explosion"
 --#endregion
-
 --#region fx_dracolich_skeleton_glow
 tt = RT("fx_dracolich_skeleton_glow", "fx")
 tt.render.sprites[1].name = "fx_dracolich_skeleton_glow"
 --#endregion
-
 --#region dracolich_spine
 tt = RT("dracolich_spine", "bullet")
 
@@ -3989,7 +3870,6 @@ tt.tween.props[1].keys = {{0, 0}, {fts(3), 0}, {fts(6), 255}, {tt.bullet.duratio
 tt.tween.props[1].sprite_id = 2
 tt.sound_events.delayed_insert = "HeroDracolichBoneRain"
 --#endregion
-
 --#region fx_dracolich_nova_cloud
 tt = RT("fx_dracolich_nova_cloud", "decal_tween")
 tt.render.sprites[1].name = "Halloween_hero_bones_particle"
@@ -4000,14 +3880,12 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].name = "offset"
 tt.tween.props[2].keys = {}
 --#endregion
-
 --#region fx_dracolich_nova_explosion
 tt = RT("fx_dracolich_nova_explosion", "fx")
 tt.render.sprites[1].name = "fx_dracolich_explosion"
 tt.render.sprites[1].anchor.y = 0.2
 tt.render.sprites[1].sort_y_offset = -1
 --#endregion
-
 --#region fx_dracolich_nova_decal
 tt = RT("fx_dracolich_nova_decal", "decal_tween")
 tt.render.sprites[1].name = "Halloween_hero_bones_explosion_decal"
@@ -4015,7 +3893,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{fts(40), 255}, {fts(45), 0}}
 --#endregion
-
 --#region dracolich_plague_carrier
 tt = RT("dracolich_plague_carrier", "aura")
 
@@ -4042,7 +3919,6 @@ tt.tween.disabled = true
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration_var, 0}}
 --#endregion
-
 --#region ps_dracolich_plague
 tt = RT("ps_dracolich_plague", "ps_bolt_necromancer_trail")
 tt.particle_system.particle_lifetime = {fts(15), fts(25)}
@@ -4053,7 +3929,6 @@ tt.particle_system.emission_rate = 10
 tt.particle_system.sort_y_offset = -20
 tt.particle_system.z = Z_OBJECTS
 --#endregion
-
 --#region soldier_dracolich_golem
 tt = RT("soldier_dracolich_golem", "soldier")
 
@@ -4092,7 +3967,6 @@ tt.unit.mod_offset = vec_2(0, 18)
 tt.unit.explode_fx = nil
 tt.vis.bans = bor(F_POISON, F_SKELETON, F_LYCAN, F_CANNIBALIZE)
 --#endregion
-
 --#region hero_pirate
 tt = RT("hero_pirate", "hero")
 
@@ -4229,7 +4103,6 @@ tt.unit.mod_offset = vec_2(0, 14.16)
 tt.swordsmanship_extra = 0
 tt.toughness_extra_hp = 0
 --#endregion
-
 --#region pirate_shotgun
 tt = RT("pirate_shotgun", "shotgun")
 tt.bullet.level = 0
@@ -4244,7 +4117,6 @@ tt.bullet.xp_gain_factor = 2.5
 tt.render.sprites[1].hidden = true
 tt.sound_events.insert = "ShotgunSound"
 --#endregion
-
 --#region pirate_loot_aura
 tt = RT("pirate_loot_aura", "aura")
 tt.aura.mod = "mod_pirate_loot"
@@ -4260,7 +4132,6 @@ tt.aura.vis_flags = bor(F_MOD, F_RANGED)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region mod_pirate_loot
 tt = RT("mod_pirate_loot", "modifier")
 tt.modifier.duration = fts(13)
@@ -4269,7 +4140,6 @@ tt.main_script.update = scripts.mod_pirate_loot.update
 tt.percent = nil
 tt.extra_loot = 0
 --#endregion
-
 --#region kraken_aura
 tt = RT("kraken_aura", "aura")
 tt.main_script.insert = scripts.kraken_aura.insert
@@ -4283,7 +4153,6 @@ tt.aura.vis_bans = bor(F_BOSS, F_FLYING, F_WATER, F_CLIFF, F_FRIEND, F_HERO)
 tt.max_active_targets = 2
 tt.active_targets_count = 0
 --#endregion
-
 --#region kraken_aura_slow
 tt = RT("kraken_aura_slow", "aura")
 tt.main_script.insert = scripts.aura_apply_mod.insert
@@ -4295,7 +4164,6 @@ tt.aura.radius = 40
 tt.aura.vis_flags = bor(F_RANGED)
 tt.aura.vis_bans = bor(F_BOSS, F_FLYING, F_WATER, F_CLIFF, F_FRIEND, F_HERO)
 --#endregion
-
 --#region mod_stun_kraken
 tt = RT("mod_stun_kraken", "modifier")
 
@@ -4312,7 +4180,6 @@ tt.main_script.insert = scripts.mod_stun_kraken.insert
 tt.main_script.remove = scripts.mod_stun_kraken.remove
 tt.main_script.update = scripts.mod_stun_kraken.update
 --#endregion
-
 --#region mod_dps_kraken
 tt = RT("mod_dps_kraken", "modifier")
 
@@ -4326,13 +4193,11 @@ tt.dps.damage_every = fts(10)
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 --#endregion
-
 --#region mod_slow_kraken
 tt = RT("mod_slow_kraken", "mod_slow")
 tt.modifier.duration = fts(10)
 tt.slow.factor = 0.5
 --#endregion
-
 --#region pirate_exploding_barrel
 tt = RT("pirate_exploding_barrel", "bomb")
 tt.bullet.flight_time = fts(20)
@@ -4348,13 +4213,11 @@ tt.render.sprites[1].animated = false
 tt.main_script.update = scripts.pirate_exploding_barrel.update
 tt.fragments = 0
 --#endregion
-
 --#region fx_barrel_explosion
 tt = RT("fx_barrel_explosion", "fx")
 tt.render.sprites[1].name = "barrel_explosion"
 tt.render.sprites[1].z = Z_BULLETS
 --#endregion
-
 --#region barrel_fragment
 tt = RT("barrel_fragment", "bomb")
 tt.bullet.align_with_trajectory = true
@@ -4372,7 +4235,6 @@ tt.render.sprites[1].name = "barrel_fragment"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].anchor.x = 0.68
 --#endregion
-
 --#region ps_barrel_fragment
 tt = RT("ps_barrel_fragment")
 
@@ -4391,14 +4253,12 @@ tt.particle_system.alphas = {255, 0}
 tt.particle_system.emit_rotation_spread = math.pi
 tt.particle_system.scale_same_aspect = false
 --#endregion
-
 --#region fx_fragment_ground_explosion
 tt = RT("fx_fragment_ground_explosion", "fx")
 tt.render.sprites[1].name = "barrel_fragment_ground_explosion"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.22)
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
-
 --#region decal_kraken
 tt = RT("decal_kraken", "decal_scripted")
 
@@ -4409,7 +4269,6 @@ tt.render.sprites[1].prefix = "kraken_water"
 tt.render.sprites[1].z = Z_DECALS
 tt.duration = 3
 --#endregion
-
 --#region hero_dragon
 tt = RT("hero_dragon", "hero")
 
@@ -4582,7 +4441,6 @@ tt.timed_attacks.list[1].vis_flags = F_RANGED
 tt.timed_attacks.list[1].vis_bans = bor(F_FLYING, F_BOSS, F_WATER, F_CLIFF)
 tt.timed_attacks.list[1].sound = "HeroDragonTauntSelect"
 --#endregion
-
 --#region fireball_dragon
 tt = RT("fireball_dragon", "bullet")
 tt.render.sprites[1].name = "hero_dragon_attack_proy"
@@ -4604,26 +4462,22 @@ tt.bullet.mod = nil
 tt.main_script.update = scripts.fireball_dragon.update
 tt.sound_events.hit = "HeroDragonAttackHit"
 --#endregion
-
 --#region fx_fireball_dragon_hit
 tt = RT("fx_fireball_dragon_hit", "fx")
 tt.render.sprites[1].name = "fx_fireball_dragon_hit"
 tt.render.sprites[1].anchor.y = 0.24
 tt.render.sprites[1].z = Z_EFFECTS
 --#endregion
-
 --#region fx_fireball_explosion_air
 tt = RT("fx_fireball_explosion_air", "fx_explosion_air")
 tt.render.sprites[1].scale = vec_2(0.7, 0.7)
 tt.render.sprites[1].z = Z_EFFECTS
 --#endregion
-
 --#region fx_fireball_throw
 tt = RT("fx_fireball_throw", "fx")
 tt.render.sprites[1].name = "fx_dragon_range_attack"
 tt.render.sprites[1].z = Z_BULLETS + 1
 --#endregion
-
 --#region ps_fireball_dragon
 tt = RT("ps_fireball_dragon")
 
@@ -4639,7 +4493,6 @@ tt.particle_system.emission_rate = 40
 tt.particle_system.emit_spread = math.pi
 tt.particle_system.alphas = {255, 0}
 --#endregion
-
 --#region mod_dragon_reign
 tt = RT("mod_dragon_reign", "modifier")
 
@@ -4661,7 +4514,6 @@ tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].loop = true
 tt.spread_radius = 60
 --#endregion
-
 --#region breath_dragon
 tt = RT("breath_dragon", "bullet")
 tt.render.sprites[1].name = "hero_dragon_flameBurnDecal"
@@ -4678,20 +4530,17 @@ tt.bullet.damage_flags = F_AREA
 tt.main_script.update = scripts.breath_dragon.update
 tt.duration = fts(20)
 --#endregion
-
 --#region fx_breath_dragon_fire
 tt = RT("fx_breath_dragon_fire", "fx")
 tt.render.sprites[1].name = "dragon_breath_fire"
 tt.render.sprites[1].anchor.y = 0.3472222222222222
 --#endregion
-
 --#region fx_breath_dragon_fire_decal
 tt = RT("fx_breath_dragon_fire_decal", "fx")
 tt.render.sprites[1].name = "dragon_breath_fire_decal"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.3424657534246575
 --#endregion
-
 --#region fx_breath_dragon_mouth_glow
 tt = RT("fx_breath_dragon_mouth_glow", "decal_timed")
 tt.render.sprites[1].name = "hero_dragon_flameBurnGlow_cut"
@@ -4699,7 +4548,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS + 1
 tt.timed.duration = fts(20)
 --#endregion
-
 --#region ps_breath_dragon
 tt = RT("ps_breath_dragon")
 
@@ -4713,20 +4561,17 @@ tt.particle_system.name = "dragon_breath_particle"
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 --#endregion
-
 --#region fx_dragon_feast
 tt = RT("fx_dragon_feast", "fx")
 tt.render.sprites[1].name = "fx_dragon_feast"
 tt.render.sprites[1].anchor.y = 0.065
 --#endregion
-
 --#region fx_dragon_feast_explode
 tt = RT("fx_dragon_feast_explode", "fx")
 tt.render.sprites[1].name = "fx_dragon_feast_explode"
 tt.render.sprites[1].anchor.y = 0.065
 tt.render.sprites[1].size_scales = {vec_1(0.8), vec_1(1), vec_1(1.2)}
 --#endregion
-
 --#region fierymist_dragon
 tt = RT("fierymist_dragon", "bullet")
 tt.render = nil
@@ -4738,7 +4583,6 @@ tt.bullet.vis_flags = F_RANGED
 tt.bullet.hit_payload = "aura_fierymist_dragon"
 tt.main_script.update = scripts.fierymist_dragon.update
 --#endregion
-
 --#region ps_fierymist_dragon
 tt = RT("ps_fierymist_dragon")
 
@@ -4752,7 +4596,6 @@ tt.particle_system.name = "dragon_fierymist_particle"
 tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.source_lifetime = fts(20)
 --#endregion
-
 --#region aura_fierymist_dragon
 tt = RT("aura_fierymist_dragon", "aura")
 tt.aura.mod = "mod_slow_fierymist"
@@ -4766,13 +4609,11 @@ tt.aura.vis_flags = F_MOD
 tt.aura.vis_bans = F_FRIEND
 tt.main_script.update = scripts.aura_fiery_mist_ashbite.update
 --#endregion
-
 --#region mod_slow_fierymist
 tt = RT("mod_slow_fierymist", "mod_slow")
 tt.modifier.duration = fts(5)
 tt.slow.factor = nil
 --#endregion
-
 --#region fx_aura_fierymist_dragon
 tt = RT("fx_aura_fierymist_dragon", "decal_tween")
 tt.duration = nil
@@ -4781,7 +4622,6 @@ tt.render.sprites[1].anchor.y = 0.15
 tt.render.sprites[1].z = Z_OBJECTS
 tt.tween.props[1].keys = {{0, 0}, {fts(6), 255}, {"this.duration-0.3", 255}, {"this.duration", 0}}
 --#endregion
-
 --#region wildfirebarrage_dragon
 tt = RT("wildfirebarrage_dragon", "bullet")
 tt.render.sprites[1].name = "dragon_wildfirebarrage_projectile"
@@ -4804,14 +4644,12 @@ tt.main_script.update = scripts.wildfirebarrage_dragon.update
 tt.sound_events.hit = "HeroDragonAttackHit"
 tt.explosions = nil
 --#endregion
-
 --#region fx_emit_wildfirebarrage
 tt = RT("fx_emit_wildfirebarrage", "fx")
 tt.render.sprites[1].name = "fx_dragon_wildfirebarrage"
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].offset = vec_2(-28, -48)
 --#endregion
-
 --#region ps_wildbarrage_dragon
 tt = RT("ps_wildbarrage_dragon")
 
@@ -4828,26 +4666,22 @@ tt.particle_system.emission_rate = 60
 tt.particle_system.emit_rotation_spread = math.pi
 tt.particle_system.alphas = {255, 0}
 --#endregion
-
 --#region fx_wildfirebarrage_explosion_1
 tt = RT("fx_wildfirebarrage_explosion_1", "fx")
 tt.render.sprites[1].name = "dragon_wildfirebarrage_explosion_1"
 tt.render.sprites[1].anchor.y = 0.24
 --#endregion
-
 --#region fx_wildfirebarrage_explosion_2
 tt = RT("fx_wildfirebarrage_explosion_2", "fx")
 tt.render.sprites[1].name = "dragon_wildfirebarrage_explosion_2"
 tt.render.sprites[1].anchor.y = 0.16
 --#endregion
-
 --#region decal_wildfirebarrage_explosion
 tt = RT("decal_wildfirebarrage_explosion", "decal_timed")
 tt.render.sprites[1].name = "dragon_wildfirebarrage_decal"
 tt.render.sprites[1].anchor.y = 0.3
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
-
 --#region hero_van_helsing
 tt = RT("hero_van_helsing", "hero")
 
@@ -5013,7 +4847,6 @@ tt.timed_attacks.list[3].max_range = 160
 tt.timed_attacks.list[3].min_range = 0
 tt.timed_attacks.list[3].cooldown = 8
 --#endregion
-
 --#region van_helsing_shotgun
 tt = RT("van_helsing_shotgun", "shotgun")
 tt.bullet.damage_min = 30
@@ -5028,7 +4861,6 @@ tt.sound_events.insert = "ShotgunSound"
 tt.bullet.xp_gain_factor = 3
 tt.bullet.pop = nil
 --#endregion
-
 --#region van_helsing_silverbullet
 tt = RT("van_helsing_silverbullet", "van_helsing_shotgun")
 tt.bullet.damage_type = bor(DAMAGE_TRUE, DAMAGE_FX_EXPLODE)
@@ -5037,7 +4869,6 @@ tt.bullet.damage_min = nil
 tt.sound_events.insert = "SniperSound"
 tt.bullet.xp_gain_factor = nil
 --#endregion
-
 --#region mod_van_helsing_crosshair
 tt = RT("mod_van_helsing_crosshair", "modifier")
 
@@ -5048,7 +4879,6 @@ tt.render.sprites[1].sort_y_offset = -2
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(16)
 --#endregion
-
 --#region van_helsing_grenade
 tt = RT("van_helsing_grenade", "bullet")
 tt.bullet.damage_radius = 80
@@ -5062,7 +4892,6 @@ tt.main_script.update = scripts.van_helsing_grenade.update
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "Halloween_hero_vhelsing_water"
 --#endregion
-
 --#region mod_van_helsing_silence
 tt = RT("mod_van_helsing_silence", "modifier")
 
@@ -5080,7 +4909,6 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].sort_y_offset = -2
 --#endregion
-
 --#region van_helsing_grenade_explosion
 tt = RT("van_helsing_grenade_explosion", "fx")
 
@@ -5092,7 +4920,6 @@ tt.render.sprites[1].anchor.y = 0.25
 tt.render.sprites[1].z = Z_OBJECTS
 tt.sound_events.insert = "HeroVanHelsingHolyWater"
 --#endregion
-
 --#region mod_van_helsing_relic
 tt = RT("mod_van_helsing_relic", "modifier")
 
@@ -5105,7 +4932,6 @@ tt.main_script.update = scripts.mod_van_helsing_relic.update
 tt.armor_reduce_factor = nil
 tt.remove_mods = {"mod_shaman_magic_armor", "mod_shaman_armor"}
 --#endregion
-
 --#region van_helsing_beacon_aura
 tt = RT("van_helsing_beacon_aura", "aura")
 tt.aura.mod = "mod_van_helsing_beacon"
@@ -5120,7 +4946,6 @@ tt.aura.vis_flags = F_MOD
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region mod_van_helsing_beacon
 tt = RT("mod_van_helsing_beacon", "modifier")
 
@@ -5136,7 +4961,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "Halloween_hero_vhelsing_buffeffect"
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
-
 --#region mod_anya_ultimate_beacon
 tt = RT("mod_anya_ultimate_beacon", "mod_van_helsing_beacon")
 tt.inflicted_damage_factor = 1.5
@@ -5144,7 +4968,6 @@ tt.modifier.duration = 12
 tt.render.sprites[1].color = {100, 100, 255}
 tt.render.sprites[1].scale = vec_1(1.2)
 --#endregion
-
 --#region hero_steam_frigate
 tt = RT("hero_steam_frigate", "stage_hero")
 
@@ -5209,7 +5032,6 @@ tt.timed_attacks.list[1].min_range = 16.5
 tt.timed_attacks.list[1].shoot_time = fts(13)
 tt.timed_attacks.list[1].valid_terrains = TERRAIN_WATER
 --#endregion
-
 --#region steam_frigate_barrel
 tt = RT("steam_frigate_barrel", "bomb")
 tt.bullet.flight_time = fts(20)
@@ -5221,7 +5043,6 @@ tt.bullet.hide_radius = nil
 tt.render.sprites[1].name = "pirateHero_proy_0001"
 tt.sound_events.insert = "AxeSound"
 --#endregion
-
 --#region steam_frigate_mine
 tt = RT("steam_frigate_mine", "bomb")
 
@@ -5247,7 +5068,6 @@ tt.render.sprites[2].prefix = "steam_frigate_mine"
 tt.sound_events.insert = "AxeSound"
 tt.trigger_radius = 10
 --#endregion
-
 --#region hero_vampiress
 tt = RT("hero_vampiress", "hero")
 
@@ -5351,19 +5171,16 @@ tt.timed_attacks.list[1].disabled = true
 tt.vis.bans = bor(tt.vis.bans, F_POISON)
 tt.gain_count = 0
 --#endregion
-
 --#region fx_vampiress_transform
 tt = RT("fx_vampiress_transform", "fx")
 tt.render.sprites[1].name = "fx_vampiress_transform"
 tt.render.sprites[1].anchor.y = 0.32432432432432434
 --#endregion
-
 --#region mod_vampiress_lifesteal
 tt = RT("mod_vampiress_lifesteal", "modifier")
 tt.heal_hp = 100
 tt.main_script.insert = scripts.mod_simple_lifesteal.insert
 --#endregion
-
 --#region mod_vampiress_blood
 tt = RT("mod_vampiress_blood", "mod_blood")
 tt.modifier.duration = 6
@@ -5371,7 +5188,6 @@ tt.dps.damage_min = 5
 tt.dps.damage_max = 5
 tt.dps.damage_inc = 5
 --#endregion
-
 --#region mod_vampiress_gain
 tt = RT("mod_vampiress_gain", "modifier")
 tt.gain = {
@@ -5389,7 +5205,6 @@ tt.max_gain_count = 75
 tt.main_script.insert = scripts.mod_gain_on_kill.insert
 tt.main_script.update = scripts.mod_vampiress_gain.update
 --#endregion
-
 --#region hero_alien
 tt = RT("hero_alien", "hero")
 
@@ -5522,20 +5337,17 @@ tt.selfdestruct.sound_hit = "HeroAlienExplosion"
 tt.selfdestruct.xp_from_skill = "finalcountdown"
 tt.selfdestruct.mod = "mod_alien_selfdestruct"
 --#endregion
-
 --#region mod_slow_alien_glaive
 tt = RT("mod_slow_alien_glaive", "mod_slow")
 tt.modifier.duration = 2
 tt.slow.factor = 0.65
 --#endregion
-
 --#region mod_alien_selfdestruct
 tt = RT("mod_alien_selfdestruct", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.modifier.duration = 1.5
 --#endregion
-
 --#region alien_glaive
 tt = RT("alien_glaive", "bullet")
 tt.main_script.update = scripts.alien_glaive.update
@@ -5553,12 +5365,10 @@ tt.bounce_range = 150
 tt.bullet.mod = "mod_slow_alien_glaive"
 tt.sound_events.insert = "HeroAlienDiscoThrow"
 --#endregion
-
 --#region fx_alien_glaive_hit
 tt = RT("fx_alien_glaive_hit", "fx")
 tt.render.sprites[1].name = "alien_glaive_hit"
 --#endregion
-
 --#region ps_alien_glaive_trail
 tt = RT("ps_alien_glaive_trail")
 
@@ -5573,7 +5383,6 @@ tt.particle_system.scales_y = {1.5, 0.5}
 tt.particle_system.emission_rate = 40
 tt.particle_system.track_rotation = true
 --#endregion
-
 --#region alien_abduction_ship
 tt = RT("alien_abduction_ship", "decal_scripted")
 
@@ -5659,7 +5468,6 @@ for _, r in pairs(rays) do
 end
 
 --#endregion
-
 --#region abducted_enemy_decal
 tt = RT("abducted_enemy_decal", "decal_tween")
 tt.tween.disabled = true
@@ -5672,7 +5480,6 @@ tt.tween.props[3] = CC("tween_prop")
 tt.tween.props[3].name = "r"
 tt.tween.props[3].keys = {{0, 0}, {0.55, "math.random(-20,20)*math.pi/180"}}
 --#endregion
-
 --#region alien_purification_drone
 tt = RT("alien_purification_drone", "decal_scripted")
 
@@ -5704,7 +5511,6 @@ tt.vis_bans = bor(F_BOSS)
 tt.vis_flags = bor(F_RANGED)
 tt.duration = nil
 --#endregion
-
 --#region hero_monk
 tt = RT("hero_monk", "hero")
 
@@ -5889,13 +5695,11 @@ tt.timed_attacks.list[2].range = 100
 tt.timed_attacks.list[2].xp_from_skill = "leopardstyle"
 tt.cooldown_factor_dec_count = 0
 --#endregion
-
 --#region mod_monk_damage_reduction
 tt = RT("mod_monk_damage_reduction", "modifier")
 tt.main_script.insert = scripts.mod_monk_damage_reduction.insert
 tt.reduction_factor = nil
 --#endregion
-
 --#region hero_voodoo_witch
 tt = RT("hero_voodoo_witch", "hero")
 
@@ -6007,7 +5811,6 @@ tt.timed_attacks.list[1].damage = nil
 tt.timed_attacks.list[1].vis_flags = F_RANGED
 tt.timed_attacks.list[1].vis_bans = bor(F_BOSS)
 --#endregion
-
 --#region voodoo_witch_skull_aura
 tt = RT("voodoo_witch_skull_aura", "aura")
 tt.aura.cycle_time = 0.267
@@ -6021,7 +5824,6 @@ tt.skulls = {}
 tt.rot_speed = 2 * math.pi / 8
 tt.rot_radius = 40
 --#endregion
-
 --#region mod_voodoo_witch_skull_spawn
 tt = RT("mod_voodoo_witch_skull_spawn", "modifier")
 tt.modifier.duration = fts(10)
@@ -6030,7 +5832,6 @@ tt.count_group_type = COUNT_GROUP_CONCURRENT
 tt.count_group_name = "voodoo_witch_skulls"
 tt.skull_count = 2
 --#endregion
-
 --#region voodoo_witch_skull
 tt = RT("voodoo_witch_skull", "decal_scripted")
 
@@ -6076,12 +5877,10 @@ tt.sacrifice.sound = "HeroVoodooWitchSacrificeStart"
 tt.sacrifice.sound_hit = "HeroVoodooWitchSacrificeHit"
 tt.rot_dest = vec_2(0, 0)
 --#endregion
-
 --#region fx_voodoo_witch_skull_explosion
 tt = RT("fx_voodoo_witch_skull_explosion", "fx")
 tt.render.sprites[1].name = "fx_voodoo_witch_skull_explosion"
 --#endregion
-
 --#region ps_voodoo_witch_skull
 tt = RT("ps_voodoo_witch_skull")
 
@@ -6096,7 +5895,6 @@ tt.particle_system.scales_y = {0.85, 0.15}
 tt.particle_system.emit_rotation_spread = math.pi
 tt.particle_system.emission_rate = 60
 --#endregion
-
 --#region voodoo_witch_death_aura
 tt = RT("voodoo_witch_death_aura", "aura")
 
@@ -6120,7 +5918,6 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "voodoo_buff_top"
 tt.render.sprites[2].anchor.y = 0.22727272727272727
 --#endregion
-
 --#region mod_voodoo_witch_aura_slow
 tt = RT("mod_voodoo_witch_aura_slow", "mod_slow")
 
@@ -6137,7 +5934,6 @@ tt.render.sprites[1].animated = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.remove = false
 --#endregion
-
 --#region bolt_voodoo_witch
 tt = RT("bolt_voodoo_witch", "bolt")
 tt.bullet.damage_max = nil
@@ -6150,7 +5946,6 @@ tt.bullet.xp_gain_factor = 2.7
 tt.render.sprites[1].prefix = "bolt_voodoo_witch"
 tt.sound_events.insert = "HeroVoodooWitchAttack"
 --#endregion
-
 --#region bolt_voodoo_witch_skull
 tt = RT("bolt_voodoo_witch_skull", "bolt_voodoo_witch")
 tt.bullet.damage_max = 5
@@ -6160,7 +5955,6 @@ tt.bullet.xp_gain_factor = 1.8
 tt.render.sprites[1].scale = vec_2(0.75, 0.75)
 tt.sound_events.insert = "HeroVoodooWitchSkullAttack"
 --#endregion
-
 --#region ps_bolt_voodoo_witch
 tt = RT("ps_bolt_voodoo_witch")
 
@@ -6173,13 +5967,11 @@ tt.particle_system.alphas = {255, 0}
 tt.particle_system.scales_y = {0.75, 0.15}
 tt.particle_system.emission_rate = 60
 --#endregion
-
 --#region ps_bolt_voodoo_witch_skull
 tt = RT("ps_bolt_voodoo_witch_skull", "ps_bolt_voodoo_witch")
 tt.particle_system.scales_y = {0.5, 0.1}
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 --#endregion
-
 --#region mod_voodoo_witch_magic
 tt = RT("mod_voodoo_witch_magic", "modifier")
 
@@ -6191,13 +5983,11 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "mod_voodoo_witch_magic"
 tt.render.sprites[1].loop = false
 --#endregion
-
 --#region mod_voodoo_witch_magic_slow
 tt = RT("mod_voodoo_witch_magic_slow", "mod_slow")
 tt.slow.factor = 0.3
 tt.modifier.duration = 0.4
 --#endregion
-
 --#region hero_crab
 tt = RT("hero_crab", "hero")
 
@@ -6351,7 +6141,6 @@ tt.timed_attacks.list[1].sound = "HeroCrabPrincer"
 tt.timed_attacks.list[1].xp_from_skill = "pincerattack"
 tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
 --#endregion
-
 --#region crab_water_bomb
 tt = RT("crab_water_bomb", "bomb")
 tt.bullet.damage_radius = 60
@@ -6367,7 +6156,6 @@ tt.sound_events.hit_water = "HeroGiantExplosionRock"
 tt.render.sprites[1].name = "hero_crabman_proy"
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region aura_slow_water_bomb
 tt = RT("aura_slow_water_bomb", "aura")
 tt.aura.mod = "mod_slow_water_bomb"
@@ -6379,13 +6167,11 @@ tt.aura.vis_flags = F_MOD
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region mod_slow_water_bomb
 tt = RT("mod_slow_water_bomb", "mod_slow")
 tt.modifier.duration = nil
 tt.slow.factor = nil
 --#endregion
-
 --#region fx_crab_water_bomb_explosion
 tt = RT("fx_crab_water_bomb_explosion", "fx")
 tt.render.sprites[1].name = "fx_hero_crab_splash"
@@ -6393,12 +6179,10 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].anchor.y = 0.21212121212121213
 tt.render.sprites[1].sort_y_offset = -5
 --#endregion
-
 --#region mod_stun_burrow
 tt = RT("mod_stun_burrow", "mod_stun")
 tt.modifier.duration = 2.2
 --#endregion
-
 --#region aura_crab_invuln
 tt = RT("aura_crab_invuln", "aura")
 
@@ -6434,7 +6218,6 @@ tt.tween.props[4].sprite_id = 2
 tt.tween.props[4].keys = {{0, vec_2(0.75, 0.85)}, {fts(10), vec_2(0.8, 0.8)}, {fts(20), vec_2(0.75, 0.85)}}
 tt.tween.props[4].loop = true
 --#endregion
-
 --#region hero_giant
 tt = RT("hero_giant", "hero")
 
@@ -6585,7 +6368,6 @@ tt.timed_attacks.list[1].stun_vis_flags = F_STUN
 tt.timed_attacks.list[1].stun_vis_bans = bor(F_CLIFF, F_BOSS, F_FLYING)
 tt.hardrock_extra_hp = 0
 --#endregion
-
 --#region giant_death_remains
 tt = RT("giant_death_remains", "decal_tween")
 tt.render.sprites[1].name = "hero_giant_death_remains"
@@ -6600,7 +6382,6 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].keys = {{0, 0}, {fts(12), 0}, {fts(13), 255}, {fts(25), 0}, {fts(27), 0}}
 tt.tween.props[2].sprite_id = 2
 --#endregion
-
 --#region aura_giant_bastion
 tt = RT("aura_giant_bastion", "aura")
 
@@ -6622,7 +6403,6 @@ tt.max_damage = nil
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
-
 --#region mod_giant_massivedamage
 tt = RT("mod_giant_massivedamage", "modifier")
 
@@ -6642,24 +6422,20 @@ tt.tween.props[1].keys = {{0, 255}, {fts(12), 255}, {fts(12) + 0.25, 0}}
 tt.tween.remove = true
 tt.main_script.insert = scripts.mod_giant_massivedamage.insert
 --#endregion
-
 --#region mod_giant_slow
 tt = RT("mod_giant_slow", "mod_slow")
 tt.modifier.duration = 1
 tt.slow.factor = 0.5
 --#endregion
-
 --#region mod_giant_stun
 tt = RT("mod_giant_stun", "mod_shock_and_awe")
 tt.modifier.duration = nil
 --#endregion
-
 --#region giant_stomp_decal
 tt = RT("giant_stomp_decal", "decal_timed")
 tt.render.sprites[1].name = "giant_stomp_stones"
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
-
 --#region giant_boulder
 tt = RT("giant_boulder", "bomb")
 tt.bullet.damage_min = nil
@@ -6677,13 +6453,11 @@ tt.sound_events.insert = nil
 tt.render.sprites[1].name = "hero_giant_proy_0001"
 tt.main_script.insert = scripts.giant_boulder.insert
 --#endregion
-
 --#region fx_giant_boulder_explosion
 tt = RT("fx_giant_boulder_explosion", "fx")
 tt.render.sprites[1].name = "giant_boulder_explosion"
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
-
 --#region hero_minotaur
 tt = RT("hero_minotaur", "hero")
 
@@ -6841,13 +6615,11 @@ tt.timed_attacks.list[4].sound = "HeroMinotaurDaedalusMaze"
 tt.timed_attacks.list[4].vis_flags = bor(F_BLOCK, F_RANGED, F_TELEPORT)
 tt.timed_attacks.list[4].vis_bans = bor(F_BOSS, F_FLYING, F_CLIFF, F_WATER, F_STUN)
 --#endregion
-
 --#region daedalus_enemy_decal
 tt = RT("daedalus_enemy_decal", "decal_tween")
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
 --#endregion
-
 --#region mod_minotaur_daedalus
 tt = RT("mod_minotaur_daedalus", "modifier")
 
@@ -6863,7 +6635,6 @@ tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].hidden = true
 --#endregion
-
 --#region decal_minotaur_daedalus
 tt = RT("decal_minotaur_daedalus", "decal_tween")
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}, {1, 0}}
@@ -6871,12 +6642,10 @@ tt.render.sprites[1].name = "minotaur_decal_"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
-
 --#region mod_minotaur_stun
 tt = RT("mod_minotaur_stun", "mod_shock_and_awe")
 tt.modifier.duration = nil
 --#endregion
-
 --#region mod_minotaur_dust
 tt = RT("mod_minotaur_dust", "modifier")
 
@@ -6888,7 +6657,6 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "fx_minotaur_dust"
 tt.render.sprites[1].loop = true
 --#endregion
-
 --#region ps_minotaur_bullrush
 tt = RT("ps_minotaur_bullrush")
 
@@ -6907,7 +6675,6 @@ tt.particle_system.scale_var = {0.8, 1.2}
 tt.particle_system.scales_x = {0.5, 1.5}
 tt.particle_system.scales_y = {0.5, 1.5}
 --#endregion
-
 --#region mod_minotaur_roaroffury
 tt = RT("mod_minotaur_roaroffury", "modifier")
 
@@ -6936,19 +6703,16 @@ tt.tween.props[3].loop = true
 tt.tween.props[3].name = "scale"
 tt.tween.props[3].keys = {{0, vec_2(1, 1)}, {0.5, vec_2(0.9, 0.9)}, {1, vec_2(1, 1)}}
 --#endregion
-
 --#region fx_minotaur_roarofury_scream
 tt = RT("fx_minotaur_roarofury_scream", "fx")
 tt.render.sprites[1].name = "fx_minotaur_roarofury_scream"
 --#endregion
-
 --#region decal_minotaur_bloodaxe
 tt = RT("decal_minotaur_bloodaxe", "decal_tween")
 tt.tween.props[1].keys = {{fts(50), 255}, {fts(60), 0}}
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "minotaur_axeDecal"
 --#endregion
-
 --#region hero_monkey_god
 tt = RT("hero_monkey_god", "hero")
 
@@ -7119,14 +6883,12 @@ tt.timed_attacks.list[1].sound_start = "HeroMonkeyGodAngryGodScream"
 tt.timed_attacks.list[1].sound_loop = "HeroMonkeyGodAngryGodLoop"
 tt.vis.bans = bor(F_POISON)
 --#endregion
-
 --#region aura_monkey_god_divinenature
 tt = RT("aura_monkey_god_divinenature", "aura_beastmaster_regeneration")
 tt.hps.heal_min = 3
 tt.hps.heal_max = 3
 tt.hps.heal_every = fts(10)
 --#endregion
-
 --#region mod_monkey_god_angry
 tt = RT("mod_monkey_god_angry", "modifier")
 
@@ -7145,7 +6907,6 @@ tt.render.sprites[1].size_scales = {vec_1(1), vec_1(1.2), vec_1(1.4)}
 tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].anchor.y = 0.46551724137931033
 --#endregion
-
 --#region mod_monkey_god_fire
 tt = RT("mod_monkey_god_fire", "modifier")
 
@@ -7162,7 +6923,6 @@ tt.dps.damage_type = DAMAGE_TRUE
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 --#endregion
-
 --#region mod_monkey_god_palm
 tt = RT("mod_monkey_god_palm", "modifier")
 
@@ -7194,7 +6954,6 @@ tt.custom_offsets.enemy_bluegale = vec_2(0, 22)
 tt.custom_offsets.enemy_blacksurge = vec_2(0, 18)
 tt.custom_offsets.enemy_phantom_warrior = vec_2(0, 18)
 --#endregion
-
 --#region ps_monkey_god_trail
 tt = RT("ps_monkey_god_trail")
 
@@ -7212,7 +6971,6 @@ tt.particle_system.scales_y = {1, 0.2}
 tt.particle_system.sort_y_offset = -45
 tt.particle_system.spin = {-math.pi * 0.5, math.pi * 0.5}
 --#endregion
-
 --#region hero_dwarf
 tt = RT("hero_dwarf", "hero")
 
@@ -7315,7 +7073,6 @@ tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.marker_offset = vec_2(0, -2)
 tt.unit.mod_offset = vec_2(0, ady(22))
 --#endregion
-
 --#region soldier_dwarf_reinforcement
 tt = RT("soldier_dwarf_reinforcement", "soldier_dwarf")
 
@@ -7331,7 +7088,6 @@ tt.tween.disabled = true
 tt.reinforcement.duration = 12
 tt.reinforcement.fade = true
 --#endregion
-
 --#region fx_dwarf_area_quake
 tt = RT("fx_dwarf_area_quake", "decal_timed")
 tt.render.sprites[1].name = "fx_dwarf_area_quake"
@@ -7343,14 +7099,12 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].offset.y = -22
 --#endregion
-
 --#region fx_dwarf_area_ring
 tt = RT("fx_dwarf_area_ring", "decal_timed")
 tt.render.sprites[1].name = "fx_dwarf_area_ring"
 tt.render.sprites[1].z = Z_DECALS - 1
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region mod_dwarf_champion_stun
 tt = RT("mod_dwarf_champion_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
@@ -7358,7 +7112,6 @@ tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 --  三代
 -- 艾莉丹
 --#endregion
-
 --#region hero_elves_archer
 tt = RT("hero_elves_archer", "hero")
 
@@ -7504,13 +7257,11 @@ tt.ultimate.ts = 0
 tt.ultimate.cooldown = 32
 tt.ultimate.disabled = true
 --#endregion
-
 --#region aura_elves_archer_regen
 tt = RT("aura_elves_archer_regen", "aura")
 tt.aura.duration = -1
 tt.main_script.update = scripts.aura_hero_regen.update
 --#endregion
-
 --#region arrow_hero_elves_archer
 tt = RT("arrow_hero_elves_archer", "arrow")
 tt.render.sprites[1].name = "archer_hero_proy_0001-f"
@@ -7520,7 +7271,6 @@ tt.bullet.pop = {"pop_archer"}
 tt.bullet.hide_radius = 1
 tt.bullet.xp_gain_factor = 2.8
 --#endregion
-
 --#region hero_elves_archer_ultimate
 tt = RT("hero_elves_archer_ultimate")
 
@@ -7533,13 +7283,11 @@ tt.spread = {6, 8, 10, 12}
 tt.damage = {20, 35, 50, 65}
 tt.main_script.update = scripts.hero_elves_archer_ultimate.update
 --#endregion
-
 --#region mod_hero_elves_archer_slow
 tt = RT("mod_hero_elves_archer_slow", "mod_slow")
 tt.modifier.duration = 1
 tt.slow.factor = 0.5
 --#endregion
-
 --#region arrow_hero_elves_archer_ultimate
 tt = RT("arrow_hero_elves_archer_ultimate", "bullet")
 tt.main_script.update = scripts.arrow_hero_elves_archer_ultimate.update
@@ -7555,7 +7303,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.x = 0.9629629629629629
 tt.sound_events.insert = "ArrowSound"
 --#endregion
-
 --#region decal_hero_elves_archer_ultimate
 tt = RT("decal_hero_elves_archer_ultimate", "decal_tween")
 
@@ -7575,7 +7322,6 @@ tt.render.sprites[2].loop = false
 tt.render.sprites[2].z = Z_OBJECTS
 -- 雷格森
 --#endregion
-
 --#region hero_regson
 tt = RT("hero_regson", "hero")
 
@@ -7718,7 +7464,6 @@ tt.ultimate = {
 }
 tt.path_extra = 0
 --#endregion
-
 --#region aura_regson_blade
 tt = RT("aura_regson_blade", "aura")
 tt.aura.duration = -1
@@ -7726,7 +7471,6 @@ tt.main_script.update = scripts.aura_regson_blade.update
 tt.blade_cooldown = 25
 tt.blade_duration = 6
 --#endregion
-
 --#region aura_regson_heal
 tt = RT("aura_regson_heal", "aura")
 tt.aura.duration = -1
@@ -7736,13 +7480,11 @@ tt.aura.vis_bans = bor(F_BOSS)
 tt.aura.vis_flags = bor(F_RANGED)
 tt.main_script.update = scripts.aura_regson_heal.update
 --#endregion
-
 --#region mod_regson_heal
 tt = RT("mod_regson_heal", "modifier")
 tt.modifier.duration = fts(40)
 tt.main_script.update = scripts.mod_regson_heal.update
 --#endregion
-
 --#region mod_regson_slash
 tt = RT("mod_regson_slash", "modifier")
 
@@ -7760,7 +7502,6 @@ tt.render.sprites[1].sort_y_offset = -2
 tt.render.sprites[1].loop = false
 tt.modifier.allows_duplicates = true
 --#endregion
-
 --#region hero_regson_ultimate
 tt = RT("hero_regson_ultimate")
 
@@ -7777,7 +7518,6 @@ tt.vis_flags = F_RANGED
 tt.vis_bans = 0
 tt.hit_time = fts(20)
 --#endregion
-
 --#region hero_lynn
 tt = RT("hero_lynn", "hero")
 
@@ -7925,7 +7665,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_lynn_ultimate
 tt = RT("hero_lynn_ultimate")
 
@@ -7938,7 +7677,6 @@ tt.vis_flags = F_RANGED
 tt.vis_bans = 0
 tt.sound_events.insert = "ElvesHeroLynnFateSealed"
 --#endregion
-
 --#region mod_lynn_ultimate
 tt = RT("mod_lynn_ultimate", "modifier")
 
@@ -7974,7 +7712,6 @@ tt.explode_damage_type = DAMAGE_TRUE
 tt.explode_vis_flags = F_RANGED
 tt.explode_vis_bans = 0
 --#endregion
-
 --#region mod_lynn_curse
 tt = RT("mod_lynn_curse", "modifier")
 tt.modifier.chance = 0.25
@@ -7983,7 +7720,6 @@ tt.main_script.insert = scripts.mod_lynn_curse.insert
 tt.main_script.update = scripts.mod_lynn_curse.update
 tt.main_script.remove = scripts.mod_lynn_curse.remove
 --#endregion
-
 --#region mod_lynn_despair
 tt = RT("mod_lynn_despair", "modifier")
 
@@ -8005,13 +7741,11 @@ tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
 --#endregion
-
 --#region mod_lynn_despair_self
 tt = RT("mod_lynn_despair_self", "mod_lynn_despair")
 tt.speed_factor = 2 - tt.speed_factor
 tt.inflicted_damage_factor = 2 - tt.inflicted_damage_factor
 --#endregion
-
 --#region mod_lynn_weakening
 tt = RT("mod_lynn_weakening", "modifier")
 
@@ -8033,13 +7767,11 @@ tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].sprite_id = 2
 tt.tween.remove = false
 --#endregion
-
 --#region mod_lynn_weakening_self
 tt = RT("mod_lynn_weakening_self", "mod_lynn_weakening")
 tt.armor_reduction = -tt.armor_reduction * 0.5
 tt.magic_armor_reduction = -tt.magic_armor_reduction * 0.5
 --#endregion
-
 --#region hero_wilbur
 tt = RT("hero_wilbur", "hero")
 
@@ -8203,7 +7935,6 @@ tt.ultimate = {
 }
 tt.engine_factor = 1
 --#endregion
-
 --#region hero_wilbur_ultimate
 tt = RT("hero_wilbur_ultimate")
 
@@ -8215,7 +7946,6 @@ tt.sound_events.insert = "ElvesHeroGyroDronesSpawn"
 tt.entity = "drone_wilbur"
 tt.spawn_offsets = {vec_2(0, 25), vec_2(15, 0), vec_2(-15, 0), vec_2(0, -25)}
 --#endregion
-
 --#region missile_wilbur
 tt = RT("missile_wilbur", "bullet")
 tt.bullet.acceleration_factor = 0.05
@@ -8243,7 +7973,6 @@ tt.render.sprites[1].scale = vec_1(0.75)
 tt.sound_events.hit = "BombExplosionSound"
 tt.sound_events.insert = "RocketLaunchSound"
 --#endregion
-
 --#region box_wilbur
 tt = RT("box_wilbur", "bomb")
 tt.bullet.damage_type = DAMAGE_NONE
@@ -8258,7 +7987,6 @@ tt.sound_events.insert = nil
 tt.render.sprites[1].name = "hero_wilburg_box"
 tt.render.sprites[1].animated = false
 --#endregion
-
 --#region shot_wilbur
 tt = RT("shot_wilbur", "bullet")
 tt.bullet.hit_fx = "fx_shot_wilbur_hit"
@@ -8269,7 +7997,6 @@ tt.bullet.xp_gain_factor = 1.6
 tt.main_script.update = scripts.shot_wilbur.update
 tt.render = nil
 --#endregion
-
 --#region drone_wilbur
 tt = RT("drone_wilbur", "decal_scripted")
 
@@ -8314,7 +8041,6 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].keys = {{0, vec_2(0, tt.flight_height + 2)}, {0.4, vec_2(0, tt.flight_height - 2)}, {0.8, vec_2(0, tt.flight_height + 2)}}
 tt.tween.props[1].interp = "sine"
 --#endregion
-
 --#region hero_veznan
 tt = RT("hero_veznan", "hero")
 
@@ -8462,7 +8188,6 @@ tt.ultimate = {
 }
 tt.hermeticinsight_factor = 1
 --#endregion
-
 --#region bolt_veznan
 tt = RT("bolt_veznan", "bolt")
 tt.render.sprites[1].prefix = "veznan_hero_bolt"
@@ -8477,7 +8202,6 @@ tt.sound_events.insert = "ElvesHeroVeznanRangeShoot"
 tt.bullet.pop = {"pop_mage"}
 tt.bullet.pop_conds = DR_KILL
 --#endregion
-
 --#region hero_veznan_ultimate
 tt = RT("hero_veznan_ultimate")
 
@@ -8492,7 +8216,6 @@ tt.sound_events.insert = "ElvesHeroVeznanDarkPact"
 tt.vis_bans = bor(F_BOSS)
 tt.vis_flags = bor(F_MOD, F_STUN)
 --#endregion
-
 --#region soldier_veznan_demon
 tt = RT("soldier_veznan_demon", "soldier_militia")
 
@@ -8547,7 +8270,6 @@ tt.unit.hide_after_death = true
 tt.vis.flags = bor(tt.vis.flags, F_HERO)
 tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN)
 --#endregion
-
 --#region hero_durax
 tt = RT("hero_durax", "hero")
 
@@ -8560,6 +8282,7 @@ tt.hero.level_stats.melee_damage_min = {8, 9, 10, 11, 12, 13, 14, 15, 16, 17}
 tt.hero.skills.crystallites = CC("hero_skill")
 tt.hero.skills.crystallites.duration = {35, 60, 85}
 tt.hero.skills.crystallites.xp_gain = {225, 450, 675}
+tt.hero.skills.crystallites.damage_factor = 0.8
 tt.hero.skills.crystallites.xp_level_steps = {
 	[4] = 1,
 	[7] = 2,
@@ -8593,6 +8316,7 @@ tt.hero.skills.shardseed.xp_level_steps = {
 }
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "hero_durax_ultimate"
+-- deprecated, default no count bound
 tt.hero.skills.ultimate.max_count = {4, 6, 8, 10}
 tt.hero.skills.ultimate.damage = {300, 400, 800, 1200}
 tt.hero.skills.ultimate.xp_gain_factor = 36
@@ -8638,7 +8362,7 @@ tt.melee.attacks[2].animation = "attack2"
 tt.melee.attacks[2].chance = 0.5
 tt.melee.attacks[3] = CC("melee_attack")
 tt.melee.attacks[3].animation = "armblade"
-tt.melee.attacks[3].cooldown = 20
+tt.melee.attacks[3].cooldown = 18
 tt.melee.attacks[3].damage_max = nil
 tt.melee.attacks[3].damage_min = nil
 tt.melee.attacks[3].damage_type = DAMAGE_TRUE
@@ -8654,7 +8378,7 @@ tt.ranged.attacks[1].animation = "shardseed"
 tt.ranged.attacks[1].disabled = true
 tt.ranged.attacks[1].max_range = 250
 tt.ranged.attacks[1].min_range = 75
-tt.ranged.attacks[1].cooldown = 25
+tt.ranged.attacks[1].cooldown = 22.5
 tt.ranged.attacks[1].bullet = "spear_durax"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(-17, 55)}
 tt.ranged.attacks[1].shoot_time = fts(9)
@@ -8663,7 +8387,7 @@ tt.timed_attacks.list[1] = CC("bullet_attack")
 tt.timed_attacks.list[1].animations = {"lethalPrismStart", "lethalPrismLoop", "lethalPrismEnd"}
 tt.timed_attacks.list[1].bullet = "ray_durax"
 tt.timed_attacks.list[1].bullet_start_offset = {vec_2(0, 20)}
-tt.timed_attacks.list[1].cooldown = 20
+tt.timed_attacks.list[1].cooldown = 18
 tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].range = 150
 tt.timed_attacks.list[1].ray_cooldown = fts(10)
@@ -8686,7 +8410,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_durax_ultimate
 tt = RT("hero_durax_ultimate")
 
@@ -8706,7 +8429,6 @@ tt.mod_slow = "mod_durax_slow"
 tt.mod_stun = "mod_durax_stun"
 tt.hit_blood_fx = "fx_blood_splat"
 --#endregion
-
 --#region hero_durax_clone
 tt = RT("hero_durax_clone", "hero_durax")
 
@@ -8729,7 +8451,6 @@ tt.tween.disabled = true
 tt.tween.props[1].keys = {{2, 255}, {3, 0}}
 tt.transfer.particles_name = "ps_durax_clone_transfer"
 --#endregion
-
 --#region hero_elves_denas
 tt = RT("hero_elves_denas", "hero")
 
@@ -8874,7 +8595,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_elves_denas_ultimate
 tt = RT("hero_elves_denas_ultimate")
 
@@ -8887,7 +8607,6 @@ tt.main_script.update = scripts.hero_elves_denas_ultimate.update
 tt.sound_events.insert = "ElvesHeroDenasKingsguardTaunt"
 tt.can_fire_fn = scripts.hero_elves_denas_ultimate.can_fire_fn
 --#endregion
-
 --#region shield_elves_denas
 tt = RT("shield_elves_denas", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -8899,7 +8618,6 @@ tt.main_script.update = scripts.shield_elves_denas.update
 tt.render.sprites[1].name = "shield_elves_denas_loop"
 tt.rebound_range = 125
 --#endregion
-
 --#region soldier_elves_denas_guard
 tt = RT("soldier_elves_denas_guard", "soldier_militia")
 
@@ -8943,12 +8661,10 @@ tt.tween.disabled = true
 tt.unit.level = 0
 tt.vis.bans = bor(F_SKELETON, F_LYCAN)
 --#endregion
-
 --#region mod_elves_denas_celebrity
 tt = RT("mod_elves_denas_celebrity", "mod_shock_and_awe")
 tt.modifier.duration = nil
 --#endregion
-
 --#region mod_elves_denas_sybarite
 tt = RT("mod_elves_denas_sybarite", "modifier")
 
@@ -8963,7 +8679,6 @@ tt.modifier.bans = {"mod_son_of_mactans_poison", "mod_drider_poison", "mod_dark_
 tt.modifier.duration = 8
 tt.render.sprites[1].name = "fx_elves_denas_heal"
 --#endregion
-
 --#region hero_arivan
 tt = RT("hero_arivan", "hero")
 
@@ -9118,7 +8833,6 @@ tt.stone_extra_per_stone = 0
 tt.melee_raw_min = 0
 tt.melee_raw_max = 0
 --#endregion
-
 --#region ray_arivan_simple
 tt = RT("ray_arivan_simple", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -9135,12 +8849,10 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "arivan_ray_simple"
 tt.sound_events.insert = "ElvesHeroArivanRegularRay"
 --#endregion
-
 --#region fx_ray_arivan_simple_hit
 tt = RT("fx_ray_arivan_simple_hit", "fx")
 tt.render.sprites[1].name = "arivan_ray_simple_hit"
 --#endregion
-
 --#region lightning_arivan
 tt = RT("lightning_arivan", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -9156,12 +8868,10 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "arivan_lightning"
 tt.sound_events.insert = nil
 --#endregion
-
 --#region fx_lighting_arivan_hit
 tt = RT("fx_lighting_arivan_hit", "fx")
 tt.render.sprites[1].name = "arivan_lightning_hit"
 --#endregion
-
 --#region bolt_freeze_arivan
 tt = RT("bolt_freeze_arivan", "bolt")
 tt.bullet.acceleration_factor = 0.3
@@ -9180,7 +8890,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.sound_events.insert = "ElvesHeroArivanLightingBolt"
 --#endregion
-
 --#region fx_bolt_freeze_arivan_hit
 tt = RT("fx_bolt_freeze_arivan_hit", "fx")
 
@@ -9189,7 +8898,6 @@ AC(tt, "sound_events")
 tt.render.sprites[1].name = "arivan_freeze_hit"
 tt.sound_events.insert = "ElvesHeroArivanIceShootHit"
 --#endregion
-
 --#region mod_arivan_freeze
 tt = RT("mod_arivan_freeze", "mod_freeze")
 
@@ -9201,7 +8909,6 @@ tt.render.sprites[1].name = "arivan_hero_freeze_decal"
 tt.render.sprites[1].animated = false
 tt.tween.props[1].keys = {{"this.modifier.duration-0.5", 255}, {"this.modifier.duration", 0}}
 --#endregion
-
 --#region fireball_arivan
 tt = RT("fireball_arivan", "bullet")
 tt.bullet.acceleration_factor = 0.15
@@ -9222,7 +8929,6 @@ tt.sound_events.hit = "ElvesHeroArivanFireballExplode"
 tt.sound_events.insert = "ElvesHeroArivanFireballSummon"
 tt.sound_events.travel = "ElvesHeroArivanFireball"
 --#endregion
-
 --#region fx_fireball_arivan_hit
 tt = RT("fx_fireball_arivan_hit", "fx")
 tt.render.sprites[1].name = "arivan_fireball_hit"
@@ -9230,7 +8936,6 @@ tt.render.sprites[1].sort_y_offset = -5
 tt.render.sprites[1].anchor.y = 0.20930232558139536
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
-
 --#region aura_arivan_stone_dance
 tt = RT("aura_arivan_stone_dance", "aura")
 
@@ -9249,7 +8954,6 @@ tt.owner_vis_bans = bor(F_BURN, F_POISON, F_STUN, F_NET, F_BLOOD)
 tt.rot_speed = 3 * FPS * math.pi / 180
 tt.rot_radius = 25
 --#endregion
-
 --#region arivan_stone
 tt = RT("arivan_stone", "decal_tween")
 anchor_y = 0.11666666666666667
@@ -9267,13 +8971,11 @@ tt.tween.props[1].loop = true
 tt.tween.remove = false
 tt.hp = 60
 --#endregion
-
 --#region fx_arivan_stone_explosion
 tt = RT("fx_arivan_stone_explosion", "fx")
 tt.render.sprites[1].name = "arivan_stone_explosion"
 tt.render.sprites[1].anchor.y = 0.11666666666666667
 --#endregion
-
 --#region hero_arivan_ultimate
 tt = RT("hero_arivan_ultimate", "aura")
 
@@ -9314,7 +9016,6 @@ tt.timed_attacks.list[4].bullet_start_offset = {vec_2(6, 36)}
 tt.timed_attacks.list[4].max_range = 100
 tt.timed_attacks.list[4].chance = nil
 --#endregion
-
 --#region lightning_arivan_ultimate
 tt = RT("lightning_arivan_ultimate", "bullet")
 tt.bullet.damage_min = 0
@@ -9330,7 +9031,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "arivan_twister_ray"
 tt.sound_events.insert = "ElvesHeroArivanRegularRay"
 --#endregion
-
 --#region fx_lighting_arivan_ultimate_hit
 tt = RT("fx_lighting_arivan_ultimate_hit", "modifier")
 
@@ -9342,12 +9042,10 @@ tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(12)
 --#endregion
-
 --#region mod_arivan_ultimate_freeze
 tt = RT("mod_arivan_ultimate_freeze", "mod_arivan_freeze")
 tt.modifier.duration = nil
 --#endregion
-
 --#region hero_phoenix
 tt = RT("hero_phoenix", "hero")
 
@@ -9516,7 +9214,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_phoenix_ultimate
 tt = RT("hero_phoenix_ultimate", "aura")
 
@@ -9552,7 +9249,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.9, 255}, {1.1, 255}, {2, 0}}
 tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].loop = true
 --#endregion
-
 --#region ray_phoenix
 tt = RT("ray_phoenix", "bullet")
 tt.image_width = 120
@@ -9567,7 +9263,6 @@ tt.bullet.hit_time = fts(4)
 tt.bullet.hit_payload = "aura_ray_phoenix"
 tt.track_target = true
 --#endregion
-
 --#region aura_ray_phoenix
 tt = RT("aura_ray_phoenix", "aura")
 tt.main_script.insert = scripts.aura_ray_phoenix.insert
@@ -9582,7 +9277,6 @@ tt.aura.vis_bans = bor(F_FRIEND)
 tt.aura.mod = "mod_veznan_demon_fire"
 tt.aura.xp_gain_factor = 1.75
 --#endregion
-
 --#region missile_phoenix
 tt = RT("missile_phoenix", "bullet")
 tt.bullet.acceleration_factor = 0.05
@@ -9610,7 +9304,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "phoenix_hero_bird"
 tt.sound_events.hit = "ElvesHeroPhoenixBlazingOffspringHit"
 --#endregion
-
 --#region missile_phoenix_small
 tt = RT("missile_phoenix_small", "missile_phoenix")
 tt.bullet.damage_max = nil
@@ -9619,7 +9312,6 @@ tt.bullet.particles_name = "ps_missile_phoenix_small"
 tt.bullet.xp_gain_factor = 0.12
 tt.render.sprites[1].scale = vec_1(0.65)
 --#endregion
-
 --#region mod_phoenix_purification
 tt = RT("mod_phoenix_purification", "modifier")
 tt.modifier.duration = fts(11)
@@ -9627,7 +9319,6 @@ tt.fx = "fx_ray_phoenix_hit"
 tt.entity = "missile_phoenix_small"
 tt.main_script.update = scripts.mod_phoenix_purification.update
 --#endregion
-
 --#region mod_phoenix_egg
 tt = RT("mod_phoenix_egg", "mod_lava")
 tt.modifier.duration = 2
@@ -9637,7 +9328,6 @@ tt.dps.damage_max = nil
 tt.dps.damage_inc = 0
 tt.dps.damage_every = fts(6)
 --#endregion
-
 --#region mod_phoenix_flaming_path
 tt = RT("mod_phoenix_flaming_path", "modifier")
 
@@ -9677,7 +9367,6 @@ tt.tween.props[2].keys = {{0, 0}, {0.3, 255}, {"this.modifier.duration-0.3", 255
 tt.tween.props[3] = table.deepclone(tt.tween.props[2])
 tt.tween.props[3].sprite_id = 2
 --#endregion
-
 --#region aura_phoenix_egg
 tt = RT("aura_phoenix_egg", "aura")
 
@@ -9702,7 +9391,6 @@ tt.custom_attack.damage_type = DAMAGE_TRUE
 tt.custom_attack.vis_flags = F_RANGED
 tt.custom_attack.hit_fx = "fx_phoenix_explosion"
 --#endregion
-
 --#region aura_phoenix_purification
 tt = RT("aura_phoenix_purification", "aura")
 tt.aura.cycle_time = fts(9)
@@ -9717,7 +9405,6 @@ tt.aura.vis_bans = bor(F_FRIEND)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region hero_bravebark
 tt = RT("hero_bravebark", "hero")
 
@@ -9870,7 +9557,6 @@ tt.ultimate = {
 	range = 180
 }
 --#endregion
-
 --#region soldier_bravebark
 tt = RT("soldier_bravebark", "soldier_militia")
 
@@ -9908,7 +9594,6 @@ tt.unit.level = 0
 tt.unit.mod_offset = vec_2(0, 15)
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 --#endregion
-
 --#region aura_bravebark_springsap
 tt = RT("aura_bravebark_springsap", "aura")
 
@@ -9935,7 +9620,6 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(0.5)}, {0.85, vec_1(1.25)}}
 tt.tween.props[2].loop = true
 --#endregion
-
 --#region mod_bravebark_springsap
 tt = RT("mod_bravebark_springsap", "modifier")
 
@@ -9957,7 +9641,6 @@ tt.render.sprites[1].sort_y_offset = -1
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.15, 255}}
 --#endregion
-
 --#region hero_bravebark_ultimate
 tt = RT("hero_bravebark_ultimate")
 
@@ -9980,12 +9663,10 @@ tt.vis_flags = bor(F_STUN)
 tt.vis_bans = bor(F_FLYING, F_BOSS)
 tt.mod = "mod_bravebark_ultimate"
 --#endregion
-
 --#region mod_bravebark_ultimate
 tt = RT("mod_bravebark_ultimate", "mod_stun")
 tt.modifier.duration = 1
 --#endregion
-
 --#region hero_catha
 tt = RT("hero_catha", "hero")
 
@@ -10137,7 +9818,6 @@ tt.ultimate = {
 	range = 80
 }
 --#endregion
-
 --#region hero_catha_ultimate
 tt = RT("hero_catha_ultimate")
 
@@ -10157,7 +9837,6 @@ tt.render.sprites[1].name = "hero_catha_ultimate"
 tt.render.sprites[1].anchor.y = 0.373
 tt.hit_time = fts(22)
 --#endregion
-
 --#region knife_catha
 tt = RT("knife_catha", "arrow")
 tt.render.sprites[1].name = "catha_hero_proy_0001"
@@ -10170,7 +9849,6 @@ tt.bullet.miss_decal = nil
 tt.bullet.mod = "mod_catha_curse"
 tt.bullet.xp_gain_factor = 4
 --#endregion
-
 --#region soldier_catha
 tt = RT("soldier_catha", "soldier_militia")
 
@@ -10224,7 +9902,6 @@ tt.unit.hit_offset = vec_2(0, 16)
 tt.unit.mod_offset = vec_2(0, 22)
 tt.unit.hide_after_death = true
 --#endregion
-
 --#region hero_lilith
 tt = RT("hero_lilith", "hero")
 
@@ -10393,7 +10070,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_lilith_ultimate
 tt = RT("hero_lilith_ultimate")
 
@@ -10411,7 +10087,6 @@ tt.meteor_bullet = "meteor_lilith"
 tt.meteor_chance = 0.5
 tt.meteor_node_spread = 5
 --#endregion
-
 --#region bullet_lilith
 tt = RT("bullet_lilith", "arrow")
 tt.bullet.damage_max = nil
@@ -10428,7 +10103,6 @@ tt.bullet.xp_gain_factor = 3.2
 tt.render.sprites[1].name = "fallen_angel_hero_proy_0001-f"
 tt.sound_events.insert = "ElvesHeroLilithRangeShoot"
 --#endregion
-
 --#region hero_xin
 tt = RT("hero_xin", "hero")
 
@@ -10585,7 +10259,6 @@ tt.mind_over_body_damage_buff_max = 0
 tt.mind_over_body_damage_buff = 0
 tt.mind_over_body_duration = 0
 --#endregion
-
 --#region hero_xin_ultimate
 tt = RT("hero_xin_ultimate")
 
@@ -10601,7 +10274,6 @@ tt.vis_flags = bor(F_RANGED)
 tt.vis_bans = bor(F_FLYING)
 tt.entity = "soldier_xin_ultimate"
 --#endregion
-
 --#region soldier_xin_shadow
 tt = RT("soldier_xin_shadow", "soldier")
 
@@ -10652,7 +10324,6 @@ end
 tt.melee.cooldown = fts(15)
 tt.melee.range = 60
 --#endregion
-
 --#region soldier_xin_ultimate
 tt = RT("soldier_xin_ultimate", "soldier_xin_shadow")
 tt.max_attack_count = 2
@@ -10667,12 +10338,10 @@ end
 tt.sound_events.insert = "ElvesHeroXinAfterTeleportIn"
 tt.sound_events.death = "ElvesHeroXinAfterTeleportOut"
 --#endregion
-
 --#region mod_xin_stun
 tt = RT("mod_xin_stun", "mod_shock_and_awe")
 tt.modifier.duration = 1.3
 --#endregion
-
 --#region mod_xin_inspire
 tt = RT("mod_xin_inspire", "modifier")
 
@@ -10687,7 +10356,6 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "mod_xin_inspire"
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
-
 --#region mod_xin_mind_over_body
 tt = RT("mod_xin_mind_over_body", "modifier")
 
@@ -10710,12 +10378,10 @@ tt.render.sprites[2].name = "xin_hero_drink_decal"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].z = Z_DECALS
 --#endregion
-
 --#region mod_xin_slow
 tt = RT("mod_xin_slow", "mod_slow")
 tt.modifier.duration = 6
 --#endregion
-
 --#region hero_faustus
 tt = RT("hero_faustus", "hero")
 
@@ -10914,7 +10580,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region bolt_faustus
 tt = RT("bolt_faustus", "bolt_elves")
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -10926,7 +10591,6 @@ tt.render.sprites[1].prefix = "bolt_faustus"
 tt.sound_events.insert = nil
 tt.upgrades_disabled = true
 --#endregion
-
 --#region aura_teleport_faustus
 tt = RT("aura_teleport_faustus", "aura")
 
@@ -10946,7 +10610,6 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 55}, {fts(10), 255}, {fts(40), 255}, {fts(50), 0}}
 tt.render.sprites[1].scale = vec_1(1.45)
 --#endregion
-
 --#region mod_teleport_faustus
 tt = RT("mod_teleport_faustus", "mod_teleport")
 tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
@@ -10963,7 +10626,6 @@ tt.fx_end = "fx_teleport_faustus"
 tt.damage_base = 50
 tt.damage_inc = 25
 --#endregion
-
 --#region hero_faustus_ultimate
 tt = RT("hero_faustus_ultimate")
 
@@ -10975,7 +10637,6 @@ tt.sound_events.insert = "ElvesHeroFaustusUltimate"
 tt.separation_nodes = 20
 tt.show_delay = 0.5
 --#endregion
-
 --#region hero_rag
 tt = RT("hero_rag", "hero")
 
@@ -11150,7 +10811,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region aura_rabbit_kamihare
 tt = RT("aura_rabbit_kamihare", "aura")
 tt.aura.cycles = 1
@@ -11162,7 +10822,6 @@ tt.aura.vis_bans = bor(F_FRIEND)
 tt.aura.vis_flags = bor(F_RANGED)
 tt.main_script.update = scripts.aura_apply_damage.update
 --#endregion
-
 --#region bullet_rag_throw
 tt = RT("bullet_rag_throw", "arrow")
 tt.bullet.damage_max = nil
@@ -11176,32 +10835,26 @@ tt.bullet.pop = nil
 tt.bullet.predict_target_pos = true
 tt.bullet.rotation_speed = 15 * FPS * math.pi / 180
 --#endregion
-
 --#region bullet_rag_throw_bolso
 tt = RT("bullet_rag_throw_bolso", "bullet_rag_throw")
 tt.render.sprites[1].name = "razzAndRaggs_hero_throw_proys_0001"
 --#endregion
-
 --#region bullet_rag_throw_anchor
 tt = RT("bullet_rag_throw_anchor", "bullet_rag_throw")
 tt.render.sprites[1].name = "razzAndRaggs_hero_throw_proys_0002"
 --#endregion
-
 --#region bullet_rag_throw_fungus
 tt = RT("bullet_rag_throw_fungus", "bullet_rag_throw")
 tt.render.sprites[1].name = "razzAndRaggs_hero_throw_proys_0003"
 --#endregion
-
 --#region bullet_rag_throw_pan
 tt = RT("bullet_rag_throw_pan", "bullet_rag_throw")
 tt.render.sprites[1].name = "razzAndRaggs_hero_throw_proys_0004"
 --#endregion
-
 --#region bullet_rag_throw_chair
 tt = RT("bullet_rag_throw_chair", "bullet_rag_throw")
 tt.render.sprites[1].name = "razzAndRaggs_hero_throw_proys_0005"
 --#endregion
-
 --#region hero_rag_ultimate
 tt = RT("hero_rag_ultimate")
 
@@ -11218,7 +10871,6 @@ tt.vis_flags = bor(F_RANGED, F_MOD, F_RAGGIFY)
 tt.vis_bans = bor(F_BOSS, F_FLYING)
 tt.hit_time = fts(2)
 --#endregion
-
 --#region bullet_rag
 tt = RT("bullet_rag", "arrow")
 tt.bullet.damage_max = nil
@@ -11237,7 +10889,6 @@ tt.bullet.xp_gain_factor = 2
 tt.render.sprites[1].name = "razzAndRaggs_hero_proy-f"
 tt.sound_events.insert = "ElvesHeroRagGnomeShot"
 --#endregion
-
 --#region mod_rag_raggified
 tt = RT("mod_rag_raggified", "modifier")
 tt.main_script.update = scripts.mod_rag_raggified.update
@@ -11247,7 +10898,6 @@ tt.entity_name = "soldier_rag"
 tt.fx = "fx_rag_raggified"
 tt.doll_duration = nil
 --#endregion
-
 --#region soldier_rag
 tt = RT("soldier_rag", "soldier_militia")
 
@@ -11284,7 +10934,6 @@ tt.unit.mod_offset = vec_2(0, 15)
 tt.unit.hide_after_death = true
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 --#endregion
-
 --#region hero_bruce
 tt = RT("hero_bruce", "hero")
 
@@ -11416,7 +11065,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_bruce_ultimate
 tt = RT("hero_bruce_ultimate")
 
@@ -11432,7 +11080,6 @@ tt.range_nodes_max = 999
 tt.vis_flags = bor(F_RANGED)
 tt.vis_bans = bor(F_FLYING)
 --#endregion
-
 --#region lion_bruce
 tt = RT("lion_bruce", "decal_scripted")
 
@@ -11465,7 +11112,6 @@ tt.sound_events.custom_loop_end = "ElvesHeroBruceGuardianLionsLoopEnd"
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
-
 --#region hero_bolverk
 tt = RT("hero_bolverk", "hero")
 
@@ -11563,7 +11209,6 @@ tt.timed_attacks.list[1].disabled = true
 tt.vis.bans = bor(tt.vis.bans, F_BURN)
 tt.berserker_factor = 0.5
 --#endregion
-
 --#region mod_bolverk_scream
 tt = RT("mod_bolverk_scream", "modifier")
 
@@ -11583,7 +11228,6 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
-
 --#region mod_bolverk_fire
 tt = RT("mod_bolverk_fire", "modifier")
 
@@ -11604,7 +11248,6 @@ tt.dps.damage_type = DAMAGE_POISON
 --         五代
 --     --
 --#endregion
-
 --#region soldier_hero_hunter_beast
 tt = RT("soldier_hero_hunter_beast", "decal_scripted")
 
@@ -11654,7 +11297,6 @@ tt.mark_mod = "mod_hero_hunter_beast_mark"
 tt.idle_change_pos_cd = fts(8)
 tt.idle_change_pos_offset = vec_2(35, 35)
 --#endregion
-
 --#region soldier_hero_hunter_ultimate
 tt = RT("soldier_hero_hunter_ultimate", "soldier_militia")
 
@@ -11714,7 +11356,6 @@ tt.ui.click_rect = r(-20, -5, 40, 50)
 tt.distance_to_revive = b.ultimate.distance_to_revive
 -- 安雅
 --#endregion
-
 --#region hero_hunter
 tt = RT("hero_hunter", "hero")
 b = balance.heroes.hero_hunter
@@ -11899,7 +11540,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region bullet_hero_hunter_ranged_attack
 tt = RT("bullet_hero_hunter_ranged_attack", "bullet")
 b = balance.heroes.hero_hunter.basic_ranged
@@ -11913,7 +11553,6 @@ tt.bullet.xp_gain_factor = b.xp_gain_factor
 tt.render = nil
 tt.main_script.update = scripts.bullet_hero_hunter_ranged_attack.update
 --#endregion
-
 --#region arrow_hero_hunter_ricochet
 tt = RT("arrow_hero_hunter_ricochet", "bullet")
 b = balance.heroes.hero_hunter.ricochet
@@ -11934,7 +11573,6 @@ tt.bullet.mods = {"mod_hero_hunter_ricochet_attack", "mod_hero_hunter_ricochet_s
 tt.trail_arrow = "arrow_hero_hunter_ricochet_trail"
 tt.sound_bounce = "HeroHunterRicochetBounce"
 --#endregion
-
 --#region arrow_hero_hunter_ricochet_trail
 tt = RT("arrow_hero_hunter_ricochet_trail", "bullet")
 b = balance.heroes.hero_hunter.ricochet
@@ -11947,7 +11585,6 @@ tt.render.sprites[1].animated = true
 tt.track_target = true
 tt.ray_duration = fts(12)
 --#endregion
-
 --#region bullet_hero_hunter_ultimate_ranged_attack
 tt = RT("bullet_hero_hunter_ultimate_ranged_attack", "bullet")
 b = balance.heroes.hero_hunter
@@ -11962,7 +11599,6 @@ tt.bullet.level = 1
 tt.render = nil
 tt.main_script.update = scripts.bullet_hero_hunter_ultimate_ranged_attack.update
 --#endregion
-
 --#region aura_hero_hunter_shoot_around
 tt = RT("aura_hero_hunter_shoot_around", "aura")
 b = balance.heroes.hero_hunter.shoot_around
@@ -11981,14 +11617,12 @@ tt.fx = "fx_hero_hunter_skill_shoot_around_decal"
 tt.fx_every = fts(15)
 tt.fx_amount = 3
 --#endregion
-
 --#region mod_hero_hunter_shoot_around_slow
 tt = RT("mod_hero_hunter_shoot_around_slow", "mod_slow")
 b = balance.heroes.hero_hunter.shoot_around
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
 --#endregion
-
 --#region aura_hero_hunter_ultimate
 tt = RT("aura_hero_hunter_ultimate", "aura")
 b = balance.heroes.hero_hunter.ultimate
@@ -12010,7 +11644,6 @@ tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region mod_hero_hunter_skill_shoot_around_hit_fx
 tt = RT("mod_hero_hunter_skill_shoot_around_hit_fx", "modifier")
 
@@ -12022,7 +11655,6 @@ tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(10)
 --#endregion
-
 --#region mod_hero_hunter_ricochet_attack
 tt = RT("mod_hero_hunter_ricochet_attack", "modifier")
 b = balance.heroes.hero_hunter.ricochet
@@ -12044,12 +11676,10 @@ tt.damage_min = nil
 tt.damage_max = nil
 tt.tween.props[1].keys = {{0, 255}, {tt.modifier.duration - fts(4), 255}, {tt.modifier.duration, 0}}
 --#endregion
-
 --#region mod_hero_hunter_ricochet_stun
 tt = RT("mod_hero_hunter_ricochet_stun", "mod_stun")
 tt.modifier.duration = fts(9)
 --#endregion
-
 --#region mod_hero_hunter_beast_mark
 tt = RT("mod_hero_hunter_beast_mark", "modifier")
 
@@ -12060,14 +11690,12 @@ tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.soldier_hero_hunter_beast_mark.update
 --#endregion
-
 --#region mod_hero_hunter_ultimate_slow
 tt = RT("mod_hero_hunter_ultimate_slow", "mod_slow")
 b = balance.heroes.hero_hunter.ultimate
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
 --#endregion
-
 --#region controller_hero_hunter_ultimate
 tt = RT("controller_hero_hunter_ultimate")
 
@@ -12079,7 +11707,6 @@ tt.aura = "aura_hero_hunter_ultimate"
 tt.main_script.update = scripts.hero_hunter_ultimate.update
 tt.sound = "HeroHunterUltimateCast"
 --#endregion
-
 --#region hero_space_elf
 tt = RT("hero_space_elf", "hero")
 b = balance.heroes.hero_space_elf
@@ -12264,7 +11891,6 @@ tt.ultimate = {
 	ts = 0
 }
 --#endregion
-
 --#region soldier_hero_space_elf_astral_reflection
 tt = RT("soldier_hero_space_elf_astral_reflection", "soldier_militia")
 
@@ -12320,7 +11946,6 @@ tt.ui.click_rect = r(-20, -5, 40, 50)
 tt.health.dead_lifetime = fts(15)
 tt.spawn_fx = "fx_hero_space_elf_astral_reflection_spawn"
 --#endregion
-
 --#region soldier_hero_space_elf_astral_reflection_1
 tt = RT("soldier_hero_space_elf_astral_reflection_1", "soldier_hero_space_elf_astral_reflection")
 b = balance.heroes.hero_space_elf
@@ -12330,7 +11955,6 @@ tt.ranged.attacks[1].damage_min = b.astral_reflection.entity.basic_ranged.damage
 tt.ranged.attacks[1].damage_max = b.astral_reflection.entity.basic_ranged.damage_max[1]
 tt.health.hp_max = b.astral_reflection.entity.hp_max[1]
 --#endregion
-
 --#region soldier_hero_space_elf_astral_reflection_2
 tt = RT("soldier_hero_space_elf_astral_reflection_2", "soldier_hero_space_elf_astral_reflection")
 b = balance.heroes.hero_space_elf
@@ -12340,7 +11964,6 @@ tt.ranged.attacks[1].damage_min = b.astral_reflection.entity.basic_ranged.damage
 tt.ranged.attacks[1].damage_max = b.astral_reflection.entity.basic_ranged.damage_max[2]
 tt.health.hp_max = b.astral_reflection.entity.hp_max[2]
 --#endregion
-
 --#region soldier_hero_space_elf_astral_reflection_3
 tt = RT("soldier_hero_space_elf_astral_reflection_3", "soldier_hero_space_elf_astral_reflection")
 b = balance.heroes.hero_space_elf
@@ -12350,7 +11973,6 @@ tt.ranged.attacks[1].damage_min = b.astral_reflection.entity.basic_ranged.damage
 tt.ranged.attacks[1].damage_max = b.astral_reflection.entity.basic_ranged.damage_max[3]
 tt.health.hp_max = b.astral_reflection.entity.hp_max[3]
 --#endregion
-
 --#region bolt_hero_space_elf_basic_attack
 tt = RT("bolt_hero_space_elf_basic_attack", "bolt")
 b = balance.heroes.hero_space_elf
@@ -12370,7 +11992,6 @@ tt.bullet.damage_type = b.basic_ranged.damage_type
 tt.bullet.particles_name = "ps_hero_space_elf_basic_attack_trail"
 tt.bullet.mod = "mod_hero_space_elf_bolt"
 --#endregion
-
 --#region mod_hero_space_elf_bolt
 tt = RT("mod_hero_space_elf_bolt", "modifier")
 tt.received_damage_factor = 1.1
@@ -12380,12 +12001,10 @@ tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
 --#endregion
-
 --#region mod_hero_space_elf_void_rift
 tt = RT("mod_hero_space_elf_void_rift", "mod_slow")
 tt.slow.factor = 0.8
 --#endregion
-
 --#region aura_hero_space_elf_void_rift
 tt = RT("aura_hero_space_elf_void_rift", "aura")
 b = balance.heroes.hero_space_elf
@@ -12420,7 +12039,6 @@ tt.render.sprites[3].animated = true
 tt.main_script.update = scripts.aura_hero_space_elf_void_rift.update
 tt.ignore_damage = false
 --#endregion
-
 --#region aura_hero_space_elf_ultimate
 tt = RT("aura_hero_space_elf_ultimate", "aura")
 b = balance.heroes.hero_space_elf
@@ -12435,7 +12053,6 @@ tt.aura.mod = "mod_hero_space_elf_ultimate"
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region mod_hero_space_elf_black_aegis
 tt = RT("mod_hero_space_elf_black_aegis", "modifier")
 
@@ -12484,7 +12101,6 @@ tt.render.sprites[2].offset = vec_2(0, 3)
 tt.modifier.damage_fx = "fx_hero_space_elf_black_aegis_hit"
 tt.sound_explosion = "HeroSpaceElfBlackAegisExplosion"
 --#endregion
-
 --#region mod_hero_space_elf_spatial_distortion
 tt = RT("mod_hero_space_elf_spatial_distortion", "modifier")
 
@@ -12514,7 +12130,6 @@ tt.offset_y_per_tower = {
 	ballista = 20
 }
 --#endregion
-
 --#region mod_hero_space_elf_ultimate
 tt = RT("mod_hero_space_elf_ultimate", "modifier")
 b = balance.heroes.hero_space_elf
@@ -12553,7 +12168,6 @@ tt.sound_events.insert = "HeroSpaceElfCosmicPrisonIn"
 tt.out_sfx = "HeroSpaceElfCosmicPrisonOut"
 tt.decal = "decal_hero_space_elf_ultimate_mod"
 --#endregion
-
 --#region controller_hero_space_elf_ultimate
 tt = RT("controller_hero_space_elf_ultimate")
 
@@ -12563,7 +12177,6 @@ tt.entity = "aura_hero_space_elf_ultimate"
 tt.decal = "decal_hero_space_elf_ultimate"
 tt.main_script.update = scripts.hero_space_elf_ultimate.update
 --#endregion
-
 --#region hero_raelyn
 tt = RT("hero_raelyn", "hero")
 b = balance.heroes.hero_raelyn
@@ -12729,19 +12342,16 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_raelyn_melee_attack_hit
 tt = RT("hero_raelyn_melee_attack_hit", "fx")
 tt.render.sprites[1].name = "hero_raelyn_melee_attack_hit"
 --#endregion
-
 --#region hero_raelyn_brutal_slash_decal
 tt = RT("hero_raelyn_brutal_slash_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_raelyn_brutal_slash_decal"
 tt.render.sprites[1].animated = false
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 --#endregion
-
 --#region hero_raelyn_unbreakable_floor_decal_mod
 tt = RT("hero_raelyn_unbreakable_floor_decal_mod", "modifier")
 
@@ -12760,7 +12370,6 @@ tt.render.sprites[2].hidden = false
 tt.modifier.use_mod_offset = false
 tt.modifier.duration = fts(17)
 --#endregion
-
 --#region hero_raelyn_unbreakable_mod
 tt = RT("hero_raelyn_unbreakable_mod", "modifier")
 
@@ -12791,7 +12400,6 @@ tt.render.sprites[1].prefix = "hero_raelyn_unbreakable_shield_lvl1"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = true
 --#endregion
-
 --#region hero_raelyn_inspire_fear_floor_decal_mod
 tt = RT("hero_raelyn_inspire_fear_floor_decal_mod", "modifier")
 
@@ -12806,7 +12414,6 @@ tt.render.sprites[1].hide_after_runs = 1
 tt.modifier.use_mod_offset = false
 tt.modifier.duration = fts(28)
 --#endregion
-
 --#region hero_raelyn_inspire_fear_damage_mod
 tt = RT("hero_raelyn_inspire_fear_damage_mod", "modifier")
 
@@ -12822,20 +12429,17 @@ tt.render.sprites[1].name = "hero_raelyn_inspire_fear_decal"
 tt.render.sprites[1].draw_order = 20
 tt.modifier.use_mod_offset = false
 --#endregion
-
 --#region hero_raelyn_inspire_fear_stun_mod
 tt = RT("hero_raelyn_inspire_fear_stun_mod", "mod_stun")
 tt.modifier.duration = nil
 tt.render.sprites[1].hidden = true
 tt.modifier.vis_bans = bor(F_BOSS)
 --#endregion
-
 --#region hero_raelyn_inspire_fear_fx_mod
 tt = RT("hero_raelyn_inspire_fear_fx_mod", "modifier")
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = nil
 --#endregion
-
 --#region hero_raelyn_onslaught_aura
 tt = RT("hero_raelyn_onslaught_aura", "aura")
 
@@ -12865,7 +12469,6 @@ function tt.main_script.insert(this, store)
 end
 
 --#endregion
-
 --#region hero_raelyn_ultimate
 tt = RT("hero_raelyn_ultimate")
 
@@ -12877,7 +12480,6 @@ tt.entity_prefix = "hero_raelyn_ultimate_entity"
 tt.main_script.update = scripts.hero_raelyn_ultimate.update
 tt.sound_events.insert = "HeroRaelynUltimateCast"
 --#endregion
-
 --#region hero_raelyn_ultimate_entity
 tt = RT("hero_raelyn_ultimate_entity", "soldier_militia")
 
@@ -12931,7 +12533,6 @@ tt.reinforcement.fade = nil
 tt.reinforcement.fade_out = nil
 tt.ui.click_rect = r(-20, -5, 40, 50)
 --#endregion
-
 --#region hero_raelyn_ultimate_entity_1
 tt = RT("hero_raelyn_ultimate_entity_1", "hero_raelyn_ultimate_entity")
 tt.motion.max_speed = b.ultimate.entity.speed[1]
@@ -12945,7 +12546,6 @@ end
 tt.health.hp_max = b.ultimate.entity.hp_max[1]
 tt.health.armor = b.ultimate.entity.armor[1]
 --#endregion
-
 --#region hero_raelyn_ultimate_entity_2
 tt = RT("hero_raelyn_ultimate_entity_2", "hero_raelyn_ultimate_entity")
 tt.motion.max_speed = b.ultimate.entity.speed[2]
@@ -12959,7 +12559,6 @@ end
 tt.health.hp_max = b.ultimate.entity.hp_max[2]
 tt.health.armor = b.ultimate.entity.armor[2]
 --#endregion
-
 --#region hero_raelyn_ultimate_entity_3
 tt = RT("hero_raelyn_ultimate_entity_3", "hero_raelyn_ultimate_entity")
 tt.motion.max_speed = b.ultimate.entity.speed[3]
@@ -12973,7 +12572,6 @@ end
 tt.health.hp_max = b.ultimate.entity.hp_max[3]
 tt.health.armor = b.ultimate.entity.armor[3]
 --#endregion
-
 --#region hero_raelyn_ultimate_entity_4
 tt = RT("hero_raelyn_ultimate_entity_4", "hero_raelyn_ultimate_entity")
 tt.motion.max_speed = b.ultimate.entity.speed[4]
@@ -12987,7 +12585,6 @@ end
 tt.health.hp_max = b.ultimate.entity.hp_max[4]
 tt.health.armor = b.ultimate.entity.armor[4]
 --#endregion
-
 --#region decal_hero_venom_spike_a
 tt = RT("decal_hero_venom_spike_a", "decal_scripted")
 b = balance.heroes.hero_venom.floor_spikes
@@ -13002,7 +12599,6 @@ tt.damage_radius = b.damage_radius
 tt.vis_flags = bor(F_AREA)
 tt.vis_bans = bor(F_FLYING)
 --#endregion
-
 --#region hero_venom
 tt = RT("hero_venom", "hero")
 b = balance.heroes.hero_venom
@@ -13217,7 +12813,6 @@ tt.ultimate = {
 }
 tt.vis.bans = bor(tt.vis.bans, F_POISON)
 --#endregion
-
 --#region bullet_hero_venom_ranged_tentacle
 tt = RT("bullet_hero_venom_ranged_tentacle", "bullet")
 
@@ -13240,7 +12835,6 @@ tt.sound_events.insert = nil
 tt.track_target = false
 tt.ray_duration = fts(20)
 --#endregion
-
 --#region aura_hero_venom_ultimate
 tt = RT("aura_hero_venom_ultimate", "aura")
 b = balance.heroes.hero_venom.ultimate
@@ -13266,7 +12860,6 @@ tt.end_damage_max = nil
 tt.end_damage_type = b.damage_type
 tt.sound_attack = "HeroVenomRenewCreepingDeathSpikes"
 --#endregion
-
 --#region mod_bullet_hero_venom_ranged_tentacle_bleed
 tt = RT("mod_bullet_hero_venom_ranged_tentacle_bleed", "mod_blood")
 b = balance.heroes.hero_venom.ranged_tentacle
@@ -13278,13 +12871,11 @@ tt.dps.fx_every = tt.dps.damage_every
 tt.dps.fx_every = fts(20)
 tt.modifier.duration = nil
 --#endregion
-
 --#region mod_bullet_hero_venom_ranged_tentacle_stun
 tt = RT("mod_bullet_hero_venom_ranged_tentacle_stun", "mod_stun")
 tt.modifier.duration = fts(7)
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 --#endregion
-
 --#region mod_hero_venom_eat_enemy_regen
 tt = RT("mod_hero_venom_eat_enemy_regen", "modifier")
 
@@ -13305,14 +12896,12 @@ tt.render.sprites[2].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[2].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {tt.modifier.duration - fts(10), 255}, {tt.modifier.duration, 0}}
 --#endregion
-
 --#region mod_hero_venom_ultimate_slow
 tt = RT("mod_hero_venom_ultimate_slow", "mod_slow")
 b = balance.heroes.hero_mecha.tar_bomb
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = 0.5
 --#endregion
-
 --#region controller_hero_venom_ultimate
 tt = RT("controller_hero_venom_ultimate")
 
@@ -13324,7 +12913,6 @@ tt.main_script.update = scripts.hero_venom_ultimate.update
 tt.sound = "HeroVenomRenewCreepingDeathCast"
 -- 晶龙
 --#endregion
-
 --#region ps_bolt_hero_dragon_gem_attack
 tt = RT("ps_bolt_hero_dragon_gem_attack")
 
@@ -13338,39 +12926,33 @@ tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi * 0.5
 tt.particle_system.z = Z_FLYING_HEROES
 --#endregion
-
 --#region fx_hero_dragon_gem_bolt_hit
 tt = RT("fx_hero_dragon_gem_bolt_hit", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_attack_fx_idle"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
 --#endregion
-
 --#region fx_hero_dragon_gem_bolt_hit_flying
 tt = RT("fx_hero_dragon_gem_bolt_hit_flying", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_attack_fx_air_idle"
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
 --#endregion
-
 --#region fx_hero_dragon_gem_skill_stun
 tt = RT("fx_hero_dragon_gem_skill_stun", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_breath_cloud_idle"
 tt.render.sprites[1].loop = true
 --#endregion
-
 --#region fx_hero_dragon_gem_ultimate_shard_arrival_1
 tt = RT("fx_hero_dragon_gem_ultimate_shard_arrival_1", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_fx_a_idle"
 tt.render.sprites[1].loop = false
 --#endregion
-
 --#region fx_hero_dragon_gem_ultimate_shard_arrival_2
 tt = RT("fx_hero_dragon_gem_ultimate_shard_arrival_2", "fx5")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_fx_b_idle"
 tt.render.sprites[1].loop = false
 --#endregion
-
 --#region decal_hero_dragon_gem_crystal_tomb
 tt = RT("decal_hero_dragon_gem_crystal_tomb", "decal_scripted")
 tt.render.sprites[1].prefix = "hero_evil_dragon_hero"
@@ -13379,7 +12961,6 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.decal_hero_dragon_gem_crystal_tomb.update
 --#endregion
-
 --#region decal_bullet_hero_dragon_gem_ultimate_shard
 tt = RT("decal_bullet_hero_dragon_gem_ultimate_shard", "decal_tween")
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_crystal_a_idle"
@@ -13387,7 +12968,6 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {3, 0}}
 --#endregion
-
 --#region decal_hero_dragon_gem_floor_decal
 tt = RT("decal_hero_dragon_gem_floor_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_evil_dragon_decal"
@@ -13396,7 +12976,6 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.props[1].keys = {{0, 255}, {1.5, 255}, {2, 0}}
 --#endregion
-
 --#region decal_hero_dragon_gem_floor_circle
 tt = RT("decal_hero_dragon_gem_floor_circle", "decal")
 
@@ -13413,12 +12992,10 @@ tt.tween.props[2].keys = {{0, vec_2(0.245, 0.245)}, {fts(6), vec_2(0.385, 0.385)
 tt.tween.props[2].sprite_id = 1
 tt.tween.remove = true
 --#endregion
-
 --#region decal_hero_dragon_gem_floor_circle_totem
 tt = RT("decal_hero_dragon_gem_floor_circle_totem", "decal_hero_dragon_gem_floor_circle")
 tt.tween.props[2].keys = {{0, vec_2(0.175, 0.175)}, {fts(6), vec_2(0.315, 0.315)}, {fts(13), vec_2(0.35, 0.35)}}
 --#endregion
-
 --#region decal_hero_dragon_gem_floor_impact_shard
 tt = RT("decal_hero_dragon_gem_floor_impact_shard", "decal_scripted")
 
@@ -13437,7 +13014,6 @@ tt.damage_range = b.damage_range
 tt.damage_type = b.damage_type
 tt.sound_events.insert = "HeroDragonGemPrismaticShardRipple"
 --#endregion
-
 --#region decal_hero_dragon_gem_ultimate_shard
 tt = RT("decal_hero_dragon_gem_ultimate_shard", "decal_scripted")
 
@@ -13461,7 +13037,6 @@ tt.tween.disabled = true
 tt.tween_remove = false
 tt.sound_events.insert = "HeroDragonGemUltimateCast"
 --#endregion
-
 --#region hero_dragon_gem
 tt = RT("hero_dragon_gem", "hero")
 
@@ -13677,7 +13252,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region hero_dragon_gem_ultimate
 tt = RT("hero_dragon_gem_ultimate")
 b = balance.heroes.hero_dragon_gem.ultimate
@@ -13695,7 +13269,6 @@ tt.prediction_nodes = fts(15)
 tt.distance_between_shards = b.distance_between_shards
 tt.random_ni_spread = b.random_ni_spread
 --#endregion
-
 --#region bolt_hero_dragon_gem_attack
 tt = RT("bolt_hero_dragon_gem_attack", "bolt")
 
@@ -13724,7 +13297,6 @@ tt.main_script.update = scripts.bolt_hero_dragon_gem_attack.update
 tt.damage_range = b.damage_range
 tt.sound_hit = "HeroDragonGemBasicAttackImpact"
 --#endregion
-
 --#region ray_hero_dragon_gem_stun
 tt = RT("ray_hero_dragon_gem_stun", "bullet")
 b = balance.heroes.hero_dragon_gem
@@ -13744,7 +13316,6 @@ tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
 tt.track_target = false
 tt.ray_duration = fts(42)
 --#endregion
-
 --#region bullet_hero_dragon_gem_crystal_totem
 tt = RT("bullet_hero_dragon_gem_crystal_totem", "bomb")
 tt.bullet.flight_time = fts(30)
@@ -13764,7 +13335,6 @@ tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
 tt.bullet.g = -0.8 / (fts(1) * fts(1))
 --#endregion
-
 --#region bullet_hero_dragon_gem_ultimate_shard
 tt = RT("bullet_hero_dragon_gem_ultimate_shard", "bullet")
 tt.main_script.update = scripts.bullet_hero_dragon_gem_ultimate_shard.update
@@ -13773,7 +13343,6 @@ tt.bullet.max_speed = 900
 tt.render.sprites[1].name = "hero_evil_dragon_ultimate_projectile"
 tt.render.sprites[1].animated = false
 --#endregion
-
 --#region aura_hero_dragon_gem_skill_stun
 tt = RT("aura_hero_dragon_gem_skill_stun", "aura")
 b = balance.heroes.hero_dragon_gem.stun
@@ -13786,7 +13355,6 @@ tt.aura.duration = fts(1)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_hero_dragon_gem_skill_stun.update
 --#endregion
-
 --#region aura_hero_dragon_gem_crystal_totem
 tt = RT("aura_hero_dragon_gem_crystal_totem", "aura")
 b = balance.heroes.hero_dragon_gem.crystal_totem
@@ -13814,7 +13382,6 @@ tt.tween.disabled = true
 tt.floor_decal = "decal_hero_dragon_gem_floor_circle_totem"
 tt.pulse_sound = "HeroDragonGemPowerConduitCrystal"
 --#endregion
-
 --#region mod_hero_dragon_gem_skill_stun
 tt = RT("mod_hero_dragon_gem_skill_stun", "mod_stun")
 
@@ -13827,7 +13394,6 @@ tt.render.sprites[1].size_names = {"small", "medium", "big"}
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.modifier.animation_phases = true
 --#endregion
-
 --#region mod_hero_dragon_gem_crystal_instakill
 tt = RT("mod_hero_dragon_gem_crystal_instakill", "modifier")
 b = balance.heroes.hero_dragon_gem.crystal_instakill
@@ -13853,14 +13419,12 @@ tt.damage_type_aoe = DAMAGE_PHYSICAL
 tt.damage_range = b.damage_range
 tt.damage_aoe_bans = bor(F_FLYING, F_CLIFF)
 --#endregion
-
 --#region mod_hero_dragon_gem_crystal_totem_slow
 tt = RT("mod_hero_dragon_gem_crystal_totem_slow", "mod_slow")
 b = balance.heroes.hero_dragon_gem.crystal_totem
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
 --#endregion
-
 --#region mod_hero_dragon_gem_passive_charge
 tt = RT("mod_hero_dragon_gem_passive_charge", "modifier")
 b = balance.heroes.hero_dragon_gem.passive_charge
@@ -13877,7 +13441,6 @@ tt.render.sprites[1].prefix = "hero_evil_dragon_passive"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].z = Z_FLYING_HEROES + 1
 --#endregion
-
 --#region controller_hero_dragon_gem_skill_floor_impact_spawner
 tt = RT("controller_hero_dragon_gem_skill_floor_impact_spawner")
 
@@ -13885,7 +13448,6 @@ AC(tt, "main_script")
 
 tt.main_script.update = scripts.controller_hero_dragon_gem_skill_floor_impact_spawner.update
 --#endregion
-
 --#region soldier_hero_witch_cat
 tt = RT("soldier_hero_witch_cat", "soldier_militia")
 b = balance.heroes.hero_witch
@@ -13927,7 +13489,6 @@ tt.unit.hit_offset = vec_2(0, 5)
 tt.unit.mod_offset = vec_2(0, 14)
 tt.unit.level = 0
 --#endregion
-
 --#region soldier_hero_witch_decoy
 tt = RT("soldier_hero_witch_decoy", "soldier_militia")
 b = balance.heroes.hero_witch
@@ -13973,7 +13534,6 @@ tt.death_spawns.concurrent_with_death = true
 tt.death_spawns.delay = fts(19)
 tt.sound_death = "HeroWitchDazzlingDecoyExplosion"
 --#endregion
-
 --#region hero_witch
 tt = RT("hero_witch", "hero")
 b = balance.heroes.hero_witch
@@ -14156,7 +13716,6 @@ tt.ultimate = {
 	disabled = true
 }
 --#endregion
-
 --#region enemy_pumpkin_witch
 tt = RT("enemy_pumpkin_witch", "enemy_KR5")
 
@@ -14182,7 +13741,6 @@ tt.vis.flags = bor(F_ENEMY, F_POLYMORPH)
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.clicks_to_destroy = b.clicks_to_destroy
 --#endregion
-
 --#region enemy_pumpkin_witch_flying
 tt = RT("enemy_pumpkin_witch_flying", "enemy_pumpkin_witch")
 tt.info.portrait = "kr5_info_portraits_enemies_0049"
@@ -14206,7 +13764,6 @@ tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-18, tt.flight_height - 2, 36, 23)
 tt.vis.flags = bor(F_ENEMY, F_FLYING, F_POLYMORPH)
 --#endregion
-
 --#region bullet_hero_witch_basic_1
 tt = RT("bullet_hero_witch_basic_1", "bolt")
 b = balance.heroes.hero_witch
@@ -14237,12 +13794,10 @@ tt.force_motion.max_a = 1800
 tt.force_motion.max_v = 450
 tt.sound_events.insert = nil
 --#endregion
-
 --#region bullet_hero_witch_basic_2
 tt = RT("bullet_hero_witch_basic_2", "bullet_hero_witch_basic_1")
 tt.initial_impulse_angle = 3.5 * math.pi * 0.5
 --#endregion
-
 --#region bullet_witch_skill_polymorph
 tt = RT("bullet_witch_skill_polymorph", "bolt")
 b = balance.heroes.hero_witch
@@ -14277,7 +13832,6 @@ tt.sound_events.insert = "HeroWitchVeggiefyIn"
 tt.shoot_sound = nil
 tt.hit_sound = nil
 --#endregion
-
 --#region aura_hero_witch_path_aoe
 tt = RT("aura_hero_witch_path_aoe", "aura")
 b = balance.heroes.hero_witch.skill_path_aoe
@@ -14320,7 +13874,6 @@ tt.damage_max = nil
 tt.damage_type = b.damage_type
 tt.sound_impact = "HeroWitchSquishNSquashImpact"
 --#endregion
-
 --#region aura_hero_witch_decoy_explotion
 tt = RT("aura_hero_witch_decoy_explotion", "aura")
 b = balance.heroes.hero_witch.disengage.decoy.explotion
@@ -14351,20 +13904,17 @@ tt.render.sprites[2].scale = vec_1(1.25 / 768 * 1080)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
-
 --#region mod_hero_witch_path_aoe
 tt = RT("mod_hero_witch_path_aoe", "mod_slow")
 b = balance.heroes.hero_witch.skill_path_aoe
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = 0.5
 --#endregion
-
 --#region mod_hero_witch_decoy_stun
 tt = RT("mod_hero_witch_decoy_stun", "mod_stun")
 b = balance.heroes.hero_witch.disengage.decoy.explotion
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 --#endregion
-
 --#region mod_hero_witch_skill_polymorph
 tt = RT("mod_hero_witch_skill_polymorph", "modifier")
 b = balance.heroes.hero_witch.skill_polymorph
@@ -14378,7 +13928,6 @@ tt.entity_t_flying = "enemy_pumpkin_witch_flying"
 tt.transform_fx = "fx_hero_witch_skill_polymorph"
 tt.sound_transform_out = "HeroWitchVeggiefyOut"
 --#endregion
-
 --#region mod_hero_witch_ultimate_teleport
 tt = RT("mod_hero_witch_ultimate_teleport", "mod_teleport")
 b = balance.heroes.hero_witch.ultimate
@@ -14398,7 +13947,6 @@ tt.end_mod = "mod_hero_witch_ultimate_sleep"
 tt.sound_events.insert = "HeroDragonBoneUltimateOut"
 tt.sound_events.remove = "HeroDragonBoneUltimateIn"
 --#endregion
-
 --#region mod_hero_witch_ultimate_mark
 tt = RT("mod_hero_witch_ultimate_mark", "modifier")
 
@@ -14410,7 +13958,6 @@ tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.mod_mark_flags.update
 --#endregion
-
 --#region mod_hero_witch_ultimate_sleep
 tt = RT("mod_hero_witch_ultimate_sleep", "modifier")
 
@@ -14433,7 +13980,6 @@ tt.render.sprites[2].keep_flip_x = true
 tt.render.sprites[2].draw_order = DO_MOD_FX
 tt.render.sprites[2].scale = vec_1(1)
 --#endregion
-
 --#region controller_hero_witch_ultimate
 tt = RT("controller_hero_witch_ultimate")
 b = balance.heroes.hero_witch.ultimate
@@ -14451,7 +13997,6 @@ tt.mod_mark = "mod_hero_witch_ultimate_mark"
 tt.mod_teleport = "mod_hero_witch_ultimate_teleport"
 -- 五代骨龙
 --#endregion
-
 --#region ps_bolt_dragon_bone_basic_attack
 tt = RT("ps_bolt_dragon_bone_basic_attack")
 
@@ -14465,7 +14010,6 @@ tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_FLYING_HEROES
 --#endregion
-
 --#region ps_bolt_dragon_bone_burst
 tt = RT("ps_bolt_dragon_bone_burst")
 
@@ -14480,7 +14024,6 @@ tt.particle_system.emit_area_spread = vec_2(5, 0)
 tt.particle_system.scales_y = {1, 0.5}
 tt.particle_system.scales_x = {1, 0.5}
 --#endregion
-
 --#region fx_bolt_dragon_bone_basic_attack_hit
 tt = RT("fx_bolt_dragon_bone_basic_attack_hit", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_hit_idle"
@@ -14489,7 +14032,6 @@ tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].sort_y_offset = -5
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region fx_bolt_dragon_bone_basic_attack_hit_flying
 tt = RT("fx_bolt_dragon_bone_basic_attack_hit_flying", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_hit_air_idle"
@@ -14497,7 +14039,6 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region fx_dragon_bone_plague_explosion
 tt = RT("fx_dragon_bone_plague_explosion", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_plague_explosion_idle"
@@ -14505,7 +14046,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region fx_bullet_dragon_bone_rain
 tt = RT("fx_bullet_dragon_bone_rain", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_bones_fx_idle"
@@ -14513,7 +14053,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region fx_bullet_dragon_bone_rain_vanish
 tt = RT("fx_bullet_dragon_bone_rain_vanish", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_bones_despawn_fx_idle"
@@ -14521,20 +14060,17 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region fx_dragon_bone_dog_spawn
 tt = RT("fx_dragon_bone_dog_spawn", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_drake_spawn_fx_idle"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.4)
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region fx_dragon_bone_dog_hit
 tt = RT("fx_dragon_bone_dog_hit", "fx")
 tt.render.sprites[1].name = "hero_dragon_bone_drake_hit_fx_idle"
 tt.render.sprites[1].scale = vec_1(1)
 --#endregion
-
 --#region decal_dragon_bone_cloud
 tt = RT("decal_dragon_bone_cloud", "decal_tween")
 tt.render.sprites[1].name = "hero_dragon_bone_cloud_b"
@@ -14557,7 +14093,6 @@ tt.tween.props[2].sprite_id = 2
 tt.tween.disabled = false
 tt.tween.remove = false
 --#endregion
-
 --#region decal_bullet_dragon_bone_rain
 tt = RT("decal_bullet_dragon_bone_rain", "decal_timed")
 tt.render.sprites[1].name = "hero_dragon_bone_bones_decal"
@@ -14566,7 +14101,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vec_1(1)
 tt.timed.duration = fts(27)
 --#endregion
-
 --#region hero_dragon_bone
 tt = RT("hero_dragon_bone", "hero")
 
@@ -14778,7 +14312,6 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
-
 --#region hero_dragon_bone_ultimate
 tt = RT("hero_dragon_bone_ultimate")
 b = balance.heroes.hero_dragon_bone.ultimate
@@ -14800,7 +14333,6 @@ tt.distance_between_shards = b.distance_between_shards
 tt.random_ni_spread = b.random_ni_spread
 tt.sound_events.insert = "HeroDragonBoneUltimateCast"
 --#endregion
-
 --#region soldier_dragon_bone_ultimate_dog
 tt = RT("soldier_dragon_bone_ultimate_dog", "soldier_militia")
 b = balance.heroes.hero_dragon_bone.ultimate.dog
@@ -14843,7 +14375,6 @@ tt.unit.mod_offset = vec_2(0, 14)
 tt.unit.level = 0
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 --#endregion
-
 --#region bolt_dragon_bone_basic_attack
 tt = RT("bolt_dragon_bone_basic_attack", "bolt")
 
@@ -14876,7 +14407,6 @@ tt.damage_range = b.radius
 tt.sound_events.insert = "HeroDragonBoneBasicAttackCast"
 tt.sound_events.hit = "HeroDragonBoneBasicAttackImpact"
 --#endregion
-
 --#region bullet_dragon_bone_cloud
 tt = RT("bullet_dragon_bone_cloud", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
@@ -14896,7 +14426,6 @@ tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
 tt.track_target = false
 tt.ray_duration = fts(42)
 --#endregion
-
 --#region bullet_dragon_bone_rain
 tt = RT("bullet_dragon_bone_rain", "bullet")
 
@@ -14950,7 +14479,6 @@ tt.tween.props[5].disabled = true
 tt.sound_events.insert = nil
 tt.sound_events.hit = "HeroDragonBoneSpineRainImpact"
 --#endregion
-
 --#region bolt_dragon_bone_burst
 tt = RT("bolt_dragon_bone_burst", "bolt")
 b = balance.heroes.hero_dragon_bone.burst
@@ -14996,7 +14524,6 @@ tt.force_motion.max_v = 510
 tt.sound_events.insert = nil
 tt.sound_events.hit = "HeroDragonBoneSpreadingBurstImpact"
 --#endregion
-
 --#region aura_dragon_bone_cloud
 tt = RT("aura_dragon_bone_cloud", "aura")
 
@@ -15042,7 +14569,6 @@ tt.tween.props[3].sprite_id = 2
 tt.tween.remove = false
 tt.decal_cloud_t = "decal_dragon_bone_cloud"
 --#endregion
-
 --#region mod_dragon_bone_plague
 tt = RT("mod_dragon_bone_plague", "modifier")
 b = balance.heroes.hero_dragon_bone.plague
@@ -15069,14 +14595,12 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.main_script.remove = scripts.mod_dragon_bone_plague.remove
 --#endregion
-
 --#region mod_dragon_bone_cloud_slow
 tt = RT("mod_dragon_bone_cloud_slow", "mod_slow")
 b = balance.heroes.hero_dragon_bone.cloud
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = 0.5
 --#endregion
-
 --#region mod_dragon_bone_rain_stun
 tt = RT("mod_dragon_bone_rain_stun", "mod_stun")
 b = balance.heroes.hero_dragon_bone.rain
@@ -15085,7 +14609,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 -- 光龙
 --#endregion
-
 --#region ps_bolt_lumenir
 tt = RT("ps_bolt_lumenir")
 
@@ -15099,7 +14622,6 @@ tt.particle_system.emission_rate = 30
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_FLYING_HEROES
 --#endregion
-
 --#region ps_bolt_lumenir_mini
 tt = RT("ps_bolt_lumenir_mini")
 
@@ -15112,7 +14634,6 @@ tt.particle_system.particle_lifetime = {fts(12), fts(12)}
 tt.particle_system.emission_rate = 15
 tt.particle_system.emit_rotation_spread = math.pi / 2
 --#endregion
-
 --#region ps_bolt_lumenir_wave
 tt = RT("ps_bolt_lumenir_wave")
 
@@ -15130,7 +14651,6 @@ tt.particle_system.scales_y = {1.5, 2}
 tt.particle_system.z = Z_OBJECTS
 tt.particle_system.emit_rotation_spread = math.pi / 4
 --#endregion
-
 --#region ps_bolt_lance_lumenir
 tt = RT("ps_bolt_lance_lumenir")
 
@@ -15143,7 +14663,6 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.emission_rate = 90
 tt.particle_system.emit_rotation_spread = math.pi
 --#endregion
-
 --#region ps_soul_soldier_tower_ghost
 tt = RT("ps_soul_soldier_tower_ghost")
 
@@ -15156,7 +14675,6 @@ tt.particle_system.particle_lifetime = {fts(13), fts(13)}
 tt.particle_system.emission_rate = 60
 tt.particle_system.emit_rotation_spread = math.pi
 --#endregion
-
 --#region ps_bullet_liquid_fire_lumenir
 tt = RT("ps_bullet_liquid_fire_lumenir")
 
@@ -15177,14 +14695,12 @@ tt.particle_system.scales_y = {1, 1, 1.5}
 tt.particle_system.spin = {-math.pi / 2, math.pi / 2}
 tt.particle_system.sort_y_offsets = {-100, 0}
 --#endregion
-
 --#region ps_minidragon_lumenir_fire
 tt = RT("ps_minidragon_lumenir_fire", "ps_bullet_liquid_fire_lumenir")
 tt.particle_system.emit_duration = nil
 tt.particle_system.emit_speed = {500, 500}
 tt.particle_system.emit_rotation_spread = math.pi / 8
 --#endregion
-
 --#region ps_hero_lumenir_fire_ball
 tt = RT("ps_hero_lumenir_fire_ball")
 
@@ -15208,17 +14724,14 @@ tt.particle_system.scale_same_aspect = false
 tt.particle_system.emit_spread = math.pi
 tt.particle_system.emission_rate = 30
 --#endregion
-
 --#region fx_bolt_lumenir_hit
 tt = RT("fx_bolt_lumenir_hit", "fx")
 tt.render.sprites[1].name = "hero_lumenir_attack_hit_fx_air"
 --#endregion
-
 --#region fx_bolt_lumenir_hit_mini
 tt = RT("fx_bolt_lumenir_hit_mini", "fx")
 tt.render.sprites[1].name = "hero_lumenir_light_companion_attack_fx_idle"
 --#endregion
-
 --#region decal_hero_lumenir_sword
 tt = RT("decal_hero_lumenir_sword", "decal_tween")
 tt.render.sprites[1].name = "hero_lumenir_celestial_judgement_fx_decal"
@@ -15228,7 +14741,6 @@ tt.tween.props[1].keys = {{0, 255}, {2, 255}, {2.5, 0}}
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
 --#endregion
-
 --#region hero_lumenir
 tt = RT("hero_lumenir", "hero")
 
@@ -15441,7 +14953,6 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
-
 --#region mini_dragon_hero_lumenir
 tt = RT("mini_dragon_hero_lumenir", "decal_scripted")
 b = balance.heroes.hero_lumenir.mini_dragon.dragon
@@ -15499,7 +15010,6 @@ tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].name = "alpha"
 tt.tween.props[2].keys = {{1, 0}, {1.5, 255}}
 --#endregion
-
 --#region mini_dragon_death_hero_lumenir
 tt = RT("mini_dragon_death_hero_lumenir", "mini_dragon_hero_lumenir")
 b = balance.heroes.hero_lumenir.mini_dragon_death
@@ -15508,7 +15018,6 @@ tt.ranged.attacks[1].min_range = b.min_range
 tt.ranged.attacks[1].cooldown = b.cooldown
 tt.ranged.attacks[1].bullet = "bolt_lumenir_mini_death"
 --#endregion
-
 --#region hero_lumenir_ultimate
 tt = RT("hero_lumenir_ultimate")
 b = balance.heroes.hero_lumenir.ultimate
@@ -15525,7 +15034,6 @@ tt.vis_flags = bor(F_RANGED)
 tt.vis_bans = bor(F_FLYING)
 tt.entity = "soldier_lumenir_ultimate"
 --#endregion
-
 --#region soldier_lumenir_ultimate
 tt = RT("soldier_lumenir_ultimate", "soldier")
 
@@ -15578,7 +15086,6 @@ tt.melee.attacks[1].sound_hit = "MeleeSword"
 tt.melee.cooldown = fts(15)
 tt.melee.range = 60
 --#endregion
-
 --#region bolt_lumenir
 tt = RT("bolt_lumenir", "bullet")
 
@@ -15605,7 +15112,6 @@ tt.main_script.update = scripts.bolt_lumenir.update
 tt.render.sprites[1].name = "hero_lumenir_attack_projectile_idle"
 tt.render.sprites[1].z = Z_FLYING_HEROES
 --#endregion
-
 --#region bolt_lumenir_mini
 tt = RT("bolt_lumenir_mini", "bolt_lumenir")
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -15615,11 +15121,9 @@ tt.bullet.particles_name = "ps_bolt_lumenir_mini"
 tt.render.sprites[1].name = "hero_lumenir_light_companion_attack_projectile_idle"
 tt.sound_events.insert = "HeroLumenirLightCompanionBasicAttack"
 --#endregion
-
 --#region bolt_lumenir_mini_death
 tt = RT("bolt_lumenir_mini_death", "bolt_lumenir_mini")
 --#endregion
-
 --#region bolt_lumenir_wave
 tt = RT("bolt_lumenir_wave", "bolt_lumenir")
 b = balance.heroes.hero_lumenir.fire_balls
@@ -15628,7 +15132,6 @@ tt.bullet.hit_fx = "fx_bolt_lumenir_hit_mini"
 tt.bullet.particles_name = "ps_bolt_lumenir_wave"
 tt.render.sprites[1].name = "hero_lumenir_radiant_wave_projectile_idle"
 --#endregion
-
 --#region aura_fire_balls_hero_lumenir
 tt = RT("aura_fire_balls_hero_lumenir", "aura")
 
@@ -15655,7 +15158,6 @@ tt.tween.disabled = true
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration_var, 0}}
 --#endregion
-
 --#region mod_hero_lumenir_sword_hit
 tt = RT("mod_hero_lumenir_sword_hit", "modifier")
 
@@ -15679,7 +15181,6 @@ tt.stun_bans = bor(F_FLYING)
 tt.main_script.update = scripts.mod_hero_lumenir_sword_hit.update
 tt.sound = "HeroLumenirCelestialJudgementImpact"
 --#endregion
-
 --#region mod_hero_lumenir_stun
 tt = RT("mod_hero_lumenir_stun", "mod_stun")
 
@@ -15687,7 +15188,6 @@ AC(tt, "render")
 
 tt.modifier.duration = fts(23)
 --#endregion
-
 --#region mod_hero_lumenir_shield
 tt = RT("mod_hero_lumenir_shield", "modifier")
 
@@ -15709,7 +15209,6 @@ tt.render.sprites[2].z = Z_DECALS
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
 --#endregion
-
 --#region mod_lumenir_ulti_stun
 tt = RT("mod_lumenir_ulti_stun", "mod_stun")
 b = balance.heroes.hero_lumenir
@@ -15719,7 +15218,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 -- 悟空_START
 --#endregion
-
 --#region ps_wukong_nube_trail
 tt = RT("ps_wukong_nube_trail")
 
@@ -15734,14 +15232,12 @@ tt.particle_system.track_rotation = false
 tt.particle_system.particle_lifetime = {fts(19), fts(19)}
 tt.particle_system.z = Z_OBJECTS
 --#endregion
-
 --#region fx_hero_wukong_clones_spawn
 tt = RT("fx_hero_wukong_clones_spawn", "fx")
 tt.render.sprites[1].name = "hero_wukong_smoke_in"
 tt.render.sprites[1].sort_y_offset = -5
 tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
-
 --#region fx_hero_wukong_giant_staff
 tt = RT("fx_hero_wukong_giant_staff", "decal_scripted")
 -- AC(tt, "tween")
@@ -15772,14 +15268,12 @@ tt.render.sprites[1].scale = vv(2)
 -- tt.tween.disabled = true
 -- tt.tween.remove = true
 --#endregion
-
 --#region fx_zhu_apprentice_respawn
 tt = RT("fx_zhu_apprentice_respawn", "fx")
 tt.render.sprites[1].name = "hero_wukong_woolong_spawn_FX_spawn"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 --#endregion
-
 --#region fx_hero_wukong_giant_staff_dust_cloud_back
 tt = RT("fx_hero_wukong_giant_staff_dust_cloud_back", "fx")
 tt.render.sprites[1].name = "hero_wukong_back_dust_in"
@@ -15787,7 +15281,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = 10
 tt.render.sprites[1].scale = vv(3)
 --#endregion
-
 --#region fx_hero_wukong_giant_staff_dust_cloud_front
 tt = RT("fx_hero_wukong_giant_staff_dust_cloud_front", "fx")
 tt.render.sprites[1].name = "hero_wukong_smoke_in"
@@ -15798,21 +15291,18 @@ tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].name = "hero_wukong_dust_up_in"
 tt.render.sprites[2].sort_y_offset = -35
 --#endregion
-
 --#region fx_hero_wukong_hit_2
 tt = RT("fx_hero_wukong_hit_2", "fx")
 tt.render.sprites[1].name = "hero_wukong_hit_run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -35
 --#endregion
-
 --#region fx_hero_wukong_hit
 tt = RT("fx_hero_wukong_hit", "fx")
 tt.render.sprites[1].name = "hero_wukong_hit_wukong_run"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -35
 --#endregion
-
 --#region decal_zhu_apprentice_area_attack
 tt = RT("decal_zhu_apprentice_area_attack", "decal_scripted")
 
@@ -15838,7 +15328,6 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.disabled = false
 tt.tween.remove = true
 --#endregion
-
 --#region decal_hero_wukong_ranged_attack_staff
 tt = RT("decal_hero_wukong_ranged_attack_staff", "decal_scripted")
 
@@ -15867,7 +15356,6 @@ tt.tween.props[1].sprite_id = 1
 tt.tween.disabled = true
 tt.tween.remove = true
 --#endregion
-
 --#region decal_hero_wukong_ranged_attack_staff_decal
 tt = RT("decal_hero_wukong_ranged_attack_staff_decal", "decal_tween")
 
@@ -15883,7 +15371,6 @@ tt.tween.props[1].sprite_id = 1
 tt.tween.disabled = false
 tt.tween.remove = true
 --#endregion
-
 --#region soldier_hero_wukong_clone
 tt = RT("soldier_hero_wukong_clone", "soldier_militia")
 b = balance.heroes.hero_wukong
@@ -15925,7 +15412,6 @@ tt.unit.hit_offset = v(0, 14)
 tt.unit.mod_offset = v(0, 14)
 tt.unit.level = 0
 --#endregion
-
 --#region soldier_hero_wukong_clone_b
 tt = RT("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
 tt.info.portrait = "kr5_info_portraits_soldiers_0034"
@@ -15934,7 +15420,6 @@ tt.info.random_name_count = nil
 tt.info.random_name_format = nil
 tt.info.i18n_key = "SOLDIER_HERO_WUKONG_HAIR_CLONES_2"
 --#endregion
-
 --#region soldier_hero_wukong_zhu_apprentice
 tt = RT("soldier_hero_wukong_zhu_apprentice", "soldier_militia")
 
@@ -15990,7 +15475,6 @@ tt.motion.max_speed = b.max_speed
 tt.soldier.melee_slot_offset = v(12, 0)
 tt.ignore_linirea_true_might_revive = true
 --#endregion
-
 --#region fx_hero_wukong_ultimate
 tt = RT("fx_hero_wukong_ultimate", "decal_scripted")
 
@@ -16003,7 +15487,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.sound_events.insert = "HeroWukongUltimate"
 --#endregion
-
 --#region fx_hero_wukong_ultimate_cracks
 tt = RT("fx_hero_wukong_ultimate_cracks", "decal_tween")
 tt.render.sprites[1].name = "hero_wukong_dragon_ultimate_cracks_floor"
@@ -16025,7 +15508,6 @@ tt.tween.props[3].sprite_id = 3
 tt.tween.props[3].keys = {{fts(31) + fts(14), 0}, {fts(35) + fts(14), 255}, {2.5 + fts(14), 255}, {3 + fts(14), 0}, {4, 0}}
 tt.tween.remove = true
 --#endregion
-
 --#region fx_hero_wukong_ultimate_explosion
 tt = RT("fx_hero_wukong_ultimate_explosion", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
@@ -16034,7 +15516,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].hidden = true
 --#endregion
-
 --#region hero_wukong
 tt = RT("hero_wukong", "hero")
 b = balance.heroes.hero_wukong
@@ -16291,7 +15772,6 @@ tt.flywalk.animations = {"cloud_in", "cloud_loop", "cloud_out"}
 tt.flywalk.sound = nil
 tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
 --#endregion
-
 --#region aura_hero_wukong_ultimate_slow
 tt = RT("aura_hero_wukong_ultimate_slow", "aura")
 b = balance.heroes.hero_wukong.ultimate
@@ -16312,13 +15792,11 @@ tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod_hero_wukong_ultimate.update
 --#endregion
-
 --#region mod_hero_wukong_attacks_combos
 tt = RT("mod_hero_wukong_attacks_combos", "modifier")
 tt.main_script.insert = scripts.mod_hero_wukong_attacks_combos.insert
 tt.main_script.queue = scripts.mod_hero_wukong_attacks_combos.queue
 --#endregion
-
 --#region mod_hero_wukong_ranged_pole_stun
 tt = RT("mod_hero_wukong_ranged_pole_stun", "mod_stun")
 b = balance.heroes.hero_wukong.pole_ranged
@@ -16326,14 +15804,12 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.modifier.duration = b.stun_duration
 --#endregion
-
 --#region mod_hero_wukong_ultimate_slow
 tt = RT("mod_hero_wukong_ultimate_slow", "mod_slow")
 b = balance.heroes.hero_wukong.ultimate
 tt.slow.factor = nil
 tt.modifier.duration = 0.5
 --#endregion
-
 --#region controller_hero_wukong_ultimate
 tt = RT("controller_hero_wukong_ultimate")
 b = balance.heroes.hero_wukong.ultimate
@@ -16361,4 +15837,5 @@ tt.dragon_fx_cracks = "fx_hero_wukong_ultimate_cracks"
 tt.explosion_fx = "fx_hero_wukong_ultimate_explosion"
 tt.sound_events.insert = "HeroSpiderGlobalCocoons"
 tt.aura_slow = "aura_hero_wukong_ultimate_slow"
+
 --#endregion
