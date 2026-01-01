@@ -6279,16 +6279,13 @@ function BooleanToggleItem:on_exit()
 	self:update_display()
 end
 
-function BooleanToggleItem:on_click()
-	S:queue("GUIButtonCommon")
-	self:toggle()
-end
+function BooleanToggleItem:set_value_lable(new_value)
+	self.value_label.text = new_value or self.value_label.text
 
-function BooleanToggleItem:toggle()
-	if self._type == "boolean" then
-		self.value = not self.value
-	elseif self._type == "number" then
-		screen_map.window:set_responder(self)
+	local num = tonumber(self.value_label.text)
+
+	if num then
+		self.value = num
 	end
 
 	self:update_display()
@@ -6298,21 +6295,46 @@ function BooleanToggleItem:toggle()
 	end
 end
 
+function BooleanToggleItem:on_click(button, vx, vy)
+	S:queue("GUIButtonCommon")
+	-- self:toggle()
+
+	if self._type == "boolean" then
+		self.value = not self.value
+	elseif self._type == "number" then
+		screen_map.window:set_responder(self)
+
+		if vx < self.pos.x + self.size.x / 2 then
+			self:set_value_lable(self.value_label.text - 1)
+		else
+			self:set_value_lable(self.value_label.text + 1)
+		end
+	end
+
+	self:update_display()
+
+	if self.on_change_callback then
+		self.on_change_callback(self.key, self.value)
+	end
+end
+
+-- function BooleanToggleItem:toggle()
+-- 	if self._type == "boolean" then
+-- 		self.value = not self.value
+-- 	elseif self._type == "number" then
+-- 		screen_map.window:set_responder(self)
+-- 	end
+
+-- 	self:update_display()
+
+-- 	if self.on_change_callback then
+-- 		self.on_change_callback(self.key, self.value)
+-- 	end
+-- end
+
 function BooleanToggleItem:on_textinput(t)
 	if self._type == "number" then
-		self.value_label.text = tostring(self.value_label.text .. t)
-
-		local num = tonumber(self.value_label.text)
-
-		if num then
-			self.value = num
-		end
-
-		self:update_display()
-
-		if self.on_change_callback then
-			self.on_change_callback(self.key, self.value)
-		end
+		self:set_value_lable(tostring(self.value_label.text .. t))
 	end
 
 	return true
@@ -6334,17 +6356,7 @@ function BooleanToggleItem:on_keypressed(key)
 				self.value_label.text = ""
 			end
 
-			local num = tonumber(self.value_label.text)
-
-			if num then
-				self.value = num
-			end
-
-			self:update_display()
-
-			if self.on_change_callback then
-				self.on_change_callback(self.key, self.value)
-			end
+			self:set_value_lable()
 		end
 	end
 end
