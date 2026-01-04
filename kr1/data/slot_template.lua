@@ -3,8 +3,8 @@ return {
 	gems = 0,
 	achievements = {},
 	levels = {
-		[1] = {};
-		[27] = {};
+		[1] = {},
+		[27] = {},
 		[49] = {}
 	},
 	upgrades = {

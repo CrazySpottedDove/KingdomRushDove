@@ -1,1 +1,1 @@
-return {animations={{name="run";frames={{{1,1,1,21.05,-48.4,1,1,0,0,0},{1,1,1,-23.55,-51.4,1,-1.0693359375,3.1415926535898,0,0}}}}};fps=30;partScaleCompensation=1;attach_points={};parts={{"dclenanos_stage05_headplasmabg_asst_robotheadDLC_plasma4",0,26.6}}}
+return {animations={{name="run",frames={{{1,1,1,21.05,-48.4,1,1,0,0,0},{1,1,1,-23.55,-51.4,1,-1.0693359375,3.1415926535898,0,0}}}}},fps=30,partScaleCompensation=1,attach_points={},parts={{"dclenanos_stage05_headplasmabg_asst_robotheadDLC_plasma4",0,26.6}}}

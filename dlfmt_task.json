@@ -32,5 +32,8 @@
 			"type": "compress",
 			"directory": "kr1/data/levels"
 		}
-	]
+	],
+	"params": {
+		"format": "manual"
+	}
 }

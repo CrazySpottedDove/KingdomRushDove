@@ -1,1 +1,1 @@
-return {parts={{"dclenanos_stage05_ScrapProjectileTrail_asst_scrap_projectile_trail",0,0}};animations={{frames={{{1,1,1,-1.2,-0.4,1,1,0,0,0}}};name="trail"}};attach_points={};fps=30;partScaleCompensation=1}
+return {parts={{"dclenanos_stage05_ScrapProjectileTrail_asst_scrap_projectile_trail",0,0}},animations={{frames={{{1,1,1,-1.2,-0.4,1,1,0,0,0}}},name="trail"}},attach_points={},fps=30,partScaleCompensation=1}
