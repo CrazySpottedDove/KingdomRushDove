@@ -28,9 +28,7 @@ require("game_templates_utils")
 
 --#region tower_paladin
 tt = RT("tower_paladin", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0007" or "info_portraits_towers_0005"
 tt.info.enc_icon = 14
 tt.info.i18n_key = "TOWER_PALADINS"
@@ -2857,9 +2855,7 @@ tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)
 --#endregion
 --#region ps_bullet_incendiary_soldier_dwarf_tower
 tt = RT("ps_bullet_incendiary_soldier_dwarf_tower")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "tower_dwarf_skill_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2902,9 +2898,7 @@ tt.render.sprites[4].offset.y = 62
 --#region mod_aura_bullet_soldier_tower_dwarf
 tt = RT("mod_aura_bullet_soldier_tower_dwarf", "modifier")
 b = balance.towers.dwarf.incendiary_ammo.burn
-
 AC(tt, "dps", "render")
-
 tt.modifier.duration = b.duration
 tt.dps.damage_config = b.damage
 tt.dps.damage_type = DAMAGE_TRUE
@@ -2920,16 +2914,14 @@ tt.main_script.update = scripts.mod_dps.update
 --#region tower_dwarf_lvl4
 tt = RT("tower_dwarf_lvl4", "tower")
 b = balance.towers.dwarf
-
 AC(tt, "barrack", "vis", "powers")
-
 tt.powers.formation = CC("power")
-tt.powers.formation.price_base = b.formation.price[2]
-tt.powers.formation.price_inc = b.formation.price[3]
+tt.powers.formation.price_base = b.formation.price[1]
+tt.powers.formation.price_inc = b.formation.price[2]
 tt.powers.formation.enc_icon = 35
 tt.powers.incendiary_ammo = CC("power")
-tt.powers.incendiary_ammo.price_base = b.incendiary_ammo.price[2]
-tt.powers.incendiary_ammo.price_inc = b.incendiary_ammo.price[3]
+tt.powers.incendiary_ammo.price_base = b.incendiary_ammo.price[1]
+tt.powers.incendiary_ammo.price_inc = b.incendiary_ammo.price[2]
 tt.powers.incendiary_ammo.damage_min = b.damage_min
 tt.powers.incendiary_ammo.damage_max = b.damage_max
 tt.powers.incendiary_ammo.burn_damage_min = b.incendiary_ammo.burn.damage_min
@@ -2966,7 +2958,6 @@ tt.barrack.soldier_type = "soldier_tower_dwarf_lvl4"
 tt.barrack.rally_range = b.rally_range
 tt.barrack.respawn_offset = v(0, 12)
 tt.barrack.max_soldiers = b.max_soldiers
-tt.info.fn = scripts.tower_paladin_covenant.get_info
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_dwarf.update
 tt.main_script.remove = scripts.tower_barrack.remove
@@ -2978,13 +2969,10 @@ tt.ui.click_rect = r(-42, 0, 84, 90)
 --#region soldier_tower_dwarf_lvl4
 tt = RT("soldier_tower_dwarf_lvl4", "soldier_militia")
 b = balance.towers.dwarf.soldier
-
 AC(tt, "nav_grid", "ranged", "powers")
-
 tt.info.portrait = "kr5_info_portraits_soldiers_0024"
 tt.info.random_name_format = "SOLDIER_TOWER_DWARF_%i_NAME"
 tt.info.random_name_count = 10
-tt.main_script.insert = scripts.soldier_tower_dwarf.insert
 tt.main_script.update = scripts.soldier_tower_dwarf.update
 tt.render.sprites[1].prefix = "tower_dwarf_dwarf_lvl4"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
@@ -3055,9 +3043,9 @@ tt = RT("bullet_soldier_tower_dwarf", "bullet")
 b = balance.towers.dwarf.soldier.ranged_attack
 tt.bullet.hit_fx = "fx_bullet_soldier_tower_dwarf_hit"
 tt.bullet.flight_time = fts(2)
-tt.bullet.damage_type = DAMAGE_PHYSICAL
-tt.bullet.damage_max = b.damage_max[1]
-tt.bullet.damage_min = b.damage_min[1]
+tt.bullet.damage_type = DAMAGE_SHOT
+tt.bullet.damage_max = b.damage_max[4]
+tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.damage_max_config = b.damage_max
 tt.bullet.damage_min_config = b.damage_min
 tt.bullet.level = 1
@@ -3067,9 +3055,7 @@ tt.sound_events.insert = "TowerDwarfBasicAttack"
 --#endregion
 --#region bullet_incendiary_soldier_tower_dwarf
 tt = RT("bullet_incendiary_soldier_tower_dwarf", "bomb")
-
 local b = balance.towers.dwarf.incendiary_ammo
-
 tt.bullet.hit_fx = "fx_explosion_tower_dwarf"
 tt.bullet.hit_decal = nil
 tt.bullet.miss_decal = nil

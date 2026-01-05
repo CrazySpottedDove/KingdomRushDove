@@ -18839,33 +18839,28 @@ function scripts.tower_dwarf.update(this, store, script)
 	local formation_angles = {math.pi * 0.25, math.pi, math.pi * 0.25}
 	local angle_offset = math.pi * 0.25
 	local mute_spawn = false
+	local b = this.barrack
+	local pow_f = this.powers.formation
+	local pow_i = this.powers.incendiary_ammo
+	local tw = this.tower
 
 	while true do
-		local b = this.barrack
-
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.changed then
-					p.changed = nil
-
-					if p == this.powers.incendiary_ammo then
-						for _, s in pairs(b.soldiers) do
-							s.powers[pn].level = p.level
-							s.powers[pn].changed = true
-						end
-					end
-
-					if p == this.powers.formation then
-						b.max_soldiers = base_max_soldiers + p.level
-						b.rally_new = true
-						angle_offset = formation_angles[p]
-						mute_spawn = true
-					end
-				end
+		if pow_f.changed then
+			pow_f.changed = nil
+			b.max_soldiers = base_max_soldiers + pow_f.level
+			b.rally_new = true
+			angle_offset = formation_angles[pow_f.level]
+			mute_spawn = true
+		end
+		if pow_i.changed then
+			pow_i.changed = nil
+			for _, s in pairs(b.soldiers) do
+				s.powers.incendiary_ammo.level = pow_i.level
+				s.powers.incendiary_ammo.changed = true
 			end
 		end
 
-		if not this.tower.blocked then
+		if not tw.blocked then
 			for i = 1, b.max_soldiers do
 				local s = b.soldiers[i]
 
@@ -18889,15 +18884,11 @@ function scripts.tower_dwarf.update(this, store, script)
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
 					s.nav_rally.new = true
 
-					if this.powers then
-						for pn, p in pairs(this.powers) do
-							if p == this.powers.incendiary_ammo and p.level > 0 then
-								s.powers[pn].level = p.level
-								s.powers[pn].changed = true
-							end
-						end
+					if pow_i.level > 0 then
+						s.powers.incendiary_ammo.level = pow_i.level
+						s.powers.incendiary_ammo.changed = true
 					end
-
+					U.soldier_inherit_tower_buff_factor(s, this)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -18945,24 +18936,10 @@ end
 
 scripts.soldier_tower_dwarf = {}
 
-function scripts.soldier_tower_dwarf.insert(this, store)
-	if scripts.soldier_barrack.insert(this, store) then
-		local pow_h = this.powers and this.powers.healing_prayer or nil
-		local pow_l = this.powers and this.powers.lead or nil
-		local a_h = this.timed_attacks and this.timed_attacks.list[1] or nil
-		local a_l = this.timed_attacks and this.timed_attacks.list[2] or nil
-
-		return true
-	end
-
-	return false
-end
-
 function scripts.soldier_tower_dwarf.update(this, store, script)
 	local brk, sta
-	local pow_i = this.powers and this.powers.incendiary_ammo or nil
-	local a_i = this.ranged.attacks[2] or nil
-	local damage_factor_prev = this.health.damage_factor
+	local pow_i = this.powers.incendiary_ammo
+	local a_i = this.ranged.attacks[2]
 	local mods = {}
 	local first_walk = true
 
@@ -18973,7 +18950,7 @@ function scripts.soldier_tower_dwarf.update(this, store, script)
 
 	this.nav_rally._first_time = true
 
-	local function y_soldier_new_rally_break_attack(store, this, break_fn, first_walk)
+	local function y_soldier_new_rally_break_attack(store, this, first_walk)
 		local r = this.nav_rally
 		local out = false
 		local vis_bans = this.vis.bans
@@ -19016,12 +18993,6 @@ function scripts.soldier_tower_dwarf.update(this, store, script)
 					end
 
 					if r.new then
-						out = false
-
-						break
-					end
-
-					if break_fn() then
 						out = false
 
 						break
@@ -19125,42 +19096,13 @@ function scripts.soldier_tower_dwarf.update(this, store, script)
 		return out
 	end
 
-	local function check_tower_damage_factor()
-		if store.entities[this.soldier.tower_id] then
-			for _, a in ipairs(this.melee.attacks) do
-				if not a._original_damage_min then
-					a._original_damage_min = a.damage_min
-				end
-
-				if not a._original_damage_max then
-					a._original_damage_max = a.damage_max
-				end
-
-				a.damage_min = a._original_damage_min * store.entities[this.soldier.tower_id].tower.damage_factor
-				a.damage_max = a._original_damage_max * store.entities[this.soldier.tower_id].tower.damage_factor
-			end
-		end
-	end
-
-	local function walk_break_fn()
-		return pow_l and pow_l.changed
-	end
-
 	while true do
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.changed then
-					p.changed = nil
-
-					SU.soldier_power_upgrade(this, pn)
-
-					if p == pow_i then
-						a_i.disabled = nil
-						a_i.cooldown = p.cooldown
-						a_i.level = p.level
-					end
-				end
-			end
+		if pow_i.changed then
+			pow_i.changed = nil
+			SU.soldier_power_upgrade(this, "incendiary_ammo")
+			a_i.disabled = nil
+			a_i.cooldown = pow_i.cooldown
+			a_i.level = pow_i.level
 		end
 
 		if this.health.dead then
@@ -19169,10 +19111,6 @@ function scripts.soldier_tower_dwarf.update(this, store, script)
 			SU.y_soldier_death(store, this)
 
 			while true do
-				if pow_l and pow_l.changed then
-					queue_remove(store, this)
-				end
-
 				coroutine.yield()
 			end
 		end
@@ -19181,14 +19119,12 @@ function scripts.soldier_tower_dwarf.update(this, store, script)
 			SU.soldier_idle(store, this)
 		else
 			while this.nav_rally.new do
-				if y_soldier_new_rally_break_attack(store, this, walk_break_fn, first_walk) then
+				if y_soldier_new_rally_break_attack(store, this, first_walk) then
 					goto label_1204_1
 				end
 
 				first_walk = false
 			end
-
-			check_tower_damage_factor()
 
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -19225,22 +19161,10 @@ scripts.bullet_soldier_tower_dwarf = {}
 function scripts.bullet_soldier_tower_dwarf.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
-	local source = store.entities[b.source_id]
-
-	b.damage_min = b.damage_min_config[b.level]
-	b.damage_max = b.damage_max_config[b.level]
-
-	local tower = source and store.entities[source.soldier.tower_id]
 
 	U.y_wait(store, b.flight_time)
 
 	if target then
-		if tower then
-			local tower_damage_factor = tower.tower.damage_factor
-
-			b.damage_factor = tower_damage_factor
-		end
-
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
@@ -19255,8 +19179,8 @@ function scripts.bullet_soldier_tower_dwarf.update(this, store)
 
 	queue_remove(store, this)
 end
-
 -- 炮兵 END
+
 -- 幽冥 START
 scripts.tower_ghost = {}
 
