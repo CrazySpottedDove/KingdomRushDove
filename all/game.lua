@@ -1580,30 +1580,30 @@ function game:draw_speed_state(rox, roy, gs)
 end
 
 -- 设定每多少帧绘制一次
-function game:on_interval_draw(draw_fn_name, interval, rox, roy, gs)
-	if not self.draw_count[draw_fn_name] then
-		self.draw_count[draw_fn_name] = interval
-	end
+-- function game:on_interval_draw(draw_fn_name, interval, rox, roy, gs)
+-- 	if not self.draw_count[draw_fn_name] then
+-- 		self.draw_count[draw_fn_name] = interval
+-- 	end
 
-	local count = self.draw_count[draw_fn_name]
+-- 	local count = self.draw_count[draw_fn_name]
 
-	if count >= interval then
-		self[draw_fn_name](self, rox, roy, gs)
+-- 	if count >= interval then
+-- 		self[draw_fn_name](self, rox, roy, gs)
 
-		count = 0
-	else
-		count = count + 1
-	end
+-- 		count = 0
+-- 	else
+-- 		count = count + 1
+-- 	end
 
-	self.draw_count[draw_fn_name] = count
-end
+-- 	self.draw_count[draw_fn_name] = count
+-- end
 
 function game:draw_game()
 	local d = self.store
 
-	if not self.draw_count then
-		self.draw_count = {}
-	end
+	-- if not self.draw_count then
+	-- 	self.draw_count = {}
+	-- end
 
 	local frame_draw_params = RU.frame_draw_params
 	local draw_frames_range = RU.draw_frames_range
@@ -1649,7 +1649,7 @@ function game:draw_game()
 
 	-- last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
 
-    local last_idx = frame_draw_params(d.render_frames, 1, Z_SCREEN_FIXED - 1)
+    local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
 
 	G.pop()
 

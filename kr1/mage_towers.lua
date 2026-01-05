@@ -2170,6 +2170,7 @@ tt.render.sprites[3].prefix = "channeler_tower_lvl3_rune_glow"
 tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].prefix = "channeler_tower_lvl4_mage"
 tt.render.sprites[4].draw_order = 3
+tt.render.sprites[4].offset = vec_2(0, 10)
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].name = "channeler_tower_towers_decal"
 tt.render.sprites[5].animated = false
@@ -2183,10 +2184,8 @@ tt.render.sprites[6].z = Z_OBJECTS + 1
 tt.render.sprites[6].offset = tt.attacks.list[1].bullet_start_offset
 tt.render.sprites[6].hidden = true
 tt.render.sprites[tt.render.sid_crystal_union].offset = tt.attacks.list[1].bullet_start_offset
-
 for i = 1, #tt.crystals_ids do
 	local crystal_sid = tt.render.sid_crystals + i - 1
-
 	tt.render.sprites[crystal_sid] = CC("sprite")
 	tt.render.sprites[crystal_sid].prefix = "channeler_tower_lvl4_crystal_" .. tt.crystals_ids[i]
 	tt.render.sprites[crystal_sid].name = "idle"
@@ -2194,7 +2193,6 @@ for i = 1, #tt.crystals_ids do
 	tt.render.sprites[crystal_sid].offset = vec_2(0, 20)
 	tt.render.sprites[crystal_sid].draw_order = 4
 end
-
 tt.render.sid_stones = tt.render.sid_crystals + #tt.crystals_ids
 tt.stones_ids = {
 	"a",
@@ -2210,17 +2208,14 @@ tt.stones_ids = {
 	"k",
 	"l"
 }
-
 for i = 1, #tt.stones_ids do
 	local stone_sid = tt.render.sid_stones + i - 1
-
 	tt.render.sprites[stone_sid] = CC("sprite")
 	tt.render.sprites[stone_sid].name = "channeler_tower_lvl4_stone_" .. tt.stones_ids[i]
 	tt.render.sprites[stone_sid].animated = false
 	tt.render.sprites[stone_sid].draw_order = 2
 	tt.render.sprites[stone_sid].offset = tt.render.sprites[2].offset
 end
-
 tt.render.sid_core_rock_shadow = 27
 tt.render.sprites[tt.render.sid_core_rock_shadow] = CC("sprite")
 tt.render.sprites[tt.render.sid_core_rock_shadow].name = "channeler_tower_lvl4_tower_shadow"
@@ -2229,10 +2224,8 @@ tt.render.sprites[tt.render.sid_core_rock_shadow].z = Z_DECALS
 tt.render.sprites[tt.render.sid_core_rock_shadow].offset = tt.render.sprites[2].offset
 tt.render.sid_rocks = 28
 tt.rocks_ids = {"a", "b", "c"}
-
 for i = 1, #tt.rocks_ids do
 	local rock_sid = tt.render.sid_rocks + i - 1
-
 	tt.render.sprites[rock_sid] = CC("sprite")
 	tt.render.sprites[rock_sid].prefix = "channeler_tower_lvl4_rock_" .. tt.rocks_ids[i]
 	tt.render.sprites[rock_sid].name = "idle"
@@ -2241,33 +2234,26 @@ for i = 1, #tt.rocks_ids do
 	tt.render.sprites[rock_sid].draw_order = 4
 	tt.render.sprites[rock_sid].offset = tt.render.sprites[2].offset
 end
-
 tt.render.sid_back_rocks = 31
 tt.back_rocks_ids = {"d", "e"}
-
 for i = 1, #tt.back_rocks_ids do
 	local rock_sid = tt.render.sid_back_rocks + i - 1
-
 	tt.render.sprites[rock_sid] = CC("sprite")
 	tt.render.sprites[rock_sid].name = "channeler_tower_lvl4_rock_" .. tt.back_rocks_ids[i]
 	tt.render.sprites[rock_sid].animated = false
 	tt.render.sprites[rock_sid].draw_order = 1
 	tt.render.sprites[rock_sid].offset = tt.render.sprites[2].offset
 end
-
 tt.shocks_ids = {"a", "b", "c", "d"}
 tt.shock_fx = "fx_tower_ray_lvl4_shock"
 tt.ui.click_rect = r(-35, 10, 70, 70)
-
 for i = 1, #tt.crystals_ids do
 	local crystal_sid = tt.render.sid_crystals + i - 1
 	local start_offset = tt.render.sprites[crystal_sid].offset
 	local end_offset = V.v(start_offset.x, start_offset.y + 2.5)
 	local frec = 3
-
 	tt.tween.props[i] = CC("tween_prop")
 	tt.tween.props[i].name = "offset"
-
 	if i == 3 or i == 4 then
 		end_offset.x = -3
 	elseif i == 5 or i == 6 then
@@ -2275,13 +2261,11 @@ for i = 1, #tt.crystals_ids do
 	elseif i == 7 or i == 8 then
 		end_offset.x = 3
 	end
-
 	tt.tween.props[i].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
 	tt.tween.props[i].sprite_id = crystal_sid
 	tt.tween.props[i].loop = true
 	tt.tween.props[i].interp = "sine"
 end
-
 if tt.stones_ids then
 	for i = 1, #tt.stones_ids do
 		local stone_sid = tt.render.sid_stones + i - 1
@@ -2319,7 +2303,6 @@ if tt.stones_ids then
 		tt.tween.props[prop_id].interp = "sine"
 	end
 end
-
 for i = 1, #tt.rocks_ids + #tt.back_rocks_ids do
 	local rock_sid = tt.render.sid_rocks + i - 1
 	local prop_id = #tt.crystals_ids + #tt.stones_ids + i
@@ -2334,13 +2317,11 @@ for i = 1, #tt.rocks_ids + #tt.back_rocks_ids do
 	tt.tween.props[prop_id].loop = true
 	tt.tween.props[prop_id].interp = "sine"
 end
-
 local core_rock_sid = 2
 local prop_id = #tt.crystals_ids + #tt.stones_ids + #tt.rocks_ids + #tt.back_rocks_ids + 1
 local start_offset = V.vclone(tt.render.sprites[2].offset)
 local end_offset = V.v(start_offset.x, start_offset.y + 4)
 local frec = 5
-
 tt.tween.props[prop_id] = CC("tween_prop")
 tt.tween.props[prop_id].name = "offset"
 tt.tween.props[prop_id].keys = {{0, start_offset}, {frec / 2, end_offset}, {frec, start_offset}}
