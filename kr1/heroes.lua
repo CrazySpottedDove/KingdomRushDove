@@ -9688,9 +9688,8 @@ tt.hero.skills.soul.xp_level_steps = {
 }
 tt.hero.skills.tale = CC("hero_skill")
 tt.hero.skills.tale.max_count = {2, 3, 4}
-tt.hero.skills.tale.hp_max = {30, 40, 50}
+tt.hero.skills.tale.hp_max = {40, 60, 80}
 tt.hero.skills.tale.xp_gain_factor = 75
-tt.hero.skills.tale.xp_gain_factor = 0
 tt.hero.skills.tale.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
@@ -9698,7 +9697,7 @@ tt.hero.skills.tale.xp_level_steps = {
 }
 tt.hero.skills.fury = CC("hero_skill")
 tt.hero.skills.fury.count = {2, 3, 4}
-tt.hero.skills.fury.damage_min = {10, 12, 18}
+tt.hero.skills.fury.damage_min = {20, 25, 30}
 tt.hero.skills.fury.damage_max = {30, 40, 50}
 tt.hero.skills.fury.xp_gain_factor = 32
 tt.hero.skills.fury.xp_level_steps = {
@@ -9788,7 +9787,7 @@ tt.timed_attacks.list[2].mod = "mod_catha_soul"
 tt.timed_attacks.list[2].cooldown = 11.4
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].max_range = 100
-tt.timed_attacks.list[2].max_count = 3
+tt.timed_attacks.list[2].max_count = 6
 tt.timed_attacks.list[2].vis_flags = bor(F_FRIEND)
 tt.timed_attacks.list[2].sound = "ElvesHeroCathaSoul"
 tt.timed_attacks.list[2].shoot_time = fts(30)
@@ -9820,9 +9819,7 @@ tt.ultimate = {
 --#endregion
 --#region hero_catha_ultimate
 tt = RT("hero_catha_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events", "render")
-
 tt.cooldown = 20
 tt.range = 80
 tt.duration = 0
@@ -9851,9 +9848,7 @@ tt.bullet.xp_gain_factor = 4
 --#endregion
 --#region soldier_catha
 tt = RT("soldier_catha", "soldier_militia")
-
 AC(tt, "reinforcement", "ranged", "tween")
-
 tt.health.armor = 0
 tt.health.hp_max = nil
 tt.health_bar.offset = vec_2(0, 45)

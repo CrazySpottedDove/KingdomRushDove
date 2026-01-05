@@ -14483,10 +14483,14 @@ function scripts.hero_catha.level_up(this, store)
 	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
 
-	local bt = E:get_template(this.ranged.attacks[1].bullet)
+	local e = E:get_template(this.timed_attacks.list[3].entity)
+	e.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	e.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
 
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
 	bt.bullet.damage_min = ls.ranged_damage_min[hl]
 	bt.bullet.damage_max = ls.ranged_damage_max[hl]
+
 	bt = E:get_template("knife_soldier_catha")
 	bt.bullet.damage_min = ls.ranged_damage_min[hl]
 	bt.bullet.damage_max = ls.ranged_damage_max[hl]
@@ -14644,7 +14648,7 @@ function scripts.hero_catha.update(this, store)
 						SU.hero_gain_xp_from_skill(this, skill)
 
 						local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
-							return not table.contains(a.excluded_templates, e.template_name)
+							return not table.contains(a.excluded_templates, e.template_name) and e.health.hp < e.health.hp_max
 						end)
 
 						if targets then

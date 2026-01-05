@@ -24466,20 +24466,6 @@ scripts.mod_catha_curse = {}
 
 function scripts.mod_catha_curse.insert(this, store)
 	if math.random() < this.chance and scripts.mod_stun.insert(this, store) then
-		if this.xp_from_skill then
-			local ref = store.entities[this.modifier.source_id]
-
-			if ref and ref.bullet then
-				ref = store.entities[ref.bullet.source_id]
-			end
-
-			if ref and ref.hero then
-				SU.hero_gain_xp_from_skill(ref, ref.hero.skills[this.xp_from_skill])
-			else
-				log.error("mod_catha_curse: could not find source hero for %s", this.id)
-			end
-		end
-
 		return true
 	else
 		return false

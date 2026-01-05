@@ -166,7 +166,7 @@ local function magic_armor_str(i)
 
 	return str(health[i].magic_armor * 100, "点魔法抗性")
 end
-
+--- t: table, with component health
 local function get_health(t, i)
 	if not i then
 		i = 1
@@ -1914,12 +1914,39 @@ cooldown = h.melee.attacks[2].cooldown
 map["本垒打"] = str(cooldown_str(), "巴克抄起大树枝，将面前的敌人打飞出游戏。")
 
 set_hero("hero_catha")
-
-map["仙境魔尘"] = str()
-map["仙子诅咒"] = str()
-map["仙女之魂"] = str()
-map["仙境传说"] = str()
-map["仙子之怒"] = str()
+set_skill(h.hero.skills.ultimate)
+duration = ss("duration")
+duration_2 = ss("duration_boss")
+radius = ss("range")
+cooldown = h.ultimate.cooldown
+map["仙境魔尘"] = str(cooldown_str(), "卡莎释放仙境魔尘，使", radius, "范围内敌人陷入昏睡", duration, "秒。若敌人为BOSS，则改为昏睡", duration_2, "秒。")
+set_skill(h.hero.skills.curse)
+chance = ss("chance")
+duration = ss("duration")
+factor = s.chance_factor_tale
+map["仙子诅咒"] = str("卡莎的近战和远程普攻有", rate_str(chance), "使敌人昏睡，持续", duration, "秒。卡莎分身继承该效果，但是触发概率为原来的", factor * 100, "%。")
+set_skill(h.hero.skills.soul)
+heal = ss("heal_hp")
+cooldown = h.timed_attacks.list[2].cooldown
+radius = h.timed_attacks.list[2].max_range
+count = h.timed_attacks.list[2].max_count
+map["仙女之魂"] = str(cooldown_str(), "卡莎仙法大爆发，为附近", radius, "范围内最多", count, "名友军恢复", heal, "点生命值。")
+set_skill(h.hero.skills.tale)
+count = ss("max_count")
+e = T("soldier_catha")
+get_health(e)
+health[1].hp_max = ss("hp_max")
+cooldown = h.timed_attacks.list[3].cooldown
+duration = e.reinforcement.duration
+map["仙境传说"] = str(cooldown_str(), "卡莎召唤", count, "个分身。分身拥有", health_str(), "，造成和本体相同的伤害，驻场", duration, "秒。")
+set_skill(h.hero.skills.fury)
+e = T("catha_fury")
+get_damage(e.bullet)
+count = ss("count")
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+cooldown = h.timed_attacks.list[1].cooldown
+map["仙子之怒"] = str(cooldown_str(), "卡莎释放仙子之怒，对", count, "名随机敌人造成", damage_str(), "。")
 
 set_hero("hero_lilith")
 
