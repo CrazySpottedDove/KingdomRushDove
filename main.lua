@@ -1,5 +1,5 @@
 -- chunkname: @./main.lua
-local M = require("update_manager")
+local M = require("dove_modules.updater.update_manager")
 
 M.update_client()
 

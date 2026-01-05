@@ -6157,7 +6157,7 @@ local towers = {
 				cooldown = 1.5,
 				max_range = {180, 180, 180, 180},
 				min_range = {70, 70, 70, 70},
-				damage_max = {6, 14, 26, 35},
+				damage_max = {6, 14, 26, 32},
 				damage_min = {4, 10, 18, 24}
 			}
 		},
