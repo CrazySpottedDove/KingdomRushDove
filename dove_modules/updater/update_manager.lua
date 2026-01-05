@@ -157,7 +157,7 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 		end
 
 		-- 轮询到了结果，此时触发下一步逻辑
-		local ok, resp = pcall(require("json").decode, result)
+		local ok, resp = pcall(require("lib.json").decode, result)
 
 		if not ok then
 			print("Failed to decode update check response.\n")

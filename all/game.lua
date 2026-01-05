@@ -1634,20 +1634,22 @@ function game:draw_game()
 	-- if d.night_mode then
 	-- end
 	-- self:draw_speed_state(rox, roy, gs)
-	local last_idx
+	-- local last_idx
 
 	G.push()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
 
-	last_idx = draw_frames_range(d.render_frames, 1, Z_GUI_DECALS - 1)
+	-- last_idx = draw_frames_range(d.render_frames, 1, Z_GUI_DECALS - 1)
 
-	G.pop()
-	G.push()
-	G.translate(rox, roy)
-	G.scale(gs, gs)
+	-- G.pop()
+	-- G.push()
+	-- G.translate(rox, roy)
+	-- G.scale(gs, gs)
 
-	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
+	-- last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
+
+    local last_idx = frame_draw_params(d.render_frames, 1, Z_SCREEN_FIXED - 1)
 
 	G.pop()
 
