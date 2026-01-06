@@ -1649,7 +1649,7 @@ function game:draw_game()
 
 	-- last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
 
-    local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
+	local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
 
 	G.pop()
 
