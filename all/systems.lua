@@ -127,6 +127,30 @@ function sys.level:init(store)
 		table.removeobject(store.level.locked_towers, unlock_tower)
 	end
 
+    if store.config.ban_random_towers then
+        local locked_towers = store.level.locked_towers
+        for i = 4, #GS.archer_towers do
+            if math.random() < 0.5 then
+                locked_towers[#locked_towers + 1] = GS.archer_towers[i]
+            end
+        end
+        for i = 4, #GS.mage_towers do
+            if math.random() < 0.5 then
+                locked_towers[#locked_towers + 1] = GS.mage_towers[i]
+            end
+        end
+        for i = 4, #GS.engineer_towers do
+            if math.random() < 0.5 then
+                locked_towers[#locked_towers + 1] = GS.engineer_towers[i]
+            end
+        end
+        for i = 4, #GS.barrack_towers do
+            if math.random() < 0.5 then
+                locked_towers[#locked_towers + 1] = GS.barrack_towers[i]
+            end
+        end
+    end
+
 	if store.criket and store.criket.on then
 		store.lives = 0
 	elseif store.level_mode == GAME_MODE_CAMPAIGN then

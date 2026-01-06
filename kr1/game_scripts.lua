@@ -30693,7 +30693,7 @@ function scripts.moon_controller_s91.update(this, store)
 		time = store.tick_ts
 		this.moon_active = true
 
-		local spawn_count = store.wave_group_number or 1
+		local spawn_count = store.wave_group_number and math.ceil(store.wave_group_number / 2) or 1
 		local spawn_gap = hold_time / spawn_count
 
 		for _, e in pairs(store.enemies) do

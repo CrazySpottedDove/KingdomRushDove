@@ -31,5 +31,7 @@ return {
 	-- 怪物受伤倍率，默认为 1
 	enemy_health_damage_multiplier = 1,
 	-- 怪物移速倍率，默认为 1
-	enemy_speed_multiplier = 1
+	enemy_speed_multiplier = 1,
+    -- 随机禁用高级防御塔
+    ban_random_towers = false,
 }
