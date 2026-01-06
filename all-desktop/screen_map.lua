@@ -6304,7 +6304,9 @@ function BooleanToggleItem:on_click(button, vx, vy)
 	elseif self._type == "number" then
 		screen_map.window:set_responder(self)
 
-		if vx < self.pos.x + self.size.x / 2 then
+		local ix = self:view_to_view(vx, vy, self.parent)
+
+		if ix < self.pos.x + self.size.x / 2 then
 			self:set_value_lable(self.value_label.text - 1)
 		else
 			self:set_value_lable(self.value_label.text + 1)
