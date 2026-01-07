@@ -5275,25 +5275,7 @@ tt.custom_attack.vis_bans = bor(F_FLYING)
 tt.custom_attack.aura = "aura_rabbit_kamihare"
 tt.custom_attack.hit_fx = "fx_rabbit_kamihare_explode"
 --#endregion
---#region soldier_lilith_angel
-tt = RT("soldier_lilith_angel", "soldier_xin_shadow")
-tt.angel_damage_type = DAMAGE_TRUE
-tt.sound_events.insert = "ElvesHeroLilithAngelsCast"
-tt.render.sprites[1].prefix = "lilith_ultimate_angel"
-tt.render.sprites[1].anchor.y = 0.1875
-tt.max_attack_count = 2
-tt.min_wait = 0
-tt.max_wait = 0
-tt.soldier.melee_slot_offset = vec_2(-13, 0)
-tt.melee.attacks[1].damage_max = nil
-tt.melee.attacks[1].damage_min = nil
-tt.melee.attacks[1].damage_type = DAMAGE_TRUE
-tt.melee.attacks[1].sound = "ElvesHeroLilithAngelsHit"
-tt.melee.attacks[2] = nil
-tt.melee.attacks[3] = nil
-tt.melee.attacks[4] = nil
-tt.melee.cooldown = 0
---#endregion
+
 --#region bomb_wilbur
 tt = RT("bomb_wilbur", "rabbit_kamihare")
 
@@ -6111,22 +6093,7 @@ tt.render.sprites[1].shader_args = {
 	tint_color = {0, 1, 1, 1}
 }
 --#endregion
---#region meteor_lilith
-tt = RT("meteor_lilith", "bullet")
-tt.main_script.update = scripts.meteor_lilith.update
-tt.bullet.damage_max = nil
-tt.bullet.damage_radius = 45
-tt.bullet.damage_flags = F_AREA
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.arrive_decal = "decal_meteor_lilith_explosion"
-tt.bullet.arrive_fx = "fx_meteor_lilith_explosion"
-tt.bullet.max_speed = 1050
-tt.bullet.mod = "mod_hero_elves_archer_slow"
-tt.render.sprites[1].name = "fallen_angel_hero_ultimate_meteor"
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].anchor.x = 0.9166666666666666
-tt.sound_events.hit = "ElvesHeroLilithMeteorsHit"
---#endregion
+
 --#region torch_gnoll_burner
 tt = RT("torch_gnoll_burner", "arrow")
 tt.bullet.mod = "mod_gnoll_burner"
@@ -6427,40 +6394,7 @@ tt.stun.vis_flags = bor(F_RANGED, F_STUN)
 tt.stun.vis_bans = bor(F_FLYING, F_BOSS)
 tt.stun.mod = "mod_baby_malik_stun"
 --#endregion
---#region aura_lilith_infernal_wheel
-tt = RT("aura_lilith_infernal_wheel", "aura")
 
-AC(tt, "render", "tween")
-
-tt.aura.duration = 5
-tt.aura.cycle_time = fts(10)
-tt.aura.mod = "mod_lilith_infernal_wheel"
-tt.aura.vis_flags = bor(F_RANGED, F_MOD)
-tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
-tt.aura.radius = 50
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-tt.render.sprites[1].name = "lilith_infernal_base_decal_loop"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].loop = false
-tt.render.sprites[2].name = "lilith_infernal_base_fireIn_loop"
-tt.render.sprites[2].hide_after_runs = 1
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}, {"this.aura.duration-0.5", 255}, {"this.aura.duration", 0}}
---#endregion
---#region aura_lilith_soul_eater
-tt = RT("aura_lilith_soul_eater", "aura")
-tt.aura.duration = -1
-tt.aura.cooldown = 15
-tt.aura.cycle_time = fts(5)
-tt.aura.radius = 200
-tt.aura.vis_bans = bor(F_BOSS, F_FLYING)
-tt.aura.vis_flags = bor(F_MOD, F_RANGED)
-tt.aura.excluded_templates = {"enemy_hyena"}
-tt.aura.mod = "mod_lilith_soul_eater_track"
-tt.main_script.update = scripts.aura_lilith_soul_eater.update
---#endregion
 --#region aura_bruce_hps
 tt = RT("aura_bruce_hps", "aura")
 
@@ -7066,58 +7000,7 @@ tt = RT("mod_lilith_soul_eater_track", "modifier")
 tt.main_script.update = scripts.mod_lilith_soul_eater_track.update
 tt.modifier.duration = fts(11)
 --#endregion
---#region mod_lilith_soul_eater_damage_factor
-tt = RT("mod_lilith_soul_eater_damage_factor", "modifier")
 
-AC(tt, "render", "tween")
-
-tt.inflicted_damage_factor = nil
-tt.soul_eater_factor = nil
-tt.modifier.duration = 12
-tt.modifier.use_mod_offset = false
-tt.modifier.allows_duplicates = true
-tt.main_script.insert = scripts.mod_damage_factors.insert
-tt.main_script.remove = scripts.mod_damage_factors.remove
-tt.main_script.update = scripts.mod_track_target.update
-tt.render.sprites[1].name = "lilith_soul_eater_decal_loop"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].name = "fallen_angel_hero_soul_eater_sword"
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].offset = vec_2(0, 12)
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[3].offset = vec_2(-18, 22)
-tt.render.sprites[4] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[4].offset = vec_2(18, 22)
-tt.tween.remove = false
-tt.tween.props[1] = CC("tween_prop")
-tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {"this.modifier.duration-0.3", 255}, {"this.modifier.duration", 0}}
-
-for i = 2, 4 do
-	tt.tween.props[i] = table.deepclone(tt.tween.props[1])
-	tt.tween.props[i].sprite_id = i
-end
-
-tt.tween.props[5] = CC("tween_prop")
-tt.tween.props[5].name = "anchor"
-tt.tween.props[5].keys = {{0, vec_2(0.5, 0.6538461538461539)}, {fts(12), vec_2(0.5, 0.34615384615384615)}, {fts(24), vec_2(0.5, 0.6538461538461539)}}
-tt.tween.props[5].loop = true
-tt.tween.props[5].interp = "sine"
-tt.tween.props[5].sprite_id = 2
-tt.tween.props[6] = table.deepclone(tt.tween.props[5])
-tt.tween.props[6].sprite_id = 3
-tt.tween.props[7] = table.deepclone(tt.tween.props[5])
-tt.tween.props[7].sprite_id = 4
---#endregion
---#region mod_lilith_infernal_wheel
-tt = RT("mod_lilith_infernal_wheel", "mod_lava")
-tt.modifier.duration = fts(31)
-tt.dps.damage_type = DAMAGE_TRUE
-tt.dps.damage_min = nil
-tt.dps.damage_max = nil
-tt.dps.damage_inc = 0
-tt.dps.damage_every = fts(10)
---#endregion
 --#region mod_bruce_sharp_claws
 tt = RT("mod_bruce_sharp_claws", "mod_blood_elves")
 tt.modifier.allows_duplicates = true

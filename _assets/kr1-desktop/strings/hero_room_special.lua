@@ -1950,12 +1950,53 @@ map["仙子之怒"] = str(cooldown_str(), "卡莎释放仙子之怒，对", coun
 
 set_hero("hero_lilith")
 set_skill(h.hero.skills.infernal_wheel)
-map["地狱之轮"] = str()
-map["收割"] = str()
-map["神圣混沌"] = str()
-map["噬魂"] = str()
-map["复生"] = str()
-
+a = h.timed_attacks.list[1]
+cooldown = a.cooldown
+get_damage(T("mod_lilith_infernal_wheel").dps)
+cycle_time = T("mod_lilith_infernal_wheel").dps.damage_every
+e = T("aura_lilith_infernal_wheel")
+duration = e.aura.duration
+radius = e.aura.radius
+set_damage_value(ss("damage"))
+map["地狱之轮"] = str(cooldown_str(), "莉莉丝召唤一片持续", duration, "秒的火场，使", radius, "范围内敌人烧伤，每", cycle_time, "秒造成", damage_str(), "。")
+set_skill(h.hero.skills.reapers_harvest)
+chance = ss("instakill_chance")
+a = h.melee.attacks[3]
+cooldown = a.cooldown
+get_damage(a)
+set_damage_value(ss("damage"))
+map["收割"] = str(cooldown_str(), "莉莉丝高举镰刀，对敌人进行一次无法闪避的攻击，造成", damage_str(), "。该攻击有", rate_str(chance), "秒杀敌人，并立刻触发噬魂，为莉莉丝恢复20%最大生命值。")
+set_skill(h.hero.skills.ultimate)
+count = ss("angel_count")
+e = T("soldier_lilith_angel")
+count_2 = e.max_attack_count
+get_damage(e.melee.attacks[1])
+set_damage_value(ss("angel_damage"))
+e = T("meteor_lilith")
+get_damage(e.bullet, 2)
+radius = e.bullet.damage_radius
+e = T("mod_hero_elves_archer_slow")
+factor = 1 - e.slow.factor
+duration = e.modifier.duration
+set_damage_value(ss("meteor_damage"), 2)
+cooldown = h.ultimate.cooldown
+e = T("hero_lilith_ultimate")
+min_count = 1
+local max_count = 1 + e.meteor_node_spread * 4
+map["神圣混沌"] = str(cooldown_str(), "若身边只有一名敌人，莉莉丝召唤", count, "名天使短暂阻拦敌人，每名天使攻击敌人", count_2, "次，每次攻击造成", damage_str(), "。否则，莉莉丝召唤", min_count, "至", max_count, "颗陨石砸向敌人，每枚陨石对", radius, "范围内敌人造成", damage_str(2), "，并使其受到", factor * 100, "%的减速效果，持续", duration, "秒。")
+set_skill(h.hero.skills.soul_eater)
+e = T("aura_lilith_soul_eater")
+factor = ss("damage_factor")
+cooldown = e.aura.cooldown
+e = T("mod_lilith_soul_eater_damage_factor")
+duration = e.modifier.duration
+map["噬魂"] = str(cooldown_str(), "莉莉丝汲取一名周围死亡敌人的灵魂，使自己获得基于敌人攻击力x", factor * 100, "%与自身原本攻击力的比值的伤害加成，持续", duration, "秒。")
+set_skill(h.hero.skills.resurrection)
+chance = ss(("chance"))
+local cost = h.revive.resist.cost
+duration = h.revive.resist.duration
+map["复生"] = str("莉莉丝死亡时，有", rate_str(chance), "复活，并刷新收割的冷却。当莉莉丝受到眩晕、流血、中毒、灼烧等异常效果影响时，莉莉丝会降低下次复活概率", cost * 100, "%，并刷新收割的冷却，并在接下来的", duration, "秒免疫异常效果。")
+map["降临"] = str("莉莉丝拥有额外10%复活概率，该复活概率可由其躯体的透明度显明。透明度越高，复活概率越低。莉莉丝每次近战普攻可提升复活概率1%，每次远程普攻可提升复活概率1.5%。收割未触发秒杀时，提升复活概率1%，反之提升2%。每1%额外复活概率可加快神圣混沌的冷却0.15%、地狱之轮的冷却0.4%，并使收割秒杀的触发概率提升0.2%，最高加快15%，40%冷却，提高20%秒杀概率。当莉莉丝复活时，其额外复活概率减半。")
 set_hero("hero_xin")
 set_skill(h.hero.skills.inspire)
 
