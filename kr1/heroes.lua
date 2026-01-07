@@ -8272,9 +8272,7 @@ tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN)
 --#endregion
 --#region hero_durax
 tt = RT("hero_durax", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks", "transfer")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {280, 300, 320, 340, 360, 380, 400, 420, 440, 460}
 tt.hero.level_stats.melee_damage_max = {12, 13, 15, 16, 18, 19, 21, 22, 24, 25}
@@ -8290,7 +8288,7 @@ tt.hero.skills.crystallites.xp_level_steps = {
 }
 tt.hero.skills.armsword = CC("hero_skill")
 tt.hero.skills.armsword.xp_gain = {40, 80, 120}
-tt.hero.skills.armsword.damage = {60, 120, 180}
+tt.hero.skills.armsword.damage = {80, 130, 180}
 tt.hero.skills.armsword.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
@@ -8298,7 +8296,7 @@ tt.hero.skills.armsword.xp_level_steps = {
 }
 tt.hero.skills.lethal_prism = CC("hero_skill")
 tt.hero.skills.lethal_prism.damage_max = {40, 45, 55}
-tt.hero.skills.lethal_prism.damage_min = {20, 25, 35}
+tt.hero.skills.lethal_prism.damage_min = {25, 30, 35}
 tt.hero.skills.lethal_prism.ray_count = {2, 4, 6}
 tt.hero.skills.lethal_prism.xp_gain = {23, 46, 78}
 tt.hero.skills.lethal_prism.xp_level_steps = {
@@ -8307,7 +8305,7 @@ tt.hero.skills.lethal_prism.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.shardseed = CC("hero_skill")
-tt.hero.skills.shardseed.damage = {60, 120, 180}
+tt.hero.skills.shardseed.damage = {80, 130, 180}
 tt.hero.skills.shardseed.xp_gain = {40, 80, 120}
 tt.hero.skills.shardseed.xp_level_steps = {
 	[1] = 1,

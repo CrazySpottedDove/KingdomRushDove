@@ -1949,7 +1949,7 @@ cooldown = h.timed_attacks.list[1].cooldown
 map["仙子之怒"] = str(cooldown_str(), "卡莎释放仙子之怒，对", count, "名随机敌人造成", damage_str(), "。")
 
 set_hero("hero_lilith")
-
+set_skill(h.hero.skills.infernal_wheel)
 map["地狱之轮"] = str()
 map["收割"] = str()
 map["神圣混沌"] = str()
