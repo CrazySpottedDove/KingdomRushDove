@@ -3,7 +3,7 @@ require("lib.klua.string")
 
 local log = require("lib.klua.log"):new("platform_services_appstore_rating")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local rr = {}
 
 rr.can_be_paused = true

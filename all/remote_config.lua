@@ -1,9 +1,9 @@
 -- chunkname: @./all/remote_config.lua
 local log = require("lib.klua.log"):new("remote_config")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local PS = require("platform_services")
 
-require("constants")
+require("all.constants")
 require("version")
 
 rc = {}

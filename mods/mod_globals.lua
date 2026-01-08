@@ -24,7 +24,7 @@ end
 require("klove.kui")
 require("klua.table")
 
-signal = require("hump.signal")
+signal = require("lib.hump.signal")
 km = require("klua.macros")
 SH = require("klove.shader_db")
 V = require("klua.vector")

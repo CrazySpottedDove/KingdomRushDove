@@ -6,12 +6,12 @@ local F = require("lib.klove.font_db")
 local I = require("klove.image_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local i18n = require("i18n")
 
 require("klove.kui")
 require("gg_views_custom")
-require("constants")
+require("all.constants")
 
 local data = require("data.director_data")
 local screen = {}

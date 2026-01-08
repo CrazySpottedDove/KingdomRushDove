@@ -1,7 +1,7 @@
 -- chunkname: @./all/shop_views.lua
 local log = require("lib.klua.log"):new("shop_views")
 local class = require("middleclass")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local I = require("klove.image_db")
 local S = require("sound_db")
 local PS = require("platform_services")

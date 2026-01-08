@@ -3,7 +3,7 @@ local log = require("lib.klua.log"):new("systems")
 local log_xp = log.xp or log:new("xp")
 local log_hp = log.hp or log:new("hp")
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 
 require("lib.klua.table")
 require("lib.klua.dump")
@@ -18,7 +18,7 @@ local E = require("entity_db")
 local P = require("path_db")
 local F = require("lib.klove.font_db")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local S = require("sound_db")
 local UP = require("upgrades")
 local W = require("wave_db")
@@ -38,7 +38,7 @@ local sin = math.sin
 local cos = math.cos
 local PI = math.pi
 
-require("constants")
+require("all.constants")
 
 local ffi = require("ffi")
 local EXO = require("exoskeleton")

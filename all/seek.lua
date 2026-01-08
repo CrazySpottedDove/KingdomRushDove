@@ -8,7 +8,7 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 
-require("constants")
+require("all.constants")
 
 local id_arrays
 local entities

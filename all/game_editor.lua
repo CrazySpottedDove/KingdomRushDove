@@ -6,7 +6,7 @@ log.level = log.DEBUG_LEVEL
 require("lib.klua.dump")
 
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local V = require("hump.vector-light")
 local F = require("lib.klove.font_db")
 local simulation, A
@@ -40,7 +40,7 @@ local game_editor_gui = require("game_editor_gui")
 local G = love.graphics
 local bit = require("bit")
 
-require("constants")
+require("all.constants")
 
 BATCH_SIZE = 1000
 DEFAULT_PATH_WIDTH = 40

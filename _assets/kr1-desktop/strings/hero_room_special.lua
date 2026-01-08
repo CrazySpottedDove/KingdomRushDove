@@ -1,4 +1,4 @@
-require("constants")
+require("all.constants")
 
 local E = require("entity_db")
 local damage_type_map = {
@@ -1858,7 +1858,7 @@ map["余烬之地"] = str()
 set_skill(h.hero.skills.blazing_offspring)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-count=ss("count")
+count = ss("count")
 map["火焰之环"] = str()
 map["炽焰后裔"] = str()
 

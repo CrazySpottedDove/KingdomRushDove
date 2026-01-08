@@ -30,14 +30,14 @@ function M.update_client()
 			client_updated = true
 		end
 
-		-- 运行 $binary_path --quiz，强等待。
-		local cmd = client_updated and string.format('"%s" --quiz-force', binary_path) or string.format('"%s" --quiz', binary_path)
-		local ret = os.execute(cmd)
+	-- -- 运行 $binary_path --quiz，强等待。
+	-- local cmd = client_updated and string.format('"%s" --quiz-force', binary_path) or string.format('"%s" --quiz', binary_path)
+	-- local ret = os.execute(cmd)
 
-		if ret ~= 0 then
-			love.window.showMessageBox("错误", "答题错误，不允许游玩，确定以退出。", {"确定"})
-			love.event.quit()
-		end
+	-- if ret ~= 0 then
+	-- 	love.window.showMessageBox("错误", "答题错误，不允许游玩，确定以退出。", {"确定"})
+	-- 	love.event.quit()
+	-- end
 	end
 end
 
@@ -230,15 +230,11 @@ function M.hack_love_update(original_love_update_function, original_love_draw_fu
 			local target_w = math.max(200, math.floor((dw or 800) * 0.95))
 			local target_h = math.max(200, math.floor((dh or 600) * 0.95))
 
-			pcall(function()
-				if love.window and love.window.setMode then
-					love.window.setMode(target_w, target_h, {
-						resizable = false,
-						fullscreen = false,
-						highdpi = true
-					})
-				end
-			end)
+			love.window.setMode(target_w, target_h, {
+				resizable = false,
+				fullscreen = false,
+				highdpi = false
+			})
 
 			-- 新建升级线程，实时读取输出
 			local update_thread = love.thread.newThread(update_thread_code)

@@ -11,9 +11,9 @@ local bnot = bit.bnot
 local V = require("lib.klua.vector")
 local P = require("path_db")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 
-require("constants")
+require("all.constants")
 
 local random = math.random
 local min = math.min

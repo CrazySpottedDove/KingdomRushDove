@@ -5,7 +5,7 @@ local DI = require("difficulty")
 local E = require("entity_db")
 local F = require("lib.klove.font_db")
 local G = love.graphics
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local GU = require("gui_utils")
 local I = require("klove.image_db")
 local PS = require("platform_services")
@@ -19,7 +19,7 @@ local v = V.v
 local km = require("lib.klua.macros")
 local i18n = require("i18n")
 local storage = require("storage")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data

@@ -3,7 +3,7 @@ require("lib.klua.string")
 
 local log = require("lib.klua.log"):new("platform_services_gamecenter")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local gamecenter = {}
 
 gamecenter.can_be_paused = false

@@ -1,6 +1,6 @@
 local i18n = require("i18n")
 
-require("constants")
+require("all.constants")
 
 local anchor_x = 0
 local anchor_y = 0
@@ -19,7 +19,7 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv

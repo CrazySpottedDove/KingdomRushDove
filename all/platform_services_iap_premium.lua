@@ -5,7 +5,7 @@ log.level = log.DEBUG_LEVEL
 
 require("lib.klua.table")
 
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local storage = require("storage")
 local PSU = require("platform_services_utils")
 local RC = require("remote_config")

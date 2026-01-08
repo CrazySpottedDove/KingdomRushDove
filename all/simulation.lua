@@ -3,7 +3,7 @@ local log = require("lib.klua.log"):new("simulation")
 local km = require("lib.klua.macros")
 local S = require("systems")
 
-require("constants")
+require("all.constants")
 
 simulation = {}
 

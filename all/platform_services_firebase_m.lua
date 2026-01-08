@@ -3,7 +3,7 @@ local log = require("lib.klua.log"):new("platform_services_firebase_m")
 
 require("lib.klua.table")
 require("lib.klua.string")
-require("constants")
+require("all.constants")
 
 local fbm = {}
 

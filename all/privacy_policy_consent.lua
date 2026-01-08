@@ -7,7 +7,7 @@ local features = require("features")
 local storage = require("storage")
 local json = require("json")
 local PS = require("platform_services")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 
 require("version")
 

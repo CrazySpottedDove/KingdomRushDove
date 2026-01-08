@@ -11,7 +11,7 @@ local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
 
-require("constants")
+require("all.constants")
 
 local grid_db = {}
 

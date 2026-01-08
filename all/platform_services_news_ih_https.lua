@@ -4,7 +4,7 @@ local log = require("lib.klua.log"):new("platform_services_news_ih_https")
 require("lib.klua.table")
 require("lib.klua.string")
 
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local PS = require("platform_services")
 local PSU = require("platform_services_utils")
 local RC = require("remote_config")
@@ -12,7 +12,7 @@ local I = require("klove.image_db")
 local i18n = require("i18n")
 local storage = require("storage")
 
-require("constants")
+require("all.constants")
 require("version")
 
 local news = {}

@@ -1,6 +1,6 @@
 -- chunkname: @./all/platform_services.lua
 local log = require("lib.klua.log"):new("platform_services")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local features = require("features")
 local PLATFORM_SERVICE_TIMEOUT = 60
 local ps = {}

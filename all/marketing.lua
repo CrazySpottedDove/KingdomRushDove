@@ -3,10 +3,10 @@ local log = require("lib.klua.log"):new("marketing")
 local PS = require("platform_services")
 local RC = require("remote_config")
 local storage = require("storage")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 
 require("lib.klua.table")
-require("constants")
+require("all.constants")
 
 marketing = {}
 marketing.signal_handlers = {

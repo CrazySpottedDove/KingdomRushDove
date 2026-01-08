@@ -18,10 +18,10 @@ local v = V.v
 local r = V.r
 local P = require("path_db")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local G = love.graphics
 
-require("constants")
+require("all.constants")
 
 local IS_KR5 = KR_GAME == "kr5"
 

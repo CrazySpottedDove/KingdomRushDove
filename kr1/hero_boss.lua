@@ -1,6 +1,6 @@
 local i18n = require("i18n")
 
-require("constants")
+require("all.constants")
 
 local anchor_x = 0
 local anchor_y = 0
@@ -15,7 +15,7 @@ require("lib.klua.table")
 local log = require("lib.klua.log"):new("hero_boss")
 local km = require("lib.klua.macros")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local P = require("path_db")
 local SU = require("script_utils")
 local U = require("utils")

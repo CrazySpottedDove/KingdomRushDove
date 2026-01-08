@@ -1,7 +1,7 @@
 -- chunkname: @./all/director.lua
 local log = require("lib.klua.log"):new("director")
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 
 require("lib.klua.dump")
 
@@ -23,7 +23,7 @@ local PP = require("privacy_policy_consent")
 local storage = require("storage")
 local services = require("platform_services")
 local director_data = require("data.director_data")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local EXO = require("exoskeleton")
 
 local function replace_locale(list, locale)
@@ -669,13 +669,13 @@ function director:update(dt)
 	end
 
 	if self.active_item then
-		local ai = self.active_item
+		local active_item = self.active_item
 
-		if ai.limit_fps then
-			ai.next_frame_ts = ai.limit_fps and ai.next_frame_ts + 1 / ai.limit_fps or nil
+		if active_item.limit_fps then
+			active_item.next_frame_ts = active_item.limit_fps and active_item.next_frame_ts + 1 / active_item.limit_fps or nil
 		end
 
-		ai:update(dt)
+		active_item:update(dt)
 	end
 
 	local ai = self.active_item

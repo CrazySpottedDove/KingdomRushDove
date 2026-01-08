@@ -1,4 +1,5 @@
 -- chunkname: @./kr1/game_settings.lua
+require("all.constants")
 local GS = {}
 
 GS.archer_towers = {

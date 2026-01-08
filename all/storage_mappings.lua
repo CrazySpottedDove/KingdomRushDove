@@ -4,7 +4,7 @@ local log = require("lib.klua.log"):new("storage_mappings")
 require("lib.klua.string")
 
 local bit = require("bit")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local sm = {}
 
 function sm:append_pp_token(src, dst)

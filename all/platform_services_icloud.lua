@@ -3,7 +3,7 @@ require("lib.klua.string")
 
 local log = require("lib.klua.log"):new("platform_services_icloud")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local storage = require("storage")
 
 require("version")

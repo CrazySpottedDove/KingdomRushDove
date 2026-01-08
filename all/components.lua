@@ -5,7 +5,7 @@ local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
 
-require("constants")
+require("all.constants")
 
 local function v(v1, v2)
 	return {

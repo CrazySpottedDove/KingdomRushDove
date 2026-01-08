@@ -1,6 +1,6 @@
 -- chunkname: @./all/storage_io_generic.lua
 local log = require("lib.klua.log"):new("storage_io_generic")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local km = require("lib.klua.macros")
 local persistence = require("lib.klua.persistence")
 

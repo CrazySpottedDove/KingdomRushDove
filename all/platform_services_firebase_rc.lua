@@ -4,10 +4,10 @@ local log = require("lib.klua.log"):new("platform_services_firebase_rc")
 require("lib.klua.table")
 require("lib.klua.string")
 
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local PSU = require("platform_services_utils")
 
-require("constants")
+require("all.constants")
 
 local fbrc = {}
 

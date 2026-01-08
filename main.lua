@@ -1,4 +1,6 @@
 -- chunkname: @./main.lua
+local MUST_READ = require("dove_modules.notice.must_read")
+
 local M = require("dove_modules.updater.update_manager")
 
 M.update_client()
@@ -241,8 +243,6 @@ do
 	end
 end
 
--- ...existing code...
--- ...existing code...
 KR_FULLPATH_BASE = norm_path(base_dir .. "/src", true)
 KR_PATH_ROOT = norm_path(tostring(rel_ppref))
 KR_PATH_ALL = norm_path(string.format("%s%s", rel_ppref, "all"))
@@ -274,7 +274,7 @@ local log = require("lib.klua.log")
 require("lib.klua.table")
 require("lib.klua.dump")
 require("version")
-require("constants")
+require("all.constants")
 
 if arg[2] == "monitor" then
 	PERFORMANCE_MONITOR_ENABLED = true
@@ -551,7 +551,7 @@ end
 
 function love.wheelmoved(dx, dy)
 	if main.handler.wheelmoved then
-		main.handler:wheelmoved(dx, dy, button)
+		main.handler:wheelmoved(dx, dy)
 	end
 end
 
@@ -638,6 +638,8 @@ function love.run()
 	load(arg)
 
 	love.timer.step()
+
+	MUST_READ.hack_love_update(love.update, love.draw)
 
 	local dt = 0
 

@@ -1,5 +1,5 @@
 -- chunkname: @./kr1-desktop/data/platform_services_ids.lua
-require("constants")
+require("all.constants")
 require("version")
 
 local ids = {}

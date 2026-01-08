@@ -1,7 +1,7 @@
 -- chunkname: @./all-desktop/platform_services_steam.lua
 local log = require("lib.klua.log"):new("platform_services_steam")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local steam = {}
 
 steam.can_be_paused = false

@@ -1,6 +1,6 @@
 local E = require("entity_db")
 
-require("constants")
+require("all.constants")
 
 local UP = require("upgrades")
 local U = require("utils")

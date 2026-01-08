@@ -78,7 +78,7 @@ function dd.sk(keyseq)
 end
 
 function dd.sshot()
-	local signal = require("hump.signal")
+	local signal = require("lib.hump.signal")
 
 	signal.emit("hide-gui")
 
@@ -115,7 +115,7 @@ function dd.dh(view, pad, i)
 end
 
 function dd.victory()
-	local signal = require("hump.signal")
+	local signal = require("lib.hump.signal")
 	local outcome = {
 		lives_left = 10,
 		victory = true,
@@ -139,7 +139,7 @@ end
 DEBUG_NNI = 1
 
 function dd.nn(force_nni)
-	local signal = require("hump.signal")
+	local signal = require("lib.hump.signal")
 
 	ggd = require("data.game_gui_data")
 	eel = table.map(ggd.notifications, function(k, v)
@@ -176,7 +176,7 @@ end
 local aai = 1
 
 function dd.aa(force_aai)
-	local signal = require("hump.signal")
+	local signal = require("lib.hump.signal")
 
 	ad = require("data.achievements_data")
 	aai = force_aai or aai

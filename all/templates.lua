@@ -6,7 +6,7 @@ local bnot = bit.bnot
 local E = require("entity_db")
 local i18n = require("i18n")
 
-require("constants")
+require("all.constants")
 
 local scale_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 local features = require("features")

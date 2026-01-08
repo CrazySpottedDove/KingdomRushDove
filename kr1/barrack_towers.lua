@@ -1,6 +1,6 @@
 local i18n = require("i18n")
 
-require("constants")
+require("all.constants")
 
 local anchor_y = 0
 local anchor_x = 0

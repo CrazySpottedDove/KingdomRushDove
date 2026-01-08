@@ -4,7 +4,7 @@ local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
 
-require("constants")
+require("all.constants")
 
 local function T(name)
 	return E:get_template(name)
@@ -343,7 +343,7 @@ function upgrades:get_total_stars()
 	return total
 end
 
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 
 function upgrades:archer_towers()
 	return GS.archer_towers

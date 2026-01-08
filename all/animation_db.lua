@@ -18,7 +18,7 @@ local function is_file(path)
 	return info and info.type == "file"
 end
 
-require("constants")
+require("all.constants")
 
 local animation_db = {}
 

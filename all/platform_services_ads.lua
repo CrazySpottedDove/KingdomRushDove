@@ -3,13 +3,13 @@ local log = require("lib.klua.log"):new("platform_services_ads")
 
 require("lib.klua.table")
 
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local storage = require("storage")
 local PSU = require("platform_services_utils")
 local RC = require("remote_config")
 local S = require("sound_db")
 
-require("constants")
+require("all.constants")
 
 local ads = {}
 

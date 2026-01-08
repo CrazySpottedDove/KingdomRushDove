@@ -3,14 +3,14 @@ local log = require("lib.klua.log"):new("storage")
 local km = require("lib.klua.macros")
 local FS = love.filesystem
 local persistence = require("lib.klua.persistence")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 
 require("lib.klua.string")
 
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 require("version")
 
-local sio = require("storage_io_generic")
+local sio = require("all.storage_io_generic")
 local storage = {}
 
 storage.active_slot_idx = nil
@@ -200,7 +200,7 @@ function storage:load_endless(level_name)
 end
 
 function storage:save_endless(level_name, endless)
-	local success = self:write_lua(string.format("endless_%s.lua", level_name), endless, true)
+	local success = self:write_lua(string.format("endless_%s.lua", level_name), endless)
 
 	if not success then
 		log.error("Error saving endless_%s.lua", level_name)
@@ -237,7 +237,7 @@ function storage:load_keyset()
 end
 
 function storage:save_keyset(key_shortcuts)
-	local success = self:write_lua("keyset.lua", key_shortcuts, true)
+	local success = self:write_lua("keyset.lua", key_shortcuts)
 
 	if not success then
 		log.error("Error saving keyset.lua")
@@ -245,7 +245,7 @@ function storage:save_keyset(key_shortcuts)
 end
 
 function storage:save_config(config)
-	local success = self:write_lua("config.lua", config, true)
+	local success = self:write_lua("config.lua", config)
 
 	if not success then
 		log.error("Error saving config.lua")
@@ -253,14 +253,14 @@ function storage:save_config(config)
 end
 
 function storage:save_criket(criket)
-	local success = self:write_lua("criket.lua", criket, true)
+	local success = self:write_lua("criket.lua", criket)
 
 	if not success then
 		log.error("Error saving criket.lua")
 	end
 end
 
-function storage:write_lua(filename, data_table, commit)
+function storage:write_lua(filename, data_table)
 	local ok = sio:write_file(filename, data_table)
 
 	if not ok then
@@ -270,7 +270,7 @@ function storage:write_lua(filename, data_table, commit)
 	return ok
 end
 
-function storage:remove(filename, commit)
+function storage:remove(filename)
 	local ok = sio:remove_file(filename)
 
 	if not ok then
@@ -304,7 +304,7 @@ function storage:save_settings(data_table, should_sync)
 		out[p] = data_table[p]
 	end
 
-	local success = self:write_lua(self.SETTINGS_FILE, out, should_sync)
+	local success = self:write_lua(self.SETTINGS_FILE, out)
 
 	if success then
 		signal.emit("settings-saved", should_sync)
@@ -326,7 +326,7 @@ function storage:load_global()
 end
 
 function storage:save_global(data_table, should_sync)
-	local result = self:write_lua(self.GLOBAL_FILE, data_table, should_sync)
+	local result = self:write_lua(self.GLOBAL_FILE, data_table)
 
 	return result
 end
@@ -406,7 +406,7 @@ function storage:save_slot(data_table, idx, should_sync)
 	log.debug("saving slot:%s should sync:%s", idx, should_sync)
 
 	local fn = string.format(self.SLOT_FILE_FMT, idx)
-	local success = self:write_lua(fn, data_table, should_sync)
+	local success = self:write_lua(fn, data_table)
 
 	if success then
 		signal.emit("slot-saved", idx, should_sync)

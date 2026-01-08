@@ -4,7 +4,7 @@
 -- 其它模块只允许访问 spatial_index 暴露的接口，不允许通过 getter 来访问其内部数据结构。
 local ffi = require("ffi")
 
-require("constants")
+require("all.constants")
 
 local _aspect = ASPECT
 local _aspect_inv = 1.0 / _aspect

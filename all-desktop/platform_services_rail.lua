@@ -1,8 +1,8 @@
 -- chunkname: @./all-desktop/platform_services_rail.lua
 local log = require("lib.klua.log"):new("platform_services_rail")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
-local GS = require("game_settings")
+local signal = require("lib.hump.signal")
+local GS = require("kr1.game_settings")
 local rail = {}
 
 rail.can_be_paused = false

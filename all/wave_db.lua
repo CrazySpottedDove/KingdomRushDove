@@ -6,7 +6,7 @@ local E = require("entity_db")
 local EL = require("kr1.data.endless")
 local EU = require("endless_utils")
 
-require("constants")
+require("all.constants")
 
 local wave_db = {}
 

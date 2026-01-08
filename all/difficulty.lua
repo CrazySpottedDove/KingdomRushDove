@@ -1,9 +1,9 @@
 -- chunkname: @./all/difficulty.lua
 local E = require("entity_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local km = require("lib.klua.macros")
 
-require("constants")
+require("all.constants")
 
 local difficulty = {}
 

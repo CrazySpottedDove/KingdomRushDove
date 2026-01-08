@@ -12,7 +12,7 @@ require("klove.kui")
 
 local kui_db = require("klove.kui_db")
 local timer = require("hump.timer"):new()
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local class = require("middleclass")
 local bit = require("bit")
 local band = bit.band
@@ -31,7 +31,7 @@ local r = V.r
 local P = require("path_db")
 local PS = require("platform_services")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local GU = require("gui_utils")
 local LU = require("level_utils")
 local storage = require("storage")
@@ -60,7 +60,7 @@ local IS_KR3 = KR_GAME == "kr3"
 local IS_KR2 = KR_GAME == "kr2"
 local IS_KR1 = KR_GAME == "kr1"
 
-require("constants")
+require("all.constants")
 
 local features = require("features")
 

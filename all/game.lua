@@ -1,7 +1,7 @@
 -- chunkname: @./all/game.lua
 local log = require("lib.klua.log"):new("game")
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local V = require("hump.vector-light")
 local U = require("utils")
 local RU = require("render_utils")
@@ -12,7 +12,7 @@ local P = require("path_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local UP = require("upgrades")
 local AC = require("achievements")
 local PS = require("platform_services")
@@ -21,7 +21,7 @@ local game_gui = require("game_gui")
 local G = love.graphics
 local bit = require("bit")
 
-require("constants")
+require("all.constants")
 
 game = {}
 game.required_textures = {

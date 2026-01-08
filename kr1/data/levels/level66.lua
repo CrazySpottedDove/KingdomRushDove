@@ -1,5 +1,5 @@
 local log=require("lib.klua.log"):new("level17")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local km=require("lib.klua.macros")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -7,7 +7,7 @@ local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
-require("constants")
+require("all.constants")
 local function fts(v)
 return v/FPS
 end
