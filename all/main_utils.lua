@@ -90,20 +90,12 @@ function mu.parse_args(arg, params)
 		params.diff = argv("diff")
 	end
 
-	if has_arg("draw-stats") then
-		params.draw_stats = true
-	end
-
 	if has_arg("level") then
 		params.level = argv("level")
 	end
 
 	if has_arg("locale") then
 		params.locale = argv("locale")
-	end
-
-	if has_arg("localuser") then
-		params.localuser = true
 	end
 
 	if has_arg("log_file") then

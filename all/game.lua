@@ -306,10 +306,6 @@ function game:init_debug()
 	self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
 	self.dbg_active_pi = 1
 
-	if localuser_game_init then
-		localuser_game_init()
-	end
-
 	if custom_script and custom_script.game_init then
 		custom_script:game_init()
 	end

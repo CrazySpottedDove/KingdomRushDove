@@ -318,8 +318,6 @@ local i18n = require("i18n")
 
 main = {}
 main.handler = nil
-main.draw_stats = nil
-main.draw_stats_displayed = false
 main.log_output = nil
 
 function main:set_locale(locale)
@@ -500,20 +498,8 @@ function love.load(arg)
 		load_director()
 	end
 
-	if main.params.draw_stats then
-		main.draw_stats = require("draw_stats")
-		main.draw_stats_displayed = true
-
-		main.draw_stats:init(main.params.width, main.params.height)
-	end
-
 	if DEBUG then
 		require("debug_tools")
-
-		if main.params.localuser then
-			log.error("---- LOADING LOCALUSER -----")
-			require("localuser")
-		end
 	end
 
 	if main.params.custom_script then
@@ -547,10 +533,6 @@ end
 
 local function love_draw_master()
 	main.handler:draw()
-
-	if main.draw_stats and main.draw_stats_displayed then
-		main.draw_stats:draw(main.params.width, main.params.height)
-	end
 end
 
 M.hack_love_update(love_update_master, love_draw_master)
@@ -558,10 +540,6 @@ M.hack_love_update(love_update_master, love_draw_master)
 function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
 		LLDEBUGGER.start()
-	end
-
-	if main.draw_stats and key == "f" then
-		main.draw_stats_displayed = not main.draw_stats_displayed
 	end
 
 	if custom_script and custom_script.keypressed then
@@ -697,82 +675,50 @@ function love.run()
 	local nx = love.nx
 
 	while true do
+		-- normal mode，逻辑看这里即可
+		if love.event then
+			love.event.pump()
 
-			-- normal mode，逻辑看这里即可
-			if love.event then
-				love.event.pump()
-
-				for e, a, b, c, d in love.event.poll() do
-					if e == "quit" and (not love.quit or not love.quit()) then
-						return
-					end
-
-					love.handlers[e](a, b, c, d)
-				end
-			end
-
-			if love.timer then
-				love.timer.step()
-
-				dt = love.timer.getDelta()
-			end
-
-			if main.draw_stats then
-				updatei = love.timer.getTime()
-			end
-
-			if love.update then
-				love.update(dt)
-			end
-
-			if main.draw_stats then
-				updatef = love.timer.getTime()
-
-				main.draw_stats:update_lap(dt, updatei, updatef)
-			end
-
-			if love.window and G and love.window.isOpen() and G.isActive() then
-				G.clear()
-				G.origin()
-
-				if love.draw then
-					if main.draw_stats then
-						drawi = love.timer.getTime()
-					end
-
-					love.draw()
-
-					if main.draw_stats then
-						drawf = love.timer.getTime()
-
-						main.draw_stats:draw_lap(drawi, drawf)
-					end
+			for e, a, b, c, d in love.event.poll() do
+				if e == "quit" and (not love.quit or not love.quit()) then
+					return
 				end
 
-				if main.draw_stats then
-					presi = love.timer.getTime()
-				end
+				love.handlers[e](a, b, c, d)
+			end
+		end
 
-				G.present()
+		if love.timer then
+			love.timer.step()
 
-				if main.draw_stats then
-					presf = love.timer.getTime()
+			dt = love.timer.getDelta()
+		end
 
-					main.draw_stats:present_lap(presi, presf)
-				end
+		if love.update then
+			love.update(dt)
+		end
 
-				if main.handler.limit_fps then
-					main.handler:limit_fps()
-				else
-					collectgarbage("step")
-					love.timer.sleep(0.001)
-				end
+		if love.window and G and love.window.isOpen() and G.isActive() then
+			G.clear()
+			G.origin()
+
+			if love.draw then
+				love.draw()
+			end
+
+			G.present()
+
+			if main.handler.limit_fps then
+				main.handler:limit_fps()
 			else
-				if love.timer then
-					love.timer.sleep(0.001)
-				end
+				collectgarbage("step")
+				love.timer.sleep(0.001)
 			end
-
+		else
+			if love.timer then
+				love.timer.sleep(0.001)
+			end
+		end
 	end
 end
 
