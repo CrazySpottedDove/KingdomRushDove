@@ -413,7 +413,7 @@ local function load_app_settings()
 	})
 end
 
-function love.load(arg)
+local function load(arg)
 	love.filesystem.setIdentity(version.identity)
 
 	if love.filesystem.isFused() and not love.filesystem.getInfo(KR_PATH_ALL_TARGET) then
@@ -502,15 +502,6 @@ function love.load(arg)
 		require("debug_tools")
 	end
 
-	if main.params.custom_script then
-		log.error("---- LOADING CUSTOM SCRIPT %s ----", main.params.custom_script)
-		require(main.params.custom_script)
-
-		if custom_script.init then
-			custom_script:init()
-		end
-	end
-
 	if KR_PLATFORM == "ios" then
 		local ffi = require("ffi")
 
@@ -525,10 +516,6 @@ end
 local function love_update_master(dt)
 	storage:update(dt)
 	main.handler:update(dt)
-
-	if custom_script and custom_script.update then
-		custom_script:update(dt)
-	end
 end
 
 local function love_draw_master()
@@ -540,10 +527,6 @@ M.hack_love_update(love_update_master, love_draw_master)
 function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
 		LLDEBUGGER.start()
-	end
-
-	if custom_script and custom_script.keypressed then
-		custom_script:keypressed(key, isrepeat)
 	end
 
 	main.handler:keypressed(key, isrepeat)
@@ -560,10 +543,6 @@ function love.textinput(t)
 end
 
 function love.mousepressed(x, y, button, istouch)
-	if custom_script and custom_script.mousepressed then
-		custom_script:mousepressed(x, y, button, istouch)
-	end
-
 	main.handler:mousepressed(x, y, button, istouch)
 end
 
@@ -602,10 +581,6 @@ function love.gamepadaxis(joystick, axis, value)
 end
 
 function love.gamepadpressed(joystick, button)
-	if custom_script and custom_script.gamepadpressed then
-		custom_script:gamepadpressed(joystick, button)
-	end
-
 	if main.handler.gamepadpressed then
 		main.handler:gamepadpressed(joystick, button)
 	end
@@ -653,52 +628,41 @@ function love.focus(focus)
 	end
 end
 
+local function quit()
+	log.info("Quitting...")
+	close_log()
+end
+
 function love.run()
-	if love.math then
-		love.math.setRandomSeed(os.time())
+	love.math.setRandomSeed(os.time())
 
-		for i = 1, 3 do
-			love.math.random()
-		end
-	end
+	load(arg)
 
-	if love.load then
-		love.load(arg)
-	end
-
-	if love.timer then
-		love.timer.step()
-	end
+	love.timer.step()
 
 	local dt = 0
-	local updatei, updatef, presi, presf, drawi, drawf
-	local nx = love.nx
 
 	while true do
-		-- normal mode，逻辑看这里即可
-		if love.event then
-			love.event.pump()
+		love.event.pump()
 
-			for e, a, b, c, d in love.event.poll() do
-				if e == "quit" and (not love.quit or not love.quit()) then
-					return
-				end
-
-				love.handlers[e](a, b, c, d)
+		for e, a, b, c, d in love.event.poll() do
+			if e == "quit" then
+				quit()
+				return
 			end
+
+			love.handlers[e](a, b, c, d)
 		end
 
-		if love.timer then
-			love.timer.step()
+		love.timer.step()
 
-			dt = love.timer.getDelta()
-		end
+		dt = love.timer.getDelta()
 
 		if love.update then
 			love.update(dt)
 		end
 
-		if love.window and G and love.window.isOpen() and G.isActive() then
+		if love.window.isOpen() and G.isActive() then
 			G.clear()
 			G.origin()
 
@@ -720,11 +684,6 @@ function love.run()
 			end
 		end
 	end
-end
-
-function love.quit()
-	log.info("Quitting...")
-	close_log()
 end
 
 local function get_error_stack(msg, layer)

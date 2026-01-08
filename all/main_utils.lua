@@ -74,10 +74,6 @@ function mu.parse_args(arg, params)
 		params.pause_on_switch = true
 	end
 
-	if has_arg("custom_script") then
-		params.custom_script = argv("custom_script")
-	end
-
 	if has_arg("custom") then
 		params.custom = argv("custom")
 	end

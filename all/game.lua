@@ -305,10 +305,6 @@ function game:init_debug()
 	self.enemy_pages = data.enemy_pages
 	self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
 	self.dbg_active_pi = 1
-
-	if custom_script and custom_script.game_init then
-		custom_script:game_init()
-	end
 end
 
 local tick_length_limit = TICK_LENGTH * 1.1
@@ -325,13 +321,6 @@ function game:update(dt)
 		self:update_debug(dt)
 	end
 
-	-- if self.DBG_TIME_MULT then
-	-- 	for i = 1, self.DBG_TIME_MULT do
-	-- 		self.simulation:update(dt)
-	-- 	end
-	-- else
-	-- 	self.simulation:update(dt)
-	-- end
 	if click_state.active then
 		local now = love.timer.getTime()
 
