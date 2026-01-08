@@ -4759,10 +4759,13 @@ function scripts.aura_apply_mod.update(this, store)
 				end)
 			end
 
-			if #targets == 0 then
+			local count = #targets
+			if count == 0 then
 			-- last_hit_ts = last_hit_ts + fts(1)
 			else
-				for i, target in ipairs(targets) do
+				local mods = this.aura.mods or {this.aura.mod}
+				local mod_count = #mods
+				for i = 1, count do
 					if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
 						break
 					end
@@ -4771,10 +4774,9 @@ function scripts.aura_apply_mod.update(this, store)
 						break
 					end
 
-					local mods = this.aura.mods or {this.aura.mod}
-
-					for _, mod_name in pairs(mods) do
-						local new_mod = E:create_entity(mod_name)
+					local target = targets[i]
+					for j = 1, mod_count do
+						local new_mod = E:create_entity(mods[j])
 
 						new_mod.modifier.level = this.aura.level
 						new_mod.modifier.target_id = target.id
@@ -4786,9 +4788,9 @@ function scripts.aura_apply_mod.update(this, store)
 						end
 
 						queue_insert(store, new_mod)
-
-						victims_count = victims_count + 1
 					end
+					victims_count = victims_count + 1
+
 				end
 			end
 		end
@@ -4852,22 +4854,26 @@ function scripts.aura_apply_damage.update(this, store)
 					return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name))
 				end)
 			end
-
-			if #targets == 0 then
+			local target_count = #targets
+			if target_count == 0 then
 			-- last_hit_ts = last_hit_ts + fts(1)
 			else
-				for _, target in pairs(targets) do
+				local dmin, dmax = this.aura.damage_min, this.aura.damage_max
+
+				if this.aura.damage_inc then
+					dmin = dmin + this.aura.damage_inc * this.aura.level
+					dmax = dmax + this.aura.damage_inc * this.aura.level
+				end
+				local mods = this.aura.mods or {this.aura.mod}
+				local mod_count = #mods
+
+				for i = 1, target_count do
+					local target = targets[i]
+
 					local d = E:create_entity("damage")
 
 					d.source_id = this.id
 					d.target_id = target.id
-
-					local dmin, dmax = this.aura.damage_min, this.aura.damage_max
-
-					if this.aura.damage_inc then
-						dmin = dmin + this.aura.damage_inc * this.aura.level
-						dmax = dmax + this.aura.damage_inc * this.aura.level
-					end
 
 					d.value = math.random(dmin, dmax)
 					d.damage_type = this.aura.damage_type
@@ -4877,10 +4883,8 @@ function scripts.aura_apply_damage.update(this, store)
 
 					queue_damage(store, d)
 
-					local mods = this.aura.mods or {this.aura.mod}
-
-					for _, mod_name in pairs(mods) do
-						local m = E:create_entity(mod_name)
+					for j = 1, mod_count do
+						local m = E:create_entity(mods[j])
 
 						m.modifier.level = this.aura.level
 						m.modifier.target_id = target.id

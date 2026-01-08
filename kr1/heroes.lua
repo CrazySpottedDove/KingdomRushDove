@@ -1,3 +1,4 @@
+
 local i18n = require("i18n")
 
 require("all.constants")
@@ -9069,7 +9070,6 @@ tt.hero.skills.inmolate.xp_level_steps = {
 tt.hero.skills.purification = CC("hero_skill")
 tt.hero.skills.purification.damage_min = {15, 25, 35}
 tt.hero.skills.purification.damage_max = {15, 25, 35}
-tt.hero.skills.purification.max_targets = {3, 5, 7}
 tt.hero.skills.purification.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
@@ -9311,7 +9311,7 @@ tt.render.sprites[1].scale = vec_1(0.65)
 --#endregion
 --#region mod_phoenix_purification
 tt = RT("mod_phoenix_purification", "modifier")
-tt.modifier.duration = fts(11)
+tt.modifier.duration = 1
 tt.fx = "fx_ray_phoenix_hit"
 tt.entity = "missile_phoenix_small"
 tt.main_script.update = scripts.mod_phoenix_purification.update

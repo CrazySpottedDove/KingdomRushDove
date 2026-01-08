@@ -13796,18 +13796,6 @@ function scripts.hero_phoenix.level_up(this, store, initiaal)
 		a.disabled = nil
 	end)
 	upgrade_skill(this, "purification", function(this, s)
-		local au = E:get_template("aura_phoenix_purification")
-
-		au.aura.targets_per_cycle = s.max_targets[s.evel]
-
-		for _, e in pairs(store.auras) do
-			if e.template_name == "aura_phoenix_purification" then
-				e.aura.targets_per_cycle = s.max_targets[s.level]
-
-				break
-			end
-		end
-
 		local b = E:get_template("missile_phoenix_small")
 
 		b.bullet.damage_max = s.damage_max[s.level]
