@@ -8,11 +8,9 @@ local signal = require("hump.signal")
 require("lib.klua.string")
 
 local GS = require("game_settings")
-local features = require("features")
-
 require("version")
 
-local sio = require(features.storage_io or "storage_io_generic")
+local sio = require("storage_io_generic")
 local storage = {}
 
 storage.active_slot_idx = nil
@@ -269,31 +267,17 @@ function storage:write_lua(filename, data_table, commit)
 		log.error("Error writing %s", filename)
 	end
 
-	if ok and commit then
-		sio:commit()
-	end
-
 	return ok
 end
 
 function storage:remove(filename, commit)
 	local ok = sio:remove_file(filename)
 
-	if ok and commit then
-		sio:commit()
+	if not ok then
+		log.error("Error removing %s", filename)
 	end
 
 	return ok
-end
-
-function storage:is_busy()
-	return sio:is_busy()
-end
-
-function storage:update(dt)
-	if sio.update then
-		sio:update(dt)
-	end
 end
 
 function storage:load_settings()

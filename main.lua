@@ -514,7 +514,6 @@ local function load(arg)
 end
 
 local function love_update_master(dt)
-	storage:update(dt)
 	main.handler:update(dt)
 end
 

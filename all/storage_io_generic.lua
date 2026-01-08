@@ -102,20 +102,4 @@ function sio:remove_file(filename)
 	return love.filesystem.remove(filename)
 end
 
-function sio:commit()
-	return true
-end
-
-function sio:update()
-	return
-end
-
-function sio:is_busy()
-	return false
-end
-
-function sio:is_pending()
-	return false
-end
-
 return sio
