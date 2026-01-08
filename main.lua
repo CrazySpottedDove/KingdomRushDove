@@ -318,8 +318,6 @@ local i18n = require("i18n")
 
 main = {}
 main.handler = nil
-main.profiler = nil
-main.profiler_displayed = false
 main.draw_stats = nil
 main.draw_stats_displayed = false
 main.log_output = nil
@@ -502,10 +500,6 @@ function love.load(arg)
 		load_director()
 	end
 
-	if main.params.profiler then
-		main.profiler = require("profiler")
-	end
-
 	if main.params.draw_stats then
 		main.draw_stats = require("draw_stats")
 		main.draw_stats_displayed = true
@@ -554,10 +548,6 @@ end
 local function love_draw_master()
 	main.handler:draw()
 
-	if main.profiler and main.profiler_displayed then
-		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
-	end
-
 	if main.draw_stats and main.draw_stats_displayed then
 		main.draw_stats:draw(main.params.width, main.params.height)
 	end
@@ -565,155 +555,9 @@ end
 
 M.hack_love_update(love_update_master, love_draw_master)
 
--- function love.update(dt)
--- 	if DEBUG and not main.params.debug and main.params.repl then
--- 		repl_t()
--- 	end
--- 	storage:update(dt)
--- 	main.handler:update(dt)
--- 	if DEBUG and main.params.localuser and localuser_update then
--- 		localuser_update(dt)
--- 	end
--- 	if custom_script and custom_script.update then
--- 		custom_script:update(dt)
--- 	end
--- 	do
--- 		if (apply_upgrade) and (not update_popup_shown) then
--- 			local ch = love.thread.getChannel("update_result")
--- 			local result = ch:pop()
--- 			-- 轮询到了结果
--- 			if result ~= nil and result ~= false then
--- 				-- 结果有效
--- 				if result ~= false then
--- 					local ok, resp = pcall(require("json").decode, result)
--- 					-- 需要更新
--- 					if ok and type(resp) == "table" and resp.has_update then
--- 						update_result_json = result
--- 						-- 收集所有 commit message
--- 						local messages = {}
--- 						local max_messages_to_show = 20
--- 						if resp.commits then
--- 							for i, commit in ipairs(resp.commits) do
--- 								if i > max_messages_to_show then
--- 									table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
--- 									break
--- 								end
--- 								table.insert(messages, commit.message)
--- 							end
--- 						end
--- 						local msg_text = table.concat(messages, "\n\n")
--- 						msg_text = msg_text .. "\n\n请耐心等待升级完成..."
--- 						local cmd = string.format('"%s" --upgrade-new-version', binary_path)
--- 						-- 弹窗有“升级”按钮
--- 						local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
--- 						if pressed == 1 then
--- 							-- 新建升级线程，实时读取输出
--- 							local upgrade_thread = love.thread.newThread([[
---         local cmd, update_result_json = ...
---         local pipe = io.popen(cmd, "w")
---         if pipe then
---             pipe:write(update_result_json)
---             pipe:flush()
---             -- 读取输出并实时推送
---             while true do
---                 local line = pipe:read("*l")
---                 if not line then break end
---                 love.thread.getChannel("upgrade_log"):push(line)
---             end
---             pipe:close()
---         end
---         love.thread.getChannel("upgrade_result"):push("done")
---     ]])
--- 							upgrade_thread:start(cmd, update_result_json)
--- 							love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
--- 							-- 用于显示升级日志
--- 							local upgrade_log = {}
--- 							love.update = function(dt)
--- 								local ch = love.thread.getChannel("upgrade_result")
--- 								local result = ch:pop()
--- 								-- 轮询日志
--- 								local log_ch = love.thread.getChannel("upgrade_log")
--- 								while true do
--- 									local line = log_ch:pop()
--- 									if not line then
--- 										break
--- 									end
--- 									table.insert(upgrade_log, line)
--- 									-- 限制最大行数
--- 									if #upgrade_log > 30 then
--- 										table.remove(upgrade_log, 1)
--- 									end
--- 								end
--- 								if result == "done" then
--- 									love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
--- 									love.event.quit()
--- 								elseif result == "error" then
--- 									love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
--- 									love.update = love_update_master
--- 									love.draw = love_draw_master
--- 								end
--- 							end
--- 							love.draw = function()
--- 								G.clear(0, 0, 0)
--- 								G.origin()
--- 								local font = F:f("JIMOJW", 20)
--- 								G.setFont(font)
--- 								G.setColor(1, 1, 1, 1)
--- 								local w, h = G.getDimensions()
--- 								local text = "正在升级资源，请勿关闭游戏..."
--- 								local tw = font:getWidth(text)
--- 								local th = font:getHeight()
--- 								G.print(text, (w - tw) / 2, (h - th) / 2)
--- 								-- 动画
--- 								G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
--- 								G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
--- 								-- 显示升级日志
--- 								G.setColor(1, 1, 1, 1)
--- 								local log_y = (h - th) / 2 + 60
--- 								for i, line in ipairs(upgrade_log) do
--- 									G.print(line, 40, log_y + (i - 1) * 22)
--- 								end
--- 							end
--- 						end
--- 					else
--- 						-- 不需要更新，那么恢复原 update
--- 						love.update = love_update_master
--- 					end
--- 				else
--- 					-- 结果无效，恢复 love.update
--- 					-- 这里应该提示更新失败
--- 					love.window.showMessageBox("更新失败", "可检查client.log。只影响更新，不影响游戏。", {"确定"})
--- 					love.update = love_update_master
--- 				end
--- 			end
--- 		end
--- 	end
--- end
--- function love.draw()
--- 	main.handler:draw()
--- 	if main.profiler and main.profiler_displayed then
--- 		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
--- 	end
--- 	if main.draw_stats and main.draw_stats_displayed then
--- 		main.draw_stats:draw(main.params.width, main.params.height)
--- 	end
--- end
 function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
 		LLDEBUGGER.start()
-	end
-
-	if main.profiler then
-		if key == "f1" then
-			main.profiler.start()
-		elseif key == "f2" then
-			main.profiler.stop()
-		elseif key == "f3" then
-			main.profiler_displayed = not main.profiler_displayed
-		elseif key == "f4" then
-			main.profiler.flag_l2_shown = not main.profiler.flag_l2_shown
-			main.profiler.flag_dirty = true
-		end
 	end
 
 	if main.draw_stats and key == "f" then
@@ -853,94 +697,7 @@ function love.run()
 	local nx = love.nx
 
 	while true do
-		if main.profiler and nx and nx.isProfiling() then
-			nx.profilerHeartbeat()
 
-			if love.event then
-				love.event.pump()
-
-				for e, a, b, c, d in love.event.poll() do
-					if e == "quit" and (not love.quit or not love.quit()) then
-						return
-					end
-
-					love.handlers[e](a, b, c, d)
-				end
-			end
-
-			if love.timer then
-				love.timer.step()
-
-				dt = love.timer.getDelta()
-			end
-
-			if main.draw_stats then
-				updatei = love.timer.getTime()
-			end
-
-			nx.profilerEnterCodeBlock("update")
-
-			if love.update then
-				love.update(dt)
-			end
-
-			nx.profilerExitCodeBlock("update")
-
-			if main.draw_stats then
-				updatef = love.timer.getTime()
-
-				main.draw_stats:update_lap(dt, updatei, updatef)
-			end
-
-			if love.window and G and love.window.isOpen() and G.isActive() then
-				nx.profilerEnterCodeBlock("clear")
-				G.clear()
-				G.origin()
-				nx.profilerExitCodeBlock("clear")
-
-				if love.draw then
-					if main.draw_stats then
-						drawi = love.timer.getTime()
-					end
-
-					nx.profilerEnterCodeBlock("draw")
-					love.draw()
-					nx.profilerExitCodeBlock("draw")
-
-					if main.draw_stats then
-						drawf = love.timer.getTime()
-
-						main.draw_stats:draw_lap(drawi, drawf)
-					end
-				end
-
-				collectgarbage("step")
-
-				if main.draw_stats then
-					presi = love.timer.getTime()
-				end
-
-				nx.profilerEnterCodeBlock("present")
-				G.present()
-				nx.profilerExitCodeBlock("present")
-
-				if main.draw_stats then
-					presf = love.timer.getTime()
-
-					main.draw_stats:present_lap(presi, presf)
-				end
-
-				if main.handler.limit_fps then
-					nx.profilerEnterCodeBlock("limit_fps")
-					main.handler:limit_fps()
-					nx.profilerExitCodeBlock("limit_fps")
-				end
-			end
-
-			if love.timer then
-				love.timer.sleep(0.001)
-			end
-		else
 			-- normal mode，逻辑看这里即可
 			if love.event then
 				love.event.pump()
@@ -1015,7 +772,7 @@ function love.run()
 					love.timer.sleep(0.001)
 				end
 			end
-		end
+
 	end
 end
 

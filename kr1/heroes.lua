@@ -9044,11 +9044,10 @@ tt.modifier.duration = fts(12)
 tt = RT("mod_arivan_ultimate_freeze", "mod_arivan_freeze")
 tt.modifier.duration = nil
 --#endregion
+
 --#region hero_phoenix
 tt = RT("hero_phoenix", "hero")
-
 AC(tt, "ranged", "timed_attacks", "selfdestruct")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {530, 510, 490, 470, 450, 430, 410, 390, 370, 350}
 tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}

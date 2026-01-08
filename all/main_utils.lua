@@ -118,10 +118,6 @@ function mu.parse_args(arg, params)
 		params.mode = argv("mode")
 	end
 
-	if has_arg("profiler") then
-		params.profiler = true
-	end
-
 	if has_arg("repl") then
 		params.repl = argv("repl")
 	end
