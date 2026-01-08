@@ -1,4 +1,3 @@
-
 local i18n = require("i18n")
 
 require("all.constants")

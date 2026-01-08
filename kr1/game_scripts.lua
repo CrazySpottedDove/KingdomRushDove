@@ -33649,4 +33649,55 @@ function scripts.controller_s93.update(this, store)
 	end
 end
 
+scripts.mod_krdove_elephant_cannibal = {}
+function scripts.mod_krdove_elephant_cannibal.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	scripts.heal(target, this.heal_amount)
+
+	local s = this.render.sprites[1]
+
+	s.ts = store.tick_ts
+
+	s.name = s.size_names[target.unit.size]
+
+	if target.unit.mod_offset then
+		s.offset.x = target.unit.mod_offset.x
+		s.offset.y = target.unit.mod_offset.y
+	end
+
+	if target.template_name == "krdove_eb_elephant_cannibal" then
+		return false
+	end
+
+	return true
+end
+
+function scripts.mod_krdove_elephant_cannibal.update(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		queue_remove(store, this)
+
+		return
+	end
+
+	SU.enemy_scale_mul(store, target, this.scale_factor, this.scale_delay)
+
+	while true do
+		local target = store.entities[this.modifier.target_id]
+
+		if not target or target.health.dead then
+			break
+		end
+
+		coroutine.yield()
+	end
+	queue_remove(store, this)
+end
+
 return scripts

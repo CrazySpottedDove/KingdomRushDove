@@ -242,9 +242,7 @@ tt.unit.marker_offset.y = 1
 --#endregion
 --#region enemy_shaman
 tt = RT("enemy_shaman", "enemy")
-
 AC(tt, "melee", "timed_attacks")
-
 anchor_y = 0.2
 anchor_x = 0.5
 image_y = 60

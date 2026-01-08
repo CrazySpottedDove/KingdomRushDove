@@ -4512,6 +4512,47 @@ local function queue_remove_clean_table(store, tbl)
 	end
 end
 
+local function enemy_scale_mul(store, e, factor, duration)
+	if not e.render.sprites[1].scale then
+		e.render.sprites[1].scale = {
+			x = 1,
+			y = 1
+		}
+	end
+	local stop_ts = store.tick_ts + duration
+	local initial_scale_x = e.render.sprites[1].scale.x
+	local initial_scale_y = e.render.sprites[1].scale.y
+	local target_scale_x = initial_scale_x * factor
+	local target_scale_y = initial_scale_y * factor
+
+	stun_inc(e)
+
+	while store.tick_ts < stop_ts do
+		local t = (store.tick_ts - (stop_ts - duration)) / duration
+		e.render.sprites[1].scale.x = initial_scale_x + (target_scale_x - initial_scale_x) * t
+		e.render.sprites[1].scale.y = initial_scale_y + (target_scale_y - initial_scale_y) * t
+		coroutine.yield()
+	end
+
+	stun_dec(e)
+
+	e.render.sprites[1].scale.x = target_scale_x
+	e.render.sprites[1].scale.y = target_scale_y
+
+	U.speed_mul(e, factor)
+	e.enemy.melee_slot.x = e.enemy.melee_slot.x * factor
+	e.enemy.melee_slot.y = e.enemy.melee_slot.y * factor
+	local u = e.unit
+	u.hit_offset.x = u.hit_offset.x * factor
+	u.hit_offset.y = u.hit_offset.y * factor
+	u.marker_offset.x = u.marker_offset.x * factor
+	u.marker_offset.y = u.marker_offset.y * factor
+	u.mod_offset.x = u.mod_offset.x * factor
+	u.mod_offset.y = u.mod_offset.y * factor
+	u.damage_factor = u.damage_factor * (factor * factor * factor)
+	e.health.damage_factor = e.health.damage_factor / (factor * factor * factor)
+end
+
 local SU = {
 	has_modifiers = U.has_modifiers,
 	ui_click_proxy_add = ui_click_proxy_add,
@@ -4624,7 +4665,8 @@ local SU = {
 	towers_swaped = towers_swaped,
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
-	queue_remove_clean_table = queue_remove_clean_table
+	queue_remove_clean_table = queue_remove_clean_table,
+	enemy_scale_mul = enemy_scale_mul
 }
 
 return SU

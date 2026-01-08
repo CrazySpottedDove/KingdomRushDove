@@ -2995,9 +2995,7 @@ tt.creeps = {"enemy_halloween_zombie", "enemy_ghoul"}
 --#endregion
 --#region krdove_eb_elephant_cannibal
 tt = RT("krdove_eb_elephant_cannibal", "boss")
-
 AC(tt, "melee", "timed_attacks")
-
 anchor_y = 0.11
 anchor_x = 0.5
 tt.enemy.gold = 0
@@ -3009,16 +3007,28 @@ tt.health.dead_lifetime = 8
 tt.health.hp_max = 12000
 tt.health_bar.offset = vec_2(0, 95)
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
-tt.health.magic_armor = 0.1
+tt.health.magic_armor = 0.114514
 tt.info.enc_icon = 40
-tt.info.portrait = "info_portraits_enemies_0019"
+tt.info.portrait = "kr2_info_portraits_enemies_0024"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.enemy_mixed.update
--- tt.main_script.update = scripts.enemy_shaman.update
+tt.main_script.update = scripts.enemy_shaman.update
+tt.melee.attacks[1] = CC("area_attack")
 tt.melee.attacks[1].cooldown = 1 + fts(20)
 tt.melee.attacks[1].damage_max = 600
 tt.melee.attacks[1].damage_min = 200
-tt.melee.attacks[1].hit_time = fts(11)
+tt.melee.attacks[1].hit_time = fts(22)
+tt.melee.attacks[1].hit_offset = vec_2(60, 0)
+tt.melee.attacks[1].damage_radius = 60
+tt.timed_attacks.list[1] = CC("mod_attack")
+tt.timed_attacks.list[1].animation = "cast"
+tt.timed_attacks.list[1].cooldown = 10
+tt.timed_attacks.list[1].cast_time = fts(8)
+tt.timed_attacks.list[1].max_count = 100
+tt.timed_attacks.list[1].max_range = 200
+tt.timed_attacks.list[1].mod = "mod_krdove_elephant_cannibal"
+tt.timed_attacks.list[1].sound = "EnemyHealing"
+tt.timed_attacks.list[1].vis_flags = F_MOD
 tt.motion.max_speed = 0.4 * FPS
 tt.render.sprites[1].anchor = vec_2(anchor_x, anchor_y)
 tt.render.sprites[1].prefix = "krdove_eb_elephant_cannibal"
@@ -3045,4 +3055,15 @@ tt.unit.size = UNIT_SIZE_LARGE
 tt.vis.bans = bor(F_TELEPORT, F_THORN, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY, F_BOSS)
 
+tt = RT("mod_krdove_elephant_cannibal", "modifier")
+AC(tt, "render")
+tt.main_script.insert = scripts.mod_krdove_elephant_cannibal.insert
+tt.main_script.update = scripts.mod_krdove_elephant_cannibal.update
+tt.scale_factor = 1.2
+tt.scale_delay = fts(45)
+tt.heal_amount = 500
+tt.render.sprites[1].prefix = "healing"
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].loop = false
 --#endregion
