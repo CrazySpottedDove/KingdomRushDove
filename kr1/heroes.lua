@@ -6460,9 +6460,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 --#endregion
 --#region hero_minotaur
 tt = RT("hero_minotaur", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 image_y = 110
 anchor_y = 28 / image_y
 tt.hero.level_stats.hp_max = {325, 350, 375, 400, 425, 450, 475, 500, 525, 550}
@@ -6622,9 +6620,7 @@ tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
 --#endregion
 --#region mod_minotaur_daedalus
 tt = RT("mod_minotaur_daedalus", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.duration = nil
 tt.main_script.insert = scripts.mod_minotaur_daedalus.insert
 tt.main_script.update = scripts.mod_minotaur_daedalus.update

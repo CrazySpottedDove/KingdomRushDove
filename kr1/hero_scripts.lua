@@ -9080,7 +9080,6 @@ scripts.mod_minotaur_daedalus = {
 		end
 
 		SU.stun_dec(target)
-		U.bans_remove(target.vis, F_ALL)
 
 		return true
 	end,
@@ -9144,6 +9143,7 @@ scripts.mod_minotaur_daedalus = {
 		s.flip_x = target.render.sprites[1].flip_x
 		m.ts = store.tick_ts
 
+		U.bans_remove(target.vis, F_ALL)
 		while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
 			coroutine.yield()
 		end
