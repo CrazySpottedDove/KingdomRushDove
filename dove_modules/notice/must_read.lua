@@ -189,7 +189,7 @@ function MUST_READ.hack_love_update(original_love_update_function, original_love
 			local total_lines = #lines
 			local max_scroll = math.max(0, total_lines - visible_lines)
 			-- 这里的 30 是经验值，可根据实际手感调整
-			local delta = (touch_start_y - y) / 30
+			local delta = math.ceil((touch_start_y - y) / 30)
 			scroll = math.max(0, math.min(max_scroll, scroll_start + delta))
 		end
 	end
