@@ -33700,4 +33700,73 @@ function scripts.mod_krdove_elephant_cannibal.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.krdove_eb_elephant_cannibal = {}
+
+function scripts.krdove_eb_elephant_cannibal.update(this, store)
+	local a = this.timed_attacks.list[1]
+
+	a.ts = store.tick_ts
+
+	local function ready_to_heal()
+		return enemy_ready_to_magic_attack(this, store, a)
+	end
+
+	::label_95_0::
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+			LU.kill_all_enemies(store, true)
+			store.force_next_wave = true
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if ready_to_heal() then
+				local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+					return not U.has_modifier(store, e, "mod_krdove_elephant_cannibal")
+				end)
+
+				if not targets then
+					SU.delay_attack(store, a, 0.5)
+				else
+					a.ts = store.tick_ts
+
+					U.animation_start(this, a.animation, nil, store.tick_ts, false)
+					S:queue(a.sound)
+
+					if SU.y_enemy_wait(store, this, a.cast_time) then
+						goto label_95_0
+					end
+
+					local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+						return not U.has_modifier(store, e, "mod_krdove_elephant_cannibal")
+					end)
+
+					if targets then
+						for _, target in ipairs(targets) do
+							local m = E:create_entity(a.mod)
+
+							m.modifier.source_id = this.id
+							m.modifier.target_id = target.id
+
+							queue_insert(store, m)
+						end
+					end
+
+					U.y_animation_wait(this)
+				end
+			end
+
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, ready_to_heal, ready_to_heal) then
+			-- block empty
+			else
+				coroutine.yield()
+			end
+		end
+	end
+end
+
 return scripts
