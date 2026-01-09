@@ -3,7 +3,9 @@ local bit = require("bit")
 local log = require("lib.klua.log"):new("path_db")
 local km = require("lib.klua.macros")
 local FS = love.filesystem
+
 require("lib.klua.table")
+
 local V = require("lib.klua.vector")
 local GR = require("grid_db")
 local serpent = require("serpent")
@@ -11,6 +13,7 @@ local path_db = {}
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
+
 	return info and info.type == "file"
 end
 
@@ -33,11 +36,13 @@ function path_db:load(name, visible_coords)
 	self.path_widths = {}
 	self.defend_point_node = {}
 	self.path_curves = {}
+
 	local path_list
 	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
 
 	if not is_file(fn) then
 		log.debug("Level paths file does not exist for %s", fn)
+
 		path_list = {
 			connections = {},
 			paths = {},
@@ -49,6 +54,7 @@ function path_db:load(name, visible_coords)
 
 		if err then
 			log.error("Error loading paths for %s: %s", fn, err)
+
 			return nil
 		end
 
@@ -78,6 +84,7 @@ function path_db:load(name, visible_coords)
 
 		for _, o in pairs(sp) do
 			local cell_type = GR:cell_type(o.x, o.y)
+
 			terrain_types = bit.bor(terrain_types, cell_type)
 		end
 
@@ -97,6 +104,7 @@ function path_db:load(name, visible_coords)
 
 				if n.x >= vc.left and n.x <= vc.right and n.y >= vc.bottom and n.y <= vc.top then
 					ni_in = i
+
 					break
 				end
 			end
@@ -106,17 +114,21 @@ function path_db:load(name, visible_coords)
 
 				if n.x < vc.left or n.x > vc.right or n.y < vc.bottom or n.y > vc.top then
 					ni_out = i
+
 					break
 				end
 			end
 
 			local offset = self.path_end_margin
+
 			self:set_start_node(j, km.clamp(1, #p[1], ni_in - offset))
 			self:set_end_node(j, km.clamp(1, #p[1], ni_out + offset))
+
 			local visible_start = ni_in == 1
 			local visible_end = ni_out == #p[1]
 			local margin_start = p[1][1].y > REF_H and self.path_valid_margin_top or self.path_valid_margin
 			local margin_end = p[1][#p[1]].y > REF_H and self.path_valid_margin_top or self.path_valid_margin
+
 			self:set_visible_start_node(j, km.clamp(1, #p[1], ni_in + (visible_start and 0 or margin_start)))
 			self:set_visible_end_node(j, km.clamp(1, #p[1], ni_out - (visible_end and 0 or margin_end)))
 		end
@@ -125,7 +137,7 @@ end
 
 function path_db:reverse_all_paths()
 	if not self.paths then
-		return 
+		return
 	end
 
 	for _, path_group in ipairs(self.paths) do
@@ -143,6 +155,7 @@ end
 
 function path_db:path(index, subindex)
 	subindex = subindex or 1
+
 	return self.paths[index][subindex]
 end
 
@@ -164,6 +177,7 @@ function path_db:node_pos(p1, p2, p3, return_ref)
 	end
 
 	local path = self.paths[pi][spi]
+
 	ni = km.clamp(1, #path, ni)
 
 	if return_ref then
@@ -183,9 +197,11 @@ function path_db:node_offset_pos(offset, p1, p2, p3)
 	end
 
 	ni = km.clamp(1, #self.paths[pi][spi], ni)
+
 	local o = self.paths[pi][spi][ni]
 	local v1 = self.paths[pi][3][ni]
 	local v2 = self.paths[pi][2][ni]
+
 	return V.v(V.add(o.x, o.y, V.mul(offset, V.normalize(v2.x - v1.x, v2.y - v1.y))))
 end
 
@@ -199,13 +215,17 @@ end
 
 function path_db:get_visible_start_node(pi)
 	local ni = self.visible_path_start_node[pi]
+
 	ni = ni or 1
+
 	return ni
 end
 
 function path_db:get_visible_end_node(pi)
 	local ni = self.visible_path_end_node[pi]
+
 	ni = ni or #self.paths[pi]
+
 	return ni
 end
 
@@ -219,13 +239,17 @@ end
 
 function path_db:get_start_node(pi)
 	local ni = self.path_start_node[pi]
+
 	ni = ni or 1
+
 	return ni
 end
 
 function path_db:get_end_node(pi)
 	local ni = self.path_end_node[pi]
+
 	ni = ni or #self.paths[pi]
+
 	return ni
 end
 
@@ -252,11 +276,14 @@ function path_db:nodes_to_goal(p1, p2, p3)
 
 	local cpi = pi
 	local count = -ni
+
 	::label_16_0::
+
 	count = count + self.path_end_node[cpi]
 
 	if self.path_connections[cpi] then
 		cpi = self.path_connections[cpi]
+
 		goto label_16_0
 	end
 
@@ -287,6 +314,7 @@ function path_db:nodes_to_defend_point(p1, p2, p3)
 		return ntg
 	else
 		local dntg = self:nodes_to_goal(lpi, spi, dn)
+
 		return ntg - dntg
 	end
 end
@@ -355,6 +383,7 @@ function path_db:nearest_nodes(x, y, path_indexes, subpath_indexes, valid_only, 
 	table.sort(nodes, function(n1, n2)
 		return n1[4] < n2[4]
 	end)
+
 	return nodes
 end
 
@@ -382,12 +411,14 @@ function path_db:add_invalid_range(index, from, to, flags)
 	from = from or 1
 	to = to or self:get_end_node(index)
 	flags = flags or NF_ALL
+
 	table.insert(self.invalid_ranges[index], {from, to, flags})
 end
 
 function path_db:remove_invalid_range(index, from, to)
 	from = from or 1
 	to = to or self:get_end_node(index)
+
 	local ranges = self.invalid_ranges[index]
 
 	for i = #ranges, 1, -1 do
@@ -395,6 +426,7 @@ function path_db:remove_invalid_range(index, from, to)
 
 		if range[1] == from and range[2] == to then
 			table.remove(ranges, i)
+
 			break
 		end
 	end
@@ -441,6 +473,7 @@ end
 
 function path_db:valid_node_nearby(x, y, path_width_factor, flags)
 	path_width_factor = path_width_factor or 1
+
 	local nodes = self:nearest_nodes(x, y)
 
 	for _, n in pairs(nodes) do
@@ -466,11 +499,16 @@ function path_db:next_entity_node(e, dt)
 		if n.ni < 1 or n.ni > #path then
 			if self.path_connections[n.pi] and n.dir > 0 then
 				n.prev_pis = n.prev_pis or {}
+
 				table.insert(n.prev_pis, n.pi)
+
 				local newpi, newspi, newni, dist
+
 				newpi = self.path_connections[n.pi]
 				newpi, newspi, newni, dist = unpack(self:nearest_nodes(e.pos.x, e.pos.y, {newpi})[1])
+
 				log.debug("Entity %s switching from path:%i,%i,%i -> path:%i,%i,%i", e.id, n.pi, n.spi, n.ni, newpi, newspi, newni)
+
 				n.pi = newpi
 				n.ni = newni + n.dir
 				path = self.paths[n.pi][n.spi]
@@ -484,6 +522,7 @@ function path_db:next_entity_node(e, dt)
 	end
 
 	next_node = next_node and V.vclone(next_node)
+
 	return next_node, new
 end
 
@@ -502,6 +541,7 @@ function path_db:predict_enemy_node_advance(e, flight_time)
 	local speed = V.len(e.motion.speed.x, e.motion.speed.y)
 	local node_offset = math.ceil(flight_time * speed / average_node_dist)
 	local path = self:path(e.nav_path.pi)
+
 	return km.clamp(0, #path - e.nav_path.ni, node_offset)
 end
 
@@ -511,6 +551,7 @@ end
 
 function path_db:predict_enemy_pos(e, flight_time)
 	local node_offset = self:predict_enemy_node_advance(e, flight_time)
+
 	return self:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni + node_offset)
 end
 
@@ -573,6 +614,7 @@ function path_db:get_random_position(margin, valid_terrains, node_flags, margin_
 
 	if not found then
 		log.debug("could not find random node")
+
 		return nil
 	else
 		return self:node_pos(pi, spi, ni), pi, spi, ni
@@ -600,6 +642,7 @@ end
 
 function path_db:get_all_valid_pos(x, y, min_distance, max_distance, valid_terrains, filter_func, flags)
 	valid_terrains = valid_terrains or TERRAIN_ALL_MASK
+
 	local nodes = {}
 
 	for pi = 1, #self.paths do
@@ -641,6 +684,7 @@ function path_db:load_curves(name)
 
 	if not is_file(fn) then
 		log.debug("Level paths file does not exist for %s", fn)
+
 		data = {
 			connections = {},
 			curves = {},
@@ -652,6 +696,7 @@ function path_db:load_curves(name)
 
 		if err then
 			log.error("Error loading path curves for %s: %s", fn, err)
+
 			return nil
 		end
 
@@ -679,7 +724,7 @@ function path_db:generate_paths(pi)
 		-- block empty
 		else
 			if not curve.beziers then
-				return 
+				return
 			end
 
 			local path_points = {{}, {}, {}}
@@ -701,16 +746,20 @@ function path_db:generate_paths(pi)
 
 				while t + tstep < 1 do
 					t = t + tstep
+
 					local px, py = bezier:evaluate(t)
 
 					if PATH_POINTS_DISTANCE <= V.len(px - lpx, py - lpy) then
 						table.insert(path_points[1], V.v(km.round(px), km.round(py)))
+
 						local w = w1 + (w4 - w1) * t
 						local wx, wy = V.perpendicular(V.normalize(bezier_d:evaluate(t)))
 						local s1x, s1y = V.mul(w * 0.5, wx, wy)
 						local s2x, s2y = V.mul(-w * 0.5, wx, wy)
+
 						table.insert(path_points[2], V.v(km.round(s1x + px), km.round(s1y + py)))
 						table.insert(path_points[3], V.v(km.round(s2x + px), km.round(s2y + py)))
+
 						lpx, lpy = px, py
 					end
 				end

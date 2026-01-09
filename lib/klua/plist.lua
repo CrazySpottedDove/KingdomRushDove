@@ -7,6 +7,7 @@ local xplist = {}
 function plist:parse(buffer)
 	if buffer == nil or string.len(buffer) < 6 then
 		log.error("Buffer is nil or too small")
+
 		return nil
 	end
 
@@ -14,14 +15,17 @@ function plist:parse(buffer)
 
 	if buffer:sub(1, 6) == "bplist" then
 		log.debug("binary parsing...")
+
 		ref = bplist
 		parser = bplist.parse
 	elseif buffer:sub(1, 5) == "<?xml" then
 		log.debug("xml parsing...")
+
 		ref = xplist
 		parser = xplist.parse
 	else
 		log.error("Unknown buffer header")
+
 		return nil
 	end
 
@@ -31,6 +35,7 @@ function plist:parse(buffer)
 		return result
 	else
 		log.error("Error parsing buffer: %s", result)
+
 		return nil
 	end
 end
@@ -40,6 +45,7 @@ local XS = require("xmlSimple")
 function xplist:parse(buf)
 	local x = XS.newParser():ParseXmlText(buf)
 	local xt = self:dict2table(x.plist.dict)
+
 	return xt
 end
 
@@ -63,10 +69,12 @@ function xplist:dict2table(x)
 
 		if x:name() == "dict" then
 			local i, v
+
 			i, v = next(x:children(), i)
 
 			while i do
 				local ck = v:value()
+
 				i, v = next(x:children(), i)
 				o[ck] = self:dict2table(v)
 				i, v = next(x:children(), i)
@@ -131,6 +139,7 @@ local function r_uint(s, off, len)
 	end
 
 	result = tonumber(result)
+
 	return result
 end
 
@@ -156,6 +165,7 @@ local function r_int(s, off, len)
 	end
 
 	result = tonumber(result)
+
 	return result
 end
 
@@ -188,6 +198,7 @@ local function r_float(s, off, len)
 		end
 	else
 		log.error("real numbers of length %s not supported", len)
+
 		return 0
 	end
 end
@@ -201,6 +212,7 @@ bplist.offset_table_offset = 0
 
 function bplist:parse(buf)
 	self.buf = buf
+
 	local out = {}
 
 	if not buf or string.len(buf) < 6 then
@@ -208,6 +220,7 @@ function bplist:parse(buf)
 	end
 
 	local magic_str = r_str(buf, 0, 6)
+
 	log.debug("magic_number:%s", magic_str)
 
 	if magic_str ~= "bplist" then
@@ -215,14 +228,17 @@ function bplist:parse(buf)
 	end
 
 	local trailer = buf:len() - 32
+
 	log.debug("trailer offset: %x", trailer)
 	log.debug("trailer offset_size: %x", r_uint(buf, trailer + 6, 1))
+
 	self.offset_table = {}
 	self.offset_size = r_uint(buf, trailer + 6, 1)
 	self.object_ref_size = r_uint(buf, trailer + 7, 1)
 	self.num_objects = r_uint(buf, trailer + 8, 8)
 	self.top_object = r_uint(buf, trailer + 16, 8)
 	self.offset_table_offset = r_uint(buf, trailer + 24, 8)
+
 	log.debug("offset_size: %x", self.offset_size)
 	log.debug("object_ref_size: %x", self.object_ref_size)
 	log.debug("num_objects: %x", self.num_objects)
@@ -231,21 +247,27 @@ function bplist:parse(buf)
 
 	for i = 0, self.num_objects do
 		local offset_bytes = r_uint(buf, self.offset_table_offset + i * self.offset_size, self.offset_size)
+
 		self.offset_table[i] = offset_bytes
 	end
 
 	out = self:parse_object(self.top_object)
+
 	return out
 end
 
 function bplist:parse_object(table_offset)
 	log.paranoid("parse_object(%s)", table_offset)
+
 	local buf = self.buf
 	local start_pos = self.offset_table[table_offset]
+
 	assert(start_pos ~= nil, string.format("start_pos is nil for table_offset:%x", table_offset))
+
 	local h = r_uint(buf, start_pos, 1)
 	local obj_type = bit.rshift(h, 4)
 	local obj_info = bit.band(h, 15)
+
 	log.paranoid(" start_pos:%x obj_type:%x obj_info:%x", start_pos, obj_type, obj_info)
 
 	if obj_type == 0 and obj_info == 0 then
@@ -266,6 +288,7 @@ function bplist:parse_object(table_offset)
 		end
 	elseif obj_type == 2 then
 		local length = 2 ^ obj_info
+
 		return r_float(buf, start_pos + 1, length)
 	elseif obj_type == 3 then
 		if obj_info ~= 3 then
@@ -287,6 +310,7 @@ function bplist:parse_object(table_offset)
 
 			local intInfo = bit.band(int_type, 15)
 			local intLength = 2 ^ intInfo
+
 			data_offset = 2 + intLength
 			length = r_int(buf, start_pos + 2, intLength)
 		end
@@ -330,9 +354,11 @@ function bplist:parse_object(table_offset)
 		end
 
 		length = length * 2
+
 		return r_ustr(buf, start_pos + strOffset, length)
 	elseif obj_type == 8 then
 		local length = obj_info + 1
+
 		return r_uint(buf, start_pos + 1, length)
 	elseif obj_type == 10 then
 		local length = obj_info
@@ -387,9 +413,12 @@ function bplist:parse_object(table_offset)
 			local valOff = start_pos + dictOffset + length * self.object_ref_size + i * self.object_ref_size
 			local keyRef = r_uint(buf, keyOff, self.object_ref_size)
 			local valRef = r_uint(buf, valOff, self.object_ref_size)
+
 			log.paranoid("  keyOff:%x keyRef:%s  valOff:%x valRef:%s", keyOff, keyRef, valOff, valRef)
+
 			local key = self:parse_object(keyRef)
 			local val = self:parse_object(valRef)
+
 			dict[key] = val
 		end
 

@@ -1,19 +1,19 @@
 local log=require("lib.klua.log"):new("level20")
 local km=require("lib.klua.macros")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local P=require("path_db")
-require("constants")
+require("all.constants")
 local function fts(v)
 return v/FPS
 end
 local level={}
 function level:load(store)
-return 
+return
 end
 function level:update(store)
 while store.wave_group_number<1 do

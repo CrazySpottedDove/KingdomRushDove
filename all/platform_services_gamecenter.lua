@@ -1,9 +1,11 @@
 -- chunkname: @./all/platform_services_gamecenter.lua
 require("lib.klua.string")
+
 local log = require("lib.klua.log"):new("platform_services_gamecenter")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local gamecenter = {}
+
 gamecenter.can_be_paused = false
 gamecenter.update_interval = 2
 gamecenter.signal_handlers = {
@@ -20,10 +22,11 @@ gamecenter.signal_handlers = {
 		end
 	}
 }
-
 gamecenter.lib = nil
 gamecenter.inited = false
+
 local ffi = require("ffi")
+
 ffi.cdef("bool  gkw_initialize(void);\nvoid  gkw_shutdown(void);\nint   gkw_get_status(void);\nint   gkw_get_request_status(int rid);\nvoid  gkw_delete_request(int rid);\nbool  gkw_ach_unlock(const char* name);\nbool  gkw_ach_reset_all(void);\nconst char* gkw_ach_get_cached(void);\nint   gkw_create_request_ach_sync(void);\nvoid  gkw_ach_show(void);\nvoid  gkw_lb_submit_score(const char* board_id, int score);\nvoid  gkw_lb_show_board(const char* board_id);\n")
 
 function gamecenter:init(name, params)
@@ -34,6 +37,7 @@ function gamecenter:init(name, params)
 
 		if not self.lib then
 			log.error("Error loading kgamekit library")
+
 			return false
 		end
 
@@ -41,6 +45,7 @@ function gamecenter:init(name, params)
 
 		if not self.inited then
 			log.error("Error initializing kgamekit")
+
 			return false
 		end
 
@@ -49,6 +54,7 @@ function gamecenter:init(name, params)
 
 			if not ids then
 				log.error("data.platform_services_ids missing")
+
 				return nil
 			end
 
@@ -56,6 +62,7 @@ function gamecenter:init(name, params)
 
 			if not ids[ids_key] then
 				log.error("data.platform_services_ids for %s not found", ids_key)
+
 				return nil
 			end
 
@@ -106,6 +113,7 @@ end
 
 function gamecenter:get_install_dir()
 	local o = love.filesystem.getUserDirectory() .. ".config"
+
 	return o
 end
 
@@ -116,7 +124,9 @@ end
 function gamecenter:get_request_status(rid)
 	if self.inited then
 		local result = self.lib.gkw_get_request_status(rid)
+
 		log.paranoid("get_request_status(%s) = %s", rid, result)
+
 		return result
 	end
 
@@ -125,7 +135,7 @@ end
 
 function gamecenter:cancel_request(rid)
 	if not rid then
-		return 
+		return
 	end
 
 	self.prq:remove(rid)
@@ -136,24 +146,26 @@ function gamecenter:cancel_request(rid)
 end
 
 function gamecenter:do_signin()
-	return 
+	return
 end
 
 function gamecenter:do_signout()
-	return 
+	return
 end
 
 function gamecenter:unlock_achievement(ach_id, defer_store)
 	if not self.inited then
 		log.error("kgamekit not initialized")
-		return 
+
+		return
 	end
 
 	local gkw_ach_id = self.ids.achievements[ach_id]
 
 	if not gkw_ach_id then
 		log.error("gkw achievement id missing for %s", ach_id)
-		return 
+
+		return
 	end
 
 	self.lib.gkw_ach_unlock(gkw_ach_id)
@@ -163,7 +175,7 @@ end
 function gamecenter:sync_achievements()
 	local function cb_sync_achievements(status, req)
 		if not self.prq:contains(req.id) then
-			return 
+			return
 		end
 
 		local success
@@ -183,10 +195,12 @@ function gamecenter:sync_achievements()
 
 	if rid < 0 then
 		log.error("error creating request to sync achievements")
+
 		return nil
 	end
 
 	self.prq:add(rid, "sync_achievements", cb_sync_achievements)
+
 	return rid
 end
 
@@ -208,7 +222,8 @@ end
 function gamecenter:reset_achievements()
 	if not self.inited then
 		log.error("kgamekit not initialized")
-		return 
+
+		return
 	end
 
 	self.lib.gkw_ach_reset_all()
@@ -224,7 +239,8 @@ function gamecenter:show_leaderboard(level_idx, diff_idx)
 
 	if not board_id then
 		log.error("gps leaderboard id missing for level_idx: %s", level_idx)
-		return 
+
+		return
 	end
 
 	self.lib.gkw_lb_show_board(board_id)
@@ -235,7 +251,8 @@ function gamecenter:submit_score(level_idx, diff_idx, score)
 
 	if not board_id then
 		log.error("gps leaderboard id missing for level_idx: %s", level_idx)
-		return 
+
+		return
 	end
 
 	self.lib.gkw_lb_submit_score(board_id, score)

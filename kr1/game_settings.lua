@@ -1,5 +1,7 @@
 -- chunkname: @./kr1/game_settings.lua
+require("all.constants")
 local GS = {}
+
 GS.archer_towers = {
 	"tower_archer_1",
 	"tower_archer_2",
@@ -33,7 +35,8 @@ GS.mage_towers = {
 	"tower_necromancer_lvl4",
 	"tower_ray_lvl4",
 	"tower_elven_stargazers_lvl4",
-	"tower_arcane_wizard_lvl4"
+	"tower_arcane_wizard_lvl4",
+	"tower_hermit_toad_lvl4"
 }
 GS.engineer_towers = {
 	"tower_engineer_1",
@@ -49,7 +52,8 @@ GS.engineer_towers = {
 	"tower_tricannon_lvl4",
 	"tower_demon_pit_lvl4",
 	"tower_flamespitter_lvl4",
-	"tower_barrel_lvl4"
+	"tower_barrel_lvl4",
+	"tower_sparking_geode_lvl4"
 }
 GS.barrack_towers = {
 	"tower_barrack_1",
@@ -70,7 +74,9 @@ GS.barrack_towers = {
 	"tower_drow",
 	"tower_ewok",
 	"tower_baby_ashbite",
-	"tower_pandas_lvl4"
+	"tower_pandas_lvl4",
+	"tower_ghost_lvl4",
+	"tower_dwarf_lvl4"
 }
 GS.soldier_regen_factor = 0.2
 GS.gameplay_tips_count = 21
@@ -811,4 +817,5 @@ GS.wraith = {
 	soldier_tower_necromancer_skeleton_golem_lvl4 = true,
 	soldier_dragon_bone_ultimate_dog = true
 }
+
 return GS

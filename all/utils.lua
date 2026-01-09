@@ -1,6 +1,8 @@
 -- chunkname: @./all/utils.lua
 local log = require("lib.klua.log"):new("utils")
+
 require("lib.klua.table")
+
 local km = require("lib.klua.macros")
 local bit = require("bit")
 local bor = bit.bor
@@ -8,7 +10,11 @@ local band = bit.band
 local bnot = bit.bnot
 local V = require("lib.klua.vector")
 local P = require("path_db")
-require("constants")
+local GR = require("grid_db")
+local GS = require("kr1.game_settings")
+
+require("all.constants")
+
 local random = math.random
 local min = math.min
 local max = math.max
@@ -21,6 +27,7 @@ local PI = math.pi
 local U = {}
 --- Import Functions From Seek
 local seek = require("seek")
+
 U.calculate_enemy_ffe_pos = seek.calculate_enemy_ffe_pos
 U.find_foremost_enemy_in_range_filter_on = seek.find_foremost_enemy_in_range_filter_on
 U.find_foremost_enemy_in_range_filter_off = seek.find_foremost_enemy_in_range_filter_off
@@ -97,14 +104,17 @@ end
 function U.y_ease_keys(store, key_tables, key_names, froms, tos, duration, easings, fn)
 	local start_ts = store.tick_ts
 	local phase
+
 	easings = easings or {}
 
 	repeat
 		local dt = store.tick_ts - start_ts
+
 		phase = km.clamp(0, 1, dt / duration)
 
 		for i, t in ipairs(key_tables) do
 			local kn = key_names[i]
+
 			t[kn] = U.ease_value(froms[i], tos[i], phase, easings[i])
 		end
 
@@ -131,6 +141,7 @@ function U.y_ease_key(store, key_table, key_name, from, to, duration, easing, fn
 
 	repeat
 		local dt = store.tick_ts - start_ts
+
 		phase = km.clamp(0, 1, dt / duration)
 		key_table[key_name] = U.ease_value(from, to, phase, easing)
 
@@ -192,8 +203,10 @@ local easing_functions = {
 function U.ease_phase(phase, easing)
 	phase = km.clamp(0, 1, phase)
 	easing = easing or ""
+
 	local fn_name, first_ease = string.match(easing, "([^-]+)%-([^-]+)")
 	local fn = easing_functions[fn_name]
+
 	fn = fn or easing_functions.linear
 
 	if first_ease == "outin" then
@@ -220,6 +233,7 @@ end
 ---@return number 透明度值
 function U.hover_pulse_alpha(t)
 	local min, max, per = HOVER_PULSE_ALPHA_MIN, HOVER_PULSE_ALPHA_MAX, HOVER_PULSE_PERIOD
+
 	return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
 end
 
@@ -231,8 +245,10 @@ end
 ---@return boolean 是否在椭圆内
 function U.is_inside_ellipse(p, center, radius, aspect)
 	aspect = aspect or 0.7
+
 	local x = (p.x - center.x)
 	local y = (p.y - center.y) / aspect
+
 	return x * x + y * y <= radius * radius
 end
 
@@ -245,7 +261,9 @@ end
 function U.point_on_ellipse(center, a, angle, aspect)
 	aspect = aspect or 0.7
 	angle = angle or 0
+
 	local b = a * aspect
+
 	return {
 		x = center.x + a * cos(angle),
 		y = center.y + b * sin(angle)
@@ -261,6 +279,7 @@ end
 ---@return number 距离因子（0-1）
 function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
 	aspect = aspect or 0.7
+
 	local vx, vy = p.x - center.x, p.y - center.y
 	local angle = V.angleTo(vx, vy)
 	local a = radius
@@ -271,6 +290,7 @@ function U.dist_factor_inside_ellipse(p, center, radius, min_radius, aspect)
 	if min_radius then
 		local ma, mb = min_radius, min_radius * aspect
 		local mab_len = V.len(ma * cos(angle), mb * sin(angle))
+
 		return km.clamp(0, 1, (v_len - mab_len) / (ab_len - mab_len))
 	else
 		return km.clamp(0, 1, v_len / ab_len)
@@ -306,6 +326,7 @@ end
 ---@param force_ts boolean? 是否强制设置时间戳（可选）
 function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
 	loop = (loop == -1 or loop == true) and true or false
+
 	local first, last
 
 	if idx then
@@ -346,6 +367,7 @@ end
 function U.animation_finished(entity, idx, times)
 	idx = idx or 1
 	times = times or 1
+
 	local a = entity.render.sprites[idx]
 
 	if a.loop then
@@ -378,6 +400,7 @@ end
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_for_angle(e, group, angle, idx)
 	idx = idx or 1
+
 	local a = e.render.sprites[idx]
 	local angles = a.angles and a.angles[group] or nil
 
@@ -414,6 +437,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
 
 		if stickiness and quadrant then
 			local skew = stickiness * ((quadrant == 1 or quadrant == 3) and 1 or -1)
+
 			a1, a3 = a1 - skew, a3 - skew
 			a2, a4 = a2 + skew, a4 + skew
 		end
@@ -459,6 +483,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 
 	if e.nav_path and use_path then
 		local npos = P:node_pos(e.nav_path)
+
 		fx, fy = npos.x, npos.y
 	else
 		fx, fy = e.pos.x, e.pos.y
@@ -469,6 +494,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 	end
 
 	local angle = km.unroll(atan2(point.y - fy, point.x - fx))
+
 	return U.animation_name_for_angle(e, group, angle, idx)
 end
 
@@ -498,6 +524,7 @@ end
 function U.animation_start_group(entity, name, flip_x, ts, loop, group)
 	if not group then
 		U.animation_start(entity, name, flip_x, ts, loop)
+
 		return
 	end
 
@@ -543,17 +570,20 @@ end
 function U.y_animation_play_group(entity, name, flip_x, ts, times, group)
 	if not group then
 		U.y_animation_play(entity, name, flip_x, ts, times)
+
 		return
 	end
 
 	-- local loop = times and times > 1
 	U.animation_start_group(entity, name, flip_x, ts, times and times > 1, group)
+
 	local idx
 	local sprites = entity.render.sprites
 
 	for i = 1, #sprites do
 		if sprites[i].group == group then
 			idx = i
+
 			break
 		end
 	end
@@ -572,6 +602,7 @@ end
 function U.y_animation_wait_group(entity, group, times)
 	if not group then
 		U.y_animation_wait(entity, nil, times)
+
 		return
 	end
 
@@ -580,6 +611,7 @@ function U.y_animation_wait_group(entity, group, times)
 
 		if s.group == group then
 			U.y_animation_wait(entity, i, times)
+
 			break
 		end
 	end
@@ -616,7 +648,9 @@ function U.sprites_hide(entity, from, to, keep)
 	end
 
 	from = from or 1
+
 	local sprites = entity.render.sprites
+
 	to = to or #sprites
 
 	for i = from, to do
@@ -715,6 +749,7 @@ function U.walk(e, dt, accel, unsnapped)
 
 		m.speed.x, m.speed.y = 0, 0
 		m.arrived = true
+
 		return true
 	end
 
@@ -724,9 +759,11 @@ function U.walk(e, dt, accel, unsnapped)
 
 	local true_step = min(step, v_len)
 	local sx, sy = true_step * nx, true_step * ny
+
 	pos.x, pos.y = pos.x + sx, pos.y + sy
 	m.speed.x, m.speed.y = sx / dt, sy / dt
 	m.arrived = false
+
 	return false
 end
 
@@ -783,6 +820,7 @@ function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, b
 
 			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
 		end)
+
 		return soldiers[1]
 	end
 end
@@ -826,6 +864,7 @@ function U.find_nearest_enemy(store, origin, min_range, max_range, flags, bans, 
 		table.sort(targets, function(e1, e2)
 			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
 		end)
+
 		return targets[1], targets
 	end
 end
@@ -848,6 +887,7 @@ function U.find_nearest_target(entities, origin, min_range, max_range, flags, ba
 		table.sort(targets, function(e1, e2)
 			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
 		end)
+
 		return targets[1], targets
 	end
 end
@@ -920,6 +960,7 @@ end
 function U.find_random_target(entities, origin, min_range, max_range, flags, bans, filter_func)
 	flags = flags or 0
 	bans = bans or 0
+
 	local targets = table.filter(entities, function(k, v)
 		return not v.pending_removal and v.health and not v.health.dead and v.vis and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
 	end)
@@ -928,6 +969,7 @@ function U.find_random_target(entities, origin, min_range, max_range, flags, ban
 		return nil
 	else
 		local idx = random(1, #targets)
+
 		return targets[idx]
 	end
 end
@@ -943,6 +985,7 @@ end
 ---@return table? 随机敌人
 function U.find_random_enemy(store, origin, min_range, max_range, flags, bans, filter_func)
 	local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+
 	return enemies and enemies[random(1, #enemies)] or nil
 end
 
@@ -1015,12 +1058,14 @@ end
 ---@param count number 需要的敌人数量
 function U.has_enough_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func, count)
 	local enemies = U.find_enemies_in_range(store, origin, min_range, max_range, flags, bans, filter_func)
+
 	return enemies and #enemies >= count
 end
 
 local function nearest_to_goal_cmp(e1, e2)
 	local p1 = e1.enemy.nav_path
 	local p2 = e2.enemy.nav_path
+
 	return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
@@ -1039,6 +1084,7 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
 	max_path_dist = max_path_dist or 30
 	flags = flags or 0
 	bans = bans or 0
+
 	local result = {}
 	local nearest_nodes = P:nearest_nodes(origin.x, origin.y)
 
@@ -1063,6 +1109,7 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
 		return nil
 	else
 		table.sort(result, nearest_to_goal_cmp)
+
 		return result
 	end
 end
@@ -1214,7 +1261,9 @@ function U.find_entity_at_pos(entities, x, y, filter_func)
 
 	if #found > 0 then
 		local e = found[1]
+
 		log.paranoid("entity:%s template:%s", e.id, e.template_name)
+
 		return e
 	else
 		return nil
@@ -1283,6 +1332,7 @@ function U.attack_order(attacks)
 
 	for i = 1, #attacks do
 		local a = attacks[i]
+
 		table.insert(order, {
 			id = i,
 			chance = a.chance or 1,
@@ -1342,6 +1392,7 @@ function U.melee_slot_position(soldier, enemy, rank, back)
 	end
 
 	local soldier_pos = V.v(enemy.pos.x + (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x) * (soldier_on_the_right and 1 or -1), enemy.pos.y + enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
+
 	return soldier_pos, soldier_on_the_right
 end
 
@@ -1378,6 +1429,7 @@ function U.melee_slot_enemy_position(enemy, soldier, rank, back)
 	end
 
 	local enemy_pos = V.v(soldier.pos.x + (soldier.soldier.melee_slot.x + x_off + enemy.enemy.melee_slot_offset.x) * (enemy_on_the_right and 1 or -1), soldier.pos.y + soldier.soldier.melee_slot.y + y_off + enemy.enemy.melee_slot_offset.y)
+
 	return enemy_pos, enemy_on_the_right
 end
 
@@ -1389,6 +1441,7 @@ end
 ---@return table 位置坐标, table 中心点坐标
 function U.rally_formation_position(idx, barrack, count, angle_offset)
 	local pos
+
 	count = count or #barrack.soldiers
 	angle_offset = angle_offset or 0
 
@@ -1396,10 +1449,12 @@ function U.rally_formation_position(idx, barrack, count, angle_offset)
 		pos = V.vclone(barrack.rally_pos)
 	else
 		local a = 2 * PI / count
+
 		pos = U.point_on_ellipse(barrack.rally_pos, barrack.rally_radius, (idx - 1) * a - PI * 0.5 + angle_offset)
 	end
 
 	local center = V.vclone(barrack.rally_pos)
+
 	return pos, center
 end
 
@@ -1411,6 +1466,7 @@ function U.get_blocker(store, blocked)
 	if blocked.enemy and #blocked.enemy.blockers > 0 then
 		local blocker_id = blocked.enemy.blockers[1]
 		local blocker = store.entities[blocker_id]
+
 		return blocker
 	end
 
@@ -1424,6 +1480,7 @@ end
 function U.get_blocked(store, blocker)
 	local blocked_id = blocker.soldier.target_id
 	local blocked = store.entities[blocked_id]
+
 	return blocked
 end
 
@@ -1449,6 +1506,7 @@ end
 function U.is_blocked_valid(store, blocker)
 	local blocked_id = blocker.soldier.target_id
 	local blocked = store.entities[blocked_id]
+
 	return blocked and not blocked.health.dead and (not blocked.vis or bit.band(blocked.vis.bans, F_BLOCK) == 0)
 end
 
@@ -1476,6 +1534,7 @@ function U.dec_blocker(store, blocked, blocker_id)
 
 	if #blocked.enemy.blockers > 1 then
 		local last = table.remove(blocked.enemy.blockers)
+
 		table.insert(blocked.enemy.blockers, 1, last)
 	end
 end
@@ -1505,6 +1564,7 @@ function U.block_enemy(store, blocker, blocked)
 
 	if not table.keyforobject(blocked.enemy.blockers, blocker.id) then
 		table.insert(blocked.enemy.blockers, blocker.id)
+
 		blocker.soldier.target_id = blocked.id
 	end
 end
@@ -1606,7 +1666,12 @@ function U.predict_damage(entity, damage)
 	end
 
 	protection = km.clamp(0, 1, protection)
+
 	local rounded_damage = damage.value
+
+	if band(damage.damage_type, DAMAGE_STAB) ~= 0 then
+		rounded_damage = rounded_damage * 2
+	end
 
 	if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
 		rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
@@ -1682,9 +1747,11 @@ function U.find_next_level_in_ranges(ranges, cur)
 			if idx then
 				if idx < #r then
 					nex = r[idx + 1]
+
 					break
 				elseif ri < #ranges then
 					nex = ranges[ri + 1][1]
+
 					break
 				end
 			end
@@ -1693,9 +1760,11 @@ function U.find_next_level_in_ranges(ranges, cur)
 
 			if r1 == cur or r2 and r1 <= cur and cur < r2 then
 				nex = cur + 1
+
 				break
 			elseif r2 and cur == r2 and ri < #ranges then
 				nex = ranges[ri + 1][1]
+
 				break
 			end
 		end
@@ -1723,7 +1792,9 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, gene
 		end
 
 		table.insert(unlock_data.unlocked_levels, idx)
+
 		dirty = true
+
 		log.debug(">>> sanitizing : added level %s", idx)
 	end
 
@@ -1733,7 +1804,9 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, gene
 
 			if not levels[range[1]] then
 				levels[range[1]] = {}
+
 				table.insert(unlock_data.unlocked_levels, range[1])
+
 				dirty = true
 			end
 		end
@@ -1744,6 +1817,7 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, gene
 			for i = range[1], range[2] - 1 do
 				if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
 					sanitize_unlock(i + 1)
+
 					break
 				end
 			end
@@ -1807,8 +1881,10 @@ function U.push_bans(t, value, op)
 	end
 
 	local row = {op, value}
+
 	table.insert(t._bans_stack, row)
 	rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+
 	return row
 end
 
@@ -1854,6 +1930,7 @@ function U.get_hero_level(xp, thresholds)
 	else
 		local this_xp = thresholds[level - 1] or 0
 		local next_xp = thresholds[level]
+
 		phase = (xp - this_xp) / (next_xp - this_xp)
 	end
 
@@ -2122,7 +2199,9 @@ function U.append_mod(entity, mod_name)
 	if entity.mod then
 		if type(entity.mod) == "table" then
 			entity.mods = entity.mod
+
 			table.insert(entity.mods, mod_name)
+
 			entity.mod = nil
 		else
 			entity.mods = {entity.mod, mod_name}
@@ -2130,6 +2209,7 @@ function U.append_mod(entity, mod_name)
 		end
 	else
 		entity.mods = entity.mods or {}
+
 		table.insert(entity.mods, mod_name)
 	end
 end
@@ -2176,6 +2256,7 @@ local function get_value(obj, path)
 	end
 
 	local val = obj
+
 	log.paranoid("values are " .. getfulldump(p))
 
 	for _, v in ipairs(p) do
@@ -2204,6 +2285,7 @@ function U.dynamic_format(tbl, s)
 
 			if f then
 				log.paranoid("index i " .. i .. " end " .. f)
+
 				local p = string.sub(s, i + 1, f - 2)
 				local v = get_value(tbl, p)
 
@@ -2238,6 +2320,7 @@ function U.balance_format(s)
 
 			if f then
 				log.paranoid("index i " .. i .. " end " .. f)
+
 				local p = string.sub(s, i + 1, f - 2)
 				local v = get_value(b, p)
 
@@ -2322,8 +2405,10 @@ function U.push_bans(t, value, op)
 	end
 
 	local row = {op, value}
+
 	table.insert(t._bans_stack, row)
 	rawset(t, "_bans_stack_value", U.calc_vis_stack(t._bans_stack))
+
 	return row
 end
 
@@ -2331,6 +2416,7 @@ function U.pop_bans(t, ref)
 	if not t._bans_stack then
 		if DEBUG then
 			log.error("error in pop_ban: nil _bans_stack for vis table %s", t)
+
 			return
 		else
 			return
@@ -2367,6 +2453,7 @@ end
 function U.splicing_from_kr(from_kr, str)
 	if from_kr and from_kr ~= 1 then
 		local kr = "kr" .. from_kr
+
 		return kr .. "_" .. str, kr
 	end
 
@@ -2475,6 +2562,7 @@ function U.flags_add(vis, mask)
 			end
 
 			vis.flags = gain_f(f_refs)
+
 			return
 		end
 	end
@@ -2503,6 +2591,7 @@ function U.flags_remove(vis, mask)
 			end
 
 			vis.flags = gain_f(f_refs)
+
 			return
 		end
 	end
@@ -2531,6 +2620,7 @@ function U.bans_add(vis, mask)
 			end
 
 			vis.bans = gain_f(f_refs)
+
 			return
 		end
 	end
@@ -2559,6 +2649,7 @@ function U.bans_remove(vis, mask)
 			end
 
 			vis.bans = gain_f(f_refs)
+
 			return
 		end
 	end
@@ -2578,6 +2669,60 @@ function U.find_first_target(entities, origin, min_range, max_range, flags, bans
 	end
 
 	return nil
+end
+
+--- 找到实体身上带有 bans 中任意标签的 mod
+---@param this table
+---@param bans number
+---@return table mod列表
+function U.find_modifiers_with_flags(this, bans)
+	local mods = this._applied_mods
+	local result = {}
+
+	if not mods then
+		return result
+	end
+
+	for i = 1, #mods do
+		local m = mods[i]
+
+		if band(m.modifier.vis_flags, bans) ~= 0 then
+			result[#result + 1] = m
+		end
+	end
+
+	return result
+end
+
+function U.valid_rally_node_nearby(pos)
+	return GR:cell_is_only(pos.x, pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and P:valid_node_nearby(pos.x, pos.y, nil, NF_RALLY)
+end
+
+function U.is_wraith(template_name)
+	return GS.wraith[template_name] == true
+end
+
+---获取所有塔位模板名
+---@return table
+function U.get_all_holder()
+	return {
+		"tower_holder",
+		"tower_holder_grass",
+		"tower_holder_snow",
+		"tower_holder_wasteland",
+		"tower_holder_blackburn",
+		"tower_holder_desert",
+		"tower_holder_jungle",
+		"tower_holder_elven_woods",
+		"tower_holder_faerie_grove",
+		"tower_holder_ancient_metropolis",
+		"tower_holder_hulking_rage",
+		"tower_holder_bittering_rancor",
+		"tower_holder_forgotten_treasures",
+		"tower_holder_blocked",
+		"tower_holder_blocked_jungle",
+		"tower_holder_blocked_underground"
+	}
 end
 
 return U

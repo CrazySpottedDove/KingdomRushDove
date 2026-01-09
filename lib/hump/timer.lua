@@ -1,10 +1,11 @@
 -- chunkname: @./lib/hump/timer.lua
 local log = require("lib.klua.log"):new("timer")
 local Timer = {}
+
 Timer.__index = Timer
 
 local function _nothing_()
-	return 
+	return
 end
 
 function Timer:update(dt)
@@ -12,11 +13,13 @@ function Timer:update(dt)
 
 	for handle in pairs(self.functions) do
 		handle.time = handle.time + dt
+
 		handle.during(dt, math.max(handle.limit - handle.time, 0))
 
 		while handle.time >= handle.limit and handle.count > 0 do
 			if handle.after(handle.after) == false then
 				handle.count = 0
+
 				break
 			end
 
@@ -42,7 +45,9 @@ function Timer:during(delay, during, after)
 		after = after or _nothing_,
 		limit = delay
 	}
+
 	self.functions[handle] = true
+
 	return handle
 end
 
@@ -59,7 +64,9 @@ function Timer:every(delay, after, count)
 		limit = delay,
 		count = count
 	}
+
 	self.functions[handle] = true
+
 	return handle
 end
 
@@ -73,6 +80,7 @@ end
 
 function Timer:script(f)
 	local co = coroutine.wrap(f)
+
 	co(function(t)
 		self:after(t, co)
 		coroutine.yield()
@@ -116,14 +124,17 @@ Timer.tween = setmetatable({
 	end,
 	back = function(s, bounciness)
 		bounciness = bounciness or 1.70158
+
 		return s * s * ((bounciness + 1) * s - bounciness)
 	end,
 	bounce = function(s)
 		local a, b = 7.5625, 0.36363636363636365
+
 		return math.min(a * s ^ 2, a * (s - 1.5 * b) ^ 2 + 0.75, a * (s - 2.25 * b) ^ 2 + 0.9375, a * (s - 2.625 * b) ^ 2 + 0.984375)
 	end,
 	elastic = function(s, amp, period)
 		amp, period = amp and math.max(1, amp) or 1, period or 0.3
+
 		return -amp * math.sin(2 * math.pi / period * (s - 1) - math.asin(1 / amp)) * 2 ^ (10 * (s - 1))
 	end
 }, {
@@ -131,11 +142,13 @@ Timer.tween = setmetatable({
 		local function tween_collect_payload(subject, target, out)
 			if type(target) ~= "table" then
 				log.error(target)
+
 				return {}
 			end
 
 			for k, v in pairs(target) do
 				local ref = subject[k]
+
 				assert(type(v) == type(ref), "Type mismatch in field \"" .. k .. "\".")
 
 				if type(v) == "table" then
@@ -144,7 +157,9 @@ Timer.tween = setmetatable({
 					local ok, delta = pcall(function()
 						return (v - ref) * 1
 					end)
+
 					assert(ok, "Field \"" .. k .. "\" does not support arithmetic operations")
+
 					out[#out + 1] = {subject, k, delta}
 				end
 			end
@@ -153,16 +168,21 @@ Timer.tween = setmetatable({
 		end
 
 		method = tween[method or "linear"]
+
 		local payload, t, args = tween_collect_payload(subject, target, {}), 0, {...}
 		local last_s = 0
+
 		return self:during(len, function(dt)
 			t = t + dt
+
 			local s = method(math.min(1, t / len), unpack(args))
 			local ds = s - last_s
+
 			last_s = s
 
 			for _, info in ipairs(payload) do
 				local ref, key, delta = unpack(info)
+
 				ref[key] = ref[key] + delta * ds
 			end
 		end, after)
@@ -189,6 +209,7 @@ Timer.tween = setmetatable({
 		end
 
 		local out, chain = rawget(tweens, "out"), rawget(tweens, "chain")
+
 		return construct("^in%-([^-]+)$", function(...)
 			return ...
 		end) or construct("^out%-([^-]+)$", out) or construct("^in%-out%-([^-]+)$", function(f)
@@ -226,6 +247,7 @@ module.tween = setmetatable({}, {
 		return default:tween(...)
 	end
 })
+
 return setmetatable(module, {
 	__call = Timer.new
 })

@@ -1,19 +1,26 @@
 -- chunkname: @./all/platform_services_firebase_m.lua
 local log = require("lib.klua.log"):new("platform_services_firebase_m")
+
 require("lib.klua.table")
 require("lib.klua.string")
-require("constants")
+require("all.constants")
+
 local fbm = {}
+
 fbm.can_be_paused = true
 fbm.update_interval = 5
 fbm.SRV_ID = 52
 fbm.SRV_DISPLAY_NAME = "Firebase Messaging"
+
 local proxy
 
 if KR_PLATFORM == "ios" then
 	local ffi = require("ffi")
+
 	ffi.cdef("bool kfb_m_init_service(void);\nconst char* kfb_m_get_messaging_token(void);\n")
+
 	local C = ffi.C
+
 	proxy = {
 		init_service = function(srvid)
 			if C.kfb_m_init_service() then
@@ -32,6 +39,7 @@ function fbm:init(name, params)
 	else
 		if KR_PLATFORM == "android" and not require("jni") then
 			log.error("%s requires jni.lua. not initialized", name)
+
 			return nil
 		end
 
@@ -40,6 +48,7 @@ function fbm:init(name, params)
 
 			if result ~= 1 then
 				log.error("%s native init failed", name)
+
 				return nil
 			end
 		end

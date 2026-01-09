@@ -1,8 +1,10 @@
 -- chunkname: @./all/storage_mappings.lua
 local log = require("lib.klua.log"):new("storage_mappings")
+
 require("lib.klua.string")
+
 local bit = require("bit")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local sm = {}
 
 function sm:append_pp_token(src, dst)
@@ -36,7 +38,8 @@ function sm:do_row(row, src, dst)
 
 	if not src_k or not dst_k then
 		log.error("src_k or dst_k are nil")
-		return 
+
+		return
 	end
 
 	local s_expr = "return src." .. src_k
@@ -44,29 +47,36 @@ function sm:do_row(row, src, dst)
 
 	if not fs then
 		log.error("error: parsing src_k. err:%s src_k:%s", err, src_k)
-		return 
+
+		return
 	end
 
 	local env = {}
+
 	env.src = src
+
 	setfenv(fs, env)
+
 	local ok, s_val = pcall(fs)
 
 	if not ok then
 		log.error("error evaluating source key %s expresion %s", src_k, s_expr)
-		return 
+
+		return
 	end
 
 	if not s_val then
 		log.debug("source key %s is nil, skipping.", src_k)
-		return 
+
+		return
 	end
 
 	local d_parts = string.split(string.gsub(string.gsub(dst_k, "]", ""), "%[", "."), ".")
 
 	if not d_parts or #d_parts == 0 then
 		log.error("error splitting dest key %s", dst_k)
-		return 
+
+		return
 	end
 
 	local t = dst
@@ -74,6 +84,7 @@ function sm:do_row(row, src, dst)
 	for i = 1, #d_parts - 1 do
 		local v = d_parts[i]
 		local vn = tonumber(v)
+
 		log.debug("  creating table tree key %s", v)
 
 		if vn then
@@ -101,6 +112,7 @@ function sm:do_row(row, src, dst)
 	end
 
 	t[last_k] = d_val
+
 	log.debug("  setting last table tree value %s = %s (source val:%s)", last_k, d_val, s_val)
 end
 
@@ -286,6 +298,7 @@ function sm.hero_code_to_name(input, output, args)
 		"hero_lilith",
 		"hero_wilbur"
 	}
+
 	return map[input]
 end
 

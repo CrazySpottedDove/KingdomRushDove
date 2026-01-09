@@ -34,7 +34,9 @@ local function read_assets_dir()
 	end
 
 	local dir = f:read("*l")
+
 	f:close()
+
 	return dir
 end
 
@@ -46,7 +48,9 @@ local function file_size(path)
 	end
 
 	local size = f:seek("end")
+
 	f:close()
+
 	return size or 0
 end
 
@@ -79,15 +83,19 @@ local function move_file(src, dst)
 
 	if not infile then
 		io.stderr:write("下载失败，未找到文件: " .. src .. "\n")
+
 		return false
 	end
 
 	local data = infile:read("*a")
+
 	infile:close()
+
 	local outfile = io.open(dst, "wb")
 
 	if not outfile then
 		io.stderr:write("无法写入目标文件: " .. dst .. "\n")
+
 		return false
 	end
 
@@ -95,10 +103,12 @@ local function move_file(src, dst)
 	outfile:close()
 	print(dst)
 	os.remove(src)
+
 	return true
 end
 
 print("正在检查本地多余或不匹配的资源...")
+
 local parent_dir = assets_dir:match("^(.*)[/\\][^/\\]+$") or "."
 local trashed_dir = parent_dir .. "/_trashed_assets"
 
@@ -152,6 +162,7 @@ trash_unindexed_assets()
 print("已迁移本地多余或不匹配的资源到" .. trashed_dir .. "目录")
 -- 1. 收集需要下载的文件
 print("正在检查需要下载的资源...")
+
 local download_batches = {} -- release -> { {path=..., filename=..., fullpath=...}, ... }
 
 for path, info in pairs(index) do
@@ -167,7 +178,9 @@ for path, info in pairs(index) do
 		end
 
 		local release = get_release_for_file(filename)
+
 		download_batches[release] = download_batches[release] or {}
+
 		table.insert(download_batches[release], {
 			path = path,
 			filename = filename,
@@ -177,21 +190,26 @@ for path, info in pairs(index) do
 end
 
 print("检查完毕，开始下载...")
+
 -- 2. 执行分批下载
 local tmpdir = "_assets/tmp_download"
+
 os.execute(string.format(mkdir_cmd_tpl, tmpdir))
 
 for release, files in pairs(download_batches) do
 	print(string.format("正在下载资源包 '%s' (%d 个文件)...", release, #files))
+
 	-- 构造 --pattern 参数
 	local patterns = {}
 
 	for _, f in ipairs(files) do
 		local quoted = '"' .. f.filename:gsub('"', '\\"') .. '"'
+
 		table.insert(patterns, quoted)
 	end
 
 	local cmd = string.format('gh release download %s -p %s --dir "%s" --clobber', release, table.concat(patterns, " -p "), tmpdir)
+
 	os.execute(cmd)
 
 	-- 逐个移动到目标目录

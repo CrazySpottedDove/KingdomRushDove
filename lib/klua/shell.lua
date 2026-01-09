@@ -1,9 +1,12 @@
 -- chunkname: @./lib/klua/shell.lua
 local klog = require("lib.klua.log"):new("klog.shell")
 local lfs = require("lfs")
+
 require("lib.klua.table")
 require("lib.klua.string")
+
 local shell = {}
+
 shell.DIR_SEP = "/"
 shell.DRY_RUN = nil
 
@@ -24,6 +27,7 @@ function shell.run(...)
 
 	if shell.DRY_RUN then
 		klog.error("dry run cmd: %s", cmd)
+
 		return true
 	end
 
@@ -42,6 +46,7 @@ function shell.run_no_fail(...)
 
 	if shell.DRY_RUN then
 		klog.error("dry run cmd: %s", cmd)
+
 		return true
 	end
 
@@ -59,7 +64,8 @@ function shell.runget(...)
 
 	if shell.DRY_RUN then
 		klog.error("dry run cmd: %s", cmd)
-		return 
+
+		return
 	end
 
 	local h = io.popen(cmd)
@@ -70,8 +76,11 @@ function shell.runget(...)
 	end
 
 	local out = h:read("*a")
+
 	out = string.gsub(out, "\n$", "")
+
 	h:close()
+
 	return out
 end
 
@@ -80,6 +89,7 @@ function shell.is_file(file)
 
 	if t == nil then
 		klog.debug("could not find file %s: %s", file, msg)
+
 		return false
 	else
 		return t.mode == "file"
@@ -91,6 +101,7 @@ function shell.is_dir(dir)
 
 	if t == nil then
 		klog.debug("could not find dir %s: %s", dir, msg)
+
 		return false
 	else
 		return t.mode == "directory"
@@ -135,7 +146,8 @@ function shell.echo(str, file, append)
 
 	if not h then
 		klog.error("echo error: could not open %s for writing", file)
-		return 
+
+		return
 	end
 
 	h:write(str)
@@ -147,11 +159,14 @@ function shell.read(file)
 
 	if not h then
 		klog.error("read error: could not open %s for reading", file)
-		return 
+
+		return
 	end
 
 	local out = h:read("*a")
+
 	h:close()
+
 	return out
 end
 
@@ -198,6 +213,7 @@ end
 
 function shell.zip(src, dst)
 	local cwd = lfs.currentdir()
+
 	lfs.chdir(src)
 	klog.info("zipping \"%s\" to \"%s\"...", src, dst)
 	shell.run("zip -9 -q -r %s .", dst)

@@ -4,13 +4,16 @@ local Registry = {}
 function Registry:__index(key)
 	return Registry[key] or (function()
 		local t = {}
+
 		rawset(self, key, t)
+
 		return t
 	end)()
 end
 
 function Registry:register(s, f)
 	self[s][f] = f
+
 	return f
 end
 

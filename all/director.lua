@@ -1,13 +1,15 @@
 -- chunkname: @./all/director.lua
 local log = require("lib.klua.log"):new("director")
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
+
 require("lib.klua.dump")
+
 local features = require("features")
 local i18n = require("i18n")
 local V = require("lib.klua.vector")
 local I = require("klove.image_db")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local SH = require("klove.shader_db")
 local KDB = require("klove.kui_db")
 local S = require("sound_db")
@@ -21,7 +23,7 @@ local PP = require("privacy_policy_consent")
 local storage = require("storage")
 local services = require("platform_services")
 local director_data = require("data.director_data")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local EXO = require("exoskeleton")
 
 local function replace_locale(list, locale)
@@ -29,6 +31,7 @@ local function replace_locale(list, locale)
 
 	for _, v in pairs(list) do
 		local ns = string.gsub(v, "LOCALE", locale or i18n.current_locale)
+
 		table.insert(out, ns)
 	end
 
@@ -41,6 +44,7 @@ director.item_props = director_data.item_props
 function director:init(params)
 	KDB:init(KR_PATH_GAME_TARGET .. "/data/kui_templates" .. ";" .. KR_PATH_ALL_TARGET .. "/data/kui_templates", DEBUG)
 	SH:init(KR_PATH_ASSETS_ALL_TARGET .. "/shaders", true)
+
 	local sound_paths = KR_PATH_ASSETS_GAME_FALLBACK or {{
 		path = KR_PATH_ASSETS_GAME_TARGET
 	}}
@@ -50,11 +54,13 @@ function director:init(params)
 
 		if love.filesystem.getInfo(p .. "/sounds.lua") then
 			S:init(p)
+
 			break
 		end
 	end
 
 	I.use_canvas = params.image_db_uses_canvas
+
 	RC:init()
 	AC:init()
 
@@ -71,13 +77,14 @@ function director:init(params)
 	end
 
 	self.params = params
+
 	self:reset_screen_params()
 
 	if params.locale then
 		main:set_locale(params.locale)
-		-- love.window.setTitle(_("GAME_TITLE_" .. string.upper(KR_GAME)))
-		love.window.setTitle(version.title .. version.id)
 	end
+
+	love.window.setTitle(version.title .. version.id)
 
 	if features.overrides and (table.contains(features.overrides, "censored_cn") or table.contains(features.overrides, "yodo1sdk")) then
 		BLOOD_RED = BLOOD_GRAY
@@ -85,6 +92,7 @@ function director:init(params)
 
 	if KR_TARGET == "phone" and KR_PLATFORM == "android" then
 		local filename = "/data/data/" .. version.bundle_id .. "/files/.Defaults.plist"
+
 		storage:import_plist(filename)
 	elseif KR_TARGET == "desktop" and KR_GAME == "kr1" and services.services then
 		local dir
@@ -133,6 +141,7 @@ function director:init(params)
 	if KR_TARGET == "desktop" then
 		if params.screen == "game_editor" then
 			local c = love.mouse.newCursor(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/crosshair.png", 16, 16)
+
 			love.mouse.setCursor(c)
 		else
 			local cursor_name = "hand_32"
@@ -143,6 +152,7 @@ function director:init(params)
 
 			self.cursor_up = love.mouse.newCursor(string.format(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/%s_0001.png", cursor_name), 3, 2)
 			self.cursor_down = love.mouse.newCursor(string.format(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/%s_0002.png", cursor_name), 3, 2)
+
 			love.mouse.setCursor(self.cursor_up)
 		end
 	end
@@ -163,13 +173,16 @@ function director:get_texture_scale(item_name, ref_res, forced_texture_size)
 	end
 
 	log.debug("item:%s ref_res:%s texture_size:%s forced_texture_size:%s-> scale:%s", item_name, ref_res, self.params.texture_size, forced_texture_size, scale)
+
 	return scale
 end
 
 function director:reset_screen_params(force_scissor)
 	local params = self.params
 	local aw, ah = love.graphics.getDimensions()
+
 	params.width, params.height = aw, ah
+
 	local screen_aspect = params.width / params.height
 	local max_aspect = MAX_SCREEN_ASPECT
 	local min_aspect = MIN_SCREEN_ASPECT
@@ -192,6 +205,7 @@ function director:reset_screen_params(force_scissor)
 
 	if force_scissor ~= nil then
 		log.info("forcing scissor value to %s", force_scissor)
+
 		self.scissor_enabled = force_scissor
 	end
 
@@ -201,6 +215,7 @@ end
 function director:item_done_callback(item_name, outcome)
 	if self.active_item and self.active_item.done_callback_called then
 		log.error("  Done callback already called... Ignoring!")
+
 		return
 	end
 
@@ -224,10 +239,12 @@ function director:item_done_callback(item_name, outcome)
 	if outcome then
 		if outcome.quit then
 			self:quit()
+
 			return
 		elseif outcome.next_item_name then
 			self.next_item_name = outcome.next_item_name
 			self.next_item_args = outcome
+
 			return
 		elseif outcome.prevent_loading then
 			self.next_item_prevent_loading = true
@@ -241,7 +258,9 @@ function director:item_done_callback(item_name, outcome)
 
 		if outcome.simple_privacy_policy_accepted then
 			local global = storage:load_global()
+
 			global.simple_privacy_policy_accepted = true
+
 			storage:save_global(global)
 		end
 
@@ -253,10 +272,12 @@ function director:item_done_callback(item_name, outcome)
 
 	if item_name == "comics" then
 		self.queued_item = self.active_item.game_item
+
 		return
 	end
 
 	local props = self.item_props[item_name]
+
 	::label_6_0::
 
 	if props.next then
@@ -264,12 +285,15 @@ function director:item_done_callback(item_name, outcome)
 
 		if props_next and props_next.skip_check and director.skip_checks[props_next.skip_check] and director.skip_checks[props_next.skip_check]() then
 			log.debug("skipping screen %s. %s passed", props.next, props_next.skip_check)
+
 			props = props_next
+
 			goto label_6_0
 		end
 
 		self.next_item_name = props.next
 		self.next_item_args = {}
+
 		return
 	end
 end
@@ -277,14 +301,18 @@ end
 function director:unload_item(item)
 	if not item then
 		log.debug("item nil")
+
 		return
 	end
 
 	if item.item_name == "game" then
 		local game = item
+
 		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), self.params.texture_size, game.game_gui.ref_res, "game_gui")
+
 		local groups = {}
 		local scaled_groups = {}
+
 		groups = table.append(groups, replace_locale(game.required_textures))
 		groups = table.append(groups, replace_locale(game.store.level.required_textures))
 		scaled_groups = table.append(scaled_groups, replace_locale(game.scale_required_textures))
@@ -295,6 +323,7 @@ function director:unload_item(item)
 			for _, data in pairs(hero_data) do
 				local hero = data.name
 				local hero_textures = {"go_" .. hero}
+
 				groups = table.append(groups, hero_textures)
 			end
 		elseif game.store.selected_hero then
@@ -338,7 +367,9 @@ function director:unload_item(item)
 		end
 
 		game:destroy()
+
 		game.store = nil
+
 		collectgarbage()
 	elseif not item.keep_loaded then
 		local textures = item.required_textures
@@ -372,11 +403,14 @@ function director:queue_load_item_named(name, force_reload)
 		end
 
 		local r = require(name)
+
 		r.locale_at_requirement = i18n.current_locale
+
 		return r
 	end
 
 	local props = self.item_props[name]
+
 	self:reset_screen_params(props and props.scissor)
 
 	if DBG_REPLACE_MISSING_TEXTURES then
@@ -412,12 +446,14 @@ function director:queue_load_item_named(name, force_reload)
 
 		loading:init(self.params.width, self.params.height)
 		loading:close()
+
 		self.queue_unload_item = self.active_item
 		self.active_item = loading
 	end
 
 	if props.type == "screen" then
 		local item = _require(props.src, self.next_item_args and self.next_item_args.force_reload)
+
 		item.item_name = name
 		item.args = self.next_item_args
 
@@ -438,18 +474,24 @@ function director:queue_load_item_named(name, force_reload)
 		local args = self.next_item_args
 		local comic_idx = args.custom
 		local item = _require("screen_comics")
+
 		item.item_name = "comics"
 		item.required_textures = {"loading_common", "kr3_comic", "kr2_comic"}
 		item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
+
 		self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true)
+
 		self.queued_item = item
 	elseif props.type == "game" then
 		-- 进入游戏的加载环节
 		local game_gui = _require("game_gui")
 		local game = _require("game")
+
 		game.item_name = "game"
 		game.max_fps = DRAW_FPS
+
 		local args = self.next_item_args
+
 		game.store = {}
 		game.store.level_idx = args.level_idx
 		game.store.level_name = "level" .. string.format("%02i", args.level_idx)
@@ -465,6 +507,7 @@ function director:queue_load_item_named(name, force_reload)
 		end
 
 		game.store.criket = storage:load_criket()
+
 		local criket = game.store.criket
 
 		if criket and criket.on then
@@ -489,6 +532,7 @@ function director:queue_load_item_named(name, force_reload)
 			for _, data in pairs(hero_data) do
 				local hero = data.name
 				local hero_textures = {"go_" .. hero}
+
 				self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
 				self:load_sound_groups({hero})
 			end
@@ -499,6 +543,7 @@ function director:queue_load_item_named(name, force_reload)
 				for _, hero in pairs(slot.heroes.selected) do
 					if hero then
 						local hero_textures = {"go_" .. hero}
+
 						self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
 						self:load_sound_groups({hero})
 					end
@@ -509,11 +554,14 @@ function director:queue_load_item_named(name, force_reload)
 		if game.store.level.show_comic_idx and game.store.level_mode == GAME_MODE_CAMPAIGN then
 			local comic_idx = game.store.level.show_comic_idx
 			local item = _require("screen_comics")
+
 			item.item_name = "comics"
 			item.required_textures = {"comic_" .. comic_idx}
 			item.level_idx = game.store.level_idx
 			item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
+
 			self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true, "comic")
+
 			self.queued_item = item
 			item.game_item = game
 			self.queued_item = game
@@ -540,7 +588,9 @@ function director:unload_texture_groups(groups, texture_size, ref_height, item_n
 
 					if love.filesystem.getInfo(texture_path .. "/" .. group .. ".lua") then
 						log.debug(" --- texture group %s fallback to %s", group, texture_path)
+
 						forced_texture_size = v.texture_size
+
 						break
 					end
 				end
@@ -577,6 +627,7 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
 
 				if love.filesystem.getInfo(ov_path .. "/" .. group .. ".lua") then
 					log.debug("  +++ texture group %s overriden by %s", group, n)
+
 					texture_path = ov_path
 				end
 			end
@@ -609,6 +660,7 @@ function director:update(dt)
 
 	if self.next_item_name then
 		self:queue_load_item_named(self.next_item_name, self.force_reload)
+
 		self.queued_item_init = false
 		self.queued_item_first_draw = false
 		self.last_item_name = self.next_item_name
@@ -617,13 +669,13 @@ function director:update(dt)
 	end
 
 	if self.active_item then
-		local ai = self.active_item
+		local active_item = self.active_item
 
-		if ai.limit_fps then
-			ai.next_frame_ts = ai.limit_fps and ai.next_frame_ts + 1 / ai.limit_fps or nil
+		if active_item.limit_fps then
+			active_item.next_frame_ts = active_item.limit_fps and active_item.next_frame_ts + 1 / active_item.limit_fps or nil
 		end
 
-		ai:update(dt)
+		active_item:update(dt)
 	end
 
 	local ai = self.active_item
@@ -634,6 +686,7 @@ function director:update(dt)
 	else
 		if self.queue_unload_item and (not aits or aits == "closed") then
 			self:unload_item(self.queue_unload_item)
+
 			self.queue_unload_item = nil
 		end
 
@@ -651,10 +704,13 @@ function director:update(dt)
 					end
 
 					self.queued_item:init(self.params.width, self.params.height, cb)
+
 					self.queued_item.done_callback_called = nil
 					self.queued_item_init = true
 					self.queued_item_first_draw = false
+
 					self.queued_item:update(2 * TICK_LENGTH)
+
 					goto label_14_0
 				end
 
@@ -663,6 +719,7 @@ function director:update(dt)
 						goto label_14_0
 					elseif ai.transition_state == "closed" and self.queued_item_first_draw then
 						ai:open()
+
 						goto label_14_0
 					elseif ai.transition_state == "opening" then
 						goto label_14_0
@@ -670,10 +727,13 @@ function director:update(dt)
 				end
 
 				self:unload_item(self.active_item)
+
 				self.active_item = self.queued_item
 				self.queued_item = nil
 				self.queued_item_init = nil
+
 				signal.emit(SGN_DIRECTOR_ITEM_SHOWN, self.active_item.item_name, self.active_item)
+
 				local item = self.active_item
 				local fps
 
@@ -693,6 +753,7 @@ function director:update(dt)
 
 	if ISM then
 		local state = self.active_item and self.active_item.get_ism_state and self.active_item:get_ism_state()
+
 		ISM:update(dt, state)
 	end
 
@@ -711,6 +772,7 @@ function director:draw()
 			self.queue_unload_item:draw()
 		elseif self.queued_item and self.queued_item_init then
 			self.queued_item:draw()
+
 			self.queued_item_first_draw = true
 		end
 
@@ -734,6 +796,7 @@ function director:limit_fps()
 	if current_ts >= deadline then
 		-- 已经超时了，直接进入下一帧
 		ai.next_frame_ts = current_ts
+
 		return
 	end
 
@@ -763,6 +826,7 @@ end
 function director:keypressed(key, isrepeat)
 	if key == "tab" and love.window.getFullscreen() and love.system.getOS() == "OS X" and (love.keyboard.isDown("lgui") or love.keyboard.isDown("rgui")) then
 		love.window.minimize()
+
 		return
 	end
 
@@ -774,6 +838,7 @@ function director:keypressed(key, isrepeat)
 			game:reload_gui()
 		else
 			log.error("FORCING RELOAD OF %s", self.last_item_name)
+
 			self.force_reload = true
 			self.next_item_name = self.last_item_name
 		end
@@ -787,6 +852,7 @@ function director:keypressed(key, isrepeat)
 
 	if ISM then
 		local state = self.active_item and self.active_item.get_ism_state and self.active_item:get_ism_state()
+
 		ISM:proc_key(state, key, isrepeat)
 	end
 end

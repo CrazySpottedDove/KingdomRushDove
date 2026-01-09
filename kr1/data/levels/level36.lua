@@ -1,5 +1,5 @@
 local log=require("lib.klua.log"):new("level10")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local km=require("lib.klua.macros")
 local bit=require("bit")
 local bor=bit.bor
@@ -12,7 +12,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
-require("constants")
+require("all.constants")
 local function fts(v)
 return v/FPS
 end
@@ -174,7 +174,7 @@ while store.tick_ts-start_ts<30 do
 if U.y_wait(store,self.volcano_bomb_delay,function(store)
 return store.waves_finished and not LU.has_alive_enemies(store)
 end) then
-return 
+return
 end
 local targets=U.find_soldiers_in_range(store.soldiers,V.v(0,0),0,1000000000,F_RANGED,F_FLYING)
 if not targets or #targets<1 then

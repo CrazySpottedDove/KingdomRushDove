@@ -3,9 +3,11 @@ local log = require("lib.klua.log"):new("marketing")
 local PS = require("platform_services")
 local RC = require("remote_config")
 local storage = require("storage")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
+
 require("lib.klua.table")
-require("constants")
+require("all.constants")
+
 marketing = {}
 marketing.signal_handlers = {
 	[SGN_PS_PURCHASE_PRODUCT_FINISHED] = function(service_name, success, product_id)
@@ -13,13 +15,15 @@ marketing.signal_handlers = {
 
 		if success then
 			marketing:md_inc("purchases_count")
+
 			local o = PS.services.iap:get_product(product_id)
 
 			if o then
 				marketing:md_set_table("offers_purchased", product_id, os.time())
 				marketing:md_set("last_offer_purchase_time", os.time())
 				marketing:md_set("last_offer_purchase_session", marketing:md_get("session_count"))
-				return 
+
+				return
 			end
 		end
 	end,
@@ -47,6 +51,7 @@ end
 
 function marketing:load_marketing_data()
 	local global = storage:load_global()
+
 	return global.marketing or {}
 end
 
@@ -63,11 +68,13 @@ end
 
 function marketing:md_get(key)
 	local md = self:load_marketing_data()
+
 	return md[key]
 end
 
 function marketing:md_get_table(tablekey, key)
 	local md = self:load_marketing_data()
+
 	return md[tablekey] and md[tablekey][key] or nil
 end
 
@@ -79,12 +86,15 @@ function marketing:md_inc(name)
 	end
 
 	md[name] = md[name] + 1
+
 	self:save_marketing_data(md)
 end
 
 function marketing:md_set(key, value)
 	local md = self:load_marketing_data()
+
 	md[key] = value
+
 	self:save_marketing_data(md)
 end
 
@@ -96,6 +106,7 @@ function marketing:md_set_table(tablekey, key, value)
 	end
 
 	md[tablekey][key] = value
+
 	self:save_marketing_data(md)
 end
 
@@ -107,6 +118,7 @@ marketing.offer_condition_checks = {
 		for _, inc_name in pairs(offer.includes) do
 			if table.contains(heroes_on_sale, inc_name) ~= cond_bool then
 				includes = true
+
 				break
 			end
 		end
@@ -121,6 +133,7 @@ marketing.offer_condition_checks = {
 
 			if p and p.owned then
 				includes = true
+
 				break
 			end
 		end
@@ -143,43 +156,53 @@ marketing.offer_condition_checks = {
 	offer_was_shown = function(offer, cond_bool)
 		local md = marketing:load_marketing_data()
 		local shown = md.offers_shown and md.offers_shown[offer.id] and md.offers_shown[offer.id] > 0 or false
+
 		return shown == cond_bool
 	end,
 	offer_was_purchased = function(offer, cond_value)
 		local p = PS.services.iap:get_product(offer.id)
+
 		return (p and p.owned or false) == cond_value
 	end,
 	player_made_purchases = function(offer, cond_bool)
 		local md = marketing:load_marketing_data()
 		local made_purchases = md.purchases_count and md.purchases_count > 0
+
 		return made_purchases == cond_bool
 	end,
 	player_reached_level = function(offer, cond_number)
 		local slot = storage:load_slot()
+
 		return slot and slot.levels and slot.levels[cond_number]
 	end,
 	player_reached_sessions = function(offer, cond_number)
 		local md = marketing:load_marketing_data()
+
 		return md.session_count and cond_number <= md.session_count
 	end,
 	player_reached_stars = function(offer, cond_number)
 		local slot = storage:load_slot()
+
 		return slot and cond_number <= storage:get_slot_progress(slot)
 	end,
 	seconds_elapsed_since_any_offer_purchased = function(offer, cond_number)
 		local p_time = marketing:md_get("last_offer_purchase_time")
+
 		return not p_time or cond_number < os.difftime(os.time(), p_time)
 	end,
 	seconds_elapsed_since_any_offer_shown = function(offer, cond_number)
 		local s_time = marketing:md_get("last_offer_show_time")
+
 		return not s_time or cond_number < os.difftime(os.time(), s_time)
 	end,
 	sessions_passed_since_offer_purchased = function(offer, cond_number)
 		local md = marketing:load_marketing_data()
+
 		return not md.last_offer_purchase_session or cond_number <= md.session_count - md.last_offer_purchase_session
 	end,
 	sessions_passed_since_offer_shown = function(offer, cond_number)
 		local md = marketing:load_marketing_data()
+
 		return not md.last_offer_show_session or cond_number <= md.session_count - md.last_offer_show_session
 	end
 }
@@ -187,14 +210,16 @@ marketing.offer_condition_checks = {
 function marketing:get_candidate_offers(persistent)
 	if not PS.services.iap then
 		log.error("IAP not available")
-		return 
+
+		return
 	end
 
 	local offers_available = PS.services.iap:get_offers()
 
 	if not offers_available or #offers_available < 1 then
 		log.debug("offers not defined or empty")
-		return 
+
+		return
 	end
 
 	local candidate_offers = {}
@@ -227,6 +252,7 @@ function marketing:get_candidate_offers(persistent)
 							log.error("condition check named %s not found for offer %s", cond_name, id)
 						elseif cond_value ~= "any" and not check_fn(od, cond_value) then
 							log.debug("offer %s failed to pass condition %s %s", id, cond_name, cond_value)
+
 							goto label_25_0
 						end
 					end
@@ -240,6 +266,7 @@ function marketing:get_candidate_offers(persistent)
 	end
 
 	log.debug(" candidate offers: %s", getdump(candidate_offers))
+
 	return candidate_offers
 end
 
@@ -248,7 +275,9 @@ function marketing:patch_offer_prices(od)
 
 	for _, inc_name in pairs(od.includes) do
 		local p = PS.services.iap:get_product(inc_name)
+
 		old_price = old_price + (p.price_micros or 0)
+
 		log.debug("  adding to old price:%s", p.price_micros)
 	end
 
@@ -273,14 +302,16 @@ end
 function marketing:get_active_offer()
 	if not PS.services.iap then
 		log.error("IAP not available")
-		return 
+
+		return
 	end
 
 	local offers_available = PS.services.iap:get_offers()
 
 	if not offers_available or #offers_available < 1 then
 		log.debug("offers not defined or empty")
-		return 
+
+		return
 	end
 
 	local id = self:md_get("active_offer")
@@ -292,6 +323,7 @@ function marketing:get_active_offer()
 		log.debug("offer %s expired, invalid, disabled or purchased.", id)
 		self:md_set("active_offer", nil)
 		self:md_set("active_offer_expiration", nil)
+
 		return nil
 	else
 		local offer = PS.services.iap:get_product(id)
@@ -299,6 +331,7 @@ function marketing:get_active_offer()
 
 		if offer then
 			od = table.deepclone(offer)
+
 			self:patch_offer_prices(od)
 		end
 
@@ -310,8 +343,10 @@ function marketing:set_active_offer(offer)
 	local defaults = RC.v.default_offer_params or {}
 	local duration = offer.seconds_icon_is_visible or defaults.seconds_icon_is_visible or 0
 	local exp_time = os.time() + duration
+
 	marketing:md_set("active_offer", offer.id)
 	marketing:md_set("active_offer_expiration", exp_time)
+
 	return exp_time
 end
 

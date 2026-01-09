@@ -10,6 +10,7 @@ local function read_assets_dir()
 	end
 
 	local dir = f:read("*l")
+
 	f:close()
 
 	if not dir or dir == "" then
@@ -70,6 +71,7 @@ end
 local function to_relpath(fullpath, basedir)
 	-- 去掉末尾的斜杠或反斜杠
 	basedir = basedir:gsub("[/\\]+$", "")
+
 	local rel = fullpath:sub(#basedir + 2)
 
 	if sys == "windows" then
@@ -97,6 +99,7 @@ local function list_files(dir)
 	end
 
 	p:close()
+
 	return files
 end
 
@@ -108,7 +111,9 @@ local function file_size(path)
 	end
 
 	local size = f:seek("end")
+
 	f:close()
+
 	return size or 0
 end
 
@@ -133,6 +138,7 @@ for _, path in ipairs(list_files(assets_dir)) do
 
 	if ext and allowed_exts[ext:lower()] then
 		local relpath = to_relpath(path, assets_dir)
+
 		assets[relpath] = {
 			size = file_size(path)
 		}
@@ -155,10 +161,12 @@ else
 end
 
 local f = io.open("_assets/assets_index.lua", "w")
+
 f:write("return {\n")
 
 for _, path in ipairs(paths) do
 	local info = assets[path]
+
 	f:write(string.format("    [\"%s\"] = { size = %d},\n", path, info.size))
 end
 

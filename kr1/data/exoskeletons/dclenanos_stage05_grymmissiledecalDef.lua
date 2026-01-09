@@ -1,1 +1,1 @@
-return {animations={{frames={{{1,1,0.328125,32.65,19.5,0.83706665039063,0.89996337890625,3.1415926535898,-0,0}}};name="decal"}};attach_points={};fps=30;parts={{"dclenanos_stage05_grymmissiledecal_asst_grym3_ray_grow_mark",40.05,21.8}};partScaleCompensation=1}
+return {animations={{frames={{{1,1,0.328125,32.65,19.5,0.83706665039063,0.89996337890625,3.1415926535898,-0,0}}},name="decal"}},attach_points={},fps=30,parts={{"dclenanos_stage05_grymmissiledecal_asst_grym3_ray_grow_mark",40.05,21.8}},partScaleCompensation=1}

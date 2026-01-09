@@ -1,12 +1,13 @@
 -- chunkname: @./all/platform_services_utils.lua
 local log = require("lib.klua.log"):new("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local storage = require("storage")
 local psu = {}
 
 function psu:new_prq()
 	local t = {}
 	local mt = {}
+
 	mt.__index = {
 		add = function(this, rid, kind, callback, timeout)
 			local item = {
@@ -16,19 +17,25 @@ function psu:new_prq()
 				ts = love.timer.getTime(),
 				timeout = timeout
 			}
+
 			rawset(this, rid, item)
+
 			return item
 		end,
 		remove = function(this, rid)
 			local item = rawget(this, rid)
+
 			rawset(this, rid, nil)
+
 			return item
 		end,
 		contains = function(this, rid)
 			return rawget(this, rid) ~= nil
 		end
 	}
+
 	setmetatable(t, mt)
+
 	return t
 end
 
@@ -39,6 +46,7 @@ function psu:load_library(name, ffi)
 		return ffi.C
 	else
 		local lib_name = self:get_library_file(name)
+
 		return ffi.load(lib_name)
 	end
 end
@@ -88,14 +96,16 @@ end
 function psu:deliver_rewards(rewards)
 	if not rewards then
 		log.debug("rewards empty. skipping")
-		return 
+
+		return
 	end
 
 	local slot = storage:load_slot()
 
 	if not slot then
 		log.error("error giving ad reward. slot could not be loaded")
-		return 
+
+		return
 	end
 
 	if rewards.items then

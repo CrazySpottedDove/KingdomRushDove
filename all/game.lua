@@ -1,18 +1,18 @@
 -- chunkname: @./all/game.lua
 local log = require("lib.klua.log"):new("game")
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local V = require("hump.vector-light")
 local U = require("utils")
 local RU = require("render_utils")
 local I = require("klove.image_db")
 local E = require("entity_db")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local P = require("path_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local UP = require("upgrades")
 local AC = require("achievements")
 local PS = require("platform_services")
@@ -20,7 +20,9 @@ local simulation = require("simulation")
 local game_gui = require("game_gui")
 local G = love.graphics
 local bit = require("bit")
-require("constants")
+
+require("all.constants")
+
 game = {}
 game.required_textures = {
 	"go_decals",
@@ -39,7 +41,13 @@ game.required_textures = {
 	"go_towers_rocket_gunners",
 	"go_towers_flamespitter",
 	"go_towers_ballista",
-	"go_towers_barrel"
+	"go_towers_barrel",
+	"go_towers_hermit_toad",
+	"go_towers_sparking_geode",
+	"go_towers_dwarf",
+	"go_towers_ghost",
+	"go_towers_paladin_covenant",
+	"go_towers_arborean_emissary"
 }
 game.scale_required_textures = {}
 game.ref_h = REF_H
@@ -63,7 +71,13 @@ game.required_sounds = {
 	"tower_rocket_gunners",
 	"tower_flamespitter",
 	"tower_ballista",
-	"tower_barrel"
+	"tower_barrel",
+	"tower_hermit_toad",
+	"tower_sparking_geode",
+	"tower_dwarf",
+	"tower_ghost",
+	"tower_paladin_covenant",
+	"tower_arborean_emissary"
 }
 game.simulation_systems = {
 	"level",
@@ -99,6 +113,7 @@ function game:init(screen_w, screen_h, done_callback)
 	self.screen_h = screen_h
 	self.done_callback = done_callback
 	self.path_lines = {}
+
 	local aspect = screen_w / screen_h
 
 	if aspect < MIN_SCREEN_ASPECT then
@@ -108,14 +123,18 @@ function game:init(screen_w, screen_h, done_callback)
 	end
 
 	self.game_ref_origin = V.v((screen_w - self.ref_w * self.game_scale) * 0.5, (screen_h - self.ref_h * self.game_scale) * 0.5)
+
 	local panext = self.store.level.pan_extension
 	local visible_h = REF_H
 	local visible_w = math.ceil(self.screen_w * self.ref_h / self.screen_h)
+
 	visible_w = km.clamp(REF_H * 4 / 3, REF_H * 16 / 9, visible_w)
+
 	local v_left = (self.ref_w - visible_w) * 0.5
 	local v_right = self.ref_w + (visible_w - self.ref_w) * 0.5
 	local v_top = (panext and panext.top or 0) + visible_h
 	local v_bottom = panext and panext.bottom or 0
+
 	self.store.visible_coords = {
 		top = v_top,
 		left = v_left,
@@ -150,7 +169,9 @@ function game:init(screen_w, screen_h, done_callback)
 		zoom = zoom or this.zoom
 		x = x or this.x
 		y = y or this.y
+
 		this:cancel_tween(timer)
+
 		this.tweener = timer:tween(time, this, {
 			x = x,
 			y = y,
@@ -163,16 +184,22 @@ function game:init(screen_w, screen_h, done_callback)
 	function self.camera.cancel_tween(this, timer)
 		if this.tweener then
 			timer:cancel(this.tweener)
+
 			this.tweener = nil
 		end
 	end
 
 	-- end
 	RU.init()
+
 	self.store.ephemeral = {}
+
 	simulation:init(self.store, self.simulation_systems)
+
 	self.simulation = simulation
+
 	game_gui:init(screen_w, screen_h, self)
+
 	self.game_gui = game_gui
 	-- 允许 store 层影响 game_gui
 	self.store.game_gui = game_gui
@@ -188,10 +215,14 @@ end
 if DEBUG then
 	function game:reload_gui()
 		self.game_gui:destroy()
+
 		local i18n = require("i18n")
+
 		main:set_locale(i18n.current_locale)
+
 		package.loaded.game_gui = nil
 		self.game_gui = require("game_gui")
+
 		self.game_gui:init(self.screen_w, self.screen_h, self)
 
 		if self.store.main_hero then
@@ -204,6 +235,7 @@ function game:restart()
 	self.store.restarted = true
 	self.store.restart_count = (self.store.restart_count or 0) + 1
 	self.store.ephemeral = {}
+
 	self.simulation:init(self.store, self.simulation_systems)
 	self.game_gui:init(self.screen_w, self.screen_h, self)
 	S:stop_all()
@@ -219,7 +251,9 @@ end
 
 function game:destroy()
 	self.game_gui:destroy()
+
 	self.game_gui = nil
+
 	RU.destroy()
 end
 
@@ -228,10 +262,13 @@ function game:update_debug(dt)
 		for k, ts in pairs(self.auto_send_list) do
 			if game.store.tick_ts - ts > self.auto_send_interval then
 				self.auto_send_list[k] = game.store.tick_ts
+
 				local e = E:create_entity(k)
+
 				e.nav_path.pi = self.dbg_active_pi
 				e.nav_path.spi = self.dbg_use_random_subpath and math.random(1, 3) or 1
 				e.nav_path.ni = P:get_start_node(self.dbg_active_pi)
+
 				self.simulation:queue_insert_entity(e)
 			end
 		end
@@ -240,7 +277,7 @@ end
 
 function game:init_debug()
 	if not DEBUG then
-		return 
+		return
 	end
 
 	DEBUG_KEYS_ON = true
@@ -261,19 +298,13 @@ function game:init_debug()
 	self.auto_send_interval = 5
 	self.dbg_use_random_subpath = true
 	package.loaded["data.game_debug_data"] = nil
+
 	local data = require("data.game_debug_data")
+
 	self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[self.store.level_idx] or data.default_page_for_terrain[self.store.level_terrain_type] or 1
 	self.enemy_pages = data.enemy_pages
 	self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
 	self.dbg_active_pi = 1
-
-	if localuser_game_init then
-		localuser_game_init()
-	end
-
-	if custom_script and custom_script.game_init then
-		custom_script:game_init()
-	end
 end
 
 local tick_length_limit = TICK_LENGTH * 1.1
@@ -290,18 +321,12 @@ function game:update(dt)
 		self:update_debug(dt)
 	end
 
-	-- if self.DBG_TIME_MULT then
-	-- 	for i = 1, self.DBG_TIME_MULT do
-	-- 		self.simulation:update(dt)
-	-- 	end
-	-- else
-	-- 	self.simulation:update(dt)
-	-- end
 	if click_state.active then
 		local now = love.timer.getTime()
 
 		if now - click_state.press_time > click_state.threshold then
 			local sx, sy = love.mouse.getPosition()
+
 			self.camera.x = self.camera.x - sx + click_state.x
 			self.camera.y = self.camera.y - sy + click_state.y
 			click_state.x = sx
@@ -321,8 +346,10 @@ function game:update(dt)
 
 	while d.to > TICK_LENGTH do
 		d.to = d.to - TICK_LENGTH
+
 		self.simulation:update(d.dt)
 		self.game_gui:update(d.dt)
+
 		d.step = false
 	end
 end
@@ -350,18 +377,22 @@ function game:mousepressed(x, y, button, istouch)
 	click_state.press_time = love.timer.getTime()
 	click_state.x = x
 	click_state.y = y
+
 	self.game_gui:mousepressed(x, y, button, istouch)
 end
 
 function game:mousereleased(x, y, button, istouch)
 	click_state.active = false
+
 	self.game_gui:mousereleased(x, y, button, istouch)
 end
 
 function game:wheelmoved(dx, dy)
 	if self.camera then
 		local old_zoom = self.camera.zoom
+
 		self.camera.zoom = self.camera.zoom * (1 + dy * 0.1)
+
 		self.camera:clamp()
 	end
 
@@ -403,6 +434,7 @@ function game:touchmoved(id, x, y, dx, dy, pressure)
 		x = x,
 		y = y
 	}
+
 	local points = self._touch_points
 	local ids = {}
 
@@ -432,7 +464,9 @@ function game:touchmoved(id, x, y, dx, dy, pressure)
 				-- 以两指中心为缩放中心
 				local old_zoom = self.camera.zoom
 				local ratio = old_zoom / new_zoom
+
 				self.camera.zoom = new_zoom
+
 				self.camera:clamp()
 			end
 		end
@@ -504,6 +538,7 @@ end
 function game:draw_enemy_pages()
 	local function print_sh(str, x, y, color)
 		color = color and color or {255, 255, 255}
+
 		G.setColor(0, 0, 0)
 		G.print(str, x + 1, y + 1)
 		G.setColor_old(unpack(color))
@@ -512,23 +547,33 @@ function game:draw_enemy_pages()
 	end
 
 	local sw, sh, scale, origin = SU.clamp_window_aspect(self.screen_w, self.screen_h, self.screen_w, self.screen_h)
+
 	G.setColor(0, 0, 0, 0.392)
 	G.rectangle("fill", origin.x + 5, self.screen_h * 0.5 - 5, 270, self.screen_h / 3)
+
 	local names = self.enemy_pages[self.current_enemy_page]
 	local x, y = math.floor(origin.x + 10), self.screen_h * 0.5
+
 	G.setFont(F:f("DroidSansMono", 13))
 
 	for i, n in ipairs(names) do
 		local key = self.enemy_keys[i]
+
 		print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and {255, 100, 100} or {255, 255, 255})
+
 		y = y + 12
 	end
 
 	G.setColor(1, 1, 1)
+
 	y = y + 12
+
 	print_sh("[: prev page", x, y)
+
 	y = y + 12
+
 	print_sh("]: next page", x, y)
+
 	y = y + 12
 
 	if self.DBG_AUTO_SEND then
@@ -538,30 +583,45 @@ function game:draw_enemy_pages()
 	end
 
 	y = y + 12
+
 	print_sh(string.format(";: use random subpath: %s", self.dbg_use_random_subpath), x, y)
+
 	y = y + 12
+
 	print_sh(string.format(":: remove existing mods: %s", self.DBG_REMOVE_EXISTING_MODS), x, y)
+
 	y = y + 12
+
 	print_sh(string.format("+/-: auto send time (%s sec)", self.auto_send_interval), x, y)
 
 	if self.store.game_outcome then
 		y = y + 12
+
 		print_sh("Lives checking OFF (store.game_outcome set)", x, y)
 	end
 
 	y = y + 12
+
 	print_sh(string.format("z/Z: time warp (%sx)", self.DBG_TIME_MULT), x, y)
+
 	y = y + 12
+
 	print_sh(string.format("f9/f10: enemy speed factor (%sx)", GS.difficulty_enemy_speed_factor[self.store.level_difficulty]), x, y)
+
 	y = y + 12
+
 	print_sh(string.format("DEBUG KEYS ARE %s", DEBUG_KEYS_ON and "ON" or "OFF"), x, y)
+
 	y = y + 12
+
 	print_sh(string.format("Frame: %if", self.store.tick_ts * FPS), x, y)
 
 	if self.store._lap_start then
 		y = y + 12
+
 		local sta = self.store._lap_start
 		local sto = self.store._lap_stop or 0
+
 		print_sh(string.format(",/.: Chrono: %i->%i=%if (%.2fs)", sta * FPS, sto * FPS, (sto - sta) * FPS, sto - sta), x, y)
 	end
 end
@@ -584,14 +644,18 @@ if DEBUG then
 		local function apply_modifier(name, e)
 			if e then
 				local m = E:create_entity(name)
+
 				m.modifier.target_id = e.id
 				m.pos = V.vclone(e.pos)
+
 				self.simulation:queue_insert_entity(m)
 			else
 				for _, e in pairs(self.store.enemies) do
 					local m = E:create_entity(name)
+
 					m.modifier.target_id = e.id
 					m.pos = V.vclone(e.pos)
+
 					self.simulation:queue_insert_entity(m)
 				end
 			end
@@ -651,22 +715,28 @@ if DEBUG then
 
 				if ctrl and shift and e.health then
 					local damage = E:create_entity("damage")
+
 					damage.value = e.health.hp
 					damage.target_id = e.id
 					damage.damage_type = bit.bor(DAMAGE_EAT)
+
 					table.insert(self.store.damage_queue, damage)
 				elseif shift and e.health then
 					local damage = E:create_entity("damage")
+
 					damage.value = math.floor(0.9 * e.health.hp - 1)
 					damage.target_id = e.id
+
 					table.insert(self.store.damage_queue, damage)
 				elseif ctrl and e.health then
 					e.health.hp = e.health.hp_max
 				elseif e.health then
 					local damage = E:create_entity("damage")
+
 					damage.value = e.health.hp
 					damage.target_id = e.id
 					damage.damage_type = DAMAGE_TRUE
+
 					table.insert(self.store.damage_queue, damage)
 				end
 			end
@@ -698,9 +768,12 @@ if DEBUG then
 					level_mode = game.store.level_mode,
 					level_difficulty = game.store.level_difficulty
 				}
+
 				game.store.game_outcome = outcome
+
 				signal.emit("game-victory", game.store)
 				signal.emit("game-victory-after", game.store)
+
 				return true
 			elseif shift then
 				if self.store.lives > 1 then
@@ -753,6 +826,7 @@ if DEBUG then
 				if self.game_gui.window:get_child_by_id("bag_contents_view") then
 					for _, v in pairs(self.game_gui.window:get_child_by_id("bag_contents_view").children) do
 						v:enable()
+
 						v:ci("bag_item_qty").text = 9999
 						slot.bag[v.item] = 9999
 					end
@@ -793,9 +867,11 @@ if DEBUG then
 			end
 		elseif key == "f9" then
 			GS.difficulty_enemy_speed_factor[self.store.level_difficulty] = GS.difficulty_enemy_speed_factor[self.store.level_difficulty] - 0.01
+
 			log.debug(" decrement speed factor")
 		elseif key == "f10" then
 			GS.difficulty_enemy_speed_factor[self.store.level_difficulty] = GS.difficulty_enemy_speed_factor[self.store.level_difficulty] + 0.01
+
 			log.debug(" increment speed factor")
 		else
 			return false
@@ -809,10 +885,13 @@ function game:front_draw_debug(rox, roy, gs)
 	if self.DBG_DRAW_PATHS and not self.path_canvas then
 		local node_size = 2
 		local point_size = 3
+
 		G.push()
 		G.translate(rox, roy)
 		G.scale(gs, gs)
+
 		self.path_canvas = G.newCanvas()
+
 		G.setCanvas(self.path_canvas)
 
 		for pi, p in ipairs(P.paths) do
@@ -837,12 +916,15 @@ function game:front_draw_debug(rox, roy, gs)
 		G.translate(rox, REF_H * gs + roy)
 		G.scale(gs, -gs)
 		G.translate(GR.ox, GR.oy)
+
 		self.grid_canvas = G.newCanvas()
+
 		G.setCanvas(self.grid_canvas)
 
 		for i = 1, #GR.grid do
 			for j = 1, #GR.grid[i] do
 				local t = GR.grid[i][j]
+
 				G.setColor_old(GR.grid_colors[t] or {100, 100, 100})
 				G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
 			end
@@ -884,10 +966,12 @@ function game:front_draw_debug(rox, roy, gs)
 			if e.barrack then
 				local b = e.barrack
 				local s = E:get_template(b.soldier_type)
+
 				G.setColor(0.392, 0.392, 1, 0.392)
 
 				if s.melee then
 					local range = s.melee.range
+
 					G.ellipse("fill", b.rally_pos.x, REF_H - b.rally_pos.y, range, range * ASPECT)
 				end
 			end
@@ -924,14 +1008,17 @@ function game:front_draw_debug(rox, roy, gs)
 		G.push()
 		G.translate(rox, roy)
 		G.scale(gs, gs)
+
 		local e = game.game_gui.selected_entity or self.dbg_last_selected_entity
 
 		if e then
 			self.dbg_last_selected_entity = e
+
 			local range = e.attacks and e.attacks.range
 
 			if range then
 				range = range * (e.attacks.prediction_range_factor or 1)
+
 				local pos = e.pos
 
 				if e.tower and e.tower.range_offset then
@@ -944,6 +1031,7 @@ function game:front_draw_debug(rox, roy, gs)
 
 				if e.attacks and e.attacks.range_check_factor then
 					local f = e.attacks.range_check_factor
+
 					G.setColor_old(100, 100, 255, 60)
 					G.setLineWidth(3)
 					G.ellipse("line", pos.x, REF_H - pos.y, f * range, f * range * ASPECT)
@@ -959,10 +1047,12 @@ function game:front_draw_debug(rox, roy, gs)
 		G.push()
 		G.translate(rox, roy)
 		G.scale(gs, gs)
+
 		local e = game.game_gui.selected_entity or self.dbg_last_selected_entity
 
 		if e then
 			self.dbg_last_selected_entity = e
+
 			local range, min_range
 
 			if e.ranged then
@@ -1041,7 +1131,9 @@ function game:after_draw_debug(rox, roy, gs)
 		for _, e in pairs(self.store.entities) do
 			if e.ui then
 				G.setColor_old(255, 255, 0, 70)
+
 				local rect = e.ui.click_rect
+
 				G.rectangle("fill", e.pos.x + rect.pos.x, REF_H - (e.pos.y + rect.pos.y), rect.size.x, -rect.size.y)
 			end
 		end
@@ -1055,11 +1147,13 @@ function game:after_draw_debug(rox, roy, gs)
 		G.translate(rox, roy)
 		G.scale(gs, gs)
 		G.setFont(F:f("DroidSansMono", 18))
+
 		local towers = {}
 
 		for _, e in pairs(self.store.entities) do
 			if e.ui and e.ui.nav_mesh_id then
 				towers[tonumber(e.ui.nav_mesh_id)] = e
+
 				G.setColor_old(0, 0, 0, 255)
 				G.print(e.ui.nav_mesh_id, e.pos.x + 5, REF_H - e.pos.y - 8)
 				G.setColor_old(202, 202, 0, 255)
@@ -1070,6 +1164,7 @@ function game:after_draw_debug(rox, roy, gs)
 		G.setColor_old(0, 100, 255, 255)
 		G.setLineWidth(2)
 		G.translate(0, -10)
+
 		local ox, oy = 40, 15
 		local ax, ay = 40, 15
 
@@ -1107,6 +1202,7 @@ function game:after_draw_debug(rox, roy, gs)
 
 		local s2 = 10
 		local s3 = 15
+
 		G.setColor_old(0, 0, 200, 255)
 
 		for h_id, row in pairs(self.store.level.nav_mesh) do
@@ -1238,6 +1334,7 @@ function game:draw_dark_foreground(rox, roy, gs)
 		if self.store and self.store.lights then
 			for _, l in pairs(self.store.lights) do
 				local _, uy = game_gui:g2u(l.pos)
+
 				love.graphics.circle("fill", l.pos.x, uy, l.radius)
 			end
 		end
@@ -1245,6 +1342,7 @@ function game:draw_dark_foreground(rox, roy, gs)
 		local x, y = game_gui.window:get_mouse_position()
 		local ux, uy = game_gui.window:screen_to_view(x, y)
 		local gx = game_gui:u2g(vec_2(ux, uy))
+
 		love.graphics.circle("fill", gx, uy, 50)
 	end, "replace", 1)
 	-- 仅在 stencil 值为 0 的区域绘制暗色覆盖层（被抠出的圆形保持亮）
@@ -1267,6 +1365,7 @@ function game:draw_path(rox, roy, gs)
 		-- 初始化路径数据
 		local path_data = {}
 		local total_length = 0
+
 		self.dash_start_offset = self.dash_start_offset or 0
 		self.dash_start_offset = (self.dash_start_offset + 0.4 * 120 / DRAW_FPS) % (dash_length + gap_length)
 
@@ -1276,7 +1375,9 @@ function game:draw_path(rox, roy, gs)
 
 			for spi, sp in ipairs(P.paths[self.shown_path]) do
 				self.path_lines[self.shown_path][spi] = {}
+
 				local len = 0
+
 				self.path_lines[self.shown_path][spi][1] = 0
 
 				for ni = 2, #sp do
@@ -1284,6 +1385,7 @@ function game:draw_path(rox, roy, gs)
 					local o2 = sp[ni]
 					local dx, dy = o2.x - o1.x, o2.y - o1.y
 					local seg_len = math.sqrt(dx * dx + dy * dy)
+
 					len = len + seg_len
 					self.path_lines[self.shown_path][spi][ni] = len
 				end
@@ -1297,6 +1399,7 @@ function game:draw_path(rox, roy, gs)
 
 		if not self.path_canvas then
 			self.path_canvas = G.newCanvas()
+
 			G.setCanvas(self.path_canvas)
 		else
 			G.setCanvas(self.path_canvas)
@@ -1320,7 +1423,9 @@ function game:draw_path(rox, roy, gs)
 			local y1 = REF_H - path[i - 1].y
 			local y2 = REF_H - path[i].y
 			local factor = (self.dash_start_offset - path_line[i - 1]) / (path_line[i] - path_line[i - 1])
+
 			G.line((x2 - x1) * factor + x1, (y2 - y1) * factor + y1, x2, y2)
+
 			local line_len = path_line[i] - self.dash_start_offset
 
 			-- 从第 i 个点开始往下画线
@@ -1351,6 +1456,7 @@ function game:draw_path(rox, roy, gs)
 							local y1 = REF_H - path[i].y
 							local x2 = path[i + 1].x
 							local y2 = REF_H - path[i + 1].y
+
 							G.line(x1, y1, x1 + (x2 - x1) * factor, y1 + (y2 - y1) * factor)
 						end
 					end
@@ -1370,7 +1476,9 @@ function game:draw_path(rox, roy, gs)
 					local y1 = REF_H - path[i - 1].y
 					local x2 = path[i].x
 					local y2 = REF_H - path[i].y
+
 					G.line(x2 - (x2 - x1) * factor, y2 - (y2 - y1) * factor, x2, y2)
+
 					line_len = line_len - dash_length - gap_length
 				end
 			end
@@ -1399,6 +1507,7 @@ function game:draw_speed_state(rox, roy, gs)
 
 	if not self.speed_state then
 		self.speed_state = G.newCanvas()
+
 		G.setCanvas(self.speed_state)
 	else
 		G.setCanvas(self.speed_state)
@@ -1408,9 +1517,11 @@ function game:draw_speed_state(rox, roy, gs)
 	local r = (math.sin(d.ts) + 1)
 	local g = (math.sin(d.ts + 2) + 1)
 	local b = (math.sin(d.ts + 4) + 1)
+
 	-- 180 / 255 = 0.7058823529411765
 	G.setColor(r, g, b, 0.7058823529411765)
 	G.setFont(self.cn_font)
+
 	-- local pos = vec_2(500, 500)
 	local pos = {
 		x = 120,
@@ -1454,29 +1565,30 @@ function game:draw_speed_state(rox, roy, gs)
 end
 
 -- 设定每多少帧绘制一次
-function game:on_interval_draw(draw_fn_name, interval, rox, roy, gs)
-	if not self.draw_count[draw_fn_name] then
-		self.draw_count[draw_fn_name] = interval
-	end
+-- function game:on_interval_draw(draw_fn_name, interval, rox, roy, gs)
+-- 	if not self.draw_count[draw_fn_name] then
+-- 		self.draw_count[draw_fn_name] = interval
+-- 	end
 
-	local count = self.draw_count[draw_fn_name]
+-- 	local count = self.draw_count[draw_fn_name]
 
-	if count >= interval then
-		self[draw_fn_name](self, rox, roy, gs)
-		count = 0
-	else
-		count = count + 1
-	end
+-- 	if count >= interval then
+-- 		self[draw_fn_name](self, rox, roy, gs)
 
-	self.draw_count[draw_fn_name] = count
-end
+-- 		count = 0
+-- 	else
+-- 		count = count + 1
+-- 	end
+
+-- 	self.draw_count[draw_fn_name] = count
+-- end
 
 function game:draw_game()
 	local d = self.store
 
-	if not self.draw_count then
-		self.draw_count = {}
-	end
+	-- if not self.draw_count then
+	-- 	self.draw_count = {}
+	-- end
 
 	local frame_draw_params = RU.frame_draw_params
 	local draw_frames_range = RU.draw_frames_range
@@ -1485,9 +1597,12 @@ function game:draw_game()
 
 	if self.camera then
 		local c = self.camera
+
 		c:clamp()
+
 		local dox = c.x * c.zoom - self.screen_w * 0.5
 		local doy = c.y * c.zoom - self.screen_h * 0.5
+
 		rox, roy = -dox, -doy
 		gs = gs * c.zoom
 	else
@@ -1500,19 +1615,27 @@ function game:draw_game()
 
 	self:front_draw_debug(rox, roy, gs)
 	self:draw_path(rox, roy, gs)
+
 	-- if d.night_mode then
 	-- end
 	-- self:draw_speed_state(rox, roy, gs)
-	local last_idx
+	-- local last_idx
+
 	G.push()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
-	last_idx = draw_frames_range(d.render_frames, 1, Z_GUI_DECALS - 1)
-	G.pop()
-	G.push()
-	G.translate(rox, roy)
-	G.scale(gs, gs)
-	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
+
+	-- last_idx = draw_frames_range(d.render_frames, 1, Z_GUI_DECALS - 1)
+
+	-- G.pop()
+	-- G.push()
+	-- G.translate(rox, roy)
+	-- G.scale(gs, gs)
+
+	-- last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
+
+	local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
+
 	G.pop()
 
 	if self.DBG_DRAW_PATHS or self.shown_path then
@@ -1529,7 +1652,9 @@ function game:draw_game()
 	G.push()
 	G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
 	G.scale(self.game_scale, self.game_scale)
+
 	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
+
 	G.pop()
 	self.game_gui.window:draw_child(self.game_gui.layer_gui)
 

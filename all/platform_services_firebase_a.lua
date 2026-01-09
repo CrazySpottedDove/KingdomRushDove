@@ -1,10 +1,13 @@
 -- chunkname: @./all/platform_services_firebase_a.lua
 local log = require("lib.klua.log"):new("platform_services_firebase_a")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
+
 require("lib.klua.table")
 require("lib.klua.string")
-require("constants")
+require("all.constants")
+
 local fba = {}
+
 fba.can_be_paused = true
 fba.update_interval = 3
 fba.SRV_ID = 51
@@ -45,12 +48,16 @@ fba.signal_handlers = {
 		fba:log_event("premium_unlock_" .. id)
 	end
 }
+
 local proxy
 
 if KR_PLATFORM == "ios" then
 	proxy = {}
+
 	local ffi = require("ffi")
+
 	ffi.cdef("bool kfb_a_init_service(void);\nvoid kfb_a_log_analytics_event(const char* name, const char* key, const char* value);\nvoid kfb_a_log_and_crash(const char* msg);\nvoid kfb_cr_set_collection(bool value);\n")
+
 	local C = ffi.C
 
 	function proxy.init_service(srvid)
@@ -86,6 +93,7 @@ function fba:init(name, params)
 	else
 		if KR_PLATFORM == "android" and not require("jni") then
 			log.error("%s requires jni.lua. not initialized", name)
+
 			return nil
 		end
 
@@ -98,6 +106,7 @@ function fba:init(name, params)
 
 			if result ~= 1 then
 				log.error("%s native init failed", name)
+
 				return nil
 			end
 		end
@@ -127,6 +136,7 @@ end
 
 function fba:log_event(name, key, value)
 	value = string.format("%s", value)
+
 	proxy.log_analytics_event(self.SRV_ID, name, key, value)
 end
 

@@ -2,13 +2,17 @@
 local log = require("lib.klua.log"):new("simulation")
 local km = require("lib.klua.macros")
 local S = require("systems")
-require("constants")
+
+require("all.constants")
+
 simulation = {}
 
 -- 把 game 的 store 挂载给 simulation
 function simulation:init(store, system_names)
 	self.store = store
+
 	local d = store
+
 	d.tick_length = TICK_LENGTH
 	d.tick = 0
 	d.tick_ts = 0
@@ -39,6 +43,7 @@ function simulation:init(store, system_names)
 	self.systems_on_insert = {}
 	self.systems_on_remove = {}
 	self.systems_on_update = {}
+
 	local systems_order = {}
 
 	for _, name in pairs(system_names) do
@@ -88,7 +93,7 @@ function simulation:update(dt)
 	local d = self.store
 
 	if d.paused and not d.step then
-		return 
+		return
 	end
 
 	simulation:do_tick()
@@ -96,8 +101,10 @@ end
 
 function simulation:do_tick()
 	local d = self.store
+
 	d.tick = d.tick + 1
 	d.tick_ts = d.tick_ts + TICK_LENGTH
+
 	-- 批量插入
 	local last_count = #d.pending_inserts
 
@@ -136,7 +143,7 @@ end
 
 function simulation:queue_insert_entity(e)
 	if not e then
-		return 
+		return
 	end
 
 	local d = self.store
@@ -151,7 +158,7 @@ end
 
 function simulation:queue_remove_entity(e)
 	if not e or e.pending_removal then
-		return 
+		return
 	end
 
 	local d = self.store
@@ -173,7 +180,7 @@ function simulation:insert_entity(e)
 				self.systems_on_dequeue[j]:on_dequeue(e, d, true)
 			end
 
-			return 
+			return
 		end
 	end
 
@@ -192,7 +199,8 @@ function simulation:remove_entity(e)
 			end
 
 			print(string.format("remove %s aborted", e.template_name))
-			return 
+
+			return
 		end
 	end
 

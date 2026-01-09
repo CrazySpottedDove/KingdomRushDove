@@ -1,13 +1,16 @@
 -- chunkname: @./all/platform_services_kvideo.lua
 local log = require("lib.klua.log"):new("platform_services_kvideo")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local srv = {}
+
 srv.can_be_paused = false
 srv.update_interval = 1
 srv.lib = nil
 srv.inited = false
+
 local ffi = require("ffi")
+
 ffi.cdef("bool kvideo_initialize();\nvoid kvideo_shutdown();\nvoid kvideo_set_video(const char* name, bool absolute);\nvoid kvideo_play();\nvoid kvideo_stop();\nbool kvideo_is_finished();\n")
 
 function srv:init(name, params)
@@ -20,6 +23,7 @@ function srv:init(name, params)
 
 		if not self.lib then
 			log.error("KVideo library could not be loaded from %s", lib_name)
+
 			return false
 		end
 

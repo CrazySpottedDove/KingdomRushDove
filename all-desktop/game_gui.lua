@@ -6,18 +6,20 @@ end
 
 local log = require("lib.klua.log"):new("game_gui")
 local km = require("lib.klua.macros")
+
 require("lib.klua.table")
 require("klove.kui")
+
 local kui_db = require("klove.kui_db")
 local timer = require("hump.timer"):new()
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local class = require("middleclass")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
 local AC = require("achievements")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local I = require("klove.image_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
@@ -29,7 +31,7 @@ local r = V.r
 local P = require("path_db")
 local PS = require("platform_services")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local GU = require("gui_utils")
 local LU = require("level_utils")
 local storage = require("storage")
@@ -57,12 +59,17 @@ end
 local IS_KR3 = KR_GAME == "kr3"
 local IS_KR2 = KR_GAME == "kr2"
 local IS_KR1 = KR_GAME == "kr1"
-require("constants")
+
+require("all.constants")
+
 local features = require("features")
+
 require("gg_views_custom")
+
 local data = require("data.game_gui_data")
 local tower_menus = require("data.tower_menus_data")
 local game_gui = {}
+
 game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
@@ -101,6 +108,7 @@ local function next_wave_ready_handler(group)
 
 	if game_gui.game.store.level.show_next_wave_balloon then
 		game_gui.game.store.level.show_next_wave_balloon = nil
+
 		game_gui:show_balloon("TB_WAVE")
 	end
 
@@ -115,6 +123,7 @@ local function next_wave_ready_handler(group)
 			end
 
 			local endless = game_gui.game.store.endless
+
 			EU.patch_enemy_growth(endless)
 		end
 	end
@@ -148,6 +157,7 @@ local function next_wave_sent_handler(group)
 				for k, v in pairs(slot.bag) do
 					if v > 0 then
 						game_gui.bag_button:set_mode("unlocked")
+
 						break
 					end
 				end
@@ -200,6 +210,7 @@ end
 local function game_victory_handler(store)
 	game_gui:deselect_all()
 	game_gui:disable_keys()
+
 	local wait_time
 
 	if store.criket and store.criket.on then
@@ -233,10 +244,11 @@ end
 
 local function show_gems_reward_handler(entity, amount)
 	if not game_gui.is_premium then
-		return 
+		return
 	end
 
 	local v = GemsRewardFx:new(amount)
+
 	v.world_pos = V.vclone(entity.pos)
 
 	if entity.unit then
@@ -302,6 +314,7 @@ local function atomic_freeze_ends_handler()
 	end
 
 	S:queue("InAppAtomicFreezeEnd")
+
 	this.timer_h = timer:tween(0.25, this, {
 		alpha = 0
 	}, "linear", function()
@@ -311,9 +324,11 @@ end
 
 local function atomic_bombs_starts_handler()
 	local this = wid("layer_user_item_bomb")
+
 	this.colors.background = {255, 255, 255, 255}
 	this.hidden = false
 	this.alpha = 1
+
 	timer:tween(1.7, this.colors.background, {
 		[2] = 0,
 		[3] = 0
@@ -335,6 +350,7 @@ local function gem_timewarp_starts_handler()
 	if this.hidden == true then
 		this.timer_h = timer:script(function(wait)
 			this.hidden = false
+
 			timer:tween(0.3333333333333333, this, {
 				alpha = 1
 			}, "out-sine")
@@ -351,6 +367,7 @@ local function gem_timewarp_starts_handler()
 				alpha = 0
 			}, "in-sine")
 			wait(0.3333333333333333)
+
 			this.hidden = true
 		end)
 	end
@@ -397,7 +414,9 @@ function game_gui:init(w, h, game)
 	self.game = game
 	self.w = w
 	self.h = h
+
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
+
 	self.sw = sw
 	self.sh = sh
 	self.gui_scale = scale
@@ -405,10 +424,14 @@ function game_gui:init(w, h, game)
 	self.manual_gui_hide = nil
 	self.keys_disabled = nil
 	self.is_premium = PS.services.iap and PS.services.iap:is_premium()
+
 	local settings = storage:load_settings()
+
 	self.key_shortcuts = storage:load_keyset()
 	self.pause_on_switch = settings.pause_on_switch
+
 	local window = KWindow:new(V.v(sw, sh))
+
 	self.window = window
 	window.timer = timer
 	window.scale.x, window.scale.y = scale, scale
@@ -417,27 +440,49 @@ function game_gui:init(w, h, game)
 	window.origin = origin
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
+
 	local pickview = PickView:new(sw, sh)
+
 	pickview.pos = v(0, 0)
+
 	local towermenu = TowerMenu:new()
+
 	towermenu.hidden = true
+
 	local criketmenu = CriketMenu:new()
+
 	criketmenu.hidden = true
+
 	local heromenu = HeroMenu:new()
+
 	heromenu.hidden = true
+
 	local towertooltip = TowerMenuTooltip:new()
+
 	towertooltip.hidden = true
+
 	local rallyrange = RangeCircle:new("rally_circle")
+
 	rallyrange.hidden = true
+
 	local tower_range = RangeCircle:new("range_circle")
+
 	tower_range.hidden = true
+
 	local meleerange = RangeCircle:new("rally_circle")
+
 	meleerange.hidden = true
+
 	local rangedrange = RangeCircle:new("range_circle")
+
 	rangedrange.hidden = true
+
 	local tower_range_upgrade = RangeCircle:new("range_circle")
+
 	tower_range_upgrade.hidden = true
+
 	local point_confirm = KImageView:new("confirm_feedback_0001")
+
 	point_confirm.animation = {
 		to = 11,
 		prefix = "confirm_feedback",
@@ -445,7 +490,9 @@ function game_gui:init(w, h, game)
 	}
 	point_confirm.hidden = true
 	point_confirm.anchor = v(point_confirm.size.x * 0.5, point_confirm.size.y * 0.5)
+
 	local rallyflag = KImageView:new("rally_feedback_0005")
+
 	rallyflag.animation = {
 		to = 30,
 		prefix = "rally_feedback",
@@ -453,34 +500,51 @@ function game_gui:init(w, h, game)
 	}
 	rallyflag.hidden = true
 	rallyflag.anchor = v(rallyflag.size.x * 0.5, rallyflag.size.y * 0.5)
+
 	local hud_bottom = HudBottomView:new(sw, sh)
 	local hud_counters = HudCountersView:new(self.game.simulation.store.level_mode)
+
 	hud_counters.anchor = v(0, 0)
 	hud_counters.pos = v(0, -22)
 	hud_counters.scale = v(0.9, 0.9)
+
 	local incoming_tooltip = IncomingTooltip:new()
+
 	incoming_tooltip.hidden = true
+
 	local mouse_pointer = MousePointer:new()
+
 	mouse_pointer.hidden = true
+
 	local hud_pause = HudPauseButton:new()
+
 	hud_pause.anchor = v(hud_pause.size.x, 0)
 	hud_pause.pos = v(sw + (IS_KR3 and 0 or -37), -21)
 	hud_pause.scale = v(0.9, 0.9)
+
 	local pauseview = PauseView:new()
+
 	pauseview.anchor = v(pauseview.size.x * 0.5, pauseview.size.y * 0.5)
 	pauseview.pos.x = self.sw * 0.5
 	pauseview.hidden = true
+
 	local hud_noti_queue = NotificationQueue:new()
+
 	hud_noti_queue.anchor = v(0, 0)
 	hud_noti_queue.pos = v(80, 100)
 	hud_noti_queue.propagate_on_click = true
+
 	local notiview = NotificationView:new()
+
 	notiview.pos = v(self.sw * 0.5, self.sh * 0.5)
 	notiview.hidden = true
+
 	local victoryview = VictoryView:new(self.game.simulation.store.level_mode)
+
 	victoryview.pos.x, victoryview.pos.y = self.sw * 0.5, self.sh / 3
 	victoryview.anchor.x, victoryview.anchor.y = victoryview.size.x * 0.5, victoryview.size.y * 0.5
 	victoryview.hidden = true
+
 	local defeatview
 
 	-- if self.game.simulation.store.level_mode == GAME_MODE_ENDLESS then
@@ -502,15 +566,20 @@ function game_gui:init(w, h, game)
 			S:stop_all()
 			S:queue("GUIQuestCompleted")
 			game_gui.overlay:show()
+
 			local level_mode = game_gui.game.store.level_mode
 			local level_idx = game_gui.game.store.level_idx
 			local gems = game_gui.game.store.gems_collected or 0
+
 			timer:script(function(wait)
 				this.hidden = false
+
 				local gv = this:ci("gems_view")
+
 				gv.hidden = true
 				wid("waves_label").text = game_gui.game.store.wave_group_number
 				wid("score_label").text = game_gui.game.store.player_score
+
 				local max_taunt_idx = 120
 				local taunt_idx = km.clamp(1, max_taunt_idx, game_gui.game.store.wave_group_number)
 				local taunt_text, taunt_key
@@ -522,15 +591,20 @@ function game_gui:init(w, h, game)
 				until taunt_key ~= taunt_text or max_taunt_idx < taunt_idx
 
 				this:ci("taunt_label").text = taunt_text
+
 				local b = this:ci("badge_view")
+
 				b.scale = V.v(0.5, 0.5)
+
 				timer:tween(0.6, b.scale, {
 					x = 1,
 					y = 1
 				}, "out-back", nil, 1.5)
 				wait(0.15)
+
 				this:ci("gems_label").text = gems
 				gv.hidden = false
+
 				timer:tween(0.4, gv.pos, {
 					x = gv.shown_x
 				}, "out-elastic")
@@ -550,15 +624,20 @@ function game_gui:init(w, h, game)
 				local cv = wid("defeat_endless_view_try_again")
 				local rb = wid("defeat_endless_view_quit_button")
 				local rv = wid("defeat_endless_view_quit")
+
 				cb:disable(false)
 				rb:disable(false)
+
 				cb.hidden = false
 				cv.hidden = false
+
 				timer:tween(0.5, cv.pos, {
 					y = cv.shown_y
 				}, "out-back")
 				wait(0.5)
+
 				rv.hidden = false
+
 				timer:tween(0.5, rv.pos, {
 					y = rv.shown_y
 				}, "out-back")
@@ -575,17 +654,24 @@ function game_gui:init(w, h, game)
 	end
 
 	defeatview.hidden = true
+
 	local endless_select_reward_view = EndlessSelectRewardView:new(sw, sh)
+
 	endless_select_reward_view.hidden = true
 	endless_select_reward_view.pos = v(0, 0)
+
 	local overlay = OverlayView:new(sw, sh)
+
 	overlay.hidden = true
+
 	local comic_transition = KView:new(V.v(sw, sh))
+
 	comic_transition.colors.background = {0, 0, 0, 255}
 
 	if self.game.store.level.show_comic_idx then
 		comic_transition.hidden = false
 		comic_transition.alpha = 1
+
 		timer:tween(0.5, comic_transition, {
 			alpha = 0
 		}, "out-linear", function()
@@ -611,29 +697,37 @@ function game_gui:init(w, h, game)
 	end
 
 	local layer_gui = KView:new()
+
 	layer_gui.id = "layer_gui"
 	layer_gui.pos = v(0, 0)
 	layer_gui.size = v(sw, sh)
 	layer_gui.propagate_on_click = true
 	layer_gui.propagate_on_down = true
+
 	local layer_gui_game = KView:new()
+
 	layer_gui_game.id = "layer_gui_game"
 	layer_gui_game.pos = v(0, 0)
 	layer_gui_game.size = v(sw, sh)
 	layer_gui_game.propagate_on_click = true
 	layer_gui_game.propagate_on_down = true
+
 	local layer_gui_hud = KView:new()
+
 	layer_gui_hud.id = "layer_gui_hud"
 	layer_gui_hud.pos = v(0, 0)
 	layer_gui_hud.size = v(sw, sh)
 	layer_gui_hud.propagate_on_click = true
 	layer_gui_hud.propagate_on_down = true
+
 	local layer_gui_top = KView:new()
+
 	layer_gui_top.id = "layer_gui_top"
 	layer_gui_top.pos = v(0, 0)
 	layer_gui_top.size = v(sw, sh)
 	layer_gui_top.propagate_on_click = true
 	layer_gui_top.propagate_on_down = true
+
 	layer_gui_game:add_child(rallyrange)
 	layer_gui_game:add_child(tower_range)
 	layer_gui_game:add_child(tower_range_upgrade)
@@ -671,6 +765,7 @@ function game_gui:init(w, h, game)
 	layer_gui:add_child(layer_gui_top)
 	window:add_child(pickview)
 	window:add_child(layer_gui)
+
 	self.endless_select_reward_view = endless_select_reward_view
 	self.pickview = pickview
 	self.towermenu = towermenu
@@ -702,6 +797,7 @@ function game_gui:init(w, h, game)
 	self.layer_gui_top = layer_gui_top
 	self.heroes = {}
 	self.heroes_no_panel = {}
+
 	signal.register("enemy-reached-goal", enemy_reached_goal_handler)
 	signal.register("next-wave-ready", next_wave_ready_handler)
 	signal.register("next-wave-sent", next_wave_sent_handler)
@@ -736,10 +832,14 @@ end
 
 function game_gui:destroy()
 	timer:clear()
+
 	self.heroes = nil
+
 	self.window:destroy()
+
 	self.window = nil
 	self.game = nil
+
 	SU.remove_references(self, KView)
 	signal.remove("enemy-reached-goal", enemy_reached_goal_handler)
 	signal.remove("next-wave-ready", next_wave_ready_handler)
@@ -770,20 +870,69 @@ end
 
 function game_gui:update(dt)
 	timer:update(dt)
+
 	local e = game_gui.selected_entity
 
 	if e then
 		if e.melee and e.melee.range then
 			local ux, uy = game_gui:g2u(e.pos)
+
 			game_gui:show_melee_range(ux, uy, e.melee.range)
 		end
 
 		if e.ranged and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
 			local ux, uy = game_gui:g2u(e.pos)
+
 			game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
 		elseif e.timed_attacks and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
 			local ux, uy = game_gui:g2u(e.pos)
+
 			game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
+		end
+	end
+
+	local st = game_gui.swap_entity
+
+	if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
+		game_gui:hide_ghost_hover()
+
+		game_gui.swap_entity = nil
+	end
+
+	-- if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+	-- 	local x, y = game_gui.window:get_mouse_position()
+	-- 	local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
+	-- 	if x ~= lx or y ~= ly then
+	-- 		game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
+	-- 		local wx, wy = game_gui:s2g(V.v(x, y))
+	-- 		local ee = game_gui:entity_at_pos(wx, wy)
+	-- 		local lastt = game_gui.last_tower_hover
+	-- 		if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
+	-- 			game_gui:show_clickable_hover(ee)
+	-- 		elseif lastt and (not ee or ee ~= lastt) then
+	-- 			game_gui:hide_clickable_hover()
+	-- 			self.last_tower_hover = nil
+	-- 		end
+	-- 	end
+	-- end
+	if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+		local x, y = game_gui.window:get_mouse_position()
+		local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
+
+		if x ~= lx or y ~= ly then
+			game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
+
+			local wx, wy = game_gui:s2g(V.v(x, y))
+			local ee = game_gui:entity_at_pos(wx, wy)
+			local lastt = game_gui.last_tower_hover
+
+			if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
+				-- game_gui:show_clickable_hover(ee)
+				self.last_tower_hover = ee
+			elseif lastt and (not ee or ee ~= lastt) then
+				-- game_gui:hide_clickable_hover()
+				self.last_tower_hover = nil
+			end
 		end
 	end
 
@@ -804,7 +953,7 @@ end
 
 function game_gui:add_mobile_shortcut_buttons()
 	if not IS_MOBILE then
-		return 
+		return
 	end
 
 	local ks = self.key_shortcuts
@@ -813,8 +962,11 @@ function game_gui:add_mobile_shortcut_buttons()
 
 	for group, keys in pairs(ks) do
 		local key = type(keys) == "table" and keys[1] or keys
+
 		idx = idx + 1
+
 		local btn = KButton:new(V.v(80, 40))
+
 		btn.pos = V.v(20 + (idx - 1) * 90, y)
 		btn.text = tostring(key) -- 直接显示key名
 
@@ -828,7 +980,7 @@ end
 
 function game_gui:keypressed(key, isrepeat)
 	if isrepeat then
-		return 
+		return
 	end
 
 	if DBG_SLIDE_EDITOR and game_gui.SEL_VIEW then
@@ -900,6 +1052,7 @@ function game_gui:keypressed(key, isrepeat)
 
 		if key == "space" or key == "return" then
 			local out = string.format("pos=v(%s,%s), size=v(%s,%s), font_size=%s, text_align='%s'\n", av.pos.x, av.pos.y, av.size.x, av.size.y, av.font_size, av.text_align)
+
 			log.debug("\n%s\n", out)
 
 			if av and av.parent then
@@ -910,6 +1063,7 @@ function game_gui:keypressed(key, isrepeat)
 				end
 
 				out = out .. "---------------------------\n"
+
 				log.debug("\n%s\n", out)
 			end
 		end
@@ -932,7 +1086,7 @@ function game_gui:keypressed(key, isrepeat)
 	end
 
 	if self.keys_disabled then
-		return 
+		return
 	end
 
 	local ks = self.key_shortcuts
@@ -1038,6 +1192,7 @@ function game_gui:keypressed(key, isrepeat)
 				for _, s in pairs(t.barrack.soldiers) do
 					if s.health and not s.health.dead and s.soldier.target_id == nil then
 						busy = false
+
 						break
 					end
 				end
@@ -1055,6 +1210,7 @@ function game_gui:keypressed(key, isrepeat)
 		end
 	elseif table.contains(ks.endless_shop, key) and self.game.store.level_mode_override == GAME_MODE_ENDLESS and self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
 		self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
+
 		game_gui.endless_select_reward_view:show(true)
 	elseif table.contains(ks.hero_menu_toggle, key) and self.game.store.config.enable_hero_menu then
 		if self.heromenu.hidden then
@@ -1072,12 +1228,12 @@ function game_gui:keypressed(key, isrepeat)
 end
 
 function game_gui:keyreleased(key, isrepeat)
-	return 
+	return
 end
 
 function game_gui:focus(focus)
 	if focus or self.game.store.paused or self.gui_hud_hidden or DEBUG_IGNORE_FOCUS then
-		return 
+		return
 	end
 
 	if self.pause_on_switch and self.pauseview then
@@ -1113,6 +1269,7 @@ function game_gui:u2g(s)
 	-- return px, py
 	local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
 	local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
+
 	return px, py
 end
 
@@ -1130,7 +1287,28 @@ end
 function game_gui:u2g_old(s)
 	local px = (s.x * self.gui_scale + self.window.origin.x - self.game.game_ref_origin.x) / self.game.game_scale
 	local py = (self.sh * self.gui_scale - (s.y * self.gui_scale + self.window.origin.y) - self.game.game_ref_origin.y) / self.game.game_scale
+
 	return px, py
+end
+
+function game_gui:s2u(s)
+	local ux, uy = s.x / self.gui_scale, s.y / self.gui_scale
+
+	return ux, uy
+end
+
+function game_gui:u2w(s)
+	local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
+	local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
+
+	return px, py
+end
+
+function game_gui:s2g(s)
+	local px, py = self:s2u(s)
+	local wx, wy = self:u2w(V.v(px, py))
+
+	return wx, wy
 end
 
 function game_gui:entity_at_pos(x, y)
@@ -1145,16 +1323,21 @@ function game_gui:list_heroes()
 	local result = table.filter(self.game.simulation.store.pending_inserts, function(_, e)
 		return e.hero
 	end)
+
 	table.sort(result, function(e1, e2)
 		return e1.id < e2.id
 	end)
+
 	return result
 end
 
 function game_gui:set_mode(mode)
 	local new_mode = mode or GUI_MODE_IDLE
+
 	log.debug("  CHANGING MODE: %s -> %s", self.mode, new_mode)
+
 	self.mode = new_mode
+
 	self.mouse_pointer:update_pointer(mode)
 end
 
@@ -1192,6 +1375,7 @@ end
 
 function game_gui:show_rally_range(x, y, range)
 	local rr = self.rallyrange
+
 	rr.range_shown = range
 	rr.pos.x, rr.pos.y = x, y
 	rr.scale = v(range * self.game.game_scale * self.game.camera.zoom / (rr.actual_radius.x * self.gui_scale), range * self.game.game_scale * self.game.camera.zoom * ASPECT / (rr.actual_radius.y * self.gui_scale))
@@ -1200,12 +1384,14 @@ end
 
 function game_gui:hide_rally_range()
 	local rr = self.rallyrange
+
 	rr.range_shown = nil
 	rr.hidden = true
 end
 
 function game_gui:show_tower_range(x, y, range)
 	local r = self.tower_range
+
 	r.range_shown = range
 	r.pos.x, r.pos.y = x, y
 	r.scale = v(range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale), range * self.game.game_scale * self.game.camera.zoom * ASPECT / (r.actual_radius.y * self.gui_scale))
@@ -1214,6 +1400,7 @@ end
 
 function game_gui:show_tower_range_upgrade(x, y, range)
 	local r = self.tower_range_upgrade
+
 	r.range_shown = range
 	r.pos.x, r.pos.y = x, y
 	r.scale = v(range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale), range * self.game.game_scale * self.game.camera.zoom * ASPECT / (r.actual_radius.y * self.gui_scale))
@@ -1222,6 +1409,7 @@ end
 
 function game_gui:show_melee_range(x, y, range)
 	local r = self.melee_range
+
 	r.range_shown = range
 	r.pos.x, r.pos.y = x, y
 	r.scale.x = range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale)
@@ -1231,6 +1419,7 @@ end
 
 function game_gui:show_ranged_range(x, y, range)
 	local r = self.ranged_range
+
 	r.range_shown = range
 	r.pos.x, r.pos.y = x, y
 	r.scale.x = range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale)
@@ -1266,11 +1455,12 @@ end
 
 function game_gui:show_wave_flags(group)
 	self.wave_flags = {}
+
 	local store = self.game.store
 	local flags_positions = store.level.locations.entrances
 
 	if not flags_positions then
-		return 
+		return
 	end
 
 	for _, w in pairs(group.waves) do
@@ -1283,11 +1473,15 @@ function game_gui:show_wave_flags(group)
 			if incoming_report and #incoming_report > 0 then
 				local wf = WaveFlag:new(w.some_flying, duration, incoming_report, w.path_index)
 				local wfx, wfy = self:g2u_old(item.pos)
+
 				wf.pointer.r = item.r - math.pi * 0.5
 				wf.hidden = false
+
 				local vf = V.v(V.rotate(-item.r, 1, 0))
 				local pf = V.v(wfx, wfy)
+
 				wf.pos = self:find_flag_position(pf, vf, 50, item.len)
+
 				self.layer_gui_game:add_child(wf)
 				wf:order_below(self.towertooltip)
 				table.insert(self.wave_flags, wf)
@@ -1306,6 +1500,61 @@ function game_gui:hide_wave_flags()
 	end
 end
 
+function game_gui:show_clickable_hover(entity)
+	if game_gui.game.store.paused then
+		return
+	end
+
+	if self.last_tower_hover then
+		if self.last_tower_hover ~= entity then
+			self:hide_clickable_hover()
+		elseif self.clickable_hover_controller and not self.clickable_hover_controller.done then
+			return
+		end
+	end
+
+	if not entity or not game_gui.game.store.entities[entity.id] then
+		log.debug("clickable not in store. skipping hover")
+
+		return
+	end
+
+	self.last_tower_hover = entity
+
+	local h = E:create_entity("clickable_hover_circle_controller")
+
+	h.target = entity
+
+	self.game.simulation:insert_entity(h)
+
+	self.clickable_hover_controller = h
+
+	S:queue("GUIQuickMenuOver")
+end
+
+function game_gui:hide_clickable_hover()
+	if self.clickable_hover_controller then
+		self.clickable_hover_controller.done = true
+		self.clickable_hover_controller = nil
+	end
+end
+
+function game_gui:show_ghost_hover()
+	local h = E:create_entity("tower_ghost_hover_controller")
+
+	self.game.simulation:insert_entity(h)
+
+	self.tower_ghost_hover_controller = h
+end
+
+function game_gui:hide_ghost_hover()
+	if self.tower_ghost_hover_controller then
+		self.game.simulation:remove_entity(self.tower_ghost_hover_controller)
+
+		self.tower_ghost_hover_controller = nil
+	end
+end
+
 function game_gui:find_flag_position(pf, vf, margin, len)
 	local function intersection(p1, v1, p2, v2)
 		local v1xv2 = V.cross(v1.x, v1.y, v2.x, v2.y)
@@ -1317,6 +1566,7 @@ function game_gui:find_flag_position(pf, vf, margin, len)
 			local m = V.cross(sx, sy, v2.x, v2.y) / v1xv2
 			local pi = V.v(V.add(p1.x, p1.y, V.mul(m, v1.x, v1.y)))
 			local a = V.angleTo(v1.x, v1.y, pi.x - p1.x, pi.y - p1.y)
+
 			return pi, math.abs(a) < math.pi / 4
 		end
 	end
@@ -1339,6 +1589,7 @@ function game_gui:find_flag_position(pf, vf, margin, len)
 	table.sort(isects, function(p1, p2)
 		return V.dist2(pf.x, pf.y, p1.x, p1.y) < V.dist2(pf.x, pf.y, p2.x, p2.y)
 	end)
+
 	local pi = isects[1]
 
 	if pi.y == pt.y or pi.y == pb.y then
@@ -1346,9 +1597,11 @@ function game_gui:find_flag_position(pf, vf, margin, len)
 	else
 		if len and len < V.dist(pf.x, pf.y, pi.x, pi.y) then
 			local ox, oy = V.mul(len, vf.x, vf.y)
+
 			return V.v(V.add(pf.x, pf.y, ox, oy))
 		else
 			local ox, oy = V.mul(-margin, vf.x, vf.y)
+
 			pi.x, pi.y = V.add(pi.x, pi.y, ox, oy)
 		end
 
@@ -1363,13 +1616,19 @@ end
 
 function game_gui:deselect_controables()
 	self.selected_controables = {}
+
 	self:set_mode()
 end
 
 function game_gui:select_entity(e)
 	if e and e.ui and not e.ui.can_select then
 		log.debug("cannot select: entity %s has ui.can_select = false", e.id)
-		return 
+
+		return
+	end
+
+	if game_gui.mode == GUI_MODE_SWAP_TOWER then
+		game_gui.swap_tower()
 	end
 
 	if self.selected_entity and e ~= self.selected_entity then
@@ -1396,13 +1655,19 @@ function game_gui:select_entity(e)
 	if e.enemy or e.soldier or e.barrack then
 		if e.soldier and e.soldier.tower_id and self.game.simulation.store.entities[e.soldier.tower_id] then
 			local tower = self.game.simulation.store.entities[e.soldier.tower_id]
+
 			game_gui:set_mode(GUI_MODE_RALLY_TOWER)
+
 			local ux, uy = game_gui:g2u(V.v(V.add(tower.pos.x, tower.pos.y, tower.tower.range_offset.x, tower.tower.range_offset.y)))
+
 			game_gui:show_rally_range(ux, uy, tower.barrack.rally_range)
 		else
 			local m = E:create_entity("entity_marker_controller")
+
 			m.target = e
+
 			self.game.simulation:insert_entity(m)
+
 			self.selected_entity_marker = m
 		end
 	end
@@ -1424,7 +1689,9 @@ function game_gui:deselect_entity()
 
 	self.selected_entity = nil
 	self.selected_controables = {}
+
 	self:set_mode()
+	game_gui:hide_ghost_hover()
 end
 
 function game_gui:deselect_powers()
@@ -1469,6 +1736,7 @@ end
 
 function game_gui:add_hero(hero_entity)
 	local hero = self.hud_bottom:add_hero(hero_entity)
+
 	table.insert(self.heroes, hero)
 end
 
@@ -1480,6 +1748,7 @@ function game_gui:remove_hero_no_panel(hero_entity)
 	for i, h in ipairs(self.heroes_no_panel) do
 		if h.id == hero_entity.id then
 			table.remove(self.heroes_no_panel, i)
+
 			break
 		end
 	end
@@ -1497,10 +1766,11 @@ end
 
 function game_gui:hide()
 	if self.manual_gui_hide then
-		return 
+		return
 	end
 
 	self.manual_gui_hide = true
+
 	self:disable_keys()
 	self:deselect_all()
 	self.pickview:disable()
@@ -1521,10 +1791,11 @@ end
 
 function game_gui:show()
 	if not self.manual_gui_hide then
-		return 
+		return
 	end
 
 	self.manual_gui_hide = nil
+
 	self:enable_keys()
 	self.pickview:enable()
 	self.hud_bottom:show()
@@ -1544,6 +1815,7 @@ end
 
 function game_gui:defeat()
 	self.game.store.paused = true
+
 	self:hide_wave_flags()
 	self:deselect_all()
 	self:disable_keys()
@@ -1556,6 +1828,7 @@ function game_gui:victory()
 	end
 
 	self.game.store.paused = true
+
 	self:deselect_all()
 
 	if self.game.store.custom_game_outcome then
@@ -1569,12 +1842,15 @@ function game_gui:go_to_map()
 	if self.game.store.main_hero and not GS.hero_xp_ephemeral then
 		local hero = self.game.store.main_hero
 		local slot = storage:load_slot()
+
 		slot.heroes.status[hero.template_name].xp = hero.hero.xp
+
 		storage:save_slot(slot)
 	end
 
 	if self.game.store.level_mode_override == GAME_MODE_ENDLESS then
 		local endless_data = self.game.store.endless
+
 		-- 保存玩家基础信息
 		endless_data.player_gold = self.game.store.player_gold
 		endless_data.lives = self.game.store.lives
@@ -1649,7 +1925,9 @@ function game_gui:restart_game()
 	if self.game.store.main_hero and not GS.hero_xp_ephemeral then
 		local hero = self.game.store.main_hero
 		local slot = storage:load_slot()
+
 		slot.heroes.status[hero.template_name].xp = hero.hero.xp
+
 		storage:save_slot(slot)
 	end
 
@@ -1668,11 +1946,14 @@ end
 function game_gui:show_early_wave_reward()
 	if game_gui.game.store.early_wave_reward > 0 then
 		S:queue("GUICoins")
+
 		local reward_fx = WaveRewardFx:new(game_gui.game.store.early_wave_reward)
 		local x, y = self.window:get_mouse_position()
 		local wx, wy = self.window:screen_to_view(x, y)
+
 		wy = wy - reward_fx.size.y
 		reward_fx.pos = V.v(wx, wy)
+
 		self.layer_gui_hud:add_child(reward_fx)
 		log.debug("show early wave reward at %s,%s", wx, wy)
 	end
@@ -1688,21 +1969,24 @@ end
 
 function game_gui:show_balloon(id)
 	local b = TutorialBalloon:new(id)
+
 	self.layer_gui_game:add_child(b)
 end
 
 function game_gui:show_achievement(id)
 	if self.manual_gui_hide then
-		return 
+		return
 	end
 
 	if features.hide_achievements_popup then
 		log.debug("features.hide_achievements_popup enabled: not showing achievement popup")
-		return 
+
+		return
 	end
 
 	if not self.achievement_banner then
 		self.achievement_banner = AchievementBanner:new()
+
 		self.layer_gui_game:add_child(self.achievement_banner)
 	end
 
@@ -1724,34 +2008,117 @@ function game_gui:block_random_power(duration, style)
 
 	if p then
 		log.debug("blocking power: %s", p)
+
 		local pbb = PowerButtonBlock:new(p, duration, style)
+
 		p:add_child(pbb)
 		pbb:block()
 	end
+end
+
+function game_gui.swap_tower()
+	local e = game_gui.last_tower_hover
+	local tower_selected = game_gui.swap_entity
+
+	if not e or not e.ui then
+		goto lable_return
+	end
+
+	if not game_gui.game.store.entities[e.id] then
+		log.debug("tower %s is not in entities", e.id)
+
+		goto lable_return
+	end
+
+	if e.ui and e.ui.click_proxies then
+		for _, cp in pairs(e.ui.click_proxies) do
+			if cp and cp.ui and cp.ui.can_click then
+				log.debug("click proxied from (%s)%s to (%s)%s", e.id, e.template_name, cp.id, cp.template_name)
+
+				cp.ui.clicked = true
+			end
+		end
+	end
+
+	if not e.ui.can_click then
+		log.debug("cannot click tower %s: has ui.can_click == false", e.id)
+
+		goto lable_return
+	end
+
+	e.ui.clicked = true
+
+	if not e.ui.can_select then
+		log.debug("cannot select tower %s: has ui.can_select == false", e.id)
+
+		goto lable_return
+	end
+
+	if e == game_gui.selected_entity then
+		log.debug("cannot select tower %s: is already selected", e.id)
+
+		goto lable_return
+	end
+
+	-- if table.contains(tower_selected.cannot_be_swappeds, e.template_name) or e.cannot_be_swapped then
+	if table.contains(tower_selected.cannot_be_swappeds, e.template_name) then
+		log.debug("cannot be swap this tower", e.id)
+
+		goto lable_return
+	end
+
+	game_gui:deselect_entity()
+
+	do
+		local controller = E:create_entity("controller_tower_swap")
+
+		controller.tower_1 = tower_selected
+		controller.tower_2 = e
+
+		game_gui.game.simulation:insert_entity(controller)
+	end
+
+	::lable_return::
+
+	game_gui.swap_entity = nil
+
+	game_gui:set_mode(GUI_MODE_IDLE)
+	game_gui:hide_ghost_hover()
 end
 
 GemsRewardFx = class("GemsRewardFx", KView)
 
 function GemsRewardFx:initialize(amount)
 	KView.initialize(self)
+
 	self.ani_offset = 0
 	self.world_offset = v(0, 0)
+
 	local icon = KImageView:new("gemsReward_0001")
+
 	icon.anchor.y = icon.size.y * 0.5
+
 	self:add_child(icon)
+
 	local digits = SpriteDigits:new("waveRewardTimer", "%i", amount)
+
 	digits.anchor.y = digits.size.y * 0.5
 	digits.pos.x = icon.size.x
+
 	self:add_child(digits)
+
 	self.anchor.x, self.anchor.y = (digits.size.x + icon.size.x) * 0.5, icon.size.y + 2
 	self.scale = V.v(0.3, 0.3)
+
 	timer:script(function(wait)
 		timer:tween(0.21, self.scale, {
 			x = 1,
 			y = 1
 		}, "out-back")
 		wait(0.21)
+
 		local dy = icon.size.y * 0.5
+
 		timer:tween(0.4, self, {
 			alpha = 0,
 			ani_offset = -dy
@@ -1766,6 +2133,7 @@ function GemsRewardFx:update(dt)
 
 	if self.world_pos then
 		local wp, wo = self.world_pos, self.world_offset
+
 		self.pos.x, self.pos.y = game_gui:g2u(V.v(wp.x + wo.x, wp.y + wo.y))
 		self.pos.y = self.pos.y + self.ani_offset
 	end
@@ -1775,9 +2143,13 @@ TimeRewardFx = class("TimeRewardFx", KView)
 
 function TimeRewardFx:initialize(amount)
 	TimeRewardFx.super.initialize(self)
+
 	self.ts = 0
+
 	local vd = KView:new()
+
 	self:add_child(vd)
+
 	local text_width = 0
 	local letter_spacing = 0.7
 	local offset = v(0, 0)
@@ -1787,25 +2159,35 @@ function TimeRewardFx:initialize(amount)
 	for i = 1, #reward_string do
 		local c = string.sub(reward_string, i, i)
 		local index
+
 		index = c == "-" and 11 or c == "s" and 12 or tonumber(c)
+
 		local v = KImageView:new(string.format(img_fmt, index))
+
 		v.pos.x, v.pos.y = offset.x, offset.y
+
 		local char_size = km.round(letter_spacing * v.size.x)
+
 		offset.x = offset.x + char_size
 		text_width = text_width + char_size
+
 		vd:add_child(v)
+
 		self.size.y = v.size.y
 	end
 
 	self.size.x = text_width + text_width * (1 - letter_spacing) / #reward_string
 	self.anchor.x = self.size.x * 0.5
 	self.alpha = 1
+
 	timer:tween(1, self, {
 		alpha = 0
 	}, "out-quad", function()
 		self:remove_from_parent()
 	end)
+
 	local dy = self.size.y / 3
+
 	timer:tween(1, vd.pos, {
 		y = -dy
 	}, "out-quad")
@@ -1815,6 +2197,7 @@ SpriteDigits = class("SpriteDigits", KView)
 
 function SpriteDigits:initialize(prefix, format, ...)
 	KView.initialize(self)
+
 	local text_width = 0
 	local offset = v(0, 0)
 	local reward_string = string.format(format, ...)
@@ -1823,13 +2206,20 @@ function SpriteDigits:initialize(prefix, format, ...)
 	for i = 1, #reward_string do
 		local c = string.sub(reward_string, i, i)
 		local index
+
 		index = c == "+" and 11 or c == "-" and 11 or c == "s" and 12 or tonumber(c)
+
 		local v = KImageView:new(string.format(img_fmt, index))
+
 		v.pos.x, v.pos.y = offset.x, offset.y
+
 		local char_size = km.round(0.7 * v.size.x)
+
 		offset.x = offset.x + char_size
 		text_width = text_width + char_size
+
 		self:add_child(v)
+
 		self.size.y = math.max(v.size.y, self.size.y)
 	end
 
@@ -1840,14 +2230,18 @@ WaveRewardFx = class("WaveRewardFx", KImageView)
 
 function WaveRewardFx:initialize(reward)
 	WaveRewardFx.super.initialize(self, "nextwave_coin_0001")
+
 	self.animation = {
 		to = 14,
 		prefix = "nextwave_coin",
 		from = 1
 	}
 	self.ts = 0
+
 	local vd = KView:new()
+
 	self:add_child(vd)
+
 	local text_width = 0
 	local offset = v(0, 0)
 	local reward_string = string.format("+%i", reward)
@@ -1856,18 +2250,25 @@ function WaveRewardFx:initialize(reward)
 	for i = 1, #reward_string do
 		local c = string.sub(reward_string, i, i)
 		local index
+
 		index = c == "+" and 11 or tonumber(c)
+
 		local v = KImageView:new(string.format(img_fmt, index))
+
 		v.pos.x, v.pos.y = offset.x, offset.y
+
 		local char_size = km.round(0.7 * v.size.x)
+
 		offset.x = offset.x + char_size
 		text_width = text_width + char_size
+
 		vd:add_child(v)
 	end
 
 	vd.pos.x = self.size.x
 	self.anchor.x = (self.size.x + text_width) * 0.5
 	self.alpha = 1
+
 	timer:tween(1.5, self, {
 		alpha = 0
 	}, "out-quad", function()
@@ -1879,6 +2280,7 @@ HeroPortrait = class("HeroPortrait", KButton)
 
 function HeroPortrait:initialize(hero_entity)
 	HeroPortrait.super.initialize(self, V.v(102, 101))
+
 	self.colors.background = {0, 0, 0, 0}
 	self.disabled_tint_color = {200, 200, 200, 255}
 	self.hero_id = hero_entity.id
@@ -1892,19 +2294,25 @@ function HeroPortrait:initialize(hero_entity)
 	self.portrait_bo = KImageView:new("hero_portraits_0000")
 	-- end
 	self.portrait.propagate_on_click = true
+
 	self:add_child(self.portrait)
 	self:add_child(self.portrait_bo)
+
 	self.ov_cooldown = KView:new(V.v(63, 63))
 	self.ov_cooldown.pos = v(19, 78)
 	self.ov_cooldown.anchor = v(0, 0)
 	self.ov_cooldown.colors.background = {0, 0, 0, 150}
 	self.ov_cooldown.propagate_on_click = true
 	self.ov_cooldown.hidden = true
+
 	self:add_child(self.ov_cooldown)
+
 	self.frame = KImageView:new("heroPortrait_0001")
 	self.frame.disabled_tint_color = {200, 200, 200, 255}
 	self.frame.propagate_on_click = true
+
 	self:add_child(self.frame)
+
 	self.level = GGLabel:new(V.v(16, 16))
 	self.level.pos = v(66, IS_KR3 and 60 or 65)
 	self.level.font_name = "TOONISH"
@@ -1913,25 +2321,35 @@ function HeroPortrait:initialize(hero_entity)
 	self.level.text_align = "center"
 	self.level.text = "1"
 	self.level.propagate_on_click = true
+
 	self:add_child(self.level)
+
 	self.bar_health = KImageView:new("hero_portrait_bars_0001")
 	self.bar_health.pos = IS_KR3 and v(22, 78) or v(23, 83)
 	self.bar_health.anchor = v(0, 0)
 	self.bar_health.propagate_on_click = true
+
 	self:add_child(self.bar_health)
+
 	self.bar_level = KImageView:new("hero_portrait_bars_0002")
 	self.bar_level.pos = IS_KR3 and v(22, 84) or v(23, 89)
 	self.bar_level.anchor = v(0, 0)
 	self.bar_level.propagate_on_click = true
+
 	self:add_child(self.bar_level)
+
 	self.ov_selected = KImageView:new("heroPortrait_selected")
 	self.ov_selected.hidden = true
 	self.ov_selected.propagate_on_click = true
+
 	self:add_child(self.ov_selected)
+
 	self.ov_hover = KImageView:new("heroPortrait_0003")
 	self.ov_hover.hidden = true
 	self.ov_hover.propagate_on_click = true
+
 	self:add_child(self.ov_hover)
+
 	self.ov_levelup = KImageView:new("heroPortrait_0001")
 	self.ov_levelup.propagate_on_click = true
 	self.ov_levelup.animation = {
@@ -1940,15 +2358,19 @@ function HeroPortrait:initialize(hero_entity)
 		from = 2
 	}
 	self.ov_levelup.ts = 100
+
 	self:add_child(self.ov_levelup)
 	self:update_xp(hero_entity)
 end
 
 function HeroPortrait:set_style(style)
 	local prefix
+
 	prefix = style == "left" and "heroPortrait_L" or style == "right" and "heroPortrait_R" or "heroPortrait"
+
 	self.frame:set_image(prefix .. "_0001")
 	self.ov_hover:set_image(prefix .. "_0003")
+
 	self.ov_levelup.animation.prefix = prefix
 end
 
@@ -1962,6 +2384,7 @@ end
 
 function HeroPortrait:hide()
 	self._original_pos_y = self.pos.y
+
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y + self.size.y
 	}, "out-quad")
@@ -1984,6 +2407,7 @@ end
 function HeroPortrait:on_click(button, x, y)
 	if button == 2 and DEBUG_RIGHT_CLICK then
 		local wx, wy = game_gui:u2g(V.v(x, y))
+
 		DEBUG_RIGHT_CLICK(wx, wy)
 	end
 
@@ -2010,6 +2434,7 @@ function HeroPortrait:update_xp(hero)
 	else
 		if self.hero_level ~= e.hero.level then
 			log.debug("level up! %s - %s", e.id, e.template_name)
+
 			self.hero_level = e.hero.level
 			self.hero_xp_base = 0
 
@@ -2032,7 +2457,7 @@ function HeroPortrait:update(dt)
 	local e = force_hero or game_gui:entity_by_id(self.hero_id)
 
 	if not e or not e.hero then
-		return 
+		return
 	end
 
 	local new_level = self:update_xp(e)
@@ -2058,16 +2483,19 @@ function HeroPortrait:update(dt)
 			self.death_start_ts = game_gui.game.store.tick_ts
 		else
 			local phase = km.clamp(0, 1, (game_gui.game.store.tick_ts - self.death_start_ts) / e.health.dead_lifetime)
+
 			self.ov_cooldown.scale.y = phase - 1
 		end
 	elseif not e.health.dead and (self:is_disabled() or not self.ov_cooldown.hidden) then
 		self:enable()
+
 		self.ov_cooldown.hidden = true
 		self.ov_levelup.ts = 0
 	end
 
 	if self.portrait_image_name ~= e.info.hero_portrait then
 		self.portrait:set_image(e.info.hero_portrait)
+
 		self.portrait_image_name = e.info.hero_portrait
 	end
 
@@ -2078,21 +2506,27 @@ PowerButton = class("PowerButton", KButton)
 
 function PowerButton:initialize(default_image, mask_image)
 	PowerButton.super.initialize(self, nil, default_image)
+
 	self.anchor = v(0, self.size.y)
 	self.animations = {}
 	self.mode = "default"
 	self.cooldown_time = 2
 	self.selected_gui_mode = nil
+
 	local cv = KView:new(V.v(self.size.x, self.size.y))
+
 	cv.size = v(self.size.x - 18, self.size.y - 19)
 	cv.pos = v(9, 10 + cv.size.y)
 	cv.colors.background = {0, 0, 0, 150}
 	cv.hidden = true
+
 	self:add_child(cv)
+
 	self.cooldown_view = cv
 
 	if mask_image then
 		self.mask = KImageView:new(mask_image)
+
 		self:add_child(self.mask)
 	end
 end
@@ -2102,17 +2536,20 @@ function PowerButton:set_mode(mode)
 
 	if self.animations[mode] then
 		local tv = self.mask or self
+
 		tv.animation = self.animations[mode]
 		tv.ts = 0
 	end
 
 	self.cooldown_view.hidden = true
+
 	self:enable()
 
 	if mode == "locked" then
 		self:disable()
 	elseif mode == "cooldown" then
 		self:disable()
+
 		self.cooldown_view.hidden = false
 		self.cooldown_view.start_ts = game_gui.game.store.tick_ts
 		self.cooldown_view.scale.x, self.cooldown_view.scale.y = 1, -1
@@ -2124,6 +2561,7 @@ end
 function PowerButton:update(dt)
 	if self.mode == "cooldown" then
 		local phase = km.clamp(0, 1, (game_gui.game.store.tick_ts - self.cooldown_view.start_ts) / self.cooldown_time)
+
 		self.cooldown_view.scale.y = phase - 1
 
 		if phase == 1 then
@@ -2165,6 +2603,7 @@ end
 
 function PowerButton:is_disabled()
 	log.debug(" ---- mode: %s", self.mode)
+
 	return self._disabled or self.mode == "locked" or self.mode == "cooldown"
 end
 
@@ -2183,8 +2622,11 @@ end
 function PowerButton:early_wave_bonus(remaining_time)
 	if self.mode == "cooldown" and remaining_time > 1 then
 		self.cooldown_view.start_ts = self.cooldown_view.start_ts - remaining_time
+
 		local reward_fx = TimeRewardFx:new(remaining_time)
+
 		reward_fx.pos = V.v(self.size.x * 0.5, -2 * reward_fx.size.y / 3)
+
 		self:add_child(reward_fx)
 		log.debug("show early wave time reward at %s,%s", wx, wy)
 	end
@@ -2195,7 +2637,9 @@ Power1Button = class("Power1Button", PowerButton)
 function Power1Button:initialize()
 	if IS_KR3 then
 		Power1Button.super.initialize(self, "power_button_icons_0017", "power_button_mask_0001")
+
 		local mask_prefix = "power_button_mask"
+
 		self.animations = {
 			default = {
 				to = 1,
@@ -2236,6 +2680,7 @@ function Power1Button:initialize()
 		}
 	else
 		Power1Button.super.initialize(self, "fire_0001")
+
 		self.animations = {
 			default = {
 				to = 1,
@@ -2277,13 +2722,17 @@ function Power1Button:initialize()
 	end
 
 	self.selected_gui_mode = GUI_MODE_POWER_1
+
 	self:set_mode("locked")
 end
 
 function Power1Button:fire(wx, wy)
 	Power1Button.super.fire(self, wx, wy)
+
 	local e = E:create_entity("user_power_1")
+
 	e.pos.x, e.pos.y = wx, wy
+
 	game_gui.game.simulation:insert_entity(e)
 	signal.emit("power-used", 1)
 end
@@ -2302,6 +2751,7 @@ Power2Button = class("Power2Button", PowerButton)
 
 function Power2Button:initialize()
 	Power2Button.super.initialize(self, "reinforcements_0001")
+
 	self.animations = {
 		default = {
 			to = 1,
@@ -2341,24 +2791,30 @@ function Power2Button:initialize()
 		}
 	}
 	self.selected_gui_mode = GUI_MODE_POWER_2
+
 	self:set_mode("locked")
 end
 
 function Power2Button:fire(wx, wy)
 	Power2Button.super.fire(self, wx, wy)
+
 	local i = math.random(1, 3)
 	local e = E:create_entity("re_current_" .. i)
+
 	e.pos.x = wx + 10
 	e.pos.y = wy - 10
 	e.nav_rally.center = V.v(wx, wy)
 	e.nav_rally.pos = V.vclone(e.pos)
+
 	game_gui.game.simulation:insert_entity(e)
+
 	i = math.random(1, 3)
 	e = E:create_entity("re_current_" .. i)
 	e.pos.x = wx - 10
 	e.pos.y = wy + 10
 	e.nav_rally.center = V.v(wx, wy)
 	e.nav_rally.pos = V.vclone(e.pos)
+
 	game_gui.game.simulation:insert_entity(e)
 	signal.emit("power-used", 2)
 end
@@ -2368,7 +2824,9 @@ Power3Button = class("Power3Button", PowerButton)
 function Power3Button:initialize()
 	local ht = E:get_template(game_gui.game.store.selected_hero)
 	local icon_name = "power_button_icons_" .. ht.info.ultimate_icon
+
 	Power3Button.super.initialize(self, icon_name, "power_button_mask_0001")
+
 	self.animations = {
 		default = {
 			to = 1,
@@ -2408,6 +2866,7 @@ function Power3Button:initialize()
 		}
 	}
 	self.selected_gui_mode = GUI_MODE_POWER_3
+
 	self:set_mode("locked")
 end
 
@@ -2418,11 +2877,14 @@ function Power3Button:fire(wx, wy)
 		local he = game_gui:entity_by_id(game_gui.heroes[1].hero_id)
 		local u = he.hero.skills.ultimate
 		local e = E:create_entity(u.controller_name)
+
 		e.pos.x, e.pos.y = wx, wy
 		e.owner = he
 		e.level = u.level
+
 		game_gui.game.simulation:insert_entity(e)
 		signal.emit("power-used", 3)
+
 		self.cooldown_time = e.cooldown
 	end
 end
@@ -2432,9 +2894,12 @@ PowerButtonBlock = class("PowerButtonBlock", KImageView)
 function PowerButtonBlock:initialize(power_button, duration, style_name)
 	self.power_button = power_button
 	self.duration = duration
+
 	local styles = data.power_button_block_styles
 	local style = styles[style_name] or styles.drow_queen
+
 	KImageView.initialize(self, style.image)
+
 	self.anchor = v(self.size.x * 0.5, self.size.y * 0.5)
 	self.pos.x, self.pos.y = power_button.size.x * 0.5, power_button.size.y * 0.5
 	self.animations = style.animations
@@ -2442,6 +2907,7 @@ end
 
 function PowerButtonBlock:block()
 	self.power_button:disable(false)
+
 	self.start_ts = game_gui.game.store.tick_ts
 	self.animation = self.animations.block
 	self.ts = 0
@@ -2449,9 +2915,11 @@ end
 
 function PowerButtonBlock:unblock()
 	self.power_button:enable(false)
+
 	self.start_ts = nil
 	self.animation = self.animations.unblock
 	self.ts = 0
+
 	timer:after((self.animation.to - self.animation.from + 1) / 30, function()
 		self:remove_from_parent()
 	end)
@@ -2470,13 +2938,16 @@ BagButton.static.init_arg_names = {"default_image_name", "focused_image_name", "
 
 function BagButton:initialize(default_image_name, focused_image_name, selected_image_name)
 	KImageView.initialize(self, default_image_name)
+
 	self.default_image_name = default_image_name
 	self.focused_image_name = focused_image_name
 	self.selected_image_name = selected_image_name
 	self.icon_bg_image_name = icon_bg_image_name
 	self.selected_item = nil
 	self.selected_gui_mode = GUI_MODE_BAG
+
 	self:set_mode("locked")
+
 	self.propagate_on_down = false
 	self.propagate_on_up = false
 	self.propagate_on_touch_down = false
@@ -2503,6 +2974,7 @@ function BagButton:set_mode(new_mode, item_name)
 
 	if new_mode == "locked" then
 		self:disable()
+
 		doors.hidden = false
 		doors.ts = 0
 		doors.animation.paused = true
@@ -2510,6 +2982,7 @@ function BagButton:set_mode(new_mode, item_name)
 		self:enable()
 		self:set_image(self.default_image_name)
 		show_icon("default")
+
 		doors.hidden = false
 		doors.ts = 0
 		doors.animation.paused = nil
@@ -2519,11 +2992,14 @@ function BagButton:set_mode(new_mode, item_name)
 	elseif new_mode == "item" then
 		self:set_image(self.selected_image_name)
 		show_icon(item_name)
+
 		self.selected_item = item_name
 	else
 		self:enable()
 		show_icon("default")
+
 		self.mode = "default"
+
 		self:set_image(self.default_image_name)
 	end
 end
@@ -2579,12 +3055,17 @@ end
 
 function BagButton:fire_item(item_name, x, y, entity)
 	self:deselect()
+
 	local slot = storage:load_slot()
 	local qty = slot.bag[item_name] or 0
+
 	qty = km.clamp(0, 9000000000, qty - 1)
 	slot.bag[item_name] = qty
+
 	storage:save_slot(slot)
+
 	local item_button = wid("bag_item_" .. item_name)
+
 	item_button:ci("bag_item_qty").text = qty
 
 	if qty < 1 then
@@ -2593,44 +3074,57 @@ function BagButton:fire_item(item_name, x, y, entity)
 
 	if item_name == "coins" then
 		local gnome = game_gui.hud_counters.gold_gnome
+
 		timer:script(function(wait)
 			S:queue("InAppExtraGold")
+
 			gnome.hidden = false
 			gnome.alpha = 0
 			gnome.pos.x = gnome.hidden_x
+
 			timer:tween(1.2, gnome.pos, {
 				x = gnome.shown_x
 			}, "out-elastic")
 			timer:tween(0.2, gnome, {
 				alpha = 1
 			})
+
 			local p1, p2 = ItemRewardParticles:new(), ItemRewardParticles:new()
+
 			p1.pos.x, p1.pos.y = x, y
 			p2.pos.x, p2.pos.y = gnome.shown_x, gnome.pos.y
+
 			game_gui.layer_gui_hud:add_child(p1)
 			game_gui.layer_gui_hud:add_child(p2)
 			wait(1)
 			timer:tween(0.2, gnome, {
 				alpha = 0
 			})
+
 			game.store.player_gold = game.store.player_gold + entity.reward
 		end)
 	elseif item_name == "hearts" then
 		S:queue("InAppExtraHearts")
+
 		local lh = game_gui.layer_gui_hud
 		local hud = game_gui.hud_counters
 		local p1 = ItemRewardParticles:new()
+
 		p1.pos.x, p1.pos.y = x, y
+
 		lh:add_child(p1)
 
 		for i = 1, entity.reward do
 			local h = KImageView:new("heart_0001")
+
 			h.pos = V.v(lh:view_to_view(x, y, hud))
 			h.anchor.x, h.anchor.y = h.size.x * 0.5, h.size.y * 0.5
 			h.hidden = true
+
 			hud:add_child(h)
 			timer:after((i - 1) * 0.15, function()
 				h.hidden = false
+
 				timer:tween(1, h.pos, {
 					x = hud.heart_x
 				}, "in-back")
@@ -2640,9 +3134,13 @@ function BagButton:fire_item(item_name, x, y, entity)
 			end)
 			timer:after((i - 1) * 0.15 + 1, function()
 				h:remove_from_parent()
+
 				local p1 = ItemRewardParticles:new(0.4)
+
 				p1.pos = V.v(hud:view_to_view(hud.heart_x, hud.heart_y, lh))
+
 				lh:add_child(p1)
+
 				game.store.lives = game.store.lives + 1
 
 				for _, e in pairs(E:filter_templates("enemy")) do
@@ -2662,6 +3160,7 @@ function BagButton:fire_item(item_name, x, y, entity)
 		entity.pos.x, entity.pos.y = game_gui:u2g(V.v(-50, 200))
 		entity.plane_dest = V.v(game_gui:u2g(V.v(game_gui.sw + 50, 200)))
 		entity.bomb_dest = V.v(game_gui:u2g(V.v(game_gui.sw * 0.5, 450)))
+
 		local wx, wy = game_gui:u2g(V.v(x, y))
 	end
 end
@@ -2671,8 +3170,11 @@ BagItemButton.static.init_arg_names = {"item", "image_suffix"}
 
 function BagItemButton:initialize(item, image_suffix)
 	KView.initialize(self)
+
 	self.item = item
+
 	local b = self:ci("bag_item_button")
+
 	b.propagate_on_touch_down = false
 	b.propagate_on_touch_up = false
 	b.propagate_on_touch_move = false
@@ -2686,15 +3188,18 @@ function BagItemButton:initialize(item, image_suffix)
 	end
 
 	local p = self:ci("bag_item_plus")
+
 	p.hidden = true
 	self.but = b
 	self.plus = p
+
 	self:refresh()
 end
 
 function BagItemButton:refresh()
 	local slot = storage:load_slot()
 	local qty = slot.bag and slot.bag[self.item] or 0
+
 	self:ci("bag_item_qty").text = qty
 
 	if qty < 1 then
@@ -2722,11 +3227,13 @@ NextWaveButton = class("NextWaveButton", KImageButton)
 
 function NextWaveButton:initialize()
 	NextWaveButton.super.initialize(self, "nextwave_0001", "nextwave_0002", "nextwave_0002")
+
 	self.anchor = v(math.floor(self.size.x * 0.5), self.size.y)
 end
 
 function NextWaveButton:on_click(button, x, y)
 	log.debug("")
+
 	game_gui.game.store.send_next_wave = true
 end
 
@@ -2734,21 +3241,29 @@ InfoBar = class("InfoBar", KImageView)
 
 function InfoBar:initialize()
 	InfoBar.super.initialize(self, "base")
+
 	local v_portrait = KView:new(V.v(68, 68))
+
 	v_portrait.anchor = v(34, 34)
 	v_portrait.pos = v(61, 32)
 	v_portrait.propagate_on_down = true
 	v_portrait.propagate_on_click = true
 	self.v_portrait = v_portrait
+
 	self:add_child(v_portrait)
+
 	local portrait_bo = KView:new(V.v(68, 68), "info_portraits_0000")
+
 	portrait_bo.anchor = v(34, 34)
 	portrait_bo.pos = v(61, 32)
 	portrait_bo.propagate_on_down = true
 	portrait_bo.propagate_on_click = true
 	self.portrait_bo = portrait_bo
+
 	self:add_child(portrait_bo)
+
 	local l_name = GGLabel:new(V.v(130, 15))
+
 	l_name.pos = v(97, 11)
 	l_name.font_name = "infobar_name"
 	l_name.font_size = 12
@@ -2760,7 +3275,9 @@ function InfoBar:initialize()
 	l_name.propagate_on_click = true
 	l_name.fit_lines = 1
 	self.l_name = l_name
+
 	self:add_child(l_name)
+
 	local s_1 = 396
 	local s_3 = 133.33333333333334
 	local s_2 = 200
@@ -2771,6 +3288,7 @@ function InfoBar:initialize()
 	local padding = v(20, CJK(1, 0, 3, -1.5))
 	local label_height = 14
 	local stat_labels = {}
+
 	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_0001", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_0003", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_0004", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_0007", 0.8 * s_4}}
 	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.2 * s_12}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.2 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.5 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.5 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.5 * s_12}}
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
@@ -2800,6 +3318,7 @@ function InfoBar:initialize()
 		l.text_shadow = shadow
 		l.propagate_on_down = true
 		l.propagate_on_click = true
+
 		return l
 	end
 
@@ -2808,10 +3327,12 @@ function InfoBar:initialize()
 
 	for vn, vp in pairs(stat_labels) do
 		local sv = KView:new()
+
 		sv.pos = v(100, 33)
 		sv.propagate_on_down = true
 		sv.propagate_on_click = true
 		self.stats_views[vn] = sv
+
 		local off_x = 0
 
 		for i, p in ipairs(vp) do
@@ -2821,17 +3342,21 @@ function InfoBar:initialize()
 				local _, name, bg_image, fg_image, w = unpack(p)
 				local b = KImageView:new(bg_image)
 				local bfg = KImageView:new(fg_image)
+
 				b:add_child(bfg)
+
 				bfg.pos.x = (b.size.x - bfg.size.x) * 0.5
 				bfg.pos.y = (b.size.y - bfg.size.y) * 0.5
 				b.pos.x = off_x
 				b.bar = bfg
 				b.pos.x = (w - b.size.x) * 0.5
 				sv[name] = b
+
 				sv:add_child(b)
 			elseif p[1] == "label" then
 				local _, l_name, l_icon, l_w, l_align, shadow, custom_padding = unpack(p)
 				local l = make_label(l_icon, l_w, l_align, shadow)
+
 				l.pos.x = off_x
 
 				if custom_padding then
@@ -2840,6 +3365,7 @@ function InfoBar:initialize()
 
 				off_x = off_x + l_w
 				sv[l_name] = l
+
 				sv:add_child(l)
 			end
 		end
@@ -2848,11 +3374,13 @@ end
 
 function InfoBar:show()
 	log.debug("pos:%s,%s  size:%s,%s", self.pos.x, self.pos.y, self.size.x, self.size.y)
+
 	local e = game_gui.selected_entity
 
 	if not e or not e.info then
 		self:hide()
-		return 
+
+		return
 	end
 
 	if e.info and e.info.i18n_key then
@@ -2869,13 +3397,15 @@ function InfoBar:show()
 	end
 
 	self.hidden = false
+
 	local pos_vis_y = self.pos_hidden.y - self.size.y
 
 	if self.pos.y == pos_vis_y then
-		return 
+		return
 	end
 
 	local to_y = pos_vis_y
+
 	self.tweening = timer:tween(0.25, self.pos, {
 		y = to_y
 	}, "out-quad", function()
@@ -2885,7 +3415,7 @@ end
 
 function InfoBar:hide()
 	if self.hidden then
-		return 
+		return
 	end
 
 	if self.tweening then
@@ -2893,6 +3423,7 @@ function InfoBar:hide()
 	end
 
 	local to_y = self.pos_hidden.y
+
 	self.tweening = timer:tween(0.25, self.pos, {
 		y = to_y
 	}, "in-quad", function()
@@ -2903,11 +3434,13 @@ end
 
 function InfoBar:update(dt)
 	InfoBar.super.update(self, dt)
+
 	local e = game_gui.selected_entity
 
 	if e and e.ui and not e.ui.can_select then
 		game_gui:deselect_all()
-		return 
+
+		return
 	end
 
 	self:update_portrait()
@@ -2918,12 +3451,13 @@ function InfoBar:update_portrait()
 	local e = game_gui.selected_entity
 
 	if not e or not e.info then
-		return 
+		return
 	end
 
 	if self.v_portrait_image_name ~= e.info.portrait then
 		if e.info.portrait then
 			self.v_portrait:set_image(e.info.portrait)
+
 			self.v_portrait.hidden = false
 			self.v_portrait_image_name = e.info.portrait
 			self.portrait_bo.hidden = false
@@ -2939,7 +3473,7 @@ function InfoBar:update_stats()
 	local e = game_gui.selected_entity
 
 	if not e or not e.info or not e.info.fn then
-		return 
+		return
 	end
 
 	local stats = e.info.fn(e)
@@ -2948,14 +3482,17 @@ function InfoBar:update_stats()
 	if not sv then
 		log.error("Entity %s has no infobar", entity)
 		self:hide()
-		return 
+
+		return
 	elseif sv ~= self.stats_view then
 		if self.stats_view then
 			self:remove_child(self.stats_view)
+
 			self.stats_view = nil
 		end
 
 		self.stats_view = sv
+
 		self:add_child(self.stats_view)
 	end
 
@@ -2971,18 +3508,24 @@ function InfoBar:update_stats()
 	if stats.type == STATS_TYPE_TOWER_BARRACK then
 		sv.l_hp.text = string.format("%i", stats.hp_max)
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
+
 		sv.l_armor.text = GU.armor_value_desc(stats.armor)
 		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
 		sv.l_respawn.text = stats.respawn and string.format(_("%i sec."), stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
+
 		sv.l_range.text = GU.range_value_desc(stats.range)
 		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
 	elseif stats.type == STATS_TYPE_TOWER_NO_RANGE then
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
+
 		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
 	elseif stats.type == STATS_TYPE_ENEMY then
 		sv.b_hp.bar.scale.x = stats.hp / stats.hp_max
@@ -2994,9 +3537,13 @@ function InfoBar:update_stats()
 		end
 
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
+
 		sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
+
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
+
 		sv.l_armor.text = GU.armor_value_desc(stats.armor)
 		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
 		sv.l_lives.text = type(stats.lives) == "number" and stats.lives > 0 and stats.lives or "-"
@@ -3004,9 +3551,13 @@ function InfoBar:update_stats()
 		sv.b_hp.bar.scale.x = stats.hp / stats.hp_max
 		sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
+
 		sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
+
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
+
 		sv.l_armor.text = GU.armor_value_desc(stats.armor)
 		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
 		sv.l_respawn.text = stats.respawn or "-"
@@ -3019,7 +3570,9 @@ HudBottomView = class("HudBottomView", KView)
 
 function HudBottomView:initialize(sw, sh)
 	sh = sh + 1
+
 	HudBottomView.super.initialize(self)
+
 	self.propagate_on_click = true
 
 	if IS_KR3 then
@@ -3029,8 +3582,11 @@ function HudBottomView:initialize(sw, sh)
 
 		while x < sw do
 			local v = KImageView:new("base_gui_kr3_tile")
+
 			v.pos.x, v.pos.y = x, 0
+
 			bg_bar:add_child(v)
+
 			x = x + v.size.x
 			vh = v.size.y
 		end
@@ -3041,27 +3597,40 @@ function HudBottomView:initialize(sw, sh)
 		bg_bar.anchor = v(0, vh)
 		bg_bar.size = v(sw, vh)
 		bg_bar.pos = v(0, sh)
+
 		self:add_child(bg_bar)
 	else
 		local bg_bar = KImageView:new("bg_bottom_bar")
+
 		bg_bar.anchor = v(0, bg_bar.size.y)
 		bg_bar.pos = v(0, sh)
+
 		self:add_child(bg_bar)
 	end
 
 	local next_wave = IS_KR3 and KView:new(v(120, 36)) or KImageView:new("bg_bottom_right")
+
 	next_wave.anchor = v(next_wave.size.x, next_wave.size.y)
 	next_wave.pos = v(sw + 6, sh)
 	self.next_wave = next_wave
+
 	self:add_child(next_wave)
+
 	local bg_nextwave = KImageView:new("bg_bottom_nextwave")
+
 	bg_nextwave.anchor = v(math.floor(bg_nextwave.size.x * 0.5), bg_nextwave.size.y)
 	bg_nextwave.pos = v(next_wave.size.x * 0.5, next_wave.size.y)
+
 	next_wave:add_child(bg_nextwave)
+
 	local next_wave_button = NextWaveButton:new()
+
 	next_wave_button.pos = v(next_wave.size.x * 0.5, 31)
+
 	next_wave:add_child(next_wave_button)
+
 	self.bg_right = next_wave
+
 	local powers
 
 	if IS_KR3 then
@@ -3073,24 +3642,36 @@ function HudBottomView:initialize(sw, sh)
 	powers.anchor = v(0, powers.size.y)
 	powers.pos = v(105, sh)
 	self.powers = powers
+
 	self:add_child(powers)
+
 	local base_powers = KImageView:new(game_gui.is_premium and "base_powers_3_bg" or "base_powers_bg")
+
 	base_powers.anchor = v(103, base_powers.size.y)
 	base_powers.pos = v(123.5, powers.size.y)
+
 	powers:add_child(base_powers)
+
 	local power_1 = Power1Button:new()
+
 	power_1.cooldown_time = E:get_template("user_power_1").cooldown
 	power_1.pos = IS_KR3 and v(29, 30) or v(59, 30)
+
 	powers:add_child(power_1)
+
 	local power_2 = Power2Button:new()
+
 	power_2.cooldown_time = E:get_template("re_current_1").cooldown
 	power_2.pos = IS_KR3 and v(92, 30) or v(125, 30)
+
 	powers:add_child(power_2)
+
 	local power_3
 
 	if IS_KR3 then
 		power_3 = Power3Button:new()
 		power_3.pos = v(155, 30)
+
 		powers:add_child(power_3)
 	end
 
@@ -3098,16 +3679,20 @@ function HudBottomView:initialize(sw, sh)
 
 	if game_gui.is_premium then
 		local tt = kui_db:get_table("game_gui_bag_button", {})
+
 		bag_button = BagButton:new_from_table(tt)
 		bag_button.pos = v((power_3 and power_3.pos.x or power_2.pos.x) + 66, 29.5)
+
 		powers:add_child(bag_button)
 	end
 
 	for i = 1, IS_KR3 and 3 or 2 do
 		local pb = powers.children[1 + i]
 		local pn = KImageView:new("power_nbrs_000" .. i)
+
 		pn.anchor = v(pn.size.x * 0.5, pn.size.y)
 		pn.pos = v(pb.pos.x + pb.size.x * 0.5, powers.size.y)
+
 		powers:add_child(pn)
 	end
 
@@ -3115,9 +3700,11 @@ function HudBottomView:initialize(sw, sh)
 
 	if not IS_KR3 then
 		local bg_center = KImageView:new("bg_bottom_center")
+
 		bg_center.anchor = v(bg_center.size.x * 0.5, bg_center.size.y)
 		bg_center.pos = v(x_center, sh)
 		self.bg_center = bg_center
+
 		self:add_child(bg_center)
 	end
 
@@ -3125,12 +3712,14 @@ function HudBottomView:initialize(sw, sh)
 
 	if game_gui.is_premium then
 		local tt = kui_db:get_table("game_gui_bag_view", {})
+
 		bagbar = GG9View:new_from_table(tt)
 		bagbar.anchor = v(math.floor(bagbar.size.x * 0.5), bagbar.size.y)
 		bagbar.y_shown = sh + 25
 		bagbar.y_hidden = sh + bagbar.size.y
 		bagbar.pos = V.v(x_center, bagbar.y_hidden)
 		self.bagbar = bagbar
+
 		self:add_child(bagbar)
 
 		function bagbar.show(this)
@@ -3162,20 +3751,26 @@ function HudBottomView:initialize(sw, sh)
 	end
 
 	local infobar = InfoBar:new()
+
 	infobar.anchor = v(math.floor(infobar.size.x * 0.5), infobar.size.y)
 	infobar.pos = v(x_center, sh + infobar.size.y)
 	infobar.pos_hidden = V.vclone(infobar.pos)
 	infobar.hidden = true
 	self.infobar = infobar
+
 	self:add_child(infobar)
 	self:update_bars_pos()
+
 	local herobar = KView:new()
+
 	herobar.propagate_on_click = true
 	herobar.propagate_on_down = true
 	herobar.propagate_on_up = true
 	herobar.pos = v(0, sh)
 	self.herobar = herobar
+
 	self:add_child(herobar)
+
 	game_gui.power_1 = power_1
 	game_gui.power_2 = power_2
 	game_gui.power_3 = power_3
@@ -3185,6 +3780,7 @@ end
 
 function HudBottomView:hide()
 	self._original_pos_y = self.pos.y
+
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y + 110
 	}, "out-quad")
@@ -3198,6 +3794,7 @@ end
 
 function HudBottomView:update_bars_pos()
 	local x_center = math.floor((game_gui.sw - self.next_wave.size.x - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
+
 	self.infobar.pos.x = x_center - 12
 
 	if self.bagbar then
@@ -3211,23 +3808,34 @@ end
 
 function HudBottomView:add_hero(hero_entity)
 	local hero = HeroPortrait:new(hero_entity)
+
 	hero.anchor = v(0, hero.size.y)
+
 	self.herobar:add_child(hero)
 
 	if #self.herobar.children > 1 then
 		self.powers.pos.x = 175
+
 		local last = self.herobar.children[1]
+
 		last:set_style("left")
+
 		last.pos.x = 8
+
 		local overlap = 18
+
 		hero.pos = v(last.pos.x + hero.size.x - overlap, 0)
+
 		hero:set_style("right")
+
 		local separator = KImageView:new("heroPortrait_separator")
+
 		separator.anchor = v(separator.size.x * 0.5, hero.size.y)
 		separator.pos = v(last.pos.x + hero.size.x - overlap * 0.5, 3)
 		separator.propagate_on_click = true
 		separator.propagate_on_down = true
 		separator.propagate_on_up = true
+
 		self.herobar:add_child(separator)
 	else
 		hero.pos = v(15, 0)
@@ -3235,6 +3843,7 @@ function HudBottomView:add_hero(hero_entity)
 	end
 
 	game_gui.hud_bottom:update_bars_pos()
+
 	return hero
 end
 
@@ -3243,24 +3852,31 @@ HudCountersView = class("HudCountersView", KImageView)
 function HudCountersView:initialize(level_mode)
 	-- HudCountersView.super.initialize(self, level_mode == GAME_MODE_ENDLESS and "top_left_endless" or "top_left")
 	HudCountersView.super.initialize(self, "top_left")
+
 	self.level_mode = level_mode
 	self.heart_x = 70
 	self.heart_y = 50
+
 	local lbl_lives = GGLabel:new(V.v(71, 35))
+
 	lbl_lives.pos = v(80, CJK(44, 39, 46, 39))
 	lbl_lives.text = "0"
 	lbl_lives.text_align = "left"
 	lbl_lives.font_name = "hud"
 	lbl_lives.font_size = 12
 	lbl_lives.colors.text = {255, 255, 255}
+
 	local lbl_gold = GGLabel:new(V.v(71, 35))
+
 	lbl_gold.pos = v(136, CJK(44, 39, 46, 39))
 	lbl_gold.text = "1000"
 	lbl_gold.text_align = "left"
 	lbl_gold.font_name = "hud"
 	lbl_gold.font_size = 12
 	lbl_gold.colors.text = {255, 255, 255}
+
 	local lbl_wave = GGLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
+
 	lbl_wave.pos = v(240, 38)
 	lbl_wave.text_align = "left"
 	lbl_wave.vertical_align = "middle"
@@ -3271,16 +3887,20 @@ function HudCountersView:initialize(level_mode)
 	lbl_wave.fit_lines = 1
 	lbl_wave.colors.text = {255, 255, 255}
 	lbl_wave.colors.background = DEBUG_BACKGROUND_COLOR
+
 	local gold_gnome = KImageView:new("gold_gnome")
+
 	gold_gnome.id = "user_item_gold_gnome_view"
 	gold_gnome.pos = v(100, 25)
 	gold_gnome.hidden_x = 80
 	gold_gnome.shown_x = 112
 	gold_gnome.hidden = true
+
 	self:add_child(lbl_lives)
 	self:add_child(lbl_gold)
 	self:add_child(lbl_wave)
 	self:add_child(gold_gnome)
+
 	self.lbl_lives = lbl_lives
 	self.lbl_gold = lbl_gold
 	self.lbl_wave = lbl_wave
@@ -3336,7 +3956,9 @@ end
 
 function HudCountersView:update(dt)
 	HudCountersView.super.update(self, dt)
+
 	local store = game_gui.game.store
+
 	self.lbl_lives.text = string.format("%d", store.lives)
 	self.lbl_gold.text = string.format("%d", store.player_gold)
 
@@ -3352,6 +3974,7 @@ end
 
 function HudCountersView:hide()
 	self._original_pos_y = self.pos.y
+
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y - self.size.y
 	}, "out-quad")
@@ -3365,14 +3988,17 @@ end
 
 function HudCountersView:show_bonus(reward)
 	if not reward or reward < 1 or not self.lbl_bonus then
-		return 
+		return
 	end
 
 	self.lbl_bonus.text = string.format("+%d", reward)
+
 	local b = self.bonus_fx
+
 	b.hidden = false
 	b.ts = 0
 	b.alpha = 1
+
 	timer:tween(1, b, {
 		alpha = 0
 	}, "in-quint")
@@ -3382,6 +4008,7 @@ OverlayView = class("OverlayView", KView)
 
 function OverlayView:initialize(sw, sh)
 	OverlayView.super.initialize(self, V.v(sw, sh))
+
 	self.colors.background = {0, 0, 0, 120}
 	self.sw = sw
 	self.sh = sh
@@ -3418,7 +4045,9 @@ HudPauseButton = class("HudPauseButton", KImageView)
 
 function HudPauseButton:initialize()
 	HudPauseButton.super.initialize(self, "pause_base")
+
 	local button = KImageButton:new("pause_btn_0001", "pause_btn_0002", "pause_btn_0002")
+
 	button.anchor = v(button.size.x * 0.5, 0)
 	button.pos = v(self.size.x * 0.5, 25)
 
@@ -3432,6 +4061,7 @@ end
 
 function HudPauseButton:hide()
 	self._original_pos_y = self.pos.y
+
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y - self.size.y
 	}, "out-quad")
@@ -3447,19 +4077,28 @@ PauseView = class("PauseView", KImageView)
 
 function PauseView:initialize()
 	PauseView.super.initialize(self, "options_bg_notxt")
+
 	local header = GGPanelHeader:new(_("OPTIONS"), 170)
+
 	header.pos = V.v(172, CJK(30, 28, nil, 28) + (IS_KR3 and -16 or 0))
+
 	self:add_child(header)
+
 	local mx = 100
 	local y = 100
 	local title = GGOptionsLabel:new(V.v(self.size.x, 28))
+
 	title.text = _("SFX")
 	title.pos = V.v(self.size.x * 0.5, y)
 	title.anchor.x = title.size.x * 0.5
 	title.vertical_align = "middle"
+
 	self:add_child(title)
+
 	y = y + title.size.y + 6
+
 	local s_sfx = VolumeSlider:new("options_sounds_0004", "options_sounds_0005", "options_sounds_0006")
+
 	s_sfx.pos = V.v(mx, y)
 
 	function s_sfx:on_change(value)
@@ -3467,15 +4106,20 @@ function PauseView:initialize()
 	end
 
 	s_sfx.id = "s_sfx"
+
 	self:add_child(s_sfx)
+
 	y = y + 50
 	title = GGOptionsLabel:new(V.v(self.size.x, 28))
 	title.text = _("Music")
 	title.pos = V.v(self.size.x * 0.5, y)
 	title.anchor.x = title.size.x * 0.5
 	title.vertical_align = "middle"
+
 	self:add_child(title)
+
 	y = y + title.size.y + 6
+
 	local s_music = VolumeSlider:new("options_sounds_0001", "options_sounds_0002", "options_sounds_0003")
 
 	function s_music:on_change(value)
@@ -3484,12 +4128,17 @@ function PauseView:initialize()
 
 	s_music.pos = V.v(mx, y)
 	s_music.id = "s_music"
+
 	self:add_child(s_music)
+
 	mx = 45
 	y = y + 90 + 30
+
 	local b
+
 	b = GGOptionsButton:new(_("BUTTON_QUIT"))
 	b.pos = V.v(mx + b.size.x * 0.5, y)
+
 	self:add_child(b)
 
 	function b.on_click(this, button, x, y)
@@ -3499,6 +4148,7 @@ function PauseView:initialize()
 
 	b = GGOptionsButton:new(_("BUTTON_RESTART"))
 	b.pos = V.v(math.ceil(self.size.x * 0.5), y)
+
 	self:add_child(b)
 
 	function b.on_click(this, button, x, y)
@@ -3508,6 +4158,7 @@ function PauseView:initialize()
 
 	b = GGOptionsButton:new(_("BUTTON_RESUME"))
 	b.pos = V.v(self.size.x - mx - b.size.x * 0.5, y)
+
 	self:add_child(b)
 
 	function b.on_click(this, button, x, y)
@@ -3537,8 +4188,11 @@ function PauseView:show()
 	game_gui:deselect_all()
 	S:pause()
 	self:disable(false)
+
 	game_gui.game.store.paused = true
+
 	game_gui.overlay:show()
+
 	self.pos.y = game_gui.sh * 0.5 - 50
 	self.hidden = false
 	self.alpha = 0
@@ -3549,6 +4203,7 @@ function PauseView:show()
 		}
 	}, "out-quad", function()
 		self:enable()
+
 		self.tweener = nil
 	end)
 	self._last_volume_fx = km.clamp(0, 1, self:get_child_by_id("s_sfx").value)
@@ -3563,8 +4218,11 @@ function PauseView:hide()
 	game_gui:enable_keys()
 	self:disable(false)
 	S:resume()
+
 	game_gui.game.store.paused = false
+
 	game_gui.overlay:hide()
+
 	self.tweener = timer:tween(0.25, self, {
 		alpha = 0,
 		pos = {
@@ -3574,13 +4232,16 @@ function PauseView:hide()
 		self.hidden = true
 		self.tweener = nil
 	end)
+
 	local s_sfx = self:get_child_by_id("s_sfx")
 	local s_music = self:get_child_by_id("s_music")
 
 	if self._last_volume_fx ~= s_sfx.value or self._last_volume_music ~= s_music.value then
 		local settings = storage:load_settings()
+
 		settings.volume_fx = km.clamp(0, 1, s_sfx.value)
 		settings.volume_music = km.clamp(0, 1, s_music.value)
+
 		storage:save_settings(settings)
 	end
 end
@@ -3592,11 +4253,15 @@ function DefeatView:initialize()
 
 	if game_gui.is_premium then
 		local gnome = KImageView:new("win_Gnome")
+
 		gnome.pos = V.v(300, 120)
 		gnome.id = "defeat_gems_view"
 		gnome.hidden = true
+
 		self:add_child(gnome)
+
 		local gems_label = GGShaderLabel:new(V.v(90, 48))
+
 		gems_label.colors = {
 			text = {255, 255, 255, 255},
 			background = {0, 0, 0, 0}
@@ -3619,15 +4284,22 @@ function DefeatView:initialize()
 			thickness = 1,
 			glow_color = {0, 0.6196078431372549, 0.7058823529411765, 1}
 		}}
+
 		gnome:add_child(gems_label)
 	end
 
 	local bg = KImageView:new("defeat_bg_notxt")
+
 	self:add_child(bg)
+
 	local header = GGPanelHeader:new(_("DEFEAT"), 140)
+
 	header.pos = V.v(160, CJK(81, 81, 83) + (IS_KR3 and -16 or 0))
+
 	self:add_child(header)
+
 	local l_tip = GGLabel:new(V.v(246, 90))
+
 	l_tip.anchor.x = l_tip.size.x * 0.5
 	l_tip.text = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
 	l_tip.text_align = "center"
@@ -3637,11 +4309,15 @@ function DefeatView:initialize()
 	l_tip.fit_size = true
 	l_tip.colors.text = {255, 255, 255, 255}
 	l_tip.pos.x, l_tip.pos.y = self.size.x * 0.5, 155
+
 	self:add_child(l_tip)
+
 	self.l_tip = l_tip
+
 	local mx = 84
 	local y = 278
 	local b
+
 	b = GGOptionsButton(_("BUTTON_RESTART"))
 	b.pos.x, b.pos.y = V.csnap(mx + b.size.x * 0.5, y + b.size.y * 0.5)
 
@@ -3651,6 +4327,7 @@ function DefeatView:initialize()
 	end
 
 	self:add_child(b)
+
 	b = GGOptionsButton(_("Quit"))
 	b.pos.x, b.pos.y = V.csnap(self.size.x - mx - b.size.x * 0.5, y + b.size.y * 0.5)
 
@@ -3664,23 +4341,32 @@ end
 
 function DefeatView:show()
 	game_gui.overlay:show()
+
 	self.hidden = false
 	self.l_tip.text = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
+
 	S:stop_all()
 	S:queue("GUIQuestFailed")
+
 	self.pos.y = -game_gui.sw * 0.5
+
 	timer:tween(0.5, self.pos, {
 		y = game_gui.sh * 0.5
 	}, "out-back", nil, 1)
 
 	if game_gui.is_premium then
 		local gems = game_gui.game.store.gems_collected or 0
+
 		self:ci("defeat_gems_label").text = gems
+
 		local gv = self:ci("defeat_gems_view")
+
 		timer:script(function(wait)
 			wait(0.5)
 			S:queue("InAppExtraGold")
+
 			gv.hidden = false
+
 			timer:tween(0.4, gv.pos, {
 				x = 400
 			}, "out-elastic")
@@ -3692,13 +4378,17 @@ VictoryParticles = class("VictoryParticles", KView)
 
 function VictoryParticles:initialize(w, h)
 	VictoryParticles.super.initialize(self)
+
 	local ss = I:s("victory_star")
 	local p_scale = ss.ref_scale or 1
 	local c = G.newCanvas(ss.size[1], ss.size[2])
+
 	G.setCanvas(c)
 	G.draw(I:i(ss.atlas), ss.quad)
 	G.setCanvas()
+
 	local ps = G.newParticleSystem(c, 500)
+
 	ps:setDirection(-math.pi * 0.5)
 	ps:setSpread(2 * math.pi / 3)
 	ps:setSizes(1 * p_scale, 1.4 * p_scale)
@@ -3708,6 +4398,7 @@ function VictoryParticles:initialize(w, h)
 	ps:setRadialAcceleration(-200)
 	ps:setColors(255, 255, 255, 255, 255, 255, 255, 0)
 	ps:emit(150)
+
 	self.ps = ps
 	self.ss = ss
 end
@@ -3728,7 +4419,9 @@ VictoryView = class("VictoryView", KView)
 
 function VictoryView:initialize(level_mode)
 	VictoryView.super.initialize(self)
+
 	self.level_mode = level_mode
+
 	local img_names = {
 		[GAME_MODE_CAMPAIGN] = "victoryBadges_notxt_0002",
 		[GAME_MODE_HEROIC] = "victoryBadges_notxt_0003",
@@ -3736,11 +4429,14 @@ function VictoryView:initialize(level_mode)
 	}
 	local v_badge = KImageView:new(img_names[level_mode])
 	local vw, vh = v_badge.size.x, v_badge.size.y
+
 	v_badge.anchor.x = vw * 0.5
 	v_badge.anchor.y = 0
 	v_badge.pos.x, v_badge.pos.y = vw * 0.5, 0
 	v_badge.propagate_on_click = true
+
 	local ct = GGEllipseText:new(V.v(320, -30))
+
 	ct.pos.x, ct.pos.y = v_badge.size.x * 0.5, 235
 	ct.anchor.x = ct.size.x * 0.5
 	ct.text = _("VICTORY")
@@ -3749,8 +4445,11 @@ function VictoryView:initialize(level_mode)
 	ct.colors.text = {76, 56, 23}
 	ct.max_angle = math.pi / 6
 	self.ct = ct
+
 	v_badge:add_child(ct)
+
 	local v_stars = KImageView:new("victoryStars_0001")
+
 	v_stars.anchor.x = v_stars.size.x * 0.5
 	v_stars.pos.x, v_stars.pos.y = vw * 0.5, 230
 	v_stars.hidden = true
@@ -3775,6 +4474,7 @@ function VictoryView:initialize(level_mode)
 	local v_c = KView:new()
 	local c = KImageView:new("button_continue_chains")
 	local b = GGBorderButton(_("BUTTON_CONTINUE"), true)
+
 	c.anchor.x = c.size.x * 0.5
 	c.anchor.y = c.size.y + 0.9 * b.size.y
 	c.pos.x = vw * 0.5
@@ -3790,6 +4490,7 @@ function VictoryView:initialize(level_mode)
 	c:disable(false)
 	c:add_child(b)
 	v_c:add_child(c)
+
 	v_c.propagate_on_click = true
 	v_c.propagate_on_down = true
 	v_c.clip = true
@@ -3799,9 +4500,11 @@ function VictoryView:initialize(level_mode)
 	v_c.anchor.y = 0
 	v_c.pos.x = vw * 0.5
 	v_c.pos.y = 300
+
 	local v_r = KView:new()
 	local c = KImageView:new("button_restart_chains")
 	local b = GGBorderButton(_("BUTTON_RESTART"))
+
 	c.anchor.x = c.size.x * 0.5
 	c.anchor.y = c.size.y + 0.9 * b.size.y
 	c.pos.x = vw * 0.5
@@ -3817,6 +4520,7 @@ function VictoryView:initialize(level_mode)
 	c:disable(false)
 	c:add_child(b)
 	v_r:add_child(c)
+
 	v_r.clip = true
 	v_r.size.x = vw
 	v_r.size.y = vh
@@ -3824,6 +4528,7 @@ function VictoryView:initialize(level_mode)
 	v_r.anchor.y = 0
 	v_r.pos.x = vw * 0.5
 	v_r.pos.y = v_c.pos.y + 115
+
 	local v_gnome
 
 	if game_gui.is_premium then
@@ -3843,6 +4548,7 @@ function VictoryView:initialize(level_mode)
 	self:add_child(v_c)
 	self:add_child(v_badge)
 	self:add_child(v_stars)
+
 	self.v_badge = v_badge
 	self.v_stars = v_stars
 	self.v_restart = v_r
@@ -3866,18 +4572,23 @@ function VictoryView:show()
 
 		if criket.tower_name then
 			local tower_icon = KImageView:new(E:get_template(criket.tower_name).info.portrait)
+
 			tower_icon.anchor = V.v(tower_icon.size.x * 0.5, tower_icon.size.y * 0.5)
 			tower_icon.pos = V.v(400, 120)
 			tower_icon.scale = V.v(1.2, 1.2)
 			tower_icon.hidden = false
+
 			self:add_child(tower_icon)
 		end
 	end
 
 	game_gui.overlay:show()
+
 	self.hidden = false
+
 	S:stop_all()
 	S:queue("GUIQuestCompleted")
+
 	local v_badge, v_stars, v_restart, v_continue = self.v_badge, self.v_stars, self.v_restart, self.v_continue
 	local c_chain = v_continue.children[1]
 	local r_chain = v_restart.children[1]
@@ -3892,17 +4603,23 @@ function VictoryView:show()
 
 	timer:script(function(wait)
 		self.scale.x, self.scale.y = 0.6, 0.6
+
 		timer:tween(0.6, self.scale, {
 			x = 1,
 			y = 1
 		}, "out-back", nil, 1.5)
 		wait(0.15)
+
 		local p = VictoryParticles:new()
+
 		p.pos.x, p.pos.y = self.size.x * 0.5, self.size.y / 3
 		self.particles = p
+
 		self:add_child(p)
 		wait(0.5)
+
 		local animation = v_stars.animations[stars_rating]
+
 		v_stars.animation = animation
 		v_stars.ts = 0
 		v_stars.hidden = false
@@ -3914,12 +4631,16 @@ function VictoryView:show()
 		end
 
 		wait(animation.to / FPS)
+
 		c_chain.pos.y = 0
+
 		timer:tween(0.5, c_chain.pos, {
 			y = c_chain.anchor.y
 		}, "out-back")
 		wait(0.5)
+
 		r_chain.pos.y = 0
+
 		timer:tween(0.5, r_chain.pos, {
 			y = r_chain.anchor.y
 		}, "out-back")
@@ -3931,17 +4652,20 @@ function VictoryView:show()
 end
 
 function VictoryView:hide()
-	return 
+	return
 end
 
 MousePointer = class("MousePointer", KView)
 
 function MousePointer:initialize()
 	MousePointer.super.initialize(self)
+
 	self.propagate_on_click = true
 	self.propagate_on_down = true
 	self.propagate_on_up = true
+
 	local rally_tower = KImageView:new("pointer_set_rally_0001")
+
 	rally_tower.anchor = V.v(rally_tower.size.x * 0.5, rally_tower.size.y * 0.5)
 	rally_tower.animation = {
 		to = 10,
@@ -3949,17 +4673,23 @@ function MousePointer:initialize()
 		from = 1
 	}
 	rally_tower.loop = true
+
 	local ipc = KImageView:new("error_feedback_0001")
+
 	ipc.anchor = v(ipc.size.x * 0.5, ipc.size.y * 0.5)
 	ipc.animation = {
 		to = 14,
 		prefix = "error_feedback",
 		from = 1
 	}
+
 	local pirate_camp = KImageView:new("pointer_pirate_cannons")
+
 	pirate_camp.anchor = v(pirate_camp.size.x * 0.5, pirate_camp.size.y * 0.5)
 	pirate_camp.alpha = 0.75
+
 	local p1b, p2b, p3b, pb_point, pb_area, sunray_tower
+
 	p1b = KImageView:new("pointer_area_orange_0001")
 	p1b.anchor = V.v(p1b.size.x * 0.5, p1b.size.y * 0.5)
 	p1b.animation = {
@@ -3968,10 +4698,14 @@ function MousePointer:initialize()
 		from = 1
 	}
 	p1b.loop = true
+
 	local p1i = KImageView:new(IS_KR3 and "pointer_hero_power_0017" or "pointer_user_power_0001")
+
 	p1i.anchor = V.v(p1i.size.x * 0.5, p1i.size.y * 100 / 100)
 	p1i.pos.x, p1i.pos.y = p1b.size.x * 0.5, p1b.size.y * 0.5
+
 	p1b:add_child(p1i)
+
 	p2b = KImageView:new("pointer_point_orange_0001")
 	p2b.anchor = V.v(p2b.size.x * 0.5, p2b.size.y * 0.5)
 	p2b.animation = {
@@ -3980,9 +4714,12 @@ function MousePointer:initialize()
 		from = 1
 	}
 	p2b.loop = true
+
 	local p2i = KImageView:new(IS_KR3 and "pointer_hero_power_0018" or "pointer_user_power_0002")
+
 	p2i.anchor = V.v(p2i.size.x * 0.5, p2i.size.y * 100 / 100)
 	p2i.pos.x, p2i.pos.y = p2b.size.x * 0.5, p2b.size.y * 0.5
+
 	p2b:add_child(p2i)
 
 	if IS_KR3 then
@@ -3990,6 +4727,7 @@ function MousePointer:initialize()
 		local p3_icon = "pointer_hero_power_" .. ht.info.ultimate_icon
 		local p3_style = ht.info.ultimate_pointer_style or "point"
 		local p3b_prefix = p3_style == "area" and "pointer_area_orange" or "pointer_point_orange"
+
 		p3b = KImageView:new(p3b_prefix .. "_0001")
 		p3b.anchor = V.v(p3b.size.x * 0.5, p3b.size.y * 0.5)
 		p3b.animation = {
@@ -3998,9 +4736,12 @@ function MousePointer:initialize()
 			prefix = p3b_prefix
 		}
 		p3b.loop = true
+
 		local p3i = KImageView:new(p3_icon)
+
 		p3i.anchor = V.v(p3i.size.x * 0.5, p3i.size.y * 100 / 100)
 		p3i.pos.x, p3i.pos.y = p3b.size.x * 0.5, p3b.size.y * 0.5
+
 		p3b:add_child(p3i)
 	end
 
@@ -4013,9 +4754,12 @@ function MousePointer:initialize()
 			from = 1
 		}
 		sunray_tower.loop = true
+
 		local drop = KImageView:new("pointer_sunray_tower")
+
 		drop.anchor = V.v(drop.size.x * 0.5, drop.size.y * 100 / 100)
 		drop.pos.x, drop.pos.y = sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5
+
 		sunray_tower:add_child(drop)
 	end
 
@@ -4028,10 +4772,14 @@ function MousePointer:initialize()
 			from = 1
 		}
 		pb_point.loop = true
+
 		local pbi = KImageView:new("pointer_bag_item_0001")
+
 		pbi.anchor = V.v(pbi.size.x * 0.5, pbi.size.y * 100 / 100)
 		pbi.pos.x, pbi.pos.y = pb_point.size.x * 0.5, pb_point.size.y * 0.5
+
 		pb_point:add_child(pbi)
+
 		pb_area = KImageView:new("pointer_area_orange_0001")
 		pb_area.anchor = V.v(pb_area.size.x * 0.5, pb_area.size.y * 0.5)
 		pb_area.animation = {
@@ -4043,6 +4791,7 @@ function MousePointer:initialize()
 		pbi = KImageView:new("pointer_bag_item_0001")
 		pbi.anchor = V.v(pbi.size.x * 0.5, pbi.size.y * 100 / 100)
 		pbi.pos.x, pbi.pos.y = pb_area.size.x * 0.5, pb_area.size.y * 0.5
+
 		pb_area:add_child(pbi)
 	end
 
@@ -4115,6 +4864,7 @@ end
 function MousePointer:update_pointer(mode)
 	if self.timer then
 		timer:cancel(self.timer)
+
 		self.timer = nil
 	end
 
@@ -4128,6 +4878,7 @@ function MousePointer:update_pointer(mode)
 			if item then
 				pointer = item.pointer
 				pointer_image = item.image
+
 				pointer.children[1]:set_image(pointer_image)
 			end
 		else
@@ -4145,11 +4896,13 @@ function MousePointer:update_pointer(mode)
 
 	if not pointer then
 		self.hidden = true
+
 		love.mouse.setVisible(true)
 	else
 		love.mouse.setVisible(false)
 		self:remove_children()
 		self:add_child(pointer)
+
 		self.hidden = false
 	end
 end
@@ -4157,6 +4910,7 @@ end
 function MousePointer:show_cross()
 	if self.timer then
 		timer:cancel(self.timer)
+
 		self.timer = nil
 	else
 		if self.hidden then
@@ -4168,6 +4922,7 @@ function MousePointer:show_cross()
 
 	self:remove_children()
 	self:add_child(self.cross)
+
 	self.cross.ts = 0
 	self.hidden = false
 	self.timer = timer:after(0.4666666666666667, function()
@@ -4175,6 +4930,7 @@ function MousePointer:show_cross()
 
 		if self.last_cursor then
 			self:add_child(self.last_cursor)
+
 			self.last_cursor = nil
 			self.timer = nil
 		else
@@ -4190,6 +4946,7 @@ function MousePointer:update(dt)
 		end
 
 		local x, y = self.window:get_mouse_position()
+
 		self.pos.x, self.pos.y = self.window:screen_to_view(x, y)
 	end
 
@@ -4225,10 +4982,13 @@ function NotificationView:show(id, no_transition, force_show)
 		local title_bg, title_text, title_color = unpack(titles[style])
 		local is_long = #title_text > 20
 		local v_title = KImageView:new(title_bg)
+
 		v_title.anchor = V.v(0, v_title.size.y)
 		v_title.pos = V.v(80, 40)
 		v_title.scale.x = is_long and 1.3 or 1
+
 		local v_title_label = GGShaderLabel:new(V.v(math.floor(208 * v_title.scale.x), 38))
+
 		v_title_label.font_name = "h_noti"
 		v_title_label.font_size = 24
 		v_title_label.scale.x = 1 / v_title.scale.x
@@ -4246,7 +5006,9 @@ function NotificationView:show(id, no_transition, force_show)
 			glow_color = {0, 0, 0, 1}
 		}}
 		v_title_label.fit_lines = 1
+
 		v_title:add_child(v_title_label)
+
 		return v_title
 	end
 
@@ -4267,6 +5029,7 @@ function NotificationView:show(id, no_transition, force_show)
 			b.label.text = _("Next!")
 		elseif style == "gotcha" then
 			local prefix = "tutorial_but_gotcha_bg_long"
+
 			b = GGButton(prefix .. "_0001", prefix .. "_0002", prefix .. "_0002")
 			b.label.text = _("Got it!")
 		end
@@ -4290,6 +5053,7 @@ function NotificationView:show(id, no_transition, force_show)
 			thickness = 0.5,
 			glow_color = {0, 0, 0, 1}
 		}}
+
 		b.label:do_fit_lines(1)
 
 		if style == "gotcha" then
@@ -4299,8 +5063,10 @@ function NotificationView:show(id, no_transition, force_show)
 			b.label.pos.y = CJK(30, 24, nil, 26)
 			b.label.font_size = 20
 			b.label.fit_lines = 1
+
 			local margin = 15
 			local l2 = GGShaderLabel:new(V.v(b.size.x - 2 * margin, 20))
+
 			l2.font_name = "body"
 			l2.font_size = 12
 			l2.text = _("I'm ready. Now bring it on!")
@@ -4316,6 +5082,7 @@ function NotificationView:show(id, no_transition, force_show)
 			}}
 			l2.colors.text = {255, 254, 200}
 			l2.fit_lines = 1
+
 			b:add_child(l2)
 		end
 
@@ -4324,15 +5091,20 @@ function NotificationView:show(id, no_transition, force_show)
 
 	local function create_photo(image, rotation, small_shadow)
 		local v_image = KImageView:new(image)
+
 		v_image.anchor = V.v(v_image.size.x * 0.5, v_image.size.y * 0.5)
 		v_image.r = rotation
 		v_image.propagate_on_click = true
+
 		local border_name = small_shadow and "notifications_polaroid_overlay_small_shadow" or "notifications_polaroid_overlay"
 		local v_border = KImageView:new(border_name)
 		local dx, dy = (v_border.size.x - v_image.size.x) * 0.5, (v_border.size.y - v_image.size.y) * 0.5
+
 		v_border.pos = V.v(-dx, -dy)
 		v_border.propagate_on_click = true
+
 		v_image:add_child(v_border)
+
 		return v_image
 	end
 
@@ -4347,18 +5119,23 @@ function NotificationView:show(id, no_transition, force_show)
 		}
 		local views = {}
 		local v_paper = KImageView:new(paper)
+
 		v_paper.propagate_on_click = true
 		v_paper.propagate_on_down = true
+
 		table.insert(views, v_paper)
 
 		for i, d in pairs(layout_data) do
 			local lv = GGLabel:new(V.v(d.size.x, d.size.y))
+
 			lv.font_name = "body_slides"
 			lv.font_size = 18
 			lv.text_align = "left"
 			lv.fit_size = true
 			lv.colors.text = {17, 20, 12, 255}
+
 			table.deepmerge(lv, d)
+
 			lv.text = _(lv.text)
 
 			if lv.color and colors[lv.color] then
@@ -4382,6 +5159,7 @@ function NotificationView:show(id, no_transition, force_show)
 					game_gui.SEL_VIEW = this
 					this._debug_old_bg_color = this.colors and this.colors.background or "none"
 					this.colors.background = {255, 0, 0, 100}
+
 					log.debug("NotificationView - SEL_VIEW: %s", this.text)
 				end
 			else
@@ -4396,19 +5174,25 @@ function NotificationView:show(id, no_transition, force_show)
 
 	local function create_layout(layout, image, prefix, subtitle, offset_y)
 		offset_y = offset_y or 0
+
 		local views = {}
 		local ox, oy = 255, 50 + offset_y
 		local my = 0
 		local label_w = 320
+
 		prefix = string.upper(prefix)
+
 		local v_paper = KImageView:new("notifications_newenemy")
+
 		v_paper.pos.y = offset_y
 		v_paper.propagate_on_click = true
 		v_paper.propagate_on_down = true
+
 		table.insert(views, v_paper)
 
 		if layout == N_ENEMY then
 			local l_name = GGLabel:new(V.v(label_w, 36))
+
 			l_name.pos = V.v(ox, CJK(oy, nil, nil, oy - 5))
 			l_name.text = _(prefix .. "_NAME")
 			l_name.font_name = "body_slides"
@@ -4416,9 +5200,13 @@ function NotificationView:show(id, no_transition, force_show)
 			l_name.colors.text = {24, 26, 15, 255}
 			l_name.text_align = "left"
 			l_name.fit_lines = 1
+
 			table.insert(views, l_name)
+
 			oy = oy + my + l_name.size.y
+
 			local l_desc = GGLabel:new(V.v(label_w, 100))
+
 			l_desc.pos = V.v(ox, oy)
 			l_desc.text = _(prefix .. "_DESCRIPTION")
 			l_desc.font_name = "body_slides"
@@ -4427,9 +5215,13 @@ function NotificationView:show(id, no_transition, force_show)
 			l_desc.colors.text = {24, 26, 15, 255}
 			l_desc.text_align = "left"
 			l_desc.fit_size = true
+
 			table.insert(views, l_desc)
+
 			oy = oy + my + l_desc.size.y
+
 			local l_extra = GGLabel:new(V.v(label_w, 90))
+
 			l_extra.pos = V.v(ox, oy + 1)
 			l_extra.text = string.gsub(_(prefix .. "_EXTRA"), "- ", "* ")
 			l_extra.font_name = "body_slides"
@@ -4437,10 +5229,13 @@ function NotificationView:show(id, no_transition, force_show)
 			l_extra.line_height = CJK(0.85, nil, 1.1, 0.9)
 			l_extra.text_align = "left"
 			l_extra.colors.text = {146, 25, 0, 255}
+
 			table.insert(views, l_extra)
+
 			oy = oy + my + l_extra.size.y
 		elseif layout == N_POWER then
 			local l_name = GGLabel:new(V.v(label_w, 35))
+
 			l_name.pos = V.v(ox, oy)
 			l_name.text = _(prefix .. "_NAME")
 			l_name.font_name = "body_slides"
@@ -4449,9 +5244,13 @@ function NotificationView:show(id, no_transition, force_show)
 			l_name.text_align = "left"
 			l_name.vertical_align = "middle"
 			l_name.fit_lines = 1
+
 			table.insert(views, l_name)
+
 			oy = oy + my + l_name.size.y
+
 			local l_desc = GGLabel:new(V.v(label_w, 85))
+
 			l_desc.pos = V.v(ox, CJK(oy, nil, nil, oy + 8))
 			l_desc.text = _(prefix .. "_LARGE_DESCRIPTION")
 			l_desc.font_name = "body_slides"
@@ -4459,20 +5258,28 @@ function NotificationView:show(id, no_transition, force_show)
 			l_desc.line_height = CJK(0.8, nil, 1.1, 0.9)
 			l_desc.colors.text = {24, 26, 15, 255}
 			l_desc.text_align = "left"
+
 			table.insert(views, l_desc)
+
 			oy = oy + my + l_desc.size.y
 		elseif layout == N_TOWER then
 			oy = oy + 20
+
 			local l_sub = GGLabel:new(V.v(label_w, 20))
+
 			l_sub.pos = V.v(ox + 2, oy + CJK(4, nil, nil, -4))
 			l_sub.text = _(subtitle)
 			l_sub.font_name = "body_slides"
 			l_sub.font_size = 15
 			l_sub.colors.text = {24, 26, 15, 255}
 			l_sub.text_align = "left"
+
 			table.insert(views, l_sub)
+
 			oy = oy + my + l_sub.size.y
+
 			local l_name = GGLabel:new(V.v(label_w, 40))
+
 			l_name.pos = V.v(ox, CJK(oy, nil, nil, oy - 2))
 			l_name.text = _(prefix .. "_NAME")
 			l_name.font_name = "body_slides"
@@ -4480,9 +5287,13 @@ function NotificationView:show(id, no_transition, force_show)
 			l_name.colors.text = {24, 26, 15, 255}
 			l_name.text_align = "left"
 			l_name.fit_lines = 1
+
 			table.insert(views, l_name)
+
 			oy = oy + my + l_name.size.y
+
 			local l_extra = GGLabel:new(V.v(label_w, 100))
+
 			l_extra.pos = V.v(ox, oy)
 			l_extra.text = _(prefix .. "_EXTRA")
 			l_extra.font_name = "body_slides"
@@ -4490,12 +5301,16 @@ function NotificationView:show(id, no_transition, force_show)
 			l_extra.line_height = CJK(0.8, nil, 1.1, 0.9)
 			l_extra.colors.text = {24, 26, 15, 255}
 			l_extra.text_align = "left"
+
 			table.insert(views, l_extra)
+
 			oy = oy + my + l_extra.size.y
 		end
 
 		local v_photo = create_photo(image, math.pi / 24)
+
 		v_photo.pos = V.v(134, 160 + offset_y)
+
 		table.insert(views, v_photo)
 
 		if DBG_SLIDE_EDITOR then
@@ -4515,6 +5330,7 @@ function NotificationView:show(id, no_transition, force_show)
 						game_gui.SEL_VIEW = this
 						this._debug_old_bg_color = this.colors and this.colors.background or "none"
 						this.colors.background = {255, 0, 0, 100}
+
 						log.debug("create_layout - SEL_VIEW: %s", this.text)
 					end
 				end
@@ -4528,11 +5344,12 @@ function NotificationView:show(id, no_transition, force_show)
 
 	if not n then
 		log.debug("Notification with id:%s not found", id)
-		return 
+
+		return
 	end
 
 	if not force_show and U.is_seen(game_gui.game.store, id) and not n.always then
-		return 
+		return
 	end
 
 	U.mark_seen(game_gui.game.store, id)
@@ -4549,6 +5366,7 @@ function NotificationView:show(id, no_transition, force_show)
 		end
 
 		self:remove_children()
+
 		self.timers = nil
 	end
 
@@ -4557,13 +5375,17 @@ function NotificationView:show(id, no_transition, force_show)
 
 		if n.layout == N_ENEMY then
 			local t = E:get_template(id)
+
 			n_prefix = t and t.info and t.info.i18n_key or n_prefix
 		end
 
 		local views, pw, ph = create_layout(n.layout, n.image, n_prefix, n.sub)
 		local v_title = create_noti_title(n.layout)
+
 		v_title.anchor = V.v(0, v_title.size.y)
+
 		local b_ok = create_noti_button("dark")
+
 		b_ok.pos = V.v(475, 254)
 
 		function b_ok.on_click(this)
@@ -4583,9 +5405,12 @@ function NotificationView:show(id, no_transition, force_show)
 	elseif n.layout == N_TIP then
 		local views, pw, ph = create_slide(n.layout, n.paper, data.notification_slides[id])
 		local v_title = create_noti_title(n.layout)
+
 		v_title.anchor = V.v(v_title.size.x * 0.5, v_title.size.y)
 		v_title.pos = V.v(pw * 0.5, 32)
+
 		local b_ok = create_noti_button("light")
+
 		b_ok.pos = V.v(300, 360)
 		b_ok.anchor.x = 0
 
@@ -4607,8 +5432,11 @@ function NotificationView:show(id, no_transition, force_show)
 		local views_1, pw1, ph1 = create_layout(N_TOWER, n.images[1], n.prefixes[1], n.subs[1])
 		local views_2, pw2, ph2 = create_layout(N_TOWER, n.images[2], n.prefixes[2], n.subs[2], ph1 - 30)
 		local v_title = create_noti_title(n.layout)
+
 		v_title.anchor = V.v(0, v_title.size.y)
+
 		local b_ok = create_noti_button("dark")
+
 		b_ok.pos = V.v(450, ph1 + ph2 - 30 - 40)
 
 		function b_ok.on_click(this)
@@ -4633,9 +5461,12 @@ function NotificationView:show(id, no_transition, force_show)
 		local ox, oy = 76, 55
 		local my = 5
 		local v_paper = KImageView:new("notifications_newenemy")
+
 		v_paper.propagate_on_click = true
 		v_paper.propagate_on_down = true
+
 		local l_1 = GGLabel:new(V.v(490, 32))
+
 		l_1.pos = V.v(ox, oy)
 		l_1.text = string.format(_("NOTIFICATION_NEW_TOWERS_SUB_TITLE"), n.level)
 		l_1.font_name = "body_slides"
@@ -4643,7 +5474,9 @@ function NotificationView:show(id, no_transition, force_show)
 		l_1.colors.text = {24, 26, 15, 255}
 		l_1.text_align = "center"
 		oy = oy + my + l_1.size.y
+
 		local l_2 = GGLabel:new(V.v(490, 85))
+
 		l_2.pos = V.v(ox, oy)
 		l_2.text = string.format(_("NOTIFICATION_NEW_TOWERS_SUB_DESCRIPTION"), n.level)
 		l_2.font_name = "body_slides"
@@ -4651,6 +5484,7 @@ function NotificationView:show(id, no_transition, force_show)
 		l_2.colors.text = {24, 26, 15, 255}
 		l_2.text_align = "center"
 		oy = oy + my + l_2.size.y
+
 		local offx = 140
 		local pox, poy = (v_paper.size.x - 3 * offx) * 0.5, 220
 		local rotations = {math.pi / 22, -math.pi / 20, math.pi / 30, -math.pi / 25}
@@ -4658,14 +5492,19 @@ function NotificationView:show(id, no_transition, force_show)
 
 		for i, image in ipairs(n.images) do
 			local photo = create_photo(image, rotations[i], true)
+
 			photo.pos.x, photo.pos.y = pox + (i - 1) * offx, poy
 			photo.scale = V.v(0.85, 0.85)
+
 			table.insert(photos, photo)
 		end
 
 		local v_title = create_noti_title(n.layout)
+
 		v_title.anchor = V.v(0, v_title.size.y)
+
 		local b_ok = create_noti_button("dark")
+
 		b_ok.pos = V.v(450, v_paper.size.y - 15)
 
 		function b_ok.on_click(this)
@@ -4688,15 +5527,20 @@ function NotificationView:show(id, no_transition, force_show)
 	elseif n.layout == N_TUTORIAL then
 		local views, pw, ph = create_slide(n.layout, n.paper, data.notification_slides[id])
 		local v_paper = views[1]
+
 		v_paper.propagate_on_click = true
 		v_paper.propagate_on_down = true
+
 		local v_title = create_noti_title(n.layout)
+
 		v_title.anchor = V.v(v_title.size.x * 0.5, v_title.size.y)
 		v_title.pos = V.v(pw * 0.5, 32)
+
 		self:add_child(v_title)
 
 		if n.next then
 			local b_skip = create_noti_button("skip")
+
 			b_skip.anchor = V.v(b_skip.size.x, 0)
 			b_skip.pos = V.v(v_paper.size.x * 0.5 - 20, v_paper.size.y - 30)
 
@@ -4706,12 +5550,15 @@ function NotificationView:show(id, no_transition, force_show)
 			end
 
 			self:add_child(b_skip)
+
 			local b_next = create_noti_button("next")
+
 			b_next.anchor = V.v(0, 0)
 			b_next.pos = V.v(v_paper.size.x * 0.5 + 20, v_paper.size.y - 30)
 
 			function b_next.on_click(this)
 				self.show_next = n.next
+
 				this:disable()
 				self:hide(true)
 			end
@@ -4719,6 +5566,7 @@ function NotificationView:show(id, no_transition, force_show)
 			self:add_child(b_next)
 		else
 			local b_ok = create_noti_button("gotcha")
+
 			b_ok.anchor = V.v(b_ok.size.x * 0.5, 0)
 			b_ok.pos = V.v(v_paper.size.x * 0.5, v_paper.size.y - 24)
 
@@ -4738,13 +5586,17 @@ function NotificationView:show(id, no_transition, force_show)
 		self.anchor = V.v(self.size.x * 0.5, self.size.y * 0.5)
 	else
 		log.error("Notification type %s unknown", n.layout)
-		return 
+
+		return
 	end
 
 	game_gui:deselect_all()
 	game_gui:disable_keys()
+
 	game_gui.game.store.paused = true
+
 	game_gui.overlay:show()
+
 	self.hidden = false
 
 	if no_transition then
@@ -4774,15 +5626,19 @@ end
 function NotificationView:hide(no_transition)
 	if not self.show_next then
 		game_gui:enable_keys()
+
 		game_gui.game.store.paused = false
+
 		game_gui.overlay:hide()
 	end
 
 	if no_transition then
 		self:remove_children()
 		self:show(self.show_next, true)
+
 		self.show_next = nil
-		return 
+
+		return
 	end
 
 	self.alpha = 1
@@ -4803,10 +5659,12 @@ function NotificationView:hide(no_transition)
 	}, "in-back", function()
 		self.timers = nil
 		self.hidden = true
+
 		self:remove_children()
 
 		if self.show_next then
 			self:show(self.show_next)
+
 			self.show_next = nil
 		end
 	end)}
@@ -4818,6 +5676,7 @@ NotificationQueue = class("NotificationQueue", KView)
 
 function NotificationQueue:initialize(w, h)
 	NotificationQueue.super.initialize(self, V.v(w, h))
+
 	self.clip = false
 	self.colors.background = {0, 0, 0, 0}
 	self.space_y = 10
@@ -4828,16 +5687,20 @@ function NotificationQueue:add(id, force)
 
 	if not n then
 		log.warning("Notification with id:%s not found", id)
-		return 
+
+		return
 	end
 
 	if U.is_seen(game_gui.game.store, id) and not n.always and not force then
-		return 
+		return
 	end
 
 	U.mark_seen(game_gui.game.store, id)
+
 	local v_icon = NotificationIcon:new(n.icon, id, n.layout)
+
 	v_icon.pos.y = #self.children * (v_icon.size.y + self.space_y)
+
 	self:add_child(v_icon)
 	S:queue("GUINotificationSecondLevel")
 
@@ -4880,9 +5743,12 @@ NotificationIcon = class("NotificationIcon", KImageView)
 
 function NotificationIcon:initialize(image, notification_id, layout)
 	NotificationIcon.super.initialize(self, image)
+
 	self.anchor = V.v(self.size.x * 0.5, self.size.y * 0.5)
 	self.notification_id = notification_id
+
 	local title = GGShaderLabel:new(V.v(math.floor(self.size.x * 1.5), 30))
+
 	title.anchor = V.v(title.size.x * 0.5, 0)
 	title.pos.x = self.size.x * 0.5 - 4
 	title.font_name = "h_noti"
@@ -4929,12 +5795,14 @@ function NotificationIcon:initialize(image, notification_id, layout)
 
 	title.fit_lines = 1
 	title.propagate_on_click = true
+
 	self:add_child(title)
 	self:show()
 end
 
 function NotificationIcon:loop_tween()
 	local s = self.scale.x > 1 and 0.985 or 1.015
+
 	timer:tween(0.3, self.scale, {
 		x = s,
 		y = s
@@ -4953,13 +5821,17 @@ function NotificationIcon:show()
 	timer:tween(0.3, self, {
 		alpha = 1
 	}, "in-quad")
+
 	self.scale.x, self.scale.y = 0.8, 0.8
+
 	self:loop_tween()
 end
 
 function NotificationIcon:hide()
 	self:disable(false)
+
 	local s = 0.4
+
 	timer:tween(0.4, self.scale, {
 		x = s,
 		y = s
@@ -4978,7 +5850,8 @@ function TutorialBalloon:initialize(id)
 
 	if not bd then
 		log.error("Balloon with id:%s not found", id)
-		return 
+
+		return
 	end
 
 	TutorialBalloon.super.initialize(self, bd.image)
@@ -4988,11 +5861,14 @@ function TutorialBalloon:initialize(id)
 
 		for i, d in pairs(data.notification_slides[id]) do
 			local lv = GGLabel:new(V.v(d.size.x, d.size.y))
+
 			lv.font_name = "body"
 			lv.font_size = 18
 			lv.text_align = "left"
 			lv.colors.text = {17, 20, 12, 255}
+
 			table.deepmerge(lv, d)
+
 			lv.text = _(lv.text)
 
 			if lv.color and colors[lv.color] then
@@ -5004,6 +5880,7 @@ function TutorialBalloon:initialize(id)
 			if DBG_SLIDE_EDITOR then
 				function lv.on_click(this)
 					game_gui.SEL_VIEW = this
+
 					log.debug("SEL_VIEW: %s", this.text)
 				end
 			else
@@ -5058,6 +5935,7 @@ function TutorialBalloon:initialize(id)
 
 	local function sig_reg(name, fn)
 		local h = signal.register(name, fn)
+
 		table.insert(self.sig_handles, {name, h})
 	end
 
@@ -5117,7 +5995,9 @@ function TutorialBalloon:initialize(id)
 	sig_reg("hide-gui", function()
 		self:remove(false)
 	end)
+
 	self.hidden = true
+
 	self:show()
 end
 
@@ -5127,10 +6007,11 @@ function TutorialBalloon:loop_tween()
 	end
 
 	if self.hidden then
-		return 
+		return
 	end
 
 	local s = self.scale.x > 1 and 0.985 or 1.015
+
 	self.tween_handle = timer:tween(0.3, self.scale, {
 		x = s,
 		y = s
@@ -5143,7 +6024,7 @@ function TutorialBalloon:hide()
 	log.debug("TutorialBalloon:hide %s", self.id)
 
 	if self.hidden or not self.parent then
-		return 
+		return
 	end
 
 	if self.tween_handle then
@@ -5151,6 +6032,7 @@ function TutorialBalloon:hide()
 	end
 
 	local s = 0.4
+
 	self.tween_handle = timer:tween(0.4, self, {
 		alpha = 0,
 		scale = {
@@ -5167,6 +6049,7 @@ function TutorialBalloon:remove(animated)
 
 	for _, h in pairs(self.sig_handles) do
 		local name, fn = unpack(h)
+
 		signal.remove(name, fn)
 	end
 
@@ -5180,6 +6063,7 @@ function TutorialBalloon:remove(animated)
 		end
 
 		local s = 0.4
+
 		self.tween_handle = timer:tween(0.4, self, {
 			alpha = 0,
 			scale = {
@@ -5198,7 +6082,7 @@ function TutorialBalloon:show()
 	log.debug("TutorialBalloon:show id:%s", self.id)
 
 	if not self.hidden then
-		return 
+		return
 	end
 
 	if self.tween_handle then
@@ -5206,10 +6090,13 @@ function TutorialBalloon:show()
 	end
 
 	self.hidden = false
+
 	timer:tween(0.3, self, {
 		alpha = 1
 	}, "in-quad")
+
 	self.scale.x, self.scale.y = 0.8, 0.8
+
 	self:loop_tween()
 end
 
@@ -5217,7 +6104,9 @@ AchievementBanner = class("AchievementBanner", KImageView)
 
 function AchievementBanner:initialize(id)
 	AchievementBanner.super.initialize(self, "Achievements_Box_Big")
+
 	local header = GGLabel:new(V.v(78, 13))
+
 	header.pos.x, header.pos.y = 95, 8.5 + CJK(0, -1, 0, 0)
 	header.text = _("ACHIEVEMENT")
 	header.vertical_align = "middle"
@@ -5226,14 +6115,20 @@ function AchievementBanner:initialize(id)
 	header.font_name = "h_noti"
 	header.font_size = 16
 	header.fit_lines = 1
+
 	self:add_child(header)
+
 	local icon = KImageView:new("achievement_icons_0001")
+
 	icon.anchor = V.v(icon.size.x * 0.5, icon.size.y * 0.5)
 	icon.pos = V.v(40, 54)
 	icon.scale = V.v(0.8, 0.8)
 	icon.propagate_on_click = true
+
 	self:add_child(icon)
+
 	local l_title = GGLabel:new(V.v(180, 14))
+
 	l_title.pos = V.v(68, CJK(35, 33, nil, 33))
 	l_title.font_name = "h"
 	l_title.font_size = 12
@@ -5242,8 +6137,11 @@ function AchievementBanner:initialize(id)
 	l_title.text_align = "left"
 	l_title.propagate_on_click = true
 	l_title.fit_lines = 1
+
 	self:add_child(l_title)
+
 	local l_desc = GGLabel:new(V.v(180, 32))
+
 	l_desc.font_name = "body"
 	l_desc.font_size = 10
 	l_desc.colors.text = {246, 227, 176}
@@ -5251,10 +6149,14 @@ function AchievementBanner:initialize(id)
 	l_desc.text_align = "left"
 	l_desc.propagate_on_click = true
 	l_desc.line_height = CJK(0.8, nil, 1.1, 0.9)
+
 	l_desc:do_fit_lines(3)
+
 	l_desc.clip = true
 	l_desc.pos.x, l_desc.pos.y = 68, 45 + CJK(0, 3, 3, 1)
+
 	self:add_child(l_desc)
+
 	self.icon = icon
 	self.l_title = l_title
 	self.l_desc = l_desc
@@ -5278,17 +6180,20 @@ end
 
 function AchievementBanner:show()
 	if #self.queued_ids < 1 or not self.hidden then
-		return 
+		return
 	end
 
 	local id = table.remove(self.queued_ids, 1)
 	local ach = AC:get_data(id)
 	local prefix = KR_GAME == "kr3" and "ELVES_" or ""
+
 	self.icon:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
+
 	self.l_title.text = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")
 	self.l_desc.text = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_DESCRIPTION")
 	self.hidden = false
 	self.active = true
+
 	S:queue("GUIAchievementWin", {
 		ignore = 1
 	})
@@ -5331,6 +6236,7 @@ PickView = class("PickView", KView)
 
 function PickView:initialize(w, h)
 	PickView.super.initialize(self)
+
 	self.size = v(w, h)
 	self.clip = false
 	self.colors.background = {0, 0, 0, 0}
@@ -5339,7 +6245,7 @@ end
 function PickView:update(dt)
 	local function show_tower_hover(entity)
 		if game_gui.game.store.paused then
-			return 
+			return
 		end
 
 		local s = entity.render.sprites[1]
@@ -5354,6 +6260,7 @@ function PickView:update(dt)
 		end
 
 		self.last_tower_hover = entity
+
 		S:queue("GUIQuickMenuOver")
 	end
 
@@ -5376,6 +6283,7 @@ function PickView:update(dt)
 	end
 
 	PickView.super.update(self, dt)
+
 	local e = game_gui.selected_entity
 
 	if e and (e.tower and e.tower.blocked or e.health and e.health.dead and not e.health.ignore_damage) then
@@ -5384,7 +6292,8 @@ function PickView:update(dt)
 
 	if self:is_disabled() or game_gui.mode ~= GUI_MODE_IDLE then
 		hide_tower_hover()
-		return 
+
+		return
 	elseif not game_gui.towermenu.hidden then
 		local e = game_gui.selected_entity
 
@@ -5396,11 +6305,13 @@ function PickView:update(dt)
 			end
 		end
 
-		return 
+		return
 	end
 
 	local x, y = game_gui.window:get_mouse_position()
+
 	x, y = game_gui.window:screen_to_view(x, y)
+
 	local wx, wy = game_gui:u2g(V.v(x, y))
 	local e = game_gui:entity_at_pos(wx, wy)
 
@@ -5413,6 +6324,7 @@ end
 
 function PickView:on_down(button, x, y)
 	local wx, wy = game_gui:u2g(V.v(x, y))
+
 	log.debug("button:%d, screen:%s,%s  world:%s,%s", button, x, y, wx, wy)
 
 	if button == 2 then
@@ -5422,6 +6334,7 @@ function PickView:on_down(button, x, y)
 	elseif button == 1 then
 		if game_gui.mode == GUI_MODE_RALLY_TOWER then
 			log.debug("set rally point. view:%s,%s -> game:%s,%s", x, y, wx, wy)
+
 			local e = game_gui.selected_entity
 
 			if not e.barrack then
@@ -5433,8 +6346,10 @@ function PickView:on_down(button, x, y)
 
 			if U.is_inside_ellipse(v(wx, wy), rc, b.rally_range) and (b.rally_anywhere or P:valid_node_nearby(wx, wy, nil, NF_RALLY) and GR:cell_is_only(wx, wy, b.rally_terrains)) then
 				S:queue("GUIPlaceRallyPoint")
+
 				e.barrack.rally_pos = v(wx, wy)
 				e.barrack.rally_new = true
+
 				game_gui:show_rally_flag(x, y)
 				game_gui:hide_rally_range()
 				game_gui:deselect_entity()
@@ -5444,6 +6359,7 @@ function PickView:on_down(button, x, y)
 			end
 		elseif game_gui.mode == GUI_MODE_RALLY_HERO or game_gui.mode == GUI_MODE_RALLY_CONTROABLE then
 			local e = game_gui.selected_entity
+
 			log.debug("set rally point for hero %s to %s,%s", e, wx, sy)
 
 			if (not e.nav_rally.requires_node_nearby or P:valid_node_nearby(wx, wy, nil, NF_RALLY)) and GR:cell_is_only(wx, wy, e.nav_grid.valid_terrains_dest) and (e.teleport and not e.teleport.disabled and V.dist(wx, wy, e.pos.x, e.pos.y) > e.teleport.min_distance or e.nav_grid.ignore_waypoints or GR:find_waypoints(e.pos, e.nav_rally.pos, V.v(wx, wy), e.nav_grid.valid_terrains)) then
@@ -5454,6 +6370,7 @@ function PickView:on_down(button, x, y)
 				e.nav_rally.new = true
 				e.nav_rally.pos = v(wx, wy)
 				e.nav_rally.center = v(wx, wy)
+
 				game_gui:show_point_confirm(x, y)
 				game_gui:deselect_entity()
 			else
@@ -5462,6 +6379,7 @@ function PickView:on_down(button, x, y)
 		elseif game_gui.mode == GUI_MODE_RALLY_CONTROABLES then
 			local function calc_rally_pos(idx)
 				local r = 15
+
 				return V.v(wx + r * math.cos(idx * 2 * math.pi / #game_gui.selected_controables), wy + r * math.sin(idx * 2 * math.pi / #game_gui.selected_controables))
 			end
 
@@ -5493,11 +6411,13 @@ function PickView:on_down(button, x, y)
 
 			if e.user_selection.can_select_point_fn and not e.user_selection.can_select_point_fn(e, wx, wy, game_gui.game.store) then
 				game_gui:show_invalid_point_cross(x, y)
-				return 
+
+				return
 			end
 
 			e.user_selection.in_progress = false
 			e.user_selection.new_pos = v(wx, wy)
+
 			game_gui:deselect_entity()
 			log.debug("fire to %s", v(wx, wy))
 		elseif game_gui.mode == GUI_MODE_POWER_1 then
@@ -5532,6 +6452,7 @@ function PickView:on_down(button, x, y)
 
 			if not fn or fn(e, wx, wy, store) then
 				e.pos.x, e.pos.y = wx, wy
+
 				game_gui.game.simulation:insert_entity(e)
 				wid("bag_button"):fire_item(item_name, x, y, e)
 				signal.emit("item-used", item_name)
@@ -5549,7 +6470,9 @@ function PickView:on_down(button, x, y)
 				log.info("SELECTED ENTITY (%s) %s pos:(%s,%s)", e.id, e.template_name, e.pos.x, e.pos.y)
 			end
 
-			game_gui:deselect_all()
+			if game_gui.mode ~= GUI_MODE_SWAP_TOWER then
+				game_gui:deselect_all()
+			end
 
 			if e and e.ui and e.ui.can_click then
 				e.ui.clicked = true
@@ -5570,11 +6493,14 @@ RangeCircle = class("RangeCircle", KView)
 
 function RangeCircle:initialize(sprite_name)
 	RangeCircle.super.initialize(self)
+
 	self.range_shown = nil
+
 	local tl = KImageView:new(sprite_name)
 	local tr = KImageView:new(sprite_name)
 	local bl = KImageView:new(sprite_name)
 	local br = KImageView:new(sprite_name)
+
 	tl.anchor = v(tl.size.x - 0.15, tl.size.y - 0.15)
 	tl.scale = v(1, 1)
 	tr.anchor = v(tl.size.x - 0.15, tl.size.y - 0.15)
@@ -5587,10 +6513,12 @@ function RangeCircle:initialize(sprite_name)
 	tr.propagate_on_down = true
 	bl.propagate_on_down = true
 	br.propagate_on_down = true
+
 	self:add_child(tl)
 	self:add_child(tr)
 	self:add_child(bl)
 	self:add_child(br)
+
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.scale = v(1, 0.7)
@@ -5601,37 +6529,49 @@ CriketMenuButton = class("CriketMenuButton", KView)
 
 function CriketMenuButton:initialize(item)
 	CriketMenuButton.super.initialize(self)
+
 	self.item_image = item.image
 	self.item = item
+
 	local b = KImageView:new(item.image)
+
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
 	b.disabled_tint_color = nil
 	self.button = b
+
 	self:add_child(b)
 
 	local function get_pos(this, offset)
 		offset = offset or v(0, 0)
+
 		local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
 		local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
 		return v(x, y)
 	end
 
 	local function create_bo_view(img_name)
 		local bo = KImageView:new(img_name)
+
 		bo.pos = get_pos(bo)
 		bo.propagate_on_click = true
+
 		self:add_child(bo, 2)
+
 		return bo
 	end
 
 	local halo = KImageView:new(item.halo)
+
 	halo.pos = get_pos(halo)
 	halo.propagate_on_click = true
 	halo.hidden = true
 	self.halo = halo
+
 	self:add_child(halo)
 	create_bo_view("main_icons_0000")
+
 	self.size = V.vclone(b.size)
 end
 
@@ -5639,6 +6579,7 @@ CriketMenu = class("CriketMenu", KImageView)
 
 function CriketMenu:initialize()
 	CriketMenu.super.initialize(self, "gui_ring")
+
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
@@ -5668,6 +6609,7 @@ function CriketMenu:calculate_button_position(item_index)
 	-- 计算相对于圆心的位置
 	local x = math.cos(angle) * radius
 	local y = math.sin(angle) * radius
+
 	-- 返回相对于菜单中心的位置
 	return V.v(self.size.x * 0.5 + x, self.size.y * 0.5 + y)
 end
@@ -5677,9 +6619,11 @@ function CriketMenu:show()
 
 	for index, item in pairs(criket_menu) do
 		local b = CriketMenuButton:new(item)
+
 		b.pos = self:calculate_button_position(index)
 		b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
 		b.item_props = item
+
 		local stm = self
 
 		if item.action == "tw_none" then
@@ -5721,6 +6665,7 @@ function CriketMenu:show()
 		self.tweening = nil
 		self.tweeners = {}
 	end)}
+
 	S:queue("GUIQuickMenuOpen")
 end
 
@@ -5748,7 +6693,7 @@ function CriketMenu:update(dt)
 	CriketMenu.super.update(self, dt)
 
 	if self.hidden then
-		return 
+		return
 	end
 end
 
@@ -5770,6 +6715,7 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 		for k, v in pairs(game_gui.game.store.towers) do
 			local new_tower = E:create_entity(item.action_arg)
+
 			game_gui.game.store.criket.tower_name = new_tower.template_name
 			new_tower.pos = V.vclone(v.pos)
 			new_tower.tower.holder_id = v.tower.holder_id
@@ -5793,6 +6739,7 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 			end
 
 			queue_insert(game_gui.game.store, new_tower)
+
 			game_gui.game.store.towers[k] = new_tower
 
 			if new_tower.powers then
@@ -5800,13 +6747,6 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 					p.level = p.max_level
 					p.changed = true
 				end
-			end
-
-			if new_tower.template_name == "tower_sunray" then
-				new_tower.powers.manual.level = 0
-				new_tower.powers.manual.changed = nil
-				new_tower.powers.auto.level = 1
-				new_tower.powers.auto.changed = true
 			end
 
 			if new_tower.barrack then
@@ -5875,41 +6815,54 @@ end
 
 -- 局内召唤英雄仪表盘
 local hero_data = require("data.map_data").hero_data
+
 HeroMenuButton = class("HeroMenuButton", KView)
 
 function HeroMenuButton:initialize(item)
 	HeroMenuButton.super.initialize(self)
+
 	self.item_image = item.image
 	self.item = item
+
 	local b = KImageView:new(item.image)
+
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
 	b.disabled_tint_color = nil
 	self.button = b
+
 	self:add_child(b)
 
 	local function get_pos(this, offset)
 		offset = offset or v(0, 0)
+
 		local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
 		local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
 		return v(x, y)
 	end
 
 	local function create_bo_view(img_name)
 		local bo = KImageView:new(img_name)
+
 		bo.pos = get_pos(bo)
 		bo.propagate_on_click = true
+
 		self:add_child(bo, 2)
+
 		return bo
 	end
 
 	local halo = KImageView:new(item.halo)
+
 	halo.pos = get_pos(halo)
 	halo.propagate_on_click = true
 	halo.hidden = true
 	self.halo = halo
+
 	self:add_child(halo)
 	create_bo_view("main_icons_0000")
+
 	self.size = V.vclone(b.size)
 end
 
@@ -5917,6 +6870,7 @@ HeroMenu = class("CriketMenu", KImageView)
 
 function HeroMenu:initialize()
 	HeroMenu.super.initialize(self, "gui_ring")
+
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
@@ -5944,6 +6898,7 @@ function HeroMenu:calculate_button_position(item_index)
 	-- 计算相对于圆心的位置
 	local x = math.cos(angle) * radius
 	local y = math.sin(angle) * radius
+
 	-- 返回相对于菜单中心的位置
 	return V.v(self.size.x * 0.5 + x, self.size.y * 0.5 + y)
 end
@@ -5959,9 +6914,11 @@ function HeroMenu:show()
 			halo = "glow_ico_main"
 		}
 		local b = HeroMenuButton:new(item)
+
 		b.pos = self:calculate_button_position(index)
 		b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
 		b.item_props = item
+
 		local stm = self
 
 		function b.on_click(this, button, x, y)
@@ -5997,6 +6954,7 @@ function HeroMenu:show()
 		self.tweening = nil
 		self.tweeners = {}
 	end)}
+
 	S:queue("GUIQuickMenuOpen")
 end
 
@@ -6024,7 +6982,7 @@ function HeroMenu:update(dt)
 	HeroMenu.super.update(self, dt)
 
 	if self.hidden then
-		return 
+		return
 	end
 end
 
@@ -6042,6 +7000,7 @@ end
 
 function HeroMenu:button_callback(button, item, entity, mouse_button, x, y)
 	game_gui.selected_hero_to_summon = item.name
+
 	game_gui:set_mode(GUI_MODE_SUMMON_HERO)
 	game_gui.mouse_pointer:update_pointer(GUI_MODE_SUMMON_HERO)
 	-- LU.insert_hero(game_gui.game.store, item.name, game_gui.game.store.level.locations.exits[1].pos, true)
@@ -6052,6 +7011,7 @@ TowerMenu = class("TowerMenu", KImageView)
 
 function TowerMenu:initialize()
 	TowerMenu.super.initialize(self, "gui_ring")
+
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
@@ -6065,7 +7025,7 @@ function TowerMenu:show()
 	local entity = game_gui.selected_entity
 
 	if not entity or not entity.tower then
-		return 
+		return
 	end
 
 	if entity.user_selection then
@@ -6077,35 +7037,48 @@ function TowerMenu:show()
 	if entity.attacks and entity.attacks.range and not entity.attacks.hide_range then
 		local range = entity.attacks.range
 		local ux, uy = game_gui:g2u(V.v(V.add(entity.pos.x, entity.pos.y, entity.tower.range_offset.x, entity.tower.range_offset.y)))
+
 		game_gui:show_tower_range(ux, uy, range)
 	end
 
-	if not tower_menus[entity.tower.type] or not tower_menus[entity.tower.type][entity.tower.level] then
+	local current_tms = tower_menus[entity.tower.type]
+
+	if not current_tms or not current_tms[entity.tower.level] then
 		log.debug("tower_menus[%s][%s] not found", entity.tower.type, entity.tower.level)
+
 		self.hidden = true
-		return 
+
+		return
 	end
 
-	local tm = tower_menus[entity.tower.type][entity.tower.level]
+	local tm = current_tms[entity.tower.level]
+
 	self:remove_children()
 
 	for _, item in pairs(tm) do
 		if item.action == "tw_upgrade" and game_gui.game.store.level.locked_towers and table.contains(game_gui.game.store.level.locked_towers, item.action_arg) and not DEBUG_UNLOCK_ALL_TOWERS then
 			local b = KImageView:new("main_icons_0014")
+
 			b.pos = V.vclone(data.tower_menu_button_places[item.place])
 			b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
+
 			self:add_child(b)
+
 			local bo = KImageView:new("main_icons_0000")
+
 			bo.x = math.floor((b.size.x - bo.size.x) * 0.5)
 			bo.y = math.floor((b.size.y - bo.size.y) * 0.5)
+
 			b:add_child(bo)
 		elseif item.action == "tw_sell" and entity.tower and not entity.tower.can_be_sold then
 		-- block empty
 		else
 			local b = TowerMenuButton:new(item, entity)
+
 			b.pos = V.vclone(data.tower_menu_button_places[item.place])
 			b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
 			b.item_props = item
+
 			local stm = self
 
 			if item.action == "tw_none" then
@@ -6159,12 +7132,15 @@ function TowerMenu:show()
 	end
 
 	local ewx, ewy = game_gui:g2u(V.v(ewx_g, ewy_g), true)
+
 	self.pos = v(ewx, ewy)
 	self.scale = v(0.6, 0.6)
 	self.alpha = 0
 	self.hidden = false
 	self.tweening = true
+
 	local game_time = 0.12 * game_gui.game.store.speed_factor
+
 	self.tweeners = {timer:tween(game_time, self.scale, {
 		x = game_gui.game.camera.zoom,
 		y = game_gui.game.camera.zoom
@@ -6174,6 +7150,7 @@ function TowerMenu:show()
 		self.tweening = nil
 		self.tweeners = {}
 	end)}
+
 	signal.emit("tower-menu-showing")
 	S:queue("GUIQuickMenuOpen")
 end
@@ -6192,7 +7169,9 @@ function TowerMenu:hide()
 	end
 
 	self.tweening = true
+
 	local game_time = 0.12 * game_gui.game.store.speed_factor
+
 	self.tweeners = {timer:tween(game_time, self, {
 		alpha = 0
 	}, "out-quad"), timer:tween(game_time, self.scale, {
@@ -6203,6 +7182,7 @@ function TowerMenu:hide()
 		self.tweening = false
 		self.tweeners = {}
 	end)}
+
 	game_gui:hide_tower_ranges()
 	game_gui.towertooltip:hide()
 	signal.emit("tower-menu-hiding")
@@ -6212,13 +7192,13 @@ function TowerMenu:update(dt)
 	TowerMenu.super.update(self, dt)
 
 	if self.hidden then
-		return 
+		return
 	end
 
 	local e = game_gui.selected_entity
 
 	if not e or not e.tower then
-		return 
+		return
 	end
 
 	local store = game_gui.game.store
@@ -6298,32 +7278,41 @@ function TowerMenu:update(dt)
 				end
 			elseif e and c.item_props.action == "tw_change_mode" then
 				local current_mode = e.tower_upgrade_persistent_data.current_mode
-				c.button:set_image(c.item["image_mode" .. current_mode])
+
+				if e.tower_upgrade_persistent_data.max_current_mode == 0 then
+					if e.user_selection and not e.user_selection.allowed then
+						c:disable()
+					else
+						c:enable()
+					end
+				else
+					c.button:set_image(c.item["image_mode" .. current_mode])
+				end
 			-- if current_mode ~= 0 then
 			--     c.button:set_image(U.str_reset_leading_zero(c.item_image, current_mode))
 			-- else
 			--     c.button:set_image(c.item_image)
 			-- end
-			elseif e and c.item_props.action == "tw_free_action" then
-				local usa = e.user_selection and e.user_selection.actions
-
-				if usa and usa.tw_free_action then
-					if not usa.tw_free_action.allowed then
-						c:disable()
-					else
-						c:enable()
-					end
-				elseif not e.user_selection.allowed then
-					c:disable()
-				else
-					c:enable()
-				end
+			-- elseif e and c.item_props.action == "tw_free_action" then
+			-- 	local usa = e.user_selection and e.user_selection.actions
+			-- 	if usa and usa.tw_free_action then
+			-- 		if not usa.tw_free_action.allowed then
+			-- 			c:disable()
+			-- 		else
+			-- 			c:enable()
+			-- 		end
+			-- 	elseif not e.user_selection.allowed then
+			-- 		c:disable()
+			-- 	else
+			-- 		c:enable()
+			-- 	end
 			end
 		end
 	end
 
 	if e and e.attacks and e.attacks.range and not game_gui.tower_range.hidden and game_gui.tower_range.range_shown ~= e.attacks.range then
 		local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)), true)
+
 		game_gui:show_tower_range(ux, uy, e.attacks.range)
 
 		if not game_gui.tower_range_upgrade.hidden and e.template_name == "tower_crossbow" then
@@ -6331,6 +7320,7 @@ function TowerMenu:update(dt)
 				local m = E:get_template("mod_crossbow_eagle")
 				local factor = e.powers.eagle.level < 1 and m.range_factor + m.range_factor_inc or 1 + m.range_factor_inc
 				local range = e.attacks.range * factor
+
 				game_gui:show_tower_range_upgrade(ux, uy, range)
 			else
 				game_gui:hide_tower_range_upgrade()
@@ -6351,6 +7341,7 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 
 		if item.preview then
 			local tb = E:get_template(item.action_arg)
+
 			nt = E:get_template(tb.build_name)
 		else
 			nt = E:get_template(item.action_arg)
@@ -6368,6 +7359,7 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 
 				if #mods == 1 and mods[1].modifier then
 					local m = mods[1]
+
 					new_range = new_range * (m.range_factor + m.modifier.level * m.range_factor_inc)
 				end
 
@@ -6389,10 +7381,12 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 		else
 			local m = E:get_template("mod_crossbow_eagle")
 			local factor = entity.powers.eagle.level < 1 and m.range_factor + m.range_factor_inc or 1 + m.range_factor_inc
+
 			new_range = new_range * factor
 		end
 
 		local ux, uy = game_gui:g2u(V.v(V.add(entity.pos.x, entity.pos.y, entity.tower.range_offset.x, entity.tower.range_offset.y)))
+
 		log.debug("range:%s factor:%s", new_range, factor)
 		game_gui:show_tower_range_upgrade(ux, uy, new_range)
 	end
@@ -6448,12 +7442,15 @@ end
 function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 	log.debug("BUTTON CALLBACK action:%s entity:%s", item.action, entity.id)
 	button:disable()
+
 	local inhibit_sounds = false
 	local e = game_gui.selected_entity
 
 	if item.action == "tw_rally" then
 		game_gui:set_mode(GUI_MODE_RALLY_TOWER)
+
 		local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)))
+
 		game_gui:show_rally_range(ux, uy, e.barrack.rally_range)
 		self:hide()
 	elseif item.action == "tw_point" then
@@ -6463,10 +7460,13 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		end
 
 		game_gui:set_mode(GUI_MODE_SELECT_POINT)
+
 		local ux, uy = game_gui:g2u(e.pos)
+
 		self:hide()
 	elseif item.action == "tw_upgrade" or item.action == "tw_unblock" then
 		entity.tower.upgrade_to = item.action_arg
+
 		signal.emit("tower-built")
 		game_gui:deselect_entity()
 	elseif item.action == "upgrade_power" then
@@ -6498,10 +7498,12 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 			store.player_gold = store.player_gold - spent
 			entity.tower.spent = entity.tower.spent + spent
+
 			game_gui.towertooltip:show(entity, item)
 
 			if power.level >= power.max_level and button.halo then
 				button:remove_child(button.halo)
+
 				button.halo = nil
 			end
 
@@ -6511,19 +7513,23 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		end
 	elseif item.action == "tw_sell" then
 		entity.tower.sell = true
+
 		game_gui:deselect_entity()
 	elseif item.action == "tw_buy_soldier" then
 		entity.barrack.unit_bought = item.action_arg
+
 		game_gui:deselect_entity()
 	elseif item.action == "tw_buy_attack" then
 		if e.user_selection then
 			if e.user_selection.ignore_point then
 				e.user_selection.arg = item.action_arg
+
 				game_gui:deselect_entity()
 			else
 				e.user_selection.in_progress = true
 				e.user_selection.arg = item.action_arg
 				e.user_selection.new_pos = nil
+
 				game_gui:set_mode(GUI_MODE_SELECT_POINT)
 				self:hide()
 			end
@@ -6531,26 +7537,38 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 			game_gui:deselect_entity()
 		end
 	elseif item.action == "tw_change_mode" then
-		if e.tower then
-			local current_mode = e.tower_upgrade_persistent_data.current_mode
-			local max_current_mode = e.tower_upgrade_persistent_data.max_current_mode
-			e.change_mode = true
-			game_gui:deselect_entity()
+		local current_mode = e.tower_upgrade_persistent_data.current_mode
+		local max_current_mode = e.tower_upgrade_persistent_data.max_current_mode
 
-			if current_mode >= max_current_mode then
-				e.tower_upgrade_persistent_data.current_mode = 0
-			else
-				e.tower_upgrade_persistent_data.current_mode = current_mode + 1
-			end
-		end
-	elseif item.action == "tw_free_action" then
-		if e.user_selection then
-			e.user_selection.in_progress = true
-			e.user_selection.arg = item.action_arg
-			e.user_selection.new_pos = nil
+		e.change_mode = true
+
+		game_gui:deselect_entity()
+
+		if current_mode >= max_current_mode then
+			e.tower_upgrade_persistent_data.current_mode = 0
+		else
+			e.tower_upgrade_persistent_data.current_mode = current_mode + 1
 		end
 
-		self:hide()
+		local us = e.user_selection
+
+		if us then
+			us.in_progress = true
+			us.arg = item.action_arg
+			us.new_pos = nil
+		end
+
+		if not e.user_selection_func or e.user_selection_func(e, game_gui.game.store) then
+		-- block empty
+		end
+	-- self:hide()
+	-- elseif item.action == "tw_free_action" then
+	-- 	if e.user_selection then
+	-- 		e.user_selection.in_progress = true
+	-- 		e.user_selection.arg = item.action_arg
+	-- 		e.user_selection.new_pos = nil
+	-- 	end
+	-- 	self:hide()
 	end
 
 	if item.sounds and not inhibit_sounds then
@@ -6564,8 +7582,10 @@ TowerMenuTooltip = class("TowerMenuTooltip", KImageView)
 
 function TowerMenuTooltip:initialize()
 	TowerMenuTooltip.super.initialize(self, "tooltip_bg_standard")
+
 	local margin = v(10, 14)
 	local title = GGLabel:new(V.v(self.size.x - 2 * margin.x, 16))
+
 	title.pos = v(margin.x, margin.y + CJK(0, -2, nil, nil))
 	title.font_name = "h"
 	title.font_size = 12.8
@@ -6574,8 +7594,11 @@ function TowerMenuTooltip:initialize()
 	title.text = "ARCHER TOWER"
 	title.fit_lines = 1
 	self.title = title
+
 	self:add_child(title)
+
 	local desc = GGLabel:new(V.v(self.size.x - 2 * margin.x, 74))
+
 	desc.pos = v(margin.x, margin.y + 14)
 	desc.font_name = "body"
 	desc.font_size = 12.5
@@ -6585,7 +7608,9 @@ function TowerMenuTooltip:initialize()
 	desc.text = "Archers ready to strike at your enemies from a distance."
 	desc.fit_size = true
 	self.desc = desc
+
 	self:add_child(desc)
+
 	local bottom_margin = 26
 	local font_size = 10
 	local text_offset = v(18, CJK(3, 1, 1, 1))
@@ -6594,6 +7619,7 @@ function TowerMenuTooltip:initialize()
 	local p12, p22 = margin.x * 0.5, margin.x * 0.5 + w2
 	local p13, p23, p33 = margin.x * 0.5, margin.x * 0.5 + w3, margin.x * 0.5 + 2 * w3
 	local damage_label = GGLabel:new(V.v(self.size.x / 3, 16), "tooltip_icons_0007")
+
 	damage_label.pos = v(p13, self.size.y - bottom_margin)
 	damage_label.font_name = "sans"
 	damage_label.font_size = font_size
@@ -6602,8 +7628,11 @@ function TowerMenuTooltip:initialize()
 	damage_label.text_align = "left"
 	damage_label.text = "6-8"
 	self.damage_label = damage_label
+
 	self:add_child(damage_label)
+
 	local cooldown_label = GGLabel:new(V.v(self.size.x * 0.5, 16), "tooltip_icons_0009")
+
 	cooldown_label.pos = v(p23, self.size.y - bottom_margin)
 	cooldown_label.font_name = "sans"
 	cooldown_label.font_size = font_size
@@ -6612,8 +7641,11 @@ function TowerMenuTooltip:initialize()
 	cooldown_label.text_align = "left"
 	cooldown_label.text = "Average"
 	self.cooldown_label = cooldown_label
+
 	self:add_child(cooldown_label)
+
 	local health_label = GGLabel:new(V.v(self.size.x / 3, 16), "tooltip_icons_0006")
+
 	health_label.pos = v(p23, self.size.y - bottom_margin)
 	health_label.font_name = "sans"
 	health_label.font_size = font_size
@@ -6622,8 +7654,11 @@ function TowerMenuTooltip:initialize()
 	health_label.text_align = "left"
 	health_label.text = "100"
 	self.health_label = health_label
+
 	self:add_child(health_label)
+
 	local armor_label = GGLabel:new(V.v(self.size.x / 3, 16), "tooltip_icons_0004")
+
 	armor_label.pos = v(p33, self.size.y - bottom_margin)
 	armor_label.font_name = "sans"
 	armor_label.font_size = font_size
@@ -6632,19 +7667,23 @@ function TowerMenuTooltip:initialize()
 	armor_label.text_align = "left"
 	armor_label.text = "Medium"
 	self.armor_label = armor_label
+
 	self:add_child(armor_label)
+
 	local phrase_label = GGLabel:new(V.v(self.size.x - 2 * margin.x, 16))
+
 	phrase_label.pos = v(margin.x, self.size.y - 22)
 	phrase_label.font_name = "sans"
 	phrase_label.font_size = font_size
 	phrase_label.colors.text = {170, 160, 125}
 	phrase_label.text_align = "left"
 	self.phrase_label = phrase_label
+
 	self:add_child(phrase_label)
 end
 
 function TowerMenuTooltip:set_template(template)
-	return 
+	return
 end
 
 function TowerMenuTooltip:show(entity, item)
@@ -6658,6 +7697,7 @@ function TowerMenuTooltip:show(entity, item)
 	if item.action == "tw_upgrade" then
 		self.title.text = item.tt_title or U.balance_format(_(item.action_arg))
 		self.desc.text = U.balance_format(item.tt_desc) or ""
+
 		local te
 
 		if entity.tower_holder then
@@ -6674,7 +7714,9 @@ function TowerMenuTooltip:show(entity, item)
 
 		if stats.type == STATS_TYPE_TOWER_BARRACK then
 			self.damage_label.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 			self.damage_label:set_image("tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
+
 			self.health_label.text = stats.hp_max
 			self.armor_label.text = GU.armor_value_desc(stats.armor)
 			self.damage_label.hidden = false
@@ -6682,18 +7724,14 @@ function TowerMenuTooltip:show(entity, item)
 			self.armor_label.hidden = false
 		elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
 			self.damage_label.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+
 			self.damage_label:set_image(stats.type == STATS_TYPE_TOWER_MAGE and "tooltip_icons_0010" or "tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
+
 			self.cooldown_label.text = GU.cooldown_value_desc(stats.cooldown)
 			self.damage_label.hidden = false
 			self.cooldown_label.hidden = false
 		end
 	elseif item.action == "upgrade_power" then
-		if item.tt_phrase then
-			self.phrase_label.text = item.tt_phrase
-			self.phrase_label.hidden = false
-			self.phrase_label:do_fit_lines(1, 10, 0.15)
-		end
-
 		local power = entity.powers[item.action_arg]
 		local show_level = km.clamp(1, power.max_level, power.level + 1)
 
@@ -6702,12 +7740,13 @@ function TowerMenuTooltip:show(entity, item)
 		end
 
 		local texts = item.tt_list[show_level]
+
 		self.title.text = texts.tt_title
 		self.desc.text = U.balance_format(texts.tt_desc)
 	-- if power.level == power.max_level then
 	-- self.hidden = true
 	-- end
-	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_free_action" then
+	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" then
 		if item.tt_title then
 			self.title.text = item.tt_title
 		end
@@ -6717,21 +7756,45 @@ function TowerMenuTooltip:show(entity, item)
 		end
 	elseif item.action == "tw_sell" then
 		self.title.text = _("Sell Tower")
+
 		local refund = game_gui.game.store.wave_group_number == 0 and entity.tower.spent or km.round(entity.tower.refund_factor * entity.tower.spent)
+
 		self.desc.text = string.format(_("Sell this tower and get a %s GP refund."), refund)
 	elseif item.action == "tw_change_mode" then
 		local current_mode = entity.tower_upgrade_persistent_data.current_mode
-		self.title.text = item["tt_title_mode" .. current_mode]
-		self.desc.text = item["tt_desc_mode" .. current_mode]
+
+		if entity.tower_upgrade_persistent_data.max_current_mode == 0 then
+			self.title.text = item.tt_title
+			self.desc.text = U.balance_format(item.tt_desc)
+		else
+			self.title.text = item["tt_title_mode" .. current_mode]
+			self.desc.text = item["tt_desc_mode" .. current_mode]
+
+			if item["tt_phrase_mode" .. current_mode] then
+				self.phrase_label.text = item["tt_phrase_mode" .. current_mode]
+				self.phrase_label.hidden = false
+
+				self.phrase_label:do_fit_lines(1, 10, 0.15)
+			end
+		end
 	else
 		self.hidden = true
 	end
 
+	if item.tt_phrase then
+		self.phrase_label.text = item.tt_phrase
+		self.phrase_label.hidden = false
+
+		self.phrase_label:do_fit_lines(1, 10, 0.15)
+	end
+
 	if not self.hidden then
 		local no_bottom_label = self.damage_label.hidden and self.health_label.hidden and self.armor_label.hidden and self.cooldown_label.hidden and self.phrase_label.hidden
+
 		self.title:do_fit_lines()
 		self.desc:do_fit_lines()
 		self.damage_label:do_fit_lines()
+
 		local width, lines = self.desc:get_wrap_lines()
 
 		if self.title:get_font_height() + self.desc:get_font_height() * lines + (no_bottom_label and 0 or self.damage_label:get_font_height()) < 73 then
@@ -6749,6 +7812,7 @@ function TowerMenuTooltip:show(entity, item)
 
 	local oy = 142
 	local ex, ey = game_gui:g2u(V.v(entity.pos.x, entity.pos.y), true)
+
 	self.pos.x = ex - math.floor(self.size.x * 0.5)
 	self.pos.y = ey - self.size.y - oy - 20
 
@@ -6765,12 +7829,14 @@ TowerMenuButton = class("TowerMenuButton", KView)
 
 function TowerMenuButton:enable()
 	self.click_disabled = false
+
 	self.button:set_image(self.item_image)
 	self.button:enable()
 
 	if self.price_tag then
 		self.price_tag:set_image("price_tag")
 		self.price_tag:enable()
+
 		self.price_tag.colors.text = {255, 224, 0}
 	end
 end
@@ -6778,13 +7844,14 @@ end
 function TowerMenuButton:disable()
 	self.click_disabled = true
 
-	if self.item.action ~= "tw_change_mode" and self.item.action ~= "tw_swap_mode" then
+	if self.item.action ~= "tw_change_mode" then
 		-- self.button:set_image(self.item_image .. "_disabled")
 		self.button:disable()
 
 		if self.price_tag then
 			-- self.price_tag:set_image("price_tag_disabled")
 			self.price_tag:disable()
+
 			self.price_tag.colors.text = {156, 146, 132}
 		end
 	end
@@ -6792,10 +7859,13 @@ end
 
 function TowerMenuButton:initialize(item, entity)
 	TowerMenuButton.super.initialize(self)
+
 	self.item_image = item.image
 	self.item = item
 	self.entity = entity
+
 	local b = KImageView:new(item.image)
+
 	b.pos = v(0, 0)
 	b.propagate_on_click = true
 	-- b.disabled_tint_color = nil
@@ -6803,8 +7873,10 @@ function TowerMenuButton:initialize(item, entity)
 
 	local function get_pos(this, offset)
 		offset = offset or v(0, 0)
+
 		local x = math.floor(-0.5 * (this.size.x - b.size.x) + offset.x)
 		local y = math.floor(-0.5 * (this.size.y - b.size.y) + offset.y)
+
 		return v(x, y)
 	end
 
@@ -6819,14 +7891,18 @@ function TowerMenuButton:initialize(item, entity)
 	halo.propagate_on_click = true
 	halo.hidden = true
 	self.halo = halo
+
 	self:add_child(halo)
 	self:add_child(b)
 
 	local function create_bo_view(img_name)
 		local bo = KImageView:new(img_name)
+
 		bo.pos = get_pos(bo)
 		bo.propagate_on_click = true
+
 		self:add_child(bo)
+
 		return bo
 	end
 
@@ -6861,6 +7937,7 @@ function TowerMenuButton:initialize(item, entity)
 		price_tag = tostring(price)
 	elseif item.action == "tw_buy_soldier" then
 		local nt = E:get_template(item.action_arg)
+
 		price_tag = tostring(nt.unit.price)
 	elseif item.action == "tw_buy_attack" then
 		price_tag = ""
@@ -6868,6 +7945,7 @@ function TowerMenuButton:initialize(item, entity)
 
 	if price_tag then
 		local pt = GGLabel:new(nil, "price_tag")
+
 		pt.id = "price_tag"
 		pt.pos = V.v(b.size.x * 0.5 - pt.size.x * 0.5, b.size.y - 11)
 		pt.text_algin = "center"
@@ -6879,6 +7957,7 @@ function TowerMenuButton:initialize(item, entity)
 		pt.propagate_on_click = true
 		pt.text = price_tag
 		self.price_tag = pt
+
 		self:add_child(pt)
 	end
 
@@ -6901,6 +7980,7 @@ function TowerMenuButton:initialize(item, entity)
 				pv.pos.x, pv.pos.y = pv.pos.x - pv.size.x * 0.5, pv.pos.y - pv.size.y * 0.5
 				pv.disabled_tint_color = nil
 				pv.propagate_on_click = true
+
 				bo:add_child(pv)
 				table.insert(self.power_buttons, pv)
 			end
@@ -6908,11 +7988,13 @@ function TowerMenuButton:initialize(item, entity)
 
 		if power.level >= power.max_level then
 			self:remove_child(self.halo)
+
 			self.halo = nil
 		end
 	end
 
 	local ufx = KImageView:new("effect_powerbuy_0001")
+
 	ufx.animation = {
 		to = 23,
 		prefix = "effect_powerbuy",
@@ -6922,7 +8004,9 @@ function TowerMenuButton:initialize(item, entity)
 	ufx.hidden = true
 	ufx.propagate_on_click = true
 	self.ufx = ufx
+
 	self:add_child(ufx)
+
 	self.size = V.vclone(b.size)
 end
 
@@ -6930,31 +8014,41 @@ IncomingTooltip = class("IncomingTooltip", KView)
 
 function IncomingTooltip:initialize()
 	IncomingTooltip.super.initialize(self, V.v(200, 90))
+
 	self.colors.background = {21, 17, 13, 220}
+
 	local aw, ah = 18, 24
 	local arrow = KView:new(V.v(aw, ah))
+
 	arrow.shape = {
 		name = "polygon",
 		args = {"fill", {0, ah, aw, ah * 0.5, aw * 0.5, ah * 0.5, aw * 0.5, 0}}
 	}
 	arrow.colors.background = self.colors.background
 	arrow.anchor = V.v(aw * 0.5, ah * 0.5)
+
 	self:add_child(arrow)
+
 	local title = GGLabel:new(V.v(180, 30))
+
 	title.text = _("INCOMING WAVE")
 	title.font_name = "h"
 	title.font_size = 14
 	title.text_align = "center"
 	title.colors.text = {255, 115, 55, 255}
+
 	local report = GGLabel:new(V.v(180, 90))
+
 	report.font_name = "body"
 	report.font_size = 12
 	report.text_align = "center"
 	report.colors.text = {255, 245, 210, 255}
 	title.pos.x, title.pos.y = 0, 10
 	report.pos.x, report.pos.y = 0, 30
+
 	self:add_child(title)
 	self:add_child(report)
+
 	self.arrow = arrow
 	self.title = title
 	self.report = report
@@ -6962,19 +8056,24 @@ end
 
 function IncomingTooltip:set_report(text)
 	self.report.text = text
+
 	local title_w = self.title:get_text_width(self.title.text)
 	local report_w = self.report:get_text_width(text)
 	local w = math.max(title_w, report_w) + 40
+
 	self.report.size.x = w
 	self.title.size.x = w
 	self.size.x = w
+
 	local width, lines = self.report:get_wrap_lines()
 	local height = lines * self.report:get_font_height()
+
 	self.size.y = 40 + height + 10
 end
 
 function IncomingTooltip:show(x, y, r, report)
 	self:set_report(report)
+
 	local arrow = self.arrow
 	local a_w, a_h = arrow.anchor.x, arrow.size.y - arrow.anchor.y
 	local a = km.unroll(r)
@@ -7035,20 +8134,25 @@ WaveFlag = class("WaveFlag", KView)
 
 function WaveFlag:initialize(flying, duration, report, path_index)
 	WaveFlag.super.initialize(self)
+
 	self.path_index = path_index
 	self.duration = duration
 	self.report = report
 	self.start_game_ts = game_gui.game.store.tick_ts
 	self.ts = 0
 	self.pulse_animation = true
+
 	local halo = KImageView:new("nextwaveTimer_glow_0001")
 	local bg_circle = KImageView:new("nextwaveTimer_Full")
 	local circle = KImageView:new("nextwaveTimer_0001")
 	local icon = KImageView:new(flying and "nextwaveTimer_0003" or "nextwaveTimer_0002")
 	local pointer = KImageView:new("nextwaveTimer_0020")
+
 	self.size.x, self.size.y = halo.size.x, halo.size.y
 	self.anchor.x, self.anchor.y = self.size.x * 0.5, self.size.y * 0.5
+
 	local hrs = 0.25
+
 	self.hit_rect = V.r(hrs * self.size.x, hrs * self.size.y, (1 - 2 * hrs) * self.size.x, (1 - 2 * hrs) * self.size.y)
 
 	for _, v in pairs({halo, bg_circle, circle, icon}) do
@@ -7060,6 +8164,7 @@ function WaveFlag:initialize(flying, duration, report, path_index)
 	for _, v in pairs({halo, bg_circle, circle, icon, pointer}) do
 		v.pos.x, v.pos.y = self.size.x * 0.5, self.size.y * 0.5
 		v.propagate_on_click = true
+
 		self:add_child(v)
 	end
 
@@ -7071,6 +8176,7 @@ function WaveFlag:initialize(flying, duration, report, path_index)
 	function bg_circle.clip_fn()
 		local start_angle = 3 * math.pi * 0.5
 		local stop_angle = 7 * math.pi * 0.5 - bg_circle.phase * 2 * math.pi
+
 		G.arc("fill", bg_circle.size.x * 0.5, bg_circle.size.y * 0.5, bg_circle.size.x * 0.5, start_angle, stop_angle, 12)
 	end
 
@@ -7082,24 +8188,29 @@ end
 function WaveFlag:on_click()
 	log.debug(">>> sending next wave...")
 	self:disable()
+
 	self.clicked = true
 	game_gui.game.store.send_next_wave = true
 end
 
 function WaveFlag:on_enter()
 	self.halo.hidden = false
+
 	game_gui.incoming_tooltip:show(self.pos.x, self.pos.y, self.pointer.r + math.pi * 0.5, self.report)
+
 	game.shown_path = self.path_index
 end
 
 function WaveFlag:on_exit()
 	self.halo.hidden = true
 	game.shown_path = nil
+
 	game_gui.incoming_tooltip:hide()
 end
 
 function WaveFlag:hide()
 	self.pulse_animation = false
+
 	self:disable()
 
 	if not self.hide_timer then
@@ -7111,6 +8222,7 @@ function WaveFlag:hide()
 			}
 		}, "out-quad", function()
 			self.hidden = true
+
 			self:remove_from_parent()
 		end)
 	end
@@ -7121,6 +8233,7 @@ function WaveFlag:update(dt)
 
 	if self.pulse_animation then
 		local scale = 0.85 + 0.15 * (0.5 * math.sin(2 * math.pi * self.ts * 1.25) + 1)
+
 		self.scale.x, self.scale.y = scale, scale
 	end
 
@@ -7131,9 +8244,11 @@ function WaveFlag:update(dt)
 	if not self.clicked and not self.hide_timer then
 		if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_WAVE_FLAG then
 			self:enable()
+
 			self.alpha = 1
 		else
 			self:disable(false)
+
 			self.alpha = 0.2
 		end
 	end
@@ -7143,14 +8258,19 @@ ItemRewardParticles = class("ItemRewardParticles", KView)
 
 function ItemRewardParticles:initialize(scale)
 	ItemRewardParticles.super.initialize(self)
+
 	scale = scale or 1
+
 	local ss = I:s("lives_particle")
 	local p_scale = (ss.ref_scale or 1) * scale
 	local c = G.newCanvas(ss.size[1], ss.size[2])
+
 	G.setCanvas(c)
 	G.draw(I:i(ss.atlas), ss.quad, ss.trim[1], ss.trim[2])
 	G.setCanvas()
+
 	local ps = G.newParticleSystem(c, 500)
+
 	ps:setDirection(-math.pi * 0.5)
 	ps:setSpread(2 * math.pi)
 	ps:setSizes(1 * p_scale, 0.5 * p_scale)
@@ -7159,7 +8279,9 @@ function ItemRewardParticles:initialize(scale)
 	ps:setRadialAcceleration(-50 * scale)
 	ps:setColors(255, 255, 255, 255, 255, 255, 255, 0)
 	ps:emit(150)
+
 	self.ps = ps
+
 	timer:after(1, function()
 		self.parent:remove_child(self)
 		log.debug("remving particles :%s", self)
@@ -7182,7 +8304,9 @@ SelectItem = class("SelectItem", KButton)
 
 function SelectItem:initialize(key_text, size)
 	size = size or V.v(400, 80) -- 增加高度以容纳两行文本
+
 	KButton.initialize(self, size)
+
 	self.key = key_text
 	self.on_change_callback = nil
 	-- 标题标签（原来的key_label改为title_label）
@@ -7209,10 +8333,13 @@ function SelectItem:initialize(key_text, size)
 	self.desc_label.colors.text_default = {180, 180, 180, 255}
 	self.desc_label.colors.text_hover = {220, 220, 220, 255}
 	self.desc_label.propagate_on_click = true
+
 	self:add_child(self.title_label)
 	self:add_child(self.desc_label)
+
 	-- 设置初始状态
 	self.value = false
+
 	self:update_display()
 end
 
@@ -7242,6 +8369,7 @@ function SelectItem:on_exit()
 	self.colors.background = {0, 0, 0, 0}
 	self.title_label.colors.text = self.title_label.colors.text_default
 	self.desc_label.colors.text = self.desc_label.colors.text_default
+
 	self:update_display()
 end
 
@@ -7252,6 +8380,7 @@ end
 
 function SelectItem:toggle()
 	self.value = not self.value
+
 	self:update_display()
 
 	if self.on_change_callback then
@@ -7261,6 +8390,7 @@ end
 
 function SelectItem:set_false()
 	self.value = false
+
 	self:update_display()
 end
 
@@ -7269,7 +8399,9 @@ SelectGroup = class("SelectGroup", KView)
 
 function SelectGroup:initialize(size)
 	size = size or V.v(400, 300)
+
 	KView.initialize(self, size)
+
 	self.key_label_map = {}
 	self.items = {}
 	self.item_height = 75
@@ -7313,8 +8445,10 @@ function SelectGroup:add_item(key, initial_value)
 	end
 
 	self:add_child(item)
+
 	self.items[key] = item
 	self.data[key] = initial_value
+
 	return item
 end
 
@@ -7354,30 +8488,41 @@ SelectPanelView = class("SelectPanelView", PopUpView)
 
 function SelectPanelView:initialize(sw, sh, title)
 	PopUpView.initialize(self, V.v(sw, sh))
+
 	self.back = KImageView:new("options_bg_notxt")
 	self.pos = v(0, 0)
 	self.back.anchor = v(self.back.size.x * 0.5, self.back.size.y * 0.5)
 	self.back.pos = v(sw * 0.5, sh * 0.5 - 50)
 	self.header = title
+
 	self:add_child(self.back)
+
 	self.extra = false
 	self.back.alpha = 1
+
 	-- 添加标题
 	local header = GGPanelHeader:new(self.header, 242)
+
 	header.pos = V.v(135, 28)
+
 	self.back:add_child(header)
+
 	-- 创建配置组
 	local data_group_width = 400
+
 	self.data_group = SelectGroup:new(V.v(data_group_width, 300))
 	self.data_group.pos = V.v((self.back.size.x - data_group_width) * 0.5, 120)
+
 	-- 设置数据改变回调
 	self.data_group:set_on_data_change_callback(function(key, value, all_data)
 	end)
 	self.back:add_child(self.data_group)
+
 	-- 添加底部按钮
 	local mx = 150
 	local y = 420
 	local b = GGOptionsButton:new(_("BUTTON_DONE"))
+
 	b.anchor.x = b.size.x * 0.5
 	b.pos = V.v(self.back.size.x * 0.5, y)
 
@@ -7388,6 +8533,7 @@ function SelectPanelView:initialize(sw, sh, title)
 	end
 
 	self.done_button = b
+
 	self.back:add_child(b)
 end
 
@@ -7464,7 +8610,9 @@ function EndlessSelectRewardView:load()
 	game_gui:disable_keys()
 	game_gui:deselect_all()
 	S:pause()
+
 	game_gui.game.store.paused = true
+
 	game_gui.overlay:show()
 end
 
@@ -7474,15 +8622,19 @@ function EndlessSelectRewardView:save()
 	for k, v in pairs(self.data_group:get_all_data()) do
 		if v then
 			key = k
+
 			break
 		end
 	end
 
 	local store = game_gui.game.store
+
 	EU.patch_upgrade_in_game(key, store, store.endless)
 	game_gui:enable_keys()
 	S:resume()
+
 	game_gui.game.store.paused = false
+
 	game_gui.overlay:hide()
 end
 

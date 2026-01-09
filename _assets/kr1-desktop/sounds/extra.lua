@@ -466,7 +466,7 @@ return {
 			sounds = {"MusicBattlePrep_91", "MusicBattle_91"}
 		},
 		music_stage92 = {
-			sounds = {"MusicBattlePrep_92", "MusicBattle_92"}
+			sounds = {"MusicBattlePrep_92", "MusicBattle_92", "MusicBossFight"}
 		},
 		music_stage93 = {
 			sounds = {"MusicBattlePrep_93", "MusicBattle_93", "MusicBossFight"}

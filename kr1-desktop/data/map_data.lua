@@ -18,6 +18,7 @@ end
 local p11, p12 = 0, CJK(0.48, 0.5, 0.5, 0.5)
 local p21, p22 = CJK(0.3, 0.35, 0.35, 0.35), CJK(0.5, 0.55, 0.55, 0.55)
 local rs = GGLabel.static.ref_h / REF_H
+
 return {
 	hero_names_config = {
 		default = {
@@ -2098,7 +2099,7 @@ return {
 				heroe = true,
 				level = 5
 			},
-			iron = {"archers", "mages"}
+			iron = {"artillery", "mages"}
 		},
 		-- from fl level 87
 		[93] = {
@@ -2337,6 +2338,18 @@ return {
 			name = "tower_flamespitter_lvl4",
 			icon = 11,
 			detail_icon = 11,
+			from_kr = 5
+		},
+		{
+			name = "tower_hermit_toad_lvl4",
+			icon = 18,
+			detail_icon = 18,
+			from_kr = 5
+		},
+		{
+			name = "tower_sparking_geode_lvl4",
+			icon = 19,
+			detail_icon = 19,
 			from_kr = 5
 		} -- 16, 17: 蛤蟆
 	-- 18: 巨像

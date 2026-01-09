@@ -1,9 +1,9 @@
 -- chunkname: @./kr1/achievements_handlers.lua
 local log = require("lib.klua.log"):new("achievements_handlers")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local bit = require("bit")
 local E = require("entity_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local storage = require("storage")
 local ah = {}
 
@@ -83,7 +83,8 @@ end
 function ah:h_entity_killed(entity, damage)
 	if not entity then
 		log.debug("nil entity")
-		return 
+
+		return
 	end
 
 	if entity.enemy then
@@ -127,6 +128,7 @@ function ah:h_entity_killed(entity, damage)
 
 			if s.template_name == "soldier_barbarian" then
 				s._barbarian_rush_counter = 1 + (s._barbarian_rush_counter or 0)
+
 				self.A:high_check("BARBARIAN_RUSH", s._barbarian_rush_counter)
 			end
 		end
@@ -178,6 +180,7 @@ function ah:h_game_victory(store)
 			elseif i == go.level_idx then
 				local l_stars = l.stars or 0
 				local go_stars = go.stars or 0
+
 				stars = stars + (go.level_mode == GAME_MODE_CAMPAIGN and math.max(l_stars, go_stars) or l_stars) + ((go.level_mode == GAME_MODE_HEROIC or l[GAME_MODE_HEROIC]) and 1 or 0) + ((go.level_mode == GAME_MODE_IRON or l[GAME_MODE_IRON]) and 1 or 0)
 			else
 				stars = stars + (l.stars or 0) + (l[GAME_MODE_HEROIC] and 1 or 0) + (l[GAME_MODE_IRON] and 1 or 0)
@@ -190,6 +193,7 @@ function ah:h_game_victory(store)
 	self.A:high_check("EARN15_STARS", stars)
 	self.A:high_check("EARN30_STARS", stars)
 	self.A:high_check("EARN45_STARS", stars)
+
 	local done_c, done_h, done_i, done_g = true, true, true, true
 
 	if slot and slot.levels then
@@ -198,6 +202,7 @@ function ah:h_game_victory(store)
 
 			if not lv then
 				done_c, done_h, done_i, done_g = false, false, false, false
+
 				break
 			end
 

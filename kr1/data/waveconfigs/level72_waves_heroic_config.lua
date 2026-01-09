@@ -90,4 +90,5 @@ local data = {
 	-- 如果怪物的 vis.flags 中含有 F_FLYING，就要为 wave 添加 some_flying = true
 	wave_max_types = 5 -- 每个 wave 最多不同种类敌人数量
 }
+
 return data

@@ -75,6 +75,7 @@ end
 
 local function RAND_SIGN(prob_positive)
 	prob_positive = prob_positive or 0.5
+
 	return prob_positive <= math.random() and 1 or -1
 end
 

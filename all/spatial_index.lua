@@ -3,7 +3,9 @@
 -- friend module: seek.lua
 -- 其它模块只允许访问 spatial_index 暴露的接口，不允许通过 getter 来访问其内部数据结构。
 local ffi = require("ffi")
-require("constants")
+
+require("all.constants")
+
 local _aspect = ASPECT
 local _aspect_inv = 1.0 / _aspect
 local ceil = math.ceil
@@ -19,6 +21,7 @@ local _rows = SPATIAL_HASH_ROWS
 local _max_size = SPATIAL_HASH_MAX_INDEX
 local _id_array_capacity = ID_ARRAY_CAPACITY
 local _check_interval = SPATIAL_INDEX_CHECK_INTERVAL
+
 -- array: 存储实体 id 的数组
 -- size: 当前 array 中有的 id 个数
 -- capacity: array 的最大容量
@@ -29,6 +32,7 @@ typedef struct{
     uint32_t array[256];
 } id_array;
 ]]
+
 --- 模块数据区 BEGIN
 -- id_array 数组，共 SPATIAL_HASH_MAX_INDEX 个元素
 local id_arrays = ffi.new("id_array[?]", _max_size)
@@ -56,6 +60,7 @@ end
 function spatial_index.insert_entity(entity)
 	local id_array_index = floor((entity.pos.y - _y_min) * _cell_size_factor) * _cols + floor((entity.pos.x - _x_min) * _cell_size_factor)
 	local id_array = id_arrays[id_array_index]
+
 	-- 让 entity 知道自己在 spatial_index 中的位置
 	entity._id_array_index = id_array_index
 	entity._id_array_subindex = id_array.size
@@ -69,10 +74,13 @@ function spatial_index.remove_entity(entity)
 	local id_array_index = entity._id_array_index
 	local subindex = entity._id_array_subindex
 	local id_array = id_arrays[id_array_index]
+
 	-- 更新 size
 	id_array.size = id_array.size - 1
+
 	-- 移动原来最后一个 id 到被删除位置，代替被删除的 id
 	local last_id = id_array.array[id_array.size]
+
 	id_array.array[subindex] = last_id
 	-- 更新被移动实体的 subindex
 	entities[last_id]._id_array_subindex = subindex
@@ -83,7 +91,7 @@ function spatial_index.on_update(dt)
 	t = t + dt
 
 	if t < _check_interval then
-		return 
+		return
 	end
 
 	t = t - _check_interval
@@ -93,6 +101,7 @@ function spatial_index.on_update(dt)
 
 		if new_id_array_index >= _max_size then
 			print("spatial_index.on_update: entity " .. e.template_name .. " out of bounds, position (" .. e.pos.x .. ", " .. e.pos.y .. ")")
+
 			goto continue
 		end
 
@@ -104,6 +113,7 @@ function spatial_index.on_update(dt)
 			-- 从旧的 id_array 中移除
 			local subindex = e._id_array_subindex
 			local last_id = old_id_array.array[old_id_array.size - 1]
+
 			old_id_array.array[subindex] = last_id
 			entities[last_id]._id_array_subindex = subindex
 			old_id_array.size = old_id_array.size - 1

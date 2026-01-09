@@ -5413,9 +5413,9 @@ local towers = {
 		},
 		price = {70, 100, 160, 230},
 		basic_attack = {
-			cooldown = 0.8,
-			damage_min = {3, 8, 15, 13},
-			damage_max = {5, 11, 23, 19},
+			cooldown = 0.7,
+			damage_min = {3, 8, 15, 11},
+			damage_max = {5, 11, 23, 17},
 			range = {160, 170, 185, 200},
 			damage_type = DAMAGE_PHYSICAL
 		},
@@ -5427,7 +5427,9 @@ local towers = {
 			cooldown = {15, 15, 15},
 			damage_min = {20, 40, 60},
 			damage_max = {30, 60, 90},
-			damage_type = DAMAGE_PHYSICAL,
+			s_damage_min = {20, 40, 60},
+			s_damage_max = {30, 60, 90},
+			damage_type = DAMAGE_STAB,
 			armor_penetration = {0.1, 0.25, 0.4}
 		},
 		rapacious_hunter = {
@@ -5437,8 +5439,8 @@ local towers = {
 			max_distance_from_tower = 240,
 			attack_cooldown = 2,
 			price = {200, 100, 100},
-			damage_min = {18, 34, 52},
-			damage_max = {26, 52, 78},
+			damage_min = {20, 40, 60},
+			damage_max = {30, 55, 80},
 			damage_type = DAMAGE_PHYSICAL
 		}
 	},
@@ -5625,7 +5627,7 @@ local towers = {
 			speed_flight = 250,
 			dead_lifetime = 10,
 			speed_ground = 75,
-			armor = {0.1, 0.15, 0.2, 0.45},
+			armor = {0.1, 0.15, 0.2, 0.5},
 			hp = {30, 50, 70, 100},
 			regen_hp = {5, 8, 11, 15},
 			melee_attack = {
@@ -5642,7 +5644,7 @@ local towers = {
 				damage_min = {5, 12, 22, 40}
 			},
 			phosphoric = {
-				damage_radius = 50,
+				damage_radius = 55,
 				price = {250, 100, 100},
 				armor_reduction = {0.01, 0.02, 0.03},
 				damage_area_max = {
@@ -5653,9 +5655,9 @@ local towers = {
 				},
 				damage_area_min = {
 					[0] = 12,
-					[1] = 12,
-					[2] = 16,
-					[3] = 20
+					[1] = 14,
+					[2] = 19,
+					[3] = 24
 				},
 				damage_factor = {1, 1, 1},
 				damage_type = DAMAGE_AGAINST_ARMOR
@@ -5798,9 +5800,9 @@ local towers = {
 		basic_attack = {
 			duration = 1.2,
 			cooldown = 2,
-			cycle_time = 0.1,
-			damage_min = {2, 5, 12, 8},
-			damage_max = {3, 10, 16, 9},
+			cycle_time = 0.12,
+			damage_min = {2, 5, 12, 9},
+			damage_max = {3, 10, 16, 10},
 			range = {180, 180, 180, 200},
 			damage_type = DAMAGE_TRUE
 		},
@@ -5918,8 +5920,8 @@ local towers = {
 			bounce_range = 150,
 			bounce_speed_mult = 1.25,
 			bounce_damage_mult = 0.6,
-			damage_min = {3, 6, 10, 35},
-			damage_max = {5, 10, 14, 58},
+			damage_min = {3, 6, 10, 17},
+			damage_max = {5, 10, 14, 29},
 			range = {145, 155, 170, 190},
 			damage_type = DAMAGE_STAB,
 			max_bounces = {1, 2, 3, 4}
@@ -5931,8 +5933,8 @@ local towers = {
 			range_effect = 190,
 			price = {200, 200, 200},
 			cooldown = {8, 8, 8},
-			damage_min = {104, 204, 304},
-			damage_max = {104, 204, 304},
+			damage_min = {52, 102, 152},
+			damage_max = {52, 102, 152},
 			s_damage = {52, 102, 152},
 			damage_type = DAMAGE_STAB,
 			gold_extra = {4, 8, 12}
@@ -5945,8 +5947,8 @@ local towers = {
 			damage_every = 0.25,
 			slow_duration = 0.5,
 			price = {200, 200, 200},
-			damage_min = {10, 16, 24},
-			damage_max = {16, 28, 34},
+			damage_min = {5, 8, 12},
+			damage_max = {8, 14, 17},
 			s_damage_min = {20, 32, 48},
 			s_damage_max = {32, 42, 68},
 			cooldown = {16, 16, 16},
@@ -5957,7 +5959,7 @@ local towers = {
 	ghost = {
 		max_soldiers = 2,
 		rally_range = 155,
-		price = {90, 150, 220, 300},
+		price = {90, 150, 220, 235},
 		stats = {
 			damage = 3,
 			armor = 6,
@@ -5966,35 +5968,38 @@ local towers = {
 		soldier = {
 			dead_lifetime = 8,
 			speed = 75,
-			armor = {0.2, 0.3, 0.45, 0.6},
-			hp = {30, 50, 75, 100},
+			armor = {0.2, 0.3, 0.45, 0.5},
+			hp = {30, 50, 75, 130},
 			regen_hp = {5, 8, 12, 18},
 			basic_attack = {
 				range = 70,
 				cooldown = 1,
-				damage_min = {4, 6, 10, 16},
-				damage_max = {6, 10, 16, 24},
+				damage_min = {4, 6, 10, 21},
+				damage_max = {6, 10, 16, 30},
 				damage_type = DAMAGE_TRUE
 			}
 		},
 		extra_damage = {
-			duration = 8,
-			cooldown_start = 5,
-			price = {200, 100, 100},
-			damage_factor = {1.5, 1.75, 2},
-			s_damage = {0.5, 0.75, 1}
+			cycle_time = fts(4.5),
+			price = {150, 150, 150},
+			damage_min = 0,
+			damage_max = 0,
+			damage_inc = 1,
+			damage_type = DAMAGE_MAGICAL,
+			s_damage = {1, 2, 3}
 		},
 		soul_attack = {
-			slow_duration = 5,
+			slow_duration = 3,
+			dead_lifetime_dec = {0.5, 1, 1.5},
 			range = 120,
 			slow_factor = 0.6,
 			damage_factor = 0.5,
-			damage_factor_duration = 5,
+			damage_factor_duration = 3,
 			price = {150, 150, 150},
 			damage_type = DAMAGE_TRUE,
-			damage_min = {60, 120, 180},
-			damage_max = {60, 120, 180},
-			s_damage = {60, 120, 180}
+			damage_min = {100, 150, 200},
+			damage_max = {100, 150, 200},
+			s_damage = {100, 150, 200}
 		}
 	},
 	ray = {
@@ -6096,7 +6101,7 @@ local towers = {
 			damage_radius = 60,
 			cooldown = 2.5,
 			damage_min = {7, 15, 29, 45},
-			damage_max = {9, 21, 39, 59},
+			damage_max = {9, 21, 39, 60},
 			range = {180, 200, 220, 240},
 			slow_factor = {0.8, 0.7, 0.6, 0.5},
 			slow_decal_duration = {1.75, 1.75, 1.75, 1.75},
@@ -6105,8 +6110,8 @@ local towers = {
 		},
 		mage_basic_attack = {
 			cooldown = 1.2,
-			damage_min = {7, 17, 29, 47},
-			damage_max = {10, 22, 38, 63},
+			damage_min = {7, 17, 29, 64},
+			damage_max = {10, 22, 38, 80},
 			range = {160, 175, 190, 200},
 			damage_type = DAMAGE_MAGICAL
 		},
@@ -6130,7 +6135,7 @@ local towers = {
 	dwarf = {
 		max_soldiers = 2,
 		rally_range = 180,
-		price = {60, 130, 180, 240},
+		price = {60, 130, 180, 180},
 		stats = {
 			damage = 5,
 			armor = 4,
@@ -6140,7 +6145,7 @@ local towers = {
 			dead_lifetime = 8,
 			speed = 75,
 			armor = {0, 0.1, 0.2, 0.3},
-			hp = {35, 70, 100, 140},
+			hp = {35, 70, 100, 150},
 			regen_hp = {6, 12, 18, 28},
 			melee_attack = {
 				cooldown = 1,
@@ -6152,19 +6157,19 @@ local towers = {
 				cooldown = 1.5,
 				max_range = {180, 180, 180, 180},
 				min_range = {70, 70, 70, 70},
-				damage_max = {6, 14, 26, 38},
-				damage_min = {4, 10, 18, 26}
+				damage_max = {6, 14, 26, 32},
+				damage_min = {4, 10, 18, 24}
 			}
 		},
 		formation = {
-			price = {120, 180, 240}
+			price = {180, 180, 180}
 		},
 		incendiary_ammo = {
 			damage_radius = 60,
 			cooldown = 12,
-			price = {150, 150, 150},
-			damages_min = {20, 38, 52},
-			damages_max = {28, 58, 80},
+			price = {150, 175, 175},
+			damage_min = {20, 38, 52},
+			damage_max = {28, 58, 80},
 			damage_type = DAMAGE_EXPLOSION,
 			burn = {
 				damage_every = 0.25,
@@ -6182,7 +6187,7 @@ local towers = {
 	},
 	sparking_geode = {
 		shared_min_cooldown = 2,
-		price = {110, 130, 210, 290},
+		price = {110, 130, 210, 350},
 		stats = {
 			cooldown = 7,
 			range = 8,
@@ -6192,34 +6197,34 @@ local towers = {
 			cooldown = 2,
 			bounce_range = 140,
 			targeting_style = 1,
-			damage_min = {3, 5, 7, 9},
+			damage_min = {3, 5, 7, 11},
 			damage_max = {4, 6, 9, 12},
-			range = {130, 140, 150, 160},
+			range = {130, 140, 150, 190},
 			ray_timing_min = {1.05, 0.95, 0.75, 0.55},
 			ray_timing_max = {1.15, 1.05, 0.85, 0.65},
 			damage_type = DAMAGE_TRUE,
 			bounces_min = {1, 2, 3, 4},
 			bounces_max = {1, 2, 3, 4},
-			bounce_damage_factor = {1.05, 1.1, 1.15, 1.25}
+			bounce_damage_factor = {1.05, 1.1, 1.15, 1.3}
 		},
 		crystalize = {
 			price = {150, 150, 150},
-			cooldown = {31, 28, 25},
-			max_targets = {2, 3, 4},
+			cooldown = {30, 25, 20},
+			max_targets = {3, 4, 5},
 			duration = {5, 5, 5},
-			received_damage_factor = {1.3, 1.3, 1.3},
-			s_received_damage_factor = {0.3, 0.3, 0.3}
+			received_damage_factor = {1.25, 1.25, 1.25},
+			s_received_damage_factor = {0.25, 0.25, 0.25}
 		},
 		spike_burst = {
 			damage_every = 0.5,
 			radius = 200,
 			price = {200, 200, 200},
-			cooldown = {40, 35, 30},
-			duration = {6, 8, 10},
+			cooldown = {35, 30, 25},
+			duration = {6, 9, 12},
 			damage_min = {3, 4, 5},
 			damage_max = {3, 4, 5},
 			damage_type = DAMAGE_TRUE,
-			speed_factor = {0.7, 0.6, 0.5}
+			speed_factor = {0.7, 0.65, 0.6}
 		}
 	},
 	pandas = {
@@ -6361,7 +6366,7 @@ local specials = {
 			price = 150
 		}
 	},
-    	terrain_8 = {
+	terrain_8 = {
 		flaming_ground = {
 			dps = {
 				duration = 0.25,
@@ -6399,7 +6404,7 @@ local specials = {
 			},
 			wooden_holder_enhance = {
 				range_factor = 2.5,
-                damage_factor = 1.2,
+				damage_factor = 1.2,
 				first_cooldown = 999999,
 				duration = 8,
 				slow_factor = 0.5,
@@ -6462,36 +6467,26 @@ local specials = {
 					}
 				},
 				holder_spawn_pos = {
-					["22"] = {
-						{
-							x = 282,
-							y = 361
-						}
-					},
-					["23"] = {
-						{
-							x = 85,
-							y = 361
-						}
-					},
-					["25"] = {
-						{
-							x = 109,
-							y = 433
-						}
-					},
-					["26"] = {
-						{
-							x = 367,
-							y = 515
-						}
-					},
-					["29"] = {
-						{
-							x = 770,
-							y = 515
-						}
-					}
+					["22"] = {{
+						x = 282,
+						y = 361
+					}},
+					["23"] = {{
+						x = 85,
+						y = 361
+					}},
+					["25"] = {{
+						x = 109,
+						y = 433
+					}},
+					["26"] = {{
+						x = 367,
+						y = 515
+					}},
+					["29"] = {{
+						x = 770,
+						y = 515
+					}}
 				}
 			},
 			metal_holder = {

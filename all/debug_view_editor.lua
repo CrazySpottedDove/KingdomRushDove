@@ -1,6 +1,7 @@
 -- chunkname: @./all/debug_view_editor.lua
 local log = require("lib.klua.log"):new("debug_view_editor")
 local km = require("lib.klua.macros")
+
 dbe = {}
 
 function dbe:inject_editor(root_view, screen)
@@ -60,13 +61,14 @@ function dbe:inject_on_click(label, screen)
 		screen.SEL_VIEW = this
 		this._debug_old_bg_color = this.colors and this.colors.background or "none"
 		this.colors.background = {255, 0, 0, 100}
+
 		log.debug("SEL_VIEW: %s", this.text)
 	end
 end
 
 function dbe:keypressed(selected_view, key, isrepeat)
 	if not selected_view then
-		return 
+		return
 	end
 
 	local av = selected_view
@@ -138,6 +140,7 @@ function dbe:keypressed(selected_view, key, isrepeat)
 
 	if key == "s" then
 		local inc = shift and -0.01 or 0.01
+
 		av.scale.x = av.scale.x + inc
 		av.scale.y = av.scale.y + inc
 	end
@@ -147,12 +150,14 @@ function dbe:keypressed(selected_view, key, isrepeat)
 
 		if v and v.parent then
 			log.info("selecting %s:%s parent of %s", v.parent.id, v.parent, v)
+
 			self.screen.SEL_VIEW = v.parent
 		end
 	end
 
 	if key == "space" or key == "return" then
 		local out = string.format("pos=v(%s,%s), size=v(%s,%s), font_size=%s, text_align='%s', text='%s'\n", av.pos.x, av.pos.y, av.size.x, av.size.y, av.font_size, av.text_align, av.text)
+
 		log.info("\n%s\n", out)
 
 		if av and av.parent then
@@ -196,11 +201,13 @@ function dbe:keypressed(selected_view, key, isrepeat)
 					out = out .. string.format("%s\n", o)
 				else
 					local fill = string.rep(" ", 70 - string.len(o))
+
 					out = out .. string.format("%s%s || %s\n", o, fill, oo)
 				end
 			end
 
 			out = out .. "---------------------------\n"
+
 			log.info("\n%s\n", out)
 		end
 	end

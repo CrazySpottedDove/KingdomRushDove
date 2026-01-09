@@ -1,16 +1,18 @@
 -- chunkname: @./all/platform_services.lua
 local log = require("lib.klua.log"):new("platform_services")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local features = require("features")
 local PLATFORM_SERVICE_TIMEOUT = 60
 local ps = {}
+
 ps.services = {}
 ps.paused = nil
 
 function ps:init(only_essential)
 	if not features.platform_services then
 		log.debug("Platform services not defined. Skipping init")
-		return 
+
+		return
 	end
 
 	for k, v in pairs(features.platform_services) do
@@ -27,6 +29,7 @@ function ps:init(only_essential)
 				log.error("Error requiring service %s src %s", k, v.src)
 			elseif s:init(k, v.params) then
 				log.debug("Service %s (src=%s) initialized", k, v.src)
+
 				self.services[k] = s
 				s.name = v.name
 

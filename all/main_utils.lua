@@ -1,6 +1,8 @@
 -- chunkname: @./all/main_utils.lua
 local log = require("lib.klua.log")
+
 require("lib.klua.table")
+
 local i18n = require("i18n")
 local mu = {}
 
@@ -72,10 +74,6 @@ function mu.parse_args(arg, params)
 		params.pause_on_switch = true
 	end
 
-	if has_arg("custom_script") then
-		params.custom_script = argv("custom_script")
-	end
-
 	if has_arg("custom") then
 		params.custom = argv("custom")
 	end
@@ -88,20 +86,12 @@ function mu.parse_args(arg, params)
 		params.diff = argv("diff")
 	end
 
-	if has_arg("draw-stats") then
-		params.draw_stats = true
-	end
-
 	if has_arg("level") then
 		params.level = argv("level")
 	end
 
 	if has_arg("locale") then
 		params.locale = argv("locale")
-	end
-
-	if has_arg("localuser") then
-		params.localuser = true
 	end
 
 	if has_arg("log_file") then
@@ -114,10 +104,6 @@ function mu.parse_args(arg, params)
 
 	if has_arg("mode") then
 		params.mode = argv("mode")
-	end
-
-	if has_arg("profiler") then
-		params.profiler = true
 	end
 
 	if has_arg("repl") then
@@ -146,12 +132,15 @@ function mu.default_params(params, game_name, game_target, game_platform)
 
 	if game_platform == "ios" then
 		local ffi = require("ffi")
+
 		ffi.cdef(" const char* kr_get_current_locale(); ")
 		ffi.cdef(" const char* kr_get_device_model(); ")
+
 		local s = ffi.string(ffi.C.kr_get_current_locale())
 
 		if s then
 			local ll, ls, lc = string.match(s, "^(%a%a)-?(%a*)_?(%a?%a?)")
+
 			device_locale = i18n:find_fallback_locale(ll, ls)
 		end
 
@@ -182,6 +171,7 @@ function mu.default_params(params, game_name, game_target, game_platform)
 
 		if s then
 			local l1, l2 = unpack(string.split(s, "-"))
+
 			device_locale = i18n:find_fallback_locale(l1, l2)
 		end
 	end
@@ -263,6 +253,7 @@ function mu.default_params(params, game_name, game_target, game_platform)
 
 	if params.locale and not i18n.locale_names[params.locale] then
 		log.error("Invalid locale %s in settings.lua. Falling back to default.", params.locale)
+
 		params.locale = nil
 	end
 
@@ -304,6 +295,7 @@ function mu.redirect_output(params)
 		if f then
 			io.stderr:write(string.format("redirecting log output to %s\n", path))
 			io.output(f)
+
 			out_f = f
 		else
 			log.error("Failed to open log file %s for writing. Error: %s", path, err)
@@ -317,10 +309,12 @@ function mu.start_debugger(params)
 	if DEBUG then
 		if params.debug then
 			local m = require("mobdebug")
+
 			m.coro()
 			m.start()
 		elseif params.repl then
 			require("lib.klua.repl")
+
 			local repl_port, repl_address
 
 			if params.repl then
@@ -329,6 +323,7 @@ function mu.start_debugger(params)
 
 			repl_port = repl_port or 9000
 			repl_address = repl_address or "127.0.0.1"
+
 			repl_init(repl_port, repl_address)
 		end
 	end
@@ -336,17 +331,21 @@ end
 
 function mu.get_version_info(v)
 	local o = "\n"
+
 	o = o .. string.format("-- VERSION INFO -- \n")
 	o = o .. string.format("identity  : %s\n", v.identity)
 	o = o .. string.format("title     : %s\n", v.title)
 	o = o .. string.format("bundle_id : %s\n", v.bundle_id)
 	o = o .. string.format("string    : %s\n", v.string)
+
 	return o
 end
 
 function mu.get_graphics_features()
 	local o = "\n"
+
 	o = o .. string.format("-- GRAPHICS FEATURES -- \n")
+
 	local gfeatures = love.graphics.getSupported()
 	local limits = love.graphics.getSystemLimits()
 
@@ -359,15 +358,18 @@ function mu.get_graphics_features()
 	end
 
 	local name, version, vendor, device = love.graphics.getRendererInfo()
+
 	o = o .. string.format("name  : %s\n", name)
 	o = o .. string.format("ver   : %s\n", version)
 	o = o .. string.format("vendor: %s\n", vendor)
 	o = o .. string.format("device: %s\n", device)
+
 	return o
 end
 
 function mu.get_debug_info(params)
 	local o = "\n"
+
 	o = o .. string.format("-------------------------------------------------------\n")
 	o = o .. string.format("------------------- DEBUG IS ON -----------------------\n")
 	o = o .. string.format("-------------------------------------------------------\n")
@@ -396,6 +398,7 @@ function mu.get_debug_info(params)
 	o = o .. string.format("-- STARTING PARAMS \n")
 	o = o .. string.format("\n%s", getfulldump(params))
 	o = o .. string.format("-------------------------------------------------------\n")
+
 	return o
 end
 

@@ -1,10 +1,10 @@
 local log=require("lib.klua.log"):new("level02")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
-require("constants")
+require("all.constants")
 local level={}
 level.required_sounds={"music_stage28","SpecialStargate"}
 level.required_textures={"go_enemies_desert","go_stages_desert","go_stage28","go_stage28_bg"}

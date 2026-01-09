@@ -1,0 +1,39 @@
+{
+	"tasks": [
+		{
+			"type": "format",
+			"directory": ".",
+			"exclude": [
+				"_assets/kr1-desktop/images/fullhd",
+				"kr1/data/animations",
+				"kr1/data/exoskeletons",
+				"kr1/data/waves",
+				"kr1/data/levels",
+				".versions"
+			]
+		},
+		{
+			"type": "compress",
+			"directory": "_assets/kr1-desktop/images/fullhd"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/animations"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/exoskeletons"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/waves"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/levels"
+		}
+	],
+	"params": {
+		"format": "manual"
+	}
+}

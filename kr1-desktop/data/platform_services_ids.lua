@@ -1,7 +1,9 @@
 -- chunkname: @./kr1-desktop/data/platform_services_ids.lua
-require("constants")
+require("all.constants")
 require("version")
+
 local ids = {}
+
 ids.steam = {}
 ids.steam.achievements = {
 	RATATOUILLE = "ACH_RATATOUILLE",
@@ -232,4 +234,5 @@ ids.gamecenter.achievements_metadata = {
 	IRON_DEFENDER = {50, false},
 	DEFEAT_COMPLETE_HARD = {50, false}
 }
+
 return ids

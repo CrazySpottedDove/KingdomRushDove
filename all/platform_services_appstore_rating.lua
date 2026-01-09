@@ -1,14 +1,18 @@
 -- chunkname: @./all/platform_services_appstore_rating.lua
 require("lib.klua.string")
+
 local log = require("lib.klua.log"):new("platform_services_appstore_rating")
 local PSU = require("platform_services_utils")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local rr = {}
+
 rr.can_be_paused = true
 rr.update_interval = 5
 rr.lib = nil
 rr.inited = false
+
 local ffi = require("ffi")
+
 ffi.cdef("bool skw_initialize(void);\nvoid skw_shutdown(void);\nint  skw_get_status(void);\nvoid skw_request_review(void);\n")
 
 function rr:init(name, params)
@@ -19,6 +23,7 @@ function rr:init(name, params)
 
 		if not self.lib then
 			log.error("Error loading kstore library")
+
 			return false
 		end
 
@@ -26,6 +31,7 @@ function rr:init(name, params)
 
 		if not self.inited then
 			log.error("Error initializing kstorekit")
+
 			return false
 		end
 	end

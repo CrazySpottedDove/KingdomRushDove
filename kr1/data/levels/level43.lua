@@ -5,7 +5,7 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local S=require("sound_db")
 local P=require("path_db")
-require("constants")
+require("all.constants")
 local level={}
 level.required_sounds={"music_stage43","PirateBoatSounds","RisingTidesSounds","SpecialMermaid"}
 level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage43","go_stage43_bg","go_hero_pirate"}

@@ -7,8 +7,11 @@ end
 
 local function escape_string(s)
 	s = s:gsub("\r\n", "\\n"):gsub("\n", "\\n"):gsub("\r", "\\r")
+
 	local q = string.format("%q", s)
+
 	q = q:gsub("\\\\n", "\\n"):gsub("\\\\r", "\\r")
+
 	return q
 end
 
@@ -34,6 +37,7 @@ local function sort_keys(tbl)
 	table.sort(keys, function(a, b)
 		return tostring(a) < tostring(b)
 	end)
+
 	return keys
 end
 
@@ -80,23 +84,27 @@ end
 local function serialize_impl(t, indent, printed, out)
 	printed = printed or {}
 	indent = indent or ""
+
 	local tp = type(t)
 
 	if tp == "table" then
 		if printed[t] then
 			out:write("nil --[[circular reference]]")
-			return 
+
+			return
 		end
 
 		printed[t] = true
 
 		if next(t) == nil then
 			out:write("{}")
-			return 
+
+			return
 		end
 
 		if is_array(t) then
 			out:write("{\n")
+
 			local n = #t
 
 			for i = 1, n do
@@ -111,9 +119,11 @@ local function serialize_impl(t, indent, printed, out)
 			end
 
 			out:write(indent .. "}")
-			return 
+
+			return
 		else
 			out:write("{\n")
+
 			local keys = sort_keys(t)
 
 			for i, k in ipairs(keys) do
@@ -122,6 +132,7 @@ local function serialize_impl(t, indent, printed, out)
 
 				if type(k) == "string" and is_identifier(k) then
 					key_str = k
+
 					out:write(indent .. "  " .. key_str .. " = ")
 				else
 					out:write(indent .. "  [" .. (type(k) == "string" and escape_string(k) or tostring(k)) .. "] = ")
@@ -132,19 +143,24 @@ local function serialize_impl(t, indent, printed, out)
 			end
 
 			out:write(indent .. "}")
-			return 
+
+			return
 		end
 	elseif tp == "string" then
 		out:write(escape_string(t))
-		return 
+
+		return
 	elseif tp == "number" or tp == "boolean" then
 		out:write(tostring(t))
-		return 
+
+		return
 	else
 		-- function / userdata / thread / other -> serialize to a quoted marker so result is valid lua
 		local mark = value_marker(t)
+
 		out:write(escape_string(mark))
-		return 
+
+		return
 	end
 end
 
@@ -170,13 +186,14 @@ function debug_macros.print(t, maybe_filename_or_indent, ...)
 			serialize_impl(t, "", {}, fh)
 			fh:write("\n")
 		end)
+
 		fh:close()
 
 		if not ok then
 			error(perr)
 		end
 
-		return 
+		return
 	end
 
 	-- 控制台输出：直接打印序列化的 lua 表（不带 return）
@@ -204,6 +221,7 @@ function debug_macros.trace(t, key)
 			if last[k] ~= v then
 				serialize_impl(t, "", {}, std_out)
 				io.write("\n")
+
 				break
 			end
 		end

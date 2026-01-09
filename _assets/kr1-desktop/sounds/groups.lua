@@ -647,7 +647,7 @@ return {
 		files = {"KRF_sfx_minotauro_ataquefuerte.ogg", "KRF_sfx_minotauro_carga.ogg", "KRF_sfx_minotauro_grito.ogg", "KRF_sfx_minotauro_portal.ogg", "KRF_sfx_minotauro_remolino_2tiempo.ogg", "Minotaur_01b.ogg", "Minotaur_02c.ogg", "Minotaur_03c.ogg", "Minotaur_05e_death.ogg"}
 	},
 	HeroMirage = {
-		files = {"assassinHero_taunt_confirm_1.ogg", "assassinHero_taunt_confirm_3.ogg", "assassinHero_taunt_confirm_4.ogg", "assassinHero_taunt_death", "hero_mirage_lethalstrike_hit.ogg", "hero_mirage_lethalstrike_vanish.ogg", "hero_mirage_shadowdance_cast.ogg", "hero_mirage_shadowdance_hit.ogg", "hero_mirage_shadowdodge.ogg", "hero_mirage_shadowdodge_puff.ogg"}
+		files = {"assassinHero_taunt_confirm_1.ogg", "assassinHero_taunt_confirm_3.ogg", "assassinHero_taunt_confirm_4.ogg", "assassinHero_taunt_death.ogg", "hero_mirage_lethalstrike_hit.ogg", "hero_mirage_lethalstrike_vanish.ogg", "hero_mirage_shadowdance_cast.ogg", "hero_mirage_shadowdance_hit.ogg", "hero_mirage_shadowdodge.ogg", "hero_mirage_shadowdodge_puff.ogg"}
 	},
 	HeroMonk = {
 		files = {
@@ -2752,7 +2752,7 @@ return {
 			"kr_voice_surgecolossus_04c.ogg",
 			"kr_voice_surgecolossus_05c.ogg",
 			"kr_voice_surgecolossus_taunt-select_c.ogg",
-			"kra_sfx_spiders_tower_heode_cristalize_ONESHOT_v1.ogg",
+			-- "kra_sfx_spiders_tower_heode_cristalize_ONESHOT_v1.ogg",
 			"kra_sfx_spiders_tower_heode_cristalize_bolt_var1_v1.ogg",
 			"kra_sfx_spiders_tower_heode_cristalize_bolt_var2_v1.ogg",
 			"kra_sfx_spiders_tower_heode_cristalize_bolt_var3_v1.ogg",

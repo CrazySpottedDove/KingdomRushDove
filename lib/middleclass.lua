@@ -55,7 +55,9 @@ end
 
 local function _createClass(name, super)
 	local dict = {}
+
 	dict.__index = dict
+
 	local aClass = {
 		name = name,
 		super = super,
@@ -87,6 +89,7 @@ local function _createClass(name, super)
 		__call = _call,
 		__newindex = _declareInstanceMethod
 	})
+
 	return aClass
 end
 
@@ -115,7 +118,7 @@ local DefaultMixin = {
 		return "instance of " .. tostring(self.class)
 	end,
 	initialize = function(self, ...)
-		return 
+		return
 	end,
 	isInstanceOf = function(self, aClass)
 		return type(aClass) == "table" and (aClass == self.class or self.class:isSubclassOf(aClass))
@@ -123,19 +126,24 @@ local DefaultMixin = {
 	static = {
 		allocate = function(self)
 			assert(type(self) == "table", "Make sure that you are using 'Class:allocate' instead of 'Class.allocate'")
+
 			return setmetatable({
 				class = self
 			}, self.__instanceDict)
 		end,
 		new = function(self, ...)
 			assert(type(self) == "table", "Make sure that you are using 'Class:new' instead of 'Class.new'")
+
 			local instance = self:allocate()
+
 			instance:initialize(...)
+
 			return instance
 		end,
 		subclass = function(self, name)
 			assert(type(self) == "table", "Make sure that you are using 'Class:subclass' instead of 'Class.subclass'")
 			assert(type(name) == "string", "You must provide a name(string) for your class")
+
 			local subclass = _createClass(name, self)
 
 			for methodName, f in pairs(self.__instanceDict) do
@@ -147,11 +155,13 @@ local DefaultMixin = {
 			end
 
 			self.subclasses[subclass] = true
+
 			self:subclassed(subclass)
+
 			return subclass
 		end,
 		subclassed = function(self, other)
-			return 
+			return
 		end,
 		isSubclassOf = function(self, other)
 			return type(other) == "table" and type(self.super) == "table" and (self.super == other or self.super:isSubclassOf(other))
@@ -170,6 +180,7 @@ local DefaultMixin = {
 
 function middleclass.class(name, super)
 	assert(type(name) == "string", "A name (string) is needed for the new class")
+
 	return super and super:subclass(name) or _includeMixin(_createClass(name), DefaultMixin)
 end
 
@@ -178,4 +189,5 @@ setmetatable(middleclass, {
 		return middleclass.class(...)
 	end
 })
+
 return middleclass

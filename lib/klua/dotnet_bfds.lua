@@ -5,6 +5,7 @@ if ... == "lib.klua.dotnet_bfds" then
 -- block empty
 else
 	_TESTING = true
+
 	require("lib.klua.dump")
 end
 
@@ -19,6 +20,7 @@ local bf = {}
 function bf:parse(buffer)
 	if buffer == nil or string.len(buffer) < 16 then
 		log.error("Buffer is nil or too small")
+
 		return nil
 	end
 
@@ -34,6 +36,7 @@ function bf:parse(buffer)
 			return result
 		else
 			log.error("Error parsing buffer: %s", result)
+
 			return nil
 		end
 	end
@@ -49,6 +52,7 @@ function bf:flatten(stream, target)
 			return result
 		else
 			log.error("Error flattening object: %s", result)
+
 			return nil
 		end
 	end
@@ -65,11 +69,13 @@ local int32_p = ffi.typeof("int32_t*")
 
 local function r_str(s, off, len)
 	len = len or 1
+
 	return s:sub(off + 1, off + len), off + len
 end
 
 local function r_byte(s, off, len)
 	len = len or 1
+
 	return string.byte(s, off + 1, off + len), off + len
 end
 
@@ -80,6 +86,7 @@ local function r_lstr(s, off)
 	repeat
 		if shift == 35 then
 			log.error("Invalid LengthPrefixedString at offset %s", off)
+
 			return ""
 		end
 
@@ -94,12 +101,14 @@ end
 
 local function r_bool(s, off)
 	local v, ff = r_byte(s, off)
+
 	return v == 1, ff
 end
 
 local function r_int32(s, off)
 	local t = r_str(s, off, 4)
 	local o = cast(int32_p, t)[0]
+
 	return o, off + 4
 end
 
@@ -119,14 +128,17 @@ local r_ReadRecord
 local function r_MemberReference(s, off)
 	local v
 	local ff = off
+
 	v, ff = r_byte(s, ff)
 
 	if v ~= 9 then
 		log.error("MemberReference has wrong RecordTypeEnum at offset %s", ff - 1)
+
 		return nil
 	end
 
 	v, ff = r_int32(s, ff)
+
 	return {
 		_type = "MemberReference",
 		IdRef = v
@@ -135,10 +147,12 @@ end
 
 local function r_SerializationHeaderRecord(s, ff)
 	local v, rid, hid, vmaj, vmin
+
 	v, ff = r_byte(s, ff)
 
 	if v ~= 0 then
 		log.error("SerializationHeaderRecord has wrong RecordTypeEnum at offset %s", ff - 1)
+
 		return nil
 	end
 
@@ -146,6 +160,7 @@ local function r_SerializationHeaderRecord(s, ff)
 	hid, ff = r_int32(s, ff)
 	vmaj, ff = r_int32(s, ff)
 	vmin, ff = r_int32(s, ff)
+
 	return {
 		_type = "SerializationHeaderRecord",
 		RootId = rid,
@@ -157,15 +172,18 @@ end
 
 local function r_BinaryLibrary(s, ff)
 	local v, lid, lname
+
 	v, ff = r_byte(s, ff)
 
 	if v ~= 12 then
 		log.error("BinaryLibrary has wrong RecordTypeEnum at offset %s", ff - 1)
+
 		return nil
 	end
 
 	lid, ff = r_int32(s, ff)
 	lname, ff = r_lstr(s, ff)
+
 	return {
 		_type = "BinaryLibrary",
 		LibraryId = lid,
@@ -248,18 +266,22 @@ end
 local function r_ClassInfo(s, off)
 	local ff = off
 	local o = {}
+
 	o.ObjectId, ff = r_int32(s, ff)
 	o.Name, ff = r_lstr(s, ff)
 	o.MemberCount, ff = r_int32(s, ff)
 	o.MemberNames = {}
+
 	local n
 
 	for i = 1, o.MemberCount do
 		n, ff = r_lstr(s, ff)
+
 		table.insert(o.MemberNames, n)
 	end
 
 	bf._object_index[o.ObjectId] = o
+
 	return o, ff
 end
 
@@ -270,14 +292,17 @@ local function r_ClassWithMembersAndTypes(s, off, is_reading_system)
 		log.error("not a SystemClassWithMemberAndTypes at offset %s. record type:%s", off, s:byte(off + 1))
 	elseif not is_reading_system and rt ~= 5 then
 		log.error("not a ClassWithMemberAndTypes at offset %s. record type:%s", off, s:byte(off + 1))
+
 		return nil
 	end
 
 	local ff = off + 1
 	local o
+
 	o, ff = r_ClassInfo(s, ff)
 	o.BinaryTypeEnums = {}
 	o.member_infos = {}
+
 	local teff, aiff = ff, ff + o.MemberCount
 	local t, a
 
@@ -300,6 +325,7 @@ local function r_ClassWithMembersAndTypes(s, off, is_reading_system)
 			}
 		elseif t == 4 then
 			local ctitn, ctili
+
 			ctitn, aiff = r_lstr(s, aiff)
 			ctili, aiff = r_int32(s, aiff)
 			o.member_infos[i] = {
@@ -332,6 +358,7 @@ local function r_ClassWithMembersAndTypes(s, off, is_reading_system)
 	end
 
 	bf._library[o.ObjectId] = o
+
 	return o, ff
 end
 
@@ -341,8 +368,10 @@ end
 
 local function r_ObjectNullMultiple256(s, ff)
 	local v
+
 	ff = ff + 1
 	v, ff = r_byte(s, ff)
+
 	return {
 		_type = "ObjectNullMultiple256",
 		NullCount = v
@@ -352,9 +381,11 @@ end
 local function r_ArraySingleObject(s, ff)
 	local v, oid, len
 	local values = {}
+
 	ff = ff + 1
 	oid, ff = r_int32(s, ff)
 	len, ff = r_int32(s, ff)
+
 	local i = 1
 
 	while i <= len do
@@ -375,40 +406,50 @@ local function r_ArraySingleObject(s, ff)
 		Length = len,
 		values = values
 	}
+
 	bf._object_index[oid] = out
+
 	return out, ff
 end
 
 local function r_ClassWithId(s, ff)
 	local oid, mid, mval
+
 	ff = ff + 1
 	oid, ff = r_int32(s, ff)
 	mid, ff = r_int32(s, ff)
+
 	local cla = bf._library[mid]
 
 	if cla == nil then
 		log.error("No class in _library matches MetadataId %s", mid)
+
 		return nil
 	end
 
 	mval, ff = r_member_values(s, ff, cla)
+
 	local out = {
 		_type = "ClassWithId",
 		ObjectId = oid,
 		MetadataId = mid,
 		member_values = mval
 	}
+
 	bf._object_index[oid] = out
+
 	return out, ff
 end
 
 function r_ReadRecord(s, ff)
 	local function ee(rt)
 		log.error("ReadRecord not implemented for type %s", rt)
+
 		return nil, ff + 1
 	end
 
 	local rt
+
 	rt = r_byte(s, ff)
 
 	if rt == 0 then
@@ -458,11 +499,14 @@ end
 
 function bf:_parse(buf)
 	local out = {}
+
 	out.records = {}
+
 	local check_str = r_lstr(buf, 43)
 
 	if check_str ~= "SaveGame" then
 		log.error("check_str at 0x2b is not SaveGame: %s", check_str)
+
 		return nil
 	end
 
@@ -482,11 +526,13 @@ function bf:_parse(buf)
 
 	out.library = bf._library
 	out.object_index = bf._object_index
+
 	return out
 end
 
 function bf:_flatten(stream, target)
 	local o = {}
+
 	o._type = target._type
 	o._name = target.Name
 	o._id = target.ObjectId
@@ -494,6 +540,7 @@ function bf:_flatten(stream, target)
 	if target._type == "ClassWithMemberAndTypes" or target._type == "SystemClassWithMemberAndTypes" then
 		if target.Name == "System.Collections.ArrayList" then
 			local iv = bf:_flatten(stream, target.member_values[2])
+
 			o = iv
 		else
 			for i, k in pairs(target.MemberNames) do
@@ -501,6 +548,7 @@ function bf:_flatten(stream, target)
 
 				if type(v) == "table" then
 					log.debug("found table for key %s", k)
+
 					v = bf:_flatten(stream, v)
 				end
 
@@ -510,6 +558,7 @@ function bf:_flatten(stream, target)
 	elseif target._type == "ArraySingleObject" then
 		for _, v in pairs(target.values) do
 			local fv = bf:_flatten(stream, v)
+
 			table.insert(o, fv)
 		end
 	elseif target._type == "ClassWithId" then
@@ -527,9 +576,11 @@ function bf:_flatten(stream, target)
 	elseif target._type == "MemberReference" then
 		local v = stream.object_index[target.IdRef]
 		local fv = bf:_flatten(stream, v)
+
 		o = fv
 	else
 		log.error("flattening of record type %s not implemented", target._type)
+
 		return nil
 	end
 
@@ -543,11 +594,16 @@ end
 if _TESTING then
 	local args = {...}
 	local fn = args[1]
+
 	print(fn)
+
 	local f = io.open(fn, "rb")
 	local fs = f:read("*a")
+
 	f:close()
+
 	local o = bf:parse(fs)
+
 	require("lib.klua.dump")
 	log.error("table: %s", getfulldump(o))
 else

@@ -2,6 +2,7 @@
 local assert = assert
 local sqrt, cos, sin, atan2 = math.sqrt, math.cos, math.sin, math.atan2
 local vector = {}
+
 vector.__index = vector
 
 local function new(x, y)
@@ -39,11 +40,13 @@ end
 
 function vector.__add(a, b)
 	assert(isvector(a) and isvector(b), "Add: wrong argument types (<vector> expected)")
+
 	return new(a.x + b.x, a.y + b.y)
 end
 
 function vector.__sub(a, b)
 	assert(isvector(a) and isvector(b), "Sub: wrong argument types (<vector> expected)")
+
 	return new(a.x - b.x, a.y - b.y)
 end
 
@@ -54,12 +57,14 @@ function vector.__mul(a, b)
 		return new(b * a.x, b * a.y)
 	else
 		assert(isvector(a) and isvector(b), "Mul: wrong argument types (<vector> or <number> expected)")
+
 		return a.x * b.x + a.y * b.y
 	end
 end
 
 function vector.__div(a, b)
 	assert(isvector(a) and type(b) == "number", "wrong argument types (expected <vector> / <number>)")
+
 	return new(a.x / b, a.y / b)
 end
 
@@ -77,6 +82,7 @@ end
 
 function vector.permul(a, b)
 	assert(isvector(a) and isvector(b), "permul: wrong argument types (<vector> expected)")
+
 	return new(a.x * b.x, a.y * b.y)
 end
 
@@ -94,15 +100,19 @@ end
 
 function vector.dist(a, b)
 	assert(isvector(a) and isvector(b), "dist: wrong argument types (<vector> expected)")
+
 	local dx = a.x - b.x
 	local dy = a.y - b.y
+
 	return sqrt(dx * dx + dy * dy)
 end
 
 function vector.dist2(a, b)
 	assert(isvector(a) and isvector(b), "dist: wrong argument types (<vector> expected)")
+
 	local dx = a.x - b.x
 	local dy = a.y - b.y
+
 	return dx * dx + dy * dy
 end
 
@@ -122,12 +132,15 @@ end
 
 function vector:rotateInplace(phi)
 	local c, s = cos(phi), sin(phi)
+
 	self.x, self.y = c * self.x - s * self.y, s * self.x + c * self.y
+
 	return self
 end
 
 function vector:rotated(phi)
 	local c, s = cos(phi), sin(phi)
+
 	return new(c * self.x - s * self.y, s * self.x + c * self.y)
 end
 
@@ -137,25 +150,32 @@ end
 
 function vector:projectOn(v)
 	assert(isvector(v), "invalid argument: cannot project vector on " .. type(v))
+
 	local s = (self.x * v.x + self.y * v.y) / (v.x * v.x + v.y * v.y)
+
 	return new(s * v.x, s * v.y)
 end
 
 function vector:mirrorOn(v)
 	assert(isvector(v), "invalid argument: cannot mirror vector on " .. type(v))
+
 	local s = 2 * (self.x * v.x + self.y * v.y) / (v.x * v.x + v.y * v.y)
+
 	return new(s * v.x - self.x, s * v.y - self.y)
 end
 
 function vector:cross(v)
 	assert(isvector(v), "cross: wrong argument types (<vector> expected)")
+
 	return self.x * v.y - self.y * v.x
 end
 
 function vector:trimInplace(maxLen)
 	local s = maxLen * maxLen / self:len2()
+
 	s = s > 1 and 1 or math.sqrt(s)
 	self.x, self.y = self.x * s, self.y * s
+
 	return self
 end
 

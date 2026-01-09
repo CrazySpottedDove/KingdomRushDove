@@ -1,76 +1,9 @@
 -- chunkname: @./main.lua
-local apply_upgrade = love.system.getOS() ~= "Android"
-local ok, update_cfg = pcall(dofile, "update.lua")
+local MUST_READ = require("dove_modules.notice.must_read")
 
-if ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false then
-	apply_upgrade = false
-end
+local M = require("dove_modules.updater.update_manager")
 
-local binary_path = "client"
-
-if package.config:sub(1, 1) == "\\" then -- Windows
-	binary_path = "client.exe"
-end
-
-if apply_upgrade then
-	-- 如果主目录有 $binary_path.new，就用这个文件替换掉 $binary_path
-	local client_updated = false
-	local new_path = binary_path .. ".new"
-	local f = io.open(new_path, "r")
-
-	if f then
-		f:close()
-		-- 存在 .new 文件，进行替换
-		os.remove(binary_path)
-		os.rename(new_path, binary_path)
-		client_updated = true
-	end
-
-	-- 运行 $binary_path --quiz，强等待。
-	local cmd = client_updated and string.format('"%s" --quiz-force', binary_path) or string.format('"%s" --quiz', binary_path)
-	local ret = os.execute(cmd)
-end
-
-local function check_update_async()
-	local hash_file = io.open("current_version_commit_hash.txt", "r")
-
-	if not hash_file then
-		return 
-	end
-
-	local commit_hash = hash_file:read("*l")
-	hash_file:close()
-
-	if not commit_hash then
-		return 
-	end
-
-	local cmd = string.format('"%s" --check-new-version', binary_path)
-	print("cmd:", cmd)
-	-- 4. 启动线程调用
-	local thread = love.thread.newThread([[
-        local cmd, commit_hash = ...
-        -- 写入临时文件
-        local tmpfile = os.tmpname()
-        local f = io.open(tmpfile, "w")
-        if f then f:write(commit_hash) f:close() end
-        -- 设置环境变量或切换目录（如有需要）
-        -- 调用外部程序
-        local full_cmd = cmd
-        -- Windows下防止弹黑框
-        if package.config:sub(1,1) == "\\" then
-            full_cmd = 'cmd /C ' .. full_cmd
-        end
-        local pipe = io.popen(full_cmd, "r")
-        local resp = pipe and pipe:read("*a") or nil
-        if pipe then pipe:close() end
-        os.remove(tmpfile)
-        love.thread.getChannel("update_result"):push(resp or false)
-    ]])
-	thread:start(cmd, commit_hash)
-end
-
-local update_popup_shown = false
+M.update_client()
 
 do
 	love.graphics.setColor_old = function(r, g, b, a)
@@ -117,26 +50,32 @@ end
 
 if arg[2] == "debug" then
 	LLDEBUGGER = require("lldebugger")
+
 	LLDEBUGGER.start()
 end
 
 local G = love.graphics
+
 require("main_globals")
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
+
 	return info and info.type == "file"
 end
 
 local function is_directory(path)
 	local info = love.filesystem.getInfo(path)
+
 	return info and info.type == "directory"
 end
 
 if KR_TARGET == "universal" then
 	if KR_PLATFORM == "ios" then
 		local ffi = require("ffi")
+
 		ffi.cdef(" const char* kr_get_device_model(); ")
+
 		local device_model = ffi.string(ffi.C.kr_get_device_model())
 		local m = {string.match(device_model, "(%a+)(%d+),")}
 
@@ -149,14 +88,11 @@ if KR_TARGET == "universal" then
 		print("UNIVERSAL TARGET SOLVED:", KR_TARGET)
 	else
 		print("ERROR: KR_TARGET==universal and not solved in this platform")
-		return 
+
+		return
 	end
 end
 
--- local base_dir = love.filesystem.getSourceBaseDirectory()
--- ...existing code...
--- local base_dir = love.filesystem.getSourceBaseDirectory()
--- local work_dir = love.filesystem.getWorkingDirectory()
 local base_dir = love.filesystem.getSourceBaseDirectory()
 local work_dir = love.filesystem.getWorkingDirectory()
 
@@ -177,6 +113,7 @@ end
 
 base_dir = norm_path(base_dir, true)
 work_dir = norm_path(work_dir, true)
+
 local ppref
 
 if love.filesystem.isFused() then
@@ -188,6 +125,7 @@ else
 end
 
 ppref = norm_path(ppref, true)
+
 local apref = norm_path(ppref .. "_assets/", true)
 local rel_ppref = ""
 local rel_apref = "_assets/"
@@ -196,10 +134,12 @@ local jpref = "joint_apk"
 if love.filesystem.isFused() and KR_PLATFORM == "android" and is_directory(jpref) then
 	local ffi = require("ffi")
 	local arch = ffi.abi("gc64") and "64" or "32"
+
 	ppref = jpref .. "/gc" .. arch .. "/"
 	apref = jpref .. "/"
 	rel_ppref = ppref
 	rel_apref = apref
+
 	print(string.format("main.lua - joint_apk found: configuring ppref:%s apref:%s", ppref, apref))
 end
 
@@ -211,6 +151,7 @@ for i, p in ipairs(additional_paths) do
 end
 
 local require_paths = "?.lua;?/init.lua;" .. table.concat(additional_paths, ";")
+
 require_paths = norm_path(require_paths)
 
 -- 在 ppref/apref 准备好后，注册基于 love.filesystem 的优先 searcher（保证使用 "/"）
@@ -249,6 +190,7 @@ do
 
 			if not seen[r] then
 				seen[r] = true
+
 				table.insert(real_roots, r)
 			end
 		end
@@ -260,6 +202,7 @@ do
 
 			for _, root in ipairs(real_roots) do
 				local base = (root == "" and "" or (root .. "/"))
+
 				table.insert(candidates, base .. name .. ".lua")
 				table.insert(candidates, base .. name .. "/init.lua")
 			end
@@ -277,6 +220,7 @@ do
 
 			for _, p in ipairs(candidates) do
 				p = lnorm(p)
+
 				local info = lfs.getInfo and lfs.getInfo(p)
 
 				if info and info.type == "file" then
@@ -299,8 +243,6 @@ do
 	end
 end
 
--- ...existing code...
--- ...existing code...
 KR_FULLPATH_BASE = norm_path(base_dir .. "/src", true)
 KR_PATH_ROOT = norm_path(tostring(rel_ppref))
 KR_PATH_ALL = norm_path(string.format("%s%s", rel_ppref, "all"))
@@ -328,10 +270,11 @@ end
 
 -- ...existing code...
 local log = require("lib.klua.log")
+
 require("lib.klua.table")
 require("lib.klua.dump")
 require("version")
-require("constants")
+require("all.constants")
 
 if arg[2] == "monitor" then
 	PERFORMANCE_MONITOR_ENABLED = true
@@ -348,27 +291,33 @@ end
 if version.build == "RELEASE" then
 	DEBUG = nil
 	log.level = log.ERROR_LEVEL
+
 	local ok, l = pcall(require, "log_levels_release")
+
 	log.default_level_by_name = ok and l or {}
 else
 	DEBUG = true
 	log.level = log.INFO_LEVEL
+
 	local ok, l = pcall(require, "log_levels_debug")
+
 	log.default_level_by_name = ok and l or {}
 end
 
 log.use_print = KR_PLATFORM == "android"
+
 local features = require("features")
 local storage = require("storage")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
+
+F:init("_assets/all-desktop/fonts")
+F:load()
+
 local MU = require("main_utils")
 local i18n = require("i18n")
+
 main = {}
 main.handler = nil
-main.profiler = nil
-main.profiler_displayed = false
-main.draw_stats = nil
-main.draw_stats_displayed = false
 main.log_output = nil
 
 function main:set_locale(locale)
@@ -410,20 +359,25 @@ local function load_director()
 		msaa = main.params.msaa,
 		highdpi = main.params.highdpi
 	})
+
 	local aw, ah = G.getDimensions()
 
 	if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
 		log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw, ah, love.window.getDPIScale())
+
 		main.params.width, main.params.height = aw, ah
 	end
 
 	if main.params.wpos then
 		local x, y = unpack(main.params.wpos)
+
 		love.window.setPosition(x or 1, y or 1)
 	end
 
 	local director = require("director")
-	director:init(main.params)
+
+	require("mods.mod_main"):init(director)
+
 	main.handler = director
 end
 
@@ -438,6 +392,7 @@ local function load_app_settings()
 
 	local function done_cb()
 		storage:save_settings(main.params)
+
 		main.handler = nil
 
 		for _, t in pairs(settings.required_textures) do
@@ -449,14 +404,16 @@ local function load_app_settings()
 	end
 
 	settings:init(w, h, main.params, done_cb)
+
 	main.handler = settings
+
 	love.window.setMode(w, h, {
 		centered = true,
 		vsync = false
 	})
 end
 
-function love.load(arg)
+local function load(arg)
 	love.filesystem.setIdentity(version.identity)
 
 	if love.filesystem.isFused() and not love.filesystem.getInfo(KR_PATH_ALL_TARGET) then
@@ -466,30 +423,36 @@ function love.load(arg)
 
 		if not love.filesystem.mount(base_dir, "/", true) then
 			log.error("error mounting assets base_dir: %s", base_dir)
-			return 
+
+			return
 		end
 
 		for _, n in pairs({KR_PATH_ALL_TARGET, KR_PATH_GAME_TARGET}) do
 			local fn = string.format("%s.dat", n)
 			local dn = string.format("%s", n)
+
 			log.debug("mounting %s -> %s", fn, dn)
 
 			if not love.filesystem.mount(fn, dn, true) then
 				log.error("error mounting assets file: %s", fn)
-				return 
+
+				return
 			end
 		end
 	end
 
 	main.params = storage:load_settings()
+
 	MU.basic_init()
 
 	if DEBUG and is_file(KR_PATH_ROOT .. "args.lua") then
 		if KR_TARGET == "desktop" then
 			print("WARNING: Appending parameters from args.lua with command line args.")
+
 			arg = table.append(arg, require("args"), true)
 		else
 			print("WARNING: Reading parameters from args.lua. Overrides all cmdline arguments")
+
 			arg = require("args")
 		end
 	end
@@ -519,19 +482,10 @@ function love.load(arg)
 		path = KR_PATH_ASSETS_ALL_TARGET
 	}}
 
-	for _, v in pairs(font_paths) do
-		local p = v.path .. "/fonts"
-
-		if love.filesystem.getInfo(p .. "/ObelixPro.ttf") then
-			F:init(p)
-			F:load()
-		end
-	end
-
 	main:set_locale(main.params.locale)
-	-- love.window.setTitle(_("GAME_TITLE_" .. string.upper(KR_GAME)))
 	love.window.setTitle(version.title .. version.id)
-	-- icon switched
+
+	-- icon switched to krdove
 	local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"
 
 	if is_file(icon) then
@@ -544,215 +498,34 @@ function love.load(arg)
 		load_director()
 	end
 
-	if main.params.profiler then
-		main.profiler = require("profiler")
-	end
-
-	if main.params.draw_stats then
-		main.draw_stats = require("draw_stats")
-		main.draw_stats_displayed = true
-		main.draw_stats:init(main.params.width, main.params.height)
-	end
-
 	if DEBUG then
 		require("debug_tools")
-
-		if main.params.localuser then
-			log.error("---- LOADING LOCALUSER -----")
-			require("localuser")
-		end
-	end
-
-	if main.params.custom_script then
-		log.error("---- LOADING CUSTOM SCRIPT %s ----", main.params.custom_script)
-		require(main.params.custom_script)
-
-		if custom_script.init then
-			custom_script:init()
-		end
 	end
 
 	if KR_PLATFORM == "ios" then
 		local ffi = require("ffi")
+
 		ffi.cdef(" void kr_init_ios(); ")
 		ffi.C.kr_init_ios()
 	end
 
-	if apply_upgrade then
-		check_update_async()
-	end
+	-- 启动更新检查
+	M.check_update()
 end
 
-local update_result_json = nil
-
 local function love_update_master(dt)
-	storage:update(dt)
 	main.handler:update(dt)
-
-	if custom_script and custom_script.update then
-		custom_script:update(dt)
-	end
 end
 
 local function love_draw_master()
 	main.handler:draw()
-
-	if main.profiler and main.profiler_displayed then
-		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
-	end
-
-	if main.draw_stats and main.draw_stats_displayed then
-		main.draw_stats:draw(main.params.width, main.params.height)
-	end
 end
 
-function love.update(dt)
-	if DEBUG and not main.params.debug and main.params.repl then
-		repl_t()
-	end
-
-	storage:update(dt)
-	main.handler:update(dt)
-
-	if DEBUG and main.params.localuser and localuser_update then
-		localuser_update(dt)
-	end
-
-	if custom_script and custom_script.update then
-		custom_script:update(dt)
-	end
-
-	do
-		if (apply_upgrade) and (not update_popup_shown) then
-			local ch = love.thread.getChannel("update_result")
-			local result = ch:pop()
-
-			-- 轮询到了结果
-			if result ~= nil and result ~= false then
-				-- 结果有效
-				if result ~= false then
-					local ok, resp = pcall(require("json").decode, result)
-
-					-- 需要更新
-					if ok and type(resp) == "table" and resp.has_update then
-						update_result_json = result
-						-- 收集所有 commit message
-						local messages = {}
-						local max_messages_to_show = 20
-
-						if resp.commits then
-							for i, commit in ipairs(resp.commits) do
-								if i > max_messages_to_show then
-									table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
-									break
-								end
-
-								table.insert(messages, commit.message)
-							end
-						end
-
-						local msg_text = table.concat(messages, "\n\n")
-						msg_text = msg_text .. "\n\n请耐心等待升级完成..."
-						local cmd = string.format('"%s" --upgrade-new-version', binary_path)
-						-- 弹窗有“升级”按钮
-						local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
-
-						if pressed == 1 then
-							local upgrade_thread = love.thread.newThread([[
-        local cmd, update_result_json = ...
-        local pipe = io.popen(cmd, "w")
-        if pipe then
-            pipe:write(update_result_json)
-            pipe:close()
-        end
-        love.thread.getChannel("upgrade_result"):push("done")
-    ]])
-							upgrade_thread:start(cmd, update_result_json)
-							love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
-							-- 3. 在 love.update 里轮询升级状态
-							love.update = function(dt)
-								local ch = love.thread.getChannel("upgrade_result")
-								local result = ch:pop()
-
-								if result == "done" then
-									love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
-									love.event.quit() -- 升级完成后退出程序
-								elseif result == "error" then
-									love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
-									-- 恢复正常的 love.update
-									love.update = love_update_master
-									love.draw = love_draw_master
-								end
-							end
-
-							-- 也直接改变 love.draw()，显示正在升级的信息
-							love.draw = function()
-								G.clear(0, 0, 0)
-								G.origin()
-								local font = F:f("JIMOJW", 20)
-								G.setFont(font)
-								G.setColor(1, 1, 1, 1)
-								local w, h = G.getDimensions()
-								local text = "正在升级资源，请勿关闭游戏..."
-								local tw = font:getWidth(text)
-								local th = font:getHeight()
-								G.print(text, (w - tw) / 2, (h - th) / 2)
-								-- 来一点点动画效果
-								G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
-								G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
-							end
-						end
-					else
-						-- 不需要更新，那么恢复原 update
-						love.update = love_update_master
-					end
-				else
-					-- 结果无效，恢复 love.update
-					-- 这里应该提示更新失败
-					love.window.showMessageBox("更新失败", "可检查client.log。只影响更新，不影响游戏。", {"确定"})
-					love.update = love_update_master
-				end
-			end
-		end
-	end
-end
-
-function love.draw()
-	main.handler:draw()
-
-	if main.profiler and main.profiler_displayed then
-		main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
-	end
-
-	if main.draw_stats and main.draw_stats_displayed then
-		main.draw_stats:draw(main.params.width, main.params.height)
-	end
-end
+M.hack_love_update(love_update_master, love_draw_master)
 
 function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
 		LLDEBUGGER.start()
-	end
-
-	if main.profiler then
-		if key == "f1" then
-			main.profiler.start()
-		elseif key == "f2" then
-			main.profiler.stop()
-		elseif key == "f3" then
-			main.profiler_displayed = not main.profiler_displayed
-		elseif key == "f4" then
-			main.profiler.flag_l2_shown = not main.profiler.flag_l2_shown
-			main.profiler.flag_dirty = true
-		end
-	end
-
-	if main.draw_stats and key == "f" then
-		main.draw_stats_displayed = not main.draw_stats_displayed
-	end
-
-	if custom_script and custom_script.keypressed then
-		custom_script:keypressed(key, isrepeat)
 	end
 
 	main.handler:keypressed(key, isrepeat)
@@ -769,10 +542,6 @@ function love.textinput(t)
 end
 
 function love.mousepressed(x, y, button, istouch)
-	if custom_script and custom_script.mousepressed then
-		custom_script:mousepressed(x, y, button, istouch)
-	end
-
 	main.handler:mousepressed(x, y, button, istouch)
 end
 
@@ -782,7 +551,7 @@ end
 
 function love.wheelmoved(dx, dy)
 	if main.handler.wheelmoved then
-		main.handler:wheelmoved(dx, dy, button)
+		main.handler:wheelmoved(dx, dy)
 	end
 end
 
@@ -811,10 +580,6 @@ function love.gamepadaxis(joystick, axis, value)
 end
 
 function love.gamepadpressed(joystick, button)
-	if custom_script and custom_script.gamepadpressed then
-		custom_script:gamepadpressed(joystick, button)
-	end
-
 	if main.handler.gamepadpressed then
 		main.handler:gamepadpressed(joystick, button)
 	end
@@ -862,189 +627,64 @@ function love.focus(focus)
 	end
 end
 
+local function quit()
+	log.info("Quitting...")
+	close_log()
+end
+
 function love.run()
-	if love.math then
-		love.math.setRandomSeed(os.time())
+	love.math.setRandomSeed(os.time())
 
-		for i = 1, 3 do
-			love.math.random()
-		end
-	end
+	load(arg)
 
-	if love.load then
-		love.load(arg)
-	end
+	love.timer.step()
 
-	if love.timer then
-		love.timer.step()
-	end
+	MUST_READ.hack_love_update(love.update, love.draw)
 
 	local dt = 0
-	local updatei, updatef, presi, presf, drawi, drawf
-	local nx = love.nx
 
 	while true do
-		if main.profiler and nx and nx.isProfiling() then
-			nx.profilerHeartbeat()
+		love.event.pump()
 
-			if love.event then
-				love.event.pump()
-
-				for e, a, b, c, d in love.event.poll() do
-					if e == "quit" and (not love.quit or not love.quit()) then
-						return 
-					end
-
-					love.handlers[e](a, b, c, d)
-				end
+		for e, a, b, c, d in love.event.poll() do
+			if e == "quit" then
+				quit()
+				return
 			end
 
-			if love.timer then
-				love.timer.step()
-				dt = love.timer.getDelta()
+			love.handlers[e](a, b, c, d)
+		end
+
+		love.timer.step()
+
+		dt = love.timer.getDelta()
+
+		if love.update then
+			love.update(dt)
+		end
+
+		if love.window.isOpen() and G.isActive() then
+			G.clear()
+			G.origin()
+
+			if love.draw then
+				love.draw()
 			end
 
-			if main.draw_stats then
-				updatei = love.timer.getTime()
-			end
+			G.present()
 
-			nx.profilerEnterCodeBlock("update")
-
-			if love.update then
-				love.update(dt)
-			end
-
-			nx.profilerExitCodeBlock("update")
-
-			if main.draw_stats then
-				updatef = love.timer.getTime()
-				main.draw_stats:update_lap(dt, updatei, updatef)
-			end
-
-			if love.window and G and love.window.isOpen() and G.isActive() then
-				nx.profilerEnterCodeBlock("clear")
-				G.clear()
-				G.origin()
-				nx.profilerExitCodeBlock("clear")
-
-				if love.draw then
-					if main.draw_stats then
-						drawi = love.timer.getTime()
-					end
-
-					nx.profilerEnterCodeBlock("draw")
-					love.draw()
-					nx.profilerExitCodeBlock("draw")
-
-					if main.draw_stats then
-						drawf = love.timer.getTime()
-						main.draw_stats:draw_lap(drawi, drawf)
-					end
-				end
-
+			if main.handler.limit_fps then
+				main.handler:limit_fps()
+			else
 				collectgarbage("step")
-
-				if main.draw_stats then
-					presi = love.timer.getTime()
-				end
-
-				nx.profilerEnterCodeBlock("present")
-				G.present()
-				nx.profilerExitCodeBlock("present")
-
-				if main.draw_stats then
-					presf = love.timer.getTime()
-					main.draw_stats:present_lap(presi, presf)
-				end
-
-				if main.handler.limit_fps then
-					nx.profilerEnterCodeBlock("limit_fps")
-					main.handler:limit_fps()
-					nx.profilerExitCodeBlock("limit_fps")
-				end
-			end
-
-			if love.timer then
 				love.timer.sleep(0.001)
 			end
 		else
-			-- normal mode，逻辑看这里即可
-			if love.event then
-				love.event.pump()
-
-				for e, a, b, c, d in love.event.poll() do
-					if e == "quit" and (not love.quit or not love.quit()) then
-						return 
-					end
-
-					love.handlers[e](a, b, c, d)
-				end
-			end
-
 			if love.timer then
-				love.timer.step()
-				dt = love.timer.getDelta()
-			end
-
-			if main.draw_stats then
-				updatei = love.timer.getTime()
-			end
-
-			if love.update then
-				love.update(dt)
-			end
-
-			if main.draw_stats then
-				updatef = love.timer.getTime()
-				main.draw_stats:update_lap(dt, updatei, updatef)
-			end
-
-			if love.window and G and love.window.isOpen() and G.isActive() then
-				G.clear()
-				G.origin()
-
-				if love.draw then
-					if main.draw_stats then
-						drawi = love.timer.getTime()
-					end
-
-					love.draw()
-
-					if main.draw_stats then
-						drawf = love.timer.getTime()
-						main.draw_stats:draw_lap(drawi, drawf)
-					end
-				end
-
-				if main.draw_stats then
-					presi = love.timer.getTime()
-				end
-
-				G.present()
-
-				if main.draw_stats then
-					presf = love.timer.getTime()
-					main.draw_stats:present_lap(presi, presf)
-				end
-
-				if main.handler.limit_fps then
-					main.handler:limit_fps()
-				else
-					collectgarbage("step")
-					love.timer.sleep(0.001)
-				end
-			else
-				if love.timer then
-					love.timer.sleep(0.001)
-				end
+				love.timer.sleep(0.001)
 			end
 		end
 	end
-end
-
-function love.quit()
-	log.info("Quitting...")
-	close_log()
 end
 
 local function get_error_stack(msg, layer)
@@ -1064,25 +704,31 @@ end
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	local last_canvas = G.getCanvas()
+
 	G.setCanvas(error_canvas)
+
 	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
+
 	msg = tostring(msg)
+
 	local stack_msg = debug.traceback("Error: " .. tostring(msg), 3):gsub("\n[^\n]+$", "")
+
 	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
+
 	print(stack_msg)
 	log.error(stack_msg)
 	close_log()
 	pcall(crash_report, stack_msg)
 
 	if not love.window or not G or not love.event then
-		return 
+		return
 	end
 
 	if not G.isCreated() or not love.window.isOpen() then
 		local success, status = pcall(love.window.setMode, 800, 600)
 
 		if not success or not status then
-			return 
+			return
 		end
 	end
 
@@ -1107,24 +753,31 @@ function love.errorhandler(msg)
 	end
 
 	G.reset()
+
 	local font = G.setNewFont(math.floor(love.window.toPixels(15)))
 	local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(love.window.toPixels(16)))
+
 	G.setBackgroundColor(0.349, 0.616, 0.863)
 	G.setColor(1, 1, 1, 1)
+
 	local trace = debug.traceback()
+
 	-- G.clear(G.getBackgroundColor())
 	G.origin()
+
 	local err = {}
 	local tip = {}
 	local tip_trigger_errors = {
 		["Texture expected, got nil"] = "你在老本体上放了新版本补丁，请先安装新的本体。\n"
 	}
 	local has_tip
+
 	table.insert(tip, string.format("Version %s: Tip\n", version.id))
 
 	for e, v in pairs(tip_trigger_errors) do
 		if string.find(msg, e, 1, true) then
 			table.insert(tip, "提示: " .. v)
+
 			has_tip = true
 		end
 	end
@@ -1139,12 +792,15 @@ function love.errorhandler(msg)
 
 	if string.find(msg, "Error running coro", 1, true) then
 		msg = msg:gsub("^[^:]+:%d+: ", "")
+
 		local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
+
 		table.insert(err, l)
 
 		for l in string.gmatch(trace, "(.-)\n") do
 			if not string.match(l, "boot.lua") then
 				l = string.gsub(l, "stack traceback:", "")
+
 				table.insert(err, l)
 			end
 		end
@@ -1156,6 +812,7 @@ function love.errorhandler(msg)
 		for l in string.gmatch(trace, "(.-)\n") do
 			if not string.match(l, "boot.lua") then
 				l = string.gsub(l, "stack traceback:", "Traceback\n")
+
 				table.insert(err, l)
 			end
 		end
@@ -1175,19 +832,26 @@ function love.errorhandler(msg)
 
 	table.insert(err, "\n\nLast error msgs\n")
 	table.insert(err, last_log_msg)
+
 	local pt = table.concat(tip, "\n")
+
 	pt = string.gsub(pt, "\t", "")
 	pt = string.gsub(pt, "%[string \"(.-)\"%]", "%1")
+
 	local p = table.concat(err, "\n")
+
 	p = string.gsub(p, "\t", "")
 	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
+
 	local pos = love.window.toPixels(70)
+
 	G.setFont(font)
 	G.clear(G.getBackgroundColor())
 	G.printf(p, pos, pos, G.getWidth() - pos)
 	G.setFont(cn_font)
 	G.printf(pt, pos, pos, G.getWidth() - pos)
 	G.present()
+
 	show_last = true
 
 	local function draw()
@@ -1212,16 +876,19 @@ function love.errorhandler(msg)
 		for e, a, b, c in love.event.poll() do
 			if e == "quit" then
 				quiterr = true
+
 				love.event.quit()
-				return 
+
+				return
 			elseif e == "keypressed" then
 				if a == "escape" and error_type == "coro" then
 					quiterr = true
-					return 
+
+					return
 				elseif a == "-" then
 					show_last = not show_last
 				else
-					return 
+					return
 				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()
@@ -1234,7 +901,7 @@ function love.errorhandler(msg)
 				local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
 				if pressed == 1 then
-					return 
+					return
 				end
 			end
 		end

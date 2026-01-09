@@ -279,6 +279,8 @@ local key_desc_map = {
 	ban_barrack = "不再出现兵营科技",
 	ban_mage = "不再出现法塔科技"
 }
+
 endless.key_label_map = key_label_map
 endless.key_desc_map = key_desc_map
+
 return endless

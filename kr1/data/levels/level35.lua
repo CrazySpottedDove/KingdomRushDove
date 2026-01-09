@@ -1,5 +1,5 @@
 local log=require("lib.klua.log"):new("level09")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local A=require("achievements")
 local E=require("entity_db")
 local P=require("path_db")
@@ -7,7 +7,7 @@ local S=require("sound_db")
 local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
-require("constants")
+require("all.constants")
 local function fts(v)
 return v/FPS
 end
@@ -101,17 +101,17 @@ function level:y_spawn_aliens(store)
 local wave_number=store.wave_group_number
 local w=self.alien_waves[wave_number]
 if not w then
-return 
+return
 end
 for i=1,w.cycles do
 local ts=store.tick_ts
 while store.tick_ts-ts<w.delay do
 coroutine.yield()
 if wave_number~=store.wave_group_number then
-return 
+return
 end
 if store.waves_finished then
-return 
+return
 end
 end
 for j=1,w.top do

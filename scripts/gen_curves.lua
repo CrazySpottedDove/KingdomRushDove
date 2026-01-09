@@ -5,7 +5,9 @@ local output_file = "tmp/" .. file_name .. ".lua"
 local function load_table_from_file(filename)
 	local f = assert(io.open(filename, "r"))
 	local content = f:read("*a")
+
 	f:close()
+
 	-- 加载为函数
 	local chunk, err = load(content, "@" .. filename, "t", _ENV)
 
@@ -23,6 +25,7 @@ local paths = path_data.paths
 -- 返回 curves: {{nodes = {...}, widths = {...}}, ...}
 local function generate_curves_from_paths(paths, default_width)
 	default_width = default_width or 40
+
 	local curves = {}
 
 	for i, path_group in ipairs(paths) do
@@ -73,7 +76,9 @@ end
 
 local function serialize(tbl, indent)
 	indent = indent or ""
+
 	local lines = {}
+
 	table.insert(lines, "{")
 
 	if is_array(tbl) then
@@ -86,6 +91,7 @@ local function serialize(tbl, indent)
 			elseif type(v) == "string" then
 				-- 先把换行替换成 \n
 				local s = v:gsub("\n", "\\n")
+
 				-- 再用 %q 转义
 				val_str = string.format("%q", s)
 				-- 再把 \\n 还原成 \n（去掉多余的转义）
@@ -127,6 +133,7 @@ local function serialize(tbl, indent)
 			elseif type(v) == "string" then
 				-- 先把换行替换成 \n
 				local s = v:gsub("\n", "\\n")
+
 				-- 再用 %q 转义
 				val_str = string.format("%q", s)
 				-- 再把 \\n 还原成 \n（去掉多余的转义）
@@ -140,11 +147,14 @@ local function serialize(tbl, indent)
 	end
 
 	table.insert(lines, indent .. "}")
+
 	return table.concat(lines, "\n")
 end
 
 path_data.curves = generate_curves_from_paths(paths)
+
 local f = assert(io.open(output_file, "w"))
+
 f:write("return ")
 f:write(serialize(path_data, ""))
 f:write("\n")

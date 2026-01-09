@@ -2,11 +2,12 @@ local recover = {}
 
 local function serialize(t, printed, out)
 	printed = printed or {}
+
 	local tp = type(t)
 
 	if tp == "table" then
 		if printed[t] then
-			return 
+			return
 		end
 
 		printed[t] = true

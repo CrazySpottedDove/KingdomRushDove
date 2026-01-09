@@ -1,13 +1,15 @@
 -- chunkname: @./all/script_utils.lua
 local log = require("lib.klua.log"):new("script_utils")
 local log_xp = log.xp or log:new("xp")
+
 require("lib.klua.table")
+
 local km = require("lib.klua.macros")
-local signal = require("hump.signal")
+local signal = require("lib.hump.signal")
 local AC = require("achievements")
 local E = require("entity_db")
 local GR = require("grid_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local P = require("path_db")
 local S = require("sound_db")
 local U = require("utils")
@@ -18,6 +20,7 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
+
 require("i18n")
 
 ---将实体插入到实体队列中
@@ -58,10 +61,12 @@ end
 local function ui_click_proxy_add(proxy, dest)
 	if not proxy.ui then
 		log.error("cannot proxy. entity has no ui component: (%s)%s", proxy.id, proxy.template_name)
-		return 
+
+		return
 	end
 
 	proxy.ui.click_proxies = proxy.ui.click_proxies or {}
+
 	table.insert(proxy.ui.click_proxies, dest)
 end
 
@@ -83,7 +88,7 @@ end
 ---@return nil
 local function remove_modifiers(store, entity, mod_name, exclude_name)
 	if not entity._applied_mods then
-		return 
+		return
 	end
 
 	local mods = entity._applied_mods
@@ -105,7 +110,7 @@ end
 ---@return nil
 local function remove_modifiers_by_type(store, entity, mod_type, exclude_name)
 	if not entity._applied_mods then
-		return 
+		return
 	end
 
 	local mods = entity._applied_mods
@@ -143,7 +148,7 @@ local function hide_modifiers(store, entity, keep, exclude_mod)
 	local mods = entity._applied_mods
 
 	if not mods then
-		return 
+		return
 	end
 
 	for i = 1, #mods do
@@ -165,7 +170,7 @@ local function show_modifiers(store, entity, restore, exclude_mod)
 	local mods = entity._applied_mods
 
 	if not mods then
-		return 
+		return
 	end
 
 	for i = 1, #mods do
@@ -220,6 +225,7 @@ local function unit_dodges(store, this, ranged_attack, attack, source)
 	end
 
 	this.dodge.last_check_ts = store.tick_ts
+
 	local is_special_attack = ranged_attack or (attack and attack.type == "area")
 
 	if not this.unit.is_stunned and (not this.enemy or this.enemy.can_do_magic) and (not ranged_attack or this.dodge.ranged) and (not this.dodge.cooldown or store.tick_ts - this.dodge.ts > this.dodge.cooldown) and (not attack or not attack.damage_type or band(attack.damage_type, DAMAGE_NO_DODGE) == 0) and ((not is_special_attack and math.random() <= this.dodge.chance) or (is_special_attack and math.random() <= 0.6 * this.dodge.chance)) and (not this.dodge.can_dodge or this.dodge.can_dodge(store, this, ranged_attack, attack, source)) then
@@ -245,6 +251,7 @@ end
 local function stun_inc(this)
 	if this and this.unit and not this.unit.ignore_stun then
 		local u = this.unit
+
 		u.stun_count = u.stun_count + 1
 
 		if u.stun_count > 0 then
@@ -260,6 +267,7 @@ end
 local function stun_dec(this, remove_all)
 	if this and this.unit and not this.unit.ignore_stun then
 		local u = this.unit
+
 		u.stun_count = remove_all and 0 or u.stun_count - 1
 
 		if u.stun_count < 1 then
@@ -297,6 +305,7 @@ end
 ---@return nil
 local function armor_inc(this, value)
 	this.health.armor_buff = this.health.armor_buff + value * (1 - this.health.armor_resilience)
+
 	update_armor(this)
 end
 
@@ -314,6 +323,7 @@ end
 ---@return nil
 local function magic_armor_inc(this, value)
 	this.health.magic_armor_buff = this.health.magic_armor_buff + value * (1 - this.health.armor_resilience)
+
 	update_magic_armor(this)
 end
 
@@ -369,6 +379,7 @@ end
 local function tower_block_inc(this)
 	if this and this.tower and not this.tower_holder then
 		local t = this.tower
+
 		t.block_count = t.block_count + 1
 
 		if t.block_count > 0 then
@@ -388,6 +399,7 @@ end
 local function tower_block_dec(this, remove_all)
 	if this and this.tower and not this.tower_holder then
 		local t = this.tower
+
 		t.block_count = remove_all and 0 or t.block_count - 1
 
 		if t.block_count < 1 then
@@ -429,6 +441,7 @@ end
 local function do_death_spawns(store, this)
 	if this.death_spawns.fx then
 		local fx = E:create_entity(this.death_spawns.fx)
+
 		fx.pos = V.vclone(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 
@@ -440,11 +453,12 @@ local function do_death_spawns(store, this)
 	end
 
 	if this.enemy and not this.enemy.can_do_magic then
-		return 
+		return
 	end
 
 	for i = 1, this.death_spawns.quantity do
 		local s = E:create_entity(this.death_spawns.name)
+
 		s.pos = V.vclone(this.pos)
 
 		if this.death_spawns.spawn_animation and s.render then
@@ -457,11 +471,14 @@ local function do_death_spawns(store, this)
 
 		if s.nav_path then
 			s.nav_path.pi = this.nav_path.pi
+
 			local spread_nodes = this.death_spawns.spread_nodes
 
 			if spread_nodes > 0 then
 				s.nav_path.spi = km.zmod(this.nav_path.spi + i, 3)
+
 				local node_offset = spread_nodes * -2 * math.floor(i / 3)
+
 				s.nav_path.ni = this.nav_path.ni + node_offset + spread_nodes
 			else
 				s.nav_path.spi = this.nav_path.spi
@@ -496,6 +513,7 @@ end
 ---@return table 精灵实体
 local function insert_sprite(store, name, pos, flip_x, ts_offset)
 	local e = E:create_entity(name)
+
 	e.pos.x, e.pos.y = pos.x, pos.y
 
 	if e.render then
@@ -506,6 +524,7 @@ local function insert_sprite(store, name, pos, flip_x, ts_offset)
 	end
 
 	queue_insert(store, e)
+
 	return e
 end
 
@@ -520,17 +539,21 @@ local function fade_out_entity(store, entity, delay, duration)
 
 	if entity.tween then
 		log.error("entity %s already has tween. cannot be faded out", entity.id)
-		return 
+
+		return
 	end
 
 	entity.tween = E:clone_c("tween")
 	entity.tween.remove = false
 	entity.tween.ts = store.tick_ts
+
 	local p = E:clone_c("tween_prop")
+
 	p.keys = {{0, 255}, {delay, 255}, {delay + duration, 0}}
 
 	for i, s in ipairs(entity.render.sprites) do
 		local pp = table.deepclone(p)
+
 		pp.sprite_id = i
 		entity.tween.props[i] = pp
 	end
@@ -544,9 +567,11 @@ end
 local function create_pop(store, pos, pop)
 	local name = pop[math.random(1, #pop)]
 	local e = E:create_entity(name)
+
 	e.pos = V.v(pos.x, pos.y + e.pop_y_offset)
 	e.render.sprites[1].r = math.random(-21, 21) * math.pi / 180
 	e.render.sprites[1].ts = store.tick_ts
+
 	return e
 end
 
@@ -569,9 +594,11 @@ end
 ---@return table 伤害实体
 local function create_bullet_damage(bullet, target_id, source_id)
 	local d = E:create_entity("damage")
+
 	d.damage_type = bullet.damage_type
 	d.reduce_armor = bullet.reduce_armor
 	d.reduce_magic_armor = bullet.reduce_magic_armor
+
 	local vmin, vmax = bullet.damage_min, bullet.damage_max
 
 	if bullet.level and bullet.level > 0 then
@@ -590,6 +617,7 @@ local function create_bullet_damage(bullet, target_id, source_id)
 	end
 
 	local value = U.frandom(vmin, vmax)
+
 	d.value = math.max(1, bullet.damage_factor * value)
 	d.target_id = target_id
 	d.source_id = source_id
@@ -599,6 +627,7 @@ local function create_bullet_damage(bullet, target_id, source_id)
 	d.pop_chance = bullet.pop_chance
 	d.pop_conds = bullet.pop_conds
 	d.track_damage = bullet.track_damage
+
 	return d
 end
 
@@ -626,6 +655,7 @@ local function create_attack_damage(a, target_id, this)
 	end
 
 	local d = E:create_entity("damage")
+
 	d.value = U.frandom(vmin, vmax)
 
 	if this.damage_buff then
@@ -639,6 +669,7 @@ local function create_attack_damage(a, target_id, this)
 	d.damage_type = a.damage_type
 	d.target_id = target_id
 	d.source_id = this.id
+
 	return d
 end
 
@@ -661,6 +692,7 @@ end
 local function position_in_parabola(t, from, speed, g)
 	local x = speed.x * t + from.x
 	local y = g * t * t * 0.5 + speed.y * t + from.y
+
 	return x, y
 end
 
@@ -679,8 +711,11 @@ local function parabola_y(phase, from_y, to_y, max_y)
 	local C = (reverse and from_y or to_y) - offset
 	local x = reverse and 1 - phase or phase
 	local b
+
 	b = (M < C or C < 0.0001) and 1 or 2 / C * (M - math.sqrt(M * M - M * C))
+
 	local y = M * 4 / (b * b) * x * (b - x)
+
 	return y + offset
 end
 
@@ -724,6 +759,7 @@ end
 local function hero_will_teleport(this, new_rally_pos)
 	local tp = this.teleport
 	local r = new_rally_pos
+
 	return tp and not tp.disabled and V.dist2(r.x, r.y, this.pos.x, this.pos.y) > tp.min_distance * tp.min_distance
 end
 
@@ -734,6 +770,7 @@ end
 local function hero_will_transfer(this, new_rally_pos)
 	local tr = this.transfer
 	local r = new_rally_pos
+
 	return tr and not tr.disabled and V.dist2(r.x, r.y, this.pos.x, this.pos.y) > tr.min_distance * tr.min_distance
 end
 
@@ -751,8 +788,11 @@ local function y_hero_walk_waypoints(store, this, animation)
 	while not V.veq(this.pos, dest) do
 		local w = table.remove(n.waypoints, 1) or dest
 		local unsnap = #n.waypoints > 0
+
 		U.set_destination(this, w)
+
 		local an, af = U.animation_name_facing_point(this, animation, this.motion.dest)
+
 		U.animation_start(this, an, af, store.tick_ts, true)
 
 		while not this.motion.arrived do
@@ -766,6 +806,7 @@ local function y_hero_walk_waypoints(store, this, animation)
 
 			U.walk(this, store.tick_length, nil, unsnap)
 			coroutine.yield()
+
 			this.motion.speed.x, this.motion.speed.y = 0, 0
 		end
 	end
@@ -780,6 +821,7 @@ local function y_hero_new_rally(store, this)
 
 	if r.new then
 		r.new = false
+
 		U.unblock_target(store, this)
 
 		if this.sound_events then
@@ -789,15 +831,20 @@ local function y_hero_new_rally(store, this)
 		if hero_will_teleport(this, r.pos) then
 			local tp = this.teleport
 			local vis_bans = this.vis.bans
+
 			tp.pending = true
+
 			U.set_destination(this, r.pos)
+
 			this.vis.bans = F_ALL
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
+
 			S:queue(tp.sound)
 
 			if tp.fx_out then
 				local fx = E:create_entity(tp.fx_out)
+
 				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
 
@@ -821,6 +868,7 @@ local function y_hero_new_rally(store, this)
 
 			if tp.fx_in then
 				local fx = E:create_entity(tp.fx_in)
+
 				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
 
@@ -832,19 +880,23 @@ local function y_hero_new_rally(store, this)
 			end
 
 			U.y_animation_play(this, tp.animations[2], nil, store.tick_ts)
+
 			tp.pending = false
 			this.health_bar.hidden = false
 			this.vis.bans = vis_bans
 			this.health.ignore_damage = false
+
 			return false
 		elseif hero_will_transfer(this, r.pos) then
 			local tr = this.transfer
 			local interrupt = false
 			local ps
 			local vis_bans = this.vis.bans
+
 			this.vis.bans = F_ALL
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
+
 			local prev_scale, prev_color
 
 			if tr.scale then
@@ -859,6 +911,7 @@ local function y_hero_new_rally(store, this)
 			if tr.particles_name then
 				ps = E:create_entity(tr.particles_name)
 				ps.particle_system.track_id = this.id
+
 				queue_insert(store, ps)
 			end
 
@@ -867,6 +920,7 @@ local function y_hero_new_rally(store, this)
 
 				if y_hero_walk_waypoints(store, this, tr.animations[2]) then
 					interrupt = true
+
 					break
 				end
 			until this.motion.arrived
@@ -887,16 +941,22 @@ local function y_hero_new_rally(store, this)
 			this.health_bar.hidden = false
 			this.vis.bans = vis_bans
 			this.health.ignore_damage = false
+
 			return interrupt
 		else
 			local vis_bans = this.vis.bans
 			local prev_immune = this.health.immune_to
+
 			this.vis.bans = F_ALL
 			this.health.immune_to = r.immune_to
+
 			local out = y_hero_walk_waypoints(store, this)
+
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
+
 			this.vis.bans = vis_bans
 			this.health.immune_to = prev_immune
+
 			return out
 		end
 	end
@@ -924,6 +984,7 @@ local function hero_gain_xp_from_skill(this, skill)
 			for k, v in pairs(this.hero.skills) do
 				if v == skill then
 					skill_name = k
+
 					break
 				end
 			end
@@ -940,6 +1001,7 @@ end
 ---@return nil
 local function hero_gain_xp(this, value, desc)
 	this.hero.xp_queued = this.hero.xp_queued + value
+
 	log_xp.debug("XP QUEUE MANUAL: (%s)%s xp:%.2f from:%s", this.id, this.template_name, value, desc)
 end
 
@@ -967,7 +1029,9 @@ local function hero_level_up(store, this)
 
 	local difficulty_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty]
 	local net_xp = h.xp_queued * expected_level_multiplier * difficulty_multiplier * store.config.hero_xp_gain_multiplier
+
 	log_xp.debug("XP+: (%s)%s xp:%07.2f + net_xp:%6.2f = %8.2f | net_xp = xp_queued:%s * exp_lvl_mul:%s * diff_mul:%s", this.id, this.template_name, h.xp, km.round(net_xp), h.xp + km.round(net_xp), h.xp_queued, expected_level_multiplier, difficulty_multiplier)
+
 	h.xp = h.xp + km.round(net_xp)
 	h.xp_queued = 0
 
@@ -976,9 +1040,11 @@ local function hero_level_up(store, this)
 	end
 
 	this.hero.level = this.hero.level + 1
+
 	this.hero.fn_level_up(this, store)
 	signal.emit("hero-level-increased", this)
 	S:queue("HeroLevelUp")
+
 	return true
 end
 
@@ -989,16 +1055,21 @@ end
 local function y_hero_death_and_respawn(store, this)
 	local h = this.health
 	local he = this.hero
+
 	this.ui.can_click = false
+
 	local death_ts = store.tick_ts
 	local dead_lifetime = h.dead_lifetime
+
 	U.unblock_target(store, this)
 
 	if this.selfdestruct and not this.selfdestruct.disabled and band(h.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE)) == 0 then
 		local sd = this.selfdestruct
+
 		this.unit.hide_after_death = true
 		this.health_bar.hidden = true
 		dead_lifetime = sd.dead_lifetime or dead_lifetime
+
 		U.animation_start(this, sd.animation, nil, store.tick_ts)
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		S:queue(sd.sound, sd.sound_args)
@@ -1018,17 +1089,21 @@ local function y_hero_death_and_respawn(store, this)
 		if targets then
 			for _, t in pairs(targets) do
 				local d = E:create_entity("damage")
+
 				d.damage_type = sd.damage_type
 				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.damage_buff) * this.unit.damage_factor
 				d.source_id = this.id
 				d.target_id = t.id
+
 				queue_damage(store, d)
 
 				if sd.mod then
 					local m = E:create_entity(sd.mod)
+
 					m.modifier.target_id = t.id
 					m.modifier.source_id = this.id
 					m.modifier.damage_factor = this.unit.damage_factor
+
 					queue_insert(store, m)
 				end
 			end
@@ -1037,26 +1112,35 @@ local function y_hero_death_and_respawn(store, this)
 		U.y_animation_wait(this)
 	elseif band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE)) ~= 0 then
 		this.unit.hide_after_death = true
+
 		local fx = E:create_entity("fx_soldier_desintegrate")
+
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
+
 		queue_insert(store, fx)
 	elseif band(h.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
 		this.unit.hide_after_death = true
 	elseif band(h.last_damage_types, bor(DAMAGE_HOST)) ~= 0 then
 		this.unit.hide_after_death = true
+
 		S:queue("DeathEplosion")
+
 		local fx = E:create_entity("fx_unit_explode")
+
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
+
 		queue_insert(store, fx)
 
 		if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 			local decal = E:create_entity("decal_blood_pool")
+
 			decal.pos = V.vclone(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 			decal.render.sprites[1].name = this.unit.blood_color
+
 			queue_insert(store, decal)
 		end
 	else
@@ -1079,6 +1163,7 @@ local function y_hero_death_and_respawn(store, this)
 
 		tombstone = E:create_entity(he.tombstone_decal)
 		tombstone.pos = this.pos
+
 		queue_insert(store, tombstone)
 
 		for _, s in pairs(this.render.sprites) do
@@ -1096,6 +1181,7 @@ local function y_hero_death_and_respawn(store, this)
 
 	if he and he.respawn_point then
 		local p = he.respawn_point
+
 		this.pos.x, this.pos.y = p.x, p.y
 		this.nav_rally.pos.x, this.nav_rally.pos.y = p.x, p.y
 		this.nav_rally.center.x, this.nav_rally.center.y = p.x, p.y
@@ -1107,8 +1193,10 @@ local function y_hero_death_and_respawn(store, this)
 	end
 
 	h.ignore_damage = true
+
 	S:queue(this.sound_events.respawn)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
+
 	this.health_bar.hidden = false
 	this.ui.can_click = true
 	h.dead = false
@@ -1123,6 +1211,7 @@ end
 ---@return nil
 local function y_reinforcement_fade_in(store, this)
 	U.y_wait(store, fts(10))
+
 	this.tween.disabled = true
 end
 
@@ -1132,6 +1221,7 @@ end
 ---@return nil
 local function y_reinforcement_fade_out(store, this)
 	this.render.sprites[1].ts = store.tick_ts
+
 	local offset = 50
 
 	if this.render.sprites[1].flip_x then
@@ -1139,10 +1229,14 @@ local function y_reinforcement_fade_out(store, this)
 	end
 
 	local o = V.v(this.pos.x + offset, this.pos.y)
+
 	U.set_destination(this, o)
+
 	local t_angle = offset > 0 and 0 or math.pi
 	local an, af, ai = U.animation_name_for_angle(this, "walk", t_angle)
+
 	U.animation_start(this, an, af, store.tick_ts, -1)
+
 	this.tween.reverse = true
 	this.tween.disabled = nil
 	this.health.hp = 0
@@ -1162,35 +1256,43 @@ local function y_soldier_new_rally(store, this)
 	local out = false
 	local vis_bans = this.vis.bans
 	local prev_immune = this.health.immune_to
+
 	this.health.immune_to = r.immune_to
 	this.vis.bans = F_ALL
 
 	if r.new then
 		r.new = false
+
 		U.unblock_target(store, this)
 		U.set_destination(this, r.pos)
+
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
 		U.animation_start(this, an, af, store.tick_ts, -1)
 
 		while not this.motion.arrived do
 			if this.health.dead or this.unit.is_stunned then
 				out = true
+
 				break
 			end
 
 			if r.new then
 				out = false
+
 				break
 			end
 
 			U.walk(this, store.tick_length)
 			coroutine.yield()
+
 			this.motion.speed.x, this.motion.speed.y = 0, 0
 		end
 	end
 
 	this.vis.bans = vis_bans
 	this.health.immune_to = prev_immune
+
 	return out
 end
 
@@ -1208,6 +1310,7 @@ local function y_soldier_revive(store, this)
 
 	if math.random() < chance then
 		local r = this.revive
+
 		r.protect = r.protect * 0.5
 
 		if r.remove_modifiers then
@@ -1241,14 +1344,17 @@ local function y_soldier_revive(store, this)
 
 		if r.fx then
 			local fx = E:create_entity(r.fx)
+
 			fx.pos = this.pos
 			fx.render.sprites[1].ts = store.tick_ts
+
 			queue_insert(store, fx)
 		end
 
 		if r.animation then
 			S:queue(r.sound)
 			U.animation_start(this, r.animation, nil, store.tick_ts, false)
+
 			r.ts = store.tick_ts
 
 			while store.tick_ts - r.ts < r.hit_time do
@@ -1257,7 +1363,9 @@ local function y_soldier_revive(store, this)
 		end
 
 		r.revive_count = (r.revive_count or 0) + 1
+
 		signal.emit("entity-revived", this, r.revive_count)
+
 		this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.health.hp_max * r.health_recover)
 
 		if r.animation then
@@ -1267,6 +1375,7 @@ local function y_soldier_revive(store, this)
 		end
 
 		this.health.ignore_damage = false
+
 		return true
 	end
 
@@ -1279,38 +1388,50 @@ end
 ---@return nil
 local function y_soldier_death(store, this)
 	U.unblock_target(store, this)
+
 	local h = this.health
 
 	if band(h.last_damage_types, DAMAGE_DISINTEGRATE) ~= 0 then
 		this.unit.hide_during_death = true
+
 		local fx = E:create_entity("fx_soldier_desintegrate")
+
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
+
 		queue_insert(store, fx)
 	elseif band(h.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
 		this.unit.hide_during_death = true
 	elseif band(h.last_damage_types, bor(DAMAGE_HOST)) ~= 0 then
 		S:queue(this.sound_events.death_by_explosion)
+
 		this.unit.hide_during_death = true
+
 		local fx = E:create_entity("fx_unit_explode")
+
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
+
 		queue_insert(store, fx)
 
 		if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
 			local decal = E:create_entity("decal_blood_pool")
+
 			decal.pos = V.vclone(this.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 			decal.render.sprites[1].name = this.unit.blood_color
+
 			queue_insert(store, decal)
 		end
 	elseif this.reinforcement and (this.reinforcement.fade or this.reinforcement.fade_out) then
 		y_reinforcement_fade_out(store, this)
-		return 
+
+		return
 	else
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+
 		this.ui.can_select = false
 	end
 
@@ -1336,15 +1457,18 @@ local function y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 	local attack_done = false
 	local start_ts = store.tick_ts
 	local b, an, af, ai
+
 	S:queue(attack.sound, attack.sound_args)
 
 	if attack.animations[1] then
 		an, af, ai = U.animation_name_facing_point(this, attack.animations[1], target.pos)
+
 		U.y_animation_play_group(this, an, af, store.tick_ts, 1, attack.sprite_group)
 	end
 
 	for i = 1, attack.loops do
 		an, af, ai = U.animation_name_facing_point(this, attack.animations[2], target.pos)
+
 		U.animation_start_group(this, an, af, store.tick_ts, false, attack.sprite_group)
 
 		for si, st in pairs(attack.shoot_times) do
@@ -1365,11 +1489,13 @@ local function y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 
 			if attack.bullet_start_offset then
 				local offset = attack.bullet_start_offset[ai]
+
 				b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
 			end
 
 			if attack.bullet_shot_start_offset then
 				local offset = attack.bullet_shot_start_offset[si]
+
 				b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
 			end
 
@@ -1383,6 +1509,7 @@ local function y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 			b.bullet.damage_factor = this.unit.damage_factor
 			b.bullet.damage_max = b.bullet.damage_max + this.damage_buff
 			b.bullet.damage_min = b.bullet.damage_min + this.damage_buff
+
 			queue_insert(store, b)
 
 			if attack.xp_from_skill then
@@ -1409,6 +1536,7 @@ local function y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 
 	if attack.animations[3] then
 		an, af, ai = U.animation_name_facing_point(this, attack.animations[3], target.pos)
+
 		U.animation_start_group(this, an, af, store.tick_ts, false, attack.sprite_group)
 
 		while not U.animation_finished_group(this, attack.sprite_group) do
@@ -1443,6 +1571,7 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 	local bullet_to = pred_pos or target.pos
 	local bullet_to_start = V.vclone(bullet_to)
 	local an, af, ai = U.animation_name_facing_point(this, attack.animation, bullet_to)
+
 	U.animation_start(this, an, af, store.tick_ts, false)
 	S:queue(attack.sound)
 
@@ -1489,34 +1618,48 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 		end
 
 		S:queue(attack.sound_shoot)
+
 		bullet = E:create_entity(attack.bullet)
+
+		local b = bullet.bullet
+
 		bullet.pos = V.vclone(this.pos)
 
 		if attack.bullet_start_offset then
 			local offset = attack.bullet_start_offset[ai]
+
 			bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 		end
 
-		bullet.bullet.damage_max = bullet.bullet.damage_max + this.damage_buff
-		bullet.bullet.damage_min = bullet.bullet.damage_min + this.damage_buff
-
-		if attack.mod then
-			bullet.bullet.mod = attack.mod
-		end
-
-		bullet.bullet.from = V.vclone(bullet.pos)
-		bullet.bullet.to = V.vclone(bullet_to)
+		b.from = V.vclone(bullet.pos)
+		b.to = V.vclone(bullet_to)
 
 		if not attack.ignore_hit_offset then
-			bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
-			bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
+			b.to.x = b.to.x + target.unit.hit_offset.x
+			b.to.y = b.to.y + target.unit.hit_offset.y
 		end
 
-		bullet.bullet.target_id = target.id
-		bullet.bullet.source_id = this.id
-		bullet.bullet.xp_dest_id = this.id
-		bullet.bullet.level = attack.level
-		bullet.bullet.damage_factor = this.unit.damage_factor
+		b.target_id = target.id
+		b.source_id = this.id
+		b.xp_dest_id = this.id
+		b.level = attack.level
+		b.damage_factor = this.unit.damage_factor
+
+		if type(b.damages_min) == "table" then
+			b.damage_min = b.damage_min[b.level]
+		end
+
+		if type(b.damage_max) == "table" then
+			b.damage_max = b.damage_max[b.level]
+		end
+
+		b.damage_max = b.damage_max + this.damage_buff
+		b.damage_min = b.damage_min + this.damage_buff
+
+		if attack.mod then
+			b.mod = attack.mod
+		end
+
 		queue_insert(store, bullet)
 
 		if attack.xp_from_skill then
@@ -1535,6 +1678,7 @@ local function y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 	end
 
 	::label_60_0::
+
 	return attack_done
 end
 
@@ -1550,6 +1694,7 @@ local function soldier_pick_ranged_target_and_attack(store, this)
 	end
 
 	r.last_range_ts = store.tick_ts
+
 	local awaiting_target
 	local target
 
@@ -1608,6 +1753,7 @@ local function y_soldier_ranged_attacks(store, this)
 
 	local start_ts = store.tick_ts
 	local attack_done
+
 	U.set_destination(this, this.pos)
 
 	if attack.loops then
@@ -1647,6 +1793,7 @@ end
 local function y_soldier_do_timed_action(store, this, action)
 	local action_done = false
 	local start_ts = store.tick_ts
+
 	U.animation_start(this, action.animation, nil, store.tick_ts)
 	S:queue(action.sound)
 
@@ -1658,17 +1805,21 @@ local function y_soldier_do_timed_action(store, this, action)
 
 		if action.mod then
 			local e = E:create_entity(action.mod)
+
 			e.modifier.target_id = this.id
 			e.modifier.source_id = this.id
 			e.modifier.level = action.level
 			e.modifier.damage_factor = this.unit.damage_factor
+
 			queue_insert(store, e)
 		elseif action.aura then
 			local e = E:create_entity(action.aura)
+
 			e.aura.source_id = this.id
 			e.aura.level = action.level
 			e.aura.damage_factor = this.unit.damage_factor
 			e.pos = V.vclone(this.pos)
+
 			queue_insert(store, e)
 		end
 
@@ -1716,6 +1867,7 @@ local function y_soldier_do_timed_attack(store, this, target, attack)
 	local start_ts = store.tick_ts
 	local spell
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
+
 	U.animation_start(this, an, af, store.tick_ts)
 	S:queue(attack.sound)
 
@@ -1736,7 +1888,9 @@ local function y_soldier_do_timed_attack(store, this, target, attack)
 
 	spell.spell.source_id = this.id
 	spell.spell.target_id = target.id
+
 	queue_insert(store, spell)
+
 	attack_done = true
 
 	while not U.animation_finished(this) do
@@ -1748,7 +1902,9 @@ local function y_soldier_do_timed_attack(store, this, target, attack)
 	end
 
 	::label_65_0::
+
 	S:stop(attack.sound)
+
 	return attack_done
 end
 
@@ -1802,6 +1958,7 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 	local start_ts = store.tick_ts
 	local targets, hit_pos
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
+
 	U.animation_start(this, an, af, store.tick_ts, 1)
 	S:queue(attack.sound, attack.sound_args)
 
@@ -1814,6 +1971,7 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 	end
 
 	S:queue(attack.sound_hit, attack.sound_hit_args)
+
 	attack.ts = start_ts
 
 	if attack.shared_cooldown then
@@ -1858,6 +2016,7 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 	for i = 1, math.min(attack.count or #targets, #targets) do
 		local e = targets[i]
 		local d = E:create_entity("damage")
+
 		d.source_id = this.id
 		d.target_id = e.id
 		d.damage_type = attack.damage_type
@@ -1869,17 +2028,20 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 		d.pop = attack.pop
 		d.pop_chance = attack.pop_chance
 		d.pop_conds = attack.pop_conds
+
 		queue_damage(store, d)
 
 		if attack.mod then
 			if (not attack.mod_chance) or math.random() < attack.mod_chance then
 				local mod = E:create_entity(attack.mod)
+
 				mod.modifier.ts = store.tick_ts
 				mod.modifier.target_id = e.id
 				mod.modifier.source_id = this.id
 				mod.modifier.level = attack.level
 				mod.modifier.target_idx = i
 				mod.modifier.damage_factor = this.unit.damage_factor
+
 				queue_insert(store, mod)
 			end
 		end
@@ -1887,14 +2049,17 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 
 	if attack.hit_aura then
 		local a = E:create_entity(attack.hit_aura)
+
 		a.pos = V.vclone(hit_pos)
 		a.aura.target_id = target.id
 		a.aura.source_id = this.id
+
 		queue_insert(store, a)
 	end
 
 	if attack.hit_fx then
 		local fx = E:create_entity(attack.hit_fx)
+
 		fx.pos = V.vclone(hit_pos)
 
 		for i = 1, #fx.render.sprites do
@@ -1906,6 +2071,7 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 
 	if attack.hit_decal then
 		local fx = E:create_entity(attack.hit_decal)
+
 		fx.pos = V.vclone(hit_pos)
 
 		for i = 1, #fx.render.sprites do
@@ -1926,7 +2092,9 @@ local function y_soldier_do_single_area_attack(store, this, target, attack)
 	end
 
 	::label_67_0::
+
 	S:stop(attack.sound)
+
 	return attack_done
 end
 
@@ -1940,10 +2108,12 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 	local attack_done = false
 	local start_ts = store.tick_ts
 	local an, af
+
 	S:queue(attack.sound, attack.sound_args)
 
 	if attack.animations[1] then
 		an, af = U.animation_name_facing_point(this, attack.animations[1], target.pos)
+
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
 	end
 
@@ -1953,9 +2123,13 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 		end
 
 		local loop_ts = store.tick_ts
+
 		S:queue(attack.sound_loop, attack.sound_loop_args)
+
 		an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
+
 		U.animation_start(this, an, af, store.tick_ts, 1)
+
 		local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
 
 		for _, ht in pairs(hit_times) do
@@ -1976,6 +2150,7 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 			end
 
 			S:queue(attack.sound_hit, attack.sound_hit_args)
+
 			attack.ts = start_ts
 
 			if attack.shared_cooldown then
@@ -2010,6 +2185,7 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 				for _, e in pairs(targets) do
 					local d = E:create_entity("damage")
+
 					d.source_id = this.id
 					d.target_id = e.id
 					d.damage_type = attack.damage_type
@@ -2021,21 +2197,25 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					d.pop = attack.pop
 					d.pop_chance = attack.pop_chance
 					d.pop_conds = attack.pop_conds
+
 					queue_damage(store, d)
 
 					if attack.mod then
 						local mod = E:create_entity(attack.mod)
+
 						mod.modifier.ts = store.tick_ts
 						mod.modifier.target_id = e.id
 						mod.modifier.source_id = this.id
 						mod.modifier.level = attack.level
 						mod.modifier.damage_factor = this.unit.damage_factor
+
 						queue_insert(store, mod)
 					end
 				end
 
 				if attack.hit_fx then
 					local fx = E:create_entity(attack.hit_fx)
+
 					fx.pos = V.vclone(hit_pos)
 
 					for i = 1, #fx.render.sprites do
@@ -2047,6 +2227,7 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 				if attack.hit_decal then
 					local fx = E:create_entity(attack.hit_decal)
+
 					fx.pos = V.vclone(hit_pos)
 
 					for i = 1, #fx.render.sprites do
@@ -2075,6 +2256,7 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 				d.pop = attack.pop
 				d.pop_chance = attack.pop_chance
 				d.pop_conds = attack.pop_conds
+
 				queue_damage(store, d)
 			end
 
@@ -2099,10 +2281,12 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 	end
 
 	::label_70_0::
+
 	S:queue(attack.sound_end)
 
 	if attack.animations[3] then
 		an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
+
 		U.animation_start(this, an, af, store.tick_ts, 1)
 
 		while not U.animation_finished(this) do
@@ -2115,7 +2299,9 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
 	end
 
 	::label_70_1::
+
 	S:stop(attack.sound)
+
 	return attack_done
 end
 
@@ -2136,6 +2322,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 	local attack_done = false
 	local start_ts = store.tick_ts
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
+
 	U.animation_start(this, an, af, store.tick_ts, 1)
 	S:queue(attack.sound, attack.sound_args)
 
@@ -2150,6 +2337,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 	end
 
 	S:queue(attack.sound_hit, attack.sound_hit_args)
+
 	attack.ts = start_ts
 
 	if attack.shared_cooldown then
@@ -2184,6 +2372,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 
 		if attack.damage_type ~= DAMAGE_NONE then
 			local d = E:create_entity("damage")
+
 			d.source_id = this.id
 			d.target_id = target.id
 			d.xp_gain_factor = attack.xp_gain_factor
@@ -2209,22 +2398,26 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 
 		if attack.mod then
 			local mod = E:create_entity(attack.mod)
+
 			mod.modifier.ts = store.tick_ts
 			mod.modifier.target_id = target.id
 			mod.modifier.source_id = this.id
 			mod.modifier.level = attack.level
 			mod.modifier.damage_factor = this.unit.damage_factor
+
 			queue_insert(store, mod)
 		end
 
 		if attack.mods then
 			for _, m in pairs(attack.mods) do
 				local mod = E:create_entity(m)
+
 				mod.modifier.ts = store.tick_ts
 				mod.modifier.target_id = target.id
 				mod.modifier.source_id = this.id
 				mod.modifier.level = attack.level
 				mod.modifier.damage_factor = this.unit.damage_factor
+
 				queue_insert(store, mod)
 			end
 		end
@@ -2238,14 +2431,17 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 
 		if attack.hit_aura then
 			local a = E:create_entity(attack.hit_aura)
+
 			a.pos = V.vclone(hit_pos)
 			a.aura.target_id = target.id
 			a.aura.source_id = this.id
+
 			queue_insert(store, a)
 		end
 
 		if attack.hit_fx then
 			local fx = E:create_entity(attack.hit_fx)
+
 			fx.pos = V.vclone(hit_pos)
 
 			for i = 1, #fx.render.sprites do
@@ -2257,6 +2453,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 
 		if attack.hit_decal then
 			local fx = E:create_entity(attack.hit_decal)
+
 			fx.pos = V.vclone(hit_pos)
 
 			for i = 1, #fx.render.sprites do
@@ -2283,8 +2480,10 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 
 			if pi.fx then
 				local fx = E:create_entity(pi.fx)
+
 				fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
 				fx.render.sprites[1].ts = store.tick_ts
+
 				queue_insert(store, fx)
 			end
 		end
@@ -2303,6 +2502,7 @@ local function y_soldier_do_single_melee_attack(store, this, target, attack)
 	end
 
 	::label_72_0::
+
 	S:stop(attack.sound)
 
 	if dodge_active(this) and this.render.sprites[1].alpha == 128 then
@@ -2363,6 +2563,7 @@ end
 ---@return boolean 是否还在移动
 local function soldier_move_to_slot_step(store, this, target)
 	U.block_enemy(store, this, target)
+
 	local slot_pos, slot_flip, enemy_flip = U.melee_slot_position(this, target)
 
 	if not slot_pos then
@@ -2371,15 +2572,20 @@ local function soldier_move_to_slot_step(store, this, target)
 
 	if not (this.teleport and this.teleport.pending) and V.veq(slot_pos, this.pos) then
 		this.motion.arrived = true
+
 		return false
 	else
 		U.set_destination(this, slot_pos)
+
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
 		U.animation_start(this, an, af, store.tick_ts, -1)
 
 		if U.walk(this, store.tick_length) then
 			local ani = this.melee and this.melee.arrived_slot_animation or "idle"
+
 			an, af = U.animation_name_facing_point(this, ani, target.pos)
+
 			U.animation_start(this, an, af, store.tick_ts, -1)
 		end
 
@@ -2398,6 +2604,7 @@ local function soldier_pick_melee_attack(store, this, target)
 			target_id = target.id,
 			attack = this.dodge.counter_attack
 		}
+
 		return this.dodge.counter_attack
 	else
 		for _, i in pairs(this.melee.order) do
@@ -2415,6 +2622,7 @@ local function soldier_pick_melee_attack(store, this, target)
 				end
 
 				cooldown = cooldown * this.cooldown_factor
+
 				local forced_cooldown_ok = true
 
 				if this.melee.forced_cooldown and a.forced_cooldown then
@@ -2437,6 +2645,7 @@ local function soldier_pick_melee_attack(store, this, target)
 							target_id = target.id,
 							attack = a
 						}
+
 						return a
 					end
 				end
@@ -2463,6 +2672,7 @@ local function y_soldier_melee_block_and_attacks(store, this)
 
 	if not target then
 		this.soldier.last_block_ts = store.tick_ts
+
 		return false, A_NO_TARGET
 	end
 
@@ -2506,6 +2716,7 @@ local function soldier_go_back_step(store, this)
 
 	if not (this.teleport and this.teleport.pending) and V.veq(this.pos, dest) then
 		this.motion.arrived = true
+
 		return false
 	else
 		U.set_destination(this, dest)
@@ -2514,7 +2725,9 @@ local function soldier_go_back_step(store, this)
 			return false
 		else
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
 			U.animation_start(this, an, af, store.tick_ts, -1)
+
 			return true
 		end
 	end
@@ -2529,7 +2742,7 @@ local function soldier_idle(store, this, force_ts)
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, force_ts)
 
 	if this.unit.is_stunned then
-		return 
+		return
 	end
 
 	if store.tick_ts - this.idle_flip.ts > 2 * store.tick_length then
@@ -2558,7 +2771,7 @@ end
 ---@return nil
 local function soldier_regen(store, this)
 	if not this.regen then
-		return 
+		return
 	end
 
 	if not this.regen.health then
@@ -2571,6 +2784,7 @@ local function soldier_regen(store, this)
 		if this.regen.ts_counter > this.regen.cooldown then
 			if this.health.hp < this.health.hp_max then
 				this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+
 				signal.emit("health-regen", this, this.regen.health)
 			end
 
@@ -2818,15 +3032,19 @@ local function enemy_water_change(store, this)
 
 		if w.ignore_pi == this.nav_path.pi then
 			log.debug("Enemy %s ignored path %s for water change", this.id, w.ignore_pi)
+
 			w.last_terrain_type = terrain_type
-			return 
+
+			return
 		end
 
 		if w.last_terrain_type and bor(w.last_terrain_type, terrain_type) == bor(TERRAIN_WATER, TERRAIN_LAND) then
 			local fx = E:create_entity("fx_enemy_splash")
+
 			fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
 			fx.render.sprites[1].ts = store.tick_ts
 			fx.pos = V.vclone(this.pos)
+
 			queue_insert(store, fx)
 
 			if this.sound_events and this.sound_events.water_splash then
@@ -2838,6 +3056,7 @@ local function enemy_water_change(store, this)
 			this.vis.flags = bor(this.vis.flags, F_WATER)
 			w._orig_vis_bans = this.vis.bans
 			this.vis.bans = bor(this.vis.bans, this.water.vis_bans)
+
 			U.speed_mul_self(this, this.water.speed_factor)
 
 			if this.health_bar then
@@ -2953,7 +3172,9 @@ local function enemy_cliff_change(store, this)
 			this.vis.flags = bor(this.vis.flags, F_CLIFF)
 			c._orig_vis_bans = this.vis.bans
 			this.vis.bans = bor(this.vis.bans, c.vis_bans)
+
 			U.speed_mul_self(this, c.speed_factor)
+
 			this.health.dead_lifetime = 3
 
 			for i = 1, #this.render.sprites do
@@ -2974,7 +3195,9 @@ local function enemy_cliff_change(store, this)
 		elseif c.last_terrain_type == TERRAIN_CLIFF and terrain_type == TERRAIN_LAND then
 			this.vis.flags = band(this.vis.flags, bnot(F_CLIFF))
 			this.vis.bans = c._orig_vis_bans
+
 			U.speed_div_self(this, c.speed_factor)
+
 			this.health.dead_lifetime = 2
 
 			for i = 1, #this.render.sprites do
@@ -3008,11 +3231,13 @@ local function y_enemy_death(store, this)
 	local function show_blood_pool(e, terrain_type)
 		if e.unit.show_blood_pool and e.unit.blood_color ~= BLOOD_NONE and band(terrain_type, TERRAIN_WATER) == 0 then
 			local decal = E:create_entity("decal_blood_pool")
+
 			decal.pos = V.vclone(e.pos)
 			decal.render.sprites[1].ts = store.tick_ts
 			decal.render.sprites[1].name = e.unit.blood_color
 			decal.render.sprites[1].z = e.render.sprites[1].z
 			decal.render.sprites[1].sort_y_offset = 1
+
 			queue_insert(store, decal)
 		end
 	end
@@ -3022,6 +3247,7 @@ local function y_enemy_death(store, this)
 	if can_spawn and this.death_spawns.concurrent_with_death then
 		do_death_spawns(store, this)
 		coroutine.yield()
+
 		can_spawn = false
 	end
 
@@ -3029,15 +3255,20 @@ local function y_enemy_death(store, this)
 
 	if (band(this.health.last_damage_types, bor(DAMAGE_EXPLOSION, DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_SHOT, DAMAGE_RUDE)) ~= 0 and band(this.health.last_damage_types, bor(DAMAGE_FX_NOT_EXPLODE, DAMAGE_DISINTEGRATE)) == 0 and this.unit.can_explode) or (this.unit.explode_when_silenced_death and not this.enemy.can_do_magic) and this.unit.explode_fx and band(terrain_type, TERRAIN_WATER) == 0 then
 		S:queue(this.sound_events.death_by_explosion)
+
 		local fx = E:create_entity(this.unit.explode_fx)
+
 		fx.pos = V.vclone(this.pos)
 		fx.render.sprites[1].ts = store.tick_ts
 		fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
+
 		queue_insert(store, fx)
 		show_blood_pool(this, terrain_type)
+
 		this.unit.hide_during_death = true
 	elseif (band(this.health.last_damage_types, bor(DAMAGE_DISINTEGRATE)) ~= 0 or this.unit.disintegrate_when_silenced_death and not this.enemy.can_do_magic) and this.unit.can_disintegrate and this.unit.disintegrate_fx then
 		local fx = E:create_entity(this.unit.disintegrate_fx)
+
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 		fx.render.sprites[1].ts = store.tick_ts
 
@@ -3050,6 +3281,7 @@ local function y_enemy_death(store, this)
 		end
 
 		queue_insert(store, fx)
+
 		this.unit.hide_during_death = true
 		this.unit.show_blood_pool = false
 	elseif band(this.health.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
@@ -3078,6 +3310,7 @@ local function y_enemy_death(store, this)
 		if can_spawn and this.death_spawns.delay then
 			U.y_wait(store, this.death_spawns.delay)
 			do_death_spawns(store, this)
+
 			can_spawn = false
 		end
 
@@ -3089,6 +3322,7 @@ local function y_enemy_death(store, this)
 	if can_spawn then
 		do_death_spawns(store, this)
 		coroutine.yield()
+
 		can_spawn = false
 	end
 
@@ -3116,15 +3350,18 @@ end
 ---@return boolean 是否继续行走
 local function y_enemy_walk_step(store, this, animation_name, sprite_id)
 	animation_name = animation_name or "walk"
+
 	local next, new, use_path
 
 	if this.motion.forced_waypoint then
 		local w = this.motion.forced_waypoint
+
 		next = w
 
 		if V.dist(w.x, w.y, this.pos.x, this.pos.y) < 2 * this.motion.real_speed * store.tick_length then
 			this.pos.x, this.pos.y = w.x, w.y
 			this.motion.forced_waypoint = nil
+
 			return false
 		end
 	else
@@ -3134,11 +3371,13 @@ local function y_enemy_walk_step(store, this, animation_name, sprite_id)
 		if not next then
 			log.debug("enemy %s ran out of nodes to walk", this.id)
 			coroutine.yield()
+
 			return false
 		end
 	end
 
 	U.set_destination(this, next)
+
 	local an, af = U.animation_name_facing_point(this, animation_name, this.motion.dest, sprite_id, nil, use_path)
 
 	if this.sound_events and new then
@@ -3148,7 +3387,9 @@ local function y_enemy_walk_step(store, this, animation_name, sprite_id)
 	U.animation_start(this, an, af, store.tick_ts, true, sprite_id)
 	U.walk(this, store.tick_length)
 	coroutine.yield()
+
 	this.motion.speed.x, this.motion.speed.y = 0, 0
+
 	return true
 end
 
@@ -3192,6 +3433,7 @@ local function y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 
 		if node_valid and not ignore_soldiers and #this.enemy.blockers > 0 then
 			U.cleanup_blockers(store, this)
+
 			blocker = store.entities[this.enemy.blockers[1]]
 		end
 
@@ -3217,6 +3459,7 @@ end
 local function y_wait_for_blocker(store, this, blocker)
 	local pos = blocker.motion.arrived and blocker.pos or blocker.motion.dest
 	local an, af = U.animation_name_facing_point(this, "idle", pos)
+
 	U.animation_start(this, an, af, store.tick_ts, true)
 
 	while not blocker.motion.arrived do
@@ -3228,7 +3471,9 @@ local function y_wait_for_blocker(store, this, blocker)
 
 		if blocker.unit.is_stunned then
 			blocker.soldier.target_id = nil
+
 			U.dec_blocker(store, this, blocker.id)
+
 			return false
 		end
 	end
@@ -3244,6 +3489,7 @@ end
 ---@return boolean 是否攻击完成
 local function y_enemy_do_ranged_attack(store, this, target, attack)
 	local an, af, ai = U.animation_name_facing_point(this, attack.animation, target.pos)
+
 	U.animation_start(this, an, af, store.tick_ts, false)
 
 	while store.tick_ts - attack.ts < attack.shoot_time do
@@ -3275,10 +3521,12 @@ local function y_enemy_do_ranged_attack(store, this, target, attack)
 
 			if band(target.vis.bans, attack.vis_flags) == 0 and band(target.vis.flags, attack.vis_bans) == 0 then
 				local bullet = E:create_entity(attack.bullet)
+
 				bullet.pos = V.vclone(this.pos)
 
 				if attack.bullet_start_offset then
 					local offset = attack.bullet_start_offset[ai]
+
 					bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
 				end
 
@@ -3311,6 +3559,7 @@ local function y_enemy_do_ranged_attack(store, this, target, attack)
 	end
 
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
 	return true
 end
 
@@ -3323,13 +3572,18 @@ end
 local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 	local attack_done = false
 	local b
+
 	S:queue(attack.sound)
+
 	local an, af, ai = U.animation_name_facing_point(this, attack.animations[1], target.pos)
+
 	U.y_animation_play(this, an, af, store.tick_ts, 1)
 
 	for i = 1, attack.loops do
 		an, af, ai = U.animation_name_facing_point(this, attack.animations[2], target.pos)
+
 		U.animation_start(this, an, af, store.tick_ts, false)
+
 		local shoot_times = attack.shoot_times or {attack.shoot_time}
 
 		for si, st in pairs(shoot_times) do
@@ -3350,6 +3604,7 @@ local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 
 			if attack.bullet_start_offset then
 				local offset = attack.bullet_start_offset[ai]
+
 				b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
 			end
 
@@ -3363,6 +3618,7 @@ local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 			end
 
 			queue_insert(store, b)
+
 			attack_done = true
 		end
 
@@ -3380,7 +3636,9 @@ local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 	end
 
 	::label_99_0::
+
 	an, af, ai = U.animation_name_facing_point(this, attack.animations[3], target.pos)
+
 	U.animation_start(this, an, af, store.tick_ts, 1)
 
 	while not U.animation_finished(this) do
@@ -3392,6 +3650,7 @@ local function y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 	end
 
 	::label_99_1::
+
 	return attack_done
 end
 
@@ -3468,7 +3727,9 @@ local function y_enemy_melee_attacks(store, this, target)
 				end
 
 				ma.ts = store.tick_ts
+
 				S:queue(ma.sound, ma.sound_args)
+
 				local an, af = U.animation_name_facing_point(this, ma.animation, target.pos)
 
 				for i = 1, #this.render.sprites do
@@ -3524,6 +3785,7 @@ local function y_enemy_melee_attacks(store, this, target)
 						end
 
 						local d = E:create_entity("damage")
+
 						d.source_id = this.id
 						d.target_id = target.id
 						d.track_kills = this.track_kills ~= nil
@@ -3534,17 +3796,21 @@ local function y_enemy_melee_attacks(store, this, target)
 
 						if ma.instakill then
 							d.damage_type = DAMAGE_INSTAKILL
+
 							queue_damage(store, d)
 						elseif ma.damage_min then
 							d.damage_type = ma.damage_type
 							d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
+
 							queue_damage(store, d)
 						end
 
 						if ma.mod then
 							local mod = E:create_entity(ma.mod)
+
 							mod.modifier.target_id = target.id
 							mod.modifier.source_id = this.id
+
 							queue_insert(store, mod)
 						end
 					elseif ma.type == "area" then
@@ -3565,6 +3831,7 @@ local function y_enemy_melee_attacks(store, this, target)
 								end
 
 								local d = E:create_entity("damage")
+
 								d.source_id = this.id
 								d.target_id = e.id
 								d.damage_type = ma.damage_type
@@ -3572,12 +3839,15 @@ local function y_enemy_melee_attacks(store, this, target)
 								d.pop = ma.pop
 								d.pop_chance = ma.pop_chance
 								d.pop_conds = ma.pop_conds
+
 								queue_damage(store, d)
 
 								if ma.mod then
 									local mod = E:create_entity(ma.mod)
+
 									mod.modifier.target_id = e.id
 									mod.modifier.source_id = this.id
+
 									queue_insert(store, mod)
 								end
 							end
@@ -3586,6 +3856,7 @@ local function y_enemy_melee_attacks(store, this, target)
 
 					if ma.hit_fx and (not ma.hit_fx_once or i == 1) then
 						local fx = E:create_entity(ma.hit_fx)
+
 						fx.pos = V.vclone(hit_pos)
 
 						if ma.hit_fx_offset then
@@ -3598,13 +3869,16 @@ local function y_enemy_melee_attacks(store, this, target)
 						end
 
 						fx.render.sprites[1].ts = store.tick_ts
+
 						queue_insert(store, fx)
 					end
 
 					if ma.hit_decal then
 						local fx = E:create_entity(ma.hit_decal)
+
 						fx.pos = V.vclone(hit_pos)
 						fx.render.sprites[1].ts = store.tick_ts
+
 						queue_insert(store, fx)
 					end
 				end
@@ -3618,6 +3892,7 @@ local function y_enemy_melee_attacks(store, this, target)
 				end
 
 				U.animation_start(this, "idle", nil, store.tick_ts, true)
+
 				return true
 			end
 		end
@@ -3632,6 +3907,7 @@ end
 ---@return nil
 local function y_enemy_stun(store, this)
 	local flip_x = this.motion and this.motion.dest.x < this.pos.x or nil
+
 	U.animation_start(this, "idle", flip_x, store.tick_ts, true)
 	coroutine.yield()
 end
@@ -3646,6 +3922,7 @@ end
 ---@return boolean 是否继续
 local function y_enemy_mixed_walk_melee_ranged(store, this, ignore_soldiers, walk_break_fn, melee_break_fn, ranged_break_fn)
 	ranged_break_fn = ranged_break_fn or melee_break_fn
+
 	local cont, blocker, ranged = y_enemy_walk_until_blocked(store, this, ignore_soldiers, walk_break_fn)
 
 	if not cont then
@@ -3689,16 +3966,20 @@ end
 ---@return table 创建的嘲讽实体
 local function y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait, decal)
 	local set = taunts.sets[set_name]
+
 	index = index or set.idxs and table.random(set.idxs) or math.random(set.start_idx, set.end_idx)
 	duration = duration or taunts.duration
 	pos = pos or set.pos or taunts.pos
+
 	local offset = set.offset or taunts.offset or v(0, 0)
 	local t = E:create_entity(decal or set.decal_name or taunts.decal_name)
+
 	t.texts.list[1].text = _(string.format(set.format, index))
 	t.pos.x, t.pos.y = pos.x + offset.x, pos.y + offset.y
 	t.tween.ts = store.tick_ts
 	t.duration = duration
 	t.start_ts = store.tick_ts
+
 	queue_insert(store, t)
 
 	if wait then
@@ -3715,7 +3996,9 @@ end
 ---@return table 生成的单位列表
 local function y_spawner_spawn(store, this)
 	local sp = this.spawner
+
 	sp._last_subpath = sp._last_subpath or math.random(1, 3)
+
 	local spawns = {}
 
 	for i = 1, sp.count do
@@ -3724,6 +4007,7 @@ local function y_spawner_spawn(store, this)
 		end
 
 		local spawn = E:create_entity(sp.entity)
+
 		spawn.nav_path.pi = sp.pi
 
 		if sp.random_subpath then
@@ -3765,6 +4049,7 @@ local function y_spawner_spawn(store, this)
 
 		queue_insert(store, spawn)
 		table.insert(spawns, spawn)
+
 		local spawn_ts = store.tick_ts
 
 		while store.tick_ts - spawn_ts < sp.cycle_time do
@@ -3860,7 +4145,7 @@ end
 ---@param allow_barrack boolean 是否允许兵营范围加成
 local function insert_tower_range_buff(target, range_factor, allow_barrack)
 	if not target then
-		return 
+		return
 	end
 
 	if target.attacks and target.attacks.range then
@@ -3890,7 +4175,7 @@ local function scale_fps_based_keys(tbl, factor, visited)
 	visited = visited or {}
 
 	if visited[tbl] then
-		return 
+		return
 	end
 
 	visited[tbl] = true
@@ -3924,6 +4209,7 @@ local function change_fps(ts, entity, factor)
 
 			local new_fps = s._origin_fps * factor
 			local t = ts + s.time_offset
+
 			s.ts = t - (t - s.ts) * (s.fps or s._origin_fps) / new_fps
 			s.fps = new_fps
 		end
@@ -3938,16 +4224,18 @@ end
 ---@param cooldown_factor number 冷却系数
 local function insert_tower_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
+
 	change_fps(ts, target, 1 / (target.tower.cooldown_factor))
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
 			if s.cooldown_factor then
 				s.cooldown_factor = s.cooldown_factor * cooldown_factor
+
 				change_fps(ts, s, 1 / (s.cooldown_factor))
 			end
 		end
@@ -3956,11 +4244,12 @@ end
 
 local function insert_unit_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	if target.cooldown_factor then
 		target.cooldown_factor = target.cooldown_factor * cooldown_factor
+
 		change_fps(ts, target, 1 / (target.cooldown_factor))
 	end
 end
@@ -3971,7 +4260,7 @@ end
 ---@param allow_barrack boolean 是否允许兵营范围加成
 local function remove_tower_range_buff(target, range_factor, allow_barrack)
 	if not target then
-		return 
+		return
 	end
 
 	if target.attacks and target.attacks.range then
@@ -3996,16 +4285,18 @@ end
 ---@param cooldown_factor number 冷却系数
 local function remove_tower_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.cooldown_factor = target.tower.cooldown_factor / cooldown_factor
+
 	change_fps(ts, target, 1 / (target.tower.cooldown_factor))
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
 			if s.cooldown_factor then
 				s.cooldown_factor = s.cooldown_factor / cooldown_factor
+
 				change_fps(ts, s, 1 / (s.cooldown_factor))
 			end
 		end
@@ -4014,11 +4305,12 @@ end
 
 local function remove_unit_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
-		return 
+		return
 	end
 
 	if target.cooldown_factor then
 		target.cooldown_factor = target.cooldown_factor / cooldown_factor
+
 		change_fps(ts, target, 1 / (target.cooldown_factor))
 	end
 end
@@ -4028,7 +4320,7 @@ end
 ---@param damage_factor number 伤害加成值
 local function insert_tower_damage_factor_buff(target, damage_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.damage_factor = target.tower.damage_factor + damage_factor
@@ -4047,7 +4339,7 @@ end
 ---@param damage_factor number 伤害加成值
 local function remove_tower_damage_factor_buff(target, damage_factor)
 	if not target then
-		return 
+		return
 	end
 
 	target.tower.damage_factor = target.tower.damage_factor - damage_factor
@@ -4070,6 +4362,7 @@ local function y_controable_new_rally(store, this)
 
 	if r.new then
 		r.new = false
+
 		U.unblock_target(store, this)
 
 		if this.sound_events then
@@ -4078,12 +4371,17 @@ local function y_controable_new_rally(store, this)
 
 		local vis_bans = this.vis.bans
 		local prev_immune = this.health.immune_to
+
 		this.vis.bans = F_ALL
 		this.health.immune_to = r.immune_to
+
 		local out = y_hero_walk_waypoints(store, this)
+
 		U.animation_start(this, "idle", nil, store.tick_ts, true)
+
 		this.vis.bans = vis_bans
 		this.health.immune_to = prev_immune
+
 		return out
 	end
 end
@@ -4110,33 +4408,72 @@ local function update_on_damage(entity)
 	end
 end
 
----重置英雄的技能冷却时间
----@param this table 实体
----@param store game.store
+---获取实体所有可用攻击
+---@param e table 实体
+---@return table 所有攻击
+local function get_entity_all_attacks(e)
+	local all_attacks = {}
+	local all_attacks_names = {"attacks", "melee", "ranged", "timed_attacks", "timed_actions"}
+
+	for i = 1, #all_attacks_names do
+		local attack_name = all_attacks_names[i]
+		local as = e[attack_name]
+
+		if not as then
+			goto continue
+		end
+
+		local attacks_list
+
+		if as.list then
+			attacks_list = as.list
+		elseif as.attacks then
+			attacks_list = as.attacks
+		end
+
+		if not attacks_list then
+			goto continue
+		end
+
+		for i = 1, #attacks_list do
+			local a = attacks_list[i]
+
+			if not a.disabled and not a.changed then
+				table.insert(all_attacks, a)
+			end
+		end
+
+		::continue::
+	end
+
+	return all_attacks
+end
+
+---降低实体单个攻击冷却时间
+---@param a table 攻击
+---@param store table game.store
+---@param cooldown_factor? number 冷却降低倍率，默认为1
 ---@return nil
-local function hero_spawning_set_skill_ts(this, store)
-	local function reset_skill(v)
-		if not v.disabled and v.cooldown then
-			v.ts = store.tick_ts - v.cooldown
-		end
-	end
+local function reset_attack_ts(a, store, cooldown_factor)
+	cooldown_factor = cooldown_factor or 1
 
-	if this.melee then
-		for _, v in ipairs(this.melee.attacks) do
-			reset_skill(v)
-		end
+	if a.cooldown then
+		a.ts = store.tick_ts - a.cooldown * cooldown_factor
 	end
+end
 
-	if this.ranged then
-		for _, v in ipairs(this.ranged.attacks) do
-			reset_skill(v)
-		end
-	end
+---降低实体所有攻击冷却时间
+---@param e table 实体
+---@param store table game.store
+---@param cooldown_factor? number 冷却降低倍率，默认为1
+---@return nil
+local function reset_all_attacks_ts(e, store, cooldown_factor)
+	local attacks = get_entity_all_attacks(e)
 
-	if this.timed_attacks then
-		for _, v in ipairs(this.timed_attacks.list) do
-			reset_skill(v)
-		end
+	for i = 1, #attacks do
+		local a = attacks[i]
+
+		reset_attack_ts(a, store, cooldown_factor)
 	end
 end
 
@@ -4158,8 +4495,62 @@ local function towers_swaped(store, this, attacks)
 	end
 end
 
-local function is_wraith(template_name)
-	return GS.wraith[template_name]
+--- 清空一个表，并将表中全部实体移出游戏队列
+---@param store table
+---@param tbl table array
+local function queue_remove_clean_table(store, tbl)
+	local keys = {}
+
+	for k, v in pairs(tbl) do
+		table.insert(keys, k)
+	end
+
+	for _, k in pairs(keys) do
+		queue_remove(store, tbl[k])
+
+		tbl[k] = nil
+	end
+end
+
+local function enemy_scale_mul(store, e, factor, duration)
+	if not e.render.sprites[1].scale then
+		e.render.sprites[1].scale = {
+			x = 1,
+			y = 1
+		}
+	end
+	local stop_ts = store.tick_ts + duration
+	local initial_scale_x = e.render.sprites[1].scale.x
+	local initial_scale_y = e.render.sprites[1].scale.y
+	local target_scale_x = initial_scale_x * factor
+	local target_scale_y = initial_scale_y * factor
+
+	stun_inc(e)
+
+	while store.tick_ts < stop_ts do
+		local t = (store.tick_ts - (stop_ts - duration)) / duration
+		e.render.sprites[1].scale.x = initial_scale_x + (target_scale_x - initial_scale_x) * t
+		e.render.sprites[1].scale.y = initial_scale_y + (target_scale_y - initial_scale_y) * t
+		coroutine.yield()
+	end
+
+	stun_dec(e)
+
+	e.render.sprites[1].scale.x = target_scale_x
+	e.render.sprites[1].scale.y = target_scale_y
+
+	U.speed_mul(e, factor)
+	e.enemy.melee_slot.x = e.enemy.melee_slot.x * factor
+	e.enemy.melee_slot.y = e.enemy.melee_slot.y * factor
+	local u = e.unit
+	u.hit_offset.x = u.hit_offset.x * factor
+	u.hit_offset.y = u.hit_offset.y * factor
+	u.marker_offset.x = u.marker_offset.x * factor
+	u.marker_offset.y = u.marker_offset.y * factor
+	u.mod_offset.x = u.mod_offset.x * factor
+	u.mod_offset.y = u.mod_offset.y * factor
+	u.damage_factor = u.damage_factor * (factor * factor * factor)
+	e.health.damage_factor = e.health.damage_factor / (factor * factor * factor)
 end
 
 local SU = {
@@ -4264,14 +4655,18 @@ local SU = {
 	insert_tower_cooldown_buff = insert_tower_cooldown_buff,
 	remove_tower_range_buff = remove_tower_range_buff,
 	remove_tower_cooldown_buff = remove_tower_cooldown_buff,
+	change_fps = change_fps,
 	insert_tower_damage_factor_buff = insert_tower_damage_factor_buff,
 	remove_tower_damage_factor_buff = remove_tower_damage_factor_buff,
 	y_controable_new_rally = y_controable_new_rally,
 	update_on_damage = update_on_damage,
-	hero_spawning_set_skill_ts = hero_spawning_set_skill_ts,
+	get_entity_all_attacks = get_entity_all_attacks,
+	reset_all_attacks_ts = reset_all_attacks_ts,
 	towers_swaped = towers_swaped,
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
-	is_wraith = is_wraith
+	queue_remove_clean_table = queue_remove_clean_table,
+	enemy_scale_mul = enemy_scale_mul
 }
+
 return SU

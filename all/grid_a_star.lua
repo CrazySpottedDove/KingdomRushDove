@@ -180,13 +180,16 @@
 -- end
 -- return a
 local log = require("lib.klua.log"):new("grid_a_star")
+
 require("lib.klua.table")
+
 local a = {}
 
 -- 优化：使用曼哈顿距离 + 对角线修正，避免开方运算
 function a.heuristic_cost(n1, n2)
 	local dx = math.abs(n2.x - n1.x)
 	local dy = math.abs(n2.y - n1.y)
+
 	-- 曼哈顿距离 + 对角线修正 (√2 - 2 ≈ -0.586)
 	return dx + dy + (1.4142 - 2) * math.min(dx, dy)
 end
@@ -199,7 +202,9 @@ local function create_binary_heap()
 
 	function heap:push(node, cost)
 		self.size = self.size + 1
+
 		local pos = self.size
+
 		self[pos] = {
 			node = node,
 			cost = cost
@@ -224,9 +229,11 @@ local function create_binary_heap()
 		end
 
 		local result = self[1].node
+
 		self[1] = self[self.size]
 		self[self.size] = nil
 		self.size = self.size - 1
+
 		-- 下沉操作
 		local pos = 1
 
@@ -253,6 +260,7 @@ local function create_binary_heap()
 		for i = 1, self.size do
 			if self[i].node == node then
 				self[i].cost = new_cost
+
 				-- 重新调整堆结构
 				local pos = i
 
@@ -358,7 +366,9 @@ end
 -- 主要优化：完全重写的get_path函数
 function a.get_path(start_coords, goal_coords, grid, valid_cell_fn, debug_data, max_iterations)
 	log.debug("start")
+
 	max_iterations = max_iterations or 1000 -- 添加迭代限制
+
 	local nodes = {}
 	local start = a.get_node(nodes, start_coords.x, start_coords.y)
 	local goal = a.get_node(nodes, goal_coords.x, goal_coords.y)
@@ -369,11 +379,15 @@ function a.get_path(start_coords, goal_coords, grid, valid_cell_fn, debug_data, 
 	local cost_back = {} -- g值
 	local cost_forward = {} -- f值
 	local previous = {} -- 前驱节点
+
 	-- 初始化
 	cost_back[start] = 0
 	cost_forward[start] = a.heuristic_cost(start, goal)
+
 	open_heap:push(start, cost_forward[start])
+
 	open_set[node_key(start)] = true
+
 	local iterations = 0
 	local current
 
@@ -386,6 +400,7 @@ function a.get_path(start_coords, goal_coords, grid, valid_cell_fn, debug_data, 
 		end
 
 		local current_key = node_key(current)
+
 		open_set[current_key] = nil
 		closed[current_key] = true
 
@@ -412,6 +427,7 @@ function a.get_path(start_coords, goal_coords, grid, valid_cell_fn, debug_data, 
 
 					if not is_in_open then
 						open_heap:push(neighbor, cost_forward[neighbor])
+
 						open_set[neighbor_key] = true
 					else
 						-- 更新堆中的成本
@@ -440,6 +456,7 @@ function a.get_path(start_coords, goal_coords, grid, valid_cell_fn, debug_data, 
 	-- 检查是否达到迭代限制
 	if iterations >= max_iterations then
 		log.warning("A* reached iteration limit (%s), pathfinding incomplete", max_iterations)
+
 		return nil
 	end
 
@@ -451,6 +468,7 @@ function a.get_path(start_coords, goal_coords, grid, valid_cell_fn, debug_data, 
 
 		while current ~= start do
 			table.insert(result, 1, current)
+
 			current = previous[current]
 		end
 
@@ -471,6 +489,7 @@ function a.dump_costs(debug_data)
 		for j = 1, #d.grid[i] do
 			local n = a.get_node(d.nodes, i, j)
 			local cost = d.cost_back[n]
+
 			out = out .. (cost and string.format("%02i ", cost) or ".  ")
 		end
 

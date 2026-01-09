@@ -1,8 +1,10 @@
 -- chunkname: @./all/difficulty.lua
 local E = require("entity_db")
-local GS = require("game_settings")
+local GS = require("kr1.game_settings")
 local km = require("lib.klua.macros")
-require("constants")
+
+require("all.constants")
+
 local difficulty = {}
 
 function difficulty:set_level(level)
@@ -149,8 +151,11 @@ function difficulty:patch_templates()
 	end
 
 	local necromancer_aura = E:get_template("necromancer_aura")
+
 	necromancer_aura.min_health_for_knight = necromancer_aura.min_health_for_knight * GS.difficulty_enemy_hp_max_factor[self.level]
+
 	local tower_arcane_wizard = E:get_template("tower_arcane_wizard")
+
 	tower_arcane_wizard.powers.disintegrate.upper_damage[1] = tower_arcane_wizard.powers.disintegrate.upper_damage[1] * GS.difficulty_enemy_hp_max_factor[self.level]
 	tower_arcane_wizard.powers.disintegrate.upper_damage[2] = tower_arcane_wizard.powers.disintegrate.upper_damage[2] * GS.difficulty_enemy_hp_max_factor[self.level]
 	tower_arcane_wizard.powers.disintegrate.upper_damage[3] = tower_arcane_wizard.powers.disintegrate.upper_damage[3] * GS.difficulty_enemy_hp_max_factor[self.level]

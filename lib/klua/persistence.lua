@@ -43,11 +43,13 @@ function persistence.serialize(file, ...)
 		if count > 1 then
 			if not wrote_def then
 				file:write("local multiRefObjects = {\n")
+
 				wrote_def = true
 			end
 
 			objRefIdx = objRefIdx + 1
 			objRefNames[obj] = objRefIdx
+
 			file:write("{};")
 		end
 	end
@@ -87,9 +89,13 @@ end
 
 function persistence.serialize_to_string(...)
 	local sw = stringWriter.open()
+
 	persistence.serialize(sw, ...)
+
 	local str = tostring(sw)
+
 	sw:close()
+
 	return str
 end
 
@@ -138,6 +144,7 @@ writers = {
 			file:write("multiRefObjects[" .. refIdx .. "]")
 		else
 			file:write("{\n")
+
 			local keys = {}
 
 			for k, v in pairs(item) do
@@ -160,6 +167,7 @@ writers = {
 
 			for _, k in pairs(keys) do
 				local v = item[k]
+
 				writeIndent(file, level + 1)
 				file:write("[")
 				write(file, k, level + 1, objRefNames)
@@ -197,6 +205,7 @@ writers = {
 	end
 }
 stringWriter = {}
+
 local metat = {
 	__index = {}
 }
@@ -205,7 +214,9 @@ function stringWriter.open(...)
 	local sw = {
 		buffer = {}
 	}
+
 	setmetatable(sw, metat)
+
 	return sw
 end
 
@@ -255,6 +266,7 @@ function persistence.serialize_compact(file, ...)
 	if n == 1 then
 		file:write("return ")
 		write_compact(file, select(1, ...))
+
 		return
 	end
 
@@ -279,34 +291,38 @@ end
 
 function persistence.serialize_to_string_compact(...)
 	local sw = stringWriter.open()
+
 	persistence.serialize_compact(sw, ...)
+
 	local str = tostring(sw)
+
 	sw:close()
+
 	return str
 end
 
 local key_words = {
-    ["and"] = true,
-    ["break"] = true,
-    ["do"] = true,
-    ["else"] = true,
-    ["elseif"] = true,
-    ["end"] = true,
-    ["false"] = true,
-    ["for"] = true,
-    ["function"] = true,
-    ["if"] = true,
-    ["in"] = true,
-    ["local"] = true,
-    ["nil"] = true,
-    ["not"] = true,
-    ["or"] = true,
-    ["repeat"] = true,
-    ["return"] = true,
-    ["then"] = true,
-    ["true"] = true,
-    ["until"] = true,
-    ["while"] = true
+	["and"] = true,
+	["break"] = true,
+	["do"] = true,
+	["else"] = true,
+	["elseif"] = true,
+	["end"] = true,
+	["false"] = true,
+	["for"] = true,
+	["function"] = true,
+	["if"] = true,
+	["in"] = true,
+	["local"] = true,
+	["nil"] = true,
+	["not"] = true,
+	["or"] = true,
+	["repeat"] = true,
+	["return"] = true,
+	["then"] = true,
+	["true"] = true,
+	["until"] = true,
+	["while"] = true
 }
 
 write_compact = function(file, item)
@@ -337,6 +353,7 @@ write_compact = function(file, item)
 		else
 			-- 普通 table：{[k]=v;...}，不缩进不排序，分号做项分隔更紧凑
 			file:write("{")
+
 			local first = true
 
 			for k, v in pairs(item) do
@@ -349,8 +366,8 @@ write_compact = function(file, item)
 				-- 当无异义时，省略键的方括号
 				if type(k) == "string" and k:match("^[%a_][%w_]*$") and (not key_words[k]) then
 					file:write(k)
-                    file:write("=")
-                    write_compact(file, v)
+					file:write("=")
+					write_compact(file, v)
 				else
 					file:write("[")
 					write_compact(file, k)

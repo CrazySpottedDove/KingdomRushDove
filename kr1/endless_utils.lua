@@ -1,5 +1,7 @@
 local E = require("entity_db")
-require("constants")
+
+require("all.constants")
+
 local UP = require("upgrades")
 local U = require("utils")
 local scripts = require("scripts")
@@ -70,11 +72,13 @@ local function engineer_focus_bomb_update(this, store)
 	if b.particles_name then
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
+
 		queue_insert(store, ps)
 	end
 
 	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
 		coroutine.yield()
+
 		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
 		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
 
@@ -95,15 +99,20 @@ local function engineer_focus_bomb_update(this, store)
 		for i = 1, #enemies do
 			local enemy = enemies[i]
 			local d = E:create_entity("damage")
+
 			d.damage_type = b.damage_type
 			d.reduce_armor = b.reduce_armor
 			d.reduce_magic_armor = b.reduce_magic_armor
+
 			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+
 			d.value = dmax + (dmax - (dmax - dmin) * dist_factor) * (store.endless.upgrade_levels.engineer_focus * EL.friend_buff.engineer_focus)
 			d.value = b.damage_factor * d.value
 			d.source_id = this.id
 			d.target_id = enemy.id
+
 			queue_damage(store, d)
+
 			-- if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and
 			--     band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < this.up_shock_and_awe_chance then
 			--     local mod = E:create_entity("mod_shock_and_awe")
@@ -121,6 +130,7 @@ local function engineer_focus_bomb_update(this, store)
 			if mods then
 				for _, mod_name in pairs(mods) do
 					local mod = E:create_entity(mod_name)
+
 					mod.modifier.damage_factor = b.damage_factor
 					mod.modifier.target_id = enemy.id
 					mod.modifier.source_id = this.id
@@ -134,29 +144,39 @@ local function engineer_focus_bomb_update(this, store)
 	end
 
 	local p = SU.create_bullet_pop(store, this)
+
 	queue_insert(store, p)
+
 	local cell_type = GR:cell_type(b.to.x, b.to.y)
 
 	if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then
 		S:queue(this.sound_events.hit_water)
+
 		local water_fx = E:create_entity(b.hit_fx_water)
+
 		water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
 		water_fx.render.sprites[1].ts = store.tick_ts
 		water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
 		queue_insert(store, water_fx)
 	elseif b.hit_fx then
 		S:queue(this.sound_events.hit)
+
 		local sfx = E:create_entity(b.hit_fx)
+
 		sfx.pos = V.vclone(b.to)
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
 		queue_insert(store, sfx)
 	end
 
 	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
 		local decal = E:create_entity(b.hit_decal)
+
 		decal.pos = V.vclone(b.to)
 		decal.render.sprites[1].ts = store.tick_ts
+
 		queue_insert(store, decal)
 	end
 
@@ -231,6 +251,7 @@ function EU.init_endless(level_name, groups)
 		deepcopy(endless_history, endless_template)
 	else
 		endless = table.deepclone(endless_template)
+
 		local group = #groups > 1 and groups[#groups - 1] or groups[1]
 		local waves = group.waves
 		local total_spawns = 0
@@ -254,6 +275,7 @@ function EU.init_endless(level_name, groups)
 		endless.only_fly_paths = table.deepclone(endless.available_paths)
 		endless.only_water_paths = table.deepclone(endless.available_paths)
 		endless.special_paths = table.deepclone(endless.available_paths)
+
 		local fixed_special_paths = {}
 
 		for _, group in pairs(groups) do
@@ -327,8 +349,10 @@ end
 
 function EU.generate_group(endless)
 	local group = {}
+
 	group.interval = endless.interval
 	group.waves = {}
+
 	local i = 1
 
 	for _, path_id in pairs(endless.available_paths) do
@@ -350,6 +374,7 @@ function EU.generate_group(endless)
 
 		for j = 1, math.floor(20 / weight) do
 			table.insert(enemy_list, template_name)
+
 			remain_enemy_weight = remain_enemy_weight - weight
 		end
 	end
@@ -400,6 +425,7 @@ function EU.generate_group(endless)
 			end
 
 			local creep_by_weight, max_by_weight = generate_creep_by_weight(5)
+
 			wave.spawns[j] = {
 				interval = endless.avg_interval,
 				interval_next = endless.avg_interval_next,
@@ -472,6 +498,7 @@ local patch_upgrade_in_game_map = {}
 
 function patch_upgrade_map.archer_bleed(level, endless)
 	local mod = E:get_template("mod_blood_elves")
+
 	mod.damage_factor = 0.1 + friend_buff.archer_bleed * level
 end
 
@@ -484,6 +511,7 @@ function patch_upgrade_map.archer_insight(level, endless)
 		end
 
 		local mod = E:get_template("mod_endless_archer_insight")
+
 		mod.modifier.health_damage_factor_inc = level * friend_buff.archer_insight
 	end
 end
@@ -529,21 +557,29 @@ end
 
 function patch_upgrade_map.rain_count_inc(level, endless)
 	local controller = E:get_template("power_fireball_control")
+
 	controller.cataclysm_count = controller.cataclysm_count + level * friend_buff.rain_count_inc
 	controller.fireball_count = controller.fireball_count + level * friend_buff.rain_count_inc
 end
 
 function patch_upgrade_map.rain_damage_inc(level, endless)
 	local fireball = E:get_template("power_fireball")
+
 	fireball.bullet.damage_min = fireball.bullet.damage_min + level * friend_buff.rain_damage_inc
 	fireball.bullet.damage_max = fireball.bullet.damage_max + level * friend_buff.rain_damage_inc
+
 	local scorched_water = E:get_template("power_scorched_water")
+
 	scorched_water.aura.damage_min = scorched_water.aura.damage_min + level * friend_buff.rain_damage_inc * 0.1
 	scorched_water.aura.damage_max = scorched_water.aura.damage_max + level * friend_buff.rain_damage_inc * 0.1
+
 	local scorched_earth = E:get_template("power_scorched_earth")
+
 	scorched_earth.aura.damage_min = scorched_earth.aura.damage_min + level * friend_buff.rain_damage_inc * 0.1
 	scorched_earth.aura.damage_max = scorched_earth.aura.damage_max + level * friend_buff.rain_damage_inc * 0.1
+
 	local thunder = E:get_template("power_thunder_control")
+
 	thunder.thunders[1].damage_min = thunder.thunders[1].damage_min + level * friend_buff.rain_damage_inc * 0.5
 	thunder.thunders[1].damage_max = thunder.thunders[1].damage_max + level * friend_buff.rain_damage_inc * 0.5
 	thunder.thunders[2].damage_min = thunder.thunders[2].damage_min + level * friend_buff.rain_damage_inc * 0.5
@@ -557,27 +593,36 @@ end
 
 function patch_upgrade_map.rain_radius_mul(level, endless)
 	local fireball = E:get_template("power_fireball")
+
 	fireball.bullet.damage_radius = fireball.bullet.damage_radius * friend_buff.rain_radius_mul ^ level
 	fireball.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
+
 	local scorched_water = E:get_template("power_scorched_water")
+
 	scorched_water.aura.radius = scorched_water.aura.radius * friend_buff.rain_radius_mul ^ level
 	scorched_water.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
+
 	local scorched_earth = E:get_template("power_scorched_earth")
+
 	scorched_earth.aura.radius = scorched_earth.aura.radius * friend_buff.rain_radius_mul ^ level
 	scorched_earth.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
 end
 
 function patch_upgrade_map.rain_cooldown_dec(level, endless)
 	local controller = E:get_template("power_fireball_control")
+
 	controller.cooldown = controller.cooldown - level * friend_buff.rain_cooldown_dec
 end
 
 function patch_upgrade_map.rain_scorch_damage_true(level, endless)
 	local scorched_earth = E:get_template("power_scorched_earth")
+
 	scorched_earth.aura.damage_type = DAMAGE_TRUE
 	scorched_earth.aura.damage_min = scorched_earth.aura.damage_min + level * friend_buff.rain_scorch_damage_true
 	scorched_earth.aura.damage_max = scorched_earth.aura.damage_max + level * friend_buff.rain_scorch_damage_true
+
 	local scorched_water = E:get_template("power_scorched_water")
+
 	scorched_water.aura.damage_type = DAMAGE_TRUE
 	scorched_water.aura.damage_min = scorched_water.aura.damage_min + level * friend_buff.rain_scorch_damage_true
 	scorched_water.aura.damage_max = scorched_water.aura.damage_max + level * friend_buff.rain_scorch_damage_true
@@ -589,11 +634,14 @@ function patch_upgrade_map.rain_thunder(level, endless)
 	if not controller._endless_rain_thunder then
 		controller.main_script.insert = U.function_append(controller.main_script.insert, function(this, store)
 			local thunder = E:create_entity("power_thunder_control")
+
 			thunder.slow.disabled = false
 			thunder.rain.disabled = false
 			thunder.thunders[1].count = this.fireball_count
 			thunder.thunders[2].count = this.cataclysm_count
+
 			queue_insert(store, thunder)
+
 			return true
 		end)
 		controller._endless_rain_thunder = true
@@ -618,12 +666,14 @@ function patch_upgrade_map.barrack_unity(level, endless)
 	for _, name in pairs(UP:towers_with_barrack()) do
 		if name ~= "tower_pandas_lvl4" then
 			local t = E:get_template(name)
+
 			t.barrack.max_soldiers = t.barrack.max_soldiers + level * friend_buff.barrack_unity_count
 		end
 	end
 
 	for _, name in pairs(UP:barrack_soldiers()) do
 		local s = E:get_template(name)
+
 		s.health.dead_lifetime = s.health.dead_lifetime - friend_buff.barrack_unity_lifetime * level
 	end
 end
@@ -636,9 +686,13 @@ function patch_upgrade_map.barrack_synergy(level, endless)
 			if s.main_script then
 				s.main_script.insert = U.function_append(s.main_script.insert, function(this, store)
 					local a = E:create_entity("endless_barrack_synergy_aura")
+
 					a.aura.source_id = this.id
+
 					queue_insert(store, a)
+
 					this._barrack_synergy_aura = a
+
 					return true
 				end)
 				s.main_script.remove = U.function_append(s.main_script.remove, function(this, store)
@@ -655,16 +709,19 @@ function patch_upgrade_map.barrack_synergy(level, endless)
 	end
 
 	local m = E:get_template("mod_endless_barrack_synergy")
+
 	m.extra_damage = level * friend_buff.barrack_synergy
 end
 
 function patch_upgrade_map.barrack_rally(level, endless)
 	for _, name in pairs(UP:towers_with_barrack()) do
 		local t = E:get_template(name)
+
 		t.barrack.rally_range = math.huge
 	end
 
 	local pixie_tower = E:get_template("tower_pixie")
+
 	pixie_tower.attacks.range = math.huge
 end
 
@@ -697,12 +754,15 @@ function patch_upgrade_map.engineer_focus(level, endless)
 			if name == "rock_druid" then
 				b.main_script.update = function(this, store)
 					local b = this.bullet
+
 					this.render.sprites[1].z = Z_OBJECTS
+
 					S:queue(this.sound_events.load, {
 						delay = fts(4)
 					})
 					U.y_animation_play(this, "load", nil, store.tick_ts)
 					U.y_animation_play(this, "travel", nil, store.tick_ts)
+
 					this.tween.disabled = false
 
 					while not b.target_id do
@@ -710,10 +770,13 @@ function patch_upgrade_map.engineer_focus(level, endless)
 					end
 
 					local fx = E:create_entity("fx_rock_druid_launch")
+
 					fx.pos.x, fx.pos.y = b.from.x, b.from.y
 					fx.render.sprites[1].ts = store.tick_ts
 					fx.render.sprites[1].flip_x = b.to.x < fx.pos.x
+
 					queue_insert(store, fx)
+
 					this.render.sprites[1].sort_y_offset = nil
 					this.render.sprites[1].z = Z_BULLETS
 					this.tween.disabled = true
@@ -721,6 +784,7 @@ function patch_upgrade_map.engineer_focus(level, endless)
 					b.ts = store.tick_ts
 					b.last_pos = V.vclone(b.from)
 					b.rotation_speed = b.rotation_speed * (b.to.x > b.from.x and -1 or 1)
+
 					engineer_focus_bomb_update(this, store)
 				end
 			else
@@ -732,6 +796,7 @@ function patch_upgrade_map.engineer_focus(level, endless)
 	end
 
 	local tower = E:get_template("tower_tesla")
+
 	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
 	tower = E:get_template("tower_dwaarp")
 	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
@@ -739,6 +804,7 @@ function patch_upgrade_map.engineer_focus(level, endless)
 	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
 	tower = E:get_template("tower_flamespitter_lvl4")
 	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
+
 	local missile = E:get_template("missile_bfg")
 
 	if not missile.bullet._engineer_focus_damage_min then
@@ -761,10 +827,13 @@ end
 
 local function endless_engineer_aftermath_ray_remove(this, store)
 	local after_math = E:create_entity("aura_endless_engineer_aftermath_ray")
+
 	after_math.pos.x, after_math.pos.y = this.bullet.to.x, this.bullet.to.y
 	after_math.aura.source_id = this.id
 	after_math.aura.level = store.endless.upgrade_levels.engineer_aftermath
+
 	queue_insert(store, after_math)
+
 	return true
 end
 
@@ -774,6 +843,7 @@ function patch_upgrade_map.engineer_aftermath(level, endless)
 
 		if not b._endless_engineer_aftermath then
 			U.append_mod(b.bullet, "mod_endless_engineer_aftermath")
+
 			b._endless_engineer_aftermath = true
 		end
 	end
@@ -782,11 +852,14 @@ function patch_upgrade_map.engineer_aftermath(level, endless)
 
 	if not dwarrp_attack._endless_engineer_aftermath then
 		U.append_mod(dwarrp_attack, "mod_endless_engineer_aftermath")
+
 		dwarrp_attack._endless_engineer_aftermath = true
 	end
 
 	local mod = E:get_template("mod_endless_engineer_aftermath")
+
 	mod.value = level * friend_buff.engineer_aftermath
+
 	local ray = E:get_template("ray_tesla")
 
 	if not ray._endless_engineer_aftermath then
@@ -821,24 +894,41 @@ function patch_upgrade_map.engineer_seek(level, endless)
 	end
 
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("tower_engineer_2")
+
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("tower_engineer_3")
+
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("tower_bfg")
+
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("soldier_mecha")
+
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("tower_druid")
+
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("tower_entwood")
+
 	clear_flying_bans(t.attacks.list[1])
 	clear_flying_bans(t.attacks.list[2])
+
 	t = E:get_template("tower_tricannon_lvl4")
+
 	clear_flying_bans(t.attacks.list[1])
 	clear_flying_bans(t.attacks.list[2])
+
 	t = E:get_template("soldier_mecha")
+
 	clear_flying_bans(t.attacks.list[1])
+
 	t = E:get_template("tower_tesla")
 	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
 	t = E:get_template("tower_frankenstein")
@@ -851,6 +941,7 @@ end
 
 local function fireball_quick_up(this, store)
 	store.game_gui.power_1:wait_time_dec(fts(friend_buff.engineer_fireball * store.endless.upgrade_levels.engineer_fireball))
+
 	return true
 end
 
@@ -882,6 +973,7 @@ function patch_upgrade_map.engineer_fireball(level, endless)
 
 	if not flame._endless_engineer_fireball then
 		E:add_comps(flame, "main_script")
+
 		flame._endless_engineer_fireball = true
 		flame.main_script.remove = U.function_append(flame.main_script.remove, fireball_quick_up)
 	end
@@ -904,7 +996,9 @@ function patch_upgrade_map.mage_thunder(level, endless)
 
 					if math.random() < store.endless.upgrade_levels.mage_thunder * friend_buff.mage_thunder_normal then
 						local thunder = E:create_entity("endless_mage_thunder")
+
 						thunder.pos = V.vclone(target.pos)
+
 						queue_insert(store, thunder)
 					end
 
@@ -920,7 +1014,9 @@ function patch_upgrade_map.mage_thunder(level, endless)
 
 					if math.random() < store.endless.upgrade_levels.mage_thunder * friend_buff.mage_thunder_small then
 						local thunder = E:create_entity("endless_mage_thunder")
+
 						thunder.pos = V.vclone(target.pos)
+
 						queue_insert(store, thunder)
 					end
 
@@ -943,7 +1039,9 @@ function patch_upgrade_map.mage_thunder(level, endless)
 
 			if math.random() < store.endless.upgrade_levels.mage_thunder * friend_buff.mage_thunder_normal then
 				local thunder = E:create_entity("endless_mage_thunder")
+
 				thunder.pos = V.vclone(target.pos)
+
 				queue_insert(store, thunder)
 			end
 
@@ -998,6 +1096,7 @@ function patch_upgrade_map.mage_chain(level, endless)
 						for i = 1, #enemies do
 							local enemy = enemies[i]
 							local bolt = E:create_entity(this.template_name)
+
 							bolt.bullet.target_id = enemy.id
 							bolt.bullet.from = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 							bolt.pos = V.vclone(bolt.bullet.from)
@@ -1037,6 +1136,7 @@ end
 
 function patch_upgrade_map.mage_curse(level, endless)
 	local curse = E:get_template("mod_slow_curse")
+
 	curse.slow.factor = friend_buff.mage_curse_factor
 	curse.slow.duration = friend_buff.mage_curse_duration
 end
@@ -1268,8 +1368,11 @@ function patch_upgrade_in_game_map.barrack_synergy(level, store, endless)
 	for _, s in pairs(store.soldiers) do
 		if not s._barrack_synergy_aura then
 			local a = E:create_entity("endless_barrack_synergy_aura")
+
 			a.aura.source_id = s.id
+
 			queue_insert(store, a)
+
 			s._barrack_synergy_aura = a
 
 			if s.main_script then

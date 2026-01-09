@@ -1,1 +1,1 @@
-return {version=3,partScaleCompensation=1,fps=30,parts={{'stage33_water_holder_animations_parche_asst_wukong_waterdragon_parche_4',-14.15,-5.85},},attach_points={},animations={{name='stage_33',frames={{{1,1,1,0,-0.45,1,1,0,0,0}},}},},}
+return {version=3,partScaleCompensation=1,fps=30,parts={{'stage33_water_holder_animations_parche_asst_wukong_waterdragon_parche_4',-14.15,-5.85}},attach_points={},animations={{name='stage_33',frames={{{1,1,1,0,-0.45,1,1,0,0,0}}}}}}

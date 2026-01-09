@@ -1,11 +1,14 @@
 local i18n = require("i18n")
-require("constants")
+
+require("all.constants")
+
 local anchor_x = 0
 local anchor_y = 0
 local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
+
 require("templates")
 
 local function adx(v)
@@ -24,8 +27,12 @@ local function v(x, y)
 end
 
 require("game_templates_utils")
+
+--#region tower_ranger
 tt = RT("tower_ranger", "tower_archer_1")
+
 AC(tt, "attacks", "powers")
+
 image_y = 90
 tt.tower.type = "ranger"
 tt.tower.level = 1
@@ -77,6 +84,8 @@ tt.attacks.list[1].shoot_time = fts(4)
 tt.attacks.list[1].shooters_delay = 0.1
 tt.attacks.list[1].bullet_start_offset = {vec_2(8, 4), vec_2(4, -5)}
 tt.sound_events.insert = "ArcherRangerTaunt"
+--#endregion
+--#region aura_ranger_thorn
 tt = RT("aura_ranger_thorn", "aura")
 tt.aura.mod = "mod_thorn"
 tt.aura.duration = -1
@@ -93,10 +102,14 @@ tt.aura.owner_sid = 5
 tt.aura.hit_time = fts(17)
 tt.aura.hit_sound = "ThornSound"
 tt.main_script.update = scripts.aura_ranger_thorn.update
+--#endregion
+--#region arrow_ranger
 tt = RT("arrow_ranger", "arrow")
 tt.bullet.damage_min = 13
 tt.bullet.damage_max = 20
 tt.bullet.flight_time = fts(15.2)
+--#endregion
+--#region mod_ranger_poison
 tt = RT("mod_ranger_poison", "mod_poison")
 tt.modifier.duration = 3
 tt.dps.damage_max = 0
@@ -105,11 +118,17 @@ tt.dps.damage_inc = 5
 tt.dps.damage_every = 1
 tt.dps.kill = true
 tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
+--#endregion
+--#region mod_ranger_slow
 tt = RT("mod_ranger_slow", "mod_slow")
 tt.modifier.duration = 3
 tt.slow.factor = 0.9
+--#endregion
+--#region mod_thorn
 tt = RT("mod_thorn", "modifier")
+
 AC(tt, "render")
+
 tt.animation_start = "thorn"
 tt.animation_end = "thornFree"
 tt.modifier.duration = 0
@@ -132,8 +151,11 @@ tt.main_script.dequeue = scripts.mod_thorn.dequeue
 tt.main_script.insert = scripts.mod_thorn.insert
 tt.main_script.update = scripts.mod_thorn.update
 tt.main_script.remove = scripts.mod_thorn.remove
+
 local tower_crossbow = RT("tower_crossbow", "tower_archer_1")
+
 AC(tower_crossbow, "attacks", "powers")
+
 tower_crossbow.info.portrait = "kr2_info_portraits_towers_0009"
 tower_crossbow.info.enc_icon = 17
 tower_crossbow.tower.type = "crossbow"
@@ -197,12 +219,16 @@ tower_crossbow.render.sprites[5].offset = vec_2(2, 53)
 tower_crossbow.render.sprites[5].hidden = true
 tower_crossbow.render.sprites[5].draw_order = 6
 tower_crossbow.sound_events.insert = "CrossbowTauntReady"
+
 local arrow_crossbow = RT("arrow_crossbow", "arrow")
+
 arrow_crossbow.bullet.flight_time = fts(15)
 arrow_crossbow.bullet.damage_min = 15
 arrow_crossbow.bullet.damage_max = 23
 arrow_crossbow.bullet.pop = {"pop_shunt_violet"}
+
 local multishot_crossbow = RT("multishot_crossbow", "shotgun")
+
 multishot_crossbow.bullet.damage_type = DAMAGE_SHOT
 multishot_crossbow.bullet.min_speed = 20 * FPS
 multishot_crossbow.bullet.max_speed = 20 * FPS
@@ -215,8 +241,11 @@ multishot_crossbow.bullet.miss_fx_water = "fx_splash_small"
 multishot_crossbow.render.sprites[1].name = "proy_crossbow_special"
 multishot_crossbow.render.sprites[1].animated = false
 multishot_crossbow.sound_events.insert = "ArrowSound"
+
 local mod_crossbow_eagle = RT("mod_crossbow_eagle", "modifier")
+
 AC(mod_crossbow_eagle, "render", "tween")
+
 mod_crossbow_eagle.range_factor = 1.03
 mod_crossbow_eagle.range_factor_inc = 0.03
 mod_crossbow_eagle.cooldown_factor = 0.965
@@ -242,6 +271,7 @@ for i, p in ipairs({vec_2(22, 45), vec_2(40, 35), vec_2(58, 30), vec_2(77, 35), 
 end
 
 local decal_crossbow_eagle_preview = RT("decal_crossbow_eagle_preview", "decal_tween")
+
 decal_crossbow_eagle_preview.render.sprites[1].name = "CrossbowHunterDecalDotted"
 decal_crossbow_eagle_preview.render.sprites[1].animated = false
 decal_crossbow_eagle_preview.render.sprites[1].anchor = vec_2(0.5, 0.32)
@@ -250,8 +280,11 @@ decal_crossbow_eagle_preview.tween.remove = false
 decal_crossbow_eagle_preview.tween.props[1].name = "scale"
 decal_crossbow_eagle_preview.tween.props[1].loop = true
 decal_crossbow_eagle_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)}, {0.5, vec_2(1, 1)}}
+
 local tower_totem = RT("tower_totem", "tower_archer_1")
+
 AC(tower_totem, "powers")
+
 tower_totem.info.portrait = "kr2_info_portraits_towers_0010"
 tower_totem.info.enc_icon = 18
 tower_totem.tower.type = "totem"
@@ -306,7 +339,9 @@ tower_totem.render.sprites[8].offset = vec_2(0, 41)
 tower_totem.render.sprites[8].hidden = true
 tower_totem.render.sprites[8].loop = false
 tower_totem.sound_events.insert = "TotemTauntReady"
+
 local axe_totem = RT("axe_totem", "arrow")
+
 axe_totem.render.sprites[1].name = "TotemAxe_0001"
 axe_totem.render.sprites[1].animated = false
 axe_totem.bullet.rotation_speed = 30 * FPS * math.pi / 180
@@ -319,8 +354,11 @@ axe_totem.bullet.pop = {"pop_thunk"}
 axe_totem.bullet.pop_chance = 1
 axe_totem.bullet.pop_conds = DR_KILL
 axe_totem.sound_events.insert = "AxeSound"
+
 local mod_silence_totem = RT("mod_silence_totem", "modifier")
+
 AC(mod_silence_totem, "render")
+
 mod_silence_totem.modifier.duration = 3
 mod_silence_totem.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_shaman_rage"}
 mod_silence_totem.modifier.remove_banned = true
@@ -332,7 +370,9 @@ mod_silence_totem.render.sprites[1].size_names = {"small", "big", "big"}
 mod_silence_totem.render.sprites[1].name = "small"
 mod_silence_totem.render.sprites[1].loop = true
 mod_silence_totem.render.sprites[1].draw_order = 2
+
 local mod_weakness_totem = RT("mod_weakness_totem", "modifier")
+
 -- AC(mod_weakness_totem, "render")
 mod_weakness_totem.inflicted_damage_factor = 0.5
 mod_weakness_totem.received_damage_factor = 1.4
@@ -342,13 +382,16 @@ mod_weakness_totem.modifier.use_mod_offset = false
 mod_weakness_totem.main_script.insert = scripts.mod_damage_factors.insert
 mod_weakness_totem.main_script.remove = scripts.mod_damage_factors.remove
 mod_weakness_totem.main_script.update = scripts.mod_track_target.update
+
 -- mod_weakness_totem.render.sprites[1].prefix = "weakness"
 -- mod_weakness_totem.render.sprites[1].size_names = {"small", "big", "big"}
 -- mod_weakness_totem.render.sprites[1].name = "small"
 -- mod_weakness_totem.render.sprites[1].loop = true
 -- mod_weakness_totem.render.sprites[1].z = Z_DECALS
 local totem_silence = RT("totem_silence", "aura")
+
 AC(totem_silence, "render", "tween")
+
 totem_silence.aura.mod = "mod_silence_totem"
 totem_silence.aura.cycle_time = 0.3
 totem_silence.aura.duration = 2
@@ -379,7 +422,9 @@ totem_silence.tween.props[1].loop = true
 totem_silence.tween.props[2] = CC("tween_prop")
 totem_silence.tween.props[2].keys = {{0, 50}, {fts(10), 255}, {fts(20), 255}, {fts(30), 0}}
 totem_silence.tween.props[2].loop = true
+
 local totem_weakness = RT("totem_weakness", "totem_silence")
+
 totem_weakness.aura.mods = {"mod_weakness_totem", "mod_totem_fire"}
 totem_weakness.aura.duration = 0
 totem_weakness.aura.duration_inc = 3
@@ -389,6 +434,8 @@ totem_weakness.render.sprites[2].name = "TotemTower_GroundEffect-Red_0001"
 totem_weakness.render.sprites[3].prefix = "totem_red"
 totem_weakness.render.sprites[3].anchor = vec_2(0.45, 0.17)
 totem_weakness.sound_events.insert = "TotemWeakness"
+--#endregion
+--#region mod_totem_fire
 tt = RT("mod_totem_fire", "mod_lava")
 tt.modifier.duration = 3
 tt.dps.damage_min = 1
@@ -399,8 +446,12 @@ tt.dps.damage_every = 0.5
 tt.render.sprites[1].color = {255, 100, 100}
 tt.render.sprites[1].alpha = 150
 -- 火枪
+--#endregion
+--#region tower_musketeer
 tt = RT("tower_musketeer", "tower_archer_1")
+
 AC(tt, "attacks", "powers")
+
 image_y = 90
 tt.tower.type = "musketeer"
 tt.tower.level = 1
@@ -479,6 +530,8 @@ tt.attacks.list[4].node_prediction = fts(6)
 tt.attacks.list[4].min_spread = 12.5
 tt.attacks.list[4].max_spread = 32.5
 tt.attacks.list[4].shoot_fx = "fx_rifle_smoke"
+--#endregion
+--#region ps_shotgun_musketeer
 tt = RT("ps_shotgun_musketeer", "particle_system")
 tt.particle_system.animated = true
 tt.particle_system.emission_rate = 20
@@ -486,6 +539,8 @@ tt.particle_system.loop = false
 tt.particle_system.name = "ps_shotgun_musketeer"
 tt.particle_system.particle_lifetime = {fts(13), fts(13)}
 tt.particle_system.track_rotation = true
+--#endregion
+--#region shotgun_musketeer
 tt = RT("shotgun_musketeer", "shotgun")
 tt.bullet.damage_max = 65
 tt.bullet.damage_min = 35
@@ -496,14 +551,20 @@ tt.bullet.start_fx = "fx_rifle_smoke"
 tt.bullet.min_speed = 20 * FPS
 tt.bullet.max_speed = 20 * FPS
 tt.sound_events.insert = "ShotgunSound"
+--#endregion
+--#region shotgun_musketeer_sniper
 tt = RT("shotgun_musketeer_sniper", "shotgun_musketeer")
 tt.bullet.particles_name = "ps_shotgun_musketeer"
 tt.sound_events.insert = "SniperSound"
 tt.bullet.damage_type = bor(DAMAGE_SHOT, DAMAGE_FX_EXPLODE, DAMAGE_NO_DODGE)
 tt.bullet.pop = nil
+--#endregion
+--#region shotgun_musketeer_sniper_instakill
 tt = RT("shotgun_musketeer_sniper_instakill", "shotgun_musketeer_sniper")
 tt.bullet.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_NO_DODGE)
 tt.bullet.pop = {"pop_headshot"}
+--#endregion
+--#region bomb_musketeer
 tt = RT("bomb_musketeer", "bomb")
 tt.bullet.damage_max = 0
 tt.bullet.damage_max_inc = 40
@@ -518,13 +579,19 @@ tt.render.sprites[1].name = "bombs_0007"
 tt.sound_events.insert = "ShrapnelSound"
 tt.sound_events.hit = nil
 tt.sound_events.hit_water = nil
+--#endregion
+--#region fx_explosion_shrapnel
 tt = RT("fx_explosion_shrapnel", "fx")
 tt.render.sprites[1].anchor.y = 0.2
 tt.render.sprites[1].sort_y_offset = -2
 tt.render.sprites[1].prefix = "explosion"
 tt.render.sprites[1].name = "shrapnel"
+--#endregion
+--#region tower_archer_dwarf
 tt = RT("tower_archer_dwarf", "tower_archer_1")
+
 AC(tt, "powers")
+
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "dwarf_shotgun"
@@ -578,6 +645,8 @@ tt.render.sprites[5].offset = vec_2(0, 31)
 tt.sound_events.insert = "DwarfArcherTaunt2"
 tt.tower.price = 230
 tt.tower.type = "archer_dwarf"
+--#endregion
+--#region dwarf_shotgun
 tt = RT("dwarf_shotgun", "shotgun")
 tt.bullet.level = 0
 tt.bullet.damage_min = 40
@@ -590,6 +659,8 @@ tt.bullet.miss_fx = "fx_smoke_bullet"
 tt.bullet.start_fx = "fx_rifle_smoke"
 tt.bullet.damage_type = DAMAGE_SHOT
 tt.sound_events.insert = "ShotgunSound"
+--#endregion
+--#region dwarf_barrel
 tt = RT("dwarf_barrel", "bomb")
 tt.bullet.damage_max = 45
 tt.bullet.damage_max_inc = 65
@@ -602,8 +673,12 @@ tt.bullet.g = -1 / (fts(1) * fts(1))
 tt.bullet.level = 0
 tt.render.sprites[1].name = "DwarfShooter_Barril"
 tt.sound_events.insert = "AxeSound"
+--#endregion
+--#region tower_pirate_watchtower
 tt = RT("tower_pirate_watchtower", "tower_archer_1")
+
 AC(tt, "powers")
+
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "pirate_watchtower_shotgun"
@@ -648,6 +723,8 @@ tt.render.sprites[4].offset = vec_2(0, 50)
 tt.sound_events.insert = "PirateTowerTaunt2"
 tt.tower.price = 170
 tt.tower.type = "pirate_watchtower"
+--#endregion
+--#region pirate_watchtower_shotgun
 tt = RT("pirate_watchtower_shotgun", "shotgun")
 tt.bullet.level = 0
 tt.bullet.damage_min = 45
@@ -661,8 +738,12 @@ tt.bullet.miss_fx = "fx_smoke_bullet"
 tt.bullet.miss_fx_water = "fx_splash_small"
 tt.bullet.start_fx = "fx_rifle_smoke"
 tt.sound_events.insert = "ShotgunSound"
+--#endregion
+--#region pirate_watchtower_parrot
 tt = RT("pirate_watchtower_parrot", "decal_scripted")
+
 AC(tt, "force_motion", "custom_attack")
+
 anchor_y = 0.5
 image_y = 30
 tt.flight_height = 60
@@ -692,6 +773,8 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = vec_2(0, 0)
 tt.owner = nil
+--#endregion
+--#region pirate_watchtower_bomb
 tt = RT("pirate_watchtower_bomb", "bomb")
 tt.bullet.flight_time = fts(10)
 tt.bullet.rotation_speed = 0
@@ -701,10 +784,16 @@ tt.bullet.hide_radius = nil
 tt.bullet.mod = "mod_pirate_watchtower_bomb"
 tt.render.sprites[1].name = "pirateTower_bomb"
 tt.sound_events.insert = nil
+--#endregion
+--#region mod_pirate_watchtower_bomb
 tt = RT("mod_pirate_watchtower_bomb", "mod_stun")
 tt.modifier.duration = 0.3
+--#endregion
+--#region tower_arcane
 tt = RT("tower_arcane", "tower")
+
 AC(tt, "attacks", "powers")
+
 image_y = 90
 tt.tower.type = "arcane"
 tt.tower.level = 1
@@ -774,6 +863,8 @@ tt.attacks.list[3].shoot_time = fts(13)
 tt.attacks.list[3].vis_bans = bor(F_BOSS)
 tt.attacks.list[3].vis_flags = bor(F_STUN)
 tt.sound_events.insert = "ElvesArcherArcaneTaunt"
+--#endregion
+--#region arrow_arcane
 tt = RT("arrow_arcane", "arrow_1")
 tt.bullet.damage_max = 18
 tt.bullet.damage_min = 11
@@ -785,6 +876,8 @@ tt.bullet.pop = {"pop_arcane"}
 tt.render.sprites[1].name = "archer_arcane_proy2_0001-f"
 tt.bullet.flight_time_min = fts(10)
 tt.bullet.flight_time_factor = fts(5) * 1.8
+--#endregion
+--#region arrow_arcane_burst
 tt = RT("arrow_arcane_burst", "arrow_arcane")
 tt.bullet.flight_time_min = fts(14)
 tt.bullet.miss_decal = "archer_arcane_proy_decal-f"
@@ -797,8 +890,12 @@ tt.bullet.payload_props = {
 tt.sleep_chance = 0
 tt.render.sprites[1].name = "archer_arcane_proy_0001-f"
 tt.sound_events.insert = "TowerArcanePreloadAndTravel"
+--#endregion
+--#region aura_arcane_burst
 tt = RT("aura_arcane_burst", "aura")
+
 AC(tt, "render")
+
 tt.aura.damage_inc = 80
 tt.aura.damage_type = DAMAGE_MAGICAL_EXPLOSION
 tt.aura.radius = 57.5
@@ -808,6 +905,8 @@ tt.render.sprites[1].name = "arcane_burst_explosion"
 tt.render.sprites[1].sort_y_offset = -7
 tt.render.sprites[1].z = Z_EFFECTS
 tt.sound_events.insert = "TowerArcaneExplotion"
+--#endregion
+--#region arrow_arcane_slumber
 tt = RT("arrow_arcane_slumber", "arrow_arcane")
 tt.bullet.damage_max = 36
 tt.bullet.damage_min = 22
@@ -818,12 +917,18 @@ tt.bullet.mod = {"mod_arrow_arcane_slumber"}
 tt.bullet.particles_name = "ps_arrow_arcane_special"
 tt.render.sprites[1].name = "archer_arcane_proy_0001-f"
 tt.sound_events.insert = "TowerArcanePreloadAndTravel"
+--#endregion
+--#region mod_arrow_arcane
 tt = RT("mod_arrow_arcane", "mod_damage")
 tt.damage_min = 0.035
 tt.damage_max = 0.035
 tt.damage_type = DAMAGE_MAGICAL_ARMOR
+--#endregion
+--#region mod_arrow_arcane_slumber
 tt = RT("mod_arrow_arcane_slumber", "modifier")
+
 AC(tt, "render")
+
 tt.main_script.insert = scripts.mod_arrow_arcane_slumber.insert
 tt.main_script.update = scripts.mod_stun.update
 tt.main_script.remove = scripts.mod_stun.remove
@@ -834,8 +939,12 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].prefix = "arcane_slumber_z"
 tt.render.sprites[2].loop = true
+--#endregion
+--#region tower_silver
 tt = RT("tower_silver", "tower")
+
 AC(tt, "attacks", "powers")
+
 image_y = 90
 tt.info.enc_icon = 18
 tt.tower.type = "silver"
@@ -911,6 +1020,8 @@ tt.render.sprites[3].angles.sentence = {"instakillUp", "instakillDown"}
 tt.render.sprites[3].offset = vec_2(0, 62)
 tt.main_script.update = scripts.tower_silver.update
 tt.sound_events.insert = "ElvesArcherGoldenBowTaunt"
+--#endregion
+--#region arrow_silver
 tt = RT("arrow_silver", "arrow_1")
 tt.bullet.flight_time_min = fts(8.1)
 tt.bullet.flight_time_factor = fts(0.0135)
@@ -923,10 +1034,14 @@ tt.render.sprites[1].name = "archer_silver_proys_0001-f"
 tt.sound_events.insert = "TowerGoldenBowArrowShot"
 tt.main_script.update = scripts.arrow_missile.update
 tt.bullet.particles_name = "ps_arrow_silver"
+--#endregion
+--#region arrow_silver_long
 tt = RT("arrow_silver_long", "arrow_silver")
 tt.bullet.flight_time_factor = fts(0.0264)
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 45
+--#endregion
+--#region arrow_silver_sentence
 tt = RT("arrow_silver_sentence", "arrow_silver")
 tt.render.sprites[1].name = "archer_silver_instaKill_bullet"
 tt.bullet.g = 0
@@ -939,7 +1054,11 @@ tt.bullet.damage_min = 45
 tt.bullet.pop = {"pop_headshot"}
 tt.bullet.pop_conds = DR_KILL
 tt.main_script.update = scripts.arrow.update
+--#endregion
+--#region arrow_silver_sentence_long
 tt = RT("arrow_silver_sentence_long", "arrow_silver_sentence")
+--#endregion
+--#region arrow_silver_mark
 tt = RT("arrow_silver_mark", "arrow_silver")
 tt.bullet.hit_fx = "fx_arrow_silver_mark_hit"
 tt.bullet.mod = "mod_arrow_silver_mark"
@@ -947,12 +1066,18 @@ tt.bullet.particles_name = "ps_arrow_silver_mark"
 tt.bullet.miss_decal = "archer_silver_proys_0004-f"
 tt.render.sprites[1].name = "archer_silver_proys_0003-f"
 tt.sound_events.insert = nil
+--#endregion
+--#region arrow_silver_mark_long
 tt = RT("arrow_silver_mark_long", "arrow_silver_mark")
 tt.bullet.flight_time_factor = fts(0.033)
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 45
+--#endregion
+--#region ps_arrow_silver
 tt = RT("ps_arrow_silver")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
 tt.particle_system.loop = false
 tt.particle_system.cycle_names = true
@@ -963,8 +1088,12 @@ tt.particle_system.scales_x = {1, 0.25}
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.emission_rate = 60
 tt.particle_system.color = {255, 100, 100}
+--#endregion
+--#region ps_arrow_silver_mark
 tt = RT("ps_arrow_silver_mark")
+
 AC(tt, "pos", "particle_system")
+
 tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
 tt.particle_system.loop = false
 tt.particle_system.cycle_names = true
@@ -973,8 +1102,12 @@ tt.particle_system.particle_lifetime = {fts(10), fts(10)}
 tt.particle_system.scales_y = {0.85, 0.85}
 tt.particle_system.scales_x = {0.85, 0.85}
 tt.particle_system.emission_rate = 30
+--#endregion
+--#region mod_arrow_silver_mark
 tt = RT("mod_arrow_silver_mark", "modifier")
+
 AC(tt, "tween", "render", "sound_events", "count_group")
+
 tt.count_group.name = "mod_arrow_silver_mark"
 tt.count_group.type = COUNT_GROUP_CONCURRENT
 tt.received_damage_factor = 2
@@ -1005,14 +1138,20 @@ tt.tween.props[3].keys = {{0, 255}, {0.25, 0}}
 tt.tween.props[4] = table.deepclone(tt.tween.props[3])
 tt.tween.props[4].sprite_id = 1
 tt.sound_events.insert = "TowerGoldenBowFlareHit"
+
 --         五代
 --     --
 local balance = require("kr1.data.balance")
 local b
+
 -- 暮光长弓_START
 b = balance.towers.dark_elf
+--#endregion
+--#region tower_dark_elf_lvl4
 tt = RT("tower_dark_elf_lvl4", "tower")
+
 AC(tt, "powers", "barrack", "attacks")
+
 tt.tower.level = 1
 tt.tower.type = "dark_elf"
 tt.tower.price = b.price[4]
@@ -1098,8 +1237,12 @@ tt.controller_soldiers_template = "controller_tower_dark_elf_soldiers"
 tt.sound_events.change_rally_point = "TowerDarkElfUnitTaunt"
 tt.sound_events.insert = "TowerDarkElfTaunt"
 tt.ui.click_rect = r(-38, -10, 70, 60)
+--#endregion
+--#region soldier_tower_dark_elf
 tt = RT("soldier_tower_dark_elf", "soldier_militia")
+
 AC(tt, "nav_grid", "dodge")
+
 tt.is_kr5 = true
 tt.info.portrait = "kr5_info_portraits_soldiers_0017"
 tt.info.random_name_count = 9
@@ -1136,6 +1279,8 @@ tt.dodge.animation = "evade"
 tt.dodge.time_before_hit = fts(5)
 tt.dodge.sound = "HeroVesperDisengageCast"
 tt.ui.click_rect = r(-10, -2, 20, 25)
+--#endregion
+--#region bullet_tower_dark_elf_lvl4
 tt = RT("bullet_tower_dark_elf_lvl4", "bullet")
 tt.bullet.hit_fx = "fx_bullet_tower_dark_elf_hit"
 tt.bullet.flight_time = fts(23)
@@ -1154,10 +1299,16 @@ tt.hit_delay = fts(1)
 tt.bullet.reduce_armor = 0.1
 tt.sound_events.insert = "TowerDarkElfBasicAttackCast"
 tt.skill_buff_mod = "mod_tower_dark_elf_skill_buff"
+--#endregion
+--#region fx_bullet_tower_dark_elf_hit
 tt = RT("fx_bullet_tower_dark_elf_hit", "fx")
 tt.render.sprites[1].name = "shotexplosion_run"
+--#endregion
+--#region bullet_tower_dark_elf_skill_buff
 tt = RT("bullet_tower_dark_elf_skill_buff", "bullet")
+
 AC(tt, "tween")
+
 tt.main_script.insert = scripts.bullet_tower_dark_elf_skill_buff.insert
 tt.main_script.update = scripts.bullet_tower_dark_elf_skill_buff.update
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
@@ -1174,24 +1325,36 @@ tt.tween.reverse = false
 tt.tween.disabled = true
 tt.sound_start = "TowerDarkElfThrillOfTheHuntCast"
 tt._parent = true
+--#endregion
+--#region fx_tower_dark_elf_skill_buff
 tt = RT("fx_tower_dark_elf_skill_buff", "fx")
 tt.render.sprites[1].name = "souldrain_run"
 tt.render.sprites[1].offset.y = 25
+--#endregion
+--#region mod_tower_dark_elf_skill_buff
 tt = RT("mod_tower_dark_elf_skill_buff", "modifier")
 tt.modifier.duration = fts(3)
 tt.main_script.update = scripts.mod_track_target.update
 tt.main_script.remove = scripts.mod_tower_dark_elf_skill_buff.remove
 tt.skill_buff_bullet = "bullet_tower_dark_elf_skill_buff"
 tt.tower_offset = vec_2(0, 35)
+--#endregion
+--#region mod_tower_dark_elf_big_target
 tt = RT("mod_tower_dark_elf_big_target", "modifier")
+
 AC(tt, "render")
+
 tt.main_script.update = scripts.mod_tower_dark_elf_big_target.update
 tt.modifier.use_mod_offset = true
 tt.modifier.duration = fts(60) + fts(13) + fts(2)
 tt.render.sprites[1].prefix = "twilight_longbows_tower_mira"
 tt.render.sprites[1].draw_order = DO_MOD_FX
+--#endregion
+--#region controller_tower_dark_elf_soldiers
 tt = RT("controller_tower_dark_elf_soldiers")
+
 AC(tt, "render", "main_script", "pos")
+
 tt.render.sprites[1].prefix = "Tower_lvl4_door"
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = 10
@@ -1202,8 +1365,12 @@ tt.check_soldiers_cooldown = fts(10)
 tt.sound_open = "TowerDarkElfSupportBladesSpawn"
 -- 暮光长弓_END
 -- 沙丘哨兵 BEGIN
-tt = E:register_t("tower_sand_lvl4", "tower")
-E:add_comps(tt, "powers", "attacks", "vis")
+--#endregion
+--#region tower_sand_lvl4
+tt = RT("tower_sand_lvl4", "tower")
+
+AC(tt, "powers", "attacks", "vis")
+
 b = balance.towers.sand
 tt.info.enc_icon = 18
 tt.info.i18n_key = "TOWER_SAND_4"
@@ -1218,7 +1385,7 @@ tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.tower.menu_offset = vec_2(0, 25)
 tt.tower.size = TOWER_SIZE_LARGE
-tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "bullet_tower_sand_lvl4"
 tt.attacks.list[1].shoot_time = fts(9)
@@ -1226,7 +1393,7 @@ tt.attacks.list[1].bullet_start_offset = {vec_2(-15, 13), vec_2(15, 12)}
 tt.attacks.list[1].cooldown = b.basic_attack.cooldown
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
-tt.attacks.list[2] = E:clone_c("bullet_attack")
+tt.attacks.list[2] = CC("bullet_attack")
 tt.attacks.list[2].animation = "skill1"
 tt.attacks.list[2].bullet = "bullet_tower_sand_skill_gold"
 tt.attacks.list[2].cooldown = nil
@@ -1234,7 +1401,7 @@ tt.attacks.list[2].shoot_time = fts(17)
 tt.attacks.list[2].bullet_start_offset = {vec_2(-12, 13), vec_2(-12, 12)}
 tt.attacks.list[2].sound = "TowerSandSkillGoldCast"
 tt.attacks.list[2].vis_bans = bor(F_FRIEND, F_NIGHTMARE)
-tt.attacks.list[3] = E:clone_c("bullet_attack")
+tt.attacks.list[3] = CC("bullet_attack")
 tt.attacks.list[3].animation = "skill2"
 tt.attacks.list[3].bullet = "aura_tower_sand_skill_big_blade"
 tt.attacks.list[3].cooldown = nil
@@ -1249,13 +1416,13 @@ tt.attacks.range = b.basic_attack.range[4]
 tt.main_script.insert = scripts.tower_archer.insert
 tt.main_script.update = scripts.tower_sand.update
 tt.main_script.remove = scripts.tower_sand.remove
-tt.powers.skill_gold = E:clone_c("power")
+tt.powers.skill_gold = CC("power")
 tt.powers.skill_gold.attack_idx = 2
 tt.powers.skill_gold.price_base = b.skill_gold.price[1]
 tt.powers.skill_gold.price_inc = b.skill_gold.price[2]
 tt.powers.skill_gold.cooldown = b.skill_gold.cooldown
 tt.powers.skill_gold.enc_icon = 27
-tt.powers.skill_big_blade = E:clone_c("power")
+tt.powers.skill_big_blade = CC("power")
 tt.powers.skill_big_blade.attack_idx = 3
 tt.powers.skill_big_blade.price_base = b.skill_big_blade.price[1]
 tt.powers.skill_big_blade.price_inc = b.skill_big_blade.price[2]
@@ -1268,12 +1435,12 @@ tt.powers.skill_big_blade.controller = "controller_tower_sand_lvl4_skill_big_bla
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = vec_2(0, 14)
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = true
 tt.render.sprites[2].prefix = "tower_sand_lvl4_tower"
 tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].offset = vec_2(1, 13)
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "tower_sand_lvl4_sentinel"
 tt.render.sprites[3].name = "idle"
 tt.render.sprites[3].angles = {}
@@ -1283,17 +1450,23 @@ tt.render.sprites[3].angles_flip_horizontal = {true, false}
 tt.render.sprites[3].offset = vec_2(-9, 61)
 tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
 tt.render.sprites[4].offset = vec_2(10, 56)
-tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].animated = false
 tt.render.sprites[5].name = "tower_sand_lvl4_tower_front"
 tt.render.sprites[5].offset = vec_2(1, 13)
 tt.sound_events.insert = "TowerSandTaunt"
 tt.ui.click_rect = r(-35, 3, 73, 77)
 tt.tower_sid = 2
-tt = E:register_t("controller_tower_sand_lvl4_skill_big_blade")
-E:add_comps(tt, "main_script")
+--#endregion
+--#region controller_tower_sand_lvl4_skill_big_blade
+tt = RT("controller_tower_sand_lvl4_skill_big_blade")
+
+AC(tt, "main_script")
+
 tt.main_script.update = scripts.controller_tower_sand_lvl4_skill_big_blade.update
-tt = E:register_t("bullet_tower_sand_lvl4", "bullet")
+--#endregion
+--#region bullet_tower_sand_lvl4
+tt = RT("bullet_tower_sand_lvl4", "bullet")
 b = balance.towers.sand.basic_attack
 tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.damage_max = b.damage_max[4]
@@ -1315,7 +1488,9 @@ tt.bounce_range = b.bounce_range
 tt.bounce_speed_mult = b.bounce_speed_mult
 tt.bounce_damage_mult = b.bounce_damage_mult
 tt.sound_hit = "TowerSandBasicAttackHit"
-tt = E:register_t("bullet_tower_sand_skill_gold", "bullet_tower_sand_lvl4")
+--#endregion
+--#region bullet_tower_sand_skill_gold
+tt = RT("bullet_tower_sand_skill_gold", "bullet_tower_sand_lvl4")
 b = balance.towers.sand.skill_gold
 tt.bullet.damage_min_config = b.damage_min
 tt.bullet.damage_max_config = b.damage_max
@@ -1328,8 +1503,12 @@ tt.render.sprites[1].prefix = "tower_sand_lvl4_skill_1_projectile"
 tt.gold_chance = b.gold_chance
 tt.gold_extra = b.gold_extra
 tt.max_bounces = b.max_bounces
-tt = E:register_t("aura_tower_sand_skill_big_blade", "aura")
-E:add_comps(tt, "render")
+--#endregion
+--#region aura_tower_sand_skill_big_blade
+tt = RT("aura_tower_sand_skill_big_blade", "aura")
+
+AC(tt, "render")
+
 b = balance.towers.sand.skill_big_blade
 tt.aura.duration = b.duration[1]
 tt.aura.radius = b.radius
@@ -1350,14 +1529,20 @@ tt.render.sprites[1].z = Z_BULLETS
 tt.fixed_speed = FPS * 8
 tt.particles_name = "ps_aura_tower_sand_skill_big_blade"
 tt.hit_fx = "fx_aura_tower_sand_skill_big_blade"
-tt = E:register_t("mod_tower_sand_skill_big_blade_slow", "mod_slow")
+--#endregion
+--#region mod_tower_sand_skill_big_blade_slow
+tt = RT("mod_tower_sand_skill_big_blade_slow", "mod_slow")
 b = balance.towers.sand.skill_big_blade
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = b.slow_duration
 -- 沙丘哨兵 END
 -- 皇家弓箭手 BEGIN
-tt = E:register_t("tower_royal_archers_lvl4", "tower")
-E:add_comps(tt, "powers", "attacks", "vis")
+--#endregion
+--#region tower_royal_archers_lvl4
+tt = RT("tower_royal_archers_lvl4", "tower")
+
+AC(tt, "powers", "attacks", "vis")
+
 b = balance.towers.royal_archers
 image_y = 90
 tt.info.portrait = "kr5_portraits_towers" .. "_0002"
@@ -1373,7 +1558,7 @@ tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.tower.menu_offset = vec_2(0, 25)
 tt.tower.size = TOWER_SIZE_LARGE
-tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].cooldown = b.basic_attack.cooldown
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
@@ -1381,7 +1566,7 @@ tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "tower_royal_archers_arrow_lvl4"
 tt.attacks.list[1].shoot_time = fts(8)
 tt.attacks.list[1].bullet_start_offset = {vec_2(11, 18), vec_2(12, 22)}
-tt.attacks.list[2] = E:clone_c("bullet_attack")
+tt.attacks.list[2] = CC("bullet_attack")
 tt.attacks.list[2].animation = "armor_piercer"
 tt.attacks.list[2].bullet = "arrow_armor_piercer_royal_archers"
 tt.attacks.list[2].range_trigger = b.armor_piercer.range_trigger
@@ -1396,14 +1581,14 @@ tt.attacks.list[2].sound = "TowerRoyalArchersArmorPiercerShot"
 tt.attacks.list[2].vis_bans = bor(F_FRIEND, F_NIGHTMARE)
 tt.attacks.range = b.basic_attack.range[4]
 tt.attacks.attack_delay_on_spawn = fts(5)
-tt.powers.armor_piercer = E:clone_c("power")
+tt.powers.armor_piercer = CC("power")
 tt.powers.armor_piercer.attack_idx = 2
 tt.powers.armor_piercer.price_base = b.armor_piercer.price[1]
 tt.powers.armor_piercer.price_inc = b.armor_piercer.price[2]
 tt.powers.armor_piercer.cooldown = b.armor_piercer.cooldown
 tt.powers.armor_piercer.enc_icon = 3
 tt.powers.armor_piercer.flight_time_factor = {0.2, 0.4, 0.6}
-tt.powers.rapacious_hunter = E:clone_c("power")
+tt.powers.rapacious_hunter = CC("power")
 tt.powers.rapacious_hunter.attack_idx = 3
 tt.powers.rapacious_hunter.price_base = b.rapacious_hunter.price[1]
 tt.powers.rapacious_hunter.price_inc = b.rapacious_hunter.price[2]
@@ -1417,11 +1602,11 @@ tt.powers.rapacious_hunter.purchase_fx = "fx_tower_royal_archer_rapacious_hunter
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = vec_2(0, 14)
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "royal_archer_tower_lvl4_tower"
 tt.render.sprites[2].offset = vec_2(1, 13)
-tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "royal_archer_tower_royal_archer_lvl4"
 tt.render.sprites[3].name = "idleDown"
 tt.render.sprites[3].angles = {}
@@ -1430,11 +1615,11 @@ tt.render.sprites[3].angles.shoot = {"attack_2", "attack_1"}
 tt.render.sprites[3].offset = vec_2(-12, 54)
 tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
 tt.render.sprites[4].offset = vec_2(14, 54)
-tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].animated = false
 tt.render.sprites[5].name = "royal_archer_tower_lvl4_tower_front"
 tt.render.sprites[5].offset = vec_2(1, 13)
-tt.render.sprites[6] = E:clone_c("sprite")
+tt.render.sprites[6] = CC("sprite")
 tt.render.sprites[6].name = "royal_archer_tower_lvl4_tower_rapacious_hunter_base"
 tt.render.sprites[6].animated = false
 tt.render.sprites[6].offset = vec_2(1, 13)
@@ -1446,8 +1631,12 @@ tt.main_script.remove = scripts.tower_royal_archers.remove
 tt.sid_rapacious_hunter = 6
 tt.sound_events.insert = "TowerRoyalArchersTaunt"
 tt.ui.click_rect = r(-35, 3, 73, 77)
-tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_tamer", "decal_scripted")
-E:add_comps(tt, "pos", "main_script", "attacks")
+--#endregion
+--#region tower_royal_archers_pow_rapacious_hunter_tamer
+tt = RT("tower_royal_archers_pow_rapacious_hunter_tamer", "decal_scripted")
+
+AC(tt, "pos", "main_script", "attacks")
+
 b = balance.towers.royal_archers
 tt.render.sprites[1].prefix = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer"
 tt.render.sprites[1].name = "idle_1"
@@ -1459,7 +1648,7 @@ tt.main_script.update = scripts.tower_royal_archers_pow_rapacious_hunter_tamer.u
 tt.min_cheer_cooldown = 1
 tt.max_time_without_cheer = 9
 tt.cheer_chance = 1
-tt.attacks.list[1] = E:clone_c("custom_attack")
+tt.attacks.list[1] = CC("custom_attack")
 tt.attacks.list[1].animation = "leave"
 tt.attacks.list[1].range = b.rapacious_hunter.range
 tt.attacks.list[1].cooldown = b.rapacious_hunter.cooldown
@@ -1476,8 +1665,12 @@ tt.idle = {}
 tt.idle.min_cooldown = 4
 tt.idle.max_cooldown = 10
 tt.idle.animation = "idle_2"
-tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_eagle", "decal_scripted")
-E:add_comps(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events")
+--#endregion
+--#region tower_royal_archers_pow_rapacious_hunter_eagle
+tt = RT("tower_royal_archers_pow_rapacious_hunter_eagle", "decal_scripted")
+
+AC(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events")
+
 b = balance.towers.royal_archers
 tt.flight_speed = 45
 tt.flight_height = 27
@@ -1494,7 +1687,7 @@ tt.main_script.remove = scripts.tower_royal_archers_pow_rapacious_hunter_eagle.r
 tt.max_distance_from_tower = b.rapacious_hunter.max_distance_from_tower
 tt.min_distance_to_attack = 60
 tt.orbital_speed = 100
-tt.attacks.list[1] = E:clone_c("custom_attack")
+tt.attacks.list[1] = CC("custom_attack")
 tt.attacks.list[1].damage_min = b.rapacious_hunter.damage_min
 tt.attacks.list[1].damage_max = b.rapacious_hunter.damage_max
 tt.attacks.list[1].cooldown = b.rapacious_hunter.attack_cooldown
@@ -1508,7 +1701,7 @@ tt.attacks.list[1].trail = "ps_rapacious_hunter_eagle_royal_archers"
 tt.render.sprites[1].prefix = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle"
 tt.render.sprites[1].offset = vec_2(0, 0)
 tt.render.sprites[1].z = Z_FLYING_HEROES
-tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "decal_flying_shadow_hard"
 tt.render.sprites[2].offset = vec_2(0, 0)
@@ -1517,13 +1710,17 @@ tt.render.sprites[2].scale = vec_1(0.7)
 tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
-tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].keys = {{0, vec_2(0.75, 1)}, {fts(10), vec_2(1, 1)}}
 tt.tween.props[2].name = "scale"
 tt.sound_events.insert = "TowerRoyalArchersRapaciousHunterTakeOff"
 tt.sound_events.descend = "TowerRoyalArchersRapaciousHunterDescend"
-tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod", "modifier")
+--#endregion
+--#region tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod
+tt = RT("tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod", "modifier")
+
 AC(tt, "render", "tween")
+
 tt.main_script.insert = scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.insert
 tt.main_script.remove = scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.remove
 tt.main_script.update = scripts.tower_royal_archers_pow_rapacious_hunter_tamer_mark_mod.update
@@ -1540,7 +1737,9 @@ tt.tween.props[2] = CC("tween_prop")
 tt.tween.props[2].disabled = true
 tt.tween.props[2].sprite_id = 1
 tt.tween.props[2].keys = {{0, 255}, {0.25, 0}}
-tt = E:register_t("arrow_armor_piercer_royal_archers", "arrow5_fixed_height")
+--#endregion
+--#region arrow_armor_piercer_royal_archers
+tt = RT("arrow_armor_piercer_royal_archers", "arrow5_fixed_height")
 b = balance.towers.royal_archers
 tt.bullet.pop = {"pop_archer"}
 tt.bullet.damage_type = b.armor_piercer.damage_type
@@ -1560,7 +1759,9 @@ tt.render.sprites[1].name = "royal_archer_tower_lvl4_arrow_armor_piercer_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = nil
 tt.sound_events.hit = "TowerRoyalArchersArmorPiercerHit"
-tt = E:register_t("tower_royal_archers_arrow_lvl4", "arrow5_fixed_height")
+--#endregion
+--#region tower_royal_archers_arrow_lvl4
+tt = RT("tower_royal_archers_arrow_lvl4", "arrow5_fixed_height")
 b = balance.towers.royal_archers
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
 tt.bullet.damage_max = b.basic_attack.damage_max[4]
@@ -1571,15 +1772,22 @@ tt.bullet.pop = {"pop_archer"}
 tt.render.sprites[1].name = "royal_archer_tower_lvl4_arrow_0001"
 tt.render.sprites[1].scale = vec_1(0.9)
 tt.bullet.miss_decal = "royal_archer_tower_lvl4_arrow_0002"
-tt = E:register_t("mod_tower_royal_archers_armor_piercer", "mod_damage")
+--#endregion
+--#region mod_tower_royal_archers_armor_piercer
+tt = RT("mod_tower_royal_archers_armor_piercer", "mod_damage")
 tt.damage_min = 0.1
 tt.damage_max = 0.1
 tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
 -- 皇家弓箭手 END
 -- 巨弩哨站 BEGIN
-tt = E:register_t("tower_ballista_lvl4", "tower")
+--#endregion
+--#region tower_ballista_lvl4
+tt = RT("tower_ballista_lvl4", "tower")
+
 local b = balance.towers.ballista
-E:add_comps(tt, "powers", "attacks")
+
+AC(tt, "powers", "attacks")
+
 tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.tower.menu_offset = v(0, 30)
@@ -1590,7 +1798,7 @@ tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = v(0, 15)
 
 for i = 2, 4 do
-	tt.render.sprites[i] = E:clone_c("sprite")
+	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].animated = true
 	tt.render.sprites[i].prefix = "ballista_tower_lvl4_tower_base_layer" .. i - 1
 	tt.render.sprites[i].name = "idle_1_1"
@@ -1599,13 +1807,13 @@ for i = 2, 4 do
 	tt.render.sprites[i].group = "layers_base"
 end
 
-tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].animated = true
 tt.render.sprites[5].prefix = "ballista_tower_lvl4_tower_goblin"
 tt.render.sprites[5].name = "idle"
 tt.render.sprites[5].offset = tt.render.sprites[2].offset
 tt.render.sprites[5].sort_y_offset = tt.render.sprites[2].sort_y_offset
-tt.render.sprites[6] = E:clone_c("sprite")
+tt.render.sprites[6] = CC("sprite")
 tt.render.sprites[6].animated = true
 tt.render.sprites[6].name = "idle_1_1"
 tt.render.sprites[6].prefix = "ballista_tower_lvl4_tower_top"
@@ -1628,7 +1836,7 @@ tt.attacks.range = b.basic_attack.range[4]
 tt.attacks.min_cooldown = b.shared_min_cooldown
 tt.attacks.range = b.basic_attack.range[1]
 tt.attacks.attack_delay_on_spawn = fts(5)
-tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_tower_ballista_lvl4"
 tt.attacks.list[1].cooldown = b.basic_attack.cooldown
 tt.attacks.list[1].shoot_time = fts(8)
@@ -1637,7 +1845,7 @@ tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].burst_count = 5
 tt.attacks.list[1].max_dist_between_shots = 60
 tt.attacks.list[1].bullet_start_offset = {v(12, 54), v(23, 59), v(15, 78), v(0, 80), v(0, 47)}
-tt.attacks.list[2] = E:clone_c("bullet_attack")
+tt.attacks.list[2] = CC("bullet_attack")
 tt.attacks.list[2].bullet = "bullet_tower_ballista_skill_bomb"
 tt.attacks.list[2].max_range = b.skill_bomb.max_range
 tt.attacks.list[2].min_range = b.skill_bomb.min_range
@@ -1651,7 +1859,7 @@ tt.attacks.list[2].damage_max = b.skill_bomb.damage_max
 tt.attacks.list[2].damage_min = b.skill_bomb.damage_min
 tt.attacks.list[2].min_targets = b.skill_bomb.min_targets
 tt.attacks.list[2].sound = "TowerTricannonBasicAttackFire"
-tt.powers.skill_final_shot = E:clone_c("power")
+tt.powers.skill_final_shot = CC("power")
 tt.powers.skill_final_shot.cooldown = b.skill_final_shot.cooldown
 tt.powers.skill_final_shot.price_base = b.skill_final_shot.price[1]
 tt.powers.skill_final_shot.price_inc = b.skill_final_shot.price[2]
@@ -1659,7 +1867,7 @@ tt.powers.skill_final_shot.damage_factor = b.skill_final_shot.damage_factor[1]
 tt.powers.skill_final_shot.damage_factor_config = b.skill_final_shot.damage_factor
 tt.powers.skill_final_shot.bullet = "bullet_tower_ballista_skill_final_shot"
 tt.powers.skill_final_shot.enc_icon = 19
-tt.powers.skill_bomb = E:clone_c("power")
+tt.powers.skill_bomb = CC("power")
 tt.powers.skill_bomb.price_base = b.skill_bomb.price[1]
 tt.powers.skill_bomb.price_inc = b.skill_bomb.price[2]
 tt.powers.skill_bomb.cooldown = b.skill_bomb.cooldown
@@ -1673,7 +1881,9 @@ tt.sound_events.insert = "TowerBallistaTaunt"
 tt.sound_events.tower_room_select = "TowerBallistaTauntSelect"
 tt.ui.click_rect = r(-35, 0, 70, 90)
 tt.ui.click_rect_offset_y = -10
-tt = E:register_t("bullet_tower_ballista_lvl4", "bullet")
+--#endregion
+--#region bullet_tower_ballista_lvl4
+tt = RT("bullet_tower_ballista_lvl4", "bullet")
 b = balance.towers.ballista.basic_attack
 tt.bullet.hit_fx = "fx_bullet_tower_ballista_hit"
 tt.bullet.flight_time = fts(2)
@@ -1693,7 +1903,9 @@ tt.missed_arrow = "fx_bullet_tower_ballista_missed_arrow"
 tt.missed_arrow_dust = "fx_bullet_tower_ballista_missed_arrow_dust"
 tt.missed_arrow_decal = "fx_bullet_tower_ballista_missed_arrow_decal"
 tt.sound_events.insert = "TowerBallistaBasicAttack"
-tt = E:register_t("bullet_tower_ballista_skill_final_shot", "bullet_tower_ballista_lvl4")
+--#endregion
+--#region bullet_tower_ballista_skill_final_shot
+tt = RT("bullet_tower_ballista_skill_final_shot", "bullet_tower_ballista_lvl4")
 b = balance.towers.ballista.skill_final_shot
 tt.bullet.hit_fx = "fx_bullet_tower_ballista_final_shot_hit"
 tt.bullet.damage_factor = b.damage_factor[1]
@@ -1706,8 +1918,12 @@ tt.image_width = 162.5
 tt.is_final_shot = true
 tt.sound_events.insert = "TowerBallistaFinalNail"
 tt.main_script.update = scripts.bullet_tower_ballista_skill_final_shot.update
-tt = E:register_t("bullet_tower_ballista_skill_bomb", "bomb")
+--#endregion
+--#region bullet_tower_ballista_skill_bomb
+tt = RT("bullet_tower_ballista_skill_bomb", "bomb")
+
 local b = balance.towers.ballista.skill_bomb
+
 tt.bullet.damage_max_config = b.damage_area_max
 tt.bullet.damage_min_config = b.damage_area_min
 tt.bullet.damage_radius = b.damage_radius
@@ -1727,9 +1943,13 @@ tt.scraps = "aura_bullet_tower_ballista_skill_bomb"
 tt.duration_config = balance.towers.ballista.skill_bomb.duration
 tt.sound_events.insert = "TowerBallistaScrapBombCast"
 tt.sound_events.hit = "TowerBallistaScrapBombExplosion"
-tt = E:register_t("aura_bullet_tower_ballista_skill_bomb", "aura")
+--#endregion
+--#region aura_bullet_tower_ballista_skill_bomb
+tt = RT("aura_bullet_tower_ballista_skill_bomb", "aura")
 b = balance.towers.ballista.skill_bomb
-E:add_comps(tt, "render", "tween")
+
+AC(tt, "render", "tween")
+
 tt.aura.mod = "mod_bullet_tower_ballista_skill_bomb_slow"
 tt.aura.radius = 35
 tt.aura.vis_flags = bor(F_AREA)
@@ -1747,12 +1967,18 @@ tt.damage_max = 0
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
 tt.junk_fx = "fx_bullet_tower_ballista_bomb_junk_floor"
-tt = E:register_t("mod_bullet_tower_ballista_skill_final_shot_stun", "mod_stun")
+--#endregion
+--#region mod_bullet_tower_ballista_skill_final_shot_stun
+tt = RT("mod_bullet_tower_ballista_skill_final_shot_stun", "mod_stun")
 b = balance.towers.ballista.skill_final_shot
 tt.modifier.duration = fts(b.stun_time)
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
-tt = E:register_t("mod_bullet_tower_ballista_skill_bomb_slow", "mod_slow")
+--#endregion
+--#region mod_bullet_tower_ballista_skill_bomb_slow
+tt = RT("mod_bullet_tower_ballista_skill_bomb_slow", "mod_slow")
 b = balance.towers.ballista.skill_bomb
 tt.slow.factor = 0.5
 tt.modifier.duration = 0.5
+
+--#endregion

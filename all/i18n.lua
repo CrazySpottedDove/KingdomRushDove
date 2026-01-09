@@ -1,5 +1,6 @@
 -- chunkname: @./all/i18n.lua
 local i18n = {}
+
 i18n.msgs = {}
 -- i18n.default_locale = "en"
 -- i18n.current_locale = "en"
@@ -35,7 +36,9 @@ end
 
 function _(s, default)
 	local l = i18n.msgs[i18n.current_locale]
+
 	l = l or i18n.msgs[i18n.default_locale]
+
 	local ts = l[s]
 
 	if ts then

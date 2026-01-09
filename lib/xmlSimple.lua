@@ -12,6 +12,7 @@ function newParser()
 		value = string.gsub(value, "([^%w%&%;%p%\t% ])", function(c)
 			return string.format("&#x%X;", string.byte(c))
 		end)
+
 		return value
 	end
 
@@ -27,6 +28,7 @@ function newParser()
 		value = string.gsub(value, "&gt;", ">")
 		value = string.gsub(value, "&lt;", "<")
 		value = string.gsub(value, "&amp;", "&")
+
 		return value
 	end
 
@@ -39,7 +41,9 @@ function newParser()
 	function XmlParser:ParseXmlText(xmlText)
 		local stack = {}
 		local top = newNode()
+
 		table.insert(stack, top)
+
 		local ni, c, label, xarg, empty
 		local i, j = 1, 1
 
@@ -54,20 +58,25 @@ function newParser()
 
 			if not string.find(text, "^%s*$") then
 				local lVal = (top:value() or "") .. self:FromXmlString(text)
+
 				stack[#stack]:setValue(lVal)
 			end
 
 			if empty == "/" then
 				local lNode = newNode(label)
+
 				self:ParseArgs(lNode, xarg)
 				top:addChild(lNode)
 			elseif c == "" then
 				local lNode = newNode(label)
+
 				self:ParseArgs(lNode, xarg)
 				table.insert(stack, lNode)
+
 				top = lNode
 			else
 				local toclose = table.remove(stack)
+
 				top = stack[#stack]
 
 				if #stack < 1 then
@@ -95,15 +104,19 @@ function newParser()
 
 	function XmlParser:loadFile(xmlFilename, base)
 		base = base or system.ResourceDirectory
+
 		local path = system.pathForFile(xmlFilename, base)
 		local hFile, err = io.open(path, "r")
 
 		if hFile and not err then
 			local xmlText = hFile:read("*a")
+
 			io.close(hFile)
+
 			return self:ParseXmlText(xmlText), nil
 		else
 			print(err)
+
 			return nil
 		end
 	end
@@ -113,6 +126,7 @@ end
 
 function newNode(name)
 	local node = {}
+
 	node.___value = nil
 	node.___name = name
 	node.___children = {}
@@ -146,7 +160,9 @@ function newNode(name)
 		if self[child:name()] ~= nil then
 			if type(self[child:name()].name) == "function" then
 				local tempTable = {}
+
 				table.insert(tempTable, self[child:name()])
+
 				self[child:name()] = tempTable
 			end
 
@@ -172,7 +188,9 @@ function newNode(name)
 		if self[lName] ~= nil then
 			if type(self[lName]) == "string" then
 				local tempTable = {}
+
 				table.insert(tempTable, self[lName])
+
 				self[lName] = tempTable
 			end
 

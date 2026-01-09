@@ -2,6 +2,7 @@
 local SW = ctx.SW
 local WH = ctx.SH
 local F = 1
+
 return {
 	propagate_on_click = true,
 	propagate_on_down = true,

@@ -6,7 +6,7 @@ local LU=require("level_utils")
 local V=require("lib.klua.vector")
 local S=require("sound_db")
 local P=require("path_db")
-require("constants")
+require("all.constants")
 local function fts(v)
 return v/FPS
 end

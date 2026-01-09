@@ -1,4 +1,5 @@
 local v = (arg[2] == "debug" or arg[2] == "release") and "DEBUG" or "RELEASE"
+
 version = {
 	identity = "kingdom_rush",
 	title = "王国保卫战 dove 版",
@@ -8,5 +9,5 @@ version = {
 	vc = "kr1-desktop-5.6.12",
 	build = v,
 	bundle_keywords = "-standalone",
-	id = "9.2.2"
+	id = "9.3.5"
 }

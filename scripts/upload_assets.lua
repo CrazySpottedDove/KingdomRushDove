@@ -8,7 +8,9 @@ local function read_assets_dir()
 	end
 
 	local dir = f:read("*l")
+
 	f:close()
+
 	return dir
 end
 
@@ -33,6 +35,7 @@ local function table_to_string(t)
 	end
 
 	table.sort(s)
+
 	return table.concat(s, ";")
 end
 
@@ -46,11 +49,13 @@ else
 end
 
 os.execute(git_show_cmd)
+
 local old_index = {}
 local f = io.open("_assets/assets_index.remote.lua", "r")
 
 if f then
 	f:close()
+
 	old_index = dofile("_assets/assets_index.remote.lua") or {}
 end
 
@@ -82,11 +87,13 @@ local created_releases = {}
 
 local function ensure_release(name)
 	if created_releases[name] then
-		return 
+		return
 	end
 
 	local cmd = is_windows and string.format('gh release view %s >NUL 2>&1 || gh release create %s --title "%s" --notes "Auto created" 2>NUL', name, name, name) or string.format('gh release view %s >/dev/null 2>&1 || gh release create %s --title "%s" --notes "Auto created" 2>/dev/null', name, name, name)
+
 	os.execute(cmd)
+
 	created_releases[name] = true
 end
 
@@ -99,7 +106,9 @@ local function get_release_assets(release)
 	end
 
 	local output = handle:read("*a")
+
 	handle:close()
+
 	local assets = {}
 
 	if output and output ~= "" then
@@ -115,6 +124,7 @@ end
 
 local upload_batches = {} -- 按 release 分组
 local release_assets_cache = {}
+
 print("collecting upload tasks...")
 
 if same_as_remote then
@@ -131,10 +141,13 @@ if same_as_remote then
 
 		if (not assets[filename]) then
 			print(COLOR.blue .. "[MISS] " .. filename)
+
 			local fullpath = assets_dir .. "/" .. path
 			local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
 			local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
+
 			upload_batches[release] = upload_batches[release] or {}
+
 			table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
 		end
 	end
@@ -154,7 +167,9 @@ else
 			local fullpath = assets_dir .. "/" .. path
 			local quoted_fullpath = '"' .. fullpath:gsub('"', '\\"') .. '"'
 			local quoted_filename = '"' .. filename:gsub('"', '\\"') .. '"'
+
 			upload_batches[release] = upload_batches[release] or {}
+
 			table.insert(upload_batches[release], string.format('%s#%s', quoted_fullpath, quoted_filename))
 		end
 	end
@@ -177,6 +192,7 @@ for release, files in pairs(upload_batches) do
 end
 
 print(COLOR.yellow .. "按回车继续上传，或按 q 退出..." .. COLOR.reset)
+
 local answer = io.read()
 
 if answer:lower() == "q" then
@@ -194,7 +210,9 @@ end
 for release, files in pairs(upload_batches) do
 	print(COLOR.blue .. "[tag]: ", release, "batch_size: ", #files)
 	ensure_release(release)
+
 	local cmd = string.format('gh release upload %s %s --clobber', release, table.concat(files, " "))
+
 	os.execute(cmd)
 end
 

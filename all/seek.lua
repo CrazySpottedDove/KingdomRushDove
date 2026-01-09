@@ -7,7 +7,9 @@ local P = require("path_db")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
-require("constants")
+
+require("all.constants")
+
 local id_arrays
 local entities
 
@@ -56,10 +58,12 @@ local function calculate_enemy_ffe_pos(e, prediction_time)
 	if prediction_time then
 		if e.motion.forced_waypoint then
 			local dt = prediction_time == true and 1 or prediction_time
+
 			return v(e.pos.x + dt * e.motion.speed.x, e.pos.y + dt * e.motion.speed.y)
 		else
 			local node_offset = P:predict_enemy_node_advance(e, prediction_time)
 			local e_ni = e.nav_path.ni + node_offset
+
 			return P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
 		end
 	else
@@ -82,6 +86,7 @@ local function foremost_enemy_cmp(e1, e2)
 
 	local p1 = e1.nav_path
 	local p2 = e2.nav_path
+
 	return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
@@ -103,6 +108,7 @@ local function foremost_enemy_flying_preference_cmp(e1, e2)
 
 	local p1 = e1.nav_path
 	local p2 = e2.nav_path
+
 	return P:nodes_to_goal(p1.pi, p1.spi, p1.ni) < P:nodes_to_goal(p2.pi, p2.spi, p2.ni)
 end
 
@@ -293,6 +299,7 @@ function seek.find_foremost_enemy_in_range_filter_off(origin, range, prediction_
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
@@ -334,6 +341,7 @@ function seek.find_foremost_enemy_in_range_filter_on(origin, range, prediction_t
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
@@ -377,6 +385,7 @@ function seek.find_foremost_enemy_between_range_filter_off(origin, min_range, ma
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
@@ -420,6 +429,7 @@ function seek.find_foremost_enemy_between_range_filter_on(origin, min_range, max
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	return result[1], result, calculate_enemy_ffe_pos(result[1], prediction_time)
 end
 
@@ -704,10 +714,12 @@ function seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on(or
 					end
 
 					::accept::
+
 					e_mocking = e_next_mocking
 					e_flying = e_next_flying
 					e_nodes_to_goal = e_next_nodes_to_goal
 					e = entity
+
 					::not_accept::
 				end
 			end
@@ -780,10 +792,12 @@ function seek.detect_foremost_enemy_with_flying_preference_in_range_filter_off(o
 					end
 
 					::accept::
+
 					e_mocking = e_next_mocking
 					e_flying = e_next_flying
 					e_nodes_to_goal = e_next_nodes_to_goal
 					e = entity
+
 					::not_accept::
 				end
 			end
@@ -858,10 +872,12 @@ function seek.detect_foremost_enemy_with_flying_preference_between_range_filter_
 					end
 
 					::accept::
+
 					e_mocking = e_next_mocking
 					e_flying = e_next_flying
 					e_nodes_to_goal = e_next_nodes_to_goal
 					e = entity
+
 					::not_accept::
 				end
 			end
@@ -936,10 +952,12 @@ function seek.detect_foremost_enemy_with_flying_preference_between_range_filter_
 					end
 
 					::accept::
+
 					e_mocking = e_next_mocking
 					e_flying = e_next_flying
 					e_nodes_to_goal = e_next_nodes_to_goal
 					e = entity
+
 					::not_accept::
 				end
 			end
@@ -1162,6 +1180,7 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_off(origin, 
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	local foremost_enemy = result[1]
 	local cover_range_sq = cover_range * cover_range
 	local ffe_pos = calculate_enemy_ffe_pos(foremost_enemy, prediction_time)
@@ -1222,6 +1241,7 @@ function seek.find_foremost_enemy_with_max_coverage_in_range_filter_on(origin, r
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	local foremost_enemy = result[1]
 	local cover_range_sq = cover_range * cover_range
 	local ffe_pos = calculate_enemy_ffe_pos(foremost_enemy, prediction_time)
@@ -1284,6 +1304,7 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_off(ori
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	local foremost_enemy = result[1]
 	local cover_range_sq = cover_range * cover_range
 	local ffe_pos = calculate_enemy_ffe_pos(foremost_enemy, prediction_time)
@@ -1346,6 +1367,7 @@ function seek.find_foremost_enemy_with_max_coverage_between_range_filter_on(orig
 	end
 
 	table.sort(result, foremost_enemy_cmp)
+
 	local foremost_enemy = result[1]
 	local cover_range_sq = cover_range * cover_range
 	local ffe_pos = calculate_enemy_ffe_pos(foremost_enemy, prediction_time)
@@ -1480,6 +1502,7 @@ function seek.find_foremost_enemy_with_flying_preference_in_range_filter_on(orig
 	end
 
 	table.sort(result, foremost_enemy_flying_preference_cmp)
+
 	return result[1], result
 end
 
@@ -1521,6 +1544,7 @@ function seek.find_foremost_enemy_with_flying_preference_in_range_filter_off(ori
 	end
 
 	table.sort(result, foremost_enemy_flying_preference_cmp)
+
 	return result[1], result
 end
 

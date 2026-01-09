@@ -1,15 +1,18 @@
 -- chunkname: @./lib/klove/kui.lua
 local log = require("lib.klua.log"):new("kui")
+
 require("lib.klua.table")
+
 local km = require("lib.klua.macros")
 local V = require("lib.klua.vector")
 local I = require("klove.image_db")
-local F = require("klove.font_db")
+local F = require("lib.klove.font_db")
 local SH = require("klove.shader_db")
 local class = require("middleclass")
 local G = love.graphics
 local _last_id = 99000
 local KUI_FPS = 30
+
 M_DOWN = "mouse_down"
 M_UP = "mouse_up"
 M_SCROLL = "mouse_scroll"
@@ -43,6 +46,7 @@ function KMDragInertia:included(klass)
 	klass.update = klass.kmdi_update
 	klass.on_down = klass.kmdi_on_down
 	klass.on_dropped = klass.kmdi_on_dropped
+
 	table.insert(klass.static.serialize_keys, "inertia_damping")
 end
 
@@ -65,21 +69,24 @@ function KMDragInertia:kmdi_update(dt)
 	end
 
 	if self.hidden then
-		return 
+		return
 	end
 
 	if love.mouse.isDown(1) then
 		self._inertia_idx = km.zmod(self._inertia_idx + 1, #self._inertia_deltas)
+
 		local idelta = self._inertia_deltas[self._inertia_idx]
+
 		idelta.x, idelta.y = (self.pos.x - self._inertia_last_pos.x) / dt, (self.pos.y - self._inertia_last_pos.y) / dt
 		self._inertia_last_pos.x = self.pos.x
 		self._inertia_last_pos.y = self.pos.y
 	else
 		if self._inertia_done then
-			return 
+			return
 		end
 
 		local lx, ly = self.pos.x, self.pos.y
+
 		self.pos.x = self.pos.x + self._inertia_v.x * dt
 		self.pos.y = self.pos.y + self._inertia_v.y * dt
 		self._inertia_v.x = self._inertia_v.x * self.inertia_damping
@@ -87,6 +94,7 @@ function KMDragInertia:kmdi_update(dt)
 
 		if self.drag_limits then
 			local dl = self.drag_limits
+
 			self.pos.x = km.clamp(dl.pos.x, dl.pos.x + dl.size.x, self.pos.x)
 			self.pos.y = km.clamp(dl.pos.y, dl.pos.y + dl.size.y, self.pos.y)
 		end
@@ -104,6 +112,7 @@ function KMDragInertia:kmdi_on_down(...)
 
 	for i = 1, #self._inertia_deltas do
 		local d = self._inertia_deltas[i]
+
 		d.x, d.y = 0, 0
 		self._inertia_v.x = 0
 		self._inertia_v.y = 0
@@ -124,6 +133,7 @@ function KMDragInertia:kmdi_on_dropped(...)
 
 		for i = 1, steps do
 			local p = self._inertia_deltas[i]
+
 			vx = vx + p.x / steps
 			vy = vy + p.y / steps
 		end
@@ -154,11 +164,13 @@ function KMOverrides:apply_override(o_key)
 	end
 
 	if not self.overrides or not self.overrides[o_key] then
-		return 
+		return
 	end
 
 	local ov = self.overrides[key]
+
 	apply_data(self, ov)
+
 	self.overrides.active = o_key
 end
 
@@ -176,6 +188,7 @@ end
 function KMShaderDraw:shader_draw()
 	if self.text and self.text ~= self._last_text then
 		self:redraw()
+
 		self._last_text = self.text
 	end
 
@@ -184,7 +197,9 @@ function KMShaderDraw:shader_draw()
 
 	if not self.canvases then
 		self.canvases = {}
+
 		local cw, ch = math.ceil(self.size.x * ss + 2 * m), math.ceil(self.size.y * ss + 2 * m)
+
 		self.canvases[1] = G.newCanvas(cw, ch)
 
 		if self.shaders then
@@ -196,19 +211,25 @@ function KMShaderDraw:shader_draw()
 
 	if not self.canvases_drawn then
 		self.canvases_drawn = true
+
 		local pr, pg, pb, pa = G.getColor()
+
 		G.setColor(1, 1, 1, 1)
+
 		local scx, scy, scw, sch = G.getScissor()
+
 		G.push()
 		G.setCanvas(self.canvases[1])
 		G.setScissor()
 		G.origin()
 		G.translate(m, m)
 		G.scale(ss)
+
 		local clear_color = self.colors.text or self.colors.background
 
 		if clear_color then
 			local r, g, b = unpack(clear_color)
+
 			G.clear(r, g, b, 0)
 		else
 			G.clear()
@@ -220,12 +241,14 @@ function KMShaderDraw:shader_draw()
 
 		if self.shaders then
 			local b = G.getBlendMode()
+
 			G.setBlendMode("alpha", "premultiplied")
 
 			for i = 1, #self.shaders do
 				local sh = self.shaders and SH:get(self.shaders[i]) or nil
 				local in_ca = self.canvases[i]
 				local out_ca = self.canvases[i + 1]
+
 				G.push()
 				G.setScissor()
 				G.setCanvas(out_ca)
@@ -234,7 +257,9 @@ function KMShaderDraw:shader_draw()
 
 				if not sh then
 					log.warning("error loading shader:%s falling back to p_none", self.shaders[i])
+
 					sh = SH:get("p_none")
+
 					G.setShader(sh)
 				else
 					G.setShader(sh)
@@ -313,9 +338,13 @@ end
 
 function KObject.static:new_from_table(t)
 	local v = self:allocate()
+
 	v._deserialize_table = t
+
 	v:initialize(v.class:get_init_args(t))
+
 	v._deserialize_table = nil
+
 	return v
 end
 
@@ -324,6 +353,7 @@ function KObject:initialize()
 	self.id = tostring(_last_id)
 	self.children = {}
 	self.parent = nil
+
 	self:deserialize()
 end
 
@@ -331,7 +361,7 @@ function KObject:deserialize()
 	local t = self._deserialize_table
 
 	if not t then
-		return 
+		return
 	end
 
 	for k, v in pairs(t) do
@@ -348,6 +378,7 @@ function KObject:deserialize()
 						log.error("class not found %s", klass_name)
 					else
 						local c = klass:new_from_table(ct)
+
 						self:add_child(c)
 					end
 				end
@@ -372,10 +403,12 @@ function KObject:serialize(doing_template)
 
 	if doing_template_instance then
 		local out_t = self:serialize(true)
+
 		out._template_table = out_t
 	end
 
 	out.class = self.class.name
+
 	local keys = doing_template_instance and self.class.static.instance_keys or self.class.static.serialize_keys
 
 	for _, k in pairs(keys) do
@@ -416,10 +449,12 @@ end
 function KObject:remove_child(c)
 	if not c then
 		log.error("Removing nil child from %s", self)
-		return 
+
+		return
 	end
 
 	table.removeobject(self.children, c)
+
 	c.parent = nil
 end
 
@@ -462,6 +497,7 @@ end
 function KObject:order_to_front()
 	if self.parent then
 		local p = self.parent
+
 		p:remove_child(self)
 		p:add_child(self)
 	end
@@ -477,10 +513,11 @@ function KObject:order_above(c)
 	local p = self.parent
 
 	if not p or c.parent ~= p then
-		return 
+		return
 	end
 
 	p:remove_child(self)
+
 	local idx = c:get_order()
 
 	if idx then
@@ -492,10 +529,11 @@ function KObject:order_below(c)
 	local p = self.parent
 
 	if not p or c.parent ~= p then
-		return 
+		return
 	end
 
 	p:remove_child(self)
+
 	local idx = c:get_order()
 
 	if idx then
@@ -505,6 +543,7 @@ end
 
 function KObject:clone()
 	local o = table.deepclone(self)
+
 	return o
 end
 
@@ -533,7 +572,9 @@ function KObject:flatten(filter, trim_filter)
 end
 
 KView = class("KView", KObject)
+
 KView:append_serialize_keys("pos", "size", "padding", "anchor", "scale", "r", "hit_rect", "clip", "alpha", "disabled_tint_color", "colors", "image_scale", "image_name", "image_offset", "focus_nav_offset", "focus_nav_dir", "animation")
+
 KView.static.serialize_children = true
 KView.static.init_arg_names = {"size"}
 
@@ -574,6 +615,7 @@ function KView:initialize(size, image_name, image_scale)
 	self.ts = 0
 	self._disabled = false
 	self._focused = false
+
 	self:set_image(image_name, size)
 	KView.super.initialize(self)
 end
@@ -582,10 +624,11 @@ function KView:deserialize()
 	local t = self._deserialize_table
 
 	if not t then
-		return 
+		return
 	end
 
 	t.image_name = nil
+
 	KView.super.deserialize(self)
 end
 
@@ -602,6 +645,7 @@ function KView:set_image(image, size)
 		end
 	elseif image and type(image) == "string" then
 		self.image_name = image
+
 		local ss = I:s(image)
 
 		if not ss then
@@ -610,6 +654,7 @@ function KView:set_image(image, size)
 
 		self.image_ss = ss
 		self.image = I:i(ss.atlas)
+
 		local ref_scale = (ss.ref_scale or 1) * self.image_scale
 
 		if size then
@@ -661,11 +706,12 @@ end
 
 function KView:draw()
 	if self.hidden then
-		return 
+		return
 	end
 
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
+
 	G.setColor_old({255, 255, 255, current_alpha})
 	G.push()
 	G.scale(self.scale.x, self.scale.y)
@@ -725,6 +771,7 @@ function KView:_draw_self()
 
 	if self.colors.background then
 		local new_c = {self.colors.background[1], self.colors.background[2], self.colors.background[3], self.colors.background[4] * current_alpha}
+
 		G.setColor_old(new_c)
 
 		if self.shape then
@@ -742,11 +789,13 @@ function KView:_draw_self()
 
 	if self.colors.tint then
 		local tint = self.colors.tint
+
 		G.setColor_old({tint[1], tint[2], tint[3], tint[4] * current_alpha})
 	end
 
 	if self.animation then
 		local fn, runs = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
+
 		self.image_ss = I:s(fn)
 		self.image = I:i(self.image_ss.atlas)
 
@@ -763,16 +812,19 @@ function KView:_draw_self()
 	if self.image_ss then
 		local ss = self.image_ss
 		local ref_scale = (ss.ref_scale or 1) * self.image_scale
+
 		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
 	elseif self.image then
 		local iw, ih = self.image:getDimensions()
 		local ix = (self.size.x - iw * self.image_scale) * 0.5
 		local iy = (self.size.y - ih * self.image_scale) * 0.5
+
 		G.draw(self.image, ix, iy, 0, self.image_scale, self.image_scale)
 	end
 
 	if DEBUG_KUI_DRAW_FOCUS_NAV and self.on_keypressed then
 		G.setColor(0, 0, 1, 1)
+
 		local x, y = 0, 0
 
 		if self.focus_nav_offset then
@@ -819,7 +871,9 @@ end
 
 function KView:animation_frame(animation, time_offset, loop, fps)
 	local a = animation
+
 	fps = fps or animation.fps or KUI_FPS
+
 	local frames = a.frames
 
 	if not frames then
@@ -860,6 +914,7 @@ function KView:animation_frame(animation, time_offset, loop, fps)
 	end
 
 	local frame = frames[idx]
+
 	return string.format("%s_%04i", a.prefix, frame), runs
 end
 
@@ -883,6 +938,7 @@ function KView:hit_all(x, y, filter)
 			local cx = (x - c.pos.x + c.anchor.x * c.scale.x) / c.scale.x
 			local cy = (y - c.pos.y + c.anchor.y * c.scale.y - self.scroll_origin_y) / c.scale.y
 			local c_hits = c:hit_all(cx, cy, filter)
+
 			table.append(hits, c_hits)
 		end
 	end
@@ -913,11 +969,13 @@ function KView:screen_to_view(x, y)
 
 	repeat
 		table.insert(view_list, this)
+
 		this = this.parent
 	until not this
 
 	for i = #view_list, 1, -1 do
 		local v = view_list[i]
+
 		x = (x - v.pos.x) / v.scale.x + v.anchor.x
 		y = (y - v.pos.y) / v.scale.y + v.anchor.y
 
@@ -949,6 +1007,7 @@ end
 
 function KView:view_to_view(x, y, dest_view)
 	local ix, iy = self:view_to_screen(x, y)
+
 	return dest_view:screen_to_view(ix, iy)
 end
 
@@ -1052,6 +1111,7 @@ function KView:get_bounds()
 	for _, c in pairs(self.children) do
 		if not c.ignore_bounds then
 			local b = c:get_bounds()
+
 			xmin = xmin > b.pos.x and b.pos.x or xmin
 			ymin = ymin > b.pos.y and b.pos.y or ymin
 			xmax = xmax < b.pos.x + b.size.x and b.pos.x + b.size.x or xmax
@@ -1076,6 +1136,7 @@ KImageView.static.init_arg_names = {"image_name", "size", "image_scale"}
 
 function KImageView:initialize(image_name, size, image_scale)
 	KView.initialize(self, size, image_name, image_scale)
+
 	local dt = self._deserialize_table
 
 	for _, v in pairs({"up", "down", "click"}) do
@@ -1090,10 +1151,12 @@ function KImageView:initialize(image_name, size, image_scale)
 end
 
 KWindow = class("KWindow", KView)
+
 KWindow:append_serialize_keys("origin")
 
 function KWindow:initialize(size)
 	KWindow.super.initialize(self, size)
+
 	self.origin = V.v(0, 0)
 	self.drag_threshold = 4
 	self.focused = nil
@@ -1119,38 +1182,50 @@ end
 
 function KWindow:get_mouse_position()
 	local x, y = love.mouse.getPosition()
+
 	x, y = x - self.origin.x, y - self.origin.y
+
 	local any_button_down = love.mouse.isDown(1, 2)
+
 	return x, y, any_button_down
 end
 
 function KWindow:mousepressed(x, y, button, istouch)
 	x, y = x - self.origin.x, y - self.origin.y
 	self._mouse_down_pos = V.v(x, y)
+
 	local wx, wy = self:screen_to_view(x, y)
+
 	log.paranoid("x,y:%s,%s  button:%s, istouch:%s, wx,wy:%s,%s  ", x, y, button, istouch, wx, wy)
+
 	local event_name
 
 	if button == 1 or button == 2 then
 		event_name = "on_down"
+
 		local dv = self:hit_topmost(wx, wy, function(v)
 			return not v.propagate_drag or v.can_drag
 		end)
+
 		self._drag_view = dv and dv.can_drag and dv or nil
+
 		log.paranoid("  _drag_view:%s", self._drag_view)
 	elseif button == "wu" or button == "wd" then
 		event_name = "on_scroll"
 	else
 		log.paranoid("button press not handled: %s", button)
-		return 
+
+		return
 	end
 
 	local hl = self:hit_all(wx, wy)
+
 	self._click_start_view = nil
 
 	for _, v in pairs(hl) do
 		if v.on_click then
 			self._click_start_view = v
+
 			break
 		elseif not v.propagate_on_click then
 			break
@@ -1162,6 +1237,7 @@ function KWindow:mousepressed(x, y, button, istouch)
 
 		if v[event_name] then
 			log.paranoid(" > handling event %s in view %s[%s]", event_name, tostring(v), v.id)
+
 			local vx, vy = v:screen_to_view(x, y)
 
 			if not v[event_name](v, button, vx, vy, istouch) then
@@ -1175,7 +1251,9 @@ end
 
 function KWindow:wheelmoved(dx, dy)
 	local x, y = love.mouse.getPosition()
+
 	log.debug("dx:%s dy:%s", dx, dy)
+
 	local button
 
 	if dy > 0 then
@@ -1189,10 +1267,11 @@ end
 
 function KWindow:mousereleased(x, y, button, istouch)
 	x, y = x - self.origin.x, y - self.origin.y
+
 	log.paranoid("x:%s, y:%s, button:%s istouch:%s", x, y, button, istouch)
 
 	if not self._mouse_down_pos then
-		return 
+		return
 	end
 
 	local mth = self.drag_threshold * self.scale.x
@@ -1220,6 +1299,7 @@ function KWindow:mousereleased(x, y, button, istouch)
 
 			if v.on_up then
 				log.paranoid(" > handling event %s in view %s[%s]", "up", tostring(v), v.id)
+
 				local vx, vy = v:screen_to_view(x, y)
 
 				if not v:on_up(button, vx, vy, self._drag_view, istouch) then
@@ -1235,6 +1315,7 @@ function KWindow:mousereleased(x, y, button, istouch)
 
 			if v.on_click and v == self._click_start_view then
 				log.paranoid(" > handling event %s in view %s[%s]", "click", tostring(v), v.id)
+
 				local vx, vy = v:screen_to_view(x, y)
 
 				if not v:on_click(button, vx, vy, istouch, moved) then
@@ -1251,7 +1332,9 @@ end
 
 function KWindow:touchpressed(id, x, y, dx, dy, pressure)
 	x, y = x - self.origin.x, y - self.origin.y
+
 	log.paranoid("x:%s, y:%s, id:%s", x, y, id)
+
 	local wx, wy = self:screen_to_view(x, y)
 	local hl = self:hit_all(wx, wy)
 	local event_name = "on_touch_down"
@@ -1261,6 +1344,7 @@ function KWindow:touchpressed(id, x, y, dx, dy, pressure)
 
 		if v[event_name] then
 			log.paranoid(" > handling event %s in view %s", event_name, tostring(v))
+
 			local vx, vy = v:screen_to_view(x, y)
 
 			if not v[event_name](v, id, vx, vy, dx, dy, pressure) then
@@ -1274,7 +1358,9 @@ end
 
 function KWindow:touchreleased(id, x, y, dx, dy, pressure)
 	x, y = x - self.origin.x, y - self.origin.y
+
 	log.paranoid("x:%s, y:%s, id:%s", x, y, id)
+
 	local wx, wy = self:screen_to_view(x, y)
 	local hl = self:hit_all(wx, wy)
 	local event_name = "on_touch_up"
@@ -1284,6 +1370,7 @@ function KWindow:touchreleased(id, x, y, dx, dy, pressure)
 
 		if v[event_name] then
 			log.paranoid(" > handling event %s in view %s", event_name, tostring(v))
+
 			local vx, vy = v:screen_to_view(x, y)
 
 			if not v[event_name](v, id, vx, vy, dx, dy, pressure) then
@@ -1297,6 +1384,7 @@ end
 
 function KWindow:touchmoved(id, x, y, dx, dy, pressure)
 	x, y = x - self.origin.x, y - self.origin.y
+
 	local wx, wy = self:screen_to_view(x, y)
 	local hl = self:hit_all(wx, wy)
 	local event_name = "on_touch_move"
@@ -1306,6 +1394,7 @@ function KWindow:touchmoved(id, x, y, dx, dy, pressure)
 
 		if v[event_name] then
 			log.paranoid(" > handling event %s in view %s", event_name, tostring(v))
+
 			local vx, vy = v:screen_to_view(x, y)
 
 			if not v[event_name](v, id, vx, vy, dx, dy, pressure) then
@@ -1319,6 +1408,7 @@ end
 
 function KWindow:update(dt)
 	KWindow.super.update(self, dt)
+
 	local x, y = 0, 0
 	local button_1_down = false
 	local touches = love.touch.getTouches()
@@ -1357,6 +1447,7 @@ function KWindow:update(dt)
 
 			if csv and csv.on_exit then
 				csv:on_exit()
+
 				self._click_start_view = nil
 			end
 
@@ -1365,12 +1456,14 @@ function KWindow:update(dt)
 
 			if dv.drag_limits then
 				local dl = dv.drag_limits
+
 				dv.pos.x = km.clamp(dl.pos.x, dl.pos.x + dl.size.x, dv.pos.x)
 				dv.pos.y = km.clamp(dl.pos.y, dl.pos.y + dl.size.y, dv.pos.y)
 			end
 		end
 
 		::label_70_0::
+
 		self._last_mouse_pos = V.v(x, y)
 	else
 		self._last_mouse_pos = nil
@@ -1396,6 +1489,7 @@ end
 
 function KWindow:focus_view(v)
 	log.debug("focus_view:%s", v)
+
 	local c = self.focused
 
 	if c then
@@ -1456,7 +1550,8 @@ function KWindow:find_next_focus(root, focused, key, reverse)
 
 	if #all < 1 then
 		log.paranoid("sorted list of views is empty")
-		return 
+
+		return
 	end
 
 	local root_pos_list = {}
@@ -1517,6 +1612,7 @@ function KWindow:find_next_focus(root, focused, key, reverse)
 			if key == "tab" then
 				fidx = km.zmod(fidx + (reverse and -1 or 1), #sorted)
 				focused = sorted[fidx]
+
 				log.paranoid("after tab. fidx:%s focused:%s", fidx, focused)
 			elseif table.contains({"up", "down", "left", "right"}, key) then
 				local dir_passes
@@ -1543,6 +1639,7 @@ function KWindow:find_next_focus(root, focused, key, reverse)
 						local d1x, d1y = (p1x - fposx) * fx, (p1y - fposy) * fy
 						local d2x, d2y = (p2x - fposx) * fx, (p2y - fposy) * fy
 						local d1, d2 = d1x * d1x + d1y * d1y, d2x * d2x + d2y * d2y
+
 						return d1 < d2
 					end)
 
@@ -1557,10 +1654,12 @@ function KWindow:find_next_focus(root, focused, key, reverse)
 					for _, row in pairs(root_pos_list) do
 						local v, vx, vy = unpack(row)
 						local dir = get_dir(vx - fposx, vy - fposy, nav_dir, 5)
+
 						log.paranoid("key:%s pass:%s fpos:%s,%s  v:%s pos:%s,%s  dir:%s", key, nav_dir, fposx, fposy, v, vx, vy, dir)
 
 						if v ~= focused and dir == key then
 							focused = v
+
 							goto label_73_0
 						end
 					end
@@ -1581,11 +1680,13 @@ end
 function KWindow:keypressed(key, isrepeat)
 	if self.responder and self.responder.on_keypressed and self.responder:on_keypressed(key) then
 		log.paranoid("FOCUS: keypress handled by focused view: %s", self.focused)
+
 		return true
 	end
 
 	if self.focused and self.focused.on_keypressed and self.focused:on_keypressed(key) then
 		log.paranoid("FOCUS: keypress handled by focused view: %s", self.focused)
+
 		return true
 	end
 
@@ -1597,6 +1698,7 @@ function KWindow:keypressed(key, isrepeat)
 		end
 
 		local next_view = self:find_next_focus(self.responder, self.focused, key, reverse)
+
 		self:focus_view(next_view)
 	end
 end
@@ -1620,7 +1722,9 @@ function KWindow:textinput(t)
 end
 
 KLabel = class("KLabel", KImageView)
+
 KLabel:append_serialize_keys("text", "text_offset", "text_align", "text_size", "colors", "line_height", "font_name", "font_size")
+
 KLabel.static.init_arg_names = {"size", "image_name"}
 
 function KLabel:initialize(size, image_name)
@@ -1633,6 +1737,7 @@ function KLabel:initialize(size, image_name)
 	self.line_height = 1
 	self._loaded_font_name = nil
 	self._loaded_font_size = nil
+
 	KImageView.initialize(self, image_name, size)
 
 	if not self.text_size then
@@ -1664,6 +1769,7 @@ function KLabel:_draw_self()
 
 		if self.colors.tint then
 			local tint_c = self.colors.tint
+
 			new_c[1] = new_c[1] * tint_c[1] / 255
 			new_c[2] = new_c[2] * tint_c[2] / 255
 			new_c[3] = new_c[3] * tint_c[3] / 255
@@ -1671,17 +1777,21 @@ function KLabel:_draw_self()
 		end
 
 		new_c[4] = self.alpha * pa / 255 * new_c[4]
+
 		G.setColor_old(new_c)
 	end
 
 	local voff = self.font_adj and self.font_adj.top or 0
+
 	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x, self.text_align)
 	G.setColor_old(pr, pg, pb, pa)
 end
 
 function KLabel:get_wrap_lines()
 	self:_load_font()
+
 	local width, wrapped = self.font:getWrap(self.text, self.text_size.x)
+
 	return width, #wrapped, wrapped
 end
 
@@ -1695,6 +1805,7 @@ function KLabel:_load_font()
 			self.font_adj = F:f_adj(self.font_name, self.font_size)
 		else
 			log.debug("Font not specified for %s", self)
+
 			self.font = G:getFont()
 			self.font_adj = {
 				size = 1
@@ -1707,6 +1818,7 @@ KButton = class("KButton", KLabel)
 
 function KButton:initialize(size, image_name)
 	KLabel.initialize(self, size, image_name)
+
 	self.highlighted = false
 	self.propagate_on_up = false
 	self.propagate_on_down = false
@@ -1725,7 +1837,9 @@ function KButton:draw()
 end
 
 KImageButton = class("KImageButton", KButton)
+
 KImageButton:append_serialize_keys("default_image_name", "hover_image_name", "click_image_name", "disable_image_name")
+
 KImageButton.static.init_arg_names = {"default_image_name", "hover_image_name", "click_image_name", "disable_image_name"}
 
 function KImageButton:initialize(default_image_name, hover_image_name, click_image_name, disable_image_name)
@@ -1733,6 +1847,7 @@ function KImageButton:initialize(default_image_name, hover_image_name, click_ima
 	self.hover_image_name = hover_image_name or default_image_name
 	self.click_image_name = click_image_name or hover_image_name or default_image_name
 	self.disable_image_name = disable_image_name
+
 	KButton.initialize(self, nil, default_image_name)
 end
 
@@ -1771,6 +1886,7 @@ end
 function KImageButton:on_keypressed(key, is_repeat)
 	if key == "return" and not self:is_disabled() then
 		self:on_click()
+
 		return true
 	end
 end
@@ -1796,10 +1912,12 @@ function KImageButton:remove_disabled_tint()
 end
 
 KScrollList = class("KScrollList", KView)
+
 KScrollList:append_serialize_keys("scroll_amount", "scroll_acceleration", "scroller_width", "scroller_margin", "scroller_hidden")
 
 function KScrollList:initialize(size)
 	log.debug("KScrollList")
+
 	self.scroll_origin_y = 0
 	self._bottom_y = 0
 	self.scroll_amount = 1
@@ -1807,7 +1925,9 @@ function KScrollList:initialize(size)
 	self.scroller_width = 16
 	self.scroller_margin = 4
 	self.scroller_hidden = false
+
 	KView.initialize(self, size)
+
 	self.clip = true
 	self.propagate_on_scroll = false
 
@@ -1844,8 +1964,10 @@ function KScrollList:draw()
 		G.setColor_old(self.colors.scroller_background)
 		G.rectangle("fill", self.scroller_rect.pos.x, self.scroller_rect.pos.y, self.scroller_rect.size.x, self.scroller_rect.size.y)
 		G.setColor_old(self.colors.scroller_foreground)
+
 		local scroller_height = self.size.y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
 		local scroller_offset = -self.scroll_origin_y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
+
 		G.rectangle("fill", self.size.x - self.scroller_width - self.scroller_margin, scroller_offset + self.scroller_margin, self.scroller_width, scroller_height)
 	end
 
@@ -1855,12 +1977,14 @@ end
 function KScrollList:clear_rows()
 	self._bottom_y = 0
 	self.scroll_origin_y = 0
+
 	self:remove_children()
 end
 
 function KScrollList:add_row(view)
 	view.pos.y = self._bottom_y
 	self._bottom_y = self._bottom_y + view.size.y
+
 	self:add_child(view)
 end
 
@@ -1887,6 +2011,7 @@ end
 
 function KScrollList:update(dt)
 	KScrollList.super.update(self, dt)
+
 	local mx, my, any_button_down = self:get_window():get_mouse_position()
 	local wx, wy = self:screen_to_view(mx, my)
 
@@ -1897,6 +2022,7 @@ function KScrollList:update(dt)
 
 		if math.abs(a) >= math.abs(scroller_step) then
 			local steps = km.sign(a) * math.floor(math.abs(a) / scroller_step)
+
 			self._down_y = self._down_y + steps * scroller_step
 			self.scroll_origin_y = self.scroll_origin_y - steps * self.scroll_amount
 			self.scroll_origin_y = km.clamp(-(self._bottom_y - self.size.y), 0, self.scroll_origin_y)
@@ -1915,11 +2041,13 @@ end
 
 function KScrollList:on_up(button, x, y)
 	log.debug()
+
 	self._down_y = nil
 end
 
 function KScrollList:on_exit()
 	log.debug()
+
 	self._down_y = nil
 end
 
@@ -1940,16 +2068,21 @@ function KScrollList:on_scroll(button)
 	self._last_scroll_direction = button
 	self.scroll_origin_y = self.scroll_origin_y + (button == "wu" and 1 or -1) * amount
 	self.scroll_origin_y = km.clamp(-(self._bottom_y - self.size.y), 0, self.scroll_origin_y)
+
 	return false
 end
 
 KInertialView = class("KInertialView", KView)
+
 KInertialView:include(KMDragInertia)
+
 KTable = class("KTable", KView)
+
 KTable:append_serialize_keys("cell_view", "start_view", "end_view")
 
 function KTable:initialize(size, cell_view, start_view, end_view)
 	KView.initialize(self, size)
+
 	self.clip = true
 	self.propagate_on_scroll = false
 	self.cell_view = cell_view
@@ -1961,6 +2094,7 @@ end
 function KTable:set_data(data)
 	self.data = data
 	self._first_cell_y = 0
+
 	local height = self.cell_view.size.y * #data
 
 	if self.start_view then
@@ -1980,7 +2114,7 @@ function KTable:update(dt)
 	local sy = self.scroll_origin_y
 
 	if not self.data or not self.cell_view then
-		return 
+		return
 	end
 
 	if self.start_view then
@@ -2018,6 +2152,7 @@ function KTable:update(dt)
 		if v.cell_idx and (start_vis_idx > v.cell_idx or end_vis_idx < v.cell_idx) then
 			self:remove_child(v)
 			table.insert(self.cell_pool, v)
+
 			self._vis_idx[v.cell_idx] = nil
 		end
 	end
@@ -2025,10 +2160,14 @@ function KTable:update(dt)
 	for i = start_vis_idx, end_vis_idx do
 		if not self._vis_idx[i] then
 			local v = table.remove(self.cell_pool) or self.cell_view:clone()
+
 			v.cell_idx = i
 			v.pos.y = self._first_cell_y + (i - 1) * v.size.y
+
 			v:prepare(i, self.data[i])
+
 			self._vis_idx[i] = v
+
 			self:add_child(v)
 		end
 	end
@@ -2043,10 +2182,12 @@ function KVideoView:initialize(video_name)
 
 	if not self.video then
 		log.error("video not found: %s", video_name)
-		return 
+
+		return
 	end
 
 	local size = V.v(self.video:getWidth(), self.video:getHeight())
+
 	log.debug("video name:%s", video_name)
 	log.debug("video size:%s,%s", size.x, size.y)
 	KView.initialize(self, size)
