@@ -1,1 +1,4180 @@
-return {["krdove_eb_elephant_cannibal_0001"]={a_name="go_stage92-1.dds",size={197,171},trim={3,9,10,12},a_size={2048,2048},f_quad={803,896,184,150},alias={"krdove_eb_elephant_cannibal_0002","krdove_eb_elephant_cannibal_0034","krdove_eb_elephant_cannibal_0035","krdove_eb_elephant_cannibal_0036","krdove_eb_elephant_cannibal_0037"}},["krdove_eb_elephant_cannibal_0010"]={a_name="go_stage92-1.dds",size={197,171},trim={2,10,15,12},a_size={2048,2048},f_quad={1359,1353,180,149},alias={"krdove_eb_elephant_cannibal_0009"}},["krdove_eb_elephant_cannibal_0100"]={a_name="go_stage92-1.dds",size={108,155},trim={0,5,0,0},a_size={2048,2048},f_quad={1925,896,108,150},alias={"krdove_eb_elephant_cannibal_0099"}},["krdove_eb_elephant_cannibal_0101"]={a_name="go_stage92-1.dds",size={108,155},trim={0,4,0,0},a_size={2048,2048},f_quad={1926,742,108,151},alias={"krdove_eb_elephant_cannibal_0102"}},["krdove_eb_elephant_cannibal_0103"]={a_name="go_stage92-1.dds",size={108,155},trim={0,2,0,0},a_size={2048,2048},f_quad={1470,1663,108,153},alias={"krdove_eb_elephant_cannibal_0104"}},["krdove_eb_elephant_cannibal_0105"]={a_name="go_stage92-1.dds",size={108,155},trim={0,0,0,0},a_size={2048,2048},f_quad={1359,1505,108,155},alias={"krdove_eb_elephant_cannibal_0106"}},["krdove_eb_elephant_cannibal_0107"]={a_name="go_stage92-1.dds",size={108,155},trim={0,0,0,0},a_size={2048,2048},f_quad={1359,1663,108,155},alias={"krdove_eb_elephant_cannibal_0108"}},["krdove_eb_elephant_cannibal_0109"]={a_name="go_stage92-1.dds",size={108,155},trim={0,2,0,0},a_size={2048,2048},f_quad={1470,1819,108,153},alias={"krdove_eb_elephant_cannibal_0110"}},["krdove_eb_elephant_cannibal_0011"]={a_name="go_stage92-1.dds",size={197,171},trim={2,11,17,12},a_size={2048,2048},f_quad={1542,1353,178,148},alias={"krdove_eb_elephant_cannibal_0012"}},["krdove_eb_elephant_cannibal_0111"]={a_name="go_stage92-1.dds",size={108,155},trim={0,3,0,0},a_size={2048,2048},f_quad={1581,1817,108,152},alias={"krdove_eb_elephant_cannibal_0112"}},["krdove_eb_elephant_cannibal_0113"]={a_name="go_stage92-1.dds",size={108,155},trim={0,5,0,0},a_size={2048,2048},f_quad={1924,1049,108,150},alias={"krdove_eb_elephant_cannibal_0114"}},["krdove_eb_elephant_cannibal_0115"]={a_name="go_stage92-1.dds",size={108,155},trim={0,6,0,0},a_size={2048,2048},f_quad={1904,1353,108,149},alias={"krdove_eb_elephant_cannibal_0116","krdove_eb_elephant_cannibal_0133","krdove_eb_elephant_cannibal_0097","krdove_eb_elephant_cannibal_0098"}},["krdove_eb_elephant_cannibal_0117"]={a_name="go_stage92-1.dds",size={108,155},trim={0,5,0,0},a_size={2048,2048},f_quad={1803,1505,108,150},alias={"krdove_eb_elephant_cannibal_0118"}},["krdove_eb_elephant_cannibal_0119"]={a_name="go_stage92-1.dds",size={108,155},trim={0,4,0,0},a_size={2048,2048},f_quad={1895,180,108,151},alias={"krdove_eb_elephant_cannibal_0120"}},["krdove_eb_elephant_cannibal_0121"]={a_name="go_stage92-1.dds",size={108,155},trim={0,2,0,0},a_size={2048,2048},f_quad={1581,1505,108,153},alias={"krdove_eb_elephant_cannibal_0122"}},["krdove_eb_elephant_cannibal_0123"]={a_name="go_stage92-1.dds",size={108,155},trim={0,0,0,0},a_size={2048,2048},f_quad={1359,1821,108,155},alias={"krdove_eb_elephant_cannibal_0124"}},["krdove_eb_elephant_cannibal_0125"]={a_name="go_stage92-1.dds",size={108,155},trim={0,0,0,0},a_size={2048,2048},f_quad={1470,1505,108,155},alias={"krdove_eb_elephant_cannibal_0126"}},["krdove_eb_elephant_cannibal_0127"]={a_name="go_stage92-1.dds",size={108,155},trim={0,2,0,0},a_size={2048,2048},f_quad={1581,1661,108,153},alias={"krdove_eb_elephant_cannibal_0128"}},["krdove_eb_elephant_cannibal_0129"]={a_name="go_stage92-1.dds",size={108,155},trim={0,3,0,0},a_size={2048,2048},f_quad={1692,1505,108,152},alias={"krdove_eb_elephant_cannibal_0130"}},["krdove_eb_elephant_cannibal_0013"]={a_name="go_stage92-1.dds",size={197,171},trim={1,11,18,12},a_size={2048,2048},f_quad={1723,1353,178,148},alias={"krdove_eb_elephant_cannibal_0014"}},["krdove_eb_elephant_cannibal_0131"]={a_name="go_stage92-1.dds",size={108,155},trim={0,5,0,0},a_size={2048,2048},f_quad={1914,1505,108,150},alias={"krdove_eb_elephant_cannibal_0132"}},["krdove_eb_elephant_cannibal_0134"]={a_name="go_stage92-1.dds",size={184,158},trim={0,5,0,4},a_size={2048,2048},f_quad={1176,1049,184,149},alias={"krdove_eb_elephant_cannibal_0135","krdove_eb_elephant_cannibal_0170"}},["krdove_eb_elephant_cannibal_0136"]={a_name="go_stage92-1.dds",size={184,158},trim={0,5,0,4},a_size={2048,2048},f_quad={1363,1049,184,149},alias={"krdove_eb_elephant_cannibal_0137"}},["krdove_eb_elephant_cannibal_0138"]={a_name="go_stage92-1.dds",size={184,158},trim={0,4,0,4},a_size={2048,2048},f_quad={990,896,184,150},alias={"krdove_eb_elephant_cannibal_0139"}},["krdove_eb_elephant_cannibal_0140"]={a_name="go_stage92-1.dds",size={184,158},trim={0,3,0,4},a_size={2048,2048},f_quad={429,1516,184,151},alias={"krdove_eb_elephant_cannibal_0141"}},["krdove_eb_elephant_cannibal_0142"]={a_name="go_stage92-1.dds",size={184,158},trim={0,2,0,4},a_size={2048,2048},f_quad={242,742,184,152},alias={"krdove_eb_elephant_cannibal_0143"}},["krdove_eb_elephant_cannibal_0144"]={a_name="go_stage92-1.dds",size={184,158},trim={0,3,0,4},a_size={2048,2048},f_quad={429,1670,184,151},alias={"krdove_eb_elephant_cannibal_0145"}},["krdove_eb_elephant_cannibal_0146"]={a_name="go_stage92-1.dds",size={184,158},trim={0,3,0,4},a_size={2048,2048},f_quad={429,1824,184,151},alias={"krdove_eb_elephant_cannibal_0147"}},["krdove_eb_elephant_cannibal_0148"]={a_name="go_stage92-1.dds",size={184,158},trim={0,4,0,4},a_size={2048,2048},f_quad={1177,896,184,150},alias={"krdove_eb_elephant_cannibal_0149"}},["krdove_eb_elephant_cannibal_0015"]={a_name="go_stage92-1.dds",size={197,171},trim={1,11,19,12},a_size={2048,2048},f_quad={1177,1507,177,148},alias={"krdove_eb_elephant_cannibal_0016"}},["krdove_eb_elephant_cannibal_0150"]={a_name="go_stage92-1.dds",size={184,158},trim={0,5,0,4},a_size={2048,2048},f_quad={1550,1049,184,149},alias={"krdove_eb_elephant_cannibal_0151"}},["krdove_eb_elephant_cannibal_0152"]={a_name="go_stage92-1.dds",size={184,158},trim={0,5,0,4},a_size={2048,2048},f_quad={1737,1049,184,149},alias={"krdove_eb_elephant_cannibal_0153"}},["krdove_eb_elephant_cannibal_0154"]={a_name="go_stage92-1.dds",size={184,158},trim={0,5,0,4},a_size={2048,2048},f_quad={990,1202,184,149},alias={"krdove_eb_elephant_cannibal_0155"}},["krdove_eb_elephant_cannibal_0156"]={a_name="go_stage92-1.dds",size={184,158},trim={0,4,0,4},a_size={2048,2048},f_quad={1364,896,184,150},alias={"krdove_eb_elephant_cannibal_0157"}},["krdove_eb_elephant_cannibal_0158"]={a_name="go_stage92-1.dds",size={184,158},trim={0,3,0,4},a_size={2048,2048},f_quad={617,742,184,151},alias={"krdove_eb_elephant_cannibal_0159"}},["krdove_eb_elephant_cannibal_0160"]={a_name="go_stage92-1.dds",size={184,158},trim={0,2,0,4},a_size={2048,2048},f_quad={242,897,184,152},alias={"krdove_eb_elephant_cannibal_0161"}},["krdove_eb_elephant_cannibal_0162"]={a_name="go_stage92-1.dds",size={184,158},trim={0,3,0,4},a_size={2048,2048},f_quad={804,742,184,151},alias={"krdove_eb_elephant_cannibal_0163"}},["krdove_eb_elephant_cannibal_0164"]={a_name="go_stage92-1.dds",size={184,158},trim={0,4,0,4},a_size={2048,2048},f_quad={1551,896,184,150},alias={"krdove_eb_elephant_cannibal_0165"}},["krdove_eb_elephant_cannibal_0166"]={a_name="go_stage92-1.dds",size={184,158},trim={0,4,0,4},a_size={2048,2048},f_quad={1738,896,184,150},alias={"krdove_eb_elephant_cannibal_0167"}},["krdove_eb_elephant_cannibal_0168"]={a_name="go_stage92-1.dds",size={184,158},trim={0,5,0,4},a_size={2048,2048},f_quad={990,1354,184,149},alias={"krdove_eb_elephant_cannibal_0169"}},["krdove_eb_elephant_cannibal_0017"]={a_name="go_stage92-1.dds",size={197,171},trim={0,12,21,12},a_size={2048,2048},f_quad={1177,1658,176,147},alias={}},["krdove_eb_elephant_cannibal_0018"]={a_name="go_stage92-1.dds",size={197,171},trim={1,11,22,12},a_size={2048,2048},f_quad={1177,1808,174,148},alias={"krdove_eb_elephant_cannibal_0019"}},["krdove_eb_elephant_cannibal_0020"]={a_name="go_stage92-1.dds",size={197,171},trim={2,11,12,12},a_size={2048,2048},f_quad={1177,1202,183,148},alias={}},["krdove_eb_elephant_cannibal_0021"]={a_name="go_stage92-1.dds",size={197,171},trim={5,10,6,12},a_size={2048,2048},f_quad={1179,742,186,149},alias={}},["krdove_eb_elephant_cannibal_0022"]={a_name="go_stage92-1.dds",size={197,171},trim={6,9,4,12},a_size={2048,2048},f_quad={5,1843,187,150},alias={}},["krdove_eb_elephant_cannibal_0023"]={a_name="go_stage92-1.dds",size={197,171},trim={8,8,6,12},a_size={2048,2048},f_quad={1368,742,183,151},alias={}},["krdove_eb_elephant_cannibal_0024"]={a_name="go_stage92-1.dds",size={197,171},trim={8,7,0,12},a_size={2048,2048},f_quad={5,1068,189,152},alias={}},["krdove_eb_elephant_cannibal_0025"]={a_name="go_stage92-1.dds",size={197,171},trim={8,7,0,12},a_size={2048,2048},f_quad={5,1223,189,152},alias={}},["krdove_eb_elephant_cannibal_0026"]={a_name="go_stage92-1.dds",size={197,171},trim={8,7,0,12},a_size={2048,2048},f_quad={5,1378,189,152},alias={}},["krdove_eb_elephant_cannibal_0027"]={a_name="go_stage92-1.dds",size={197,171},trim={7,7,3,12},a_size={2048,2048},f_quad={5,1533,187,152},alias={"krdove_eb_elephant_cannibal_0028"}},["krdove_eb_elephant_cannibal_0029"]={a_name="go_stage92-1.dds",size={197,171},trim={6,7,5,12},a_size={2048,2048},f_quad={5,1688,186,152},alias={"krdove_eb_elephant_cannibal_0030"}},["krdove_eb_elephant_cannibal_0003"]={a_name="go_stage92-1.dds",size={197,171},trim={3,9,10,12},a_size={2048,2048},f_quad={803,1049,184,150},alias={"krdove_eb_elephant_cannibal_0004"}},["krdove_eb_elephant_cannibal_0031"]={a_name="go_stage92-1.dds",size={197,171},trim={5,8,7,12},a_size={2048,2048},f_quad={429,742,185,151},alias={"krdove_eb_elephant_cannibal_0032"}},["krdove_eb_elephant_cannibal_0033"]={a_name="go_stage92-1.dds",size={197,171},trim={4,9,9,12},a_size={2048,2048},f_quad={803,1202,184,150},alias={}},["krdove_eb_elephant_cannibal_0038"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={1554,742,183,151},alias={}},["krdove_eb_elephant_cannibal_0039"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={1740,742,183,151},alias={}},["krdove_eb_elephant_cannibal_0040"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,896,183,151},alias={}},["krdove_eb_elephant_cannibal_0041"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,1050,183,151},alias={}},["krdove_eb_elephant_cannibal_0042"]={a_name="go_stage92-1.dds",size={183,156},trim={0,6,0,0},a_size={2048,2048},f_quad={803,1509,183,150},alias={}},["krdove_eb_elephant_cannibal_0043"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,1204,183,151},alias={}},["krdove_eb_elephant_cannibal_0044"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={242,1052,183,152},alias={}},["krdove_eb_elephant_cannibal_0045"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={242,1207,183,152},alias={}},["krdove_eb_elephant_cannibal_0046"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={242,1362,183,152},alias={}},["krdove_eb_elephant_cannibal_0047"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={242,1517,183,152},alias={}},["krdove_eb_elephant_cannibal_0048"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={242,1672,183,152},alias={}},["krdove_eb_elephant_cannibal_0049"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={242,1827,183,152},alias={}},["krdove_eb_elephant_cannibal_0005"]={a_name="go_stage92-1.dds",size={197,171},trim={3,9,12,12},a_size={2048,2048},f_quad={990,1506,182,150},alias={"krdove_eb_elephant_cannibal_0006"}},["krdove_eb_elephant_cannibal_0050"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={429,896,183,152},alias={}},["krdove_eb_elephant_cannibal_0051"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={429,1051,183,152},alias={}},["krdove_eb_elephant_cannibal_0052"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={429,1206,183,152},alias={}},["krdove_eb_elephant_cannibal_0053"]={a_name="go_stage92-1.dds",size={183,156},trim={0,4,0,0},a_size={2048,2048},f_quad={429,1361,183,152},alias={}},["krdove_eb_elephant_cannibal_0054"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,1358,183,151},alias={}},["krdove_eb_elephant_cannibal_0055"]={a_name="go_stage92-1.dds",size={183,156},trim={0,6,0,0},a_size={2048,2048},f_quad={803,1662,183,150},alias={}},["krdove_eb_elephant_cannibal_0056"]={a_name="go_stage92-1.dds",size={183,156},trim={0,6,0,0},a_size={2048,2048},f_quad={803,1815,183,150},alias={}},["krdove_eb_elephant_cannibal_0057"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,1512,183,151},alias={}},["krdove_eb_elephant_cannibal_0058"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,1666,183,151},alias={}},["krdove_eb_elephant_cannibal_0059"]={a_name="go_stage92-1.dds",size={183,156},trim={0,5,0,0},a_size={2048,2048},f_quad={617,1820,183,151},alias={}},["krdove_eb_elephant_cannibal_0060"]={a_name="go_stage92-1.dds",size={342,209},trim={130,38,29,21},a_size={2048,2048},f_quad={990,1049,183,150},alias={}},["krdove_eb_elephant_cannibal_0061"]={a_name="go_stage92-1.dds",size={342,209},trim={129,37,31,21},a_size={2048,2048},f_quad={803,1355,182,151},alias={}},["krdove_eb_elephant_cannibal_0062"]={a_name="go_stage92-1.dds",size={342,209},trim={129,37,33,21},a_size={2048,2048},f_quad={990,1659,180,151},alias={}},["krdove_eb_elephant_cannibal_0063"]={a_name="go_stage92-1.dds",size={342,209},trim={128,37,35,21},a_size={2048,2048},f_quad={1177,1353,179,151},alias={}},["krdove_eb_elephant_cannibal_0064"]={a_name="go_stage92-1.dds",size={342,209},trim={120,38,37,21},a_size={2048,2048},f_quad={991,742,185,150},alias={}},["krdove_eb_elephant_cannibal_0065"]={a_name="go_stage92-1.dds",size={342,209},trim={113,33,39,21},a_size={2048,2048},f_quad={5,910,190,155},alias={}},["krdove_eb_elephant_cannibal_0066"]={a_name="go_stage92-1.dds",size={342,209},trim={101,29,41,21},a_size={2048,2048},f_quad={1819,5,200,159},alias={}},["krdove_eb_elephant_cannibal_0067"]={a_name="go_stage92-1.dds",size={342,209},trim={84,23,43,21},a_size={2048,2048},f_quad={1815,334,215,165},alias={}},["krdove_eb_elephant_cannibal_0068"]={a_name="go_stage92-1.dds",size={342,209},trim={65,23,43,21},a_size={2048,2048},f_quad={5,742,234,165},alias={}},["krdove_eb_elephant_cannibal_0069"]={a_name="go_stage92-1.dds",size={342,209},trim={43,23,43,21},a_size={2048,2048},f_quad={278,334,256,165},alias={}},["krdove_eb_elephant_cannibal_0007"]={a_name="go_stage92-1.dds",size={197,171},trim={2,10,13,12},a_size={2048,2048},f_quad={990,1813,182,149},alias={"krdove_eb_elephant_cannibal_0008"}},["krdove_eb_elephant_cannibal_0070"]={a_name="go_stage92-1.dds",size={342,209},trim={29,23,43,21},a_size={2048,2048},f_quad={5,334,270,165},alias={}},["krdove_eb_elephant_cannibal_0071"]={a_name="go_stage92-1.dds",size={342,209},trim={6,23,43,14},a_size={2048,2048},f_quad={5,5,293,172},alias={}},["krdove_eb_elephant_cannibal_0072"]={a_name="go_stage92-1.dds",size={342,209},trim={6,23,43,14},a_size={2048,2048},f_quad={301,5,293,172},alias={}},["krdove_eb_elephant_cannibal_0073"]={a_name="go_stage92-1.dds",size={342,209},trim={6,29,39,14},a_size={2048,2048},f_quad={597,5,297,166},alias={}},["krdove_eb_elephant_cannibal_0074"]={a_name="go_stage92-1.dds",size={342,209},trim={6,32,35,14},a_size={2048,2048},f_quad={897,5,301,163},alias={}},["krdove_eb_elephant_cannibal_0075"]={a_name="go_stage92-1.dds",size={342,209},trim={6,35,32,14},a_size={2048,2048},f_quad={1201,5,304,160},alias={}},["krdove_eb_elephant_cannibal_0076"]={a_name="go_stage92-1.dds",size={342,209},trim={6,39,28,14},a_size={2048,2048},f_quad={1508,5,308,156},alias={}},["krdove_eb_elephant_cannibal_0077"]={a_name="go_stage92-1.dds",size={342,209},trim={6,44,24,14},a_size={2048,2048},f_quad={5,180,312,151},alias={}},["krdove_eb_elephant_cannibal_0078"]={a_name="go_stage92-1.dds",size={342,209},trim={6,47,24,14},a_size={2048,2048},f_quad={320,180,312,148},alias={}},["krdove_eb_elephant_cannibal_0079"]={a_name="go_stage92-1.dds",size={342,209},trim={6,51,24,14},a_size={2048,2048},f_quad={635,180,312,144},alias={}},["krdove_eb_elephant_cannibal_0080"]={a_name="go_stage92-1.dds",size={342,209},trim={6,55,24,14},a_size={2048,2048},f_quad={950,180,312,140},alias={}},["krdove_eb_elephant_cannibal_0081"]={a_name="go_stage92-1.dds",size={342,209},trim={6,59,24,14},a_size={2048,2048},f_quad={1265,180,312,136},alias={}},["krdove_eb_elephant_cannibal_0082"]={a_name="go_stage92-1.dds",size={342,209},trim={6,62,24,14},a_size={2048,2048},f_quad={1580,180,312,133},alias={"krdove_eb_elephant_cannibal_0083"}},["krdove_eb_elephant_cannibal_0084"]={a_name="go_stage92-1.dds",size={342,209},trim={6,62,24,14},a_size={2048,2048},f_quad={537,334,312,133},alias={}},["krdove_eb_elephant_cannibal_0085"]={a_name="go_stage92-1.dds",size={342,209},trim={6,68,21,14},a_size={2048,2048},f_quad={852,334,315,127},alias={}},["krdove_eb_elephant_cannibal_0086"]={a_name="go_stage92-1.dds",size={342,209},trim={6,70,18,14},a_size={2048,2048},f_quad={1170,334,318,125},alias={}},["krdove_eb_elephant_cannibal_0087"]={a_name="go_stage92-1.dds",size={342,209},trim={6,73,15,14},a_size={2048,2048},f_quad={1491,334,321,122},alias={}},["krdove_eb_elephant_cannibal_0088"]={a_name="go_stage92-1.dds",size={342,209},trim={6,76,12,14},a_size={2048,2048},f_quad={5,620,324,119},alias={}},["krdove_eb_elephant_cannibal_0089"]={a_name="go_stage92-1.dds",size={342,209},trim={6,79,9,14},a_size={2048,2048},f_quad={665,620,327,116},alias={}},["krdove_eb_elephant_cannibal_0090"]={a_name="go_stage92-1.dds",size={342,209},trim={6,80,6,14},a_size={2048,2048},f_quad={332,620,330,115},alias={}},["krdove_eb_elephant_cannibal_0091"]={a_name="go_stage92-1.dds",size={342,209},trim={6,81,3,14},a_size={2048,2048},f_quad={1700,502,333,114},alias={}},["krdove_eb_elephant_cannibal_0092"]={a_name="go_stage92-1.dds",size={342,209},trim={6,82,0,14},a_size={2048,2048},f_quad={1361,502,336,113},alias={}},["krdove_eb_elephant_cannibal_0093"]={a_name="go_stage92-1.dds",size={342,209},trim={6,81,0,14},a_size={2048,2048},f_quad={344,502,336,114},alias={}},["krdove_eb_elephant_cannibal_0094"]={a_name="go_stage92-1.dds",size={342,209},trim={6,81,0,14},a_size={2048,2048},f_quad={683,502,336,114},alias={}},["krdove_eb_elephant_cannibal_0095"]={a_name="go_stage92-1.dds",size={342,209},trim={6,81,0,14},a_size={2048,2048},f_quad={1022,502,336,114},alias={}},["krdove_eb_elephant_cannibal_0096"]={a_name="go_stage92-1.dds",size={342,209},trim={6,80,0,14},a_size={2048,2048},f_quad={5,502,336,115},alias={}},["krdove_enemy_shaman_gravity_0001"]={a_name="go_stage92-1.dds",size={59,55},trim={14,5,6,0},a_size={2048,2048},f_quad={326,1982,39,50},alias={"krdove_enemy_shaman_gravity_0010","krdove_enemy_shaman_gravity_0002","krdove_enemy_shaman_gravity_0003","krdove_enemy_shaman_gravity_0004","krdove_enemy_shaman_gravity_0005","krdove_enemy_shaman_gravity_0006","krdove_enemy_shaman_gravity_0007","krdove_enemy_shaman_gravity_0008","krdove_enemy_shaman_gravity_0009"}},["krdove_enemy_shaman_gravity_0100"]={a_name="go_stage92-1.dds",size={41,53},trim={2,7,0,0},a_size={2048,2048},f_quad={1070,1965,39,46},alias={"krdove_enemy_shaman_gravity_0099"}},["krdove_enemy_shaman_gravity_0101"]={a_name="go_stage92-1.dds",size={41,53},trim={1,3,0,0},a_size={2048,2048},f_quad={195,1843,40,50},alias={"krdove_enemy_shaman_gravity_0102"}},["krdove_enemy_shaman_gravity_0103"]={a_name="go_stage92-1.dds",size={41,53},trim={2,2,0,0},a_size={2048,2048},f_quad={2006,180,39,51},alias={"krdove_enemy_shaman_gravity_0104"}},["krdove_enemy_shaman_gravity_0105"]={a_name="go_stage92-1.dds",size={41,53},trim={1,2,1,0},a_size={2048,2048},f_quad={2006,234,39,51},alias={}},["krdove_enemy_shaman_gravity_0011"]={a_name="go_stage92-1.dds",size={59,55},trim={2,1,10,0},a_size={2048,2048},f_quad={1359,1979,47,54},alias={}},["krdove_enemy_shaman_gravity_0012"]={a_name="go_stage92-1.dds",size={59,55},trim={2,1,10,0},a_size={2048,2048},f_quad={1409,1979,47,54},alias={}},["krdove_enemy_shaman_gravity_0013"]={a_name="go_stage92-1.dds",size={59,55},trim={2,1,11,0},a_size={2048,2048},f_quad={1470,1975,46,54},alias={"krdove_enemy_shaman_gravity_0014","krdove_enemy_shaman_gravity_0015","krdove_enemy_shaman_gravity_0016"}},["krdove_enemy_shaman_gravity_0017"]={a_name="go_stage92-1.dds",size={59,55},trim={19,11,0,0},a_size={2048,2048},f_quad={1228,1959,40,44},alias={"krdove_enemy_shaman_gravity_0018"}},["krdove_enemy_shaman_gravity_0019"]={a_name="go_stage92-1.dds",size={59,55},trim={19,7,2,0},a_size={2048,2048},f_quad={886,1968,38,48},alias={"krdove_enemy_shaman_gravity_0020"}},["krdove_enemy_shaman_gravity_0021"]={a_name="go_stage92-1.dds",size={59,55},trim={15,5,6,0},a_size={2048,2048},f_quad={617,1974,38,50},alias={}},["krdove_enemy_shaman_gravity_0022"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={1271,1959,35,50},alias={"krdove_enemy_shaman_gravity_0023"}},["krdove_enemy_shaman_gravity_0024"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={1309,1959,35,50},alias={"krdove_enemy_shaman_gravity_0025"}},["krdove_enemy_shaman_gravity_0026"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1068,35,50},alias={"krdove_enemy_shaman_gravity_0027","krdove_enemy_shaman_gravity_0030","krdove_enemy_shaman_gravity_0031"}},["krdove_enemy_shaman_gravity_0028"]={a_name="go_stage92-1.dds",size={37,50},trim={2,2,0,0},a_size={2048,2048},f_quad={197,1439,35,48},alias={"krdove_enemy_shaman_gravity_0029"}},["krdove_enemy_shaman_gravity_0032"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1121,35,50},alias={"krdove_enemy_shaman_gravity_0033"}},["krdove_enemy_shaman_gravity_0034"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1174,35,50},alias={"krdove_enemy_shaman_gravity_0035"}},["krdove_enemy_shaman_gravity_0036"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1227,35,50},alias={"krdove_enemy_shaman_gravity_0037"}},["krdove_enemy_shaman_gravity_0038"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1280,35,50},alias={"krdove_enemy_shaman_gravity_0039","krdove_enemy_shaman_gravity_0042","krdove_enemy_shaman_gravity_0043"}},["krdove_enemy_shaman_gravity_0040"]={a_name="go_stage92-1.dds",size={37,50},trim={0,2,0,0},a_size={2048,2048},f_quad={1112,1965,37,48},alias={"krdove_enemy_shaman_gravity_0041"}},["krdove_enemy_shaman_gravity_0044"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1333,35,50},alias={"krdove_enemy_shaman_gravity_0045"}},["krdove_enemy_shaman_gravity_0046"]={a_name="go_stage92-1.dds",size={37,50},trim={2,0,0,0},a_size={2048,2048},f_quad={197,1386,35,50},alias={}},["krdove_enemy_shaman_gravity_0047"]={a_name="go_stage92-1.dds",size={65,60},trim={26,1,0,8},a_size={2048,2048},f_quad={195,1533,39,51},alias={}},["krdove_enemy_shaman_gravity_0048"]={a_name="go_stage92-1.dds",size={65,60},trim={26,1,0,8},a_size={2048,2048},f_quad={195,1587,39,51},alias={}},["krdove_enemy_shaman_gravity_0049"]={a_name="go_stage92-1.dds",size={65,60},trim={26,1,0,8},a_size={2048,2048},f_quad={194,1688,39,51},alias={}},["krdove_enemy_shaman_gravity_0050"]={a_name="go_stage92-1.dds",size={65,60},trim={26,1,0,9},a_size={2048,2048},f_quad={368,1982,39,50},alias={}},["krdove_enemy_shaman_gravity_0051"]={a_name="go_stage92-1.dds",size={65,60},trim={8,9,6,6},a_size={2048,2048},f_quad={1519,1975,51,45},alias={}},["krdove_enemy_shaman_gravity_0052"]={a_name="go_stage92-1.dds",size={65,60},trim={6,12,8,5},a_size={2048,2048},f_quad={1581,1972,51,43},alias={}},["krdove_enemy_shaman_gravity_0053"]={a_name="go_stage92-1.dds",size={65,60},trim={4,15,10,4},a_size={2048,2048},f_quad={1635,1972,51,41},alias={}},["krdove_enemy_shaman_gravity_0054"]={a_name="go_stage92-1.dds",size={65,60},trim={5,20,12,2},a_size={2048,2048},f_quad={927,1968,48,38},alias={}},["krdove_enemy_shaman_gravity_0055"]={a_name="go_stage92-1.dds",size={65,60},trim={4,22,13,1},a_size={2048,2048},f_quad={1177,1959,48,37},alias={}},["krdove_enemy_shaman_gravity_0056"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={5,1996,37,49},alias={"krdove_enemy_shaman_gravity_0057"}},["krdove_enemy_shaman_gravity_0058"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={45,1996,37,49},alias={"krdove_enemy_shaman_gravity_0059"}},["krdove_enemy_shaman_gravity_0060"]={a_name="go_stage92-1.dds",size={37,53},trim={0,1,1,0},a_size={2048,2048},f_quad={658,1974,36,52},alias={"krdove_enemy_shaman_gravity_0061"}},["krdove_enemy_shaman_gravity_0062"]={a_name="go_stage92-1.dds",size={37,53},trim={0,1,1,0},a_size={2048,2048},f_quad={697,1974,36,52},alias={"krdove_enemy_shaman_gravity_0063"}},["krdove_enemy_shaman_gravity_0064"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={85,1996,37,49},alias={"krdove_enemy_shaman_gravity_0065"}},["krdove_enemy_shaman_gravity_0066"]={a_name="go_stage92-1.dds",size={37,53},trim={0,3,0,0},a_size={2048,2048},f_quad={736,1974,37,50},alias={"krdove_enemy_shaman_gravity_0067"}},["krdove_enemy_shaman_gravity_0068"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={125,1996,37,49},alias={"krdove_enemy_shaman_gravity_0069"}},["krdove_enemy_shaman_gravity_0070"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={165,1996,37,49},alias={"krdove_enemy_shaman_gravity_0071"}},["krdove_enemy_shaman_gravity_0072"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={990,1965,37,49},alias={"krdove_enemy_shaman_gravity_0073"}},["krdove_enemy_shaman_gravity_0074"]={a_name="go_stage92-1.dds",size={37,53},trim={0,1,0,0},a_size={2048,2048},f_quad={511,1978,37,52},alias={"krdove_enemy_shaman_gravity_0075"}},["krdove_enemy_shaman_gravity_0076"]={a_name="go_stage92-1.dds",size={37,53},trim={0,1,0,0},a_size={2048,2048},f_quad={551,1978,37,52},alias={"krdove_enemy_shaman_gravity_0077"}},["krdove_enemy_shaman_gravity_0078"]={a_name="go_stage92-1.dds",size={37,53},trim={0,3,0,0},a_size={2048,2048},f_quad={803,1968,37,50},alias={"krdove_enemy_shaman_gravity_0079"}},["krdove_enemy_shaman_gravity_0080"]={a_name="go_stage92-1.dds",size={37,53},trim={0,4,0,0},a_size={2048,2048},f_quad={1030,1965,37,49},alias={}},["krdove_enemy_shaman_gravity_0081"]={a_name="go_stage92-1.dds",size={41,53},trim={1,2,1,0},a_size={2048,2048},f_quad={194,1742,39,51},alias={"krdove_enemy_shaman_gravity_0082"}},["krdove_enemy_shaman_gravity_0083"]={a_name="go_stage92-1.dds",size={41,53},trim={1,1,0,0},a_size={2048,2048},f_quad={198,910,40,52},alias={"krdove_enemy_shaman_gravity_0084"}},["krdove_enemy_shaman_gravity_0085"]={a_name="go_stage92-1.dds",size={41,53},trim={3,2,0,0},a_size={2048,2048},f_quad={429,1978,38,51},alias={"krdove_enemy_shaman_gravity_0086"}},["krdove_enemy_shaman_gravity_0087"]={a_name="go_stage92-1.dds",size={41,53},trim={1,7,0,0},a_size={2048,2048},f_quad={843,1968,40,46},alias={"krdove_enemy_shaman_gravity_0088"}},["krdove_enemy_shaman_gravity_0089"]={a_name="go_stage92-1.dds",size={41,53},trim={3,2,0,0},a_size={2048,2048},f_quad={470,1978,38,51},alias={"krdove_enemy_shaman_gravity_0090"}},["krdove_enemy_shaman_gravity_0091"]={a_name="go_stage92-1.dds",size={41,53},trim={1,2,1,0},a_size={2048,2048},f_quad={242,1982,39,51},alias={"krdove_enemy_shaman_gravity_0092"}},["krdove_enemy_shaman_gravity_0093"]={a_name="go_stage92-1.dds",size={41,53},trim={1,2,0,0},a_size={2048,2048},f_quad={198,965,40,51},alias={"krdove_enemy_shaman_gravity_0094"}},["krdove_enemy_shaman_gravity_0095"]={a_name="go_stage92-1.dds",size={41,53},trim={2,2,0,0},a_size={2048,2048},f_quad={284,1982,39,51},alias={"krdove_enemy_shaman_gravity_0096"}},["krdove_enemy_shaman_gravity_0097"]={a_name="go_stage92-1.dds",size={41,53},trim={1,3,0,0},a_size={2048,2048},f_quad={195,1896,40,50},alias={"krdove_enemy_shaman_gravity_0098"}}}
+return {
+	["krdove_eb_elephant_cannibal_0001"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1318,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0002",
+			"krdove_eb_elephant_cannibal_0034",
+			"krdove_eb_elephant_cannibal_0035",
+			"krdove_eb_elephant_cannibal_0036",
+			"krdove_eb_elephant_cannibal_0037"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0010"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			72,
+			28,
+			49,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1135,
+			1777,
+			179,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0009"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0101"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			22,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1726,
+			1776,
+			108,
+			152
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0102"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0103"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			20,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1504,
+			1777,
+			108,
+			154
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0104"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0105"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			18,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1934,
+			333,
+			108,
+			156
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0106"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0107"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			19,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1504,
+			1619,
+			108,
+			155
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0108"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0109"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			20,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1615,
+			1619,
+			108,
+			154
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0110"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0011"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			71,
+			29,
+			50,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1319,
+			1619,
+			179,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0012"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0111"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			22,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			1619,
+			108,
+			152
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0112"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0113"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			23,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1895,
+			179,
+			108,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0114"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0115"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			25,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1881,
+			859,
+			108,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0116",
+			"krdove_eb_elephant_cannibal_0133",
+			"krdove_eb_elephant_cannibal_0097",
+			"krdove_eb_elephant_cannibal_0098"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0119"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			22,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			1774,
+			108,
+			152
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0120"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0121"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			20,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1615,
+			1776,
+			108,
+			154
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0122"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0123"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			18,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1879,
+			1011,
+			108,
+			156
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0124",
+			"krdove_eb_elephant_cannibal_0125",
+			"krdove_eb_elephant_cannibal_0126"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0127"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			20,
+			90,
+			26
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1726,
+			1619,
+			108,
+			154
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0128"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0013"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			71,
+			29,
+			51,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1319,
+			1770,
+			178,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0014"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0134"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			29,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1695,
+			859,
+			183,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0135",
+			"krdove_eb_elephant_cannibal_0170"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0136"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			28,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			951,
+			859,
+			183,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0137"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0138"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1471,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0139"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0140"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1624,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0141"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0142"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1479,
+			183,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0143"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0144"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1633,
+			183,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0145"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0146"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1777,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0147"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0148"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			28,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1137,
+			859,
+			183,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0149"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0015"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			70,
+			29,
+			53,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1504,
+			1468,
+			177,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0016"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0150"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			29,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1319,
+			1317,
+			183,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0151"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0152"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			29,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1505,
+			1317,
+			183,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0153"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0154"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			28,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1323,
+			859,
+			183,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0155"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0156"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			1011,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0157"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0158"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1787,
+			183,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0159"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0160"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1012,
+			183,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0161"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0162"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1166,
+			183,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0163"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0164"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1135,
+			1011,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0165"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0166"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			28,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1509,
+			859,
+			183,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0167"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0168"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			29,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1691,
+			1317,
+			183,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0169"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0017"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			70,
+			30,
+			54,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1862,
+			1468,
+			176,
+			147
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0018"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			70,
+			29,
+			55,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1684,
+			1468,
+			175,
+			148
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0019"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0020"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			72,
+			29,
+			46,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1319,
+			1468,
+			182,
+			148
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0021"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			74,
+			28,
+			40,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			859,
+			186,
+			149
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0022"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			76,
+			27,
+			38,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			859,
+			186,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0023"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			78,
+			25,
+			39,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1012,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0024"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			78,
+			25,
+			33,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1016,
+			189,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0025"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			78,
+			25,
+			33,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1171,
+			189,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0026"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			78,
+			25,
+			33,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1326,
+			189,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0027"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			76,
+			25,
+			37,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1481,
+			187,
+			152
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0028"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0029"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			75,
+			25,
+			39,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1636,
+			186,
+			152
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0030"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0003"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1321,
+			1011,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0004"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0031"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			74,
+			26,
+			41,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1791,
+			185,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0032"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0033"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			43,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1782,
+			184,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0038"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1507,
+			1011,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0039"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1693,
+			1011,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0040"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			1164,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0041"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			1317,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0042"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			1470,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0043"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1320,
+			183,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0044"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1167,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0045"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1322,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0046"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1477,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0047"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1632,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0048"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1787,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0049"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			859,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0005"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			72,
+			27,
+			45,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			1623,
+			183,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0006"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0050"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1014,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0051"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1169,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0052"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			25,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1324,
+			183,
+			152
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0053"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1474,
+			183,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0054"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			26,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1628,
+			183,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0055"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			949,
+			1776,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0056"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1135,
+			1164,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0057"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1321,
+			1164,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0058"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1507,
+			1164,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0059"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			73,
+			27,
+			44,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1693,
+			1164,
+			183,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0060"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			160,
+			27,
+			56,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1011,
+			184,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0061"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			160,
+			26,
+			58,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1164,
+			182,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0062"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			159,
+			26,
+			60,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1135,
+			1317,
+			181,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0063"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			159,
+			26,
+			62,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1135,
+			1471,
+			179,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0064"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			151,
+			27,
+			64,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			859,
+			185,
+			150
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0065"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			143,
+			23,
+			66,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			859,
+			191,
+			154
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0066"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			132,
+			18,
+			68,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1731,
+			333,
+			200,
+			159
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0067"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			115,
+			12,
+			70,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1824,
+			5,
+			215,
+			165
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0068"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			95,
+			12,
+			70,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1493,
+			333,
+			235,
+			165
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0069"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			74,
+			12,
+			70,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			279,
+			333,
+			256,
+			165
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0007"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			72,
+			28,
+			47,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1135,
+			1625,
+			181,
+			149
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0008"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0070"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			59,
+			12,
+			70,
+			23
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			333,
+			271,
+			165
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0071"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			12,
+			70,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			5,
+			294,
+			171
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0072"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			12,
+			70,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			302,
+			5,
+			294,
+			171
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0073"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			18,
+			66,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			599,
+			5,
+			298,
+			165
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0074"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			20,
+			63,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			900,
+			5,
+			301,
+			163
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0075"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			25,
+			59,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1204,
+			5,
+			305,
+			158
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0076"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			29,
+			55,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1512,
+			5,
+			309,
+			154
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0077"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			33,
+			52,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			179,
+			312,
+			151
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0078"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			37,
+			52,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			320,
+			179,
+			312,
+			146
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0079"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			39,
+			52,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			635,
+			179,
+			312,
+			144
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0080"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			45,
+			52,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			950,
+			179,
+			312,
+			139
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0081"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			49,
+			52,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1265,
+			179,
+			312,
+			135
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0082"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			51,
+			52,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1580,
+			179,
+			312,
+			132
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0083"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0084"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			51,
+			52,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			538,
+			333,
+			312,
+			132
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0085"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			57,
+			49,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			853,
+			333,
+			315,
+			127
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0086"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			60,
+			45,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1171,
+			333,
+			319,
+			123
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0087"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			63,
+			43,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			501,
+			321,
+			120
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0088"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			65,
+			40,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			669,
+			501,
+			324,
+			118
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0089"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			68,
+			37,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			741,
+			327,
+			115
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0090"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			69,
+			34,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			681,
+			624,
+			330,
+			114
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0091"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			69,
+			31,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			624,
+			333,
+			114
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0092"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			71,
+			27,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			341,
+			624,
+			337,
+			112
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0093"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			70,
+			28,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1336,
+			501,
+			336,
+			113
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0094"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			70,
+			28,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1675,
+			501,
+			336,
+			113
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0095"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			70,
+			27,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			996,
+			501,
+			337,
+			113
+		},
+		alias = {}
+	},
+	["krdove_eb_elephant_cannibal_0096"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			400,
+			200
+		},
+		trim = {
+			36,
+			70,
+			27,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			329,
+			501,
+			337,
+			114
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0001"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			32,
+			10,
+			33,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2006,
+			235,
+			39,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0010",
+			"krdove_enemy_shaman_gravity_0002",
+			"krdove_enemy_shaman_gravity_0003",
+			"krdove_enemy_shaman_gravity_0004",
+			"krdove_enemy_shaman_gravity_0005",
+			"krdove_enemy_shaman_gravity_0006",
+			"krdove_enemy_shaman_gravity_0007",
+			"krdove_enemy_shaman_gravity_0008",
+			"krdove_enemy_shaman_gravity_0009"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0100"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			32,
+			13,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			279,
+			1942,
+			39,
+			47
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0099"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0101"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			33,
+			9,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1994,
+			38,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0102"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0103"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			8,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1504,
+			1987,
+			40,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0104"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0105"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			8,
+			34,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1726,
+			1931,
+			39,
+			52
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0011"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			18,
+			8,
+			38,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1992,
+			859,
+			48,
+			54
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0012"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			18,
+			8,
+			38,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1992,
+			916,
+			48,
+			54
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0013"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			18,
+			8,
+			38,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1990,
+			1011,
+			48,
+			54
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0014",
+			"krdove_enemy_shaman_gravity_0015",
+			"krdove_enemy_shaman_gravity_0016"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0017"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			36,
+			16,
+			27,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			513,
+			1996,
+			41,
+			46
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0018"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0019"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			36,
+			13,
+			29,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			471,
+			1996,
+			39,
+			49
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0020"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0021"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			32,
+			10,
+			33,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1726,
+			1986,
+			39,
+			52
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0022"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			279,
+			1992,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0023"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0024"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			321,
+			1942,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0025"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0026"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1935,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0027",
+			"krdove_enemy_shaman_gravity_0030",
+			"krdove_enemy_shaman_gravity_0031"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0028"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			14,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			762,
+			1930,
+			35,
+			49
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0029"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0032"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			574,
+			1989,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0033"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0034"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			612,
+			1935,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0035"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0036"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			612,
+			1989,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0037"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0038"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			650,
+			1935,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0039",
+			"krdove_enemy_shaman_gravity_0042",
+			"krdove_enemy_shaman_gravity_0043"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0040"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			33,
+			15,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			321,
+			1996,
+			37,
+			48
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0041"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0044"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			650,
+			1989,
+			35,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0045"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0046"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			35,
+			12,
+			34,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			688,
+			1935,
+			35,
+			51
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0047"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			32,
+			10,
+			33,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1768,
+			1931,
+			39,
+			52
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0048"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			27,
+			11,
+			38,
+			17
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			388,
+			1941,
+			39,
+			50
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0049"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			21,
+			12,
+			39,
+			16
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1504,
+			1934,
+			44,
+			50
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0050"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			17,
+			15,
+			39,
+			15
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1990,
+			1117,
+			48,
+			48
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0051"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			14,
+			18,
+			39,
+			14
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1990,
+			1068,
+			51,
+			46
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0052"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			12,
+			21,
+			42,
+			13
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1551,
+			1934,
+			50,
+			44
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0053"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			11,
+			25,
+			43,
+			12
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1615,
+			1933,
+			50,
+			41
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0054"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			11,
+			28,
+			45,
+			11
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			88,
+			1945,
+			48,
+			39
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0055"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			10,
+			32,
+			46,
+			9
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			688,
+			1989,
+			48,
+			37
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0056"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			430,
+			1995,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0057"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0058"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			45,
+			1995,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0059"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0060"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			5,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1879,
+			1929,
+			37,
+			53
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0061"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0062"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			5,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1879,
+			1985,
+			37,
+			53
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0063"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0064"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			88,
+			1987,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0065"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0066"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			128,
+			1987,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0067"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0068"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1942,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0069"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0070"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			199,
+			1995,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0071"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0072"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			239,
+			1942,
+			37,
+			50
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0073"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0074"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			6,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			471,
+			1941,
+			37,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0075"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0076"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			6,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			511,
+			1941,
+			37,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0077"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0078"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			7,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			5,
+			1945,
+			37,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0079"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0080"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			34,
+			8,
+			33,
+			20
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			239,
+			1995,
+			37,
+			50
+		},
+		alias = {}
+	},
+	["krdove_enemy_shaman_gravity_0081"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			8,
+			34,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1768,
+			1986,
+			39,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0082"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0083"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			32,
+			9,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			1984,
+			39,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0084"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0085"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			9,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1615,
+			1977,
+			40,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0086"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0087"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			13,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			45,
+			1945,
+			40,
+			47
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0088"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0089"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			9,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1658,
+			1977,
+			40,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0090"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0091"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			7,
+			34,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			2006,
+			179,
+			39,
+			53
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0092"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0093"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			8,
+			34,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1837,
+			1929,
+			39,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0094"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0095"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			31,
+			8,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			1551,
+			1981,
+			40,
+			52
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0096"
+		}
+	},
+	["krdove_enemy_shaman_gravity_0097"] = {
+		a_name = "go_stage92-1.dds",
+		size = {
+			104,
+			78
+		},
+		trim = {
+			33,
+			9,
+			33,
+			18
+		},
+		a_size = {
+			2048,
+			2048
+		},
+		f_quad = {
+			430,
+			1941,
+			38,
+			51
+		},
+		alias = {
+			"krdove_enemy_shaman_gravity_0098"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0100"] = {
+		a_name = "go_stage92-2.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			24,
+			90,
+			26
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			314,
+			108,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0099"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0117"] = {
+		a_name = "go_stage92-2.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			24,
+			90,
+			26
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			116,
+			5,
+			108,
+			150
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0118"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0129"] = {
+		a_name = "go_stage92-2.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			22,
+			90,
+			26
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			5,
+			108,
+			152
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0130"
+		}
+	},
+	["krdove_eb_elephant_cannibal_0131"] = {
+		a_name = "go_stage92-2.dds",
+		size = {
+			300,
+			200
+		},
+		trim = {
+			102,
+			23,
+			90,
+			26
+		},
+		a_size = {
+			512,
+			512
+		},
+		f_quad = {
+			5,
+			160,
+			108,
+			151
+		},
+		alias = {
+			"krdove_eb_elephant_cannibal_0132"
+		}
+	}
+}
