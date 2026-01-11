@@ -2436,18 +2436,17 @@ scripts.tower_archmage = {
 		return true
 	end,
 	update = function(this, store)
-		local tower_sid = 2
 		local shooter_sid = 3
-		local s_tower = this.render.sprites[tower_sid]
-		local s_shooter = this.render.sprites[shooter_sid]
+		local s_tower = this.render.sprites[2]
+		local s_shooter = this.render.sprites[3]
 		local a = this.attacks
 		local ba = this.attacks.list[1]
 		local ta = this.attacks.list[2]
 		local pow_b = this.powers.blast
 		local pow_t = this.powers.twister
-		local blast_template = E:get_template("bolt_blast")
-		local blast_range = blast_template.bullet.damage_radius
-		local blast_range_inc = blast_template.bullet.damage_radius_inc
+		local blast_range = E:get_template("bolt_blast").bullet.damage_radius
+		local tw = this.tower
+		local tpos = tpos(this)
 
 		ba.ts = store.tick_ts
 
@@ -2458,7 +2457,7 @@ scripts.tower_archmage = {
 
 			local b = E:create_entity(ba.bullet)
 
-			b.bullet.damage_factor = this.tower.damage_factor
+			b.bullet.damage_factor = tw.damage_factor
 			b.bullet.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 			b.pos = vclone(b.bullet.from)
 			b.bullet.target_id = nil
@@ -2472,7 +2471,7 @@ scripts.tower_archmage = {
 				local blast = E:create_entity(ba.payload_bullet)
 
 				blast.bullet.level = pow_b.level
-				blast.bullet.damage_factor = this.tower.damage_factor
+				blast.bullet.damage_factor = tw.damage_factor
 				b.bullet.payload = blast
 			end
 
@@ -2481,7 +2480,7 @@ scripts.tower_archmage = {
 		end
 
 		while true do
-			if this.tower.blocked then
+			if tw.blocked then
 				coroutine.yield()
 			else
 				if pow_t.changed then
@@ -2494,18 +2493,18 @@ scripts.tower_archmage = {
 
 				if pow_b.changed then
 					pow_b.changed = nil
-					blast_range = blast_range + blast_range_inc
+					blast_range = E:get_template("bolt_blast").bullet.damage_radius + E:get_template("bolt_blast").bullet.damage_radius_inc * pow_b.level
 				end
 
 				SU.tower_update_silenced_powers(store, this)
 
-				if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-					local target = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, false, ta.vis_flags, ta.vis_bans, function(e)
+				if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
+					local target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, ta.vis_flags, ta.vis_bans, function(e)
 						return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni > P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni < P:get_end_node(e.nav_path.pi) - ta.nodes_limit and (not e.enemy.counts.twister or e.enemy.counts.twister < E:get_template("twister").max_times_applied)
 					end)
 
 					if not target then
-					-- block empty
+						ta.ts = ta.ts + fts(5)
 					else
 						ta.ts = store.tick_ts
 
@@ -2530,23 +2529,26 @@ scripts.tower_archmage = {
 						np.ni = target.nav_path.ni + P:predict_enemy_node_advance(target, true)
 						twister.pos = P:node_pos(np.pi, np.spi, np.ni)
 						twister.aura.level = pow_t.level
+						twister.aura.damage_factor = tw.damage_factor
+						if pow_b.level > 0 then
+							twister.blast_chance = ba.payload_chance
+							twister.blast_level = pow_b.level
+						end
 
 						queue_insert(store, twister)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
 						end
-
-						ba.ts = store.tick_ts
 					end
 				end
 
-				if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-					local target, targets = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range, nil, ba.vis_flags, ba.vis_bans, nil, nil, blast_range)
+				if ready_to_attack(ba, store, tw.cooldown_factor) then
+					local target, targets = U.find_foremost_enemy_with_max_coverage(store, tpos, 0, a.range, nil, ba.vis_flags, ba.vis_bans, nil, nil, blast_range)
 
 					if not target and (not ba.max_stored_bullets or ba.max_stored_bullets == #this._stored_bullets) then
 						-- block empty
-						y_wait(store, this.tower.guard_time)
+						ba.ts = ba.ts + fts(5)
 					else
 						ba.ts = store.tick_ts
 
@@ -2577,12 +2579,13 @@ scripts.tower_archmage = {
 								if b.bullet.payload then
 									b.bullet.target_id = target.id
 									b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+									b.bullet.store = false
 								else
 									local normal_target = targets[km.zmod(i, #targets)]
 
 									b.bullet.target_id = normal_target.id
 									b.bullet.to = v(normal_target.pos.x + normal_target.unit.hit_offset.x, normal_target.pos.y + normal_target.unit.hit_offset.y)
-
+									b.bullet.store = false
 									local d = SU.create_bullet_damage(b.bullet, normal_target.id, this.id)
 
 									if not predicted_health[normal_target.id] then

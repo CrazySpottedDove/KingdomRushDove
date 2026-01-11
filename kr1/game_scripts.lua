@@ -243,10 +243,6 @@ end
 
 scripts.twister = {}
 
-function scripts.twister.insert(this, store)
-	return true
-end
-
 function scripts.twister.update(this, store)
 	local dmax = this.damage_max + this.aura.level * this.damage_inc
 	local dmin = this.damage_min + this.aura.level * this.damage_inc
@@ -314,11 +310,6 @@ function scripts.twister.update(this, store)
 							U.sprites_hide(enemy, nil, nil, true)
 							SU.stun_inc(enemy)
 							scripts.cast_silence(enemy, store)
-							-- queue_remove(store, enemy)
-							-- enemy.health.dead = true
-							-- enemy.health.last_damage_types = DAMAGE_EAT
-							-- enemy.main_script.co = nil
-							-- enemy.main_script.runs = 0
 							U.unblock_all(store, enemy)
 
 							if enemy.health_bar then
@@ -333,8 +324,7 @@ function scripts.twister.update(this, store)
 								enemy.count_group.in_limbo = true
 							end
 
-							enemy.vis_bans_before_twister = enemy.vis.bans
-							enemy.vis.bans = F_ALL
+							U.bans_add(enemy.vis, F_ALL)
 						end
 					end
 				end
@@ -349,14 +339,10 @@ function scripts.twister.update(this, store)
 			enemy.enemy.counts.twister = enemy.enemy.counts.twister + 1
 		end
 
-		log.debug("v twister %s dropped (%s)-%s", this.id, enemy.id, enemy.template_name)
-
 		enemy.nav_path.pi = np.pi
-		enemy.nav_path.ni = km.clamp(1, #P:path(np.pi) - 1, math.random(-3, 3) + np.ni)
+		enemy.nav_path.ni = km.clamp(1, #P:path(np.pi) - 1, math.random(-2, 2) + np.ni)
 		enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 
-		-- enemy.main_script.runs = 1
-		-- enemy.health.dead = false
 		if enemy.ui then
 			enemy.ui.can_click = true
 		end
@@ -365,13 +351,11 @@ function scripts.twister.update(this, store)
 			enemy.health_bar.hidden = nil
 		end
 
-		enemy.vis.bans = enemy.vis_bans_before_twister
+		U.bans_remove(enemy.vis, F_ALL)
 
 		SU.stun_dec(enemy)
 		scripts.remove_silence(enemy, store)
 		U.sprites_show(enemy, nil, nil, true)
-	-- enemy.motion.forced_waypoint = nil
-	-- queue_insert(store, enemy)
 	end
 
 	coroutine.yield()
@@ -381,7 +365,7 @@ function scripts.twister.update(this, store)
 
 		d.source_id = this.id
 		d.target_id = enemy.id
-		d.value = math.random(dmin, dmax)
+		d.value = math.random(dmin, dmax) * this.aura.damage_factor
 		d.damage_type = this.damage_type
 
 		queue_damage(store, d)
@@ -396,13 +380,54 @@ function scripts.twister.update(this, store)
 
 	::label_105_0::
 
-	this.picked_enemies = {}
-
 	S:stop("ArchmageTwisterTravel")
 	U.animation_start(this, "end", nil, store.tick_ts, 1)
 
+	local bolt = E:create_entity("bolt_archmage")
+	bolt.bullet.damage_factor = this.aura.damage_factor
+	bolt.pos = V.vclone(this.pos)
+	bolt.bullet.from.x, bolt.bullet.from.y = bolt.pos.x, bolt.pos.y
+	bolt.bullet.target_id = nil
+	bolt.bullet.store = true
+	bolt.bullet.to.x, bolt.bullet.to.y = bolt.pos.x, bolt.pos.y
+	if this.blast_chance then
+		if this.blast_chance > math.random() then
+			local blast = E:create_entity("bolt_blast")
+			blast.bullet.damage_factor = this.aura.damage_factor
+			blast.bullet.level = this.blast_level
+			bolt.bullet.payload = blast
+		end
+	end
+	queue_insert(store, bolt)
+
 	while not U.animation_finished(this) do
 		coroutine.yield()
+	end
+
+	local target_found = false
+
+	for i = 1, #this.picked_enemies do
+		local enemy = this.picked_enemies[i]
+		if not enemy.health.dead then
+			bolt.bullet.target_id = enemy.id
+			bolt.bullet.to.x, bolt.bullet.to.y = enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y
+			bolt.bullet.store = false
+			target_found = true
+			break
+		end
+	end
+
+	this.picked_enemies = {}
+	U.sprites_hide(this)
+	while not target_found do
+		U.y_wait(store, fts(5))
+		local target = U.find_first_enemy_in_range_filter_off(this.pos, 160, F_RANGED, F_NONE)
+		if target then
+			bolt.bullet.target_id = target.id
+			bolt.bullet.store = false
+			bolt.bullet.to.x, bolt.bullet.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+			target_found = true
+		end
 	end
 
 	queue_remove(store, this)
