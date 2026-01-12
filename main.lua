@@ -4,7 +4,7 @@ local MUST_READ = require("dove_modules.notice.must_read")
 local M = require("dove_modules.updater.update_manager")
 
 M.update_client()
-
+local perf = require("dove_modules.perf.perf")
 do
 	love.graphics.setColor_old = function(r, g, b, a)
 		if type(r) == "table" then
@@ -276,10 +276,6 @@ require("lib.klua.dump")
 require("version")
 require("all.constants")
 
-if arg[2] == "monitor" then
-	PERFORMANCE_MONITOR_ENABLED = true
-end
-
 if arg[2] == "assets" then
 	ASSETS_CHECK_ENABLED = true
 end
@@ -514,7 +510,7 @@ local function load(arg)
 end
 
 local function love_update_master(dt)
-	main.handler:update(dt)
+	return main.handler:update(dt)
 end
 
 local function love_draw_master()
@@ -631,7 +627,7 @@ local function quit()
 	log.info("Quitting...")
 	close_log()
 end
-
+local perf_ui = require("dove_modules.perf.perf_ui")
 function love.run()
 	love.math.setRandomSeed(os.time())
 
@@ -642,7 +638,7 @@ function love.run()
 	MUST_READ.hack_love_update(love.update, love.draw)
 
 	local dt = 0
-
+	local updated = false
 	while true do
 		love.event.pump()
 
@@ -660,16 +656,23 @@ function love.run()
 		dt = love.timer.getDelta()
 
 		if love.update then
-			love.update(dt)
+			updated = love.update(dt)
 		end
 
 		if love.window.isOpen() and G.isActive() then
 			G.clear()
 			G.origin()
 
+			perf.start("draw")
 			if love.draw then
 				love.draw()
 			end
+			perf.stop("draw")
+			if updated then
+				perf_ui.sync_data()
+				perf.reset()
+			end
+			perf_ui.draw()
 
 			G.present()
 

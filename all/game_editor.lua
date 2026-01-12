@@ -201,6 +201,7 @@ function editor:update(dt)
 
 	self.simulation:update(dt)
 	self.gui:update(dt)
+	return true
 end
 
 function editor:keypressed(key, isrepeat)

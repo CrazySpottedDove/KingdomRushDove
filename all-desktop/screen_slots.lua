@@ -562,6 +562,7 @@ end
 function screen:update(dt)
 	self.window:update(dt)
 	timer:update(dt)
+	return true
 end
 
 function screen:draw()

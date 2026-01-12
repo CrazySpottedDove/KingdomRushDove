@@ -656,6 +656,7 @@ function director:queued_item_ready(dt)
 end
 
 function director:update(dt)
+	local updated = false
 	S:update(dt)
 
 	if self.next_item_name then
@@ -675,7 +676,7 @@ function director:update(dt)
 			active_item.next_frame_ts = active_item.limit_fps and active_item.next_frame_ts + 1 / active_item.limit_fps or nil
 		end
 
-		active_item:update(dt)
+		updated = active_item:update(dt)
 	end
 
 	local ai = self.active_item
@@ -758,6 +759,8 @@ function director:update(dt)
 	end
 
 	services:update(dt)
+
+	return updated
 end
 
 function director:draw()

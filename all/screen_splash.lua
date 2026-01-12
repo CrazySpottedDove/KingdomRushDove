@@ -99,6 +99,7 @@ function screen:update(dt)
 			self:start_animation()
 		end)
 	end
+	return true
 end
 
 function screen:destroy()

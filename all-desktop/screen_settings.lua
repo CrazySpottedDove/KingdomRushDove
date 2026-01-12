@@ -429,6 +429,7 @@ end
 
 function screen_settings:update(dt)
 	self.window:update(dt)
+	return true
 end
 
 function screen_settings:draw()

@@ -847,6 +847,8 @@ function screen_map:update(dt)
 	if self.endlessTip then
 		self.endlessTip.scale = v(math.sin(self.stime * 0.5) * 0.02 + 0.98, math.sin(self.stime * 0.5) * 0.02 + 0.98)
 	end
+
+	return true
 end
 
 function screen_map:update_gems()

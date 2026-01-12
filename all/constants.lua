@@ -1,5 +1,4 @@
 -- chunkname: @./all/constants.lua
-PERFORMANCE_MONITOR_ENABLED = false
 ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
 NULL = "__NULL__"

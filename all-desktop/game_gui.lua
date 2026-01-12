@@ -1224,6 +1224,8 @@ function game_gui:keypressed(key, isrepeat)
 		game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
 	elseif table.contains(ks.healthy, key) then
 		game_gui.game.store.lives = game_gui.game.store.lives + 100
+	elseif table.contains(ks.fps, key) then
+		require("dove_modules.perf.perf_ui").toggle()
 	end
 end
 
@@ -6734,10 +6736,7 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 				new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
 			end
 
-			if not PERFORMANCE_MONITOR_ENABLED then
-				queue_remove(game_gui.game.store, v)
-			end
-
+			queue_remove(game_gui.game.store, v)
 			queue_insert(game_gui.game.store, new_tower)
 
 			game_gui.game.store.towers[k] = new_tower

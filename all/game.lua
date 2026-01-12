@@ -99,7 +99,6 @@ game.simulation_systems = {
 	"render",
 	"sound_events",
 	"seen_tracker",
-	"performance_monitor",
 	"spatial_index",
 	"last_hook",
 	"lights",
@@ -344,6 +343,8 @@ function game:update(dt)
 	d.ts = d.ts + d.dt
 	d.to = d.to + d.dt
 
+	local updated = false
+
 	while d.to > TICK_LENGTH do
 		d.to = d.to - TICK_LENGTH
 
@@ -351,7 +352,9 @@ function game:update(dt)
 		self.game_gui:update(d.dt)
 
 		d.step = false
+		updated = true
 	end
+	return updated
 end
 
 function game:keypressed(key, isrepeat)

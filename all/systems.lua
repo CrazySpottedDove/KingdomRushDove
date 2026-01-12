@@ -4,7 +4,7 @@ local log_xp = log.xp or log:new("xp")
 local log_hp = log.hp or log:new("hp")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
-
+local perf = require("dove_modules.perf.perf")
 require("lib.klua.table")
 require("lib.klua.dump")
 
@@ -61,6 +61,7 @@ sys.level = {}
 sys.level.name = "level"
 
 function sys.level:init(store)
+	perf.clear()
 	local slot = storage:load_slot(nil, true)
 
 	UP:set_levels(slot.upgrades)
@@ -256,6 +257,7 @@ function sys.level:init(store)
 end
 
 function sys.level:on_update(dt, ts, store)
+	perf.start("level")
 	local function store_hero_xp(slot)
 		if store.main_hero and store.main_hero.hero and not GS.hero_xp_ephemeral then
 			local hn = store.main_hero.template_name
@@ -414,6 +416,7 @@ function sys.level:on_update(dt, ts, store)
 			storage:save_slot(slot, nil, true)
 		end
 	end
+	perf.stop("level")
 end
 
 sys.wave_spawn = {}
@@ -668,6 +671,7 @@ function sys.wave_spawn:force_next_wave(store)
 end
 
 function sys.wave_spawn:on_update(dt, ts, store)
+	perf.start("wave_spawn")
 	sys.wave_spawn:force_next_wave(store)
 
 	if store.wave_spawn_thread then
@@ -717,6 +721,7 @@ function sys.wave_spawn:on_update(dt, ts, store)
 	end
 
 	store.force_next_wave = false
+	perf.stop("wave_spawn")
 end
 
 sys.mod_lifecycle = {}
@@ -838,6 +843,7 @@ sys.tower_upgrade = {}
 sys.tower_upgrade.name = "tower_upgrade"
 
 function sys.tower_upgrade:on_update(dt, ts, store)
+	perf.start("tower_upgrade")
 	for _, e in pairs(store.towers) do
 		if e.tower.sell or e.tower.destroy then
 			log.debug("selling %s", e.id)
@@ -1033,6 +1039,7 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 			end
 		end
 	end
+	perf.stop("tower_upgrade")
 end
 
 sys.game_upgrades = {}
@@ -1172,6 +1179,7 @@ function sys.main_script:on_insert(entity, store)
 end
 
 function sys.main_script:on_update(dt, ts, store)
+	perf.start("main_script")
 	local entities_with_main_script_on_update = store.entities_with_main_script_on_update
 
 	for _, e in pairs(store.entities_with_main_script_on_update) do
@@ -1201,60 +1209,7 @@ function sys.main_script:on_update(dt, ts, store)
 			end
 		end
 	end
-end
-
-if PERFORMANCE_MONITOR_ENABLED and false then
-	function sys.main_script:init(store)
-		self.print_counter = 0
-		self.print_cycle = DRAW_FPS
-	end
-
-	function sys.main_script:on_update(dt, ts, store)
-		local print_enabled = false
-
-		self.print_counter = self.print_counter + 1
-
-		if self.print_counter >= self.print_cycle then
-			self.print_counter = 0
-			print_enabled = true
-
-			print("----------------")
-		end
-
-		local entities_with_main_script_on_update = store.entities_with_main_script_on_update
-
-		for _, e in pairs(store.entities_with_main_script_on_update) do
-			local s = e.main_script
-
-			if not s.co and s.runs ~= 0 then
-				s.runs = s.runs - 1
-				s.co = coroutine.create(s.update)
-			end
-
-			if s.co then
-				local t1 = love.timer.getTime()
-				local success, err = coroutine.resume(s.co, e, store, s)
-
-				if print_enabled then
-					local t2 = love.timer.getTime()
-					local delta_t = (t2 - t1) * 1000000
-
-					print(string.format("%s: %d", e.template_name, delta_t))
-				end
-
-				-- if coroutine.status(s.co) == "dead" or err ~= nil then
-				--     if err ~= nil then
-				if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
-					if not success and err ~= nil then
-						-- log.error("Error running coro: %s", debug.traceback(s.co, error))
-						error("Error running coro: " .. err .. debug.traceback(s.co))
-					end
-
-					s.co = nil
-				end
-			end
-		end
-	end
+	perf.stop("main_script")
 end
 
 function sys.main_script:on_remove(entity, store)
@@ -1282,6 +1237,7 @@ function sys.health:on_insert(entity, store)
 end
 
 function sys.health:on_update(dt, ts, store)
+	perf.start("health")
 	local new_damage_queue = {}
 	local damage_queue = store.damage_queue
 	local damages_applied = {}
@@ -1434,6 +1390,7 @@ function sys.health:on_update(dt, ts, store)
 
 	store.damage_queue = new_damage_queue
 	store.damages_applied = damages_applied
+	perf.stop("health")
 end
 
 sys.count_groups = {}
@@ -1490,6 +1447,7 @@ sys.hero_xp_tracking = {}
 sys.hero_xp_tracking.name = "hero_xp_tracking"
 
 function sys.hero_xp_tracking:on_update(dt, ts, store)
+	perf.start("hero_xp_tracking")
 	for i = 1, #store.damages_applied do
 		local d = store.damages_applied[i]
 
@@ -1506,12 +1464,14 @@ function sys.hero_xp_tracking:on_update(dt, ts, store)
 			end
 		end
 	end
+	perf.stop("hero_xp_tracking")
 end
 
 sys.pops = {}
 sys.pops.name = "pops"
 
 function sys.pops:on_update(dt, ts, store)
+	perf.start("pops")
 	local damages_applied = store.damages_applied
 	local entities = store.entities
 
@@ -1559,12 +1519,14 @@ function sys.pops:on_update(dt, ts, store)
 
 		::continue::
 	end
+	perf.stop("pops")
 end
 
 sys.timed = {}
 sys.timed.name = "timed"
 
 function sys.timed:on_update(dt, ts, store)
+	perf.start("timed")
 	local entities = store.entities_with_timed
 
 	for _, e in pairs(entities) do
@@ -1578,6 +1540,7 @@ function sys.timed:on_update(dt, ts, store)
 			queue_remove(store, e)
 		end
 	end
+	perf.stop("timed")
 end
 
 sys.tween = {}
@@ -1745,8 +1708,8 @@ local function lerp_table_sine(a, b, t, s, key)
 	s[key].x = av.x + (bv.x - av.x) * ft
 	s[key].y = av.y + (bv.y - av.y) * ft
 end
-
 --- LERP FUNCTIONS END
+
 function sys.tween:on_insert(entity, store)
 	if entity.tween then
 		for _, p in pairs(entity.tween.props) do
@@ -1838,6 +1801,7 @@ function sys.tween:on_insert(entity, store)
 end
 
 function sys.tween:on_update(dt, ts, store)
+	perf.start("tween_system")
 	local entities = store.entities_with_tween
 
 	for _, e in pairs(entities) do
@@ -1904,12 +1868,14 @@ function sys.tween:on_update(dt, ts, store)
 			end
 		end
 	end
+	perf.stop("tween_system")
 end
 
 sys.goal_line = {}
 sys.goal_line.name = "goal_line"
 
 function sys.goal_line:on_update(dt, ts, store)
+	perf.start("goal_line")
 	local enemies = store.enemies
 
 	for _, e in pairs(enemies) do
@@ -1926,6 +1892,7 @@ function sys.goal_line:on_update(dt, ts, store)
 			queue_remove(store, e)
 		end
 	end
+	perf.stop("goal_line")
 end
 
 sys.texts = {}
@@ -2047,6 +2014,7 @@ function sys.particle_system:on_remove(entity, store)
 end
 
 function sys.particle_system:on_update(dt, ts, store)
+	perf.start("particle_system")
 	local phase_interp = self.phase_interp
 	local particle_systems = store.particle_systems
 
@@ -2266,6 +2234,7 @@ function sys.particle_system:on_update(dt, ts, store)
 			end
 		end
 	end
+	perf.stop("particle_system")
 end
 
 sys.render = {}
@@ -2550,6 +2519,7 @@ function sys.render:on_remove(entity, store)
 end
 
 function sys.render:on_update(dt, ts, store)
+	perf.start("render")
 	local d = store
 	local entities = d.entities_with_render
 	local show_health_bar = store.config and store.config.show_health_bar
@@ -2703,6 +2673,7 @@ function sys.render:on_update(dt, ts, store)
 	end
 
 	store.render_frames = new_frames
+	perf.stop("render")
 end
 
 sys.sound_events = {}
@@ -2781,6 +2752,7 @@ function sys.seen_tracker:on_insert(entity, store)
 end
 
 function sys.seen_tracker:on_update(dt, ts, store)
+	perf.start("seen_tracker")
 	if store.seen_dirty then
 		local slot = storage:load_slot()
 
@@ -2790,6 +2762,7 @@ function sys.seen_tracker:on_update(dt, ts, store)
 
 		store.seen_dirty = false
 	end
+	perf.stop("seen_tracker")
 end
 
 sys.dbg_enemy_tracker = {}
@@ -2892,6 +2865,7 @@ function sys.editor_script:on_remove(entity, store)
 end
 
 function sys.editor_script:on_update(dt, ts, store)
+	perf.start("editor_script")
 	for _, e in E:filter_iter(store.entities, "editor_script") do
 		local s = e.editor_script
 
@@ -2916,6 +2890,7 @@ function sys.editor_script:on_update(dt, ts, store)
 			end
 		end
 	end
+	perf.stop("editor_script")
 end
 
 sys.endless_patch = {}
@@ -3010,7 +2985,9 @@ function sys.spatial_index:on_remove(entity, store)
 end
 
 function sys.spatial_index:on_update(dt, ts, store)
+	perf.start("spatial_index")
 	store.enemy_spatial_index.on_update(dt)
+	perf.stop("spatial_index")
 end
 
 sys.last_hook = {}
@@ -3210,6 +3187,7 @@ function sys.lights:on_remove(entity, store)
 end
 
 function sys.lights:on_update(dt, ts, store)
+	perf.start("lights")
 	local d = store
 	local entities = d.entities_with_lights
 	local new_lights = {}
@@ -3228,240 +3206,7 @@ function sys.lights:on_update(dt, ts, store)
 	if #new_lights > 0 then
 		d.lights = new_lights
 	end
-end
-
--- 性能检测模块，在加 monitor 参数时启动
-if PERFORMANCE_MONITOR_ENABLED then
-	local perf = {}
-
-	perf.timers = {}
-	perf.frame_times = {}
-	perf.system_times = {}
-	perf.report_interval = 5 -- 每5秒输出一次报告
-	perf.max_samples = perf.report_interval / TICK_LENGTH -- 保存最近5秒数据
-
-	-- 性能计时器函数
-	function perf.start_timer(name)
-		perf.timers[name] = love.timer.getTime()
-	end
-
-	function perf.end_timer(name)
-		if perf.timers[name] then
-			local elapsed = love.timer.getTime() - perf.timers[name]
-
-			perf.system_times[name] = perf.system_times[name] or {}
-
-			table.insert(perf.system_times[name], elapsed)
-
-			-- 保持样本数量在限制内
-			if #perf.system_times[name] > perf.max_samples then
-				table.remove(perf.system_times[name], 1)
-			end
-
-			perf.timers[name] = nil
-
-			return elapsed
-		end
-
-		return 0
-	end
-
-	-- 生成性能报告
-	function perf.generate_report(store)
-		local report = {"=== 性能报告 ==="}
-
-		-- 整体帧率信息
-		if #perf.frame_times > 0 then
-			local total_time = 0
-
-			for _, time in ipairs(perf.frame_times) do
-				total_time = total_time + time
-			end
-
-			local fps = #perf.frame_times / total_time
-
-			table.insert(report, string.format("平均FPS: %.1f", fps))
-		end
-
-		-- 计算各系统在这段时间内的总开销
-		local system_costs = {}
-
-		for name, times in pairs(perf.system_times) do
-			if #times > 0 then
-				local total_cost = 0
-
-				for _, time in ipairs(times) do
-					total_cost = total_cost + time
-				end
-
-				if total_cost > 0 then
-					system_costs[name] = {
-						total = total_cost * 1000, -- 转换为毫秒
-						calls = #times
-					}
-				end
-			end
-		end
-
-		-- 按总开销排序
-		local sorted_costs = {}
-
-		for name, data in pairs(system_costs) do
-			table.insert(sorted_costs, {
-				name = name,
-				total = data.total,
-				calls = data.calls
-			})
-		end
-
-		table.sort(sorted_costs, function(a, b)
-			return a.total > b.total
-		end)
-		-- 输出排序后的结果
-		table.insert(report, "\n系统开销排行 (总耗时ms/调用次数):")
-
-		-- 先打印开销总和
-		local grand_total = 0
-
-		for _, item in ipairs(sorted_costs) do
-			grand_total = grand_total + item.total
-		end
-
-		table.insert(report, string.format("总系统开销: %.4fms", grand_total))
-
-		-- 然后打印各个分项
-		for i, item in ipairs(sorted_costs) do
-			table.insert(report, string.format("%4d. %s: %.4fms (%d次)", i, item.name, item.total, item.calls))
-
-			-- 只显示前15个最耗时的
-			if i >= 15 then
-				table.insert(report, "    ...")
-
-				break
-			end
-		end
-
-		-- 简单的实体统计
-		if store then
-			table.insert(report, string.format("\n实体数: %d | 渲染帧: %d", store.entity_count, #store.render_frames))
-		end
-
-		return table.concat(report, "\n")
-	end
-
-	function perf.save_store_entities(store)
-		local entities = {}
-
-		for _, e in pairs(store.entities) do
-			if not entities[e.template_name] then
-				entities[e.template_name] = 1
-			else
-				entities[e.template_name] = entities[e.template_name] + 1
-			end
-		end
-
-		local filename = string.format("perf_entities_%d.txt", os.time())
-		local file = love.filesystem.newFile(filename, "w")
-
-		file:open("w")
-		file:write("=== 当前实体统计 ===\n")
-
-		local total_count = 0
-
-		for name, count in pairs(entities) do
-			file:write(string.format("%s: %d\n", name, count))
-
-			total_count = total_count + count
-		end
-
-		file:write(string.format("总实体数: %d\n", total_count))
-		file:write(string.format("store 记录总实体数: %d\n", store.entity_count))
-		file:close()
-	end
-
-	function perf.save_report(store)
-		local report = perf.generate_report(store)
-
-		print(report)
-	end
-
-	-- 需要监控的系统方法列表
-	local MONITORED_METHODS = {"on_update", "on_insert", "on_remove", "on_queue", "on_dequeue"}
-
-	-- 包装系统方法以添加性能监控
-	local function create_monitored_system(original_sys)
-		local monitored = {}
-
-		for k, v in pairs(original_sys) do
-			monitored[k] = v
-		end
-
-		-- 为每个需要监控的方法添加包装
-		for _, method_name in ipairs(MONITORED_METHODS) do
-			if original_sys[method_name] then
-				local original_method = original_sys[method_name]
-				local timer_name = (original_sys.name or "unknown") .. "." .. method_name
-
-				monitored[method_name] = function(self, ...)
-					perf.start_timer(timer_name)
-
-					local result = original_method(self, ...)
-
-					perf.end_timer(timer_name)
-
-					return result
-				end
-			end
-		end
-
-		return monitored
-	end
-
-	-- 添加帧时间监控系统
-	sys.performance_monitor = {}
-	sys.performance_monitor.name = "performance_monitor"
-
-	function sys.performance_monitor:init(store)
-		self.last_frame_time = love.timer.getTime()
-		self.last_report_time = love.timer.getTime()
-	end
-
-	function sys.performance_monitor:on_update(dt, ts, store)
-		local current_time = love.timer.getTime()
-		local frame_time = current_time - self.last_frame_time
-
-		-- 记录帧时间
-		table.insert(perf.frame_times, frame_time)
-
-		if #perf.frame_times > perf.max_samples then
-			table.remove(perf.frame_times, 1)
-		end
-
-		-- 定期输出报告
-		if current_time - self.last_report_time > perf.report_interval then
-			perf.save_report(store)
-
-			-- perf.save_store_entities(store)
-			self.last_report_time = current_time
-		end
-
-		self.last_frame_time = current_time
-	end
-
-	-- 包装所有现有系统以添加性能监控
-	local original_systems = {}
-
-	for name, system in pairs(sys) do
-		if type(system) == "table" and system.name then
-			original_systems[name] = system
-			sys[name] = create_monitored_system(system)
-		end
-	end
-
-	-- 添加手动触发性能报告的函数（可以在游戏中调用）
-	function sys.trigger_performance_report(store)
-		perf.save_report(store)
-	end
+	perf.stop("lights")
 end
 
 -- 美术资源检查模块，在加 assets 参数时启动
