@@ -2451,7 +2451,8 @@ scripts.tower_archmage = {
 		ba.ts = store.tick_ts
 
 		local function prepare_bullet(start_offset, i)
-			if #this._stored_bullets >= ba.max_stored_bullets then
+			local insert_pos = #this._stored_bullets + 1
+			if insert_pos > ba.max_stored_bullets or i ~= insert_pos then
 				return
 			end
 
@@ -2475,7 +2476,8 @@ scripts.tower_archmage = {
 				b.bullet.payload = blast
 			end
 
-			table.insert(this._stored_bullets, b)
+			this._stored_bullets[insert_pos] = b
+
 			queue_insert(store, b)
 		end
 
@@ -2498,55 +2500,10 @@ scripts.tower_archmage = {
 
 				SU.tower_update_silenced_powers(store, this)
 
-				if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
-					local target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, ta.vis_flags, ta.vis_bans, function(e)
-						return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni > P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni < P:get_end_node(e.nav_path.pi) - ta.nodes_limit and (not e.enemy.counts.twister or e.enemy.counts.twister < E:get_template("twister").max_times_applied)
-					end)
-
-					if not target then
-						ta.ts = ta.ts + fts(5)
-					else
-						ta.ts = store.tick_ts
-
-						local tx, ty = V.sub(target.pos.x, target.pos.y, this.pos.x, this.pos.y + s_tower.offset.y)
-						local t_angle = km.unroll(V.angleTo(tx, ty))
-
-						this._last_t_angle = t_angle
-
-						local an, _, ai = U.animation_name_for_angle(this, ta.animation, t_angle, shooter_sid)
-
-						animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
-
-						while store.tick_ts - ta.ts < ta.shoot_time do
-							coroutine.yield()
-						end
-
-						local twister = E:create_entity(ta.bullet)
-						local np = twister.nav_path
-
-						np.pi = target.nav_path.pi
-						np.spi = target.nav_path.spi
-						np.ni = target.nav_path.ni + P:predict_enemy_node_advance(target, true)
-						twister.pos = P:node_pos(np.pi, np.spi, np.ni)
-						twister.aura.level = pow_t.level
-						twister.aura.damage_factor = tw.damage_factor
-						if pow_b.level > 0 then
-							twister.blast_chance = ba.payload_chance
-							twister.blast_level = pow_b.level
-						end
-
-						queue_insert(store, twister)
-
-						while not animation_finished(this, shooter_sid) do
-							coroutine.yield()
-						end
-					end
-				end
-
 				if ready_to_attack(ba, store, tw.cooldown_factor) then
 					local target, targets = U.find_foremost_enemy_with_max_coverage(store, tpos, 0, a.range, nil, ba.vis_flags, ba.vis_bans, nil, nil, blast_range)
 
-					if not target and (not ba.max_stored_bullets or ba.max_stored_bullets == #this._stored_bullets) then
+					if not target and ba.max_stored_bullets == #this._stored_bullets then
 						-- block empty
 						ba.ts = ba.ts + fts(5)
 					else
@@ -2609,10 +2566,14 @@ scripts.tower_archmage = {
 							local start_offset = ba.bullet_start_offset[ai]
 
 							if target then
-								for i = 1, ba.max_stored_bullets do
-									if i == 1 or random() < ba.repetition_rate + pow_t.level * ba.repetition_rate_inc then
-										prepare_bullet(start_offset, i)
+								local count = 1
+								for i = 2, ba.max_stored_bullets do
+									if random() < ba.repetition_rate + pow_t.level * ba.repetition_rate_inc then
+										count = count + 1
 									end
+								end
+								for i = 1, count do
+									prepare_bullet(start_offset, i)
 								end
 							else
 								for i = 1, ba.max_stored_bullets do
@@ -2627,12 +2588,57 @@ scripts.tower_archmage = {
 					end
 				end
 
+				if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
+					local target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, ta.vis_flags, ta.vis_bans, function(e)
+						return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni > P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni < P:get_end_node(e.nav_path.pi) - ta.nodes_limit and (not e.enemy.counts.twister or e.enemy.counts.twister < E:get_template("twister").max_times_applied)
+					end)
+
+					if not target then
+						ta.ts = ta.ts + fts(5)
+					else
+						ta.ts = store.tick_ts
+
+						local tx, ty = V.sub(target.pos.x, target.pos.y, this.pos.x, this.pos.y + s_tower.offset.y)
+						local t_angle = km.unroll(V.angleTo(tx, ty))
+
+						this._last_t_angle = t_angle
+
+						local an, _, ai = U.animation_name_for_angle(this, ta.animation, t_angle, shooter_sid)
+
+						animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
+
+						while store.tick_ts - ta.ts < ta.shoot_time do
+							coroutine.yield()
+						end
+
+						local twister = E:create_entity(ta.bullet)
+						local np = twister.nav_path
+
+						np.pi = target.nav_path.pi
+						np.spi = target.nav_path.spi
+						np.ni = target.nav_path.ni + P:predict_enemy_node_advance(target, true)
+						twister.pos = P:node_pos(np.pi, np.spi, np.ni)
+						twister.aura.level = pow_t.level
+						twister.aura.damage_factor = tw.damage_factor
+						if pow_b.level > 0 then
+							twister.blast_chance = ba.payload_chance
+							twister.blast_level = pow_b.level
+						end
+
+						queue_insert(store, twister)
+
+						while not animation_finished(this, shooter_sid) do
+							coroutine.yield()
+						end
+					end
+				end
+
 				local an = U.animation_name_for_angle(this, "idle", this._last_t_angle, shooter_sid)
 
 				animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
 
-				if store.tick_ts - math.max(ba.ts, ta.ts) > this.tower.long_idle_cooldown then
-					local an, af = animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
+				if store.tick_ts - math.max(ba.ts, ta.ts) > tw.long_idle_cooldown then
+					local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, shooter_sid)
 
 					animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
 				end
