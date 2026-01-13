@@ -282,9 +282,7 @@ decal_crossbow_eagle_preview.tween.props[1].loop = true
 decal_crossbow_eagle_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)}, {0.5, vec_2(1, 1)}}
 
 local tower_totem = RT("tower_totem", "tower_archer_1")
-
 AC(tower_totem, "powers")
-
 tower_totem.info.portrait = "kr2_info_portraits_towers_0010"
 tower_totem.info.enc_icon = 18
 tower_totem.tower.type = "totem"

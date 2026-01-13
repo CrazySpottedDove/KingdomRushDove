@@ -12387,7 +12387,7 @@ function scripts.tower_royal_archers.update(this, store)
 
 							b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 							b.pos.y = this.pos.y + soffset.y + boffset.y
-
+							apply_precision(b)
 							local bl = b.bullet
 
 							bl.from = vclone(b.pos)
@@ -12447,7 +12447,7 @@ function scripts.tower_royal_archers.update(this, store)
 
 						b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 						b.pos.y = this.pos.y + soffset.y + boffset.y
-
+						apply_precision(b)
 						local bl = b.bullet
 
 						bl.from = vclone(b.pos)
@@ -15569,20 +15569,14 @@ function scripts.tower_ballista.update(this, store)
 					local reached_target = false
 
 					if target and pred_pos then
-						-- angle_dist = rotate_towards_pos(pred_pos)
 						rotate_towards_pos_instantly(pred_pos)
 
 						target, pred_pos = find_target(aa)
-					-- reached_target = arrive_epsilon >= math.abs(angle_dist) and target and pred_pos
 					end
 
 					if not target or not pred_pos then
 						goto label_586_1
 					end
-				-- if not reached_target then
-				-- coroutine.yield()
-				-- end
-				-- until reached_target
 				end
 
 				local last_target_pos = V.vclone(pred_pos)
@@ -15657,6 +15651,7 @@ function scripts.tower_ballista.update(this, store)
 
 					bl.source_id = this.id
 					bl.damage_factor = bl.damage_factor * tw.damage_factor
+					apply_precision(b)
 
 					if shoot_final_shot then
 						bl.damage_factor = this.powers.skill_final_shot.damage_factor * bl.damage_factor
