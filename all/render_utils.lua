@@ -6,7 +6,7 @@ local G = love.graphics
 local RU = {}
 
 RU.BATCHES_COUNT = 30
-RU.BATCH_SIZE = 30
+RU.BATCH_SIZE = 90
 RU.batches = {}
 RU.bi = 1
 
@@ -42,11 +42,11 @@ function RU.destroy()
 	RU.last_texture = nil
 end
 
+--- get frame draw params
+---@param f table sprite
+---@return userdata quad, number x, number y, number r, number sx, number sy, number ox, number oy
 function RU.frame_draw_params(f)
 	local ss = f.ss
-	local x = f.pos.x + f.offset.x
-	local y = REF_H - (f.pos.y + f.offset.y)
-	local r = -f.r
 	local ref_scale = ss.ref_scale or 1
 	local sy = (f.flip_y and -1 or 1) * ref_scale
 	local sx = (f.flip_x and -1 or 1) * ref_scale
@@ -56,10 +56,7 @@ function RU.frame_draw_params(f)
 		sx = sx * f.scale.x
 	end
 
-	local ox = f.anchor.x * ss.size[1] - ss.trim[1]
-	local oy = (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
-
-	return ss.quad, x, y, r, sx, sy, ox, oy
+	return ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
 end
 
 function RU.draw_frames_range(frames, start_idx, max_z)
@@ -281,16 +278,14 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 
 				::label_6_0::
 			end
-		elseif not f.ss then
-		-- block empty
-		else
+		elseif f.ss then
 			local ss = f.ss
 
 			if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 				if batch_count > 0 then
 					G.draw(batch)
 
-					bi = bi_count < bi + 1 and 1 or bi + 1
+					bi = bi % bi_count + 1
 					batch = batches[bi]
 
 					if last_texture then
@@ -353,7 +348,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 	if batch_count > 0 then
 		G.draw(batch)
 
-		bi = bi_count < bi + 1 and 1 or bi + 1
+		bi = bi % bi_count + 1
 		batch = batches[bi]
 		batches_count = batches_count + 1
 	end

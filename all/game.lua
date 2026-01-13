@@ -140,7 +140,6 @@ function game:init(screen_w, screen_h, done_callback)
 		bottom = v_bottom,
 		right = v_right
 	}
-	-- if KR_TARGET == "phone" or KR_TARGET == "tablet" then
 	self.camera = {}
 	self.camera.x = screen_w * 0.5
 	self.camera.y = screen_h * 0.5
@@ -188,7 +187,6 @@ function game:init(screen_w, screen_h, done_callback)
 		end
 	end
 
-	-- end
 	RU.init()
 
 	self.store.ephemeral = {}
@@ -1287,46 +1285,6 @@ function game:after_draw_debug(rox, roy, gs)
 	end
 end
 
--- -- 绘制黑夜模式前景色
--- function game:draw_dark_foreground(rox, roy, gs)
---     G.push()
---     G.translate(rox, roy)
---     G.scale(gs, gs)
---     if not self.dark_canvas then
---         self.dark_canvas = G.newCanvas(self.screen_w, self.screen_h, {
---             stencil = true
---         })
---         G.setCanvas(self.dark_canvas)
---     else
---         G.setCanvas(self.dark_canvas)
---         G.clear(0, 0, 0, 0)
---     end
---     love.graphics.stencil(function()
---         -- 绘制圆形遮罩
---         if self.store and self.store.lights then
---             for _, l in pairs(self.store.lights) do
---                 local _, uy = game_gui:g2u(l.pos)
---                 love.graphics.circle("fill", l.pos.x, uy, l.radius)
---             end
---         end
---         local x, y = game_gui.window:get_mouse_position()
---         local ux, uy = game_gui.window:screen_to_view(x, y)
---         local gx = game_gui:u2g(vec_2(ux, uy))
---         love.graphics.circle("fill", gx, uy, 50)
---     end, "replace", 1)
---     -- 启用模板测试，只绘制模板值为0的区域
---     love.graphics.setStencilTest("equal", 0)
---     -- 绘制黑暗覆盖层
---     -- 51 / 255 = 0.2
---     -- 30 / 255 = 0.1176
---     G.setColor(0, 0, 0.2, 0.1176)
---     G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
---     -- 恢复默认
---     love.graphics.setStencilTest()
---     G.setColor(1, 1, 1, 1)
---     G.setCanvas()
---     G.pop()
--- end
 function game:draw_dark_foreground(rox, roy, gs)
 	G.push()
 	G.translate(rox, roy)
@@ -1567,50 +1525,19 @@ function game:draw_speed_state(rox, roy, gs)
 	G.pop()
 end
 
--- 设定每多少帧绘制一次
--- function game:on_interval_draw(draw_fn_name, interval, rox, roy, gs)
--- 	if not self.draw_count[draw_fn_name] then
--- 		self.draw_count[draw_fn_name] = interval
--- 	end
-
--- 	local count = self.draw_count[draw_fn_name]
-
--- 	if count >= interval then
--- 		self[draw_fn_name](self, rox, roy, gs)
-
--- 		count = 0
--- 	else
--- 		count = count + 1
--- 	end
-
--- 	self.draw_count[draw_fn_name] = count
--- end
-
 function game:draw_game()
 	local d = self.store
-
-	-- if not self.draw_count then
-	-- 	self.draw_count = {}
-	-- end
 
 	local frame_draw_params = RU.frame_draw_params
 	local draw_frames_range = RU.draw_frames_range
 	local gs = self.game_scale
-	local rox, roy
 
-	if self.camera then
-		local c = self.camera
+	local c = self.camera
 
-		c:clamp()
+	c:clamp()
 
-		local dox = c.x * c.zoom - self.screen_w * 0.5
-		local doy = c.y * c.zoom - self.screen_h * 0.5
-
-		rox, roy = -dox, -doy
-		gs = gs * c.zoom
-	else
-		rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
-	end
+	local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
+	gs = gs * c.zoom
 
 	if d.world_offset then
 		rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
@@ -1619,26 +1546,10 @@ function game:draw_game()
 	self:front_draw_debug(rox, roy, gs)
 	self:draw_path(rox, roy, gs)
 
-	-- if d.night_mode then
-	-- end
-	-- self:draw_speed_state(rox, roy, gs)
-	-- local last_idx
-
 	G.push()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
-
-	-- last_idx = draw_frames_range(d.render_frames, 1, Z_GUI_DECALS - 1)
-
-	-- G.pop()
-	-- G.push()
-	-- G.translate(rox, roy)
-	-- G.scale(gs, gs)
-
-	-- last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_SCREEN_FIXED - 1)
-
 	local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
-
 	G.pop()
 
 	if self.DBG_DRAW_PATHS or self.shown_path then
@@ -1649,15 +1560,12 @@ function game:draw_game()
 
 	if d.night_mode then
 		self:draw_dark_foreground(rox, roy, gs)
-	-- G.draw(self.dark_canvas)
 	end
 
 	G.push()
 	G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
 	G.scale(self.game_scale, self.game_scale)
-
 	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
-
 	G.pop()
 	self.game_gui.window:draw_child(self.game_gui.layer_gui)
 
