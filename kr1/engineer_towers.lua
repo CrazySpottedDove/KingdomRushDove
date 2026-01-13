@@ -313,9 +313,7 @@ tt.main_script.remove = scripts.mod_tesla_overcharge.remove
 tt.modifier.allows_duplicates = true
 
 local tower_dwaarp = RT("tower_dwaarp", "tower")
-
 AC(tower_dwaarp, "attacks", "powers")
-
 tower_dwaarp.info.portrait = "kr2_info_portraits_towers_0011"
 tower_dwaarp.info.enc_icon = 14
 tower_dwaarp.tower.type = "dwaarp"
@@ -357,7 +355,7 @@ tower_dwaarp.render.sprites[5].name = "lights"
 tower_dwaarp.render.sprites[5].loop = true
 tower_dwaarp.render.sprites[5].offset = vec_2(-3, 40)
 tower_dwaarp.render.sprites[5].hidden = true
-tower_dwaarp.attacks.range = 175
+tower_dwaarp.attacks.range = 170
 tower_dwaarp.attacks.list[1] = CC("area_attack")
 tower_dwaarp.attacks.list[1].vis_flags = F_RANGED
 tower_dwaarp.attacks.list[1].vis_bans = F_FLYING
