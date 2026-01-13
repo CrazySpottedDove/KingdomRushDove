@@ -9661,15 +9661,13 @@ tt.modifier.duration = 1
 --#endregion
 --#region hero_catha
 tt = RT("hero_catha", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 tt.hero.level_stats.armor = {0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45}
 tt.hero.level_stats.hp_max = {210, 220, 230, 240, 250, 260, 270, 280, 290, 300}
 tt.hero.level_stats.melee_damage_max = {8, 9, 10, 12, 13, 14, 16, 17, 18, 20}
 tt.hero.level_stats.melee_damage_min = {4, 5, 6, 6, 7, 8, 8, 9, 10, 11}
-tt.hero.level_stats.ranged_damage_min = {4, 5, 6, 6, 7, 8, 8, 9, 10, 11}
-tt.hero.level_stats.ranged_damage_max = {8, 9, 10, 12, 13, 14, 16, 17, 18, 20}
+tt.hero.level_stats.ranged_damage_min = {5, 6, 7, 7, 8, 9, 9, 10, 11, 12}
+tt.hero.level_stats.ranged_damage_max = {9, 10, 11, 13, 14, 15, 17, 18, 19, 22}
 tt.hero.skills.soul = CC("hero_skill")
 tt.hero.skills.soul.xp_gain_factor = 75
 tt.hero.skills.soul.heal_hp = {50, 100, 150}
@@ -9680,7 +9678,7 @@ tt.hero.skills.soul.xp_level_steps = {
 }
 tt.hero.skills.tale = CC("hero_skill")
 tt.hero.skills.tale.max_count = {2, 3, 4}
-tt.hero.skills.tale.hp_max = {40, 60, 80}
+tt.hero.skills.tale.hp_max = {40, 70, 100}
 tt.hero.skills.tale.xp_gain_factor = 75
 tt.hero.skills.tale.xp_level_steps = {
 	[2] = 1,
@@ -9754,7 +9752,7 @@ tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].hit_time = fts(12)
 tt.melee.attacks[1].xp_gain_factor = 4
 tt.melee.attacks[1].sound = "MeleeSword"
-tt.melee.range = 50
+tt.melee.range = 40
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].max_range = 175
 tt.ranged.attacks[1].min_range = 20
