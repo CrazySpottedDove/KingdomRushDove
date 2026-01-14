@@ -6309,9 +6309,9 @@ function BooleanToggleItem:on_click(button, vx, vy)
 		local ix = self:view_to_view(vx, vy, self.parent)
 
 		if ix < self.pos.x + self.size.x / 2 then
-			self:set_value_lable(self.value_label.text - 1)
+			self:set_value_lable(tostring(self.value - 1))
 		else
-			self:set_value_lable(self.value_label.text + 1)
+			self:set_value_lable(tostring(self.value + 1))
 		end
 	end
 
