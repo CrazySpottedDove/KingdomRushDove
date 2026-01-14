@@ -3,7 +3,6 @@ local log = require("lib.klua.log"):new("upgrades")
 local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
-
 require("all.constants")
 
 local function T(name)
@@ -876,6 +875,38 @@ function upgrades:engineer_advanced_towers()
 	}
 end
 
+local fps_based_keys = {
+	["hit_time"] = true,
+	["cast_time"] = true,
+	["shoot_time"] = true,
+	["dodge_time"] = true
+}
+-- SU 中的副本，为了避免循环引用，不得不在这里复制
+local function scale_fps_based_keys(tbl, factor, visited)
+	visited = visited or {}
+
+	if visited[tbl] then
+		return
+	end
+
+	visited[tbl] = true
+
+	for k, v in pairs(tbl) do
+		-- 跳过 _origin_xxx 字段，避免递归
+		if type(v) == "table" then
+			scale_fps_based_keys(v, factor, visited)
+		elseif fps_based_keys[k] and type(v) == "number" then
+			local _origin_key = "_origin_" .. k
+
+			if not tbl[_origin_key] then
+				tbl[_origin_key] = v
+			end
+
+			tbl[k] = tbl[_origin_key] * factor
+		end
+	end
+end
+
 function upgrades:patch_templates(max_level)
 	if max_level then
 		self.max_level = max_level
@@ -963,14 +994,14 @@ function upgrades:patch_templates(max_level)
 	if u then
 		for _, n in pairs(self:arrows()) do
 			local b = T(n).bullet
-			local reduce_armor = b.reduce_armor
-
-			if type(reduce_armor) == "table" then
-				for k, v in pairs(reduce_armor) do
-					reduce_armor[k] = v + u.reduce_armor
-				end
+			if type(b.mod) == "table" then
+				table.insert(b.mod, "mod_archer_tear")
+			elseif b.mod ~= nil then
+				b.mod = {b.mod, "mod_archer_tear"}
+			elseif b.mods ~= nil then
+				table.insert(b.mods, "mod_archer_tear")
 			else
-				b.reduce_armor = reduce_armor + u.reduce_armor
+				b.mod = "mod_archer_tear"
 			end
 		end
 	end
@@ -978,7 +1009,21 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("archer_fast_shots")
 	if u then
 		for _, n in pairs(archer_towers) do
-			T(n).tower.cooldown_factor = T(n).tower.cooldown_factor * u.cooldown_factor
+			local t = T(n)
+			t.tower.cooldown_factor = t.tower.cooldown_factor * u.cooldown_factor
+			if t.render then
+				for _, s in pairs(t.render.sprites) do
+					if not s._origin_fps then
+						if not s.fps then
+							s._origin_fps = FPS
+						else
+							s._origin_fps = s.fps
+						end
+					end
+					s.fps = s._origin_fps * u.cooldown_factor
+				end
+				scale_fps_based_keys(t, 1 / u.cooldown_factor)
+			end
 		end
 	end
 

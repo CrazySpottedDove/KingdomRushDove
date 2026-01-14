@@ -4666,7 +4666,8 @@ local SU = {
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
 	queue_remove_clean_table = queue_remove_clean_table,
-	enemy_scale_mul = enemy_scale_mul
+	enemy_scale_mul = enemy_scale_mul,
+    scale_fps_based_keys = scale_fps_based_keys
 }
 
 return SU

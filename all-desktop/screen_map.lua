@@ -3529,17 +3529,6 @@ function UpgradesView:hide()
 end
 
 function UpgradesView:rebuild_upgrade_buttons()
-	local none_bought = {}
-
-	for _, k in pairs(UPGR.display_order) do
-		none_bought[k] = 0
-	end
-
-	self.reset_button:disable()
-	self.undo_button:disable()
-	self:set_bought_levels(none_bought)
-	self:set_init_values(self.max_stars, none_bought)
-
 	for _, button in pairs(self.upgrade_buttons) do
 		self.back:remove_child(button)
 	end
