@@ -3244,8 +3244,12 @@ function UpgradesView:initialize(sw, sh)
 
 	self.done_button = GGUpgradesButton:new(_("BUTTON_DONE"))
 	self.done_button.pos = v(680, 630)
-
 	self.back:add_child(self.done_button)
+
+	-- 添加科技组切换功能
+	self.toggle_button = GGUpgradesButton:new("切换科技")
+	self.toggle_button.pos = v(420, 630)
+	self.back:add_child(self.toggle_button)
 
 	self.star_container = KImageView:new("Upgrades_StarContainer")
 	self.star_container.pos = v(100, 637)
@@ -3280,15 +3284,15 @@ function UpgradesView:initialize(sw, sh)
 	self.upgrade_buttons = {}
 
 	local init_bought_list = screen_map.user_data.upgrades
+	UPGR:set_list_id(screen_map.user_data.upgrade_list_id)
 
 	self.spent_stars = 0
 
 	local start_y = 520
 	local separation_y = 80
-	-- local x_offsets = {115, 237, 355, 477, 598, 718}
 	local x_offsets = {121, 243, 361, 483, 604, 724}
 
-	for key, value in pairs(UPGR.list) do
+	for key, value in pairs(UPGR.list[UPGR.list_id]) do
 		local class_ind = table.keyforobject(UPGR.display_order, value.class)
 		local icon_index = value.icon
 		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
@@ -3299,8 +3303,6 @@ function UpgradesView:initialize(sw, sh)
 
 		_button.pos = v(x_offsets[class_ind], start_y - value.level * separation_y * 0.83)
 
-		-- _button.size.x = _button.size.x * 0.5
-		-- _button.size.y = _button.size.y * 0.5
 		self.back:add_child(_button)
 	end
 
@@ -3479,7 +3481,7 @@ function UpgradesView:set_bought_levels(new_bought_list)
 	self:set_stars_and_check()
 
 	screen_map.user_data.upgrades = new_bought_list
-
+	screen_map.user_data.upgrade_list_id = UPGR.list_id
 	storage:save_slot(screen_map.user_data)
 end
 
@@ -3526,6 +3528,46 @@ function UpgradesView:hide()
 	self.tip_panel.hidden = true
 end
 
+function UpgradesView:rebuild_upgrade_buttons()
+	local none_bought = {}
+
+	for _, k in pairs(UPGR.display_order) do
+		none_bought[k] = 0
+	end
+
+	self.reset_button:disable()
+	self.undo_button:disable()
+	self:set_bought_levels(none_bought)
+	self:set_init_values(self.max_stars, none_bought)
+
+	for _, button in pairs(self.upgrade_buttons) do
+		self.back:remove_child(button)
+	end
+
+	self.upgrade_buttons = {}
+
+	local start_y = 520
+	local separation_y = 80
+	local x_offsets = {121, 243, 361, 483, 604, 724}
+
+	for key, value in pairs(UPGR.list[UPGR.list_id]) do
+		local class_ind = table.keyforobject(UPGR.display_order, value.class)
+		local icon_index = value.icon
+		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
+
+		self.upgrade_buttons[key] = UpgradeButtons:new(icon_name, value, key, 0.83)
+
+		local _button = self.upgrade_buttons[key]
+
+		_button.pos = v(x_offsets[class_ind], start_y - value.level * separation_y * 0.83)
+
+		self.back:add_child(_button)
+	end
+
+	self:set_bought_levels(screen_map.user_data.upgrades)
+	self:set_stars_and_check()
+end
+
 function UpgradesView:enable()
 	UpgradesView.super.enable(self)
 
@@ -3552,7 +3594,7 @@ function UpgradesView:enable()
 	function self.reset_button.on_click(button, x, y)
 		S:queue("GUIButtonCommon")
 
-		none_bought = {}
+		local none_bought = {}
 
 		for _, k in pairs(UPGR.display_order) do
 			none_bought[k] = 0
@@ -3562,6 +3604,12 @@ function UpgradesView:enable()
 		self.undo_button:disable()
 		self:set_bought_levels(none_bought)
 		self:set_init_values(self.max_stars, none_bought)
+	end
+
+	function self.toggle_button.on_click(button, x, y)
+		S:queue("GUIButtonCommon")
+		UPGR:toggle_list_id()
+		self:rebuild_upgrade_buttons()
 	end
 
 	if self.spent_stars > 0 then
@@ -3902,6 +3950,7 @@ function EncyclopediaView:show()
 
 	E:load()
 	UPGR:set_levels(user_data.upgrades)
+	UPGR:set_list_id(user_data.upgrade_list_id)
 	DI:set_level(screen_map.user_data.difficulty)
 	UPGR:patch_templates(6)
 	DI:patch_templates()

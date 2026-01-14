@@ -63,7 +63,8 @@ local SETTINGS_PARAMS = {
 }
 local SLOT_ADDITIONAL_DATA = {
 	gems = 0,
-	bag = {}
+	bag = {},
+	upgrade_list_id = 1
 }
 local SLOT_MANDATORY_KEYS = {"levels", "upgrades", "heroes"}
 
@@ -434,13 +435,7 @@ function storage:delete_slot(idx)
 end
 
 function storage:new_slot(idx)
-	local template
-
-	if DEBUG and idx == 1 then
-		template = require("data.slot_template_debug")
-	else
-		template = require("data.slot_template")
-	end
+	local template = require("data.slot_template")
 
 	template = table.deepclone(template)
 

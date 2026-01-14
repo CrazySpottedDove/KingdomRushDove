@@ -65,6 +65,7 @@ function sys.level:init(store)
 	local slot = storage:load_slot(nil, true)
 
 	UP:set_levels(slot.upgrades)
+	UP:set_list_id(slot.upgrade_list_id)
 	DI:set_level(store.level_difficulty)
 	GR:load(store.level_name)
 	P:load(store.level_name, store.visible_coords)

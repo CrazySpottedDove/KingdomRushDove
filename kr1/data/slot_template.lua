@@ -15,6 +15,7 @@ return {
 		barracks = 0,
 		mages = 0
 	},
+	upgrade_list_id = 1,
 	seen = {},
 	bag = {},
 	heroes = {
@@ -71,7 +72,8 @@ return {
 				xp = 0,
 				skills = {}
 			}
-		}
+		},
+		selected = {}
 	},
 	locked_towers = {
 		"tower_paladin",

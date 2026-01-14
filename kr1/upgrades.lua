@@ -26,7 +26,8 @@ upgrades.levels.engineers = 0
 upgrades.levels.rain = 0
 upgrades.levels.reinforcements = 0
 upgrades.display_order = {"archers", "barracks", "mages", "engineers", "rain", "reinforcements"}
-upgrades.list = {
+upgrades.list_id = 1
+upgrades.list = {{
 	archer_salvage = {
 		cost_factor = 0.95,
 		class = "archers",
@@ -309,7 +310,328 @@ upgrades.list = {
 		price = 4,
 		level = 6
 	}
-}
+}, {
+	archer_far_shots = {
+		from_kr = 2,
+		range_factor = 1.25,
+		class = "archers",
+		price = 1,
+		level = 1,
+		icon = 1
+	},
+	archer_logger = {
+		from_kr = 2,
+		cost_factor = 0.85,
+		class = "archers",
+		price = 1,
+		level = 2,
+		icon = 2
+	},
+	archer_critical = {
+		from_kr = 2,
+		class = "archers",
+		damage_factor = 1.1,
+		price = 2,
+		level = 3,
+		icon = 3
+	},
+	archer_tear = {
+		from_kr = 2,
+		reduce_armor = 0.0075,
+		class = "archers",
+		price = 2,
+		level = 4,
+		icon = 4
+	},
+	archer_fast_shots = {
+		from_kr = 2,
+		cooldown_factor = 0.925,
+		class = "archers",
+		price = 3,
+		level = 5,
+		icon = 5
+	},
+	archer_el_bloodletting_shoot = {
+		from_kr = 3,
+		price = 4,
+		icon = 5,
+		class = "archers",
+		level = 6
+	},
+	barrack_survival = {
+		from_kr = 2,
+		health_factor = 1.1,
+		class = "barracks",
+		price = 1,
+		level = 1,
+		icon = 6
+	},
+	barrack_better_armor = {
+		from_kr = 2,
+		class = "barracks",
+		armor_increase = 0.1,
+		price = 1,
+		level = 2,
+		icon = 7
+	},
+	barrack_improved_deployment = {
+		from_kr = 2,
+		cooldown_factor = 0.8,
+		rally_range_factor = 1.2,
+		class = "barracks",
+		price = 2,
+		level = 3,
+		icon = 8
+	},
+	barrack_survival_2 = {
+		from_kr = 2,
+		health_factor = 1.09,
+		class = "barracks",
+		price = 2,
+		level = 4,
+		icon = 9
+	},
+	barrack_barbed_armor = {
+		from_kr = 2,
+		spiked_armor_factor = 0.1,
+		class = "barracks",
+		price = 3,
+		level = 5,
+		icon = 10
+	},
+	barrack_el_enchanted_armor = {
+		from_kr = 3,
+		class = "barracks",
+		factor = 0.9,
+		magic_armor_inc = 0.1,
+		icon = 8,
+		price = 4,
+		level = 6
+	},
+	mage_spell_reach = {
+		from_kr = 2,
+		range_factor = 1.15,
+		class = "mages",
+		price = 1,
+		level = 1,
+		icon = 11
+	},
+	mage_arcane_shatter = {
+		from_kr = 2,
+		mod_normal = "mod_arcane_shatter",
+		mod_little = "mod_arcane_shatter_little",
+		class = "mages",
+		price = 1,
+		level = 2,
+		icon = 12
+	},
+	mage_hermetic_study = {
+		from_kr = 2,
+		class = "mages",
+		cost_factor = 0.91,
+		price = 2,
+		level = 3,
+		icon = 13
+	},
+	mage_empowered_magic = {
+		from_kr = 2,
+		damage_factor = 1.15,
+		class = "mages",
+		price = 2,
+		level = 4,
+		icon = 14
+	},
+	mage_slow_curse = {
+		from_kr = 2,
+		mod = "mod_slow_curse",
+		class = "mages",
+		price = 3,
+		level = 5,
+		icon = 15
+	},
+	mage_brilliance = {
+		from_kr = 2,
+		class = "mages",
+		icon = 15,
+		price = 4,
+		level = 6,
+		damage_factors = {
+			1.1,
+			1.12,
+			1.14,
+			1.16,
+			1.18,
+			1.2,
+			1.22,
+			1.24,
+			1.26,
+			1.28,
+			1.29,
+			1.30,
+			1.31,
+			1.32,
+			1.33,
+			1.34,
+			1.35
+		}
+	},
+	engineer_concentrated_fire = {
+		from_kr = 2,
+		damage_factor = 1.25,
+		class = "engineers",
+		price = 1,
+		level = 1,
+		icon = 16
+	},
+	engineer_range_finder = {
+		from_kr = 2,
+		range_factor = 1.1,
+		class = "engineers",
+		price = 1,
+		level = 2,
+		icon = 17
+	},
+	engineer_field_logistics = {
+		from_kr = 2,
+		class = "engineers",
+		cost_factor = 0.9,
+		price = 2,
+		level = 3,
+		icon = 18
+	},
+	engineer_industrialization = {
+		from_kr = 2,
+		class = "engineers",
+		cost_factor = 0.8,
+		price = 3,
+		level = 4,
+		icon = 19
+	},
+	engineer_efficiency = {
+		from_kr = 2,
+		price = 3,
+		class = "engineers",
+		level = 5,
+		icon = 20
+	},
+	engineer_gnomish_tinkering = {
+		from_kr = 2,
+		cooldown_factor_electric = 0.9,
+		cooldown_factor = 0.88,
+		class = "engineers",
+		icon = 19,
+		price = 4,
+		level = 6
+	},
+	rain_blazing_skies = {
+		from_kr = 2,
+		fireball_count_increase = 2,
+		class = "rain",
+		damage_increase = 30,
+		price = 2,
+		level = 1,
+		icon = 21
+	},
+	rain_scorched_earth = {
+		from_kr = 2,
+		price = 2,
+		class = "rain",
+		level = 2,
+		icon = 22
+	},
+	rain_bigger_and_meaner = {
+		from_kr = 2,
+		range_factor = 1.25,
+		cooldown_reduction = 10,
+		class = "rain",
+		damage_increase = 30,
+		price = 3,
+		level = 3,
+		icon = 23
+	},
+	rain_blazing_earth = {
+		from_kr = 2,
+		cooldown_reduction = 10,
+		class = "rain",
+		price = 3,
+		level = 4,
+		icon = 24
+	},
+	rain_cataclysm = {
+		from_kr = 2,
+		class = "rain",
+		damage_increase = 60,
+		price = 3,
+		level = 5,
+		icon = 25
+	},
+	rain_armaggedon = {
+		from_kr = 2,
+		class = "rain",
+		fireball_count_increase = 1,
+		icon = 25,
+		price = 4,
+		level = 6
+	},
+	reinforcement_level_1 = {
+		from_kr = 2,
+		class = "reinforcements",
+		template_name = "re_farmer_well_fed",
+		price = 2,
+		level = 1,
+		icon = 26
+	},
+	reinforcement_level_2 = {
+		from_kr = 2,
+		class = "reinforcements",
+		template_name = "re_conscript",
+		price = 3,
+		level = 2,
+		icon = 27
+	},
+	reinforcement_level_3 = {
+		from_kr = 2,
+		class = "reinforcements",
+		template_name = "re_warrior",
+		price = 3,
+		level = 3,
+		icon = 28
+	},
+	reinforcement_level_4 = {
+		from_kr = 2,
+		class = "reinforcements",
+		template_name = "re_legionnaire",
+		price = 3,
+		level = 4,
+		icon = 29
+	},
+	reinforcement_level_5 = {
+		from_kr = 2,
+		class = "reinforcements",
+		template_name = "re_legionnaire_ranged",
+		price = 4,
+		level = 5,
+		icon = 30
+	},
+	reinforcement_level_6 = {
+		from_kr = 3,
+		class = "reinforcements",
+		duration_inc = 2,
+		cooldown_dec = 1,
+		icon = 29,
+		price = 4,
+		level = 6
+	}
+}}
+upgrades.list_count = #upgrades.list
+
+function upgrades:toggle_list_id()
+	self.list_id = self.list_id % self.list_count + 1
+end
+
+function upgrades:set_list_id(id)
+	self.list_id = id or 1
+end
 
 function upgrades:set_levels(levels)
 	for k, v in pairs(levels) do
@@ -318,13 +640,13 @@ function upgrades:set_levels(levels)
 end
 
 function upgrades:has_upgrade(name)
-	local u = self.list[name]
+	local u = self.list[self.list_id][name]
 
 	return u and u.level <= self.levels[u.class] and (not self.max_level or u.level <= self.max_level)
 end
 
 function upgrades:get_upgrade(name)
-	local u = self.list[name]
+	local u = self.list[self.list_id][name]
 
 	if not u or u.level > self.levels[u.class] or not self.max_level or u.level > self.max_level then
 		return nil
@@ -336,7 +658,7 @@ end
 function upgrades:get_total_stars()
 	local total = 0
 
-	for k, v in pairs(self.list) do
+	for k, v in pairs(self.list[self.list_id]) do
 		total = total + v.price
 	end
 
@@ -610,6 +932,54 @@ function upgrades:patch_templates(max_level)
 		T("tower_musketeer").attacks.list[2].range = T("tower_musketeer").attacks.list[2].range * u.range_factor
 		T("tower_musketeer").attacks.list[3].range = T("tower_musketeer").attacks.list[3].range * u.range_factor
 		T("tower_musketeer").attacks.list[4].range = T("tower_musketeer").attacks.list[4].range * u.range_factor
+	end
+
+	u = self:get_upgrade("archer_logger")
+	if u then
+		for _, n in pairs(archer_towers) do
+			local t = T(n)
+			if t.powers then
+				for _, p in pairs(t.powers) do
+					if p.price_base then
+						p.price_base = math.ceil(p.price_base * u.cost_factor)
+					end
+					if p.price_inc then
+						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
+					end
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("archer_critical")
+	if u then
+		for _, n in pairs(GS.archer_towers) do
+			local t = T(n)
+			t.tower.damage_factor = t.tower.damage_factor * u.damage_factor
+		end
+	end
+
+	u = self:get_upgrade("archer_tear")
+	if u then
+		for _, n in pairs(self:arrows()) do
+			local b = T(n).bullet
+			local reduce_armor = b.reduce_armor
+
+			if type(reduce_armor) == "table" then
+				for k, v in pairs(reduce_armor) do
+					reduce_armor[k] = v + u.reduce_armor
+				end
+			else
+				b.reduce_armor = reduce_armor + u.reduce_armor
+			end
+		end
+	end
+
+	u = self:get_upgrade("archer_fast_shots")
+	if u then
+		for _, n in pairs(archer_towers) do
+			T(n).tower.cooldown_factor = T(n).tower.cooldown_factor * u.cooldown_factor
+		end
 	end
 
 	u = self:get_upgrade("archer_el_bloodletting_shoot")
