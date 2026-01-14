@@ -8050,5 +8050,15 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	ENEMY_ABOMINATION_STRONG_NAME = "狂化憎恶",
 	ENEMY_WITCH_STRONG_NAME = "狂化女巫",
 	ENEMY_BLADE_STRONG_NAME = "狂化咏剑士",
-	KRDOVE_EB_ELEPHANT_CANNIBAL_NAME = "大祭司瓦利斯"
+	KRDOVE_EB_ELEPHANT_CANNIBAL_NAME = "大祭司瓦利斯",
+	barrack_bodies_NAME = "守备提升",
+	barrack_bodies_DESCRIPTION = "提升兵营的人数上限",
+	barrack_march_NAME = "行军号角",
+	barrack_march_DESCRIPTION = "提升兵营士兵的移动速度和兵营的调集范围。",
+	barrack_rally_NAME = "部署改良",
+	barrack_rally_DESCRIPTION = "提升兵营的调集范围。",
+	barrack_weapon_NAME = "武器改良",
+	barrack_weapon_DESCRIPTION = "提升兵营士兵的攻击力。",
+	barrack_go_on_NAME = "前仆后继",
+	barrack_go_on_DESCRIPTION = "加快兵营士兵的复活速度。"
 }

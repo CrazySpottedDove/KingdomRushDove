@@ -357,42 +357,41 @@ upgrades.list = {{
 		class = "archers",
 		level = 6
 	},
-	barrack_survival = {
+	barrack_bodies = {
 		from_kr = 2,
-		health_factor = 1.1,
 		class = "barracks",
 		price = 1,
 		level = 1,
 		icon = 6
 	},
-	barrack_better_armor = {
+	barrack_march = {
 		from_kr = 2,
 		class = "barracks",
-		armor_increase = 0.1,
+		speed_inc = 12,
+		rally_range_factor = 1.1,
 		price = 1,
 		level = 2,
 		icon = 7
 	},
-	barrack_improved_deployment = {
+	barrack_rally = {
 		from_kr = 2,
-		cooldown_factor = 0.8,
-		rally_range_factor = 1.2,
 		class = "barracks",
-		price = 2,
+		rally_range_factor = 1.2,
+		price = 1,
 		level = 3,
 		icon = 8
 	},
-	barrack_survival_2 = {
+	barrack_weapon = {
 		from_kr = 2,
-		health_factor = 1.09,
+		damage_factor = 1.1,
 		class = "barracks",
 		price = 2,
 		level = 4,
 		icon = 9
 	},
-	barrack_barbed_armor = {
+	barrack_go_on = {
 		from_kr = 2,
-		spiked_armor_factor = 0.1,
+		cooldown_factor = 0.8,
 		class = "barracks",
 		price = 3,
 		level = 5,
@@ -1053,6 +1052,56 @@ function upgrades:patch_templates(max_level)
 	if u then
 		for _, n in pairs(barrack_soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
+		end
+	end
+
+	u = self:get_upgrade("barrack_bodies")
+
+	if u then
+		for _, n in pairs(GS.barrack_towers) do
+			if n ~= "tower_baby_ashbite" and n ~= "tower_pandas_lvl4" then
+				local t = T(n)
+				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
+			end
+		end
+		local t = T("soldier_baby_ashbite")
+		t.unit.damage_factor = t.unit.damage_factor * 1.3
+		local t = T("soldier_tower_pandas_green_lvl4")
+		t.unit.damage_factor = t.unit.damage_factor * 1.3
+		local t = T("soldier_tower_pandas_red_lvl4")
+		t.unit.damage_factor = t.unit.damage_factor * 1.3
+		local t = T("soldier_tower_pandas_blue_lvl4")
+		t.unit.damage_factor = t.unit.damage_factor * 1.3
+	end
+
+	u = self:get_upgrade("barrack_march")
+	if u then
+		for _, n in pairs(barrack_towers) do
+			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+		end
+		for _, n in pairs(barrack_soldiers) do
+			T(n).motion.max_speed = T(n).motion.max_speed + u.speed_inc
+		end
+	end
+
+	u = self:get_upgrade("barrack_rally")
+	if u then
+		for _, n in pairs(barrack_towers) do
+			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+		end
+	end
+
+	u = self:get_upgrade("barrack_weapon")
+	if u then
+		for _, n in pairs(barrack_soldiers) do
+			T(n).unit.damage_factor = T(n).unit.damage_factor * u.damage_factor
+		end
+	end
+
+	u = self:get_upgrade("barrack_go_on")
+	if u then
+		for _, n in pairs(barrack_soldiers) do
+			T(n).health.dead_lifetime = T(n).health.dead_lifetime * u.cooldown_factor
 		end
 	end
 

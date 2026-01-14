@@ -2287,14 +2287,8 @@ function HeroPortrait:initialize(hero_entity)
 	self.disabled_tint_color = {200, 200, 200, 255}
 	self.hero_id = hero_entity.id
 	self.portrait_image_name = hero_entity.info.hero_portrait
-	-- if hero_entity.template_name == "hero_dragon_gem" then
-	--     -- self.portrait = KImageView:new(self.portrait_image_name, nil, 0.45)
-	--     -- self.portrait.pos.x = self.portrait.pos.x + 5
-	--     self.portrait = KImageView:new(self.portrait_image_name)
-	-- else
 	self.portrait = KImageView:new(self.portrait_image_name)
 	self.portrait_bo = KImageView:new("hero_portraits_0000")
-	-- end
 	self.portrait.propagate_on_click = true
 
 	self:add_child(self.portrait)

@@ -11709,7 +11709,7 @@ AC(tt, "main_script")
 tt.main_script.update = scripts.controller_s93.update
 --#endregion
 
-tt=RT("mod_archer_tear", "mod_damage")
+tt = RT("mod_archer_tear", "mod_damage")
 tt.damage_min = 0.0075
 tt.damage_max = 0.0075
 tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
