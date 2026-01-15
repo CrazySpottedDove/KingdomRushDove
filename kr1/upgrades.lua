@@ -406,46 +406,44 @@ upgrades.list = {{
 		price = 4,
 		level = 6
 	},
-	mage_spell_reach = {
+	mage_arcane_spell = {
 		from_kr = 2,
-		range_factor = 1.15,
+		damage_factor = 1.15,
 		class = "mages",
 		price = 1,
 		level = 1,
 		icon = 11
 	},
-	mage_arcane_shatter = {
+	mage_strike = {
 		from_kr = 2,
-		mod_normal = "mod_arcane_shatter",
-		mod_little = "mod_arcane_shatter_little",
 		class = "mages",
 		price = 1,
+		-- 出于减少向上查表的考虑，这里的概率直接放在匿名函数中
 		level = 2,
 		icon = 12
 	},
-	mage_hermetic_study = {
+	mage_power = {
 		from_kr = 2,
 		class = "mages",
-		cost_factor = 0.91,
+		damage_factor = 1.1,
 		price = 2,
 		level = 3,
 		icon = 13
 	},
-	mage_empowered_magic = {
+	mage_old_folk = {
 		from_kr = 2,
-		damage_factor = 1.15,
+		cost_factor = 0.85,
 		class = "mages",
 		price = 2,
 		level = 4,
 		icon = 14
 	},
-	mage_slow_curse = {
-		from_kr = 2,
-		mod = "mod_slow_curse",
+	mage_unsteady = {
 		class = "mages",
+		-- 这里同样直接放在匿名函数
 		price = 3,
 		level = 5,
-		icon = 15
+		icon = 21
 	},
 	mage_brilliance = {
 		from_kr = 2,
@@ -1204,7 +1202,88 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
+	u = self:get_upgrade("mage_old_folk")
+	if u then
+		for _, n in pairs(mage_towers) do
+			local t = T(n)
+			if t.powers then
+				for _, p in pairs(t.powers) do
+					if p.price_base then
+						p.price_base = math.ceil(p.price_base * u.cost_factor)
+					end
+					if p.price_inc then
+						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
+					end
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("mage_strike")
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			local b = T(n).bullet
+			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
+				if protection <= 0 then
+					damage.value = damage.value * 1.2
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("mage_unsteady")
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			local b = T(n).bullet
+			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
+				if math.random() < 0.1 then
+					damage.value = damage.value * 1.5 / (1 - protection)
+				end
+			end
+		end
+	end
+
 	u = self:get_upgrade("mage_empowered_magic")
+
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+
+		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+
+		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+
+		for k, v in pairs(d) do
+			d[k] = math.ceil(v * u.damage_factor)
+		end
+	end
+
+	u = self:get_upgrade("mage_arcane_spell")
+
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+
+		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+
+		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+
+		for k, v in pairs(d) do
+			d[k] = math.ceil(v * u.damage_factor)
+		end
+	end
+
+	u = self:get_upgrade("mage_power")
 
 	if u then
 		for _, n in pairs(self:mage_tower_bolts()) do

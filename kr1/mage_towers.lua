@@ -1578,7 +1578,7 @@ tt.sound_events.insert = "ElvesGnomeDesintegrate"
 tt = RT("bullet_pixie_poison", "bullet_pixie_instakill")
 tt.bullet.mod = "mod_pixie_poison"
 tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.hit_fx = "fx_bullet_pixie_poison_hit"
+tt.bullet.hit_fx = "fx_bullet_pixie_poison_hit_"
 tt.render.sprites[1].name = "pixie_bottle"
 tt.sound_events.insert = nil
 --#endregion

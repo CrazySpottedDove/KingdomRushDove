@@ -1624,6 +1624,38 @@ local function calc_mixed_protection(armor, magic_armor)
 	end
 end
 
+function U.calc_protection(health, damage_type)
+	local protection = 0
+
+	if band(damage_type, DAMAGE_POISON) ~= 0 then
+		protection = health.poison_armor
+	elseif band(damage_type, DAMAGE_TRUE) ~= 0 then
+		protection = 0
+	elseif band(damage_type, DAMAGE_PHYSICAL) ~= 0 then
+		protection = health.armor
+	elseif band(damage_type, DAMAGE_MAGICAL) ~= 0 then
+		protection = health.magic_armor
+	elseif band(damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
+		protection = calc_explosion_protection(health.magic_armor)
+	elseif band(damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
+		protection = 0
+	elseif band(damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
+		protection = calc_explosion_protection(health.armor)
+	elseif band(damage_type, DAMAGE_ELECTRICAL) ~= 0 then
+		protection = health.armor * 0.5
+	elseif band(damage_type, DAMAGE_SHOT) ~= 0 then
+		protection = health.armor * 0.7
+	elseif band(damage_type, DAMAGE_STAB) ~= 0 then
+		protection = calc_stab_protection(health.armor)
+	elseif band(damage_type, DAMAGE_MIXED) ~= 0 then
+		protection = calc_mixed_protection(health.armor, health.magic_armor)
+	elseif damage_type == DAMAGE_NONE then
+		protection = 1
+	end
+
+	return km.clamp(0, 1, protection)
+end
+
 ---预测伤害
 ---@param entity table 实体
 ---@param damage table 伤害属性
@@ -1637,35 +1669,11 @@ function U.predict_damage(entity, damage)
 		end
 	end
 
-	local protection = 0
+	local protection = U.calc_protection(entity.health, damage.damage_type)
 
-	if band(damage.damage_type, DAMAGE_POISON) ~= 0 then
-		protection = entity.health.poison_armor
-	elseif band(damage.damage_type, DAMAGE_TRUE) ~= 0 then
-		protection = 0
-	elseif band(damage.damage_type, DAMAGE_PHYSICAL) ~= 0 then
-		protection = entity.health.armor - damage.reduce_armor
-	elseif band(damage.damage_type, DAMAGE_MAGICAL) ~= 0 then
-		protection = entity.health.magic_armor - damage.reduce_magic_armor
-	elseif band(damage.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-		protection = calc_explosion_protection(entity.health.magic_armor - damage.reduce_magic_armor)
-	elseif band(damage.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
-		protection = 0
-	elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
-		protection = calc_explosion_protection(entity.health.armor - damage.reduce_armor)
-	elseif band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
-		protection = (entity.health.armor - damage.reduce_armor) * 0.5
-	elseif band(damage.damage_type, DAMAGE_SHOT) ~= 0 then
-		protection = (entity.health.armor - damage.reduce_armor) * 0.7
-	elseif band(damage.damage_type, DAMAGE_STAB) ~= 0 then
-		protection = calc_stab_protection(entity.health.armor - damage.reduce_armor)
-	elseif band(damage.damage_type, DAMAGE_MIXED) ~= 0 then
-		protection = calc_mixed_protection(entity.health.armor - damage.reduce_armor, entity.health.magic_armor - damage.reduce_magic_armor)
-	elseif damage.damage_type == DAMAGE_NONE then
-		protection = 1
+	for i = 1, #damage.hooks do
+		damage.hooks[i](entity, damage, protection)
 	end
-
-	protection = km.clamp(0, 1, protection)
 
 	local rounded_damage = damage.value
 

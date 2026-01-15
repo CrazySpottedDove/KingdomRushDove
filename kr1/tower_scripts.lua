@@ -3189,12 +3189,7 @@ scripts.tower_sunray = {
 					b.render.sprites[1].scale = v(1, b.ray_y_scales[pow_r.level])
 					b.bullet.damage_factor = damage_factor
 
-					local pure_damage = {}
-
-					pure_damage.damage_type = b.bullet.damage_type
-					pure_damage.value = damage_min * damage_factor
-					pure_damage.reduce_armor = 0
-					pure_damage.reduce_magic_armor = b.bullet.reduce_magic_armor
+					local pure_damage = SU.create_bullet_damage(b.bullet, enemy.id, this.id)
 
 					local exact_damage = U.predict_damage(enemy, pure_damage)
 

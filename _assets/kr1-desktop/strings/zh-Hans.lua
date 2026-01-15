@@ -8060,5 +8060,15 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	barrack_weapon_NAME = "武器改良",
 	barrack_weapon_DESCRIPTION = "提升兵营士兵的攻击力。",
 	barrack_go_on_NAME = "前仆后继",
-	barrack_go_on_DESCRIPTION = "加快兵营士兵的复活速度。"
+	barrack_go_on_DESCRIPTION = "加快兵营士兵的复活速度。",
+	mage_arcane_spell_NAME = "奥术符文",
+	mage_arcane_spell_DESCRIPTION = "提升法师的攻击力。",
+	mage_strike_NAME = "法术打击",
+	mage_strike_DESCRIPTION = "法塔法球对无法抗敌人造成额外伤害",
+	mage_power_NAME = "魔力强化",
+	mage_power_DESCRIPTION = "提升法师的攻击力。",
+	mage_old_folk_NAME = "古老智慧",
+	mage_old_folk_DESCRIPTION = "降低法师塔技能价格",
+	mage_unsteady_NAME = "不稳定魔力",
+	mage_unsteady_DESCRIPTION = "法师攻击时有几率无视法抗并造成额外伤害。"
 }
