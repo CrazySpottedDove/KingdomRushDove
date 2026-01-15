@@ -18834,7 +18834,9 @@ scripts.tower_dwarf = {}
 function scripts.tower_dwarf.update(this, store, script)
 	local tower_sid = 2
 	local door_sid = 3
-	local base_max_soldiers = this.barrack.max_soldiers
+    if not this.original_max_soldiers then
+        this.original_max_soldiers = this.barrack.max_soldiers
+    end
 	local formation_angles = {math.pi * 0.25, math.pi, math.pi * 0.25}
 	local angle_offset = math.pi * 0.25
 	local mute_spawn = false
@@ -18846,7 +18848,7 @@ function scripts.tower_dwarf.update(this, store, script)
 	while true do
 		if pow_f.changed then
 			pow_f.changed = nil
-			b.max_soldiers = base_max_soldiers + pow_f.level
+			b.max_soldiers = this.original_max_soldiers + pow_f.level
 			b.rally_new = true
 			angle_offset = formation_angles[pow_f.level]
 			mute_spawn = true
