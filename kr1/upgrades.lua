@@ -320,7 +320,7 @@ upgrades.list = {{
 	},
 	archer_logger = {
 		from_kr = 2,
-		cost_factor = 0.85,
+		cost_factor = 0.9,
 		class = "archers",
 		price = 1,
 		level = 2,
@@ -471,44 +471,41 @@ upgrades.list = {{
 			1.35
 		}
 	},
-	engineer_concentrated_fire = {
+	engineer_range_finder = {
 		from_kr = 2,
-		damage_factor = 1.25,
+		range_factor = 1.15,
 		class = "engineers",
 		price = 1,
 		level = 1,
 		icon = 16
 	},
-	engineer_range_finder = {
+	engineer_magic_dust = {
 		from_kr = 2,
-		range_factor = 1.1,
 		class = "engineers",
 		price = 1,
 		level = 2,
 		icon = 17
 	},
-	engineer_field_logistics = {
+	engineer_concentrated_fire = {
 		from_kr = 2,
 		class = "engineers",
-		cost_factor = 0.9,
+		damage_factor = 1.1,
 		price = 2,
 		level = 3,
 		icon = 18
 	},
-	engineer_industrialization = {
-		from_kr = 2,
+	engineer_diffusion = {
 		class = "engineers",
-		cost_factor = 0.8,
+		radius_factor = 1.2,
 		price = 3,
 		level = 4,
-		icon = 19
+		icon = DP(23, 16)
 	},
 	engineer_efficiency = {
-		from_kr = 2,
 		price = 3,
 		class = "engineers",
 		level = 5,
-		icon = 20
+		icon = DP(27, 20)
 	},
 	engineer_gnomish_tinkering = {
 		from_kr = 2,
@@ -519,47 +516,141 @@ upgrades.list = {{
 		price = 4,
 		level = 6
 	},
+	-- rain_blazing_skies = {
+	-- 	from_kr = 2,
+	-- 	fireball_count_increase = 2,
+	-- 	class = "rain",
+	-- 	damage_increase = 30,
+	-- 	price = 2,
+	-- 	level = 1,
+	-- 	icon = 21
+	-- },
+	-- rain_scorched_earth = {
+	-- 	from_kr = 2,
+	-- 	price = 2,
+	-- 	class = "rain",
+	-- 	level = 2,
+	-- 	icon = 22
+	-- },
+	-- rain_bigger_and_meaner = {
+	-- 	from_kr = 2,
+	-- 	range_factor = 1.25,
+	-- 	cooldown_reduction = 10,
+	-- 	class = "rain",
+	-- 	damage_increase = 30,
+	-- 	price = 3,
+	-- 	level = 3,
+	-- 	icon = 23
+	-- },
+	-- rain_blazing_earth = {
+	-- 	from_kr = 2,
+	-- 	cooldown_reduction = 10,
+	-- 	class = "rain",
+	-- 	price = 3,
+	-- 	level = 4,
+	-- 	icon = 24
+	-- },
+	-- rain_cataclysm = {
+	-- 	from_kr = 2,
+	-- 	class = "rain",
+	-- 	damage_increase = 60,
+	-- 	price = 3,
+	-- 	level = 5,
+	-- 	icon = 25
+	-- },
+	-- rain_armaggedon = {
+	-- 	from_kr = 2,
+	-- 	class = "rain",
+	-- 	fireball_count_increase = 1,
+	-- 	icon = 25,
+	-- 	price = 4,
+	-- 	level = 6
+	-- },
+	-- reinforcement_level_1 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_farmer_well_fed",
+	-- 	price = 2,
+	-- 	level = 1,
+	-- 	icon = 26
+	-- },
+	-- reinforcement_level_2 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_conscript",
+	-- 	price = 3,
+	-- 	level = 2,
+	-- 	icon = 27
+	-- },
+	-- reinforcement_level_3 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_warrior",
+	-- 	price = 3,
+	-- 	level = 3,
+	-- 	icon = 28
+	-- },
+	-- reinforcement_level_4 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_legionnaire",
+	-- 	price = 3,
+	-- 	level = 4,
+	-- 	icon = 29
+	-- },
+	-- reinforcement_level_5 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_legionnaire_ranged",
+	-- 	price = 4,
+	-- 	level = 5,
+	-- 	icon = 30
+	-- },
+	-- reinforcement_level_6 = {
+	-- 	from_kr = 3,
+	-- 	class = "reinforcements",
+	-- 	duration_inc = 2,
+	-- 	cooldown_dec = 1,
+	-- 	icon = 29,
+	-- 	price = 4,
+	-- 	level = 6
+	-- }
 	rain_blazing_skies = {
-		from_kr = 2,
 		fireball_count_increase = 2,
 		class = "rain",
 		damage_increase = 30,
 		price = 2,
 		level = 1,
-		icon = 21
+		icon = DP(3, 26)
 	},
 	rain_scorched_earth = {
-		from_kr = 2,
 		price = 2,
 		class = "rain",
 		level = 2,
-		icon = 22
+		icon = DP(4, 27)
 	},
 	rain_bigger_and_meaner = {
-		from_kr = 2,
 		range_factor = 1.25,
 		cooldown_reduction = 10,
 		class = "rain",
 		damage_increase = 30,
 		price = 3,
 		level = 3,
-		icon = 23
+		icon = DP(5, 28)
 	},
 	rain_blazing_earth = {
-		from_kr = 2,
 		cooldown_reduction = 10,
 		class = "rain",
 		price = 3,
 		level = 4,
-		icon = 24
+		icon = DP(6, 29)
 	},
 	rain_cataclysm = {
-		from_kr = 2,
 		class = "rain",
 		damage_increase = 60,
 		price = 3,
 		level = 5,
-		icon = 25
+		icon = DP(7, 30)
 	},
 	rain_armaggedon = {
 		from_kr = 2,
@@ -570,44 +661,39 @@ upgrades.list = {{
 		level = 6
 	},
 	reinforcement_level_1 = {
-		from_kr = 2,
 		class = "reinforcements",
 		template_name = "re_farmer_well_fed",
 		price = 2,
 		level = 1,
-		icon = 26
+		icon = DP(28, 21)
 	},
 	reinforcement_level_2 = {
-		from_kr = 2,
 		class = "reinforcements",
 		template_name = "re_conscript",
 		price = 3,
 		level = 2,
-		icon = 27
+		icon = DP(29, 22)
 	},
 	reinforcement_level_3 = {
-		from_kr = 2,
 		class = "reinforcements",
 		template_name = "re_warrior",
 		price = 3,
 		level = 3,
-		icon = 28
+		icon = DP(30, 23)
 	},
 	reinforcement_level_4 = {
-		from_kr = 2,
 		class = "reinforcements",
 		template_name = "re_legionnaire",
 		price = 3,
 		level = 4,
-		icon = 29
+		icon = DP(1, 24)
 	},
 	reinforcement_level_5 = {
-		from_kr = 2,
 		class = "reinforcements",
 		template_name = "re_legionnaire_ranged",
 		price = 4,
 		level = 5,
-		icon = 30
+		icon = DP(2, 25)
 	},
 	reinforcement_level_6 = {
 		from_kr = 3,
@@ -701,44 +787,68 @@ function upgrades:arrows()
 	}
 end
 
-function upgrades:barrack_soldiers()
-	return {
-		"soldier_militia",
-		"soldier_footmen",
-		"soldier_knight",
-		"soldier_paladin",
-		"soldier_barbarian",
-		"soldier_elf",
-		"soldier_elemental",
-		"soldier_skeleton",
-		"soldier_skeleton_knight",
-		"soldier_death_rider",
-		"soldier_templar",
-		"soldier_assassin",
-		"soldier_dwarf",
-		"soldier_amazona",
-		"soldier_djinn",
-		"soldier_pirate_flamer",
-		"soldier_frankenstein",
-		"soldier_blade",
-		"soldier_forest",
-		"soldier_druid_bear",
-		"soldier_drow",
-		"soldier_ewok",
-		"soldier_baby_ashbite",
-		"soldier_tower_dark_elf",
-		"soldier_tower_demon_pit_basic_attack_lvl4",
-		"big_guy_tower_demon_pit_lvl4",
-		"soldier_tower_necromancer_skeleton_lvl4",
-		"soldier_tower_necromancer_skeleton_golem_lvl4",
-		"soldier_tower_pandas_green_lvl4",
-		"soldier_tower_pandas_red_lvl4",
-		"soldier_tower_pandas_blue_lvl4",
-		"soldier_tower_rocket_gunners_lvl4",
-		"soldier_tower_ghost_lvl4",
-		"soldier_tower_dwarf_lvl4"
-	}
-end
+upgrades.soldiers = {
+	"soldier_militia",
+	"soldier_footmen",
+	"soldier_knight",
+	"soldier_paladin",
+	"soldier_barbarian",
+	"soldier_elf",
+	"soldier_elemental",
+	"soldier_skeleton",
+	"soldier_skeleton_knight",
+	"soldier_death_rider",
+	"soldier_templar",
+	"soldier_assassin",
+	"soldier_dwarf",
+	"soldier_amazona",
+	"soldier_djinn",
+	"soldier_pirate_flamer",
+	"soldier_frankenstein",
+	"soldier_blade",
+	"soldier_forest",
+	"soldier_druid_bear",
+	"soldier_drow",
+	"soldier_ewok",
+	"soldier_baby_ashbite",
+	"soldier_tower_dark_elf",
+	"soldier_tower_demon_pit_basic_attack_lvl4",
+	"big_guy_tower_demon_pit_lvl4",
+	"soldier_tower_necromancer_skeleton_lvl4",
+	"soldier_tower_necromancer_skeleton_golem_lvl4",
+	"soldier_tower_pandas_green_lvl4",
+	"soldier_tower_pandas_red_lvl4",
+	"soldier_tower_pandas_blue_lvl4",
+	"soldier_tower_rocket_gunners_lvl4",
+	"soldier_tower_ghost_lvl4",
+	"soldier_tower_dwarf_lvl4"
+}
+
+upgrades.barrack_soldiers = {
+	"soldier_militia",
+	"soldier_footmen",
+	"soldier_knight",
+	"soldier_paladin",
+	"soldier_barbarian",
+	"soldier_elf",
+	"soldier_templar",
+	"soldier_assassin",
+	"soldier_dwarf",
+	"soldier_amazona",
+	"soldier_djinn",
+	"soldier_pirate_flamer",
+	"soldier_blade",
+	"soldier_forest",
+	"soldier_drow",
+	"soldier_ewok",
+	"soldier_baby_ashbite",
+	"soldier_tower_pandas_green_lvl4",
+	"soldier_tower_pandas_red_lvl4",
+	"soldier_tower_pandas_blue_lvl4",
+	"soldier_tower_rocket_gunners_lvl4",
+	"soldier_tower_ghost_lvl4",
+	"soldier_tower_dwarf_lvl4"
+}
 
 function upgrades:towers_with_barrack()
 	return {
@@ -1042,13 +1152,14 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
-	local barrack_soldiers = self:barrack_soldiers()
+	local soldiers = self.soldiers
+	local barrack_soldiers = self.barrack_soldiers
 	local barrack_towers = self:towers_with_barrack()
 
 	u = self:get_upgrade("barrack_survival")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
 		end
 	end
@@ -1062,14 +1173,19 @@ function upgrades:patch_templates(max_level)
 				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 			end
 		end
-		local t = T("soldier_baby_ashbite")
-		t.unit.damage_factor = t.unit.damage_factor * 1.3
-		local t = T("soldier_tower_pandas_green_lvl4")
-		t.unit.damage_factor = t.unit.damage_factor * 1.3
-		local t = T("soldier_tower_pandas_red_lvl4")
-		t.unit.damage_factor = t.unit.damage_factor * 1.3
-		local t = T("soldier_tower_pandas_blue_lvl4")
-		t.unit.damage_factor = t.unit.damage_factor * 1.3
+		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4"}
+
+		for _, n in pairs(special_soldiers) do
+			local t = T(n)
+			t.unit.damage_factor = t.unit.damage_factor * 1.3
+		end
+
+		for _, n in pairs(barrack_soldiers) do
+			local t = T(n)
+			if t.health.hp_max and not table.contains(special_soldiers, n) then
+				t.health.hp_max = math.ceil(t.health.hp_max * 0.8)
+			end
+		end
 	end
 
 	u = self:get_upgrade("barrack_march")
@@ -1077,7 +1193,7 @@ function upgrades:patch_templates(max_level)
 		for _, n in pairs(barrack_towers) do
 			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
 		end
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).motion.max_speed = T(n).motion.max_speed + u.speed_inc
 		end
 	end
@@ -1091,14 +1207,14 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_weapon")
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).unit.damage_factor = T(n).unit.damage_factor * u.damage_factor
 		end
 	end
 
 	u = self:get_upgrade("barrack_go_on")
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.dead_lifetime = T(n).health.dead_lifetime * u.cooldown_factor
 		end
 	end
@@ -1106,7 +1222,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_better_armor")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.armor = T(n).health.armor + u.armor_increase
 		end
 	end
@@ -1114,7 +1230,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_improved_deployment")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.dead_lifetime = math.floor(T(n).health.dead_lifetime * u.cooldown_factor)
 		end
 
@@ -1126,7 +1242,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_survival_2")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
 		end
 	end
@@ -1348,6 +1464,45 @@ function upgrades:patch_templates(max_level)
 		T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[2].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[3].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor)
+	end
+
+	u = self:get_upgrade("engineer_magic_dust")
+	if u then
+		for _, n in pairs(engineer_bombs) do
+			local n = T(n)
+			local b = n.bullet
+			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
+				if math.random() < 0.1 then
+					damage.value = damage.value + entity.health.hp_max * 0.05
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("engineer_diffusion")
+	if u then
+		for _, n in pairs(engineer_bombs) do
+			local n = T(n)
+			local b = n.bullet
+			if b.damage_radius then
+				b.damage_radius = b.damage_radius * u.radius_factor
+				if n.hit_fx then
+					local fx = T(n.hit_fx)
+					if fx.render then
+						local s = fx.render.sprites[1]
+						if s.scale then
+							s.scale.x = s.scale.x * u.radius_factor
+							s.scale.y = s.scale.y * u.radius_factor
+						else
+							s.scale = {
+								x = u.radius_factor,
+								y = u.radius_factor
+							}
+						end
+					end
+				end
+			end
+		end
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")

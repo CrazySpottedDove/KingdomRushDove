@@ -2810,11 +2810,7 @@ function scripts.bomb.update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E:create_entity("damage")
-
-			d.damage_type = b.damage_type
-			d.reduce_armor = b.reduce_armor
-			d.reduce_magic_armor = b.reduce_magic_armor
+			local d = SU.create_bullet_damage(b, enemy.id, this.id)
 
 			if UP:get_upgrade("engineer_efficiency") then
 				d.value = dmax
@@ -2825,18 +2821,9 @@ function scripts.bomb.update(this, store)
 			end
 
 			d.value = b.damage_factor * d.value
-			d.source_id = this.id
-			d.target_id = enemy.id
 
 			queue_damage(store, d)
 
-			-- if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and
-			--     band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() <
-			--     this.up_shock_and_awe_chance then
-			--     local mod = E:create_entity("mod_shock_and_awe")
-			--     mod.modifier.target_id = enemy.id
-			--     queue_insert(store, mod)
-			-- end
 			local mods
 
 			if b.mod then
@@ -3193,22 +3180,18 @@ function scripts.missile.update(this, store)
 		local enemies = U.find_enemies_in_range(store, origin, 0, b.damage_radius, b.damage_flags, b.damage_bans)
 
 		if enemies then
+			local dmin, dmax = b.damage_min, b.damage_max
+			local dradius = b.damage_radius
 			for i = 1, #enemies do
 				local enemy = enemies[i]
-				local d = E:create_entity("damage")
-
-				d.source_id = this.id
-				d.target_id = enemy.id
-				d.damage_type = b.damage_type
-				d.reduce_armor = b.reduce_armor
-				d.reduce_magic_armor = b.reduce_magic_armor
+				local d = SU.create_bullet_damage(b, enemy.id, this.id)
 
 				if UP:get_upgrade("engineer_efficiency") then
-					d.value = b.damage_max
+					d.value = dmax
 				else
-					local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, origin, b.damage_radius)
+					local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
 
-					d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
+					d.value = dmax - (dmax - dmin) * dist_factor
 				end
 
 				d.value = b.damage_factor * d.value
@@ -8619,11 +8602,7 @@ function scripts.bomb_bouncing.update(this, store)
 		if enemies then
 			for i = 1, #enemies do
 				local enemy = enemies[i]
-				local d = E:create_entity("damage")
-
-				d.damage_type = b.damage_type
-				d.reduce_armor = b.reduce_armor
-				d.reduce_magic_armor = b.reduce_magic_armor
+				local d = SU.create_bullet_damage(b, enemy.id, this.id)
 
 				if UP:get_upgrade("engineer_efficiency") then
 					d.value = dmax
@@ -8634,8 +8613,6 @@ function scripts.bomb_bouncing.update(this, store)
 				end
 
 				d.value = b.damage_factor * d.value
-				d.source_id = this.id
-				d.target_id = enemy.id
 
 				queue_damage(store, d)
 

@@ -649,7 +649,7 @@ function patch_upgrade_map.rain_thunder(level, endless)
 end
 
 function patch_upgrade_map.barrack_luck(level, endless)
-	for _, name in pairs(UP:barrack_soldiers()) do
+	for _, name in pairs(UP.soldiers) do
 		local s = E:get_template(name)
 
 		if not s._endless_barrack_luck then
@@ -671,7 +671,7 @@ function patch_upgrade_map.barrack_unity(level, endless)
 		end
 	end
 
-	for _, name in pairs(UP:barrack_soldiers()) do
+	for _, name in pairs(UP.soldiers) do
 		local s = E:get_template(name)
 
 		s.health.dead_lifetime = s.health.dead_lifetime - friend_buff.barrack_unity_lifetime * level
@@ -679,7 +679,7 @@ function patch_upgrade_map.barrack_unity(level, endless)
 end
 
 function patch_upgrade_map.barrack_synergy(level, endless)
-	for _, name in pairs(UP:barrack_soldiers()) do
+	for _, name in pairs(UP.soldiers) do
 		local s = E:get_template(name)
 
 		if not s._barrack_synergy then
