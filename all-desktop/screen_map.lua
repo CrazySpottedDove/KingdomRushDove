@@ -8,7 +8,6 @@ local G = love.graphics
 local GS = require("kr1.game_settings")
 local GU = require("gui_utils")
 local I = require("klove.image_db")
-local PS = require("platform_services")
 local S = require("sound_db")
 local SH = require("klove.shader_db")
 local SU = require("screen_utils")
@@ -30,7 +29,6 @@ require("klove.kui")
 local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
-require("shop_views")
 
 local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
@@ -97,11 +95,7 @@ local function is_extra_level(level, num)
 	return level > efrom and level <= eto or level > cfrom and level <= cto
 end
 
-screen_map.signal_handlers = {
-	[SGN_SHOP_GEMS_CHANGED] = function()
-		screen_map:update_gems()
-	end
-}
+screen_map.signal_handlers = {}
 
 function screen_map:textinput(t)
 	self.window:textinput(t)
@@ -122,7 +116,6 @@ function screen_map:init(w, h, done_callback)
 	self.window = window
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
-	self.is_premium = PS.services.iap and PS.services.iap:is_premium()
 
 	if DEBUG then
 		package.loaded["data.achievements_data"] = nil
@@ -568,39 +561,6 @@ function screen_map:init(w, h, done_callback)
 
 	self.skill_label = points_label
 
-	if self.is_premium then
-		local s_button = GGButton:new("mapButtons_notxt_0013", "mapButtons_notxt_0014")
-
-		s_button.anchor = v(s_button.size.x / 2, s_button.size.y / 2)
-		s_button.pos = v(h_button.pos.x - 170, sh - 90)
-
-		function s_button.on_click(this, button, x, y)
-			S:queue("GUIButtonCommon")
-			self.shop_view:show()
-		end
-
-		s_button.label.pos = v(50, 121)
-		s_button.label.size = v(126, 30)
-		s_button.label.text_size = s_button.label.size
-		s_button.label.font_size = 18
-		s_button.label.vertical_align = CJK("middle", "top", nil, "top")
-		s_button.label.text = _("MAP_BUTTON_SHOP")
-		s_button.label.fit_lines = 1
-
-		self.window:add_child(s_button)
-
-		local g = KImageView:new("mapGem")
-
-		g.id = "gems_to_spend_view"
-		g.pos = v(160, 50)
-		g.anchor = v(26, 23)
-		g.hidden = false
-
-		s_button:add_child(g)
-
-		self.gems_to_spend_view = g
-	end
-
 	local map_counters = GG9View:new_from_table(kui_db:get_table("map_counters_view", {
 		ref_h = self.ref_h,
 		sw = self.sw,
@@ -673,24 +633,6 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(self.criket_panel_view)
 
-	if self.is_premium then
-		local sv = KView:new(V.v(sw, sh))
-
-		sv.id = "modal_bg_shaded_view"
-		sv.colors.background = {0, 0, 0, 160}
-		sv.hidden = true
-		sv.propagate_on_enter = false
-
-		self.window:add_child(sv)
-
-		local shop_view = ShopView:new_from_table(kui_db:get_table("shop_view", {}))
-
-		self.window:add_child(shop_view)
-
-		shop_view.pos.x = sw / 2
-		self.shop_view = shop_view
-	end
-
 	if self.kr2_map then
 		S:queue("MusicMap2")
 	elseif self.kr3_map then
@@ -705,17 +647,8 @@ function screen_map:init(w, h, done_callback)
 		signal.register(sn, fn)
 	end
 
-	if self.is_premium then
-		self:update_gems()
-	end
-
-	local ask_for_rating_level = PS and PS.services and PS.services.rating and 5 or nil
-
 	if screen_map.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
 		self.difficulty_view:show()
-	elseif ask_for_rating_level ~= nil and screen_map.user_data.levels and screen_map.user_data.levels[ask_for_rating_level] and not screen_map.user_data.levels[ask_for_rating_level + 1] then
-		log.debug("trying to show rating dialog...")
-		PS.services.rating:request_review()
 	end
 end
 
@@ -757,34 +690,11 @@ function screen_map:update(dt)
 		self.skill_star.scale = v(math.sin(self.stime) * 0.05 + 0.95, math.sin(self.stime) * 0.05 + 0.95)
 	end
 
-	if self.gems_to_spend_view and not self.gems_to_spend_view.hidden then
-		self.gems_to_spend_view.scale = v(math.sin(self.stime) * 0.05 + 0.95, math.sin(self.stime) * 0.05 + 0.95)
-	end
-
 	if self.endlessTip then
 		self.endlessTip.scale = v(math.sin(self.stime * 0.5) * 0.02 + 0.98, math.sin(self.stime * 0.5) * 0.02 + 0.98)
 	end
 
 	return true
-end
-
-function screen_map:update_gems()
-	if not self.is_premium then
-		return
-	end
-
-	local user_data = storage:load_slot()
-	local amount = user_data.gems
-
-	wid("map_counters_gems").text = amount
-
-	if wid("shop_gems") then
-		wid("shop_gems").text = amount
-	end
-
-	local iap_data = require("data.iap_data")
-
-	self.gems_to_spend_view.hidden = user_data.gems < iap_data.cheapest_item_cost
 end
 
 function screen_map:draw()
@@ -3079,27 +2989,16 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 
 	right_page:add_child(b)
 
-	local ps_ld = PS and PS.services.leaderboards or nil
 	local r = KImageButton("levelSelect_rankings_0001", "levelSelect_rankings_0002", "levelSelect_rankings_0002")
 
 	r.pos = v(720, 550)
 	r.anchor = v(r.size.x / 2, r.size.y / 2)
-	r.alpha = ps_ld and ps_ld:get_status() and 1 or 0.5
+	r.alpha = 0.5
 
 	function r.on_click()
 		S:queue("GUIButtonCommon")
 
-		if not ps_ld then
-			return
-		end
-
-		if ps_ld:get_status() then
-			local user_data = storage:load_slot()
-
-			ps_ld:show_leaderboard(level_num, user_data.difficulty)
-		else
-			ps_ld:do_signin()
-		end
+		return
 	end
 
 	right_page:add_child(r)

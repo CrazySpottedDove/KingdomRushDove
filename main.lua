@@ -694,16 +694,6 @@ local function get_error_stack(msg, layer)
 	return (debug.traceback("Error: " .. tostring(msg), 1 + (layer or 1)):gsub("\n[^\n]+$", ""))
 end
 
-local function crash_report(str)
-	if KR_PLATFORM == "ios" then
-		local PS = require("platform_services")
-
-		if PS.services.analytics then
-			PS.services.analytics:log_and_crash(str)
-		end
-	end
-end
-
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	local last_canvas = G.getCanvas()
@@ -721,7 +711,6 @@ function love.errorhandler(msg)
 	print(stack_msg)
 	log.error(stack_msg)
 	close_log()
-	pcall(crash_report, stack_msg)
 
 	if not love.window or not G or not love.event then
 		return

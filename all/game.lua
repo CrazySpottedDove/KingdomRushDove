@@ -14,7 +14,6 @@ local SU = require("screen_utils")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
 local AC = require("achievements")
-local PS = require("platform_services")
 local simulation = require("simulation")
 local game_gui = require("game_gui")
 local G = love.graphics
@@ -236,10 +235,6 @@ function game:restart()
 	self.game_gui:init(self.screen_w, self.screen_h, self)
 	S:stop_all()
 	S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
-
-	if PS then
-		PS.paused = true
-	end
 
 	self:init_debug()
 	signal.emit("game-start", self.store)

@@ -29,7 +29,6 @@ local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local P = require("path_db")
-local PS = require("platform_services")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
 local GU = require("gui_utils")
@@ -56,7 +55,6 @@ local function queue_remove(store, e)
 	simulation:queue_remove_entity(e)
 end
 
-local IS_KR3 = KR_GAME == "kr3"
 local IS_KR2 = KR_GAME == "kr2"
 local IS_KR1 = KR_GAME == "kr1"
 
@@ -243,9 +241,6 @@ local function show_balloon_handler(id, at_level_idx)
 end
 
 local function show_gems_reward_handler(entity, amount)
-	if not game_gui.is_premium then
-		return
-	end
 
 	local v = GemsRewardFx:new(amount)
 
@@ -423,7 +418,6 @@ function game_gui:init(w, h, game)
 	self.mode = GUI_MODE_IDLE
 	self.manual_gui_hide = nil
 	self.keys_disabled = nil
-	self.is_premium = PS.services.iap and PS.services.iap:is_premium()
 
 	local settings = storage:load_settings()
 
@@ -519,7 +513,7 @@ function game_gui:init(w, h, game)
 	local hud_pause = HudPauseButton:new()
 
 	hud_pause.anchor = v(hud_pause.size.x, 0)
-	hud_pause.pos = v(sw + (IS_KR3 and 0 or -37), -21)
+	hud_pause.pos = v(sw + -37, -21)
 	hud_pause.scale = v(0.9, 0.9)
 
 	local pauseview = PauseView:new()
@@ -610,16 +604,6 @@ function game_gui:init(w, h, game)
 				}, "out-elastic")
 				S:queue("InAppExtraGold")
 
-				if PS.services.fullads then
-					flows = PS.services.fullads:get_workflows("defeat_endless")
-
-					if flows then
-						for _, flow in pairs(flows) do
-							game_gui:show_fullads_icon(flow.id, flow)
-						end
-					end
-				end
-
 				local cb = wid("defeat_endless_view_try_again_button")
 				local cv = wid("defeat_endless_view_try_again")
 				local rb = wid("defeat_endless_view_quit_button")
@@ -692,8 +676,6 @@ function game_gui:init(w, h, game)
 			SW = self.sw,
 			SH = self.sh
 		}))
-	elseif IS_KR3 then
-	-- block empty
 	end
 
 	local layer_gui = KView:new()
@@ -742,8 +724,6 @@ function game_gui:init(w, h, game)
 	if IS_KR1 or IS_KR2 then
 		layer_gui_hud:add_child(layer_freeze)
 		layer_gui_hud:add_child(layer_bomb)
-	elseif IS_KR3 then
-	-- block empty
 	end
 
 	layer_gui_hud:add_child(hud_counters)
@@ -814,7 +794,6 @@ function game_gui:init(w, h, game)
 	signal.register("unlock-user-power", unlock_user_power_handler)
 	signal.register("wave-notification", wave_notification_handler)
 	signal.register("show-balloon", show_balloon_handler)
-	signal.register("show-gems-reward", show_gems_reward_handler)
 	signal.register("got-achievement", show_achievement_handler)
 	signal.register("block-random-power", block_random_power_handler)
 	signal.register("atomic-freeze-starts", atomic_freeze_starts_handler)
@@ -853,7 +832,6 @@ function game_gui:destroy()
 	signal.remove("unlock-user-power", unlock_user_power_handler)
 	signal.remove("wave-notification", wave_notification_handler)
 	signal.remove("show-balloon", show_balloon_handler)
-	signal.remove("show-gems-reward", show_gems_reward_handler)
 	signal.remove("got-achievement", show_achievement_handler)
 	signal.remove("block-random-power", block_random_power_handler)
 	signal.remove("atomic-freeze-starts", atomic_freeze_starts_handler)
@@ -1095,8 +1073,6 @@ function game_gui:keypressed(key, isrepeat)
 		self.power_1:toggle_selection()
 	elseif table.contains(ks.pow_2, key) and not self.power_2:is_disabled() then
 		self.power_2:toggle_selection()
-	-- elseif IS_KR3 and key == ks.pow_3 and not self.power_3:is_disabled() then
-	--     self.power_3:toggle_selection()
 	elseif table.contains(ks.hero_1, key) then
 		if self.heroes and self.heroes[1] then
 			self.heroes[1]:on_click(1, 0, 0)
@@ -1168,10 +1144,6 @@ function game_gui:keypressed(key, isrepeat)
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 2
 	elseif table.contains(ks.normal, key) then
 		self.game.simulation.store.speed_factor = 1
-	-- elseif not game.DBG_ENEMY_PAGES and self.is_premium and key == ks.bag then
-	--     if self.bag_button and not self.bag_button:is_disabled() then
-	--         self.bag_button:on_click()
-	--     end
 	elseif table.contains(ks.next_wave, key) then
 		if not self.next_wave_button:is_disabled() then
 			game_gui.game.store.send_next_wave = true
@@ -2292,7 +2264,7 @@ function HeroPortrait:initialize(hero_entity)
 	self:add_child(self.frame)
 
 	self.level = GGLabel:new(V.v(16, 16))
-	self.level.pos = v(66, IS_KR3 and 60 or 65)
+	self.level.pos = v(66, 65)
 	self.level.font_name = "TOONISH"
 	self.level.font_size = 14
 	self.level.colors.text = {255, 255, 255}
@@ -2303,14 +2275,14 @@ function HeroPortrait:initialize(hero_entity)
 	self:add_child(self.level)
 
 	self.bar_health = KImageView:new("hero_portrait_bars_0001")
-	self.bar_health.pos = IS_KR3 and v(22, 78) or v(23, 83)
+	self.bar_health.pos = v(23, 83)
 	self.bar_health.anchor = v(0, 0)
 	self.bar_health.propagate_on_click = true
 
 	self:add_child(self.bar_health)
 
 	self.bar_level = KImageView:new("hero_portrait_bars_0002")
-	self.bar_level.pos = IS_KR3 and v(22, 84) or v(23, 89)
+	self.bar_level.pos = v(23, 89)
 	self.bar_level.anchor = v(0, 0)
 	self.bar_level.propagate_on_click = true
 
@@ -2613,91 +2585,47 @@ end
 Power1Button = class("Power1Button", PowerButton)
 
 function Power1Button:initialize()
-	if IS_KR3 then
-		Power1Button.super.initialize(self, "power_button_icons_0017", "power_button_mask_0001")
 
-		local mask_prefix = "power_button_mask"
+	Power1Button.super.initialize(self, "fire_0001")
 
-		self.animations = {
-			default = {
-				to = 1,
-				from = 1,
-				prefix = mask_prefix
-			},
-			highlighted = {
-				to = 45,
-				from = 45,
-				prefix = mask_prefix
-			},
-			cooldown = {
-				to = 1,
-				from = 1,
-				prefix = mask_prefix
-			},
-			locked = {
-				to = 30,
-				from = 30,
-				prefix = mask_prefix
-			},
-			unlocked = {
-				to = 44,
-				from = 30,
-				prefix = mask_prefix
-			},
-			selected = {
-				to = 29,
-				from = 29,
-				prefix = mask_prefix
-			},
-			ready = {
-				to = 28,
-				from = 1,
-				prefix = mask_prefix,
-				post = {1}
-			}
+	self.animations = {
+		default = {
+			to = 1,
+			prefix = "fire",
+			from = 1
+		},
+		highlighted = {
+			to = 2,
+			prefix = "fire",
+			from = 2
+		},
+		cooldown = {
+			to = 1,
+			prefix = "fire",
+			from = 1
+		},
+		locked = {
+			to = 30,
+			prefix = "fire_ready",
+			from = 30
+		},
+		unlocked = {
+			to = 44,
+			prefix = "fire_ready",
+			from = 30
+		},
+		selected = {
+			to = 29,
+			prefix = "fire_ready",
+			from = 29
+		},
+		ready = {
+			to = 28,
+			prefix = "fire_ready",
+			from = 1,
+			post = {1}
 		}
-	else
-		Power1Button.super.initialize(self, "fire_0001")
-
-		self.animations = {
-			default = {
-				to = 1,
-				prefix = "fire",
-				from = 1
-			},
-			highlighted = {
-				to = 2,
-				prefix = "fire",
-				from = 2
-			},
-			cooldown = {
-				to = 1,
-				prefix = "fire",
-				from = 1
-			},
-			locked = {
-				to = 30,
-				prefix = "fire_ready",
-				from = 30
-			},
-			unlocked = {
-				to = 44,
-				prefix = "fire_ready",
-				from = 30
-			},
-			selected = {
-				to = 29,
-				prefix = "fire_ready",
-				from = 29
-			},
-			ready = {
-				to = 28,
-				prefix = "fire_ready",
-				from = 1,
-				post = {1}
-			}
-		}
-	end
+	}
 
 	self.selected_gui_mode = GUI_MODE_POWER_1
 
@@ -3553,40 +3481,14 @@ function HudBottomView:initialize(sw, sh)
 
 	self.propagate_on_click = true
 
-	if IS_KR3 then
-		local x = 0
-		local vh
-		local bg_bar = KView:new()
+	local bg_bar = KImageView:new("bg_bottom_bar")
 
-		while x < sw do
-			local v = KImageView:new("base_gui_kr3_tile")
+	bg_bar.anchor = v(0, bg_bar.size.y)
+	bg_bar.pos = v(0, sh)
 
-			v.pos.x, v.pos.y = x, 0
+	self:add_child(bg_bar)
 
-			bg_bar:add_child(v)
-
-			x = x + v.size.x
-			vh = v.size.y
-		end
-
-		bg_bar.propagate_on_click = true
-		bg_bar.propagate_on_down = true
-		bg_bar.propagate_on_up = true
-		bg_bar.anchor = v(0, vh)
-		bg_bar.size = v(sw, vh)
-		bg_bar.pos = v(0, sh)
-
-		self:add_child(bg_bar)
-	else
-		local bg_bar = KImageView:new("bg_bottom_bar")
-
-		bg_bar.anchor = v(0, bg_bar.size.y)
-		bg_bar.pos = v(0, sh)
-
-		self:add_child(bg_bar)
-	end
-
-	local next_wave = IS_KR3 and KView:new(v(120, 36)) or KImageView:new("bg_bottom_right")
+	local next_wave = KImageView:new("bg_bottom_right")
 
 	next_wave.anchor = v(next_wave.size.x, next_wave.size.y)
 	next_wave.pos = v(sw + 6, sh)
@@ -3609,13 +3511,7 @@ function HudBottomView:initialize(sw, sh)
 
 	self.bg_right = next_wave
 
-	local powers
-
-	if IS_KR3 then
-		powers = KView:new(v(247, 36))
-	else
-		powers = GG9View:new("bg_bottom_left", game_gui.is_premium and V.v(310, 36) or V.v(247, 36), V.r(140, 36, 10, 1))
-	end
+	local powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
 
 	powers.anchor = v(0, powers.size.y)
 	powers.pos = v(105, sh)
@@ -3623,7 +3519,7 @@ function HudBottomView:initialize(sw, sh)
 
 	self:add_child(powers)
 
-	local base_powers = KImageView:new(game_gui.is_premium and "base_powers_3_bg" or "base_powers_bg")
+	local base_powers = KImageView:new("base_powers_bg")
 
 	base_powers.anchor = v(103, base_powers.size.y)
 	base_powers.pos = v(123.5, powers.size.y)
@@ -3633,38 +3529,22 @@ function HudBottomView:initialize(sw, sh)
 	local power_1 = Power1Button:new()
 
 	power_1.cooldown_time = E:get_template("user_power_1").cooldown
-	power_1.pos = IS_KR3 and v(29, 30) or v(59, 30)
+	power_1.pos = v(59, 30)
 
 	powers:add_child(power_1)
 
 	local power_2 = Power2Button:new()
 
 	power_2.cooldown_time = E:get_template("re_current_1").cooldown
-	power_2.pos = IS_KR3 and v(92, 30) or v(125, 30)
+	power_2.pos = v(125, 30)
 
 	powers:add_child(power_2)
 
 	local power_3
 
-	if IS_KR3 then
-		power_3 = Power3Button:new()
-		power_3.pos = v(155, 30)
-
-		powers:add_child(power_3)
-	end
-
 	local bag_button
 
-	if game_gui.is_premium then
-		local tt = kui_db:get_table("game_gui_bag_button", {})
-
-		bag_button = BagButton:new_from_table(tt)
-		bag_button.pos = v((power_3 and power_3.pos.x or power_2.pos.x) + 66, 29.5)
-
-		powers:add_child(bag_button)
-	end
-
-	for i = 1, IS_KR3 and 3 or 2 do
+	for i = 1, 2 do
 		local pb = powers.children[1 + i]
 		local pn = KImageView:new("power_nbrs_000" .. i)
 
@@ -3676,57 +3556,15 @@ function HudBottomView:initialize(sw, sh)
 
 	local x_center = math.floor((sw - next_wave.size.x - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
 
-	if not IS_KR3 then
-		local bg_center = KImageView:new("bg_bottom_center")
+	local bg_center = KImageView:new("bg_bottom_center")
 
-		bg_center.anchor = v(bg_center.size.x * 0.5, bg_center.size.y)
-		bg_center.pos = v(x_center, sh)
-		self.bg_center = bg_center
+	bg_center.anchor = v(bg_center.size.x * 0.5, bg_center.size.y)
+	bg_center.pos = v(x_center, sh)
+	self.bg_center = bg_center
 
-		self:add_child(bg_center)
-	end
+	self:add_child(bg_center)
 
 	local bagbar
-
-	if game_gui.is_premium then
-		local tt = kui_db:get_table("game_gui_bag_view", {})
-
-		bagbar = GG9View:new_from_table(tt)
-		bagbar.anchor = v(math.floor(bagbar.size.x * 0.5), bagbar.size.y)
-		bagbar.y_shown = sh + 25
-		bagbar.y_hidden = sh + bagbar.size.y
-		bagbar.pos = V.v(x_center, bagbar.y_hidden)
-		self.bagbar = bagbar
-
-		self:add_child(bagbar)
-
-		function bagbar.show(this)
-			this.hidden = false
-
-			if this._timer then
-				timer:cancel(this._timer)
-			end
-
-			this._timer = timer:tween(0.25, this.pos, {
-				y = this.y_shown
-			}, "out-quad", function()
-				this._timer = nil
-			end)
-		end
-
-		function bagbar.hide(this)
-			if this._timer then
-				timer:cancel(this._timer)
-			end
-
-			this._timer = timer:tween(0.25, this.pos, {
-				y = this.y_hidden
-			}, "out-quad", function()
-				this.hidden = true
-				this._timer = nil
-			end)
-		end
-	end
 
 	local infobar = InfoBar:new()
 
@@ -4058,7 +3896,7 @@ function PauseView:initialize()
 
 	local header = GGPanelHeader:new(_("OPTIONS"), 170)
 
-	header.pos = V.v(172, CJK(30, 28, nil, 28) + (IS_KR3 and -16 or 0))
+	header.pos = V.v(172, CJK(30, 28, nil, 28) + (0))
 
 	self:add_child(header)
 
@@ -4229,50 +4067,13 @@ DefeatView = class("DefeatView", KView)
 function DefeatView:initialize()
 	DefeatView.super.initialize(self, v(455, 384))
 
-	if game_gui.is_premium then
-		local gnome = KImageView:new("win_Gnome")
-
-		gnome.pos = V.v(300, 120)
-		gnome.id = "defeat_gems_view"
-		gnome.hidden = true
-
-		self:add_child(gnome)
-
-		local gems_label = GGShaderLabel:new(V.v(90, 48))
-
-		gems_label.colors = {
-			text = {255, 255, 255, 255},
-			background = {0, 0, 0, 0}
-		}
-		gems_label.fit_size = true
-		gems_label.font_name = "numbers_bold"
-		gems_label.font_size = 44
-		gems_label.id = "defeat_gems_label"
-		gems_label.pos = V.v(94, 140)
-		gems_label.r = math.rad(-14)
-		gems_label.text_align = "center"
-		gems_label.text = "9999"
-		gems_label.vertical_align = "middle-caps"
-		gems_label.shaders = {"p_outline", "p_glow"}
-		gems_label.shader_margin = 8
-		gems_label.shader_args = {{
-			thickness = 1.5,
-			outline_color = {0, 0.6196078431372549, 0.7058823529411765, 1}
-		}, {
-			thickness = 1,
-			glow_color = {0, 0.6196078431372549, 0.7058823529411765, 1}
-		}}
-
-		gnome:add_child(gems_label)
-	end
-
 	local bg = KImageView:new("defeat_bg_notxt")
 
 	self:add_child(bg)
 
 	local header = GGPanelHeader:new(_("DEFEAT"), 140)
 
-	header.pos = V.v(160, CJK(81, 81, 83) + (IS_KR3 and -16 or 0))
+	header.pos = V.v(160, CJK(81, 81, 83) + (0))
 
 	self:add_child(header)
 
@@ -4331,25 +4132,6 @@ function DefeatView:show()
 	timer:tween(0.5, self.pos, {
 		y = game_gui.sh * 0.5
 	}, "out-back", nil, 1)
-
-	if game_gui.is_premium then
-		local gems = game_gui.game.store.gems_collected or 0
-
-		self:ci("defeat_gems_label").text = gems
-
-		local gv = self:ci("defeat_gems_view")
-
-		timer:script(function(wait)
-			wait(0.5)
-			S:queue("InAppExtraGold")
-
-			gv.hidden = false
-
-			timer:tween(0.4, gv.pos, {
-				x = 400
-			}, "out-elastic")
-		end)
-	end
 end
 
 VictoryParticles = class("VictoryParticles", KView)
@@ -4508,12 +4290,6 @@ function VictoryView:initialize(level_mode)
 	v_r.pos.y = v_c.pos.y + 115
 
 	local v_gnome
-
-	if game_gui.is_premium then
-		v_gnome = KImageView:new_from_table(kui_db:get_table("game_gui_gems_view", {
-			level_mode = level_mode
-		}))
-	end
 
 	self.size.x = vw
 	self.size.y = vh
@@ -4677,7 +4453,7 @@ function MousePointer:initialize()
 	}
 	p1b.loop = true
 
-	local p1i = KImageView:new(IS_KR3 and "pointer_hero_power_0017" or "pointer_user_power_0001")
+	local p1i = KImageView:new("pointer_user_power_0001")
 
 	p1i.anchor = V.v(p1i.size.x * 0.5, p1i.size.y * 100 / 100)
 	p1i.pos.x, p1i.pos.y = p1b.size.x * 0.5, p1b.size.y * 0.5
@@ -4693,85 +4469,28 @@ function MousePointer:initialize()
 	}
 	p2b.loop = true
 
-	local p2i = KImageView:new(IS_KR3 and "pointer_hero_power_0018" or "pointer_user_power_0002")
+	local p2i = KImageView:new("pointer_user_power_0002")
 
 	p2i.anchor = V.v(p2i.size.x * 0.5, p2i.size.y * 100 / 100)
 	p2i.pos.x, p2i.pos.y = p2b.size.x * 0.5, p2b.size.y * 0.5
 
 	p2b:add_child(p2i)
 
-	if IS_KR3 then
-		local ht = E:get_template(game_gui.game.store.selected_hero)
-		local p3_icon = "pointer_hero_power_" .. ht.info.ultimate_icon
-		local p3_style = ht.info.ultimate_pointer_style or "point"
-		local p3b_prefix = p3_style == "area" and "pointer_area_orange" or "pointer_point_orange"
+	sunray_tower = KImageView:new("pointer_point_orange_0001")
+	sunray_tower.anchor = V.v(sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5)
+	sunray_tower.animation = {
+		to = 10,
+		prefix = "pointer_point_orange",
+		from = 1
+	}
+	sunray_tower.loop = true
 
-		p3b = KImageView:new(p3b_prefix .. "_0001")
-		p3b.anchor = V.v(p3b.size.x * 0.5, p3b.size.y * 0.5)
-		p3b.animation = {
-			to = 10,
-			from = 1,
-			prefix = p3b_prefix
-		}
-		p3b.loop = true
+	local drop = KImageView:new("pointer_sunray_tower")
 
-		local p3i = KImageView:new(p3_icon)
+	drop.anchor = V.v(drop.size.x * 0.5, drop.size.y * 100 / 100)
+	drop.pos.x, drop.pos.y = sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5
 
-		p3i.anchor = V.v(p3i.size.x * 0.5, p3i.size.y * 100 / 100)
-		p3i.pos.x, p3i.pos.y = p3b.size.x * 0.5, p3b.size.y * 0.5
-
-		p3b:add_child(p3i)
-	end
-
-	if IS_KR1 then
-		sunray_tower = KImageView:new("pointer_point_orange_0001")
-		sunray_tower.anchor = V.v(sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5)
-		sunray_tower.animation = {
-			to = 10,
-			prefix = "pointer_point_orange",
-			from = 1
-		}
-		sunray_tower.loop = true
-
-		local drop = KImageView:new("pointer_sunray_tower")
-
-		drop.anchor = V.v(drop.size.x * 0.5, drop.size.y * 100 / 100)
-		drop.pos.x, drop.pos.y = sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5
-
-		sunray_tower:add_child(drop)
-	end
-
-	if game_gui.is_premium then
-		pb_point = KImageView:new("pointer_point_orange_0001")
-		pb_point.anchor = V.v(pb_point.size.x * 0.5, pb_point.size.y * 0.5)
-		pb_point.animation = {
-			to = 10,
-			prefix = "pointer_point_orange",
-			from = 1
-		}
-		pb_point.loop = true
-
-		local pbi = KImageView:new("pointer_bag_item_0001")
-
-		pbi.anchor = V.v(pbi.size.x * 0.5, pbi.size.y * 100 / 100)
-		pbi.pos.x, pbi.pos.y = pb_point.size.x * 0.5, pb_point.size.y * 0.5
-
-		pb_point:add_child(pbi)
-
-		pb_area = KImageView:new("pointer_area_orange_0001")
-		pb_area.anchor = V.v(pb_area.size.x * 0.5, pb_area.size.y * 0.5)
-		pb_area.animation = {
-			to = 10,
-			prefix = "pointer_area_orange",
-			from = 1
-		}
-		pb_area.loop = true
-		pbi = KImageView:new("pointer_bag_item_0001")
-		pbi.anchor = V.v(pbi.size.x * 0.5, pbi.size.y * 100 / 100)
-		pbi.pos.x, pbi.pos.y = pb_area.size.x * 0.5, pb_area.size.y * 0.5
-
-		pb_area:add_child(pbi)
-	end
+	sunray_tower:add_child(drop)
 
 	self.cross = ipc
 	self.pointers = {
@@ -4805,38 +4524,6 @@ function MousePointer:initialize()
 		}
 	}
 
-	if game_gui.is_premium then
-		if IS_KR1 or IS_KR2 then
-			self.pointers[GUI_MODE_BAG_ITEM] = {
-				coins = {
-					image = "pointer_bag_item_0006",
-					pointer = pb_point
-				},
-				hearts = {
-					image = "pointer_bag_item_0005",
-					pointer = pb_point
-				},
-				freeze = {
-					image = "pointer_bag_item_0004",
-					pointer = pb_area
-				},
-				dynamite = {
-					image = "pointer_bag_item_0003",
-					pointer = pb_area
-				},
-				atomic_freeze = {
-					image = "pointer_bag_item_0002",
-					pointer = pb_area
-				},
-				atomic_bomb = {
-					image = "pointer_bag_item_0001",
-					pointer = pb_area
-				}
-			}
-		elseif IS_KR3 then
-			self.pointers[GUI_MODE_BAG_ITEM] = {}
-		end
-	end
 end
 
 function MousePointer:update_pointer(mode)

@@ -5,7 +5,6 @@ local F = require("lib.klove.font_db")
 local FS = love.filesystem
 local G = love.graphics
 local SU = require("screen_utils")
-local PS = require("platform_services")
 local timer = require("hump.timer").new()
 
 require("klove.kui")

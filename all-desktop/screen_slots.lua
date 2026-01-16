@@ -9,7 +9,6 @@ local signal = require("lib.hump.signal")
 local storage = require("storage")
 local slot_template = require("data.slot_template")
 local timer = require("hump.timer").new()
-local PS = require("platform_services")
 local S = require("sound_db")
 local SU = require("screen_utils")
 local U = require("utils")
@@ -357,30 +356,6 @@ function screen:init(w, h, done_callback)
 		S:queue("GUIButtonCommon")
 
 		if self.slot_panel.hidden then
-			local pscloud = PS and PS.services.cloudsave
-
-			if pscloud then
-				if self.cloudsave_req_id then
-					self:show_cloudsave_progress()
-
-					return
-				elseif pscloud and pscloud:get_status() then
-					local status = pscloud:get_sync_status()
-
-					if not status.slots or os.time() - status.slots > 600 then
-						local rid = pscloud:sync_slots()
-
-						if rid then
-							self:show_cloudsave_progress()
-
-							self.cloudsave_req_id = rid
-
-							return
-						end
-					end
-				end
-			end
-
 			self.slot_panel:show()
 		else
 			self.slot_panel:hide()
@@ -514,10 +489,6 @@ function screen:init(w, h, done_callback)
 
 		local rid = screen.cloudsave_req_id
 
-		if rid and PS and PS.services.cloudsave then
-			PS.services.cloudsave:cancel_request(rid)
-		end
-
 		screen.cloudsave_req_id = nil
 
 		screen:hide_cloudsave_progress()
@@ -531,10 +502,6 @@ function screen:init(w, h, done_callback)
 
 	for sn, fn in pairs(self.signal_handlers) do
 		signal.register(sn, fn)
-	end
-
-	if PS.services.cloudsave and PS.services.cloudsave:get_status() then
-		self.cloudsave_req_id = PS.services.cloudsave:sync_slots()
 	end
 
 	local global = storage:load_global()
