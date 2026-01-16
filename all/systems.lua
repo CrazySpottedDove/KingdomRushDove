@@ -259,17 +259,6 @@ end
 
 function sys.level:on_update(dt, ts, store)
 	perf.start("level")
-	local function store_hero_xp(slot)
-		if store.main_hero and store.main_hero.hero and not GS.hero_xp_ephemeral then
-			local hn = store.main_hero.template_name
-
-			if not slot.heroes or not slot.heroes.status or not slot.heroes.status[hn] then
-				log.error("Active slot has no heroes status information. Skipping save")
-			elseif store.main_hero.hero.xp > slot.heroes.status[hn].xp then
-				slot.heroes.status[hn].xp = store.main_hero.hero.xp
-			end
-		end
-	end
 
 	if not store.level.update then
 		store.level.run_complete = true
@@ -329,25 +318,6 @@ function sys.level:on_update(dt, ts, store)
 
 			slot.last_victory = nil
 
-			store_hero_xp(slot)
-
-			slot.gems = (slot.gems or 0) + store.gems_collected
-
-			-- if store.level_mode_override == GAME_MODE_ENDLESS then
-			--     local slot_level = slot.levels[store.level_idx]
-			--     slot_level = slot_level or {}
-			--     if not slot_level[store.level_difficulty] then
-			--         slot_level[store.level_difficulty] = {
-			--             waves_survived = 0,
-			--             high_score = 0
-			--         }
-			--         slot.levels[store.level_idx] = slot_level
-			--     end
-			--     if slot_level[store.level_difficulty].high_score < store.player_score then
-			--         slot_level[store.level_difficulty].high_score = store.player_score
-			--         slot_level[store.level_difficulty].waves_survived = store.wave_group_number
-			--     end
-			-- end
 			signal.emit("game-defeat", store)
 			signal.emit("game-defeat-after", store)
 			storage:save_slot(slot, nil, true)
@@ -407,10 +377,6 @@ function sys.level:on_update(dt, ts, store)
 				stars = stars,
 				unlock_towers = store.level.unlock_towers
 			}
-
-			store_hero_xp(slot)
-
-			slot.gems = (slot.gems or 0) + store.gems_collected
 
 			signal.emit("game-victory", store)
 			signal.emit("game-victory-after", store)
@@ -520,7 +486,6 @@ function sys.wave_spawn:init(store)
 	store.send_next_wave = false
 
 	if store.level_mode_override == GAME_MODE_ENDLESS then
-		store.gems_per_wave = 0
 		store.wave_group_total = 0
 
 		if store.endless and store.endless.wave_group_number then
@@ -606,20 +571,11 @@ function sys.wave_spawn:init(store)
 				end
 			end
 
-			-- if store.level_mode == GAME_MODE_ENDLESS and i > 1 then
-			--     local conf = W:get_endless_score_config()
-			--     local reward = (i - 1) * conf.scorePerWave
-			--     store.player_score = store.player_score + reward
-			--     local gems = GS.endless_gems_for_wave * (i - 1)
-			--     store.gems_collected = store.gems_collected + gems
-			--     log.debug("ENDLESS: wave %s reward:%s gems:%s", i, reward, gems)
-			-- end
 			store.send_next_wave = false
 			store.current_wave_group = group
 
 			signal.emit("next-wave-sent", group)
 
-			-- log.debug("GEMS:_wave_idx:%s", gems_wave_idx)
 			for j, wave in pairs(group.waves) do
 				wave.group_idx = i
 

@@ -1841,15 +1841,6 @@ function game_gui:victory()
 end
 
 function game_gui:go_to_map()
-	if self.game.store.main_hero and not GS.hero_xp_ephemeral then
-		local hero = self.game.store.main_hero
-		local slot = storage:load_slot()
-
-		slot.heroes.status[hero.template_name].xp = hero.hero.xp
-
-		storage:save_slot(slot)
-	end
-
 	if self.game.store.level_mode_override == GAME_MODE_ENDLESS then
 		local endless_data = self.game.store.endless
 
@@ -1924,15 +1915,6 @@ function game_gui:go_to_map()
 end
 
 function game_gui:restart_game()
-	if self.game.store.main_hero and not GS.hero_xp_ephemeral then
-		local hero = self.game.store.main_hero
-		local slot = storage:load_slot()
-
-		slot.heroes.status[hero.template_name].xp = hero.hero.xp
-
-		storage:save_slot(slot)
-	end
-
 	S:stop_all()
 	S:resume()
 	signal.emit("game-restart", self.game.store)
