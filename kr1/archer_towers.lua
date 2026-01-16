@@ -282,9 +282,7 @@ decal_crossbow_eagle_preview.tween.props[1].loop = true
 decal_crossbow_eagle_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)}, {0.5, vec_2(1, 1)}}
 
 local tower_totem = RT("tower_totem", "tower_archer_1")
-
 AC(tower_totem, "powers")
-
 tower_totem.info.portrait = "kr2_info_portraits_towers_0010"
 tower_totem.info.enc_icon = 18
 tower_totem.tower.type = "totem"
@@ -942,9 +940,7 @@ tt.render.sprites[2].loop = true
 --#endregion
 --#region tower_silver
 tt = RT("tower_silver", "tower")
-
 AC(tt, "attacks", "powers")
-
 image_y = 90
 tt.info.enc_icon = 18
 tt.tower.type = "silver"
@@ -962,7 +958,6 @@ tt.attacks.list[1].cooldown = 0.7
 tt.attacks.list[1].critical_chances = {0.01, 0.06}
 tt.attacks.list[1].shoot_times = {fts(6), fts(15)}
 tt.attacks.list[1].bullet_start_offsets = {{vec_2(9, 4), vec_2(6, -5)}, {vec_2(9, 4), vec_2(6, -5)}}
--- tt.attacks.list[1].use_obsidian_upgrade = true
 tt.attacks.list[2] = CC("bullet_attack")
 tt.attacks.list[2].animations = {"sentence", "sentence"}
 tt.attacks.list[2].bullets = {"arrow_silver_sentence", "arrow_silver_sentence_long"}
@@ -975,7 +970,6 @@ tt.attacks.list[2].vis_flags = bor(F_RANGED)
 tt.attacks.list[2].vis_bans = 0
 tt.attacks.list[2].shot_fx = "fx_arrow_silver_sentence_shot"
 tt.attacks.list[2].sound = "TowerGoldenBowInstakillArrowShot"
--- tt.attacks.list[2].use_obsidian_upgrade = true
 tt.attacks.list[3] = CC("bullet_attack")
 tt.attacks.list[3].animations = {"mark", "mark_long"}
 tt.attacks.list[3].cooldown = 13
@@ -1051,6 +1045,7 @@ tt.bullet.flight_time_factor = fts(0.009)
 tt.bullet.damage_type = bor(DAMAGE_FX_NOT_EXPLODE, DAMAGE_PHYSICAL, DAMAGE_IGNORE_SHIELD)
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 45
+tt.bullet.reduce_armor = 0.1
 tt.bullet.pop = {"pop_headshot"}
 tt.bullet.pop_conds = DR_KILL
 tt.main_script.update = scripts.arrow.update

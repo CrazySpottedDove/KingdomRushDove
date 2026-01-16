@@ -8,7 +8,6 @@ local G = love.graphics
 local GS = require("kr1.game_settings")
 local GU = require("gui_utils")
 local I = require("klove.image_db")
-local PS = require("platform_services")
 local S = require("sound_db")
 local SH = require("klove.shader_db")
 local SU = require("screen_utils")
@@ -30,7 +29,6 @@ require("klove.kui")
 local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
-require("shop_views")
 
 local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
@@ -85,89 +83,6 @@ local function get_hero_index(hero_name)
 	return nil
 end
 
-local function get_hero_stats(p)
-	local out = {}
-	local index, hero_name
-
-	if type(p) == "number" then
-		index = p
-	else
-		index = get_hero_index(p)
-	end
-
-	local data = screen_map.hero_data[index]
-
-	hero_name = data.name
-
-	local user_data = storage:load_slot()
-	local status = user_data.heroes.status[hero_name]
-
-	if not status then
-		log.debug("hero status for %s not found in slot. overwritting from template", hero_name)
-
-		local template = require("data.slot_template")
-
-		user_data.heroes.status[hero_name] = template.heroes.status[hero_name]
-		status = template.heroes.status[hero_name]
-	end
-
-	local h = E:create_entity(hero_name)
-
-	h.hero.xp = status.xp
-
-	local level, level_progress = U.get_hero_level(h.hero.xp, GS.hero_xp_thresholds)
-
-	h.hero.level = level
-
-	if h.hero.level < data.starting_level then
-		h.hero.level = data.starting_level
-		h.hero.xp = GS.hero_xp_thresholds[h.hero.level]
-	end
-
-	out.skill_names = {}
-	out.skill_names_i18n = {}
-
-	local used_points = 0
-
-	for k, v in pairs(status.skills) do
-		h.hero.skills[k].level = v
-
-		local i = h.hero.skills[k].hr_order
-
-		out.skill_names[i] = k
-		out.skill_names_i18n[i] = h.hero.skills[k].key
-
-		for j = 1, v do
-			used_points = used_points + h.hero.skills[k].hr_cost[j]
-		end
-	end
-
-	h.hero.fn_level_up(h, {}, true)
-
-	local info = h.info.fn(h)
-
-	out.index = index
-	out.name = hero_name
-	out.name_i18n = h.info.i18n_key or hero_name
-	out.icon = data.icon
-	out.thumb = data.thumb
-	out.portrait = data.portrait
-	out.level = h.hero.level
-	out.xp = h.hero.xp
-	out.level_progress = level_progress
-	out.taunt = h.sound_events.change_rally_point .. "Select"
-	out.hero_class = _(string.upper(out.name_i18n) .. "_CLASS")
-	out.health = info.hp_max
-	out.damage = info.damage_min .. " - " .. info.damage_max
-	out.armor = GU.armor_value_desc(info.armor)
-	out.attack_rate = _(string.upper(out.name_i18n) .. "_ATTACKRATE")
-	out.damage_icon = h.info.damage_icon or 1
-	out.skills = h.hero.skills
-	out.remaining_points = GS.skill_points_for_hero_level[h.hero.level] - used_points
-
-	return out, h
-end
-
 -- 判断是否为额外关卡
 local function is_extra_level(level, num)
 	local e = "extra_level" .. num
@@ -180,11 +95,7 @@ local function is_extra_level(level, num)
 	return level > efrom and level <= eto or level > cfrom and level <= cto
 end
 
-screen_map.signal_handlers = {
-	[SGN_SHOP_GEMS_CHANGED] = function()
-		screen_map:update_gems()
-	end
-}
+screen_map.signal_handlers = {}
 
 function screen_map:textinput(t)
 	self.window:textinput(t)
@@ -205,7 +116,6 @@ function screen_map:init(w, h, done_callback)
 	self.window = window
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
-	self.is_premium = PS.services.iap and PS.services.iap:is_premium()
 
 	if DEBUG then
 		package.loaded["data.achievements_data"] = nil
@@ -651,39 +561,6 @@ function screen_map:init(w, h, done_callback)
 
 	self.skill_label = points_label
 
-	if self.is_premium then
-		local s_button = GGButton:new("mapButtons_notxt_0013", "mapButtons_notxt_0014")
-
-		s_button.anchor = v(s_button.size.x / 2, s_button.size.y / 2)
-		s_button.pos = v(h_button.pos.x - 170, sh - 90)
-
-		function s_button.on_click(this, button, x, y)
-			S:queue("GUIButtonCommon")
-			self.shop_view:show()
-		end
-
-		s_button.label.pos = v(50, 121)
-		s_button.label.size = v(126, 30)
-		s_button.label.text_size = s_button.label.size
-		s_button.label.font_size = 18
-		s_button.label.vertical_align = CJK("middle", "top", nil, "top")
-		s_button.label.text = _("MAP_BUTTON_SHOP")
-		s_button.label.fit_lines = 1
-
-		self.window:add_child(s_button)
-
-		local g = KImageView:new("mapGem")
-
-		g.id = "gems_to_spend_view"
-		g.pos = v(160, 50)
-		g.anchor = v(26, 23)
-		g.hidden = false
-
-		s_button:add_child(g)
-
-		self.gems_to_spend_view = g
-	end
-
 	local map_counters = GG9View:new_from_table(kui_db:get_table("map_counters_view", {
 		ref_h = self.ref_h,
 		sw = self.sw,
@@ -756,24 +633,6 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(self.criket_panel_view)
 
-	if self.is_premium then
-		local sv = KView:new(V.v(sw, sh))
-
-		sv.id = "modal_bg_shaded_view"
-		sv.colors.background = {0, 0, 0, 160}
-		sv.hidden = true
-		sv.propagate_on_enter = false
-
-		self.window:add_child(sv)
-
-		local shop_view = ShopView:new_from_table(kui_db:get_table("shop_view", {}))
-
-		self.window:add_child(shop_view)
-
-		shop_view.pos.x = sw / 2
-		self.shop_view = shop_view
-	end
-
 	if self.kr2_map then
 		S:queue("MusicMap2")
 	elseif self.kr3_map then
@@ -788,17 +647,8 @@ function screen_map:init(w, h, done_callback)
 		signal.register(sn, fn)
 	end
 
-	if self.is_premium then
-		self:update_gems()
-	end
-
-	local ask_for_rating_level = PS and PS.services and PS.services.rating and 5 or nil
-
 	if screen_map.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
 		self.difficulty_view:show()
-	elseif ask_for_rating_level ~= nil and screen_map.user_data.levels and screen_map.user_data.levels[ask_for_rating_level] and not screen_map.user_data.levels[ask_for_rating_level + 1] then
-		log.debug("trying to show rating dialog...")
-		PS.services.rating:request_review()
 	end
 end
 
@@ -840,32 +690,11 @@ function screen_map:update(dt)
 		self.skill_star.scale = v(math.sin(self.stime) * 0.05 + 0.95, math.sin(self.stime) * 0.05 + 0.95)
 	end
 
-	if self.gems_to_spend_view and not self.gems_to_spend_view.hidden then
-		self.gems_to_spend_view.scale = v(math.sin(self.stime) * 0.05 + 0.95, math.sin(self.stime) * 0.05 + 0.95)
-	end
-
 	if self.endlessTip then
 		self.endlessTip.scale = v(math.sin(self.stime * 0.5) * 0.02 + 0.98, math.sin(self.stime * 0.5) * 0.02 + 0.98)
 	end
-end
 
-function screen_map:update_gems()
-	if not self.is_premium then
-		return
-	end
-
-	local user_data = storage:load_slot()
-	local amount = user_data.gems
-
-	wid("map_counters_gems").text = amount
-
-	if wid("shop_gems") then
-		wid("shop_gems").text = amount
-	end
-
-	local iap_data = require("data.iap_data")
-
-	self.gems_to_spend_view.hidden = user_data.gems < iap_data.cheapest_item_cost
+	return true
 end
 
 function screen_map:draw()
@@ -3160,27 +2989,16 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 
 	right_page:add_child(b)
 
-	local ps_ld = PS and PS.services.leaderboards or nil
 	local r = KImageButton("levelSelect_rankings_0001", "levelSelect_rankings_0002", "levelSelect_rankings_0002")
 
 	r.pos = v(720, 550)
 	r.anchor = v(r.size.x / 2, r.size.y / 2)
-	r.alpha = ps_ld and ps_ld:get_status() and 1 or 0.5
+	r.alpha = 0.5
 
 	function r.on_click()
 		S:queue("GUIButtonCommon")
 
-		if not ps_ld then
-			return
-		end
-
-		if ps_ld:get_status() then
-			local user_data = storage:load_slot()
-
-			ps_ld:show_leaderboard(level_num, user_data.difficulty)
-		else
-			ps_ld:do_signin()
-		end
+		return
 	end
 
 	right_page:add_child(r)
@@ -3242,8 +3060,12 @@ function UpgradesView:initialize(sw, sh)
 
 	self.done_button = GGUpgradesButton:new(_("BUTTON_DONE"))
 	self.done_button.pos = v(680, 630)
-
 	self.back:add_child(self.done_button)
+
+	-- 添加科技组切换功能
+	self.toggle_button = GGUpgradesButton:new("切换科技")
+	self.toggle_button.pos = v(420, 630)
+	self.back:add_child(self.toggle_button)
 
 	self.star_container = KImageView:new("Upgrades_StarContainer")
 	self.star_container.pos = v(100, 637)
@@ -3278,15 +3100,15 @@ function UpgradesView:initialize(sw, sh)
 	self.upgrade_buttons = {}
 
 	local init_bought_list = screen_map.user_data.upgrades
+	UPGR:set_list_id(screen_map.user_data.upgrade_list_id)
 
 	self.spent_stars = 0
 
 	local start_y = 520
 	local separation_y = 80
-	-- local x_offsets = {115, 237, 355, 477, 598, 718}
 	local x_offsets = {121, 243, 361, 483, 604, 724}
 
-	for key, value in pairs(UPGR.list) do
+	for key, value in pairs(UPGR.list[UPGR.list_id]) do
 		local class_ind = table.keyforobject(UPGR.display_order, value.class)
 		local icon_index = value.icon
 		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
@@ -3297,8 +3119,6 @@ function UpgradesView:initialize(sw, sh)
 
 		_button.pos = v(x_offsets[class_ind], start_y - value.level * separation_y * 0.83)
 
-		-- _button.size.x = _button.size.x * 0.5
-		-- _button.size.y = _button.size.y * 0.5
 		self.back:add_child(_button)
 	end
 
@@ -3477,7 +3297,7 @@ function UpgradesView:set_bought_levels(new_bought_list)
 	self:set_stars_and_check()
 
 	screen_map.user_data.upgrades = new_bought_list
-
+	screen_map.user_data.upgrade_list_id = UPGR.list_id
 	storage:save_slot(screen_map.user_data)
 end
 
@@ -3524,6 +3344,35 @@ function UpgradesView:hide()
 	self.tip_panel.hidden = true
 end
 
+function UpgradesView:rebuild_upgrade_buttons()
+	for _, button in pairs(self.upgrade_buttons) do
+		self.back:remove_child(button)
+	end
+
+	self.upgrade_buttons = {}
+
+	local start_y = 520
+	local separation_y = 80
+	local x_offsets = {121, 243, 361, 483, 604, 724}
+
+	for key, value in pairs(UPGR.list[UPGR.list_id]) do
+		local class_ind = table.keyforobject(UPGR.display_order, value.class)
+		local icon_index = value.icon
+		local icon_name = U.splicing_from_kr(value.from_kr, string.format("Upgrades_Icons_%04i", icon_index))
+
+		self.upgrade_buttons[key] = UpgradeButtons:new(icon_name, value, key, 0.83)
+
+		local _button = self.upgrade_buttons[key]
+
+		_button.pos = v(x_offsets[class_ind], start_y - value.level * separation_y * 0.83)
+
+		self.back:add_child(_button)
+	end
+
+	self:set_bought_levels(screen_map.user_data.upgrades)
+	self:set_stars_and_check()
+end
+
 function UpgradesView:enable()
 	UpgradesView.super.enable(self)
 
@@ -3550,7 +3399,7 @@ function UpgradesView:enable()
 	function self.reset_button.on_click(button, x, y)
 		S:queue("GUIButtonCommon")
 
-		none_bought = {}
+		local none_bought = {}
 
 		for _, k in pairs(UPGR.display_order) do
 			none_bought[k] = 0
@@ -3560,6 +3409,12 @@ function UpgradesView:enable()
 		self.undo_button:disable()
 		self:set_bought_levels(none_bought)
 		self:set_init_values(self.max_stars, none_bought)
+	end
+
+	function self.toggle_button.on_click(button, x, y)
+		S:queue("GUIButtonCommon")
+		UPGR:toggle_list_id()
+		self:rebuild_upgrade_buttons()
 	end
 
 	if self.spent_stars > 0 then
@@ -3900,6 +3755,7 @@ function EncyclopediaView:show()
 
 	E:load()
 	UPGR:set_levels(user_data.upgrades)
+	UPGR:set_list_id(user_data.upgrade_list_id)
 	DI:set_level(screen_map.user_data.difficulty)
 	UPGR:patch_templates(6)
 	DI:patch_templates()
@@ -6307,9 +6163,9 @@ function BooleanToggleItem:on_click(button, vx, vy)
 		local ix = self:view_to_view(vx, vy, self.parent)
 
 		if ix < self.pos.x + self.size.x / 2 then
-			self:set_value_lable(self.value_label.text - 1)
+			self:set_value_lable(tostring(self.value - 1))
 		else
-			self:set_value_lable(self.value_label.text + 1)
+			self:set_value_lable(tostring(self.value + 1))
 		end
 	end
 

@@ -4,7 +4,7 @@ local MUST_READ = require("dove_modules.notice.must_read")
 local M = require("dove_modules.updater.update_manager")
 
 M.update_client()
-
+local perf = require("dove_modules.perf.perf")
 do
 	love.graphics.setColor_old = function(r, g, b, a)
 		if type(r) == "table" then
@@ -276,10 +276,6 @@ require("lib.klua.dump")
 require("version")
 require("all.constants")
 
-if arg[2] == "monitor" then
-	PERFORMANCE_MONITOR_ENABLED = true
-end
-
 if arg[2] == "assets" then
 	ASSETS_CHECK_ENABLED = true
 end
@@ -514,7 +510,7 @@ local function load(arg)
 end
 
 local function love_update_master(dt)
-	main.handler:update(dt)
+	return main.handler:update(dt)
 end
 
 local function love_draw_master()
@@ -631,7 +627,7 @@ local function quit()
 	log.info("Quitting...")
 	close_log()
 end
-
+local perf_ui = require("dove_modules.perf.perf_ui")
 function love.run()
 	love.math.setRandomSeed(os.time())
 
@@ -642,7 +638,7 @@ function love.run()
 	MUST_READ.hack_love_update(love.update, love.draw)
 
 	local dt = 0
-
+	local updated = false
 	while true do
 		love.event.pump()
 
@@ -660,16 +656,23 @@ function love.run()
 		dt = love.timer.getDelta()
 
 		if love.update then
-			love.update(dt)
+			updated = love.update(dt)
 		end
 
 		if love.window.isOpen() and G.isActive() then
 			G.clear()
 			G.origin()
 
+			perf.start("draw")
 			if love.draw then
 				love.draw()
 			end
+			perf.stop("draw")
+			if updated then
+				perf_ui.sync_data()
+				perf.reset()
+			end
+			perf_ui.draw()
 
 			G.present()
 
@@ -691,16 +694,6 @@ local function get_error_stack(msg, layer)
 	return (debug.traceback("Error: " .. tostring(msg), 1 + (layer or 1)):gsub("\n[^\n]+$", ""))
 end
 
-local function crash_report(str)
-	if KR_PLATFORM == "ios" then
-		local PS = require("platform_services")
-
-		if PS.services.analytics then
-			PS.services.analytics:log_and_crash(str)
-		end
-	end
-end
-
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	local last_canvas = G.getCanvas()
@@ -718,7 +711,6 @@ function love.errorhandler(msg)
 	print(stack_msg)
 	log.error(stack_msg)
 	close_log()
-	pcall(crash_report, stack_msg)
 
 	if not love.window or not G or not love.event then
 		return

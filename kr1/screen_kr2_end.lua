@@ -33,6 +33,7 @@ function screen:update(dt)
 	if self.active_screen then
 		self.active_screen:update(dt)
 	end
+	return true
 end
 
 function screen:destroy()

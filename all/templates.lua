@@ -77,6 +77,8 @@ damage.damage_applied = nil
 damage.damage_result = 0
 damage.xp_dest_id = nil
 damage.xp_gain_factor = nil
+-- table, 成员为 function(entity, damage, protection)，支持通过添加 hooks 来添加额外的伤害结算逻辑
+damage.hooks = {}
 
 local decal = E:register_t("decal")
 

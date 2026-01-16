@@ -145,6 +145,7 @@ end
 
 function screen:update(dt)
 	self.window:update(dt)
+	return true
 end
 
 function screen:draw()

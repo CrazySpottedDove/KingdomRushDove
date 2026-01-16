@@ -1,5 +1,4 @@
 -- chunkname: @./all/constants.lua
-PERFORMANCE_MONITOR_ENABLED = false
 ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
 NULL = "__NULL__"
@@ -402,8 +401,6 @@ SGN_PS_RESTORE_PURCHASES_FINISHED = "platform-service-restore-purchases-finished
 SGN_PS_PREMIUM_UNLOCKED = "platform-service-premium-unlocked"
 SGN_PS_AD_SHOW_VIDEO_STARTED = "platform-service-ad-show-video-started"
 SGN_PS_AD_SHOW_VIDEO_FINISHED = "platform-service-ad-show-video-finished"
-SGN_PS_REMOTE_CONFIG_SYNC_FINISHED = "platform-service-remote-config-sync-finished"
-SGN_PS_SYNC_ACHIEVEMENTS_FINISHED = "platform-service-achievements-sync-finished"
 SGN_PS_CHECK_DRM_FINISHED = "platform-service-check-drm-finished"
 SGN_PS_NEWS_CACHED = "platfor-service-news-cached"
 SGN_PS_NEWS_IMAGE_CACHED = "platfor-service-news-image-cached"
@@ -413,9 +410,6 @@ SGN_PS_AUTH_FINISHED = "platform-service-auth-finished"
 SGN_PS_CHANNEL_QUIT_REQUESTED = "platform-service-channel-quit-requested"
 SGN_FS_COMMIT_STARTED = "filesystem-commit-started"
 SGN_FS_COMMIT_ENDED = "filesystem-commit-ended"
-SGN_REMOTE_CONFIG_UPDATED = "remote-config-updated"
-SGN_MARKETING_OFFER_SHOWN = "marketing-offer-shown"
-SGN_MARKETING_OFFER_ICON_TOUCHED = "marketing-offer-icon-touched"
 SGN_DIRECTOR_ITEM_SHOWN = "director-item-shown"
 SGN_GAME_GUI_PAUSE_SHOW = "game-gui-pause-show"
 SGN_GAME_GUI_PAUSE_HIDE = "game-gui-pause-hide"

@@ -16,12 +16,8 @@ local S = require("sound_db")
 local G = love.graphics
 local AC = require("achievements")
 local LU = require("level_utils")
-local RC = require("remote_config")
 local ISM = require("input_state_machine")
-local marketing = require("marketing")
-local PP = require("privacy_policy_consent")
 local storage = require("storage")
-local services = require("platform_services")
 local director_data = require("data.director_data")
 local GS = require("kr1.game_settings")
 local EXO = require("exoskeleton")
@@ -61,19 +57,10 @@ function director:init(params)
 
 	I.use_canvas = params.image_db_uses_canvas
 
-	RC:init()
 	AC:init()
 
 	if (KR_TARGET == "phone" or KR_TARGET == "tablet") and KR_PLATFORM == "ios" then
 		storage:import_plist("NSUserDefaults")
-	end
-
-	services:init(true)
-	PP:init()
-
-	if PP:has_consent() and not features.delay_services_init then
-		services:init()
-		marketing:init()
 	end
 
 	self.params = params
@@ -90,28 +77,7 @@ function director:init(params)
 		BLOOD_RED = BLOOD_GRAY
 	end
 
-	if KR_TARGET == "phone" and KR_PLATFORM == "android" then
-		local filename = "/data/data/" .. version.bundle_id .. "/files/.Defaults.plist"
-
-		storage:import_plist(filename)
-	elseif KR_TARGET == "desktop" and KR_GAME == "kr1" and services.services then
-		local dir
-
-		if services.services.steam then
-			dir = services.services.steam:get_install_dir()
-		elseif services.services.gamecenter then
-			dir = services.services.gamecenter:get_install_dir()
-		elseif services.services.kart then
-			dir = services.services.kart:get_install_dir()
-		end
-
-		if not dir then
-			log.info("Could not find original install dir. Skipping savegame import")
-		else
-			storage:import_dotnet(dir)
-		end
-	end
-
+	-- 跳过开场动画
 	-- self.next_item_name = "splash"
 	self.next_item_name = "slots"
 
@@ -160,7 +126,6 @@ end
 
 function director:quit()
 	log.debug("quitting...")
-	services:shutdown()
 	love.event.quit()
 end
 
@@ -250,23 +215,12 @@ function director:item_done_callback(item_name, outcome)
 			self.next_item_prevent_loading = true
 		end
 
-		if outcome.privacy_policy_accepted then
-			PP:give_consent_with_age(outcome.birth_month, outcome.birth_year)
-			services:init()
-			marketing:init()
-		end
-
 		if outcome.simple_privacy_policy_accepted then
 			local global = storage:load_global()
 
 			global.simple_privacy_policy_accepted = true
 
 			storage:save_global(global)
-		end
-
-		if outcome.splash_done and features.delay_services_init and not features.requires_privacy_policy then
-			services:init()
-			marketing:init()
 		end
 	end
 
@@ -656,6 +610,7 @@ function director:queued_item_ready(dt)
 end
 
 function director:update(dt)
+	local updated = false
 	S:update(dt)
 
 	if self.next_item_name then
@@ -675,7 +630,7 @@ function director:update(dt)
 			active_item.next_frame_ts = active_item.limit_fps and active_item.next_frame_ts + 1 / active_item.limit_fps or nil
 		end
 
-		active_item:update(dt)
+		updated = active_item:update(dt)
 	end
 
 	local ai = self.active_item
@@ -757,7 +712,7 @@ function director:update(dt)
 		ISM:update(dt, state)
 	end
 
-	services:update(dt)
+	return updated
 end
 
 function director:draw()
@@ -831,8 +786,6 @@ function director:keypressed(key, isrepeat)
 	end
 
 	if DEBUG and key == "r" and love.keyboard.isDown("lshift") and not isrepeat then
-		RC:reload()
-
 		if self.active_item and self.active_item.item_name == "game" then
 			log.error("FORCING RELOAD OF GUI ONLY")
 			game:reload_gui()
@@ -995,7 +948,7 @@ end
 director.skip_checks = {}
 
 function director.skip_checks.check_skip_consent()
-	return not PP:should_ask()
+	return true
 end
 
 function director.skip_checks.check_skip_splash_custom()

@@ -2436,29 +2436,29 @@ scripts.tower_archmage = {
 		return true
 	end,
 	update = function(this, store)
-		local tower_sid = 2
 		local shooter_sid = 3
-		local s_tower = this.render.sprites[tower_sid]
-		local s_shooter = this.render.sprites[shooter_sid]
+		local s_tower = this.render.sprites[2]
+		local s_shooter = this.render.sprites[3]
 		local a = this.attacks
 		local ba = this.attacks.list[1]
 		local ta = this.attacks.list[2]
 		local pow_b = this.powers.blast
 		local pow_t = this.powers.twister
-		local blast_template = E:get_template("bolt_blast")
-		local blast_range = blast_template.bullet.damage_radius
-		local blast_range_inc = blast_template.bullet.damage_radius_inc
+		local blast_range = E:get_template("bolt_blast").bullet.damage_radius
+		local tw = this.tower
+		local tpos = tpos(this)
 
 		ba.ts = store.tick_ts
 
 		local function prepare_bullet(start_offset, i)
-			if #this._stored_bullets >= ba.max_stored_bullets then
+			local insert_pos = #this._stored_bullets + 1
+			if insert_pos > ba.max_stored_bullets or i ~= insert_pos then
 				return
 			end
 
 			local b = E:create_entity(ba.bullet)
 
-			b.bullet.damage_factor = this.tower.damage_factor
+			b.bullet.damage_factor = tw.damage_factor
 			b.bullet.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
 			b.pos = vclone(b.bullet.from)
 			b.bullet.target_id = nil
@@ -2472,16 +2472,17 @@ scripts.tower_archmage = {
 				local blast = E:create_entity(ba.payload_bullet)
 
 				blast.bullet.level = pow_b.level
-				blast.bullet.damage_factor = this.tower.damage_factor
+				blast.bullet.damage_factor = tw.damage_factor
 				b.bullet.payload = blast
 			end
 
-			table.insert(this._stored_bullets, b)
+			this._stored_bullets[insert_pos] = b
+
 			queue_insert(store, b)
 		end
 
 		while true do
-			if this.tower.blocked then
+			if tw.blocked then
 				coroutine.yield()
 			else
 				if pow_t.changed then
@@ -2494,59 +2495,17 @@ scripts.tower_archmage = {
 
 				if pow_b.changed then
 					pow_b.changed = nil
-					blast_range = blast_range + blast_range_inc
+					blast_range = E:get_template("bolt_blast").bullet.damage_radius + E:get_template("bolt_blast").bullet.damage_radius_inc * pow_b.level
 				end
 
 				SU.tower_update_silenced_powers(store, this)
 
-				if ready_to_use_power(pow_t, ta, store, this.tower.cooldown_factor) then
-					local target = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, false, ta.vis_flags, ta.vis_bans, function(e)
-						return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni > P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni < P:get_end_node(e.nav_path.pi) - ta.nodes_limit and (not e.enemy.counts.twister or e.enemy.counts.twister < E:get_template("twister").max_times_applied)
-					end)
+				if ready_to_attack(ba, store, tw.cooldown_factor) then
+					local target, targets = U.find_foremost_enemy_with_max_coverage(store, tpos, 0, a.range, nil, ba.vis_flags, ba.vis_bans, nil, nil, blast_range)
 
-					if not target then
-					-- block empty
-					else
-						ta.ts = store.tick_ts
-
-						local tx, ty = V.sub(target.pos.x, target.pos.y, this.pos.x, this.pos.y + s_tower.offset.y)
-						local t_angle = km.unroll(V.angleTo(tx, ty))
-
-						this._last_t_angle = t_angle
-
-						local an, _, ai = U.animation_name_for_angle(this, ta.animation, t_angle, shooter_sid)
-
-						animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
-
-						while store.tick_ts - ta.ts < ta.shoot_time do
-							coroutine.yield()
-						end
-
-						local twister = E:create_entity(ta.bullet)
-						local np = twister.nav_path
-
-						np.pi = target.nav_path.pi
-						np.spi = target.nav_path.spi
-						np.ni = target.nav_path.ni + P:predict_enemy_node_advance(target, true)
-						twister.pos = P:node_pos(np.pi, np.spi, np.ni)
-						twister.aura.level = pow_t.level
-
-						queue_insert(store, twister)
-
-						while not animation_finished(this, shooter_sid) do
-							coroutine.yield()
-						end
-
-						ba.ts = store.tick_ts
-					end
-				end
-
-				if ready_to_attack(ba, store, this.tower.cooldown_factor) then
-					local target, targets = U.find_foremost_enemy_with_max_coverage(store, tpos(this), 0, a.range, nil, ba.vis_flags, ba.vis_bans, nil, nil, blast_range)
-
-					if not target and (not ba.max_stored_bullets or ba.max_stored_bullets == #this._stored_bullets) then
+					if not target and ba.max_stored_bullets == #this._stored_bullets then
 						-- block empty
-						y_wait(store, this.tower.guard_time)
+						ba.ts = ba.ts + fts(5)
 					else
 						ba.ts = store.tick_ts
 
@@ -2577,12 +2536,13 @@ scripts.tower_archmage = {
 								if b.bullet.payload then
 									b.bullet.target_id = target.id
 									b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+									b.bullet.store = false
 								else
 									local normal_target = targets[km.zmod(i, #targets)]
 
 									b.bullet.target_id = normal_target.id
 									b.bullet.to = v(normal_target.pos.x + normal_target.unit.hit_offset.x, normal_target.pos.y + normal_target.unit.hit_offset.y)
-
+									b.bullet.store = false
 									local d = SU.create_bullet_damage(b.bullet, normal_target.id, this.id)
 
 									if not predicted_health[normal_target.id] then
@@ -2606,10 +2566,14 @@ scripts.tower_archmage = {
 							local start_offset = ba.bullet_start_offset[ai]
 
 							if target then
-								for i = 1, ba.max_stored_bullets do
-									if i == 1 or random() < ba.repetition_rate + pow_t.level * ba.repetition_rate_inc then
-										prepare_bullet(start_offset, i)
+								local count = 1
+								for i = 2, ba.max_stored_bullets do
+									if random() < ba.repetition_rate + pow_t.level * ba.repetition_rate_inc then
+										count = count + 1
 									end
+								end
+								for i = 1, count do
+									prepare_bullet(start_offset, i)
 								end
 							else
 								for i = 1, ba.max_stored_bullets do
@@ -2624,12 +2588,57 @@ scripts.tower_archmage = {
 					end
 				end
 
+				if ready_to_use_power(pow_t, ta, store, tw.cooldown_factor) then
+					local target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, ta.vis_flags, ta.vis_bans, function(e)
+						return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni > P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni < P:get_end_node(e.nav_path.pi) - ta.nodes_limit and (not e.enemy.counts.twister or e.enemy.counts.twister < E:get_template("twister").max_times_applied)
+					end)
+
+					if not target then
+						ta.ts = ta.ts + fts(5)
+					else
+						ta.ts = store.tick_ts
+
+						local tx, ty = V.sub(target.pos.x, target.pos.y, this.pos.x, this.pos.y + s_tower.offset.y)
+						local t_angle = km.unroll(V.angleTo(tx, ty))
+
+						this._last_t_angle = t_angle
+
+						local an, _, ai = U.animation_name_for_angle(this, ta.animation, t_angle, shooter_sid)
+
+						animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
+
+						while store.tick_ts - ta.ts < ta.shoot_time do
+							coroutine.yield()
+						end
+
+						local twister = E:create_entity(ta.bullet)
+						local np = twister.nav_path
+
+						np.pi = target.nav_path.pi
+						np.spi = target.nav_path.spi
+						np.ni = target.nav_path.ni + P:predict_enemy_node_advance(target, true)
+						twister.pos = P:node_pos(np.pi, np.spi, np.ni)
+						twister.aura.level = pow_t.level
+						twister.aura.damage_factor = tw.damage_factor
+						if pow_b.level > 0 then
+							twister.blast_chance = ba.payload_chance
+							twister.blast_level = pow_b.level
+						end
+
+						queue_insert(store, twister)
+
+						while not animation_finished(this, shooter_sid) do
+							coroutine.yield()
+						end
+					end
+				end
+
 				local an = U.animation_name_for_angle(this, "idle", this._last_t_angle, shooter_sid)
 
 				animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
 
-				if store.tick_ts - math.max(ba.ts, ta.ts) > this.tower.long_idle_cooldown then
-					local an, af = animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
+				if store.tick_ts - math.max(ba.ts, ta.ts) > tw.long_idle_cooldown then
+					local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, shooter_sid)
 
 					animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
 				end
@@ -3180,12 +3189,7 @@ scripts.tower_sunray = {
 					b.render.sprites[1].scale = v(1, b.ray_y_scales[pow_r.level])
 					b.bullet.damage_factor = damage_factor
 
-					local pure_damage = {}
-
-					pure_damage.damage_type = b.bullet.damage_type
-					pure_damage.value = damage_min * damage_factor
-					pure_damage.reduce_armor = 0
-					pure_damage.reduce_magic_armor = b.bullet.reduce_magic_armor
+					local pure_damage = SU.create_bullet_damage(b.bullet, enemy.id, this.id)
 
 					local exact_damage = U.predict_damage(enemy, pure_damage)
 
@@ -12378,7 +12382,7 @@ function scripts.tower_royal_archers.update(this, store)
 
 							b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 							b.pos.y = this.pos.y + soffset.y + boffset.y
-
+							apply_precision(b)
 							local bl = b.bullet
 
 							bl.from = vclone(b.pos)
@@ -12438,7 +12442,7 @@ function scripts.tower_royal_archers.update(this, store)
 
 						b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 						b.pos.y = this.pos.y + soffset.y + boffset.y
-
+						apply_precision(b)
 						local bl = b.bullet
 
 						bl.from = vclone(b.pos)
@@ -15560,20 +15564,14 @@ function scripts.tower_ballista.update(this, store)
 					local reached_target = false
 
 					if target and pred_pos then
-						-- angle_dist = rotate_towards_pos(pred_pos)
 						rotate_towards_pos_instantly(pred_pos)
 
 						target, pred_pos = find_target(aa)
-					-- reached_target = arrive_epsilon >= math.abs(angle_dist) and target and pred_pos
 					end
 
 					if not target or not pred_pos then
 						goto label_586_1
 					end
-				-- if not reached_target then
-				-- coroutine.yield()
-				-- end
-				-- until reached_target
 				end
 
 				local last_target_pos = V.vclone(pred_pos)
@@ -15648,6 +15646,7 @@ function scripts.tower_ballista.update(this, store)
 
 					bl.source_id = this.id
 					bl.damage_factor = bl.damage_factor * tw.damage_factor
+					apply_precision(b)
 
 					if shoot_final_shot then
 						bl.damage_factor = this.powers.skill_final_shot.damage_factor * bl.damage_factor
@@ -18835,7 +18834,9 @@ scripts.tower_dwarf = {}
 function scripts.tower_dwarf.update(this, store, script)
 	local tower_sid = 2
 	local door_sid = 3
-	local base_max_soldiers = 2
+	if not this.original_max_soldiers then
+		this.original_max_soldiers = this.barrack.max_soldiers
+	end
 	local formation_angles = {math.pi * 0.25, math.pi, math.pi * 0.25}
 	local angle_offset = math.pi * 0.25
 	local mute_spawn = false
@@ -18847,7 +18848,7 @@ function scripts.tower_dwarf.update(this, store, script)
 	while true do
 		if pow_f.changed then
 			pow_f.changed = nil
-			b.max_soldiers = base_max_soldiers + pow_f.level
+			b.max_soldiers = this.original_max_soldiers + pow_f.level
 			b.rally_new = true
 			angle_offset = formation_angles[pow_f.level]
 			mute_spawn = true

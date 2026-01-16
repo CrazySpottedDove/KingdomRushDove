@@ -587,7 +587,7 @@ local function create_bullet_pop(store, this)
 	end
 end
 
----创建弹道伤害
+---创建弹道伤害。会处理 bullet.damage_factor
 ---@param bullet table 子弹实体
 ---@param target_id number 目标ID
 ---@param source_id number 来源ID
@@ -627,6 +627,9 @@ local function create_bullet_damage(bullet, target_id, source_id)
 	d.pop_chance = bullet.pop_chance
 	d.pop_conds = bullet.pop_conds
 	d.track_damage = bullet.track_damage
+
+	-- 传递伤害钩子，这里采用只读引用，避免不必要的表复制开销
+	d.hooks = bullet.damage_hooks
 
 	return d
 end
@@ -670,6 +673,7 @@ local function create_attack_damage(a, target_id, this)
 	d.target_id = target_id
 	d.source_id = this.id
 
+	-- TODO: 伤害钩子尚未挂载
 	return d
 end
 
@@ -4666,7 +4670,8 @@ local SU = {
 	insert_unit_cooldown_buff = insert_unit_cooldown_buff,
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
 	queue_remove_clean_table = queue_remove_clean_table,
-	enemy_scale_mul = enemy_scale_mul
+	enemy_scale_mul = enemy_scale_mul,
+	scale_fps_based_keys = scale_fps_based_keys
 }
 
 return SU

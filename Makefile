@@ -32,9 +32,6 @@ debug: _examine_dir_map sync
 assets_check: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" assets
 
-monitor: _examine_dir_map sync
-	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" monitor
-
 gen_waves: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)" waves
 

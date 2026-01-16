@@ -82,24 +82,24 @@ regen.last_hit_ts = 0
 regen.is_idle = nil
 regen.ts = 0
 
-local damage = E:register_c("damage")
+-- local damage = E:register_c("damage")
 
-damage.damage_type = DAMAGE_TRUE
-damage.value = 0
-damage.reduce_armor = 0
-damage.reduce_magic_armor = 0
-damage.sfx = nil
-damage.pop = nil
-damage.pop_chance = nil
-damage.pop_conds = nil
-damage.track_kills = nil
-damage.track_damage = nil
-damage.target_id = nil
-damage.source_id = nil
-damage.damage_applied = nil
-damage.damage_result = 0
-damage.xp_dest_id = nil
-damage.xp_gain_factor = nil
+-- damage.damage_type = DAMAGE_TRUE
+-- damage.value = 0
+-- damage.reduce_armor = 0
+-- damage.reduce_magic_armor = 0
+-- damage.sfx = nil
+-- damage.pop = nil
+-- damage.pop_chance = nil
+-- damage.pop_conds = nil
+-- damage.track_kills = nil
+-- damage.track_damage = nil
+-- damage.target_id = nil
+-- damage.source_id = nil
+-- damage.damage_applied = nil
+-- damage.damage_result = 0
+-- damage.xp_dest_id = nil
+-- damage.xp_gain_factor = nil
 
 local motion = E:register_c("motion")
 
@@ -1013,6 +1013,8 @@ bullet.damage_max = 0
 bullet.damage_min = 0
 bullet.damage_radius = 0
 bullet.damage_type = DAMAGE_PHYSICAL
+-- 即 damage.hoooks
+bullet.damage_hooks = {}
 bullet.flight_time = nil
 bullet.flight_time_base = nil
 bullet.flight_time_factor = nil

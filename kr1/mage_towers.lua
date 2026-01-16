@@ -28,9 +28,7 @@ require("game_templates_utils")
 
 --#region tower_arcane_wizard
 tt = RT("tower_arcane_wizard", "tower_mage_1")
-
 AC(tt, "attacks", "powers")
-
 image_y = 90
 tt.tower.type = "arcane_wizard"
 tt.tower.level = 1
@@ -107,9 +105,7 @@ tt.attacks.list[3].vis_bans = bor(F_BOSS, F_FREEZE)
 --#endregion
 --#region mod_ray_arcane
 tt = RT("mod_ray_arcane", "modifier")
-
 AC(tt, "render", "dps")
-
 -- standard dps: 248 / 2 / 2 = 62, with price = 290
 tt.dps.damage_min = 92
 tt.dps.damage_max = 156
@@ -126,9 +122,7 @@ tt.render.sprites[1].z = Z_BULLETS
 --#endregion
 --#region mod_ray_arcane_disintegrate
 tt = RT("mod_ray_arcane_disintegrate", "modifier")
-
 AC(tt, "render")
-
 tt.main_script.update = scripts.mod_ray_arcane_disintegrate.update
 tt.modifier.pop = {"pop_zap_arcane"}
 tt.modifier.pop_conds = DR_KILL
@@ -157,16 +151,13 @@ tt.damage_base = 25
 --#endregion
 --#region decalmod_arcane_wizard_disintegrate_ready
 tt = RT("decalmod_arcane_wizard_disintegrate_ready", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.main_script.insert = scripts.mod_tower_decal.insert
 tt.main_script.remove = scripts.mod_tower_decal.remove
 tt.tween.remove = false
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].loop = true
 tt.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.5, vec_2(1, 1)}, {1, vec_2(1, 1)}}
-
 for i, p in ipairs({vec_2(22, 45), vec_2(31, 40), vec_2(40, 35), vec_2(49, 32.5), vec_2(58, 30), vec_2(67.5, 32.5), vec_2(77, 35), vec_2(86, 40), vec_2(95, 45)}) do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "crossbow_eagle_buff"
@@ -175,14 +166,10 @@ for i, p in ipairs({vec_2(22, 45), vec_2(31, 40), vec_2(40, 35), vec_2(49, 32.5)
 	tt.render.sprites[i].offset = vec_2(p.x - 58, p.y - 27)
 	tt.render.sprites[i].ts = math.random()
 end
-
--- tt.render.sprites[1].offset = vec_1(0)
 for _, sprite in ipairs(tt.render.sprites) do
 	sprite.offset.y = sprite.offset.y + 10 -- 向上平移 10 单位
 	sprite.color = {120, 0, 255}
--- sprite.scale = vec_2(1.2, 1.2)  -- 放大 20%
 end
-
 --#endregion
 --#region tower_sorcerer
 tt = RT("tower_sorcerer", "tower_mage_1")
@@ -371,9 +358,7 @@ tt.vis.bans = bor(F_LYCAN, F_BLOOD, F_POISON)
 tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
 
 local tower_archmage = RT("tower_archmage", "tower")
-
 AC(tower_archmage, "attacks", "powers")
-
 tower_archmage.tower.type = "archmage"
 tower_archmage.tower.level = 1
 tower_archmage.tower.price = 300
@@ -469,20 +454,16 @@ tt.bullet.damage_flags = F_AREA
 tt.sound_events.insert = "ArchmageCriticalExplosion"
 
 local twister = RT("twister", "aura")
-
 AC(twister, "nav_path", "motion", "render")
-
-twister.main_script.insert = scripts.twister.insert
 twister.main_script.update = scripts.twister.update
 twister.after_mod = "mod_twister"
 twister.damage_type = DAMAGE_TRUE
 twister.pickup_range = 25.6
 twister.max_times_applied = 3
 twister.motion.max_speed = 46.08
-twister.damage_min = 20
-twister.damage_max = 20
+twister.damage_min = 10
+twister.damage_max = 10
 twister.damage_inc = 20
-twister.damage_type = DAMAGE_TRUE
 twister.enemies_max = 4
 twister.enemies_inc = 1
 twister.nodes = 15
@@ -495,13 +476,10 @@ twister.aura.vis_flags = bor(F_RANGED, F_TWISTER)
 twister.aura.vis_bans = bor(F_CLIFF, F_BOSS, F_WATER)
 
 local mod_twister = RT("mod_twister", "mod_slow")
-
 mod_twister.modifier.duration = 1
 
 local ps_bolt_archmage_trail = RT("ps_bolt_archmage_trail")
-
 AC(ps_bolt_archmage_trail, "pos", "particle_system")
-
 ps_bolt_archmage_trail.particle_system.name = "proy_archbolt_particle"
 ps_bolt_archmage_trail.particle_system.animated = false
 ps_bolt_archmage_trail.particle_system.particle_lifetime = {0.2, 0.2}
@@ -510,7 +488,6 @@ ps_bolt_archmage_trail.particle_system.scales_y = {0.8, 0.05}
 ps_bolt_archmage_trail.particle_system.emission_rate = 30
 
 local archmage_shatter = RT("mod_archmage_shatter", "mod_damage")
-
 archmage_shatter.damage_min = 0.035
 archmage_shatter.damage_max = 0.035
 archmage_shatter.damage_type = bor(DAMAGE_MAGICAL_ARMOR, DAMAGE_NO_SHIELD_HIT)
@@ -1601,7 +1578,7 @@ tt.sound_events.insert = "ElvesGnomeDesintegrate"
 tt = RT("bullet_pixie_poison", "bullet_pixie_instakill")
 tt.bullet.mod = "mod_pixie_poison"
 tt.bullet.damage_type = DAMAGE_NONE
-tt.bullet.hit_fx = "fx_bullet_pixie_poison_hit"
+tt.bullet.hit_fx = "fx_bullet_pixie_poison_hit_"
 tt.render.sprites[1].name = "pixie_bottle"
 tt.sound_events.insert = nil
 --#endregion

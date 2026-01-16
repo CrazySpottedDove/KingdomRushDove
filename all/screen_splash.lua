@@ -4,7 +4,6 @@ local V = require("lib.klua.vector")
 local F = require("lib.klove.font_db")
 local FS = love.filesystem
 local SU = require("screen_utils")
-local PS = require("platform_services")
 local timer = require("hump.timer").new()
 
 require("klove.kui")
@@ -65,16 +64,7 @@ function screen:init(w, h, done_callback)
 	if not global or not global.first_launch_time then
 		self.first_launch = true
 	end
-
-	if features.splash_video_service then
-		timer:after(0.1, function()
-			self:play_video_hw()
-		end)
-	elseif features.splash_video_path then
-		self:play_video_sw()
-	else
-		self:start_animation()
-	end
+	self:start_animation()
 end
 
 function screen:update(dt)
@@ -99,6 +89,7 @@ function screen:update(dt)
 			self:start_animation()
 		end)
 	end
+	return true
 end
 
 function screen:destroy()
@@ -268,181 +259,6 @@ function screen:start_animation()
 	timer:tween(0.6, iso.pos, {
 		x = pos_iso_x_f
 	}, "in-bounce", start_logo_shine)
-end
-
-function screen:play_video_hw()
-	local aspect_list = {}
-
-	for _, v in pairs(features.splash_video_service_items) do
-		local aspect_str = string.split(v, "_")
-		local parts = string.split(aspect_str[1], "x")
-
-		table.insert(aspect_list, {tonumber(parts[1]) / tonumber(parts[2]), aspect_str[1]})
-	end
-
-	table.sort(aspect_list, function(i1, i2)
-		return i1[1] < i2[1]
-	end)
-	log.paranoid("aspect_list: %s", getfulldump(aspect_list))
-
-	local aspect = self.sw / self.sh
-	local aspect_string = "4x3"
-	local dist = 9999
-
-	for _, v in pairs(aspect_list) do
-		local this_dist = math.abs(aspect - v[1])
-
-		if this_dist < dist then
-			aspect_string = v[2]
-			dist = this_dist
-		end
-	end
-
-	log.debug("picked aspect %s dist:%s", aspect_string, dist)
-
-	local orientation = "Landscape"
-	local current_res = 99999
-	local current_dist = 99999
-	local video_name
-
-	for _, file in pairs(features.splash_video_service_items) do
-		local basename = string.sub(file, 1, #file - 4)
-		local parts = string.split(basename, "_")
-
-		log.debug("  %s %s %s w:%s", parts[1], parts[2], parts[3], self.w)
-
-		if parts[1] ~= aspect_string then
-		-- block empty
-		elseif parts[2] ~= orientation then
-		-- block empty
-		elseif parts[3] == nil then
-			video_name = file
-
-			break
-		else
-			local p3 = tonumber(parts[3])
-			local dist = math.abs(p3 - self.w)
-
-			if dist < current_dist then
-				current_res = p3
-				current_dist = dist
-				video_name = file
-			end
-		end
-	end
-
-	if not video_name then
-		log.error("could not find video")
-
-		return
-	else
-		log.debug("found video_name: %s", video_name)
-	end
-
-	local absolute = not love.filesystem.isFused()
-
-	if absolute then
-		local parts = {"file://", KR_FULLPATH_BASE, "_assets/_resources", version.bundle_id, "splash_videos", video_name}
-
-		video_name = table.concat(parts, "/")
-
-		log.error("PLAYING ABSOLUTE VIDEO: %s", video_name)
-	elseif features.splash_video_service_path then
-		video_name = features.splash_video_service_path .. "/" .. video_name
-	end
-
-	self.video_service = PS.services[features.splash_video_service]
-
-	self.video_service:set_video_name(video_name, absolute)
-	self.video_service:play()
-end
-
-function screen:play_video_sw()
-	local video_file = KR_PATH_ASSETS_ROOT .. "/" .. features.splash_video_path
-
-	if string.sub(video_file, #video_file) == "*" then
-		local video_path = string.sub(video_file, 1, #video_file - 2)
-		local aspect_list = {{2.1666666666666665, "19.5x9"}, {1.7777777777777777, "16x9"}, {1.6, "16x10"}, {1.4333333333333333, "4.3x3"}, {1.3333333333333333, "4x3"}}
-
-		log.paranoid("aspect_list: %s", getfulldump(aspect_list))
-
-		local aspect = self.w / self.h
-		local aspect_string = "4x3"
-		local dist = 9999
-
-		for _, v in pairs(aspect_list) do
-			local this_dist = math.abs(aspect - v[1])
-
-			if this_dist < dist then
-				aspect_string = v[2]
-				dist = this_dist
-			end
-		end
-
-		log.debug("picked aspect %s dist:%s", aspect_string, dist)
-
-		local orientation = "Landscape"
-		local files = FS.getDirectoryItems(video_path)
-		local current_res = 99999
-		local current_dist = 99999
-		local video_name
-
-		for _, file in pairs(files) do
-			local basename = string.sub(file, 1, #file - 4)
-			local parts = string.split(basename, "_")
-
-			log.debug("  %s %s %s w:%s", parts[1], parts[2], parts[3], self.sw)
-
-			if parts[1] ~= aspect_string then
-			-- block empty
-			elseif parts[2] ~= orientation then
-			-- block empty
-			elseif parts[3] == nil then
-				video_name = file
-
-				break
-			else
-				local p3 = tonumber(parts[3])
-				local dist = math.abs(p3 - self.sw)
-
-				if dist < current_dist then
-					current_res = p3
-					current_dist = dist
-					video_name = file
-				end
-			end
-		end
-
-		if not video_name then
-			log.error("could not find video")
-		else
-			log.debug("found video_name: %s", video_name)
-		end
-
-		video_file = video_path .. "/" .. video_name
-	end
-
-	log.debug("loading video " .. video_file)
-
-	self.video = KVideoView:new(video_file)
-
-	local scale = 1
-	local screen_a = self.sw / self.sh
-	local video_a = self.video.size.x / self.video.size.y
-
-	if video_a <= screen_a then
-		scale = self.sw / self.video.size.x
-	else
-		scale = self.sh / self.video.size.y
-	end
-
-	self.video.scale = V.v(scale, scale)
-	self.video.pos = V.v((self.sw - self.video.size.x * scale) * 0.5, (self.sh - self.video.size.y * scale) * 0.5)
-
-	self.video.video:play()
-	self.content:add_child(self.video)
-
-	self.video_start_ts = love.timer.getTime()
 end
 
 return screen

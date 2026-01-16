@@ -3,7 +3,6 @@ local log = require("lib.klua.log"):new("upgrades")
 local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
-
 require("all.constants")
 
 local function T(name)
@@ -26,7 +25,8 @@ upgrades.levels.engineers = 0
 upgrades.levels.rain = 0
 upgrades.levels.reinforcements = 0
 upgrades.display_order = {"archers", "barracks", "mages", "engineers", "rain", "reinforcements"}
-upgrades.list = {
+upgrades.list_id = 1
+upgrades.list = {{
 	archer_salvage = {
 		cost_factor = 0.95,
 		class = "archers",
@@ -309,7 +309,411 @@ upgrades.list = {
 		price = 4,
 		level = 6
 	}
-}
+}, {
+	archer_far_shots = {
+		from_kr = 2,
+		range_factor = 1.25,
+		class = "archers",
+		price = 1,
+		level = 1,
+		icon = 1
+	},
+	archer_logger = {
+		from_kr = 2,
+		cost_factor = 0.9,
+		class = "archers",
+		price = 1,
+		level = 2,
+		icon = 2
+	},
+	archer_critical = {
+		from_kr = 2,
+		class = "archers",
+		damage_factor = 1.1,
+		price = 2,
+		level = 3,
+		icon = 3
+	},
+	archer_tear = {
+		from_kr = 2,
+		reduce_armor = 0.0075,
+		class = "archers",
+		price = 2,
+		level = 4,
+		icon = 4
+	},
+	archer_fast_shots = {
+		from_kr = 2,
+		cooldown_factor = 0.925,
+		class = "archers",
+		price = 3,
+		level = 5,
+		icon = 5
+	},
+	archer_el_bloodletting_shoot = {
+		from_kr = 3,
+		price = 4,
+		icon = 5,
+		class = "archers",
+		level = 6
+	},
+	barrack_bodies = {
+		from_kr = 2,
+		class = "barracks",
+		price = 1,
+		level = 1,
+		icon = 6
+	},
+	barrack_march = {
+		from_kr = 2,
+		class = "barracks",
+		speed_inc = 12,
+		rally_range_factor = 1.1,
+		price = 1,
+		level = 2,
+		icon = 7
+	},
+	barrack_rally = {
+		from_kr = 2,
+		class = "barracks",
+		rally_range_factor = 1.2,
+		price = 1,
+		level = 3,
+		icon = 8
+	},
+	barrack_weapon = {
+		from_kr = 2,
+		damage_factor = 1.1,
+		class = "barracks",
+		price = 2,
+		level = 4,
+		icon = 9
+	},
+	barrack_go_on = {
+		from_kr = 2,
+		cooldown_factor = 0.8,
+		class = "barracks",
+		price = 3,
+		level = 5,
+		icon = 10
+	},
+	barrack_el_enchanted_armor = {
+		from_kr = 3,
+		class = "barracks",
+		factor = 0.9,
+		magic_armor_inc = 0.1,
+		icon = 8,
+		price = 4,
+		level = 6
+	},
+	mage_arcane_spell = {
+		from_kr = 2,
+		damage_factor = 1.15,
+		class = "mages",
+		price = 1,
+		level = 1,
+		icon = 11
+	},
+	mage_strike = {
+		from_kr = 2,
+		class = "mages",
+		price = 1,
+		-- 出于减少向上查表的考虑，这里的概率直接放在匿名函数中
+		level = 2,
+		icon = 12
+	},
+	mage_power = {
+		from_kr = 2,
+		class = "mages",
+		damage_factor = 1.1,
+		price = 2,
+		level = 3,
+		icon = 13
+	},
+	mage_old_folk = {
+		from_kr = 2,
+		cost_factor = 0.85,
+		class = "mages",
+		price = 2,
+		level = 4,
+		icon = 14
+	},
+	mage_unsteady = {
+		class = "mages",
+		-- 这里同样直接放在匿名函数
+		price = 3,
+		level = 5,
+		icon = 21
+	},
+	mage_brilliance = {
+		from_kr = 2,
+		class = "mages",
+		icon = 15,
+		price = 4,
+		level = 6,
+		damage_factors = {
+			1.1,
+			1.12,
+			1.14,
+			1.16,
+			1.18,
+			1.2,
+			1.22,
+			1.24,
+			1.26,
+			1.28,
+			1.29,
+			1.30,
+			1.31,
+			1.32,
+			1.33,
+			1.34,
+			1.35
+		}
+	},
+	engineer_range_finder = {
+		from_kr = 2,
+		range_factor = 1.15,
+		class = "engineers",
+		price = 1,
+		level = 1,
+		icon = 16
+	},
+	engineer_magic_dust = {
+		from_kr = 2,
+		class = "engineers",
+		price = 1,
+		level = 2,
+		icon = 17
+	},
+	engineer_concentrated_fire = {
+		from_kr = 2,
+		class = "engineers",
+		damage_factor = 1.1,
+		price = 2,
+		level = 3,
+		icon = 18
+	},
+	engineer_diffusion = {
+		class = "engineers",
+		radius_factor = 1.2,
+		price = 3,
+		level = 4,
+		icon = DP(23, 16)
+	},
+	engineer_efficiency = {
+		price = 3,
+		class = "engineers",
+		level = 5,
+		icon = DP(27, 20)
+	},
+	engineer_gnomish_tinkering = {
+		from_kr = 2,
+		cooldown_factor_electric = 0.9,
+		cooldown_factor = 0.88,
+		class = "engineers",
+		icon = 19,
+		price = 4,
+		level = 6
+	},
+	-- rain_blazing_skies = {
+	-- 	from_kr = 2,
+	-- 	fireball_count_increase = 2,
+	-- 	class = "rain",
+	-- 	damage_increase = 30,
+	-- 	price = 2,
+	-- 	level = 1,
+	-- 	icon = 21
+	-- },
+	-- rain_scorched_earth = {
+	-- 	from_kr = 2,
+	-- 	price = 2,
+	-- 	class = "rain",
+	-- 	level = 2,
+	-- 	icon = 22
+	-- },
+	-- rain_bigger_and_meaner = {
+	-- 	from_kr = 2,
+	-- 	range_factor = 1.25,
+	-- 	cooldown_reduction = 10,
+	-- 	class = "rain",
+	-- 	damage_increase = 30,
+	-- 	price = 3,
+	-- 	level = 3,
+	-- 	icon = 23
+	-- },
+	-- rain_blazing_earth = {
+	-- 	from_kr = 2,
+	-- 	cooldown_reduction = 10,
+	-- 	class = "rain",
+	-- 	price = 3,
+	-- 	level = 4,
+	-- 	icon = 24
+	-- },
+	-- rain_cataclysm = {
+	-- 	from_kr = 2,
+	-- 	class = "rain",
+	-- 	damage_increase = 60,
+	-- 	price = 3,
+	-- 	level = 5,
+	-- 	icon = 25
+	-- },
+	-- rain_armaggedon = {
+	-- 	from_kr = 2,
+	-- 	class = "rain",
+	-- 	fireball_count_increase = 1,
+	-- 	icon = 25,
+	-- 	price = 4,
+	-- 	level = 6
+	-- },
+	-- reinforcement_level_1 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_farmer_well_fed",
+	-- 	price = 2,
+	-- 	level = 1,
+	-- 	icon = 26
+	-- },
+	-- reinforcement_level_2 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_conscript",
+	-- 	price = 3,
+	-- 	level = 2,
+	-- 	icon = 27
+	-- },
+	-- reinforcement_level_3 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_warrior",
+	-- 	price = 3,
+	-- 	level = 3,
+	-- 	icon = 28
+	-- },
+	-- reinforcement_level_4 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_legionnaire",
+	-- 	price = 3,
+	-- 	level = 4,
+	-- 	icon = 29
+	-- },
+	-- reinforcement_level_5 = {
+	-- 	from_kr = 2,
+	-- 	class = "reinforcements",
+	-- 	template_name = "re_legionnaire_ranged",
+	-- 	price = 4,
+	-- 	level = 5,
+	-- 	icon = 30
+	-- },
+	-- reinforcement_level_6 = {
+	-- 	from_kr = 3,
+	-- 	class = "reinforcements",
+	-- 	duration_inc = 2,
+	-- 	cooldown_dec = 1,
+	-- 	icon = 29,
+	-- 	price = 4,
+	-- 	level = 6
+	-- }
+	rain_blazing_skies = {
+		fireball_count_increase = 2,
+		class = "rain",
+		damage_increase = 30,
+		price = 2,
+		level = 1,
+		icon = DP(3, 26)
+	},
+	rain_scorched_earth = {
+		price = 2,
+		class = "rain",
+		level = 2,
+		icon = DP(4, 27)
+	},
+	rain_bigger_and_meaner = {
+		range_factor = 1.25,
+		cooldown_reduction = 10,
+		class = "rain",
+		damage_increase = 30,
+		price = 3,
+		level = 3,
+		icon = DP(5, 28)
+	},
+	rain_blazing_earth = {
+		cooldown_reduction = 10,
+		class = "rain",
+		price = 3,
+		level = 4,
+		icon = DP(6, 29)
+	},
+	rain_cataclysm = {
+		class = "rain",
+		damage_increase = 60,
+		price = 3,
+		level = 5,
+		icon = DP(7, 30)
+	},
+	rain_armaggedon = {
+		from_kr = 2,
+		class = "rain",
+		fireball_count_increase = 1,
+		icon = 25,
+		price = 4,
+		level = 6
+	},
+	reinforcement_level_1 = {
+		class = "reinforcements",
+		template_name = "re_farmer_well_fed",
+		price = 2,
+		level = 1,
+		icon = DP(28, 21)
+	},
+	reinforcement_level_2 = {
+		class = "reinforcements",
+		template_name = "re_conscript",
+		price = 3,
+		level = 2,
+		icon = DP(29, 22)
+	},
+	reinforcement_level_3 = {
+		class = "reinforcements",
+		template_name = "re_warrior",
+		price = 3,
+		level = 3,
+		icon = DP(30, 23)
+	},
+	reinforcement_level_4 = {
+		class = "reinforcements",
+		template_name = "re_legionnaire",
+		price = 3,
+		level = 4,
+		icon = DP(1, 24)
+	},
+	reinforcement_level_5 = {
+		class = "reinforcements",
+		template_name = "re_legionnaire_ranged",
+		price = 4,
+		level = 5,
+		icon = DP(2, 25)
+	},
+	reinforcement_level_6 = {
+		from_kr = 3,
+		class = "reinforcements",
+		duration_inc = 2,
+		cooldown_dec = 1,
+		icon = 29,
+		price = 4,
+		level = 6
+	}
+}}
+upgrades.list_count = #upgrades.list
+
+function upgrades:toggle_list_id()
+	self.list_id = self.list_id % self.list_count + 1
+end
+
+function upgrades:set_list_id(id)
+	self.list_id = id or 1
+end
 
 function upgrades:set_levels(levels)
 	for k, v in pairs(levels) do
@@ -318,13 +722,13 @@ function upgrades:set_levels(levels)
 end
 
 function upgrades:has_upgrade(name)
-	local u = self.list[name]
+	local u = self.list[self.list_id][name]
 
 	return u and u.level <= self.levels[u.class] and (not self.max_level or u.level <= self.max_level)
 end
 
 function upgrades:get_upgrade(name)
-	local u = self.list[name]
+	local u = self.list[self.list_id][name]
 
 	if not u or u.level > self.levels[u.class] or not self.max_level or u.level > self.max_level then
 		return nil
@@ -336,7 +740,7 @@ end
 function upgrades:get_total_stars()
 	local total = 0
 
-	for k, v in pairs(self.list) do
+	for k, v in pairs(self.list[self.list_id]) do
 		total = total + v.price
 	end
 
@@ -383,44 +787,68 @@ function upgrades:arrows()
 	}
 end
 
-function upgrades:barrack_soldiers()
-	return {
-		"soldier_militia",
-		"soldier_footmen",
-		"soldier_knight",
-		"soldier_paladin",
-		"soldier_barbarian",
-		"soldier_elf",
-		"soldier_elemental",
-		"soldier_skeleton",
-		"soldier_skeleton_knight",
-		"soldier_death_rider",
-		"soldier_templar",
-		"soldier_assassin",
-		"soldier_dwarf",
-		"soldier_amazona",
-		"soldier_djinn",
-		"soldier_pirate_flamer",
-		"soldier_frankenstein",
-		"soldier_blade",
-		"soldier_forest",
-		"soldier_druid_bear",
-		"soldier_drow",
-		"soldier_ewok",
-		"soldier_baby_ashbite",
-		"soldier_tower_dark_elf",
-		"soldier_tower_demon_pit_basic_attack_lvl4",
-		"big_guy_tower_demon_pit_lvl4",
-		"soldier_tower_necromancer_skeleton_lvl4",
-		"soldier_tower_necromancer_skeleton_golem_lvl4",
-		"soldier_tower_pandas_green_lvl4",
-		"soldier_tower_pandas_red_lvl4",
-		"soldier_tower_pandas_blue_lvl4",
-		"soldier_tower_rocket_gunners_lvl4",
-		"soldier_tower_ghost_lvl4",
-		"soldier_tower_dwarf_lvl4"
-	}
-end
+upgrades.soldiers = {
+	"soldier_militia",
+	"soldier_footmen",
+	"soldier_knight",
+	"soldier_paladin",
+	"soldier_barbarian",
+	"soldier_elf",
+	"soldier_elemental",
+	"soldier_skeleton",
+	"soldier_skeleton_knight",
+	"soldier_death_rider",
+	"soldier_templar",
+	"soldier_assassin",
+	"soldier_dwarf",
+	"soldier_amazona",
+	"soldier_djinn",
+	"soldier_pirate_flamer",
+	"soldier_frankenstein",
+	"soldier_blade",
+	"soldier_forest",
+	"soldier_druid_bear",
+	"soldier_drow",
+	"soldier_ewok",
+	"soldier_baby_ashbite",
+	"soldier_tower_dark_elf",
+	"soldier_tower_demon_pit_basic_attack_lvl4",
+	"big_guy_tower_demon_pit_lvl4",
+	"soldier_tower_necromancer_skeleton_lvl4",
+	"soldier_tower_necromancer_skeleton_golem_lvl4",
+	"soldier_tower_pandas_green_lvl4",
+	"soldier_tower_pandas_red_lvl4",
+	"soldier_tower_pandas_blue_lvl4",
+	"soldier_tower_rocket_gunners_lvl4",
+	"soldier_tower_ghost_lvl4",
+	"soldier_tower_dwarf_lvl4"
+}
+
+upgrades.barrack_soldiers = {
+	"soldier_militia",
+	"soldier_footmen",
+	"soldier_knight",
+	"soldier_paladin",
+	"soldier_barbarian",
+	"soldier_elf",
+	"soldier_templar",
+	"soldier_assassin",
+	"soldier_dwarf",
+	"soldier_amazona",
+	"soldier_djinn",
+	"soldier_pirate_flamer",
+	"soldier_blade",
+	"soldier_forest",
+	"soldier_drow",
+	"soldier_ewok",
+	"soldier_baby_ashbite",
+	"soldier_tower_pandas_green_lvl4",
+	"soldier_tower_pandas_red_lvl4",
+	"soldier_tower_pandas_blue_lvl4",
+	"soldier_tower_rocket_gunners_lvl4",
+	"soldier_tower_ghost_lvl4",
+	"soldier_tower_dwarf_lvl4"
+}
 
 function upgrades:towers_with_barrack()
 	return {
@@ -554,6 +982,38 @@ function upgrades:engineer_advanced_towers()
 	}
 end
 
+local fps_based_keys = {
+	["hit_time"] = true,
+	["cast_time"] = true,
+	["shoot_time"] = true,
+	["dodge_time"] = true
+}
+-- SU 中的副本，为了避免循环引用，不得不在这里复制
+local function scale_fps_based_keys(tbl, factor, visited)
+	visited = visited or {}
+
+	if visited[tbl] then
+		return
+	end
+
+	visited[tbl] = true
+
+	for k, v in pairs(tbl) do
+		-- 跳过 _origin_xxx 字段，避免递归
+		if type(v) == "table" then
+			scale_fps_based_keys(v, factor, visited)
+		elseif fps_based_keys[k] and type(v) == "number" then
+			local _origin_key = "_origin_" .. k
+
+			if not tbl[_origin_key] then
+				tbl[_origin_key] = v
+			end
+
+			tbl[k] = tbl[_origin_key] * factor
+		end
+	end
+end
+
 function upgrades:patch_templates(max_level)
 	if max_level then
 		self.max_level = max_level
@@ -612,6 +1072,68 @@ function upgrades:patch_templates(max_level)
 		T("tower_musketeer").attacks.list[4].range = T("tower_musketeer").attacks.list[4].range * u.range_factor
 	end
 
+	u = self:get_upgrade("archer_logger")
+	if u then
+		for _, n in pairs(archer_towers) do
+			local t = T(n)
+			if t.powers then
+				for _, p in pairs(t.powers) do
+					if p.price_base then
+						p.price_base = math.ceil(p.price_base * u.cost_factor)
+					end
+					if p.price_inc then
+						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
+					end
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("archer_critical")
+	if u then
+		for _, n in pairs(GS.archer_towers) do
+			local t = T(n)
+			t.tower.damage_factor = t.tower.damage_factor * u.damage_factor
+		end
+	end
+
+	u = self:get_upgrade("archer_tear")
+	if u then
+		for _, n in pairs(self:arrows()) do
+			local b = T(n).bullet
+			if type(b.mod) == "table" then
+				table.insert(b.mod, "mod_archer_tear")
+			elseif b.mod ~= nil then
+				b.mod = {b.mod, "mod_archer_tear"}
+			elseif b.mods ~= nil then
+				table.insert(b.mods, "mod_archer_tear")
+			else
+				b.mod = "mod_archer_tear"
+			end
+		end
+	end
+
+	u = self:get_upgrade("archer_fast_shots")
+	if u then
+		for _, n in pairs(archer_towers) do
+			local t = T(n)
+			t.tower.cooldown_factor = t.tower.cooldown_factor * u.cooldown_factor
+			if t.render then
+				for _, s in pairs(t.render.sprites) do
+					if not s._origin_fps then
+						if not s.fps then
+							s._origin_fps = FPS
+						else
+							s._origin_fps = s.fps
+						end
+					end
+					s.fps = s._origin_fps * u.cooldown_factor
+				end
+				scale_fps_based_keys(t, 1 / u.cooldown_factor)
+			end
+		end
+	end
+
 	u = self:get_upgrade("archer_el_bloodletting_shoot")
 
 	if u then
@@ -630,21 +1152,77 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
-	local barrack_soldiers = self:barrack_soldiers()
+	local soldiers = self.soldiers
+	local barrack_soldiers = self.barrack_soldiers
 	local barrack_towers = self:towers_with_barrack()
 
 	u = self:get_upgrade("barrack_survival")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
+		end
+	end
+
+	u = self:get_upgrade("barrack_bodies")
+
+	if u then
+		for _, n in pairs(GS.barrack_towers) do
+			if n ~= "tower_baby_ashbite" and n ~= "tower_pandas_lvl4" then
+				local t = T(n)
+				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
+			end
+		end
+		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4"}
+
+		for _, n in pairs(special_soldiers) do
+			local t = T(n)
+			t.unit.damage_factor = t.unit.damage_factor * 1.3
+		end
+
+		for _, n in pairs(barrack_soldiers) do
+			local t = T(n)
+			if t.health.hp_max and not table.contains(special_soldiers, n) then
+				t.health.hp_max = math.ceil(t.health.hp_max * 0.8)
+			end
+		end
+	end
+
+	u = self:get_upgrade("barrack_march")
+	if u then
+		for _, n in pairs(barrack_towers) do
+			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+		end
+		for _, n in pairs(soldiers) do
+			T(n).motion.max_speed = T(n).motion.max_speed + u.speed_inc
+		end
+	end
+
+	u = self:get_upgrade("barrack_rally")
+	if u then
+		for _, n in pairs(barrack_towers) do
+			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
+		end
+	end
+
+	u = self:get_upgrade("barrack_weapon")
+	if u then
+		for _, n in pairs(soldiers) do
+			T(n).unit.damage_factor = T(n).unit.damage_factor * u.damage_factor
+		end
+	end
+
+	u = self:get_upgrade("barrack_go_on")
+	if u then
+		for _, n in pairs(soldiers) do
+			T(n).health.dead_lifetime = T(n).health.dead_lifetime * u.cooldown_factor
 		end
 	end
 
 	u = self:get_upgrade("barrack_better_armor")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.armor = T(n).health.armor + u.armor_increase
 		end
 	end
@@ -652,7 +1230,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_improved_deployment")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.dead_lifetime = math.floor(T(n).health.dead_lifetime * u.cooldown_factor)
 		end
 
@@ -664,7 +1242,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_survival_2")
 
 	if u then
-		for _, n in pairs(barrack_soldiers) do
+		for _, n in pairs(soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
 		end
 	end
@@ -740,7 +1318,88 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
+	u = self:get_upgrade("mage_old_folk")
+	if u then
+		for _, n in pairs(mage_towers) do
+			local t = T(n)
+			if t.powers then
+				for _, p in pairs(t.powers) do
+					if p.price_base then
+						p.price_base = math.ceil(p.price_base * u.cost_factor)
+					end
+					if p.price_inc then
+						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
+					end
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("mage_strike")
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			local b = T(n).bullet
+			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
+				if protection <= 0 then
+					damage.value = damage.value * 1.2
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("mage_unsteady")
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			local b = T(n).bullet
+			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
+				if math.random() < 0.1 then
+					damage.value = damage.value * 1.5 / (1 - protection)
+				end
+			end
+		end
+	end
+
 	u = self:get_upgrade("mage_empowered_magic")
+
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+
+		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+
+		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+
+		for k, v in pairs(d) do
+			d[k] = math.ceil(v * u.damage_factor)
+		end
+	end
+
+	u = self:get_upgrade("mage_arcane_spell")
+
+	if u then
+		for _, n in pairs(self:mage_tower_bolts()) do
+			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
+			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+		end
+
+		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
+		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+
+		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+
+		for k, v in pairs(d) do
+			d[k] = math.ceil(v * u.damage_factor)
+		end
+	end
+
+	u = self:get_upgrade("mage_power")
 
 	if u then
 		for _, n in pairs(self:mage_tower_bolts()) do
@@ -805,6 +1464,45 @@ function upgrades:patch_templates(max_level)
 		T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[2].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[3].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor)
+	end
+
+	u = self:get_upgrade("engineer_magic_dust")
+	if u then
+		for _, n in pairs(engineer_bombs) do
+			local n = T(n)
+			local b = n.bullet
+			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
+				if math.random() < 0.1 then
+					damage.value = damage.value + entity.health.hp_max * 0.05
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("engineer_diffusion")
+	if u then
+		for _, n in pairs(engineer_bombs) do
+			local n = T(n)
+			local b = n.bullet
+			if b.damage_radius then
+				b.damage_radius = b.damage_radius * u.radius_factor
+				if n.hit_fx then
+					local fx = T(n.hit_fx)
+					if fx.render then
+						local s = fx.render.sprites[1]
+						if s.scale then
+							s.scale.x = s.scale.x * u.radius_factor
+							s.scale.y = s.scale.y * u.radius_factor
+						else
+							s.scale = {
+								x = u.radius_factor,
+								y = u.radius_factor
+							}
+						end
+					end
+				end
+			end
+		end
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")

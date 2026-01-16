@@ -576,6 +576,7 @@ function screen:update(dt)
 
 		self.scroller.pos.y = km.clamp(self.scroller.drag_limits.size.y, self.scroller.drag_limits.pos.y, self.scroller.pos.y - self.scroll_speed * dt)
 	end
+	return true
 end
 
 function screen:draw()

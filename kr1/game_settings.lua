@@ -76,7 +76,8 @@ GS.barrack_towers = {
 	"tower_baby_ashbite",
 	"tower_pandas_lvl4",
 	"tower_ghost_lvl4",
-	"tower_dwarf_lvl4"
+	"tower_dwarf_lvl4",
+	"tower_rocket_gunners_lvl4"
 }
 GS.soldier_regen_factor = 0.2
 GS.gameplay_tips_count = 21
@@ -97,26 +98,7 @@ GS.hero_xp_gain_per_difficulty_mode = {
 	[DIFFICULTY_HARD] = 0.65,
 	[DIFFICULTY_IMPOSSIBLE] = 0.75
 }
-GS.kr3_towers = {
-	"arcane",
-	"silver",
-	"wild_magus",
-	"druid",
-	"entwood",
-	"blade",
-	"forest",
-	"drow",
-	"holder_bastion",
-	"bastion",
-	"holder_ewok",
-	"ewok",
-	"faerie_dragon",
-	"pixie",
-	"baby_black_dragon",
-	"holder_baby_ashbite",
-	"baby_ashbite",
-	"high_elven"
-}
+
 GS.main_campaign_levels = 12
 GS.main_campaign_levels2 = 41
 GS.main_campaign_levels3 = 63
@@ -186,86 +168,7 @@ end
 
 GS.default_hero = nil
 GS.hero_xp_thresholds = {300, 900, 2000, 4000, 8000, 12000, 16000, 20000, 26000}
-GS.hero_xp_ephemeral = true
-GS.skill_points_for_hero_level = {0, 4, 8, 12, 16, 20, 24, 28, 32, 36}
-GS.endless_gems_for_wave = 1
-GS.gems_factor_per_mode = {0.8, 0.48, 0.48, 0}
-GS.gems_per_level = {
-	100,
-	150,
-	200,
-	250,
-	250,
-	300,
-	300,
-	300,
-	400,
-	400,
-	400,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	100,
-	150,
-	200,
-	250,
-	250,
-	300,
-	300,
-	300,
-	400,
-	400,
-	400,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	500,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0
-}
+
 GS.encyclopedia_enemies = {
 	{
 		always_shown = true,
@@ -682,10 +585,6 @@ GS.encyclopedia_enemies = {
 		name = "eb_gnoll"
 	},
 	{
-		target = "phone",
-		name = "enemy_gnoll_warleader"
-	},
-	{
 		name = "enemy_sword_spider"
 	},
 	{
@@ -779,10 +678,6 @@ GS.encyclopedia_enemies = {
 		name = "eb_bajnimen"
 	},
 	{
-		target = "phone",
-		name = "enemy_twilight_brute"
-	},
-	{
 		name = "enemy_shadows_spawns"
 	},
 	{
@@ -798,12 +693,6 @@ GS.encyclopedia_enemies = {
 		name = "eb_balrog"
 	}
 }
-
-for i = #GS.encyclopedia_enemies, 1, -1 do
-	if GS.encyclopedia_enemies[i].target and GS.encyclopedia_enemies[i].target ~= KR_TARGET then
-		table.remove(GS.encyclopedia_enemies, i)
-	end
-end
 
 GS.wraith = {
 	soldier_skeleton = true,
