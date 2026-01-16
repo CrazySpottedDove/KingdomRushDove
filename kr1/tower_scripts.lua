@@ -18834,9 +18834,9 @@ scripts.tower_dwarf = {}
 function scripts.tower_dwarf.update(this, store, script)
 	local tower_sid = 2
 	local door_sid = 3
-    if not this.original_max_soldiers then
-        this.original_max_soldiers = this.barrack.max_soldiers
-    end
+	if not this.original_max_soldiers then
+		this.original_max_soldiers = this.barrack.max_soldiers
+	end
 	local formation_angles = {math.pi * 0.25, math.pi, math.pi * 0.25}
 	local angle_offset = math.pi * 0.25
 	local mute_spawn = false
