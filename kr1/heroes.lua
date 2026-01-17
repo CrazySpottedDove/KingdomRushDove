@@ -42,9 +42,7 @@ require("game_templates_utils")
 
 --#region hero_gerald
 tt = RT("hero_gerald", "hero")
-
 AC(tt, "melee", "timed_attacks", "dodge")
-
 anchor_y = 0.12
 anchor_x = 0.5
 image_y = 110
@@ -82,6 +80,15 @@ tt.hero.skills.paladin.hp_max = {150, 200, 250}
 tt.hero.skills.paladin.melee_damage_min = {6, 8, 10}
 tt.hero.skills.paladin.melee_damage_max = {20, 25, 30}
 tt.hero.skills.paladin.max_speed = {60, 65, 70}
+tt.hero.skills.holy_strike = CC("hero_skill")
+tt.hero.skills.holy_strike.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.holy_strike.xp_gain = {80, 160, 240}
+tt.hero.skills.holy_strike.damage_min = {36, 72, 108}
+tt.hero.skills.holy_strike.damage_max = {60, 120, 180}
 tt.health.dead_lifetime = 15
 tt.health_bar.offset = vec_2(0, 36)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -110,10 +117,23 @@ tt.melee.attacks[1].hit_time = fts(5)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
--- tt.melee.attacks[2].animation = "attack2"
-tt.melee.attacks[2].animation = "strike"
+tt.melee.attacks[2].animation = "attack2"
 tt.melee.attacks[2].chance = 0.5
 tt.melee.attacks[2].xp_gain_factor = 5
+tt.melee.attacks[3] = CC("area_attack")
+tt.melee.attacks[3].damage_radius = 55
+tt.melee.attacks[3].damage_type = DAMAGE_MAGICAL
+tt.melee.attacks[3].animation = "strike"
+tt.melee.attacks[3].cooldown = 8
+tt.melee.attacks[3].hit_decal = "decal_paladin_holystrike"
+tt.melee.attacks[3].hit_offset = vec_2(25, 0)
+tt.melee.attacks[3].hit_time = fts(27)
+tt.melee.attacks[3].pop = nil
+tt.melee.attacks[3].mod = "mod_paladin_silence"
+tt.melee.attacks[3].vis_bans = F_FLYING
+tt.melee.attacks[3].vis_flags = F_BLOCK
+tt.melee.attacks[3].disabled = true
+tt.melee.attacks[3].never_interrupt = true
 tt.melee.range = 65
 tt.timed_attacks.list[1] = CC("mod_attack")
 tt.timed_attacks.list[1].animation = "courage"
@@ -144,15 +164,17 @@ tt.dodge.chance_base = 0.15
 tt.dodge.chance_inc = 0.2
 tt.dodge.time_before_hit = fts(4)
 tt.dodge.low_chance_factor = 0.5
-tt.dodge.counter_attack = CC("area_attack")
+-- tt.dodge.counter_attack = CC("area_attack")
+tt.dodge.counter_attack = CC("melee_attack")
 tt.dodge.counter_attack.animation = "counter"
-tt.dodge.counter_attack.damage_type = DAMAGE_MAGICAL_EXPLOSION
-tt.dodge.counter_attack.reflected_damage_factor = 0.35
-tt.dodge.counter_attack.reflected_damage_factor_inc = 0.35
-tt.dodge.counter_attack.damage_radius = 50
+-- tt.dodge.counter_attack.damage_type = DAMAGE_MAGICAL_EXPLOSION
+tt.dodge.counter_attack.damage_type = DAMAGE_TRUE
+tt.dodge.counter_attack.reflected_damage_factor = 0.5
+tt.dodge.counter_attack.reflected_damage_factor_inc = 0.5
+-- tt.dodge.counter_attack.damage_radius = 50
 tt.dodge.counter_attack.hit_time = fts(5)
-tt.dodge.counter_attack.hit_decal = "decal_paladin_holystrike"
-tt.dodge.counter_attack.hit_offset = vec_2(0, 0)
+-- tt.dodge.counter_attack.hit_decal = "decal_paladin_holystrike"
+-- tt.dodge.counter_attack.hit_offset = vec_2(0, 0)
 tt.dodge.counter_attack.sound = "HeroPaladinDeflect"
 --#endregion
 --#region mod_gerald_courage

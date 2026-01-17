@@ -250,7 +250,17 @@ local factor = h.dodge.counter_attack.reflected_damage_factor + h.dodge.counter_
 local chance = h.dodge.chance_base + h.dodge.chance_inc * max_lvl
 local low_change_factor = h.dodge.low_chance_factor
 
-map["惩戒之盾"] = str("杰拉尔德每次受到近战攻击时，有", chance * 100, "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的范围", damage_type_map[d[1].damage_type], "。面对BOSS单位时，盾反概率×", low_change_factor * 100, "%；受到范围攻击时，盾反概率×60%。")
+map["惩戒之盾"] = str("杰拉尔德每次受到近战攻击时，有", chance * 100, "%的概率举盾反击，免疫并造成本次攻击伤害", factor * 100, "%的", damage_type_map[d[1].damage_type], "。面对BOSS单位时，盾反概率×", low_change_factor * 100, "%；受到范围攻击时，盾反概率×60%。")
+
+set_skill(h.hero.skills.holy_strike)
+get_damage(h.melee.attacks[3])
+cooldown = h.melee.attacks[3].cooldown
+local radius = h.melee.attacks[3].damage_radius
+e = T("mod_paladin_silence")
+local duration = e.modifier.duration
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+map["神圣打击"] = str(cooldown_str(), "杰拉尔德发动神圣打击，对", radius, "范围内敌人造成", damage_str(), "，并使其沉默", duration, "秒。")
 
 set_skill(h.hero.skills.courage)
 

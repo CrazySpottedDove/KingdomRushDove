@@ -1,4 +1,4 @@
-﻿-- chunkname: @./kr1/game_scripts.lua
+-- chunkname: @./kr1/game_scripts.lua
 require("lib.klua.table")
 require("i18n")
 require("scripts")

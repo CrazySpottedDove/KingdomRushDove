@@ -318,7 +318,6 @@ function image_db:queue_load_done()
 	return true
 end
 
-
 function image_db:queue_load_atlas(ref_scale, path, name)
 	table.insert(self.load_queue, {ref_scale, path, name})
 

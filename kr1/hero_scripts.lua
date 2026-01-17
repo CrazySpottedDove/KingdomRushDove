@@ -224,6 +224,12 @@ scripts.hero_gerald = {
 			a.damage_max = s.melee_damage_max[s.level]
 			e.motion.max_speed = s.max_speed[s.level]
 		end)
+		upgrade_skill(this, "holy_strike", function(this, s)
+			local a = this.melee.attacks[3]
+			a.disabled = nil
+			a.damage_min = s.damage_min[s.level]
+			a.damage_max = s.damage_max[s.level]
+		end)
 
 		this.health.hp = this.health.hp_max
 	end,

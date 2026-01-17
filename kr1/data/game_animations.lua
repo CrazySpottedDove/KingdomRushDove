@@ -14589,11 +14589,11 @@ return {
 			prefix = "hero_barracks",
 			to = 6
 		},
-        hero_gerald_strike = {
-            from = 1,
-            prefix = "hero_gerald",
-            to = 35
-        },
+		hero_gerald_strike = {
+			from = 1,
+			prefix = "hero_gerald",
+			to = 35
+		},
 		hero_giant_attack = {
 			from = 26,
 			prefix = "hero_giant",
