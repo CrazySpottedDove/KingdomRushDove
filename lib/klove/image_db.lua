@@ -178,6 +178,7 @@ function image_db:get_stats()
 	return o
 end
 
+--- 等待所有加载队列中的纹理加载完毕
 function image_db:queue_load_done()
 	if #self.load_queue == 0 and #self.threads == 0 then
 		self.progress = 1
@@ -278,7 +279,6 @@ function image_db:queue_load_done()
 
 							self.db_images[key] = {c, w, h}
 							im = nil
-						-- collectgarbage()
 						else
 							log.paranoid(" +++ keeping image %s", im)
 
@@ -318,8 +318,8 @@ function image_db:queue_load_done()
 	return true
 end
 
+
 function image_db:queue_load_atlas(ref_scale, path, name)
-	log.debug("queued %s/%s-%.6f", path, name, ref_scale)
 	table.insert(self.load_queue, {ref_scale, path, name})
 
 	self.groups_total = self.groups_total + 1
@@ -380,6 +380,7 @@ function image_db:unload_atlas(name, ref_scale)
 -- collectgarbage()
 end
 
+--- 检查资源，把没有 atlas 指向的纹理回收掉
 function image_db:purge_atlas()
 	local used_images = {}
 
@@ -402,15 +403,15 @@ function image_db:purge_atlas()
 	log.debug("  purged #images:%s", #remove_images)
 end
 
+--- 加载图像组的全部帧信息，但不加载图像资源。帧信息实现了帧到纹理的映射。
+---@param ref_scale number 图像组的渲染比例
+---@param path string 图像组父目录路径
+---@param name string 图像组名称（不含.lua后缀）
 function image_db:preload_atlas(ref_scale, path, name)
 	local name_scale = string.format("%s-%.6f", name, ref_scale)
 
-	log.debug("load atlas: %s,%s-%.6f", path, name, ref_scale)
-
 	if self.atlas_uses[name_scale] then
 		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
-
-		log.debug("atlas %s already loaded", name)
 
 		return
 	end
@@ -433,8 +434,6 @@ function image_db:preload_atlas(ref_scale, path, name)
 	local deferred_image_names = {}
 
 	for k, v in pairs(frames) do
-		log.paranoid("loading atlas-frame: %s - %s", v.a_name, k)
-
 		v.group = name_scale
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
@@ -454,7 +453,8 @@ function image_db:preload_atlas(ref_scale, path, name)
 			unique_frames[a] = v
 		end
 
-		v.ref_scale = ref_scale
+		-- 允许为帧也独立定义 ref_scale
+		v.ref_scale = ref_scale * (v.ref_scale or 1)
 	end
 
 	for k, v in pairs(unique_frames) do
@@ -475,8 +475,11 @@ function image_db:preload_atlas(ref_scale, path, name)
 	return image_names
 end
 
-function image_db:load_atlas(ref_scale, path, name, yielding)
-	local rt_start = love.timer.getTime()
+--- 加载一张图像资源
+---@param ref_scale number 图像的渲染比例
+---@param path string 图像父目录路径
+---@param name string 图像组名称（不含.lua后缀）
+function image_db:load_atlas(ref_scale, path, name)
 	local image_names = self:preload_atlas(ref_scale, path, name)
 
 	if not image_names then
@@ -491,86 +494,14 @@ function image_db:load_atlas(ref_scale, path, name, yielding)
 		local key, im, w, h = image_db:load_image_file(fn, path)
 
 		self.db_images[key] = {im, w, h}
-
-		if yielding then
-			self.progress = i / #table.keys(image_names)
-
-			coroutine.yield()
-		end
 	end
 
 	self.progress = 1
-
-	log.info("Finished loading atlas %s/%s at scale %s (time:%s)", path, name, ref_scale, love.timer.getTime() - rt_start)
 end
 
-function image_db:load(ref_scale, custom_paths)
-	ref_scale = ref_scale or 1
-
-	local paths = custom_paths or {"images/ipad"}
-	local image_files = {}
-
-	for _, path in pairs(paths) do
-		local files = FS.getDirectoryItems(path)
-
-		for i = 1, #files do
-			local name = files[i]
-			local f = path .. "/" .. name
-
-			if is_file(f) and (string.match(f, ".png$") or string.match(f, ".jpg$")) then
-				local key = string.gsub(name, ".png$", "")
-
-				key = string.gsub(key, ".jpg$", "")
-
-				local im = G.newImage(f)
-
-				if not im then
-					log.error("Image %s could not be created", f)
-				else
-					local w, h = im:getDimensions()
-
-					self.db_images[key] = {im, w, h}
-				end
-			end
-		end
-	end
-
-	for _, path in pairs(paths) do
-		local files = FS.getDirectoryItems(path)
-
-		for i = 1, #files do
-			local name = files[i]
-			local f = path .. "/" .. name
-
-			if is_file(f) and string.match(f, ".lua$") then
-				local file_basename = string.gsub(name, ".lua$", "")
-				local frames = require(path .. "." .. file_basename)
-				local queue = {}
-
-				for k, v in pairs(frames) do
-					-- dynamic_upscale(v)
-					v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
-					v.atlas = string.gsub(v.a_name, ".png$", "")
-
-					for _, a in ipairs(v.alias) do
-						queue[a] = v
-					end
-
-					v.ref_scale = ref_scale
-				end
-
-				for k, v in pairs(queue) do
-					frames[k] = v
-				end
-
-				self.db_atlas = table.merge(self.db_atlas, frames)
-			end
-		end
-	end
-
-	log.debug("finished loading image_db")
-end
-
+--- 加载图像资源的核心逻辑，属于私有方法
+---@param fn string 图像文件名称
+---@param path string 图像文件父目录路径
 function image_db:load_image_file(fn, path)
 	local f = path .. "/" .. fn
 
@@ -648,6 +579,11 @@ function image_db:load_image_file(fn, path)
 	end
 end
 
+--- 临时添加图像文件
+---@param name string 纹理名称
+---@param image userdata 纹理
+---@param group string 纹理组名称
+---@param scale number 纹理参考缩放比例
 function image_db:add_image(name, image, group, scale)
 	scale = scale or 1
 
@@ -671,6 +607,8 @@ function image_db:add_image(name, image, group, scale)
 	end
 end
 
+--- 移除图像文件
+---@param name string 纹理名称
 function image_db:remove_image(name)
 	self.db_images[name] = nil
 	self.db_atlas[name] = nil
@@ -707,10 +645,6 @@ end
 function image_db:s(name, optional)
 	local s = self.db_atlas[name]
 
-	-- if DBG_REPLACE_MISSING_TEXTURES and not s then
-	-- 	s = self.db_atlas._debug_textures_missing
-	-- 	log.error("DBG_REPLACE_MISSING_TEXTURES: replaced %s", name)
-	-- end
 	if not s then
 		if not name and self.missing_sprites["nil"] or self.missing_sprites[name] then
 			return nil
