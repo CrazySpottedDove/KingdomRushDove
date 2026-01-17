@@ -2,7 +2,7 @@
 local log = require("lib.klua.log"):new("image_db")
 local G = love.graphics
 local FS = love.filesystem
-
+local perf = require("dove_modules.perf.perf")
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
 
@@ -11,12 +11,51 @@ end
 
 require("lib.klua.table")
 require("lib.klua.dump")
+local function table_to_map(t)
+	local m = {}
+
+	for _, v in pairs(t) do
+		m[v] = true
+	end
+
+	return m
+end
+
+local persistent_textures = table_to_map({
+	"go_decals",
+	"go_enemies_common",
+	"go_towers",
+	"go_towers_pandas",
+	"go_towers_dark_elf",
+	"go_towers_tricannon",
+	"go_towers_demon_pit",
+	"go_towers_necromancer",
+	"go_towers_ray",
+	"go_towers_elven_stargazers",
+	"go_towers_sand",
+	"go_towers_royal_archers",
+	"go_towers_arcane_wizard",
+	"go_towers_rocket_gunners",
+	"go_towers_flamespitter",
+	"go_towers_ballista",
+	"go_towers_barrel",
+	"go_towers_hermit_toad",
+	"go_towers_sparking_geode",
+	"go_towers_dwarf",
+	"go_towers_ghost",
+	"go_towers_paladin_covenant",
+	"go_towers_arborean_emissary",
+	"loading_common",
+	"gui_ico"
+})
 
 local km = require("lib.klua.macros")
 local image_db = {}
-
+-- 已加载的图片名称（无拓展名），为 map<string, {userdata(Image), number(width), number(height)}>
 image_db.db_images = {}
+-- 已加载的图集帧信息
 image_db.db_atlas = {}
+-- 图像组引用计数，map<string(name-scale), number>
 image_db.atlas_uses = {}
 image_db.load_queue = {}
 image_db.load_queue_current = nil
@@ -57,6 +96,10 @@ local function calculate_thread_count()
 	return thread_count
 end
 
+local function name_scale(name, scale)
+	return string.format("%s-%.6f", name, scale)
+end
+
 local _MAX_THREADS = calculate_thread_count()
 local _LOAD_IMAGE_THREAD_CODE = [[
 local cin,cout,th_i = ...
@@ -75,7 +118,7 @@ while true do
         cout:push({'ERROR','Not a file',f})
     else
         local data
-        if string.match(fn, '.pkm$') or string.match(fn, '.astc$') or string.match(fn, '.dds$') then
+        if string.match(fn, '.dds$') then
             data = love.image.newCompressedData(f)
         else
             data = love.image.newImageData(f)
@@ -305,8 +348,7 @@ function image_db:queue_load_done()
 		goto label_3_0
 	end
 
-	log.info("Done loading atlas queue. | time: %s", love.timer.getTime() - self.queue_load_start_time)
-	collectgarbage()
+	-- collectgarbage()
 
 	self.queue_load_start_time = nil
 	self.progress = 1
@@ -319,6 +361,10 @@ function image_db:queue_load_done()
 end
 
 function image_db:queue_load_atlas(ref_scale, path, name)
+	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
+		return
+	end
+
 	table.insert(self.load_queue, {ref_scale, path, name})
 
 	self.groups_total = self.groups_total + 1
@@ -330,6 +376,11 @@ function image_db:queue_load_atlas(ref_scale, path, name)
 end
 
 function image_db:unload_atlas(name, ref_scale)
+	-- 不卸载持久化纹理
+	if persistent_textures[name] then
+		return
+	end
+
 	ref_scale = ref_scale or 1
 
 	local name_scale = string.format("%s-%.6f", name, ref_scale)
@@ -375,11 +426,10 @@ function image_db:unload_atlas(name, ref_scale)
 	end
 
 	log.debug(" removed #frames:%s #images:%s ", #remove_frames, removed_images_count)
-	self:purge_atlas()
--- collectgarbage()
+-- self:purge_atlas()
 end
 
---- 检查资源，把没有 atlas 指向的纹理回收掉
+--- 检查资源，把没有 atlas 指向的纹理回收掉。需要指出，铁皮原来随便调用这个函数是非常不负责任的，因为设计合理的情况下，完全不应当重新检查资源是否清理干净！因此，不要随意使用这个函数解决问题，而是尝试找出资源泄漏的根本原因。
 function image_db:purge_atlas()
 	local used_images = {}
 
@@ -396,16 +446,16 @@ function image_db:purge_atlas()
 	end
 
 	for _, v in pairs(remove_images) do
+		print("purged image:", v)
 		self.db_images[v] = nil
 	end
-
-	log.debug("  purged #images:%s", #remove_images)
 end
 
 --- 加载图像组的全部帧信息，但不加载图像资源。帧信息实现了帧到纹理的映射。
 ---@param ref_scale number 图像组的渲染比例
 ---@param path string 图像组父目录路径
 ---@param name string 图像组名称（不含.lua后缀）
+---@return table|nil 所有待加载的图像名称 map<string, boolean>
 function image_db:preload_atlas(ref_scale, path, name)
 	local name_scale = string.format("%s-%.6f", name, ref_scale)
 
@@ -430,9 +480,9 @@ function image_db:preload_atlas(ref_scale, path, name)
 	local frames = FS.load(group_file)()
 	local unique_frames = {}
 	local image_names = {}
-	local deferred_image_names = {}
 
-	for k, v in pairs(frames) do
+	-- 为每一帧设置具体信息，并处理 alias
+	for _, v in pairs(frames) do
 		v.group = name_scale
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
@@ -440,20 +490,17 @@ function image_db:preload_atlas(ref_scale, path, name)
 			v.a_name = v.a_name:gsub(".dds$", ".png")
 		end
 
-		if v.defer then
-			deferred_image_names[v.a_name] = true
-		else
-			image_names[v.a_name] = true
-		end
+		image_names[v.a_name] = true
 
 		v.atlas = remove_extension_fast(v.a_name)
 
-		for _, a in ipairs(v.alias) do
-			unique_frames[a] = v
-		end
-
 		-- 允许为帧也独立定义 ref_scale
 		v.ref_scale = ref_scale * (v.ref_scale or 1)
+
+		-- alias 只有指针
+		for i = 1, #v.alias do
+			unique_frames[v.alias[i]] = v
+		end
 	end
 
 	for k, v in pairs(unique_frames) do
@@ -462,23 +509,18 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 	self.db_atlas = table.merge(self.db_atlas, frames)
 
-	for fn in pairs(deferred_image_names) do
-		local key = remove_extension_fast(fn)
-
-		self.db_images[key] = {
-			[4] = fn,
-			[5] = path
-		}
-	end
-
 	return image_names
 end
 
---- 加载一张图像资源
+--- 加载一张图像资源，用于少量、临时的图像加载
 ---@param ref_scale number 图像的渲染比例
 ---@param path string 图像父目录路径
 ---@param name string 图像组名称（不含.lua后缀）
 function image_db:load_atlas(ref_scale, path, name)
+	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
+		return
+	end
+
 	local image_names = self:preload_atlas(ref_scale, path, name)
 
 	if not image_names then

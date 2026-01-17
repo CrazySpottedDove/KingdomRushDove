@@ -323,9 +323,7 @@ function director:unload_item(item)
 		game:destroy()
 
 		game.store = nil
-
-		collectgarbage()
-	elseif not item.keep_loaded then
+	else
 		local textures = item.required_textures
 
 		if textures then
@@ -345,9 +343,9 @@ function director:unload_item(item)
 		if item.destroy then
 			item:destroy()
 		end
-
-		collectgarbage()
 	end
+	-- unload item 结束时，统一进行手动 gc
+	collectgarbage()
 end
 
 function director:queue_load_item_named(name, force_reload)
@@ -574,18 +572,6 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
 
 	for _, group in pairs(groups) do
 		local texture_path = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. texture_size
-
-		if features.overrides then
-			for _, n in pairs(features.overrides) do
-				local ov_path = texture_path .. "/_ov/" .. n
-
-				if love.filesystem.getInfo(ov_path .. "/" .. group .. ".lua") then
-					log.debug("  +++ texture group %s overriden by %s", group, n)
-
-					texture_path = ov_path
-				end
-			end
-		end
 
 		if queue then
 			I:queue_load_atlas(scale, texture_path, group)

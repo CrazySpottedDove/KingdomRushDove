@@ -5,6 +5,7 @@ local perf = {}
 -- items[name] = last_time_us
 -- item: { sum: number, start_time: number, avg_sum: number, count: number}
 perf.items = {}
+perf.tmp = {}
 
 function perf.reset()
 	for _, v in pairs(perf.items) do
@@ -75,6 +76,16 @@ function perf.export_table()
 	end
 
 	return sorted_items, sum
+end
+
+function perf.tmp_start(name)
+	perf.tmp[name] = love.timer.getTime() * 1000
+end
+
+function perf.tmp_stop(name)
+	local elapsed = love.timer.getTime() * 1000 - perf.tmp[name]
+	print(name .. " took " .. elapsed .. " ms")
+	perf.tmp[name] = nil
 end
 
 return perf

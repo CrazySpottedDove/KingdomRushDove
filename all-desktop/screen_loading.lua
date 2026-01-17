@@ -21,7 +21,6 @@ screen.required_textures = nil
 screen.required_sounds = {"common", "music_screen_map"}
 screen.ref_h = 1080
 screen.ref_res = TEXTURE_SIZE_ALIAS.fullhd
-screen.max_progress_speed = 0.8
 
 function screen:update_required_textures(upcoming_item, level_idx, last_level_idx)
 	local lin = data.loading_image_name
@@ -103,11 +102,8 @@ function screen:init(w, h)
 	bar.last_ts = screen.window.ts
 
 	function bar.update(this, dt)
-		local d_t = screen.window.ts - this.last_ts
-		local d_p = 0.8 * I.progress + 0.2 * S.progress - this.scale.x
-		local step = km.clamp(0, screen.max_progress_speed * d_t, d_p)
-
-		this.scale.x = km.clamp(0, 1, this.scale.x + step)
+		local d_p = 0.6 * I.progress + 0.4 * S.progress - this.scale.x
+		this.scale.x = km.clamp(0, 1, this.scale.x + d_p)
 		this.last_ts = screen.window.ts
 
 		if this.scale.x >= 1 then

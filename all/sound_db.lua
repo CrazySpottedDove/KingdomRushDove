@@ -1,6 +1,6 @@
 -- chunkname: @./all/sound_db.lua
 local log = require("lib.klua.log"):new("sound_db")
-
+local perf = require("dove_modules.perf.perf")
 require("lib.klua.table")
 
 local km = require("lib.klua.macros")
@@ -54,8 +54,6 @@ local function calculate_audio_thread_count()
 	else
 		thread_count = 6 -- 高端CPU：最多6个线程
 	end
-
-	log.info("Audio loading: %d CPU cores -> %d threads", cpu_count, thread_count)
 
 	return thread_count
 end
@@ -178,12 +176,11 @@ function sound_db:queue_load_done()
 	end
 
 	log.debug("sound queue loaded")
-	collectgarbage()
+	-- collectgarbage()
 
 	self.load_queue_current = nil
 	self.progress = 1
 	self.groups_total = 0
-
 	return true
 end
 
@@ -433,10 +430,6 @@ function sound_db:unload_group(name)
 		-- collectgarbage()
 		end
 	end
--- local t1 = love.timer.getTime()
--- collectgarbage()
--- local t2 = love.timer.getTime()
--- print("Sound group " .. name .. " unloaded. GC took " .. (t2 - t1) .. " seconds.")
 end
 
 sound_db.request_queue = {}
