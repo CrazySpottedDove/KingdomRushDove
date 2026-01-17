@@ -1589,6 +1589,15 @@ return {
 	["kr1-desktop/images/fullhd/view_options-1.dds"] = {
 		size = 1398256
 	},
+	["kr1-desktop/sounds/files/29431171705-1-192.mp3"] = {
+		size = 439116
+	},
+	["kr1-desktop/sounds/files/33145294233-1-192.ogg"] = {
+		size = 6141922
+	},
+	["kr1-desktop/sounds/files/33280295359-1-192.ogg"] = {
+		size = 2127880
+	},
 	["kr1-desktop/sounds/files/Aleria_special_arrow.ogg"] = {
 		size = 10104
 	},

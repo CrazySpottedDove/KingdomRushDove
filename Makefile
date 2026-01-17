@@ -73,3 +73,6 @@ android:
 
 windows:
 	bash $(MAKE_FILE_DIR)/pack_windows.sh
+
+linux:
+	bash $(MAKE_FILE_DIR)/pack_linux.sh
