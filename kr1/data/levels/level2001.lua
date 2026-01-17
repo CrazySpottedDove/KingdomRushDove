@@ -7,8 +7,8 @@ local S=require("sound_db")
 local P=require("path_db")
 require("all.constants")
 local level={}
-level.required_sounds={"music_stage91","PirateBoatSounds","RisingTidesSounds","SpecialMermaid","HalloweenSounds","BlackburnSounds","music_halloween_moon"}
-level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage43","go_stage91_bg","go_hero_pirate","go_enemies_blackburn","go_enemies_halloween","go_stages_halloween","go_enemies_jungle"}
+level.required_sounds={"music_stage2001","PirateBoatSounds","RisingTidesSounds","SpecialMermaid","HalloweenSounds","BlackburnSounds","music_halloween_moon"}
+level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage43","go_stage2001_bg","go_hero_pirate","go_enemies_blackburn","go_enemies_halloween","go_stages_halloween","go_enemies_jungle"}
 function level:init(store)
 store.level_terrain_type=TERRAIN_STYLE_BEACH
 self.locations=LU.load_locations(store,self)
@@ -21,7 +21,7 @@ self.locked_towers={"tower_build_mage","tower_build_barrack"}
 end
 end
 function level:load(store)
-LU.insert_background(store,"stage91",Z_BACKGROUND)
+LU.insert_background(store,"stage2001",Z_BACKGROUND)
 store.night_mode=true
 LU.queue_insert(store,e)
 LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)

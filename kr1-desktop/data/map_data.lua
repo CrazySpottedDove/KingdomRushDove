@@ -2066,35 +2066,35 @@ return {
 			iron = {"archers", "artillery"}
 		},
 		-- 额外
-		[71] = {
+		[1001] = {
 			upgrades = {
 				heroe = true,
 				level = 5
 			},
 			iron = {"mages", "artillery"}
 		},
-		[72] = {
+		[1002] = {
 			upgrades = {
 				heroe = true,
 				level = 5
 			},
 			iron = {"archers", "artillery", "barracks"}
 		},
-		[90] = {
+		[2000] = {
 			upgrades = {
 				heroe = true,
 				level = 5
 			},
 			iron = {"archers", "artillery", "barracks"}
 		},
-		[91] = {
+		[2001] = {
 			upgrades = {
 				heroe = true,
 				level = 5
 			},
 			iron = {"mages", "barracks"}
 		},
-		[92] = {
+		[2002] = {
 			upgrades = {
 				heroe = true,
 				level = 5
@@ -2102,14 +2102,14 @@ return {
 			iron = {"artillery", "mages"}
 		},
 		-- from fl level 87
-		[93] = {
+		[2003] = {
 			upgrades = {
 				heroe = true,
 				level = 5
 			},
 			iron = {"archers", "mages"}
 		},
-		[110] = {
+		[3000] = {
 			upgrades = {
 				heroe = true,
 				level = 5
