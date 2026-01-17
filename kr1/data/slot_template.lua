@@ -5,7 +5,8 @@ return {
 	levels = {
 		[1] = {},
 		[27] = {},
-		[49] = {}
+		[49] = {},
+		[101] = {}
 	},
 	upgrades = {
 		reinforcements = 0,

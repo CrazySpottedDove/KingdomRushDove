@@ -1,0 +1,234 @@
+#	COMANDOS					1 - De Izquierda a Izquierda Abajo					2 - De Derecha a Abajo Derecha					3 - De Centro Arriba a Abajo Izquierda					4 - De Arriba a Abajo					5 - De Cabeza Izquierda a Abajo Izquierda					6 - De Cabeza Derecha a Abajo Derecha					7 - Boss					8 - De Arriba a Abajo Izquierda					9 - De Arriba a Abajo Derecha
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3
+#	level properties
+	description	main JC
+	lives	1
+	gold	2400
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	6599
+#	stage gold curve
+#	WAVE 1					Hammerer x12
+Welder x1					Welder x1
+Shielder x5
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					12	5	0	0		2	0	0	0		0	0	0	0
+#	gold	619				264	115	0	0		240	0	0	0		0	0	0	0
+	wave		1		-1
+					0			brute_welder					brute_welder
+					2
+					2		darksteel_hammerer
+					2				darksteel_hammerer
+					2		darksteel_hammerer		darksteel_hammerer			darksteel_shielder		darksteel_shielder
+					2				darksteel_hammerer
+					2		darksteel_hammerer
+	wait				2
+					12				darksteel_hammerer
+					2		darksteel_hammerer
+					2		darksteel_hammerer		darksteel_hammerer			darksteel_shielder		darksteel_shielder
+					2		darksteel_hammerer
+					2				darksteel_hammerer				darksteel_shielder
+	wait				2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2										Welder x2
+Fist x8																																			Sentry x3
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	0	0		3	8	0	0		0	0	0	0
+#	gold	600				0	0	0	0		360	240	0	0		0	0	0	0
+	wave		2		23
+					0								brute_welder
+					6							darksteel_fist
+					2									darksteel_fist
+					2							darksteel_fist
+					2									darksteel_fist
+	event	shoot-cannons-L	6		0
+					0
+					6							brute_welder
+					4									brute_welder
+
+					12									darksteel_fist
+					2							darksteel_fist
+					2									darksteel_fist
+					2							darksteel_fist
+	event	shoot-cannons-L	8		0
+	wait				6
+
+
+
+
+#	WAVE 3					Tinkerer x2
+Speedster x20																																			Sentry x2
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	20	0		0	0	3	0		0	0	0	0
+#	gold	330				0	0	120	0		0	0	210	0		0	0	0	0
+	wave		3		22
+					0			mad_tinkerer
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					0.6		scrap_speedster
+					2				scrap_speedster
+	event	shoot-cannons-R	6		0
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					5		scrap_speedster
+					0.6				scrap_speedster
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					0
+	event	shoot-cannons-R	8		2
+					8			mad_tinkerer
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+	event	shoot-cannons-R	8		0
+					2			mad_tinkerer
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					5		scrap_speedster
+					0.6				scrap_speedster
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+
+
+
+
+
+
+
+#	WAVE 4					Hulk x1
+Hammerer x12
+Anvil x2
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					12	0	0	0		0	0	0	0		2	1	0	0
+#	gold	624				264	0	0	0		0	0	0	0		160	200	0	0
+	wave		4		22
+					0		darksteel_hammerer		darksteel_hammerer
+					2		darksteel_hammerer		darksteel_hammerer
+					2		darksteel_hammerer		darksteel_hammerer
+					2			darksteel_anvil
+	event	shoot-cannons-R	10		0
+					12			darksteel_hulk
+
+					8		darksteel_hammerer		darksteel_hammerer
+					2		darksteel_hammerer		darksteel_hammerer
+					2		darksteel_hammerer		darksteel_hammerer
+	event	shoot-cannons-R	10		0
+					2			darksteel_anvil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5										Guardian x1
+Shielder x10
+Fist x4
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	10	0	0		0	4	0	0		0	0	0	1
+#	gold	530				0	230	0	0		0	120	0	0		0	0	0	180
+	wave		5		25
+					0								darksteel_guardian
+					14							darksteel_fist		darksteel_fist
+					2							darksteel_shielder		darksteel_shielder
+	event	shoot-cannons-L	10		2
+					10							darksteel_shielder		darksteel_shielder
+					2							darksteel_shielder		darksteel_shielder
+	event	shoot-cannons-L	10		8
+					6							darksteel_shielder		darksteel_shielder
+					4							darksteel_fist		darksteel_fist
+					4							darksteel_shielder		darksteel_shielder
+	event	shoot-cannons-L	10		0
+	wait				6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6					(1) Hulk x2
+(1) Hammerer x12					(1) Guardian x2
+(1) Welder x6
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					8	0	0	0		4	0	0	0		1	2	0	2
+#	gold	1496				176	0	0	0		480	0	0	0		80	400	0	360
+	wave		6		22
+	event	shoot-cannons-L	10		0
+	event	shoot-cannons-R	10		4
+	event	shoot-cannons-L	10		8
+#	event	shoot-cannons-R	10		2
+					0							darksteel_guardian
+					12									brute_welder
+	event	shoot-cannons-L	8		2
+					2			darksteel_hulk					brute_welder
+					2		darksteel_hammerer
+					2				darksteel_hammerer
+					4		darksteel_hammerer
+					2				darksteel_hammerer
+					0
+					0
+					12							darksteel_guardian
+					4								brute_welder
+					4									brute_welder
+					2			darksteel_hulk
+#	event	shoot-cannons-R	8		0
+					2		darksteel_hammerer
+					2				darksteel_hammerer
+					4		darksteel_hammerer
+	event	shoot-cannons-L	6		0
+					2				darksteel_hammerer
+					2			darksteel_anvil

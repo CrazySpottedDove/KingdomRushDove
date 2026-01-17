@@ -1,0 +1,482 @@
+#	COMANDOS							1	Arriba Izq				2	Arriba Der				3	Abajo Izq				4	Abajo derecha				5	Centro izquierda				6	Centro derecha		
+	column_names						inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties																																			
+	description	rodri																																		
+	lives	20																																		
+	gold	1100																																		
+	gems	150																																		
+	enemy_prefix	enemy_																																		
+	default_increment	1																																		
+	default_interval	20																																		
+#	expected gold																																			
+#	stage total gold	9175																																		
+#	stage gold curve							water_spirit_spawnless																												
+#	WAVE 1																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen*																					
+#	cant.							0	0	0	0		0	0	23			0	0	0	0															
+#	gold	235						0	0	0	0		0	0	115			0	0	0	0															
+	wave		1				-1																													
+							2		citizen_1		citizen_1																									
+							1.5			citizen_2																										
+							8		citizen_2		citizen_4																									
+							2			citizen_1																										
+							3		citizen_2		citizen_2																									
+							2			citizen_1																										
+							3		citizen_4		citizen_1																									
+							2			citizen_2																										
+							9		citizen_2		citizen_2																									
+							2			citizen_4																										
+							2.5		citizen_1		citizen_1																									
+							2			citizen_2																										
+							4		citizen_4		citizen_4																									
+							2			citizen_1																										
+							1.5		citizen_1		citizen_1																									
+#	46.5																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 2																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	6		0	0	8																					
+#	gold	220						0	0	0	180		0	0	40																					
+	wave		2				40																													
+							1																		gale_warrior											
+							7																	gale_warrior												
+							2																			gale_warrior										
+							6.5																	citizen												
+							2																			citizen										
+							2																		citizen											
+							1.5																			citizen										
+							2																	citizen												
+							3																			citizen										
+							1.5																		citizen											
+							1																	citizen												
+							3.5																		gale_warrior											
+							3																	gale_warrior												
+							2																			gale_warrior										
+																																				
+																																				
+#	38																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 3																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	0		0	0	7			0	0	0	0															
+#	gold	225						0	0	0	0		0	0	35			0	0	0	0															
+	wave		3				20																													
+	wait						2																													
+	wait						2																													
+	wait						1.5																													
+	wait						1.5																													
+	wait						10																													
+																																				
+																																				
+							5			citizen																										
+							1.5		citizen																											
+							2				citizen																									
+							5		citizen																											
+							2				citizen																									
+							2.5		citizen																											
+							1.5				citizen																									
+																																				
+#	36.5																																			
+																																				
+																																				
+																																				
+#	WAVE 4																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	9	0	0		0	0	0			0	0	0	0															
+#	gold	300						0	180	0	0		0	0	0			0	0	0	0															
+	wave		4				45																													
+							0													storm_spirit																
+							8												storm_spirit																	
+							5													storm_spirit																
+	wait						6																													
+							6												storm_spirit																	
+							5													storm_spirit																
+							12												storm_spirit																	
+							6													storm_spirit																
+							5												storm_spirit																	
+							5													storm_spirit																
+#	58																																			
+																																				
+	wait_signal	all_enemies_died					-1																													
+	event	ciclone			in																															
+	wait						1																													
+	event	ciclone	1	1	destroy_houses																															
+	wait_signal	ciclone_end					-1																													
+																																				
+#	WAVE 5																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	9		0	0	0			0	0	0	0															
+#	gold	345						0	0	0	270		0	0	0			0	0	0	0															
+	wave		5				1																													
+																																				
+																																				
+							2									gale_warrior																				
+							3							gale_warrior																						
+							10																			gale_warrior										
+							3																	gale_warrior												
+							10									gale_warrior																				
+							3.5							gale_warrior											gale_warrior											
+																																				
+							3																			gale_warrior										
+							2.5																	gale_warrior												
+																																				
+#	37																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 6																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	4		0	1	0			0	0	0	0															
+#	gold	370						0	0	0	120		0	100	0			0	0	0	0															
+	wave		6				38																													
+																																				
+							1								storm_elemental																					
+							8							gale_warrior																						
+							3									gale_warrior																				
+							5							gale_warrior																						
+							3									gale_warrior																				
+	wait						1																													
+	wait						1.5																													
+	wait						10																													
+	wait						3																													
+																																				
+	wait						6.5																													
+	wait						3																													
+																																				
+																																				
+#	45																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 7																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	14	0	0		0	0	12			0	0	0	0															
+#	gold	390						0	280	0	0		0	0	60			0	0	0	0															
+	wave		7				40																													
+	event	ciclone			out																															
+							2																			storm_spirit										
+							4.5																	storm_spirit												
+							5														storm_spirit															
+							4.5												storm_spirit																	
+							5.5														storm_spirit															
+							5												storm_spirit																	
+							3			citizen										storm_spirit																
+							1.5		citizen		citizen																									
+							1		citizen																											
+							1				citizen																									
+							1.5			citizen																										
+							1			citizen																										
+							1.5		citizen																											
+							1.5				citizen																									
+							1			citizen																										
+							1		citizen		citizen													storm_spirit												
+							4.5																		storm_spirit											
+							5												storm_spirit																	
+							5														storm_spirit															
+							5												storm_spirit					storm_spirit												
+							5																		storm_spirit											
+#	65																																			
+																																				
+	wait_signal	all_enemies_died					-1																													
+	event	ciclone			in																															
+	wait						1																													
+	event	ciclone	23	1	destroy_houses																															
+	wait_signal	ciclone_end					-1																													
+																																				
+																																				
+																																				
+#	WAVE 8																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	2	10		0	0	0			0	0	0	0															
+#	gold	610						0	0	130	300		0	0	0			0	0	0	0															
+	wave		8				4																													
+							1													qiongqi																
+							5								gale_warrior																					
+							3.5							gale_warrior																						
+							2.5									gale_warrior																				
+							5								gale_warrior																					
+							3.5									gale_warrior																				
+							2.5							gale_warrior																						
+							7													qiongqi																
+	event	ciclone			out																															
+	wait						5																													
+	event	boat																																		
+							17																		gale_warrior											
+							3.5																	gale_warrior												
+							2.5																			gale_warrior										
+							5																		gale_warrior											
+																																				
+																																				
+	63																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 9																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	16	0	0		0	0	0			0	0	0	0															
+#	gold	610						0	320	0	0		0	0	0			0	0	0	0															
+	wave		9				20																													
+	event	ciclone			in																															
+	wait						7																													
+	event	boat																																		
+							10													storm_spirit					storm_spirit											
+							6												storm_spirit					storm_spirit												
+							5														storm_spirit					storm_spirit										
+							15													storm_spirit					storm_spirit											
+							6														storm_spirit			storm_spirit												
+							5												storm_spirit							storm_spirit										
+							4													storm_spirit					storm_spirit											
+							5														storm_spirit															
+							4																			storm_spirit										
+																																				
+																																				
+	wait_signal	all_enemies_died					-1																													
+																																				
+	wait						1																													
+	event	ciclone		1	destroy_houses	TRUE																														
+	wait_signal	ciclone_end					-1																													
+#	59																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 10																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	7		2	0	0			0	0	0	0															
+#	gold	690						0	0	0	210		70	0	0			0	0	0	0															
+	wave		10				3																													
+							1																							water_sorceress						
+							6			gale_warrior																										
+							3.5		gale_warrior																											
+							3				gale_warrior																									
+							2.5			gale_warrior																										
+																																				
+	wait						5																													
+	event	boat																																		
+							15				gale_warrior																									
+							3		gale_warrior																											
+							2				gale_warrior																									
+							12																							water_sorceress						
+																																				
+																																				
+																																				
+#	53																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 11																																			
+#	enemies							water_spirit*	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	0		3	2	0			0	0	0	0															
+#	gold	535						0	0	0	0		105	200	0			0	0	0	0															
+	wave		11				45																													
+																																				
+							1									storm_elemental																				
+	wait						3																													
+	event	boat																																		
+							2																							water_sorceress						
+							6																													
+							13													storm_elemental																
+	wait						7																													
+							3																													
+	wait						3																													
+							6																						water_sorceress							
+							3.5																								water_sorceress					
+																																				
+	47.5																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 12																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	6	0	12		0	0	0			0	0	0	0															
+#	gold	730						0	120	0	360		0	0	0			0	0	0	0															
+	wave		12				40																													
+	event	ciclone			out																															
+	event	boat																																		
+							7								gale_warrior																					
+							3							gale_warrior		gale_warrior																				
+							3							gale_warrior		gale_warrior																				
+							7								gale_warrior																					
+							3.5							gale_warrior																						
+							3.5									gale_warrior																				
+							12								gale_warrior																					
+							5							gale_warrior		gale_warrior																				
+							4								gale_warrior										storm_spirit											
+							5																	storm_spirit												
+							6																			storm_spirit										
+							3																		storm_spirit											
+	event	boat																																		
+							4																	storm_spirit		storm_spirit										
+	66																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 13																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	11	2	0		3	0	0			0	0	0	0															
+#	gold	735						0	220	130	0		105	0	0			0	0	0	0															
+	wave		13				30																													
+	event	ciclone			in																															
+							2											storm_spirit																		
+							3											storm_spirit																		
+							4											storm_spirit																		
+							3											storm_spirit																		
+							3																							qiongqi						
+							3																												water_sorceress	
+																																				
+	wait						15																													
+							5											storm_spirit																		water_sorceress
+							4											storm_spirit																		
+							10													qiongqi																
+							6												storm_spirit																	
+							3														storm_spirit															
+							2												storm_spirit											water_sorceress						
+							2														storm_spirit															
+							3												storm_spirit																	
+	68																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 14																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	0	15		2	0	0			0	0	0	0															
+#	gold	760						0	0	0	450		70	0	0			0	0	0	0															
+	wave		14				35																													
+	event	ciclone			out																															
+							2				gale_warrior													gale_warrior		gale_warrior										
+							3		gale_warrior															gale_warrior		gale_warrior										
+	event	boat																																		
+							2																		gale_warrior											
+							10																		gale_warrior											
+							3																	gale_warrior		gale_warrior					water_sorceress					
+							2																		gale_warrior				water_sorceress							
+							12				gale_warrior																									
+	event	boat																																		
+							2		gale_warrior																											
+							2				gale_warrior																									
+							2		gale_warrior																											
+							6																													
+																																				
+																																				
+																																				
+	46																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+#	WAVE 15																																			
+#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
+#	cant.							0	0	1	6		3	0	0			0	0	0	0															
+#	gold	1320						0	0	65	180		105	0	0			0	0	0	0															
+	wave		15				35																													
+	event	ciclone			in																															
+							1																													
+							6																												water_sorceress	
+	event	boat																																		
+							18																											water_sorceress		
+							3																													water_sorceress
+	wait						3																													
+	event	boat																																		
+	wait						11.5																													
+	event	boat																																		
+							4.5																							qiongqi						
+	wait						4																													
+							1				gale_warrior																									
+							1				gale_warrior																									
+							3							gale_warrior																						
+							1							gale_warrior																						
+																																				
+	event	boat																																		
+							2																							gale_warrior						
+							1																												gale_warrior	
+																																				
+#	59																																			
+	wait_signal	all_enemies_died					-1																													
+	event	ciclone			out																															
+	wait						4																													
+#	Total Wave Intervals: 6.6 mins																																			

@@ -1,0 +1,352 @@
+#	COMANDOS					1 - De Izquierda a Derecha Arriba					2 - De Arriba a Derecha Arriba					3 - De Izquierda a Abajo					4 - De Arriba a Abajo					5 - De Spawner (mano) a Derecha Arriba					6 - De Spawner (mano) a Abajo					7 - De Ascensor Arriba a Derecha Arriba					8 - De Ascensor Abajo a Abajo					9 - De Jeringa a Abajo
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3
+#	level properties
+	description	main JC
+	lives	1
+	gold	2300
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	6658
+#	stage gold curve
+#	WAVE 1										Shielder x14										Hammerer x14																				Clones x12
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					14	14	0	0		0	0	0	0		0	0	12	0
+#	gold	630				308	322	0	0		0	0	0	0		0	0	0	0
+	wave		1		-1
+					0																darksteel_hammerer
+					1.5																darksteel_hammerer
+					1.5																darksteel_hammerer
+					1.5																darksteel_hammerer
+					2																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					4						darksteel_shielder
+					2						darksteel_shielder
+					2						darksteel_shielder
+					2						darksteel_shielder
+					3																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					3																		darksteel_hammerer
+					2																	darksteel_hammerer		darksteel_hammerer
+					2																		darksteel_hammerer
+					0
+					8							darksteel_shielder		darksteel_shielder
+					2							darksteel_shielder		darksteel_shielder
+					5																	darksteel_hammerer		darksteel_hammerer
+					2																		darksteel_hammerer
+					10																	darksteel_hammerer		darksteel_hammerer
+					2																		darksteel_hammerer
+					2																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					10							darksteel_shielder		darksteel_shielder
+					2							darksteel_shielder		darksteel_shielder
+					2							darksteel_shielder		darksteel_shielder
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2															Speedster x12
+Tinkerer x2										Fist x10
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	12	0		0	10	2	0		0	0	0	0
+#	gold	512				0	0	72	0		0	300	140	0		0	0	0	0
+#	wave		2		28
+					16																						darksteel_fist		darksteel_fist
+					2											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					3											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					1											mad_tinkerer											darksteel_fist		darksteel_fist
+					2																						darksteel_fist		darksteel_fist
+					10											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					3											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					1											mad_tinkerer											darksteel_fist		darksteel_fist
+					2																						darksteel_fist		darksteel_fist
+	wait				6
+
+
+
+
+
+#	WAVE 3																				Anvil x2										Fist x10					Clones x24
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	0	0		0	10	0	0		2	0	24	0
+#	gold	460				0	0	0	0		0	300	0	0		160	0	0	0
+#	wave		3		30
+					20																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					3																												darksteel_fist
+					2																											darksteel_fist		darksteel_fist
+					4																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					3																		darksteel_anvil
+					10																											darksteel_fist		darksteel_fist
+					2																											darksteel_fist		darksteel_fist
+					3																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																												darksteel_fist			common_clone
+					2																											darksteel_fist		darksteel_fist
+					4																		darksteel_anvil													common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+
+
+#	WAVE 4					Hulk x1					Hammerer x12
+Welder x2
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					12	0	0	0		2	0	0	0		0	1	0	0
+#	gold	704				264	0	0	0		240	0	0	0		0	200	0	0
+#	wave		4		25
+					0			darksteel_hulk
+					6								brute_welder
+					4							darksteel_hammerer
+					2									darksteel_hammerer
+					2							darksteel_hammerer
+					4									darksteel_hammerer
+					2							darksteel_hammerer
+					2									darksteel_hammerer
+
+					24								brute_welder
+					4							darksteel_hammerer
+					2									darksteel_hammerer
+					2							darksteel_hammerer
+					4									darksteel_hammerer
+					2							darksteel_hammerer
+					2									darksteel_hammerer
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5					Sentry x4																									Fist x8															Hulk x1
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	0	4		0	8	0	0		0	0	12	0
+#	gold	340				0	0	0	100		0	240	0	0		0	0	0	0
+#	wave		5		25
+	wait				17
+					2																											darksteel_fist		darksteel_fist
+					2																											darksteel_fist		darksteel_fist
+					8	surveillance_sentry
+					6	surveillance_sentry
+					10																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					2																											darksteel_fist		darksteel_fist
+					2																											darksteel_fist		darksteel_fist
+					8	surveillance_sentry
+					4	surveillance_sentry
+					12																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6															Speedster x12
+Tinkerer x2					Welder x4																				Clones x12
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	12	0		4	0	2	0		0	0	12	0
+#	gold	692				0	0	72	0		480	0	140	0		0	0	0	0
+#	wave		6		15
+					10																brute_welder
+					4																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					2											scrap_speedster					brute_welder
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					0.5											mad_tinkerer
+					12																brute_welder
+					8																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					2											scrap_speedster					brute_welder
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					0.5											mad_tinkerer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 7					Sentry x4					Anvil x4																									Clones x24					Clones x24
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+#	wave		7		15
+					20																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0
+					4																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0
+					4																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																															common_clone					common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+					0.6																																				common_clone
+
+
+
+
+
+
+
+
+
+
+#	WAVE 8										Hammerer x12					Hammerer x18										Fist x12																				Hulk x2
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian
+#	cant.					30	0	0	0		0	12	0	0		0	0	0	0
+#	gold	1020				660	0	0	0		0	360	0	0		0	0	0	0
+#	wave		8		15
+					0												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer			darksteel_hammerer		darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					4																						darksteel_fist		darksteel_fist
+					2																						darksteel_fist		darksteel_fist
+					8												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+	wait				20
+					0												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+					0							darksteel_hammerer		darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					6																						darksteel_fist		darksteel_fist
+					2																						darksteel_fist		darksteel_fist
+					4							darksteel_hammerer		darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					6																						darksteel_fist		darksteel_fist
+					2																						darksteel_fist		darksteel_fist
+	wait				10

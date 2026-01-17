@@ -1,0 +1,178 @@
+#	COMANDOS					1					2					3					4					5					6					7					8					9					10					11					12					13			
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3		12:*	12:2	12:1	12:3		13:*	13:2	13:1	13:3
+#	level properties																																																																				
+	description	rodri																																																																			
+	lives	1																																																																			
+	gold	2900																																																																			
+	gems	150																																																																			
+	enemy_prefix	enemy_																																																																			
+	default_increment	1																																																																			
+	default_interval	20																																																																			
+#	expected gold																																																																				
+#	stage total gold	5208																																																																			
+#	stage gold curve																																																																				
+#	WAVE 1																																																																				
+#	enemies					water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen	fan_guard		palace_guard																																																					
+#	cant.					0	0	0	6		0	0	0	0		44																																																					
+#	gold	444				0	0	0	180		0	0	0	0		264																																																					
+	wave		1		-1																																																																
+					1																																	palace_guard																															
+					2																			palace_guard														palace_guard																															
+					1.5																	palace_guard																																															
+					0.5																			palace_guard														palace_guard																															
+					1.5																	palace_guard																																															
+					0.5																			palace_guard														palace_guard																															
+					1.5																	palace_guard																																															
+					0.5																			palace_guard														palace_guard																															
+					1.5																	palace_guard																																															
+					0.5																			palace_guard																																													
+					1.5																	palace_guard																																															
+					4.5																																						palace_guard																										
+					2																								palace_guard														palace_guard																										
+					1.5																						palace_guard																																										
+					0.5																								palace_guard														palace_guard																										
+					1.5																						palace_guard																																										
+					0.5																								palace_guard														palace_guard																										
+					1.5																						palace_guard																																										
+					0.5																								palace_guard														palace_guard																										
+					1.5																						palace_guard																																										
+					0.5																								palace_guard																																								
+					1.5			gale_warrior																			palace_guard																																										
+					1.5				gale_warrior																																																												
+					1.5		gale_warrior																																																														
+					5																												palace_guard																																				
+					2														palace_guard														palace_guard																																				
+					1.5												palace_guard																																																				
+					0.5														palace_guard														palace_guard																																				
+					1.5												palace_guard																																																				
+					0.5														palace_guard														palace_guard																																				
+					1.5												palace_guard																																																				
+					0.5														palace_guard														palace_guard																																				
+					1.5												palace_guard																																																				
+					0.5														palace_guard																																																		
+					1.5								gale_warrior				palace_guard																																																				
+					1.5									gale_warrior																																																							
+					1.5							gale_warrior																																																									
+#	51																																																																				
+#	WAVE 2																																																																				
+#	enemies					water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen	fan_guard		palace_guard																																																					
+#	cant.					0	0	0	10		0	4	0	0		0																																																					
+#	gold	800				0	0	0	300		0	400	0	0		0																																																					
+#	wave		2																																																																		
+					16									storm_elemental																																																							
+					6							storm_elemental																										gale_warrior																															
+	call_manual_wave	wspawner_p2a																																																																			
+					16		storm_elemental																																																														
+					6				storm_elemental																													gale_warrior																															
+	call_manual_wave	wspawner_p2a																																																																			
+					12																			gale_warrior																																													
+					1.5																	gale_warrior																																															
+					3.5																			gale_warrior																																													
+					1.5																	gale_warrior																																															
+					5																			gale_warrior																																													
+					1.5																	gale_warrior																																															
+					3.5																			gale_warrior																																													
+					1.5																	gale_warrior																																															
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+#	74																																																																				
+																																																																					
+																																																																					
+																																																																					
+#	WAVE 3																																																																				
+#	enemies					water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen	fan_guard		palace_guard																																																					
+#	cant.					0	0	0	11		2	0	0	10		14																																																					
+#	gold	1064				0	0	0	330		70	0	0	450		84																																																					
+#	wave		3																																																																		
+					14							fan_guard											gale_warrior																																														
+					2									fan_guard																																																							
+					1																																palace_guard		palace_guard																														
+					3																		gale_warrior														palace_guard		palace_guard																														
+					3																																palace_guard		palace_guard																														
+					3								water_sorceress										gale_warrior																																														
+					6							fan_guard											gale_warrior																																														
+					2									fan_guard																																																							
+					1																																palace_guard		palace_guard																														
+					3																		gale_warrior														palace_guard		palace_guard																														
+					3																																palace_guard		palace_guard																														
+					3								water_sorceress										gale_warrior														palace_guard		palace_guard																														
+					15			fan_guard																																																													
+					4																		gale_warrior																																														
+					4			fan_guard																																																													
+	call_manual_wave	wspawner_p3a																					gale_warrior																																														
+					4																		gale_warrior																																														
+					4			fan_guard																																																													
+					4									fan_guard									gale_warrior																																														
+					4			fan_guard				fan_guard											gale_warrior																																														
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+#	83																																																																				
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+#	MANUAL WAVES																																																																				
+	manual_wave	wspawner_p2a																																																																			
+					1																																																										water_spirit_spawnless						
+					1.5																																																									water_spirit_spawnless							
+					1.5																																																											water_spirit_spawnless					
+					3																																																										water_spirit_spawnless						
+					1.5																																																									water_spirit_spawnless							
+					1.5																																																											water_spirit_spawnless					
+					3																																																										water_spirit_spawnless						
+					1.5																																																									water_spirit_spawnless							
+					1.5																																																											water_spirit_spawnless					
+					1.5																																																										water_spirit_spawnless						
+#	17																																																																				
+																																																																					
+	manual_wave	wspawner_p2b																																																																			
+					1																																											water_spirit_spawnless																					
+					1.5																																										water_spirit_spawnless																						
+					1.5																																												water_spirit_spawnless																				
+					3																																											water_spirit_spawnless																					
+					1.5																																										water_spirit_spawnless																						
+					1.5																																												water_spirit_spawnless																				
+					3																																											water_spirit_spawnless																					
+					1.5																																										water_spirit_spawnless																						
+					1.5																																												water_spirit_spawnless																				
+					1.5																																											water_spirit_spawnless																					
+#	17																																																																				
+																																																																					
+	manual_wave	wspawner_p3a																																																																			
+					1																																										water_spirit_spawnless																						
+					2																																										water_spirit_spawnless																						
+					3																																												water_spirit_spawnless																				
+					2																																												water_spirit_spawnless																				
+					3																																										water_spirit_spawnless																						
+					2																																										water_spirit_spawnless																						
+					6																																												water_spirit_spawnless																				
+					2																																												water_spirit_spawnless																				
+					2																																										water_spirit_spawnless		water_spirit_spawnless																				
+					2																																										water_spirit_spawnless		water_spirit_spawnless																				
+					3																																																										water_spirit_spawnless						
+					1																																																										water_spirit_spawnless						
+	wait				1																																																																
+					1																																																										water_spirit_spawnless						
+					1																																																										water_spirit_spawnless						
+	wait				1																																																																
+					1																																																										water_spirit_spawnless						
+					1																																																										water_spirit_spawnless						
+	wait				1																																																																
+					1																																																										water_spirit_spawnless						
+					1																																																										water_spirit_spawnless						
+					1																																																										water_spirit_spawnless						
+																																																																					
+																																																																					
+																																																																					
+																																																																					
+#	29																																																																				

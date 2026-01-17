@@ -1,0 +1,1112 @@
+#	COMANDOS					1					2					3					4					5					6					7					8
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3
+#	level properties
+	description	main K1000
+	lives	20
+	gold	950
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	950
+#	stage gold curve
+#	WAVE 1
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spided
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		1		-1
+					1		ballooning_spider
+					2				ballooning_spider
+					2		ballooning_spider
+					13																							ballooning_spider
+					1.3																						ballooning_spider		ballooning_spider
+					7.3																						ballooning_spider		ballooning_spider
+					0.4		ballooning_spider		ballooning_spider
+					1.8			ballooning_spider
+					13.33
+
+
+
+
+#	WAVE 2
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spided
+#	cant.					0							0	0		0	0	0	0
+#	gold	0				0							0	0		0	0	0	0
+	wave		2		13.33
+					1																						spiderling
+					1																								spiderling
+					1																						spiderling
+					1																								spiderling
+					1																						spiderling
+#
+					8.77																							spiderling
+					1.17																						spiderling		spiderling
+#
+					8.77																							spiderling
+					1.17																						spiderling		spiderling
+#
+					10.6																						spiderling
+					1																								spiderling
+					1																						spiderling
+					1																								spiderling
+					1																						spiderling
+					1																								spiderling
+					1																						spiderling
+					1																								spiderling
+					13.33
+
+#	WAVE 3
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		3		13.33
+					1		ballooning_spider
+					1.333									ballooning_spider
+					1.333		ballooning_spider
+					1.333									ballooning_spider
+					1.333		ballooning_spider
+					1.333									ballooning_spider
+#
+					23.6				ballooning_spider
+					1.333							ballooning_spider
+					1.333				ballooning_spider
+					1.333							ballooning_spider
+					1.333				ballooning_spider
+					1.333							ballooning_spider
+					15
+
+
+
+
+#	WAVE 4
+#	enemies				15	spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		4		15
+					7				spiderling
+					2.6666																						spiderling
+					7.33		spiderling
+					2.6666																								spiderling
+					21				spiderling
+					1		spiderling
+					1.66																						spiderling
+					1																								spiderling
+					33.33
+
+#	WAVE 5
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		5		33.33
+					1			spidead
+					4																							spidead
+					6			spidead
+					4																							spidead
+					18.33																																	cultbrood
+					1.66		spidead																																				cultbrood
+					1.66																																	cultbrood
+					1.66				spidead																																		cultbrood
+					1																								spidead
+					3.33																						spidead
+					19.33																																						cultbrood
+					1.33																																	cultbrood
+					1.33																																						cultbrood
+					1.33																																	cultbrood
+					15
+
+#	WAVE 6
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		6		20
+					1																							spidead
+					2.66																						spidead		spidead
+					10																							spider_priest
+					3		spider_priest		spider_priest
+					8.33			spidead
+					2.66			spidead
+					2			spidead
+					9.33																								spidead
+					1.66																						spidead
+					1.66																								spidead
+					1.66																						spidead
+					7.33																						spider_priest
+					2.66																								spider_priest
+					3			spidead
+					2.66		spidead		spidead
+					7.33		spider_priest		spider_priest
+					2.66			spider_priest
+					20
+
+
+
+
+#	WAVE 7
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		7		20
+					1			spider_sister
+					20		spider_sister		spider_sister
+					2.33													drainbrood
+					23.33													drainbrood
+					10		spider_sister		spider_sister
+
+
+
+
+
+
+
+
+					28.3
+
+#	WAVE 8
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		8		33
+					1																												drainbrood
+					2.66																											drainbrood		drainbrood
+					3																						spider_sister
+					8.33			spider_sister
+					10																											drainbrood		drainbrood
+					4																							spider_sister
+					5.66			spider_sister
+					13.66																											drainbrood		drainbrood
+
+
+
+
+
+
+					25
+
+
+
+
+
+#	WAVE 9
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		9		25
+					1				ballooning_spider
+					1.33		ballooning_spider
+					1.33				ballooning_spider
+					1.33		ballooning_spider
+					6.66																						ballooning_spider
+					1.33																								ballooning_spider
+					1.33																						ballooning_spider
+					1.33																								ballooning_spider
+					6																																	cultbrood
+					1.33																																						cultbrood
+					1.33																																	cultbrood
+					1.33																																						cultbrood
+					2.66		ballooning_spider
+					1.33				ballooning_spider
+					1.33		ballooning_spider
+					1.33				ballooning_spider
+					5.66																								ballooning_spider
+					1.33																						ballooning_spider
+					1.33																								ballooning_spider
+					1.33																						ballooning_spider
+					6																																						cultbrood
+					1.33																																	cultbrood
+					1.33																																						cultbrood
+					1.33																																	cultbrood
+					11.66
+
+
+#	WAVE 10
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		10		11.66
+					3														spidead
+					1.66												spidead
+					1.66														spidead
+					1.66												spidead
+					8																											spidead
+					1.66																													spidead
+					1.66																											spidead
+					1.66																													spidead
+					10.33														spidead
+					1.66												spidead
+					1.66														spidead
+					1.66												spidead
+					8																											spidead
+					1.66																													spidead
+					1.66																											spidead
+					1.66																													spidead
+					30
+
+#	WAVE 11
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		11		30
+					1			ballooning_spider
+					1		ballooning_spider
+					1				ballooning_spider
+					1		ballooning_spider
+					1				ballooning_spider
+					2																							ballooning_spider
+					1																								ballooning_spider
+					1																						ballooning_spider
+					1																								ballooning_spider
+					1																						ballooning_spider
+					0.333																																spiderling
+					1																																							spiderling
+					1																																spiderling
+					1																																							spiderling
+					1																																spiderling
+					1																																							spiderling
+					1																																spiderling
+					1																																							spiderling
+					1																																spiderling
+					1																																							spiderling
+					4.33								ballooning_spider
+					1							ballooning_spider
+					1									ballooning_spider
+					1							ballooning_spider
+					1									ballooning_spider
+					11.6																							ballooning_spider
+					1																								ballooning_spider
+					1																						ballooning_spider
+					1																								ballooning_spider
+					1																						ballooning_spider
+					1.33																																spiderling
+					0.66																																							spiderling
+					0.66																																spiderling
+					0.66																																							spiderling
+					0.66																																spiderling
+					0.66																																							spiderling
+					0.66																																spiderling
+					0.66																																							spiderling
+					0.66																																spiderling
+					0.66																																							spiderling
+					2.66				ballooning_spider
+					1
+					1		ballooning_spider																				ballooning_spider
+					1
+					1				ballooning_spider																				ballooning_spider
+					1
+					1		ballooning_spider																				ballooning_spider
+					1
+					1				ballooning_spider																				ballooning_spider
+					1
+					5		ballooning_spider																				ballooning_spider
+					1
+					1				ballooning_spider																				ballooning_spider
+					1																						ballooning_spider
+					1		ballooning_spider
+					1																								ballooning_spider
+					1				ballooning_spider
+					1																						ballooning_spider
+
+
+					13.33
+
+
+
+
+
+#	WAVE 12
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		12		15
+					2		spider_sister		spider_sister
+					6.33																						spider_sister		spider_sister
+					15								ballooning_spider
+					1.33							ballooning_spider
+					1.33									ballooning_spider
+					1.33							ballooning_spider
+					1.33									ballooning_spider
+					4.66			ballooning_spider
+					1.33				ballooning_spider
+					1.33		ballooning_spider
+					1.33				ballooning_spider
+					1.33		ballooning_spider
+					3.33		spider_sister
+					6.33																								spider_sister
+
+					25
+
+
+
+
+
+
+
+
+
+#	WAVE 13
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		13		25
+					1			spidead																															cultbrood			cultbrood
+					2			spidead
+					0.66																																		cultbrood			cultbrood
+					1.33																							spidead
+					2																							spidead
+					11.5																																		cultbrood			cultbrood
+					2.166																																		cultbrood			cultbrood
+					1.833			spidead
+					0.33																																		cultbrood			cultbrood
+					1.33			spidead
+					0.33																							spidead
+
+					1.366			spidead
+					0.33																							spidead
+
+					1.33			spidead
+					0.33																							spidead
+					1.66																							spidead
+					14.66																																		cultbrood			cultbrood
+					2.166																																		cultbrood			cultbrood
+					2.166																																		cultbrood			cultbrood
+					2.166																																		cultbrood			cultbrood
+					2.166
+
+
+
+
+
+#	WAVE 14
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_spider		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		14		15
+					1																								ballooning_spider
+					1.33																						ballooning_spider
+					1.33																								ballooning_spider
+					1.33																						ballooning_spider
+					1																												drainbrood
+				6.32	0.33																								ballooning_spider
+					1.33																						ballooning_spider
+				8.98	1.33																								ballooning_spider			drainbrood		drainbrood
+					0.33			drainbrood
+					1																						ballooning_spider
+					2		drainbrood		drainbrood
+					4.33												drainbrood		drainbrood
+					7.33			drainbrood
+					8																						drainbrood		drainbrood
+					2.66																						drainbrood		drainbrood
+					2												drainbrood		drainbrood
+					5.66																												drainbrood
+					5				ballooning_spider
+					0.833		ballooning_spider
+					0.833				ballooning_spider
+					0.833		ballooning_spider
+					0.833				ballooning_spider
+					0.833		ballooning_spider
+					0.833				ballooning_spider
+					0.833		ballooning_spider
+
+
+
+
+#	WAVE 15
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarewarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		15		20
+					1																																	spiderling
+					0.866																																spiderling
+					0.866																																		spiderling
+					0.866																																spiderling
+					0.866																																		spiderling
+					3.66																							spiderling
+					0.866																						spiderling
+					0.866																								spiderling
+					0.866																						spiderling
+					0.866																								spiderling
+					6																																						spiderling
+					0.866																																					spiderling
+					0.866																																							spiderling
+					0.866																																					spiderling
+					0.866																																							spiderling
+					4.66																							spiderling
+					0.866																								spiderling
+					0.866																						spiderling
+					0.866																								spiderling
+					0.866																						spiderling
+					10			spiderling
+					0.866		spiderling
+					0.866				spiderling
+					0.866		spiderling
+					0.866				spiderling
+					1			spiderling
+					0.866				spiderling
+					0.866		spiderling
+					0.866				spiderling
+					0.866		spiderling
+					4																																		spiderling
+					0.433																																					spiderling
+					0.433																																		spiderling
+					0.433																																					spiderling
+					0.433																																		spiderling
+					0.433																																					spiderling
+					0.433																																		spiderling
+					0.433																																					spiderling
+					0.433																																		spiderling
+					0.433																																					spiderling
+#	WAVE BOSS
+#	enemies					spiderling	spider_priest	ballooning_spider	spider_sister		glarenwarden	drainbrood	cultbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	manual_wave	BOSS1
+					3												cultbrood
+					1.5														cultbrood
+					1.5												cultbrood
+					1.5
+
+					8								spiderling
+					0.4									spiderling
+					0.4							spiderling
+					0.4									spiderling
+					0.4							spiderling
+					0.4									spiderling
+					0.4							spiderling
+					0.4									spiderling
+					0.4							spiderling
+					0.4									spiderling
+					0.4							spiderling
+					0.4									spiderling
+
+					2														cultbrood
+					1.5												cultbrood
+					1.5														cultbrood
+					1.5												cultbrood
+					1.5														cultbrood
+
+					12
+					1
+					1
+					1
+
+					16		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+
+					1
+					1
+					1
+					1
+
+					3		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+
+
+
+
+
+
+
+
+					11																						glarenwarden		glarenwarden
+
+					13		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+																											spidead
+					1																								spidead
+					1
+					1														cultbrood
+				75.9	1												cultbrood
+
+
+
+					12				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+
+
+					5														cultbrood								spidead
+					1												cultbrood												spidead
+					1																						spidead
+					1
+					1
+
+					5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+
+					1
+					1																						spidead
+					1																								spidead
+					1
+
+					1
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+
+					10												cultbrood		cultbrood								glarenwarden
+					5																								glarenwarden
+					3		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+					0.5		spiderling
+					0.5									spiderling
+
+					1												cultbrood
+					1														cultbrood
+					1												cultbrood
+					1
+
+					5																								spidead
+					0.5																						spidead
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+
+					5
+
+					10
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					12														cultbrood								spidead
+					1												cultbrood												spidead
+					1
+					1
+
+
+					5				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+
+					5												cultbrood												spidead
+					1														cultbrood								spidead
+					1
+					1
+
+					5
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4																						glarenwarden		glarenwarden
+					0.4
+					0.4
+					0.4
+					0.4
+
+					10		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+
+					1														cultbrood								spidead
+					1												cultbrood												spidead
+					1
+					1
+
+					7
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					13
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					7												cultbrood												spidead
+					1														cultbrood								spidead
+					1
+					1
+
+					5				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					6
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					10														cultbrood								spidead
+					1												cultbrood												spidead
+					1														cultbrood								spidead
+					1																								spidead
+
+					5				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					1												cultbrood
+					1														cultbrood
+					1
+					1
+
+					8																								spidead
+					0.5																						spidead
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+
+					8
+
+					10
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					12														cultbrood								spidead
+					1												cultbrood												spidead
+					1
+					1
+
+
+					8				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					8
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+
+					8												cultbrood												spidead
+					1														cultbrood								spidead
+					1
+					1
+
+					8
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					10		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+
+					1														cultbrood								spidead
+					1												cultbrood												spidead
+					1
+					1
+
+					8
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					13
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					8												cultbrood												spidead
+					1														cultbrood								spidead
+					1
+					1
+
+					8				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					6
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					10														cultbrood								spidead
+					1												cultbrood												spidead
+					1																						spidead
+					1																								spidead
+
+					8				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					1												cultbrood
+					1														cultbrood
+					1
+					1
+
+					8																								spidead
+					0.5																						spidead
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+					0.5
+
+					8
+
+					10
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					12														cultbrood								spidead
+					1												cultbrood												spidead
+					1
+					1
+
+
+					8				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					8
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+
+					8												cultbrood												spidead
+					1														cultbrood								spidead
+					1
+					1
+
+					8
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					10		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+					0.4		spiderling
+					0.4									spiderling
+
+					1														cultbrood								spidead
+					1												cultbrood												spidead
+					1
+					1
+
+					7
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					13
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					7												cultbrood												spidead
+					1														cultbrood								spidead
+					1
+					1
+
+					5				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+
+					6
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+					0.4
+
+					10														cultbrood								spidead
+					1												cultbrood												spidead
+					1																						spidead
+					1																								spidead
+
+					5				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling
+					0.4				spiderling
+					0.4							spiderling

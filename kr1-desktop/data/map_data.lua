@@ -2064,6 +2064,285 @@ return {
 				level = 5
 			},
 			iron = {"archers", "artillery"}
+		}, --5代
+		[101] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+		},
+		[102] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[103] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[104] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[105] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[106] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[107] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[108] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[109] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[110] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[111] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[112] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[113] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[114] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[115] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[116] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[117] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[118] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[119] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[120] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[121] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[122] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[123] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[124] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[125] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[126] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[127] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[128] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[129] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[130] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[131] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[132] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[133] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[134] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[135] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
 		},
 		-- 额外
 		[1001] = {
@@ -5863,6 +6142,8 @@ return {
 			}
 		}
 	},
+	map_animations5 = {},
+
 	map_decos = {
 		[1] = {
 			{
@@ -6199,6 +6480,7 @@ return {
 			fns = {
 				unlock = deco_fn.md_ft_mountain.unlock
 			}
-		}}
+		}},
+		[5] = {}
 	}
 }

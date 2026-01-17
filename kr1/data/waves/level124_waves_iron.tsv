@@ -1,0 +1,308 @@
+#	COMANDOS					1 - Izquierda a Derecha Arriba					2 - Arriba a Derecha Arriba					3 - Abajo a Derecha Abajo					4 - Izquierda a Derecha Abajo					5 - Furnace a Derecha Abajo					6 - Furnace a Derecha Arriba
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties
+	description	main JC
+	lives	1
+	gold	1900
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	5478
+#	stage gold curve
+#	WAVE 1															Hammerer x8
+Welder x1										Sentry x6
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					12	0	0	0		1	0	0	0		0	0	0	0		6
+#	gold	534				264	0	0	0		120	0	0	0		0	0	0	0		150
+	wave		1		-1
+					0												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+					12													brute_welder								rolling_sentry
+					4																					rolling_sentry
+					4																					rolling_sentry
+					4												darksteel_hammerer		darksteel_hammerer
+					2												darksteel_hammerer		darksteel_hammerer
+					4																					rolling_sentry
+					4												darksteel_hammerer		darksteel_hammerer							rolling_sentry
+					4												darksteel_hammerer		darksteel_hammerer							rolling_sentry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2					Speedster x12
+Tinkerer x3					Hammerer x8
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					10	0	12	0		0	0	2	0		0	0	0	0		0
+#	gold	432				220	0	72	0		0	0	140	0		0	0	0	0		0
+#	wave		2		30
+					15						darksteel_hammerer
+					2						darksteel_hammerer
+					2						darksteel_hammerer
+					2						darksteel_hammerer
+					2						darksteel_hammerer
+					6	mad_tinkerer
+					0.6	scrap_speedster
+					0.6	scrap_speedster
+					0.6	scrap_speedster
+					3	scrap_speedster
+					0.6	scrap_speedster
+					0.6	scrap_speedster
+					0						darksteel_hammerer
+					2						darksteel_hammerer
+					2						darksteel_hammerer
+					2						darksteel_hammerer
+					2						darksteel_hammerer
+					8	mad_tinkerer
+
+					0.6	scrap_speedster
+					0.6	scrap_speedster
+					0.6	scrap_speedster
+					3	scrap_speedster
+					0.6	scrap_speedster
+					0.6	scrap_speedster
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 3										Shielder x8
+Welder x2																				Sentry x6
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					8	0	0	0		2	0	0	0		0	0	0	0		4
+#	gold	516				176	0	0	0		240	0	0	0		0	0	0	0		100
+#	wave		3		34
+					16								brute_welder
+					4							darksteel_hammerer		darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					12
+					2																										rolling_sentry
+					4
+					4																										rolling_sentry
+					10								brute_welder
+					4							darksteel_hammerer		darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					12
+					2																										rolling_sentry
+					4
+					4																										rolling_sentry
+
+
+
+
+
+
+#	WAVE 4										Hammerer x10										Hammerer x12
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					22	0	0	0		0	0	0	0		0	0	0	0		0
+#	gold	484				484	0	0	0		0	0	0	0		0	0	0	0		0
+#	wave		4		30
+					12						darksteel_hammerer
+					2						darksteel_hammerer												darksteel_hammerer
+					3						darksteel_hammerer											darksteel_hammerer		darksteel_hammerer
+					3						darksteel_hammerer												darksteel_hammerer
+					2						darksteel_hammerer
+
+
+					10																	darksteel_hammerer		darksteel_hammerer
+					3																	darksteel_hammerer		darksteel_hammerer
+					8						darksteel_hammerer
+					2						darksteel_hammerer												darksteel_hammerer
+					3						darksteel_hammerer											darksteel_hammerer		darksteel_hammerer
+					3						darksteel_hammerer												darksteel_hammerer
+					2						darksteel_hammerer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5															Speedster x12					Speedster x12
+Tinkerer x2					Sentry x8
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					0	0	24	0		0	0	2	0		0	0	0	0		8
+#	gold	484				0	0	144	0		0	0	140	0		0	0	0	0		200
+#	wave		5		28
+					30																		mad_tinkerer			rolling_sentry
+					0.6											scrap_speedster						scrap_speedster
+					0.6											scrap_speedster								scrap_speedster
+					0.6											scrap_speedster						scrap_speedster
+					0.6											scrap_speedster
+					3																			scrap_speedster
+					0.6																	scrap_speedster
+					0.6																			scrap_speedster		rolling_sentry
+					6																					rolling_sentry
+					6											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster
+					6																		mad_tinkerer			rolling_sentry
+					0.6																	scrap_speedster
+					0.6																			scrap_speedster
+					0.6																	scrap_speedster
+					3																			scrap_speedster
+					0.6																	scrap_speedster
+					0.6																			scrap_speedster		rolling_sentry
+					4																					rolling_sentry
+					6											scrap_speedster
+					0.6											scrap_speedster
+					0.6											scrap_speedster										rolling_sentry
+					0.6											scrap_speedster
+					3																					rolling_sentry
+
+
+
+
+
+
+
+
+#	WAVE 6										Hammerer x12
+Shielder x6																				Sentry x6
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					12	6	0	0		0	0	0	0		0	0	0	0		6
+#	gold	552				264	138	0	0		0	0	0	0		0	0	0	0		150
+#	wave		6		25
+					5							darksteel_shielder		darksteel_shielder																	rolling_sentry
+					6								darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					2								darksteel_hammerer																		rolling_sentry
+
+					18							darksteel_shielder		darksteel_shielder																	rolling_sentry
+					6								darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					2								darksteel_hammerer																		rolling_sentry
+					2							darksteel_shielder		darksteel_shielder
+
+					18								darksteel_hammerer
+					2							darksteel_hammerer		darksteel_hammerer
+					2								darksteel_hammerer																		rolling_sentry
+					4																										rolling_sentry
+
+
+
+
+
+#	WAVE 7					Speedster x8
+Tinkerer x2										Speedster x8
+Tinkerer x2										Sentry x6					Sentry x6
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					0	0	16	0		0	0	4	0		0	0	0	0		8
+#	gold	576				0	0	96	0		0	0	280	0		0	0	0	0		200
+#	wave		7		25
+					20			mad_tinkerer																		rolling_sentry
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					0.6		scrap_speedster
+					0.6				scrap_speedster																	rolling_sentry
+
+					12													mad_tinkerer													rolling_sentry
+					0.6												scrap_speedster
+					0.6														scrap_speedster
+					0.6												scrap_speedster
+					0.6														scrap_speedster												rolling_sentry
+
+					12			mad_tinkerer																		rolling_sentry
+					0.6		scrap_speedster
+					0.6				scrap_speedster
+					0.6		scrap_speedster
+					0.6				scrap_speedster																	rolling_sentry
+
+					12													mad_tinkerer													rolling_sentry
+					0.6												scrap_speedster
+					0.6														scrap_speedster
+					0.6												scrap_speedster
+					0.6														scrap_speedster												rolling_sentry
+
+
+
+
+
+
+
+#	WAVE 8										Hammerer x16
+Welder x4					Speedster x16					Speedster x20
+Tinkerer x4
+#	enemies					darksteel_hammerer	darksteel_shielder	scrap_speedster	surveillance_sentry		brute_welder	darksteel_fist	mad_tinkerer	scrap_drone		darksteel_anvil	darksteel_hulk	common_clone	darksteel_guardian		rolling_sentry
+#	cant.					16	0	32	0		4	0	4	0		0	0	0	0		0
+#	gold	1304				352	0	192	0		480	0	280	0		0	0	0	0		0
+#	wave		8		25
+					8						brute_welder
+					6						brute_welder
+					12							darksteel_hammerer		darksteel_hammerer		scrap_speedster					mad_tinkerer
+					0.6											scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+					0.6							darksteel_hammerer		darksteel_hammerer		scrap_speedster					scrap_speedster
+																					scrap_speedster
+
+					7							darksteel_hammerer		darksteel_hammerer							mad_tinkerer
+					0.6											scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+					0.6							darksteel_hammerer		darksteel_hammerer		scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+
+					9						brute_welder										mad_tinkerer
+					8						brute_welder										mad_tinkerer
+					6											scrap_speedster					scrap_speedster
+					0.6							darksteel_hammerer		darksteel_hammerer		scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+					0.6							darksteel_hammerer		darksteel_hammerer
+					5							darksteel_hammerer		darksteel_hammerer		scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+					0.6											scrap_speedster					scrap_speedster
+					0.6							darksteel_hammerer		darksteel_hammerer		scrap_speedster					scrap_speedster

@@ -1,0 +1,218 @@
+#	COMANDOS					1					2					3					4					5					6					7					8
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3
+#	level properties
+	description	main rodri
+	lives	1
+	gold	1900
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	1900
+#	stage gold curve
+#	WAVE 1					Glarebrood x5
+Drainbrood x1
+Deathbrood x1					Glarebrood x3
+Deathbrood x1															Glarebrood x6
+Drainbrood x1
+Deadbrood x2											Glarebrood x3
+Drainbrood x1					Glarebrood x3
+Drainbrood x1
+#	enemies
+#	cant.															0	0	0	0
+#	gold	0														0	0	0	0
+	wave		1		-1
+					2			spiderling
+					1		spiderling
+					1				spiderling																			spiderling
+					1																						spiderling
+					1																								spiderling
+					2			drainbrood
+					2																							drainbrood
+#
+					5								spiderling
+					1							spiderling
+					1									spiderling														spiderling
+					1																						spiderling
+					1								spidead																spiderling
+	wait				3
+					2
+					2																							spidead
+					7		spiderling		spiderling
+					2			spidead
+					2																							spidead
+	wait				8
+					0																																	spiderling					spiderling
+					1.5																																spiderling					spiderling
+					1.5																																		spiderling					spiderling
+					1.5																																	drainbrood					drainbrood
+	wait				2
+#	WAVE 2					Drainbrood x2					Ballooning x7
+Drainbrood x1															Ballooning x5
+Drainbrood x3															Ballooning x5
+#	enemies
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		2		25
+					0								ballooning_spider
+					2							ballooning_spider															ballooning_spider
+					2									ballooning_spider															ballooning_spider
+	wait				9
+					2							ballooning_spider																ballooning_spider
+					2									ballooning_spider													ballooning_spider
+					2																								ballooning_spider
+					3								drainbrood
+					5			drainbrood
+					2
+					4																								drainbrood
+					3																						drainbrood
+	wait				5
+					2							ballooning_spider
+					2									ballooning_spider
+					3			drainbrood
+					3																							drainbrood
+					8																																							ballooning_spider
+					2																																					ballooning_spider
+					2																																						ballooning_spider
+					2																																							ballooning_spider
+					2																																					ballooning_spider
+					1.5
+	wait				2
+#	WAVE 3					Drainbrood x2					Ballooning x6															Ballooning x5
+Drainbrood x1
+Glarewarden x1										Glarewarden x2
+Drainbrood x1					Glarewarden x2
+Drainbrood x1
+#	enemies
+#	cant.					0	0		0		0	0		0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
+	wave		3		15
+					0																																		glarenwarden			glarenwarden
+	wait				7
+					1							ballooning_spider															ballooning_spider
+					2									ballooning_spider															ballooning_spider
+					2								ballooning_spider															ballooning_spider
+	wait				5
+					1								ballooning_spider
+					2									ballooning_spider
+					2							ballooning_spider
+					2																								ballooning_spider
+					2																						ballooning_spider
+					5				drainbrood																				glarenwarden
+					5		drainbrood																				drainbrood
+					10																																	drainbrood
+					2.5																																						drainbrood
+					2.5																																	glarenwarden
+					2.5																																						glarenwarden
+	wait				2
+#	WAVE 4										Glarebrood x5
+Cultbrood x2															Glarebrood x5
+Deathbrood x4
+Cultbrood x2					Glarebrood x3
+Deathbrood x3					Glarebrood x5
+Cultbrood x1
+Deathbrood x5
+#	enemies
+#	cant.
+#	gold	0
+	wave		4		22
+					1																							spiderling
+					1																						spiderling
+					1																								spiderling
+					1								spiderling														spiderling
+					1							spiderling																	spiderling
+					1									spiderling
+					1							spiderling
+					1									spiderling
+					12																												spiderling
+					1																											spiderling
+					1																													spiderling
+					3																											spidead
+					2																													spidead
+					2									cultbrood																			spidead
+					2							cultbrood
+					3																						spidead
+					3																								spidead
+					9																																	spiderling
+					1																																		spiderling
+					1																																spiderling
+					1																																		spiderling
+					1																																spiderling
+					1																																	cultbrood
+					3																																spidead		spidead
+					3																						cultbrood
+					2																								cultbrood
+					2																						spidead
+					2																								spidead
+
+
+#	WAVE 5					SSister x2
+SPriest x2										Glarebrood x5
+Deathbrood x2
+Drainbrood x1										Deathbrood x1
+Drainbrood x1					Glarebrood x5					Dethbrood x2					SSister x2
+SPriest x2
+#	enemies
+#	cant.
+#	gold	0
+	wave		5		15
+					2																																					spider_sister		spider_sister
+					4																																					spider_priest		spider_priest
+					4																																	spidead
+					1																																spidead
+					6													spiderling
+					1														spiderling														spiderling
+					1												spiderling															spiderling
+					1														spiderling															spiderling
+					1		spider_priest										spiderling															spiderling
+					1				spider_priest																									spiderling
+					1		spider_priest																									spiderling
+					1				spider_priest																									spiderling
+					8																						spidead		spidead
+					3		spider_sister																					drainbrood
+					1				spider_sister
+					0.1												spidead
+					1														spidead
+					2													drainbrood
+
+
+
+	wait				5
+
+#	WAVE 6					Glarebrood x3
+Drainbrood x2										SPriest x2
+SSister x1										SSister x1
+Deathbrood x2
+Drainbrood x1					Drainbrood x2
+Glarewarden x2
+Glarebrood x3					Cultbrood x4					Cultbrood x4
+#	enemies
+#	cant.
+#	gold	0
+	wave		6		15
+					4													spider_sister										spider_sister
+					2																												spiderling
+					1																											spiderling
+					1			spiderling																										spiderling
+					1		spiderling
+					1				spiderling
+					13														glarenwarden																				cultbrood				cultbrood
+					5												glarenwarden																					cultbrood				cultbrood
+					15																											glarenwarden
+					3																													glarenwarden
+					8			drainbrood																				drainbrood
+					12
+					3
+					7																																		cultbrood			cultbrood
+					5																																	cultbrood					cultbrood
+					2		drainbrood
+					5				drainbrood
+					1
+					5																											drainbrood
+					5																													drainbrood
+					2		drainbrood
+					5				drainbrood
+					1
+					5																											drainbrood
+					5																													drainbrood

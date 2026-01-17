@@ -1,0 +1,592 @@
+#	COMANDOS					1					2					3					4					5					6			
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties																																	
+	description	main K1000																																
+	lives	20																																
+	gold	1000																																
+	gems	150																																
+	enemy_prefix	enemy_																																
+	default_increment	1																																
+	default_interval	20																																
+#	expected gold	1200																																
+#	stage total gold	1914																																
+#	stage gold curve																																	
+#	WAVE 1																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox	burning_treant																					
+#	cant.					54	5	2	2		10	2	0	0		0	0	0	0															
+#	gold	914				324	150	120	50		150	120	0	0		0	0	0	0															
+	wave		1		-1																													
+					0			flame_guard																										
+					1.4		flame_guard		flame_guard																									
+					1.4			flame_guard																										
+					1.4		flame_guard		flame_guard																									
+					1.4			flame_guard																										
+					7		flame_guard																											
+					1				flame_guard																									
+					1		flame_guard																											
+					1				flame_guard																									
+					1		flame_guard																											
+					1				flame_guard																									
+					1		flame_guard																											
+					6			flame_guard																										
+					1.5		flame_guard		flame_guard																									
+					5			flame_guard																										
+					1		flame_guard		flame_guard																									
+					1			flame_guard																										
+					1		flame_guard		flame_guard																									
+					1			flame_guard																										
+																																		
+																																		
+																																		
+#	WAVE 2																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0							0	0		0	0	0	0															
+#	gold	0				0							0	0		0	0	0	0															
+	wave		2		10																													
+					1																		blaze_raider											
+					6																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+					0.7																			flame_guard										
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+					4																	blaze_raider		blaze_raider										
+																																		
+					12																		flame_guard											
+					1																	flame_guard		flame_guard										
+					1.3																	flame_guard		flame_guard										
+					1.3																	flame_guard		flame_guard										
+																																		
+																																		
+																																		
+																																		
+					13.33																													
+																																		
+#	WAVE 3																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		3		35																													
+					6								fire_fox																					
+					1.8								fire_fox																					
+					8								fire_fox																					
+					0.7									fire_fox																				
+					0.7							fire_fox																						
+					0.7									fire_fox																				
+					0.7							fire_fox																						
+					0.7									fire_fox																				
+					0																	flame_guard												
+					0.55																			flame_guard										
+					0.55																	flame_guard												
+					0.55																			flame_guard										
+					0.55																	flame_guard												
+					0.55																			flame_guard										
+																																		
+																																		
+					7																		flame_guard											
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+																																		
+																																		
+					12								fire_fox																					
+					1.25									fire_fox																				
+					1.25							fire_fox																						
+					1.25									fire_fox																				
+					1.25							fire_fox																						
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 4																																	
+#	enemies				12	flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		4		15																													
+																																		
+					1			fire_fox																fire_fox										
+					2				fire_fox														fire_fox											
+					1.5		fire_fox															fire_fox		fire_fox										
+					5								fire_fox																					
+					1.2							fire_fox																						
+					0.75									fire_fox																				
+					1.2								fire_fox																					
+					0.75									fire_fox																				
+					1.2							fire_fox																						
+					3									fire_fox																				
+					1							fire_fox																						
+					1								fire_fox																					
+					4																	blaze_raider		blaze_raider										
+					4																	blaze_raider		blaze_raider										
+					6			fire_fox																										
+					1.25				fire_fox																									
+					1.75		fire_fox	fire_fox																										
+					1.25				fire_fox																									
+					1																	blaze_raider		blaze_raider										
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 5																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0				0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		5		28																													
+					1								fire_phoenix																					
+					1.5							fire_phoenix																						
+					1.5									fire_phoenix																				
+					1.5							fire_phoenix																						
+					1.5																													
+					1.5								fire_phoenix																					
+					4			fire_phoenix																										
+					1.5				fire_phoenix																									
+					1.5		fire_phoenix																											
+					1.5				fire_phoenix																									
+					1.5		fire_phoenix																											
+					2			fire_fox																										
+					1.5		fire_fox		fire_fox																									
+					1.5			fire_fox																										
+																																		
+																																		
+																																		
+					4.5								fire_phoenix																					
+					1.3							fire_phoenix																						
+					1.3									fire_phoenix																				
+					1.3								fire_phoenix																					
+					2								fire_fox																					
+					1							fire_fox	fire_fox																					
+					1.5									fire_fox																				
+					1.3								fire_fox	fire_fox																				
+																																		
+																																		
+#	WAVE 6																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		6		8																													
+					1																		blaze_raider											
+					2.66																	blaze_raider		blaze_raider										
+					2.66																													
+																																		
+					13		flame_guard		flame_guard																									
+					1.7		flame_guard		flame_guard																									
+					1.7		flame_guard		flame_guard																									
+					2																													
+					5																	blaze_raider		blaze_raider										
+					2.66																		blaze_raider											
+					1.66																													
+					9			flame_guard																										
+					0.5		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.5		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.7		flame_guard		flame_guard																									
+					0.7		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.5		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.5		flame_guard		flame_guard																									
+					6																		blaze_raider											
+					2.66																	blaze_raider		blaze_raider										
+					4			flame_guard																										
+					1		flame_guard		flame_guard																									
+					5																	blaze_raider		blaze_raider										
+																																		
+																																		
+																																		
+#	WAVE 7																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		7		40																													
+					4													nine_tailed_fox																
+					6							fire_fox																						
+					1.5									fire_fox																				
+					1.5							fire_fox																						
+					1.5									fire_fox																				
+																																		
+																																		
+					5									fire_fox																				
+					2							fire_fox																						
+					2									fire_fox																				
+					2																													
+																																		
+					7									fire_fox																				
+					1.3							fire_fox																						
+					1.3									fire_fox																				
+					1.3							fire_fox																						
+					1.3									fire_fox																				
+					1.3							fire_fox						nine_tailed_fox																
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 8																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		8		32																													
+					1								nine_tailed_fox																					
+					0.1																		blaze_raider											
+					3																	blaze_raider		blaze_raider										
+																																		
+					9			fire_phoenix																										
+					0.8		fire_phoenix																											
+					0.8				fire_phoenix																									
+					0.8		fire_phoenix																											
+					0.8				fire_phoenix																									
+					0.8		fire_phoenix																											
+					0.8				fire_phoenix																									
+					6																	blaze_raider		blaze_raider										
+																																		
+					2			fire_phoenix																										
+					0.8				fire_phoenix																									
+					0.8		fire_phoenix																											
+					0.8				fire_phoenix																									
+					0.8		fire_phoenix																											
+					0.8				fire_phoenix																									
+					0.8			fire_phoenix					nine_tailed_fox																					
+					6																	blaze_raider		blaze_raider										
+					3																	blaze_raider		blaze_raider										
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 9																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		9		45																													
+					5.5																											flame_guard		flame_guard
+					1.2																											flame_guard		flame_guard
+					2																							wuxian						
+																																		
+																																		
+																																		
+																																		
+					1																		blaze_raider											
+					7.5																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												
+					0.7																			flame_guard										
+					0.7																	flame_guard												flame_guard
+					0.7																			flame_guard								flame_guard		
+					0.7																	flame_guard												flame_guard
+					0.7																			flame_guard								flame_guard		
+					0.7																													flame_guard
+					0.7																											flame_guard		
+																																		
+																																		
+																																		
+																																		
+					8																											flame_guard		flame_guard
+					1.17																											flame_guard		flame_guard
+					1.17																													
+																																		
+																																		
+																																		
+					10																													flame_guard
+					1																											flame_guard		flame_guard
+					1																											flame_guard		flame_guard
+					1																											flame_guard		
+					2.5																						wuxian		wuxian					
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 10																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		10		35																													
+																																		
+					1												wuxian		wuxian															
+					8								fire_fox																					
+					1									fire_fox																				
+					1							fire_fox																						
+					1									fire_fox																				
+					1																													
+					1																													
+					1																													
+					6			fire_fox																										
+					1		fire_fox																											
+					1				fire_fox																									
+					1		fire_fox																											
+					1				fire_fox																									
+					7													wuxian																
+					5												wuxian		wuxian															
+					6																													
+					8								fire_fox																					
+					0.8									fire_fox																				
+					0.8							fire_fox																						
+					0.8									fire_fox																				
+					0.8							fire_fox																						
+					0.8								fire_fox																					
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 11																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																				flame_guard	blaze_raider	
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		11		45																													
+					0		flame_guard		flame_guard																									
+					1		flame_guard		flame_guard																								blaze_raider	
+					1.5		flame_guard		flame_guard																									
+					2																											blaze_raider		blaze_raider
+																																		
+					4		blaze_raider		blaze_raider																									flame_guard
+					0.5																											flame_guard		
+					0.5																													flame_guard
+					0.5																											flame_guard		
+					0.5																													flame_guard
+					0.5																											flame_guard		
+					3			blaze_raider																										
+					3		blaze_raider		blaze_raider																									
+					3																											flame_guard		flame_guard
+					1.4																											flame_guard		flame_guard
+					1.4																											flame_guard		flame_guard
+					3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.3			flame_guard																										
+					0.75		flame_guard		flame_guard																									
+					1.4																											flame_guard		flame_guard
+					1.4																											flame_guard		flame_guard
+					1.4																											flame_guard		flame_guard
+					1.4																											flame_guard		flame_guard
+					1.4																											flame_guard		flame_guard
+					5																												blaze_raider	
+					3																											blaze_raider		blaze_raider
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 12																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox	burning_treant	burning_treant																				
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		12		15																													
+					1												burning_treant																	
+					2.6									burning_treant																				
+					2.6														burning_treant															
+					2.6							burning_treant																						
+																																		
+																																		
+					5																		fire_phoenix											
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					7																								burning_treant					
+					2.2																											burning_treant		
+					2.2																						burning_treant							
+					2.2																													burning_treant
+					3																		fire_phoenix											
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					6												burning_treant																	
+					1.8									burning_treant																				
+					1.8												burning_treant																	
+					1.8									burning_treant																				
+					3																		fire_phoenix											
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+					0.8																			fire_phoenix										
+					0.8																	fire_phoenix												
+																																		
+																																		
+#	WAVE 13																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		13		25																													
+					2								nine_tailed_fox															nine_tailed_fox						
+					7		fire_phoenix																											
+					0.8																			fire_fox										
+					0.8		fire_phoenix																											
+					0.8																			fire_fox										
+					0.8		fire_phoenix																											
+					0.8																			fire_fox										
+					0.8		fire_phoenix																											
+					0.8																			fire_fox										
+					0.8		fire_phoenix																											
+					0.8																			fire_fox										
+					10								nine_tailed_fox															nine_tailed_fox						
+					11												fire_phoenix																	
+					0.8																								fire_phoenix					
+					0.8												fire_phoenix																	
+					0.8																								fire_phoenix					
+					0.8												fire_phoenix																	
+					0.8																								fire_phoenix					
+					0.8												fire_phoenix																	
+					0.8																								fire_phoenix					
+					0.8												fire_phoenix																	
+					0.8																								fire_phoenix					
+					0.8												fire_phoenix																	
+					0.8																								fire_phoenix					
+					0.8																													
+					0.8																													
+																																		
+																																		
+#	WAVE 14																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox	burning_treant																					
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		14		18																													
+					1																												wuxian	
+					5																						wuxian		wuxian					
+					10																							flame_guard						
+					1																						flame_guard		flame_guard					
+					1																						flame_guard		flame_guard					
+					1																						flame_guard		flame_guard					
+					1																						flame_guard		flame_guard					
+					1																							flame_guard						
+					3									burning_treant														wuxian						
+					2							burning_treant																						
+					2												burning_treant																	
+					2														burning_treant															
+					1.5																													
+					1.5																													
+					2																											burning_treant		
+					2																													burning_treant
+					8.5																											flame_guard		flame_guard
+					1.5																											flame_guard		flame_guard
+					1.5																											flame_guard		flame_guard
+					1.5																											flame_guard		flame_guard
+					2							burning_treant																						
+					1.5									burning_treant																				
+					1.5																													burning_treant
+					1.5																											burning_treant		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 15																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0															
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0															
+	wave		15		30																													
+					1.5														nine_tailed_fox								nine_tailed_fox							
+					10									nine_tailed_fox									nine_tailed_fox											
+					7																												fire_fox	
+					5														nine_tailed_fox								nine_tailed_fox							fire_fox
+					2																											fire_fox		
+					1.5																													fire_fox
+					1.5																											fire_fox		
+					15									nine_tailed_fox								nine_tailed_fox												
+					5			fire_fox				nine_tailed_fox												nine_tailed_fox										
+					1.5																		fire_fox											
+					1.5			fire_fox																										
+					1.5																		fire_fox											
+					1.5			fire_fox																										
+					1.5																		fire_fox											
+					1.5			fire_fox																										
+					1.5																		fire_fox											

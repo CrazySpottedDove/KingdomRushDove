@@ -1,0 +1,169 @@
+#	COMANDOS					1	Arriba Izq				2	Arriba Der				3	Abajo Izq				4	Abajo derecha				5	Centro izquierda				6	Centro derecha		
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties																																	
+	description	rodri																																
+	lives	1																																
+	gold	2000																																
+	gems	150																																
+	enemy_prefix	enemy_																																
+	default_increment	1																																
+	default_interval	20																																
+#	expected gold																																	
+#	stage total gold	4915																																
+#	stage gold curve																																	
+#	WAVE 1																																	
+#	enemies					water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen	water_spirit_spawnless																				
+#	cant.					0	0	0	0		4	0	0	39		0	0	0	0															
+#	gold	335				0	0	0	0		140	0	0	195		0	0	0	0															
+	wave		1		-1																													
+					1								water_sorceress															water_spirit_spawnless						
+					1.5																								water_spirit_spawnless			water_spirit_spawnless		
+					1.5																												water_spirit_spawnless	
+					1																						water_spirit_spawnless							water_spirit_spawnless
+					4							water_sorceress																						
+					6																						water_spirit_spawnless							water_spirit_spawnless
+					1.5																								water_spirit_spawnless			water_spirit_spawnless		
+					2																						water_spirit_spawnless							water_spirit_spawnless
+					1.5																								water_spirit_spawnless			water_spirit_spawnless		
+					1																						water_spirit_spawnless							water_spirit_spawnless
+					1.5																								water_spirit_spawnless			water_spirit_spawnless		
+					4.5									water_sorceress																				
+					6																							water_spirit_spawnless						
+					1																											water_spirit_spawnless		water_spirit_spawnless
+					1.5																						water_spirit_spawnless		water_spirit_spawnless					
+					1																												water_spirit_spawnless	
+					1.5																						water_spirit_spawnless						water_spirit_spawnless	
+					1.5																							water_spirit_spawnless						water_spirit_spawnless
+					4								water_sorceress														water_spirit_spawnless							water_spirit_spawnless
+					1																							water_spirit_spawnless				water_spirit_spawnless		
+					1.5																								water_spirit_spawnless				water_spirit_spawnless	
+					1																						water_spirit_spawnless		water_spirit_spawnless				water_spirit_spawnless	
+					1.5																							water_spirit_spawnless				water_spirit_spawnless		water_spirit_spawnless
+#	48.5																																	
+#	WAVE 2																																	
+#	enemies					water_spirit	gale_warrior	water_spirit	storm_spirit		water_sorceress	storm_elemental	citizen	qiongqi																				
+#	cant.					0	7	0	0		3	0	0	0		0	0	0	0															
+#	gold	435				0	210	0	0		105	0	0	0		0	0	0	0															
+	wave		2		36																													
+					1		gale_warrior						water_sorceress																					
+					3				gale_warrior																									
+					10		gale_warrior						water_sorceress																					
+					3				gale_warrior																									
+	event	boat																																
+					20				gale_warrior				water_sorceress																					
+					1		gale_warrior																											
+					2				gale_warrior																									
+	event	boat																																
+	40																																	
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 3																																	
+#	enemies					water_spirit*	gale_warrior	storm_spirit	storm_spirit		water_sorceress	storm_elemental		qiongqi																				
+#	cant.					14	10	0	0		0	1		0		0	0	0	0															
+#	gold	470				70	300	0	0		0	100		0		0	0	0	0															
+	wave		3		40																													
+					1				gale_warrior																			storm_elemental						
+					2		gale_warrior																											
+					8				gale_warrior																									
+					2		gale_warrior																											
+					7																	water_spirit_spawnless												
+					1																		water_spirit_spawnless											
+					1																			water_spirit_spawnless										
+					5																	water_spirit_spawnless												
+					1																		water_spirit_spawnless											
+					1																			water_spirit_spawnless										
+					5																	water_spirit_spawnless		water_spirit_spawnless										
+					1																		water_spirit_spawnless											
+					2																	water_spirit_spawnless		water_spirit_spawnless										
+					5				gale_warrior													water_spirit_spawnless		water_spirit_spawnless										
+					1		gale_warrior																water_spirit_spawnless											
+					2			gale_warrior																										
+					5		gale_warrior																											
+					1				gale_warrior																									
+					2			gale_warrior																										
+	50																																	
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 4																																	
+#	enemies					water_spirit	gale_warrior	water_spirit	storm_spirit		water_sorceress	storm_elemental	gale_warrior	qiongqi		water_spirit_spawnless																		
+#	cant.					0	0	0	0		0	0	0	0		15	0	0	0															
+#	gold	470				0	0	0	0		0	0	0	0		75	0	0	0															
+	wave		4		35																													
+	event	boat																																
+					31																	water_spirit_spawnless		water_spirit_spawnless										
+					1.5																		water_spirit_spawnless											
+					1.5																	water_spirit_spawnless		water_spirit_spawnless										
+					2.5																		water_spirit_spawnless											
+					1																	water_spirit_spawnless		water_spirit_spawnless										
+					19																		water_spirit_spawnless											
+					1																	water_spirit_spawnless		water_spirit_spawnless										
+					2																		water_spirit_spawnless											
+					2																	water_spirit_spawnless		water_spirit_spawnless										
+					1																		water_spirit_spawnless											
+	event	boat																																
+	62.5																																	
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 5																																	
+#	enemies					water_spirit*	gale_warrior	water_spirit	storm_spirit		water_sorceress	storm_elemental		qiongqi																				
+#	cant.					12	0	0	0		3	2		0		0	0	0	0															
+#	gold	465				60	0	0	0		105	200		0		0	0	0	0															
+	wave		5		33																													
+					1			storm_elemental																										
+					8																								water_sorceress					
+					2																											water_sorceress		
+					15			storm_elemental																										
+					20																											water_sorceress		
+					10																		water_spirit_spawnless											
+					2																		water_spirit_spawnless											
+					1.5																	water_spirit_spawnless		water_spirit_spawnless										
+					1																		water_spirit_spawnless											
+					5																	water_spirit_spawnless		water_spirit_spawnless										
+					2																		water_spirit_spawnless											
+					1.5																		water_spirit_spawnless											
+					2																	water_spirit_spawnless		water_spirit_spawnless										
+					1																		water_spirit_spawnless											
+																																		
+	72																																	
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 6																																	
+#	enemies					water_spirit	gale_warrior	water_spirit	storm_spirit		water_sorceress	storm_elemental	gale_warrior	qiongqi																				
+#	cant.					0	4	0	0		3	3	4	0		0	0	0	0															
+#	gold	740				0	120	0	0		105	300	120	0		0	0	0	0															
+	wave		6		40																													
+					1													storm_elemental										storm_elemental						
+					3		gale_warrior					water_sorceress																						
+					3				gale_warrior																									
+	event	boat																																
+	wait				25																													
+	event	boat																																
+					10																							storm_elemental						
+					10		gale_warrior																									water_sorceress		
+					3				gale_warrior																									water_sorceress
+																																		
+	wait				20																													
+	75																																	

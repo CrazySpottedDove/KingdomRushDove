@@ -88,11 +88,8 @@ local function is_extra_level(level, num)
 	local e = "extra_level" .. num
 	local efrom = GS[e .. "_from"]
 	local eto = efrom + GS[e]
-	local c = "custom_level" .. num
-	local cfrom = GS[c .. "_from"]
-	local cto = cfrom + GS[c]
 
-	return level > efrom and level <= eto or level > cfrom and level <= cto
+	return level > efrom and level <= eto
 end
 
 screen_map.signal_handlers = {}
@@ -140,10 +137,30 @@ function screen_map:init(w, h, done_callback)
 	elseif self.kr3_map then
 		points_data = require("data.map_points3")
 		generation = 3
+	elseif self.kr5_map then
+		points_data = require("data.map_points5")
+		generation = 5
 	end
 
 	local ppl = {}
+	if self.kr5_map == true then
+		local ppl_points = {}
+		if points_data.points and points_data.points[1] and points_data.points[1].children then
+			for i = 1, #points_data.points - 6 do
+				for j = 1, #points_data.points[i].children do
+					local new_pos = v(points_data.points[i].pos.x * points_data.RATE_X + points_data.OFFSET_X + points_data.points[i].children[j].pos.x * points_data.RATE_X + points_data.OFFSET_X1, points_data.points[i].pos.y * points_data.RATE_Y + points_data.OFFSET_Y + points_data.points[i].children[j].pos.y * points_data.RATE_Y + points_data.OFFSET_Y1)
+					local p = {
+						id = #points_data.points[i].children[j].id,
+						level = #points_data.points[i].id,
+						pos = new_pos
+					}
+					table.insert(ppl_points, p)
+				end
+			end
 
+			points_data.points = ppl_points
+		end
+	end
 	if points_data.points then
 		table.sort(points_data.points, function(e1, e2)
 			local e1l, e2l = tonumber(e1.level), tonumber(e2.level)
@@ -286,6 +303,41 @@ function screen_map:init(w, h, done_callback)
 	self.window:add_child(map_scroll_hotspots_r)
 	map_scroll_hotspots_r:order_below(self.map_view)
 
+	--上下, copy from FL
+	local map_scroll_hotspots_u = KView:new(V.v(sw, 100))
+
+	map_scroll_hotspots_u.propagate_on_click = true
+	map_scroll_hotspots_u.anchor = v(sw / 2, 0)
+	map_scroll_hotspots_u.pos = v(sw / 2, 0)
+
+	function map_scroll_hotspots_u.on_enter()
+		map.scrolling_dir = 2
+	end
+
+	function map_scroll_hotspots_u.on_exit()
+		map.scrolling_dir = 0
+	end
+
+	self.window:add_child(map_scroll_hotspots_u)
+	map_scroll_hotspots_u:order_below(self.map_view)
+
+	local map_scroll_hotspots_d = KView:new(V.v(sw - 184, 100))
+
+	map_scroll_hotspots_d.propagate_on_click = true
+	map_scroll_hotspots_d.anchor = v(sw / 2, 100)
+	map_scroll_hotspots_d.pos = v(sw / 2, sh)
+
+	function map_scroll_hotspots_d.on_enter()
+		map.scrolling_dir = -2
+	end
+
+	function map_scroll_hotspots_d.on_exit()
+		map.scrolling_dir = 0
+	end
+
+	self.window:add_child(map_scroll_hotspots_d)
+	map_scroll_hotspots_d:order_below(self.map_view)
+
 	local o_button = KImageButton:new("map_configBtn_0001", "map_configBtn_0002", "map_configBtn_0003")
 
 	o_button.anchor = v(o_button.size.x / 2, o_button.size.y / 2)
@@ -365,16 +417,25 @@ function screen_map:init(w, h, done_callback)
 			self.kr1_map = false
 			self.kr2_map = false
 			self.kr3_map = true
+			self.kr5_map = false
 
-			-- timer.clear()
 			screen_map:init(w, h, done_callback)
 		elseif self.kr3_map then
 			S:queue("GUIButtonCommon")
 
+			self.kr1_map = false
 			self.kr2_map = false
-			self.kr1_map = true
 			self.kr3_map = false
+			self.kr5_map = true
 
+			screen_map:init(w, h, done_callback)
+		elseif self.kr5_map then
+			S:queue("GUIButtonCommon")
+
+			self.kr1_map = true
+			self.kr2_map = false
+			self.kr3_map = false
+			self.kr5_map = false
 			screen_map:init(w, h, done_callback)
 		else
 			S:queue("GUIButtonCommon")
@@ -382,8 +443,7 @@ function screen_map:init(w, h, done_callback)
 			self.kr2_map = true
 			self.kr1_map = false
 			self.kr3_map = false
-
-			-- timer.clear()
+			self.kr5_map = false
 			screen_map:init(w, h, done_callback)
 		end
 	end
@@ -637,6 +697,8 @@ function screen_map:init(w, h, done_callback)
 		S:queue("MusicMap2")
 	elseif self.kr3_map then
 		S:queue("MusicMap3")
+	elseif self.kr5_map then
+		S:queue("MusicMap5")
 	else
 		S:queue("MusicMap1")
 	end
@@ -1060,6 +1122,65 @@ function MapView:initialize(screen_w, screen_h)
 
 		self:load_map_animations(3)
 		self:show_flags(3)
+	elseif screen_map.kr5_map then
+		KImageView.initialize(self, "map_background_kr5")
+
+		self.screen_w = screen_w
+		self.screen_h = screen_h
+		self.stime = 0
+		self.max_scroll_speed = 280
+		self.scrolling_dir = 0
+		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
+		self.ma_under_layer.propagate_on_click = true
+		self.ma_under_layer.propagate_on_down = true
+		self.ma_under_layer.propagate_on_up = true
+
+		self:add_child(self.ma_under_layer)
+
+		self.points_layer = KView:new(V.v(screen_w, screen_h))
+		self.points_layer.propagate_on_click = true
+		self.points_layer.propagate_on_down = true
+		self.points_layer.propagate_on_up = true
+
+		self:add_child(self.points_layer)
+
+		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
+		self.ma_mid_layer.propagate_on_click = true
+		self.ma_mid_layer.propagate_on_down = true
+		self.ma_mid_layer.propagate_on_up = true
+
+		self:add_child(self.ma_mid_layer)
+
+		self.flags_layer = KView:new(V.v(screen_w, screen_h))
+		self.flags_layer.propagate_on_click = true
+		self.flags_layer.propagate_on_down = true
+		self.flags_layer.propagate_on_up = true
+
+		self:add_child(self.flags_layer)
+
+		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
+		self.ma_over_layer.propagate_on_click = true
+		self.ma_over_layer.propagate_on_down = true
+		self.ma_over_layer.propagate_on_up = true
+
+		self:add_child(self.ma_over_layer)
+
+		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
+		local last_flag = screen_map.map_points.flags[last_flag_idx]
+
+		if last_flag and last_flag.pos then
+			log.debug("scroll to show level idx:%s", last_flag_idx)
+
+			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
+
+			if vl > last_flag.pos.x or vr < last_flag.pos.x then
+				self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
+				self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
+			end
+		end
+		-- TODO: map_animations 和 show_flags 当前均为空，在 map_data 中等待添加
+		self:load_map_animations(5)
+		self:show_flags(5)
 	else
 		KImageView.initialize(self, "map_background")
 
@@ -1626,12 +1747,6 @@ function MapView:show_flags(num)
 			end
 		end
 
-		if GS["custom_level" .. num] then
-			for i = 1, GS["custom_level" .. num] do
-				show_flag1(i, GS["custom_level" .. num .. "_from"], true)
-			end
-		end
-
 		wait(1)
 
 		while not screen_map.difficulty_view.hidden do
@@ -1766,12 +1881,6 @@ function MapView:show_flags(num)
 			end
 		end
 
-		if GS["custom_level" .. num] then
-			for i = 1, GS["custom_level" .. num] do
-				show_flag2(i, GS["custom_level" .. num .. "_from"], true)
-			end
-		end
-
 		self.show_flags_in_progress = nil
 
 		if DBG_SHOW_BALLOONS or #screen_map.user_data.levels == 1 then
@@ -1813,6 +1922,7 @@ function MapView:show_flags(num)
 	end)
 end
 
+-- copy from FL
 function MapView:update(dt)
 	MapView.super.update(self, dt)
 
@@ -1826,16 +1936,37 @@ function MapView:update(dt)
 		return
 	end
 
-	self.pos = v(self.pos.x + self.scrolling_dir * self.max_scroll_speed * dt, self.pos.y)
+	if self.scrolling_dir == 1 or self.scrolling_dir == -1 then
+		self.pos = v(self.pos.x + self.scrolling_dir * self.max_scroll_speed * dt, self.pos.y)
 
-	if self.pos.x >= 0 then
-		self.scrolling_dir = 0
-		self.pos = v(0, self.pos.y)
+		if self.pos.x >= 0 then
+			self.scrolling_dir = 0
+			self.pos = v(0, self.pos.y)
+		end
+
+		if self.pos.x <= self.screen_w - self.size.x then
+			self.scrolling_dir = 0
+			self.pos = v(self.screen_w - self.size.x, self.pos.y)
+		end
 	end
 
-	if self.pos.x <= self.screen_w - self.size.x then
-		self.scrolling_dir = 0
-		self.pos = v(self.screen_w - self.size.x, self.pos.y)
+	-- 处理 Y 轴滚动 (上下) - 新增逻辑
+	if self.scrolling_dir == 2 or self.scrolling_dir == -2 then
+		-- scrolling_dir = 2 (鼠标在顶部) -> 地图向下移动 (Y增加) 以显示顶部内容
+		-- scrolling_dir = -2 (鼠标在底部) -> 地图向上移动 (Y减少) 以显示底部内容
+		local dir_y = (self.scrolling_dir == 2) and 1 or -1
+		self.pos = v(self.pos.x, self.pos.y + dir_y * self.max_scroll_speed * dt)
+
+		-- 顶部边界限制 (地图Y坐标不能大于0)
+		if self.pos.y >= 0 then
+			self.scrolling_dir = 0
+			self.pos = v(self.pos.x, 0)
+		end
+
+		if self.pos.y <= self.screen_h - self.size.y then
+			self.scrolling_dir = 0
+			self.pos = v(self.pos.x, self.screen_h - self.size.y)
+		end
 	end
 end
 
@@ -2547,6 +2678,8 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 		level_num = level_num + GS.level2_from
 	elseif screen_map.kr3_map and not is_extra_level(level_num, 3) then
 		level_num = level_num + GS.level3_from
+	elseif screen_map.kr5_map and not is_extra_level(level_num, 5) then
+		level_num = level_num + GS.level5_from
 	end
 
 	local level_string = string.format("%02i", level_num)

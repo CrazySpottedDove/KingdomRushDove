@@ -235,7 +235,7 @@ return {
 			sounds = {"MusicEndVictory", "MusicSuspense", "MusicCredits"}
 		},
 		music_screen_map = {
-			sounds = {"MusicMap1", "MusicMap2", "MusicMap3"}
+			sounds = {"MusicMap1", "MusicMap2", "MusicMap3", "MusicMap5"}
 		},
 		music_screen_slots = {
 			sounds = {"MusicMainMenu"}
@@ -455,6 +455,111 @@ return {
 		},
 		music_stage70 = {
 			sounds = {"MusicBattlePrep_70", "MusicBattle_70"}
+		},
+		music_stage101 = {
+			sounds = {"MusicBattlePrep_101", "MusicBattle_101"}
+		},
+		music_stage102 = {
+			sounds = {"MusicBattlePrep_102", "MusicBattle_102"}
+		},
+		music_stage103 = {
+			sounds = {"MusicBattlePrep_103", "MusicBattle_103"}
+		},
+		music_stage104 = {
+			sounds = {"MusicBattlePrep_104", "MusicBattle_104"}
+		},
+		music_stage105 = {
+			sounds = {"MusicBattlePrep_105", "MusicBattle_105"}
+		},
+		music_stage106 = {
+			sounds = {"MusicBattlePrep_106", "MusicBattle_106", "MusicBossFight_106"}
+		},
+		music_stage107 = {
+			sounds = {"MusicBattlePrep_107", "MusicBattle_107"}
+		},
+		music_stage108 = {
+			sounds = {"MusicBattlePrep_108", "MusicBattle_108"}
+		},
+		music_stage109 = {
+			sounds = {"MusicBattlePrep_109", "MusicBattle_109"}
+		},
+		music_stage110 = {
+			sounds = {"MusicBattlePrep_110", "MusicBattle_110"}
+		},
+		music_stage111 = {
+			sounds = {"MusicBattlePrep_111", "MusicBattle_111", "MusicBossFight_111"}
+		},
+		music_stage112 = {
+			sounds = {"MusicBattlePrep_112", "MusicBattle_112"}
+		},
+		music_stage113 = {
+			sounds = {"MusicBattlePrep_113", "MusicBattle_113"}
+		},
+		music_stage114 = {
+			sounds = {"MusicBattlePrep_114", "MusicBattle_114"}
+		},
+		music_stage115 = {
+			sounds = {"MusicBattlePrep_115", "MusicBattle_115", "MusicBossFight_115"}
+		},
+		music_stage116 = {
+			sounds = {"MusicBattlePrep_116", "MusicBattle_116", "MusicBossFight_116"}
+		},
+		music_stage117 = {
+			sounds = {"MusicBattlePrep_117", "MusicBattle_117"}
+		},
+		music_stage118 = {
+			sounds = {"MusicBattlePrep_118", "MusicBattle_118"}
+		},
+		music_stage119 = {
+			sounds = {"MusicBattlePrep_119", "MusicBattle_119", "MusicBossFight_119"}
+		},
+		music_stage120 = {
+			sounds = {"MusicBattlePrep_120", "MusicBattle_120"}
+		},
+		music_stage121 = {
+			sounds = {"MusicBattlePrep_121", "MusicBattle_121"}
+		},
+		music_stage122 = {
+			sounds = {"MusicBattlePrep_122", "MusicBattle_122", "MusicBossFight_122"}
+		},
+		music_stage123 = {
+			sounds = {"MusicBattlePrep_123", "MusicBattle_123"}
+		},
+		music_stage124 = {
+			sounds = {"MusicBattlePrep_124", "MusicBattle_124"}
+		},
+		music_stage125 = {
+			sounds = {"MusicBattlePrep_125", "MusicBattle_125"}
+		},
+		music_stage126 = {
+			sounds = {"MusicBattlePrep_126", "MusicBattle_126"}
+		},
+		music_stage127 = {
+			sounds = {"MusicBattlePrep_127", "MusicBattle_127", "MusicBossFight_127"}
+		},
+		music_stage128 = {
+			sounds = {"MusicBattlePrep_128", "MusicBattle_128"}
+		},
+		music_stage129 = {
+			sounds = {"MusicBattlePrep_129", "MusicBattle_129"}
+		},
+		music_stage130 = {
+			sounds = {"MusicBattlePrep_130", "MusicBattle_130", "MusicBossFight_130"}
+		},
+		music_stage131 = {
+			sounds = {"MusicBattlePrep_131", "MusicBattle_131"}
+		},
+		music_stage132 = {
+			sounds = {"MusicBattlePrep_132", "MusicBattle_132"}
+		},
+		music_stage133 = {
+			sounds = {"MusicBattlePrep_133", "MusicBattle_133"}
+		},
+		music_stage134 = {
+			sounds = {"MusicBattlePrep_134", "MusicBattle_134"}
+		},
+		music_stage135 = {
+			sounds = {"MusicBattlePrep_135", "MusicBattle_135", "MusicBossFight_135"}
 		},
 		music_stage1001 = {
 			sounds = {"MusicBattlePrep_1001", "MusicBattle_1001", "MusicBossFight"}
@@ -1305,6 +1410,251 @@ return {
 			source_group = "MUSIC",
 			stream = true
 		},
+		MusicBattlePrep_101 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_102 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_preparation2_v1.ogg"}
+		},
+		MusicBattlePrep_103 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_104 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_preparation2_v1.ogg"}
+		},
+		MusicBattlePrep_105 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_106 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_preparation2_v1.ogg"}
+		},
+		MusicBattlePrep_107 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_preparation1_vN.ogg"}
+		},
+		MusicBattlePrep_108 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_preparation2_v2.ogg"}
+		},
+		MusicBattlePrep_109 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_preparation1_vN.ogg"}
+		},
+		MusicBattlePrep_110 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_preparation2_v2.ogg"}
+		},
+		MusicBattlePrep_111 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_preparation1_vN.ogg"}
+		},
+		MusicBattlePrep_112 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_113 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_preparation2_v1.ogg"}
+		},
+		MusicBattlePrep_114 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_115 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_116 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_preparation3_v1.ogg"}
+		},
+		MusicBattlePrep_117 = {
+			source_group = "MUSIC",
+			gain = 0.5,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_preparation1_v3.ogg"}
+		},
+		MusicBattlePrep_118 = {
+			source_group = "MUSIC",
+			gain = 0.6,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_preparation1_v3.ogg"}
+		},
+		MusicBattlePrep_119 = {
+			source_group = "MUSIC",
+			gain = 0.6,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_preparation1_v3.ogg"}
+		},
+		MusicBattlePrep_120 = {
+			source_group = "MUSIC",
+			gain = 0.6,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_121 = {
+			source_group = "MUSIC",
+			gain = 0.5,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_122 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_123 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_124 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_preparation2_v2.ogg"}
+		},
+		MusicBattlePrep_125 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_126 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_preparation2_v2.ogg"}
+		},
+		MusicBattlePrep_127 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_128 = {
+			source_group = "MUSIC",
+			gain = 0.6,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_129 = {
+			source_group = "MUSIC",
+			gain = 0.5,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_130 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_131 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_132 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_preparation2_v1.ogg"}
+		},
+		MusicBattlePrep_133 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_134 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_135 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_preparation2_v1.ogg"}
+		},
 		MusicBattlePrep_1001 = {
 			files = {"MusicBattlePreparationsMountain.ogg"},
 			gain = 0.8,
@@ -1851,6 +2201,251 @@ return {
 			source_group = "MUSIC",
 			stream = true
 		},
+		MusicBattle_101 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_battle1_v1.ogg"}
+		},
+		MusicBattle_102 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_battle2_v1.ogg"}
+		},
+		MusicBattle_103 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_battle1_v1.ogg"}
+		},
+		MusicBattle_104 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_battle2_v1.ogg"}
+		},
+		MusicBattle_105 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_battle1_v1.ogg"}
+		},
+		MusicBattle_106 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_battle2_v1.ogg"}
+		},
+		MusicBattle_107 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_battle1_v1.ogg"}
+		},
+		MusicBattle_108 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_battle2_v2.ogg"}
+		},
+		MusicBattle_109 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_battle1_v1.ogg"}
+		},
+		MusicBattle_110 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_battle2_v2.ogg"}
+		},
+		MusicBattle_111 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_battle1_v1.ogg"}
+		},
+		MusicBattle_112 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_battle1_v1.ogg"}
+		},
+		MusicBattle_113 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_battle2_v1.ogg"}
+		},
+		MusicBattle_114 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_battle1_v1.ogg"}
+		},
+		MusicBattle_115 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_battle2_v1.ogg"}
+		},
+		MusicBattle_116 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_boss2_v1.ogg"}
+		},
+		MusicBattle_117 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_battle1_v2.ogg"}
+		},
+		MusicBattle_118 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_battle1_v2.ogg"}
+		},
+		MusicBattle_119 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_battle1_v2.ogg"}
+		},
+		MusicBattle_120 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_121 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_122 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_123 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_124 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_battle2_v1.ogg"}
+		},
+		MusicBattle_125 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_126 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_battle2_v1.ogg"}
+		},
+		MusicBattle_127 = {
+			source_group = "MUSIC",
+			gain = 0.25,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_128 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_129 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_130 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_131 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_132 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_battle2_v1.ogg"}
+		},
+		MusicBattle_133 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_battle3_v1.ogg"}
+		},
+		MusicBattle_134 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_135 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_battle2_v1.ogg"}
+		},
 		MusicBattle_1001 = {
 			files = {"MusicBattleUnderAttackMountain.ogg"},
 			gain = 0.8,
@@ -1980,6 +2575,13 @@ return {
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
+		},
+		MusicMap5 = {
+			source_group = "MUSIC",
+			gain = 0.6,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_atlas_v1.ogg"}
 		},
 		MusicSuspense = {
 			files = {"MusicSuspense.ogg"},

@@ -1,0 +1,119 @@
+#	COMANDOS					1	izq				2	medio izq				3	medio der				4	der				5	Spawn bull left				6	Spawn bull right				7	Spawn fire portal				8	Spawn water portal				9	Spawn left island 8				10	Spawn left exit 3				11	Spawn right center 6		
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3
+#	level properties																																																										
+	description	rodri																																																									
+	lives	1																																																									
+	gold	4700																																																									
+	gems	150																																																									
+	enemy_prefix	enemy_																																																									
+	default_increment	1																																																									
+	default_interval	20																																																									
+#	expected gold																																																										
+#	stage total gold	7007																																																									
+#	stage gold curve																																																										
+#	WAVE 1																																																										
+#	enemies					flame_guard	blaze_raider	fire_fox	wuxian		nine_tailed_fox	golden_eyed		hellfire_warlock		demon_minotaur	doom_bringer	water_spirit	water_sorceress		qiongqi	fire_phoenix																																					
+#	cant.					26	0	12	0		1	0		2		2	4	0	0		0	0																																					
+#	gold	816				156	0	180	0		60	0		100		140	180	0	0		0	0																																					
+	flags																									n					n					n					n																		
+	wave		1		-1																																																flame_guard						
+					1								flame_guard																																														
+					1							flame_guard		flame_guard																																													
+					0.85							flame_guard	flame_guard	flame_guard																																													
+					1.5		flame_guard	flame_guard	flame_guard																																																		
+					1		flame_guard	flame_guard	flame_guard																																																		
+					0.85		flame_guard	flame_guard	flame_guard																																																		
+					4									doom_bringer																																													
+					2							doom_bringer																																															
+					3		flame_guard	flame_guard	flame_guard																																																		
+					1		flame_guard	flame_guard	flame_guard																																																		
+					1.5		flame_guard	flame_guard	flame_guard																																																		
+					1		flame_guard	flame_guard	flame_guard																																																		
+					5									hellfire_warlock																																													
+					5							hellfire_warlock																																															
+					12														doom_bringer																																								
+					5												doom_bringer																																										
+					10														fire_fox																																								
+					1													fire_fox																																									
+					1												fire_fox																																										
+					6														demon_minotaur																																								
+					6												demon_minotaur																																										
+	wait				8																																																						
+	event	portal_left																																																									
+					2																																nine_tailed_fox																						
+	wait				2																																																						
+	event	portal_left_close																																																									
+					7			fire_fox																																																			
+					1		fire_fox		fire_fox																																																		
+					0.85		fire_fox	fire_fox																																																			
+					1			fire_fox	fire_fox																																																		
+					0.85		fire_fox		fire_fox																																																		
+#	92.4																																																										
+#	WAVE 2																																																										
+#	enemies					flame_guard	blaze_raider	fire_fox	wuxian		nine_tailed_fox	golden_eyed	doom_bringer	hellfire_warlock		demon_minotaur	doom_bringer	water_spirit	water_sorceress		qiongqi	fire_phoenix																																					
+#	cant.					36	0	9	0		0	0	0	0		3	0	0	3		2	0																																					
+#	gold	561				216	0	135	0		0	0	0	0		210	0	0	105		130	0																																					
+	wait				20																																																						
+					0												fire_fox																																										
+					1													fire_fox																																									
+					1														fire_fox																																								
+					7													demon_minotaur																																									
+					2																	fire_fox																																					
+					1																		fire_fox																																				
+					1																			fire_fox																																			
+					7																		demon_minotaur																																				
+					2							fire_fox						water_sorceress																																									
+					1								fire_fox																																														
+					1									fire_fox																																													
+					7								demon_minotaur																																														
+					2		flame_guard	flame_guard	flame_guard														water_sorceress																																				
+					1		flame_guard	flame_guard	flame_guard																																																		
+					1		flame_guard	flame_guard	flame_guard																																																		
+					2							flame_guard	flame_guard	flame_guard																																													
+					1							flame_guard	flame_guard	flame_guard																																													
+					1							flame_guard	flame_guard	flame_guard																																													
+					3.5		flame_guard	flame_guard	flame_guard																																																		
+					1		flame_guard	flame_guard	flame_guard																																																		
+					1		flame_guard	flame_guard	flame_guard																																																		
+					2							flame_guard	flame_guard	flame_guard																																													
+					1							flame_guard	flame_guard	flame_guard																																													
+					1							flame_guard	flame_guard	flame_guard																																													
+	wait				3																																																						
+	event	portal_right																																																									
+					2																																					qiongqi																	
+					5																																							qiongqi															
+					3																																						water_sorceress																
+	wait				2																																																						
+	event	portal_right_close																																																									
+																																																											
+#	83.5																																																										
+#	WAVE 3																																																										
+#	enemies					flame_guard	blaze_raider	fire_fox	wuxian		nine_tailed_fox	golden_eyed	doom_bringer	hellfire_warlock		demon_minotaur		water_spirit	water_sorceress		qiongqi	fire_phoenix																																					
+#	cant.					0	0	16	0		0	3	4	0		3		0	0		0	9																																					
+#	gold	930				0	0	240	0		0	300	180	0		210		0	0		0	225																																					
+	wait				19.5																																																						
+					1							fire_phoenix																																															
+					1								fire_phoenix																																														
+					1									fire_phoenix																																													
+					2.5								golden_eyed																																														
+					3.5							fire_fox		fire_fox																																													
+					0.85								fire_fox	fire_fox																																													
+					1							fire_fox	fire_fox																																														
+					0.85							fire_fox		fire_fox																																													
+					1								fire_fox	fire_fox																																													
+					8			demon_minotaur																																																			
+					12												doom_bringer		doom_bringer																																								
+					9																		golden_eyed																																				
+					7												demon_minotaur							demon_minotaur																																			
+					12			golden_eyed																																																			
+					10							doom_bringer																																															
+					3									doom_bringer																																													
+	event	portal_left																																																									
+					1																																fire_phoenix	fire_phoenix	fire_phoenix																				
+					1																																fire_phoenix	fire_phoenix	fire_phoenix																				
+					4																																fire_fox	fire_fox	fire_fox																				
+					0.85																																fire_fox	fire_fox	fire_fox																				
+	wait				2																																																						
+	event	portal_left_close																																																									
+																																																											
+#	102.05																																																										

@@ -1,0 +1,169 @@
+#	COMANDOS					1					2					3					4					5					6					7					8
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3
+#	level properties
+	description	main rodri
+	lives	1
+	gold	1100
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold	1200
+#	stage total gold	4155
+#	stage gold curve
+#	WAVE 1
+#	enemies					spiderling	ballooning_spider	spider_priest	spider_sister		glarenwarden	cultbrood	drainbrood	spidead
+#	cant.					6	0	2	6		0	0	0	11		0	0	0	0
+#	gold	695				60	0	60	300		0	0	0	275		0	0	0	0
+	wave		1		-1
+					2		spidead
+					1				spider_sister
+					4																													spidead
+					1																											spider_sister
+					8		spiderling		spiderling
+					1			spidead
+					1			spider_sister
+					9																											spiderling		spiderling
+					1																												spidead
+					1																												spider_sister
+					11		spiderling		spiderling
+					1		spidead
+					2				spidead
+					2			spider_priest
+					8																											spidead
+					2																													spidead
+					2																												spider_priest
+					9		spidead		spidead																							spidead
+					2			spider_sister																									spider_sister
+
+
+
+
+
+
+
+
+
+
+#	WAVE 2
+#	enemies					spiderling	ballooning_spider	spider_priest	spider_sister		glarenwarden	cultbrood	drainbrood	spidead
+#	cant.					41	0	0	0		0	0	3	8		0	0	0	0
+#	gold	775				410	0	0	0		0	0	165	200		0	0	0	0
+#	wave		2		0
+					23		spiderling		spiderling
+					0.25			spiderling
+					0.25		spiderling		spiderling
+					4																						spiderling		spiderling
+					0.25																						spiderling		spiderling
+					0.25																						spiderling		spiderling
+					4																							spidead
+					3																						spiderling		spiderling
+					0.25																							spidead
+					0.25																						spiderling		spiderling
+					4			spidead
+					0.25		spiderling		spiderling
+					6			drainbrood
+					3		spiderling		spiderling
+					6																							spidead
+					2																						spiderling		spiderling
+					0.25																						spiderling		spiderling
+					7			spidead																				spidead
+					3		spiderling		spiderling																		spiderling		spiderling
+					0.25																						spiderling		spiderling
+					2			drainbrood																				spidead
+					2.5																						spiderling		spiderling
+					0.25																						spiderling		spiderling
+					0.25		spiderling		spiderling																		spiderling		spiderling
+					0.25			drainbrood																				spidead
+					1		spiderling		spiderling																		spiderling		spiderling
+
+#	WAVE 3
+#	enemies					spiderling	ballooning_spider	spider_priest	spider_sister		glarenwarden	cultbrood	drainbrood	spidead
+#	cant.					0	0	0	2		0	8	2	7		0	0	0	0
+#	gold	785				0	0	0	100		0	400	110	175		0	0	0	0
+#	wave		3		0
+#	159.5	doors
+					18																																		spidead				spidead
+					2																																	spidead				spidead
+					2																																		spidead				spidead
+					15												drainbrood																spider_priest
+					1.5													cultbrood
+					5			drainbrood																				spidead						spider_priest
+					1.5				cultbrood
+					10												cultbrood																	cultbrood
+					1.5
+					10												cultbrood																	cultbrood
+					1.5
+					5												cultbrood																	cultbrood
+					1.5
+					5
+
+
+
+
+
+
+
+
+
+
+#	WAVE 4
+#	enemies					spiderling	ballooning_spider	spider_priest	spider_sister		glarenwarden	cultbrood	drainbrood	spidead
+#	cant.					0	0	0	0		0	16	0	0
+#	gold	800				0	0	0	0		0	800	0	0
+#	wave		4		0
+#
+
+					15												cultbrood																	cultbrood
+					1.5																																		cultbrood			cultbrood
+					5												cultbrood																	cultbrood
+					1.5																																		cultbrood			cultbrood
+					5												cultbrood																	cultbrood
+					1.5		cultbrood		cultbrood																		cultbrood		cultbrood										cultbrood			cultbrood
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 5
+#	enemies					spiderling	ballooning_spider	spider_priest	spider_sister		glarenwarden	cultbrood	drainbrood	spidead
+#	cant.
+#	gold	0
+#	wave		5		0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#	WAVE 6
+#	enemies					spiderling	ballooning_spider	spider_priest	spider_sister		glarenwarden	cultbrood	drainbrood	spidead
+#	cant.					0	0	0	0		0	0	0	0
+#	gold	0				0	0	0	0		0	0	0	0
+#	wave		6		0
