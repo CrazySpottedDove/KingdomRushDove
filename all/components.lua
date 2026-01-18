@@ -1234,3 +1234,13 @@ light.radius = 0
 local lights = E:register_c("lights")
 
 lights[1] = E:clone_c("light")
+
+local cheats_text_button = E:register_c("cheats_text_button")
+
+cheats_text_button.text = nil
+cheats_text_button.fn = nil
+
+local cheats = E:register_c("cheats")
+
+cheats.buttons = {}
+cheats.buttons[1] = E:clone_c("cheats_text_button")

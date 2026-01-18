@@ -2695,7 +2695,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
 
-	close_button.pos = v(self.back.size.x - 50, 20)
+	close_button.pos = v(self.back.size.x - 50, 30)
 	self.close_button = close_button
 
 	self.back:add_child(close_button)

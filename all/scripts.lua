@@ -9260,4 +9260,35 @@ function scripts.mod_track_fx.update(this, store, script)
 	end
 end
 
+scripts.enemy_basic_with_random_range = {}
+
+function scripts.enemy_basic_with_random_range.insert(this, store, script)
+	if scripts.enemy_basic.insert(this, store, script) then
+		for _, a in ipairs(this.ranged.attacks) do
+			if a.max_range_variance then
+				a.max_range = a.max_range + math.random(0, a.max_range_variance)
+			end
+		end
+
+		return true
+	else
+		return false
+	end
+end
+
+scripts.instant_heal_mod = {}
+
+function scripts.instant_heal_mod.insert(this, store, script)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target or not target.health or target.health.dead then
+		return false
+	end
+
+	target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + this.heal_hp)
+	this.render.sprites[1].ts = store.tick_ts
+
+	return true
+end
 return scripts

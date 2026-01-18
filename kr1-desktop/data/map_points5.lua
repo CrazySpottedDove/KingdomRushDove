@@ -11,8 +11,8 @@ local a = {
 	OFFSET_Y = 475 + 187 + 156,
 	OFFSET_X1 = 30,
 	OFFSET_Y1 = 100,
-	RATE_X = 1,
-	RATE_Y = 1,
+	RATE_X = 1980 / 2432,
+	RATE_Y = 1569 / 1922,
 	--OFFSET_X = 0,
 	--OFFSET_Y = 0,
 	--OFFSET_X1 = 0,
@@ -3669,8 +3669,8 @@ local a = {
 }
 
 for i = 1, #a.flags do
-	a.flags[i].pos.x = a.flags[i].pos.x * a.RATE_X + a.OFFSET_X
-	a.flags[i].pos.y = a.flags[i].pos.y * a.RATE_Y + a.OFFSET_Y
+	a.flags[i].pos.x = (a.flags[i].pos.x + a.OFFSET_X) * a.RATE_X
+	a.flags[i].pos.y = (a.flags[i].pos.y +  a.OFFSET_Y) * a.RATE_Y
 end
 
 return a

@@ -83,6 +83,10 @@ tt = RT("tower_holder_blackburn", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_BLACKBURN
 tt.render.sprites[1].name = "build_terrain_0008"
 --#endregion
+tt = E:register_t("tower_holder_sea_of_trees", "tower_holder")
+tt.tower.terrain_style = TERRAIN_STYLE_FOREST
+-- tt.render.sprites[1].name = "build_terrain_0016"
+tt.render.sprites[1].name = "build_terrain_0001"
 --#region tower_build_archer
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"
@@ -1338,5 +1342,4 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
-
 --#endregion

@@ -8064,3 +8064,656 @@ tt.health_bar.offset.y = tt.health_bar.offset.y * 1.2
 tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
 
 --#endregion
+-- G5
+local v = vec_2
+local vv = vec_1
+local balance = require("kr1.data.balance")
+
+local b = balance.enemies.werebeasts.hog_invader
+
+tt = E:register_t("enemy_hog_invader", "enemy_KR5")
+
+E:add_comps(tt, "melee")
+
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 32)
+tt.info.enc_icon = 1
+tt.info.portrait = "kr5_info_portraits_enemies_0004"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(0, 5)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(8)
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "hog_invader"
+tt.sound_events.death = "EnemyTuskedBrawlerDeath"
+tt.ui.click_rect = r(-17, 0, 34, 30)
+
+local b = balance.enemies.werebeasts.tusked_brawler
+
+tt = E:register_t("enemy_tusked_brawler", "enemy_KR5")
+
+E:add_comps(tt, "melee")
+
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 34)
+tt.health.dead_lifetime = 1
+tt.info.enc_icon = 2
+tt.info.portrait = "kr5_info_portraits_enemies_0009"
+tt.unit.hit_offset = v(0, 14)
+tt.unit.head_offset = v(0, 0)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(8)
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "tusked_brawler"
+tt.sound_events.death = "EnemyTuskedBrawlerDeath"
+tt.ui.click_rect = r(-20, 0, 40, 35)
+
+local b = balance.enemies.werebeasts.turtle_shaman
+
+tt = E:register_t("turtle_shaman_bullet", "bolt_enemy")
+tt.render.sprites[1].prefix = "turtle_shaman_attack_1_projectile"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.hit_fx = "turtle_shaman_bullet_hit"
+tt.sound_events.insert = "EnemyTurtleShamanBasicAttack"
+tt.bullet.pop = {
+	"pop_mage"
+}
+tt.bullet.pop_conds = DR_KILL
+tt = E:register_t("turtle_shaman_bullet_hit", "fx")
+tt.render.sprites[1].name = "turtle_shaman_attack_1_hit"
+tt = E:register_t("turtle_shaman_melee_hit", "fx")
+tt.render.sprites[1].name = "turtle_shaman_attack_2_hit"
+
+local b = balance.enemies.werebeasts.turtle_shaman
+
+tt = E:register_t("enemy_turtle_shaman", "enemy_KR5")
+
+E:add_comps(tt, "melee", "ranged", "timed_attacks")
+
+tt.info.enc_icon = 5
+tt.info.portrait = "kr5_info_portraits_enemies_0008"
+tt.unit.mod_offset = v(0, 16)
+tt.unit.hit_offset = v(0, 18)
+tt.unit.head_offset = v(0, 10)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.marker_offset = v(-1, -1)
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(34, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 42)
+tt.health.dead_lifetime = 3
+tt.unit.fade_time_after_death = 2
+tt.main_script.insert = scripts.enemy_basic_with_random_range.insert
+tt.main_script.update = scripts.enemy_turtle_shaman.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(11)
+tt.melee.attacks[1].animation = "attack_2"
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "turtle_shaman"
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.ranged.attacks[1].animation = "attack_1"
+tt.ranged.attacks[1].bullet = "turtle_shaman_bullet"
+tt.ranged.attacks[1].hold_advance = true
+tt.ranged.attacks[1].shoot_time = fts(9)
+tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
+tt.ranged.attacks[1].max_range_variance = 60
+tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(25, 46)
+}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.sound_events.death = "EnemyTurtleShamanDeath"
+tt.timed_attacks.list[1] = E:clone_c("mod_attack")
+tt.timed_attacks.list[1].cast_time = fts(7)
+tt.timed_attacks.list[1].animation = "ability_1"
+tt.timed_attacks.list[1].cooldown = b.natures_vigor.cooldown
+tt.timed_attacks.list[1].max_count = 1
+tt.timed_attacks.list[1].hp_trigger_factor = b.natures_vigor.hp_trigger_factor
+tt.timed_attacks.list[1].mod = "mod_natures_vigor"
+tt.timed_attacks.list[1].markMod = "mod_natures_vigor_mark"
+tt.timed_attacks.list[1].cast_fx = "turtle_shaman_natures_vigor_cast_fx"
+tt.timed_attacks.list[1].markDurationOffset = 0.1
+tt.timed_attacks.list[1].range = b.natures_vigor.range
+tt.timed_attacks.list[1].sound = "EnemyTurtleShamanHealing"
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_CUSTOM)
+tt.timed_attacks.list[1].excluded_templates = {
+	"enemy_turtle_shaman"
+}
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.can_explode = false
+tt = E:register_t("mod_natures_vigor_mark", "modifier")
+
+E:add_comps(tt, "mark_flags")
+
+tt.mark_flags.vis_bans = F_CUSTOM
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+
+local b = balance.enemies.werebeasts.turtle_shaman
+
+tt = E:register_t("mod_natures_vigor", "modifier")
+
+E:add_comps(tt, "hps", "render")
+
+tt.modifier.duration = b.natures_vigor.duration
+tt.modifier.resets_same = false
+tt.hps.heal_min = b.natures_vigor.heal_min
+tt.hps.heal_max = b.natures_vigor.heal_max
+tt.hps.heal_every = b.natures_vigor.heal_every
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.render.sprites[1].name = "turtle_shaman_HealFX_a_Idle_1"
+tt.render.sprites[1].loop = true
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "turtle_shaman_HealFX_b_Idle_1"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].exclude_mod_offset = true
+tt = E:register_t("turtle_shaman_natures_vigor_cast_fx", "fx")
+tt.render.sprites[1].name = "turtle_shaman_HealFX_decal"
+tt.render.sprites[1].z = Z_DECALS
+
+local b = balance.enemies.werebeasts.bear_vanguard
+
+tt = E:register_t("enemy_bear_vanguard", "enemy_KR5")
+
+E:add_comps(tt, "melee")
+
+tt.info.enc_icon = 3
+tt.info.portrait = "kr5_info_portraits_enemies_0001"
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(37, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 50)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_bear_vanguard.update
+tt.melee.attacks[1] = E:clone_c("area_attack")
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_radius = b.basic_attack.damage_radius
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.melee.attacks[1].hit_decal = "decal_ground_enemy_bear_vanguard"
+tt.melee.attacks[1].hit_fx = "fx_bear_ground_hit"
+tt.melee.attacks[1].hit_time = fts(13)
+tt.melee.attacks[1].hit_offset = v(40, 0)
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "bear_vanguard"
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.sound_events.death = "EnemyBearVanguardDeath"
+tt.ui.click_rect = r(-20, 0, 40, 40)
+tt.unit.hit_offset = v(0, 22)
+tt.unit.head_offset = v(0, 10)
+tt.unit.marker_offset = v(-1, 0)
+tt.unit.mod_offset = v(0, 19)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.wrath_of_the_fallen = {}
+tt.wrath_of_the_fallen.ts = nil
+tt.wrath_of_the_fallen.ts_max = 1
+tt.wrath_of_the_fallen.animation = "wrath"
+tt.wrath_of_the_fallen.cast_time = fts(9)
+tt.wrath_of_the_fallen.radius = b.wrath_of_the_fallen.radius
+tt.wrath_of_the_fallen.mod = "mod_wrath_of_the_fallen"
+tt.wrath_of_the_fallen.sound = "EnemyBearVanguardRage"
+
+tt = E:register_t("fx_bear_ground_hit", "fx")
+tt.render.sprites[1].name = "bear_vanguard_decal_animation"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].scale = v(1.5, 1.5)
+tt.render.sprites[1].sort_y_offset = -2
+
+local b = balance.enemies.werebeasts.bear_vanguard
+tt = E:register_t("mod_wrath_of_the_fallen", "modifier")
+E:add_comps(tt, "render")
+tt.inflicted_damage_factor = b.wrath_of_the_fallen.inflicted_damage_factor
+tt.modifier.duration = b.wrath_of_the_fallen.duration
+tt.modifier.resets_same = true
+tt.modifier.use_mod_offset = false
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.render.sprites[1].name = "bear_vanguard_mod_fx_wrath_of_the_fallen_decal_base"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "bear_vanguard_mod_fx_wrath_of_the_fallen_decal_top"
+tt.render.sprites[2].sort_y_offset = -1
+
+local b = balance.enemies.werebeasts.bear_woodcutter
+
+tt = E:register_t("enemy_bear_woodcutter", "enemy_KR5")
+
+E:add_comps(tt, "melee")
+
+tt.info.enc_icon = 3
+tt.info.portrait = "kr5_info_portraits_enemies_0011"
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(37, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 46)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_bear_vanguard.update
+tt.melee.attacks[1] = E:clone_c("area_attack")
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_radius = b.basic_attack.damage_radius
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.melee.attacks[1].hit_decal = "decal_ground_enemy_bear_vanguard"
+tt.melee.attacks[1].hit_fx = "fx_bear_ground_hit"
+tt.melee.attacks[1].hit_time = fts(13)
+tt.melee.attacks[1].hit_offset = v(40, 0)
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "bear_woodcutter"
+tt.render.sprites[1].draw_order = DO_ENEMY_BIG
+tt.sound_events.death = "EnemyBearVanguardDeath"
+tt.ui.click_rect = r(-20, 0, 40, 40)
+tt.unit.hit_offset = v(0, 22)
+tt.unit.head_offset = v(0, 10)
+tt.unit.marker_offset = v(-1, 0)
+tt.unit.mod_offset = v(0, 19)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.wrath_of_the_fallen = {}
+tt.wrath_of_the_fallen.ts = nil
+tt.wrath_of_the_fallen.ts_max = 1
+tt.wrath_of_the_fallen.animation = "wrath"
+tt.wrath_of_the_fallen.cast_time = fts(9)
+tt.wrath_of_the_fallen.radius = b.wrath_of_the_fallen.radius
+tt.wrath_of_the_fallen.mod = "mod_wrath_of_the_fallen"
+
+local b = balance.enemies.werebeasts.cutthroat_rat
+
+tt = E:register_t("enemy_cutthroat_rat", "enemy_KR5")
+
+E:add_comps(tt, "melee", "timed_attacks")
+
+tt.info.enc_icon = 4
+tt.info.portrait = "kr5_info_portraits_enemies_0002"
+tt.unit.mod_offset = v(0, 12)
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(0, 5)
+tt.unit.marker_offset = v(0, 0)
+tt.ui.click_rect = r(-20, 0, 40, 35)
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(30, 0)
+tt.health.hp_max = b.hp
+tt.health_bar.offset = v(0, 28)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_cutthroat_rat.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].animation = "attack_1"
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].hit_fx = "enemy_cutthroat_rat_attack_fx"
+tt.melee.attacks[1].hit_fx_offset = v(25, 5)
+tt.melee.attacks[1].hit_fx_flip = true
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "cutthroat_rat"
+tt.sound_events.death = "EnemyCutthroatRatDeath"
+tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+tt.timed_attacks.list[1].cast_time = fts(21)
+tt.timed_attacks.list[1].hide_time = fts(25)
+tt.timed_attacks.list[1].animation = "attack_2"
+tt.timed_attacks.list[1].cooldown = b.gut_stab.cooldown
+tt.timed_attacks.list[1].damage_max = b.gut_stab.damage_max
+tt.timed_attacks.list[1].damage_min = b.gut_stab.damage_min
+tt.timed_attacks.list[1].damage_type = b.gut_stab.damage_type
+tt.timed_attacks.list[1].mod = "mod_cutthroat_rat_bleed"
+tt.timed_attacks.list[1].duration = b.gut_stab.duration
+tt.timed_attacks.list[1].min_distance_from_end = b.gut_stab.min_distance_from_end
+tt.timed_attacks.list[1].smoke_fx = "enemy_cutthroat_rat_smoke_fx"
+tt.timed_attacks.list[1].hit_fx = "enemy_cutthroat_rat_stab_fx"
+tt.timed_attacks.list[1].ts = 0
+tt.timed_attacks.list[1].sound = "EnemyCutthroatRat"
+tt = E:register_t("enemy_cutthroat_rat_smoke_fx", "fx")
+tt.render.sprites[1].name = "cutthroat_rat_attack_2_smokeFX"
+tt = E:register_t("enemy_cutthroat_rat_attack_fx", "fx")
+tt.render.sprites[1].name = "cutthroat_rat_attack_1_hit"
+tt = E:register_t("enemy_cutthroat_rat_stab_fx", "fx")
+tt.render.sprites[1].name = "cutthroat_rat_attack_2_hit"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt.render.sprites[1].offset = v(0, 10)
+tt = E:register_t("mod_cutthroat_rat_bleed", "mod_blood")
+b = balance.enemies.werebeasts.cutthroat_rat
+tt.dps.damage_min = b.gut_stab.bleed_damage_min
+tt.dps.damage_max = b.gut_stab.bleed_damage_max
+tt.dps.damage_inc = 0
+tt.dps.damage_every = b.gut_stab.bleed_every
+tt.dps.fx_every = fts(20)
+tt.modifier.duration = b.gut_stab.bleed_duration
+tt = E:register_t("mod_dreadeye_viper_arrow_acidic", "mod_poison")
+b = balance.enemies.werebeasts.dreadeye_viper
+tt.dps.damage_every = b.ranged_attack.poison.every
+tt.dps.damage_min = b.ranged_attack.poison.damage_min
+tt.dps.damage_max = b.ranged_attack.poison.damage_max
+tt.dps.kill = true
+tt.modifier.duration = b.ranged_attack.poison.duration
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt = E:register_t("mod_dreadeye_viper_basic_attack", "mod_poison")
+b = balance.enemies.werebeasts.dreadeye_viper
+tt.dps.damage_every = b.basic_attack.poison.every
+tt.dps.damage_min = b.basic_attack.poison.damage_min
+tt.dps.damage_max = b.basic_attack.poison.damage_max
+tt.dps.kill = true
+tt.modifier.duration = b.basic_attack.poison.duration
+tt = E:register_t("enemy_dreadeye_viper", "enemy_KR5")
+
+E:add_comps(tt, "melee", "ranged")
+
+b = balance.enemies.werebeasts.dreadeye_viper
+tt.info.enc_icon = 7
+tt.info.portrait = "kr5_info_portraits_enemies_0003"
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(0, 5)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 14)
+tt.ui.click_rect = r(-20, 0, 40, 35)
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 35)
+tt.main_script.insert = scripts.enemy_basic_with_random_range.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(11)
+tt.melee.attacks[1].animation = "attack_02"
+tt.melee.attacks[1].mod = "mod_dreadeye_viper_basic_attack"
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "dreadeye_viper_creep"
+tt.ranged.attacks[1].bullet = "arrow_dreadeye_viper"
+tt.ranged.attacks[1].hold_advance = false
+tt.ranged.attacks[1].shoot_time = fts(8)
+tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
+tt.ranged.attacks[1].max_range_variance = 60
+tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(12, 31)
+}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].animation = "attack_01"
+tt.sound_events.death = "EnemyDreadeyeViperDeath"
+tt.unit.blood_color = BLOOD_GREEN
+
+local b = balance.enemies.werebeasts.surveyor_harpy
+
+tt = E:register_t("enemy_surveyor_harpy", "enemy_KR5")
+tt.info.enc_icon = 6
+tt.info.portrait = "kr5_info_portraits_enemies_0005"
+tt.enemy.gold = b.gold
+tt.flight_height = 47
+tt.health.hp_max = b.hp
+tt.health_bar.offset = v(0, tt.flight_height + 40)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_surveyor_harpy.update
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[1].prefix = "patrolling_vulture"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "decal_flying_shadow_hard"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].scale = vv(0.8)
+tt.sound_events.death = "EnemyPatrollingVultureDeath"
+tt.ui.click_rect = r(-18, tt.flight_height - 2, 36, 27)
+tt.unit.can_explode = false
+tt.unit.hide_after_death = true
+tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
+tt.unit.hit_offset = v(0, tt.flight_height + 15)
+tt.unit.head_offset = v(0, 5)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, tt.flight_height + 15)
+tt.unit.size = UNIT_SIZE_SMALL
+tt.unit.show_blood_pool = false
+tt.vis.bans = bor(F_BLOCK, F_SKELETON)
+tt.vis.flags = bor(F_ENEMY, F_FLYING)
+tt = E:register_t("enemy_rhino", "enemy_KR5")
+
+local b = balance.enemies.werebeasts.rhino
+
+E:add_comps(tt, "melee", "timed_attacks")
+
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(37, 0)
+tt.enemy.lives_cost = b.lives_cost
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 80)
+tt.info.enc_icon = 10
+tt.info.portrait = "kr5_info_portraits_enemies_0012"
+tt.unit.hit_offset = v(0, 26)
+tt.unit.head_offset = v(0, 0)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 10)
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_rhino.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(16)
+tt.melee.attacks[1].sound = "EnemyRazingRhinoBasicAttack"
+tt.melee.attacks[2] = E:clone_c("melee_attack")
+tt.melee.attacks[2].animation = "attack"
+tt.melee.attacks[2].cooldown = b.instakill.cooldown
+tt.melee.attacks[2].damage_max = b.instakill.damage_max
+tt.melee.attacks[2].damage_min = b.instakill.damage_min
+tt.melee.attacks[2].damage_type = bor(b.instakill.damage_type)
+tt.melee.attacks[2].vis_bans = bor(F_HERO)
+tt.melee.attacks[2].vis_flags = F_INSTAKILL
+tt.melee.attacks[2].hit_time = fts(16)
+tt.melee.attacks[2].instakill = true
+tt.melee.attacks[2].disabled = true
+tt.melee.attacks[2].sound = "EnemyRazingRhinoBasicAttack"
+tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+tt.timed_attacks.list[1].cast_time = fts(21)
+tt.timed_attacks.list[1].animation = "charge"
+tt.timed_attacks.list[1].cooldown = b.charge.cooldown
+tt.timed_attacks.list[1].duration = b.charge.duration
+tt.timed_attacks.list[1].min_distance_from_end = b.charge.min_distance_from_end
+tt.timed_attacks.list[1].speed = b.charge.speed
+tt.timed_attacks.list[1].trigger_range = b.charge.trigger_range
+tt.timed_attacks.list[1].vis_flags = F_FRIEND
+tt.timed_attacks.list[1].vis_bans = bor(F_HERO, F_FLYING)
+tt.timed_attacks.list[1].vis_flags_enemies = F_RANGED
+tt.timed_attacks.list[1].vis_bans_enemies = F_BOSS
+tt.timed_attacks.list[1].vis_flags_soldiers = F_RANGED
+tt.timed_attacks.list[1].vis_bans_soldiers = bor(F_BOSS, F_FLYING)
+tt.timed_attacks.list[1].mod_enemy = "mod_enemy_rhino_charge_enemy"
+tt.timed_attacks.list[1].mod_soldier = "mod_enemy_rhino_charge_soldier"
+tt.timed_attacks.list[1].range = b.charge.range
+tt.timed_attacks.list[1].min_range = b.charge.min_range
+tt.timed_attacks.list[1].particles_name_a = "ps_enemy_rhino_charge_a"
+tt.timed_attacks.list[1].particles_name_b = "ps_enemy_rhino_charge_b"
+tt.timed_attacks.list[1].sound = "EnemyRazingRhinoCharge"
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "razing_rhino_razing_rhino"
+tt.render.sprites[1].angles.charge = {
+	"charge_side",
+	"charge_back",
+	"charge_front"
+}
+tt.render.sprites[1].angles_custom = {
+	charge = {
+		55,
+		115,
+		245,
+		305
+	}
+}
+tt.ui.click_rect = r(-30, -3, 60, 65)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.unit.can_explode = false
+tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
+tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
+tt.sound_events.death = "EnemyRazingRhinoDeath"
+tt.base_speed = b.speed
+
+local b = balance.enemies.werebeasts.skunk_bombardier
+
+tt = E:register_t("enemy_skunk_bombardier", "enemy_KR5")
+
+E:add_comps(tt, "melee", "ranged", "death_spawns")
+
+tt.info.enc_icon = 9
+tt.info.portrait = "kr5_info_portraits_enemies_0007"
+tt.enemy.gold = b.gold
+tt.enemy.melee_slot = v(28, 0)
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_mixed.update
+tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
+tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
+tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(10)
+tt.motion.max_speed = b.speed
+tt.ranged.attacks[1].bullet = "enemy_skunk_bombardier_bomb"
+tt.ranged.attacks[1].hold_advance = false
+tt.ranged.attacks[1].shoot_time = fts(12)
+tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
+tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
+tt.ranged.attacks[1].bullet_start_offset = {
+	v(0, 32)
+}
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].vis_bans = bor(F_FLYING)
+tt.ranged.attacks[1].ignore_hit_offset = true
+tt.render.sprites[1].prefix = "skunk_bombardier"
+tt.sound_events.death = "EnemySkunkBombardierDeath"
+tt.unit.hit_offset = v(0, 15)
+tt.unit.head_offset = v(0, 5)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.size = UNIT_SIZE_SMALL
+tt.ui.click_rect = r(-20, 0, 40, 35)
+tt.death_spawns.name = "aura_enemy_skunk_bombardier_death_explosion"
+tt.death_spawns.concurrent_with_death = false
+tt.death_spawns.delay = fts(19)
+tt = E:register_t("enemy_skunk_bombardier_hit_fx", "fx")
+tt.render.sprites[1].name = "skunk_bombardier_bomb_hit_fx"
+tt.render.sprites[1].anchor.y = 0.25
+tt = E:register_t("enemy_skunk_bombardier_bomb_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "skunk_bombardier_bomb_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {
+	fts(9),
+	fts(9)
+}
+tt.particle_system.emission_rate = 30
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("enemy_hyena5", "enemy_KR5")
+
+local b = balance.enemies.werebeasts.hyena5
+
+E:add_comps(tt, "melee")
+
+tt.feast = {}
+tt.feast.mods = {
+	"enemy_hyena5_feast_mod"
+}
+tt.feast.animation = "eat"
+tt.feast.duration = b.feast.duration
+tt.feast.cooldown = b.feast.cooldown
+tt.feast.hp_min_trigger = b.feast.hp_min_trigger
+tt.enemy.gold = b.gold
+tt.health.armor = b.armor
+tt.health.hp_max = b.hp
+tt.health.magic_armor = b.magic_armor
+tt.info.enc_icon = 8
+tt.info.portrait = "kr5_info_portraits_enemies_0006"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_hyena5.update
+tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
+tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
+tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(15)
+tt.melee.attacks[1].hit_fx = "enemy_hyena5_attack_fx"
+tt.melee.attacks[1].hit_fx_offset = v(25, 5)
+tt.melee.attacks[1].hit_fx_flip = true
+tt.motion.max_speed = b.speed
+tt.sound_events.feast = "EnemyRottenfangHyenaFeast"
+tt.sound_events.death = "EnemyRottenfangHyenaDeath"
+tt.sound_events.water_splash = "SpecialMermaid"
+tt.render.sprites[1].prefix = "rottenfang_hyena"
+tt.render.sprites[1].angles_stickiness.run = 10
+tt.health_bar.offset = v(0, 35)
+tt.unit.hit_offset = v(0, 16)
+tt.unit.head_offset = v(0, 5)
+tt.unit.marker_offset = v(0, -1)
+tt.unit.mod_offset = v(0, 17)
+tt.unit.size = UNIT_SIZE_SMALL
+tt.enemy.melee_slot = v(33, 0)
+tt.ui.click_rect = r(-20, 0, 40, 35)
+tt = E:register_t("enemy_hyena5_feast_mod", "modifier")
+
+E:add_comps(tt, "hps", "render")
+
+tt.modifier.duration = b.feast.duration
+tt.modifier.resets_same = false
+tt.hps.heal_min = b.feast.heal
+tt.hps.heal_max = b.feast.heal
+tt.hps.heal_every = b.feast.heal_every
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.render.sprites[1].prefix = "mod_twilight_evoker_heal"
+tt.render.sprites[1].size_names = {
+	"small",
+	"big",
+	"big"
+}
+tt.render.sprites[1].loop = true
+tt = E:register_t("enemy_hyena5_attack_fx", "fx")
+tt.render.sprites[1].name = "rottenfang_hyena_attack_hit_fx"

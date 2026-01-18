@@ -1,0 +1,33172 @@
+﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_stage135.lua
+
+local a = {
+	boss_princess_iron_fan_vfx_stun_hero_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			149,
+			101,
+			57,
+			123
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1973,
+			30,
+			28
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_0002"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			153,
+			101,
+			50,
+			120
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1788,
+			33,
+			31
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_0004"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			75,
+			28,
+			42,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2916,
+			1806,
+			119,
+			107
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_0006"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			80,
+			38,
+			40,
+			116
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3601,
+			1700,
+			116,
+			98
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_0008"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			72,
+			57,
+			36,
+			104
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2699,
+			1700,
+			128,
+			91
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			72,
+			57,
+			36,
+			104
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2833,
+			1700,
+			128,
+			91
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			73,
+			64,
+			41,
+			101
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2967,
+			1700,
+			122,
+			87
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0012 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			73,
+			64,
+			41,
+			101
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3095,
+			1700,
+			122,
+			87
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0013 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			57,
+			56,
+			43,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1871,
+			1700,
+			136,
+			94
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0014 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			50,
+			51,
+			43,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			3639,
+			143,
+			99
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0015 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			46,
+			48,
+			48,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3440,
+			1523,
+			142,
+			102
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0016 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			46,
+			46,
+			48,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3292,
+			1523,
+			142,
+			104
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0017 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			46,
+			46,
+			60,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			2968,
+			130,
+			104
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0018 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			46,
+			46,
+			60,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			3078,
+			130,
+			104
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0019 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			45,
+			46,
+			58,
+			103
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			3437,
+			133,
+			103
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0020 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			45,
+			45,
+			58,
+			103
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			3327,
+			133,
+			104
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0021 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			44,
+			45,
+			54,
+			103
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			3564,
+			138,
+			104
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0022 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			43,
+			44,
+			54,
+			103
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			3453,
+			139,
+			105
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0023 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			42,
+			44,
+			59,
+			105
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			3218,
+			135,
+			103
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0024 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			42,
+			44,
+			58,
+			105
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			2568,
+			136,
+			103
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0025 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			41,
+			44,
+			58,
+			107
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			1947,
+			137,
+			101
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0026 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			40,
+			45,
+			58,
+			107
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			1700,
+			138,
+			100
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0027 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			45,
+			47,
+			57,
+			112
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2845,
+			206,
+			134,
+			93
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0028 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			46,
+			48,
+			54,
+			112
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2013,
+			1700,
+			136,
+			92
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0029 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			57,
+			50,
+			67,
+			112
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			826,
+			3627,
+			112,
+			90
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0030 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			55,
+			53,
+			75,
+			112
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3044,
+			2131,
+			106,
+			87
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0031 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			102,
+			76,
+			73,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2946,
+			1038,
+			61,
+			59
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_0032 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			252
+		},
+		trim = {
+			0,
+			0,
+			234,
+			250
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1707,
+			269,
+			2,
+			2
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_0033",
+			"boss_princess_iron_fan_vfx_stun_hero_0034",
+			"boss_princess_iron_fan_vfx_stun_hero_0035",
+			"boss_princess_iron_fan_vfx_stun_hero_0036",
+			"boss_princess_iron_fan_vfx_stun_hero_0037",
+			"boss_princess_iron_fan_vfx_stun_hero_0038",
+			"boss_princess_iron_fan_vfx_stun_hero_0039"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			0,
+			0,
+			246,
+			230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1707,
+			277,
+			2,
+			2
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0002 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			63,
+			93,
+			65,
+			88
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1607,
+			1042,
+			120,
+			51
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			67,
+			92,
+			69,
+			86
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2810,
+			1293,
+			112,
+			54
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0004 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			66,
+			92,
+			68,
+			86
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2637,
+			1293,
+			114,
+			54
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			60,
+			89,
+			62,
+			83
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2814,
+			1038,
+			126,
+			60
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0006 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			54,
+			87,
+			56,
+			82
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2702,
+			502,
+			138,
+			63
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			42,
+			85,
+			45,
+			80
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2535,
+			502,
+			161,
+			67
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0008 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			45,
+			83,
+			48,
+			79
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2847,
+			502,
+			155,
+			70
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			34,
+			81,
+			37,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3300,
+			1104,
+			177,
+			74
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			31,
+			80,
+			34,
+			76
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2505,
+			777,
+			183,
+			76
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			28,
+			79,
+			32,
+			75
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1982,
+			1104,
+			188,
+			78
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0012 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			27,
+			79,
+			30,
+			75
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1397,
+			1104,
+			191,
+			78
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0013 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			26,
+			78,
+			29,
+			74
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3013,
+			860,
+			193,
+			80
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0014 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			26,
+			78,
+			28,
+			75
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2012,
+			1019,
+			194,
+			79
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0015 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			32,
+			78,
+			35,
+			74
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2556,
+			1104,
+			181,
+			80
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0016 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			23,
+			78,
+			26,
+			73
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3631,
+			199,
+			81
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0017 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			22,
+			78,
+			25,
+			73
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3116,
+			201,
+			81
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0018 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			22,
+			78,
+			24,
+			73
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3029,
+			202,
+			81
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_0019 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			232
+		},
+		trim = {
+			21,
+			78,
+			24,
+			73
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2696,
+			203,
+			81
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0020",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0021",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0022",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0023",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0024",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0025",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0026",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_0027"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			102,
+			68,
+			100,
+			68
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3483,
+			1104,
+			174,
+			76
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_decal_2_0021"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0002 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			74,
+			59,
+			69,
+			57
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			366,
+			2235,
+			233,
+			96
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			75,
+			58,
+			70,
+			57
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			366,
+			2468,
+			231,
+			97
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0004 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			76,
+			58,
+			71,
+			58
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			2735,
+			229,
+			96
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			78,
+			59,
+			72,
+			58
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			3050,
+			226,
+			95
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0006 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			80,
+			59,
+			74,
+			59
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			380,
+			1734,
+			222,
+			94
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			81,
+			60,
+			76,
+			59
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			3301,
+			219,
+			93
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0008 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			82,
+			60,
+			77,
+			59
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2765,
+			690,
+			217,
+			93
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			84,
+			61,
+			79,
+			60
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3241,
+			757,
+			213,
+			91
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			86,
+			62,
+			81,
+			61
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			3627,
+			209,
+			89
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			87,
+			62,
+			82,
+			61
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			1952,
+			207,
+			89
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0012 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			89,
+			63,
+			84,
+			62
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2510,
+			203,
+			87
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0013 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			90,
+			63,
+			86,
+			63
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3447,
+			200,
+			86
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0014 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			92,
+			64,
+			87,
+			63
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1607,
+			860,
+			197,
+			85
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0015 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			94,
+			65,
+			89,
+			64
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2814,
+			860,
+			193,
+			83
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0016 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			95,
+			65,
+			90,
+			65
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3013,
+			946,
+			191,
+			82
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0017 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			96,
+			66,
+			92,
+			65
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1594,
+			1104,
+			188,
+			81
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0018 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			98,
+			66,
+			94,
+			66
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2176,
+			1104,
+			184,
+			80
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0019 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			99,
+			67,
+			96,
+			67
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2743,
+			1104,
+			181,
+			78
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0020 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			101,
+			68,
+			98,
+			67
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3117,
+			1104,
+			177,
+			77
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_decal_2_0042"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0022 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			104,
+			69,
+			101,
+			69
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2286,
+			1192,
+			171,
+			74
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0023 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			105,
+			70,
+			103,
+			69
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2286,
+			1272,
+			168,
+			73
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0024 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			74,
+			59,
+			69,
+			57
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			366,
+			2337,
+			233,
+			96
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0025 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			75,
+			58,
+			70,
+			57
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			366,
+			2571,
+			231,
+			97
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0026 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			76,
+			58,
+			71,
+			58
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			2837,
+			229,
+			96
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0027 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			78,
+			59,
+			72,
+			58
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			3200,
+			226,
+			95
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0028 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			80,
+			59,
+			74,
+			59
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			380,
+			1834,
+			222,
+			94
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0029 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			81,
+			60,
+			76,
+			59
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			361,
+			3609,
+			219,
+			93
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0030 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			82,
+			60,
+			77,
+			59
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3016,
+			753,
+			217,
+			93
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0031 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			84,
+			61,
+			79,
+			60
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3463,
+			755,
+			213,
+			91
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0032 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			86,
+			62,
+			81,
+			61
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			1438,
+			209,
+			89
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0033 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			87,
+			62,
+			82,
+			61
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2047,
+			207,
+			89
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0034 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			89,
+			63,
+			84,
+			62
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2603,
+			203,
+			87
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0035 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			90,
+			63,
+			86,
+			63
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3539,
+			200,
+			86
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0036 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			92,
+			64,
+			87,
+			63
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1607,
+			951,
+			197,
+			85
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0037 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			94,
+			65,
+			89,
+			64
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2814,
+			949,
+			193,
+			83
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0038 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			95,
+			65,
+			90,
+			65
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			1104,
+			191,
+			82
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0039 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			96,
+			66,
+			92,
+			65
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1788,
+			1104,
+			188,
+			81
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0040 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			98,
+			66,
+			94,
+			66
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2366,
+			1104,
+			184,
+			80
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_2_0041 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			376,
+			212
+		},
+		trim = {
+			99,
+			67,
+			96,
+			67
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2930,
+			1104,
+			181,
+			78
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			83,
+			48,
+			83,
+			50
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1627,
+			269,
+			74,
+			42
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0002 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			75,
+			44,
+			75,
+			47
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2614,
+			1046,
+			90,
+			49
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			67,
+			41,
+			67,
+			44
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1571,
+			1449,
+			106,
+			55
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0004 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			60,
+			37,
+			60,
+			41
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3013,
+			1034,
+			120,
+			62
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			54,
+			35,
+			54,
+			39
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1404,
+			1032,
+			132,
+			66
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0006 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			49,
+			32,
+			48,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3008,
+			502,
+			143,
+			71
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			44,
+			30,
+			43,
+			35
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3607,
+			1009,
+			153,
+			75
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0008 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			40,
+			29,
+			40,
+			33
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1903,
+			1356,
+			160,
+			78
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			37,
+			27,
+			37,
+			32
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2983,
+			1192,
+			166,
+			81
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			35,
+			26,
+			34,
+			31
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2109,
+			1192,
+			171,
+			83
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_decal_3_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			140
+		},
+		trim = {
+			33,
+			25,
+			33,
+			31
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			3333,
+			174,
+			84
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0012",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0013",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0014",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0015",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0016",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0017",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0018",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0019",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0020",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0021",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0022",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0023",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0024",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0025",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0026",
+			"boss_princess_iron_fan_vfx_stun_hero_decal_3_0027"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			168,
+			136,
+			71,
+			332
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2397,
+			29,
+			28
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0002"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			171,
+			136,
+			64,
+			329
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1825,
+			33,
+			31
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0004"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			94,
+			63,
+			56,
+			326
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2916,
+			1919,
+			118,
+			107
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0006"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			98,
+			73,
+			53,
+			325
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3478,
+			1700,
+			117,
+			98
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0008 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			98,
+			73,
+			53,
+			309
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3413,
+			1806,
+			117,
+			114
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			90,
+			70,
+			50,
+			289
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			3497,
+			128,
+			137
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			67,
+			57,
+			50,
+			272
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2525,
+			1523,
+			151,
+			167
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			51,
+			47,
+			54,
+			259
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			2888,
+			163,
+			190
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0012 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			41,
+			39,
+			54,
+			248
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			3423,
+			173,
+			209
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0013 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			36,
+			34,
+			50,
+			241
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			2263,
+			182,
+			221
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0014 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			36,
+			32,
+			45,
+			235
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			2028,
+			187,
+			229
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0015 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			35,
+			32,
+			43,
+			234
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			1429,
+			190,
+			230
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0016 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			35,
+			32,
+			43,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			1192,
+			190,
+			231
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0017 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			34,
+			31,
+			43,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3410,
+			860,
+			191,
+			232
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0018 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			33,
+			31,
+			43,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3212,
+			860,
+			192,
+			232
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0019 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			32,
+			30,
+			42,
+			232
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2414,
+			860,
+			194,
+			234
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0020 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			32,
+			30,
+			42,
+			231
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2214,
+			860,
+			194,
+			235
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0021 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			30,
+			29,
+			42,
+			231
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1810,
+			860,
+			196,
+			236
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0022 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			29,
+			28,
+			41,
+			230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			860,
+			198,
+			238
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0023 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			27,
+			28,
+			41,
+			230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3203,
+			200,
+			238
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0024 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			26,
+			27,
+			40,
+			229
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2783,
+			202,
+			240
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0025 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			24,
+			27,
+			37,
+			229
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			1706,
+			207,
+			240
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0026 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			23,
+			33,
+			34,
+			229
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			394,
+			1194,
+			211,
+			234
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0027 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			23,
+			34,
+			34,
+			234
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			394,
+			1464,
+			211,
+			228
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0028 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			47,
+			42,
+			55,
+			236
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			1523,
+			166,
+			218
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0029 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			47,
+			77,
+			63,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			447,
+			866,
+			158,
+			175
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0030 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			116,
+			136,
+			63,
+			278
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3315,
+			89,
+			82
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_dragon_0031 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			268,
+			496
+		},
+		trim = {
+			0,
+			0,
+			266,
+			494
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1707,
+			285,
+			2,
+			2
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0032",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0033",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0034",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0035",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0036",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0037",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0038",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0039",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0040",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0041",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0042",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0043",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0044",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0045",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0046",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0047",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0048",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0049",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0050",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0051",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0052",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0053",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0054",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0055",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0056",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0057",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0058",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0059",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0060",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0061",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0062",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0063",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0064",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0065",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0066",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0067",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0068",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0069",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0070",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0071",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0072",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0073",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0074",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0075",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0076",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0077",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0078",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0079",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0080",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0081",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0082",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0083",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0084",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0085",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0086",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0087",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0088",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0089",
+			"boss_princess_iron_fan_vfx_stun_hero_dragon_0090"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			164,
+			396
+		},
+		trim = {
+			41,
+			31,
+			34,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			3606,
+			89,
+			121
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_0002"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			164,
+			396
+		},
+		trim = {
+			41,
+			28,
+			34,
+			239
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			3471,
+			89,
+			129
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_0004"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			164,
+			396
+		},
+		trim = {
+			40,
+			25,
+			34,
+			243
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			3068,
+			90,
+			128
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_0006"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			164,
+			396
+		},
+		trim = {
+			38,
+			24,
+			34,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3585,
+			2651,
+			92,
+			128
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_0008"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			164,
+			396
+		},
+		trim = {
+			38,
+			22,
+			33,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3486,
+			2651,
+			93,
+			130
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_0010"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_copy_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			244,
+			540
+		},
+		trim = {
+			49,
+			27,
+			31,
+			289
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			2207,
+			164,
+			224
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_copy_0002"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_copy_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			244,
+			540
+		},
+		trim = {
+			49,
+			23,
+			31,
+			289
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			1973,
+			164,
+			228
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_copy_0004"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_copy_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			244,
+			540
+		},
+		trim = {
+			48,
+			31,
+			31,
+			289
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			1747,
+			165,
+			220
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_copy_0006"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_copy_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			244,
+			540
+		},
+		trim = {
+			49,
+			34,
+			31,
+			289
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			2665,
+			164,
+			217
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_copy_0008"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_copy_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			244,
+			540
+		},
+		trim = {
+			49,
+			29,
+			31,
+			289
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			2437,
+			164,
+			222
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_loop_copy_0010"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_shadow = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			84,
+			56
+		},
+		trim = {
+			20,
+			22,
+			19,
+			20
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2429,
+			295,
+			45,
+			14
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_shadow_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			60
+		},
+		trim = {
+			32,
+			24,
+			31,
+			22
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2480,
+			295,
+			45,
+			14
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_loop_shadow_0002 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			60
+		},
+		trim = {
+			21,
+			20,
+			19,
+			19
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2347,
+			290,
+			68,
+			21
+		},
+		alias = {}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			145,
+			33,
+			78,
+			283
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3508,
+			2595,
+			53,
+			48
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0002"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			163,
+			27,
+			58,
+			296
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			3720,
+			55,
+			41
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0004"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			182,
+			32,
+			47,
+			287
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1542,
+			502,
+			47,
+			45
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0006"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			192,
+			40,
+			41,
+			278
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1150,
+			3447,
+			43,
+			46
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0008"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			197,
+			48,
+			36,
+			265
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1151,
+			3116,
+			43,
+			51
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0010"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			190,
+			58,
+			39,
+			258
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			555,
+			3708,
+			47,
+			48
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0012"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0013 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			177,
+			66,
+			46,
+			250
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3609,
+			2592,
+			53,
+			48
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0014"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0015 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			145,
+			69,
+			69,
+			250
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			532,
+			3400,
+			62,
+			45
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0016"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0017 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			113,
+			49,
+			99,
+			262
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3370,
+			1633,
+			64,
+			53
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0018"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0019 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			83,
+			33,
+			140,
+			283
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2887,
+			2814,
+			53,
+			48
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0020"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0021 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			63,
+			27,
+			158,
+			296
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2794,
+			2602,
+			55,
+			41
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0022"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0023 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			52,
+			32,
+			178,
+			287
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2757,
+			1293,
+			46,
+			45
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0024"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0025 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			45,
+			40,
+			187,
+			278
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1150,
+			3372,
+			44,
+			46
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0026"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0027 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			40,
+			48,
+			192,
+			265
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1150,
+			3315,
+			44,
+			51
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0028"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0029 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			44,
+			58,
+			186,
+			258
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2234,
+			1281,
+			46,
+			48
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0030"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0031 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			50,
+			66,
+			173,
+			250
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2987,
+			2814,
+			53,
+			48
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0032"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0033 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			73,
+			69,
+			141,
+			250
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			3718,
+			62,
+			45
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0034"
+		}
+	},
+	boss_princess_iron_fan_vfx_stun_hero_particle_0035 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			276,
+			364
+		},
+		trim = {
+			104,
+			49,
+			109,
+			262
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3516,
+			1631,
+			63,
+			53
+		},
+		alias = {
+			"boss_princess_iron_fan_vfx_stun_hero_particle_0036"
+		}
+	},
+	destruccion_holder_escombros_camino = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			208,
+			136
+		},
+		trim = {
+			20,
+			30,
+			24,
+			25
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3325,
+			1192,
+			164,
+			81
+		},
+		alias = {}
+	},
+	destruccion_holder_escombros_oro = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			208,
+			136
+		},
+		trim = {
+			31,
+			33,
+			26,
+			27
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1903,
+			1440,
+			151,
+			76
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			212,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1079,
+			3718,
+			61,
+			39
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0002",
+			"easter_egg_saitam_saitam_stage_5_0003",
+			"easter_egg_saitam_saitam_stage_5_0004",
+			"easter_egg_saitam_saitam_stage_5_0005",
+			"easter_egg_saitam_saitam_stage_5_0006",
+			"easter_egg_saitam_saitam_stage_5_0007",
+			"easter_egg_saitam_saitam_stage_5_0008",
+			"easter_egg_saitam_saitam_stage_5_0009",
+			"easter_egg_saitam_saitam_stage_5_0010",
+			"easter_egg_saitam_saitam_stage_5_0011",
+			"easter_egg_saitam_saitam_stage_5_0012",
+			"easter_egg_saitam_saitam_stage_5_0013",
+			"easter_egg_saitam_saitam_stage_5_0014",
+			"easter_egg_saitam_saitam_stage_5_0015",
+			"easter_egg_saitam_saitam_stage_5_0016",
+			"easter_egg_saitam_saitam_stage_5_0017",
+			"easter_egg_saitam_saitam_stage_5_0018",
+			"easter_egg_saitam_saitam_stage_5_0019",
+			"easter_egg_saitam_saitam_stage_5_0020",
+			"easter_egg_saitam_saitam_stage_5_0021",
+			"easter_egg_saitam_saitam_stage_5_0022",
+			"easter_egg_saitam_saitam_stage_5_0023",
+			"easter_egg_saitam_saitam_stage_5_0024",
+			"easter_egg_saitam_saitam_stage_5_0025",
+			"easter_egg_saitam_saitam_stage_5_0026",
+			"easter_egg_saitam_saitam_stage_5_0027",
+			"easter_egg_saitam_saitam_stage_5_0028",
+			"easter_egg_saitam_saitam_stage_5_0029",
+			"easter_egg_saitam_saitam_stage_5_0030",
+			"easter_egg_saitam_saitam_stage_5_0031",
+			"easter_egg_saitam_saitam_stage_5_0032",
+			"easter_egg_saitam_saitam_stage_5_0033",
+			"easter_egg_saitam_saitam_stage_5_0034",
+			"easter_egg_saitam_saitam_stage_5_0035",
+			"easter_egg_saitam_saitam_stage_5_0036",
+			"easter_egg_saitam_saitam_stage_5_0037",
+			"easter_egg_saitam_saitam_stage_5_0038",
+			"easter_egg_saitam_saitam_stage_5_0039",
+			"easter_egg_saitam_saitam_stage_5_0040",
+			"easter_egg_saitam_saitam_stage_5_0041",
+			"easter_egg_saitam_saitam_stage_5_0042",
+			"easter_egg_saitam_saitam_stage_5_0043",
+			"easter_egg_saitam_saitam_stage_5_0044",
+			"easter_egg_saitam_saitam_stage_5_0045",
+			"easter_egg_saitam_saitam_stage_5_0046",
+			"easter_egg_saitam_saitam_stage_5_0047",
+			"easter_egg_saitam_saitam_stage_5_0048",
+			"easter_egg_saitam_saitam_stage_5_0049",
+			"easter_egg_saitam_saitam_stage_5_0050",
+			"easter_egg_saitam_saitam_stage_5_0051",
+			"easter_egg_saitam_saitam_stage_5_0052",
+			"easter_egg_saitam_saitam_stage_5_0053",
+			"easter_egg_saitam_saitam_stage_5_0054",
+			"easter_egg_saitam_saitam_stage_5_0055",
+			"easter_egg_saitam_saitam_stage_5_0056",
+			"easter_egg_saitam_saitam_stage_5_0057",
+			"easter_egg_saitam_saitam_stage_5_0058",
+			"easter_egg_saitam_saitam_stage_5_0059",
+			"easter_egg_saitam_saitam_stage_5_0060",
+			"easter_egg_saitam_saitam_stage_5_0061",
+			"easter_egg_saitam_saitam_stage_5_0062",
+			"easter_egg_saitam_saitam_stage_5_0063",
+			"easter_egg_saitam_saitam_stage_5_0064",
+			"easter_egg_saitam_saitam_stage_5_0065",
+			"easter_egg_saitam_saitam_stage_5_0066",
+			"easter_egg_saitam_saitam_stage_5_0067",
+			"easter_egg_saitam_saitam_stage_5_0068",
+			"easter_egg_saitam_saitam_stage_5_0069",
+			"easter_egg_saitam_saitam_stage_5_0070",
+			"easter_egg_saitam_saitam_stage_5_0071",
+			"easter_egg_saitam_saitam_stage_5_0072",
+			"easter_egg_saitam_saitam_stage_5_0073",
+			"easter_egg_saitam_saitam_stage_5_0074",
+			"easter_egg_saitam_saitam_stage_5_0075",
+			"easter_egg_saitam_saitam_stage_5_0076",
+			"easter_egg_saitam_saitam_stage_5_0077",
+			"easter_egg_saitam_saitam_stage_5_0078",
+			"easter_egg_saitam_saitam_stage_5_0079",
+			"easter_egg_saitam_saitam_stage_5_0080",
+			"easter_egg_saitam_saitam_stage_5_0081",
+			"easter_egg_saitam_saitam_stage_5_0082",
+			"easter_egg_saitam_saitam_stage_5_0083",
+			"easter_egg_saitam_saitam_stage_5_0084",
+			"easter_egg_saitam_saitam_stage_5_0085",
+			"easter_egg_saitam_saitam_stage_5_0086",
+			"easter_egg_saitam_saitam_stage_5_0087",
+			"easter_egg_saitam_saitam_stage_5_0088",
+			"easter_egg_saitam_saitam_stage_5_0089",
+			"easter_egg_saitam_saitam_stage_5_0090",
+			"easter_egg_saitam_saitam_stage_5_0091",
+			"easter_egg_saitam_saitam_stage_5_0092",
+			"easter_egg_saitam_saitam_stage_5_0093",
+			"easter_egg_saitam_saitam_stage_5_0094",
+			"easter_egg_saitam_saitam_stage_5_0095",
+			"easter_egg_saitam_saitam_stage_5_0096",
+			"easter_egg_saitam_saitam_stage_5_0097",
+			"easter_egg_saitam_saitam_stage_5_0098",
+			"easter_egg_saitam_saitam_stage_5_0099",
+			"easter_egg_saitam_saitam_stage_5_0100",
+			"easter_egg_saitam_saitam_stage_5_0101",
+			"easter_egg_saitam_saitam_stage_5_0102",
+			"easter_egg_saitam_saitam_stage_5_0103",
+			"easter_egg_saitam_saitam_stage_5_0104",
+			"easter_egg_saitam_saitam_stage_5_0105",
+			"easter_egg_saitam_saitam_stage_5_0161",
+			"easter_egg_saitam_saitam_stage_5_0162",
+			"easter_egg_saitam_saitam_stage_5_0163",
+			"easter_egg_saitam_saitam_stage_5_0164",
+			"easter_egg_saitam_saitam_stage_5_0165",
+			"easter_egg_saitam_saitam_stage_5_0166",
+			"easter_egg_saitam_saitam_stage_5_0167",
+			"easter_egg_saitam_saitam_stage_5_0168",
+			"easter_egg_saitam_saitam_stage_5_0169",
+			"easter_egg_saitam_saitam_stage_5_0170",
+			"easter_egg_saitam_saitam_stage_5_0171",
+			"easter_egg_saitam_saitam_stage_5_0172",
+			"easter_egg_saitam_saitam_stage_5_0173",
+			"easter_egg_saitam_saitam_stage_5_0174",
+			"easter_egg_saitam_saitam_stage_5_0175",
+			"easter_egg_saitam_saitam_stage_5_0176",
+			"easter_egg_saitam_saitam_stage_5_0177",
+			"easter_egg_saitam_saitam_stage_5_0178",
+			"easter_egg_saitam_saitam_stage_5_0179",
+			"easter_egg_saitam_saitam_stage_5_0180",
+			"easter_egg_saitam_saitam_stage_5_0181",
+			"easter_egg_saitam_saitam_stage_5_0182",
+			"easter_egg_saitam_saitam_stage_5_0183",
+			"easter_egg_saitam_saitam_stage_5_0184",
+			"easter_egg_saitam_saitam_stage_5_0185",
+			"easter_egg_saitam_saitam_stage_5_0186",
+			"easter_egg_saitam_saitam_stage_5_0187",
+			"easter_egg_saitam_saitam_stage_5_0188",
+			"easter_egg_saitam_saitam_stage_5_0189",
+			"easter_egg_saitam_saitam_stage_5_0190",
+			"easter_egg_saitam_saitam_stage_5_0191",
+			"easter_egg_saitam_saitam_stage_5_0192",
+			"easter_egg_saitam_saitam_stage_5_0193",
+			"easter_egg_saitam_saitam_stage_5_0194",
+			"easter_egg_saitam_saitam_stage_5_0195",
+			"easter_egg_saitam_saitam_stage_5_0196",
+			"easter_egg_saitam_saitam_stage_5_0197",
+			"easter_egg_saitam_saitam_stage_5_0198",
+			"easter_egg_saitam_saitam_stage_5_0199",
+			"easter_egg_saitam_saitam_stage_5_0206",
+			"easter_egg_saitam_saitam_stage_5_0207"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0106 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			214,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3155,
+			1313,
+			61,
+			37
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0107"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0108 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			210,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			745,
+			3722,
+			61,
+			41
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0109"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0110 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			209,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			3722,
+			61,
+			42
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0111"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0112 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			212,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			3725,
+			61,
+			39
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0113"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0114 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			212,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1267,
+			3725,
+			61,
+			39
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0115"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0116 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			212,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3091,
+			1453,
+			61,
+			39
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0117",
+			"easter_egg_saitam_saitam_stage_5_0118",
+			"easter_egg_saitam_saitam_stage_5_0119",
+			"easter_egg_saitam_saitam_stage_5_0120",
+			"easter_egg_saitam_saitam_stage_5_0121",
+			"easter_egg_saitam_saitam_stage_5_0122",
+			"easter_egg_saitam_saitam_stage_5_0123",
+			"easter_egg_saitam_saitam_stage_5_0124",
+			"easter_egg_saitam_saitam_stage_5_0125",
+			"easter_egg_saitam_saitam_stage_5_0126",
+			"easter_egg_saitam_saitam_stage_5_0127",
+			"easter_egg_saitam_saitam_stage_5_0128",
+			"easter_egg_saitam_saitam_stage_5_0129",
+			"easter_egg_saitam_saitam_stage_5_0130",
+			"easter_egg_saitam_saitam_stage_5_0131",
+			"easter_egg_saitam_saitam_stage_5_0132",
+			"easter_egg_saitam_saitam_stage_5_0133",
+			"easter_egg_saitam_saitam_stage_5_0134",
+			"easter_egg_saitam_saitam_stage_5_0135",
+			"easter_egg_saitam_saitam_stage_5_0136",
+			"easter_egg_saitam_saitam_stage_5_0137",
+			"easter_egg_saitam_saitam_stage_5_0138",
+			"easter_egg_saitam_saitam_stage_5_0139",
+			"easter_egg_saitam_saitam_stage_5_0140",
+			"easter_egg_saitam_saitam_stage_5_0141",
+			"easter_egg_saitam_saitam_stage_5_0142",
+			"easter_egg_saitam_saitam_stage_5_0143",
+			"easter_egg_saitam_saitam_stage_5_0144",
+			"easter_egg_saitam_saitam_stage_5_0145",
+			"easter_egg_saitam_saitam_stage_5_0146",
+			"easter_egg_saitam_saitam_stage_5_0147",
+			"easter_egg_saitam_saitam_stage_5_0148",
+			"easter_egg_saitam_saitam_stage_5_0149",
+			"easter_egg_saitam_saitam_stage_5_0150"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0151 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			214,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3222,
+			1313,
+			61,
+			37
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0152"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0153 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			210,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			826,
+			3723,
+			61,
+			41
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0154"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0155 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			209,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			678,
+			3722,
+			61,
+			42
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0156"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0157 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			212,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			3717,
+			61,
+			39
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0158"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0159 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			212,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1794,
+			3717,
+			61,
+			39
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0160"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0200 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			219,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3682,
+			716,
+			61,
+			32
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0201"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0202 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			208,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1012,
+			3718,
+			61,
+			43
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0203"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0204 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			81,
+			214,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3041,
+			1994,
+			61,
+			37
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0205"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0208 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			75,
+			146,
+			194,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3319,
+			3424,
+			67,
+			105
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0209"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0210 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			65,
+			131,
+			182,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			2874,
+			89,
+			120
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0211"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0212 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			53,
+			49,
+			180,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			2621,
+			103,
+			202
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0213"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0214 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			61,
+			35,
+			177,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			2429,
+			98,
+			216
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0215"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0216 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			30,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2687,
+			3349,
+			94,
+			222
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0217"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0218 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			26,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2687,
+			2885,
+			94,
+			226
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0219"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0220 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			26,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2687,
+			3117,
+			94,
+			226
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0221"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0222 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			21,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			3166,
+			94,
+			231
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0223"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0224 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			22,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			3403,
+			94,
+			230
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0225"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0226 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			24,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2687,
+			2651,
+			94,
+			228
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0227"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0228 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			35,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			2651,
+			94,
+			217
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0229 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			70,
+			37,
+			182,
+			245
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			3072,
+			84,
+			214
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0230"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0231 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			54,
+			149,
+			169,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			3647,
+			113,
+			114
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0232 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			52,
+			149,
+			167,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3536,
+			1806,
+			117,
+			114
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0233 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			49,
+			51,
+			163,
+			220
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2274,
+			1806,
+			124,
+			225
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0234 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			47,
+			51,
+			162,
+			220
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			1806,
+			127,
+			225
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0235 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			46,
+			103,
+			161,
+			210
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			3188,
+			129,
+			183
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0236 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			45,
+			103,
+			159,
+			228
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			3546,
+			132,
+			165
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0237 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			43,
+			95,
+			158,
+			234
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			3045,
+			135,
+			167
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0238 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			41,
+			95,
+			156,
+			234
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			3280,
+			139,
+			167
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0239 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			40,
+			95,
+			155,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3588,
+			1523,
+			141,
+			168
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0240 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			39,
+			95,
+			153,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3142,
+			1523,
+			144,
+			168
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0241 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			37,
+			95,
+			152,
+			232
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2837,
+			1523,
+			147,
+			169
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0242 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			36,
+			95,
+			151,
+			232
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2682,
+			1523,
+			149,
+			169
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0243 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			35,
+			95,
+			150,
+			231
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2368,
+			1523,
+			151,
+			170
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0244 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			35,
+			95,
+			149,
+			231
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2210,
+			1523,
+			152,
+			170
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0245 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			34,
+			95,
+			149,
+			231
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2051,
+			1523,
+			153,
+			170
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0246 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			33,
+			95,
+			148,
+			230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			1523,
+			155,
+			171
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0247 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			33,
+			95,
+			148,
+			230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1729,
+			1523,
+			155,
+			171
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0248 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			33,
+			95,
+			148,
+			230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1890,
+			1523,
+			155,
+			171
+		},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_5_0249 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3609,
+			2429,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0250"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0251 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2687,
+			3577,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0252",
+			"easter_egg_saitam_saitam_stage_5_0257",
+			"easter_egg_saitam_saitam_stage_5_0258"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0253 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2887,
+			2651,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0254",
+			"easter_egg_saitam_saitam_stage_5_0259",
+			"easter_egg_saitam_saitam_stage_5_0260"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0255 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2987,
+			2651,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0256",
+			"easter_egg_saitam_saitam_stage_5_0261",
+			"easter_egg_saitam_saitam_stage_5_0262"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0263 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3087,
+			2651,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0264"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0265 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3187,
+			2651,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0266",
+			"easter_egg_saitam_saitam_stage_5_0267",
+			"easter_egg_saitam_saitam_stage_5_0268",
+			"easter_egg_saitam_saitam_stage_5_0269",
+			"easter_egg_saitam_saitam_stage_5_0270",
+			"easter_egg_saitam_saitam_stage_5_0271",
+			"easter_egg_saitam_saitam_stage_5_0272",
+			"easter_egg_saitam_saitam_stage_5_0273"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0274 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			66,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3287,
+			2651,
+			94,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0275"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0276 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			50,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2751,
+			110,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0277"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0278 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			54,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			2344,
+			106,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0279"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0280 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			56,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			3605,
+			104,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0281"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0282 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			20,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			2941,
+			140,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0283"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0284 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			24,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			2405,
+			136,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0285"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0286 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			28,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			2140,
+			132,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0287",
+			"easter_egg_saitam_saitam_stage_5_0288",
+			"easter_egg_saitam_saitam_stage_5_0289",
+			"easter_egg_saitam_saitam_stage_5_0290",
+			"easter_egg_saitam_saitam_stage_5_0291",
+			"easter_egg_saitam_saitam_stage_5_0292",
+			"easter_egg_saitam_saitam_stage_5_0293",
+			"easter_egg_saitam_saitam_stage_5_0294",
+			"easter_egg_saitam_saitam_stage_5_0295",
+			"easter_egg_saitam_saitam_stage_5_0296",
+			"easter_egg_saitam_saitam_stage_5_0297",
+			"easter_egg_saitam_saitam_stage_5_0298",
+			"easter_egg_saitam_saitam_stage_5_0299",
+			"easter_egg_saitam_saitam_stage_5_0300",
+			"easter_egg_saitam_saitam_stage_5_0301"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0302 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			28,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			2303,
+			132,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0303"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0304 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			28,
+			95,
+			176,
+			244
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			2466,
+			132,
+			157
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0305"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0306 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			46,
+			90,
+			177,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			3199,
+			113,
+			159
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0307"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0308 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			55,
+			75,
+			176,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			3298,
+			105,
+			174
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0309"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0310 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			61,
+			69,
+			178,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2898,
+			2429,
+			97,
+			180
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0311"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0312 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			69,
+			65,
+			187,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3683,
+			2651,
+			80,
+			184
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0313"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0314 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			75,
+			66,
+			200,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3392,
+			3551,
+			61,
+			183
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0315"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0316 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			77,
+			60,
+			204,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3709,
+			2429,
+			55,
+			189
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0317"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0318 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			79,
+			61,
+			204,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3585,
+			3557,
+			53,
+			188
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0319"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0320 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			80,
+			63,
+			204,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3644,
+			3557,
+			52,
+			186
+		},
+		alias = {
+			"easter_egg_saitam_saitam_stage_5_0321"
+		}
+	},
+	easter_egg_saitam_saitam_stage_5_0322 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			336,
+			496
+		},
+		trim = {
+			85,
+			230,
+			204,
+			247
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3383,
+			292,
+			47,
+			19
+		},
+		alias = {}
+	},
+	golem_holder_creep_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			106,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3068,
+			2037,
+			109,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0002",
+			"golem_holder_creep_0013",
+			"golem_holder_creep_0014",
+			"golem_holder_creep_0091",
+			"golem_holder_creep_0092"
+		}
+	},
+	golem_holder_creep_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			106,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3183,
+			2037,
+			109,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0004",
+			"golem_holder_creep_0015",
+			"golem_holder_creep_0016"
+		}
+	},
+	golem_holder_creep_0005 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			106,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3298,
+			2037,
+			109,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0006",
+			"golem_holder_creep_0017",
+			"golem_holder_creep_0018"
+		}
+	},
+	golem_holder_creep_0007 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			106,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3413,
+			2037,
+			109,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0008",
+			"golem_holder_creep_0019",
+			"golem_holder_creep_0020"
+		}
+	},
+	golem_holder_creep_0009 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			106,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3528,
+			2037,
+			109,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0010",
+			"golem_holder_creep_0021",
+			"golem_holder_creep_0022"
+		}
+	},
+	golem_holder_creep_0011 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			106,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3643,
+			2037,
+			109,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0012"
+		}
+	},
+	golem_holder_creep_0023 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			113,
+			159,
+			124,
+			171
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			878,
+			2775,
+			59,
+			34
+		},
+		alias = {
+			"golem_holder_creep_0024"
+		}
+	},
+	golem_holder_creep_0025 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			108,
+			152,
+			118,
+			170
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			456,
+			3400,
+			70,
+			42
+		},
+		alias = {
+			"golem_holder_creep_0026"
+		}
+	},
+	golem_holder_creep_0027 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			97,
+			118,
+			103,
+			172
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3103,
+			2530,
+			96,
+			74
+		},
+		alias = {
+			"golem_holder_creep_0028"
+		}
+	},
+	golem_holder_creep_0029 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			96,
+			111,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3216,
+			2344,
+			98,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0030"
+		}
+	},
+	golem_holder_creep_0031 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			95,
+			111,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			3627,
+			99,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0032"
+		}
+	},
+	golem_holder_creep_0033 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			96,
+			111,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3320,
+			2344,
+			98,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0034"
+		}
+	},
+	golem_holder_creep_0035 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			95,
+			111,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			2344,
+			99,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0036"
+		}
+	},
+	golem_holder_creep_0037 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			96,
+			111,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3424,
+			2344,
+			98,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0038"
+		}
+	},
+	golem_holder_creep_0039 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			88,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3449,
+			2234,
+			100,
+			102
+		},
+		alias = {
+			"golem_holder_creep_0040"
+		}
+	},
+	golem_holder_creep_0041 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			93,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3555,
+			2234,
+			100,
+			97
+		},
+		alias = {
+			"golem_holder_creep_0042"
+		}
+	},
+	golem_holder_creep_0043 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			93,
+			106,
+			176
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3103,
+			2429,
+			96,
+			95
+		},
+		alias = {
+			"golem_holder_creep_0044"
+		}
+	},
+	golem_holder_creep_0045 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			86,
+			55,
+			73,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			1806,
+			137,
+			135
+		},
+		alias = {
+			"golem_holder_creep_0046"
+		}
+	},
+	golem_holder_creep_0047 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			80,
+			53,
+			71,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3310,
+			1356,
+			145,
+			137
+		},
+		alias = {
+			"golem_holder_creep_0048"
+		}
+	},
+	golem_holder_creep_0049 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			77,
+			51,
+			70,
+			172
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2851,
+			1356,
+			149,
+			141
+		},
+		alias = {
+			"golem_holder_creep_0050"
+		}
+	},
+	golem_holder_creep_0051 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			76,
+			49,
+			68,
+			171
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2069,
+			1356,
+			152,
+			144
+		},
+		alias = {
+			"golem_holder_creep_0052"
+		}
+	},
+	golem_holder_creep_0053 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			72,
+			47,
+			67,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3607,
+			860,
+			157,
+			143
+		},
+		alias = {
+			"golem_holder_creep_0054"
+		}
+	},
+	golem_holder_creep_0055 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			70,
+			45,
+			65,
+			173
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3495,
+			1192,
+			161,
+			146
+		},
+		alias = {
+			"golem_holder_creep_0056"
+		}
+	},
+	golem_holder_creep_0057 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			64,
+			45,
+			64,
+			171
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2463,
+			1192,
+			168,
+			148
+		},
+		alias = {
+			"golem_holder_creep_0058"
+		}
+	},
+	golem_holder_creep_0059 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			57,
+			44,
+			62,
+			170
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			3177,
+			177,
+			150
+		},
+		alias = {
+			"golem_holder_creep_0060"
+		}
+	},
+	golem_holder_creep_0061 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			111,
+			98,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2587,
+			2234,
+			104,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0062"
+		}
+	},
+	golem_holder_creep_0063 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			95,
+			106,
+			100,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3342,
+			2234,
+			101,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0064"
+		}
+	},
+	golem_holder_creep_0065 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			95,
+			103,
+			99,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3662,
+			1192,
+			102,
+			87
+		},
+		alias = {
+			"golem_holder_creep_0066"
+		}
+	},
+	golem_holder_creep_0067 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			101,
+			98,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3599,
+			2131,
+			104,
+			89
+		},
+		alias = {
+			"golem_holder_creep_0068"
+		}
+	},
+	golem_holder_creep_0069 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			93,
+			100,
+			97,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2932,
+			2131,
+			106,
+			90
+		},
+		alias = {
+			"golem_holder_creep_0070"
+		}
+	},
+	golem_holder_creep_0071 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			93,
+			99,
+			97,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2820,
+			2131,
+			106,
+			91
+		},
+		alias = {
+			"golem_holder_creep_0072"
+		}
+	},
+	golem_holder_creep_0073 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			90,
+			102,
+			95,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2371,
+			2037,
+			111,
+			88
+		},
+		alias = {
+			"golem_holder_creep_0074"
+		}
+	},
+	golem_holder_creep_0075 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			84,
+			108,
+			90,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3223,
+			1700,
+			122,
+			82
+		},
+		alias = {
+			"golem_holder_creep_0076"
+		}
+	},
+	golem_holder_creep_0077 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			84,
+			107,
+			91,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3351,
+			1700,
+			121,
+			83
+		},
+		alias = {
+			"golem_holder_creep_0078"
+		}
+	},
+	golem_holder_creep_0079 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			87,
+			104,
+			93,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2534,
+			1939,
+			116,
+			86
+		},
+		alias = {
+			"golem_holder_creep_0080"
+		}
+	},
+	golem_holder_creep_0081 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			89,
+			102,
+			94,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2037,
+			113,
+			88
+		},
+		alias = {
+			"golem_holder_creep_0082"
+		}
+	},
+	golem_holder_creep_0083 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			91,
+			100,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2365,
+			2131,
+			109,
+			90
+		},
+		alias = {
+			"golem_holder_creep_0084"
+		}
+	},
+	golem_holder_creep_0085 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			93,
+			99,
+			96,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2594,
+			2131,
+			107,
+			91
+		},
+		alias = {
+			"golem_holder_creep_0086"
+		}
+	},
+	golem_holder_creep_0087 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			100,
+			98,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3489,
+			2131,
+			104,
+			90
+		},
+		alias = {
+			"golem_holder_creep_0088"
+		}
+	},
+	golem_holder_creep_0089 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			95,
+			103,
+			100,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3128,
+			2234,
+			101,
+			87
+		},
+		alias = {
+			"golem_holder_creep_0090"
+		}
+	},
+	golem_holder_creep_0093 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			102,
+			111,
+			116,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3241,
+			2992,
+			78,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0094"
+		}
+	},
+	golem_holder_creep_0095 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			86,
+			114,
+			110,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			3459,
+			100,
+			76
+		},
+		alias = {
+			"golem_holder_creep_0096"
+		}
+	},
+	golem_holder_creep_0097 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			82,
+			113,
+			117,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3528,
+			2344,
+			97,
+			77
+		},
+		alias = {
+			"golem_holder_creep_0098"
+		}
+	},
+	golem_holder_creep_0099 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			80,
+			113,
+			121,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3508,
+			2429,
+			95,
+			77
+		},
+		alias = {
+			"golem_holder_creep_0100"
+		}
+	},
+	golem_holder_creep_0101 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			79,
+			113,
+			122,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3508,
+			2512,
+			95,
+			77
+		},
+		alias = {
+			"golem_holder_creep_0102"
+		}
+	},
+	golem_holder_creep_0103 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			116,
+			41,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2539,
+			1442,
+			138,
+			74
+		},
+		alias = {
+			"golem_holder_creep_0104"
+		}
+	},
+	golem_holder_creep_0105 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			93,
+			81,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2690,
+			2429,
+			98,
+			97
+		},
+		alias = {
+			"golem_holder_creep_0106"
+		}
+	},
+	golem_holder_creep_0107 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			110,
+			64,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1146,
+			230,
+			115,
+			80
+		},
+		alias = {
+			"golem_holder_creep_0108"
+		}
+	},
+	golem_holder_creep_0109 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			106,
+			65,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3413,
+			1926,
+			114,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0110"
+		}
+	},
+	golem_holder_creep_0111 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			106,
+			65,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3536,
+			1926,
+			114,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0112"
+		}
+	},
+	golem_holder_creep_0113 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			106,
+			65,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			3019,
+			114,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0114"
+		}
+	},
+	golem_holder_creep_0115 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			106,
+			65,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			3109,
+			114,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0116"
+		}
+	},
+	golem_holder_creep_0117 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			117,
+			106,
+			77,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2697,
+			2234,
+			102,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0118"
+		}
+	},
+	golem_holder_creep_0119 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			113,
+			95,
+			90,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			3639,
+			93,
+			95
+		},
+		alias = {
+			"golem_holder_creep_0120"
+		}
+	},
+	golem_holder_creep_0121 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			93,
+			114,
+			97,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3156,
+			2131,
+			106,
+			76
+		},
+		alias = {
+			"golem_holder_creep_0122"
+		}
+	},
+	golem_holder_creep_0123 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			87,
+			115,
+			91,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2695,
+			1442,
+			118,
+			75
+		},
+		alias = {
+			"golem_holder_creep_0124"
+		}
+	},
+	golem_holder_creep_0125 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			94,
+			94,
+			102,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3661,
+			2234,
+			100,
+			96
+		},
+		alias = {
+			"golem_holder_creep_0126"
+		}
+	},
+	golem_holder_creep_0127 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			87,
+			106,
+			99,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2605,
+			2037,
+			110,
+			84
+		},
+		alias = {
+			"golem_holder_creep_0128"
+		}
+	},
+	golem_holder_creep_0129 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			107,
+			107,
+			98,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3585,
+			2785,
+			91,
+			83
+		},
+		alias = {
+			"golem_holder_creep_0130"
+		}
+	},
+	golem_holder_creep_0131 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			111,
+			108,
+			87,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2690,
+			2532,
+			98,
+			82
+		},
+		alias = {
+			"golem_holder_creep_0132"
+		}
+	},
+	golem_holder_creep_0133 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			112,
+			109,
+			86,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2794,
+			2429,
+			98,
+			81
+		},
+		alias = {
+			"golem_holder_creep_0134"
+		}
+	},
+	golem_holder_creep_0135 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			113,
+			110,
+			85,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2794,
+			2516,
+			98,
+			80
+		},
+		alias = {
+			"golem_holder_creep_0136"
+		}
+	},
+	golem_holder_creep_0137 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			113,
+			110,
+			84,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			3541,
+			99,
+			80
+		},
+		alias = {
+			"golem_holder_creep_0138"
+		}
+	},
+	golem_holder_creep_0139 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			114,
+			111,
+			83,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2691,
+			2344,
+			99,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0140"
+		}
+	},
+	golem_holder_creep_0141 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			114,
+			111,
+			83,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2796,
+			2344,
+			99,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0142"
+		}
+	},
+	golem_holder_creep_0143 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			114,
+			111,
+			83,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2901,
+			2344,
+			99,
+			79
+		},
+		alias = {
+			"golem_holder_creep_0144"
+		}
+	},
+	golem_holder_creep_0145 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			87,
+			32,
+			36,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			1192,
+			173,
+			158
+		},
+		alias = {
+			"golem_holder_creep_0146"
+		}
+	},
+	golem_holder_creep_0147 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			85,
+			29,
+			34,
+			177
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			3013,
+			177,
+			158
+		},
+		alias = {
+			"golem_holder_creep_0148"
+		}
+	},
+	golem_holder_creep_0149 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			74,
+			27,
+			32,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			1665,
+			190,
+			163
+		},
+		alias = {
+			"golem_holder_creep_0150"
+		}
+	},
+	golem_holder_creep_0151 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			69,
+			25,
+			30,
+			173
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1404,
+			860,
+			197,
+			166
+		},
+		alias = {
+			"golem_holder_creep_0152"
+		}
+	},
+	golem_holder_creep_0153 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			64,
+			23,
+			28,
+			177
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2340,
+			204,
+			164
+		},
+		alias = {
+			"golem_holder_creep_0154"
+		}
+	},
+	golem_holder_creep_0155 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			61,
+			21,
+			27,
+			176
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			1533,
+			208,
+			167
+		},
+		alias = {
+			"golem_holder_creep_0156"
+		}
+	},
+	golem_holder_creep_0157 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			58,
+			20,
+			25,
+			174
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3463,
+			579,
+			213,
+			170
+		},
+		alias = {
+			"golem_holder_creep_0158"
+		}
+	},
+	golem_holder_creep_0159 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			57,
+			19,
+			23,
+			173
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3241,
+			579,
+			216,
+			172
+		},
+		alias = {
+			"golem_holder_creep_0160"
+		}
+	},
+	golem_holder_creep_0161 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			56,
+			19,
+			21,
+			177
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3016,
+			579,
+			219,
+			168
+		},
+		alias = {
+			"golem_holder_creep_0162"
+		}
+	},
+	golem_holder_creep_0163 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			62,
+			51,
+			55,
+			193
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			2490,
+			179,
+			120
+		},
+		alias = {
+			"golem_holder_creep_0164"
+		}
+	},
+	golem_holder_creep_0165 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			78,
+			62,
+			54,
+			187
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3155,
+			1192,
+			164,
+			115
+		},
+		alias = {
+			"golem_holder_creep_0166"
+		}
+	},
+	golem_holder_creep_0167 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			296,
+			364
+		},
+		trim = {
+			70,
+			86,
+			49,
+			236
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			368,
+			2187,
+			177,
+			42
+		},
+		alias = {
+			"golem_holder_creep_0168"
+		}
+	},
+	golem_holder_hit_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			39,
+			35,
+			34,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1862,
+			31,
+			32
+		},
+		alias = {}
+	},
+	golem_holder_hit_0002 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			31,
+			26,
+			31,
+			29
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1152,
+			2783,
+			42,
+			49
+		},
+		alias = {}
+	},
+	golem_holder_hit_0003 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			30,
+			26,
+			29,
+			31
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1149,
+			3631,
+			45,
+			47
+		},
+		alias = {}
+	},
+	golem_holder_hit_0004 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			104,
+			104
+		},
+		trim = {
+			0,
+			0,
+			102,
+			102
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1707,
+			293,
+			2,
+			2
+		},
+		alias = {
+			"golem_holder_hit_0005"
+		}
+	},
+	hero_stun_fire_0001 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			296,
+			234,
+			262,
+			380
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1363,
+			677,
+			134,
+			138
+		},
+		alias = {
+			"hero_stun_fire_0002"
+		}
+	},
+	hero_stun_fire_0003 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			239,
+			191,
+			200,
+			356
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			534,
+			1462,
+			253,
+			205
+		},
+		alias = {
+			"hero_stun_fire_0004"
+		}
+	},
+	hero_stun_fire_0005 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			231,
+			162,
+			189,
+			304
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1156,
+			833,
+			272,
+			286
+		},
+		alias = {}
+	},
+	hero_stun_fire_0006 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			231,
+			156,
+			189,
+			304
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			878,
+			833,
+			272,
+			292
+		},
+		alias = {}
+	},
+	hero_stun_fire_0007 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			192,
+			127,
+			169,
+			287
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			534,
+			1118,
+			331,
+			338
+		},
+		alias = {
+			"hero_stun_fire_0008"
+		}
+	},
+	hero_stun_fire_0009 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			154,
+			103,
+			169,
+			263
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			988,
+			397,
+			369,
+			386
+		},
+		alias = {
+			"hero_stun_fire_0010"
+		}
+	},
+	hero_stun_fire_0011 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			91,
+			68,
+			153,
+			254
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			534,
+			397,
+			448,
+			430
+		},
+		alias = {
+			"hero_stun_fire_0012"
+		}
+	},
+	hero_stun_fire_0013 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			48,
+			37,
+			150,
+			252
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			6,
+			881,
+			494,
+			463
+		},
+		alias = {
+			"hero_stun_fire_0014"
+		}
+	},
+	hero_stun_fire_0015 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			21,
+			21,
+			149,
+			253
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			6,
+			397,
+			522,
+			478
+		},
+		alias = {
+			"hero_stun_fire_0016"
+		}
+	},
+	hero_stun_fire_0017 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			257,
+			153,
+			247,
+			327
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1072,
+			1131,
+			188,
+			272
+		},
+		alias = {
+			"hero_stun_fire_0018"
+		}
+	},
+	hero_stun_fire_0019 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			257,
+			150,
+			247,
+			327
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			878,
+			1131,
+			188,
+			275
+		},
+		alias = {
+			"hero_stun_fire_0020"
+		}
+	},
+	hero_stun_fire_0021 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			257,
+			163,
+			247,
+			327
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			878,
+			1412,
+			188,
+			262
+		},
+		alias = {
+			"hero_stun_fire_0022"
+		}
+	},
+	hero_stun_fire_0023 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			257,
+			160,
+			247,
+			327
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1072,
+			1409,
+			188,
+			265
+		},
+		alias = {
+			"hero_stun_fire_0024"
+		}
+	},
+	hero_stun_fire_0025 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			257,
+			156,
+			247,
+			327
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1460,
+			1131,
+			188,
+			269
+		},
+		alias = {
+			"hero_stun_fire_0026"
+		}
+	},
+	hero_stun_fire_0027 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			257,
+			153,
+			247,
+			327
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1266,
+			1131,
+			188,
+			272
+		},
+		alias = {
+			"hero_stun_fire_0028"
+		}
+	},
+	hero_stun_fire_0029 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			246,
+			150,
+			211,
+			324
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1434,
+			833,
+			235,
+			278
+		},
+		alias = {
+			"hero_stun_fire_0030"
+		}
+	},
+	hero_stun_fire_0031 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			219,
+			163,
+			192,
+			315
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1363,
+			397,
+			281,
+			274
+		},
+		alias = {
+			"hero_stun_fire_0032"
+		}
+	},
+	hero_stun_fire_0033 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			187,
+			168,
+			167,
+			305
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			534,
+			833,
+			338,
+			279
+		},
+		alias = {
+			"hero_stun_fire_0034"
+		}
+	},
+	hero_stun_fire_0035 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			144,
+			124,
+			146,
+			305
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			6,
+			1350,
+			402,
+			323
+		},
+		alias = {
+			"hero_stun_fire_0036"
+		}
+	},
+	hero_stun_fire_0037 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			81,
+			86,
+			137,
+			323
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			1113,
+			6,
+			474,
+			343
+		},
+		alias = {
+			"hero_stun_fire_0038"
+		}
+	},
+	hero_stun_fire_0039 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			47,
+			60,
+			121,
+			316
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			583,
+			6,
+			524,
+			376
+		},
+		alias = {
+			"hero_stun_fire_0040"
+		}
+	},
+	hero_stun_fire_0041 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			25,
+			38,
+			96,
+			329
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			6,
+			6,
+			571,
+			385
+		},
+		alias = {
+			"hero_stun_fire_0042"
+		}
+	},
+	hero_stun_fire_0043 = {
+		a_name = "go_stage135_vfx_stun_hero-1.dds",
+		size = {
+			692,
+			752
+		},
+		trim = {
+			0,
+			0,
+			690,
+			750
+		},
+		a_size = {
+			1676,
+			1676
+		},
+		f_quad = {
+			583,
+			388,
+			2,
+			2
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_bandera_blanca_3 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			76,
+			74
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			276,
+			73,
+			71
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_bandera_blanca_7 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			74,
+			76
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			353,
+			71,
+			72
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_bandera_blanca_8 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			72,
+			71
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			380,
+			276,
+			70,
+			68
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_abanic01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			78,
+			98
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			558,
+			163,
+			75,
+			94
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_abanico_02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			78,
+			98
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			390,
+			163,
+			78,
+			98
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_abanico_blanco = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			78,
+			98
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			474,
+			163,
+			78,
+			98
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			25,
+			22
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			541,
+			128,
+			22,
+			18
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			23,
+			26
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			600,
+			353,
+			20,
+			23
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			38
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			332,
+			596,
+			24,
+			35
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			33,
+			34
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			246,
+			577,
+			29,
+			31
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			28,
+			38
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			596,
+			25,
+			34
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm06 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			45,
+			42
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			569,
+			109,
+			42,
+			39
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_arm08 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			42,
+			36
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			333,
+			123,
+			39,
+			33
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			19,
+			22
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			600,
+			382,
+			16,
+			18
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body_03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			21,
+			28
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			451,
+			127,
+			18,
+			24
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body_cloud_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			73,
+			48
+		},
+		trim = {
+			4,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			531,
+			276,
+			68,
+			45
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body_cloud_02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			72,
+			49
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			431,
+			68,
+			45
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body_cloud_03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			71,
+			49
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			456,
+			276,
+			69,
+			46
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body_cloud_04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			70,
+			49
+		},
+		trim = {
+			2,
+			1,
+			2,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			569,
+			6,
+			66,
+			46
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_body_cloud_05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			69,
+			49
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			569,
+			58,
+			66,
+			45
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_cadera01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			29,
+			21
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			456,
+			328,
+			25,
+			18
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_aura_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			142,
+			162
+		},
+		trim = {
+			1,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			154,
+			333,
+			140,
+			162
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_aura_02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			142,
+			163
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			6,
+			163,
+			142,
+			163
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_aura_03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			141,
+			171
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			6,
+			332,
+			141,
+			171
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_aura_04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			142,
+			164
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			154,
+			163,
+			141,
+			164
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_enojo_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			21,
+			17
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			531,
+			327,
+			21,
+			17
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			32,
+			72
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			604,
+			489,
+			32,
+			72
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			46,
+			72
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			552,
+			489,
+			46,
+			72
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			58,
+			75
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			378,
+			414,
+			58,
+			75
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			56,
+			104
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			378,
+			495,
+			56,
+			104
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			50,
+			98
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			442,
+			414,
+			50,
+			97
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_06 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			27
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			418,
+			127,
+			27,
+			27
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_07 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			27
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			475,
+			128,
+			27,
+			27
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_08 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			27
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			508,
+			128,
+			27,
+			27
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_09 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			27
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			605,
+			276,
+			27,
+			27
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_fx_red_10 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			27
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			605,
+			309,
+			27,
+			27
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			22,
+			36
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			617,
+			109,
+			18,
+			34
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			16,
+			22
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			281,
+			577,
+			13,
+			19
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_back = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			41,
+			47
+		},
+		trim = {
+			2,
+			2,
+			0,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			99,
+			587,
+			39,
+			43
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_cloud_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			64,
+			54
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			540,
+			61,
+			50
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_cloud_02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			61,
+			59
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			378,
+			353,
+			59,
+			55
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_cloud_03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			62,
+			58
+		},
+		trim = {
+			4,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			508,
+			353,
+			57,
+			55
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_cloud_04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			63,
+			55
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			443,
+			353,
+			59,
+			52
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_cloud_05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			65,
+			56
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			482,
+			62,
+			52
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hair_monho = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			27,
+			21
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			487,
+			328,
+			23,
+			18
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hand01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			19,
+			23
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			279,
+			614,
+			16,
+			19
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hand02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			23,
+			23
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			558,
+			327,
+			20,
+			19
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hand03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			19,
+			21
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			584,
+			327,
+			15,
+			17
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_hand04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			25,
+			38
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			571,
+			353,
+			23,
+			35
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			72
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			442,
+			517,
+			48,
+			69
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head010 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			72
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			498,
+			414,
+			48,
+			69
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			72
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			552,
+			414,
+			48,
+			69
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			73
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			498,
+			489,
+			48,
+			69
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			74
+		},
+		trim = {
+			2,
+			1,
+			1,
+			3
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			246,
+			501,
+			48,
+			70
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head06 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			72
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			498,
+			564,
+			48,
+			69
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_head07 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			51,
+			75
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			99,
+			509,
+			48,
+			72
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_neackle01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			36,
+			24
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			379,
+			127,
+			33,
+			21
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_power_magic_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			83,
+			107
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			301,
+			163,
+			83,
+			107
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_power_magic_02 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			86,
+			114
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			154,
+			501,
+			86,
+			114
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_power_magic_03 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			87,
+			115
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			6,
+			509,
+			87,
+			115
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_power_magic_04 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			88,
+			116
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			475,
+			6,
+			88,
+			116
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_power_magic_05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			90,
+			115
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			379,
+			6,
+			90,
+			115
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_shadow_01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			106,
+			28
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			223,
+			123,
+			104,
+			25
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_swipe_dirty_05 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			150,
+			111
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			223,
+			6,
+			150,
+			111
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_swipe_dirty_06 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			211,
+			151
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			6,
+			6,
+			211,
+			151
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_tiara01 = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			19,
+			19
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			378,
+			605,
+			15,
+			16
+		},
+		alias = {}
+	},
+	ironfan_stage5_asst_iron_fan_torso = {
+		a_name = "go_stage135_boss_iron_fan_exo_stage_5-1.dds",
+		size = {
+			31,
+			20
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			636,
+			636
+		},
+		f_quad = {
+			246,
+			614,
+			27,
+			17
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_arm_bby_redboy_01_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			34,
+			24
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			736,
+			414,
+			30,
+			21
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_arm_bby_redboy_02_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			22,
+			30
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1114,
+			343,
+			18,
+			27
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_arm_bby_redboy_03_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			39,
+			30
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			695,
+			414,
+			35,
+			26
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_arm_bby_redboy_04_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			22,
+			31
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1114,
+			308,
+			18,
+			29
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_ballenergy_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			28,
+			29
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			802,
+			414,
+			24,
+			25
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_1"
+		}
+	},
+	redboy_stage5_asst_ballenergy_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			27,
+			29
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			832,
+			414,
+			24,
+			25
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_2"
+		}
+	},
+	redboy_stage5_asst_ballenergy_3 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1538,
+			384,
+			23,
+			27
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_3"
+		}
+	},
+	redboy_stage5_asst_ballenergy_4 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			25,
+			29
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			922,
+			414,
+			23,
+			26
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_4"
+		}
+	},
+	redboy_stage5_asst_ballenergy_5 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			862,
+			414,
+			24,
+			25
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_5"
+		}
+	},
+	redboy_stage5_asst_ballenergy_6 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			772,
+			414,
+			24,
+			26
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_6"
+		}
+	},
+	redboy_stage5_asst_ballenergy_7 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1139,
+			412,
+			25,
+			27
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_7"
+		}
+	},
+	redboy_stage5_asst_ballenergy_8 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1170,
+			412,
+			25,
+			27
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_8"
+		}
+	},
+	redboy_stage5_asst_ballenergy_9 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1201,
+			412,
+			24,
+			27
+		},
+		alias = {
+			"ironfan_stage5_asst_ballenergy_9"
+		}
+	},
+	redboy_stage5_asst_bandera_blanca = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			71,
+			78
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1715,
+			1937,
+			67,
+			74
+		},
+		alias = {
+			"ironfan_stage5_asst_bandera_blanca"
+		}
+	},
+	redboy_stage5_asst_bandera_blanca_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			70,
+			75
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1788,
+			1814,
+			67,
+			71
+		},
+		alias = {
+			"ironfan_stage5_asst_bandera_blanca_2"
+		}
+	},
+	redboy_stage5_asst_bandera_blanca_4 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			70,
+			72
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1788,
+			1891,
+			67,
+			70
+		},
+		alias = {
+			"ironfan_stage5_asst_bandera_blanca_4"
+		}
+	},
+	redboy_stage5_asst_bandera_blanca_5 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			70,
+			75
+		},
+		trim = {
+			1,
+			5,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1816,
+			1693,
+			68,
+			69
+		},
+		alias = {
+			"ironfan_stage5_asst_bandera_blanca_5"
+		}
+	},
+	redboy_stage5_asst_bandera_blanca_6 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			71,
+			77
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1965,
+			1550,
+			68,
+			73
+		},
+		alias = {
+			"ironfan_stage5_asst_bandera_blanca_6"
+		}
+	},
+	redboy_stage5_asst_banderablanca_palo = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			52,
+			113
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1977,
+			1904,
+			50,
+			110
+		},
+		alias = {
+			"ironfan_stage5_asst_banderablanca_palo"
+		}
+	},
+	redboy_stage5_asst_basewukongball = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			35,
+			37
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1470,
+			384,
+			31,
+			33
+		},
+		alias = {
+			"ironfan_stage5_asst_basewukongball"
+		}
+	},
+	redboy_stage5_asst_body_bby_redboy_01_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			55,
+			43
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1495,
+			287,
+			51,
+			41
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_fire_small_01_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			56,
+			64
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1788,
+			1967,
+			56,
+			63
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_fire_small_02_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			54,
+			74
+		},
+		trim = {
+			0,
+			0,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1982,
+			1814,
+			53,
+			73
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_fire_small_03_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			54,
+			80
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1923,
+			1814,
+			53,
+			80
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_fire_small_04_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			54,
+			84
+		},
+		trim = {
+			0,
+			0,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1991,
+			1202,
+			53,
+			82
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_fire_small_05_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			56,
+			86
+		},
+		trim = {
+			0,
+			0,
+			0,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1861,
+			1814,
+			56,
+			84
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_fire_small_06_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			53,
+			89
+		},
+		trim = {
+			1,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1919,
+			1904,
+			52,
+			88
+		},
+		alias = {
+			"redboy_stage5_asst_fire_small_10_redboy"
+		}
+	},
+	redboy_stage5_asst_hand_bby_redboy_01_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			24,
+			22
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1007,
+			414,
+			21,
+			19
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_hand_bby_redboy_03_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			22,
+			29
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1114,
+			376,
+			18,
+			27
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			70,
+			94
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1890,
+			1693,
+			67,
+			92
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_01_solofuego = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			22,
+			29
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1114,
+			201,
+			19,
+			26
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_02_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			71,
+			94
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1124,
+			1944,
+			69,
+			92
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_03_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			72,
+			89
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1368,
+			1946,
+			69,
+			86
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			72,
+			83
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1682,
+			950,
+			69,
+			80
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_04_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			71,
+			94
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1618,
+			1197,
+			69,
+			92
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_redboy_sinfuego = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			70,
+			81
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1963,
+			1693,
+			67,
+			77
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_weapon_swipe_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			205,
+			412
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1243,
+			1362,
+			205,
+			412
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_weapon_swipe_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			238,
+			383
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			998,
+			1392,
+			238,
+			383
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_weapon_swipe_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			239,
+			350
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			998,
+			1036,
+			239,
+			350
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_weapon_swipe_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			224,
+			320
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1243,
+			1036,
+			224,
+			320
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_head_bby_weapon_swipe_05 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			23,
+			157
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			343,
+			1803,
+			23,
+			157
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_lagrimas_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			20,
+			27
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1034,
+			414,
+			17,
+			23
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_lagrimas_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			25,
+			33
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1950,
+			232,
+			22,
+			31
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_lagrimas_3 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			27,
+			36
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1507,
+			384,
+			25,
+			32
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_leg_bby_redboy_01_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			24,
+			24
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			980,
+			414,
+			21,
+			21
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_leg_bby_redboy_02_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			21,
+			22
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1057,
+			414,
+			17,
+			18
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_leg_bby_redboy_03_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			26,
+			25
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			951,
+			414,
+			23,
+			23
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_leg_bby_redboy_04_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			27,
+			24
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			892,
+			414,
+			24,
+			21
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_light01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			44,
+			20
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			645,
+			414,
+			44,
+			20
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_shadow_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			92,
+			33
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1470,
+			348,
+			89,
+			30
+		},
+		alias = {
+			"redboy_stage5_asst_shadow_redboy02"
+		}
+	},
+	redboy_stage5_asst_swoosh_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			138,
+			148
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1770,
+			1362,
+			136,
+			146
+		},
+		alias = {
+			"ironfan_stage5_asst_swoosh_1"
+		}
+	},
+	redboy_stage5_asst_swoosh_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			47,
+			73
+		},
+		trim = {
+			2,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			665,
+			1567,
+			44,
+			69
+		},
+		alias = {
+			"ironfan_stage5_asst_swoosh_2"
+		}
+	},
+	redboy_stage5_asst_swoosh_3 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			86,
+			116
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1950,
+			114,
+			82,
+			112
+		},
+		alias = {
+			"ironfan_stage5_asst_swoosh_3"
+		}
+	},
+	redboy_stage5_asst_weapon_bby_redboy_01_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			43,
+			119
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			665,
+			1666,
+			40,
+			115
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_weapon_bby_redboy_02_redboy = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			50,
+			132
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			665,
+			1432,
+			47,
+			129
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_1_glow_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			23,
+			77
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			665,
+			1869,
+			20,
+			74
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_1_glow_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			25,
+			56
+		},
+		trim = {
+			1,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			1983,
+			22,
+			54
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_1_solid_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			25,
+			78
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			665,
+			1787,
+			23,
+			76
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_1_solid_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			25,
+			54
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1978,
+			232,
+			21,
+			51
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_2_glow_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			16,
+			42
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			2005,
+			232,
+			14,
+			39
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_2_glow_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			19,
+			75
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			694,
+			1787,
+			16,
+			72
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_2_solid_1 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			18,
+			39
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1552,
+			287,
+			15,
+			36
+		},
+		alias = {}
+	},
+	redboy_stage5_asst_wukong_tredboy_flama_2_solid_2 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			20,
+			72
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1114,
+			233,
+			18,
+			69
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0001 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			36,
+			67,
+			40,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3555,
+			64,
+			62
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0002 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			40,
+			71,
+			33,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3139,
+			1034,
+			67,
+			58
+		},
+		alias = {
+			"sate_5_mono_unit_0003"
+		}
+	},
+	sate_5_mono_unit_0004 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			39,
+			64,
+			37,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3484,
+			64,
+			65
+		},
+		alias = {
+			"sate_5_mono_unit_0005"
+		}
+	},
+	sate_5_mono_unit_0006 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			38,
+			59,
+			33,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3547,
+			3083,
+			69,
+			70
+		},
+		alias = {
+			"sate_5_mono_unit_0007"
+		}
+	},
+	sate_5_mono_unit_0008 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			39,
+			54,
+			37,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3331,
+			64,
+			75
+		},
+		alias = {
+			"sate_5_mono_unit_0009"
+		}
+	},
+	sate_5_mono_unit_0010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			39,
+			63,
+			37,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3412,
+			64,
+			66
+		},
+		alias = {
+			"sate_5_mono_unit_0011"
+		}
+	},
+	sate_5_mono_unit_0012 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			38,
+			70,
+			32,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3440,
+			1631,
+			70,
+			59
+		},
+		alias = {
+			"sate_5_mono_unit_0013"
+		}
+	},
+	sate_5_mono_unit_0014 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			39,
+			64,
+			38,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3319,
+			3679,
+			63,
+			65
+		},
+		alias = {
+			"sate_5_mono_unit_0015"
+		}
+	},
+	sate_5_mono_unit_0016 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			38,
+			59,
+			39,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3606,
+			3176,
+			63,
+			70
+		},
+		alias = {
+			"sate_5_mono_unit_0017"
+		}
+	},
+	sate_5_mono_unit_0018 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			39,
+			57,
+			42,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			878,
+			2697,
+			59,
+			72
+		},
+		alias = {
+			"sate_5_mono_unit_0019"
+		}
+	},
+	sate_5_mono_unit_0020 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			39,
+			62,
+			36,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2694,
+			777,
+			65,
+			67
+		},
+		alias = {
+			"sate_5_mono_unit_0021"
+		}
+	},
+	sate_5_mono_unit_0022 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			20,
+			74,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1733,
+			1042,
+			69,
+			55
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0023 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			19,
+			63,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2662,
+			1964,
+			70,
+			66
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0024 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			20,
+			54,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3322,
+			3083,
+			69,
+			75
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0025 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			21,
+			49,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3622,
+			3083,
+			68,
+			80
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0026 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			22,
+			45,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3696,
+			3083,
+			67,
+			84
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0027 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			23,
+			42,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3394,
+			3176,
+			66,
+			87
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0028 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			24,
+			40,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3535,
+			3270,
+			65,
+			89
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0029 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			24,
+			39,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3464,
+			3270,
+			65,
+			90
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0030 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			25,
+			38,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3041,
+			64,
+			91
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0031 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			25,
+			38,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3138,
+			64,
+			91
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0032 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			25,
+			39,
+			51,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			874,
+			3235,
+			64,
+			90
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0033 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			27,
+			70,
+			23,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2909,
+			789,
+			90,
+			59
+		},
+		alias = {
+			"sate_5_mono_unit_0034"
+		}
+	},
+	sate_5_mono_unit_0035 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			51,
+			58,
+			27,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3392,
+			3474,
+			62,
+			71
+		},
+		alias = {
+			"sate_5_mono_unit_0036"
+		}
+	},
+	sate_5_mono_unit_0037 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			49,
+			65,
+			28,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3606,
+			3270,
+			63,
+			64
+		},
+		alias = {
+			"sate_5_mono_unit_0038"
+		}
+	},
+	sate_5_mono_unit_0039 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			50,
+			62,
+			29,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3661,
+			3366,
+			61,
+			67
+		},
+		alias = {
+			"sate_5_mono_unit_0040",
+			"sate_5_mono_unit_0041",
+			"sate_5_mono_unit_0042",
+			"sate_5_mono_unit_0043",
+			"sate_5_mono_unit_0044"
+		}
+	},
+	sate_5_mono_unit_0045 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			49,
+			65,
+			28,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3675,
+			3270,
+			63,
+			64
+		},
+		alias = {
+			"sate_5_mono_unit_0046"
+		}
+	},
+	sate_5_mono_unit_0047 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			36,
+			59,
+			41,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3675,
+			3176,
+			63,
+			70
+		},
+		alias = {
+			"sate_5_mono_unit_0048"
+		}
+	},
+	sate_5_mono_unit_0049 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			35,
+			72,
+			38,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3387,
+			2807,
+			67,
+			57
+		},
+		alias = {
+			"sate_5_mono_unit_0050"
+		}
+	},
+	sate_5_mono_unit_0051 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			36,
+			67,
+			40,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3238,
+			1453,
+			64,
+			62
+		},
+		alias = {}
+	},
+	sate_5_mono_unit_0052 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			42,
+			80,
+			29,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3289,
+			1974,
+			69,
+			49
+		},
+		alias = {
+			"sate_5_mono_unit_0053"
+		}
+	},
+	sate_5_mono_unit_0054 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			43,
+			57,
+			28,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3472,
+			3083,
+			69,
+			72
+		},
+		alias = {
+			"sate_5_mono_unit_0055"
+		}
+	},
+	sate_5_mono_unit_0056 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			43,
+			39,
+			31,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3392,
+			3270,
+			66,
+			90
+		},
+		alias = {
+			"sate_5_mono_unit_0057"
+		}
+	},
+	sate_5_mono_unit_0058 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			43,
+			27,
+			35,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3392,
+			3366,
+			62,
+			102
+		},
+		alias = {
+			"sate_5_mono_unit_0059"
+		}
+	},
+	sate_5_mono_unit_0060 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			43,
+			20,
+			41,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3460,
+			3639,
+			56,
+			109
+		},
+		alias = {
+			"sate_5_mono_unit_0061"
+		}
+	},
+	sate_5_mono_unit_0062 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			43,
+			20,
+			48,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3713,
+			2874,
+			49,
+			109
+		},
+		alias = {
+			"sate_5_mono_unit_0063"
+		}
+	},
+	sate_5_mono_unit_0064 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			46,
+			23,
+			50,
+			119
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1150,
+			3203,
+			44,
+			106
+		},
+		alias = {
+			"sate_5_mono_unit_0065"
+		}
+	},
+	sate_5_mono_unit_0066 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			38,
+			32,
+			41,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3460,
+			3366,
+			61,
+			99
+		},
+		alias = {
+			"sate_5_mono_unit_0067"
+		}
+	},
+	sate_5_mono_unit_0068 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			41,
+			48,
+			44,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3709,
+			2131,
+			55,
+			83
+		},
+		alias = {
+			"sate_5_mono_unit_0069"
+		}
+	},
+	sate_5_mono_unit_0070 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			40,
+			76,
+			44,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2473,
+			1455,
+			56,
+			55
+		},
+		alias = {
+			"sate_5_mono_unit_0071"
+		}
+	},
+	sate_5_mono_unit_0072 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			41,
+			65,
+			44,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2162,
+			502,
+			55,
+			66
+		},
+		alias = {
+			"sate_5_mono_unit_0073"
+		}
+	},
+	sate_5_mono_unit_0074 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			41,
+			70,
+			44,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3524,
+			3666,
+			55,
+			61
+		},
+		alias = {
+			"sate_5_mono_unit_0075"
+		}
+	},
+	sate_5_mono_unit_0076 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			140,
+			248
+		},
+		trim = {
+			41,
+			69,
+			44,
+			117
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3524,
+			3598,
+			55,
+			62
+		},
+		alias = {
+			"sate_5_mono_unit_0077"
+		}
+	},
+	spawner_golden_beast_asst_banditbrute_dallas_DrillTower_drill_petrolmist_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			129,
+			114
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			3377,
+			129,
+			114
+		},
+		alias = {
+			"stage_35_stun_tower_asst_boss_bull_petrolmist_2",
+			"stage_35_stun_unit_asst_boss_bull_petrolmist_2"
+		}
+	},
+	spawner_golden_beast_asst_banditbrute_tactic_barrel_DrillTower_wifi_babies_dirt = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			95,
+			92
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			2973,
+			91,
+			89
+		},
+		alias = {
+			"stage_35_stun_tower_asst_boss_bull_dirt",
+			"stage_35_stun_unit_asst_boss_bull_dirt"
+		}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			18,
+			31
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1966,
+			254,
+			18,
+			31
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			22,
+			38
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2988,
+			690,
+			22,
+			38
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			68,
+			63
+		},
+		trim = {
+			8,
+			10,
+			13,
+			10
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1146,
+			3718,
+			47,
+			43
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			113,
+			117
+		},
+		trim = {
+			29,
+			38,
+			12,
+			25
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3292,
+			1633,
+			72,
+			54
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			31,
+			18,
+			19,
+			47
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3682,
+			579,
+			81,
+			71
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			106,
+			84
+		},
+		trim = {
+			11,
+			4,
+			9,
+			3
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3677,
+			86,
+			77
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			25,
+			29,
+			19,
+			31
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3486,
+			2787,
+			87,
+			76
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			29,
+			39,
+			19,
+			22
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			3575,
+			83,
+			75
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			35,
+			45,
+			11,
+			17
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			2992,
+			85,
+			74
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			23,
+			38,
+			22,
+			26
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3256,
+			2874,
+			86,
+			72
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			151,
+			136
+		},
+		trim = {
+			65,
+			59,
+			0,
+			6
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3348,
+			2874,
+			86,
+			71
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_08 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			21,
+			37,
+			16,
+			28
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2789,
+			1958,
+			94,
+			71
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_09 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			6,
+			74,
+			41,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2227,
+			1455,
+			84,
+			60
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			131,
+			136
+		},
+		trim = {
+			25,
+			48,
+			22,
+			36
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2383,
+			1455,
+			84,
+			52
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_boss_bull_teleport_fireball_11 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			42,
+			34
+		},
+		trim = {
+			0,
+			0,
+			0,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1152,
+			2838,
+			42,
+			33
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_brillo = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			209,
+			195
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			2142,
+			206,
+			192
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_bullking_fire_ball_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			82,
+			91
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			3656,
+			80,
+			88
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_bullking_fire_ball_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			86,
+			114
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1627,
+			153,
+			82,
+			110
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_bullking_fire_ball_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			87,
+			115
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			3292,
+			84,
+			111
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_bullking_fire_ball_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			88,
+			116
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3440,
+			2874,
+			85,
+			112
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_bullking_fire_ball_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			90,
+			115
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			2874,
+			86,
+			112
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_landmine_explotion_dust = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			28
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2667,
+			24,
+			24
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_dust",
+			"stage_35_domo_asst_boss_bull_explotion_dust",
+			"stage_35_stun_tower_asst_boss_bull_explotion_dust",
+			"stage_35_stun_unit_asst_boss_bull_explotion_dust"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer2_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			137,
+			36
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			3151,
+			135,
+			33
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer2_3",
+			"stage_35_domo_asst_boss_bull_explotion_layer2_3",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer2_3",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer2_3"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer2_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			143,
+			43
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			447,
+			1134,
+			141,
+			40
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer2_4",
+			"stage_35_domo_asst_boss_bull_explotion_layer2_4",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer2_4",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer2_4"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer2_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			150,
+			43
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1991,
+			265,
+			147,
+			40
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer2_5",
+			"stage_35_domo_asst_boss_bull_explotion_layer2_5",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer2_5",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer2_5"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer3_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			158,
+			85
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1991,
+			178,
+			156,
+			81
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_3",
+			"stage_35_domo_asst_boss_bull_explotion_layer3_3",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_3",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_3"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer3_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			170,
+			98
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2810,
+			1192,
+			167,
+			95
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_4",
+			"stage_35_domo_asst_boss_bull_explotion_layer3_4",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_4",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_4"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer3_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			182,
+			99
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			2717,
+			179,
+			95
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_5",
+			"stage_35_domo_asst_boss_bull_explotion_layer3_5",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_5",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_5"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer3_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			194,
+			94
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			1931,
+			190,
+			91
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_6",
+			"stage_35_domo_asst_boss_bull_explotion_layer3_6",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_6",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_6"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer3_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			198,
+			90
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2614,
+			953,
+			194,
+			87
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_7",
+			"stage_35_domo_asst_boss_bull_explotion_layer3_7",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_7",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_7"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer3_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			199,
+			68
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2223,
+			502,
+			195,
+			65
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_8",
+			"stage_35_domo_asst_boss_bull_explotion_layer3_8",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_8",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_8"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			115,
+			117
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2632,
+			111,
+			113
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_10",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_10",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_10",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_10"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			103,
+			171
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			3286,
+			100,
+			167
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_3",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_3",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_3",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_3"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			188
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			3108,
+			105,
+			184
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_4",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_4",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_4",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_4"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			114,
+			188
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2322,
+			111,
+			185
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_5",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_5",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_5",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_5"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			121,
+			185
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3165,
+			1806,
+			118,
+			182
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_6",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_6",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_6",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_6"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			138,
+			181
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			2861,
+			135,
+			178
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_7",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_7",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_7",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_7"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			143,
+			171
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			2767,
+			140,
+			168
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_8",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_8",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_8",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_8"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer4_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			147,
+			131
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3612,
+			1356,
+			145,
+			127
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_9",
+			"stage_35_domo_asst_boss_bull_explotion_layer4_9",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_9",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_9"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			92,
+			125
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			3202,
+			90,
+			122
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_2",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_2",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_2",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_2"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			103,
+			127
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			2983,
+			101,
+			124
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_3",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_3",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_3",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_3"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			112,
+			134
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			2551,
+			108,
+			130
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_4",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_4",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_4",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_4"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			128
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			2470,
+			116,
+			125
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_5",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_5",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_5",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_5"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			117,
+			130
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			2759,
+			115,
+			127
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_6",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_6",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_6",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_6"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			118,
+			125
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			2892,
+			115,
+			121
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_7",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_7",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_7",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_7"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			94
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3379,
+			2131,
+			104,
+			91
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_8",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_8",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_8",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_8"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layer5_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			93,
+			73
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3205,
+			2574,
+			89,
+			69
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_9",
+			"stage_35_domo_asst_boss_bull_explotion_layer5_9",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_9",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_9"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			61,
+			47
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1542,
+			1032,
+			58,
+			43
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_10",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_10",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_10",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_10"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			60,
+			63
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2317,
+			1455,
+			57,
+			60
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_2",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_2",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_2",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_2"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			76,
+			102
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3239,
+			3559,
+			73,
+			98
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_3",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_3",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_3",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_3"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			93,
+			97
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3117,
+			89,
+			94
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_4",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_4",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_4",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_4"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			113,
+			101
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			2131,
+			109,
+			97
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_5",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_5",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_5",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_5"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			99
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3268,
+			2131,
+			105,
+			96
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_6",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_6",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_6",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_6"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			99,
+			79
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3631,
+			2344,
+			97,
+			76
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_7",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_7",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_7",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_7"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			87,
+			73
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			3499,
+			84,
+			70
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_8",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_8",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_8",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_8"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_layerback_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			73,
+			65
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3702,
+			69,
+			62
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_9",
+			"stage_35_domo_asst_boss_bull_explotion_layerback_9",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_9",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_9"
+		}
+	},
+	spawner_golden_beast_asst_landmine_explotion_rock = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			14,
+			15
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1966,
+			291,
+			12,
+			12
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_explotion_rock",
+			"stage_35_domo_asst_boss_bull_explotion_rock",
+			"stage_35_stun_tower_asst_boss_bull_explotion_rock",
+			"stage_35_stun_unit_asst_boss_bull_explotion_rock"
+		}
+	},
+	spawner_golden_beast_asst_leon = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			120,
+			132
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			2335,
+			116,
+			129
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_leon_roto_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			122,
+			132
+		},
+		trim = {
+			8,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			3512,
+			113,
+			129
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_leon_roto_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			126,
+			132
+		},
+		trim = {
+			8,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1146,
+			95,
+			117,
+			129
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_leon_roto_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			129,
+			178
+		},
+		trim = {
+			1,
+			33,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2141,
+			1806,
+			127,
+			144
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_leon_roto_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			155,
+			210
+		},
+		trim = {
+			1,
+			41,
+			8,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2990,
+			1523,
+			146,
+			168
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_leon_roto_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			170,
+			262
+		},
+		trim = {
+			4,
+			50,
+			10,
+			5
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			3084,
+			156,
+			207
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_leoncito_base = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			151,
+			79
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2429,
+			214,
+			147,
+			75
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_polvo_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			14,
+			21
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3436,
+			292,
+			10,
+			17
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_polvo_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			11,
+			22
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3452,
+			292,
+			9,
+			19
+		},
+		alias = {}
+	},
+	spawner_golden_beast_asst_polvo_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			8,
+			9
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2144,
+			265,
+			5,
+			5
+		},
+		alias = {}
+	},
+	stage35_deco1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			279,
+			961,
+			2368,
+			397
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			2255,
+			153,
+			178
+		},
+		alias = {}
+	},
+	stage35_deco2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			2129,
+			262,
+			518,
+			1095
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			1700,
+			153,
+			179
+		},
+		alias = {}
+	},
+	stage35_deco3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			571,
+			343,
+			2076,
+			1014
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			1885,
+			153,
+			179
+		},
+		alias = {}
+	},
+	stage35_deco4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			2102,
+			889,
+			545,
+			468
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			2070,
+			153,
+			179
+		},
+		alias = {}
+	},
+	stage35_escombros_holder_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			666,
+			401,
+			1996,
+			1074
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3159,
+			502,
+			138,
+			61
+		},
+		alias = {}
+	},
+	stage35_escombros_holder_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			1944,
+			575,
+			718,
+			900
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3303,
+			502,
+			138,
+			61
+		},
+		alias = {}
+	},
+	stage35_escombros_holder_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			1107,
+			734,
+			1555,
+			741
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2765,
+			789,
+			138,
+			61
+		},
+		alias = {}
+	},
+	stage35_mask_boss = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			1188,
+			396,
+			1178,
+			974
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1715,
+			6,
+			434,
+			166
+		},
+		alias = {}
+	},
+	stage35_mask_bosses = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			0,
+			264,
+			2519,
+			937
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			2356,
+			281,
+			335
+		},
+		alias = {}
+	},
+	stage35_mask_mask_creeps = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			86,
+			369,
+			2427,
+			681
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			1579,
+			287,
+			486
+		},
+		alias = {}
+	},
+	stage35_mask_path_close = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			1247,
+			1342,
+			1157,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2583,
+			6,
+			396,
+			194
+		},
+		alias = {}
+	},
+	stage35_mask_path_open = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			1451,
+			863,
+			957,
+			387
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2985,
+			6,
+			392,
+			286
+		},
+		alias = {}
+	},
+	stage35_mask_shadow_creeps = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			2800,
+			1536
+		},
+		trim = {
+			622,
+			0,
+			1851,
+			1230
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			860,
+			327,
+			306
+		},
+		alias = {}
+	},
+	stage35_spawner_base = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			292,
+			284
+		},
+		trim = {
+			58,
+			89,
+			65,
+			34
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			1356,
+			169,
+			161
+		},
+		alias = {}
+	},
+	stage35_spawner_puerta = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			236,
+			240
+		},
+		trim = {
+			20,
+			21,
+			20,
+			66
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2012,
+			860,
+			196,
+			153
+		},
+		alias = {}
+	},
+	stage5_destruccion_holder_asst_cannon_half = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			145,
+			151
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			2439,
+			141,
+			148
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_cannon_half",
+			"stage_5_bloqueo_path_asst_cannon_half"
+		}
+	},
+	stage5_destruccion_holder_asst_catapulta = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			161,
+			197
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			447,
+			666,
+			158,
+			194
+		},
+		alias = {}
+	},
+	stage5_destruccion_holder_asst_catapulta_copy = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			142,
+			174
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			3104,
+			139,
+			170
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_catapulta_copy",
+			"stage_5_bloqueo_path_asst_catapulta_copy",
+			"stage_5_pokebola_tnt_asst_catapulta_copy"
+		}
+	},
+	stage5_destruccion_holder_asst_cc_sat_smokesplode2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			175,
+			141
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1931,
+			1192,
+			172,
+			138
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_cc_sat_smokesplode2",
+			"stage_5_bloqueo_path_asst_cc_sat_smokesplode2_copy",
+			"stage_5_pokebola_tnt_asst_cc_sat_smokesplode2_copy"
+		}
+	},
+	stage5_destruccion_holder_asst_cc_sat_smokesplode3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			126,
+			130
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2534,
+			1806,
+			122,
+			127
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_cc_sat_smokesplode3",
+			"stage_5_bloqueo_path_asst_cc_sat_smokesplode3_copy",
+			"stage_5_pokebola_tnt_asst_cc_sat_smokesplode3_copy"
+		}
+	},
+	stage5_destruccion_holder_asst_cc_sat_smokesplode4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			96,
+			189
+		},
+		trim = {
+			8,
+			3,
+			15,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3239,
+			3369,
+			73,
+			184
+		},
+		alias = {}
+	},
+	stage5_destruccion_holder_asst_cc_sat_smokesplode5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			174,
+			85
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			3638,
+			172,
+			81
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_cc_sat_smokesplode5",
+			"stage_5_bloqueo_path_asst_cc_sat_smokesplode5_copy",
+			"stage_5_pokebola_tnt_asst_cc_sat_smokesplode5_copy"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			92,
+			54
+		},
+		trim = {
+			2,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2710,
+			1046,
+			89,
+			50
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_1",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_1",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_1"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			137,
+			80
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			3674,
+			135,
+			77
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_2",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_2",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_2"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			158,
+			85
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			447,
+			1047,
+			155,
+			81
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_3",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_3",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_3"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			170,
+			98
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2637,
+			1192,
+			167,
+			95
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_4",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_4",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_4"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			182,
+			99
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			2616,
+			179,
+			95
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_5",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_5",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_5"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			194,
+			94
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			1834,
+			190,
+			91
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_6",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_6",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_6"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			198,
+			90
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2614,
+			860,
+			194,
+			87
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_7",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_7",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_7"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer3_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			199,
+			68
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			380,
+			1934,
+			195,
+			65
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer3_8",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer3_8",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer3_8"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			62,
+			100
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			878,
+			2815,
+			58,
+			97
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_1",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_1",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_1"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			115,
+			117
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2513,
+			111,
+			113
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_10",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_10",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_10"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			78,
+			155
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3156,
+			3571,
+			75,
+			151
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_2",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_2",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_2"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			103,
+			171
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			3113,
+			100,
+			167
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_3",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_3",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_3"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			188
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3659,
+			1806,
+			105,
+			184
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_4",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_4",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_4"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			114,
+			188
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2131,
+			111,
+			185
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_5",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_5",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_5"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			121,
+			185
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3041,
+			1806,
+			118,
+			182
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_6",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_6",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_6"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			138,
+			181
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			2677,
+			135,
+			178
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_7",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_7",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_7"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			143,
+			171
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1568,
+			2593,
+			140,
+			168
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_8",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_8",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_8"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_explotion_layer4_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			147,
+			131
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3461,
+			1356,
+			145,
+			127
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_explotion_layer4_9",
+			"stage_5_bloqueo_path_asst_fuente_explotion_layer4_9",
+			"stage_5_pokebola_tnt_asst_fuente_explotion_layer4_9"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			188,
+			23
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2155,
+			290,
+			186,
+			21
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_1",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_1",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_1"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			97,
+			27
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			394,
+			1434,
+			94,
+			23
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_10"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			195,
+			29
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			394,
+			1698,
+			191,
+			25
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_2",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_2",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_2"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			192,
+			59
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			361,
+			3708,
+			188,
+			55
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_3",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_3",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_3"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			229,
+			101
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			2947,
+			226,
+			97
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_4",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_4",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_4"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			247,
+			104
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			361,
+			3453,
+			244,
+			100
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_5",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_5",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_5"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			108
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2765,
+			579,
+			245,
+			105
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_6",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_6",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_6"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			254,
+			109
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2505,
+			665,
+			251,
+			106
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_7",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_7",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_7"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			259,
+			102
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2583,
+			206,
+			256,
+			98
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_8",
+			"stage_5_bloqueo_path_asst_fuente_waterplash_8",
+			"stage_5_pokebola_tnt_asst_fuente_waterplash_8"
+		}
+	},
+	stage5_destruccion_holder_asst_fuente_waterplash_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			259,
+			81
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2236,
+			755,
+			256,
+			78
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_fuente_waterplash_9"
+		}
+	},
+	stage5_destruccion_holder_asst_sombra_catapulta = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			88,
+			40
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			3400,
+			85,
+			37
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_sombra_catapulta",
+			"stage_5_bloqueo_path_asst_sombra_catapulta_copy",
+			"stage_5_pokebola_tnt_asst_sombra_catapulta_copy"
+		}
+	},
+	stage5_destruccion_holder_asst_stage_3_asst_rock_s_paths_smallasst_rock = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			30,
+			31
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2527,
+			27,
+			27
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_stage_3_asst_rock_s_paths_smallasst_rock",
+			"stage_5_bloqueo_path_asst_stage_3_asst_rock_s_paths_smallasst_rock",
+			"stage_5_pokebola_tnt_asst_stage_3_asst_rock_s_paths_smallasst_rock"
+		}
+	},
+	stage5_destruccion_holder_asst_stage_3_asst_rock_s_paths_snowcloud = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			76,
+			76
+		},
+		trim = {
+			19,
+			16,
+			16,
+			16
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1153,
+			2510,
+			41,
+			44
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_stage_3_asst_rock_s_paths_snowcloud",
+			"stage_5_bloqueo_path_asst_stage_3_asst_rock_s_paths_snowcloud",
+			"stage_5_pokebola_tnt_asst_stage_3_asst_rock_s_paths_snowcloud"
+		}
+	},
+	stage5_destruccion_holder_asst_stage_3_asst_rock_s_paths_snowparticles_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			76,
+			66
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3158,
+			1453,
+			74,
+			63
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_stage_3_asst_rock_s_paths_snowparticles_01",
+			"stage_5_bloqueo_path_asst_stage_3_asst_rock_s_paths_snowparticles_01",
+			"stage_5_pokebola_tnt_asst_stage_3_asst_rock_s_paths_snowparticles_01"
+		}
+	},
+	stage5_destruccion_holder_asst_stage_3_asst_rock_s_paths_snowparticles_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			72,
+			75
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3397,
+			3083,
+			69,
+			72
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_stage_3_asst_rock_s_paths_snowparticles_02",
+			"stage_5_bloqueo_path_asst_stage_3_asst_rock_s_paths_snowparticles_02",
+			"stage_5_pokebola_tnt_asst_stage_3_asst_rock_s_paths_snowparticles_02"
+		}
+	},
+	stage5_destruccion_holder_asst_stage_3_asst_rock_s_paths_snowparticles_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			67,
+			82
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3466,
+			3176,
+			65,
+			79
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_stage_3_asst_rock_s_paths_snowparticles_03",
+			"stage_5_bloqueo_path_asst_stage_3_asst_rock_s_paths_snowparticles_03",
+			"stage_5_pokebola_tnt_asst_stage_3_asst_rock_s_paths_snowparticles_03"
+		}
+	},
+	stage5_destruccion_holder_asst_stage_3_asst_rock_s_paths_snowparticles_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			66,
+			84
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3537,
+			3176,
+			63,
+			80
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_stage_3_asst_rock_s_paths_snowparticles_04",
+			"stage_5_bloqueo_path_asst_stage_3_asst_rock_s_paths_snowparticles_04",
+			"stage_5_pokebola_tnt_asst_stage_3_asst_rock_s_paths_snowparticles_04"
+		}
+	},
+	stage5_destruccion_holder_asst_wifi_babies_floatingbabies_smoke = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			86,
+			34
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			506,
+			3151,
+			86,
+			34
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_wifi_babies_floatingbabies_smoke",
+			"stage_5_bloqueo_path_asst_wifi_babies_floatingbabies_smoke_copy",
+			"stage_5_pokebola_tnt_asst_wifi_babies_floatingbabies_smoke_copy",
+			"spawner_golden_beast_asst_banditbrute_wifi_babies_floatingbabies_smoke",
+			"stage_35_stun_tower_asst_boss_bull_floatingbabies_smoke",
+			"stage_35_stun_unit_asst_boss_bull_floatingbabies_smoke"
+		}
+	},
+	stage5_destruccion_holder_asst_wifi_babies_smokecircle1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			107,
+			87
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2707,
+			2131,
+			107,
+			87
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_wifi_babies_smokecircle1",
+			"stage_5_bloqueo_path_asst_wifi_babies_smokecircle1_copy",
+			"stage_5_pokebola_tnt_asst_wifi_babies_smokecircle1_copy",
+			"spawner_golden_beast_asst_banditbrute_wifi_babies_smokecircle1",
+			"stage_35_stun_tower_asst_boss_bull_smokecircle1",
+			"stage_35_stun_unit_asst_boss_bull_smokecircle1"
+		}
+	},
+	stage5_destruccion_holder_asst_wifi_babies_smokecircle2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			113,
+			87
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2252,
+			2037,
+			113,
+			87
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_wifi_babies_smokecircle2",
+			"stage_5_bloqueo_path_asst_wifi_babies_smokecircle2_copy",
+			"stage_5_pokebola_tnt_asst_wifi_babies_smokecircle2_copy",
+			"spawner_golden_beast_asst_banditbrute_wifi_babies_smokecircle2",
+			"stage_35_stun_tower_asst_boss_bull_smokecircle2",
+			"stage_35_stun_unit_asst_boss_bull_smokecircle2"
+		}
+	},
+	stage5_destruccion_holder_asst_wifi_babies_smokecircle3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			88
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2480,
+			2131,
+			108,
+			88
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_wifi_babies_smokecircle3",
+			"stage_5_bloqueo_path_asst_wifi_babies_smokecircle3_copy",
+			"stage_5_pokebola_tnt_asst_wifi_babies_smokecircle3_copy",
+			"spawner_golden_beast_asst_banditbrute_wifi_babies_smokecircle3",
+			"stage_35_stun_tower_asst_boss_bull_smokecircle3",
+			"stage_35_stun_unit_asst_boss_bull_smokecircle3"
+		}
+	},
+	stage5_destruccion_holder_asst_wifi_babies_smokecircle4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			111,
+			81
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2488,
+			2037,
+			111,
+			81
+		},
+		alias = {
+			"stage5_destruccion_holder_sinojos_asst_wifi_babies_smokecircle4",
+			"stage_5_bloqueo_path_asst_wifi_babies_smokecircle4_copy",
+			"stage_5_pokebola_tnt_asst_wifi_babies_smokecircle4_copy",
+			"spawner_golden_beast_asst_banditbrute_wifi_babies_smokecircle4",
+			"stage_35_stun_tower_asst_boss_bull_smokecircle4",
+			"stage_35_stun_unit_asst_boss_bull_smokecircle4"
+		}
+	},
+	stage5_destruccion_holder_sinojos_asst_cc_sat_smokesplode4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			105,
+			189
+		},
+		trim = {
+			12,
+			3,
+			15,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			3178,
+			78,
+			184
+		},
+		alias = {
+			"stage_5_bloqueo_path_asst_cc_sat_smokesplode4_copy",
+			"stage_5_pokebola_tnt_asst_cc_sat_smokesplode4_copy"
+		}
+	},
+	stage5_samadhi_1_asst_sign_a_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			172,
+			135
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1848,
+			446,
+			172,
+			135
+		},
+		alias = {
+			"stage5_samadhi_2_asst_sign_a_01"
+		}
+	},
+	stage5_samadhi_1_asst_sign_a_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			172,
+			135
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1848,
+			587,
+			169,
+			131
+		},
+		alias = {
+			"stage5_samadhi_2_asst_sign_a_02"
+		}
+	},
+	stage5_samadhi_1_asst_sign_b_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			226,
+			157
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			998,
+			1781,
+			226,
+			157
+		},
+		alias = {
+			"stage5_samadhi_2_asst_sign_b_01"
+		}
+	},
+	stage5_samadhi_1_asst_sign_b_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			226,
+			157
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1473,
+			1036,
+			224,
+			155
+		},
+		alias = {
+			"stage5_samadhi_2_asst_sign_b_02"
+		}
+	},
+	stage5_samadhi_1_asst_sign_c_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			153,
+			182
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1454,
+			1362,
+			153,
+			182
+		},
+		alias = {
+			"stage5_samadhi_2_asst_sign_c_01"
+		}
+	},
+	stage5_samadhi_1_asst_sign_c_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			153,
+			182
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1613,
+			1362,
+			151,
+			179
+		},
+		alias = {
+			"stage5_samadhi_2_asst_sign_c_02"
+		}
+	},
+	stage5_samadhi_1_asst_wozniac_decal_02_buff = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			164,
+			164
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1243,
+			1780,
+			161,
+			160
+		},
+		alias = {
+			"stage5_samadhi_2_asst_wozniac_decal_02_buff"
+		}
+	},
+	stage_35_areaattack_asst_boss_bull_area_melee_banditeBrute_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			115,
+			83
+		},
+		trim = {
+			2,
+			2,
+			8,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			2237,
+			105,
+			80
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			16,
+			18
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			441,
+			1202,
+			12,
+			15
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			14,
+			15
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1211,
+			397,
+			11,
+			12
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			14,
+			14
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1228,
+			397,
+			11,
+			12
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			11,
+			14
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1261,
+			397,
+			7,
+			11
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			10,
+			13
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			455,
+			782,
+			6,
+			10
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			10,
+			16
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			455,
+			763,
+			6,
+			13
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			10,
+			21
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			453,
+			2285,
+			7,
+			17
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			13,
+			23
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1330,
+			759,
+			10,
+			20
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_11 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			14,
+			26
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2340,
+			536,
+			10,
+			22
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_12 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			14,
+			28
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			441,
+			1223,
+			11,
+			25
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_13 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			14,
+			28
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			441,
+			1254,
+			11,
+			25
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_14 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			15,
+			28
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			441,
+			1171,
+			12,
+			25
+		},
+		alias = {}
+	},
+	stage_35_areaattack_asst_boss_bull_rock_banditeBrute_15 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			17,
+			28
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			380,
+			14,
+			25
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_01_skill_b = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			61,
+			75
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2300,
+			2122,
+			61,
+			75
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_02_skill_b = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			69,
+			85
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2088,
+			2306,
+			69,
+			85
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_03_skill_b = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			95,
+			88
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			2335,
+			95,
+			88
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_04_skill_b = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			102,
+			79
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			1574,
+			102,
+			79
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_05_skill_b = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			81,
+			54
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			2365,
+			81,
+			54
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_06_skill_b = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			86,
+			50
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1130,
+			954,
+			86,
+			50
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_arm01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			85,
+			93
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			2269,
+			81,
+			90
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_arm01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_arm011 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			107,
+			88
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			2397,
+			103,
+			84
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_arm012 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			78,
+			49
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2011,
+			1909,
+			74,
+			46
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_arm02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			89,
+			70
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2207,
+			1767,
+			85,
+			66
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_arm02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_arm04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			75,
+			97
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2010,
+			2216,
+			72,
+			94
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_arm04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_arm05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			89,
+			109
+		},
+		trim = {
+			1,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2024,
+			1767,
+			86,
+			107
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			29
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1818,
+			1117,
+			24,
+			25
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_1"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			28
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1608,
+			924,
+			26,
+			24
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_10"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_11 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			29,
+			26
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			977,
+			2200,
+			25,
+			24
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_11"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_12 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2173,
+			977,
+			25,
+			27
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_12"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_13 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			32
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1608,
+			954,
+			25,
+			29
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_13"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_14 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			26,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1728,
+			1117,
+			24,
+			26
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_14"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_15 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2417,
+			972,
+			25,
+			27
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_15"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_16 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			29
+		},
+		trim = {
+			2,
+			1,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1758,
+			1117,
+			24,
+			26
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_16"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			27,
+			29
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1848,
+			1117,
+			24,
+			25
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_2"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			995,
+			1603,
+			23,
+			27
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_3"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			25,
+			29
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			995,
+			1636,
+			23,
+			26
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_4"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_5 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			2470,
+			24,
+			25
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_5"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_6 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1788,
+			1117,
+			24,
+			26
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_6"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_7 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2448,
+			972,
+			25,
+			27
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_7"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_8 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2479,
+			972,
+			25,
+			27
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_8"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_ballenergy_9 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			968,
+			2309,
+			24,
+			27
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_ballenergy_9"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_basewukongball = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			37
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			983,
+			2020,
+			35,
+			37
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_basewukongball"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_body_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			125,
+			93
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			2398,
+			121,
+			90
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_body_04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cahetes = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			115,
+			43
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1622,
+			733,
+			112,
+			39
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_chain_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			73
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			968,
+			2233,
+			49,
+			70
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_chain_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_chain_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			46,
+			58
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2350,
+			2211,
+			44,
+			55
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_chain_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cinto = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			71,
+			41
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1377,
+			1112,
+			68,
+			38
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_cinto"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cinto02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			71,
+			41
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1451,
+			1112,
+			68,
+			38
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_cinto02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cinto_toro01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			43
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2443,
+			1862,
+			49,
+			39
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cinto_toro02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			51,
+			43
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2276,
+			1909,
+			49,
+			39
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_cinto_toro02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cloth_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			29
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1547,
+			31,
+			26
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_cloth_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cloth_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			29,
+			22
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2421,
+			766,
+			25,
+			19
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_cloth_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_cloth_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			23,
+			21
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			441,
+			1128,
+			20,
+			18
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_cloth_03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			121,
+			49
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1337,
+			504,
+			121,
+			49
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			160,
+			81
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1442,
+			924,
+			160,
+			81
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			169,
+			111
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1553,
+			1013,
+			169,
+			111
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			182,
+			116
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2088,
+			664,
+			182,
+			116
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			187,
+			125
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2032,
+			793,
+			187,
+			125
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			186,
+			147
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2225,
+			793,
+			186,
+			147
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			185,
+			159
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			2068,
+			185,
+			159
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			187,
+			171
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1839,
+			793,
+			187,
+			171
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			151,
+			162
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			2154,
+			151,
+			162
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire12 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			138,
+			107
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			2107,
+			138,
+			107
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire_ball_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			82,
+			91
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			1964,
+			80,
+			88
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_fire_ball_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire_ball_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			86,
+			114
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			2153,
+			82,
+			110
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_fire_ball_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire_ball_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			87,
+			115
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2298,
+			1767,
+			84,
+			111
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_fire_ball_03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire_ball_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			88,
+			116
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2116,
+			1767,
+			85,
+			112
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_fire_ball_04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire_ball_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			90,
+			115
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1932,
+			1767,
+			86,
+			112
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_fire_ball_05"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_fire_glow = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			65,
+			79
+		},
+		trim = {
+			5,
+			2,
+			4,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2444,
+			2038,
+			56,
+			75
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_fire_glow"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_globitoactivacion = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			2322,
+			151,
+			142
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_globitoactivacion02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			1156,
+			151,
+			142
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_globitoactivacion03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1354,
+			1156,
+			151,
+			142
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_globitoactivacion_samadhi = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			153,
+			145
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1511,
+			1156,
+			151,
+			142
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			90,
+			75
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2417,
+			894,
+			87,
+			72
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			65,
+			59
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2376,
+			2038,
+			62,
+			56
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_hand_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			73,
+			66
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2010,
+			2316,
+			70,
+			63
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_031 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			72,
+			53
+		},
+		trim = {
+			2,
+			1,
+			1,
+			6
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2091,
+			1909,
+			69,
+			46
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			89,
+			82
+		},
+		trim = {
+			12,
+			2,
+			10,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2163,
+			2038,
+			67,
+			78
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			73,
+			90
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2088,
+			2213,
+			69,
+			87
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			92
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			2348,
+			74,
+			88
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hand_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			90,
+			97
+		},
+		trim = {
+			1,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2417,
+			793,
+			87,
+			95
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_head01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			70
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2010,
+			1964,
+			74,
+			68
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_head01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_head01_sentado = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			70
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2090,
+			1964,
+			74,
+			68
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_head01_sentado02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			70
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2170,
+			1964,
+			74,
+			68
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_head02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			70
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2250,
+			1964,
+			74,
+			68
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_head02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_head04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			42,
+			40
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			977,
+			2115,
+			39,
+			37
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_head05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			82,
+			72
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			2145,
+			78,
+			68
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hear_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			115,
+			90
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			2093,
+			112,
+			87
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_hear_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_hear_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			23,
+			26
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			201,
+			19,
+			23
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_hear_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			146,
+			152
+		},
+		trim = {
+			49,
+			29,
+			49,
+			35
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2296,
+			2211,
+			48,
+			88
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			146,
+			152
+		},
+		trim = {
+			17,
+			25,
+			36,
+			25
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			1659,
+			93,
+			102
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			204,
+			201
+		},
+		trim = {
+			37,
+			17,
+			27,
+			39
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2360,
+			415,
+			140,
+			145
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			215,
+			262
+		},
+		trim = {
+			39,
+			17,
+			44,
+			33
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			1559,
+			132,
+			212
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			345,
+			294
+		},
+		trim = {
+			50,
+			45,
+			53,
+			35
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			793,
+			242,
+			214
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_05"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			366,
+			370
+		},
+		trim = {
+			43,
+			39,
+			91,
+			45
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			1013,
+			232,
+			286
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_06"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			304,
+			368
+		},
+		trim = {
+			51,
+			33,
+			37,
+			43
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			1305,
+			216,
+			292
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_07"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_intro_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			306,
+			356
+		},
+		trim = {
+			67,
+			53,
+			48,
+			65
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			1824,
+			191,
+			238
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_intro_08"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_leg = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			44,
+			38
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1981,
+			970,
+			40,
+			34
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_leg"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_leg_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			47,
+			36
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2290,
+			536,
+			44,
+			32
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_leg_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_leg_021 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			46,
+			51
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2232,
+			2454,
+			44,
+			48
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_lip01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			52,
+			40
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			966,
+			2467,
+			49,
+			37
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_lip01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_lip013 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			65,
+			34
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			536,
+			63,
+			30
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_lip013"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_lip02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			58,
+			40
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1919,
+			970,
+			56,
+			37
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_lip02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_lip03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			46,
+			48
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2296,
+			2409,
+			42,
+			45
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_lip03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_lip04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			42
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2388,
+			1862,
+			49,
+			40
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_lip04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_lip05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			63,
+			51
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2440,
+			1374,
+			61,
+			48
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_lip05"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_melee_hit_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			20,
+			27
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			252,
+			18,
+			24
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_melee_hit_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			26,
+			28
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1054,
+			2470,
+			24,
+			24
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_nariz01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			33,
+			26
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1579,
+			31,
+			22
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_nariz01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_nariz02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			37,
+			23
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1543,
+			382,
+			34,
+			20
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_nube = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			302,
+			148
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1477,
+			415,
+			299,
+			145
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_shadow = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			71,
+			26
+		},
+		trim = {
+			3,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1285,
+			382,
+			66,
+			22
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_shadow"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_shoulderpad01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			88,
+			79
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2416,
+			1659,
+			85,
+			76
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_shoulderpad01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_shoulderpad02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			64
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			966,
+			2350,
+			49,
+			61
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_shoulderpad02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_smokeboss_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			41
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1503,
+			31,
+			38
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_smokeboss_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_smokeboss_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			38,
+			55
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			983,
+			1963,
+			35,
+			51
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_smokeboss_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_smokeboss_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			45
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2166,
+			1909,
+			49,
+			42
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_smokeboss_03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_smokeboss_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			50,
+			47
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2439,
+			1909,
+			46,
+			44
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_smokeboss_04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_smokeboss_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			47,
+			47
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2400,
+			2211,
+			44,
+			43
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_smokeboss_05"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_smokeboss_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			45,
+			46
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2296,
+			2460,
+			42,
+			43
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_smokeboss_06"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			60
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			983,
+			1897,
+			35,
+			60
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			209,
+			218
+		},
+		trim = {
+			62,
+			64,
+			77,
+			91
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2010,
+			2385,
+			70,
+			63
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			100,
+			72,
+			77,
+			137
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1978,
+			1156,
+			146,
+			127
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_01"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			122,
+			65,
+			43,
+			131
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1547,
+			158,
+			140
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_02"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			129,
+			67,
+			33,
+			132
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1897,
+			1013,
+			161,
+			137
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_03"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			109,
+			68,
+			64,
+			132
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1668,
+			1156,
+			150,
+			136
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_04"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			114,
+			69,
+			55,
+			133
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1791,
+			154,
+			134
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_05"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			117,
+			71,
+			50,
+			135
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2228,
+			1013,
+			156,
+			130
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_06"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			141,
+			73,
+			12,
+			137
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1201,
+			1013,
+			170,
+			126
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_07"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			147,
+			73,
+			2,
+			136
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			2350,
+			174,
+			127
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_08"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			85,
+			81,
+			85,
+			149
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			2042,
+			153,
+			106
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_09"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			323,
+			336
+		},
+		trim = {
+			69,
+			88,
+			84,
+			155
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1377,
+			1013,
+			170,
+			93
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_10"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_teleport_fireball_11 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			81,
+			64
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2207,
+			1839,
+			81,
+			64
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_teleport_fireball_11"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_trono = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			292,
+			337
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			1661,
+			290,
+			334
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_vfx_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			175,
+			73
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2193,
+			337,
+			172,
+			69
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_vfx_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			169,
+			66
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1164,
+			504,
+			167,
+			63
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_vfx_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			121,
+			62
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2296,
+			720,
+			119,
+			59
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_vfx_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			129,
+			13
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1153,
+			382,
+			126,
+			9
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_vfx_glow_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			455,
+			342
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			415,
+			455,
+			342
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_vfx_glow_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			446,
+			363
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			763,
+			443,
+			359
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_weapon = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			72,
+			172
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2088,
+			2038,
+			69,
+			169
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_weapon"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_weapon_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			127,
+			244
+		},
+		trim = {
+			16,
+			6,
+			10,
+			11
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			1659,
+			101,
+			227
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_weapon_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			127,
+			244
+		},
+		trim = {
+			11,
+			6,
+			9,
+			11
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			1574,
+			107,
+			227
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_weapon_hand = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			42,
+			39
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			977,
+			2158,
+			39,
+			36
+		},
+		alias = {
+			"stage_35_boss_bull_2_asst_boss_bull_weapon_hand"
+		}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_wind_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			45
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2221,
+			1909,
+			49,
+			42
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_wind_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			50,
+			47
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2010,
+			2454,
+			46,
+			44
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_wind_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			47,
+			47
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2450,
+			2211,
+			44,
+			43
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_1_asst_boss_bull_wind_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			45,
+			46
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2347,
+			2305,
+			42,
+			43
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_body01_dead = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			179,
+			114
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			2233,
+			176,
+			111
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_01_jade = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			25,
+			24
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			995,
+			1668,
+			22,
+			22
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_02_jade = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			30,
+			31
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1055,
+			754,
+			27,
+			27
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_03_jade = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			17,
+			16
+		},
+		trim = {
+			1,
+			1,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			441,
+			1152,
+			14,
+			13
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_04_jade = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			33
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1290,
+			32,
+			30
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_arm03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			107,
+			159
+		},
+		trim = {
+			9,
+			9,
+			6,
+			14
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			1767,
+			92,
+			136
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_arm_L_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			98,
+			70
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1936,
+			1574,
+			95,
+			66
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_back01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			165,
+			101
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1728,
+			1013,
+			163,
+			98
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_back01",
+			"stage_35_fireball_l_asst_spider_queen_fall_back01",
+			"stage_35_fireball_r_asst_spider_queen_fall_back01"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_back02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			263,
+			128
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1090,
+			574,
+			261,
+			125
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_back02",
+			"stage_35_fireball_l_asst_spider_queen_fall_back02",
+			"stage_35_fireball_r_asst_spider_queen_fall_back02"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_back03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			271,
+			117
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2086,
+			415,
+			268,
+			115
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_back03",
+			"stage_35_fireball_l_asst_spider_queen_fall_back03",
+			"stage_35_fireball_r_asst_spider_queen_fall_back03"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_back04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			312,
+			117
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2193,
+			6,
+			308,
+			113
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_back04",
+			"stage_35_fireball_l_asst_spider_queen_fall_back04",
+			"stage_35_fireball_r_asst_spider_queen_fall_back04"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_back05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			302,
+			102
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1782,
+			415,
+			298,
+			99
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_back05",
+			"stage_35_fireball_l_asst_spider_queen_fall_back05",
+			"stage_35_fireball_r_asst_spider_queen_fall_back05"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_back06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			311,
+			86
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1164,
+			415,
+			307,
+			83
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_back06",
+			"stage_35_fireball_l_asst_spider_queen_fall_back06",
+			"stage_35_fireball_r_asst_spider_queen_fall_back06"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_backbreaker_debree1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			230,
+			93
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1855,
+			574,
+			227,
+			89
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_backbreaker_debree1",
+			"stage_35_stun_tower_asst_boss_bull_backbreaker_debree1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_bull = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			162,
+			112
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2064,
+			1013,
+			158,
+			108
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_death08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			114,
+			100
+		},
+		trim = {
+			3,
+			5,
+			5,
+			3
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			1807,
+			106,
+			92
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_death09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			150,
+			111
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1824,
+			1156,
+			148,
+			108
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_death10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			162,
+			138
+		},
+		trim = {
+			16,
+			8,
+			7,
+			3
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			1637,
+			139,
+			127
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_death11 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			60,
+			37
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			794,
+			754,
+			58,
+			33
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_death12 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			186,
+			162
+		},
+		trim = {
+			32,
+			15,
+			32,
+			22
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1745,
+			1431,
+			122,
+			125
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_dirt_walk_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			32,
+			25
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			386,
+			2285,
+			28,
+			23
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_dirt_walk_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			34,
+			24
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1621,
+			382,
+			32,
+			20
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_energy_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			142,
+			162
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			1943,
+			138,
+			158
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_energy_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			141,
+			171
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			1770,
+			138,
+			167
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_energy_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			142,
+			163
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			1304,
+			140,
+			160
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_energy_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			142,
+			164
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			1470,
+			139,
+			161
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer1_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			76,
+			67
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2410,
+			1964,
+			72,
+			64
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer1_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			115,
+			102
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			2186,
+			111,
+			99
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer1_3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			130,
+			118
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2050,
+			1304,
+			126,
+			115
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer1_5 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			141,
+			124
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			2348,
+			137,
+			121
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer1_6 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			138,
+			124
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1629,
+			1304,
+			136,
+			120
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer1_7 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			136,
+			69
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2371,
+			337,
+			132,
+			65
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer2_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			86,
+			92
+		},
+		trim = {
+			2,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			2059,
+			83,
+			88
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer2_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			88,
+			92
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2388,
+			1767,
+			84,
+			89
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer2_3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			92,
+			89
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2224,
+			1659,
+			90,
+			86
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer2_4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			92,
+			86
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2320,
+			1659,
+			90,
+			83
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer2_5 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			92,
+			80
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2330,
+			1574,
+			88,
+			77
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion2_layer2_6 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			87,
+			74
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1352,
+			933,
+			84,
+			71
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer2_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			43,
+			21
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1451,
+			382,
+			41,
+			18
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer2_1",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer2_1",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer2_1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer2_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			123,
+			37
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1782,
+			520,
+			120,
+			33
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer2_2",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer2_2",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer2_2"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			92,
+			54
+		},
+		trim = {
+			1,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1034,
+			954,
+			90,
+			50
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer3_1",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_1",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer3_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			137,
+			80
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2032,
+			924,
+			135,
+			77
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer3_2",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer3_2",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer3_2"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			62,
+			100
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2232,
+			2211,
+			58,
+			97
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer4_1",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_1",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer4_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			78,
+			155
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			386,
+			2056,
+			75,
+			151
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer4_2",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer4_2",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer4_2"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layer5_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			67,
+			89
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2163,
+			2266,
+			63,
+			86
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layer5_1",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layer5_1",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layer5_1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_explotion_layerback_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			31,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			1998,
+			28,
+			26
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_explotion_layerback_1",
+			"stage_35_stun_tower_asst_boss_bull_explotion_layerback_1",
+			"stage_35_stun_unit_asst_boss_bull_explotion_layerback_1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_eyes_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			50,
+			39
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2125,
+			1532,
+			48,
+			36
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_front01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			218,
+			106
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1855,
+			669,
+			215,
+			103
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_front01"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_front02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			432,
+			159
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			1128,
+			429,
+			156
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_front02"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_front03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			491,
+			193
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1699,
+			6,
+			488,
+			189
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_front03"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_front04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			466,
+			210
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1699,
+			201,
+			463,
+			207
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_front04"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_front05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			354,
+			177
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			2314,
+			350,
+			174
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_front05"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_front06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			351,
+			157
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			415,
+			348,
+			153
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_front06"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			7,
+			7
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1668,
+			7,
+			7
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			10,
+			9
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1245,
+			397,
+			10,
+			9
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			12,
+			10
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1193,
+			397,
+			12,
+			10
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			15,
+			13
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			361,
+			15,
+			13
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			22,
+			16
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2452,
+			766,
+			22,
+			16
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			32,
+			20
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1659,
+			382,
+			32,
+			20
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_power_health_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			41,
+			24
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1404,
+			382,
+			41,
+			24
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_swipe_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			313,
+			239
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			1102,
+			313,
+			239
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_fx_swipe_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			337,
+			151
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			821,
+			415,
+			337,
+			151
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_gator_smokesplode3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			126,
+			130
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			2113,
+			126,
+			130
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_gator_smokesplode3"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_glow_fire01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			76,
+			67
+		},
+		trim = {
+			7,
+			2,
+			5,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2440,
+			1304,
+			64,
+			64
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_hand_061 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			70,
+			66
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2088,
+			2397,
+			68,
+			63
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_head03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			63,
+			83
+		},
+		trim = {
+			2,
+			3,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2434,
+			2122,
+			59,
+			79
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_head06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			70
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2330,
+			1964,
+			74,
+			68
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_instakill_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			315,
+			304
+		},
+		trim = {
+			1,
+			0,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			793,
+			313,
+			303
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_intro_boss_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			310,
+			206
+		},
+		trim = {
+			2,
+			0,
+			1,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2193,
+			125,
+			307,
+			206
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_intro_boss_01"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_layer1_4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			139,
+			126
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1197,
+			2220,
+			137,
+			122
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_leg01_dead = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			78,
+			69
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			386,
+			2213,
+			75,
+			66
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_leg02_dead = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			88,
+			75
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			2429,
+			86,
+			72
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_light_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			57,
+			48
+		},
+		trim = {
+			17,
+			10,
+			13,
+			11
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1297,
+			759,
+			27,
+			27
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_light_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			66,
+			67
+		},
+		trim = {
+			8,
+			12,
+			12,
+			8
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2173,
+			924,
+			46,
+			47
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_light_3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			98,
+			92
+		},
+		trim = {
+			8,
+			18,
+			12,
+			18
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			2286,
+			78,
+			56
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_light_4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			98,
+			92
+		},
+		trim = {
+			11,
+			14,
+			9,
+			17
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			2219,
+			78,
+			61
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_light_5 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			98,
+			92
+		},
+		trim = {
+			9,
+			13,
+			5,
+			12
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			1986,
+			84,
+			67
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_light_weapon = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			105,
+			231
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			2000,
+			105,
+			231
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_lip09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			55,
+			48
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			727,
+			2133,
+			53,
+			44
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_lip10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			55,
+			72
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			727,
+			2001,
+			53,
+			69
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_lip11 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			48
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			966,
+			2417,
+			49,
+			44
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_missile_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			50,
+			48
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2386,
+			1909,
+			47,
+			45
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_missile_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			53,
+			53
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			727,
+			2183,
+			50,
+			49
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_missile_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			54,
+			45
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2028,
+			520,
+			51,
+			41
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			42,
+			44
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			977,
+			2068,
+			39,
+			41
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			56,
+			54
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			727,
+			2076,
+			53,
+			51
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail2"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			64,
+			63
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2367,
+			2122,
+			61,
+			59
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail3"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			67,
+			65
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2236,
+			2038,
+			64,
+			61
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail4"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail5 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			68,
+			65
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			715,
+			2362,
+			65,
+			62
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail5"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail6 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			68,
+			61
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			715,
+			2430,
+			65,
+			58
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail6"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_mortartrail7 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			67,
+			61
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2306,
+			2038,
+			64,
+			57
+		},
+		alias = {
+			"stage_35_explosion_path_asst_mortar_mortartrail7"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_nightmareSwipe01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			255,
+			263
+		},
+		trim = {
+			0,
+			0,
+			1,
+			8
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			2001,
+			254,
+			255
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			37,
+			70
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			983,
+			1824,
+			35,
+			67
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock1",
+			"stage_35_stun_tower_asst_boss_bull_rock1"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			131,
+			191
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			1777,
+			128,
+			188
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock10",
+			"stage_35_stun_tower_asst_boss_bull_rock10"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			36,
+			74
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			1682,
+			34,
+			70
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock2",
+			"stage_35_stun_tower_asst_boss_bull_rock2"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			36,
+			74
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			1795,
+			33,
+			70
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock3",
+			"stage_35_stun_tower_asst_boss_bull_rock3"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			65,
+			141
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2163,
+			2122,
+			63,
+			138
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock4",
+			"stage_35_stun_tower_asst_boss_bull_rock4"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock6 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			66,
+			86
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2232,
+			2122,
+			62,
+			83
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock6",
+			"stage_35_stun_tower_asst_boss_bull_rock6"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock7 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			66,
+			116
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2163,
+			2358,
+			62,
+			112
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock7",
+			"stage_35_stun_tower_asst_boss_bull_rock7"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock8 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			48,
+			102
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2296,
+			2305,
+			45,
+			98
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock8",
+			"stage_35_stun_tower_asst_boss_bull_rock8"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_rock9 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			59,
+			137
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2232,
+			2314,
+			55,
+			134
+		},
+		alias = {
+			"stage_35_domo_asst_boss_bull_rock9",
+			"stage_35_stun_tower_asst_boss_bull_rock9"
+		}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			96,
+			67
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2037,
+			1574,
+			94,
+			64
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			99,
+			68
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			362,
+			2395,
+			96,
+			64
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			95,
+			63
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2225,
+			946,
+			91,
+			60
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			93,
+			62
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2137,
+			1574,
+			91,
+			59
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			89,
+			59
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1741,
+			949,
+			86,
+			55
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			83,
+			56
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			2425,
+			81,
+			53
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			84,
+			52
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			1909,
+			81,
+			49
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			26
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1583,
+			382,
+			32,
+			23
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			45,
+			35
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			963,
+			754,
+			43,
+			32
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_3 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			51,
+			36
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			858,
+			754,
+			49,
+			33
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_4 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			49,
+			33
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2237,
+			536,
+			47,
+			30
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_5 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			46,
+			32
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			913,
+			754,
+			44,
+			29
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_6 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			44,
+			31
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1357,
+			382,
+			41,
+			27
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_smoke_7 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			38,
+			7
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1153,
+			397,
+			34,
+			3
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_stun_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			90,
+			37
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			362,
+			2465,
+			88,
+			35
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_stun_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			85,
+			41
+		},
+		trim = {
+			1,
+			1,
+			1,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2421,
+			720,
+			83,
+			40
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_stun_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			88,
+			44
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2322,
+			946,
+			85,
+			42
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_stun_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			78,
+			36
+		},
+		trim = {
+			2,
+			1,
+			2,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1839,
+			970,
+			74,
+			35
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_stun_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			77,
+			34
+		},
+		trim = {
+			1,
+			1,
+			0,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2086,
+			536,
+			76,
+			32
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_swipe_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			114,
+			96
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			1991,
+			114,
+			96
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_swipe_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			146,
+			115
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2130,
+			1156,
+			146,
+			115
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_swipe_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			167,
+			190
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1156,
+			167,
+			190
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_swipe_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			203,
+			215
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			786,
+			1603,
+			203,
+			215
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_swipe_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			121,
+			96
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2313,
+			1304,
+			121,
+			96
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_swipe_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			290,
+			174
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			794,
+			574,
+			290,
+			174
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_teleport_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			28,
+			49
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			1943,
+			28,
+			49
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_teleport_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			277,
+			288
+		},
+		trim = {
+			94,
+			106,
+			72,
+			102
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			2389,
+			111,
+			80
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_toro = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			51,
+			43
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2331,
+			1909,
+			49,
+			39
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_weapon_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			72,
+			172
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2010,
+			2038,
+			72,
+			172
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_weapon_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			117,
+			118
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2390,
+			1013,
+			114,
+			114
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_weapon_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			117,
+			118
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2250,
+			1431,
+			117,
+			118
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_weapon_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			126,
+			244
+		},
+		trim = {
+			16,
+			6,
+			9,
+			11
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			1892,
+			101,
+			227
+		},
+		alias = {}
+	},
+	stage_35_boss_bull_2_asst_boss_bull_weapon_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			118,
+			157
+		},
+		trim = {
+			0,
+			4,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			1718,
+			118,
+			153
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			94,
+			61
+		},
+		trim = {
+			0,
+			8,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1740,
+			733,
+			94,
+			53
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			104,
+			69
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			2323,
+			104,
+			68
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			125,
+			86
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2182,
+			1304,
+			125,
+			86
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			154,
+			105
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1931,
+			154,
+			105
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			227,
+			153
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1622,
+			574,
+			227,
+			153
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			374,
+			252
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			2056,
+			374,
+			252
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			540,
+			370
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1153,
+			6,
+			540,
+			370
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			586,
+			403
+		},
+		trim = {
+			15,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			6,
+			571,
+			403
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			579,
+			403
+		},
+		trim = {
+			15,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			583,
+			6,
+			564,
+			403
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			510,
+			393
+		},
+		trim = {
+			93,
+			0,
+			0,
+			7
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			1290,
+			417,
+			386
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_11 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			508,
+			393
+		},
+		trim = {
+			93,
+			0,
+			0,
+			25
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			6,
+			1682,
+			415,
+			368
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_domo_12 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			303,
+			308
+		},
+		trim = {
+			1,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			1347,
+			302,
+			308
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_anime01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			170,
+			192
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1352,
+			166,
+			189
+		},
+		alias = {
+			"stage_35_fx_anime_asst_boss_bull_fx_anime01"
+		}
+	},
+	stage_35_domo_asst_boss_bull_fx_anime02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			245,
+			224
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			2262,
+			242,
+			221
+		},
+		alias = {
+			"stage_35_fx_anime_asst_boss_bull_fx_anime02"
+		}
+	},
+	stage_35_domo_asst_boss_bull_fx_anime03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			324,
+			216
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			467,
+			574,
+			321,
+			213
+		},
+		alias = {
+			"stage_35_fx_anime_asst_boss_bull_fx_anime03"
+		}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			191,
+			150
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1642,
+			793,
+			191,
+			150
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			199,
+			155
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1034,
+			793,
+			199,
+			155
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			197,
+			134
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1239,
+			793,
+			197,
+			134
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			194,
+			125
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1442,
+			793,
+			194,
+			125
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			202,
+			84
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2088,
+			574,
+			202,
+			84
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			201,
+			77
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1090,
+			705,
+			201,
+			77
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			71,
+			57
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			2442,
+			71,
+			57
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			90,
+			60
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2234,
+			1574,
+			90,
+			60
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			96,
+			61
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1642,
+			949,
+			93,
+			57
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_instakill_10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			205,
+			143
+		},
+		trim = {
+			3,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2296,
+			574,
+			200,
+			140
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_swipe_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			158,
+			95
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1693,
+			156,
+			92
+		},
+		alias = {}
+	},
+	stage_35_domo_asst_boss_bull_fx_swipe_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			175,
+			141
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1024,
+			1013,
+			171,
+			137
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_dust_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			21,
+			19
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			230,
+			19,
+			16
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_dust_all = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			277,
+			120
+		},
+		trim = {
+			10,
+			14,
+			8,
+			9
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1357,
+			574,
+			259,
+			97
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_dust_all",
+			"stage_35_fireball_r_asst_atomic_dust_all"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion1_b_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			98,
+			118
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			2214,
+			95,
+			115
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			108,
+			93
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1614,
+			1905,
+			106,
+			89
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			140,
+			115
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1486,
+			1304,
+			137,
+			112
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			142,
+			131
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2282,
+			1156,
+			139,
+			128
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			123,
+			120
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1873,
+			1431,
+			120,
+			117
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			103,
+			79
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			362,
+			2314,
+			99,
+			75
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_05",
+			"stage_35_fireball_r_asst_atomic_car_explosion_05"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_00 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			79,
+			72
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2427,
+			1220,
+			76,
+			69
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			120,
+			133
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2373,
+			1431,
+			116,
+			130
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			128,
+			139
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1615,
+			1431,
+			124,
+			135
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			128,
+			146
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			2249,
+			125,
+			143
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			127,
+			140
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			1431,
+			124,
+			137
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			126,
+			142
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			1574,
+			123,
+			138
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			123,
+			101
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1999,
+			1431,
+			120,
+			98
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			121,
+			98
+		},
+		trim = {
+			2,
+			2,
+			0,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2125,
+			1431,
+			119,
+			95
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_b_10 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			109,
+			61
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1239,
+			933,
+			107,
+			58
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_00 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			40,
+			36
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1012,
+			754,
+			37,
+			32
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_00",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_00"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			81,
+			61
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2427,
+			1156,
+			77,
+			58
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_01",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_01"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			104,
+			86
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1727,
+			2125,
+			101,
+			83
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_02",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_02"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			118,
+			112
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			1877,
+			115,
+			108
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_03",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_03"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			130,
+			139
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			1971,
+			126,
+			136
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_04",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_04"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			139,
+			126
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			1431,
+			136,
+			122
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_05",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_05"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_06 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			141,
+			124
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1343,
+			1304,
+			137,
+			121
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_06",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_06"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_07 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			138,
+			124
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1771,
+			1304,
+			135,
+			120
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_07",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_07"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_08 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			136,
+			90
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1912,
+			1304,
+			132,
+			87
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_08",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_08"
+		}
+	},
+	stage_35_explosion_path_asst_boss_bull_explosion_c_09 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			87,
+			74
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1834,
+			1909,
+			84,
+			71
+		},
+		alias = {
+			"stage_35_fireball_l_asst_atomic_car_explosion_c_09",
+			"stage_35_fireball_r_asst_atomic_car_explosion_c_09"
+		}
+	},
+	stage_35_explosion_path_asst_dallas_circle2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			40,
+			40
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2179,
+			1532,
+			36,
+			36
+		},
+		alias = {
+			"redboy_stage5_asst_wukong_tredboy_circle2"
+		}
+	},
+	stage_35_explosion_path_asst_mortar_mortartrail8 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			57,
+			51
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1297,
+			705,
+			54,
+			48
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_poketball_01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			115,
+			96
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1485,
+			2291,
+			111,
+			92
+		},
+		alias = {}
+	},
+	stage_35_explosion_path_asst_poketball_02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			93,
+			94
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2128,
+			1659,
+			90,
+			91
+		},
+		alias = {}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion1_b_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			98,
+			118
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1715,
+			1693,
+			95,
+			115
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion1_b_02"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			108,
+			93
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1252,
+			348,
+			106,
+			89
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_01"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			140,
+			115
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1848,
+			1202,
+			137,
+			112
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_02"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			142,
+			131
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1473,
+			1197,
+			139,
+			128
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_03"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			123,
+			120
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1716,
+			1550,
+			120,
+			117
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_04"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_00 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			79,
+			72
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1600,
+			950,
+			76,
+			69
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_00"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			120,
+			133
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1842,
+			1550,
+			117,
+			130
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_03"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			128,
+			139
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1454,
+			1699,
+			125,
+			135
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_04"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_05 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			128,
+			146
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1454,
+			1550,
+			126,
+			143
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_05"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_06 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			127,
+			140
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1586,
+			1550,
+			124,
+			137
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_06"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_07 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			126,
+			142
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1586,
+			1693,
+			123,
+			139
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_07"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_08 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			123,
+			101
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			998,
+			1944,
+			120,
+			98
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_08"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_09 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			121,
+			98
+		},
+		trim = {
+			2,
+			2,
+			0,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1243,
+			1946,
+			119,
+			95
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_09"
+		}
+	},
+	stage_35_fireball_l_asst_atomic_car_explosion_b_10 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			109,
+			61
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1139,
+			348,
+			107,
+			58
+		},
+		alias = {
+			"stage_35_fireball_r_asst_atomic_car_explosion_b_10"
+		}
+	},
+	stage_35_fireball_l_asst_ball_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			367,
+			387
+		},
+		trim = {
+			45,
+			66,
+			53,
+			52
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			719,
+			1357,
+			269,
+			269
+		},
+		alias = {
+			"stage_35_fireball_r_asst_ball_02"
+		}
+	},
+	stage_35_fireball_l_asst_fire_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			312
+		},
+		trim = {
+			30,
+			12,
+			18,
+			10
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1569,
+			446,
+			273,
+			290
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_01"
+		}
+	},
+	stage_35_fireball_l_asst_fire_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			331
+		},
+		trim = {
+			15,
+			24,
+			34,
+			14
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			719,
+			1058,
+			272,
+			293
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_02"
+		}
+	},
+	stage_35_fireball_l_asst_fire_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			325
+		},
+		trim = {
+			15,
+			14,
+			30,
+			11
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1006,
+			446,
+			276,
+			300
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_03"
+		}
+	},
+	stage_35_fireball_l_asst_fire_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			327
+		},
+		trim = {
+			15,
+			6,
+			31,
+			13
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1288,
+			446,
+			275,
+			308
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_04"
+		}
+	},
+	stage_35_fireball_l_asst_fire_05 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			333
+		},
+		trim = {
+			15,
+			1,
+			25,
+			17
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			719,
+			446,
+			281,
+			315
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_05"
+		}
+	},
+	stage_35_fireball_l_asst_fire_06 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			335
+		},
+		trim = {
+			15,
+			0,
+			20,
+			15
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			373,
+			1666,
+			286,
+			320
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_06"
+		}
+	},
+	stage_35_fireball_l_asst_fire_07 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			339
+		},
+		trim = {
+			15,
+			0,
+			20,
+			17
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			373,
+			1338,
+			286,
+			322
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_07"
+		}
+	},
+	stage_35_fireball_l_asst_fire_08 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			321,
+			312
+		},
+		trim = {
+			15,
+			17,
+			33,
+			10
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			719,
+			767,
+			273,
+			285
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_08"
+		}
+	},
+	stage_35_fireball_l_asst_fire_back_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			256,
+			266
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			998,
+			767,
+			253,
+			263
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_back_01"
+		}
+	},
+	stage_35_fireball_l_asst_fire_back_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			254,
+			248
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1773,
+			767,
+			250,
+			245
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_back_02"
+		}
+	},
+	stage_35_fireball_l_asst_fire_back_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			257,
+			246
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			719,
+			1797,
+			254,
+			243
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_back_03"
+		}
+	},
+	stage_35_fireball_l_asst_fire_back_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			256,
+			246
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1257,
+			767,
+			253,
+			243
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_back_04"
+		}
+	},
+	stage_35_fireball_l_asst_fire_cicle = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			251,
+			177
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1516,
+			767,
+			251,
+			177
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_cicle"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			146,
+			152
+		},
+		trim = {
+			49,
+			29,
+			49,
+			35
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			665,
+			1338,
+			48,
+			88
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_01"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			146,
+			152
+		},
+		trim = {
+			17,
+			25,
+			36,
+			25
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1950,
+			6,
+			93,
+			102
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_02"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			104,
+			102
+		},
+		trim = {
+			16,
+			6,
+			10,
+			16
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1516,
+			950,
+			78,
+			80
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_03"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			109,
+			133
+		},
+		trim = {
+			17,
+			6,
+			19,
+			14
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1495,
+			168,
+			73,
+			113
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_04"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_05 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			174,
+			149
+		},
+		trim = {
+			22,
+			19,
+			23,
+			15
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1912,
+			1362,
+			129,
+			115
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_05"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_06 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			185,
+			187
+		},
+		trim = {
+			19,
+			16,
+			42,
+			19
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1454,
+			1840,
+			124,
+			152
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_06"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_07 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			154,
+			186
+		},
+		trim = {
+			23,
+			14,
+			15,
+			19
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1586,
+			1838,
+			116,
+			153
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_07"
+		}
+	},
+	stage_35_fireball_l_asst_fire_intro_08 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			155,
+			180
+		},
+		trim = {
+			31,
+			24,
+			21,
+			30
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1930,
+			1036,
+			103,
+			126
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_intro_08"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			52,
+			95
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1861,
+			1904,
+			52,
+			95
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_01"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			67,
+			117
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1715,
+			1814,
+			67,
+			117
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_02"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			209,
+			218
+		},
+		trim = {
+			28,
+			33,
+			42,
+			59
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1703,
+			1202,
+			139,
+			126
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_03"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			277,
+			288
+		},
+		trim = {
+			39,
+			67,
+			17,
+			61
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1703,
+			1036,
+			221,
+			160
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_04"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			375,
+			390
+		},
+		trim = {
+			32,
+			38,
+			21,
+			71
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			373,
+			1051,
+			322,
+			281
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_01"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			375,
+			390
+		},
+		trim = {
+			33,
+			24,
+			0,
+			58
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			1489,
+			342,
+			308
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_02"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			378,
+			390
+		},
+		trim = {
+			33,
+			28,
+			0,
+			60
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			890,
+			345,
+			302
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_03"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			375,
+			390
+		},
+		trim = {
+			34,
+			30,
+			10,
+			61
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			373,
+			746,
+			331,
+			299
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_04"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_05 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			375,
+			390
+		},
+		trim = {
+			33,
+			32,
+			2,
+			64
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			373,
+			446,
+			340,
+			294
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_05"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_06 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			375,
+			390
+		},
+		trim = {
+			32,
+			37,
+			0,
+			68
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			1198,
+			343,
+			285
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_06"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_07 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			394,
+			390
+		},
+		trim = {
+			33,
+			40,
+			0,
+			71
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			446,
+			361,
+			279
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_07"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_08 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			402,
+			390
+		},
+		trim = {
+			32,
+			40,
+			0,
+			71
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1574,
+			6,
+			370,
+			279
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_08"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_09 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			805,
+			777
+		},
+		trim = {
+			0,
+			148,
+			172,
+			195
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			6,
+			633,
+			434
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_09"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_10 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			399,
+			390
+		},
+		trim = {
+			0,
+			88,
+			68,
+			128
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			1803,
+			331,
+			174
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_10"
+		}
+	},
+	stage_35_fireball_l_asst_fire_teleport_fireball_11 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			100,
+			79
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1364,
+			348,
+			100,
+			79
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fire_teleport_fireball_11"
+		}
+	},
+	stage_35_fireball_l_asst_fuego = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			269,
+			159
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			719,
+			1632,
+			269,
+			159
+		},
+		alias = {
+			"stage_35_fireball_r_asst_fuego"
+		}
+	},
+	stage_35_fireball_l_asst_samadhi_shadow = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			232,
+			118
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1574,
+			291,
+			228,
+			114
+		},
+		alias = {
+			"stage_35_fireball_r_asst_samadhi_shadow"
+		}
+	},
+	stage_35_fireball_l_asst_spider_queen_fall_front01 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			218,
+			106
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1808,
+			291,
+			215,
+			103
+		},
+		alias = {
+			"stage_35_fireball_r_asst_spider_queen_fall_front01"
+		}
+	},
+	stage_35_fireball_l_asst_spider_queen_fall_front02 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			432,
+			159
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1139,
+			6,
+			429,
+			156
+		},
+		alias = {
+			"stage_35_fireball_r_asst_spider_queen_fall_front02"
+		}
+	},
+	stage_35_fireball_l_asst_spider_queen_fall_front03 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			491,
+			193
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			645,
+			6,
+			488,
+			189
+		},
+		alias = {
+			"stage_35_fireball_r_asst_spider_queen_fall_front03"
+		}
+	},
+	stage_35_fireball_l_asst_spider_queen_fall_front04 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			466,
+			210
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			645,
+			201,
+			463,
+			207
+		},
+		alias = {
+			"stage_35_fireball_r_asst_spider_queen_fall_front04"
+		}
+	},
+	stage_35_fireball_l_asst_spider_queen_fall_front05 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			354,
+			177
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			1139,
+			168,
+			350,
+			174
+		},
+		alias = {
+			"stage_35_fireball_r_asst_spider_queen_fall_front05"
+		}
+	},
+	stage_35_fireball_l_asst_spider_queen_fall_front06 = {
+		a_name = "go_stage135_exo_redboy_stage5-1.dds",
+		size = {
+			351,
+			157
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2044,
+			2044
+		},
+		f_quad = {
+			6,
+			731,
+			348,
+			153
+		},
+		alias = {
+			"stage_35_fireball_r_asst_spider_queen_fall_front06"
+		}
+	},
+	stage_35_fume_asst_banditbrute_skill_screechsnout_backglow = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			182,
+			149
+		},
+		trim = {
+			28,
+			25,
+			28,
+			15
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			3640,
+			126,
+			109
+		},
+		alias = {
+			"stage_35_stun_tower_asst_boss_bull_backglow",
+			"stage_35_stun_unit_asst_boss_bull_backglow"
+		}
+	},
+	stage_35_fume_asst_banditbrute_skill_screechsnout_plaguetower_smokepurp = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			102,
+			109
+		},
+		trim = {
+			3,
+			3,
+			7,
+			13
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			2874,
+			92,
+			93
+		},
+		alias = {}
+	},
+	stage_35_fume_asst_banditbrute_skill_screechsnout_plaguetower_smokeup = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			34,
+			31
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1663,
+			34,
+			31
+		},
+		alias = {}
+	},
+	stage_35_fx_anime_asst_boss_bull_box1 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			30,
+			20
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			420,
+			2285,
+			27,
+			18
+		},
+		alias = {}
+	},
+	stage_35_fx_anime_asst_boss_bull_box2 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			30,
+			20
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			2030,
+			28,
+			18
+		},
+		alias = {}
+	},
+	stage_35_hit_asst_boss_bull_redboy01 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			79,
+			81
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1924,
+			2058,
+			79,
+			81
+		},
+		alias = {}
+	},
+	stage_35_hit_asst_boss_bull_redboy02 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			91,
+			94
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2031,
+			1659,
+			91,
+			94
+		},
+		alias = {}
+	},
+	stage_35_hit_asst_boss_bull_redboy03 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			95,
+			79
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1835,
+			1574,
+			95,
+			79
+		},
+		alias = {}
+	},
+	stage_35_hit_asst_boss_bull_redboy04 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			80,
+			69
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2424,
+			1574,
+			80,
+			69
+		},
+		alias = {}
+	},
+	stage_35_hit_asst_boss_bull_redboy05 = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			30,
+			55
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1607,
+			30,
+			55
+		},
+		alias = {}
+	},
+	stage_35_stun_tower_asst_boss_bull_backbreaker_debree1_gold = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			238,
+			93
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1357,
+			677,
+			235,
+			89
+		},
+		alias = {}
+	},
+	stage_35_stun_tower_asst_boss_bull_explotion_shadow = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			43,
+			23
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1498,
+			382,
+			39,
+			19
+		},
+		alias = {
+			"stage_35_stun_unit_asst_boss_bull_explotion_shadow"
+		}
+	},
+	stage_35_stun_tower_asst_boss_bull_plaguetower_smokepurp = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			102,
+			109
+		},
+		trim = {
+			3,
+			3,
+			7,
+			13
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1933,
+			1659,
+			92,
+			93
+		},
+		alias = {
+			"stage_35_stun_unit_asst_boss_bull_plaguetower_smokepurp"
+		}
+	},
+	stage_35_stun_tower_asst_boss_bull_plaguetower_smokeup = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			34,
+			31
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			1758,
+			34,
+			31
+		},
+		alias = {
+			"stage_35_stun_unit_asst_boss_bull_plaguetower_smokeup"
+		}
+	},
+	stage_35_stun_unit_asst_boss_bull_backbreaker_debree1_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			117,
+			48
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			1908,
+			520,
+			114,
+			45
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock10_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			68,
+			97
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			715,
+			2262,
+			65,
+			94
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock2_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			20,
+			36
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			322,
+			16,
+			33
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock3_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			20,
+			37
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			2168,
+			282,
+			16,
+			34
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock4_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			34,
+			74
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1326,
+			31,
+			70
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock6_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			45
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1455,
+			31,
+			42
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock7_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			35,
+			51
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			429,
+			1402,
+			31,
+			47
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock8_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			23,
+			50
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			995,
+			1696,
+			21,
+			47
+		},
+		alias = {}
+	},
+	stage_35_stun_unit_asst_boss_bull_rock9_unit = {
+		a_name = "go_stage135_boss_bull_king_exo-1.dds",
+		size = {
+			32,
+			69
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2504,
+			2504
+		},
+		f_quad = {
+			427,
+			1871,
+			29,
+			66
+		},
+		alias = {}
+	},
+	stage_5_bloqueo_path_asst_pokebola_abierta = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			264,
+			341
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			2697,
+			261,
+			338
+		},
+		alias = {}
+	},
+	stage_5_bloqueo_path_asst_rocas_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			287,
+			282
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			2071,
+			283,
+			279
+		},
+		alias = {}
+	},
+	stage_5_bloqueo_path_asst_rocas_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			451,
+			213
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			692,
+			95,
+			448,
+			209
+		},
+		alias = {}
+	},
+	stage_5_bloqueo_path_asst_rocas_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			684,
+			308
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			6,
+			680,
+			305
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			20,
+			29
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			586,
+			3642,
+			17,
+			25
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			81,
+			92
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			3083,
+			79,
+			89
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_11 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			81,
+			92
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			3653,
+			78,
+			88
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_12 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			80,
+			91
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3156,
+			3176,
+			77,
+			88
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_13 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			80,
+			91
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3156,
+			3083,
+			78,
+			87
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_14 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			79,
+			90
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3240,
+			3083,
+			76,
+			87
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_15 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			55,
+			82
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3702,
+			3557,
+			52,
+			78
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_16 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			30,
+			60
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2464,
+			27,
+			57
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			44,
+			39
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2356,
+			40,
+			35
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			65,
+			55
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			3712,
+			63,
+			52
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			80,
+			76
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3325,
+			2992,
+			78,
+			73
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_antorcha_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			81,
+			92
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			3368,
+			78,
+			89
+		},
+		alias = {
+			"stage_5_cinematica_asst_antorcha_9"
+		}
+	},
+	stage_5_cinematica_asst_antorcha_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			82,
+			92
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			3463,
+			78,
+			89
+		},
+		alias = {
+			"stage_5_cinematica_asst_antorcha_8"
+		}
+	},
+	stage_5_cinematica_asst_antorcha_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			82,
+			93
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			3558,
+			78,
+			89
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_brillo_canon = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			96,
+			175
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3001,
+			2429,
+			96,
+			175
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			360,
+			212
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			2020,
+			356,
+			209
+		},
+		alias = {
+			"stage_5_cinematica_asst_canon_8"
+		}
+	},
+	stage_5_cinematica_asst_canon_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			356,
+			231
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			2235,
+			354,
+			227
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			293,
+			268
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1658,
+			579,
+			289,
+			264
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			317,
+			250
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			966,
+			317,
+			315,
+			246
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			442,
+			145
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1269,
+			6,
+			440,
+			141
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			355,
+			160
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1269,
+			153,
+			352,
+			156
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			345,
+			278
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			579,
+			343,
+			275
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			355,
+			253
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			2691,
+			353,
+			250
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_canon_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			358,
+			220
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			2468,
+			354,
+			217
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_chispa_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			82,
+			98
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3682,
+			755,
+			80,
+			95
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_chispa_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			80,
+			97
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3156,
+			3472,
+			76,
+			93
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_chispa_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			82,
+			84
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3157,
+			2992,
+			78,
+			81
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_cinematicafondo = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			599,
+			343
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			317,
+			599,
+			343
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_cordel_cannon = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			112,
+			89
+		},
+		trim = {
+			2,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2953,
+			2037,
+			109,
+			85
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_cordel_cannon_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			60,
+			89
+		},
+		trim = {
+			1,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			878,
+			2918,
+			58,
+			85
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_cordel_cannon_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			23,
+			74
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1154,
+			2340,
+			20,
+			71
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_cordel_cannon_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			83,
+			89
+		},
+		trim = {
+			2,
+			3,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3071,
+			2992,
+			80,
+			85
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_cordel_cannon_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			20,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			586,
+			3609,
+			17,
+			27
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_explosion_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			257,
+			84
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2505,
+			579,
+			254,
+			80
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_explosion_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			266,
+			173
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2236,
+			579,
+			263,
+			170
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_explosion_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			111,
+			60
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3325,
+			1279,
+			107,
+			57
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			96
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1156,
+			2142,
+			23,
+			93
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			117,
+			145
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			3364,
+			113,
+			142
+		},
+		alias = {
+			"stage_5_cinematica_asst_fuego_15"
+		}
+	},
+	stage_5_cinematica_asst_fuego_11 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			127,
+			150
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2404,
+			1806,
+			124,
+			146
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_12 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			125,
+			155
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2662,
+			1806,
+			121,
+			152
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_13 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			124
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			3478,
+			105,
+			121
+		},
+		alias = {
+			"stage_5_cinematica_asst_fuego_7"
+		}
+	},
+	stage_5_cinematica_asst_fuego_14 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			92,
+			135
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3403,
+			88,
+			131
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_16 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			125,
+			150
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2789,
+			1806,
+			121,
+			146
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_17 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			97,
+			154
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3387,
+			2651,
+			93,
+			150
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_18 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			57,
+			124
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3524,
+			3471,
+			55,
+			121
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			33,
+			70
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1900,
+			30,
+			67
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			56,
+			84
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3585,
+			3471,
+			54,
+			80
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			78,
+			81
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3409,
+			2992,
+			75,
+			77
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			93,
+			114
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3000,
+			89,
+			111
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			111,
+			158
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3429,
+			109,
+			154
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			90,
+			135
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3540,
+			87,
+			131
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_fuego_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			98,
+			143
+		},
+		trim = {
+			1,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3205,
+			2429,
+			95,
+			139
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_montanas = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			574,
+			86
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			692,
+			6,
+			571,
+			83
+		},
+		alias = {}
+	},
+	stage_5_cinematica_asst_nubes = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			424,
+			206
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2155,
+			6,
+			422,
+			202
+		},
+		alias = {}
+	},
+	stage_5_pokebola_tnt_asst_pokebola_tnt = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			322,
+			405
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			1172,
+			320,
+			401
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			29
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2194,
+			828,
+			24,
+			25
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			28
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			494,
+			1434,
+			26,
+			24
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_11 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			29,
+			26
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			558,
+			1434,
+			25,
+			24
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_12 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1159,
+			1473,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_13 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			32
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2632,
+			25,
+			29
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_14 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1984,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			29
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			878,
+			3009,
+			24,
+			25
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1898,
+			23,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			25,
+			29
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1985,
+			23,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			908,
+			3009,
+			24,
+			25
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2014,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1158,
+			1533,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1158,
+			1566,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_ballenergy_blue_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1739,
+			24,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_basewukongball02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			35,
+			37
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			900,
+			2208,
+			35,
+			37
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_charco = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			92,
+			138
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2787,
+			3330,
+			89,
+			135
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1287,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1599,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1911,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2223,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2535,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2847,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_fuente_remolino7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			485,
+			308
+		},
+		trim = {
+			99,
+			52,
+			80,
+			77
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3159,
+			317,
+			306,
+			179
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_machinegunner_hitfx_01_blue = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			23,
+			26
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			2047,
+			23,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_machinegunner_hitfx_02_blue = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			33,
+			38
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1700,
+			33,
+			38
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_machinegunner_hitfx_03_blue = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			34,
+			36
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1579,
+			34,
+			36
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_portal_puertabosses = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			311
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			2234,
+			108,
+			311
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_princess_fire_skill_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			86,
+			50
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3662,
+			1285,
+			86,
+			50
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_princess_fire_skill_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			81,
+			54
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3006,
+			1453,
+			79,
+			51
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_princess_fire_skill_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			102,
+			79
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2805,
+			2234,
+			102,
+			79
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_princess_fire_skill_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			95,
+			88
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3306,
+			2429,
+			95,
+			88
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_princess_fire_skill_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			69,
+			85
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3570,
+			2992,
+			69,
+			85
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_princess_fire_skill_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			61,
+			75
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3527,
+			3366,
+			61,
+			75
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_puerta_bosses = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			261,
+			584
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			3041,
+			257,
+			580
+		},
+		alias = {
+			"stage_5_puerta_redboy_asst_puerta_bosses"
+		}
+	},
+	stage_5_puerta_princess_asst_puerta_bosses_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			253,
+			575
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			944,
+			860,
+			250,
+			572
+		},
+		alias = {
+			"stage_5_puerta_redboy_asst_puerta_bosses_2"
+		}
+	},
+	stage_5_puerta_princess_asst_waverise_glow = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			58,
+			58
+		},
+		trim = {
+			3,
+			3,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1852,
+			502,
+			53,
+			53
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			71,
+			152
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3319,
+			3270,
+			67,
+			148
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			78,
+			200
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3156,
+			3270,
+			76,
+			196
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			99,
+			260
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			2651,
+			95,
+			257
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			285
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			2821,
+			105,
+			281
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			305
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			3412,
+			107,
+			302
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			306
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			3103,
+			107,
+			303
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			308
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			2792,
+			107,
+			305
+		},
+		alias = {}
+	},
+	stage_5_puerta_princess_asst_wavesrise8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			132,
+			328
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			1806,
+			132,
+			328
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			29
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1805,
+			24,
+			25
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			28
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			526,
+			1434,
+			26,
+			24
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_11 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			29,
+			26
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1953,
+			828,
+			25,
+			24
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_12 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1158,
+			1599,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_13 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			32
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1159,
+			1438,
+			25,
+			29
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_14 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2044,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_15 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1158,
+			1632,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_16 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			29
+		},
+		trim = {
+			2,
+			1,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2074,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			29
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1836,
+			24,
+			25
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1952,
+			23,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			25,
+			29
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			2079,
+			23,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			29
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1867,
+			24,
+			25
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			28,
+			30
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2104,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1158,
+			1665,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1706,
+			25,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_ballenergy_9 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			30
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			1772,
+			24,
+			27
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_basewukongball = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			35,
+			37
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			900,
+			2251,
+			35,
+			37
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			437,
+			525
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			666,
+			435,
+			522
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			105,
+			152
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			2829,
+			101,
+			148
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			179,
+			192
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1200,
+			2818,
+			177,
+			189
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			119
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			368,
+			2020,
+			237,
+			116
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			273,
+			73
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1715,
+			178,
+			270,
+			70
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			228,
+			240,
+			186,
+			282
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3319,
+			3535,
+			66,
+			138
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			228,
+			240,
+			178,
+			233
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3239,
+			3176,
+			74,
+			187
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			228,
+			241,
+			157,
+			173
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2586,
+			2914,
+			95,
+			246
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			229,
+			241,
+			147,
+			148
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2476,
+			2344,
+			104,
+			271
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			228,
+			240,
+			133,
+			128
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			2037,
+			119,
+			292
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			228,
+			230,
+			122,
+			97
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1870,
+			2629,
+			130,
+			333
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_in_07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			480,
+			660
+		},
+		trim = {
+			227,
+			241,
+			117,
+			74
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1727,
+			2054,
+			136,
+			345
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			240,
+			42
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			368,
+			2142,
+			237,
+			39
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			243,
+			42
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			365,
+			2691,
+			240,
+			38
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			244,
+			47
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			361,
+			3559,
+			241,
+			44
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			246,
+			49
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			3715,
+			243,
+			45
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			249,
+			55
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1715,
+			254,
+			245,
+			52
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			248,
+			61
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1911,
+			502,
+			245,
+			58
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			250,
+			66
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1599,
+			502,
+			247,
+			63
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_08 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			271,
+			72
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2155,
+			214,
+			268,
+			70
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_lava_ola_09 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			271,
+			76
+		},
+		trim = {
+			20,
+			6,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1287,
+			502,
+			249,
+			68
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_machinegunner_hitfx_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			23,
+			26
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1156,
+			2241,
+			23,
+			26
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_machinegunner_hitfx_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			33,
+			38
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1744,
+			33,
+			38
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_machinegunner_hitfx_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			34,
+			36
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			1621,
+			34,
+			36
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_mortar_fire_01_skill_b = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			61,
+			75
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3594,
+			3366,
+			61,
+			75
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_mortar_fire_02_skill_b = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			69,
+			85
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3645,
+			2992,
+			69,
+			85
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_mortar_fire_03_skill_b = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			95,
+			88
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3306,
+			2523,
+			95,
+			88
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_mortar_fire_04_skill_b = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			102,
+			79
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2913,
+			2234,
+			102,
+			79
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_mortar_fire_05_skill_b = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			81,
+			54
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3682,
+			656,
+			81,
+			54
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_mortar_fire_06_skill_b = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			86,
+			50
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1737,
+			1449,
+			86,
+			50
+		},
+		alias = {}
+	},
+	stage_5_puerta_redboy_asst_portal_puertabosses_Red = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			311
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			2507,
+			105,
+			308
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			100,
+			48
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			255,
+			3715,
+			100,
+			48
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			101,
+			88
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3021,
+			2234,
+			101,
+			88
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			101,
+			87
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3235,
+			2234,
+			101,
+			87
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			110,
+			93
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3330,
+			110,
+			93
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_5 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			110,
+			98
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			2914,
+			110,
+			98
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_6 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			108,
+			99
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2250,
+			2687,
+			108,
+			99
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_7 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			110,
+			98
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3018,
+			110,
+			98
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_brillo_spawner_8 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			110,
+			98
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3122,
+			110,
+			98
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_spin = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			88,
+			86
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2980,
+			3409,
+			84,
+			84
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_spin2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			78,
+			81
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3490,
+			2992,
+			74,
+			79
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_spin4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			31,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2431,
+			29,
+			27
+		},
+		alias = {}
+	},
+	stage_5_spawner_asst_spinbase = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			110,
+			98
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3226,
+			110,
+			98
+		},
+		alias = {}
+	},
+	stage_5_spawner_fx_asst_dallas_spark = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			68,
+			63
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1829,
+			1449,
+			68,
+			63
+		},
+		alias = {
+			"stage_35_explosion_path_asst_dallas_spark",
+			"redboy_stage5_asst_wukong_tredboy_spark"
+		}
+	},
+	stage_5_spawner_fx_asst_dallas_sparkattack1 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			121,
+			127
+		},
+		trim = {
+			8,
+			10,
+			6,
+			13
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2364,
+			2234,
+			107,
+			104
+		},
+		alias = {
+			"stage_35_explosion_path_asst_dallas_sparkattack1"
+		}
+	},
+	stage_5_spawner_fx_asst_dallas_sparkattack2 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			137,
+			130
+		},
+		trim = {
+			7,
+			8,
+			21,
+			15
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2133,
+			3589,
+			109,
+			107
+		},
+		alias = {
+			"stage_35_explosion_path_asst_dallas_sparkattack2"
+		}
+	},
+	stage_5_spawner_fx_asst_dallas_sparkattack3 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			104,
+			101
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2477,
+			2234,
+			104,
+			101
+		},
+		alias = {
+			"stage_35_explosion_path_asst_dallas_sparkattack3"
+		}
+	},
+	stage_5_spawner_fx_asst_dallas_sparkattack4 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			89,
+			92
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2885,
+			3217,
+			89,
+			92
+		},
+		alias = {
+			"stage_35_explosion_path_asst_dallas_sparkattack4"
+		}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2928,
+			1293,
+			46,
+			44
+		},
+		alias = {
+			"stage_5_spawner_fx_asst_icecream_hit_green_02"
+		}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3438,
+			1279,
+			46,
+			44
+		},
+		alias = {}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1683,
+			1449,
+			46,
+			44
+		},
+		alias = {}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2311,
+			3720,
+			46,
+			44
+		},
+		alias = {
+			"stage_5_spawner_fx_asst_icecream_hit_green_07"
+		}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3087,
+			2814,
+			46,
+			44
+		},
+		alias = {}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_08 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3187,
+			2814,
+			46,
+			44
+		},
+		alias = {
+			"stage_5_spawner_fx_asst_icecream_hit_green_09"
+		}
+	},
+	stage_5_spawner_fx_asst_icecream_hit_green_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			119,
+			125
+		},
+		trim = {
+			38,
+			44,
+			35,
+			37
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3287,
+			2814,
+			46,
+			44
+		},
+		alias = {}
+	},
+	stage_5_spawner_puerta_asst_puertaspawner = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			199,
+			202
+		},
+		trim = {
+			0,
+			0,
+			197,
+			200
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1707,
+			301,
+			2,
+			2
+		},
+		alias = {}
+	},
+	stage_5_spawner_puerta_base_asst_puertaspawner_base = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			239,
+			212
+		},
+		trim = {
+			0,
+			0,
+			237,
+			210
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1707,
+			309,
+			2,
+			2
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_puerta_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			118,
+			155
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2008,
+			2601,
+			115,
+			152
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			159,
+			168
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			3297,
+			156,
+			165
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			346,
+			269
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			960,
+			579,
+			343,
+			265
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			371,
+			284
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3383,
+			6,
+			368,
+			280
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			386,
+			267
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			1194,
+			382,
+			264
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			352,
+			260
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			3453,
+			349,
+			256
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			356,
+			250
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			2947,
+			353,
+			247
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			280,
+			247
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3471,
+			317,
+			277,
+			243
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid08 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			175,
+			153
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1575,
+			1192,
+			172,
+			150
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl1_vfx_acid09 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			112,
+			82
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2721,
+			2037,
+			110,
+			78
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			45,
+			29
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			893,
+			3723,
+			43,
+			27
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_018 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			98,
+			86
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3407,
+			2429,
+			95,
+			83
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			50,
+			33
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			551,
+			2187,
+			47,
+			30
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			58,
+			64
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3645,
+			3471,
+			54,
+			60
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			62,
+			81
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3460,
+			3471,
+			58,
+			78
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			73,
+			92
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3239,
+			3663,
+			69,
+			88
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			87,
+			93
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3531,
+			2874,
+			85,
+			90
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			90,
+			93
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3072,
+			2874,
+			86,
+			90
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_09 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			103,
+			81
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3006,
+			2344,
+			99,
+			78
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_10 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			73
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2141,
+			1956,
+			106,
+			70
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acid5_11 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			122,
+			63
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2109,
+			1281,
+			119,
+			60
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			105,
+			70
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2424,
+			502,
+			101,
+			67
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			134,
+			79
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2155,
+			1700,
+			132,
+			76
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			153,
+			84
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2539,
+			1356,
+			150,
+			80
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			163,
+			90
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1571,
+			1356,
+			160,
+			87
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			149,
+			94
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3006,
+			1356,
+			146,
+			91
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			153,
+			97
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2227,
+			1356,
+			150,
+			93
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_acidblood07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			130,
+			96
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2431,
+			1700,
+			128,
+			93
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_trail_skill_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			25,
+			28
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2988,
+			734,
+			21,
+			24
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_trail_skill_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2134,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_trail_skill_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			31
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			581,
+			1934,
+			24,
+			28
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_trail_skill_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			29,
+			34
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2560,
+			25,
+			30
+		},
+		alias = {}
+	},
+	stage_5_splash_agua_asst_boss_princess_water_puerta_lvl2_trail_skill_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			32,
+			36
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			904,
+			2007,
+			29,
+			32
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_blood_bright02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			40,
+			144
+		},
+		trim = {
+			1,
+			2,
+			1,
+			11
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			900,
+			2071,
+			38,
+			131
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lava_puerta_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			120,
+			164
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3289,
+			1806,
+			118,
+			162
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			159,
+			168
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1396,
+			3468,
+			156,
+			165
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			346,
+			269
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1309,
+			579,
+			343,
+			265
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			371,
+			284
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			1734,
+			368,
+			280
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			386,
+			267
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			1464,
+			382,
+			264
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			352,
+			260
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			611,
+			317,
+			349,
+			256
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			356,
+			250
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			6,
+			3200,
+			353,
+			247
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			280,
+			247
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1953,
+			579,
+			277,
+			243
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid08 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			175,
+			153
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1753,
+			1192,
+			172,
+			150
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl1_vfx_acid09 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			112,
+			82
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2837,
+			2037,
+			110,
+			78
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			105,
+			70
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3663,
+			1104,
+			101,
+			67
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			134,
+			79
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2293,
+			1700,
+			132,
+			76
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			153,
+			84
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2695,
+			1356,
+			150,
+			80
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			163,
+			90
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1737,
+			1356,
+			160,
+			87
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			149,
+			94
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3158,
+			1356,
+			146,
+			91
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			153,
+			97
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2383,
+			1356,
+			150,
+			93
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_acidblood07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			130,
+			96
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2565,
+			1700,
+			128,
+			93
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_trail_skill_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			25,
+			28
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1157,
+			2017,
+			21,
+			24
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_trail_skill_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			26,
+			30
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2164,
+			828,
+			24,
+			26
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_trail_skill_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			27,
+			31
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			581,
+			1968,
+			24,
+			28
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_trail_skill_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			29,
+			34
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			898,
+			2596,
+			25,
+			30
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_boss_dragon_lava_puerta_lvl2_trail_skill_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			32,
+			36
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			900,
+			2294,
+			29,
+			32
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_01 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			45,
+			29
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1150,
+			3499,
+			43,
+			27
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_010 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			109,
+			73
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2404,
+			1958,
+			106,
+			70
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_012 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			122,
+			63
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			2983,
+			1279,
+			119,
+			60
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_02 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			50,
+			33
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			1334,
+			3725,
+			47,
+			30
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_03 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			58,
+			64
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3705,
+			3471,
+			54,
+			60
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_04 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			62,
+			81
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3460,
+			3555,
+			58,
+			78
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_05 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			73,
+			92
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3319,
+			3176,
+			69,
+			88
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_06 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			87,
+			93
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3622,
+			2874,
+			85,
+			90
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_07 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			90,
+			93
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3164,
+			2874,
+			86,
+			90
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_08 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			98,
+			86
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3407,
+			2518,
+			95,
+			83
+		},
+		alias = {}
+	},
+	stage_5_splash_lava_asst_lava_bubble_09 = {
+		a_name = "go_stage135-1.dds",
+		size = {
+			103,
+			81
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			3764,
+			3764
+		},
+		f_quad = {
+			3111,
+			2344,
+			99,
+			78
+		},
+		alias = {}
+	}
+}
+
+for k, v in pairs(a) do
+	local rate = 768 / 1080
+	a[k]["size"][1] = math.ceil(a[k]["size"][1]*rate)
+	a[k]["size"][2] = math.ceil(a[k]["size"][2]*rate)
+
+	a[k]["trim"][1] = math.ceil(a[k]["trim"][1]*rate)
+	a[k]["trim"][2] = math.ceil(a[k]["trim"][2]*rate)
+	a[k]["trim"][3] = math.ceil(a[k]["trim"][3]*rate)
+	a[k]["trim"][4] = math.ceil(a[k]["trim"][4]*rate)
+
+	a[k]["a_size"][1] = math.ceil(a[k]["a_size"][1]*rate)
+	a[k]["a_size"][2] = math.ceil(a[k]["a_size"][2]*rate)
+
+	a[k]["f_quad"][1] = math.ceil(a[k]["f_quad"][1]*rate)
+	a[k]["f_quad"][2] = math.ceil(a[k]["f_quad"][2]*rate)
+	a[k]["f_quad"][3] = math.ceil(a[k]["f_quad"][3]*rate)
+	a[k]["f_quad"][4] = math.ceil(a[k]["f_quad"][4]*rate)
+end 
+
+return a

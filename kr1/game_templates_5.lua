@@ -1902,7 +1902,7 @@ return function()
 	tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 	tt.render.sprites[1].name = "cluster_bomb_explosion_decal"
 	tt.render.sprites[1].animated = false
-	tt = E:register_t("decal_defend_point5", "decal")
+	tt = E:register_t("decal_defend_point", "decal")
 
 	E:add_comps(tt, "main_script", "editor", "editor_script")
 
@@ -1918,7 +1918,7 @@ return function()
 	tt.editor_script.update = scripts.decal_defend_point5.update_editor
 	tt.editor.props = {{"editor.exit_id", PT_NUMBER}, {"editor.orientation", PT_NUMBER}, {"editor.alpha", PT_NUMBER}, {"editor.flip", PT_NUMBER}}
 
-	local tt = E:register_t("decal_defense_flag5", "decal_defense_flag")
+	local tt = E:register_t("decal_defense_flag", "decal_defense_flag")
 
 	E:add_comps(tt, "main_script", "editor", "editor_script")
 
@@ -4471,7 +4471,7 @@ return function()
 	tt.render.sprites[1].scale = vec_1(1.7)
 	tt = E:register_t("decal_entity_marker_hero_big", "decal_entity_marker_hero_small")
 	tt.render.sprites[1].scale = vec_1(2)
-	tt = E:register_t("background_sounds_kr5", "background_sounds")
+	tt = E:register_t("background_sounds", "background_sounds")
 	tt.main_script.update = scripts.background_sounds_kr5.update
 	tt.min_delay = 7
 	tt.max_delay = 13

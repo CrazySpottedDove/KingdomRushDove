@@ -1,0 +1,8610 @@
+-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_stage132.lua
+
+local a = {
+	dlc2_generic_tap_hand_0001 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {58, 40, 61, 83},
+		a_size = {2688, 2688},
+		f_quad = {1845, 1559, 77, 89},
+		alias = {"dlc2_generic_tap_hand_0002", "dlc2_generic_tap_hand_0003", "dlc2_generic_tap_hand_0010"}
+	},
+	dlc2_generic_tap_hand_0004 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {22, 22, 65, 85},
+		a_size = {2688, 2688},
+		f_quad = {1949, 733, 109, 105},
+		alias = {}
+	},
+	dlc2_generic_tap_hand_0005 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {22, 22, 65, 85},
+		a_size = {2688, 2688},
+		f_quad = {2064, 733, 109, 105},
+		alias = {}
+	},
+	dlc2_generic_tap_hand_0006 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {20, 20, 65, 86},
+		a_size = {2688, 2688},
+		f_quad = {1601, 733, 111, 106},
+		alias = {}
+	},
+	dlc2_generic_tap_hand_0007 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {31, 31, 62, 84},
+		a_size = {2688, 2688},
+		f_quad = {899, 2513, 103, 97},
+		alias = {}
+	},
+	dlc2_generic_tap_hand_0008 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {56, 40, 62, 83},
+		a_size = {2688, 2688},
+		f_quad = {1677, 1559, 78, 89},
+		alias = {}
+	},
+	dlc2_generic_tap_hand_0009 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 212},
+		trim = {57, 40, 61, 83},
+		a_size = {2688, 2688},
+		f_quad = {1761, 1559, 78, 89},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_crack_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {176, 111},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {188, 6, 176, 111},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire01 = {
+		a_name = "go_stage132-1.dds",
+		size = {166, 114},
+		trim = {0, 0, 164, 112},
+		a_size = {4096, 4096},
+		f_quad = {1625, 1107, 2, 2},
+		alias = {"dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire03", "dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire04", "dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire05", "dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire06", "dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire07"}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_crack_fire02 = {
+		a_name = "go_stage132-1.dds",
+		size = {166, 113},
+		trim = {0, 0, 164, 111},
+		a_size = {4096, 4096},
+		f_quad = {1633, 1107, 2, 2},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_crack_floor_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {207, 124},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {3547, 2626, 203, 120},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire01 = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 64},
+		trim = {0, 0, 0, 1},
+		a_size = {2688, 2688},
+		f_quad = {2417, 1965, 56, 63},
+		alias = {"stage_32_lava_buff_asst_fire_small_01"}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire02 = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 74},
+		trim = {0, 0, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2455, 2048, 53, 73},
+		alias = {"stage_32_lava_buff_asst_fire_small_02"}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire03 = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 80},
+		trim = {1, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2278, 2048, 53, 80},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire04 = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 84},
+		trim = {0, 0, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2048, 53, 82},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire05 = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 86},
+		trim = {0, 0, 0, 2},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2048, 56, 84},
+		alias = {"stage_32_lava_buff_asst_fire_small_05"}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire06 = {
+		a_name = "go_stage132-2.dds",
+		size = {53, 89},
+		trim = {1, 0, 0, 1},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2538, 52, 88},
+		alias = {"stage_32_lava_buff_asst_fire_small_06"}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_fire2_fire07 = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 79},
+		trim = {0, 1, 0, 1},
+		a_size = {2688, 2688},
+		f_quad = {2293, 1965, 56, 77},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_shadow_fire01 = {
+		a_name = "go_stage132-1.dds",
+		size = {185, 91},
+		trim = {1, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3500, 3166, 182, 88},
+		alias = {}
+	},
+	dragon_cracks_floor_asst_dragon_boss_vfx_shadow_fire02 = {
+		a_name = "go_stage132-1.dds",
+		size = {94, 64},
+		trim = {2, 8, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3006, 4037, 91, 55},
+		alias = {}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {143, 73},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2131, 241, 141, 70},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_10"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_11 = {
+		a_name = "go_stage132-1.dds",
+		size = {147, 70},
+		trim = {1, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3702, 3089, 144, 67},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_11"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_12 = {
+		a_name = "go_stage132-1.dds",
+		size = {149, 59},
+		trim = {1, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {648, 4035, 146, 55},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_12"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_13 = {
+		a_name = "go_stage132-1.dds",
+		size = {152, 17},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1229, 1089, 149, 14},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_13"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {69, 32},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1117, 4060, 67, 28},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_5"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_6 = {
+		a_name = "go_stage132-1.dds",
+		size = {99, 48},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3504, 3110, 96, 45},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_6"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {106, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1250, 852, 103, 60},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_7"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_8 = {
+		a_name = "go_stage132-1.dds",
+		size = {123, 67},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3825, 2314, 121, 63},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_8"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {135, 72},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 2230, 133, 69},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_9"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {124, 62},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2901, 2316, 124, 62},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_01"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {139, 69},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2290, 240, 139, 69},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_02"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {151, 75},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2290, 159, 151, 75},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_03"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {165, 87},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1790, 6, 165, 87},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_04"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {191, 95},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3899, 2815, 191, 95},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_05"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {212, 111},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3113, 2626, 212, 111},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_06"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_07 = {
+		a_name = "go_stage132-1.dds",
+		size = {225, 112},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3364, 2153, 225, 112},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_07"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_08 = {
+		a_name = "go_stage132-1.dds",
+		size = {232, 115},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2462, 985, 232, 115},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_08"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_circle_09 = {
+		a_name = "go_stage132-1.dds",
+		size = {230, 94},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2140, 3995, 230, 94},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_circle_09"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_hit_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 76},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2284, 1105, 90, 72},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_hit_01"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_hit_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 196},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1221, 2378, 90, 192},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_hit_02"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_hit_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 259},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1221, 2117, 90, 255},
+		alias = {"dragon_cracks_geyser_asst_dragon_boss_vfx_hit_04", "dragon_rock_stun_asst_dragon_boss_vfx_hit_03", "dragon_rock_stun_asst_dragon_boss_vfx_hit_04"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 37},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2469, 449, 56, 37},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_01"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_010 = {
+		a_name = "go_stage132-2.dds",
+		size = {154, 181},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {184, 660, 154, 181},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_010"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_011 = {
+		a_name = "go_stage132-2.dds",
+		size = {154, 168},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {184, 847, 154, 168},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_011"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_012 = {
+		a_name = "go_stage132-2.dds",
+		size = {151, 160},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {184, 2321, 151, 160},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_012"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_013 = {
+		a_name = "go_stage132-2.dds",
+		size = {150, 154},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {346, 650, 150, 154},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_013"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {51, 94},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {4045, 1862, 51, 94},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_02"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {129, 180},
+		trim = {11, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {775, 1109, 118, 180},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_03"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 244},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {646, 962, 121, 244},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_04"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {129, 235},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {646, 492, 129, 235},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_05"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {143, 224},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {346, 2415, 143, 224},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_06"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {159, 212},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {6, 2216, 159, 212},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_07"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {161, 198},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {6, 877, 161, 198},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_08"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_lavageyser_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {159, 195},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {6, 2434, 159, 195},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_lavageyser_09"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {29, 38},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4069, 3263, 27, 36},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_01"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {28, 50},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2585, 2580, 25, 47},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_02"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {35, 58},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {1494, 4004, 31, 55},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_03"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {52, 66},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2217, 2490, 49, 62},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_04"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {57, 78},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2633, 6, 55, 75},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_05"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {54, 88},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1934, 1025, 51, 85},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_06"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {42, 83},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2376, 2534, 40, 80},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_07"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {46, 87},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2326, 2399, 44, 83},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_08"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_line_09 = {
+		a_name = "go_stage132-1.dds",
+		size = {19, 25},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 550, 17, 22},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_line_09"}
+	},
+	dragon_cracks_geyser_asst_dragon_boss_vfx_smoke = {
+		a_name = "go_stage132-2.dds",
+		size = {150, 326},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {346, 318, 150, 326},
+		alias = {"dragon_rock_stun_asst_dragon_boss_vfx_smoke"}
+	},
+	dragon_redboy_A_asst_dragon_boca_behind = {
+		a_name = "go_stage132-1.dds",
+		size = {223, 193},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3811, 2384, 219, 191},
+		alias = {"dragon_redboy_B_asst_dragon_boca_behind", "dragon_redboy_C_asst_dragon_boca_behind"}
+	},
+	dragon_redboy_A_asst_dragon_cara = {
+		a_name = "go_stage132-1.dds",
+		size = {320, 208},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1531, 1403, 317, 204},
+		alias = {"dragon_redboy_B_asst_dragon_cara", "dragon_redboy_C_asst_dragon_cara"}
+	},
+	dragon_redboy_A_asst_dragon_ceja_1_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {123, 106},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {646, 1946, 120, 103},
+		alias = {"dragon_redboy_B_asst_dragon_ceja_1_1", "dragon_redboy_C_asst_dragon_ceja_1_1"}
+	},
+	dragon_redboy_A_asst_dragon_ceja_1_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {85, 63},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2073, 82, 60},
+		alias = {"dragon_redboy_B_asst_dragon_ceja_1_2", "dragon_redboy_C_asst_dragon_ceja_1_2"}
+	},
+	dragon_redboy_A_asst_dragon_ceja_2_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {105, 108},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {899, 2403, 103, 104},
+		alias = {"dragon_redboy_B_asst_dragon_ceja_2_1", "dragon_redboy_C_asst_dragon_ceja_2_1"}
+	},
+	dragon_redboy_A_asst_dragon_ceja_2_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {86, 58},
+		trim = {2, 1, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2072, 1123, 82, 56},
+		alias = {"dragon_redboy_B_asst_dragon_ceja_2_2", "dragon_redboy_C_asst_dragon_ceja_2_2"}
+	},
+	dragon_redboy_A_asst_dragon_cuerno = {
+		a_name = "go_stage132-2.dds",
+		size = {155, 307},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {184, 1209, 151, 303},
+		alias = {"dragon_redboy_B_asst_dragon_cuerno", "dragon_redboy_C_asst_dragon_cuerno"}
+	},
+	dragon_redboy_A_asst_dragon_cuerno03 = {
+		a_name = "go_stage132-2.dds",
+		size = {155, 307},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {184, 1518, 151, 303},
+		alias = {"dragon_redboy_B_asst_dragon_cuerno03", "dragon_redboy_C_asst_dragon_cuerno03"}
+	},
+	dragon_redboy_A_asst_dragon_cuerpo = {
+		a_name = "go_stage132-1.dds",
+		size = {366, 478},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {447, 3090, 363, 474},
+		alias = {"dragon_redboy_B_asst_dragon_cuerpo", "dragon_redboy_C_asst_dragon_cuerpo"}
+	},
+	dragon_redboy_A_asst_dragon_cuerpo_lava = {
+		a_name = "go_stage132-1.dds",
+		size = {417, 381},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {6, 2181, 415, 378},
+		alias = {"dragon_redboy_B_asst_dragon_cuerpo_lava", "dragon_redboy_C_asst_dragon_cuerpo_lava"}
+	},
+	dragon_redboy_A_asst_dragon_eye = {
+		a_name = "go_stage132-1.dds",
+		size = {11, 45},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2711, 449, 11, 45},
+		alias = {"dragon_redboy_B_asst_dragon_eye", "dragon_redboy_C_asst_dragon_eye"}
+	},
+	dragon_redboy_A_asst_dragon_eye_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {11, 45},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2711, 500, 11, 45},
+		alias = {"dragon_redboy_B_asst_dragon_eye_03", "dragon_redboy_C_asst_dragon_eye_03"}
+	},
+	dragon_redboy_A_asst_dragon_faceflap_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {189, 258},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3304, 3394, 186, 254},
+		alias = {"dragon_redboy_B_asst_dragon_faceflap_1", "dragon_redboy_C_asst_dragon_faceflap_1"}
+	},
+	dragon_redboy_A_asst_dragon_faceflap_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {171, 246},
+		trim = {7, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {6, 628, 162, 243},
+		alias = {"dragon_redboy_B_asst_dragon_faceflap_2", "dragon_redboy_C_asst_dragon_faceflap_2"}
+	},
+	dragon_redboy_A_asst_dragon_faceflap_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {294, 273},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1531, 2457, 292, 269},
+		alias = {"dragon_redboy_B_asst_dragon_faceflap_3", "dragon_redboy_C_asst_dragon_faceflap_3"}
+	},
+	dragon_redboy_A_asst_dragon_faceflap_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {289, 273},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1531, 3386, 286, 269},
+		alias = {"dragon_redboy_B_asst_dragon_faceflap_4", "dragon_redboy_C_asst_dragon_faceflap_4"}
+	},
+	dragon_redboy_A_asst_dragon_headback_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {341, 284},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {1194, 1116, 337, 281},
+		alias = {"dragon_redboy_B_asst_dragon_headback_1", "dragon_redboy_C_asst_dragon_headback_1"}
+	},
+	dragon_redboy_A_asst_dragon_mandibula_down = {
+		a_name = "go_stage132-1.dds",
+		size = {326, 245},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3554, 1116, 323, 241},
+		alias = {"dragon_redboy_B_asst_dragon_mandibula_down", "dragon_redboy_C_asst_dragon_mandibula_down"}
+	},
+	dragon_redboy_A_asst_dragon_morro = {
+		a_name = "go_stage132-1.dds",
+		size = {318, 161},
+		trim = {2, 2, 0, 1},
+		a_size = {4096, 4096},
+		f_quad = {1854, 1403, 316, 158},
+		alias = {"dragon_redboy_B_asst_dragon_morro", "dragon_redboy_C_asst_dragon_morro"}
+	},
+	dragon_redboy_A_asst_dragon_morro02 = {
+		a_name = "go_stage132-1.dds",
+		size = {368, 150},
+		trim = {2, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {447, 2936, 365, 148},
+		alias = {"dragon_redboy_B_asst_dragon_morro02", "dragon_redboy_C_asst_dragon_morro02"}
+	},
+	dragon_redboy_A_asst_eye_dragon = {
+		a_name = "go_stage132-2.dds",
+		size = {77, 80},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2427, 1472, 73, 76},
+		alias = {}
+	},
+	dragon_redboy_A_asst_face_dragon = {
+		a_name = "go_stage132-2.dds",
+		size = {146, 171},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 318, 143, 168},
+		alias = {}
+	},
+	dragon_redboy_A_asst_lava02 = {
+		a_name = "go_stage132-1.dds",
+		size = {599, 234},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3431, 6, 596, 230},
+		alias = {"dragon_redboy_B_asst_lava02", "dragon_redboy_C_asst_lava02"}
+	},
+	dragon_redboy_A_asst_shadow_pelo = {
+		a_name = "go_stage132-2.dds",
+		size = {67, 56},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1891, 99, 64, 52},
+		alias = {"dragon_redboy_B_asst_shadow_pelo", "dragon_redboy_C_asst_shadow_pelo"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_front_chest_atack2 = {
+		a_name = "go_stage132-2.dds",
+		size = {91, 96},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1320, 1842, 89, 93},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_front_cinto = {
+		a_name = "go_stage132-2.dds",
+		size = {39, 31},
+		trim = {1, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {459, 277, 37, 29},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_front_cinto", "teen_redboy_B_asst_wukong_tredboy_front_cinto", "teen_redboy_asst_wukong_tredboy_front_cinto"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_front_head03 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 111},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1513, 86, 107},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_front_leftarm = {
+		a_name = "go_stage132-2.dds",
+		size = {53, 47},
+		trim = {2, 1, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2273, 2194, 49, 44},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_front_lefthand_karate_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {51, 45},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2438, 2194, 48, 42},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_front_tela_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {40, 50},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2555, 2464, 37, 48},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_front_tela_2", "teen_redboy_B_asst_wukong_tredboy_front_tela_2", "teen_redboy_asst_wukong_tredboy_front_tela_2"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_chest = {
+		a_name = "go_stage132-1.dds",
+		size = {99, 59},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3031, 2316, 96, 55},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_cinto = {
+		a_name = "go_stage132-2.dds",
+		size = {41, 33},
+		trim = {1, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1540, 123, 38, 29},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_cinto", "teen_redboy_B_asst_wukong_tredboy_side_cinto", "teen_redboy_asst_wukong_tredboy_side_cinto"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_clothshadow = {
+		a_name = "go_stage132-1.dds",
+		size = {53, 25},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1819, 1362, 51, 22},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_clothshadow", "teen_redboy_B_asst_wukong_tredboy_side_clothshadow", "teen_redboy_asst_wukong_tredboy_side_clothshadow"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_cuello = {
+		a_name = "go_stage132-2.dds",
+		size = {52, 56},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2438, 48, 52},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_cuello", "teen_redboy_B_asst_wukong_tredboy_side_cuello", "teen_redboy_asst_wukong_tredboy_side_cuello"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_cuernito = {
+		a_name = "go_stage132-2.dds",
+		size = {28, 40},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2664, 1472, 24, 36},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_cuernito", "teen_redboy_B_asst_wukong_tredboy_side_cuernito", "teen_redboy_asst_wukong_tredboy_side_cuernito"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1423, 1186, 95, 96},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {116, 128},
+		trim = {7, 10, 9, 14},
+		a_size = {2688, 2688},
+		f_quad = {2072, 1013, 100, 104},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_1", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_1", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_1"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_1_front = {
+		a_name = "go_stage132-2.dds",
+		size = {116, 128},
+		trim = {7, 10, 9, 3},
+		a_size = {2688, 2688},
+		f_quad = {1648, 1013, 100, 115},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_1_front", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_1_front", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_1_front"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 128},
+		trim = {7, 5, 11, 11},
+		a_size = {2688, 2688},
+		f_quad = {899, 2167, 103, 112},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_2", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_2", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_2"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_2_front = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 128},
+		trim = {7, 5, 11, 3},
+		a_size = {2688, 2688},
+		f_quad = {899, 2041, 103, 120},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_2_front", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_2_front", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_2_front"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {124, 128},
+		trim = {13, 10, 11, 12},
+		a_size = {2688, 2688},
+		f_quad = {1860, 1013, 100, 106},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_3", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_3", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_3"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_3_front = {
+		a_name = "go_stage132-2.dds",
+		size = {124, 128},
+		trim = {13, 10, 11, 7},
+		a_size = {2688, 2688},
+		f_quad = {1754, 1013, 100, 111},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_3_front", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_3_front", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_3_front"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 133},
+		trim = {11, 9, 9, 14},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1342, 102, 110},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_4", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_4", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_4"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_4_front = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 133},
+		trim = {11, 9, 9, 8},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1220, 102, 116},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_4_front", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_4_front", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_4_front"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_head_fueguito_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 138},
+		trim = {20, 20, 16, 16},
+		a_size = {2688, 2688},
+		f_quad = {1010, 2317, 101, 102},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_5", "teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_5", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_5"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_leftarm = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 58},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2261, 51, 54},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_piernader = {
+		a_name = "go_stage132-2.dds",
+		size = {47, 57},
+		trim = {2, 1, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2326, 2575, 43, 54},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_piernader", "teen_redboy_B_asst_wukong_tredboy_side_piernader", "teen_redboy_asst_wukong_tredboy_side_piernader"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_piernaizq = {
+		a_name = "go_stage132-2.dds",
+		size = {29, 47},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2662, 2307, 26, 43},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_piernaizq_gacha = {
+		a_name = "go_stage132-2.dds",
+		size = {44, 45},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2376, 2365, 41, 42},
+		alias = {}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_rightarm = {
+		a_name = "go_stage132-1.dds",
+		size = {54, 76},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4045, 2042, 51, 73},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_rightarm", "teen_redboy_B_asst_wukong_tredboy_side_rightarm", "teen_redboy_asst_wukong_tredboy_side_rightarm"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_shadow = {
+		a_name = "go_stage132-1.dds",
+		size = {61, 22},
+		trim = {1, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {1508, 1089, 58, 19},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_shadow", "teen_redboy_B_asst_wukong_tredboy_side_shadow", "teen_redboy_asst_wukong_tredboy_side_shadow"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_tela_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {43, 53},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2422, 2633, 39, 49},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_tela_1", "teen_redboy_B_asst_wukong_tredboy_side_tela_1", "teen_redboy_asst_wukong_tredboy_side_tela_1"}
+	},
+	dragon_redboy_A_asst_wukong_tredboy_side_tela_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 46},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3550, 2577, 28, 42},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_tela_2", "teen_redboy_B_asst_wukong_tredboy_side_tela_2", "teen_redboy_asst_wukong_tredboy_side_tela_2"}
+	},
+	dragon_redboy_A_posessed_asst_dragon_eye02 = {
+		a_name = "go_stage132-2.dds",
+		size = {37, 56},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2595, 2521, 34, 53},
+		alias = {"dragon_redboy_B_posessed_asst_dragon_eye02", "dragon_redboy_C_posessed_asst_dragon_eye02"}
+	},
+	dragon_redboy_A_posessed_asst_dragon_eye_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {37, 56},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2554, 2521, 35, 53},
+		alias = {"dragon_redboy_B_posessed_asst_dragon_eye_04", "dragon_redboy_C_posessed_asst_dragon_eye_04"}
+	},
+	dragon_redboy_A_posessed_asst_fire_eye_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {20, 16, 17, 12},
+		a_size = {2688, 2688},
+		f_quad = {2425, 2307, 42, 48},
+		alias = {"dragon_redboy_B_posessed_asst_fire_eye_01", "dragon_redboy_C_posessed_asst_fire_eye_01"}
+	},
+	dragon_redboy_A_posessed_asst_fire_eye_01_C = {
+		a_name = "go_stage132-1.dds",
+		size = {79, 76},
+		trim = {20, 16, 18, 12},
+		a_size = {4096, 4096},
+		f_quad = {4055, 2153, 41, 48},
+		alias = {"dragon_redboy_B_posessed_asst_fire_eye_01_C", "dragon_redboy_C_posessed_asst_fire_eye_01_C"}
+	},
+	dragon_redboy_A_posessed_asst_fire_eye_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {20, 16, 17, 12},
+		a_size = {2688, 2688},
+		f_quad = {2473, 2307, 42, 48},
+		alias = {"dragon_redboy_B_posessed_asst_fire_eye_02", "dragon_redboy_C_posessed_asst_fire_eye_02"}
+	},
+	dragon_redboy_A_posessed_asst_fire_eye_02_C = {
+		a_name = "go_stage132-1.dds",
+		size = {79, 76},
+		trim = {18, 16, 20, 12},
+		a_size = {4096, 4096},
+		f_quad = {4055, 2207, 41, 48},
+		alias = {"dragon_redboy_B_posessed_asst_fire_eye_02_C", "dragon_redboy_C_posessed_asst_fire_eye_02_C"}
+	},
+	dragon_redboy_A_posessed_asst_fire_eye_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {20, 22, 18, 13},
+		a_size = {2688, 2688},
+		f_quad = {2470, 2365, 41, 41},
+		alias = {"dragon_redboy_B_posessed_asst_fire_eye_03", "dragon_redboy_C_posessed_asst_fire_eye_03"}
+	},
+	dragon_redboy_A_posessed_asst_fire_eye_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {19, 19, 20, 12},
+		a_size = {2688, 2688},
+		f_quad = {2376, 2620, 40, 45},
+		alias = {"dragon_redboy_B_posessed_asst_fire_eye_05", "dragon_redboy_C_posessed_asst_fire_eye_05"}
+	},
+	dragon_redboy_A_posessed_asst_modifier_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {79, 76},
+		trim = {20, 17, 18, 12},
+		a_size = {4096, 4096},
+		f_quad = {4055, 2261, 41, 47},
+		alias = {"dragon_redboy_B_posessed_asst_modifier_03", "dragon_redboy_C_posessed_asst_modifier_03"}
+	},
+	dragon_redboy_A_posessed_asst_modifier_03_C = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {18, 17, 20, 12},
+		a_size = {2688, 2688},
+		f_quad = {2521, 2307, 41, 47},
+		alias = {"dragon_redboy_B_posessed_asst_modifier_03_C", "dragon_redboy_C_posessed_asst_modifier_03_C"}
+	},
+	dragon_redboy_A_posessed_asst_modifier_04_C = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {18, 22, 20, 13},
+		a_size = {2688, 2688},
+		f_quad = {2517, 2365, 41, 41},
+		alias = {"dragon_redboy_B_posessed_asst_modifier_04_C", "dragon_redboy_C_posessed_asst_modifier_04_C"}
+	},
+	dragon_redboy_A_posessed_asst_modifier_05_C = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 76},
+		trim = {21, 19, 19, 12},
+		a_size = {2688, 2688},
+		f_quad = {2468, 2413, 39, 45},
+		alias = {"dragon_redboy_B_posessed_asst_modifier_05_C", "dragon_redboy_C_posessed_asst_modifier_05_C"}
+	},
+	dragon_redboy_A_posessed_asst_red_eyes = {
+		a_name = "go_stage132-1.dds",
+		size = {208, 101},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2663, 3994, 205, 97},
+		alias = {"dragon_redboy_B_posessed_asst_red_eyes", "dragon_redboy_C_posessed_asst_red_eyes"}
+	},
+	dragon_redboy_A_redboy_asst_arm_bby_redboy_01_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {34, 24},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2512, 1372, 30, 21},
+		alias = {"dragon_redboy_B_redboy_asst_arm_bby_redboy_01_redboy", "dragon_redboy_C_redboy_asst_arm_bby_redboy_01_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_arm_bby_redboy_02_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {22, 30},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 517, 18, 27},
+		alias = {"dragon_redboy_B_redboy_asst_arm_bby_redboy_02_redboy", "dragon_redboy_C_redboy_asst_arm_bby_redboy_02_redboy", "dragon_redboy_screen_redboy_asst_arm_bby_redboy_02_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_body_bby_redboy_01_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {55, 43},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3904, 2765, 51, 41},
+		alias = {"dragon_redboy_B_redboy_asst_body_bby_redboy_01_redboy", "dragon_redboy_C_redboy_asst_body_bby_redboy_01_redboy", "dragon_redboy_screen_redboy_asst_body_bby_redboy_01_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_fire_small_01_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 64},
+		trim = {0, 0, 0, 1},
+		a_size = {2688, 2688},
+		f_quad = {2355, 1965, 56, 63},
+		alias = {"dragon_redboy_B_redboy_asst_fire_small_01_redboy", "dragon_redboy_C_redboy_asst_fire_small_01_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_fire_small_02_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 74},
+		trim = {0, 0, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2396, 2048, 53, 73},
+		alias = {"dragon_redboy_B_redboy_asst_fire_small_02_redboy", "dragon_redboy_C_redboy_asst_fire_small_02_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_fire_small_03_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 80},
+		trim = {1, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2219, 2048, 53, 80},
+		alias = {"dragon_redboy_B_redboy_asst_fire_small_03_redboy", "dragon_redboy_C_redboy_asst_fire_small_03_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_fire_small_04_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 84},
+		trim = {0, 0, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2635, 1559, 53, 82},
+		alias = {"dragon_redboy_B_redboy_asst_fire_small_04_redboy", "dragon_redboy_C_redboy_asst_fire_small_04_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_fire_small_05_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 86},
+		trim = {0, 0, 0, 2},
+		a_size = {2688, 2688},
+		f_quad = {2632, 1755, 56, 84},
+		alias = {"dragon_redboy_B_redboy_asst_fire_small_05_redboy", "dragon_redboy_C_redboy_asst_fire_small_05_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_hand_bby_redboy_01_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {24, 22},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3695, 1091, 21, 19},
+		alias = {"dragon_redboy_B_redboy_asst_hand_bby_redboy_01_redboy", "dragon_redboy_C_redboy_asst_hand_bby_redboy_01_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_head_bby_redboy_01_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 90},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2416, 1755, 66, 86},
+		alias = {"dragon_redboy_B_redboy_asst_head_bby_redboy_01_redboy", "dragon_redboy_C_redboy_asst_head_bby_redboy_01_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_head_bby_redboy_risa_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 90},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2488, 1755, 66, 86},
+		alias = {"dragon_redboy_B_redboy_asst_head_bby_redboy_risa_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_leg_bby_redboy_01_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {24, 24},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {419, 2678, 21, 21},
+		alias = {"dragon_redboy_B_redboy_asst_leg_bby_redboy_01_redboy", "dragon_redboy_C_redboy_asst_leg_bby_redboy_01_redboy", "dragon_redboy_screen_redboy_asst_leg_bby_redboy_01_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_leg_bby_redboy_02_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {21, 22},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {1966, 578, 17, 18},
+		alias = {"dragon_redboy_B_redboy_asst_leg_bby_redboy_02_redboy", "dragon_redboy_C_redboy_asst_leg_bby_redboy_02_redboy", "dragon_redboy_screen_redboy_asst_leg_bby_redboy_02_redboy"}
+	},
+	dragon_redboy_A_redboy_asst_light01 = {
+		a_name = "go_stage132-1.dds",
+		size = {44, 20},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2307, 1372, 44, 20},
+		alias = {"dragon_redboy_B_redboy_asst_light01", "dragon_redboy_C_redboy_asst_light01", "stage_32_lava_buff_asst_light01"}
+	},
+	dragon_redboy_A_redboy_asst_shadow_redboy02 = {
+		a_name = "go_stage132-1.dds",
+		size = {92, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2693, 1365, 89, 30},
+		alias = {"dragon_redboy_B_redboy_asst_shadow_redboy02", "dragon_redboy_C_redboy_asst_shadow_redboy02"}
+	},
+	dragon_redboy_A_redboy_asst_weapon_bby_redboy_01_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {43, 119},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1806, 3918, 40, 115},
+		alias = {"dragon_redboy_B_redboy_asst_weapon_bby_redboy_01_redboy", "dragon_redboy_C_redboy_asst_weapon_bby_redboy_01_redboy"}
+	},
+	dragon_redboy_A_redboy_redboy_asst_fire_small_06_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {53, 89},
+		trim = {1, 0, 0, 1},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2444, 52, 88},
+		alias = {"dragon_redboy_B_redboy_redboy_asst_fire_small_06_redboy", "dragon_redboy_C_redboy_redboy_asst_fire_small_06_redboy"}
+	},
+	dragon_redboy_B_asst_dragon_cuerno02 = {
+		a_name = "go_stage132-2.dds",
+		size = {155, 307},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {184, 1827, 151, 303},
+		alias = {}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_circle2 = {
+		a_name = "go_stage132-2.dds",
+		size = {40, 40},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2065, 450, 36, 36},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_circle2", "teen_redboy_B_asst_wukong_tredboy_circle2", "teen_redboy_asst_wukong_tredboy_circle2"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_1_glow_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {23, 77},
+		trim = {2, 1, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {419, 2705, 20, 74},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_1_glow_1", "teen_redboy_asst_wukong_tredboy_flama_1_glow_1"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_1_glow_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {25, 56},
+		trim = {1, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2700, 985, 22, 54},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_1_glow_2", "teen_redboy_asst_wukong_tredboy_flama_1_glow_2"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_1_solid_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {25, 78},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1823, 2895, 23, 76},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_1_solid_1", "teen_redboy_asst_wukong_tredboy_flama_1_solid_1"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_1_solid_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {25, 54},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {419, 2591, 21, 51},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_1_solid_2", "teen_redboy_asst_wukong_tredboy_flama_1_solid_2"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_2_glow_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {16, 42},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 781, 14, 39},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_2_glow_1", "teen_redboy_asst_wukong_tredboy_flama_2_glow_1"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_2_glow_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {19, 75},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 624, 16, 72},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_2_glow_2", "teen_redboy_asst_wukong_tredboy_flama_2_glow_2"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_2_solid_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {18, 39},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 724, 15, 36},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_2_solid_1", "teen_redboy_asst_wukong_tredboy_flama_2_solid_1"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_flama_2_solid_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {20, 72},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 442, 18, 69},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_flama_2_solid_2", "teen_redboy_asst_wukong_tredboy_flama_2_solid_2"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_spark = {
+		a_name = "go_stage132-2.dds",
+		size = {68, 63},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1756, 2612, 68, 63},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_spark", "teen_redboy_B_asst_wukong_tredboy_spark", "teen_redboy_asst_wukong_tredboy_spark"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_sparkattack1 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 127},
+		trim = {8, 10, 6, 13},
+		a_size = {2688, 2688},
+		f_quad = {2408, 733, 107, 104},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_sparkattack1", "teen_redboy_asst_wukong_tredboy_sparkattack1"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_sparkattack2 = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 130},
+		trim = {7, 8, 21, 15},
+		a_size = {2688, 2688},
+		f_quad = {1834, 733, 109, 107},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_sparkattack2", "teen_redboy_asst_wukong_tredboy_sparkattack2"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_sparkattack3 = {
+		a_name = "go_stage132-2.dds",
+		size = {104, 101},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {899, 1705, 104, 101},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_sparkattack3", "teen_redboy_B_asst_wukong_tredboy_sparkattack3", "teen_redboy_asst_wukong_tredboy_sparkattack3"}
+	},
+	dragon_redboy_B_asst_wukong_tredboy_sparkattack4 = {
+		a_name = "go_stage132-2.dds",
+		size = {89, 92},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1320, 1941, 89, 92},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_sparkattack4", "teen_redboy_asst_wukong_tredboy_sparkattack4"}
+	},
+	dragon_redboy_B_redboy_asst_arm_bby_redboy_03_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {39, 30},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {4045, 2121, 35, 26},
+		alias = {}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_redboy_02_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {71, 94},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1990, 1655, 69, 91},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_redboy_02_redboy"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_redboy_05_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 96},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2272, 1755, 66, 93},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_redboy_05_redboy"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_redboy_06_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 90},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2560, 1755, 66, 86},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_redboy_06_redboy"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_redboy_08_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 95},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2344, 1755, 66, 91},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_redboy_08_redboy"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_weapon_swipe_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {205, 412},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2893, 2815, 205, 412},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_weapon_swipe_01"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_weapon_swipe_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {238, 383},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2418, 2740, 238, 383},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_weapon_swipe_02"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_weapon_swipe_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {239, 350},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2418, 2384, 239, 350},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_weapon_swipe_03"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_weapon_swipe_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {224, 320},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2663, 2626, 224, 320},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_weapon_swipe_04"}
+	},
+	dragon_redboy_B_redboy_asst_head_bby_weapon_swipe_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {23, 157},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1823, 2732, 23, 157},
+		alias = {"dragon_redboy_C_redboy_asst_head_bby_weapon_swipe_05"}
+	},
+	dragon_redboy_B_redboy_asst_shadow_redboy = {
+		a_name = "go_stage132-1.dds",
+		size = {92, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2788, 1365, 89, 30},
+		alias = {"dragon_redboy_C_redboy_asst_shadow_redboy"}
+	},
+	dragon_redboy_C_redboy_asst_bby01_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {77, 270},
+		trim = {2, 0, 1, 0},
+		a_size = {2688, 2688},
+		f_quad = {1593, 2377, 74, 270},
+		alias = {}
+	},
+	dragon_redboy_C_redboy_asst_hand_bby_circle_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {59, 59},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2496, 1898, 57, 56},
+		alias = {}
+	},
+	dragon_redboy_C_redboy_asst_junkdog_hit_01_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {51, 56},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2496, 47, 52},
+		alias = {}
+	},
+	dragon_redboy_C_redboy_asst_junkdog_hit_02_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {65, 75},
+		trim = {2, 3, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2393, 61, 70},
+		alias = {}
+	},
+	dragon_redboy_C_redboy_asst_junkdog_hit_03_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {74, 80},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2332, 1559, 70, 76},
+		alias = {}
+	},
+	dragon_redboy_C_redboy_asst_weapon_vfx_bby_redboy_01_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {43, 119},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2376, 2413, 40, 115},
+		alias = {}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {45, 29},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3644, 2350, 43, 27},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_01"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {50, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {243, 123, 47, 30},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_02"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {58, 64},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2138, 54, 60},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_03"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 81},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2039, 1965, 58, 77},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_04"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 92},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2140, 1655, 69, 88},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_05"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {87, 93},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4011, 1505, 85, 90},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_06"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 93},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1601, 1295, 86, 90},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_07"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 86},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2479, 924, 95, 83},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_08"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 81},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1752, 924, 99, 78},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_09"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {109, 73},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1601, 845, 106, 70},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_10"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_11 = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1329, 246, 119, 60},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_11"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_12 = {
+		a_name = "go_stage132-1.dds",
+		size = {135, 36},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3692, 1363, 132, 33},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_12"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_13 = {
+		a_name = "go_stage132-1.dds",
+		size = {137, 34},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1678, 1362, 135, 31},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_13"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_14 = {
+		a_name = "go_stage132-1.dds",
+		size = {133, 36},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3245, 2100, 131, 33},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_14"}
+	},
+	dragon_redboy_bubbles_asst_dragon_boss_smoke_15 = {
+		a_name = "go_stage132-1.dds",
+		size = {8, 8},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1748, 1103, 6, 5},
+		alias = {"dragon_redboy_splash_asst_dragon_boss_smoke_15"}
+	},
+	dragon_redboy_screen_asst_DrillTower_drill_petrol1_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {179, 117},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {551, 6, 175, 114},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_DrillTower_drill_petrol2_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {193, 126},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3899, 2916, 190, 123},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_DrillTower_drill_petrol3_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {199, 127},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3558, 195, 124},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_DrillTower_drill_petrol4_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {202, 118},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3437, 199, 115},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_DrillTower_drill_petrol5_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {202, 94},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3883, 1301, 200, 91},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_arm_bby_redboy_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {32, 37},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {958, 277, 30, 33},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_splash03 = {
+		a_name = "go_stage132-1.dds",
+		size = {438, 428},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {6, 1116, 435, 424},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_splash04 = {
+		a_name = "go_stage132-1.dds",
+		size = {411, 1340},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {6, 2565, 407, 1338},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stun_splash3 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 50},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1754, 1130, 84, 47},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_spl1 = {
+		a_name = "go_stage132-1.dds",
+		size = {89, 28},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2215, 1372, 86, 25},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_spl2 = {
+		a_name = "go_stage132-1.dds",
+		size = {96, 30},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2089, 1368, 93, 27},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_spl3 = {
+		a_name = "go_stage132-1.dds",
+		size = {100, 32},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1986, 1368, 97, 28},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_spl4 = {
+		a_name = "go_stage132-1.dds",
+		size = {106, 32},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1877, 1368, 103, 29},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_spl5 = {
+		a_name = "go_stage132-1.dds",
+		size = {36, 28},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2400, 1372, 33, 24},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash10 = {
+		a_name = "go_stage132-2.dds",
+		size = {87, 48},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1648, 1134, 84, 45},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash11 = {
+		a_name = "go_stage132-1.dds",
+		size = {88, 42},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3460, 2577, 84, 39},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash2 = {
+		a_name = "go_stage132-2.dds",
+		size = {64, 45},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2488, 1847, 60, 41},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash4 = {
+		a_name = "go_stage132-1.dds",
+		size = {105, 54},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3663, 2090, 102, 51},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash5 = {
+		a_name = "go_stage132-1.dds",
+		size = {99, 55},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3496, 4043, 96, 52},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash6 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 54},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2447, 258, 89, 51},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash7 = {
+		a_name = "go_stage132-2.dds",
+		size = {96, 53},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {6, 2635, 93, 49},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash8 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 51},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1790, 99, 95, 48},
+		alias = {}
+	},
+	dragon_redboy_screen_asst_tactic_barrel_stunsplash_splash9 = {
+		a_name = "go_stage132-1.dds",
+		size = {96, 50},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {4002, 682, 93, 46},
+		alias = {}
+	},
+	dragon_redboy_screen_redboy_asst_head_bby_redboy_03_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 78},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1834, 1898, 66, 74},
+		alias = {}
+	},
+	dragon_redboy_screen_redboy_asst_head_bby_redboy_04_redboy = {
+		a_name = "go_stage132-2.dds",
+		size = {72, 79},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2440, 1655, 69, 76},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_dust = {
+		a_name = "go_stage132-2.dds",
+		size = {27, 28},
+		trim = {1, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {646, 126, 24, 24},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_dust", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_dust"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer2_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {43, 21},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1676, 1089, 41, 18},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer2_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {123, 37},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3382, 2100, 120, 33},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer2_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {137, 36},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {300, 4050, 135, 33},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer2_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {143, 43},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3935, 1067, 141, 40},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer2_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {150, 43},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1991, 1069, 147, 40},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {91, 51},
+		trim = {1, 3, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 2639, 89, 47},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {132, 74},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 2562, 130, 71},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {156, 79},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2131, 159, 153, 76},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {170, 94},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3873, 3166, 167, 91},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {182, 94},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3688, 3166, 179, 91},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_6 = {
+		a_name = "go_stage132-1.dds",
+		size = {193, 92},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3104, 4004, 191, 89},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_7 = {
+		a_name = "go_stage132-1.dds",
+		size = {198, 90},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3945, 194, 86},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer3_8 = {
+		a_name = "go_stage132-1.dds",
+		size = {199, 68},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3584, 2550, 195, 65},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {62, 100},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3367, 774, 58, 97},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {115, 117},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1250, 733, 111, 113},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 155},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1593, 1906, 75, 151},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 171},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1013, 100, 167},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 188},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {899, 924, 105, 184},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {114, 188},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {899, 733, 111, 185},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_6 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 185},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {646, 2342, 118, 182},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_7 = {
+		a_name = "go_stage132-1.dds",
+		size = {138, 181},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3961, 2626, 135, 178},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_8 = {
+		a_name = "go_stage132-2.dds",
+		size = {143, 171},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1094, 318, 140, 168},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer4_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {147, 131},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {346, 1883, 145, 127},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {67, 89},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {4033, 6, 63, 86},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_1", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_1"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {92, 125},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1320, 1295, 90, 122},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_2", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_2"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 127},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1010, 2071, 101, 124},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_3", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_3"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {112, 134},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2294, 733, 108, 130},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_4", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_4"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {119, 128},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {775, 1749, 116, 125},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_5", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_5"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_6 = {
+		a_name = "go_stage132-2.dds",
+		size = {117, 130},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {775, 1999, 115, 127},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_6", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_6"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {118, 125},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {775, 2132, 115, 121},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_7", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_7"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_8 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 94},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {899, 1812, 104, 91},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_8", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_8"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layer5_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 73},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1320, 2039, 89, 69},
+		alias = {}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {31, 30},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1494, 4065, 28, 26},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_1", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_1"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {61, 47},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2369, 1898, 58, 43},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_10"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {60, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2433, 1898, 57, 60},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_2", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_2"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 102},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1676, 2525, 73, 98},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_3", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_3"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 97},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1221, 2576, 89, 94},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_4", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_4"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {113, 101},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2179, 733, 109, 97},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_5", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_5"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_6 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 99},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {899, 1603, 105, 96},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_6", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_6"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {99, 79},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2275, 924, 97, 76},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_7", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_7"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_8 = {
+		a_name = "go_stage132-2.dds",
+		size = {87, 73},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2420, 1295, 84, 70},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_8", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_8"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_layerback_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 65},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1756, 2478, 69, 62},
+		alias = {"teen_redboy_B_asst_boss_gator_lvl2_explotion_layerback_9", "teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layerback_9"}
+	},
+	dragon_redboy_splash_asst_dragon_boss_explotion_rock = {
+		a_name = "go_stage132-1.dds",
+		size = {15, 14},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2711, 588, 11, 11},
+		alias = {}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire01 = {
+		a_name = "go_stage132-1.dds",
+		size = {350, 287},
+		trim = {49, 25, 22, 39},
+		a_size = {4096, 4096},
+		f_quad = {2722, 1613, 279, 223},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire01"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire02 = {
+		a_name = "go_stage132-1.dds",
+		size = {350, 287},
+		trim = {60, 30, 17, 46},
+		a_size = {4096, 4096},
+		f_quad = {2419, 1862, 273, 211},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire02"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire03 = {
+		a_name = "go_stage132-1.dds",
+		size = {350, 287},
+		trim = {49, 27, 37, 43},
+		a_size = {4096, 4096},
+		f_quad = {2973, 1930, 264, 217},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire03"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire04 = {
+		a_name = "go_stage132-1.dds",
+		size = {350, 287},
+		trim = {49, 19, 38, 36},
+		a_size = {4096, 4096},
+		f_quad = {3245, 1862, 263, 232},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire04"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire05 = {
+		a_name = "go_stage132-1.dds",
+		size = {350, 287},
+		trim = {50, 19, 22, 35},
+		a_size = {4096, 4096},
+		f_quad = {3007, 1613, 278, 233},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire05"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_base_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {714, 427},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1991, 449, 714, 427},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_base_01"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_base_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {697, 430},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2728, 6, 697, 430},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_base_02"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_base_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {756, 430},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1229, 6, 756, 430},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_base_03"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_base_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {731, 446},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1229, 442, 731, 446},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_base_04"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_base_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {731, 437},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1991, 6, 731, 437},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_base_05"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_line = {
+		a_name = "go_stage132-1.dds",
+		size = {282, 296},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1852, 1862, 282, 296},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_line"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {69, 68},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 1978, 66, 65},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_01", "dragon_rock_stun_asst_fire_med_01"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {74, 67},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2408, 1559, 70, 64},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_02", "dragon_rock_stun_asst_fire_med_02"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {74, 67},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2484, 1559, 70, 64},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_03", "dragon_rock_stun_asst_fire_med_03"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 66},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1756, 2410, 69, 62},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_04", "dragon_rock_stun_asst_fire_med_04"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {71, 63},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2199, 1755, 67, 60},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_05", "dragon_rock_stun_asst_fire_med_05"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {69, 63},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2402, 65, 60},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_06", "dragon_rock_stun_asst_fire_med_06"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_med_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {68, 57},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2173, 66, 53},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_med_07", "dragon_rock_stun_asst_fire_med_07"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_small_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 90},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1593, 1559, 78, 90},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_small_01"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_small_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 94},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1756, 1655, 73, 94},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_small_02"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_small_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 91},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1914, 1655, 70, 91},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_small_03"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_small_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {67, 105},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2126, 1755, 67, 105},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_small_04"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_small_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {58, 82},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2436, 58, 82},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_small_05"}
+	},
+	dragon_redboy_stun_vfx_01_asst_fire_small_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {36, 52},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2512, 2584, 36, 52},
+		alias = {"dragon_redboy_stun_vfx_02_asst_fire_small_06"}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 78},
+		trim = {3, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2267, 1472, 74, 74},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 85},
+		trim = {0, 0, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1928, 1559, 77, 83},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {80, 91},
+		trim = {0, 0, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2055, 79, 90},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {80, 94},
+		trim = {0, 0, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1508, 1957, 79, 92},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 100},
+		trim = {0, 0, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1852, 86, 98},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 106},
+		trim = {3, 0, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1221, 1751, 92, 104},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {107, 112},
+		trim = {8, 0, 19, 45},
+		a_size = {2688, 2688},
+		f_quad = {1680, 1394, 80, 67},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_dragon_boss_explosion_fire_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {107, 113},
+		trim = {8, 0, 21, 51},
+		a_size = {2688, 2688},
+		f_quad = {2020, 1394, 78, 62},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {28, 51},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3187, 1334, 28, 51},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {38, 66},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2467, 2517, 38, 66},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 75},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2506, 1472, 73, 75},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {100, 83},
+		trim = {0, 7, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1331, 924, 100, 76},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {211, 219},
+		trim = {49, 25, 1, 52},
+		a_size = {2688, 2688},
+		f_quad = {2466, 6, 161, 142},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {231, 219},
+		trim = {72, 19, 0, 47},
+		a_size = {2688, 2688},
+		f_quad = {184, 159, 159, 153},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {241, 219},
+		trim = {78, 21, 0, 47},
+		a_size = {2688, 2688},
+		f_quad = {6, 471, 163, 151},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {211, 219},
+		trim = {58, 22, 0, 48},
+		a_size = {2688, 2688},
+		f_quad = {1972, 159, 153, 149},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {218, 219},
+		trim = {64, 23, 0, 48},
+		a_size = {2688, 2688},
+		f_quad = {1652, 159, 154, 148},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {224, 219},
+		trim = {67, 24, 0, 50},
+		a_size = {2688, 2688},
+		f_quad = {678, 159, 157, 145},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {261, 219},
+		trim = {90, 26, 0, 53},
+		a_size = {2688, 2688},
+		f_quad = {1090, 6, 171, 140},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {271, 219},
+		trim = {97, 26, 0, 52},
+		a_size = {2688, 2688},
+		f_quad = {732, 6, 174, 141},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {285, 219},
+		trim = {0, 45, 131, 54},
+		a_size = {2688, 2688},
+		f_quad = {1812, 159, 154, 120},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {270, 219},
+		trim = {0, 42, 113, 84},
+		a_size = {2688, 2688},
+		f_quad = {1004, 159, 157, 93},
+		alias = {}
+	},
+	dragon_redboy_transform_asst_fire_teleport_fireball_11 = {
+		a_name = "go_stage132-2.dds",
+		size = {81, 64},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2372, 81, 64},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_lavastun = {
+		a_name = "go_stage132-1.dds",
+		size = {315, 263},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1531, 1892, 312, 259},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_rocklava = {
+		a_name = "go_stage132-1.dds",
+		size = {265, 225},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3514, 1862, 262, 222},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_rocklava02 = {
+		a_name = "go_stage132-1.dds",
+		size = {229, 206},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2668, 2153, 227, 202},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_rocklava_grietas = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 148},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2546, 318, 137, 148},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smallrock_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {25, 24},
+		trim = {2, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2700, 1045, 22, 22},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smallrock_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 31},
+		trim = {1, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {4069, 3342, 27, 27},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smallrock_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {17, 16},
+		trim = {1, 1, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {1966, 857, 14, 13},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smallrock_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {35, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {882, 277, 32, 30},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {50, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {296, 123, 47, 30},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {58, 64},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2204, 54, 60},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 81},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2103, 1965, 58, 77},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 92},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2215, 1655, 69, 88},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {87, 93},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1877, 1295, 85, 90},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 93},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1693, 1295, 86, 90},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 86},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2580, 924, 95, 83},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 81},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1857, 924, 99, 78},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {109, 73},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 846, 106, 70},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_11 = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1182, 634, 119, 60},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_12 = {
+		a_name = "go_stage132-1.dds",
+		size = {135, 36},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1854, 1567, 132, 33},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_smoke_13 = {
+		a_name = "go_stage132-1.dds",
+		size = {137, 34},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2552, 1365, 135, 31},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_snowcloud = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 76},
+		trim = {19, 16, 16, 16},
+		a_size = {2688, 2688},
+		f_quad = {2568, 2307, 41, 44},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_snowparticles_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 67},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2585, 1472, 73, 63},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_snowparticles_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {72, 75},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2515, 1655, 69, 72},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_snowparticles_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {67, 82},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2232, 65, 79},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_snowparticles_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {66, 84},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {4033, 98, 63, 80},
+		alias = {}
+	},
+	dragon_rock_stun_asst_dragon_boss_vfx_vfx_smoke_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {45, 29},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3693, 2350, 43, 27},
+		alias = {}
+	},
+	dragon_rock_stun_asst_fire_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {216, 191},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2663, 3797, 216, 191},
+		alias = {}
+	},
+	dragon_rock_stun_asst_fire_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {212, 207},
+		trim = {0, 0, 0, 28},
+		a_size = {4096, 4096},
+		f_quad = {3883, 1116, 212, 179},
+		alias = {}
+	},
+	dragon_rock_stun_asst_fire_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {214, 211},
+		trim = {0, 0, 0, 28},
+		a_size = {4096, 4096},
+		f_quad = {2893, 2626, 214, 183},
+		alias = {}
+	},
+	dragon_rock_stun_asst_fire_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {221, 216},
+		trim = {0, 0, 0, 29},
+		a_size = {4096, 4096},
+		f_quad = {3357, 2384, 221, 187},
+		alias = {}
+	},
+	dragon_rock_stun_asst_fire_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {224, 219},
+		trim = {0, 0, 0, 28},
+		a_size = {4096, 4096},
+		f_quad = {3595, 2153, 224, 191},
+		alias = {}
+	},
+	dragon_rock_stun_asst_fire_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {222, 221},
+		trim = {0, 0, 0, 28},
+		a_size = {4096, 4096},
+		f_quad = {3129, 2384, 222, 193},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0001 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 150, 192, 183},
+		a_size = {4096, 4096},
+		f_quad = {3811, 2581, 61, 39},
+		alias = {
+			"easter_egg_saitam_saitam_stage_2_0002",
+			"easter_egg_saitam_saitam_stage_2_0003",
+			"easter_egg_saitam_saitam_stage_2_0004",
+			"easter_egg_saitam_saitam_stage_2_0005",
+			"easter_egg_saitam_saitam_stage_2_0006",
+			"easter_egg_saitam_saitam_stage_2_0007",
+			"easter_egg_saitam_saitam_stage_2_0008",
+			"easter_egg_saitam_saitam_stage_2_0009",
+			"easter_egg_saitam_saitam_stage_2_0010",
+			"easter_egg_saitam_saitam_stage_2_0011",
+			"easter_egg_saitam_saitam_stage_2_0012",
+			"easter_egg_saitam_saitam_stage_2_0013",
+			"easter_egg_saitam_saitam_stage_2_0014",
+			"easter_egg_saitam_saitam_stage_2_0015",
+			"easter_egg_saitam_saitam_stage_2_0016",
+			"easter_egg_saitam_saitam_stage_2_0017",
+			"easter_egg_saitam_saitam_stage_2_0018",
+			"easter_egg_saitam_saitam_stage_2_0019",
+			"easter_egg_saitam_saitam_stage_2_0020",
+			"easter_egg_saitam_saitam_stage_2_0021",
+			"easter_egg_saitam_saitam_stage_2_0022",
+			"easter_egg_saitam_saitam_stage_2_0023",
+			"easter_egg_saitam_saitam_stage_2_0024",
+			"easter_egg_saitam_saitam_stage_2_0025",
+			"easter_egg_saitam_saitam_stage_2_0026",
+			"easter_egg_saitam_saitam_stage_2_0027",
+			"easter_egg_saitam_saitam_stage_2_0028",
+			"easter_egg_saitam_saitam_stage_2_0029",
+			"easter_egg_saitam_saitam_stage_2_0030",
+			"easter_egg_saitam_saitam_stage_2_0031",
+			"easter_egg_saitam_saitam_stage_2_0032",
+			"easter_egg_saitam_saitam_stage_2_0033",
+			"easter_egg_saitam_saitam_stage_2_0034",
+			"easter_egg_saitam_saitam_stage_2_0035",
+			"easter_egg_saitam_saitam_stage_2_0036",
+			"easter_egg_saitam_saitam_stage_2_0037",
+			"easter_egg_saitam_saitam_stage_2_0038",
+			"easter_egg_saitam_saitam_stage_2_0039",
+			"easter_egg_saitam_saitam_stage_2_0040",
+			"easter_egg_saitam_saitam_stage_2_0041",
+			"easter_egg_saitam_saitam_stage_2_0042",
+			"easter_egg_saitam_saitam_stage_2_0043",
+			"easter_egg_saitam_saitam_stage_2_0044",
+			"easter_egg_saitam_saitam_stage_2_0045",
+			"easter_egg_saitam_saitam_stage_2_0046",
+			"easter_egg_saitam_saitam_stage_2_0047",
+			"easter_egg_saitam_saitam_stage_2_0048",
+			"easter_egg_saitam_saitam_stage_2_0049",
+			"easter_egg_saitam_saitam_stage_2_0050",
+			"easter_egg_saitam_saitam_stage_2_0051",
+			"easter_egg_saitam_saitam_stage_2_0052",
+			"easter_egg_saitam_saitam_stage_2_0053",
+			"easter_egg_saitam_saitam_stage_2_0054",
+			"easter_egg_saitam_saitam_stage_2_0055",
+			"easter_egg_saitam_saitam_stage_2_0056",
+			"easter_egg_saitam_saitam_stage_2_0057",
+			"easter_egg_saitam_saitam_stage_2_0058",
+			"easter_egg_saitam_saitam_stage_2_0059",
+			"easter_egg_saitam_saitam_stage_2_0060",
+			"easter_egg_saitam_saitam_stage_2_0061",
+			"easter_egg_saitam_saitam_stage_2_0062",
+			"easter_egg_saitam_saitam_stage_2_0063",
+			"easter_egg_saitam_saitam_stage_2_0064",
+			"easter_egg_saitam_saitam_stage_2_0065",
+			"easter_egg_saitam_saitam_stage_2_0066",
+			"easter_egg_saitam_saitam_stage_2_0067",
+			"easter_egg_saitam_saitam_stage_2_0068",
+			"easter_egg_saitam_saitam_stage_2_0069",
+			"easter_egg_saitam_saitam_stage_2_0070",
+			"easter_egg_saitam_saitam_stage_2_0071",
+			"easter_egg_saitam_saitam_stage_2_0072",
+			"easter_egg_saitam_saitam_stage_2_0073",
+			"easter_egg_saitam_saitam_stage_2_0074",
+			"easter_egg_saitam_saitam_stage_2_0075",
+			"easter_egg_saitam_saitam_stage_2_0076",
+			"easter_egg_saitam_saitam_stage_2_0077",
+			"easter_egg_saitam_saitam_stage_2_0078",
+			"easter_egg_saitam_saitam_stage_2_0079",
+			"easter_egg_saitam_saitam_stage_2_0080",
+			"easter_egg_saitam_saitam_stage_2_0081",
+			"easter_egg_saitam_saitam_stage_2_0082",
+			"easter_egg_saitam_saitam_stage_2_0083",
+			"easter_egg_saitam_saitam_stage_2_0084",
+			"easter_egg_saitam_saitam_stage_2_0085",
+			"easter_egg_saitam_saitam_stage_2_0086",
+			"easter_egg_saitam_saitam_stage_2_0087",
+			"easter_egg_saitam_saitam_stage_2_0088",
+			"easter_egg_saitam_saitam_stage_2_0089",
+			"easter_egg_saitam_saitam_stage_2_0090",
+			"easter_egg_saitam_saitam_stage_2_0091",
+			"easter_egg_saitam_saitam_stage_2_0092",
+			"easter_egg_saitam_saitam_stage_2_0093",
+			"easter_egg_saitam_saitam_stage_2_0094",
+			"easter_egg_saitam_saitam_stage_2_0095",
+			"easter_egg_saitam_saitam_stage_2_0096",
+			"easter_egg_saitam_saitam_stage_2_0097",
+			"easter_egg_saitam_saitam_stage_2_0098",
+			"easter_egg_saitam_saitam_stage_2_0099",
+			"easter_egg_saitam_saitam_stage_2_0100",
+			"easter_egg_saitam_saitam_stage_2_0101",
+			"easter_egg_saitam_saitam_stage_2_0102",
+			"easter_egg_saitam_saitam_stage_2_0103",
+			"easter_egg_saitam_saitam_stage_2_0104",
+			"easter_egg_saitam_saitam_stage_2_0105",
+			"easter_egg_saitam_saitam_stage_2_0161",
+			"easter_egg_saitam_saitam_stage_2_0162",
+			"easter_egg_saitam_saitam_stage_2_0163",
+			"easter_egg_saitam_saitam_stage_2_0164",
+			"easter_egg_saitam_saitam_stage_2_0165",
+			"easter_egg_saitam_saitam_stage_2_0166",
+			"easter_egg_saitam_saitam_stage_2_0167",
+			"easter_egg_saitam_saitam_stage_2_0168",
+			"easter_egg_saitam_saitam_stage_2_0169",
+			"easter_egg_saitam_saitam_stage_2_0170",
+			"easter_egg_saitam_saitam_stage_2_0171",
+			"easter_egg_saitam_saitam_stage_2_0172",
+			"easter_egg_saitam_saitam_stage_2_0173",
+			"easter_egg_saitam_saitam_stage_2_0174",
+			"easter_egg_saitam_saitam_stage_2_0175",
+			"easter_egg_saitam_saitam_stage_2_0176",
+			"easter_egg_saitam_saitam_stage_2_0177",
+			"easter_egg_saitam_saitam_stage_2_0178",
+			"easter_egg_saitam_saitam_stage_2_0179",
+			"easter_egg_saitam_saitam_stage_2_0180",
+			"easter_egg_saitam_saitam_stage_2_0181",
+			"easter_egg_saitam_saitam_stage_2_0182",
+			"easter_egg_saitam_saitam_stage_2_0183",
+			"easter_egg_saitam_saitam_stage_2_0184",
+			"easter_egg_saitam_saitam_stage_2_0185",
+			"easter_egg_saitam_saitam_stage_2_0186",
+			"easter_egg_saitam_saitam_stage_2_0187",
+			"easter_egg_saitam_saitam_stage_2_0188",
+			"easter_egg_saitam_saitam_stage_2_0189",
+			"easter_egg_saitam_saitam_stage_2_0190",
+			"easter_egg_saitam_saitam_stage_2_0191",
+			"easter_egg_saitam_saitam_stage_2_0192",
+			"easter_egg_saitam_saitam_stage_2_0193",
+			"easter_egg_saitam_saitam_stage_2_0194",
+			"easter_egg_saitam_saitam_stage_2_0195",
+			"easter_egg_saitam_saitam_stage_2_0196",
+			"easter_egg_saitam_saitam_stage_2_0197",
+			"easter_egg_saitam_saitam_stage_2_0198",
+			"easter_egg_saitam_saitam_stage_2_0199",
+			"easter_egg_saitam_saitam_stage_2_0206",
+			"easter_egg_saitam_saitam_stage_2_0207"
+		}
+	},
+	easter_egg_saitam_saitam_stage_2_0106 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 152, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {184, 2651, 61, 37},
+		alias = {"easter_egg_saitam_saitam_stage_2_0107"}
+	},
+	easter_egg_saitam_saitam_stage_2_0108 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 148, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {2603, 268, 61, 41},
+		alias = {"easter_egg_saitam_saitam_stage_2_0109"}
+	},
+	easter_egg_saitam_saitam_stage_2_0110 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 147, 192, 183},
+		a_size = {4096, 4096},
+		f_quad = {3869, 4054, 61, 42},
+		alias = {"easter_egg_saitam_saitam_stage_2_0111"}
+	},
+	easter_egg_saitam_saitam_stage_2_0112 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 150, 192, 183},
+		a_size = {4096, 4096},
+		f_quad = {3878, 2581, 61, 39},
+		alias = {"easter_egg_saitam_saitam_stage_2_0113"}
+	},
+	easter_egg_saitam_saitam_stage_2_0114 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 150, 192, 183},
+		a_size = {4096, 4096},
+		f_quad = {3945, 2581, 61, 39},
+		alias = {"easter_egg_saitam_saitam_stage_2_0115"}
+	},
+	easter_egg_saitam_saitam_stage_2_0116 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 150, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {413, 2645, 61, 39},
+		alias = {
+			"easter_egg_saitam_saitam_stage_2_0117",
+			"easter_egg_saitam_saitam_stage_2_0118",
+			"easter_egg_saitam_saitam_stage_2_0119",
+			"easter_egg_saitam_saitam_stage_2_0120",
+			"easter_egg_saitam_saitam_stage_2_0121",
+			"easter_egg_saitam_saitam_stage_2_0122",
+			"easter_egg_saitam_saitam_stage_2_0123",
+			"easter_egg_saitam_saitam_stage_2_0124",
+			"easter_egg_saitam_saitam_stage_2_0125",
+			"easter_egg_saitam_saitam_stage_2_0126",
+			"easter_egg_saitam_saitam_stage_2_0127",
+			"easter_egg_saitam_saitam_stage_2_0128",
+			"easter_egg_saitam_saitam_stage_2_0129",
+			"easter_egg_saitam_saitam_stage_2_0130",
+			"easter_egg_saitam_saitam_stage_2_0131",
+			"easter_egg_saitam_saitam_stage_2_0132",
+			"easter_egg_saitam_saitam_stage_2_0133",
+			"easter_egg_saitam_saitam_stage_2_0134",
+			"easter_egg_saitam_saitam_stage_2_0135",
+			"easter_egg_saitam_saitam_stage_2_0136",
+			"easter_egg_saitam_saitam_stage_2_0137",
+			"easter_egg_saitam_saitam_stage_2_0138",
+			"easter_egg_saitam_saitam_stage_2_0139",
+			"easter_egg_saitam_saitam_stage_2_0140",
+			"easter_egg_saitam_saitam_stage_2_0141",
+			"easter_egg_saitam_saitam_stage_2_0142",
+			"easter_egg_saitam_saitam_stage_2_0143",
+			"easter_egg_saitam_saitam_stage_2_0144",
+			"easter_egg_saitam_saitam_stage_2_0145",
+			"easter_egg_saitam_saitam_stage_2_0146",
+			"easter_egg_saitam_saitam_stage_2_0147",
+			"easter_egg_saitam_saitam_stage_2_0148",
+			"easter_egg_saitam_saitam_stage_2_0149",
+			"easter_egg_saitam_saitam_stage_2_0150"
+		}
+	},
+	easter_egg_saitam_saitam_stage_2_0151 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 152, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {251, 2651, 61, 37},
+		alias = {"easter_egg_saitam_saitam_stage_2_0152"}
+	},
+	easter_egg_saitam_saitam_stage_2_0153 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 148, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {346, 2645, 61, 41},
+		alias = {"easter_egg_saitam_saitam_stage_2_0154"}
+	},
+	easter_egg_saitam_saitam_stage_2_0155 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 147, 192, 183},
+		a_size = {4096, 4096},
+		f_quad = {3936, 4054, 61, 42},
+		alias = {"easter_egg_saitam_saitam_stage_2_0156"}
+	},
+	easter_egg_saitam_saitam_stage_2_0157 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 150, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {2344, 1852, 61, 39},
+		alias = {"easter_egg_saitam_saitam_stage_2_0158"}
+	},
+	easter_egg_saitam_saitam_stage_2_0159 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 150, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {2416, 1847, 61, 39},
+		alias = {"easter_egg_saitam_saitam_stage_2_0160"}
+	},
+	easter_egg_saitam_saitam_stage_2_0200 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 157, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {1617, 117, 61, 32},
+		alias = {"easter_egg_saitam_saitam_stage_2_0201"}
+	},
+	easter_egg_saitam_saitam_stage_2_0202 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 146, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {1100, 258, 61, 43},
+		alias = {"easter_egg_saitam_saitam_stage_2_0203"}
+	},
+	easter_egg_saitam_saitam_stage_2_0204 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 152, 192, 183},
+		a_size = {2688, 2688},
+		f_quad = {2402, 449, 61, 37},
+		alias = {"easter_egg_saitam_saitam_stage_2_0205"}
+	},
+	easter_egg_saitam_saitam_stage_2_0208 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 138, 133, 183},
+		a_size = {4096, 4096},
+		f_quad = {3547, 2752, 120, 51},
+		alias = {"easter_egg_saitam_saitam_stage_2_0209"}
+	},
+	easter_egg_saitam_saitam_stage_2_0210 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 123, 114, 176},
+		a_size = {2688, 2688},
+		f_quad = {2257, 318, 139, 73},
+		alias = {"easter_egg_saitam_saitam_stage_2_0211"}
+	},
+	easter_egg_saitam_saitam_stage_2_0212 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 64, 108, 181},
+		a_size = {2688, 2688},
+		f_quad = {346, 2282, 145, 127},
+		alias = {"easter_egg_saitam_saitam_stage_2_0213"}
+	},
+	easter_egg_saitam_saitam_stage_2_0214 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 51, 78, 182},
+		a_size = {2688, 2688},
+		f_quad = {370, 6, 175, 139},
+		alias = {"easter_egg_saitam_saitam_stage_2_0215"}
+	},
+	easter_egg_saitam_saitam_stage_2_0216 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {76, 46, 75, 184},
+		a_size = {4096, 4096},
+		f_quad = {3686, 3549, 181, 142},
+		alias = {"easter_egg_saitam_saitam_stage_2_0217"}
+	},
+	easter_egg_saitam_saitam_stage_2_0218 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 42, 73, 183},
+		a_size = {2688, 2688},
+		f_quad = {6, 6, 176, 147},
+		alias = {"easter_egg_saitam_saitam_stage_2_0219"}
+	},
+	easter_egg_saitam_saitam_stage_2_0220 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 43, 69, 183},
+		a_size = {4096, 4096},
+		f_quad = {3877, 3394, 184, 146},
+		alias = {"easter_egg_saitam_saitam_stage_2_0221"}
+	},
+	easter_egg_saitam_saitam_stage_2_0222 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 37, 69, 183},
+		a_size = {4096, 4096},
+		f_quad = {3496, 3549, 184, 152},
+		alias = {"easter_egg_saitam_saitam_stage_2_0223"}
+	},
+	easter_egg_saitam_saitam_stage_2_0224 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 39, 69, 183},
+		a_size = {4096, 4096},
+		f_quad = {3496, 3707, 184, 150},
+		alias = {"easter_egg_saitam_saitam_stage_2_0225"}
+	},
+	easter_egg_saitam_saitam_stage_2_0226 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 40, 69, 183},
+		a_size = {4096, 4096},
+		f_quad = {3687, 3394, 184, 149},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0227 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 40, 68, 183},
+		a_size = {4096, 4096},
+		f_quad = {3496, 3394, 185, 149},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0228 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {79, 87, 68, 183},
+		a_size = {4096, 4096},
+		f_quad = {3690, 3263, 185, 102},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0229 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {57, 77, 129, 180},
+		a_size = {2688, 2688},
+		f_quad = {346, 1313, 146, 115},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0230 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {57, 77, 129, 180},
+		a_size = {2688, 2688},
+		f_quad = {346, 1434, 146, 115},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0231 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {41, 66, 129, 176},
+		a_size = {2688, 2688},
+		f_quad = {2130, 6, 162, 130},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0232 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {41, 66, 129, 176},
+		a_size = {2688, 2688},
+		f_quad = {2298, 6, 162, 130},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0233 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {21, 73, 124, 174},
+		a_size = {4096, 4096},
+		f_quad = {3497, 3263, 187, 125},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0234 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {29, 73, 124, 170},
+		a_size = {4096, 4096},
+		f_quad = {3873, 3549, 179, 129},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0235 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {72, 73, 124, 175},
+		a_size = {2688, 2688},
+		f_quad = {502, 1041, 136, 124},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0236 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {70, 73, 124, 174},
+		a_size = {2688, 2688},
+		f_quad = {2402, 318, 138, 125},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0237 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {69, 73, 124, 173},
+		a_size = {2688, 2688},
+		f_quad = {2112, 318, 139, 126},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0238 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {67, 73, 124, 172},
+		a_size = {2688, 2688},
+		f_quad = {947, 318, 141, 127},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0239 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {66, 73, 124, 172},
+		a_size = {2688, 2688},
+		f_quad = {799, 318, 142, 127},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0240 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {63, 73, 124, 171},
+		a_size = {2688, 2688},
+		f_quad = {346, 1749, 145, 128},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0241 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {61, 73, 124, 171},
+		a_size = {2688, 2688},
+		f_quad = {346, 1179, 147, 128},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0242 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {59, 90, 116, 170},
+		a_size = {2688, 2688},
+		f_quad = {841, 159, 157, 112},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0243 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {57, 90, 116, 170},
+		a_size = {2688, 2688},
+		f_quad = {349, 159, 159, 112},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0244 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {55, 113, 122, 170},
+		a_size = {2688, 2688},
+		f_quad = {1491, 159, 155, 89},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0245 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {74, 113, 122, 169},
+		a_size = {2688, 2688},
+		f_quad = {502, 1299, 136, 90},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0246 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {74, 68, 116, 170},
+		a_size = {2688, 2688},
+		f_quad = {651, 318, 142, 134},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0247 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 68, 116, 185},
+		a_size = {2688, 2688},
+		f_quad = {502, 2105, 133, 119},
+		alias = {}
+	},
+	easter_egg_saitam_saitam_stage_2_0248 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 40, 130, 185},
+		a_size = {2688, 2688},
+		f_quad = {646, 2055, 119, 147},
+		alias = {"easter_egg_saitam_saitam_stage_2_0249"}
+	},
+	easter_egg_saitam_saitam_stage_2_0250 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {79, 66, 136, 185},
+		a_size = {2688, 2688},
+		f_quad = {775, 1463, 117, 121},
+		alias = {"easter_egg_saitam_saitam_stage_2_0251"}
+	},
+	easter_egg_saitam_saitam_stage_2_0252 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 59, 130, 185},
+		a_size = {2688, 2688},
+		f_quad = {646, 2208, 119, 128},
+		alias = {"easter_egg_saitam_saitam_stage_2_0253"}
+	},
+	easter_egg_saitam_saitam_stage_2_0254 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 74, 133, 185},
+		a_size = {2688, 2688},
+		f_quad = {775, 1880, 116, 113},
+		alias = {"easter_egg_saitam_saitam_stage_2_0255"}
+	},
+	easter_egg_saitam_saitam_stage_2_0256 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 60, 135, 185},
+		a_size = {2688, 2688},
+		f_quad = {775, 2373, 114, 127},
+		alias = {"easter_egg_saitam_saitam_stage_2_0257"}
+	},
+	easter_egg_saitam_saitam_stage_2_0258 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 60, 110, 185},
+		a_size = {2688, 2688},
+		f_quad = {1822, 318, 139, 127},
+		alias = {"easter_egg_saitam_saitam_stage_2_0259"}
+	},
+	easter_egg_saitam_saitam_stage_2_0260 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 60, 116, 185},
+		a_size = {2688, 2688},
+		f_quad = {502, 1972, 133, 127},
+		alias = {"easter_egg_saitam_saitam_stage_2_0261"}
+	},
+	easter_egg_saitam_saitam_stage_2_0262 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 60, 123, 185},
+		a_size = {2688, 2688},
+		f_quad = {1710, 492, 126, 127},
+		alias = {"easter_egg_saitam_saitam_stage_2_0263", "easter_egg_saitam_saitam_stage_2_0264", "easter_egg_saitam_saitam_stage_2_0265", "easter_egg_saitam_saitam_stage_2_0266", "easter_egg_saitam_saitam_stage_2_0267", "easter_egg_saitam_saitam_stage_2_0268", "easter_egg_saitam_saitam_stage_2_0269"}
+	},
+	easter_egg_saitam_saitam_stage_2_0270 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 60, 123, 184},
+		a_size = {2688, 2688},
+		f_quad = {1578, 492, 126, 128},
+		alias = {"easter_egg_saitam_saitam_stage_2_0271"}
+	},
+	easter_egg_saitam_saitam_stage_2_0272 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 60, 123, 177},
+		a_size = {2688, 2688},
+		f_quad = {1314, 492, 126, 135},
+		alias = {"easter_egg_saitam_saitam_stage_2_0273"}
+	},
+	easter_egg_saitam_saitam_stage_2_0274 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 48, 128, 185},
+		a_size = {2688, 2688},
+		f_quad = {646, 1390, 121, 139},
+		alias = {"easter_egg_saitam_saitam_stage_2_0275"}
+	},
+	easter_egg_saitam_saitam_stage_2_0276 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 34, 126, 185},
+		a_size = {2688, 2688},
+		f_quad = {2364, 492, 123, 153},
+		alias = {"easter_egg_saitam_saitam_stage_2_0277"}
+	},
+	easter_egg_saitam_saitam_stage_2_0278 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 28, 129, 185},
+		a_size = {2688, 2688},
+		f_quad = {646, 1535, 120, 159},
+		alias = {"easter_egg_saitam_saitam_stage_2_0279"}
+	},
+	easter_egg_saitam_saitam_stage_2_0280 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 25, 137, 185},
+		a_size = {2688, 2688},
+		f_quad = {775, 2506, 112, 162},
+		alias = {"easter_egg_saitam_saitam_stage_2_0281"}
+	},
+	easter_egg_saitam_saitam_stage_2_0282 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 25, 149, 185},
+		a_size = {2688, 2688},
+		f_quad = {1436, 1013, 100, 162},
+		alias = {"easter_egg_saitam_saitam_stage_2_0283"}
+	},
+	easter_egg_saitam_saitam_stage_2_0284 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 20, 153, 185},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1412, 96, 167},
+		alias = {"easter_egg_saitam_saitam_stage_2_0285"}
+	},
+	easter_egg_saitam_saitam_stage_2_0286 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 21, 153, 185},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1585, 96, 166},
+		alias = {"easter_egg_saitam_saitam_stage_2_0287"}
+	},
+	easter_egg_saitam_saitam_stage_2_0288 = {
+		a_name = "go_stage132-2.dds",
+		size = {332, 372},
+		trim = {83, 22, 154, 185},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1757, 95, 165},
+		alias = {"easter_egg_saitam_saitam_stage_2_0289"}
+	},
+	easter_egg_saitam_saitam_stage_2_0290 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 372},
+		trim = {83, 168, 202, 185},
+		a_size = {4096, 4096},
+		f_quad = {1572, 1089, 47, 19},
+		alias = {}
+	},
+	sheepylava_crater_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 228},
+		trim = {21, 20, 52, 104},
+		a_size = {2688, 2688},
+		f_quad = {646, 852, 123, 104},
+		alias = {}
+	},
+	sheepylava_crater_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {196, 164},
+		trim = {20, 20, 28, 52},
+		a_size = {2688, 2688},
+		f_quad = {346, 1081, 148, 92},
+		alias = {}
+	},
+	sheepylava_crater_3_0001 = {
+		a_name = "go_stage132-1.dds",
+		size = {140, 204},
+		trim = {32, 61, 29, 94},
+		a_size = {4096, 4096},
+		f_quad = {3598, 4043, 79, 49},
+		alias = {"sheepylava_crater_3_0032", "sheepylava_crater_3_0033"}
+	},
+	sheepylava_crater_3_0002 = {
+		a_name = "go_stage132-1.dds",
+		size = {140, 204},
+		trim = {24, 66, 19, 95},
+		a_size = {4096, 4096},
+		f_quad = {3357, 2577, 97, 43},
+		alias = {"sheepylava_crater_3_0003"}
+	},
+	sheepylava_crater_3_0004 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {37, 51, 34, 93},
+		a_size = {2688, 2688},
+		f_quad = {1756, 2546, 69, 60},
+		alias = {"sheepylava_crater_3_0005"}
+	},
+	sheepylava_crater_3_0006 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 45, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1851, 1394, 79, 65},
+		alias = {"sheepylava_crater_3_0007"}
+	},
+	sheepylava_crater_3_0008 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 40, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1766, 1394, 79, 70},
+		alias = {"sheepylava_crater_3_0009"}
+	},
+	sheepylava_crater_3_0010 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 36, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1933, 1472, 79, 74},
+		alias = {"sheepylava_crater_3_0011"}
+	},
+	sheepylava_crater_3_0012 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 32, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1848, 1472, 79, 78},
+		alias = {"sheepylava_crater_3_0013"}
+	},
+	sheepylava_crater_3_0014 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 30, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1763, 1472, 79, 80},
+		alias = {"sheepylava_crater_3_0015"}
+	},
+	sheepylava_crater_3_0016 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 29, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1593, 1472, 79, 81},
+		alias = {"sheepylava_crater_3_0017"}
+	},
+	sheepylava_crater_3_0018 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 28, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2507, 79, 82},
+		alias = {"sheepylava_crater_3_0019"}
+	},
+	sheepylava_crater_3_0020 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 27, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2151, 79, 83},
+		alias = {"sheepylava_crater_3_0021"}
+	},
+	sheepylava_crater_3_0022 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 27, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2240, 79, 83},
+		alias = {"sheepylava_crater_3_0023"}
+	},
+	sheepylava_crater_3_0024 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 27, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2329, 79, 83},
+		alias = {"sheepylava_crater_3_0025"}
+	},
+	sheepylava_crater_3_0026 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 27, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2418, 79, 83},
+		alias = {"sheepylava_crater_3_0027"}
+	},
+	sheepylava_crater_3_0028 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 29, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {1678, 1472, 79, 81},
+		alias = {"sheepylava_crater_3_0029"}
+	},
+	sheepylava_crater_3_0030 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 204},
+		trim = {32, 37, 29, 94},
+		a_size = {2688, 2688},
+		f_quad = {2018, 1472, 79, 73},
+		alias = {"sheepylava_crater_3_0031"}
+	},
+	sheepylava_sheepy_0001 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {641, 408, 683, 405},
+		a_size = {2688, 2688},
+		f_quad = {1966, 1125, 76, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0002 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {639, 410, 684, 405},
+		a_size = {4096, 4096},
+		f_quad = {3673, 2752, 77, 49},
+		alias = {"sheepylava_sheepy_0003"}
+	},
+	sheepylava_sheepy_0004 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {640, 409, 684, 405},
+		a_size = {2688, 2688},
+		f_quad = {2269, 1394, 76, 50},
+		alias = {"sheepylava_sheepy_0005"}
+	},
+	sheepylava_sheepy_0006 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {642, 407, 686, 405},
+		a_size = {2688, 2688},
+		f_quad = {105, 2635, 72, 52},
+		alias = {"sheepylava_sheepy_0007"}
+	},
+	sheepylava_sheepy_0008 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {635, 414, 679, 405},
+		a_size = {2688, 2688},
+		f_quad = {2294, 869, 86, 45},
+		alias = {"sheepylava_sheepy_0009"}
+	},
+	sheepylava_sheepy_0010 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {652, 392, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2167, 1965, 57, 67},
+		alias = {"sheepylava_sheepy_0011"}
+	},
+	sheepylava_sheepy_0012 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {647, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1906, 1975, 62, 61},
+		alias = {"sheepylava_sheepy_0013"}
+	},
+	sheepylava_sheepy_0014 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {649, 398, 691, 405},
+		a_size = {4096, 4096},
+		f_quad = {4036, 2457, 60, 61},
+		alias = {"sheepylava_sheepy_0015"}
+	},
+	sheepylava_sheepy_0016 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {650, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2239, 1898, 59, 61},
+		alias = {"sheepylava_sheepy_0017"}
+	},
+	sheepylava_sheepy_0018 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {649, 398, 691, 405},
+		a_size = {4096, 4096},
+		f_quad = {4036, 2524, 60, 61},
+		alias = {"sheepylava_sheepy_0019"}
+	},
+	sheepylava_sheepy_0020 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {648, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2469, 61, 61},
+		alias = {"sheepylava_sheepy_0021"}
+	},
+	sheepylava_sheepy_0022 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {648, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2536, 61, 61},
+		alias = {"sheepylava_sheepy_0023"}
+	},
+	sheepylava_sheepy_0024 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {649, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2041, 1898, 60, 61},
+		alias = {"sheepylava_sheepy_0025"}
+	},
+	sheepylava_sheepy_0026 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {649, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2107, 1898, 60, 61},
+		alias = {"sheepylava_sheepy_0027"}
+	},
+	sheepylava_sheepy_0028 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {648, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2603, 61, 61},
+		alias = {"sheepylava_sheepy_0029"}
+	},
+	sheepylava_sheepy_0030 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {648, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1974, 1898, 61, 61},
+		alias = {"sheepylava_sheepy_0031"}
+	},
+	sheepylava_sheepy_0032 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {647, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2042, 62, 61},
+		alias = {"sheepylava_sheepy_0033"}
+	},
+	sheepylava_sheepy_0034 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {652, 392, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2230, 1965, 57, 67},
+		alias = {"sheepylava_sheepy_0035"}
+	},
+	sheepylava_sheepy_0036 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {635, 414, 679, 405},
+		a_size = {2688, 2688},
+		f_quad = {1010, 2623, 86, 45},
+		alias = {"sheepylava_sheepy_0037"}
+	},
+	sheepylava_sheepy_0038 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {641, 408, 683, 405},
+		a_size = {2688, 2688},
+		f_quad = {2178, 1123, 76, 51},
+		alias = {"sheepylava_sheepy_0039", "sheepylava_sheepy_0040", "sheepylava_sheepy_0041", "sheepylava_sheepy_0042", "sheepylava_sheepy_0043"}
+	},
+	sheepylava_sheepy_0044 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {647, 401, 688, 405},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2468, 65, 58},
+		alias = {"sheepylava_sheepy_0045"}
+	},
+	sheepylava_sheepy_0046 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {656, 408, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2632, 2048, 53, 51},
+		alias = {"sheepylava_sheepy_0047"}
+	},
+	sheepylava_sheepy_0048 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 408, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2217, 2620, 49, 51},
+		alias = {"sheepylava_sheepy_0049"}
+	},
+	sheepylava_sheepy_0050 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 403, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2217, 2558, 49, 56},
+		alias = {"sheepylava_sheepy_0051"}
+	},
+	sheepylava_sheepy_0052 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {657, 408, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2136, 53, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0053 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {656, 410, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2633, 733, 55, 49},
+		alias = {"sheepylava_sheepy_0054"}
+	},
+	sheepylava_sheepy_0055 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {657, 409, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2336, 54, 50},
+		alias = {"sheepylava_sheepy_0056"}
+	},
+	sheepylava_sheepy_0057 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {657, 407, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2136, 52, 52},
+		alias = {"sheepylava_sheepy_0058"}
+	},
+	sheepylava_sheepy_0059 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {651, 415, 686, 405},
+		a_size = {4096, 4096},
+		f_quad = {4033, 184, 63, 44},
+		alias = {"sheepylava_sheepy_0060"}
+	},
+	sheepylava_sheepy_0061 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {664, 405, 691, 405},
+		a_size = {4096, 4096},
+		f_quad = {4051, 3885, 45, 54},
+		alias = {"sheepylava_sheepy_0062"}
+	},
+	sheepylava_sheepy_0063 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {664, 409, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2433, 2250, 46, 50},
+		alias = {
+			"sheepylava_sheepy_0064",
+			"sheepylava_sheepy_0065",
+			"sheepylava_sheepy_0066",
+			"sheepylava_sheepy_0067",
+			"sheepylava_sheepy_0068",
+			"sheepylava_sheepy_0069",
+			"sheepylava_sheepy_0070",
+			"sheepylava_sheepy_0071",
+			"sheepylava_sheepy_0072",
+			"sheepylava_sheepy_0073",
+			"sheepylava_sheepy_0074"
+		}
+	},
+	sheepylava_sheepy_0075 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 417, 685, 405},
+		a_size = {2688, 2688},
+		f_quad = {2479, 1965, 56, 42},
+		alias = {"sheepylava_sheepy_0076"}
+	},
+	sheepylava_sheepy_0077 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {649, 376, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2223, 61, 83},
+		alias = {"sheepylava_sheepy_0078"}
+	},
+	sheepylava_sheepy_0079 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {640, 373, 687, 405},
+		a_size = {2688, 2688},
+		f_quad = {2253, 1559, 73, 86},
+		alias = {"sheepylava_sheepy_0080"}
+	},
+	sheepylava_sheepy_0081 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {639, 373, 687, 405},
+		a_size = {2688, 2688},
+		f_quad = {2173, 1559, 74, 86},
+		alias = {"sheepylava_sheepy_0082"}
+	},
+	sheepylava_sheepy_0083 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {638, 375, 687, 405},
+		a_size = {2688, 2688},
+		f_quad = {2011, 1559, 75, 84},
+		alias = {"sheepylava_sheepy_0084"}
+	},
+	sheepylava_sheepy_0085 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {638, 377, 687, 405},
+		a_size = {2688, 2688},
+		f_quad = {2092, 1559, 75, 82},
+		alias = {"sheepylava_sheepy_0086"}
+	},
+	sheepylava_sheepy_0087 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {639, 378, 687, 405},
+		a_size = {2688, 2688},
+		f_quad = {2187, 1472, 74, 81},
+		alias = {"sheepylava_sheepy_0088"}
+	},
+	sheepylava_sheepy_0089 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {642, 392, 684, 405},
+		a_size = {2688, 2688},
+		f_quad = {2511, 1394, 74, 67},
+		alias = {"sheepylava_sheepy_0090"}
+	},
+	sheepylava_sheepy_0091 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {649, 392, 691, 405},
+		a_size = {4096, 4096},
+		f_quad = {4036, 2384, 60, 67},
+		alias = {"sheepylava_sheepy_0092"}
+	},
+	sheepylava_sheepy_0093 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {645, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2532, 64, 61},
+		alias = {"sheepylava_sheepy_0094", "sheepylava_sheepy_0095", "sheepylava_sheepy_0096", "sheepylava_sheepy_0097", "sheepylava_sheepy_0098", "sheepylava_sheepy_0099", "sheepylava_sheepy_0100"}
+	},
+	sheepylava_sheepy_0101 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {638, 404, 688, 405},
+		a_size = {2688, 2688},
+		f_quad = {2347, 1472, 74, 55},
+		alias = {"sheepylava_sheepy_0102"}
+	},
+	sheepylava_sheepy_0103 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {640, 368, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2065, 1655, 69, 91},
+		alias = {"sheepylava_sheepy_0104"}
+	},
+	sheepylava_sheepy_0105 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {651, 371, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2342, 58, 88},
+		alias = {"sheepylava_sheepy_0106"}
+	},
+	sheepylava_sheepy_0107 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {643, 361, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2622, 492, 66, 98},
+		alias = {"sheepylava_sheepy_0108"}
+	},
+	sheepylava_sheepy_0109 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {642, 347, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2053, 1755, 67, 112},
+		alias = {"sheepylava_sheepy_0110"}
+	},
+	sheepylava_sheepy_0111 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {642, 331, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1907, 1755, 67, 128},
+		alias = {"sheepylava_sheepy_0112"}
+	},
+	sheepylava_sheepy_0113 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {636, 323, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1676, 2264, 73, 136},
+		alias = {"sheepylava_sheepy_0114"}
+	},
+	sheepylava_sheepy_0115 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {636, 319, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1676, 2118, 73, 140},
+		alias = {"sheepylava_sheepy_0116"}
+	},
+	sheepylava_sheepy_0117 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {637, 314, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1756, 1922, 72, 145},
+		alias = {"sheepylava_sheepy_0118"}
+	},
+	sheepylava_sheepy_0119 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {637, 298, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1756, 1755, 72, 161},
+		alias = {"sheepylava_sheepy_0120"}
+	},
+	sheepylava_sheepy_0121 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {636, 292, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1676, 1945, 73, 167},
+		alias = {"sheepylava_sheepy_0122"}
+	},
+	sheepylava_sheepy_0123 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {635, 291, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1676, 1655, 74, 168},
+		alias = {"sheepylava_sheepy_0124"}
+	},
+	sheepylava_sheepy_0125 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {642, 322, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1834, 1755, 67, 137},
+		alias = {"sheepylava_sheepy_0126"}
+	},
+	sheepylava_sheepy_0127 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {633, 338, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1593, 1779, 76, 121},
+		alias = {"sheepylava_sheepy_0128"}
+	},
+	sheepylava_sheepy_0129 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {628, 342, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2139, 81, 117},
+		alias = {"sheepylava_sheepy_0130"}
+	},
+	sheepylava_sheepy_0131 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {639, 352, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1756, 2297, 70, 107},
+		alias = {"sheepylava_sheepy_0132"}
+	},
+	sheepylava_sheepy_0133 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {629, 367, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2508, 80, 92},
+		alias = {"sheepylava_sheepy_0134"}
+	},
+	sheepylava_sheepy_0135 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {624, 356, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2603, 159, 85, 103},
+		alias = {"sheepylava_sheepy_0136"}
+	},
+	sheepylava_sheepy_0137 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {623, 346, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1394, 86, 113},
+		alias = {"sheepylava_sheepy_0138"}
+	},
+	sheepylava_sheepy_0139 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {622, 337, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1320, 2552, 87, 122},
+		alias = {"sheepylava_sheepy_0140"}
+	},
+	sheepylava_sheepy_0141 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {620, 331, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1320, 1708, 89, 128},
+		alias = {"sheepylava_sheepy_0142"}
+	},
+	sheepylava_sheepy_0143 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {620, 324, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1320, 1567, 89, 135},
+		alias = {"sheepylava_sheepy_0144"}
+	},
+	sheepylava_sheepy_0145 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {620, 321, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {1320, 1423, 89, 138},
+		alias = {"sheepylava_sheepy_0146"}
+	},
+	sheepylava_sheepy_0147 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {620, 319, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {1221, 1971, 91, 140},
+		alias = {"sheepylava_sheepy_0148"}
+	},
+	sheepylava_sheepy_0149 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {620, 317, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2599, 1013, 89, 142},
+		alias = {"sheepylava_sheepy_0150"}
+	},
+	sheepylava_sheepy_0151 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {621, 318, 687, 405},
+		a_size = {2688, 2688},
+		f_quad = {1221, 1604, 92, 141},
+		alias = {"sheepylava_sheepy_0152"}
+	},
+	sheepylava_sheepy_0153 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 408, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2566, 2136, 51, 51},
+		alias = {"sheepylava_sheepy_0154"}
+	},
+	sheepylava_sheepy_0155 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {658, 410, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2193, 53, 49},
+		alias = {}
+	},
+	sheepylava_sheepy_0156 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 410, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2392, 2136, 52, 49},
+		alias = {}
+	},
+	sheepylava_sheepy_0157 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 409, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2218, 2136, 52, 50},
+		alias = {}
+	},
+	sheepylava_sheepy_0158 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 409, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2276, 2136, 52, 50},
+		alias = {}
+	},
+	sheepylava_sheepy_0159 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 408, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2623, 2136, 51, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0160 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 408, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2381, 51, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0161 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 408, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2550, 50, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0162 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 408, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2250, 49, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0163 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 408, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2607, 50, 51},
+		alias = {}
+	},
+	sheepylava_sheepy_0164 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {660, 409, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2217, 2194, 50, 50},
+		alias = {}
+	},
+	sheepylava_sheepy_0165 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 409, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2438, 51, 50},
+		alias = {}
+	},
+	sheepylava_sheepy_0166 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 409, 690, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2494, 51, 50},
+		alias = {}
+	},
+	sheepylava_sheepy_0167 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 409, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2334, 2136, 52, 50},
+		alias = {}
+	},
+	sheepylava_sheepy_0168 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 410, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2450, 2136, 52, 49},
+		alias = {}
+	},
+	sheepylava_sheepy_0169 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {659, 410, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {2508, 2136, 52, 49},
+		alias = {}
+	},
+	sheepylava_sheepy_0170 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {658, 410, 688, 405},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2392, 54, 49},
+		alias = {"sheepylava_sheepy_0171"}
+	},
+	sheepylava_sheepy_0172 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {654, 416, 684, 405},
+		a_size = {2688, 2688},
+		f_quad = {2033, 110, 62, 43},
+		alias = {"sheepylava_sheepy_0173"}
+	},
+	sheepylava_sheepy_0174 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {663, 389, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2554, 46, 70},
+		alias = {"sheepylava_sheepy_0175"}
+	},
+	sheepylava_sheepy_0176 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {658, 398, 691, 405},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2194, 51, 61},
+		alias = {"sheepylava_sheepy_0177", "sheepylava_sheepy_0178", "sheepylava_sheepy_0179", "sheepylava_sheepy_0180", "sheepylava_sheepy_0181"}
+	},
+	sheepylava_sheepy_0182 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {655, 402, 689, 405},
+		a_size = {2688, 2688},
+		f_quad = {616, 253, 56, 57},
+		alias = {"sheepylava_sheepy_0183"}
+	},
+	sheepylava_sheepy_0184 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {652, 390, 695, 418},
+		a_size = {2688, 2688},
+		f_quad = {2514, 2048, 53, 56},
+		alias = {"sheepylava_sheepy_0185"}
+	},
+	sheepylava_sheepy_0186 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {654, 383, 706, 434},
+		a_size = {4096, 4096},
+		f_quad = {1806, 4039, 40, 47},
+		alias = {"sheepylava_sheepy_0187"}
+	},
+	sheepylava_sheepy_0188 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {655, 387, 706, 440},
+		a_size = {2688, 2688},
+		f_quad = {2513, 2413, 39, 37},
+		alias = {"sheepylava_sheepy_0189", "sheepylava_sheepy_0190", "sheepylava_sheepy_0191", "sheepylava_sheepy_0198", "sheepylava_sheepy_0199"}
+	},
+	sheepylava_sheepy_0192 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {652, 387, 705, 434},
+		a_size = {2688, 2688},
+		f_quad = {597, 2639, 43, 43},
+		alias = {"sheepylava_sheepy_0193", "sheepylava_sheepy_0194", "sheepylava_sheepy_0195", "sheepylava_sheepy_0196", "sheepylava_sheepy_0197"}
+	},
+	sheepylava_sheepy_0200 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {652, 384, 712, 444},
+		a_size = {2688, 2688},
+		f_quad = {2112, 450, 36, 36},
+		alias = {"sheepylava_sheepy_0201"}
+	},
+	sheepylava_sheepy_0202 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {653, 391, 721, 447},
+		a_size = {2688, 2688},
+		f_quad = {584, 126, 26, 26},
+		alias = {"sheepylava_sheepy_0203"}
+	},
+	sheepylava_sheepy_0204 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {611, 258, 695, 452},
+		a_size = {4096, 4096},
+		f_quad = {4002, 242, 94, 154},
+		alias = {"sheepylava_sheepy_0205"}
+	},
+	sheepylava_sheepy_0206 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {608, 258, 692, 452},
+		a_size = {2688, 2688},
+		f_quad = {1542, 1013, 100, 154},
+		alias = {"sheepylava_sheepy_0207"}
+	},
+	sheepylava_sheepy_0208 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {608, 254, 691, 452},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1753, 101, 158},
+		alias = {"sheepylava_sheepy_0209"}
+	},
+	sheepylava_sheepy_0210 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {615, 249, 698, 452},
+		a_size = {2688, 2688},
+		f_quad = {1320, 2383, 87, 163},
+		alias = {"sheepylava_sheepy_0211"}
+	},
+	sheepylava_sheepy_0212 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {609, 248, 692, 452},
+		a_size = {2688, 2688},
+		f_quad = {2390, 1013, 99, 164},
+		alias = {"sheepylava_sheepy_0213"}
+	},
+	sheepylava_sheepy_0214 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {604, 248, 686, 451},
+		a_size = {2688, 2688},
+		f_quad = {1718, 733, 110, 165},
+		alias = {"sheepylava_sheepy_0215"}
+	},
+	sheepylava_sheepy_0216 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {598, 249, 681, 443},
+		a_size = {2688, 2688},
+		f_quad = {646, 1212, 121, 172},
+		alias = {"sheepylava_sheepy_0217"}
+	},
+	sheepylava_sheepy_0218 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {594, 254, 655, 452},
+		a_size = {2688, 2688},
+		f_quad = {184, 2487, 151, 158},
+		alias = {"sheepylava_sheepy_0219"}
+	},
+	sheepylava_sheepy_0220 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {593, 237, 624, 453},
+		a_size = {4096, 4096},
+		f_quad = {3496, 3863, 183, 174},
+		alias = {"sheepylava_sheepy_0221"}
+	},
+	sheepylava_sheepy_0222 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {652, 201, 588, 495},
+		a_size = {2688, 2688},
+		f_quad = {6, 1247, 160, 168},
+		alias = {"sheepylava_sheepy_0223"}
+	},
+	sheepylava_sheepy_0224 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {653, 170, 548, 496},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3233, 199, 198},
+		alias = {"sheepylava_sheepy_0225"}
+	},
+	sheepylava_sheepy_0226 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {651, 141, 505, 498},
+		a_size = {4096, 4096},
+		f_quad = {2418, 2153, 244, 225},
+		alias = {"sheepylava_sheepy_0227"}
+	},
+	sheepylava_sheepy_0228 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {652, 116, 462, 497},
+		a_size = {4096, 4096},
+		f_quad = {1531, 3661, 286, 251},
+		alias = {"sheepylava_sheepy_0229"}
+	},
+	sheepylava_sheepy_0230 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {698, 95, 418, 544},
+		a_size = {4096, 4096},
+		f_quad = {2432, 1613, 284, 225},
+		alias = {"sheepylava_sheepy_0231"}
+	},
+	sheepylava_sheepy_0232 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {699, 75, 369, 543},
+		a_size = {4096, 4096},
+		f_quad = {1877, 1116, 332, 246},
+		alias = {"sheepylava_sheepy_0233"}
+	},
+	sheepylava_sheepy_0234 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {751, 59, 321, 593},
+		a_size = {4096, 4096},
+		f_quad = {2887, 1116, 328, 212},
+		alias = {"sheepylava_sheepy_0235"}
+	},
+	sheepylava_sheepy_0236 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {752, 46, 271, 592},
+		a_size = {4096, 4096},
+		f_quad = {447, 1656, 377, 226},
+		alias = {"sheepylava_sheepy_0237"}
+	},
+	sheepylava_sheepy_0238 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {851, 35, 222, 652},
+		a_size = {4096, 4096},
+		f_quad = {3221, 1116, 327, 177},
+		alias = {"sheepylava_sheepy_0239"}
+	},
+	sheepylava_sheepy_0240 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {852, 28, 173, 651},
+		a_size = {4096, 4096},
+		f_quad = {447, 1888, 375, 185},
+		alias = {"sheepylava_sheepy_0241"}
+	},
+	sheepylava_sheepy_0242 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {947, 22, 122, 710},
+		a_size = {4096, 4096},
+		f_quad = {1537, 1224, 331, 132},
+		alias = {"sheepylava_sheepy_0243"}
+	},
+	sheepylava_sheepy_0244 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {948, 20, 71, 709},
+		a_size = {4096, 4096},
+		f_quad = {6, 3909, 381, 135},
+		alias = {"sheepylava_sheepy_0245"}
+	},
+	sheepylava_sheepy_0246 = {
+		a_name = "go_stage132-1.dds",
+		size = {1400, 864},
+		trim = {1046, 19, 20, 743},
+		a_size = {4096, 4096},
+		f_quad = {1537, 1116, 334, 102},
+		alias = {"sheepylava_sheepy_0247"}
+	},
+	sheepylava_sheepy_0248 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {1044, 78, 315, 745},
+		a_size = {2688, 2688},
+		f_quad = {2564, 2365, 41, 41},
+		alias = {"sheepylava_sheepy_0249"}
+	},
+	sheepylava_sheepy_0250 = {
+		a_name = "go_stage132-2.dds",
+		size = {1400, 864},
+		trim = {1045, 77, 311, 744},
+		a_size = {2688, 2688},
+		f_quad = {2635, 2250, 44, 43},
+		alias = {"sheepylava_sheepy_0251"}
+	},
+	stage_31_sign_decal_l_asst_sign_a_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {172, 135},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {912, 6, 172, 135},
+		alias = {"stage_31_sign_decal_r_asst_sign_a_01"}
+	},
+	stage_31_sign_decal_l_asst_sign_a_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {172, 135},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1267, 6, 169, 131},
+		alias = {"stage_31_sign_decal_r_asst_sign_a_02"}
+	},
+	stage_31_sign_decal_l_asst_sign_b_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {226, 157},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2901, 2153, 226, 157},
+		alias = {"stage_31_sign_decal_r_asst_sign_b_01"}
+	},
+	stage_31_sign_decal_l_asst_sign_b_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {226, 157},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3825, 2153, 224, 155},
+		alias = {"stage_31_sign_decal_r_asst_sign_b_02"}
+	},
+	stage_31_sign_decal_l_asst_sign_c_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {153, 182},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {184, 1021, 153, 182},
+		alias = {"stage_31_sign_decal_r_asst_sign_c_01"}
+	},
+	stage_31_sign_decal_l_asst_sign_c_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {153, 182},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {184, 2136, 151, 179},
+		alias = {"stage_31_sign_decal_r_asst_sign_c_02"}
+	},
+	stage_31_sign_decal_l_asst_wozniac_decal_02_buff = {
+		a_name = "go_stage132-2.dds",
+		size = {164, 164},
+		trim = {1, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {6, 1081, 161, 160},
+		alias = {"stage_31_sign_decal_r_asst_wozniac_decal_02_buff"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion1_b_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 118},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1928, 95, 115},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion1_b_02", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion1_b_02", "teen_redboy_asst_wukong_tredboy_absorb_explosion1_b_02"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 93},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2493, 637, 106, 89},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_01"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 115},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 805, 137, 112},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_02"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {142, 131},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1532, 318, 139, 128},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_03"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {123, 120},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {646, 1700, 120, 117},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_04"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 79},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2067, 924, 99, 75},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_05", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_05", "teen_redboy_asst_wukong_tredboy_absorb_explosion_05"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_00 = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 72},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2187, 1394, 76, 69},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_00", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_00"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {120, 133},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {646, 2530, 117, 130},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_03", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_03", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_03"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {128, 139},
+		trim = {1, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1973, 492, 125, 135},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_04", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_04", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_04"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {128, 146},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1050, 492, 126, 143},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_05", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_05", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_05"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {127, 140},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2234, 492, 124, 137},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_06", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_06", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_06"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {126, 142},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2493, 492, 123, 139},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_07", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_07", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_07"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {123, 101},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1446, 628, 120, 98},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_08", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_08", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_08"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 98},
+		trim = {2, 2, 0, 1},
+		a_size = {2688, 2688},
+		f_quad = {1578, 626, 119, 95},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_09", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_09", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_09"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_b_10 = {
+		a_name = "go_stage132-1.dds",
+		size = {109, 61},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2893, 4037, 107, 58},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_b_10", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_b_10", "teen_redboy_asst_wukong_tredboy_absorb_explosion_b_10"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_00 = {
+		a_name = "go_stage132-2.dds",
+		size = {40, 36},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1745, 117, 37, 32},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_00", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_00"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {81, 61},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2104, 1394, 77, 58},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_01", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_01"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {104, 86},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 924, 101, 83},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_02", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_02", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_02"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {118, 112},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {775, 2259, 115, 108},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_03", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_03", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_03"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {130, 139},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1182, 492, 126, 136},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_04", "teen_redboy_B_asst_wukong_tredboy_absorb", "teen_redboy_asst_wukong_tredboy_absorb"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {139, 126},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {502, 1171, 136, 122},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_05", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_05", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_05"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {141, 124},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 678, 137, 121},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_06", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_06", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_06"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {138, 124},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {502, 1763, 135, 120},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_07", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_07", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_07"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {136, 90},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 2305, 132, 87},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_08", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_08", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_08"}
+	},
+	stage_32_fireball_l_asst_atomic_car_explosion_c_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {87, 74},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2330, 1295, 84, 71},
+		alias = {"stage_32_fireball_r_asst_atomic_car_explosion_c_09", "teen_redboy_B_asst_wukong_tredboy_absorb_explosion_c_09", "teen_redboy_asst_wukong_tredboy_absorb_explosion_c_09"}
+	},
+	stage_32_fireball_l_asst_atomic_dust_all = {
+		a_name = "go_stage132-1.dds",
+		size = {277, 120},
+		trim = {10, 14, 8, 9},
+		a_size = {4096, 4096},
+		f_quad = {2462, 882, 259, 97},
+		alias = {"stage_32_fireball_r_asst_atomic_dust_all"}
+	},
+	stage_32_fireball_l_asst_ball_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {367, 387},
+		trim = {45, 66, 53, 52},
+		a_size = {4096, 4096},
+		f_quad = {2698, 1862, 269, 269},
+		alias = {"stage_32_fireball_r_asst_ball_02"}
+	},
+	stage_32_fireball_l_asst_fire_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 312},
+		trim = {30, 12, 18, 10},
+		a_size = {4096, 4096},
+		f_quad = {1852, 3671, 273, 290},
+		alias = {"stage_32_fireball_r_asst_fire_01"}
+	},
+	stage_32_fireball_l_asst_fire_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 331},
+		trim = {15, 24, 34, 14},
+		a_size = {4096, 4096},
+		f_quad = {2140, 2153, 272, 293},
+		alias = {"stage_32_fireball_r_asst_fire_02"}
+	},
+	stage_32_fireball_l_asst_fire_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 325},
+		trim = {15, 14, 30, 11},
+		a_size = {4096, 4096},
+		f_quad = {1852, 2768, 276, 300},
+		alias = {"stage_32_fireball_r_asst_fire_03"}
+	},
+	stage_32_fireball_l_asst_fire_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 327},
+		trim = {15, 6, 31, 13},
+		a_size = {4096, 4096},
+		f_quad = {1852, 3357, 275, 308},
+		alias = {"stage_32_fireball_r_asst_fire_04"}
+	},
+	stage_32_fireball_l_asst_fire_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 333},
+		trim = {15, 1, 25, 17},
+		a_size = {4096, 4096},
+		f_quad = {1852, 2164, 281, 315},
+		alias = {"stage_32_fireball_r_asst_fire_05"}
+	},
+	stage_32_fireball_l_asst_fire_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 335},
+		trim = {15, 0, 20, 15},
+		a_size = {4096, 4096},
+		f_quad = {1531, 3060, 286, 320},
+		alias = {"stage_32_fireball_r_asst_fire_06"}
+	},
+	stage_32_fireball_l_asst_fire_07 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 339},
+		trim = {15, 0, 20, 17},
+		a_size = {4096, 4096},
+		f_quad = {1531, 2732, 286, 322},
+		alias = {"stage_32_fireball_r_asst_fire_07"}
+	},
+	stage_32_fireball_l_asst_fire_08 = {
+		a_name = "go_stage132-1.dds",
+		size = {321, 312},
+		trim = {15, 17, 33, 10},
+		a_size = {4096, 4096},
+		f_quad = {2140, 1862, 273, 285},
+		alias = {"stage_32_fireball_r_asst_fire_08"}
+	},
+	stage_32_fireball_l_asst_fire_back_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {256, 266},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2140, 2701, 253, 263},
+		alias = {"stage_32_fireball_r_asst_fire_back_01"}
+	},
+	stage_32_fireball_l_asst_fire_back_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {254, 248},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2140, 3402, 250, 245},
+		alias = {"stage_32_fireball_r_asst_fire_back_02"}
+	},
+	stage_32_fireball_l_asst_fire_back_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {257, 246},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2140, 2452, 254, 243},
+		alias = {"stage_32_fireball_r_asst_fire_back_03"}
+	},
+	stage_32_fireball_l_asst_fire_back_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {256, 246},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2140, 2970, 253, 243},
+		alias = {"stage_32_fireball_r_asst_fire_back_04"}
+	},
+	stage_32_fireball_l_asst_fire_cicle = {
+		a_name = "go_stage132-1.dds",
+		size = {251, 177},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {2140, 3219, 251, 177},
+		alias = {"stage_32_fireball_r_asst_fire_cicle"}
+	},
+	stage_32_fireball_l_asst_fire_intro_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {146, 152},
+		trim = {49, 29, 49, 35},
+		a_size = {4096, 4096},
+		f_quad = {393, 3909, 48, 88},
+		alias = {"stage_32_fireball_r_asst_fire_intro_01"}
+	},
+	stage_32_fireball_l_asst_fire_intro_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {146, 152},
+		trim = {17, 25, 36, 25},
+		a_size = {4096, 4096},
+		f_quad = {4002, 574, 93, 102},
+		alias = {"stage_32_fireball_r_asst_fire_intro_02"}
+	},
+	stage_32_fireball_l_asst_fire_intro_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {104, 102},
+		trim = {16, 6, 10, 16},
+		a_size = {2688, 2688},
+		f_quad = {2103, 1472, 78, 80},
+		alias = {"stage_32_fireball_r_asst_fire_intro_03"}
+	},
+	stage_32_fireball_l_asst_fire_intro_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {109, 133},
+		trim = {17, 6, 19, 14},
+		a_size = {2688, 2688},
+		f_quad = {1676, 2406, 73, 113},
+		alias = {"stage_32_fireball_r_asst_fire_intro_04"}
+	},
+	stage_32_fireball_l_asst_fire_intro_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {174, 149},
+		trim = {22, 19, 23, 15},
+		a_size = {2688, 2688},
+		f_quad = {781, 492, 129, 115},
+		alias = {"stage_32_fireball_r_asst_fire_intro_05"}
+	},
+	stage_32_fireball_l_asst_fire_intro_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {185, 187},
+		trim = {19, 16, 42, 19},
+		a_size = {2688, 2688},
+		f_quad = {2104, 492, 124, 152},
+		alias = {"stage_32_fireball_r_asst_fire_intro_06"}
+	},
+	stage_32_fireball_l_asst_fire_intro_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {154, 186},
+		trim = {23, 14, 15, 19},
+		a_size = {2688, 2688},
+		f_quad = {775, 1590, 116, 153},
+		alias = {"stage_32_fireball_r_asst_fire_intro_07"}
+	},
+	stage_32_fireball_l_asst_fire_intro_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {155, 180},
+		trim = {31, 24, 21, 30},
+		a_size = {2688, 2688},
+		f_quad = {899, 1909, 103, 126},
+		alias = {"stage_32_fireball_r_asst_fire_intro_08"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {52, 95},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {4044, 3697, 52, 95},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_01"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {67, 117},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1980, 1755, 67, 117},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_02"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {209, 218},
+		trim = {28, 33, 42, 59},
+		a_size = {2688, 2688},
+		f_quad = {1967, 318, 139, 126},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_03"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {277, 288},
+		trim = {39, 67, 17, 61},
+		a_size = {4096, 4096},
+		f_quad = {3584, 2384, 221, 160},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_04"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {375, 390},
+		trim = {32, 38, 21, 71},
+		a_size = {4096, 4096},
+		f_quad = {1194, 3717, 322, 281},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_01"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {375, 390},
+		trim = {33, 24, 0, 58},
+		a_size = {4096, 4096},
+		f_quad = {835, 3446, 342, 308},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_02"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {378, 390},
+		trim = {33, 28, 0, 60},
+		a_size = {4096, 4096},
+		f_quad = {835, 2305, 345, 302},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_03"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {375, 390},
+		trim = {34, 30, 10, 61},
+		a_size = {4096, 4096},
+		f_quad = {1194, 1403, 331, 299},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_04"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {375, 390},
+		trim = {33, 32, 2, 64},
+		a_size = {4096, 4096},
+		f_quad = {835, 3760, 340, 294},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_05"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {375, 390},
+		trim = {32, 37, 0, 68},
+		a_size = {4096, 4096},
+		f_quad = {835, 2613, 343, 285},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_06"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_07 = {
+		a_name = "go_stage132-1.dds",
+		size = {394, 390},
+		trim = {33, 40, 0, 71},
+		a_size = {4096, 4096},
+		f_quad = {447, 3570, 361, 279},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_07"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_08 = {
+		a_name = "go_stage132-1.dds",
+		size = {402, 390},
+		trim = {32, 40, 0, 71},
+		a_size = {4096, 4096},
+		f_quad = {447, 2079, 370, 279},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_08"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_09 = {
+		a_name = "go_stage132-1.dds",
+		size = {805, 777},
+		trim = {0, 148, 172, 195},
+		a_size = {4096, 4096},
+		f_quad = {2728, 442, 633, 434},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_09"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_10 = {
+		a_name = "go_stage132-1.dds",
+		size = {399, 390},
+		trim = {0, 88, 68, 128},
+		a_size = {4096, 4096},
+		f_quad = {2215, 1116, 331, 174},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_10"}
+	},
+	stage_32_fireball_l_asst_fire_teleport_fireball_11 = {
+		a_name = "go_stage132-2.dds",
+		size = {100, 79},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1225, 924, 100, 79},
+		alias = {"stage_32_fireball_r_asst_fire_teleport_fireball_11"}
+	},
+	stage_32_fireball_l_asst_fuego = {
+		a_name = "go_stage132-1.dds",
+		size = {269, 159},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1531, 3918, 269, 159},
+		alias = {"stage_32_fireball_r_asst_fuego"}
+	},
+	stage_32_fireball_l_asst_samadhi_shadow = {
+		a_name = "go_stage132-1.dds",
+		size = {232, 118},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {3197, 882, 228, 114},
+		alias = {"stage_32_fireball_r_asst_samadhi_shadow"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_back01 = {
+		a_name = "go_stage132-2.dds",
+		size = {165, 101},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1961, 6, 163, 98},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_back01"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_back02 = {
+		a_name = "go_stage132-1.dds",
+		size = {263, 128},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1723, 894, 261, 125},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_back02"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_back03 = {
+		a_name = "go_stage132-1.dds",
+		size = {271, 117},
+		trim = {2, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1852, 3967, 268, 115},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_back03"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_back04 = {
+		a_name = "go_stage132-1.dds",
+		size = {312, 117},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {2552, 1246, 308, 113},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_back04"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_back05 = {
+		a_name = "go_stage132-1.dds",
+		size = {302, 102},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3115, 1403, 298, 99},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_back05"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_back06 = {
+		a_name = "go_stage132-1.dds",
+		size = {311, 86},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3221, 1299, 307, 83},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_back06"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_front01 = {
+		a_name = "go_stage132-1.dds",
+		size = {218, 106},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3364, 2271, 215, 103},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_front01"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_front02 = {
+		a_name = "go_stage132-1.dds",
+		size = {432, 159},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {6, 2019, 429, 156},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_front02"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_front03 = {
+		a_name = "go_stage132-1.dds",
+		size = {491, 193},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1229, 894, 488, 189},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_front03"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_front04 = {
+		a_name = "go_stage132-1.dds",
+		size = {466, 210},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2728, 882, 463, 207},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_front04"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_front05 = {
+		a_name = "go_stage132-1.dds",
+		size = {354, 177},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {447, 3855, 350, 174},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_front05"}
+	},
+	stage_32_fireball_l_asst_spider_queen_fall_front06 = {
+		a_name = "go_stage132-1.dds",
+		size = {351, 157},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {835, 2146, 348, 153},
+		alias = {"stage_32_fireball_r_asst_spider_queen_fall_front06"}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {45, 29},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3595, 2350, 43, 27},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {50, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3830, 1363, 47, 30},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {58, 64},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2601, 1965, 54, 60},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 81},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2608, 58, 77},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 92},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2560, 1559, 69, 88},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {87, 93},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4011, 1403, 85, 90},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 93},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1509, 1295, 86, 90},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 86},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2378, 924, 95, 83},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 81},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1647, 924, 99, 78},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {109, 73},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2364, 651, 106, 70},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_11 = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1167, 246, 119, 60},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_12 = {
+		a_name = "go_stage132-1.dds",
+		size = {135, 36},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3554, 1363, 132, 33},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_13 = {
+		a_name = "go_stage132-1.dds",
+		size = {137, 34},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1537, 1362, 135, 31},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_14 = {
+		a_name = "go_stage132-1.dds",
+		size = {133, 36},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1992, 1567, 131, 33},
+		alias = {}
+	},
+	stage_32_lava_bubble_Asst_nuclear_substance_plop_15 = {
+		a_name = "go_stage132-1.dds",
+		size = {8, 8},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1736, 1103, 6, 5},
+		alias = {}
+	},
+	stage_32_lava_buff_asst_fire_small_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 80},
+		trim = {1, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2337, 2048, 53, 80},
+		alias = {}
+	},
+	stage_32_lava_buff_asst_fire_small_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 84},
+		trim = {0, 0, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2048, 53, 82},
+		alias = {}
+	},
+	stage_32_lava_buff_asst_shadow_small = {
+		a_name = "go_stage132-2.dds",
+		size = {94, 64},
+		trim = {2, 8, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1491, 254, 91, 55},
+		alias = {}
+	},
+	stage_32_lava_shadow_dragon_asst_shadow_screen = {
+		a_name = "go_stage132-1.dds",
+		size = {1411, 1272},
+		trim = {139, 126, 55, 42},
+		a_size = {4096, 4096},
+		f_quad = {6, 6, 1217, 1104},
+		alias = {}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_blood_bright02 = {
+		a_name = "go_stage132-1.dds",
+		size = {40, 144},
+		trim = {1, 2, 1, 11},
+		a_size = {4096, 4096},
+		f_quad = {4058, 3549, 38, 131},
+		alias = {}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lava_puerta_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {120, 164},
+		trim = {1, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {775, 1295, 118, 162},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lava_puerta_01"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid01 = {
+		a_name = "go_stage132-2.dds",
+		size = {159, 168},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {184, 489, 156, 165},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid01"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid02 = {
+		a_name = "go_stage132-1.dds",
+		size = {346, 269},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {835, 3175, 343, 265},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid02"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid03 = {
+		a_name = "go_stage132-1.dds",
+		size = {371, 284},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {447, 2650, 368, 280},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid03"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid04 = {
+		a_name = "go_stage132-1.dds",
+		size = {386, 267},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {447, 1386, 382, 264},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid04"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid05 = {
+		a_name = "go_stage132-1.dds",
+		size = {352, 260},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {835, 1884, 349, 256},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid05"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid06 = {
+		a_name = "go_stage132-1.dds",
+		size = {356, 250},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {835, 1369, 353, 247},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid06"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid07 = {
+		a_name = "go_stage132-1.dds",
+		size = {280, 247},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3574, 1613, 277, 243},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid07"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid08 = {
+		a_name = "go_stage132-2.dds",
+		size = {175, 153},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {6, 315, 172, 150},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid08"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl1_vfx_acid09 = {
+		a_name = "go_stage132-2.dds",
+		size = {112, 82},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2234, 635, 110, 78},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl1_vfx_acid09"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {45, 29},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3742, 2350, 43, 27},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_01"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_018 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 86},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2332, 1186, 95, 83},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_018"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {50, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1442, 123, 47, 30},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_02"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {58, 64},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2270, 54, 60},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_03"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 81},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2524, 58, 78},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_04"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 92},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2290, 1655, 69, 88},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_05"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {87, 93},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1968, 1295, 85, 90},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_06"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 93},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1785, 1295, 86, 90},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_07"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 81},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1962, 924, 99, 78},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_09"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acid5_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {109, 73},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1949, 844, 106, 70},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_10"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood01 = {
+		a_name = "go_stage132-2.dds",
+		size = {105, 70},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {899, 2616, 101, 67},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood01"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood02 = {
+		a_name = "go_stage132-2.dds",
+		size = {134, 79},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 2480, 132, 76},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood02"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood03 = {
+		a_name = "go_stage132-2.dds",
+		size = {153, 84},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {346, 995, 150, 80},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood03"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood04 = {
+		a_name = "go_stage132-2.dds",
+		size = {163, 90},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {6, 1421, 160, 87},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood04"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood05 = {
+		a_name = "go_stage132-2.dds",
+		size = {149, 94},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {346, 1652, 146, 91},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood05"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood06 = {
+		a_name = "go_stage132-2.dds",
+		size = {153, 97},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {346, 810, 150, 93},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood06"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_acidblood07 = {
+		a_name = "go_stage132-2.dds",
+		size = {130, 96},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {916, 492, 128, 93},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acidblood07"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_trail_skill_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {25, 28},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {419, 2648, 21, 24},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_trail_skill_01"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_trail_skill_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {26, 30},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {616, 126, 24, 26},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_trail_skill_02"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_trail_skill_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {27, 31},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {651, 458, 24, 28},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_trail_skill_03"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_trail_skill_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {29, 34},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {3326, 2583, 25, 30},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_trail_skill_04"}
+	},
+	stage_32_lava_splash_asst_boss_dragon_lava_puerta_lvl2_trail_skill_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {32, 36},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1454, 246, 29, 32},
+		alias = {"stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_trail_skill_05"}
+	},
+	stage_32_lava_splash_big_asst_boss_dragon_lava_puerta_lvl2_acid5_11 = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1314, 633, 119, 60},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava = {
+		a_name = "go_stage132-1.dds",
+		size = {431, 471},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {6, 1546, 429, 467},
+		alias = {"stage_32_lava_waterfall_2_asst_lava", "stage_32_lava_waterfall_3_asst_lava"}
+	},
+	stage_32_lava_waterfall_1_asst_lava01 = {
+		a_name = "go_stage132-1.dds",
+		size = {48, 16},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1625, 1089, 45, 12},
+		alias = {"stage_32_rock_asst_lava01"}
+	},
+	stage_32_lava_waterfall_1_asst_lava02 = {
+		a_name = "go_stage132-1.dds",
+		size = {40, 22},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3614, 1091, 37, 19},
+		alias = {"stage_32_rock_asst_lava02"}
+	},
+	stage_32_lava_waterfall_1_asst_lava1 = {
+		a_name = "go_stage132-2.dds",
+		size = {105, 152},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1917, 101, 148},
+		alias = {"stage_32_lava_waterfall_2_asst_lava1", "stage_32_lava_waterfall_3_asst_lava1"}
+	},
+	stage_32_lava_waterfall_1_asst_lava2 = {
+		a_name = "go_stage132-1.dds",
+		size = {179, 192},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3686, 3798, 177, 189},
+		alias = {"stage_32_lava_waterfall_2_asst_lava2", "stage_32_lava_waterfall_3_asst_lava2"}
+	},
+	stage_32_lava_waterfall_1_asst_lava_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {332, 128},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2552, 1116, 329, 124},
+		alias = {"stage_32_rock_asst_lava_03"}
+	},
+	stage_32_lava_waterfall_1_asst_lava_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {315, 73},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2215, 1296, 311, 70},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {297, 66},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2887, 1334, 294, 63},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {297, 66},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1194, 4004, 294, 63},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {296, 66},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2803, 1538, 292, 63},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {296, 70},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2491, 1538, 292, 67},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {296, 80},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {3419, 1403, 292, 76},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {296, 88},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {3115, 1508, 292, 84},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_07 = {
+		a_name = "go_stage132-1.dds",
+		size = {291, 94},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3717, 1505, 288, 90},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_08 = {
+		a_name = "go_stage132-1.dds",
+		size = {291, 100},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3717, 1403, 288, 96},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_lava_ola_09 = {
+		a_name = "go_stage132-1.dds",
+		size = {291, 105},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3419, 1485, 288, 101},
+		alias = {}
+	},
+	stage_32_lava_waterfall_1_asst_rock01 = {
+		a_name = "go_stage132-2.dds",
+		size = {59, 34},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1684, 117, 55, 31},
+		alias = {"stage_32_rock_asst_rock01"}
+	},
+	stage_32_lava_waterfall_1_asst_rock02 = {
+		a_name = "go_stage132-1.dds",
+		size = {36, 19},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3657, 1091, 32, 16},
+		alias = {"stage_32_rock_asst_rock02"}
+	},
+	stage_32_lava_waterfall_1_asst_rock03 = {
+		a_name = "go_stage132-1.dds",
+		size = {23, 22},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3722, 1091, 20, 19},
+		alias = {"stage_32_rock_asst_rock03"}
+	},
+	stage_32_lava_waterfall_1_asst_rock05 = {
+		a_name = "go_stage132-1.dds",
+		size = {52, 37},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {393, 4003, 48, 34},
+		alias = {"stage_32_rock_asst_rock05"}
+	},
+	stage_32_lava_waterfall_1_asst_rock06 = {
+		a_name = "go_stage132-1.dds",
+		size = {35, 27},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2439, 1372, 31, 25},
+		alias = {"stage_32_rock_asst_rock06"}
+	},
+	stage_32_lava_waterfall_1_asst_rock07 = {
+		a_name = "go_stage132-1.dds",
+		size = {41, 21},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3570, 1091, 38, 17},
+		alias = {"stage_32_rock_asst_rock07"}
+	},
+	stage_32_lava_waterfall_2_asst_column = {
+		a_name = "go_stage132-2.dds",
+		size = {96, 306},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1221, 1295, 93, 303},
+		alias = {"stage_32_lava_waterfall_3_asst_column"}
+	},
+	stage_32_lava_waterfall_2_asst_light = {
+		a_name = "go_stage132-2.dds",
+		size = {49, 234},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2217, 2250, 49, 234},
+		alias = {"stage_32_lava_waterfall_3_asst_light"}
+	},
+	stage_32_masks_layer_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {2800, 1536},
+		trim = {372, 0, 1863, 1049},
+		a_size = {4096, 4096},
+		f_quad = {3431, 242, 565, 487},
+		alias = {}
+	},
+	teen_redboy_A_asst_arm = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 80},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2150, 1295, 84, 77},
+		alias = {}
+	},
+	teen_redboy_A_asst_extra_wukong_tredboy_slashrecto_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {323, 322},
+		trim = {86, 68, 99, 74},
+		a_size = {2688, 2688},
+		f_quad = {502, 492, 138, 180},
+		alias = {"teen_redboy_asst_extra_wukong_tredboy_slashrecto_3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_Swipe01 = {
+		a_name = "go_stage132-1.dds",
+		size = {376, 306},
+		trim = {60, 19, 59, 18},
+		a_size = {4096, 4096},
+		f_quad = {3782, 1862, 257, 269},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_Swipe01", "teen_redboy_asst_wukong_tredboy_Swipe01", "teen_redboy_uiexplo_asst_wukong_tredboy_Swipe01"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {8, 10, 9, 12},
+		a_size = {4096, 4096},
+		f_quad = {3748, 1091, 13, 18},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_10 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {11, 14, 10, 15},
+		a_size = {4096, 4096},
+		f_quad = {2711, 641, 9, 11},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_10"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_11 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {9, 13, 11, 16},
+		a_size = {4096, 4096},
+		f_quad = {2711, 605, 10, 11},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_11"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_12 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {13, 18, 10, 15},
+		a_size = {4096, 4096},
+		f_quad = {1723, 1103, 7, 7},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_12"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {10, 12, 8, 9},
+		a_size = {4096, 4096},
+		f_quad = {3786, 1091, 12, 19},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {10, 10, 8, 13},
+		a_size = {4096, 4096},
+		f_quad = {3804, 1091, 12, 17},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_5"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_6 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {9, 10, 8, 13},
+		a_size = {4096, 4096},
+		f_quad = {3767, 1091, 13, 17},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_6"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_7 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {10, 12, 8, 13},
+		a_size = {4096, 4096},
+		f_quad = {2767, 1095, 12, 15},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_7"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_8 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {9, 12, 8, 13},
+		a_size = {4096, 4096},
+		f_quad = {2748, 1095, 13, 15},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_8"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_agdf_9 = {
+		a_name = "go_stage132-1.dds",
+		size = {30, 40},
+		trim = {10, 14, 9, 13},
+		a_size = {4096, 4096},
+		f_quad = {2711, 551, 11, 13},
+		alias = {"teen_redboy_asst_wukong_tredboy_agdf_9"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_arrack1_elbow = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 85},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1974, 1965, 59, 82},
+		alias = {"teen_redboy_asst_wukong_tredboy_arrack1_elbow"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_attac3_swing_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {209, 74},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {1723, 1025, 205, 72},
+		alias = {"teen_redboy_asst_wukong_tredboy_attac3_swing_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_attac3_swing_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 54},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2173, 1898, 60, 51},
+		alias = {"teen_redboy_asst_wukong_tredboy_attac3_swing_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_attac3_swing_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {18, 11},
+		trim = {2, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 766, 15, 9},
+		alias = {"teen_redboy_asst_wukong_tredboy_attac3_swing_3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_attack3_hand2 = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 45},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2560, 1847, 60, 41},
+		alias = {"teen_redboy_asst_wukong_tredboy_attack3_hand2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_atttack_1_cuello_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {60, 59},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2559, 1898, 57, 55},
+		alias = {"teen_redboy_asst_wukong_tredboy_atttack_1_cuello_3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_atttack_1_espalda = {
+		a_name = "go_stage132-2.dds",
+		size = {104, 89},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2284, 1013, 100, 86},
+		alias = {"teen_redboy_asst_wukong_tredboy_atttack_1_espalda"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_back_baaacc = {
+		a_name = "go_stage132-2.dds",
+		size = {85, 83},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2510, 1295, 82, 81},
+		alias = {"teen_redboy_asst_wukong_tredboy_back_baaacc"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_back_cinto = {
+		a_name = "go_stage132-1.dds",
+		size = {39, 25},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2357, 1372, 37, 21},
+		alias = {"teen_redboy_asst_wukong_tredboy_back_cinto"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_back_head = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 111},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1626, 86, 107},
+		alias = {"teen_redboy_asst_wukong_tredboy_back_head"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_circleswing_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {492, 322},
+		trim = {112, 61, 131, 96},
+		a_size = {4096, 4096},
+		f_quad = {2140, 3653, 249, 165},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_circleswing_1", "teen_redboy_asst_wukong_tredboy_circleswing_1", "teen_redboy_uiexplo_asst_wukong_tredboy_circleswing_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_circleswing_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {451, 320},
+		trim = {67, 57, 100, 20},
+		a_size = {4096, 4096},
+		f_quad = {1852, 1613, 284, 243},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_circleswing_2", "teen_redboy_asst_wukong_tredboy_circleswing_2", "teen_redboy_uiexplo_asst_wukong_tredboy_circleswing_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_circleswing_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {498, 266},
+		trim = {105, 73, 87, 64},
+		a_size = {4096, 4096},
+		f_quad = {2491, 1403, 306, 129},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_circleswing_3", "teen_redboy_asst_wukong_tredboy_circleswing_3", "teen_redboy_uiexplo_asst_wukong_tredboy_circleswing_3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_circleswing_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {487, 281},
+		trim = {140, 85, 132, 88},
+		a_size = {4096, 4096},
+		f_quad = {3197, 1002, 215, 108},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_circleswing_4", "teen_redboy_asst_wukong_tredboy_circleswing_4", "teen_redboy_uiexplo_asst_wukong_tredboy_circleswing_4"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_extra_bodythird = {
+		a_name = "go_stage132-2.dds",
+		size = {101, 107},
+		trim = {2, 1, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1301, 97, 105},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_extra_bodythird", "teen_redboy_asst_wukong_tredboy_extra_bodythird"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_chest = {
+		a_name = "go_stage132-2.dds",
+		size = {118, 71},
+		trim = {1, 1, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1710, 625, 116, 68},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_chest"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_chest_atack2 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 95},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1320, 2189, 88, 91},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_chest_atack2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_chest_attack = {
+		a_name = "go_stage132-2.dds",
+		size = {96, 65},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1367, 852, 93, 61},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_chest_attack"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_chest_walkfix = {
+		a_name = "go_stage132-2.dds",
+		size = {107, 74},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2064, 844, 103, 70},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_chest_walkfix", "teen_redboy_asst_wukong_tredboy_front_chest_walkfix"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_cuello = {
+		a_name = "go_stage132-1.dds",
+		size = {69, 45},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3831, 2765, 67, 43},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_cuello", "teen_redboy_asst_wukong_tredboy_front_cuello"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_head = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 111},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1739, 86, 107},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_head", "teen_redboy_asst_wukong_tredboy_front_head"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_leftarm = {
+		a_name = "go_stage132-2.dds",
+		size = {53, 47},
+		trim = {2, 1, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2328, 2194, 49, 44},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_leftarm", "teen_redboy_asst_wukong_tredboy_front_leftarm"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_leftarm_ataque2_MANITA = {
+		a_name = "go_stage132-2.dds",
+		size = {46, 41},
+		trim = {2, 1, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2272, 1854, 43, 38},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_leftarm_ataque2_MANITA"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_leftarm_ataque2_torcido = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 56},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2199, 1821, 67, 54},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_leftarm_ataque2_torcido"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_lefthand = {
+		a_name = "go_stage132-2.dds",
+		size = {45, 38},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2017, 450, 42, 36},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_lefthand", "teen_redboy_asst_wukong_tredboy_front_lefthand"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_lefthand_karate_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {52, 43},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2383, 2194, 49, 41},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_lefthand_karate_1", "teen_redboy_asst_wukong_tredboy_front_lefthand_karate_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_piernaizq = {
+		a_name = "go_stage132-1.dds",
+		size = {32, 47},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4067, 3394, 29, 44},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_front_piernaizq_flip", "teen_redboy_B_asst_wukong_tredboy_front_piernaizq", "teen_redboy_B_asst_wukong_tredboy_front_piernaizq_flip", "teen_redboy_asst_wukong_tredboy_front_piernaizq"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_piernaizq_goingdown = {
+		a_name = "go_stage132-1.dds",
+		size = {32, 47},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4067, 3444, 29, 44},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_piernaizq_goingdown"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_piernaizq_goingup = {
+		a_name = "go_stage132-1.dds",
+		size = {32, 56},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {800, 4035, 29, 52},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_piernaizq_goingup", "teen_redboy_asst_wukong_tredboy_front_piernaizq_goingup"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_rightarm_fixwalk = {
+		a_name = "go_stage132-2.dds",
+		size = {42, 80},
+		trim = {1, 1, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2422, 2549, 39, 78},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_rightarm_fixwalk", "teen_redboy_asst_wukong_tredboy_front_rightarm_fixwalk"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_front_tela_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {42, 51},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2467, 2464, 39, 47},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_front_tela_1", "teen_redboy_asst_wukong_tredboy_front_tela_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_fullylanza = {
+		a_name = "go_stage132-1.dds",
+		size = {275, 79},
+		trim = {5, 6, 3, 10},
+		a_size = {4096, 4096},
+		f_quad = {2419, 2079, 267, 63},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_fullylanza", "teen_redboy_asst_wukong_tredboy_fullylanza"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_fullylanza02 = {
+		a_name = "go_stage132-1.dds",
+		size = {270, 66},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {2973, 1862, 266, 62},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_fullylanza_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {199, 64},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {447, 4035, 195, 60},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_lanzapunta_faltante = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 174},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2501, 53, 171},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_side_lanzapunta", "teen_redboy_B_asst_weapon02", "teen_redboy_B_asst_wukong_tredboy_lanzapunta_faltante", "teen_redboy_B_asst_wukong_tredboy_side_lanzapunta", "teen_redboy_asst_wukong_tredboy_lanzapunta_faltante", "teen_redboy_asst_wukong_tredboy_side_lanzapunta"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_lanzapunta_faltante2 = {
+		a_name = "go_stage132-2.dds",
+		size = {56, 194},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2248, 52, 190},
+		alias = {"teen_redboy_A_asst_wukong_tredboy_lanzapunta_front_faltant", "teen_redboy_B_asst_wukong_tredboy_lanzapunta_faltante2", "teen_redboy_B_asst_wukong_tredboy_lanzapunta_front_faltant", "teen_redboy_asst_wukong_tredboy_lanzapunta_faltante2", "teen_redboy_asst_wukong_tredboy_lanzapunta_front_faltant"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_mandolanza_faltante = {
+		a_name = "go_stage132-2.dds",
+		size = {28, 68},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2554, 2580, 25, 64},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_mandolanza_faltante", "teen_redboy_B_asst_wukong_tredboy_mangofaltante_2", "teen_redboy_asst_wukong_tredboy_mandolanza_faltante", "teen_redboy_asst_wukong_tredboy_mangofaltante_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_palorandom = {
+		a_name = "go_stage132-1.dds",
+		size = {120, 24},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1384, 1089, 118, 20},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_palorandom", "teen_redboy_asst_wukong_tredboy_palorandom"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_redboyspin_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {223, 277},
+		trim = {1, 11, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2663, 3257, 221, 265},
+		alias = {"teen_redboy_asst_wukong_tredboy_redboyspin_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_redboyspin_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {195, 276},
+		trim = {2, 7, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3702, 2815, 191, 268},
+		alias = {"teen_redboy_asst_wukong_tredboy_redboyspin_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_relleno = {
+		a_name = "go_stage132-1.dds",
+		size = {34, 27},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {2476, 1372, 30, 23},
+		alias = {"teen_redboy_asst_wukong_tredboy_relleno"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_atack2_pose_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {101, 41},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {2544, 4054, 97, 37},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_atack2_pose_1", "teen_redboy_asst_wukong_tredboy_side_atack2_pose_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_chest = {
+		a_name = "go_stage132-2.dds",
+		size = {99, 59},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {514, 253, 96, 55},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_chest", "teen_redboy_asst_wukong_tredboy_side_chest"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_codo_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {46, 53},
+		trim = {1, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2485, 2250, 44, 51},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_codo_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_hand_attack3 = {
+		a_name = "go_stage132-2.dds",
+		size = {49, 53},
+		trim = {1, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2327, 2250, 47, 51},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_hand_attack3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1524, 1186, 95, 96},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_head", "teen_redboy_asst_wukong_tredboy_side_head"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head02 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1625, 1186, 95, 96},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_angry = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 110},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1118, 2276, 95, 106},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_angry"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_1_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {116, 128},
+		trim = {7, 10, 9, 14},
+		a_size = {2688, 2688},
+		f_quad = {2178, 1013, 100, 104},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_2_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 128},
+		trim = {7, 5, 11, 11},
+		a_size = {2688, 2688},
+		f_quad = {899, 2285, 103, 112},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_3_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {124, 128},
+		trim = {13, 10, 11, 12},
+		a_size = {2688, 2688},
+		f_quad = {1966, 1013, 100, 106},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_4_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {122, 133},
+		trim = {11, 9, 9, 14},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1458, 102, 110},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_5_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 138},
+		trim = {20, 20, 16, 16},
+		a_size = {2688, 2688},
+		f_quad = {1010, 2425, 101, 102},
+		alias = {}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_fueguito_5_front = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 138},
+		trim = {20, 20, 16, 8},
+		a_size = {2688, 2688},
+		f_quad = {1010, 2201, 101, 110},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_head_fueguito_5_front", "teen_redboy_asst_wukong_tredboy_side_head_fueguito_5_front"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_head_laugh = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 106},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 2388, 95, 103},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_head_laugh", "teen_redboy_asst_wukong_tredboy_side_head_laugh"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzamango_largo = {
+		a_name = "go_stage132-1.dds",
+		size = {28, 125},
+		trim = {1, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {803, 3855, 26, 121},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_lanzamango_largo"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito1_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {76, 89},
+		trim = {14, 29, 20, 18},
+		a_size = {4096, 4096},
+		f_quad = {4003, 4054, 42, 42},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito1_1", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito1_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito1_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 89},
+		trim = {17, 25, 22, 18},
+		a_size = {2688, 2688},
+		f_quad = {2467, 2641, 37, 46},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito1_2", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito1_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito1_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 89},
+		trim = {17, 24, 20, 23},
+		a_size = {2688, 2688},
+		f_quad = {2611, 2365, 39, 42},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito1_3", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito1_3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito1_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 89},
+		trim = {17, 20, 15, 21},
+		a_size = {2688, 2688},
+		f_quad = {2535, 2250, 44, 48},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito1_4", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito1_4"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito2_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {71, 71},
+		trim = {15, 16, 12, 11},
+		a_size = {2688, 2688},
+		f_quad = {2585, 2250, 44, 44},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito2_1", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito2_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito2_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {71, 71},
+		trim = {13, 14, 10, 15},
+		a_size = {2688, 2688},
+		f_quad = {2492, 2194, 48, 42},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito2_2", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito2_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito2_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {71, 71},
+		trim = {12, 15, 12, 13},
+		a_size = {2688, 2688},
+		f_quad = {2380, 2250, 47, 43},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito2_3", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito2_3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_lanzapunta_fueguito2_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {71, 71},
+		trim = {12, 19, 11, 10},
+		a_size = {2688, 2688},
+		f_quad = {2546, 2194, 48, 42},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_lanzapunta_fueguito2_4", "teen_redboy_asst_wukong_tredboy_side_lanzapunta_fueguito2_4"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_leftarm = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 58},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2160, 2321, 51, 54},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_leftarm", "teen_redboy_asst_wukong_tredboy_side_leftarm"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_mano_cerrada_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {38, 36},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {841, 277, 35, 33},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_mano_cerrada_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernader_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 56},
+		trim = {1, 1, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2304, 1898, 59, 54},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_piernader_2", "teen_redboy_asst_wukong_tredboy_side_piernader_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernader_estira = {
+		a_name = "go_stage132-2.dds",
+		size = {51, 62},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2373, 48, 59},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_piernader_estira", "teen_redboy_asst_wukong_tredboy_side_piernader_estira"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernader_estira_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {73, 42},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3756, 2765, 69, 40},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_piernader_estira_2", "teen_redboy_asst_wukong_tredboy_side_piernader_estira_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernaizq = {
+		a_name = "go_stage132-1.dds",
+		size = {29, 47},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {803, 3982, 26, 44},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_piernaizq", "teen_redboy_asst_wukong_tredboy_side_piernaizq"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernaizq_ataque3 = {
+		a_name = "go_stage132-2.dds",
+		size = {39, 59},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2512, 2521, 36, 57},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_piernaizq_ataque3", "teen_redboy_asst_wukong_tredboy_side_piernaizq_ataque3"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernaizq_ataque3_shadow2 = {
+		a_name = "go_stage132-2.dds",
+		size = {36, 57},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2635, 2521, 33, 53},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_piernaizq_ataque3_shadow2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernaizq_ataque3_tostep = {
+		a_name = "go_stage132-2.dds",
+		size = {36, 51},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2640, 2464, 34, 48},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_piernaizq_ataque3_tostep"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernaizq_gacha = {
+		a_name = "go_stage132-2.dds",
+		size = {44, 45},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2423, 2365, 41, 42},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_side_piernaizq_gacha", "teen_redboy_asst_wukong_tredboy_side_piernaizq_gacha"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_piernaizq_tunic = {
+		a_name = "go_stage132-2.dds",
+		size = {46, 39},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1967, 450, 44, 36},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_piernaizq_tunic"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_rightarm_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {49, 83},
+		trim = {2, 1, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {4051, 3798, 45, 81},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_rightarm_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_side_rightarm_ataqueground = {
+		a_name = "go_stage132-2.dds",
+		size = {60, 92},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2630, 828, 58, 89},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_rightarm_ataqueground"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_slashrecto_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {495, 465},
+		trim = {82, 96, 98, 96},
+		a_size = {4096, 4096},
+		f_quad = {1531, 1613, 315, 273},
+		alias = {"teen_redboy_asst_wukong_tredboy_slashrecto_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_slashrecto_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {409, 394},
+		trim = {80, 83, 91, 82},
+		a_size = {4096, 4096},
+		f_quad = {3857, 1613, 238, 229},
+		alias = {"teen_redboy_asst_wukong_tredboy_slashrecto_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_slashrecto_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {279, 279},
+		trim = {74, 78, 78, 71},
+		a_size = {2688, 2688},
+		f_quad = {916, 591, 127, 130},
+		alias = {"teen_redboy_asst_wukong_tredboy_slashrecto_4"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_spiningspear_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {280, 280},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1852, 2485, 278, 277},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_spiningspear_1", "teen_redboy_asst_wukong_tredboy_spiningspear_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_spiningspear_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {278, 280},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1852, 3074, 276, 277},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_spiningspear_2", "teen_redboy_asst_wukong_tredboy_spiningspear_2"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_spiningspear_fire_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {398, 612},
+		trim = {33, 129, 36, 155},
+		a_size = {4096, 4096},
+		f_quad = {1194, 2378, 329, 328},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_spiningspear_fire_1", "teen_redboy_asst_wukong_tredboy_spiningspear_fire_1"}
+	},
+	teen_redboy_A_asst_wukong_tredboy_spiningspear_fire_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {382, 558},
+		trim = {29, 123, 28, 106},
+		a_size = {4096, 4096},
+		f_quad = {1194, 2712, 325, 329},
+		alias = {"teen_redboy_B_asst_wukong_tredboy_spiningspear_fire_2", "teen_redboy_asst_wukong_tredboy_spiningspear_fire_2"}
+	},
+	teen_redboy_B_asst_blur_down = {
+		a_name = "go_stage132-2.dds",
+		size = {102, 290},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1010, 924, 102, 290},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid01 = {
+		a_name = "go_stage132-2.dds",
+		size = {159, 168},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {184, 318, 156, 165},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid02 = {
+		a_name = "go_stage132-1.dds",
+		size = {346, 269},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {835, 2904, 343, 265},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid03 = {
+		a_name = "go_stage132-1.dds",
+		size = {371, 284},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {447, 2364, 368, 280},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid04 = {
+		a_name = "go_stage132-1.dds",
+		size = {386, 267},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {447, 1116, 382, 264},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid05 = {
+		a_name = "go_stage132-1.dds",
+		size = {352, 260},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {835, 1622, 349, 256},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid06 = {
+		a_name = "go_stage132-1.dds",
+		size = {356, 250},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {835, 1116, 353, 247},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid07 = {
+		a_name = "go_stage132-1.dds",
+		size = {280, 247},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3291, 1613, 277, 243},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid08 = {
+		a_name = "go_stage132-2.dds",
+		size = {175, 153},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {6, 159, 172, 150},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl1_vfx_acid09 = {
+		a_name = "go_stage132-2.dds",
+		size = {112, 82},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1842, 639, 110, 78},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {45, 29},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {4036, 2591, 45, 29},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_018 = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 86},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2495, 1013, 98, 86},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {50, 33},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {349, 277, 50, 33},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 81},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2626, 1186, 62, 81},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 92},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1835, 1655, 73, 92},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {87, 93},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1295, 87, 93},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 93},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2530, 1186, 90, 93},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 81},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2521, 828, 103, 81},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acid5_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {109, 73},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2104, 650, 109, 73},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood01 = {
+		a_name = "go_stage132-2.dds",
+		size = {105, 70},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2408, 843, 101, 67},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood02 = {
+		a_name = "go_stage132-2.dds",
+		size = {134, 79},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 2398, 132, 76},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood03 = {
+		a_name = "go_stage132-2.dds",
+		size = {153, 84},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {346, 909, 150, 80},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood04 = {
+		a_name = "go_stage132-1.dds",
+		size = {163, 90},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3935, 974, 160, 87},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood05 = {
+		a_name = "go_stage132-2.dds",
+		size = {149, 94},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {346, 1555, 146, 91},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood06 = {
+		a_name = "go_stage132-2.dds",
+		size = {153, 97},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2447, 159, 150, 93},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidblood07 = {
+		a_name = "go_stage132-2.dds",
+		size = {130, 96},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {781, 613, 128, 93},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_acidbloodglow_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {43, 43},
+		trim = {3, 3, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2602, 2413, 38, 38},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_trail_skill_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {25, 28},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1454, 284, 25, 28},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_trail_skill_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {26, 30},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1584, 123, 26, 30},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_trail_skill_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {27, 31},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {4069, 3305, 27, 31},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_trail_skill_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {29, 34},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {4067, 3494, 29, 34},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_dragon_lava_puerta_lvl2_trail_skill_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {32, 36},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2194, 450, 32, 36},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {179, 254},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3869, 3798, 176, 250},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {222, 267},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2663, 3528, 219, 263},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {237, 275},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2418, 3410, 234, 272},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_06 = {
+		a_name = "go_stage132-1.dds",
+		size = {238, 278},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2418, 3129, 234, 275},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_07 = {
+		a_name = "go_stage132-1.dds",
+		size = {236, 249},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2418, 3688, 233, 246},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_08 = {
+		a_name = "go_stage132-1.dds",
+		size = {235, 239},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2663, 2384, 231, 236},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_09 = {
+		a_name = "go_stage132-1.dds",
+		size = {229, 228},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3133, 2153, 225, 225},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_10 = {
+		a_name = "go_stage132-1.dds",
+		size = {226, 221},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2900, 2384, 223, 217},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_11 = {
+		a_name = "go_stage132-1.dds",
+		size = {212, 168},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3331, 2626, 210, 165},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explosion_12 = {
+		a_name = "go_stage132-1.dds",
+		size = {202, 136},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3756, 2626, 199, 133},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_explotion_shadow = {
+		a_name = "go_stage132-1.dds",
+		size = {43, 23},
+		trim = {2, 2, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {3525, 1091, 39, 19},
+		alias = {"teen_redboy_asst_wukong_tredboy_dustexplo_explotion_shadow"}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer2_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {43, 21},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3431, 1091, 41, 18},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer2_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {123, 37},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {2418, 4054, 120, 33},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer2_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {137, 36},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {835, 4060, 135, 33},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer2_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {143, 43},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {6, 4050, 141, 40},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer2_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {150, 43},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2144, 1069, 147, 40},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {92, 54},
+		trim = {1, 3, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3606, 3110, 90, 50},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 80},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2257, 397, 135, 77},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {158, 85},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1167, 159, 156, 81},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {170, 98},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3871, 3697, 167, 95},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {182, 99},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3304, 3972, 179, 95},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_6 = {
+		a_name = "go_stage132-1.dds",
+		size = {194, 94},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3899, 3045, 190, 91},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_7 = {
+		a_name = "go_stage132-1.dds",
+		size = {198, 90},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3759, 194, 87},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer3_8 = {
+		a_name = "go_stage132-1.dds",
+		size = {199, 68},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3113, 2743, 195, 65},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 100},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2136, 58, 97},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {115, 117},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1367, 733, 111, 113},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 155},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1593, 2063, 75, 151},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 171},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1224, 1013, 100, 167},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 188},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {899, 1114, 105, 184},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {114, 188},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1016, 733, 111, 185},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_6 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 185},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {775, 733, 118, 182},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {138, 181},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 1395, 135, 178},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_8 = {
+		a_name = "go_stage132-2.dds",
+		size = {143, 171},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1240, 318, 140, 168},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer4_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {147, 131},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {346, 2016, 145, 127},
+		alias = {}
+	},
+	teen_redboy_B_asst_boss_gator_lvl2_explotion_layer5_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 73},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1320, 2114, 89, 69},
+		alias = {"teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer5_9"}
+	},
+	teen_redboy_B_asst_decal = {
+		a_name = "go_stage132-2.dds",
+		size = {164, 91},
+		trim = {4, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {514, 159, 158, 88},
+		alias = {}
+	},
+	teen_redboy_B_asst_energy_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {194, 345},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3104, 3653, 194, 345},
+		alias = {}
+	},
+	teen_redboy_B_asst_energy_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {194, 345},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3304, 2815, 194, 345},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {51, 63},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2307, 48, 60},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {64, 111},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2109, 61, 108},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 221},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1756, 2073, 70, 218},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {62, 329},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3367, 442, 58, 326},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_05 = {
+		a_name = "go_stage132-2.dds",
+		size = {82, 483},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1508, 1472, 79, 479},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {163, 609},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {6, 1604, 159, 606},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_07 = {
+		a_name = "go_stage132-1.dds",
+		size = {164, 236},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3935, 735, 161, 233},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_08 = {
+		a_name = "go_stage132-2.dds",
+		size = {128, 144},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1842, 492, 125, 141},
+		alias = {}
+	},
+	teen_redboy_B_asst_flame_09 = {
+		a_name = "go_stage132-2.dds",
+		size = {93, 72},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2495, 1105, 90, 69},
+		alias = {}
+	},
+	teen_redboy_B_asst_intro_boss_gator_smokesplode3 = {
+		a_name = "go_stage132-2.dds",
+		size = {126, 130},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1446, 492, 126, 130},
+		alias = {"teen_redboy_smoke_asst_intro_boss_gator_smokesplode3"}
+	},
+	teen_redboy_B_asst_light_back = {
+		a_name = "go_stage132-1.dds",
+		size = {298, 298},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {1531, 2157, 295, 294},
+		alias = {}
+	},
+	teen_redboy_B_asst_machinegunner_hitfx_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {23, 26},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {1823, 2977, 23, 26},
+		alias = {}
+	},
+	teen_redboy_B_asst_machinegunner_hitfx_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {33, 38},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2646, 2413, 33, 38},
+		alias = {}
+	},
+	teen_redboy_B_asst_machinegunner_hitfx_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {34, 36},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2154, 450, 34, 36},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_fire_01_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {61, 75},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1906, 2312, 61, 75},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_fire_02_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {69, 85},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2365, 1655, 69, 85},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_fire_03_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {95, 88},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2231, 1186, 95, 88},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_fire_04_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {102, 79},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1668, 102, 79},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_fire_05_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {81, 54},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1860, 1125, 81, 54},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_fire_06_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {86, 50},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1484, 852, 86, 50},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_floor_skill_b = {
+		a_name = "go_stage132-2.dds",
+		size = {115, 83},
+		trim = {2, 2, 8, 1},
+		a_size = {2688, 2688},
+		f_quad = {2179, 836, 105, 80},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_hotrock_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {10, 13},
+		trim = {2, 2, 1, 3},
+		a_size = {4096, 4096},
+		f_quad = {2711, 658, 7, 8},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_hotrock_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {12, 16},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2711, 622, 9, 13},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_hotrock_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {16, 18},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2785, 1095, 12, 15},
+		alias = {}
+	},
+	teen_redboy_B_asst_mortar_hotrock_15 = {
+		a_name = "go_stage132-1.dds",
+		size = {17, 28},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 826, 14, 25},
+		alias = {}
+	},
+	teen_redboy_B_asst_smoke_intro_boss_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {310, 206},
+		trim = {1, 1, 0, 1},
+		a_size = {4096, 4096},
+		f_quad = {2176, 1403, 309, 204},
+		alias = {"teen_redboy_smoke_asst_smoke_intro_boss_01"}
+	},
+	teen_redboy_B_asst_teen01 = {
+		a_name = "go_stage132-1.dds",
+		size = {197, 832},
+		trim = {2, 0, 1, 0},
+		a_size = {4096, 4096},
+		f_quad = {3104, 2815, 194, 832},
+		alias = {"teen_redboy_B_asst_teen_blur_01"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_cs_glow2 = {
+		a_name = "go_stage132-2.dds",
+		size = {59, 59},
+		trim = {2, 3, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2542, 258, 55, 54},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_cs_glow2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_explosion_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 93},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2521, 733, 106, 89},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_explosion_01"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_explosion_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {140, 115},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 923, 137, 112},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_explosion_02"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_explosion_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {142, 131},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1677, 318, 139, 128},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_explosion_03"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_explosion_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {123, 120},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {646, 1823, 120, 117},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_explosion_04"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {13, 13, 13, 13},
+		a_size = {2688, 2688},
+		f_quad = {1906, 1898, 62, 71},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_1"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {4, 9, 4, 9},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2606, 80, 79},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {39, 52},
+		trim = {2, 3, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2598, 2464, 36, 48},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_1"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {60, 56},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1588, 254, 58, 52},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {69, 58},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2112, 66, 55},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_3"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {70, 61},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1676, 2629, 67, 58},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_4"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {69, 60},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2049, 66, 57},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_5"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_6 = {
+		a_name = "go_stage132-1.dds",
+		size = {69, 40},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3255, 2583, 65, 37},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_6"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_2_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {53, 34},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {188, 123, 49, 30},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_2_7"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {2, 10, 1, 9},
+		a_size = {2688, 2688},
+		f_quad = {2059, 1295, 85, 78},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_3"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {2, 10, 2, 10},
+		a_size = {2688, 2688},
+		f_quad = {2240, 1295, 84, 77},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_4"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {2, 11, 3, 11},
+		a_size = {2688, 2688},
+		f_quad = {2605, 637, 83, 75},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_5"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_6 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {3, 12, 3, 12},
+		a_size = {2688, 2688},
+		f_quad = {2598, 1295, 82, 73},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_6"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {4, 12, 4, 13},
+		a_size = {2688, 2688},
+		f_quad = {1508, 1394, 80, 72},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_7"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_fire_rd_8 = {
+		a_name = "go_stage132-2.dds",
+		size = {88, 97},
+		trim = {5, 15, 5, 15},
+		a_size = {2688, 2688},
+		f_quad = {1936, 1394, 78, 67},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_fire_rd_8"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {27, 23},
+		trim = {8, 6, 8, 5},
+		a_size = {4096, 4096},
+		f_quad = {2711, 570, 11, 12},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_01"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {27, 23},
+		trim = {7, 4, 4, 3},
+		a_size = {4096, 4096},
+		f_quad = {1966, 702, 16, 16},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_02"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {27, 23},
+		trim = {6, 4, 4, 3},
+		a_size = {4096, 4096},
+		f_quad = {1966, 602, 17, 16},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_03"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_04 = {
+		a_name = "go_stage132-1.dds",
+		size = {32, 27},
+		trim = {6, 4, 4, 3},
+		a_size = {4096, 4096},
+		f_quad = {419, 2565, 22, 20},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_04"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {45, 39},
+		trim = {8, 9, 9, 6},
+		a_size = {4096, 4096},
+		f_quad = {3791, 2350, 28, 24},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_05"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_06 = {
+		a_name = "go_stage132-2.dds",
+		size = {53, 44},
+		trim = {7, 9, 7, 7},
+		a_size = {2688, 2688},
+		f_quad = {1495, 123, 39, 28},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_06"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_absorb_power_07 = {
+		a_name = "go_stage132-2.dds",
+		size = {59, 46},
+		trim = {6, 8, 5, 6},
+		a_size = {2688, 2688},
+		f_quad = {405, 277, 48, 32},
+		alias = {"teen_redboy_asst_wukong_tredboy_absorb_power_07"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_extra_bodythird_energy = {
+		a_name = "go_stage132-2.dds",
+		size = {101, 111},
+		trim = {2, 1, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 1186, 97, 109},
+		alias = {"teen_redboy_asst_wukong_tredboy_extra_bodythird_energy"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_extra_bodythird_hinchado = {
+		a_name = "go_stage132-2.dds",
+		size = {107, 106},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {899, 1494, 105, 103},
+		alias = {"teen_redboy_asst_wukong_tredboy_extra_bodythird_hinchado"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_firefast_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {80, 121},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1593, 1655, 77, 118},
+		alias = {"teen_redboy_asst_wukong_tredboy_firefast_1"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_firefast_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 114},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1676, 1829, 74, 110},
+		alias = {"teen_redboy_asst_wukong_tredboy_firefast_2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_firefast_glow_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {111, 126},
+		trim = {15, 6, 15, 16},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2262, 81, 104},
+		alias = {"teen_redboy_asst_wukong_tredboy_firefast_glow_1"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_firefast_glow_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {112, 137},
+		trim = {17, 14, 12, 12},
+		a_size = {2688, 2688},
+		f_quad = {1416, 1956, 83, 111},
+		alias = {"teen_redboy_asst_wukong_tredboy_firefast_glow_2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_front_rightarm = {
+		a_name = "go_stage132-1.dds",
+		size = {52, 85},
+		trim = {1, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4046, 3166, 50, 83},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_rightarm"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_front_tela_1_falling_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {58, 51},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2039, 2447, 54, 48},
+		alias = {"teen_redboy_asst_wukong_tredboy_front_tela_1_falling_1"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_fire_cicle = {
+		a_name = "go_stage132-1.dds",
+		size = {498, 350},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3431, 735, 498, 350},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_fire_cicle"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_spawn_fire01 = {
+		a_name = "go_stage132-1.dds",
+		size = {121, 49},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3952, 2314, 121, 49},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_spawn_fire01"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_spawn_fire02 = {
+		a_name = "go_stage132-2.dds",
+		size = {160, 84},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {6, 1514, 160, 84},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_spawn_fire02"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_spawn_fire04 = {
+		a_name = "go_stage132-2.dds",
+		size = {169, 111},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1442, 6, 169, 111},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_spawn_fire04"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_spawn_fire05 = {
+		a_name = "go_stage132-1.dds",
+		size = {182, 116},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3881, 3263, 182, 116},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_spawn_fire05"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_spawn_fire06 = {
+		a_name = "go_stage132-1.dds",
+		size = {187, 125},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3304, 3263, 187, 125},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_spawn_fire06"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_fx_spawn_fire08 = {
+		a_name = "go_stage132-1.dds",
+		size = {185, 159},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3304, 3807, 185, 159},
+		alias = {"teen_redboy_asst_wukong_tredboy_fx_spawn_fire08"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_neckk_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 72},
+		trim = {6, 12, 4, 5},
+		a_size = {2688, 2688},
+		f_quad = {2101, 2632, 52, 55},
+		alias = {"teen_redboy_asst_wukong_tredboy_neckk_2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_arm_castingmeteor = {
+		a_name = "go_stage132-2.dds",
+		size = {83, 63},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1416, 2442, 81, 60},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_arm_castingmeteor"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_chest_agachao = {
+		a_name = "go_stage132-2.dds",
+		size = {90, 95},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1320, 2286, 88, 91},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_chest_agachao"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_hand_castingmeteor = {
+		a_name = "go_stage132-1.dds",
+		size = {54, 77},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4045, 1962, 51, 74},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_hand_castingmeteor"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_hand_uiblock_tiny = {
+		a_name = "go_stage132-2.dds",
+		size = {104, 87},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1010, 2533, 101, 84},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_hand_uiblock_tiny"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_angry_frustrated_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {97, 100},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4002, 402, 94, 97},
+		alias = {}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_angry_frustrated_02_02 = {
+		a_name = "go_stage132-1.dds",
+		size = {97, 67},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {4002, 505, 94, 63},
+		alias = {}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_angry_serious = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1726, 1186, 95, 96},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_angry_serious"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_laugh_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 106},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 2497, 95, 103},
+		alias = {}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_menacing = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1827, 1186, 95, 96},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_menacing"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_closed = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 94},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2130, 1186, 95, 90},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_serious_closed"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_talk_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 106},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1221, 1186, 95, 103},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_serious_talk_2"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_talk_2_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {57, 58},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2573, 2048, 53, 55},
+		alias = {}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_talk_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1928, 1186, 95, 96},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_serious_talk_3"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_talk_3_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {60, 53},
+		trim = {1, 1, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2622, 1898, 57, 50},
+		alias = {}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_talk_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 110},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 2163, 95, 107},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_head_serious_talk_4"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_head_serious_talk_4_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {57, 70},
+		trim = {2, 1, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2541, 1965, 54, 67},
+		alias = {}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_leftarm_powerup = {
+		a_name = "go_stage132-2.dds",
+		size = {100, 84},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2172, 924, 97, 81},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_leftarm_powerup"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_leftarm_powerup_hinchado = {
+		a_name = "go_stage132-2.dds",
+		size = {102, 86},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1437, 924, 99, 83},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_leftarm_powerup_hinchado"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_rightarm_bored = {
+		a_name = "go_stage132-1.dds",
+		size = {47, 95},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {4051, 4003, 44, 92},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_rightarm_bored"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_rightarm_chargener = {
+		a_name = "go_stage132-2.dds",
+		size = {104, 91},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1010, 1574, 102, 88},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_rightarm_chargener"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_rightarm_chargener_hinchado = {
+		a_name = "go_stage132-2.dds",
+		size = {115, 93},
+		trim = {2, 1, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1973, 633, 112, 91},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_rightarm_chargener_hinchado"}
+	},
+	teen_redboy_B_asst_wukong_tredboy_side_uicast_hand_chica = {
+		a_name = "go_stage132-2.dds",
+		size = {98, 111},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1118, 2049, 95, 108},
+		alias = {"teen_redboy_asst_wukong_tredboy_side_uicast_hand_chica"}
+	},
+	teen_redboy_asst_wukong_tredboy_absorb_firewave = {
+		a_name = "go_stage132-1.dds",
+		size = {467, 184},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1991, 882, 465, 181},
+		alias = {"teen_redboy_decal_fireabsorb_asst_wukong_tredboy_absorb_firewave"}
+	},
+	teen_redboy_asst_wukong_tredboy_absorb_supply_box_base_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {59, 81},
+		trim = {2, 9, 2, 8},
+		a_size = {2688, 2688},
+		f_quad = {2633, 87, 55, 64},
+		alias = {"teen_redboy_decal_fireabsorb_asst_wukong_tredboy_absorb_supply_box_base_01"}
+	},
+	teen_redboy_asst_wukong_tredboy_absorb_supply_box_base_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 80},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2053, 59, 77},
+		alias = {"teen_redboy_decal_fireabsorb_asst_wukong_tredboy_absorb_supply_box_base_03"}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer2_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {43, 21},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3478, 1091, 41, 18},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer2_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {123, 37},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3129, 2583, 120, 33},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer2_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {137, 36},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {976, 4060, 135, 33},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer2_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {143, 43},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {153, 4050, 141, 40},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer2_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {150, 43},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2297, 1069, 147, 40},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {92, 54},
+		trim = {1, 3, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1004, 258, 90, 50},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {137, 80},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 1889, 135, 77},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {158, 85},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1329, 159, 156, 81},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {170, 98},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3686, 3993, 167, 95},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {182, 99},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3686, 3697, 179, 95},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_6 = {
+		a_name = "go_stage132-1.dds",
+		size = {194, 94},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {3304, 3166, 190, 91},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_7 = {
+		a_name = "go_stage132-1.dds",
+		size = {198, 90},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3852, 194, 87},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer3_8 = {
+		a_name = "go_stage132-1.dds",
+		size = {199, 68},
+		trim = {2, 2, 2, 1},
+		a_size = {4096, 4096},
+		f_quad = {2893, 3688, 195, 65},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {62, 100},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {1974, 2239, 58, 97},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_10 = {
+		a_name = "go_stage132-2.dds",
+		size = {115, 117},
+		trim = {2, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {1484, 733, 111, 113},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 155},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1593, 2220, 75, 151},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_3 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 171},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1330, 1013, 100, 167},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_4 = {
+		a_name = "go_stage132-2.dds",
+		size = {108, 188},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {899, 1304, 105, 184},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_5 = {
+		a_name = "go_stage132-2.dds",
+		size = {114, 188},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1133, 733, 111, 185},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_6 = {
+		a_name = "go_stage132-2.dds",
+		size = {121, 185},
+		trim = {1, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {775, 921, 118, 182},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_7 = {
+		a_name = "go_stage132-2.dds",
+		size = {138, 181},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {502, 1579, 135, 178},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_8 = {
+		a_name = "go_stage132-2.dds",
+		size = {143, 171},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1386, 318, 140, 168},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_layer4_9 = {
+		a_name = "go_stage132-2.dds",
+		size = {147, 131},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {346, 2149, 145, 127},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_dustexplo_explotion_rock = {
+		a_name = "go_stage132-1.dds",
+		size = {14, 15},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2803, 1095, 12, 12},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_flama_3_glow_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {45, 85},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {2326, 2488, 43, 81},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_flama_3_glow_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {38, 77},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2376, 3995, 36, 74},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_flama_3_solid_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {48, 89},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2326, 2307, 44, 86},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_flama_3_solid_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {42, 83},
+		trim = {1, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {2422, 2464, 39, 79},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_fx_spawn_fire03 = {
+		a_name = "go_stage132-2.dds",
+		size = {167, 105},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1617, 6, 167, 105},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_fx_spawn_fire07 = {
+		a_name = "go_stage132-1.dds",
+		size = {186, 147},
+		trim = {0, 0, 0, 0},
+		a_size = {4096, 4096},
+		f_quad = {3304, 3654, 186, 147},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_hand_uiblock = {
+		a_name = "go_stage132-2.dds",
+		size = {102, 84},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1542, 924, 99, 81},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_head_angry_frustrated = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 101},
+		trim = {1, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1322, 1186, 95, 97},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_head_angry_serious_frustrated = {
+		a_name = "go_stage132-2.dds",
+		size = {97, 99},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2029, 1186, 95, 96},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_piernaizq_ataque3_PATA = {
+		a_name = "go_stage132-2.dds",
+		size = {127, 116},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {646, 733, 123, 113},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_piernaizq_gacha_pata = {
+		a_name = "go_stage132-1.dds",
+		size = {44, 50},
+		trim = {2, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3852, 3089, 41, 48},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_uicast_arm = {
+		a_name = "go_stage132-1.dds",
+		size = {49, 55},
+		trim = {2, 1, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {4051, 3945, 45, 52},
+		alias = {}
+	},
+	teen_redboy_asst_wukong_tredboy_side_uicast_hand = {
+		a_name = "go_stage132-2.dds",
+		size = {95, 108},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1221, 1861, 92, 104},
+		alias = {}
+	},
+	teen_redboy_decal_asst_wukong_tredboy_DrillTower_drill_decal = {
+		a_name = "go_stage132-2.dds",
+		size = {127, 88},
+		trim = {4, 3, 3, 4},
+		a_size = {2688, 2688},
+		f_quad = {1050, 641, 120, 81},
+		alias = {}
+	},
+	teen_redboy_hit_asst_hit_redboy01 = {
+		a_name = "go_stage132-2.dds",
+		size = {79, 81},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1508, 2595, 79, 81},
+		alias = {}
+	},
+	teen_redboy_hit_asst_hit_redboy02 = {
+		a_name = "go_stage132-2.dds",
+		size = {91, 94},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2433, 1186, 91, 94},
+		alias = {}
+	},
+	teen_redboy_hit_asst_hit_redboy03 = {
+		a_name = "go_stage132-2.dds",
+		size = {95, 79},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1118, 2606, 95, 79},
+		alias = {}
+	},
+	teen_redboy_hit_asst_hit_redboy04 = {
+		a_name = "go_stage132-2.dds",
+		size = {80, 69},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1594, 1394, 80, 69},
+		alias = {}
+	},
+	teen_redboy_hit_asst_hit_redboy05 = {
+		a_name = "go_stage132-2.dds",
+		size = {30, 55},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {1292, 246, 30, 55},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_big_rock_path_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {195, 292},
+		trim = {2, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {3504, 2815, 192, 289},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_shadow = {
+		a_name = "go_stage132-1.dds",
+		size = {146, 53},
+		trim = {2, 2, 1, 2},
+		a_size = {4096, 4096},
+		f_quad = {3514, 2090, 143, 49},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_smallrock_01 = {
+		a_name = "go_stage132-1.dds",
+		size = {25, 24},
+		trim = {2, 1, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {2700, 1073, 22, 22},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_smallrock_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {30, 31},
+		trim = {1, 2, 2, 2},
+		a_size = {2688, 2688},
+		f_quad = {551, 126, 27, 27},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_smallrock_03 = {
+		a_name = "go_stage132-1.dds",
+		size = {17, 16},
+		trim = {1, 1, 2, 2},
+		a_size = {4096, 4096},
+		f_quad = {2728, 1095, 14, 13},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_smallrock_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {35, 33},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {920, 277, 32, 30},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_snowcloud = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 76},
+		trim = {19, 16, 16, 16},
+		a_size = {2688, 2688},
+		f_quad = {2615, 2307, 41, 44},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_snowparticles_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {76, 66},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2591, 1394, 74, 63},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_snowparticles_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {72, 75},
+		trim = {2, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {2590, 1655, 69, 72},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_snowparticles_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {67, 82},
+		trim = {1, 2, 1, 1},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2317, 65, 79},
+		alias = {}
+	},
+	teen_redboy_skyrock_asst_wukong_tredboy_ashfx_rocks_paths_snowparticles_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {66, 84},
+		trim = {2, 2, 1, 2},
+		a_size = {2688, 2688},
+		f_quad = {1834, 2599, 63, 80},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_barn_sheepray_flash1 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 104},
+		trim = {35, 34, 40, 38},
+		a_size = {2688, 2688},
+		f_quad = {799, 451, 28, 32},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_barn_sheepray_flash2 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 104},
+		trim = {32, 20, 33, 41},
+		a_size = {2688, 2688},
+		f_quad = {2558, 2413, 38, 43},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_barn_sheepray_flash3 = {
+		a_name = "go_stage132-2.dds",
+		size = {103, 104},
+		trim = {28, 23, 28, 31},
+		a_size = {2688, 2688},
+		f_quad = {2600, 2194, 47, 50},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_barn_sheepray_glow = {
+		a_name = "go_stage132-2.dds",
+		size = {47, 48},
+		trim = {9, 6, 5, 5},
+		a_size = {2688, 2688},
+		f_quad = {2512, 2642, 33, 37},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_barn_sheepray_part2 = {
+		a_name = "go_stage132-1.dds",
+		size = {15, 14},
+		trim = {1, 2, 1, 1},
+		a_size = {4096, 4096},
+		f_quad = {1966, 876, 13, 11},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_lena_dronehive_impact_body_01 = {
+		a_name = "go_stage132-2.dds",
+		size = {73, 56},
+		trim = {9, 6, 8, 8},
+		a_size = {2688, 2688},
+		f_quad = {2632, 1845, 56, 42},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_lena_dronehive_impact_body_02 = {
+		a_name = "go_stage132-2.dds",
+		size = {77, 59},
+		trim = {7, 7, 4, 9},
+		a_size = {2688, 2688},
+		f_quad = {1961, 110, 66, 43},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_lena_dronehive_impact_body_03 = {
+		a_name = "go_stage132-2.dds",
+		size = {54, 62},
+		trim = {8, 5, 8, 11},
+		a_size = {2688, 2688},
+		f_quad = {2467, 2589, 38, 46},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_lena_dronehive_impact_body_04 = {
+		a_name = "go_stage132-2.dds",
+		size = {26, 50},
+		trim = {0, 0, 0, 0},
+		a_size = {2688, 2688},
+		f_quad = {2661, 1965, 26, 50},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_lena_dronehive_impact_body_05 = {
+		a_name = "go_stage132-1.dds",
+		size = {26, 50},
+		trim = {0, 0, 24, 48},
+		a_size = {4096, 4096},
+		f_quad = {1641, 1107, 2, 2},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_shot_circle = {
+		a_name = "go_stage132-1.dds",
+		size = {103, 104},
+		trim = {30, 33, 32, 31},
+		a_size = {4096, 4096},
+		f_quad = {2129, 1567, 41, 40},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_fx_humito_1 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 73},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2351, 1394, 74, 70},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_fx_humito_2 = {
+		a_name = "go_stage132-2.dds",
+		size = {78, 73},
+		trim = {2, 2, 2, 1},
+		a_size = {2688, 2688},
+		f_quad = {2431, 1394, 74, 70},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_redboy_fuegenerico_fire_1_skill_a = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 64},
+		trim = {9, 9, 11, 2},
+		a_size = {2688, 2688},
+		f_quad = {2326, 2635, 43, 53},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_redboy_fuegenerico_fire_2_skill_a = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 64},
+		trim = {9, 9, 14, 10},
+		a_size = {2688, 2688},
+		f_quad = {2422, 2413, 40, 45},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_redboy_fuegenerico_fire_3_skill_a = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 64},
+		trim = {9, 8, 19, 7},
+		a_size = {2688, 2688},
+		f_quad = {2653, 2194, 35, 49},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_redboy_fuegenerico_fire_4_skill_a = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 64},
+		trim = {9, 8, 17, 5},
+		a_size = {2688, 2688},
+		f_quad = {2512, 2464, 37, 51},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_redboy_fuegenerico_fire_5_skill_a = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 64},
+		trim = {8, 8, 12, 4},
+		a_size = {2688, 2688},
+		f_quad = {2376, 2307, 43, 52},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_redboy_fuegenerico_fire_6_skill_a = {
+		a_name = "go_stage132-2.dds",
+		size = {63, 64},
+		trim = {9, 8, 10, 3},
+		a_size = {2688, 2688},
+		f_quad = {2272, 2630, 44, 53},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_Swipe01 = {
+		a_name = "go_stage132-1.dds",
+		size = {450, 375},
+		trim = {128, 36, 100, 40},
+		a_size = {4096, 4096},
+		f_quad = {2663, 2952, 222, 299},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_circleswing_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {492, 338},
+		trim = {112, 61, 131, 112},
+		a_size = {4096, 4096},
+		f_quad = {2140, 3824, 249, 165},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_circleswing_3 = {
+		a_name = "go_stage132-1.dds",
+		size = {537, 426},
+		trim = {100, 139, 153, 45},
+		a_size = {4096, 4096},
+		f_quad = {2142, 1613, 284, 242},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_circleswing_4 = {
+		a_name = "go_stage132-1.dds",
+		size = {519, 266},
+		trim = {105, 73, 108, 64},
+		a_size = {4096, 4096},
+		f_quad = {2803, 1403, 306, 129},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_circleswing_5 = {
+		a_name = "go_stage132-1.dds",
+		size = {835, 430},
+		trim = {290, 145, 330, 177},
+		a_size = {4096, 4096},
+		f_quad = {2418, 3940, 215, 108},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_spiningspear_fire_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {421, 426},
+		trim = {43, 35, 49, 62},
+		a_size = {4096, 4096},
+		f_quad = {1194, 1708, 329, 329},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_spiningspear_fire_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {421, 426},
+		trim = {46, 35, 51, 62},
+		a_size = {4096, 4096},
+		f_quad = {1194, 3047, 324, 329},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_spiningspear_fire_2_1 = {
+		a_name = "go_stage132-1.dds",
+		size = {421, 426},
+		trim = {43, 35, 49, 62},
+		a_size = {4096, 4096},
+		f_quad = {1194, 2043, 329, 329},
+		alias = {}
+	},
+	teen_redboy_uiexplo_asst_wukong_tredboy_dup_spiningspear_fire_2_2 = {
+		a_name = "go_stage132-1.dds",
+		size = {421, 426},
+		trim = {46, 35, 51, 62},
+		a_size = {4096, 4096},
+		f_quad = {1194, 3382, 324, 329},
+		alias = {}
+	}
+}
+
+for k, v in pairs(a) do
+	local rate = 768 / 1080
+	a[k]["size"][1] = math.ceil(a[k]["size"][1] * rate)
+	a[k]["size"][2] = math.ceil(a[k]["size"][2] * rate)
+
+	a[k]["trim"][1] = math.ceil(a[k]["trim"][1] * rate)
+	a[k]["trim"][2] = math.ceil(a[k]["trim"][2] * rate)
+	a[k]["trim"][3] = math.ceil(a[k]["trim"][3] * rate)
+	a[k]["trim"][4] = math.ceil(a[k]["trim"][4] * rate)
+
+	a[k]["a_size"][1] = math.ceil(a[k]["a_size"][1] * rate)
+	a[k]["a_size"][2] = math.ceil(a[k]["a_size"][2] * rate)
+
+	a[k]["f_quad"][1] = math.ceil(a[k]["f_quad"][1] * rate)
+	a[k]["f_quad"][2] = math.ceil(a[k]["f_quad"][2] * rate)
+	a[k]["f_quad"][3] = math.ceil(a[k]["f_quad"][3] * rate)
+	a[k]["f_quad"][4] = math.ceil(a[k]["f_quad"][4] * rate)
+end
+
+return a
