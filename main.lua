@@ -3,7 +3,6 @@ local MUST_READ = require("dove_modules.notice.must_read")
 
 local M = require("dove_modules.updater.update_manager")
 
-M.update_client()
 local perf = require("dove_modules.perf.perf")
 do
 	love.graphics.setColor_old = function(r, g, b, a)
@@ -268,7 +267,6 @@ if KR_TARGET == "tablet" then
 	}}
 end
 
--- ...existing code...
 local log = require("lib.klua.log")
 
 require("lib.klua.table")
@@ -498,26 +496,17 @@ local function load(arg)
 		require("debug_tools")
 	end
 
-	if KR_PLATFORM == "ios" then
-		local ffi = require("ffi")
-
-		ffi.cdef(" void kr_init_ios(); ")
-		ffi.C.kr_init_ios()
-	end
-
 	-- 启动更新检查
 	M.check_update()
 end
 
-local function love_update_master(dt)
+function love.update(dt)
 	return main.handler:update(dt)
 end
 
-local function love_draw_master()
+function love.draw()
 	main.handler:draw()
 end
-
-M.hack_love_update(love_update_master, love_draw_master)
 
 function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
@@ -627,6 +616,7 @@ local function quit()
 	log.info("Quitting...")
 	close_log()
 end
+
 local perf_ui = require("dove_modules.perf.perf_ui")
 function love.run()
 	love.math.setRandomSeed(os.time())
@@ -635,7 +625,11 @@ function love.run()
 
 	love.timer.step()
 
-	MUST_READ.hack_love_update(love.update, love.draw)
+	-- 显示作者的话
+	MUST_READ.run()
+
+	-- 运行更新检查
+	M.run()
 
 	local dt = 0
 	local updated = false
@@ -754,7 +748,6 @@ function love.errorhandler(msg)
 
 	local trace = debug.traceback()
 
-	-- G.clear(G.getBackgroundColor())
 	G.origin()
 
 	local err = {}
@@ -844,7 +837,7 @@ function love.errorhandler(msg)
 	G.printf(pt, pos, pos, G.getWidth() - pos)
 	G.present()
 
-	show_last = true
+	local show_last = true
 
 	local function draw()
 		if show_last then
@@ -860,8 +853,6 @@ function love.errorhandler(msg)
 		LLDEBUGGER.start()
 	end
 
-	-- return function()
-	-- end
 	while true do
 		love.event.pump()
 

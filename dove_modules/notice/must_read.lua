@@ -2,13 +2,17 @@ local MUST_READ = {}
 MUST_READ.text = require("dove_modules.notice.author_words")
 local utf8 = require("utf8")
 local storage = require("all.storage")
-
+MUST_READ.enabled = true
 local confirm_steps = {{
 	btn = "我已阅读，继续游戏"
 }, {
 	btn = "我真的已阅读全部内容"
 }, {
 	btn = "我发誓已阅读完毕"
+}, {
+	btn = "我为因未读完导致的任何事负责"
+}, {
+	btn = "我承诺不人身攻击作者"
 }}
 
 local function wrap_text(text, font, maxw)
@@ -90,7 +94,7 @@ end
 --- only do affect when must_read_flag is nil
 ---@param original_love_update_function function(dt: number)
 ---@param original_love_draw_function function()
-function MUST_READ.hack_love_update(original_love_update_function, original_love_draw_function)
+function MUST_READ.run()
 	-- 用是否存在 must_read.lua 来确定是否已经提示过用户
 	local must_read_flag = storage:load_lua("must_read.lua", true)
 	if must_read_flag ~= nil then
@@ -124,19 +128,11 @@ function MUST_READ.hack_love_update(original_love_update_function, original_love
 	font = font or love.graphics.newFont(16)
 	line_h = font:getHeight() + 6
 
-	local old_w, old_h, old_flags
-	if love.window and love.window.getMode then
-		old_w, old_h, old_flags = love.window.getMode()
-	end
-
-	local dw, dh = nil, nil
-
-	if love.window and love.window.getDesktopDimensions then
-		dw, dh = love.window.getDesktopDimensions()
-	end
+	local old_w, old_h, old_flags = love.window.getMode()
+	local dw, dh = love.window.getDesktopDimensions()
 
 	if not dw or not dh or dw == 0 or dh == 0 then
-		dw, dh = G.getDimensions()
+		dw, dh = love.graphics.getDimensions()
 	end
 
 	local target_w = math.max(200, math.floor((dw or 800) * 0.95))
@@ -168,7 +164,6 @@ function MUST_READ.hack_love_update(original_love_update_function, original_love
 
 	-- 鼠标点击判断按钮
 	local orig_mousepressed = love.mousepressed
-
 	local touch_scrolling = false
 	local touch_start_y = 0
 	local scroll_start = 0
@@ -198,25 +193,10 @@ function MUST_READ.hack_love_update(original_love_update_function, original_love
 		touch_scrolling = false
 	end
 
-	-- 替换 love.update
-	love.update = function(dt)
-		-- 如果窗口大小变了，重新布局
-		local w, h = love.graphics.getDimensions()
-		if w ~= last_w or h ~= last_h then
-			last_w, last_h = w, h
-			layout()
-		end
-	end
-
 	-- 还原函数
 	local function restore()
-		love.update = original_love_update_function
-		love.draw = original_love_draw_function
-		if old_w and old_h and old_flags and love.window and love.window.setMode then
-			pcall(function()
-				love.window.setMode(old_w, old_h, old_flags)
-			end)
-		end
+		MUST_READ.enabled = false
+		love.window.setMode(old_w, old_h, old_flags)
 		love.wheelmoved = orig_wheelmoved
 		love.mousepressed = orig_mousepressed
 		love.touchpressed = orig_touchpressed
@@ -272,67 +252,87 @@ function MUST_READ.hack_love_update(original_love_update_function, original_love
 	-- 初始化布局
 	layout()
 
-	-- draw 覆盖
-	love.draw = function()
+	local dt = 0
+	while true do
+		if not MUST_READ.enabled then
+			return
+		end
+		love.event.pump()
+
+		for e, a, b, c, d in love.event.poll() do
+			love.handlers[e](a, b, c, d)
+		end
+
+		love.timer.step()
+
+		dt = love.timer.getDelta()
+
 		local w, h = love.graphics.getDimensions()
-		-- 背景
-		love.graphics.clear(0, 0, 0)
-		love.graphics.setColor(1, 1, 1)
-		love.graphics.setFont(font)
-
-		local content_w = math.max(200, w - margin * 2)
-		local visible_lines = math.floor((h - 180) / line_h)
-		local total_lines = #lines
-
-		-- 限制 scroll 合理范围
-		local max_scroll = math.max(0, total_lines - visible_lines)
-		if scroll > max_scroll then
-			scroll = max_scroll
-		end
-		if scroll < 0 then
-			scroll = 0
+		if w ~= last_w or h ~= last_h then
+			last_w, last_h = w, h
+			layout()
 		end
 
-		-- 标题
-		local title = "作者的话"
-		love.graphics.printf(title, margin, 20, content_w, "center")
+		if love.window.isOpen() and love.graphics.isActive() then
+			love.graphics.clear()
+			love.graphics.origin()
+			local w, h = love.graphics.getDimensions()
+			-- 背景
+			love.graphics.setColor(1, 1, 1)
+			love.graphics.setFont(font)
 
-		-- 文本绘制
-		local start_i = scroll + 1
-		local end_i = math.min(total_lines, scroll + visible_lines)
-		local y = 60
-		for i = start_i, end_i do
-			love.graphics.print(lines[i], margin, y)
-			y = y + line_h
+			local content_w = math.max(200, w - margin * 2)
+			local visible_lines = math.floor((h - 180) / line_h)
+			local total_lines = #lines
+
+			-- 限制 scroll 合理范围
+			local max_scroll = math.max(0, total_lines - visible_lines)
+			if scroll > max_scroll then
+				scroll = max_scroll
+			end
+			if scroll < 0 then
+				scroll = 0
+			end
+
+			-- 标题
+			local title = "作者的话"
+			love.graphics.printf(title, margin, 20, content_w, "center")
+
+			-- 文本绘制
+			local start_i = scroll + 1
+			local end_i = math.min(total_lines, scroll + visible_lines)
+			local y = 60
+			for i = start_i, end_i do
+				love.graphics.print(lines[i], margin, y)
+				y = y + line_h
+			end
+
+			-- 滚动提示（若未到底部）
+			if not is_scrolled_to_bottom(scroll, total_lines, visible_lines) then
+				love.graphics.setColor(1, 1, 1, 0.7)
+				love.graphics.printf("向下滚动以阅读剩余内容...", margin, h - 120, content_w, "left")
+			end
+
+			-- Continue 按钮（仅当滚到底部时启用）
+			local btn_w, btn_h = 240, 44
+			local bx = (w - btn_w) / 2
+			local by = h - 100
+			local can_continue = is_scrolled_to_bottom(scroll, total_lines, visible_lines)
+			love.graphics.setColor(can_continue and {0.1, 0.6, 0.1} or {0.4, 0.4, 0.4})
+			love.graphics.rectangle("fill", bx, by, btn_w, btn_h, 6, 6)
+			love.graphics.setColor(1, 1, 1)
+			local btn_text = confirm_steps[confirm_index].btn
+			love.graphics.printf(btn_text, bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
+			love.graphics.present()
+
+			collectgarbage("step")
+			love.timer.sleep(0.001)
+		else
+			if love.timer then
+				love.timer.sleep(0.001)
+			end
 		end
-
-		-- 滚动提示（若未到底部）
-		if not is_scrolled_to_bottom(scroll, total_lines, visible_lines) then
-			love.graphics.setColor(1, 1, 1, 0.7)
-			love.graphics.printf("向下滚动以阅读剩余内容...", margin, h - 120, content_w, "left")
-		end
-
-		-- Continue 按钮（仅当滚到底部时启用）
-		local btn_w, btn_h = 240, 44
-		local bx = (w - btn_w) / 2
-		local by = h - 100
-		local can_continue = is_scrolled_to_bottom(scroll, total_lines, visible_lines)
-		love.graphics.setColor(can_continue and {0.1, 0.6, 0.1} or {0.4, 0.4, 0.4})
-		love.graphics.rectangle("fill", bx, by, btn_w, btn_h, 6, 6)
-		love.graphics.setColor(1, 1, 1)
-		local btn_text = confirm_steps[confirm_index].btn
-		love.graphics.printf(btn_text, bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
 	end
-
-	-- expose some for testing / debug
-	MUST_READ._state = {
-		get_lines = function()
-			return lines
-		end,
-		get_hidden_key = function()
-			return hidden_key
-		end
-	}
 end
 
 return MUST_READ

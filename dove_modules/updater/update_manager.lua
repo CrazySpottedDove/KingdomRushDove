@@ -1,5 +1,7 @@
 local M = {}
 local G = love.graphics
+local FS = love.filesystem
+
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
 local ok, update_cfg = pcall(dofile, "update.lua")
@@ -8,297 +10,349 @@ if (ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false) or 
 	apply_upgrade = false
 end
 
-local binary_path = "./client"
+local is_windows = package.config:sub(1, 1) == "\\"
 
-if package.config:sub(1, 1) == "\\" then -- Windows
-	binary_path = "client.exe"
+-- 更新状态定义
+local STATE_DOWNLOADING_ASSETS = 1
+local STATE_DOWNLOADING_CODE = 2
+local STATE_COMMITTING_CHANGES = 3
+local STATE_STRING_MAP = {
+	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
+	[STATE_DOWNLOADING_CODE] = "下载代码资源中……",
+	[STATE_COMMITTING_CHANGES] = "提交更新事务中……"
+}
+local state = STATE_DOWNLOADING_ASSETS
+local update_log_line_max_count = 20
+-- 日志系统
+local update_log_lines = {}
+local error_log_lines = {}
+
+-- 统一的更新界面绘制函数
+local function update_draw_func()
+	local font = require("lib.klove.font_db"):f("msyh", 20)
+	G.clear(0, 0, 0)
+	G.origin()
+	G.setFont(font)
+	G.setColor(1, 1, 1, 1)
+
+	local w, h = G.getDimensions()
+	local text = STATE_STRING_MAP[state]
+	local tw = font:getWidth(text)
+	local th = font:getHeight()
+	G.print(text, (w - tw) / 2, (h - th) / 3)
+
+	-- 显示升级日志
+	G.setColor(1, 1, 1, 1)
+	local log_y = (h - th) / 3 + 60
+	for i, line in ipairs(update_log_lines) do
+		G.print(line, 40, log_y + (i - 1) * 22)
+	end
+	G.present()
 end
 
-function M.update_client()
-	if apply_upgrade then
-		-- 如果主目录有 $binary_path.new，就用这个文件替换掉 $binary_path
-		local client_updated = false
-		local new_path = binary_path .. ".new"
-		local f = io.open(new_path, "r")
+-- 记录普通日志
+local function log_info(line)
+	table.insert(update_log_lines, line)
+	if #update_log_lines > update_log_line_max_count then
+		table.remove(update_log_lines, 1)
+	end
+	update_draw_func()
+end
 
-		if f then
-			f:close()
-			-- 存在 .new 文件，进行替换
-			os.remove(binary_path)
-			os.rename(new_path, binary_path)
+-- 记录错误日志
+local function log_error(line)
+	table.insert(update_log_lines, "[错误] " .. line)
+	if #update_log_lines > update_log_line_max_count then
+		table.remove(update_log_lines, 1)
+	end
+	table.insert(error_log_lines, line) -- 同时存入错误报告
+	update_draw_func()
+end
 
-			client_updated = true
+local function set_state(new_state)
+	state = new_state
+	log_info(STATE_STRING_MAP[state])
+end
+
+-- 文件系统操作封装
+local function ensure_parent_dir(file_path)
+	local parent_dir = file_path:match("(.+)[/\\]")
+	if parent_dir then
+		if is_windows then
+			return os.execute('mkdir "' .. parent_dir .. '" >nul 2>nul')
+		else
+			return os.execute('mkdir -p "' .. parent_dir .. '" >/dev/null 2>&1')
 		end
+	end
+	return true -- 在根目录，无需创建
+end
 
-	-- -- 运行 $binary_path --quiz，强等待。
-	-- local cmd = client_updated and string.format('"%s" --quiz-force', binary_path) or string.format('"%s" --quiz', binary_path)
-	-- local ret = os.execute(cmd)
+local function write_file(file_path, content)
+	local f, err = io.open(file_path, "wb")
+	if not f then
+		return false, err
+	end
+	f:write(content)
+	f:close()
+	return true, nil
+end
 
-	-- if ret ~= 0 then
-	-- 	love.window.showMessageBox("错误", "答题错误，不允许游玩，确定以退出。", {"确定"})
-	-- 	love.event.quit()
-	-- end
+local function delete_file(file_path)
+	return os.remove(file_path)
+end
+
+-- 网络与JSON
+local https = require("https")
+local json = require("lib.json")
+local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedonwload4.crazyspotteddove.top/"}
+local server_address = nil
+
+for _, site in ipairs(candidate_sites) do
+	if https.request(site) == 200 then
+		server_address = site
+		print("Selected update server:", server_address)
+		break
 	end
 end
 
--- 检查更新的线程代码，通过 channel "update_result" 和主线程通信
-local check_update_thread_code = [[
-    local cmd, commit_hash = ...
-    -- 写入临时文件
-    local tmpfile = os.tmpname()
-    local f = io.open(tmpfile, "w")
-    if f then f:write(commit_hash) f:close() end
-    -- 设置环境变量或切换目录（如有需要）
-    -- 调用外部程序
-    local full_cmd = cmd
-    -- Windows下防止弹黑框
-    if package.config:sub(1,1) == "\\" then
-        full_cmd = 'cmd /C ' .. full_cmd
-    end
-    local pipe = io.popen(full_cmd, "r")
-    local resp = pipe and pipe:read("*a") or nil
-    if pipe then pipe:close() end
-    os.remove(tmpfile)
-    love.thread.getChannel("check_update_result"):push(resp or false)
-]]
-local update_thread_code = [[
-    local cmd, update_result_json = ...
-    -- 写入临时文件作为 stdin 传递
-    -- 不使用不可靠的 os.tmpname()，而是自己指定
-    local tmpfile = "os_update_thread_input.tmp"
-    print(string.format("Update thread temp file: %s\n", tmpfile))
-    local f = io.open(tmpfile, "w")
-    if f then
-        f:write(update_result_json)
-        f:close()
-    end
-    -- 构建带重定向的命令，读取 stdout/stderr
-    local full_cmd = cmd .. ' < "' .. tmpfile .. '" 2>&1'
-    if package.config:sub(1,1) == "\\" then
-        full_cmd = 'cmd /C ' .. full_cmd
-    end
-    local pipe = io.popen(full_cmd, "r")
-    if pipe then
-        for line in pipe:lines() do
-            love.thread.getChannel("update_std_out"):push(line)
-        end
-        local ok = pipe:close()
-        if ok then
-            love.thread.getChannel("update_result"):push("done")
-        else
-            print("ok: ", ok)
-            love.thread.getChannel("update_result"):push("error")
-        end
-    else
-        love.thread.getChannel("update_result"):push("error")
-    end
-    os.remove(tmpfile)
-]]
+if not server_address then
+	print("No available update server found. Disabling updates.")
+	apply_upgrade = false
+end
+
+local update_response = nil
+
+-- 对应 Rust 的 sync_assets("master")
+function M.sync_assets()
+	if not server_address then
+		return true
+	end
+	set_state(STATE_DOWNLOADING_ASSETS)
+	local url = server_address .. "assets"
+	local code, response_body = https.request(url, {
+		method = "POST",
+		headers = {
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			branch = "master",
+			mode = "download",
+			assets_index = "return {}"
+		})
+	})
+
+	if code ~= 200 then
+		log_error("无法同步美术资源。服务器返回代码：" .. code)
+		log_error("服务器回复: " .. (response_body or "nil"))
+		return false
+	end
+
+	local ok, resp_json = pcall(json.decode, response_body)
+	if not ok or not resp_json then
+		log_error("无法解码资源同步的服务器回复。")
+		return false
+	end
+
+	-- 删除文件
+	for _, file_path in ipairs(resp_json.delete_files or {}) do
+		local local_file_path = "_assets/" .. file_path
+		if FS.getInfo(local_file_path) and not FS.remove(local_file_path) then
+			log_error("删除文件失败：" .. file_path)
+			return false
+		else
+			log_info("删除文件：" .. file_path)
+		end
+	end
+
+	-- 下载文件
+	local url = server_address .. "assets/download"
+	for i, file_info in ipairs(resp_json.need_files or {}) do
+		local file_path = file_info.file
+		local local_file_path = "_assets/" .. file_path
+		if not (FS.getInfo(local_file_path) and FS.getInfo(local_file_path).size == file_info.size) then
+			local download_code, file_content = https.request(url, {
+				method = "POST",
+				headers = {
+					["Content-Type"] = "application/json"
+				},
+				data = json.encode({
+					file = file_path
+				})
+			})
+			if download_code == 200 then
+				ensure_parent_dir(local_file_path)
+				local success, err = write_file(local_file_path, file_content)
+				if not success then
+					log_error("写入文件失败: " .. local_file_path .. " (" .. tostring(err) .. ")")
+					return false
+				end
+				log_info(string.format("下载美术资源 (%d/%d): %s", i, #resp_json.need_files, file_path))
+			else
+				log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
+				return false
+			end
+		end
+	end
+	return true
+end
+
+function M.upgrade_new_version(info)
+	set_state(STATE_DOWNLOADING_CODE)
+
+	local tmp_dir = ".upgrade_tmp"
+	FS.remove(tmp_dir)
+	FS.createDirectory(tmp_dir)
+	local has_error = false
+
+	-- 1. 下载到临时目录
+	local added_or_modified = info.added_or_modified_files or {}
+	local url = server_address .. "file"
+	for i, file_path in ipairs(added_or_modified) do
+		local download_code, content = https.request(url, {
+			method = "POST",
+			headers = {
+				["Content-Type"] = "application/json"
+			},
+			data = json.encode({
+				file = file_path
+			})
+		})
+		if download_code == 200 then
+			local tmp_file_path = tmp_dir .. "/" .. file_path
+			FS.createDirectory(tmp_file_path:match("(.+)/"))
+			if not FS.write(tmp_file_path, content) then
+				log_error("写入临时文件失败: " .. tmp_file_path)
+				has_error = true
+				break
+			end
+			log_info(string.format("下载代码资源 (%d/%d): %s", i, #added_or_modified, file_path))
+		else
+			log_error("下载代码文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
+			has_error = true
+			break
+		end
+	end
+
+	-- 2. 提交更改
+	if not has_error then
+		set_state(STATE_COMMITTING_CHANGES)
+		-- 覆盖文件
+		for _, file_path in ipairs(added_or_modified) do
+			local content = FS.read(tmp_dir .. "/" .. file_path)
+			if content then
+				ensure_parent_dir(file_path)
+				local success, err = write_file(file_path, content)
+				if not success then
+					log_error("提交更改时写入文件失败: " .. file_path .. " (" .. tostring(err) .. ")")
+					has_error = true
+					break
+				end
+				log_info("提交更改: " .. file_path)
+			else
+				log_error("读取临时文件失败: " .. tmp_dir .. "/" .. file_path)
+				has_error = true
+				break
+			end
+		end
+		-- 删除文件
+		if not has_error then
+			for _, file_path in ipairs(info.deleted_files or {}) do
+				if FS.getInfo(file_path) and not delete_file(file_path) then
+					log_error("删除文件失败: " .. file_path)
+					has_error = true
+					break
+				else
+					log_info("删除文件: " .. file_path)
+				end
+			end
+		end
+	end
+
+	FS.remove(tmp_dir) -- 清理
+
+	-- 3. 更新版本号
+	if not has_error and info.master_commit_hash then
+		if not write_file("current_version_commit_hash.txt", info.master_commit_hash) then
+			log_error("更新版本 commit hash 失败。")
+			has_error = true
+		end
+	end
+
+	if has_error then
+		log_error("升级过程中发生错误，部分操作未完成。")
+	end
+
+	return not has_error
+end
 
 function M.check_update()
-	local hash_file = io.open("current_version_commit_hash.txt", "r")
-
-	if not hash_file then
+	if not apply_upgrade then
 		return
 	end
-
-	local commit_hash = hash_file:read("*l")
-
-	hash_file:close()
-
+	local commit_hash = FS.read("current_version_commit_hash.txt")
 	if not commit_hash then
 		return
 	end
+	local url = server_address .. "commits"
+	local code, response = https.request(url, {
+		method = "POST",
+		headers = {
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			commit_hash = commit_hash
+		})
+	})
 
-	local cmd = string.format('"%s" --check-new-version', binary_path)
-
-	print(string.format("cmd: %s\n", cmd))
-
-	-- 4. 启动线程调用
-	local thread = love.thread.newThread(check_update_thread_code)
-
-	thread:start(cmd, commit_hash)
+	if code == 200 then
+		local resp_json = json.decode(response)
+		if resp_json.commits and #resp_json.commits > 0 then
+			apply_upgrade = true
+			update_response = resp_json
+		else
+			apply_upgrade = false
+		end
+	else
+		print("无法检查更新。服务器返回代码：" .. code)
+		apply_upgrade = false
+	end
 end
 
-local update_result_json = nil
-local update_std_out = {}
+function M.run()
+	if not apply_upgrade then
+		return
+	end
 
---- 在 love 的更新函数中做更新覆盖。
----@param original_love_update_function function(dt: number)
----@param original_love_draw_function function()
-function M.hack_love_update(original_love_update_function, original_love_draw_function)
-	love.draw = original_love_draw_function
-	love.update = function(dt)
-		original_love_update_function(dt)
+	local messages = {}
+	for i, commit in ipairs(update_response.commits or {}) do
+		if i > 20 then
+			table.insert(messages, string.format("...以及另外 %d 条更新内容。", #update_response.commits - 20))
+			break
+		end
+		table.insert(messages, commit.message)
+	end
 
-		-- 不需要更新，离线工作。
-		if not apply_upgrade then
-			love.update = original_love_update_function
+	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
 
-			return
+	if pressed == 1 then
+		local old_w, old_h, old_flags = love.window.getMode()
+		local dw, dh = love.window.getDesktopDimensions()
+		love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
+			resizable = false
+		})
+
+		local success = M.sync_assets()
+		if success then
+			success = M.upgrade_new_version(update_response)
 		end
 
-		-- 查询 check_update 线程结果
-		local ch = love.thread.getChannel("check_update_result")
-		-- 尝试获取结果
-		local result = ch:pop()
-
-		-- local result = ch:demand() -- 改为阻塞等待，避免轮询延迟
-		-- -- 如果 check_update 线程还没结果，直接返回
-		if result == nil then
-			return
-		end
-
-		-- 如果 check_update 线程返回 false，表示检查不了更新，直接离线游玩。
-		if result == false then
-			print("Cannot check for updates.\n")
-
-			love.update = original_love_update_function -- 恢复原 love.update
-		end
-
-		-- 轮询到了结果，此时触发下一步逻辑
-		local ok, resp = pcall(require("lib.json").decode, result)
-
-		if not ok then
-			print("Failed to decode update check response.\n")
-
-			love.update = original_love_update_function -- 恢复原 love.update
-
-			return
-		end
-
-		if type(resp) ~= "table" then
-			print("Invalid update check response format.\n")
-
-			love.update = original_love_update_function -- 恢复原 love.update
-
-			return
-		end
-
-		if not resp.has_update then
-			print("No updates available.\n")
-
-			love.update = original_love_update_function -- 恢复原 love.update
-
-			return
-		end
-
-		update_result_json = result
-
-		-- 收集所有 commit message
-		local messages = {}
-		local max_messages_to_show = 20
-
-		if resp.commits then
-			for i, commit in ipairs(resp.commits) do
-				if i > max_messages_to_show then
-					table.insert(messages, string.format("...以及另外 %d 条更新内容。", #resp.commits - max_messages_to_show))
-
-					break
-				end
-
-				table.insert(messages, commit.message)
-			end
-		end
-
-		local msg_text = table.concat(messages, "\n\n")
-
-		msg_text = msg_text .. "\n\n请耐心等待升级完成..."
-
-		local cmd = string.format('"%s" --upgrade-new-version', binary_path)
-		-- 弹窗有“升级”按钮
-		local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
-
-		if pressed == 1 then
-			-- 保存原窗口模式并把窗口调大到接近桌面尺寸（95%）
-			local old_w, old_h, old_flags = nil, nil, nil
-
-			if love.window and love.window.getMode then
-				old_w, old_h, old_flags = love.window.getMode()
-			end
-
-			local dw, dh = nil, nil
-
-			if love.window and love.window.getDesktopDimensions then
-				dw, dh = love.window.getDesktopDimensions()
-			end
-
-			if not dw or not dh or dw == 0 or dh == 0 then
-				dw, dh = G.getDimensions()
-			end
-
-			local target_w = math.max(200, math.floor((dw or 800) * 0.95))
-			local target_h = math.max(200, math.floor((dh or 600) * 0.95))
-
-			love.window.setMode(target_w, target_h, {
-				resizable = false,
-				fullscreen = false,
-				highdpi = false
-			})
-
-			-- 新建升级线程，实时读取输出
-			local update_thread = love.thread.newThread(update_thread_code)
-
-			update_thread:start(cmd, update_result_json)
-			love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
-
-			-- 用于显示升级日志
-			love.update = function(dt)
-				local ch = love.thread.getChannel("update_result")
-				local result = ch:pop()
-				-- 轮询日志
-				local log_ch = love.thread.getChannel("update_std_out")
-				local line = log_ch:pop()
-
-				if line then
-					table.insert(update_std_out, line)
-
-					-- 限制最大行数
-					if #update_std_out > 10 then
-						table.remove(update_std_out, 1)
-					end
-				end
-
-				if result == "done" then
-					love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
-					love.event.quit()
-				elseif result == "error" then
-					love.window.showMessageBox("升级失败，可检查 client.log 并报告。", "确定")
-
-					love.update = original_love_update_function
-					love.draw = original_love_draw_function
-				end
-			end
-			love.draw = function()
-				G.clear(0, 0, 0)
-				G.origin()
-
-				local font = require("lib.klove.font_db"):f("JIMOJW", 20)
-
-				G.setFont(font)
-				G.setColor(1, 1, 1, 1)
-
-				local w, h = G.getDimensions()
-				local text = "正在升级资源，请勿关闭游戏..."
-				local tw = font:getWidth(text)
-				local th = font:getHeight()
-
-				G.print(text, (w - tw) / 2, (h - th) / 2)
-				-- 动画
-				G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
-				G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
-				-- 显示升级日志
-				G.setColor(1, 1, 1, 1)
-
-				local log_y = (h - th) / 2 + 60
-
-				for i, line in ipairs(update_std_out) do
-					G.print(line, 40, log_y + (i - 1) * 22)
-				end
-			end
+		if success then
+			love.window.showMessageBox("升级完成", "资源已更新。游戏将重新启动。", {"确定"})
+			love.event.quit("restart")
 		else
-			-- 用户取消升级，恢复原 love.update
-			love.update = original_love_update_function
+			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
+			love.window.showMessageBox("升级失败", error_report, {"确定"})
+			love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
 		end
 	end
 end

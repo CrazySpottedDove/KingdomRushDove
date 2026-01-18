@@ -167,7 +167,6 @@ local a = {
 
 	points = {},
 
-
 	points_20250411 = {
 		{
 			id = "02",

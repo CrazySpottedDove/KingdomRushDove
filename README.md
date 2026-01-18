@@ -54,6 +54,8 @@ lua ./scripts/gen_assets_index.lua
 
 ### 上传美术资源
 
+安全起见，client 需联系作者获得。
+
 在项目目录下运行
 
 ```cmd

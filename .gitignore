@@ -48,3 +48,5 @@ client.log
 dlfmt
 love_env/
 .dlfmt_cache.json
+client.exe
+client
