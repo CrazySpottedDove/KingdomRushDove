@@ -47,6 +47,11 @@ EXCLUDES=(
     "client"
     "client.exe"
     ".gdb_history"
+    "https.dll"
+    "KingdomRushDove版启动器.exe"
+    "run.bat"
+    "launch.bat"
+    "存档位置.lnk"
 )
 
 should_exclude() {

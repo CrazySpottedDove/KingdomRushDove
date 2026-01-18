@@ -60,6 +60,7 @@ EXCLUDES=(
     "client"
     "client.exe"
     ".gdb_history"
+    "https.so"
 )
 
 should_exclude() {
