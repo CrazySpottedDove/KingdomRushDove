@@ -50,3 +50,4 @@ love_env/
 .dlfmt_cache.json
 client.exe
 client
+.gdb_history
