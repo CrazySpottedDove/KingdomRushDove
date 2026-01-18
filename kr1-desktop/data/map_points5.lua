@@ -3670,7 +3670,7 @@ local a = {
 
 for i = 1, #a.flags do
 	a.flags[i].pos.x = (a.flags[i].pos.x + a.OFFSET_X) * a.RATE_X
-	a.flags[i].pos.y = (a.flags[i].pos.y +  a.OFFSET_Y) * a.RATE_Y
+	a.flags[i].pos.y = (a.flags[i].pos.y + a.OFFSET_Y) * a.RATE_Y
 end
 
 return a

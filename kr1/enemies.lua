@@ -8142,9 +8142,7 @@ tt.bullet.max_speed = 300
 tt.bullet.align_with_trajectory = true
 tt.bullet.hit_fx = "turtle_shaman_bullet_hit"
 tt.sound_events.insert = "EnemyTurtleShamanBasicAttack"
-tt.bullet.pop = {
-	"pop_mage"
-}
+tt.bullet.pop = {"pop_mage"}
 tt.bullet.pop_conds = DR_KILL
 tt = E:register_t("turtle_shaman_bullet_hit", "fx")
 tt.render.sprites[1].name = "turtle_shaman_attack_1_hit"
@@ -8190,9 +8188,7 @@ tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
 tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
 tt.ranged.attacks[1].max_range_variance = 60
 tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
-tt.ranged.attacks[1].bullet_start_offset = {
-	v(25, 46)
-}
+tt.ranged.attacks[1].bullet_start_offset = {v(25, 46)}
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
 tt.sound_events.death = "EnemyTurtleShamanDeath"
 tt.timed_attacks.list[1] = E:clone_c("mod_attack")
@@ -8208,9 +8204,7 @@ tt.timed_attacks.list[1].markDurationOffset = 0.1
 tt.timed_attacks.list[1].range = b.natures_vigor.range
 tt.timed_attacks.list[1].sound = "EnemyTurtleShamanHealing"
 tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_CUSTOM)
-tt.timed_attacks.list[1].excluded_templates = {
-	"enemy_turtle_shaman"
-}
+tt.timed_attacks.list[1].excluded_templates = {"enemy_turtle_shaman"}
 tt.unit.blood_color = BLOOD_GREEN
 tt.unit.can_explode = false
 tt = E:register_t("mod_natures_vigor_mark", "modifier")
@@ -8471,9 +8465,7 @@ tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
 tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
 tt.ranged.attacks[1].max_range_variance = 60
 tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
-tt.ranged.attacks[1].bullet_start_offset = {
-	v(12, 31)
-}
+tt.ranged.attacks[1].bullet_start_offset = {v(12, 31)}
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
 tt.ranged.attacks[1].animation = "attack_01"
 tt.sound_events.death = "EnemyDreadeyeViperDeath"
@@ -8573,18 +8565,9 @@ tt.timed_attacks.list[1].particles_name_b = "ps_enemy_rhino_charge_b"
 tt.timed_attacks.list[1].sound = "EnemyRazingRhinoCharge"
 tt.motion.max_speed = b.speed
 tt.render.sprites[1].prefix = "razing_rhino_razing_rhino"
-tt.render.sprites[1].angles.charge = {
-	"charge_side",
-	"charge_back",
-	"charge_front"
-}
+tt.render.sprites[1].angles.charge = {"charge_side", "charge_back", "charge_front"}
 tt.render.sprites[1].angles_custom = {
-	charge = {
-		55,
-		115,
-		245,
-		305
-	}
+	charge = {55, 115, 245, 305}
 }
 tt.ui.click_rect = r(-30, -3, 60, 65)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
@@ -8622,9 +8605,7 @@ tt.ranged.attacks[1].shoot_time = fts(12)
 tt.ranged.attacks[1].cooldown = b.ranged_attack.cooldown
 tt.ranged.attacks[1].max_range = b.ranged_attack.max_range
 tt.ranged.attacks[1].min_range = b.ranged_attack.min_range
-tt.ranged.attacks[1].bullet_start_offset = {
-	v(0, 32)
-}
+tt.ranged.attacks[1].bullet_start_offset = {v(0, 32)}
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
 tt.ranged.attacks[1].vis_bans = bor(F_FLYING)
 tt.ranged.attacks[1].ignore_hit_offset = true
@@ -8648,10 +8629,7 @@ E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "skunk_bombardier_bomb_trail"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {
-	fts(9),
-	fts(9)
-}
+tt.particle_system.particle_lifetime = {fts(9), fts(9)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt = E:register_t("enemy_hyena5", "enemy_KR5")
@@ -8661,9 +8639,7 @@ local b = balance.enemies.werebeasts.hyena5
 E:add_comps(tt, "melee")
 
 tt.feast = {}
-tt.feast.mods = {
-	"enemy_hyena5_feast_mod"
-}
+tt.feast.mods = {"enemy_hyena5_feast_mod"}
 tt.feast.animation = "eat"
 tt.feast.duration = b.feast.duration
 tt.feast.cooldown = b.feast.cooldown
@@ -8709,11 +8685,7 @@ tt.hps.heal_every = b.feast.heal_every
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 tt.render.sprites[1].prefix = "mod_twilight_evoker_heal"
-tt.render.sprites[1].size_names = {
-	"small",
-	"big",
-	"big"
-}
+tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].loop = true
 tt = E:register_t("enemy_hyena5_attack_fx", "fx")
 tt.render.sprites[1].name = "rottenfang_hyena_attack_hit_fx"

@@ -12955,11 +12955,7 @@ tt.modifier.use_mod_offset = false
 tt.modifier.immune_for_seconds = b.immune_for_seconds
 tt.render.sprites[1].prefix = "stage_2_special_treeFX_holdFX"
 tt.render.sprites[1].name = "start"
-tt.render.sprites[1].size_names = {
-	"small",
-	"big",
-	"big"
-}
+tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].scale = v(1, 1)
 tt.render.sprites[1].sort_y_offset = -3
 tt.main_script.insert = scripts.trees_guardian_tree_vine_mod.insert
