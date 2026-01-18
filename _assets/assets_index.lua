@@ -245,6 +245,9 @@ return {
 	["kr1-desktop/images/fullhd/go_enemies_sarelgaz-1.dds"] = {
 		size = 5592560
 	},
+	["kr1-desktop/images/fullhd/go_enemies_sea_of_trees-1.png"] = {
+		size = 5678090
+	},
 	["kr1-desktop/images/fullhd/go_enemies_storm-1.dds"] = {
 		size = 5592560
 	},
@@ -1403,6 +1406,9 @@ return {
 	["kr1-desktop/images/fullhd/go_stages_rotten_torment-1.dds"] = {
 		size = 1398256
 	},
+	["kr1-desktop/images/fullhd/go_stages_sea_of_trees-1.png"] = {
+		size = 142759
+	},
 	["kr1-desktop/images/fullhd/go_stages_underground-1.dds"] = {
 		size = 5592560
 	},
@@ -1788,7 +1794,7 @@ return {
 		size = 5592580
 	},
 	["kr1-desktop/images/fullhd/level_select-1.dds"] = {
-		size = 9519456
+		size = 17283252
 	},
 	["kr1-desktop/images/fullhd/loading_blackburn-1.dds"] = {
 		size = 2073728

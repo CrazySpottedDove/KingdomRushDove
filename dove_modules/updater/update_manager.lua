@@ -140,6 +140,8 @@ function M.sync_assets()
 			assets_index = "return {}"
 		})
 	})
+	print(code)
+	print(response_body)
 
 	if code ~= 200 then
 		log_error("无法同步美术资源。服务器返回代码：" .. code)
@@ -156,7 +158,7 @@ function M.sync_assets()
 	-- 删除文件
 	for _, file_path in ipairs(resp_json.delete_files or {}) do
 		local local_file_path = "_assets/" .. file_path
-		if FS.getInfo(local_file_path) and not FS.remove(local_file_path) then
+		if FS.getInfo(local_file_path) and not delete_file(local_file_path) then
 			log_error("删除文件失败：" .. file_path)
 			return false
 		else
@@ -169,7 +171,8 @@ function M.sync_assets()
 	for i, file_info in ipairs(resp_json.need_files or {}) do
 		local file_path = file_info.file
 		local local_file_path = "_assets/" .. file_path
-		if not (FS.getInfo(local_file_path) and FS.getInfo(local_file_path).size == file_info.size) then
+		local local_file_info = FS.getInfo(local_file_path)
+		if not (local_file_info and local_file_info.size == file_info.size) then
 			local download_code, file_content = https.request(url, {
 				method = "POST",
 				headers = {
@@ -191,6 +194,8 @@ function M.sync_assets()
 				log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
 				return false
 			end
+		else
+			print(local_file_path .. " 已存在，跳过下载。")
 		end
 	end
 	return true
