@@ -140,8 +140,6 @@ function M.sync_assets()
 			assets_index = "return {}"
 		})
 	})
-	print(code)
-	print(response_body)
 
 	if code ~= 200 then
 		log_error("无法同步美术资源。服务器返回代码：" .. code)
@@ -194,8 +192,6 @@ function M.sync_assets()
 				log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
 				return false
 			end
-		else
-			print(local_file_path .. " 已存在，跳过下载。")
 		end
 	end
 	return true
