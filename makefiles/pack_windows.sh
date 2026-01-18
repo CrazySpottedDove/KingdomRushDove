@@ -57,6 +57,9 @@ EXCLUDES=(
     "update.lua"
     "dlfmt"
     ".dlfmt_cache.json"
+    "client"
+    "client.exe"
+    ".gdb_history"
 )
 
 should_exclude() {
